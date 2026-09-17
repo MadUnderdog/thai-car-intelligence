@@ -1,5 +1,5 @@
 /**
- * Pilot ingestion script — verifies 3 Honda prices with real evidence.
+ * Pilot ingestion script — verifies Honda prices with real evidence.
  * Safe to run multiple times (idempotent).
  */
 
@@ -25,9 +25,14 @@ async function main() {
 
   // Map evidence to price IDs
   const priceMap: Record<string, string> = {
-    "honda-city-ehev-569000-2026-verified": "90c93ea1-0c5f-4555-ad7b-2fd7e0c1794c", // Honda City e:HEV
-    "honda-civic-ehev-949000-2026-verified": "65b27d8e-f708-4587-ab87-16245de930eb", // Honda Civic e:HEV
-    "honda-hrv-ehev-949000-2026-verified": "61b46c36-6937-417d-8b1e-c0c60eec05f3", // Honda HR-V e:HEV
+    "honda-city-ehev-569000-2026-verified": "90c93ea1-0c5f-4555-ad7b-2fd7e0c1794c",
+    "honda-civic-ehev-949000-2026-verified": "65b27d8e-f708-4587-ab87-16245de930eb",
+    "honda-city-hatchback-ehev-579000-2026-verified": "12139065-ac64-4883-9969-5be421b800c7",
+    "honda-crv-ehev-1409000-2026-verified": "b8252194-3739-4d8a-9367-4fade37fb67f",
+    "honda-brv-915000-2026-verified": "0018ee8a-5bb2-48e6-a6c0-fcb393100c6e",
+    "honda-wrv-799000-2026-verified": "06ef60bf-ef77-4033-a212-0708815b04a8",
+    "honda-accord-ehev-1479000-2026-verified": "89066132-45ac-4575-af1c-16a867820553",
+    "honda-en2-ev-1429000-2026-verified": "3da122fa-679d-451c-a4ac-fa6a351abe47",
   };
 
   let verified = 0;

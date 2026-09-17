@@ -1,5 +1,6 @@
 // @ts-nocheck
 import pool from "@/lib/db-pg";
+import { isValidUuid } from "../../../../lib/validation/api-params";
 
 export const dynamic = "force-dynamic";
 
@@ -8,8 +9,12 @@ export async function GET(request: Request) {
   const ids = params.get("ids");
   if (!ids) return NextResponse.json({ error: "invalid_ids" }, { status: 400 });
 
-  const idList = ids.split(",").filter(Boolean).slice(0, 4);
-  if (idList.length < 2) return NextResponse.json({ error: "need_at_least_2" }, { status: 400 });
+  const rawList = ids.split(",").filter(Boolean).slice(0, 4);
+  if (rawList.length < 2) return NextResponse.json({ error: "need_at_least_2" }, { status: 400 });
+
+  // Validate UUID format for all IDs
+  const idList = rawList.filter((id) => isValidUuid(id));
+  if (idList.length < 2) return NextResponse.json({ error: "invalid_ids" }, { status: 400 });
 
   try {
     const variants: any = await pool.query(

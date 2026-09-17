@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import pool from "@/lib/db-pg";
+import { validateFuelType, validateLimit } from "../../../../lib/validation/api-params";
 
 export const dynamic = "force-dynamic";
 
@@ -7,8 +8,12 @@ export async function GET(request: Request) {
   try {
     const url = new URL(request.url);
     const manufacturer = url.searchParams.get("manufacturer");
-    const fuelType = url.searchParams.get("fuelType");
-    const limit = Math.min(parseInt(url.searchParams.get("limit") || "50"), 100);
+    const fuelType = validateFuelType(url.searchParams.get("fuelType"));
+    const limit = validateLimit(url.searchParams.get("limit"), 50);
+
+    if (limit === null) {
+      return NextResponse.json({ error: "invalid_params", results: [], total: 0 }, { status: 400 });
+    }
 
     let whereClause = `WHERE cm.status = 'ACTIVE' AND m.status = 'ACTIVE'`;
     const params: any[] = [];

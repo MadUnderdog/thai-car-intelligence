@@ -1,29 +1,28 @@
 import { NextResponse } from "next/server";
 import { listVariants } from "../../../../lib/catalog/queries";
 import type { CatalogFilters } from "../../../../lib/catalog/types";
+import { validateFuelType, validateLimit, validatePage, validateMaxPrice } from "../../../../lib/validation/api-params";
 
 export const dynamic = "force-dynamic";
 
 export function parseCarQuery(searchParams: URLSearchParams): CatalogFilters | null {
-  const limitRaw = searchParams.get("limit");
-  const pageRaw = searchParams.get("page");
-  const maxPriceRaw = searchParams.get("maxPrice");
+  const limit = validateLimit(searchParams.get("limit"));
+  if (searchParams.has("limit") && limit === null) return null;
 
-  const limit = limitRaw ? Number(limitRaw) : undefined;
-  if (limit !== undefined && (!Number.isFinite(limit) || limit < 1 || limit > 100)) return null;
+  const page = validatePage(searchParams.get("page"));
+  if (searchParams.has("page") && page === null) return null;
 
-  const page = pageRaw ? Number(pageRaw) : undefined;
-  if (page !== undefined && (!Number.isFinite(page) || page < 1)) return null;
+  const maxPrice = validateMaxPrice(searchParams.get("maxPrice"));
+  if (searchParams.has("maxPrice") && maxPrice === null) return null;
 
-  const maxPrice = maxPriceRaw ? Number(maxPriceRaw) : undefined;
-  if (maxPrice !== undefined && (!Number.isFinite(maxPrice) || maxPrice < 0)) return null;
+  const fuelType = validateFuelType(searchParams.get("fuelType"));
 
   return {
     manufacturer: searchParams.get("manufacturer") || undefined,
-    fuelType: searchParams.get("fuelType") || undefined,
-    maxPrice,
-    limit,
-    page,
+    fuelType: fuelType || undefined,
+    maxPrice: maxPrice ?? undefined,
+    limit: limit ?? undefined,
+    page: page ?? undefined,
   };
 }
 

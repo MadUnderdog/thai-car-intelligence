@@ -255,7 +255,7 @@ model SourceDocument {
 model Price {
   id               String         @id @default(uuid()) @db.Uuid
   variantId        String         @db.Uuid
-  sourceDocumentId String?
+  sourceDocumentId String?        @db.Uuid
   priceType        PriceType
   amount           Decimal        @db.Decimal(15, 2)
   currency         String         @default("THB")

@@ -7,6 +7,17 @@ async function q(sql: string): Promise<any[]> {
   return db.$queryRawUnsafe(sql);
 }
 
+/** Safe query that returns empty array if table doesn't exist */
+async function safeQ(sql: string): Promise<any[]> {
+  try {
+    return await q(sql);
+  } catch (e: any) {
+    // If table doesn't exist (42P01 = undefined_table, or Prisma P2010 with TableDoesNotExist)
+    if (e?.code === "42P01" || e?.code === "P2010") return [];
+    throw e;
+  }
+}
+
 export async function GET() {
   try {
     // Catalog metrics
@@ -19,11 +30,11 @@ export async function GET() {
     const perfSpecs = await q(`SELECT "sourceTier", count(*) as cnt FROM "PerformanceSpec" GROUP BY "sourceTier"`);
     const dimSpecs = await q(`SELECT "sourceTier", count(*) as cnt FROM "DimensionsSpec" GROUP BY "sourceTier"`);
 
-    // Enrichment queue
-    const queueStats = await q(`SELECT status, count(*) as cnt FROM "EnrichmentQueue" GROUP BY status`);
+    // Enrichment queue (table may not exist yet)
+    const queueStats = await safeQ(`SELECT status, count(*) as cnt FROM "EnrichmentQueue" GROUP BY status`);
 
-    // Research runs
-    const recentRuns = await q(`SELECT status, count(*) as cnt FROM "RefreshRun" GROUP BY status`);
+    // Research runs (table may not exist yet)
+    const recentRuns = await safeQ(`SELECT status, count(*) as cnt FROM "RefreshRun" GROUP BY status`);
 
     const t = Number(totalVariants[0]?.cnt ?? 0);
 

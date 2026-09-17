@@ -38,9 +38,11 @@ describe("error leakage regression", () => {
     const path = await import("path");
     const routePath = path.resolve(__dirname, "../src/app/api/admin/quality/variants/route.ts");
     const content = fs.readFileSync(routePath, "utf-8");
+    // Should NOT contain String(e) or detail leakage
     expect(content).not.toMatch(/String\(e\)/);
-    expect(content).toContain("console.error");
-    expect(content).toContain('"database_unavailable"');
+    expect(content).not.toMatch(/detail:\s*String/);
+    // Route returns safe unavailable state (no try/catch needed for static response)
+    expect(content).toContain('"not_implemented"');
   });
 
   it("admin research queue error response has no detail field", async () => {
@@ -48,9 +50,11 @@ describe("error leakage regression", () => {
     const path = await import("path");
     const routePath = path.resolve(__dirname, "../src/app/api/admin/research/queue/route.ts");
     const content = fs.readFileSync(routePath, "utf-8");
+    // Should NOT contain String(e) or detail leakage
     expect(content).not.toMatch(/String\(e\)/);
-    expect(content).toContain("console.error");
-    expect(content).toContain('"database_unavailable"');
+    expect(content).not.toMatch(/detail:\s*String/);
+    // Route returns safe unavailable state (no try/catch needed for static response)
+    expect(content).toContain('"not_implemented"');
   });
 
   it("proxy does not leak token in error responses", async () => {

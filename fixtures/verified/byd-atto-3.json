@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.reverautomotive.com/model/newatto3/overview",
+    "title": "BYD | Rêver Automotive Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official BYD/Rêver Thailand page lists ATTO 3 starting at ฿799,900.",
+    "contentHash": "14accf824fa6c72b8f44771b1a9a75e21b6b0fddf792a520838223736559cc87",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "บีวายดี",
+        "nameEn": "BYD",
+        "slug": "byd"
+      },
+      "model": {
+        "nameTh": "ATTO 3",
+        "nameEn": "ATTO 3",
+        "slug": "atto-3"
+      },
+      "variant": {
+        "nameTh": "ATTO 3",
+        "nameEn": "ATTO 3",
+        "slug": "atto-3"
+      },
+      "prices": [
+        {
+          "amount": 799900,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.reverautomotive.com/model/newatto3/overview",
+            "title": "BYD | Rêver Automotive Thailand",
+            "evidence": "ATTO 3 — 799,900 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

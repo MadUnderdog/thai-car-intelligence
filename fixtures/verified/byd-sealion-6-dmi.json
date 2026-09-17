@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.reverautomotive.com/model/sealion6_dm-i/overview",
+    "title": "BYD | Rêver Automotive Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official BYD/Rêver Thailand page lists Sealion 6 DM-i starting at ฿859,900.",
+    "contentHash": "14accf824fa6c72b8f44771b1a9a75e21b6b0fddf792a520838223736559cc87",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "บีวายดี",
+        "nameEn": "BYD",
+        "slug": "byd"
+      },
+      "model": {
+        "nameTh": "Sealion 6 DM-i",
+        "nameEn": "Sealion 6 DM-i",
+        "slug": "sealion-6-dmi"
+      },
+      "variant": {
+        "nameTh": "Sealion 6 DM-i",
+        "nameEn": "Sealion 6 DM-i",
+        "slug": "sealion-6-dmi"
+      },
+      "prices": [
+        {
+          "amount": 859900,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.reverautomotive.com/model/sealion6_dm-i/overview",
+            "title": "BYD | Rêver Automotive Thailand",
+            "evidence": "Sealion 6 DM-i — 859,900 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

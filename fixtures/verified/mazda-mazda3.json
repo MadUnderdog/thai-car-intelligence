@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.mazda.co.th/",
+    "title": "Mazda Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Mazda Thailand page lists Mazda3 at ฿999,000.",
+    "contentHash": "12249ddbcc8daf37fd2d00b671c795b09e4a7d68dc01222d0ad5e0a816068671",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "มาสด้า",
+        "nameEn": "Mazda",
+        "slug": "mazda"
+      },
+      "model": {
+        "nameTh": "Mazda3",
+        "nameEn": "mazda3",
+        "slug": "mazda3"
+      },
+      "variant": {
+        "nameTh": "Mazda3",
+        "nameEn": "mazda3",
+        "slug": "mazda3"
+      },
+      "prices": [
+        {
+          "amount": 999000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.mazda.co.th/",
+            "title": "Mazda Thailand",
+            "evidence": "Mazda3 — 999,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

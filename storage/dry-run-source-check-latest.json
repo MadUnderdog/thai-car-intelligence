@@ -1,0 +1,1878 @@
+{
+  "run_timestamp": "2026-09-14T09:01:14.688653+07:00",
+  "run_type": "dry_run_full_source_check",
+  "total_urls": 39,
+  "accessible_count": 39,
+  "inaccessible_count": 0,
+  "published_data_changed": false,
+  "url_breakdown": {
+    "price_source_urls": 35,
+    "manufacturer_websites": 4,
+    "source_base_urls": 0,
+    "source_document_urls": 0
+  },
+  "results": [
+    {
+      "url": "https://www.byd.com/en-th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 575,
+      "final_url": "https://www.byd.com/en-th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "Tengine",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Manufacturer",
+          "id": "edd58c14-d177-4cc8-aa3c-32e0a450796d",
+          "name": "BYD",
+          "field": "websiteUrl"
+        }
+      ]
+    },
+    {
+      "url": "https://www.byd.com/en-th/car/atto2",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 491,
+      "final_url": "https://www.byd.com/en-th/car/atto2",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "Tengine",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "BYD ATTO 2 Dynamic",
+          "field": "sourceUrl",
+          "amount": "629900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "BYD ATTO 2 Premium",
+          "field": "sourceUrl",
+          "amount": "659900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.byd.com/en-th/car/atto3",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 630,
+      "final_url": "https://www.byd.com/en-th/car/atto3",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "Tengine",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "BYD ATTO 3 Extended Range",
+          "field": "sourceUrl",
+          "amount": "719900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "BYD ATTO 3 Standard Range",
+          "field": "sourceUrl",
+          "amount": "629900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.byd.com/en-th/car/dolphin",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 288,
+      "final_url": "https://www.byd.com/en-th/car/dolphin",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "Tengine",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "BYD Dolphin Dynamic",
+          "field": "sourceUrl",
+          "amount": "799900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "BYD Dolphin Premium",
+          "field": "sourceUrl",
+          "amount": "899900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.byd.com/en-th/car/m6",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 327,
+      "final_url": "https://www.byd.com/en-th/car/m6",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "Tengine",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "BYD M6 Electric",
+          "field": "sourceUrl",
+          "amount": "859900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.byd.com/en-th/car/seal",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 283,
+      "final_url": "https://www.byd.com/en-th/car/seal",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "Tengine",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "BYD Seal Dynamic RWD",
+          "field": "sourceUrl",
+          "amount": "1099900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "BYD Seal Performance AWD",
+          "field": "sourceUrl",
+          "amount": "1299900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.byd.com/en-th/car/sealion7",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 285,
+      "final_url": "https://www.byd.com/en-th/car/sealion7",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "Tengine",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "BYD Sealion 7 Advanced",
+          "field": "sourceUrl",
+          "amount": "1718020.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1278,
+      "final_url": "https://www.honda.co.th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Manufacturer",
+          "id": "76a4b60c-b0d7-4517-abb9-ee7d38324b74",
+          "name": "Honda",
+          "field": "websiteUrl"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/accordehev",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 435,
+      "final_url": "https://www.honda.co.th/accordehev",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda Accord e:HEV",
+          "field": "sourceUrl",
+          "amount": "1479000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/brv",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 364,
+      "final_url": "https://www.honda.co.th/brv",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda BR-V Other",
+          "field": "sourceUrl",
+          "amount": "915000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/city",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 624,
+      "final_url": "https://www.honda.co.th/city",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda City e:HEV",
+          "field": "sourceUrl",
+          "amount": "569000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/cityhatchback",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 677,
+      "final_url": "https://www.honda.co.th/cityhatchback",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda City Hatchback e:HEV",
+          "field": "sourceUrl",
+          "amount": "579000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/civic",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 799,
+      "final_url": "https://www.honda.co.th/civic",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda Civic e:HEV",
+          "field": "sourceUrl",
+          "amount": "949000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/civictyper",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 985,
+      "final_url": "https://www.honda.co.th/civictyper",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda Civic Type R Turbo",
+          "field": "sourceUrl",
+          "amount": "3990000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/crv",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 505,
+      "final_url": "https://www.honda.co.th/crv",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda CR-V e:HEV",
+          "field": "sourceUrl",
+          "amount": "1409000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/en2",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 787,
+      "final_url": "https://www.honda.co.th/en2",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda e:N2 EV",
+          "field": "sourceUrl",
+          "amount": "1429000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/hrvehev",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 754,
+      "final_url": "https://www.honda.co.th/hrvehev",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda HR-V e:HEV",
+          "field": "sourceUrl",
+          "amount": "949000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/super-one",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 919,
+      "final_url": "https://www.honda.co.th/super-one",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda Super-ONE EV",
+          "field": "sourceUrl",
+          "amount": "990000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/wrv",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 747,
+      "final_url": "https://www.honda.co.th/wrv",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Honda WR-V Other",
+          "field": "sourceUrl",
+          "amount": "799000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 2160,
+      "final_url": "https://www.mgcars.com/th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Manufacturer",
+          "id": "2e851714-b0c0-4c5e-a2ed-91c3a855a79b",
+          "name": "MG",
+          "field": "websiteUrl"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/all-new-mg3",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1978,
+      "final_url": "https://www.mgcars.com/th/cars/all-new-mg3",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG MG3 HYBRID+ HYBRID+",
+          "field": "sourceUrl",
+          "amount": "579900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-cyberster",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1129,
+      "final_url": "https://www.mgcars.com/th/cars/mg-cyberster",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG CYBERSTER EV",
+          "field": "sourceUrl",
+          "amount": "2499000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-ep-plus",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1790,
+      "final_url": "https://www.mgcars.com/th/cars/mg-ep-plus",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG EP Plus EV",
+          "field": "sourceUrl",
+          "amount": "771000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-es",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1072,
+      "final_url": "https://www.mgcars.com/th/cars/mg-es",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG ES EV",
+          "field": "sourceUrl",
+          "amount": "959000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-extender-dc",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1252,
+      "final_url": "https://www.mgcars.com/th/cars/mg-extender-dc",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG EXTENDER DC",
+          "field": "sourceUrl",
+          "amount": "769000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-hs",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1672,
+      "final_url": "https://www.mgcars.com/th/cars/mg-hs",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG HS PHEV Premium",
+          "field": "sourceUrl",
+          "amount": "1299000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-im5",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 752,
+      "final_url": "https://www.mgcars.com/th/cars/mg-im5",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG IM5 EV",
+          "field": "sourceUrl",
+          "amount": "1549900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-im6",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 2073,
+      "final_url": "https://www.mgcars.com/th/cars/mg-im6",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG IM6 EV",
+          "field": "sourceUrl",
+          "amount": "1399900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-maxus7",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 748,
+      "final_url": "https://www.mgcars.com/th/cars/mg-maxus7",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG MAXUS 7 EV",
+          "field": "sourceUrl",
+          "amount": "1399000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-maxus9-my26",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 688,
+      "final_url": "https://www.mgcars.com/th/cars/mg-maxus9-my26",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG MAXUS 9 EV",
+          "field": "sourceUrl",
+          "amount": "1849900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-s5-ev-plus",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1045,
+      "final_url": "https://www.mgcars.com/th/cars/mg-s5-ev-plus",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG S5 EV PLUS EV PLUS",
+          "field": "sourceUrl",
+          "amount": "749900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-urban",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 774,
+      "final_url": "https://www.mgcars.com/th/cars/mg-urban",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG URBAN EV",
+          "field": "sourceUrl",
+          "amount": "579900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-vs-hev",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1079,
+      "final_url": "https://www.mgcars.com/th/cars/mg-vs-hev",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG VS HEV D",
+          "field": "sourceUrl",
+          "amount": "699000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-zs",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1088,
+      "final_url": "https://www.mgcars.com/th/cars/mg-zs",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG ZS Standard",
+          "field": "sourceUrl",
+          "amount": "599000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-zs-ev",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1418,
+      "final_url": "https://www.mgcars.com/th/cars/mg-zs-ev",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG ZS EV Premium",
+          "field": "sourceUrl",
+          "amount": "829900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg4-my2026",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 787,
+      "final_url": "https://www.mgcars.com/th/cars/mg4-my2026",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG MG4 Standard",
+          "field": "sourceUrl",
+          "amount": "669900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg5",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 758,
+      "final_url": "https://www.mgcars.com/th/cars/mg5",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "MG MG5 Standard",
+          "field": "sourceUrl",
+          "amount": "629900.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 349,
+      "final_url": "https://www.toyota.co.th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Manufacturer",
+          "id": "17e50169-cbb6-40a7-9a73-382b97226325",
+          "name": "Toyota",
+          "field": "websiteUrl"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model-list",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 197,
+      "final_url": "https://www.toyota.co.th/en/model-list",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Price",
+          "name": "Toyota bZ4X EV",
+          "field": "sourceUrl",
+          "amount": "1299000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Camry HEV",
+          "field": "sourceUrl",
+          "amount": "1475000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Corolla Altis GR Sport",
+          "field": "sourceUrl",
+          "amount": "1129000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Corolla Altis HEV",
+          "field": "sourceUrl",
+          "amount": "909000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Corolla Cross HEV",
+          "field": "sourceUrl",
+          "amount": "999000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Fortuner ICE",
+          "field": "sourceUrl",
+          "amount": "1199000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Hilux ICE",
+          "field": "sourceUrl",
+          "amount": "699000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Innova Zenix HEV",
+          "field": "sourceUrl",
+          "amount": "999000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Yaris ICE",
+          "field": "sourceUrl",
+          "amount": "584000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Yaris ATIV GR Sport",
+          "field": "sourceUrl",
+          "amount": "779000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Yaris ATIV HEV",
+          "field": "sourceUrl",
+          "amount": "569000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Yaris ATIV Nightshade",
+          "field": "sourceUrl",
+          "amount": "709000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        },
+        {
+          "entity": "Price",
+          "name": "Toyota Yaris Cross HEV",
+          "field": "sourceUrl",
+          "amount": "799000.00",
+          "currency": "THB",
+          "valid_from": "2026-01-01 00:00:00"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "accessible": [
+      {
+        "url": "https://www.byd.com/en-th",
+        "http_status": 200,
+        "response_time_ms": 575,
+        "referenced_by": [
+          {
+            "entity": "Manufacturer",
+            "id": "edd58c14-d177-4cc8-aa3c-32e0a450796d",
+            "name": "BYD",
+            "field": "websiteUrl"
+          }
+        ]
+      },
+      {
+        "url": "https://www.byd.com/en-th/car/atto2",
+        "http_status": 200,
+        "response_time_ms": 491,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "BYD ATTO 2 Dynamic",
+            "field": "sourceUrl",
+            "amount": "629900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "BYD ATTO 2 Premium",
+            "field": "sourceUrl",
+            "amount": "659900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.byd.com/en-th/car/atto3",
+        "http_status": 200,
+        "response_time_ms": 630,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "BYD ATTO 3 Extended Range",
+            "field": "sourceUrl",
+            "amount": "719900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "BYD ATTO 3 Standard Range",
+            "field": "sourceUrl",
+            "amount": "629900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.byd.com/en-th/car/dolphin",
+        "http_status": 200,
+        "response_time_ms": 288,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "BYD Dolphin Dynamic",
+            "field": "sourceUrl",
+            "amount": "799900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "BYD Dolphin Premium",
+            "field": "sourceUrl",
+            "amount": "899900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.byd.com/en-th/car/m6",
+        "http_status": 200,
+        "response_time_ms": 327,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "BYD M6 Electric",
+            "field": "sourceUrl",
+            "amount": "859900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.byd.com/en-th/car/seal",
+        "http_status": 200,
+        "response_time_ms": 283,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "BYD Seal Dynamic RWD",
+            "field": "sourceUrl",
+            "amount": "1099900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "BYD Seal Performance AWD",
+            "field": "sourceUrl",
+            "amount": "1299900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.byd.com/en-th/car/sealion7",
+        "http_status": 200,
+        "response_time_ms": 285,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "BYD Sealion 7 Advanced",
+            "field": "sourceUrl",
+            "amount": "1718020.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th",
+        "http_status": 200,
+        "response_time_ms": 1278,
+        "referenced_by": [
+          {
+            "entity": "Manufacturer",
+            "id": "76a4b60c-b0d7-4517-abb9-ee7d38324b74",
+            "name": "Honda",
+            "field": "websiteUrl"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/accordehev",
+        "http_status": 200,
+        "response_time_ms": 435,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda Accord e:HEV",
+            "field": "sourceUrl",
+            "amount": "1479000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/brv",
+        "http_status": 200,
+        "response_time_ms": 364,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda BR-V Other",
+            "field": "sourceUrl",
+            "amount": "915000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/city",
+        "http_status": 200,
+        "response_time_ms": 624,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda City e:HEV",
+            "field": "sourceUrl",
+            "amount": "569000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/cityhatchback",
+        "http_status": 200,
+        "response_time_ms": 677,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda City Hatchback e:HEV",
+            "field": "sourceUrl",
+            "amount": "579000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/civic",
+        "http_status": 200,
+        "response_time_ms": 799,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda Civic e:HEV",
+            "field": "sourceUrl",
+            "amount": "949000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/civictyper",
+        "http_status": 200,
+        "response_time_ms": 985,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda Civic Type R Turbo",
+            "field": "sourceUrl",
+            "amount": "3990000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/crv",
+        "http_status": 200,
+        "response_time_ms": 505,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda CR-V e:HEV",
+            "field": "sourceUrl",
+            "amount": "1409000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/en2",
+        "http_status": 200,
+        "response_time_ms": 787,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda e:N2 EV",
+            "field": "sourceUrl",
+            "amount": "1429000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/hrvehev",
+        "http_status": 200,
+        "response_time_ms": 754,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda HR-V e:HEV",
+            "field": "sourceUrl",
+            "amount": "949000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/super-one",
+        "http_status": 200,
+        "response_time_ms": 919,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda Super-ONE EV",
+            "field": "sourceUrl",
+            "amount": "990000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th/wrv",
+        "http_status": 200,
+        "response_time_ms": 747,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Honda WR-V Other",
+            "field": "sourceUrl",
+            "amount": "799000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th",
+        "http_status": 200,
+        "response_time_ms": 2160,
+        "referenced_by": [
+          {
+            "entity": "Manufacturer",
+            "id": "2e851714-b0c0-4c5e-a2ed-91c3a855a79b",
+            "name": "MG",
+            "field": "websiteUrl"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/all-new-mg3",
+        "http_status": 200,
+        "response_time_ms": 1978,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG MG3 HYBRID+ HYBRID+",
+            "field": "sourceUrl",
+            "amount": "579900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-cyberster",
+        "http_status": 200,
+        "response_time_ms": 1129,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG CYBERSTER EV",
+            "field": "sourceUrl",
+            "amount": "2499000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-ep-plus",
+        "http_status": 200,
+        "response_time_ms": 1790,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG EP Plus EV",
+            "field": "sourceUrl",
+            "amount": "771000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-es",
+        "http_status": 200,
+        "response_time_ms": 1072,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG ES EV",
+            "field": "sourceUrl",
+            "amount": "959000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-extender-dc",
+        "http_status": 200,
+        "response_time_ms": 1252,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG EXTENDER DC",
+            "field": "sourceUrl",
+            "amount": "769000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-hs",
+        "http_status": 200,
+        "response_time_ms": 1672,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG HS PHEV Premium",
+            "field": "sourceUrl",
+            "amount": "1299000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-im5",
+        "http_status": 200,
+        "response_time_ms": 752,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG IM5 EV",
+            "field": "sourceUrl",
+            "amount": "1549900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-im6",
+        "http_status": 200,
+        "response_time_ms": 2073,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG IM6 EV",
+            "field": "sourceUrl",
+            "amount": "1399900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-maxus7",
+        "http_status": 200,
+        "response_time_ms": 748,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG MAXUS 7 EV",
+            "field": "sourceUrl",
+            "amount": "1399000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-maxus9-my26",
+        "http_status": 200,
+        "response_time_ms": 688,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG MAXUS 9 EV",
+            "field": "sourceUrl",
+            "amount": "1849900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-s5-ev-plus",
+        "http_status": 200,
+        "response_time_ms": 1045,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG S5 EV PLUS EV PLUS",
+            "field": "sourceUrl",
+            "amount": "749900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-urban",
+        "http_status": 200,
+        "response_time_ms": 774,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG URBAN EV",
+            "field": "sourceUrl",
+            "amount": "579900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-vs-hev",
+        "http_status": 200,
+        "response_time_ms": 1079,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG VS HEV D",
+            "field": "sourceUrl",
+            "amount": "699000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-zs",
+        "http_status": 200,
+        "response_time_ms": 1088,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG ZS Standard",
+            "field": "sourceUrl",
+            "amount": "599000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-zs-ev",
+        "http_status": 200,
+        "response_time_ms": 1418,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG ZS EV Premium",
+            "field": "sourceUrl",
+            "amount": "829900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg4-my2026",
+        "http_status": 200,
+        "response_time_ms": 787,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG MG4 Standard",
+            "field": "sourceUrl",
+            "amount": "669900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg5",
+        "http_status": 200,
+        "response_time_ms": 758,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "MG MG5 Standard",
+            "field": "sourceUrl",
+            "amount": "629900.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      },
+      {
+        "url": "https://www.toyota.co.th",
+        "http_status": 200,
+        "response_time_ms": 349,
+        "referenced_by": [
+          {
+            "entity": "Manufacturer",
+            "id": "17e50169-cbb6-40a7-9a73-382b97226325",
+            "name": "Toyota",
+            "field": "websiteUrl"
+          }
+        ]
+      },
+      {
+        "url": "https://www.toyota.co.th/en/model-list",
+        "http_status": 200,
+        "response_time_ms": 197,
+        "referenced_by": [
+          {
+            "entity": "Price",
+            "name": "Toyota bZ4X EV",
+            "field": "sourceUrl",
+            "amount": "1299000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Camry HEV",
+            "field": "sourceUrl",
+            "amount": "1475000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Corolla Altis GR Sport",
+            "field": "sourceUrl",
+            "amount": "1129000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Corolla Altis HEV",
+            "field": "sourceUrl",
+            "amount": "909000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Corolla Cross HEV",
+            "field": "sourceUrl",
+            "amount": "999000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Fortuner ICE",
+            "field": "sourceUrl",
+            "amount": "1199000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Hilux ICE",
+            "field": "sourceUrl",
+            "amount": "699000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Innova Zenix HEV",
+            "field": "sourceUrl",
+            "amount": "999000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Yaris ICE",
+            "field": "sourceUrl",
+            "amount": "584000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Yaris ATIV GR Sport",
+            "field": "sourceUrl",
+            "amount": "779000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Yaris ATIV HEV",
+            "field": "sourceUrl",
+            "amount": "569000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Yaris ATIV Nightshade",
+            "field": "sourceUrl",
+            "amount": "709000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          },
+          {
+            "entity": "Price",
+            "name": "Toyota Yaris Cross HEV",
+            "field": "sourceUrl",
+            "amount": "799000.00",
+            "currency": "THB",
+            "valid_from": "2026-01-01 00:00:00"
+          }
+        ]
+      }
+    ],
+    "inaccessible": []
+  },
+  "domain_breakdown": {
+    "www.byd.com": {
+      "accessible": 7,
+      "inaccessible": 0
+    },
+    "www.honda.co.th": {
+      "accessible": 12,
+      "inaccessible": 0
+    },
+    "www.mgcars.com": {
+      "accessible": 18,
+      "inaccessible": 0
+    },
+    "www.toyota.co.th": {
+      "accessible": 2,
+      "inaccessible": 0
+    }
+  }
+}

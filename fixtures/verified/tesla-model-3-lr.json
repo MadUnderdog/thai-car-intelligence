@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.tesla.com/th_th/model3/design",
+    "title": "Tesla Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Tesla Thailand page lists Model 3 Long Range at ฿1,599,000.",
+    "contentHash": "14accf824fa6c72b8f44771b1a9a75e21b6b0fddf792a520838223736559cc87",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "เทสลา",
+        "nameEn": "Tesla",
+        "slug": "tesla"
+      },
+      "model": {
+        "nameTh": "Model 3 Long Range",
+        "nameEn": "model-3-lr",
+        "slug": "model-3-lr"
+      },
+      "variant": {
+        "nameTh": "Model 3 Long Range",
+        "nameEn": "model-3-lr",
+        "slug": "model-3-lr"
+      },
+      "prices": [
+        {
+          "amount": 1599000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.tesla.com/th_th/model3/design",
+            "title": "Tesla Thailand",
+            "evidence": "Model 3 Long Range — 1,599,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

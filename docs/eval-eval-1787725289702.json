@@ -1,0 +1,26 @@
+{
+  "runId": "eval-1787725289702",
+  "timestamp": "2026-08-26T06:21:29.702Z",
+  "application": {
+    "parser": 0.9666666666666667,
+    "retrieval": 1,
+    "fastPaths": 6
+  },
+  "provider": {
+    "success": 0.4583333333333333,
+    "timeout": 12,
+    "retry": 15,
+    "avgLatencyMs": 17194.791666666668,
+    "p95LatencyMs": 21028
+  },
+  "language": {
+    "initial": 9,
+    "repair": 1,
+    "template": 13
+  },
+  "endToEnd": {
+    "passed": 14,
+    "total": 30,
+    "providerErrors": 13
+  }
+}

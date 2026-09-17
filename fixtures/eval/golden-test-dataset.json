@@ -1,0 +1,79 @@
+{
+  "version": "1",
+  "description": "Golden test dataset for AI/RAG evaluation. Run before major RAG changes.",
+  "created": "2026-08-25",
+  "tests": [
+    {
+      "id": "price-exact",
+      "question": "Toyota Camry HEV Premium ราคาเท่าไหร่",
+      "expectedEntities": ["Toyota Camry HEV Premium"],
+      "expectedFacts": ["price is 1659000 THB"],
+      "expectedSources": ["toyota.co.th"],
+      "acceptableAnswerCriteria": "must state exact price 1,659,000 THB",
+      "category": "exact-price"
+    },
+    {
+      "id": "price-range",
+      "question": "EV ราคาไม่เกิน 800,000 มีรุ่นไหนบ้าง",
+      "expectedEntities": ["MG URBAN", "MG4", "BYD Dolphin Standard", "BYD Atto 2"],
+      "expectedFacts": ["MG URBAN 579900", "MG4 669900", "BYD Dolphin Standard 599900", "BYD Atto 2 629900"],
+      "expectedSources": ["mgcars.com", "reverautomotive.com"],
+      "acceptableAnswerCriteria": "must list multiple models under 800k, each with price",
+      "category": "budget-filter"
+    },
+    {
+      "id": "comparison",
+      "question": "MG S5 EV PLUS เทียบ BYD Atto 3 Premium ต่างกันยังไง",
+      "expectedEntities": ["MG S5 EV PLUS", "BYD Atto 3 Premium"],
+      "expectedFacts": ["S5 749900", "Atto 3 Premium 799900"],
+      "expectedSources": ["mgcars.com", "reverautomotive.com"],
+      "acceptableAnswerCriteria": "must compare both models with prices and state which is cheaper",
+      "category": "comparison"
+    },
+    {
+      "id": "cross-brand",
+      "question": "Honda Civic กับ Mazda3 ราคาต่างกันแค่ไหน",
+      "expectedEntities": ["Honda Civic", "Mazda3"],
+      "expectedFacts": ["Civic 999000", "Mazda3 999000"],
+      "expectedSources": ["honda.co.th", "mazda.co.th"],
+      "acceptableAnswerCriteria": "must state both prices and compare",
+      "category": "cross-brand"
+    },
+    {
+      "id": "cheapest",
+      "question": "รถถูกที่สุดในระบบราคาเท่าไหร่",
+      "expectedEntities": ["Suzuki Celerio"],
+      "expectedFacts": ["price 399000"],
+      "expectedSources": ["suzuki.co.th"],
+      "acceptableAnswerCriteria": "must identify cheapest vehicle with exact price",
+      "category": "aggregation"
+    },
+    {
+      "id": "brand-filter",
+      "question": "BYD มีกี่รุ่นที่ขายในไทย",
+      "expectedEntities": ["BYD"],
+      "expectedFacts": ["9 models"],
+      "expectedSources": ["reverautomotive.com"],
+      "acceptableAnswerCriteria": "must state number of BYD models",
+      "category": "counting"
+    },
+    {
+      "id": "unknown",
+      "question": "Lamborghini Aventador ราคาเท่าไหร่ในไทย",
+      "expectedEntities": [],
+      "expectedFacts": [],
+      "expectedSources": [],
+      "acceptableAnswerCriteria": "must state no data found, not fabricate an answer",
+      "category": "no-data"
+    },
+    {
+      "id": "feature-search",
+      "question": "รถ EV ที่มี fast charging มีรุ่นไหนบ้าง",
+      "expectedEntities": [],
+      "expectedFacts": [],
+      "expectedSources": [],
+      "acceptableAnswerCriteria": "should attempt search but acknowledge limited spec data if no specs available",
+      "category": "feature-filter"
+    }
+  ]
+}

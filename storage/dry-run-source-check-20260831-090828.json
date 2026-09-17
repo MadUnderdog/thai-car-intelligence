@@ -1,0 +1,1280 @@
+{
+  "run_timestamp": "2026-08-31T09:08:28.897522+07:00",
+  "run_type": "dry_run_source_check",
+  "total_urls": 32,
+  "accessible_count": 29,
+  "inaccessible_count": 3,
+  "published_data_changed": false,
+  "results": [
+    {
+      "url": "https://www.ford.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 405,
+      "final_url": "https://www.ford.co.th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html;charset=utf-8",
+      "server": "",
+      "last_modified": "Thu, 27 Aug 2026 08:20:17 GMT",
+      "etag": "W/\"7f62c-65a03019059f8-gzip\"",
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "210e4bfa-99e8-4e48-88a2-09ed5114f4f2",
+          "name": "Ford Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ford.co.th/",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 219,
+      "final_url": "https://www.ford.co.th/",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html;charset=utf-8",
+      "server": "",
+      "last_modified": "Thu, 27 Aug 2026 08:20:17 GMT",
+      "etag": "W/\"7f62c-65a03019059f8-gzip\"",
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "75e23a0c-350b-4c4e-ae25-c0561f79a52c",
+          "name": "Ford Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1023,
+      "final_url": "https://www.honda.co.th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "ec06ae44-e9cb-46f9-8bec-356b491f6bc8",
+          "name": "Honda Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th/",
+      "accessible": false,
+      "http_status": 500,
+      "response_time_ms": 331,
+      "final_url": null,
+      "redirect_chain": [],
+      "error": "HTTP 500: Internal Server Error",
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": null,
+      "server": null,
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "3f2c0437-2f8f-44bb-92c7-9850d64df626",
+          "name": "Honda Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hyundai.com",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 612,
+      "final_url": "https://www.hyundai.com/th/th",
+      "redirect_chain": [
+        "https://www.hyundai.com/th/th"
+      ],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html",
+      "server": "cloudflare",
+      "last_modified": "Fri, 28 Aug 2026 15:54:55 GMT",
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "b927798a-7279-4711-b13a-70e4fe681f82",
+          "name": "Hyundai Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hyundai.com/th/en",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 532,
+      "final_url": "https://www.hyundai.com/th/en",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html",
+      "server": "cloudflare",
+      "last_modified": "Mon, 31 Aug 2026 02:08:33 GMT",
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "1da561ff-fba8-4bfe-aa47-2c5f4a6bd722",
+          "name": "Hyundai Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.isuzu-taz.com",
+      "accessible": false,
+      "http_status": null,
+      "response_time_ms": 252,
+      "final_url": null,
+      "redirect_chain": [],
+      "error": "[Errno -2] Name or service not known",
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": null,
+      "server": null,
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "0b446d5a-eae7-4dc1-a71b-b98f5033fc55",
+          "name": "Isuzu Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.isuzu-taz.com/",
+      "accessible": false,
+      "http_status": null,
+      "response_time_ms": 8,
+      "final_url": null,
+      "redirect_chain": [],
+      "error": "[Errno -2] Name or service not known",
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": null,
+      "server": null,
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "87a03476-2755-4023-bba8-ecfde48bb3b2",
+          "name": "Isuzu Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.kia.com",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 717,
+      "final_url": "https://www.kia.com/th/th",
+      "redirect_chain": [
+        "https://www.kia.com/th/th"
+      ],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html;charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "a5fdde5a-9ca3-4fef-8bef-05f6bc6d2e92",
+          "name": "Kia Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.kia.com/th/en",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 321,
+      "final_url": "https://www.kia.com/th/en",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html;charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "06ec242e-e44d-4d63-b8ed-348e3a232f6a",
+          "name": "Kia Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mazda.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 872,
+      "final_url": "https://www.mazda.co.th/th",
+      "redirect_chain": [
+        "https://www.mazda.co.th/th"
+      ],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": "167304",
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": "\"pzrd6px1st33pt\"",
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "ce34c62e-7256-42d0-af2a-a326de31e5ee",
+          "name": "Mazda Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mazda.co.th/",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 613,
+      "final_url": "https://www.mazda.co.th/th",
+      "redirect_chain": [
+        "https://www.mazda.co.th/th"
+      ],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": "167304",
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": "\"ncweoqr4t233pt\"",
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "741c0f41-eefa-48c8-8d29-c68720fcdaea",
+          "name": "Mazda Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1619,
+      "final_url": "https://www.mgcars.com/th",
+      "redirect_chain": [
+        "https://www.mgcars.com/th"
+      ],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "9fe2b875-b0e2-4b1c-bcb7-8137355bf893",
+          "name": "MG4 MY2026 | MG Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-s5-ev-plus",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1156,
+      "final_url": "https://www.mgcars.com/th/cars/mg-s5-ev-plus",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "6926dc39-f2c9-4c6a-94fd-a57a89298198",
+          "name": "MG4 MY2026 | MG Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-urban",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 699,
+      "final_url": "https://www.mgcars.com/th/cars/mg-urban",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "2da381d9-6a7f-441e-8fa7-cfe167ba92d8",
+          "name": "MG4 MY2026 | MG Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-vs-hev",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1032,
+      "final_url": "https://www.mgcars.com/th/cars/mg-vs-hev",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "c6ae74f6-6ce0-4c05-b2fd-17029c6957f3",
+          "name": "MG4 MY2026 | MG Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg-zs-ev",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 4205,
+      "final_url": "https://www.mgcars.com/th/cars/mg-zs-ev",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "746e5a16-d101-478a-a92d-101aefaee0ff",
+          "name": "MG4 MY2026 | MG Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th/cars/mg4-my2026",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1216,
+      "final_url": "https://www.mgcars.com/th/cars/mg4-my2026",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "4e61ce50-7bd1-49cf-9562-df9c8f74748b",
+          "name": "MG4 MY2026 | MG Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mitsubishi-motors.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 772,
+      "final_url": "https://www.mitsubishi-motors.co.th/th?rd=true",
+      "redirect_chain": [
+        "https://www.mitsubishi-motors.co.th/th?rd=true"
+      ],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": "1138422",
+      "content_type": "text/html; charset=utf-8",
+      "server": "nginx/1.27.1",
+      "last_modified": null,
+      "etag": "W/\"115ef6-Zk0oDBjykN7xEjXVGN8DNXY1qqU\"",
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "110213a5-64fe-4f56-af4f-196b4dd89cff",
+          "name": "Mitsubishi Motors Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mitsubishi-motors.co.th/",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 385,
+      "final_url": "https://www.mitsubishi-motors.co.th/th?rd=true",
+      "redirect_chain": [
+        "https://www.mitsubishi-motors.co.th/th?rd=true"
+      ],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": "1138422",
+      "content_type": "text/html; charset=utf-8",
+      "server": "nginx/1.27.1",
+      "last_modified": null,
+      "etag": "W/\"115ef6-Zk0oDBjykN7xEjXVGN8DNXY1qqU\"",
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "c64092a6-1cc6-43cf-96e3-a912af7875e2",
+          "name": "Mitsubishi Motors Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nissan.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 300,
+      "final_url": "https://www.nissan.co.th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": "1381033",
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "5807176e-831a-455f-a258-a821ffb61d02",
+          "name": "Nissan Thailand Price List",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 219,
+      "final_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": "262507",
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "04fc983f-68d2-460f-8542-1ecf05ad7333",
+          "name": "Nissan Thailand Price List",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.reverautomotive.com",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 996,
+      "final_url": "https://www.reverautomotive.com",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "02ff61b4-a990-40e8-bf1d-4a36f08b4a10",
+          "name": "BYD | R\u00eaver Automotive Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.reverautomotive.com/",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1370,
+      "final_url": "https://www.reverautomotive.com/",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "82a7234e-12e6-42f9-abca-396f46b51e2e",
+          "name": "BYD | R\u00eaver Automotive Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.reverautomotive.com/model/sealion7/overview",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 416,
+      "final_url": "https://www.reverautomotive.com/model/sealion7/overview",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "0f0bf65a-5ae9-4fba-80df-2779cfa8be60",
+          "name": "BYD | R\u00eaver Automotive Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.suzuki.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 513,
+      "final_url": "https://www.suzuki.co.th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=UTF-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "fe483787-b757-4473-adcd-190e87438e1c",
+          "name": "Suzuki Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.suzuki.co.th/th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 738,
+      "final_url": "https://www.suzuki.co.th/error",
+      "redirect_chain": [
+        "https://www.suzuki.co.th/error"
+      ],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=UTF-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "6f807a8a-a5fb-4f4c-a157-c5acb946717f",
+          "name": "Suzuki Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.tesla.com",
+      "accessible": true,
+      "http_status": 403,
+      "response_time_ms": 285,
+      "final_url": null,
+      "redirect_chain": [],
+      "error": "HTTP 403: Forbidden",
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": null,
+      "server": null,
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "4ea8d436-8232-4bd9-8bca-06b7cf055e1e",
+          "name": "Tesla Thailand",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.tesla.com/th_th/model3/design",
+      "accessible": true,
+      "http_status": 403,
+      "response_time_ms": 264,
+      "final_url": null,
+      "redirect_chain": [],
+      "error": "HTTP 403: Forbidden",
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": null,
+      "server": null,
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "137b4fbd-1786-40ef-9bee-3afe911f88ee",
+          "name": "Tesla Thailand",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 253,
+      "final_url": "https://www.toyota.co.th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Source",
+          "id": "5113ca9d-2b54-451b-90ad-e1203dcdacda",
+          "name": "Toyota Thailand Price List",
+          "field": "baseUrl",
+          "source_type": "OFFICIAL_MANUFACTURER"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/model/camry",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 523,
+      "final_url": "https://www.toyota.co.th/model/camry",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html;charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "a0222c93-aea6-4500-9d84-f2e68442498a",
+          "name": "Toyota Thailand Price List",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/pricelist",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 193,
+      "final_url": "https://www.toyota.co.th/pricelist",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "SourceDocument",
+          "id": "67534edf-9075-465c-a2e1-6b3072b82c8f",
+          "name": "Toyota Thailand Price List",
+          "field": "url",
+          "doc_status": "VERIFIED"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "accessible": [
+      {
+        "url": "https://www.ford.co.th",
+        "http_status": 200,
+        "response_time_ms": 405,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "210e4bfa-99e8-4e48-88a2-09ed5114f4f2",
+            "name": "Ford Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.ford.co.th/",
+        "http_status": 200,
+        "response_time_ms": 219,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "75e23a0c-350b-4c4e-ae25-c0561f79a52c",
+            "name": "Ford Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th",
+        "http_status": 200,
+        "response_time_ms": 1023,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "ec06ae44-e9cb-46f9-8bec-356b491f6bc8",
+            "name": "Honda Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.hyundai.com",
+        "http_status": 200,
+        "response_time_ms": 612,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "b927798a-7279-4711-b13a-70e4fe681f82",
+            "name": "Hyundai Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.hyundai.com/th/en",
+        "http_status": 200,
+        "response_time_ms": 532,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "1da561ff-fba8-4bfe-aa47-2c5f4a6bd722",
+            "name": "Hyundai Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.kia.com",
+        "http_status": 200,
+        "response_time_ms": 717,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "a5fdde5a-9ca3-4fef-8bef-05f6bc6d2e92",
+            "name": "Kia Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.kia.com/th/en",
+        "http_status": 200,
+        "response_time_ms": 321,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "06ec242e-e44d-4d63-b8ed-348e3a232f6a",
+            "name": "Kia Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mazda.co.th",
+        "http_status": 200,
+        "response_time_ms": 872,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "ce34c62e-7256-42d0-af2a-a326de31e5ee",
+            "name": "Mazda Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mazda.co.th/",
+        "http_status": 200,
+        "response_time_ms": 613,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "741c0f41-eefa-48c8-8d29-c68720fcdaea",
+            "name": "Mazda Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com",
+        "http_status": 200,
+        "response_time_ms": 1619,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "9fe2b875-b0e2-4b1c-bcb7-8137355bf893",
+            "name": "MG4 MY2026 | MG Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-s5-ev-plus",
+        "http_status": 200,
+        "response_time_ms": 1156,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "6926dc39-f2c9-4c6a-94fd-a57a89298198",
+            "name": "MG4 MY2026 | MG Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-urban",
+        "http_status": 200,
+        "response_time_ms": 699,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "2da381d9-6a7f-441e-8fa7-cfe167ba92d8",
+            "name": "MG4 MY2026 | MG Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-vs-hev",
+        "http_status": 200,
+        "response_time_ms": 1032,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "c6ae74f6-6ce0-4c05-b2fd-17029c6957f3",
+            "name": "MG4 MY2026 | MG Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg-zs-ev",
+        "http_status": 200,
+        "response_time_ms": 4205,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "746e5a16-d101-478a-a92d-101aefaee0ff",
+            "name": "MG4 MY2026 | MG Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th/cars/mg4-my2026",
+        "http_status": 200,
+        "response_time_ms": 1216,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "4e61ce50-7bd1-49cf-9562-df9c8f74748b",
+            "name": "MG4 MY2026 | MG Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mitsubishi-motors.co.th",
+        "http_status": 200,
+        "response_time_ms": 772,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "110213a5-64fe-4f56-af4f-196b4dd89cff",
+            "name": "Mitsubishi Motors Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mitsubishi-motors.co.th/",
+        "http_status": 200,
+        "response_time_ms": 385,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "c64092a6-1cc6-43cf-96e3-a912af7875e2",
+            "name": "Mitsubishi Motors Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.nissan.co.th",
+        "http_status": 200,
+        "response_time_ms": 300,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "5807176e-831a-455f-a258-a821ffb61d02",
+            "name": "Nissan Thailand Price List",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+        "http_status": 200,
+        "response_time_ms": 219,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "04fc983f-68d2-460f-8542-1ecf05ad7333",
+            "name": "Nissan Thailand Price List",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.reverautomotive.com",
+        "http_status": 200,
+        "response_time_ms": 996,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "02ff61b4-a990-40e8-bf1d-4a36f08b4a10",
+            "name": "BYD | R\u00eaver Automotive Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.reverautomotive.com/",
+        "http_status": 200,
+        "response_time_ms": 1370,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "82a7234e-12e6-42f9-abca-396f46b51e2e",
+            "name": "BYD | R\u00eaver Automotive Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.reverautomotive.com/model/sealion7/overview",
+        "http_status": 200,
+        "response_time_ms": 416,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "0f0bf65a-5ae9-4fba-80df-2779cfa8be60",
+            "name": "BYD | R\u00eaver Automotive Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.suzuki.co.th",
+        "http_status": 200,
+        "response_time_ms": 513,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "fe483787-b757-4473-adcd-190e87438e1c",
+            "name": "Suzuki Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.suzuki.co.th/th",
+        "http_status": 200,
+        "response_time_ms": 738,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "6f807a8a-a5fb-4f4c-a157-c5acb946717f",
+            "name": "Suzuki Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.tesla.com",
+        "http_status": 403,
+        "response_time_ms": 285,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "4ea8d436-8232-4bd9-8bca-06b7cf055e1e",
+            "name": "Tesla Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.tesla.com/th_th/model3/design",
+        "http_status": 403,
+        "response_time_ms": 264,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "137b4fbd-1786-40ef-9bee-3afe911f88ee",
+            "name": "Tesla Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.toyota.co.th",
+        "http_status": 200,
+        "response_time_ms": 253,
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "5113ca9d-2b54-451b-90ad-e1203dcdacda",
+            "name": "Toyota Thailand Price List",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.toyota.co.th/model/camry",
+        "http_status": 200,
+        "response_time_ms": 523,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "a0222c93-aea6-4500-9d84-f2e68442498a",
+            "name": "Toyota Thailand Price List",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.toyota.co.th/pricelist",
+        "http_status": 200,
+        "response_time_ms": 193,
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "67534edf-9075-465c-a2e1-6b3072b82c8f",
+            "name": "Toyota Thailand Price List",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      }
+    ],
+    "inaccessible": [
+      {
+        "url": "https://www.honda.co.th/",
+        "http_status": 500,
+        "error": "HTTP 500: Internal Server Error",
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "3f2c0437-2f8f-44bb-92c7-9850d64df626",
+            "name": "Honda Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      },
+      {
+        "url": "https://www.isuzu-taz.com",
+        "http_status": null,
+        "error": "[Errno -2] Name or service not known",
+        "referenced_by": [
+          {
+            "entity": "Source",
+            "id": "0b446d5a-eae7-4dc1-a71b-b98f5033fc55",
+            "name": "Isuzu Thailand",
+            "field": "baseUrl",
+            "source_type": "OFFICIAL_MANUFACTURER"
+          }
+        ]
+      },
+      {
+        "url": "https://www.isuzu-taz.com/",
+        "http_status": null,
+        "error": "[Errno -2] Name or service not known",
+        "referenced_by": [
+          {
+            "entity": "SourceDocument",
+            "id": "87a03476-2755-4023-bba8-ecfde48bb3b2",
+            "name": "Isuzu Thailand",
+            "field": "url",
+            "doc_status": "VERIFIED"
+          }
+        ]
+      }
+    ]
+  }
+}

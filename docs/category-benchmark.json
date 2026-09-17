@@ -1,0 +1,530 @@
+[
+  {
+    "category": "SIMPLE_FACTUAL",
+    "model": "mimo-v2.5",
+    "total": 5,
+    "success": 5,
+    "successRate": "100",
+    "thai": 4,
+    "thaiRate": "80",
+    "correct": 3,
+    "correctRate": "60",
+    "avgLatency": 3964,
+    "p50": 4048,
+    "p95": 5518,
+    "details": [
+      {
+        "q": "Camry HEV Premium ราคาเท่าไหร่",
+        "success": true,
+        "thai": false,
+        "correct": true,
+        "latencyMs": 2269,
+        "answer": "Camry HEV Premium ราคา 1,659,000 THB"
+      },
+      {
+        "q": "BYD Dolphin มีกำลังกี่ kW",
+        "success": true,
+        "thai": true,
+        "correct": false,
+        "latencyMs": 5189,
+        "answer": "จากหลักฐานที่ให้มา ไม่มีข้อมูลเกี่ยวกับกำลัง (kW) ของ BYD Dolphin โดยหลักฐานระบุเพียงข้อมูลราคาเท่านั้น ได้แก่ BYD Dolphin 599,900 THB\n\nดังนั้น หลักฐา"
+      },
+      {
+        "q": "MG S5 EV PLUS มีแรงบิดเท่าไหร่",
+        "success": true,
+        "thai": true,
+        "correct": false,
+        "latencyMs": 2794,
+        "answer": "จากหลักฐานที่ให้มา มีเพียงข้อมูลราคาของ MG S5 EV PLUS ที่ 749,900 บาท เท่านั้น ไม่มีข้อมูลเกี่ยวกับ**แรงบิด (torque)** ของ MG S5 EV PLUS แต่อย่างใด\n\nด"
+      },
+      {
+        "q": "Tesla Model 3 มี battery capacity เท่าไหร่",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 4048,
+        "answer": "จากหลักฐานที่ให้มา ไม่มีข้อมูลเกี่ยวกับ Tesla Model 3 หรือ battery capacity ของ Tesla Model 3 แต่อย่างใด หลักฐานที่มีระบุเพียงราคาของ Camry HEV Premiu"
+      },
+      {
+        "q": "Ford Everest ราคาเท่าไหร่",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 5518,
+        "answer": "ไม่มีข้อมูลเกี่ยวกับราคา Ford Everest อยู่ในหลักฐานที่ให้มา หลักฐานมีเพียงราคาของ Camry HEV Premium, BYD ATTO 3, MG S5 EV PLUS และ BYD Dolphin เท่านั้"
+      }
+    ]
+  },
+  {
+    "category": "COMPARISON",
+    "model": "mimo-v2.5",
+    "total": 3,
+    "success": 3,
+    "successRate": "100",
+    "thai": 1,
+    "thaiRate": "33",
+    "correct": 3,
+    "correctRate": "100",
+    "avgLatency": 6492,
+    "p50": 4659,
+    "p95": 10255,
+    "details": [
+      {
+        "q": "BYD ATTO 3 เทียบ MG S5 EV PLUS เรื่องราคา",
+        "success": true,
+        "thai": false,
+        "correct": true,
+        "latencyMs": 4659,
+        "answer": "## เปรียบเทียบราคา BYD ATTO 3 กับ MG S5 EV PLUS\n\nจากข้อมูลหลักฐาน:\n\n| รุ่น | ราคา |\n|------|------|\n| **BYD ATTO 3** | 799,900 THB |\n| **MG S5 EV PLUS"
+      },
+      {
+        "q": "Camry เทียบ Accord เรื่องราคา",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 4562,
+        "answer": "## คำตอบ\n\nจากหลักฐานที่ให้มา มีข้อมูลราคาเฉพาะ **Toyota Camry HEV Premium** ที่ **1,659,000 บาท** เท่านั้น\n\n**ไม่มีข้อมูลราคา Honda Accord** ในหลักฐาน"
+      },
+      {
+        "q": "EV vs HEV ต่างกันยังไง",
+        "success": true,
+        "thai": false,
+        "correct": true,
+        "latencyMs": 10255,
+        "answer": "Based solely on the provided evidence, I cannot explain the technical differences between EV (Electric Vehicle) and HEV (Hybrid Electric Vehicle).\n\nTh"
+      }
+    ]
+  },
+  {
+    "category": "COMPLEX_REASONING",
+    "model": "mimo-v2.5",
+    "total": 3,
+    "success": 2,
+    "successRate": "67",
+    "thai": 2,
+    "thaiRate": "100",
+    "correct": 2,
+    "correctRate": "100",
+    "avgLatency": 11731,
+    "p50": 14708,
+    "p95": 15004,
+    "details": [
+      {
+        "q": "งบ 1 ล้าน ซื้อ EV รุ่นไหนดี",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 15004,
+        "answer": ""
+      },
+      {
+        "q": "ครอบครัว 4 คน ควรเลือก SUV หรือ MPV",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 5481,
+        "answer": "จากหลักฐานที่ให้มา ไม่สามารถตอบคำถามนี้ได้ เนื่องจากหลักฐานที่มีเป็นเพียงรายการราคาของรถยนต์ 4 รุ่น (Camry HEV Premium, BYD ATTO 3, MG S5 EV PLUS, BYD"
+      },
+      {
+        "q": "รถ Eco Car คุ้มค่าไหมสำหรับใช้ในเมือง",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 14708,
+        "answer": "## คำตอบ\n\nจากหลักฐานที่ให้มา **มีข้อมูลไม่เพียงพอ** ที่จะตอบคำถามได้ครับ\n\nหลักฐานที่ระบุมาแสดงเพียง **รายชื่อรถยนต์และราคา** เท่านั้น ได้แก่:\n\n| รุ่นร"
+      }
+    ]
+  },
+  {
+    "category": "ADVISORY",
+    "model": "mimo-v2.5",
+    "total": 3,
+    "success": 3,
+    "successRate": "100",
+    "thai": 2,
+    "thaiRate": "67",
+    "correct": 3,
+    "correctRate": "100",
+    "avgLatency": 8084,
+    "p50": 6938,
+    "p95": 12108,
+    "details": [
+      {
+        "q": "แนะนำรถ EV สำหรับวิ่งในกรุงเทพ",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 6938,
+        "answer": "# แนะนำรถ EV สำหรับวิ่งในกรุงเทพ\n\nจากหลักฐานที่มี แนะนำรถ EV ดังนี้:\n\n| รุ่นรถ | ราคา (บาท) |\n|---|---|\n| **BYD Dolphin** | 599,900 |\n| **MG S5 EV PLU"
+      },
+      {
+        "q": "ควรซื้อรถใหม่หรือรถมือสอง",
+        "success": true,
+        "thai": false,
+        "correct": true,
+        "latencyMs": 12108,
+        "answer": "Based solely on the evidence provided, it is not possible to recommend whether to buy a new or a used car. The evidence only lists prices for a select"
+      },
+      {
+        "q": "เลือกประกันชั้น 1 หรือ 2 ดี",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 5206,
+        "answer": "ไม่มีหลักฐานเพียงพอที่จะตอบคำถาม เนื่องจากข้อมูลที่ให้มาเป็นเพียงรายการราคาของรถยนต์ไฟฟ้าหลายรุ่น แต่ไม่มีข้อมูลเกี่ยวกับประกันภัยรถยนต์ชั้น 1 หรือชั้"
+      }
+    ]
+  },
+  {
+    "category": "SIMPLE_FACTUAL",
+    "model": "deepseek-v4-flash",
+    "total": 5,
+    "success": 5,
+    "successRate": "100",
+    "thai": 4,
+    "thaiRate": "80",
+    "correct": 3,
+    "correctRate": "60",
+    "avgLatency": 2659,
+    "p50": 1880,
+    "p95": 6937,
+    "details": [
+      {
+        "q": "Camry HEV Premium ราคาเท่าไหร่",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 1241,
+        "answer": "จากหลักฐานที่ให้มา ระบุว่า Camry HEV Premium ราคา 1,659,000 บาท"
+      },
+      {
+        "q": "BYD Dolphin มีกำลังกี่ kW",
+        "success": true,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 1880,
+        "answer": "Based on the supplied evidence, there is no information about the power (kW) of the BYD Dolphin. The evidence only mentions its price (599,900 THB)."
+      },
+      {
+        "q": "MG S5 EV PLUS มีแรงบิดเท่าไหร่",
+        "success": true,
+        "thai": true,
+        "correct": false,
+        "latencyMs": 6937,
+        "answer": "จากหลักฐานที่มีให้ ไม่ได้ระบุข้อมูลแรงบิดของ MG S5 EV PLUS ไว้แต่อย่างใด มีเพียงราคาขาย คือ 749,900 บาท เท่านั้น ดังนั้นจึงไม่สามารถตอบคำถามนี้ได้จากห"
+      },
+      {
+        "q": "Tesla Model 3 มี battery capacity เท่าไหร่",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 1989,
+        "answer": "จากหลักฐานที่มีให้ ไม่มีข้อมูลเกี่ยวกับ Tesla Model 3 หรือ battery capacity ของรถรุ่นนี้ หลักฐานระบุเพียงราคาของรถยนต์รุ่นอื่น ๆ เช่น Camry HEV, BYD A"
+      },
+      {
+        "q": "Ford Everest ราคาเท่าไหร่",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 1249,
+        "answer": "จากหลักฐานที่ให้มา ไม่มีข้อมูลเกี่ยวกับราคาของ Ford Everest ครับ หากต้องการทราบราคาที่แน่นอน ควรสอบถามจากแหล่งข้อมูลอื่นที่เกี่ยวข้องโดยตรง"
+      }
+    ]
+  },
+  {
+    "category": "COMPARISON",
+    "model": "deepseek-v4-flash",
+    "total": 3,
+    "success": 3,
+    "successRate": "100",
+    "thai": 2,
+    "thaiRate": "67",
+    "correct": 3,
+    "correctRate": "100",
+    "avgLatency": 1704,
+    "p50": 1859,
+    "p95": 2216,
+    "details": [
+      {
+        "q": "BYD ATTO 3 เทียบ MG S5 EV PLUS เรื่องราคา",
+        "success": true,
+        "thai": false,
+        "correct": true,
+        "latencyMs": 1038,
+        "answer": "Based on the supplied evidence, the BYD ATTO 3 costs 799,900 THB and the MG S5 EV PLUS costs 749,900 THB. Therefore, the BYD ATTO 3 is 50,000 THB more"
+      },
+      {
+        "q": "Camry เทียบ Accord เรื่องราคา",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 1859,
+        "answer": "จากหลักฐานที่ให้มา มีข้อมูลราคาของ Camry HEV Premium เท่ากับ 1,659,000 บาท แต่ไม่มีข้อมูลราคาของ Accord อยู่ในหลักฐานที่ให้มา จึงไม่สามารถเปรียบเทียบร"
+      },
+      {
+        "q": "EV vs HEV ต่างกันยังไง",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 2216,
+        "answer": "จากหลักฐานที่ให้มา ไม่มีข้อมูลที่อธิบายความแตกต่างระหว่างรถยนต์ไฟฟ้าแบบ HEV (Hybrid Electric Vehicle) และ EV (Electric Vehicle) ได้โดยตรง หลักฐานระบุเ"
+      }
+    ]
+  },
+  {
+    "category": "COMPLEX_REASONING",
+    "model": "deepseek-v4-flash",
+    "total": 3,
+    "success": 3,
+    "successRate": "100",
+    "thai": 3,
+    "thaiRate": "100",
+    "correct": 3,
+    "correctRate": "100",
+    "avgLatency": 3791,
+    "p50": 2308,
+    "p95": 7369,
+    "details": [
+      {
+        "q": "งบ 1 ล้าน ซื้อ EV รุ่นไหนดี",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 2308,
+        "answer": "จากหลักฐานที่ให้มา ไม่มีข้อมูลเพียงพอที่จะแนะนำว่า \"งบ 1 ล้านบาท ควรซื้อรถ EV รุ่นไหนดี\" เพราะหลักฐานระบุราคาของรถแต่ละรุ่นดังนี้:\n\n- BYD ATTO 3 ราคา "
+      },
+      {
+        "q": "ครอบครัว 4 คน ควรเลือก SUV หรือ MPV",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 1695,
+        "answer": "จากหลักฐานที่ให้มา ไม่มีข้อมูลใดที่กล่าวถึงการเปรียบเทียบระหว่าง SUV และ MPV สำหรับครอบครัวขนาด 4 คน หรือข้อดีข้อเสียของรถประเภทนั้น ๆ หลักฐานมีเพียงร"
+      },
+      {
+        "q": "รถ Eco Car คุ้มค่าไหมสำหรับใช้ในเมือง",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 7369,
+        "answer": "จากหลักฐานที่ให้มา ไม่มีข้อมูลเกี่ยวกับ \"รถ Eco Car\" หรือการประเมินความคุ้มค่าในการใช้งานในเมืองแต่อย่างใด หลักฐานมีเพียงรายชื่อรถยนต์และราคาเท่านั้น "
+      }
+    ]
+  },
+  {
+    "category": "ADVISORY",
+    "model": "deepseek-v4-flash",
+    "total": 3,
+    "success": 3,
+    "successRate": "100",
+    "thai": 3,
+    "thaiRate": "100",
+    "correct": 3,
+    "correctRate": "100",
+    "avgLatency": 2186,
+    "p50": 1731,
+    "p95": 3632,
+    "details": [
+      {
+        "q": "แนะนำรถ EV สำหรับวิ่งในกรุงเทพ",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 3632,
+        "answer": "จากหลักฐานที่ให้มา มีข้อมูลราคารถยนต์ไฟฟ้า (EV) และไฮบริดในกรุงเทพฯ แต่ไม่มีข้อมูลเกี่ยวกับความเหมาะสมกับการวิ่งในเมืองกรุงเทพฯ โดยเฉพาะ เช่น สภาพการจ"
+      },
+      {
+        "q": "ควรซื้อรถใหม่หรือรถมือสอง",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 1731,
+        "answer": "จากหลักฐานที่ให้มา มีเพียงรายการราคารถยนต์รุ่นต่างๆ เช่น Camry HEV Premium 1,659,000 บาท, BYD ATTO 3 799,900 บาท, MG S5 EV PLUS 749,900 บาท และ BYD Do"
+      },
+      {
+        "q": "เลือกประกันชั้น 1 หรือ 2 ดี",
+        "success": true,
+        "thai": true,
+        "correct": true,
+        "latencyMs": 1194,
+        "answer": "ไม่สามารถตอบได้จากหลักฐานที่ให้มา เนื่องจากหลักฐานระบุเพียงราคารถยนต์บางรุ่น (เช่น Camry HEV Premium, BYD ATTO 3, MG S5 EV PLUS, BYD Dolphin) แต่ไม่มี"
+      }
+    ]
+  },
+  {
+    "category": "SIMPLE_FACTUAL",
+    "model": "gpt-5.6-luna",
+    "total": 5,
+    "success": 0,
+    "successRate": "0",
+    "thai": 0,
+    "thaiRate": "0",
+    "correct": 0,
+    "correctRate": "0",
+    "avgLatency": 407,
+    "p50": 328,
+    "p95": 734,
+    "details": [
+      {
+        "q": "Camry HEV Premium ราคาเท่าไหร่",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 309,
+        "answer": ""
+      },
+      {
+        "q": "BYD Dolphin มีกำลังกี่ kW",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 734,
+        "answer": ""
+      },
+      {
+        "q": "MG S5 EV PLUS มีแรงบิดเท่าไหร่",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 360,
+        "answer": ""
+      },
+      {
+        "q": "Tesla Model 3 มี battery capacity เท่าไหร่",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 304,
+        "answer": ""
+      },
+      {
+        "q": "Ford Everest ราคาเท่าไหร่",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 328,
+        "answer": ""
+      }
+    ]
+  },
+  {
+    "category": "COMPARISON",
+    "model": "gpt-5.6-luna",
+    "total": 3,
+    "success": 0,
+    "successRate": "0",
+    "thai": 0,
+    "thaiRate": "0",
+    "correct": 0,
+    "correctRate": "0",
+    "avgLatency": 315,
+    "p50": 315,
+    "p95": 328,
+    "details": [
+      {
+        "q": "BYD ATTO 3 เทียบ MG S5 EV PLUS เรื่องราคา",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 315,
+        "answer": ""
+      },
+      {
+        "q": "Camry เทียบ Accord เรื่องราคา",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 328,
+        "answer": ""
+      },
+      {
+        "q": "EV vs HEV ต่างกันยังไง",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 302,
+        "answer": ""
+      }
+    ]
+  },
+  {
+    "category": "COMPLEX_REASONING",
+    "model": "gpt-5.6-luna",
+    "total": 3,
+    "success": 0,
+    "successRate": "0",
+    "thai": 0,
+    "thaiRate": "0",
+    "correct": 0,
+    "correctRate": "0",
+    "avgLatency": 334,
+    "p50": 324,
+    "p95": 356,
+    "details": [
+      {
+        "q": "งบ 1 ล้าน ซื้อ EV รุ่นไหนดี",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 323,
+        "answer": ""
+      },
+      {
+        "q": "ครอบครัว 4 คน ควรเลือก SUV หรือ MPV",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 324,
+        "answer": ""
+      },
+      {
+        "q": "รถ Eco Car คุ้มค่าไหมสำหรับใช้ในเมือง",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 356,
+        "answer": ""
+      }
+    ]
+  },
+  {
+    "category": "ADVISORY",
+    "model": "gpt-5.6-luna",
+    "total": 3,
+    "success": 0,
+    "successRate": "0",
+    "thai": 0,
+    "thaiRate": "0",
+    "correct": 0,
+    "correctRate": "0",
+    "avgLatency": 353,
+    "p50": 352,
+    "p95": 357,
+    "details": [
+      {
+        "q": "แนะนำรถ EV สำหรับวิ่งในกรุงเทพ",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 352,
+        "answer": ""
+      },
+      {
+        "q": "ควรซื้อรถใหม่หรือรถมือสอง",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 351,
+        "answer": ""
+      },
+      {
+        "q": "เลือกประกันชั้น 1 หรือ 2 ดี",
+        "success": false,
+        "thai": false,
+        "correct": false,
+        "latencyMs": 357,
+        "answer": ""
+      }
+    ]
+  }
+]

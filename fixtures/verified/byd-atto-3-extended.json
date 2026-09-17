@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.reverautomotive.com/",
+    "title": "BYD | Rêver Automotive Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official BYD Thailand page lists ATTO 3 Extended at ฿849,900.",
+    "contentHash": "20270c4c91cb5ba62fcb7a1447a6fcbccc277a7512f2b590173b59525d18ce5f",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "บีวายดี",
+        "nameEn": "BYD",
+        "slug": "byd"
+      },
+      "model": {
+        "nameTh": "ATTO 3 Extended",
+        "nameEn": "atto-3-extended",
+        "slug": "atto-3-extended"
+      },
+      "variant": {
+        "nameTh": "ATTO 3 Extended",
+        "nameEn": "atto-3-extended",
+        "slug": "atto-3-extended"
+      },
+      "prices": [
+        {
+          "amount": 849900,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.reverautomotive.com/",
+            "title": "BYD | Rêver Automotive Thailand",
+            "evidence": "ATTO 3 Extended — 849,900 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

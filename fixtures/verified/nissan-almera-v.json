@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+    "title": "Nissan Thailand Price List",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Nissan Thailand page lists Almera V at ฿669,000.",
+    "contentHash": "c709922da3cd9283ce98bf9a6a7006b8e60fb6f58e6db879cf0cbfdd68519576",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "นิสสัน",
+        "nameEn": "Nissan",
+        "slug": "nissan"
+      },
+      "model": {
+        "nameTh": "Almera V",
+        "nameEn": "almera-v",
+        "slug": "almera-v"
+      },
+      "variant": {
+        "nameTh": "Almera V",
+        "nameEn": "almera-v",
+        "slug": "almera-v"
+      },
+      "prices": [
+        {
+          "amount": 669000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+            "title": "Nissan Thailand Price List",
+            "evidence": "Almera V — 669,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

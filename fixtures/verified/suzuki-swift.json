@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.suzuki.co.th/th",
+    "title": "Suzuki Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Suzuki Thailand page lists Swift at ฿529,000.",
+    "contentHash": "a22fbaca2d780d35ea03e78ac824d2a7c16af44b67e8a924a7bf7a2375213b28",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "ซูซูกิ",
+        "nameEn": "Suzuki",
+        "slug": "suzuki"
+      },
+      "model": {
+        "nameTh": "Swift",
+        "nameEn": "swift",
+        "slug": "swift"
+      },
+      "variant": {
+        "nameTh": "Swift",
+        "nameEn": "swift",
+        "slug": "swift"
+      },
+      "prices": [
+        {
+          "amount": 529000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.suzuki.co.th/th",
+            "title": "Suzuki Thailand",
+            "evidence": "Swift — 529,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "run_timestamp": "2026-09-07T09:02:01.692502+07:00",
+  "run_type": "dry_run_source_check",
+  "total_urls": 4,
+  "accessible_count": 4,
+  "inaccessible_count": 0,
+  "published_data_changed": false,
+  "results": [
+    {
+      "url": "https://www.byd.com/en-th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 514,
+      "final_url": "https://www.byd.com/en-th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "Tengine",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Manufacturer",
+          "id": "edd58c14-d177-4cc8-aa3c-32e0a450796d",
+          "name": "BYD",
+          "field": "websiteUrl"
+        }
+      ]
+    },
+    {
+      "url": "https://www.honda.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 779,
+      "final_url": "https://www.honda.co.th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Manufacturer",
+          "id": "76a4b60c-b0d7-4517-abb9-ee7d38324b74",
+          "name": "Honda",
+          "field": "websiteUrl"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mgcars.com/th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 1535,
+      "final_url": "https://www.mgcars.com/th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Manufacturer",
+          "id": "2e851714-b0c0-4c5e-a2ed-91c3a855a79b",
+          "name": "MG",
+          "field": "websiteUrl"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th",
+      "accessible": true,
+      "http_status": 200,
+      "response_time_ms": 303,
+      "final_url": "https://www.toyota.co.th",
+      "redirect_chain": [],
+      "error": null,
+      "ssl_error": false,
+      "timeout": false,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "server": "cloudflare",
+      "last_modified": null,
+      "etag": null,
+      "referenced_by": [
+        {
+          "entity": "Manufacturer",
+          "id": "17e50169-cbb6-40a7-9a73-382b97226325",
+          "name": "Toyota",
+          "field": "websiteUrl"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "accessible": [
+      {
+        "url": "https://www.byd.com/en-th",
+        "http_status": 200,
+        "response_time_ms": 514,
+        "referenced_by": [
+          {
+            "entity": "Manufacturer",
+            "id": "edd58c14-d177-4cc8-aa3c-32e0a450796d",
+            "name": "BYD",
+            "field": "websiteUrl"
+          }
+        ]
+      },
+      {
+        "url": "https://www.honda.co.th",
+        "http_status": 200,
+        "response_time_ms": 779,
+        "referenced_by": [
+          {
+            "entity": "Manufacturer",
+            "id": "76a4b60c-b0d7-4517-abb9-ee7d38324b74",
+            "name": "Honda",
+            "field": "websiteUrl"
+          }
+        ]
+      },
+      {
+        "url": "https://www.mgcars.com/th",
+        "http_status": 200,
+        "response_time_ms": 1535,
+        "referenced_by": [
+          {
+            "entity": "Manufacturer",
+            "id": "2e851714-b0c0-4c5e-a2ed-91c3a855a79b",
+            "name": "MG",
+            "field": "websiteUrl"
+          }
+        ]
+      },
+      {
+        "url": "https://www.toyota.co.th",
+        "http_status": 200,
+        "response_time_ms": 303,
+        "referenced_by": [
+          {
+            "entity": "Manufacturer",
+            "id": "17e50169-cbb6-40a7-9a73-382b97226325",
+            "name": "Toyota",
+            "field": "websiteUrl"
+          }
+        ]
+      }
+    ],
+    "inaccessible": []
+  }
+}

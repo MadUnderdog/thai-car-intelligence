@@ -1,0 +1,55 @@
+{
+  "models": {
+    "simple": "mimo-v2.5",
+    "fastFallback": "deepseek-v4-flash",
+    "complex": "gpt-5.6-luna"
+  },
+  "results": [
+    {
+      "name": "mimo-v2.5",
+      "total": 25,
+      "success": 22,
+      "successRate": "88",
+      "thai": 20,
+      "thaiRate": "91",
+      "avgLatency": 8021,
+      "p50": 7238,
+      "p95": 15001
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "total": 25,
+      "success": 25,
+      "successRate": "100",
+      "thai": 22,
+      "thaiRate": "88",
+      "avgLatency": 1690,
+      "p50": 1397,
+      "p95": 2962
+    },
+    {
+      "name": "gpt-5.6-luna",
+      "total": 25,
+      "success": 0,
+      "successRate": "0",
+      "thai": 0,
+      "thaiRate": "0",
+      "avgLatency": 375,
+      "p50": 334,
+      "p95": 565
+    }
+  ],
+  "router": {
+    "success": 23,
+    "total": 25,
+    "health": {
+      "primary": {
+        "score": 0.7567724137931034,
+        "state": "CLOSED",
+        "successes": 23,
+        "failures": 6,
+        "avgLatency": 6560
+      }
+    }
+  }
+}

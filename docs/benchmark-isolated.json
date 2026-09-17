@@ -1,0 +1,308 @@
+{
+  "mimo": {
+    "name": "mimo",
+    "total": 25,
+    "success": 15,
+    "successRate": "60",
+    "thai": 13,
+    "thaiRate": "87",
+    "avgLatency": 7779,
+    "p50": 9069,
+    "p95": 15001
+  },
+  "gpt": {
+    "name": "gpt",
+    "total": 25,
+    "success": 0,
+    "successRate": "0",
+    "thai": 0,
+    "thaiRate": "0",
+    "avgLatency": 949,
+    "p50": 503,
+    "p95": 1685
+  },
+  "router": {
+    "name": "router",
+    "total": 25,
+    "success": 0,
+    "successRate": "0",
+    "thai": 25,
+    "thaiRate": "0",
+    "avgLatency": 950,
+    "p50": 0,
+    "p95": 3516,
+    "selections": {
+      "mimo": 0,
+      "gpt": 0,
+      "template": 25
+    },
+    "health": {
+      "primary": {
+        "score": 0.22499999999999998,
+        "state": "OPEN",
+        "successes": 0,
+        "failures": 6,
+        "avgLatency": 0
+      },
+      "fallback": {
+        "score": 0.22499999999999998,
+        "state": "OPEN",
+        "successes": 0,
+        "failures": 5,
+        "avgLatency": 0
+      }
+    },
+    "details": [
+      {
+        "id": "p01",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 14709,
+        "reason": "all_providers_failed"
+      },
+      {
+        "id": "p02",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 3516,
+        "reason": "all_providers_failed"
+      },
+      {
+        "id": "p03",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 3512,
+        "reason": "all_providers_failed"
+      },
+      {
+        "id": "f01",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 2004,
+        "reason": "all_providers_failed"
+      },
+      {
+        "id": "f02",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 1,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "f03",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "f04",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "c01",
+        "route": "COMPARISON",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "c02",
+        "route": "COMPARISON",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "me02",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "s01",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "s02",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "a01",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "a02",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "m01",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "m02",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "pr01",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "al01",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "al02",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "al03",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "al04",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "mc01",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "fc01",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "fc02",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      },
+      {
+        "id": "sc01",
+        "route": "SIMPLE_FACTUAL",
+        "provider": "template",
+        "circuitState": "CLOSED",
+        "success": false,
+        "thai": true,
+        "latencyMs": 0,
+        "reason": "all_circuits_open"
+      }
+    ]
+  }
+}

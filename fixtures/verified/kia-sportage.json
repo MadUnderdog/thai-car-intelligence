@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.kia.com/th/en",
+    "title": "Kia Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Kia Thailand page lists Sportage at ฿1,299,000.",
+    "contentHash": "ffa55ceb28b41ec1f34444ce8a36bf5f254f41180d4a87144ca533331e649beb",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "เกีย",
+        "nameEn": "Kia",
+        "slug": "kia"
+      },
+      "model": {
+        "nameTh": "Sportage",
+        "nameEn": "sportage",
+        "slug": "sportage"
+      },
+      "variant": {
+        "nameTh": "Sportage",
+        "nameEn": "sportage",
+        "slug": "sportage"
+      },
+      "prices": [
+        {
+          "amount": 1299000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.kia.com/th/en",
+            "title": "Kia Thailand",
+            "evidence": "Sportage — 1,299,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

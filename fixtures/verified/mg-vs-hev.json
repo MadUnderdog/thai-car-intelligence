@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.mgcars.com/th/cars/mg-vs-hev",
+    "title": "VS HEV | MG Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official MG Thailand page lists VS HEV with starting price ฿699,000.",
+    "contentHash": "b5bc84fdc9960f94ead32928a2dc4e21080df8134918b88ab72105fb84df3ee5",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official MG Thailand model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "เอ็มจี",
+        "nameEn": "MG",
+        "slug": "mg"
+      },
+      "model": {
+        "nameTh": "VS HEV",
+        "nameEn": "VS HEV",
+        "slug": "vs-hev"
+      },
+      "variant": {
+        "nameTh": "VS HEV",
+        "nameEn": "VS HEV",
+        "slug": "vs-hev"
+      },
+      "prices": [
+        {
+          "amount": 699000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.mgcars.com/th/cars/mg-vs-hev",
+            "title": "VS HEV | MG Thailand",
+            "evidence": "VS HEV — 699,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

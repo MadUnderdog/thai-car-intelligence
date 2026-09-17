@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.mgcars.com/th/cars/mg4-my2026",
+    "title": "MG4 MY2026 | MG Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official MG Thailand page lists MG4 MY2026 with starting price ฿669,900.",
+    "contentHash": "3d9f97a26f5eb940f00785fbe04317f1fd35eaf204256abfeceb326bec989bd9",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official MG Thailand model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "เอ็มจี",
+        "nameEn": "MG",
+        "slug": "mg"
+      },
+      "model": {
+        "nameTh": "MG4 MY2026",
+        "nameEn": "MG4 MY2026",
+        "slug": "mg4-my2026"
+      },
+      "variant": {
+        "nameTh": "MG4 MY2026",
+        "nameEn": "MG4 MY2026",
+        "slug": "mg4-my2026"
+      },
+      "prices": [
+        {
+          "amount": 669900,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.mgcars.com/th/cars/mg4-my2026",
+            "title": "MG4 MY2026 | MG Thailand",
+            "evidence": "MG4 MY2026 — 669,900 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

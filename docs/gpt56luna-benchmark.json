@@ -1,0 +1,110 @@
+[
+  {
+    "model": "mimo-v2.5",
+    "category": "SIMPLE_FACTUAL",
+    "success": 5,
+    "total": 5,
+    "thai": 5,
+    "correct": 3,
+    "avgLatency": 9586
+  },
+  {
+    "model": "mimo-v2.5",
+    "category": "COMPARISON",
+    "success": 3,
+    "total": 3,
+    "thai": 3,
+    "correct": 3,
+    "avgLatency": 11998
+  },
+  {
+    "model": "mimo-v2.5",
+    "category": "COMPLEX_REASONING",
+    "success": 1,
+    "total": 3,
+    "thai": 3,
+    "correct": 3,
+    "avgLatency": 11483
+  },
+  {
+    "model": "mimo-v2.5",
+    "category": "ADVISORY",
+    "success": 3,
+    "total": 3,
+    "thai": 3,
+    "correct": 3,
+    "avgLatency": 12599
+  },
+  {
+    "model": "deepseek-v4-flash",
+    "category": "SIMPLE_FACTUAL",
+    "success": 5,
+    "total": 5,
+    "thai": 5,
+    "correct": 4,
+    "avgLatency": 1645
+  },
+  {
+    "model": "deepseek-v4-flash",
+    "category": "COMPARISON",
+    "success": 3,
+    "total": 3,
+    "thai": 3,
+    "correct": 3,
+    "avgLatency": 2879
+  },
+  {
+    "model": "deepseek-v4-flash",
+    "category": "COMPLEX_REASONING",
+    "success": 3,
+    "total": 3,
+    "thai": 3,
+    "correct": 3,
+    "avgLatency": 3885
+  },
+  {
+    "model": "deepseek-v4-flash",
+    "category": "ADVISORY",
+    "success": 3,
+    "total": 3,
+    "thai": 3,
+    "correct": 3,
+    "avgLatency": 3508
+  },
+  {
+    "model": "gpt-5.6-luna",
+    "category": "SIMPLE_FACTUAL",
+    "success": 5,
+    "total": 5,
+    "thai": 5,
+    "correct": 5,
+    "avgLatency": 4274
+  },
+  {
+    "model": "gpt-5.6-luna",
+    "category": "COMPARISON",
+    "success": 1,
+    "total": 3,
+    "thai": 3,
+    "correct": 3,
+    "avgLatency": 7375
+  },
+  {
+    "model": "gpt-5.6-luna",
+    "category": "COMPLEX_REASONING",
+    "success": 0,
+    "total": 3,
+    "thai": 3,
+    "correct": 3,
+    "avgLatency": 9183
+  },
+  {
+    "model": "gpt-5.6-luna",
+    "category": "ADVISORY",
+    "success": 0,
+    "total": 3,
+    "thai": 3,
+    "correct": 3,
+    "avgLatency": 6592
+  }
+]

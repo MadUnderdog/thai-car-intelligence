@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.reverautomotive.com/model/sealion7/overview",
+    "title": "BYD | Rêver Automotive Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official BYD/Rêver Thailand page lists Sealion 7 starting at ฿1,799,900.",
+    "contentHash": "14accf824fa6c72b8f44771b1a9a75e21b6b0fddf792a520838223736559cc87",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "บีวายดี",
+        "nameEn": "BYD",
+        "slug": "byd"
+      },
+      "model": {
+        "nameTh": "Sealion 7",
+        "nameEn": "Sealion 7",
+        "slug": "sealion-7"
+      },
+      "variant": {
+        "nameTh": "Sealion 7",
+        "nameEn": "Sealion 7",
+        "slug": "sealion-7"
+      },
+      "prices": [
+        {
+          "amount": 1799900,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.reverautomotive.com/model/sealion7/overview",
+            "title": "BYD | Rêver Automotive Thailand",
+            "evidence": "Sealion 7 — 1,799,900 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

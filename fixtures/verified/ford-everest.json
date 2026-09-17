@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.ford.co.th/",
+    "title": "Ford Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Ford Thailand page lists Everest at ฿1,299,000.",
+    "contentHash": "d9d49d600a1f3f5e1b7b32c6178862490e93974502e41556f1c01e470ad68cfd",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "ฟอร์ด",
+        "nameEn": "Ford",
+        "slug": "ford"
+      },
+      "model": {
+        "nameTh": "Everest",
+        "nameEn": "everest",
+        "slug": "everest"
+      },
+      "variant": {
+        "nameTh": "Everest",
+        "nameEn": "everest",
+        "slug": "everest"
+      },
+      "prices": [
+        {
+          "amount": 1299000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.ford.co.th/",
+            "title": "Ford Thailand",
+            "evidence": "Everest — 1,299,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

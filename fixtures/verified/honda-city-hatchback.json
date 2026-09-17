@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.honda.co.th/",
+    "title": "Honda Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Honda Thailand page lists City Hatchback at ฿619,000.",
+    "contentHash": "48ae7174ecc373104523758495013a1f082486676b8ae361bbf48c5c72aedb65",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "ฮอนด้า",
+        "nameEn": "Honda",
+        "slug": "honda"
+      },
+      "model": {
+        "nameTh": "City Hatchback",
+        "nameEn": "city-hatchback",
+        "slug": "city-hatchback"
+      },
+      "variant": {
+        "nameTh": "City Hatchback",
+        "nameEn": "city-hatchback",
+        "slug": "city-hatchback"
+      },
+      "prices": [
+        {
+          "amount": 619000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.honda.co.th/",
+            "title": "Honda Thailand",
+            "evidence": "City Hatchback — 619,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

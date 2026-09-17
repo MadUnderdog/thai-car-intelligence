@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.mitsubishi-motors.co.th/",
+    "title": "Mitsubishi Motors Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Mitsubishi Thailand page lists Mirage at ฿449,000.",
+    "contentHash": "4f4ad1630a008012ab662c808858999a260843897b06c4c4c0a9df718a10d1f2",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "มิตซูบิชิ",
+        "nameEn": "Mitsubishi",
+        "slug": "mitsubishi"
+      },
+      "model": {
+        "nameTh": "Mirage",
+        "nameEn": "mirage",
+        "slug": "mirage"
+      },
+      "variant": {
+        "nameTh": "Mirage",
+        "nameEn": "mirage",
+        "slug": "mirage"
+      },
+      "prices": [
+        {
+          "amount": 449000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.mitsubishi-motors.co.th/",
+            "title": "Mitsubishi Motors Thailand",
+            "evidence": "Mirage — 449,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

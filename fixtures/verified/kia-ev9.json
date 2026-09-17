@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.kia.com/th/en",
+    "title": "Kia Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Kia Thailand page lists EV9 at ฿3,999,000.",
+    "contentHash": "ffa55ceb28b41ec1f34444ce8a36bf5f254f41180d4a87144ca533331e649beb",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "เกีย",
+        "nameEn": "Kia",
+        "slug": "kia"
+      },
+      "model": {
+        "nameTh": "EV9",
+        "nameEn": "ev9",
+        "slug": "ev9"
+      },
+      "variant": {
+        "nameTh": "EV9",
+        "nameEn": "ev9",
+        "slug": "ev9"
+      },
+      "prices": [
+        {
+          "amount": 3999000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.kia.com/th/en",
+            "title": "Kia Thailand",
+            "evidence": "EV9 — 3,999,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

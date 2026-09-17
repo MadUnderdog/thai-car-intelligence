@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.suzuki.co.th/th",
+    "title": "Suzuki Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Suzuki Thailand page lists Jimny at ฿1,649,000.",
+    "contentHash": "a22fbaca2d780d35ea03e78ac824d2a7c16af44b67e8a924a7bf7a2375213b28",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "ซูซูกิ",
+        "nameEn": "Suzuki",
+        "slug": "suzuki"
+      },
+      "model": {
+        "nameTh": "Jimny",
+        "nameEn": "jimny",
+        "slug": "jimny"
+      },
+      "variant": {
+        "nameTh": "Jimny",
+        "nameEn": "jimny",
+        "slug": "jimny"
+      },
+      "prices": [
+        {
+          "amount": 1649000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.suzuki.co.th/th",
+            "title": "Suzuki Thailand",
+            "evidence": "Jimny — 1,649,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

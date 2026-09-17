@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.mgcars.com/th/cars/mg-s5-ev-plus",
+    "title": "S5 EV PLUS | MG Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official MG Thailand page lists S5 EV PLUS with starting price ฿749,900.",
+    "contentHash": "dc26b099ba92261b3ccee4c512872a076a6ab399020d38a6f1937ae024907a51",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official MG Thailand model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "เอ็มจี",
+        "nameEn": "MG",
+        "slug": "mg"
+      },
+      "model": {
+        "nameTh": "S5 EV PLUS",
+        "nameEn": "S5 EV PLUS",
+        "slug": "s5-ev-plus"
+      },
+      "variant": {
+        "nameTh": "S5 EV PLUS",
+        "nameEn": "S5 EV PLUS",
+        "slug": "s5-ev-plus"
+      },
+      "prices": [
+        {
+          "amount": 749900,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.mgcars.com/th/cars/mg-s5-ev-plus",
+            "title": "S5 EV PLUS | MG Thailand",
+            "evidence": "S5 EV PLUS — 749,900 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

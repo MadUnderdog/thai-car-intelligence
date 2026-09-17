@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.hyundai.com/th/en",
+    "title": "Hyundai Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Hyundai Thailand page lists Staria at ฿1,649,000.",
+    "contentHash": "6a3d5da0c84eed14cf43e3d91147ee78cac43f59fa821cd7e103a9d16bf2b558",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "ฮุนได",
+        "nameEn": "Hyundai",
+        "slug": "hyundai"
+      },
+      "model": {
+        "nameTh": "Staria",
+        "nameEn": "staria",
+        "slug": "staria"
+      },
+      "variant": {
+        "nameTh": "Staria",
+        "nameEn": "staria",
+        "slug": "staria"
+      },
+      "prices": [
+        {
+          "amount": 1649000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.hyundai.com/th/en",
+            "title": "Hyundai Thailand",
+            "evidence": "Staria — 1,649,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.toyota.co.th/model/camry",
+    "title": "Toyota Camry | Toyota Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-24T00:00:00.000Z",
+    "evidenceExcerpt": "Official Toyota Thailand model page lists Camry grades HEV Smart at 1,475,000 THB, HEV Premium at 1,659,000 THB, and HEV Premium Luxury at 1,809,000 THB.",
+    "contentHash": "199fa8b5401c163c9fdc52b52d6d1bc4b7e2da688336c720e95d66c2e365fd26",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official Toyota Thailand model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    { "manufacturer": { "nameTh": "โตโยต้า", "nameEn": "Toyota", "slug": "toyota" }, "model": { "nameTh": "คัมรี", "nameEn": "Camry", "slug": "camry" }, "variant": { "nameTh": "HEV Smart", "nameEn": "HEV Smart", "slug": "hev-smart" }, "prices": [{ "amount": 1475000, "currency": "THB", "type": "LIST_PRICE", "provenance": { "url": "https://www.toyota.co.th/model/camry", "title": "Toyota Camry | Toyota Thailand", "evidence": "HEV Smart — 1,475,000 บาท" } }] },
+    { "manufacturer": { "nameTh": "โตโยต้า", "nameEn": "Toyota", "slug": "toyota" }, "model": { "nameTh": "คัมรี", "nameEn": "Camry", "slug": "camry" }, "variant": { "nameTh": "HEV Premium", "nameEn": "HEV Premium", "slug": "hev-premium" }, "prices": [{ "amount": 1659000, "currency": "THB", "type": "LIST_PRICE", "provenance": { "url": "https://www.toyota.co.th/model/camry", "title": "Toyota Camry | Toyota Thailand", "evidence": "HEV Premium — 1,659,000 บาท" } }] },
+    { "manufacturer": { "nameTh": "โตโยต้า", "nameEn": "Toyota", "slug": "toyota" }, "model": { "nameTh": "คัมรี", "nameEn": "Camry", "slug": "camry" }, "variant": { "nameTh": "HEV Premium Luxury", "nameEn": "HEV Premium Luxury", "slug": "hev-premium-luxury" }, "prices": [{ "amount": 1809000, "currency": "THB", "type": "LIST_PRICE", "provenance": { "url": "https://www.toyota.co.th/model/camry", "title": "Toyota Camry | Toyota Thailand", "evidence": "HEV Premium Luxury — 1,809,000 บาท" } }] }
+  ]
+}

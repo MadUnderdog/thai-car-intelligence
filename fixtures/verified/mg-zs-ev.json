@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.mgcars.com/th/cars/mg-zs-ev",
+    "title": "ZS EV | MG Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official MG Thailand page lists ZS EV with starting price ฿829,900.",
+    "contentHash": "e12936b96906eea171d745bbc9fe6f083c15c28cb184e87a2e8e5e0d0754e4b7",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official MG Thailand model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "เอ็มจี",
+        "nameEn": "MG",
+        "slug": "mg"
+      },
+      "model": {
+        "nameTh": "ZS EV",
+        "nameEn": "ZS EV",
+        "slug": "zs-ev"
+      },
+      "variant": {
+        "nameTh": "ZS EV",
+        "nameEn": "ZS EV",
+        "slug": "zs-ev"
+      },
+      "prices": [
+        {
+          "amount": 829900,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.mgcars.com/th/cars/mg-zs-ev",
+            "title": "ZS EV | MG Thailand",
+            "evidence": "ZS EV — 829,900 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

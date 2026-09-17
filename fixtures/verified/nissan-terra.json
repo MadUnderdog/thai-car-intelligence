@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+    "title": "Nissan Thailand Price List",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Nissan Thailand page lists Terra at ฿1,499,000.",
+    "contentHash": "c709922da3cd9283ce98bf9a6a7006b8e60fb6f58e6db879cf0cbfdd68519576",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "นิสสัน",
+        "nameEn": "Nissan",
+        "slug": "nissan"
+      },
+      "model": {
+        "nameTh": "Terra",
+        "nameEn": "terra",
+        "slug": "terra"
+      },
+      "variant": {
+        "nameTh": "Terra",
+        "nameEn": "terra",
+        "slug": "terra"
+      },
+      "prices": [
+        {
+          "amount": 1499000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+            "title": "Nissan Thailand Price List",
+            "evidence": "Terra — 1,499,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

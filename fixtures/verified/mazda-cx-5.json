@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.mazda.co.th/",
+    "title": "Mazda Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Mazda Thailand page lists CX-5 at ฿1,399,000.",
+    "contentHash": "12249ddbcc8daf37fd2d00b671c795b09e4a7d68dc01222d0ad5e0a816068671",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "มาสด้า",
+        "nameEn": "Mazda",
+        "slug": "mazda"
+      },
+      "model": {
+        "nameTh": "CX-5",
+        "nameEn": "cx-5",
+        "slug": "cx-5"
+      },
+      "variant": {
+        "nameTh": "CX-5",
+        "nameEn": "cx-5",
+        "slug": "cx-5"
+      },
+      "prices": [
+        {
+          "amount": 1399000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.mazda.co.th/",
+            "title": "Mazda Thailand",
+            "evidence": "CX-5 — 1,399,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,610 @@
+// Thai Car Intelligence — canonical facts retain official Thai/English names and provenance.
+// Local MVP embeddings use the internal BGE-base service at 1024 dimensions.
+// Keep provider/model metadata on each row so a future 1536d external provider can coexist
+// through a separate migration/column strategy rather than silently mixing vectors.
+// Prisma cannot introspect pgvector, so embeddings.vector is intentionally Unsupported("vector(1024)").
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum RecordStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+}
+
+enum SourceType {
+  OFFICIAL_MANUFACTURER
+  OFFICIAL_MANUFACTURER_BROCHURE
+  OFFICIAL_MANUFACTURER_PRICE_LIST
+  OFFICIAL_MANUFACTURER_PRESS_RELEASE
+  AUTHORIZED_DEALER
+  GOVERNMENT
+  AUTOMOTIVE_MEDIA
+  NEWS
+  SOCIAL
+  COMMUNITY
+  USER_SUBMISSION
+  REVIEW
+  MARKETPLACE
+  OTHER
+}
+
+enum RightsStatus {
+  UNKNOWN
+  PUBLIC_DOMAIN
+  LICENSED
+  FAIR_USE
+  RESTRICTED
+}
+
+enum DocumentStatus {
+  DISCOVERED
+  FETCHED
+  PARSED
+  VERIFIED
+  REJECTED
+}
+
+enum PriceType {
+  MSRP
+  LIST_PRICE
+  PROMOTION
+  FINANCE
+  LEASE
+  USED_PRICE
+  OTHER
+}
+
+enum CandidateStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  DUPLICATE
+}
+
+enum VerificationStatus {
+  PENDING
+  VERIFIED
+  FAILED
+}
+
+enum ReviewStatus {
+  OPEN
+  IN_REVIEW
+  APPROVED
+  REJECTED
+}
+
+enum CrawlJobStatus {
+  QUEUED
+  RUNNING
+  SUCCEEDED
+  PARTIAL_SUCCESS
+  FAILED
+  CANCELLED
+}
+
+enum CrawlEventLevel {
+  INFO
+  WARNING
+  ERROR
+}
+
+enum MediaType {
+  IMAGE
+  VIDEO
+  DOCUMENT
+  OTHER
+}
+
+enum ChangeType {
+  CREATED
+  UPDATED
+  DELETED
+  CORRECTED
+}
+
+enum ExtractionStatus {
+  PENDING
+  RUNNING
+  SUCCEEDED
+  PARTIAL_SUCCESS
+  FAILED
+}
+
+model Manufacturer {
+  id         String       @id @default(uuid()) @db.Uuid
+  nameTh     String
+  nameEn     String
+  slug       String       @unique
+  status     RecordStatus @default(ACTIVE)
+  websiteUrl String?
+  aliases    Alias[]
+  models     CarModel[]
+  sources    Source[]
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+
+  @@index([nameTh])
+  @@index([nameEn])
+}
+
+model CarModel {
+  id             String       @id @default(uuid()) @db.Uuid
+  manufacturerId String       @db.Uuid
+  nameTh         String
+  nameEn         String
+  slug           String
+  modelYear      Int?
+  generation     String?
+  bodyType       String?
+  segment        String?
+  status         RecordStatus @default(ACTIVE)
+  manufacturer   Manufacturer @relation(fields: [manufacturerId], references: [id], onDelete: Cascade)
+  variants       Variant[]
+  aliases        Alias[]
+  media          Media[]
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  @@unique([manufacturerId, slug, modelYear])
+  @@index([nameTh])
+  @@index([nameEn])
+}
+
+model Variant {
+  id          String              @id @default(uuid()) @db.Uuid
+  modelId     String              @db.Uuid
+  nameTh      String
+  nameEn      String
+  slug        String
+  modelYear   Int?
+  fuelType       String?
+  fuelTypeSource String?     @default("inferred")
+  status      RecordStatus        @default(ACTIVE)
+  model       CarModel            @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  prices      Price[]
+  specs       VariantSpec[]
+  specExtra   VariantSpecExtra?
+  dimensions  DimensionsSpec?
+  performance PerformanceSpec?
+  battery     BatterySpec?
+  charging    ChargingSpec?
+  warranty    WarrantySpec?
+  safety      SafetySpec?
+  features    VariantFeature[]
+  aliases     Alias[]
+  media       Media[]
+  candidates  ResearchCandidate[]
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+
+  @@unique([modelId, slug, modelYear])
+  @@index([nameTh])
+  @@index([nameEn])
+}
+
+model Source {
+  id             String           @id @default(uuid()) @db.Uuid
+  manufacturerId String?          @db.Uuid
+  nameTh         String
+  nameEn         String
+  sourceType     SourceType
+  baseUrl        String
+  domain         String
+  authority      Decimal?         @db.Decimal(5, 4)
+  rightsStatus   RightsStatus     @default(UNKNOWN)
+  status         RecordStatus     @default(ACTIVE)
+  manufacturer   Manufacturer?    @relation(fields: [manufacturerId], references: [id], onDelete: SetNull)
+  documents      SourceDocument[]
+  hints          SourceHint[]
+  crawlJobs      CrawlJob[]
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+
+  @@unique([baseUrl])
+  @@index([sourceType, status])
+}
+
+model SourceDocument {
+  id               String                 @id @default(uuid()) @db.Uuid
+  sourceId         String                 @db.Uuid
+  url              String
+  canonicalUrl     String?
+  titleTh          String?
+  titleEn          String?
+  mimeType         String?
+  language         String?
+  contentHash      String
+  fetchedAt        DateTime?
+  publishedAt      DateTime?
+  pageCount        Int?
+  documentType     String?
+  localPath        String?
+  objectKey        String?
+  extractedText    String?
+  extractionMethod String?
+  extractionStatus ExtractionStatus       @default(PENDING)
+  status           DocumentStatus         @default(DISCOVERED)
+  rightsStatus     RightsStatus           @default(UNKNOWN)
+  source           Source                 @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  prices           Price[]
+  specs            VariantSpec[]
+  candidates       ResearchCandidate[]
+  verifications    BrochureVerification[]
+  changes          DataChangeLog[]
+  reviewItems      ReviewItem[]
+  events           CrawlEvent[]
+  embeddings       Embedding[]
+  variantFeatures  VariantFeature[]
+  createdAt        DateTime               @default(now())
+  updatedAt        DateTime               @updatedAt
+  medias           Media[]
+
+  @@unique([sourceId, contentHash])
+  @@index([canonicalUrl])
+  @@index([status, fetchedAt])
+}
+
+model Price {
+  id               String         @id @default(uuid()) @db.Uuid
+  variantId        String         @db.Uuid
+  sourceDocumentId String?
+  priceType        PriceType
+  amount           Decimal        @db.Decimal(15, 2)
+  currency         String         @default("THB")
+  validFrom        DateTime
+  validTo          DateTime?
+  observedAt       DateTime       @default(now())
+  pageNumber       Int?
+  confidence       Decimal        @default(0) @db.Decimal(5, 4)
+  isCurrent        Boolean        @default(false)
+  variant          Variant        @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  sourceDocument   SourceDocument? @relation(fields: [sourceDocumentId], references: [id], onDelete: SetNull)
+
+  @@unique([variantId, sourceDocumentId, priceType, amount, validFrom])
+  @@index([variantId, priceType, validFrom])
+  @@index([sourceDocumentId, pageNumber])
+}
+
+model VariantSpecExtra {
+  id        String  @id @default(uuid()) @db.Uuid
+  variantId String  @unique @db.Uuid
+  data      Json
+  variant   Variant @relation(fields: [variantId], references: [id], onDelete: Cascade)
+}
+
+model DimensionsSpec {
+  id                String   @id @default(uuid()) @db.Uuid
+  variantId         String   @unique @db.Uuid
+  lengthMm          Decimal? @db.Decimal(12, 2)
+  widthMm           Decimal? @db.Decimal(12, 2)
+  heightMm          Decimal? @db.Decimal(12, 2)
+  wheelbaseMm       Decimal? @db.Decimal(12, 2)
+  groundClearanceMm Decimal? @db.Decimal(12, 2)
+  curbWeightKg      Decimal? @db.Decimal(12, 2)
+  sourceTier        String?  @default("unresolved")
+  sourceUrl         String?
+  verifiedAt        DateTime?
+  variant           Variant  @relation(fields: [variantId], references: [id], onDelete: Cascade)
+}
+
+model PerformanceSpec {
+  id                  String   @id @default(uuid()) @db.Uuid
+  variantId           String   @unique @db.Uuid
+  powerKw             Decimal? @db.Decimal(12, 2)
+  torqueNm            Decimal? @db.Decimal(12, 2)
+  acceleration0To100S Decimal? @db.Decimal(8, 3)
+  topSpeedKph         Decimal? @db.Decimal(8, 2)
+  rangeKm             Decimal? @db.Decimal(10, 2)
+  sourceTier          String?  @default("unresolved")
+  sourceUrl           String?
+  verifiedAt          DateTime?
+  variant             Variant  @relation(fields: [variantId], references: [id], onDelete: Cascade)
+}
+
+model BatterySpec {
+  id                String   @id @default(uuid()) @db.Uuid
+  variantId         String   @unique @db.Uuid
+  capacityKwh       Decimal? @db.Decimal(10, 3)
+  usableCapacityKwh Decimal? @db.Decimal(10, 3)
+  chemistry         String?
+  voltageV          Decimal? @db.Decimal(10, 2)
+  sourceTier        String?  @default("unresolved")
+  sourceUrl         String?
+  verifiedAt        DateTime?
+  variant           Variant  @relation(fields: [variantId], references: [id], onDelete: Cascade)
+}
+
+model ChargingSpec {
+  id            String   @id @default(uuid()) @db.Uuid
+  variantId     String   @unique @db.Uuid
+  acPowerKw     Decimal? @db.Decimal(10, 2)
+  dcPowerKw     Decimal? @db.Decimal(10, 2)
+  acTimeMinutes Int?
+  dcTimeMinutes Int?
+  connectorType String?
+  sourceTier    String?  @default("unresolved")
+  sourceUrl     String?
+  verifiedAt    DateTime?
+  variant       Variant  @relation(fields: [variantId], references: [id], onDelete: Cascade)
+}
+
+model WarrantySpec {
+  id                String  @id @default(uuid()) @db.Uuid
+  variantId         String  @unique @db.Uuid
+  vehicleYears      Int?
+  vehicleDistanceKm Int?
+  batteryYears      Int?
+  batteryDistanceKm Int?
+  terms             Json?
+  sourceTier        String?  @default("unresolved")
+  sourceUrl         String?
+  verifiedAt        DateTime?
+  variant           Variant @relation(fields: [variantId], references: [id], onDelete: Cascade)
+}
+
+model SafetySpec {
+  id        String   @id @default(uuid()) @db.Uuid
+  variantId String   @unique @db.Uuid
+  airbags   Int?
+  abs       Boolean?
+  esc       Boolean?
+  adas      Json?
+  rating    String?
+  variant   Variant  @relation(fields: [variantId], references: [id], onDelete: Cascade)
+}
+
+model VariantSpec {
+  id               String         @id @default(uuid()) @db.Uuid
+  variantId        String         @db.Uuid
+  sourceDocumentId String         @db.Uuid
+  key              String
+  valueTh          String?
+  valueEn          String?
+  valueNumeric     Decimal?       @db.Decimal(20, 6)
+  unit             String?
+  pageNumber       Int?
+  confidence       Decimal        @default(0) @db.Decimal(5, 4)
+  variant          Variant        @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  sourceDocument   SourceDocument? @relation(fields: [sourceDocumentId], references: [id], onDelete: SetNull)
+
+  @@unique([variantId, key, sourceDocumentId])
+  @@index([key])
+}
+
+model Feature {
+  id        String           @id @default(uuid()) @db.Uuid
+  nameTh    String
+  nameEn    String
+  slug      String           @unique
+  category  String?
+  features  VariantFeature[]
+  aliases   Alias[]
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+}
+
+model VariantFeature {
+  variantId        String          @db.Uuid
+  featureId        String          @db.Uuid
+  sourceDocumentId String?         @db.Uuid
+  available        Boolean
+  standard         Boolean         @default(false)
+  pageNumber       Int?
+  confidence       Decimal         @default(0) @db.Decimal(5, 4)
+  sourceTier       String?         @default("unresolved")
+  sourceUrl        String?
+  variant          Variant         @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  feature          Feature         @relation(fields: [featureId], references: [id], onDelete: Cascade)
+  sourceDocument   SourceDocument? @relation(fields: [sourceDocumentId], references: [id], onDelete: SetNull)
+
+  @@id([variantId, featureId])
+}
+
+model Alias {
+  id             String        @id @default(uuid()) @db.Uuid
+  value          String
+  language       String
+  manufacturerId String?       @db.Uuid
+  modelId        String?       @db.Uuid
+  variantId      String?       @db.Uuid
+  featureId      String?       @db.Uuid
+  manufacturer   Manufacturer? @relation(fields: [manufacturerId], references: [id], onDelete: Cascade)
+  model          CarModel?     @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  variant        Variant?      @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  feature        Feature?      @relation(fields: [featureId], references: [id], onDelete: Cascade)
+
+  @@unique([value, language])
+  @@index([value])
+}
+
+model Media {
+  id               String          @id @default(uuid()) @db.Uuid
+  type             MediaType
+  url              String   @unique
+  contentHash      String?
+  sourcePageUrl    String?
+  role             String?
+  perceptualHash   String?
+  width            Int?
+  height           Int?
+  sourceMetadata   Json?
+  sourceType       String?
+  rightsStatus     RightsStatus    @default(UNKNOWN)
+  sourceDocumentId String?         @db.Uuid
+  modelId          String?         @db.Uuid
+  variantId        String?         @db.Uuid
+  sourceDocument   SourceDocument? @relation(fields: [sourceDocumentId], references: [id], onDelete: SetNull)
+  model            CarModel?       @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  variant          Variant?        @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  captionTh        String?
+  captionEn        String?
+  createdAt        DateTime        @default(now())
+
+  @@index([modelId, variantId])
+}
+
+model ResearchRun {
+  id             String              @id @default(uuid()) @db.Uuid
+  name           String
+  status         CrawlJobStatus      @default(QUEUED)
+  provider       String?
+  prompt         String?
+  entityType     String?
+  entityId       String?
+  queries        Json?
+  domainsChecked Json?
+  pagesChecked   Int                 @default(0)
+  documentsFound Int                 @default(0)
+  imagesFound    Int                 @default(0)
+  factsChanged   Int                 @default(0)
+  error          String?
+  startedAt      DateTime?
+  completedAt    DateTime?
+  candidates     ResearchCandidate[]
+  changes        DataChangeLog[]
+  reviewItems    ReviewItem[]
+  createdAt      DateTime            @default(now())
+}
+
+model ResearchCandidate {
+  id               String          @id @default(uuid()) @db.Uuid
+  researchRunId    String          @db.Uuid
+  variantId        String?         @db.Uuid
+  sourceDocumentId String?         @db.Uuid
+  fieldName        String
+  proposedValue    Json
+  evidence         String?
+  pageNumber       Int?
+  confidence       Decimal         @default(0) @db.Decimal(5, 4)
+  status           CandidateStatus @default(PENDING)
+  run              ResearchRun     @relation(fields: [researchRunId], references: [id], onDelete: Cascade)
+  variant          Variant?        @relation(fields: [variantId], references: [id], onDelete: SetNull)
+  sourceDocument   SourceDocument? @relation(fields: [sourceDocumentId], references: [id], onDelete: SetNull)
+  createdAt        DateTime        @default(now())
+
+  @@index([researchRunId, status])
+}
+
+model BrochureVerification {
+  id               String             @id @default(uuid()) @db.Uuid
+  sourceDocumentId String             @db.Uuid
+  status           VerificationStatus @default(PENDING)
+  checkedBy        String?
+  notes            String?
+  verifiedAt       DateTime?
+  sourceDocument   SourceDocument     @relation(fields: [sourceDocumentId], references: [id], onDelete: Cascade)
+
+  @@unique([sourceDocumentId])
+}
+
+model DataChangeLog {
+  id               String          @id @default(uuid()) @db.Uuid
+  sourceDocumentId String?         @db.Uuid
+  researchRunId    String?         @db.Uuid
+  entityType       String
+  entityId         String          @db.Uuid
+  fieldName        String?
+  changeType       ChangeType
+  beforeValue      Json?
+  afterValue       Json?
+  reason           String?
+  confidence       Decimal?        @db.Decimal(5, 4)
+  evidenceExcerpt  String?
+  evidence         Json?
+  proposed         Boolean         @default(false)
+  applied          Boolean         @default(false)
+  reviewStatus     ReviewStatus    @default(OPEN)
+  reviewerId       String?
+  createdAt        DateTime        @default(now())
+  sourceDocument   SourceDocument? @relation(fields: [sourceDocumentId], references: [id], onDelete: SetNull)
+  researchRun      ResearchRun?    @relation(fields: [researchRunId], references: [id], onDelete: SetNull)
+
+  @@index([entityType, entityId, createdAt])
+}
+
+model ReviewItem {
+  id               String          @id @default(uuid()) @db.Uuid
+  researchRunId    String?         @db.Uuid
+  sourceDocumentId String?         @db.Uuid
+  entityType       String
+  entityId         String          @db.Uuid
+  reason           String
+  status           ReviewStatus    @default(OPEN)
+  assignedTo       String?
+  resolvedAt       DateTime?
+  run              ResearchRun?    @relation(fields: [researchRunId], references: [id], onDelete: SetNull)
+  sourceDocument   SourceDocument? @relation(fields: [sourceDocumentId], references: [id], onDelete: SetNull)
+  createdAt        DateTime        @default(now())
+
+  @@index([status, createdAt])
+}
+
+model SourceHint {
+  id          String   @id @default(uuid()) @db.Uuid
+  sourceId    String   @db.Uuid
+  pattern     String
+  description String?
+  priority    Int      @default(0)
+  enabled     Boolean  @default(true)
+  source      Source   @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+
+  @@index([sourceId, enabled, priority])
+}
+
+model CrawlJob {
+  id          String         @id @default(uuid()) @db.Uuid
+  sourceId    String         @db.Uuid
+  status      CrawlJobStatus @default(QUEUED)
+  requestedAt DateTime       @default(now())
+  startedAt   DateTime?
+  finishedAt  DateTime?
+  error       String?
+  source      Source         @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  events      CrawlEvent[]
+
+  @@index([status, requestedAt])
+}
+
+model CrawlEvent {
+  id               String          @id @default(uuid()) @db.Uuid
+  crawlJobId       String          @db.Uuid
+  sourceDocumentId String?         @db.Uuid
+  level            CrawlEventLevel @default(INFO)
+  message          String
+  metadata         Json?
+  occurredAt       DateTime        @default(now())
+  crawlJob         CrawlJob        @relation(fields: [crawlJobId], references: [id], onDelete: Cascade)
+  sourceDocument   SourceDocument? @relation(fields: [sourceDocumentId], references: [id], onDelete: SetNull)
+
+  @@index([crawlJobId, occurredAt])
+}
+
+model Embedding {
+  id               String                      @id @default(uuid()) @db.Uuid
+  sourceDocumentId String                      @db.Uuid
+  entityType       String
+  entityId         String
+  chunkIndex       Int
+  chunkType        String
+  pageNumber       Int?
+  content          String
+  contentHash      String
+  model            String
+  dimensions       Int                         @default(1024)
+  vector           Unsupported("vector(1024)")?
+  metadata         Json?
+  sourceDocument   SourceDocument              @relation(fields: [sourceDocumentId], references: [id], onDelete: Cascade)
+  createdAt        DateTime                    @default(now())
+
+  @@unique([sourceDocumentId, chunkIndex, model])
+  @@index([sourceDocumentId])
+}

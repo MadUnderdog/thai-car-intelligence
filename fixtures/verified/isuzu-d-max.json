@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.isuzu-taz.com/",
+    "title": "Isuzu Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Isuzu Thailand page lists D-Max at ฿629,000.",
+    "contentHash": "d6639a8ac30c36b53bb5bd86259d38001cf2de7ba485c97eea93e7f38256f38e",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "อีซูซุ",
+        "nameEn": "Isuzu",
+        "slug": "isuzu"
+      },
+      "model": {
+        "nameTh": "D-Max",
+        "nameEn": "d-max",
+        "slug": "d-max"
+      },
+      "variant": {
+        "nameTh": "D-Max",
+        "nameEn": "d-max",
+        "slug": "d-max"
+      },
+      "prices": [
+        {
+          "amount": 629000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.isuzu-taz.com/",
+            "title": "Isuzu Thailand",
+            "evidence": "D-Max — 629,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

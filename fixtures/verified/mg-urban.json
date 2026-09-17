@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.mgcars.com/th/cars/mg-urban",
+    "title": "URBAN | MG Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official MG Thailand page lists URBAN with starting price ฿579,900.",
+    "contentHash": "9e01dba8670c2cc782577f0ecff988d4f3b02482cb70888c5100a165fe13ac33",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official MG Thailand model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "เอ็มจี",
+        "nameEn": "MG",
+        "slug": "mg"
+      },
+      "model": {
+        "nameTh": "URBAN",
+        "nameEn": "URBAN",
+        "slug": "urban"
+      },
+      "variant": {
+        "nameTh": "URBAN",
+        "nameEn": "URBAN",
+        "slug": "urban"
+      },
+      "prices": [
+        {
+          "amount": 579900,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.mgcars.com/th/cars/mg-urban",
+            "title": "URBAN | MG Thailand",
+            "evidence": "URBAN — 579,900 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

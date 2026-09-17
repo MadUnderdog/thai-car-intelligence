@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.honda.co.th/",
+    "title": "Honda Thailand",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Honda Thailand page lists Super-ONE at ฿990,000.",
+    "contentHash": "48ae7174ecc373104523758495013a1f082486676b8ae361bbf48c5c72aedb65",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "ฮอนด้า",
+        "nameEn": "Honda",
+        "slug": "honda"
+      },
+      "model": {
+        "nameTh": "Super-ONE",
+        "nameEn": "super-one",
+        "slug": "super-one"
+      },
+      "variant": {
+        "nameTh": "Super-ONE",
+        "nameEn": "super-one",
+        "slug": "super-one"
+      },
+      "prices": [
+        {
+          "amount": 990000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.honda.co.th/",
+            "title": "Honda Thailand",
+            "evidence": "Super-ONE — 990,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

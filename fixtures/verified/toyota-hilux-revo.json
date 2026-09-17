@@ -1,0 +1,47 @@
+{
+  "version": "1",
+  "source": {
+    "url": "https://www.toyota.co.th/pricelist",
+    "title": "Toyota Thailand Price List",
+    "sourceType": "OFFICIAL_MANUFACTURER",
+    "retrievedAt": "2026-08-25T00:00:00.000Z",
+    "evidenceExcerpt": "Official Toyota Thailand page lists Hilux Revo at ฿629,000.",
+    "contentHash": "bdf46e33ddccd35929afbc1d1995b9400c653f55dc8a1f954057f9cf379911f4",
+    "verification": {
+      "type": "MODEL_PAGE",
+      "status": "VERIFIED",
+      "notes": "Manually checked official model-page price evidence; this is not brochure verification."
+    }
+  },
+  "records": [
+    {
+      "manufacturer": {
+        "nameTh": "โตโยต้า",
+        "nameEn": "Toyota",
+        "slug": "toyota"
+      },
+      "model": {
+        "nameTh": "Hilux Revo",
+        "nameEn": "hilux-revo",
+        "slug": "hilux-revo"
+      },
+      "variant": {
+        "nameTh": "Hilux Revo",
+        "nameEn": "hilux-revo",
+        "slug": "hilux-revo"
+      },
+      "prices": [
+        {
+          "amount": 629000,
+          "currency": "THB",
+          "type": "LIST_PRICE",
+          "provenance": {
+            "url": "https://www.toyota.co.th/pricelist",
+            "title": "Toyota Thailand Price List",
+            "evidence": "Hilux Revo — 629,000 บาท"
+          }
+        }
+      ]
+    }
+  ]
+}

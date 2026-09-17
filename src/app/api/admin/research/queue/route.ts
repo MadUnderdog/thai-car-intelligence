@@ -59,6 +59,7 @@ export async function GET() {
       completedToday: Number(completedToday[0]?.cnt ?? 0),
     });
   } catch (e) {
-    return NextResponse.json({ error: "database_unavailable", detail: String(e) }, { status: 503 });
+    console.error("API route error:", e);
+    return NextResponse.json({ error: "database_unavailable" }, { status: 503 });
   }
 }

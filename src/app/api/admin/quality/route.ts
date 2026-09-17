@@ -57,6 +57,7 @@ export async function GET() {
       imageCoverage: { modelsWithImages: Number(withImages[0]?.cnt ?? 0), percentage: Math.round((Number(withImages[0]?.cnt ?? 0) / 76) * 100) },
     });
   } catch (e) {
-    return NextResponse.json({ error: "database_unavailable", detail: String(e) }, { status: 503 });
+    console.error("API route error:", e);
+    return NextResponse.json({ error: "database_unavailable" }, { status: 503 });
   }
 }

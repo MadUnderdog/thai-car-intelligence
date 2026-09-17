@@ -8,10 +8,10 @@ export function getDb(): PrismaClient {
   if (globalForPrisma.prisma) return globalForPrisma.prisma;
   
   const pool = new pg.Pool({
-    user: "hermes",
-    host: "localhost",
-    port: 5432,
-    database: "thai_car_intelligence",
+    user: process.env.DB_USER || "hermes",
+    host: process.env.DB_HOST || "localhost",
+    port: Number(process.env.DB_PORT) || 5432,
+    database: process.env.DB_NAME || "thai_car_intelligence",
     max: 10,
   });
   

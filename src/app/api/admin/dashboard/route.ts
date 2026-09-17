@@ -43,6 +43,7 @@ export async function GET() {
       research: Object.fromEntries(recentRuns.map((s: any) => [s.status, Number(s.cnt)])),
     });
   } catch (e) {
-    return NextResponse.json({ error: "database_unavailable", detail: String(e) }, { status: 503 });
+    console.error("API /api/admin/dashboard error:", e);
+    return NextResponse.json({ error: "database_unavailable" }, { status: 503 });
   }
 }

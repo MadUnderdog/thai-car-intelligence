@@ -79,6 +79,7 @@ export async function GET() {
       variants: scored,
     });
   } catch (e) {
-    return NextResponse.json({ error: "database_unavailable", detail: String(e) }, { status: 503 });
+    console.error("API route error:", e);
+    return NextResponse.json({ error: "database_unavailable" }, { status: 503 });
   }
 }

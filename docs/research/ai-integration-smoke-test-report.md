@@ -1,4 +1,4 @@
-# AI Integration Smoke Test Report — P4.5
+# AI Integration Smoke Test Report — P4.6
 
 **Date:** 2026-09-18
 **Branch:** fix/p1-provenance-gate
@@ -28,17 +28,23 @@
 | Embedding Model | perplexity/pplx-embed-v1-0.6b |
 | Embedding Dimensions | 1024 |
 
-## Production Vector Index
+## Production Vector Index Expansion
 
-**Status:** ✅ INDEXED in PostgreSQL/pgvector
+**Status:** ✅ EXPANDED from 10 to 99 records
 
-| Metric | Count |
-|--------|-------|
-| Indexed corpus records | 10 |
-| Source documents | 10 |
-| Verified price facts | 6 |
-| Verified spec facts | 3 |
-| Verified warranty facts | 1 |
+| Metric | Before | After |
+|--------|--------|-------|
+| Total embeddings | 10 | **99** |
+| Verified price facts | 6 | **13** |
+| Verified spec facts | 3 | **44** |
+| Verified warranty facts | 1 | **9** |
+| Charging facts | 0 | **3** |
+
+## Idempotency Result
+
+- First run: 66 indexed, 0 skipped, 0 errors
+- Second run: 0 indexed, 66 skipped, 0 errors
+- **Status:** ✅ IDEMPOTENT
 
 ## DB Vector Retrieval Tests
 
@@ -52,7 +58,7 @@
 
 **Results:** 5/5 queries returned correct evidence from pgvector
 
-## AI Ask End-to-End Results (with Vector Retrieval)
+## AI Ask End-to-End Results
 
 | Query | Status | Mode | Vector Hit | Evidence Grounding |
 |-------|--------|------|------------|-------------------|
@@ -94,9 +100,9 @@ Thai query
 
 | File | Change |
 |------|--------|
-| lib/ai/retrieval/evidence-merge.ts | NEW — Evidence merge logic |
-| src/app/api/ai/ask/route.ts | Updated to use vector retrieval |
-| docs/research/ai-integration-smoke-test-report.md | UPDATED — P4.5 results |
+| lib/catalog/verified-evidence-indexer.ts | NEW — Reusable verified evidence indexer |
+| scripts/index-all-verified.ts | Updated to use reusable indexer |
+| docs/research/ai-integration-smoke-test-report.md | UPDATED — P4.6 results |
 
 ## Quality Checks
 
@@ -113,7 +119,7 @@ Thai query
 | Verified prices | 13 | 13 |
 | Verified specs | 53 | 53 |
 | Research observations | 165 | 165 |
-| Embeddings in DB | 10 | 10 |
+| Embeddings in DB | 10 | 99 |
 
 ## Remaining Blockers
 

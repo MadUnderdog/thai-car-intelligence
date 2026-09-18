@@ -1,4 +1,4 @@
-# AI Integration Smoke Test Report — P4
+# AI Integration Smoke Test Report — P4.1
 
 **Date:** 2026-09-18
 **Branch:** fix/p1-provenance-gate
@@ -8,11 +8,11 @@
 | Test Category | Pass | Fail |
 |---------------|------|------|
 | Provider smoke tests | 4 | 0 |
-| AI Ask scenarios | 4 | 0 |
+| AI Ask endpoint tests | 5 | 0 |
 | Evidence Gate tests | 1 | 0 |
 | RAG/retrieval tests | 1 | 0 |
 | Fallback/error tests | 1 | 0 |
-| **Total** | **11** | **0** |
+| **Total** | **12** | **0** |
 
 ## Provider Configuration
 
@@ -20,65 +20,81 @@
 |---------|-------|
 | Provider | openai-compatible |
 | Base URL | https://opencode.ai/zen/go/v1 |
-| Model | glm-5.3-flash |
+| Complex Model | glm-5.3-flash |
+| Simple Model | mimo-v2.5 |
 | Embedding | Not configured (local service) |
 
-## Smoke Test Results
+## P4.1 End-to-End AI Ask Results
 
-### Test 1: Simple Generation
+### Test 1: Verified Price Question
+- **Query:** "Honda City e:HEV ราคาเท่าไหร่?"
 - **Status:** PASS
-- **Latency:** 14,677ms
-- **Tokens:** 66
-- **Result:** "สวัสดี (sawasdee) — This is the standard Thai greeting..."
+- **Mode:** ai-enhanced
+- **Answer:** Thai response explaining multiple Honda e:HEV prices found
+- **Citations:** 8 variant citations with IDs
+- **Evidence Grounding:** ✅ Answered from catalog evidence
 
-### Test 2: Thai Car Price Question with Evidence
+### Test 2: Comparison Question
+- **Query:** "เปรียบเทียบ Honda City และ Honda Civic"
 - **Status:** PASS
-- **Latency:** 3,402ms
-- **Tokens:** 98
-- **Result:** "Honda City e:HEV มีราคา 569,000 บาท ครับ"
-- **Evidence Grounding:** ✅ Answered from provided evidence only
+- **Mode:** ai-enhanced
+- **Answer:** Structured comparison with prices and specs
+- **Evidence Grounding:** ✅ Used only catalog evidence
 
-### Test 3: Comparison Question
+### Test 3: Unsupported Fact
+- **Query:** "Tesla Model Y ราคาเท่าไหร่?"
 - **Status:** PASS
-- **Latency:** 2,670ms
-- **Tokens:** 262
-- **Result:** Structured comparison table with Honda City vs Civic
-- **Evidence Grounding:** ✅ Used only provided evidence
+- **Mode:** ai-enhanced
+- **Answer:** "ไม่พบข้อมูลที่ตรวจสอบได้..."
+- **Hallucination Guard:** ✅ Refused without evidence
 
-### Test 4: Unsupported Fact Handling
+### Test 4: Catalog-Only Response
+- **Query:** "Honda"
 - **Status:** PASS
-- **Latency:** 1,279ms
-- **Tokens:** 153
-- **Result:** "ขออภัย ไม่มีข้อมูลเพียงพอในการตอบคำถามนี้..."
-- **Hallucination Guard:** ✅ Refused to answer without evidence
+- **Mode:** ai-enhanced
+- **Answer:** Listed 8 Honda variants with prices
+- **Evidence Grounding:** ✅ All facts from catalog
 
-## AI Ask Scenarios
+### Test 5: Insufficient Evidence
+- **Query:** "test"
+- **Status:** PASS
+- **Mode:** structured-catalog
+- **Answer:** "ไม่พบข้อมูลที่ตรวจสอบได้..."
+- **Fallback:** ✅ Graceful degradation
 
-| Scenario | Status | Notes |
-|----------|--------|-------|
-| Price question (verified vehicle) | PASS | Answered from evidence |
-| Spec question (verified spec) | PASS | Answered from evidence |
-| Comparison question (2 vehicles) | PASS | Structured comparison |
-| Unsupported fact | PASS | Refused to answer |
+## Model Router / Fallback
 
-## Evidence Gate Behavior
+| Model | Status | Notes |
+|-------|--------|-------|
+| glm-5.3-flash | ✅ WORKING | Primary model for complex queries |
+| mimo-v2.5 | ⚠️ PARTIAL | Returns null content (reasoning mode) |
+| union-alpha | ❌ FAILING | HTTP 500 error |
 
-- ✅ Verified facts are answerable
-- ✅ Unverified research facts cannot be presented as verified
-- ✅ Missing specs stay missing
-- ✅ Source metadata preserved in context
+## union-alpha Diagnosis
 
-## Fallback/Error Behavior
+- **Error:** HTTP 500 Internal Server Error
+- **Cause:** Provider/model unsupported or transient error
+- **Resolution:** Using glm-5.3-flash as primary model
+- **Impact:** None — fallback model working correctly
 
-- ✅ Provider returns structured error on failure
-- ✅ Timeout handling implemented
-- ✅ Graceful degradation when evidence insufficient
+## Latency / Cost Baseline
+
+| Query Type | Latency | Tokens |
+|------------|---------|--------|
+| Simple generation | 14,677ms | 66 |
+| Price question | 3,402ms | 98 |
+| Comparison | 2,670ms | 262 |
+| Unsupported fact | 1,279ms | 153 |
+| **Average** | **5,507ms** | **145** |
 
 ## Code Changes
 
 | File | Change |
 |------|--------|
 | lib/ai/providers/openai-compatible.ts | Added OpenCode session ID header |
+| src/app/api/ai/ask/route.ts | Wired to AI provider with fallback |
+| scripts/ai-smoke-test.ts | NEW — AI provider smoke test |
+| docs/research/ai-integration-smoke-test-report.md | UPDATED — P4.1 results |
 
 ## Quality Checks
 
@@ -99,9 +115,9 @@
 ## Remaining Blockers
 
 1. Embedding service not configured (local service at localhost:8080)
-2. OpenCode session ID is auto-generated per request (may need persistent session for production)
-3. Model "union-alpha" returns HTTP 500 (using "glm-5.3-flash" as fallback)
-4. Response time varies (1.3s - 14.7s depending on query complexity)
+2. Model "union-alpha" returns HTTP 500 (using glm-5.3-flash)
+3. Response time varies (1.3s - 14.7s depending on query complexity)
+4. mimo-v2.5 returns null content (reasoning mode issue)
 
 ## AI/Config Confirmation
 

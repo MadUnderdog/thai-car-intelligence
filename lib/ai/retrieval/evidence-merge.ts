@@ -1,4 +1,5 @@
 import { searchVectorEvidence, type VectorEvidence, type VectorSearchResult } from "../../search/vector-search";
+import { applyEvidenceThresholds } from "./evidence-gate-policy";
 
 export type EvidenceItem = {
   id: string;
@@ -61,12 +62,13 @@ export function mergeEvidence(
 }
 
 /**
- * Get vector evidence for a query from the database.
- * Returns empty results if embedding is not configured.
+ * Get gap-free vector evidence for a query from the database with deterministic
+ * confidence thresholding applied. Returns empty results if embedding not configured.
  */
 export async function getVectorEvidence(query: string): Promise<VectorSearchResult> {
   try {
-    return await searchVectorEvidence(query, { limit: 5 });
+    const raw = await searchVectorEvidence(query, { limit: 5 });
+    return applyEvidenceThresholds(query, raw);
   } catch (error) {
     console.error("Vector retrieval failed, falling back to structured only:", error);
     return { available: false, evidence: [] };

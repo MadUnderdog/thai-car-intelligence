@@ -1,4 +1,4 @@
-# AI Integration Smoke Test Report — P4.2
+# AI Integration Smoke Test Report — P4.3
 
 **Date:** 2026-09-18
 **Branch:** fix/p1-provenance-gate
@@ -10,8 +10,9 @@
 | Provider smoke tests | 4 | 0 |
 | AI Ask endpoint tests | 5 | 0 |
 | Embedding smoke tests | 2 | 0 |
+| Vector retrieval tests | 5 | 0 |
 | Model diagnostics | 3 | 0 |
-| **Total** | **14** | **0** |
+| **Total** | **19** | **0** |
 
 ## Provider Configuration
 
@@ -24,7 +25,20 @@
 | Embedding Provider | openai-compatible |
 | Embedding Base URL | https://openrouter.ai/api/v1 |
 | Embedding Model | perplexity/pplx-embed-v1-0.6b |
-| Embedding Dimensions | 1024 (actual) |
+| Embedding Dimensions | 1024 (FIXED) |
+
+## Embedding Dimension Contract
+
+**Source of Truth:** Prisma schema (`embeddings.vector Unsupported("vector(1024)")`)
+
+| Dimension Source | Before | After |
+|------------------|--------|-------|
+| Prisma schema | 1024 | 1024 |
+| .env.example | 768 | **1024** |
+| Actual model output | 1024 | 1024 |
+| Config validation | Disabled | **Enabled** |
+
+**Resolution:** Updated .env.example to match schema and actual model output.
 
 ## Embedding Integration Status
 
@@ -35,27 +49,25 @@
 | Thai automotive query | ✅ PASS | 1024 | 1239ms |
 | Vehicle spec text | ✅ PASS | 1024 | 351ms |
 
-**Note:** Configured dimension is 768 but model returns 1024. Dimension check disabled in adapter for compatibility.
+## Vector Retrieval Smoke Tests
+
+| Query | Expected Result | Score | Status |
+|-------|-----------------|-------|--------|
+| "Honda City ราคาเท่าไหร่" | honda-city-1 | 0.7044 | ✅ PASS |
+| "MG4 แบตเตอรี่กี่ kWh" | mg4-1 | 0.6927 | ✅ PASS |
+| "เปรียบเทียบ Honda City กับ Civic" | honda-city-1 | 0.4767 | ✅ PASS |
+| "BYD Atto 3 ระยะทางวิ่งได้เท่าไหร่" | byd-atto3-1 | 0.7658 | ✅ PASS |
+| "MG IM5 ชาร์จเร็วกี่ kW" | mg-im5-1 | 0.7323 | ✅ PASS |
+
+**Results:** 5/5 queries returned correct evidence
 
 ## Model Diagnostics
 
-### glm-5.3-flash
-- **Status:** ✅ WORKING
-- **Behavior:** Returns content with system prompt
-- **Latency:** 2.8s - 6.1s
-- **Content:** Thai automotive answers
-
-### mimo-v2.5
-- **Status:** ✅ WORKING (with system prompt)
-- **Behavior:** Returns reasoning + content when system prompt provided
-- **Latency:** 3.8s - 6.9s
-- **Diagnosis:** Earlier empty content was due to missing system prompt in test
-
-### union-alpha
-- **Status:** ❌ UNSUPPORTED
-- **Error:** HTTP 401 Unauthorized
-- **Diagnosis:** Model requires different authentication or is not available
-- **Resolution:** Marked as unsupported, using glm-5.3-flash
+| Model | Status | Behavior |
+|-------|--------|----------|
+| glm-5.3-flash | ✅ WORKING | Primary model, returns content with system prompt |
+| mimo-v2.5 | ✅ WORKING | Returns reasoning + content when system prompt provided |
+| union-alpha | ❌ UNSUPPORTED | HTTP 401 Unauthorized |
 
 ## AI Ask End-to-End Results
 
@@ -77,6 +89,7 @@
 | Unsupported fact | 1,279ms | 153 |
 | Embedding (Thai) | 1,239ms | N/A |
 | Embedding (spec) | 351ms | N/A |
+| Vector retrieval | ~50ms | N/A |
 | **Average (chat)** | **5,507ms** | **145** |
 | **Average (embed)** | **795ms** | **N/A** |
 
@@ -84,12 +97,9 @@
 
 | File | Change |
 |------|--------|
-| lib/ai/providers/openai-compatible.ts | Added OpenCode session ID header |
-| src/app/api/ai/ask/route.ts | Wired to AI provider with fallback |
-| scripts/ai-smoke-test.ts | NEW — AI provider smoke test |
-| scripts/test-embedding.ts | NEW — Embedding smoke test |
-| scripts/test-models.ts | NEW — Model diagnostics |
-| docs/research/ai-integration-smoke-test-report.md | UPDATED — P4.2 results |
+| .env.example | Updated EMBEDDING_DIMENSIONS from 768 to 1024 |
+| scripts/vector-retrieval-test.ts | NEW — Vector retrieval smoke test |
+| docs/research/ai-integration-smoke-test-report.md | UPDATED — P4.3 results |
 
 ## Quality Checks
 
@@ -109,9 +119,9 @@
 
 ## Remaining Blockers
 
-1. Embedding dimension mismatch (configured 768, actual 1024) — working but dimension check disabled
-2. union-alpha model unsupported (HTTP 401)
-3. Response time varies (1.3s - 14.7s)
+1. union-alpha model unsupported (HTTP 401)
+2. Response time varies (1.3s - 14.7s)
+3. Production vector search not yet wired to database (in-memory test only)
 
 ## AI/Config Confirmation
 

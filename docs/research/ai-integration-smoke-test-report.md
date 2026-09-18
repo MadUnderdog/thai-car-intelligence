@@ -1,4 +1,4 @@
-# AI Integration Smoke Test Report — P4.4
+# AI Integration Smoke Test Report — P4.5
 
 **Date:** 2026-09-18
 **Branch:** fix/p1-provenance-gate
@@ -11,8 +11,9 @@
 | AI Ask endpoint tests | 5 | 0 |
 | Embedding smoke tests | 2 | 0 |
 | DB Vector retrieval tests | 5 | 0 |
+| Evidence merge tests | 2 | 0 |
 | Model diagnostics | 3 | 0 |
-| **Total** | **19** | **0** |
+| **Total** | **21** | **0** |
 
 ## Provider Configuration
 
@@ -26,17 +27,6 @@
 | Embedding Base URL | https://openrouter.ai/api/v1 |
 | Embedding Model | perplexity/pplx-embed-v1-0.6b |
 | Embedding Dimensions | 1024 |
-
-## Embedding Dimension Contract
-
-**Source of Truth:** Prisma schema (`embeddings.vector Unsupported("vector(1024)")`)
-
-| Dimension Source | Status |
-|------------------|--------|
-| Prisma schema | 1024 ✅ |
-| .env.example | 1024 ✅ |
-| Actual model output | 1024 ✅ |
-| Config validation | Enabled ✅ |
 
 ## Production Vector Index
 
@@ -62,15 +52,29 @@
 
 **Results:** 5/5 queries returned correct evidence from pgvector
 
-## AI Ask End-to-End Results
+## AI Ask End-to-End Results (with Vector Retrieval)
 
-| Query | Status | Mode | Evidence Grounding |
-|-------|--------|------|-------------------|
-| Honda City price | ✅ PASS | ai-enhanced | ✅ |
-| Comparison | ✅ PASS | ai-enhanced | ✅ |
-| Unsupported fact | ✅ PASS | ai-enhanced | ✅ Hallucination guard |
-| Catalog search | ✅ PASS | ai-enhanced | ✅ |
-| Insufficient evidence | ✅ PASS | structured-catalog | ✅ Fallback |
+| Query | Status | Mode | Vector Hit | Evidence Grounding |
+|-------|--------|------|------------|-------------------|
+| Honda City price | ✅ PASS | ai-enhanced | ✅ | ✅ |
+| Comparison | ✅ PASS | ai-enhanced | ✅ | ✅ |
+| Unsupported fact | ✅ PASS | ai-enhanced | ✅ | ✅ Hallucination guard |
+| Catalog search | ✅ PASS | ai-enhanced | ✅ | ✅ |
+| Insufficient evidence | ✅ PASS | structured-catalog | ✅ | ✅ Fallback |
+
+## Evidence Merge Flow
+
+```
+Thai query
+→ structured catalog retrieval
+→ embedding
+→ PostgreSQL/pgvector evidence retrieval
+→ merge/rank evidence (structured priority)
+→ Evidence Gate
+→ model router
+→ grounded Thai answer
+→ source/evidence metadata
+```
 
 ## Latency / Cost Baseline
 
@@ -90,9 +94,9 @@
 
 | File | Change |
 |------|--------|
-| scripts/index-evidence.ts | NEW — Production vector indexing |
-| scripts/db-vector-search.ts | NEW — DB vector search test |
-| docs/research/ai-integration-smoke-test-report.md | UPDATED — P4.4 results |
+| lib/ai/retrieval/evidence-merge.ts | NEW — Evidence merge logic |
+| src/app/api/ai/ask/route.ts | Updated to use vector retrieval |
+| docs/research/ai-integration-smoke-test-report.md | UPDATED — P4.5 results |
 
 ## Quality Checks
 
@@ -109,13 +113,12 @@
 | Verified prices | 13 | 13 |
 | Verified specs | 53 | 53 |
 | Research observations | 165 | 165 |
-| Embeddings in DB | 0 | 10 |
+| Embeddings in DB | 10 | 10 |
 
 ## Remaining Blockers
 
 1. union-alpha model unsupported (HTTP 401)
 2. Response time varies (1.3s - 14.7s)
-3. AI Ask not yet wired to use DB vector retrieval (uses structured catalog only)
 
 ## AI/Config Confirmation
 

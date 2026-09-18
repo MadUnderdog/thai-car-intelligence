@@ -34,11 +34,20 @@ export default async function VehicleDetailPage({ params }: Props) {
     `SELECT v.id, v."nameEn", v."nameTh", v.slug, v."fuelType",
       p.amount as price,
       ps."powerKw", ps."torqueNm", ps."rangeKm",
-      bs."capacityKwh"
+      bs."capacityKwh", bs.chemistry,
+      cs."dcPowerKw", cs."acPowerKw",
+      ds."lengthMm", ds."widthMm", ds."heightMm", ds."wheelbaseMm", ds."groundClearanceMm",
+      ws."vehicleYears", ws."vehicleDistanceKm", ws."batteryYears"
      FROM "Variant" v
      LEFT JOIN "Price" p ON p."variantId" = v.id AND p."isCurrent" = true
+       AND p."sourceDocumentId" IS NOT NULL
+       AND EXISTS (SELECT 1 FROM "SourceDocument" sd JOIN "BrochureVerification" bv ON bv."sourceDocumentId" = sd.id
+                   WHERE sd.id = p."sourceDocumentId" AND sd.status = 'VERIFIED' AND bv.status = 'VERIFIED')
      LEFT JOIN "PerformanceSpec" ps ON ps."variantId" = v.id
      LEFT JOIN "BatterySpec" bs ON bs."variantId" = v.id
+     LEFT JOIN "ChargingSpec" cs ON cs."variantId" = v.id
+     LEFT JOIN "DimensionsSpec" ds ON ds."variantId" = v.id
+     LEFT JOIN "WarrantySpec" ws ON ws."variantId" = v.id
      WHERE v."modelId" = $1 AND v.status = 'ACTIVE'
      ORDER BY p.amount ASC NULLS LAST`,
     [carModel.id]
@@ -66,6 +75,14 @@ export default async function VehicleDetailPage({ params }: Props) {
       torqueNm: v.torqueNm ? Number(v.torqueNm) : null,
       rangeKm: v.rangeKm ? Number(v.rangeKm) : null,
       batteryKwh: v.capacityKwh ? Number(v.capacityKwh) : null,
+      batteryChemistry: v.chemistry || null,
+      chargeDcKw: v.dcPowerKw ? Number(v.dcPowerKw) : null,
+      chargeAcKw: v.acPowerKw ? Number(v.acPowerKw) : null,
+      dimensionsMm: v.lengthMm ? `${Number(v.lengthMm)}x${Number(v.widthMm)}x${Number(v.heightMm)}` : null,
+      wheelbaseMm: v.wheelbaseMm ? Number(v.wheelbaseMm) : null,
+      groundClearanceMm: v.groundClearanceMm ? Number(v.groundClearanceMm) : null,
+      warrantyYears: v.vehicleYears ? Number(v.vehicleYears) : null,
+      warrantyKm: v.vehicleDistanceKm ? Number(v.vehicleDistanceKm) : null,
     })),
     images: media.rows.map((m: any) => ({ url: m.url, role: m.role, caption: m.captionTh || m.captionEn })),
   };

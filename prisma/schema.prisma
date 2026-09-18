@@ -608,3 +608,76 @@ model Embedding {
   @@unique([sourceDocumentId, chunkIndex, model])
   @@index([sourceDocumentId])
 }
+
+// ============================================================
+// COMMUNITY FOUNDATION
+// Community content NEVER mutates canonical car facts.
+// Flow: Comment → optional research lead → ResearchCandidate
+//       → source verification → canonical fact
+// ============================================================
+
+enum CommentStatus {
+  VISIBLE
+  HIDDEN
+  FLAGGED
+  DELETED
+}
+
+model CommunityComment {
+  id          String    @id @default(uuid()) @db.Uuid
+  variantId   String?   @db.Uuid
+  modelId     String?   @db.Uuid
+  authorName  String
+  authorToken String // anonymous pseudonymous identity hash
+  body        String    @db.Text
+  parentId    String?   @db.Uuid // thread/reply
+  parent      CommunityComment?  @relation("CommentThread", fields: [parentId], references: [id], onDelete: Cascade)
+  replies     CommunityComment[] @relation("CommentThread")
+  
+  upvotes     Int       @default(0)
+  downvotes   Int       @default(0)
+  
+  status      CommentStatus @default(VISIBLE)
+  flaggedCount Int      @default(0)
+  
+  // research lead: community observation proposed for verification
+  isResearchLead Boolean @default(false)
+  researchCandidateId String? @db.Uuid
+  
+  // anti-spam / rate limiting
+  ipAddressHash String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime?
+  
+  votes          CommentVote[]
+  reports        CommentReport[]
+  
+  @@index([variantId])
+  @@index([modelId])
+  @@index([parentId])
+  @@index([status])
+}
+
+model CommentVote {
+  id        String   @id @default(uuid()) @db.Uuid
+  commentId String   @db.Uuid
+  voterToken String
+  value     Int      // +1 upvote, -1 downvote
+  comment   CommunityComment @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  
+  @@unique([commentId, voterToken])
+}
+
+model CommentReport {
+  id        String   @id @default(uuid()) @db.Uuid
+  commentId String   @db.Uuid
+  reporterToken String
+  reason    String
+  comment   CommunityComment @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  resolvedAt DateTime?
+  resolved  Boolean  @default(false)
+  
+  @@unique([commentId, reporterToken])
+}

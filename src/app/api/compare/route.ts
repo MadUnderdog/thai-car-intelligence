@@ -33,7 +33,13 @@ export async function GET(request: Request) {
     const variantIds = variants.rows.map((v: any) => v.id);
 
     const prices: any = await pool.query(
-      `SELECT "variantId", amount, "priceType" FROM "Price" WHERE "variantId" = ANY($1) AND "isCurrent" = true ORDER BY amount ASC`,
+      `SELECT p."variantId", p.amount, p."priceType"
+       FROM "Price" p
+       WHERE p."variantId" = ANY($1) AND p."isCurrent" = true
+         AND p."sourceDocumentId" IS NOT NULL
+         AND EXISTS (SELECT 1 FROM "SourceDocument" sd JOIN "BrochureVerification" bv ON bv."sourceDocumentId" = sd.id
+                     WHERE sd.id = p."sourceDocumentId" AND sd.status = 'VERIFIED' AND bv.status = 'VERIFIED')
+       ORDER BY p.amount ASC`,
       [variantIds]
     );
 

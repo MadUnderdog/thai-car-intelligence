@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Card, CardBody } from "@/components/ui/Card";
+import { CommunitySection } from "@/components/community/CommunitySection";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 
@@ -24,6 +25,18 @@ type Variant = {
   groundClearanceMm: number | null;
   warrantyYears: number | null;
   warrantyKm: number | null;
+  // evidence provenance per section (from page.tsx joins)
+  evidence: {
+    priceVerified: boolean;
+    performance: boolean;
+    battery: boolean;
+    charging: boolean;
+    dimensions: boolean;
+    warranty: boolean;
+    lastVerifiedAt: string | null;
+  };
+  // research-only observations (NOT verified) — shown clearly distinct
+  researchSpecs: { label: string; value: string }[];
 };
 
 type ModelData = {
@@ -54,8 +67,37 @@ function SpecRow({ label, value, unit }: { label: string; value: string | number
   );
 }
 
+function EvidenceDot({ ok }: { ok: boolean }) {
+  return ok
+    ? <span className="text-[var(--color-success-600)]" title="ตรวจสอบจากแหล่งทางการแล้ว">✔️ ยืนยันแล้ว</span>
+    : <span className="text-[var(--color-gray-400)]" title="ยังไม่มีการตรวจสอบจากแหล่งทางการ">⛔ ยังไม่ยืนยัน</span>;
+}
+
+function ResearchOnlyBlock({ researchSpecs, name }: { researchSpecs: { label: string; value: string }[]; name: string }) {
+  if (researchSpecs.length === 0) return null;
+  return (
+    <Card className="border-l-4 border-[var(--color-warning-400)]">
+      <CardBody>
+        <h3 className="font-medium text-[var(--color-gray-700)] mb-2">ข้อมูลจากงานวิจัย (ยังไม่ยืนยัน) — {name}</h3>
+        <p className="text-xs text-[var(--color-gray-500)] mb-2">
+          ⚠️ ข้อมูลจากการรวบรวมสื่อ/งานวิจัย ยังไม่ผ่านการตรวจสอบจากแหล่งทางการ โปรดใช้เพื่อการอ้างอิงเบื้องต้น
+        </p>
+        <ul className="text-sm space-y-1">
+          {researchSpecs.map((r) => (
+            <li key={r.label} className="flex justify-between">
+              <span className="text-[var(--color-gray-500)]">{r.label}</span>
+              <span className="italic text-[var(--color-gray-700)]">{r.value}</span>
+            </li>
+          ))}
+        </ul>
+      </CardBody>
+    </Card>
+  );
+}
+
 export default function VehicleDetailClient({ model }: { model: ModelData }) {
   const heroImage = model.images.find((img) => img.role === "hero") || model.images[0];
+  const primary = model.variants[0];
 
   return (
     <div className="container-narrow py-8">
@@ -82,6 +124,21 @@ export default function VehicleDetailClient({ model }: { model: ModelData }) {
               <div className="text-sm text-[var(--color-gray-500)] mb-1">{model.brandTh}</div>
               <h1 className="text-2xl md:text-3xl font-bold text-[var(--color-gray-900)]">{model.name}</h1>
               <div className="text-[var(--color-gray-600)]">{model.nameTh}</div>
+              {primary && (
+                <div className="mt-3 flex flex-wrap items-baseline gap-3">
+                  <span className="text-2xl font-bold text-[var(--color-primary-600)]">
+                    {primary.price ? `฿${primary.price.toLocaleString()}` : NO_DATA}
+                  </span>
+                  <span className="text-xs">
+                    <EvidenceDot ok={primary.evidence.priceVerified} />
+                  </span>
+                  {primary.evidence.lastVerifiedAt && (
+                    <span className="text-xs text-[var(--color-gray-400)]">
+                      ตรวจสอบล่าสุด {new Date(primary.evidence.lastVerifiedAt).toLocaleDateString("th-TH")}
+                    </span>
+                  )}
+                </div>
+              )}
             </CardBody>
           </Card>
 
@@ -142,26 +199,40 @@ export default function VehicleDetailClient({ model }: { model: ModelData }) {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
                   <div>
-                    <h3 className="font-medium text-[var(--color-gray-700)] mb-1">ประสิทธิภาพ</h3>
+                    <h3 className="font-medium text-[var(--color-gray-700)] mb-1 flex items-center justify-between gap-2">
+                      ประสิทธิภาพ
+                      <span className="text-[10px] font-normal"><EvidenceDot ok={model.variants[0].evidence.performance} /></span>
+                    </h3>
                     <SpecRow label="กำลังสูงสุด" value={model.variants[0].powerKw} unit="kW" />
                     <SpecRow label="แรงบิด" value={model.variants[0].torqueNm} unit="Nm" />
                     <SpecRow label="ระยะทาง" value={model.variants[0].rangeKm} unit="km" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-[var(--color-gray-700)] mb-3">แบตเตอรี่และการชาร์จ</h3>
+                    <h3 className="font-medium text-[var(--color-gray-700)] mb-3 flex items-center justify-between gap-2">
+                      แบตเตอรี่และการชาร์จ
+                      <span className="text-[10px] font-normal">
+                        <EvidenceDot ok={model.variants[0].evidence.battery || model.variants[0].evidence.charging} />
+                      </span>
+                    </h3>
                     <SpecRow label="ความจุแบตเตอรี่" value={model.variants[0].batteryKwh} unit="kWh" />
                     <SpecRow label="ประเภทแบตเตอรี่" value={model.variants[0].batteryChemistry} />
                     <SpecRow label="ชาร์จ DC" value={model.variants[0].chargeDcKw} unit="kW" />
                     <SpecRow label="ชาร์จ AC" value={model.variants[0].chargeAcKw} unit="kW" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-[var(--color-gray-700)] mb-3">ขนาด</h3>
+                    <h3 className="font-medium text-[var(--color-gray-700)] mb-3 flex items-center justify-between gap-2">
+                      ขนาด
+                      <span className="text-[10px] font-normal"><EvidenceDot ok={model.variants[0].evidence.dimensions} /></span>
+                    </h3>
                     <SpecRow label="ยาวxกว้างxสูง" value={model.variants[0].dimensionsMm} unit="mm" />
                     <SpecRow label="ฐานล้อ" value={model.variants[0].wheelbaseMm} unit="mm" />
                     <SpecRow label="ระยะต่ำสุด" value={model.variants[0].groundClearanceMm} unit="mm" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-[var(--color-gray-700)] mb-3">การรับประกัน</h3>
+                    <h3 className="font-medium text-[var(--color-gray-700)] mb-3 flex items-center justify-between gap-2">
+                      การรับประกัน
+                      <span className="text-[10px] font-normal"><EvidenceDot ok={model.variants[0].evidence.warranty} /></span>
+                    </h3>
                     <SpecRow label="ระยะเวลา" value={model.variants[0].warrantyYears} unit="ปี" />
                     <SpecRow label="ระยะทาง" value={model.variants[0].warrantyKm} unit="km" />
                   </div>
@@ -172,15 +243,22 @@ export default function VehicleDetailClient({ model }: { model: ModelData }) {
               </CardBody>
             </Card>
           )}
+
+          {/* Research-only observations (clearly NOT verified) */}
+          {model.variants.length > 0 && (
+            <ResearchOnlyBlock researchSpecs={model.variants[0].researchSpecs} name={model.variants[0].name} />
+          )}
         </div>
 
         {/* Sidebar */}
         <div className="space-y-6">
           <Card>
             <CardBody className="space-y-3">
-              <Button className="w-full" variant="primary">
-                + เพิ่มเพื่อเปรียบเทียบ
-              </Button>
+              <Link href={`/compare?ids=${model.variants[0]?.id ?? ""}`}>
+                <Button className="w-full" variant="primary">
+                  ⚖️ เปรียบเทียบรุ่นนี้
+                </Button>
+              </Link>
               <Button className="w-full" variant="secondary">
                 🔖 บันทึก
               </Button>
@@ -192,6 +270,11 @@ export default function VehicleDetailClient({ model }: { model: ModelData }) {
             </CardBody>
           </Card>
         </div>
+      </div>
+
+      {/* Community comments (Part E) */}
+      <div className="mt-8">
+        <CommunitySection modelId={model.id} />
       </div>
     </div>
   );

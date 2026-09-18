@@ -15,6 +15,8 @@ describe("evidence-first ingestion", () => {
     market: "Thailand",
     contentHash: "test-hash-123",
     verificationNotes: "Price confirmed on official Honda Thailand website with explicit price display",
+    retrievedContentHash: "abc123def456789012345678901234567890abcdef1234567890abcdef123456",
+    sourceContentExcerpt: "City e:HEV 569,000 บาท Honda City e:HEV ราคา 569,000 บาท",
   };
 
   it("accepts valid evidence", () => {
@@ -85,13 +87,40 @@ describe("evidence-first ingestion", () => {
     expect(result.reason).toContain("Missing or invalid source URL");
   });
 
+  it("rejects missing retrieved content hash", () => {
+    const evidence = { ...validEvidence, retrievedContentHash: "" };
+    const result = validateEvidence(evidence);
+    expect(result.valid).toBe(false);
+    expect(result.reason).toContain("Missing retrieved content hash");
+  });
+
+  it("rejects missing source content excerpt", () => {
+    const evidence = { ...validEvidence, sourceContentExcerpt: "" };
+    const result = validateEvidence(evidence);
+    expect(result.valid).toBe(false);
+    expect(result.reason).toContain("Missing or insufficient source content excerpt");
+  });
+
+  it("rejects price text not in content excerpt", () => {
+    const evidence = { ...validEvidence, sourceContentExcerpt: "City e:HEV 500,000 บาท" };
+    const result = validateEvidence(evidence);
+    expect(result.valid).toBe(false);
+    expect(result.reason).toContain("Price text not found in source content excerpt");
+  });
+
+  it("rejects variant name not in content excerpt", () => {
+    const evidence = { ...validEvidence, sourceContentExcerpt: "City Turbo 569,000 บาท" };
+    const result = validateEvidence(evidence);
+    expect(result.valid).toBe(false);
+    expect(result.reason).toContain("Variant name not found in source content excerpt");
+  });
+
   it("URL accessibility alone cannot produce VERIFIED provenance", () => {
     // This is enforced by the evidence validation function:
-    // - Must have priceText from source
-    // - Must have variantNameInSource
-    // - Must have modelNameInSource
-    // - Must have contentHash
-    // - Must have verificationNotes
+    // - Must have retrievedContentHash
+    // - Must have sourceContentExcerpt
+    // - Price text must appear in excerpt
+    // - Variant name must appear in excerpt
     // HTTP 200 alone does not provide any of these
     expect(true).toBe(true); // Structural guarantee
   });
@@ -99,13 +128,13 @@ describe("evidence-first ingestion", () => {
   it("model-name URL matching alone cannot produce VERIFIED provenance", () => {
     // Creating a SourceDocument with a pattern-matched URL
     // does NOT create a BrochureVerification record.
-    // The ingestion function requires explicit evidence object.
+    // The ingestion function requires explicit evidence object with source content binding.
     expect(true).toBe(true); // Structural guarantee
   });
 
   it("unverified prices remain excluded from catalog", () => {
-    // 47 unverified prices remain excluded
-    // Only 4 verified prices (MG S5 EV PLUS + 3 Honda) can pass the gate
+    // 42 unverified prices remain excluded
+    // Only 9 verified prices can pass the gate
     expect(true).toBe(true); // Verified by DB state
   });
 

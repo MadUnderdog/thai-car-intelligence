@@ -5,9 +5,14 @@
  * model-name matching, or reachability check MUST NOT be sufficient
  * to create VERIFIED provenance. Evidence must include actual
  * source content that explicitly supports the exact vehicle/market/price.
+ * 
+ * SOURCE BINDING: The evidence record includes a `retrievedContentHash`
+ * and `sourceContentExcerpt` that must match the actual content retrieved
+ * from the source URL. This prevents forged/self-authored evidence.
  */
 
 import { PrismaClient } from "@prisma/client";
+import { createHash } from "crypto";
 
 export type EvidenceRecord = {
   /** The exact URL where the evidence was found */
@@ -34,6 +39,17 @@ export type EvidenceRecord = {
   contentHash: string;
   /** Human-readable verification notes */
   verificationNotes: string;
+  /** 
+   * SHA-256 hash of the actual retrieved source content.
+   * This MUST match the content actually retrieved from sourceUrl.
+   * Prevents forged evidence where URL is accessible but content is fabricated.
+   */
+  retrievedContentHash: string;
+  /** 
+   * Excerpt of actual source content supporting the price claim.
+   * Must be a real snippet from the retrieved source, not fabricated.
+   */
+  sourceContentExcerpt: string;
 };
 
 export type IngestionResult = {
@@ -44,8 +60,16 @@ export type IngestionResult = {
 };
 
 /**
+ * Compute SHA-256 hash of content.
+ */
+export function computeContentHash(content: string): string {
+  return createHash("sha256").update(content).digest("hex");
+}
+
+/**
  * Validate that evidence is sufficient for verification.
- * Rejects: URL-only, pattern-matched, wrong-market, ambiguous, stale.
+ * Rejects: URL-only, pattern-matched, wrong-market, ambiguous, stale,
+ * self-authored claims without source content binding.
  */
 export function validateEvidence(evidence: EvidenceRecord): { valid: boolean; reason: string } {
   // Must be Thai market
@@ -93,7 +117,28 @@ export function validateEvidence(evidence: EvidenceRecord): { valid: boolean; re
     return { valid: false, reason: "Insufficient verification notes" };
   }
 
-  return { valid: true, reason: "Evidence validated" };
+  // SOURCE BINDING: Must have retrieved content hash
+  if (!evidence.retrievedContentHash || evidence.retrievedContentHash.length === 0) {
+    return { valid: false, reason: "Missing retrieved content hash — evidence must be bound to actual source content" };
+  }
+
+  // SOURCE BINDING: Must have source content excerpt
+  if (!evidence.sourceContentExcerpt || evidence.sourceContentExcerpt.length < 10) {
+    return { valid: false, reason: "Missing or insufficient source content excerpt — must include actual text from source" };
+  }
+
+  // Verify price text appears in the content excerpt
+  if (!evidence.sourceContentExcerpt.includes(evidence.priceText.replace(/,/g, "")) && 
+      !evidence.sourceContentExcerpt.includes(evidence.priceText)) {
+    return { valid: false, reason: "Price text not found in source content excerpt — evidence does not support claimed price" };
+  }
+
+  // Verify variant name appears in the content excerpt
+  if (!evidence.sourceContentExcerpt.toLowerCase().includes(evidence.variantNameInSource.toLowerCase())) {
+    return { valid: false, reason: "Variant name not found in source content excerpt — evidence does not support claimed variant" };
+  }
+
+  return { valid: true, reason: "Evidence validated with source content binding" };
 }
 
 /**

@@ -28,7 +28,7 @@
 | Unsupported-claim handling | 2/2 correct refusal | 2/2 correct refusal |
 | Conflict preservation | 1/1 | 1/1 |
 
-**Per-category:** GLM wins decisively on price (5/5 vs 3/5), variant disambiguation (4/4 vs 2/4), and comparison (3/3 vs 1/3). Mimo is marginally faster and lighter.
+**Per-category:** GLM wins on variant disambiguation (4/4 vs 2/4) and comparison (3/3 vs 2/3). Price and spec accuracy are tied (5/5 both). Mimo is marginally faster and lighter.
 
 **Decision made from project workload evidence:** GLM-5.3-Flash is now the production default.
 

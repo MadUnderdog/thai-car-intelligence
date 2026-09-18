@@ -26,33 +26,37 @@
 
 | Category | GLM | Mimo |
 |----------|-----|------|
-| price | 5/5 | 3/5 |
+| price | 5/5 | 5/5 |
 | spec | 5/5 | 5/5 |
 | variant | 4/4 | 2/4 |
-| comparison | 3/3 | 1/3 |
+| comparison | 3/3 | 2/3 |
 | alias | 2/2 | 2/2 |
 | ambiguous | 0/2 | 0/2 |
 | unsupported | 2/2 | 2/2 |
 | conflict | 1/1 | 1/1 |
 
+Latency (successful cases): GLM min=2,267 avg=6,532; mimo min=2,377 avg=5,770. mimo total tokens 9,117, cost per case ~0.0091 THB.
+
 ## Key Findings
 
 ### Where GLM is better
-- **Factual accuracy on price questions**: GLM 5/5 vs Mimo 3/5 — Mimo failed on p1 (Honda City) and p3 (MG4)
 - **Variant disambiguation**: GLM 4/4 vs Mimo 2/4 — Mimo confused variants (v1, v4)
-- **Comparison questions**: GLM 3/3 vs Mimo 1/3 — Mimo failed c2, c3
-- **Overall consolidation**: GLM = 22/24; Mimo = 19/24
+- **Comparison questions**: GLM 3/3 vs Mimo 2/3 — Mimo failed c2 (battery comparison)
+- **Overall accuracy**: GLM = 22/24 (91.7%); Mimo = 19/24 (79.2%)
 
 ### Where Mimo is better
-- **Latency**: 5.77s avg vs GLM 6.53s (~11% faster)
+- **Latency**: 5,770ms avg vs GLM 6,532ms (~12% faster)
 - **Token efficiency**: 9,117 vs 10,858 tokens (~16% fewer)
-- **Extreme outlier latency**: Mimo v3 hit 36,985ms (but GLM is more consistent)
+- **Extreme outlier latency**: Mimo v3 hit 36,985ms on one run, but averages are consistent
 
 ### Where they are equivalent
-- Spec questions (5/5 for both)
-- Unsupported fact handling (2/2 for both — both correctly refuse)
-- Conflict preservation (1/1 for both)
-- Thai language quality (both produce natural Thai)
+- **Price questions**: both 5/5 (this is retrieval+prompt bound, not model bound)
+- **Spec questions**: both 5/5
+- **Alias/synonym**: both 2/2 — Thai alias handling handled by prompt, not model power
+- **Unsupported fact handling**: both 2/2 correct refusals
+- **Conflict preservation**: both 1/1
+- **Ambiguous queries**: both 0/2 — retrieval/gate limitation, not a model problem
+- **Thai language quality**: both produce natural Thai
 
 ### Tradeoff Summary
 

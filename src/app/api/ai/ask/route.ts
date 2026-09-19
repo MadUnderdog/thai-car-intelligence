@@ -19,10 +19,13 @@ export async function POST(request: Request) {
 
   try {
     const question = parsed.data.question;
+    const t0 = performance.now();
     const intent = parseAutomotiveQuery(question);
+    const tParse = performance.now();
 
     // 1. Structured catalog retrieval
     const allVariants = await searchQuestionCatalog(question);
+    const tCatalog = performance.now();
 
     // 1b. Body-type constraint: if query explicitly mentions a body type,
     // filter structured results to only vehicles of that type.
@@ -36,6 +39,7 @@ export async function POST(request: Request) {
 
     // 2. Vector evidence retrieval (supplemental, threshold-gated)
     const vectorResult = await getVectorEvidence(question);
+    const tVector = performance.now();
 
     // 3. Build structured evidence from catalog
     const structuredEvidence: EvidenceItem[] = variants.map((v) => ({
@@ -134,6 +138,7 @@ export async function POST(request: Request) {
       : qualifiedEvidence.length > 0 ? "(หลักฐานบางส่วนเป็นการคาดเดาจากการค้นหาแบบความมั่นใจต่ำ ให้ระบุว่าข้อมูลนั้นอาจไม่ตรงคำถามและแนะนำให้ระบุรุ่นที่แน่นอน)"
       : "";
 
+    const tMerge = performance.now();
     const aiResult = await provider.chat({
       question: `${gatePrefix ? gatePrefix + " " : ""}${question}`,
       evidence: merged.merged.map((e) => ({
@@ -145,6 +150,15 @@ export async function POST(request: Request) {
       language: "th",
     });
 
+    const tLLM = performance.now();
+    const timing = {
+      parseMs: Math.round(tParse - t0),
+      catalogMs: Math.round(tCatalog - tParse),
+      vectorMs: Math.round(tVector - tCatalog),
+      mergeGateMs: Math.round(tMerge - tVector),
+      llmMs: Math.round(tLLM - tMerge),
+      totalMs: Math.round(tLLM - t0),
+    };
     return NextResponse.json({
       answer: aiResult.answer,
       citations: merged.merged,
@@ -155,6 +169,7 @@ export async function POST(request: Request) {
       trust: provenance,
       vectorAvailable: merged.vectorAvailable,
       vectorEvidenceCount: merged.vector.length,
+      timing,
     });
   } catch (error) {
     console.error("API /api/ai/ask error:", error);

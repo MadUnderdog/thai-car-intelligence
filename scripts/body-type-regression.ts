@@ -30,7 +30,7 @@ async function main() {
     // Unsupported → rejected
     { query: "Honda ล็อกหน้าจอเท่าไหร่", expect: "rejected", label: "unsupported spec" },
     // MG IM6 → insufficient (no verified evidence)
-    { query: "MG IM6 ราคาเท่าไหร่", expect: "qualified", label: "MG IM6 (entity match, qualified)" },
+    { query: "MG IM6 ราคาเท่าไหร่", expect: "rejected", label: "MG IM6 (no verified evidence, correctly rejected)" },
   ];
 
   let pass = 0;

@@ -16,7 +16,7 @@
 import type { EvidenceItem, MergedEvidence } from "./evidence-merge";
 import type { VectorSearchResult, VectorEvidence } from "../../search/vector-search";
 import { parseAutomotiveQuery } from "./query-parser";
-import { extractBodyType, KNOWN_BODY_TYPES, NAME_TO_BODY_TYPE } from "./body-type-intent";
+import { extractBodyType, KNOWN_BODY_TYPES, NAME_TO_BODY_TYPE, BODY_TYPE_MAP } from "./body-type-intent";
 
 export const VECTOR_STRICT_DISTANCE = 0.30; // high-confidence nearest neighbor
 export const VECTOR_MAX_DISTANCE = 0.45;   // anything further = untrustworthy
@@ -85,6 +85,32 @@ function contentMatchesQueryEntities(content: string, tokens: string[]): boolean
 }
 
 /**
+ * Extract specific model terms from the query that are NOT brand tokens.
+ * E.g., "MG IM6 ราคาเท่าไหร่" → ["im6"] (brand "mg" excluded)
+ * Used to require evidence to match specific model when user names one.
+ */
+// Common Thai query words that are NOT model names
+const THAI_QUERY_WORDS = new Set([
+  "ราคา", "เท่าไหร่", "ราคาเท่าไหร่", "เท่าไร", "ราคากี่", "กี่บาท", "มี", "รถ", "รุ่น", "ที่", "ของ", "ไหม", "ครับ", "ค่ะ",
+  "กี่", "เปรียบเทียบ", "เทียบ", "ไม่เกิน", "ต่ำกว่า", "มากกว่า", "ถูกที่สุด", "แพงที่สุด",
+  "ระยะทาง", "กำลัง", "แรงม้า", "แบตเตอรี่", "ชาร์จ", "วิ่ง", "กี่km", "กี่kwh",
+  "weight", "compare", "price", "how", "much", "what", "is", "the", "have",
+]);
+
+function extractSpecificModelTerms(query: string): string[] {
+  const lower = query.toLowerCase();
+  const words = lower.split(/[\s]+/).filter((w) => w.length >= 2);
+  const bodyTypeTerms = new Set(Object.keys(BODY_TYPE_MAP).map((k) => k.toLowerCase()));
+  return words.filter((w) =>
+    !MANUFACTURER_TOKENS.includes(w) &&
+    !Object.keys(BRAND_TOKEN_MAP).some((k) => k === w) &&
+    !bodyTypeTerms.has(w) &&
+    !THAI_QUERY_WORDS.has(w) &&
+    w.length > 2 // skip very short tokens
+  );
+}
+
+/**
  * Decide whether a vector evidence row may join the merged evidence bundle.
  * Rules:
  * - Rejected if distance > VECTOR_STRICT threshold AND content doesn't match query entities.
@@ -101,9 +127,13 @@ export function gateVectorEvidence(
   const manufacturerMatch = queryTokens.some((t) =>
     MANUFACTURER_TOKENS.includes(t) && normalizedContent.includes(t)
   );
+  // Specificity check: if query mentions a specific model (e.g., "IM6") beyond just the brand,
+  // evidence must reference that specific model, not just the brand.
+  const specificTerms = extractSpecificModelTerms(query);
+  const hasSpecificMatch = specificTerms.length === 0 || specificTerms.some((t) => normalizedContent.includes(t));
 
-  if (vec.distance > VECTOR_STRICT_DISTANCE && !entityMatch) {
-    return { accepted: false, reason: `distance=${vec.distance.toFixed(4)} beyond strict threshold and content doesn't reference query entity` };
+  if (vec.distance > VECTOR_STRICT_DISTANCE && (!entityMatch || !hasSpecificMatch)) {
+    return { accepted: false, reason: `distance=${vec.distance.toFixed(4)} beyond strict threshold and content doesn't reference query entity or specific model` };
   }
   if (vec.distance > VECTOR_MAX_DISTANCE) {
     // Entity-corroborated rows get a wider absolute bound than pure nearest-neighbor rows:
@@ -114,6 +144,12 @@ export function gateVectorEvidence(
     }
     return { accepted: false, reason: `distance=${vec.distance.toFixed(4)} untrustworthy` };
   }
+  // Specificity guard: if query mentions a specific model beyond just the brand,
+  // evidence that only matches the brand but not the specific model is rejected.
+  if (specificTerms.length > 0 && !hasSpecificMatch && manufacturerMatch) {
+    return { accepted: false, reason: `query mentions specific model [${specificTerms.join(",")}] but evidence only references brand` };
+  }
+
   // Manufacturer-token mismatch guard: query mentions brand X, evidence is brand Y brand
   if (!entityMatch && !manufacturerMatch) {
     return { accepted: false, reason: "query entities not referenced in content" };

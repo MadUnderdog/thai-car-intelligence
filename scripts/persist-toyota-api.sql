@@ -1,15 +1,20 @@
 -- Persist Toyota Thailand real data from official API
 -- Source: POST https://www.toyota.co.th/component/api/tcoth/web-init
 -- This is the actual API the Toyota Thailand website uses to load model data
+--
+-- IMPORTANT: The API returns car_series with start_price/max_price per model.
+-- These are MODEL-LEVEL starting prices, NOT variant-specific MSRPs.
+-- Price type must be LIST_PRICE, not MSRP.
+-- All prices should reference a SINGLE SourceDocument (the API response).
 
 DO $$
 DECLARE
   toyota_id UUID;
   source_id UUID;
+  consolidated_doc_id UUID;
   model_rec RECORD;
-  variant_rec RECORD;
-  doc_id UUID;
-  api_data JSONB;
+  variant_id UUID;
+  model_id UUID;
 BEGIN
   -- Get Toyota manufacturer ID
   SELECT id INTO toyota_id FROM "Manufacturer" WHERE slug = 'toyota';
@@ -19,6 +24,24 @@ BEGIN
   VALUES (gen_random_uuid(), 'โตโยต้า ประเทศไทย — Official API', 'Toyota Thailand Official API', 'OFFICIAL_MANUFACTURER', 'https://www.toyota.co.th', 'www.toyota.co.th', 'RESTRICTED', 'ACTIVE', NOW(), NOW())
   ON CONFLICT ("baseUrl") DO UPDATE SET "nameEn" = EXCLUDED."nameEn"
   RETURNING "id" INTO source_id;
+
+  -- Check if consolidated SourceDocument already exists
+  SELECT sd."id" INTO consolidated_doc_id
+  FROM "SourceDocument" sd
+  WHERE sd."sourceId" = source_id 
+    AND sd."url" = 'https://www.toyota.co.th/component/api/tcoth/web-init'
+  LIMIT 1;
+  
+  IF consolidated_doc_id IS NULL THEN
+    -- Create consolidated SourceDocument for the API response
+    INSERT INTO "SourceDocument" ("id", "sourceId", "url", "canonicalUrl", "titleTh", "titleEn", "mimeType", "language", "contentHash", "extractionMethod", "extractionStatus", "fetchedAt", "status", "rightsStatus", "createdAt", "updatedAt")
+    VALUES (gen_random_uuid(), source_id, 'https://www.toyota.co.th/component/api/tcoth/web-init', 'https://www.toyota.co.th/component/api/tcoth/web-init', 'โตโยต้า ประเทศไทย — ราคาจาก API อย่างเป็นทางการ', 'Toyota Thailand — Official API Price Data (car_series)', 'application/json', 'th', 'sha256:toyota-api-web-init:84179c98139754329df029b036de276980bf2c8fc77ed7ed6d224e58f353bf93', 'api-json', 'SUCCEEDED', NOW(), 'VERIFIED', 'RESTRICTED', NOW(), NOW())
+    RETURNING "id" INTO consolidated_doc_id;
+    
+    -- Create verification
+    INSERT INTO "BrochureVerification" ("id", "sourceDocumentId", "status", "checkedBy", "notes", "verifiedAt")
+    VALUES (gen_random_uuid(), consolidated_doc_id, 'VERIFIED', 'persist-toyota-api', 'Consolidated Toyota Thailand API response. Model-level starting prices — NOT variant-specific MSRPs.', NOW());
+  END IF;
 
   -- Toyota models with real prices from official API
   -- Format: (model_slug, model_name_en, start_price, max_price)
@@ -38,40 +61,32 @@ BEGIN
     ) AS t(slug, name, start_price, max_price)
   LOOP
     -- Find the model in DB
-    SELECT id INTO variant_rec FROM "CarModel" WHERE slug = model_rec.slug AND "manufacturerId" = toyota_id;
+    SELECT id INTO model_id FROM "CarModel" WHERE slug = model_rec.slug AND "manufacturerId" = toyota_id;
     
-    IF variant_rec IS NULL THEN
+    IF model_id IS NULL THEN
       RAISE NOTICE 'Model not found: %', model_rec.slug;
       CONTINUE;
     END IF;
     
-    -- Get first variant
-    SELECT id INTO variant_rec FROM "Variant" WHERE "modelId" = (SELECT id FROM "CarModel" WHERE slug = model_rec.slug AND "manufacturerId" = toyota_id LIMIT 1) AND status = 'ACTIVE' LIMIT 1;
+    -- Get first (cheapest) variant
+    SELECT id INTO variant_id FROM "Variant" WHERE "modelId" = model_id AND status = 'ACTIVE' LIMIT 1;
     
-    IF variant_rec IS NULL THEN
+    IF variant_id IS NULL THEN
       RAISE NOTICE 'No variant for: %', model_rec.slug;
       CONTINUE;
     END IF;
     
     -- Skip if price already exists
-    IF EXISTS (SELECT 1 FROM "Price" WHERE "variantId" = variant_rec.id AND "priceType" = 'MSRP' AND amount = model_rec.start_price) THEN
+    IF EXISTS (SELECT 1 FROM "Price" WHERE "variantId" = variant_id AND "priceType" = 'LIST_PRICE' AND amount = model_rec.start_price AND "sourceDocumentId" = consolidated_doc_id) THEN
       CONTINUE;
     END IF;
     
-    -- Create source document
-    INSERT INTO "SourceDocument" ("id", "sourceId", "url", "canonicalUrl", "titleTh", "titleEn", "mimeType", "language", "contentHash", "fetchedAt", "status", "rightsStatus", "extractionStatus", "createdAt", "updatedAt")
-    VALUES (gen_random_uuid(), source_id, 'https://www.toyota.co.th/en/model/' || model_rec.slug, 'https://www.toyota.co.th/en/model/' || model_rec.slug, model_rec.name || ' — ราคา', model_rec.name || ' — Price (Official API)', 'application/json', 'th', 'toyota-api-' || model_rec.slug || '-' || model_rec.start_price, NOW(), 'VERIFIED', 'RESTRICTED', 'SUCCEEDED', NOW(), NOW())
-    RETURNING "id" INTO doc_id;
-    
-    -- Create verification
-    INSERT INTO "BrochureVerification" ("id", "sourceDocumentId", "status", "checkedBy", "notes", "verifiedAt")
-    VALUES (gen_random_uuid(), doc_id, 'VERIFIED', 'playwright-api-capture', 'Toyota Thailand official API: ' || model_rec.name || ' starting from ' || model_rec.start_price || ' THB', NOW());
-    
-    -- Create price observation
+    -- Create price observation — using LIST_PRICE (model-level starting price), NOT MSRP
     INSERT INTO "Price" ("id", "variantId", "sourceDocumentId", "priceType", "amount", "currency", "validFrom", "isCurrent", "confidence", "observedAt")
-    VALUES (gen_random_uuid(), variant_rec.id, doc_id, 'MSRP', model_rec.start_price, 'THB', NOW(), true, 0.95, NOW());
+    VALUES (gen_random_uuid(), variant_id, consolidated_doc_id, 'LIST_PRICE', model_rec.start_price, 'THB', NOW(), true, 0.90, NOW())
+    ON CONFLICT ("variantId", "sourceDocumentId", "priceType", "amount", "validFrom") DO NOTHING;
     
-    RAISE NOTICE 'Created price for %: % THB', model_rec.name, model_rec.start_price;
+    RAISE NOTICE 'Created LIST_PRICE for %: % THB (model-level starting price)', model_rec.name, model_rec.start_price;
   END LOOP;
 END $$;
 
@@ -79,19 +94,17 @@ END $$;
 SELECT '--- TOYOTA PRICES ---' as info;
 SELECT 
   m."nameEn" as model,
+  v."nameEn" as variant,
   p.amount,
   p."priceType",
-  s."nameEn" as source,
+  p.confidence,
+  sd.url as source,
   bv."status" as verification
 FROM "Price" p
 JOIN "Variant" v ON p."variantId" = v.id
 JOIN "CarModel" m ON v."modelId" = m.id
 JOIN "Manufacturer" man ON m."manufacturerId" = man.id
 LEFT JOIN "SourceDocument" sd ON p."sourceDocumentId" = sd.id
-LEFT JOIN "Source" s ON sd."sourceId" = s.id
 LEFT JOIN "BrochureVerification" bv ON bv."sourceDocumentId" = sd.id
 WHERE man.slug = 'toyota' AND p."isCurrent" = true
 ORDER BY p.amount;
-
-SELECT '--- TOTAL VERIFIED PRICES ---' as info;
-SELECT count(*) as total FROM "Price" WHERE "isCurrent" = true AND "sourceDocumentId" IS NOT NULL;

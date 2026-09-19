@@ -24,6 +24,30 @@ beforeAll(async () => {
 });
 
 describe("Toyota API Evidence Chain", () => {
+  it("all Toyota prices share ONE consolidated SourceDocument with raw API response", async () => {
+    const toyota = await prisma.manufacturer.findUnique({ where: { slug: "toyota" } });
+    if (!toyota) return;
+
+    const prices = await prisma.price.findMany({
+      where: { isCurrent: true, variant: { model: { manufacturerId: toyota.id } } },
+      include: { sourceDocument: true },
+    });
+
+    // All prices must have a source document
+    const docIds = new Set(prices.map(p => p.sourceDocumentId).filter(Boolean));
+    
+    // They should all share the same SourceDocument (consolidated)
+    expect(docIds.size).toBe(1);
+    
+    // The consolidated document must have raw API response stored
+    const doc = prices[0].sourceDocument;
+    expect(doc).toBeTruthy();
+    expect(doc!.url).toBe("https://www.toyota.co.th/component/api/tcoth/web-init");
+    expect(doc!.extractedText).toBeTruthy();
+    expect(doc!.extractedText!.length).toBeGreaterThan(10000); // Raw API response is ~58KB
+    expect(doc!.extractionMethod).toBe("api-json");
+  });
+
   it("all Toyota prices point to the actual API endpoint, not model pages", async () => {
     const toyota = await prisma.manufacturer.findUnique({ where: { slug: "toyota" } });
     if (!toyota) return; // Skip if Toyota not in DB

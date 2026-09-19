@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { searchCatalog } from "../../../../lib/catalog/queries";
 import type { CatalogFilters } from "../../../../lib/catalog/types";
 import { validateFuelType, validateLimit, validatePage, validateMaxPrice, MAX_QUERY_LENGTH } from "../../../../lib/validation/api-params";
+import { normalizeThaiQuery } from "../../../../lib/search/thai-normalize";
 
 export const dynamic = "force-dynamic";
 
@@ -23,9 +24,27 @@ export function parseSearchQuery(searchParams: URLSearchParams): CatalogFilters 
 
   const fuelType = validateFuelType(searchParams.get("fuelType"));
 
+  // Thai alias normalization: resolve Thai model/brand names to English
+  // Use resolved aliases for manufacturer/model filtering, not query string modification
+  let resolvedManufacturer = searchParams.get("manufacturer") || undefined;
+  let resolvedQ = q;
+  if (q) {
+    const { resolvedBrands, resolvedModels } = normalizeThaiQuery(q);
+    if (resolvedBrands.length > 0 && !resolvedManufacturer) {
+      resolvedManufacturer = resolvedBrands[0];
+    }
+    // If we resolved aliases, replace q with English terms for Prisma ILIKE
+    if (resolvedModels.length > 0) {
+      resolvedQ = resolvedModels.join(" ");
+    } else if (resolvedBrands.length > 0) {
+      // Brand-only: keep original Thai q for nameTh matching, manufacturer handles brand
+      resolvedQ = undefined;
+    }
+  }
+
   return {
-    q,
-    manufacturer: searchParams.get("manufacturer") || undefined,
+    q: resolvedQ,
+    manufacturer: resolvedManufacturer || undefined,
     fuelType: fuelType || undefined,
     maxPrice: maxPrice ?? undefined,
     limit,

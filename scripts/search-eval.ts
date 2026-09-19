@@ -13,8 +13,8 @@ const CASES: SearchCase[] = [
   { query: "MG4", expectSlug: "mg4", label: "exact model (MG4)" },
   { query: "BYD Atto 3", expectSlug: null, label: "exact model (Atto 3)" },
   // Thai alias
-  { query: "ฮอนด้า ซิตี้", expectSlug: null, label: "Thai alias (ฮอนด้า ซิตี้)" },
-  { query: "เอ็มจี โฟร์", expectSlug: null, label: "Thai alias (เอ็มจี โฟร์)" },
+  { query: "ฮอนด้า ซิตี้", expectSlug: "honda-city", label: "Thai alias (ฮอนด้า ซิตี้)" },
+  { query: "เอ็มจี โฟร์", expectSlug: "mg4", label: "Thai alias (เอ็มจี โฟร์)" },
   { query: "โตโยต้า คัมรี", expectSlug: null, label: "Thai alias (โตโยต้า คัมรี)" },
   // Brand only
   { query: "Honda", expectSlug: "honda-accord", label: "brand only (Honda) — sorted by name" },

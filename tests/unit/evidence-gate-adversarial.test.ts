@@ -554,12 +554,12 @@ describe("Evidence gate — adversarial audit (P12.6)", () => {
       distance: 0.20,
     });
     const result = gate("Honda City ราคา", [evidence]);
-    // Evidence mentions both Honda and Toyota — brand consistency guard
-    // should still accept because Honda is present
-    const accepted = acceptedIds(result);
-    // This is a mixed-content case: both brands present
-    // The gate should be cautious but not necessarily reject when target brand is present
-    expect(Array.isArray(accepted)).toBe(true);
+    // Evidence mentions both Honda and Toyota — mixed-entity evidence must be
+    // rejected for a single-entity query to prevent cross-brand contamination.
+    // The canonical identity matcher finds Honda City in the evidence, but the
+    // evidence also references Toyota City (wrong brand). The brand consistency
+    // guard detects multiple brands in content when query specifies only one.
+    expect(acceptedIds(result)).not.toContain("prose-toyota");
   });
 
   // ══════════════════════════════════════════════════════════════════════════
@@ -754,16 +754,17 @@ describe("Evidence gate — adversarial audit (P12.6)", () => {
   // 33: Evidence content has NO brand but matches model name
   // ══════════════════════════════════════════════════════════════════════════
 
-  it("33: evidence with no brand but matching model name is accepted when brand consistency allows", () => {
+  it("33: explicit brand+model query rejects evidence with NO brand (fail-closed contract)", () => {
     const evidence = vec({
       id: "no-brand-city",
       content: "City sedan ราคา 599,000 บาท รุ่นปี 2024",
       distance: 0.25,
     });
     const result = gate("Honda City ราคา", [evidence]);
-    // No brand in content → brand consistency guard skips (can't mismatch)
-    // "city" matches entity → accepted
-    expect(acceptedIds(result)).toContain("no-brand-city");
+    // Contract: explicit brand+model query + evidence with no brand identity → reject.
+    // Evidence mentions "city" but has NO Honda/manufacturer identifier.
+    // The gate must not silently weaken brand+model to model-only.
+    expect(acceptedIds(result)).not.toContain("no-brand-city");
   });
 
   // ══════════════════════════════════════════════════════════════════════════

@@ -3,7 +3,7 @@
 **Date:** 2026-09-19
 **Branch:** fix/p1-provenance-gate
 **PR:** #3 (OPEN, UNMERGED)
-**HEAD:** pending commit
+**HEAD:** 88f42a1 (latest push, with P12.6 gate hardening fixes applied locally)
 
 ## 1. Catalog Counts (verified from DB)
 

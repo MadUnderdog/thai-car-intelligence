@@ -307,6 +307,11 @@ function sourceTypeGuard(sourceType: string): { trusted: boolean; reason: string
 
 // ── Brand Consistency Guard ────────────────────────────────────────────────
 
+/**
+ * Contract: when query specifies explicit brand+model, evidence MUST also
+ * reference that brand. Brand-only queries remain multi-model.
+ * Evidence with NO brand reference is rejected when query has explicit brand+model.
+ */
 function brandConsistencyGuard(
   query: string,
   content: string,
@@ -316,7 +321,20 @@ function brandConsistencyGuard(
   if (queryBrands.length === 0) return true;
   const contentLower = normalize(content);
   const contentBrands = MANUFACTURER_TOKENS.filter((b) => contentLower.includes(b));
-  if (contentBrands.length === 0) return true;
+  // Fail-closed: when query specifies explicit brand+model, evidence without
+  // any brand identity is rejected (no silent weakening to model-only).
+  if (contentBrands.length === 0) {
+    // Check if query references a specific canonical model (brand+model)
+    // vs brand-only. Brand-only = allow no-brand evidence; brand+model = reject.
+    const hasModelInQuery = queryTokens.some(
+      (t) => !MANUFACTURER_TOKENS.includes(t) && t.length >= 2
+    );
+    return !hasModelInQuery;
+  }
+  // Mixed-entity rejection: when query specifies a single brand but evidence mentions
+  // multiple different brands, reject to prevent adversarial cross-brand contamination
+  // (e.g., evidence mentioning both Toyota City and Honda City for a Honda City query).
+  if (queryBrands.length === 1 && contentBrands.length > 1) return false;
   return contentBrands.some((cb) => queryBrands.includes(cb));
 }
 

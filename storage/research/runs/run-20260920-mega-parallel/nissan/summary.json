@@ -1,0 +1,19 @@
+{
+  "brand": "nissan",
+  "brand_name": "Nissan",
+  "status": "PARTIAL",
+  "prices": [],
+  "specs": [],
+  "sources": [
+    {
+      "url": "https://www.nissan.co.th/",
+      "status": "ok",
+      "method": "html_json_embed"
+    }
+  ],
+  "failures": [],
+  "models_found": 0,
+  "variants_found": 0,
+  "started_at": "2026-09-20T02:35:19.517893",
+  "finished_at": "2026-09-20T02:35:21.105644"
+}

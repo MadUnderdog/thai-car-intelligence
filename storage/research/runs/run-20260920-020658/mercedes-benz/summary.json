@@ -1,23 +1,229 @@
 {
   "brand": "mercedes-benz",
-  "brand_name": "Mercedes",
-  "started_at": "2026-09-20T02:10:44.389082",
+  "brand_name": "Mercedes-Benz",
+  "brand_name_th": "เมอร์เซเดส-เบนซ์",
   "official_url": "https://www.mercedes-benz.co.th",
-  "models_found": [],
-  "prices_found": [],
-  "specs_found": [],
+  "research_date": "2026-09-20",
+  "currency": "THB",
+  "price_note": "All prices are manufacturer's suggested retail price (MSRP) including VAT. Subject to change without prior notice.",
+  "models_found": 20,
+  "categories": [
+    {
+      "category_en": "Saloons",
+      "category_th": "ซาลูน",
+      "models": [
+        {
+          "model": "CLA Saloon",
+          "variant": "CLA Electric",
+          "starting_price_thb": 2290000,
+          "starting_price_display": "THB 2,290,000",
+          "fuel_type": "Electric",
+          "tags": ["Electric"]
+        },
+        {
+          "model": "C-Class Saloon",
+          "variant": "C-Class",
+          "starting_price_thb": 2690000,
+          "starting_price_display": "THB 2,690,000",
+          "fuel_type": "Petrol/Diesel",
+          "tags": []
+        },
+        {
+          "model": "EQE Saloon",
+          "variant": "EQE",
+          "starting_price_thb": 5950000,
+          "starting_price_display": "THB 5,950,000",
+          "fuel_type": "Electric",
+          "tags": ["Electric"]
+        },
+        {
+          "model": "E-Class Saloon",
+          "variant": "E-Class",
+          "starting_price_thb": 3650000,
+          "starting_price_display": "THB 3,650,000",
+          "fuel_type": "Petrol/Diesel",
+          "tags": []
+        },
+        {
+          "model": "S-Class Saloon",
+          "variant": "S-Class",
+          "starting_price_thb": 7050000,
+          "starting_price_display": "THB 7,050,000",
+          "fuel_type": "Petrol",
+          "tags": []
+        },
+        {
+          "model": "Mercedes-Maybach S-Class",
+          "variant": "S-Class (Standard Wheelbase)",
+          "starting_price_thb": 10200000,
+          "starting_price_display": "THB 10,200,000",
+          "fuel_type": "Petrol",
+          "tags": ["Maybach"]
+        },
+        {
+          "model": "Mercedes-Maybach S-Class",
+          "variant": "S-Class (Long Wheelbase)",
+          "starting_price_thb": 14000000,
+          "starting_price_display": "THB 14,000,000",
+          "fuel_type": "Petrol",
+          "tags": ["Maybach"]
+        }
+      ]
+    },
+    {
+      "category_en": "SUVs",
+      "category_th": "เอสยูวี",
+      "models": [
+        {
+          "model": "EQS SUV",
+          "variant": "EQS SUV",
+          "starting_price_thb": 5990000,
+          "starting_price_display": "THB 5,990,000",
+          "fuel_type": "Electric",
+          "tags": ["Electric"]
+        },
+        {
+          "model": "GLA",
+          "variant": "GLA",
+          "starting_price_thb": 2580000,
+          "starting_price_display": "THB 2,580,000",
+          "fuel_type": "Petrol",
+          "tags": []
+        },
+        {
+          "model": "GLC",
+          "variant": "GLC",
+          "starting_price_thb": 3490000,
+          "starting_price_display": "THB 3,490,000",
+          "fuel_type": "Petrol/Diesel",
+          "tags": []
+        },
+        {
+          "model": "GLC Coupé",
+          "variant": "GLC Coupé",
+          "starting_price_thb": 3990000,
+          "starting_price_display": "THB 3,990,000",
+          "fuel_type": "Petrol",
+          "tags": []
+        },
+        {
+          "model": "GLE",
+          "variant": "GLE",
+          "starting_price_thb": 4950000,
+          "starting_price_display": "THB 4,950,000",
+          "fuel_type": "Petrol/Diesel",
+          "tags": []
+        },
+        {
+          "model": "GLS",
+          "variant": "GLS",
+          "starting_price_thb": 5950000,
+          "starting_price_display": "THB 5,950,000",
+          "fuel_type": "Petrol",
+          "tags": []
+        },
+        {
+          "model": "G-Class",
+          "variant": "G-Class Electric",
+          "starting_price_thb": 9500000,
+          "starting_price_display": "THB 9,500,000",
+          "fuel_type": "Electric",
+          "tags": ["Electric"]
+        },
+        {
+          "model": "G-Class",
+          "variant": "G-Class (ICE)",
+          "starting_price_thb": 12700000,
+          "starting_price_display": "THB 12,700,000",
+          "fuel_type": "Petrol",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "category_en": "Coupés",
+      "category_th": "คูเป้",
+      "models": [
+        {
+          "model": "CLE Coupé",
+          "variant": "CLE Coupé",
+          "starting_price_thb": 3950000,
+          "starting_price_display": "THB 3,950,000",
+          "fuel_type": "Petrol",
+          "tags": []
+        },
+        {
+          "model": "Mercedes-AMG GT Coupé",
+          "variant": "AMG GT",
+          "starting_price_thb": 16100000,
+          "starting_price_display": "THB 16,100,000",
+          "fuel_type": "Petrol",
+          "tags": ["AMG"]
+        }
+      ]
+    },
+    {
+      "category_en": "Cabriolets / Roadsters",
+      "category_th": "คาบริโอเลต/โรดสเตอร์",
+      "models": [
+        {
+          "model": "Mercedes-AMG SL Roadster",
+          "variant": "AMG SL",
+          "starting_price_thb": 12000000,
+          "starting_price_display": "THB 12,000,000",
+          "fuel_type": "Petrol",
+          "tags": ["AMG"]
+        },
+        {
+          "model": "Mercedes-Maybach SL Roadster",
+          "variant": "Maybach SL",
+          "starting_price_thb": 22000000,
+          "starting_price_display": "THB 22,000,000",
+          "fuel_type": "Petrol",
+          "tags": ["Maybach"]
+        }
+      ]
+    },
+    {
+      "category_en": "MPV",
+      "category_th": "MPV",
+      "models": [
+        {
+          "model": "V-Class MPV",
+          "variant": "V-Class",
+          "starting_price_thb": 5820000,
+          "starting_price_display": "THB 5,820,000",
+          "fuel_type": "Diesel",
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "all_prices": [2290000, 2580000, 2690000, 3490000, 3650000, 3950000, 3990000, 4950000, 5820000, 5950000, 5990000, 7050000, 9500000, 10200000, 12000000, 12700000, 14000000, 16100000, 22000000],
+  "price_range": {
+    "min_thb": 2290000,
+    "max_thb": 22000000,
+    "min_model": "CLA Saloon (Electric)",
+    "max_model": "Mercedes-Maybach SL Roadster"
+  },
   "sources": [
     {
-      "url": "https://www.headlightmag.com/?s=Mercedes",
+      "url": "https://www.mercedes-benz.co.th/en/passengercars/models.html",
       "status": "ok",
-      "length": 48298
-    }
-  ],
-  "failures": [
+      "description": "Official Mercedes-Benz Thailand models page (English)"
+    },
     {
-      "url": "https://www.mercedes-benz.co.th",
-      "error": "fetch_failed"
+      "url": "https://www.mercedes-benz.co.th/th/passengercars/models.html",
+      "status": "ok",
+      "description": "Official Mercedes-Benz Thailand models page (Thai)"
     }
   ],
-  "finished_at": "2026-09-20T02:10:56.376274"
+  "failures": [],
+  "notes": [
+    "Prices are starting prices (MSRP including VAT) as shown on official Mercedes-Benz Thailand website",
+    "Two Maybach S-Class variants listed at different price points (Standard vs Long Wheelbase)",
+    "Two G-Class variants listed (Electric and ICE)",
+    "Individual trim/variant pricing within each model family requires accessing the configurator",
+    "The official website is a SPA - data extracted from SSR-embedded JSON navigation data"
+  ]
 }

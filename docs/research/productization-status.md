@@ -1,57 +1,82 @@
-# Productization Status Report — P7
+# Productization Status Report — P12.6
 
 **Date:** 2026-09-19
 **Branch:** fix/p1-provenance-gate
+**PR:** #3 (OPEN, UNMERGED)
+**HEAD:** pending commit
 
-## 1. Catalog Counts
+## 1. Catalog Counts (verified from DB)
 
 | Item | Count |
 |------|-------|
 | Manufacturers | 16 |
-| Active models | 61 |
+| Active models (CarModel) | 61 |
 | Active variants | 67 |
 | Verified prices | 13 |
-| Verified canonical specs | 53 |
+| Canonical specs (Dims+Perf+Batt+Charg) | 44 (11+19+11+3) |
 | Research VariantSpec observations | 165 |
 | Production evidence embeddings | 99 |
 | SourceDocument | 605 |
+| BrochureVerification | 13 |
 
-## 2. RAG Quality (30-query Thai evaluation)
+## 2. Evidence Gate Policy (P12.6 hardened)
 
-| Metric | P5 (before) | P6 (after) |
-|--------|-------------|------------|
-| Hit-set top-1 | 21/25 | **25/25** |
-| Hit-set misses | 4/25 | **0/25** |
-| Ambiguous FP (hard-passed) | 4/4 | **0/4** |
-| Ambiguous correctly rejected | 0/4 | **1/4** (Tesla — no corpus entity) |
-| Ambiguous qualified (brand-coherent) | 0/4 | **3/4** (answer qualified, not untrusted) |
-| Embedding latency avg | 436ms | 482ms |
-| Vector search latency avg | 2ms | 2ms |
+Five defense layers (all deterministic, no LLM):
 
-Root causes fixed:
-1. **Thai alias gap**: added Thai→English token map (ฮอนด้า→honda, ซิตี้→city, etc.) → Thai queries now resolve to English entity tokens → content corroboration succeeds.
-2. **Hard 0.45 absolute cutoff**: broad/comparison queries legitimately retrieve distant but entity-matched rows (d=0.47–0.55). Fixed: entity-corroborated rows get wider bound (0.60 max), uncorroborated rows still hard-rejected.
-3. **Unqualified trust**: brand-matching rows previously passed as equal to exact matches. Fixed: rows beyond VECTOR_STRICT_DISTANCE (0.30) marked `qualified=true` → AI Ask injects Thai qualification prefix.
+1. **Source-type guard**: RESEARCH/UNVERIFIED/COMMUNITY/USER_SUBMISSION evidence rejected at gate level. Unknown types → fail-closed (rejected). Trusted: OFFICIAL_MANUFACTURER, OFFICIAL_BROCHURE, OFFICIAL_PRICE_LIST, AUTHORIZED_DEALER, VERIFIED_AUTOMOTIVE_REFERENCE.
+2. **Canonical model identity**: Exact brand+model pairing via 40+ canonical model entries with word-boundary matching. Longest-match-first prevents "MG EP" from matching "MG EP Plus" evidence. Cross-exclusion guards (e.g., Model Y excludes Model 3, IM5 excludes IM6).
+3. **Brand consistency**: Evidence must reference the query's manufacturer brand. Prevents "Toyota City" for "Honda City" queries.
+4. **Entity specificity**: Query-specific non-brand terms must match evidence content.
+5. **Distance thresholds**: STRICT (0.30) for high-confidence, MAX (0.45) for entity-corroborated, absolute bound 0.60.
 
-## 3. Evidence Gate Policy
-
-Three states:
+States:
 - **ACCEPTED**: distance ≤ 0.30 AND entity-corroborated → full confidence
 - **QUALIFIED**: distance > 0.30 BUT entity-corroborated (0.30–0.60) → accepted but flagged
-- **REJECTED**: distance > 0.45 without corroboration, or > 0.60 even with corroboration
+- **REJECTED**: distance > 0.45 without corroboration, or > 0.60 even with corroboration, or source-type untrusted, or canonical identity mismatch
 
-## 4. AI Ask Quality
+## 3. Adversarial Test Suite (P12.6)
 
-| Query | Mode | Status | Confidence |
-|-------|------|--------|------------|
-| Honda City ราคาเท่าไหร่ | ai-enhanced | ok | verified |
-| ฮอนด้า ซิตี้ ราคาเท่าไหร่ | ai-enhanced | ok | verified |
-| Tesla Model Y ราคาเท่าไหร่ | structured-catalog | insufficient_evidence | — |
-| Honda City ล็อกหน้าจอเท่าไหร่ | ai-enhanced | ok | qualified |
+**52 tests, all passing.** Zero tests document known-unsafe behavior.
 
-Latency: avg 5.5s chat, 482ms embed, 2ms vector search (unchanged from P5).
+Coverage:
+- Wrong brand/same model (Honda City vs Toyota City)
+- Same brand/wrong model (MG IM5 vs IM6, Tesla Model Y vs Model 3)
+- Short token collision (MG EP vs EP Plus, canonical identity)
+- Exact variant and trim (City Hatchback vs City sedan)
+- Thai aliases (ฮอนด้า ซิตี้, เอ็มจี โฟร์, mixed Thai+English)
+- Punctuation/spacing variants (MG IM-5)
+- Body-type mismatch (SUV vs sedan)
+- Source type defense (RESEARCH rejected, VERIFIED official accepted, VERIFIED secondary accepted, unknown fail-closed)
+- High-similarity wrong entity
+- Brand-only queries
+- Broad compare intent
+- BYD Atto 2 vs Atto 3
+- Toyota Yaris vs Yaris Cross
+- Honda HR-V vs CR-V
+- Missing evidence, empty results
+- Distance boundary tests
+- Mixed evidence (accepted + rejected in same result)
 
-## 5. Public Vehicle Detail
+## 4. AI Ask Response Contract
+
+Every non-validation response includes:
+- `status` (ok/insufficient_evidence/unavailable)
+- `mode` (structured-catalog/ai-enhanced/error)
+- `trust` (ProvenanceMeta with confidence, retrievalMode, verifiedEvidenceCount, qualifiedEvidenceCount, hasResearchObservations)
+- `vectorAvailable` (boolean)
+- `timing` (parseMs, catalogMs, vectorMs, mergeGateMs, llmMs, totalMs) — only on successful AI path
+
+Trust states: VERIFIED / QUALIFIED / INSUFFICIENT / CLARIFICATION_NEEDED / RESEARCH_UNVERIFIED
+
+## 5. Search Normalizer
+
+`lib/search/thai-normalize.ts` — resolves Thai model/brand aliases to English terms:
+- 20+ Thai model mappings
+- 14 Thai brand mappings
+- Parser entity extraction for English queries
+- Original query always searched (augmented, not replaced)
+
+## 6. Public Vehicle Detail
 
 - Hero: verified price badge (✔️ยืนยันแล้ว / ⛔ยังไม่ยืนยัน), last-verified date
 - Per-section evidence dots: ประสิทธิภาพ / แบตเตอรี่ / ขนาด / การรับประกัน
@@ -59,11 +84,11 @@ Latency: avg 5.5s chat, 482ms embed, 2ms vector search (unchanged from P5).
 - Research-only block: "ข้อมูลจากงานวิจัย (ยังไม่ยืนยัน)" with warning
 - Compare CTA: "⚖️ เปรียบเทียบรุ่นนี้"
 
-## 6. Comparison
+## 7. Comparison
 
-`/api/compare` now gates prices on VERIFIED SourceDocument + BrochureVerification.
+`/api/compare` gates prices on VERIFIED SourceDocument + BrochureVerification.
 
-## 7. Community (Part E)
+## 8. Community
 
 | Route | Method | Rate Limit | Description |
 |-------|--------|------------|-------------|
@@ -72,9 +97,9 @@ Latency: avg 5.5s chat, 482ms embed, 2ms vector search (unchanged from P5).
 | /api/community/comments/[id]/vote | POST | 20/min | Vote (up/down, idempotent) |
 | /api/community/comments/[id]/report | POST | 10/min | Report with reason, auto-hide at 3 |
 
-Anonymous identity via SHA-256 salted IP hash + httpOnly cookie. Threading via parentId. Duplicate prevention (same body 5 min). Vote switching supported.
+Anonymous identity via SHA-256 salted IP hash + httpOnly cookie.
 
-## 8. Moderation + Research Hook (Part F)
+## 9. Moderation
 
 | Route | Method | Auth | Description |
 |-------|--------|------|-------------|
@@ -82,125 +107,54 @@ Anonymous identity via SHA-256 salted IP hash + httpOnly cookie. Threading via p
 | /api/admin/community/moderation | PATCH | bearer | HIDE/DELETE/RESTORE |
 | /api/admin/community/research-lead | POST | bearer | Handoff → ResearchCandidate |
 
-Invariant: Community → optional research lead → ResearchCandidate → later verification → canonical fact. Never mutates Price/spec tables. Verified by test #9.
+## 10. Showcase
 
-## 9. Test Results
+Demo page with visible "ข้อมูลจำลอง / Demo Data" warning banner. UI primitives only, no real catalog facts presented as verified.
+
+## 11. Test Results (P12.6)
 
 | Check | Result |
 |-------|--------|
 | prisma validate | ✅ valid |
 | tsc --noEmit | ✅ 0 errors |
-| vitest run | ✅ 33/33 files, 228 tests |
-| lint | 104 errors (pre-existing legacy; down from 139) |
+| vitest run | ✅ 36 files, 301 passed, 2 skipped |
+| adversarial suite | ✅ 52/52 PASS |
+| brand consistency | ✅ 9/9 PASS |
+| lint | 101 errors, 39 warnings (pre-existing legacy) |
 | npm run build | ✅ clean |
-| gate regression | ✅ 6/6 PASS |
-| 30-query RAG eval | ✅ 25/25 hit-set |
-| community test | ✅ 9/9 PASS |
 
-## 10. DB Row Deltas
+## 12. DB Invariants
 
-| Table | Before | After | Change |
-|-------|--------|-------|--------|
-| Verified prices | 13 | 13 | 0 |
-| Verified specs | 53 | 53 | 0 |
-| VariantSpec | 165 | 165 | 0 |
-| Embedding | 99 | 99 | 0 |
+| Item | Expected | Actual | Status |
+|------|----------|--------|--------|
+| Verified prices | 13 | 13 | ✅ |
+| Canonical specs | 44 | 44 | ✅ (11 Dims + 19 Perf + 11 Batt + 3 Charg) |
+| VariantSpec | 165 | 165 | ✅ |
+| Embeddings | 99 | 99 | ✅ |
+| .env secrets | none exposed | clean | ✅ |
+| Destructive migration | none | clean | ✅ |
+| Broad reindex/harvest | none | clean | ✅ |
+| Image generation | none | clean | ✅ |
+| union-alpha | unused | clean | ✅ |
 
-## 11. Data/Security Invariants
+## 13. Lint Breakdown
 
-- ✅ verified prices = 13 unchanged
-- ✅ verified specs = 53 unchanged
-- ✅ VariantSpec = 165 unchanged
-- ✅ Embeddings = 99 (verified facts only)
-- ✅ .env untouched
-- ✅ .env.example placeholders only
-- ✅ No secrets in git/report
-- ✅ union-alpha unused
-- ✅ No destructive migration
-- ✅ No broad reindex
-- ✅ No image generation
+- Pre-existing legacy errors: ~101 (unused vars, explicit-any in test files)
+- New errors from P12.6: 0
+- Warnings: 39 (unused imports in test files)
+- Pre-existing test warnings: `gateVectorEvidence`, `VECTOR_STRICT_DISTANCE`, `VECTOR_MAX_DISTANCE` unused imports in adversarial test (cosmetic, not functional)
 
-## 12. Files Changed (P6)
+## 14. Files Changed (P12.6)
 
-New: `lib/ai/retrieval/evidence-gate-policy.ts`, `scripts/rag-eval-v2.ts`, `scripts/evidence-gate-regression.ts`, 5 community API routes, `src/lib/community/identity.ts`, `src/lib/community/admin-auth.ts`, `src/components/community/CommunitySection.tsx`
+Modified:
+- `lib/ai/retrieval/evidence-gate-policy.ts` — canonical model identity table (40+ models), source-type defense-in-depth, word-boundary matching, longest-match-first specificity
+- `tests/unit/evidence-gate-adversarial.test.ts` — 52 adversarial tests (expanded from ~20, zero GAP/unsafe assertions)
+- `docs/research/productization-status.md` — this report (rewritten to current truth)
 
-Modified: `lib/ai/retrieval/evidence-merge.ts`, `src/app/api/ai/ask/route.ts`, `src/app/cars/[manufacturer]/[model]/page.tsx`, `VehicleDetailClient.tsx`, `src/app/api/compare/route.ts`
+## 15. Remaining Blockers
 
-## 13. Remaining Blockers
-
-1. union-alpha unsupported (HTTP 401)
-2. Latency 1.3–14.7s = LLM generation (no safe reduction)
-3. Brand-coherent but wrong vehicle-type queries → qualified path (correct behavior)
-4. MG IM6: no embedding corpus entry → MISS (data gap)
-5. Community admin UI deferred (API-only moderation)
-
-## P7 Additions
-
-### Vehicle-Type/Body-Type Intent (Part A)
-- Added `lib/ai/retrieval/body-type-intent.ts`: BODY_TYPE_MAP (Thai+English), KNOWN_BODY_TYPES (slug→type), NAME_TO_BODY_TYPE (DB model name→type, 50 entries)
-- Evidence gate now rejects body-type-violated vector evidence (longest-match-first to avoid "City" matching inside "City Hatchback")
-- AI Ask route filters structured catalog results by body type
-- Body-type regression: 8/8 PASS (exact, alias, brand-only, correct type, wrong type, ambiguous, unsupported, MG IM6)
-
-### MG IM6 Diagnosis (Part B)
-- 1 research observation (battery 90 kWh, DISCOVERED), 0 verified specs/price, 0 embeddings
-- RAG miss is correct behavior — no verified evidence exists
-- MG IM6 returns "qualified" when entity "mg" matches, insufficient otherwise
-
-### RAG After P7
-- Hit-set top-1: 25/25 (restored from 24/25 after body-type fix)
-- Body-type regression: 8/8
-- Gate regression: 6/6
-
-### Compare UI (Part E)
-- Missing data now shows "ยังไม่มีข้อมูลยืนยัน" instead of "—"
-- Added provenance note at bottom
-
-### Community Admin UI (Part F)
-- New: `src/app/admin/moderation/page.tsx` — minimal Thai moderation queue
-- Lists flagged/hidden comments with report brief
-- Actions: HIDE/DELETE/RESTORE
-- Bearer token auth
-
-### Files Added (P7)
-- `lib/ai/retrieval/body-type-intent.ts` — body-type intent extraction + mappings
-- `scripts/body-type-regression.ts` — 8-case body-type regression
-- `src/app/admin/moderation/page.tsx` — Thai admin moderation UI
-
-### Files Modified (P7)
-- `lib/ai/retrieval/evidence-gate-policy.ts` — body-type constraint in gate
-- `src/app/api/ai/ask/route.ts` — body-type filtering of structured results
-- `src/app/compare/CompareClient.tsx` — Thai missing-data state + provenance note
-- `docs/research/productization-status.md` — this report
-
-## P8 Additions
-
-### Trust Contract (Part A)
-- New: `lib/ai/trust-contract.ts` — unified FactualConfidence states (VERIFIED/QUALIFIED/INSUFFICIENT/CLARIFICATION_NEEDED/RESEARCH_UNVERIFIED)
-- ProvenanceMeta type with verifiedEvidenceCount, qualifiedEvidenceCount, hasResearchObservations
-- gateStateToConfidence() maps gate states to public contract
-- confidenceLabel() returns Thai labels
-- AI Ask route now returns `trust` field in all responses
-- 14 new trust contract tests (242 total vitest)
-
-### AI Ask UI (Part B)
-- Trust state badges: ✔️ข้อมูลยืนยันแล้ว / ⚠️ข้อมูลบางส่วน / ⛔ยังไม่มีข้อมูลยืนยัน / ❓กรุณาระบุให้ชัดเจน
-- Evidence count display (verified + qualified)
-- Source citations with links
-- All Thai text
-
-### Catalog Discovery (Part C)
-- Body type filter: SUV, Sedan, Hatchback, Pickup, MPV, Coupe
-- Client-side filtering using NAME_TO_BODY_TYPE slug mapping
-- Price display uses verified-only data (API-gated)
-- Compare selection (up to 4) with compare bar
-
-### Files Added (P8)
-- `lib/ai/trust-contract.ts` — trust contract types + helpers
-- `tests/trust-contract.test.ts` — 14 trust contract tests
-
-### Files Modified (P8)
-- `src/app/api/ai/ask/route.ts` — trust contract in all responses
-- `src/app/ai-ask/AIAskClient.tsx` — trust badges, evidence count, citations
-- `src/app/cars/page.tsx` — body type filter
-- `docs/research/productization-status.md` — this report
+1. **union-alpha unsupported** (HTTP 401) — external provider limitation, not fixable
+2. **LLM latency 1.3–14.7s** — LLM generation dominates, no safe reduction
+3. **MG IM6 no verified corpus** — data gap (no official evidence exists), correct behavior to return insufficient
+4. **Community admin UI** — API-only moderation, UI deferred
+5. **Canonical spec count 44 vs old claim 53** — old docs overcounted; actual canonical table count is 44 (11+19+11+3). Not a defect, a documentation correction.

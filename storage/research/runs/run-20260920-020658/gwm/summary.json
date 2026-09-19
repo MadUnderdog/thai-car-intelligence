@@ -1,21 +1,245 @@
 {
   "brand": "gwm",
-  "brand_name": "GWM",
-  "started_at": "2026-09-20T02:09:46.029900",
+  "brand_name": "GWM (Great Wall Motor)",
   "official_url": "https://www.gwm.co.th",
-  "models_found": [],
-  "prices_found": [
-    799000,
-    1349000
-  ],
-  "specs_found": [
+  "research_date": "2026-09-20",
+  "currency": "THB",
+  "started_at": "2026-09-20T02:09:46.029900",
+  "finished_at": "2026-09-20T02:15:00.000000",
+  "models": [
     {
-      "power_kw": 6.0,
-      "torque_nm": 642.0,
-      "displacement_cc": 462.0,
-      "battery_kwh": 58.3
+      "model": "HAVAL H6",
+      "model_name": "Haval H6",
+      "category": "SUV",
+      "fuel_type": "HEV/PHEV",
+      "url": "https://www.gwm.co.th/en/models/haval-h6",
+      "variants": [
+        {
+          "name": "HEV PRO",
+          "price_thb": 969000,
+          "fuel_type": "HEV",
+          "drivetrain": "FWD"
+        },
+        {
+          "name": "PHEV PRO",
+          "price_thb": 1089000,
+          "fuel_type": "PHEV",
+          "drivetrain": "FWD"
+        },
+        {
+          "name": "PHEV ULTRA",
+          "price_thb": 1129000,
+          "fuel_type": "PHEV",
+          "drivetrain": "FWD"
+        }
+      ]
+    },
+    {
+      "model": "ORA 5 EV",
+      "model_name": "ORA 5 EV",
+      "category": "SUV",
+      "fuel_type": "BEV",
+      "url": "https://www.gwm.co.th/en/models/ora-5-ev",
+      "variants": [
+        {
+          "name": "PRO",
+          "price_thb": 669000,
+          "fuel_type": "BEV"
+        },
+        {
+          "name": "ULTRA",
+          "price_thb": 739000,
+          "fuel_type": "BEV"
+        }
+      ]
+    },
+    {
+      "model": "ORA 5 HEV",
+      "model_name": "ORA 5 HEV",
+      "category": "SUV",
+      "fuel_type": "HEV",
+      "url": "https://www.gwm.co.th/th/models/ora-5-hev",
+      "variants": [
+        {
+          "name": "PRO",
+          "price_thb": 729000,
+          "fuel_type": "HEV"
+        },
+        {
+          "name": "ULTRA",
+          "price_thb": 799000,
+          "fuel_type": "HEV"
+        }
+      ]
+    },
+    {
+      "model": "TANK 300",
+      "model_name": "Tank 300",
+      "category": "SUV",
+      "fuel_type": "Petrol",
+      "url": "https://www.gwm.co.th/th/models/tank-300",
+      "variants": [
+        {
+          "name": "PRO",
+          "price_thb": 1649000,
+          "fuel_type": "Petrol"
+        },
+        {
+          "name": "ULTRA",
+          "price_thb": 1799000,
+          "fuel_type": "Petrol"
+        }
+      ]
+    },
+    {
+      "model": "TANK 300 DIESEL",
+      "model_name": "Tank 300 Diesel",
+      "category": "SUV",
+      "fuel_type": "Diesel",
+      "url": "https://www.gwm.co.th/en/models/tank-300-diesel",
+      "variants": [
+        {
+          "name": "PRO 2WD",
+          "price_thb": 1049000,
+          "fuel_type": "Diesel",
+          "drivetrain": "2WD"
+        },
+        {
+          "name": "ULTRA 2WD",
+          "price_thb": 1199000,
+          "fuel_type": "Diesel",
+          "drivetrain": "2WD"
+        },
+        {
+          "name": "ULTRA 4WD",
+          "price_thb": 1299000,
+          "fuel_type": "Diesel",
+          "drivetrain": "4WD"
+        }
+      ]
+    },
+    {
+      "model": "TANK 500 DIESEL",
+      "model_name": "Tank 500 Diesel",
+      "category": "SUV",
+      "fuel_type": "Diesel",
+      "url": "https://www.gwm.co.th/en/models/tank-500-diesel",
+      "variants": [
+        {
+          "name": "PRO 2WD",
+          "price_thb": 1419000,
+          "fuel_type": "Diesel",
+          "drivetrain": "2WD"
+        },
+        {
+          "name": "ULTRA 2WD",
+          "price_thb": 1569000,
+          "fuel_type": "Diesel",
+          "drivetrain": "2WD"
+        },
+        {
+          "name": "BLACK WARRIOR 2WD",
+          "price_thb": 1599000,
+          "fuel_type": "Diesel",
+          "drivetrain": "2WD"
+        },
+        {
+          "name": "ULTRA 4WD",
+          "price_thb": 1669000,
+          "fuel_type": "Diesel",
+          "drivetrain": "4WD"
+        },
+        {
+          "name": "BLACK WARRIOR 4WD",
+          "price_thb": 1699000,
+          "fuel_type": "Diesel",
+          "drivetrain": "4WD"
+        }
+      ]
+    },
+    {
+      "model": "POER SAHAR",
+      "model_name": "POER Sahar",
+      "category": "Pickup Truck",
+      "fuel_type": "Petrol",
+      "url": "https://www.gwm.co.th/th/models/sahar",
+      "variants": [
+        {
+          "name": "PRO",
+          "price_thb": 1189000,
+          "fuel_type": "Petrol"
+        },
+        {
+          "name": "ULTRA 4WD",
+          "price_thb": 1389000,
+          "fuel_type": "Petrol",
+          "drivetrain": "4WD"
+        }
+      ]
+    },
+    {
+      "model": "POER SAHAR DIESEL",
+      "model_name": "POER Sahar Diesel",
+      "category": "Pickup Truck",
+      "fuel_type": "Diesel",
+      "url": "https://www.gwm.co.th/en/models/sahar-diesel",
+      "variants": [
+        {
+          "name": "SINGLE CAB",
+          "price_thb": 849000,
+          "fuel_type": "Diesel",
+          "body_style": "Single Cab"
+        },
+        {
+          "name": "SINGLE CAB S",
+          "price_thb": 949000,
+          "fuel_type": "Diesel",
+          "body_style": "Single Cab"
+        },
+        {
+          "name": "PRO 2WD",
+          "price_thb": 1049000,
+          "fuel_type": "Diesel",
+          "drivetrain": "2WD"
+        },
+        {
+          "name": "ULTRA 2WD",
+          "price_thb": 1129000,
+          "fuel_type": "Diesel",
+          "drivetrain": "2WD"
+        },
+        {
+          "name": "ULTRA 4WD",
+          "price_thb": 1359000,
+          "fuel_type": "Diesel",
+          "drivetrain": "4WD"
+        }
+      ]
+    },
+    {
+      "model": "WEY G9",
+      "model_name": "WEY G9",
+      "category": "SUV",
+      "fuel_type": "PHEV",
+      "url": "https://www.gwm.co.th/th/models/wey-g9",
+      "variants": [
+        {
+          "name": "Hi4 ULTRA",
+          "price_thb": 2349000,
+          "fuel_type": "PHEV",
+          "drivetrain": "4WD"
+        }
+      ]
     }
   ],
+  "total_models": 9,
+  "total_variants": 28,
+  "price_range_thb": {
+    "min": 669000,
+    "max": 2349000,
+    "min_model": "ORA 5 EV PRO",
+    "max_model": "WEY G9 Hi4 ULTRA"
+  },
   "sources": [
     {
       "url": "https://www.gwm.co.th",
@@ -23,11 +247,49 @@
       "length": 154661
     },
     {
-      "url": "https://www.headlightmag.com/?s=GWM",
-      "status": "ok",
-      "length": 47941
+      "url": "https://www.gwm.co.th/en/models/haval-h6",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.gwm.co.th/en/models/ora-5-ev",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.gwm.co.th/th/models/ora-5-hev",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.gwm.co.th/th/models/tank-300",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.gwm.co.th/en/models/tank-300-diesel",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.gwm.co.th/en/models/tank-500-diesel",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.gwm.co.th/th/models/sahar",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.gwm.co.th/en/models/sahar-diesel",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.gwm.co.th/th/models/wey-g9",
+      "status": "ok"
     }
   ],
-  "failures": [],
-  "finished_at": "2026-09-20T02:09:49.170417"
+  "notes": [
+    "All prices extracted from official GWM Thailand website (www.gwm.co.th)",
+    "Prices are manufacturer's suggested retail prices in Thai Baht (THB)",
+    "Variant-to-price mapping derived from HTML tab structure (each variant tab shows its own price group)",
+    "GWM Thailand sells under brands: HAVAL, ORA, TANK, POER, WEY",
+    "TANK 300 also available as petrol (non-diesel) variant",
+    "POER SAHAR available in both petrol and diesel configurations",
+    "WEY G9 is the most expensive model at ฿2,349,000"
+  ]
 }

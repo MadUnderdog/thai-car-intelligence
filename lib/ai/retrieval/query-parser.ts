@@ -122,11 +122,18 @@ function extractEntities(text: string): string[] {
     "swift", "celerio", "ertiga", "jimny",
     "stargazer", "tucson", "ioniq 5", "ioniq 6", "staria", "คัมรี", "ยาริส", "โดลฟิน", "ซีล", "สิงโต", "แอทโต",
     "sonet", "stonic", "sportage", "ev6", "ev9",
-    "model 3", "model y",
+    "model 3", "model y", "im5", "im6",
   ];
   const lower = text.toLowerCase();
   for (const model of knownModels) {
-    if (lower.includes(model)) entities.push(model);
+    // Word-boundary match: check that model is not a substring of a larger word.
+    // E.g. "es" must not match inside "tesla", "seal", etc.
+    const idx = lower.indexOf(model);
+    if (idx < 0) continue;
+    const beforeOk = idx === 0 || /[\s,()\-]/.test(lower[idx - 1]);
+    const afterIdx = idx + model.length;
+    const afterOk = afterIdx >= lower.length || /[\s,()\-]/.test(lower[afterIdx]);
+    if (beforeOk && afterOk) entities.push(model);
   }
   // Resolve Thai model names to English
   const thaiToEn: Record<string, string> = {
@@ -134,7 +141,6 @@ function extractEntities(text: string): string[] {
     "ซีล": "seal", "สิงโต": "sealion", "แอทโต": "atto",
   };
   return entities.map((e) => thaiToEn[e] ?? e);
-  return entities;
 }
 
 /** Parse a natural language automotive question into structured intent and filters. */

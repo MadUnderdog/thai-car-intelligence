@@ -69,21 +69,8 @@ describe("Evidence gate — adversarial audit", () => {
       distance: 0.25,
     });
     const result = gate("Honda City ราคา", [evidence]);
-    // GATE GAP: the gate matches "city" entity token and passes, but
-    // the brand "toyota" in content clashes with query "honda".
-    // Expected: rejected. Actual: may be accepted (entity match on "city").
-    // This test documents whether the gate catches brand/model inconsistency.
-    const accepted = acceptedIds(result);
-    // The gate currently accepts this — documenting as a known gap.
-    // If the gate is fixed to check brand consistency, flip this assertion.
-    if (accepted.includes("toyota-city")) {
-      console.warn(
-        "⚠️  GAP: Toyota City evidence accepted for Honda City query — " +
-          "gate matches 'city' entity but ignores brand mismatch"
-      );
-    }
-    // For now, assert what the gate ACTUALLY does (accepts) — this is the gap.
-    expect(accepted).toContain("toyota-city");
+    // FIXED: brand consistency guard rejects Toyota City for Honda City query
+    expect(acceptedIds(result)).not.toContain("toyota-city");
   });
 
   // ── 3. SUV query vs sedan evidence ───────────────────────────────────────
@@ -231,31 +218,15 @@ describe("Evidence gate — adversarial audit", () => {
   });
 
   it("9b: Tesla Model Y query rejects evidence that mentions 'model' but not 'y'", () => {
-    // Edge case: evidence has "Model 3" which contains "model" (a specificity term)
     const evidence = vec({
       id: "model3",
       content: "Tesla Model 3 sedan ราคา 1,290,000 บาท",
       distance: 0.20,
     });
     const result = gate("Tesla Model Y ราคา", [evidence]);
-    // entityMatch: tokens = ["model y", "tesla"]. "model y" not in "teslamodel3sedan..." → false.
-    // Wait, normalize("model y") = "modely". normalize("Tesla Model 3 sedan...") = "teslamodel3sedan..."
-    // "teslamodel3sedan...".includes("modely") → false.
-    // "tesla" is in MANUFACTURER_TOKENS and content → manufacturerMatch = true
-    // specificTerms = ["model"], "model" in "teslamodel3..." → hasSpecificMatch = true
-    // distance 0.20 ≤ 0.30 → first check passes
-    // specificTerms.length > 0 && !hasSpecificMatch (false) && manufacturerMatch → skip
-    // !entityMatch (true) && !manufacturerMatch (false) → false → passes
-    // ACCEPTED — because manufacturerMatch is true and specificTerm "model" matches
-    const accepted = acceptedIds(result);
-    if (accepted.includes("model3")) {
-      console.warn(
-        "⚠️  GAP: Tesla Model 3 accepted for Model Y query — 'model' is " +
-          "too generic as a specificity term"
-      );
-    }
-    // Document the actual behavior: gate accepts Model 3 for Model Y because "model" matches
-    expect(accepted).toContain("model3");
+    // FIXED: entity-level specificity guard rejects Model 3 for Model Y query
+    // because "model y" (entity token) is not found in "teslamodel3..."
+    expect(acceptedIds(result)).not.toContain("model3");
   });
 
   // ── 10. Research-only evidence ───────────────────────────────────────────

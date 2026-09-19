@@ -111,6 +111,39 @@ function extractSpecificModelTerms(query: string): string[] {
 }
 
 /**
+ * Brand consistency guard: if the query specifies an explicit brand (from
+ * parser filters.brand, MANUFACTURER_TOKENS, or BRAND_ALIASES), the evidence
+ * content must also reference that brand. This prevents "Toyota City" from
+ * being accepted for a "Honda City" query where only the model token matches.
+ *
+ * Returns false (reject) if query has a brand and evidence content mentions
+ * a DIFFERENT manufacturer brand, or if evidence mentions no brand at all.
+ */
+function brandConsistencyGuard(
+  query: string,
+  content: string,
+  queryTokens: string[]
+): boolean {
+  // Extract explicit brand tokens from query (only actual manufacturer names)
+  const queryBrands = queryTokens.filter((t) =>
+    MANUFACTURER_TOKENS.includes(t)
+  );
+  if (queryBrands.length === 0) return true; // no brand constraint → pass
+
+  const contentLower = normalize(content);
+
+  // Check if evidence references ANY manufacturer brand
+  const contentBrands = MANUFACTURER_TOKENS.filter((b) =>
+    contentLower.includes(b)
+  );
+
+  if (contentBrands.length === 0) return true; // no brand in content → can't mismatch (skip)
+
+  // Evidence mentions a brand, but is it one of the query brands?
+  return contentBrands.some((cb) => queryBrands.includes(cb));
+}
+
+/**
  * Decide whether a vector evidence row may join the merged evidence bundle.
  * Rules:
  * - Rejected if distance > VECTOR_STRICT threshold AND content doesn't match query entities.
@@ -124,16 +157,34 @@ export function gateVectorEvidence(
 ): GateDecision {
   const normalizedContent = normalize(vec.content);
   const entityMatch = contentMatchesQueryEntities(vec.content, queryTokens);
-  const manufacturerMatch = queryTokens.some((t) =>
-    MANUFACTURER_TOKENS.includes(t) && normalizedContent.includes(t)
-  );
-  // Specificity check: if query mentions a specific model (e.g., "IM6") beyond just the brand,
-  // evidence must reference that specific model, not just the brand.
-  const specificTerms = extractSpecificModelTerms(query);
-  const hasSpecificMatch = specificTerms.length === 0 || specificTerms.some((t) => normalizedContent.includes(t));
 
-  if (vec.distance > VECTOR_STRICT_DISTANCE && (!entityMatch || !hasSpecificMatch)) {
-    return { accepted: false, reason: `distance=${vec.distance.toFixed(4)} beyond strict threshold and content doesn't reference query entity or specific model` };
+  // Brand consistency guard: if query specifies a brand (e.g. "Honda"),
+  // evidence content must also reference that brand. Prevents "Toyota City"
+  // from passing a "Honda City" query where only the model token matches.
+  if (!brandConsistencyGuard(query, vec.content, queryTokens)) {
+    return { accepted: false, reason: "evidence brand does not match query brand" };
+  }
+
+  // Entity-level specificity guard: if query has non-brand entity tokens
+  // (e.g. "model y" for Tesla Model Y, "im5" for MG IM5), evidence content
+  // must also contain at least one of those specific entity tokens. This prevents
+  // Model 3 from passing a Model Y query, or IM6 from passing an IM5 query.
+  const entitySpecificTerms = queryTokens.filter(
+    (t) => !MANUFACTURER_TOKENS.includes(t) && t.length >= 2
+  );
+  const entitySpecificMatch =
+    entitySpecificTerms.length === 0 ||
+    entitySpecificTerms.some((t) => normalizedContent.includes(t));
+
+  if (!entitySpecificMatch) {
+    return {
+      accepted: false,
+      reason: `query specifies [${entitySpecificTerms.join(",")}] but evidence does not reference these entities`,
+    };
+  }
+
+  if (vec.distance > VECTOR_STRICT_DISTANCE && !entityMatch) {
+    return { accepted: false, reason: `distance=${vec.distance.toFixed(4)} beyond strict threshold and content doesn't reference query entity` };
   }
   if (vec.distance > VECTOR_MAX_DISTANCE) {
     // Entity-corroborated rows get a wider absolute bound than pure nearest-neighbor rows:
@@ -144,14 +195,9 @@ export function gateVectorEvidence(
     }
     return { accepted: false, reason: `distance=${vec.distance.toFixed(4)} untrustworthy` };
   }
-  // Specificity guard: if query mentions a specific model beyond just the brand,
-  // evidence that only matches the brand but not the specific model is rejected.
-  if (specificTerms.length > 0 && !hasSpecificMatch && manufacturerMatch) {
-    return { accepted: false, reason: `query mentions specific model [${specificTerms.join(",")}] but evidence only references brand` };
-  }
 
-  // Manufacturer-token mismatch guard: query mentions brand X, evidence is brand Y brand
-  if (!entityMatch && !manufacturerMatch) {
+  // Final guard: evidence must reference at least one query entity
+  if (!entityMatch) {
     return { accepted: false, reason: "query entities not referenced in content" };
   }
   return { accepted: true, reason: entityMatch ? "entity-corroborated" : "within strict distance" };

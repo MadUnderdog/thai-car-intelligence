@@ -57,13 +57,23 @@ export function normalizeThaiQuery(query: string): {
   const resolvedModels: string[] = [];
   const additionalTerms: string[] = [];
 
-  // Resolve brand aliases
+  // Resolve brand aliases (Thai)
   for (const [thai, en] of Object.entries(THAI_BRAND_MAP)) {
     if (lower.includes(thai)) {
       resolvedBrands.push(en);
       additionalTerms.push(en);
     }
   }
+
+  // Also use parser's brand extraction for English queries
+  try {
+    const intent = parseAutomotiveQuery(query);
+    const filters = (intent as { filters?: { brand?: string } }).filters;
+    if (filters?.brand && !resolvedBrands.includes(filters.brand)) {
+      resolvedBrands.push(filters.brand);
+      additionalTerms.push(filters.brand);
+    }
+  } catch { /* ignore parser errors */ }
 
   // Resolve model aliases
   for (const [thai, en] of Object.entries(THAI_MODEL_MAP)) {

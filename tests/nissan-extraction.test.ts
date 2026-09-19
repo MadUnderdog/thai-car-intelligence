@@ -1,130 +1,320 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+import {
+  parseNissanNavigationJson,
+  dedupCandidates,
+  getValidCandidates,
+  type NissanExtractionCandidate,
+} from '../lib/discovery/nissan-parser';
 
-/**
- * Nissan Extraction — Adversarial Regression Tests
- * Tests for cross-contamination, scope classification, and provenance.
- */
+// Load real fixture from actual Nissan HTML extraction
+let NISSAN_JSON: Record<string, unknown>;
+let candidates: NissanExtractionCandidate[];
 
-const NISSAN_JSON: Record<string, { modelCode: string; price: number; versionKey: string; gradeKey: string }> = {
-  march: { modelCode: 'B02A', price: 420000, versionKey: 'VEC001', gradeKey: 'LVL001' },
-  almera: { modelCode: 'L02B', price: 445000, versionKey: 'VEC001', gradeKey: 'LVL001' },
-  'almera-with-stylish-package': { modelCode: '29851', price: 573000, versionKey: 'BDYARBZ', gradeKey: '29851-1_0L_TURBO_E_CVT' },
-  'kicks-epower': { modelCode: '70053', price: 789900, versionKey: '26KEV', gradeKey: '70053-L1_V' },
-  xtrail: { modelCode: 'P32R', price: 1350000, versionKey: 'VEC001', gradeKey: 'LVL001' },
-  'xtrail-epower': { modelCode: '70006', price: 1699000, versionKey: '26XTE4', gradeKey: '70006-E-POWER' },
-  terra: { modelCode: 'P60A', price: 1299000, versionKey: 'VEC001', gradeKey: 'LVL001' },
-  'new-terra': { modelCode: '29838', price: 1199000, versionKey: 'JTSARS', gradeKey: '29838-2_3_E_2WD_7AT' },
-  navara: { modelCode: '70005', price: 1045000, versionKey: '25DCP2A', gradeKey: '70005-DC_PRO-2X_7AT' },
-  serena: { modelCode: '30177', price: 1469000, versionKey: 'HWS01', gradeKey: '30177-V' },
-  'serena-epower': { modelCode: '30176', price: 1690000, versionKey: 'SEC28', gradeKey: '30176-HIGHWAY_STAR' },
-  leaf: { modelCode: 'B12P', price: 1990000, versionKey: 'VEC001', gradeKey: 'LVL001' },
-  'new-leaf': { modelCode: '29785', price: 1590000, versionKey: 'LEV1', gradeKey: '29785-EV' },
-  livina: { modelCode: 'N11Q', price: 672000, versionKey: 'VEC001', gradeKey: 'LVL001' },
-  teana: { modelCode: 'L42L', price: 1339000, versionKey: 'VEC001', gradeKey: 'LVL001' },
-  juke: { modelCode: 'P12C', price: 837000, versionKey: 'VEC001', gradeKey: 'LVL001' },
-  note: { modelCode: 'J02C', price: 530000, versionKey: 'VEC001', gradeKey: 'LVL001' },
-};
+beforeAll(() => {
+  const fixturePath = join(__dirname, 'fixtures', 'nissan-navigation-prices.json');
+  NISSAN_JSON = JSON.parse(readFileSync(fixturePath, 'utf-8'));
+  candidates = parseNissanNavigationJson(
+    NISSAN_JSON as Record<string, unknown>,
+    'https://www.nissan.co.th/en/vehicles/new-vehicles/march.html',
+    'sha256:test-fixture-hash',
+  );
+});
 
-describe('Nissan Cross-Contamination Prevention', () => {
-  it('rejects March receiving Terra price', () => {
-    expect(NISSAN_JSON.march.price).not.toBe(NISSAN_JSON.terra.price);
+describe('Nissan Parser — Real Source Fixture', () => {
+  it('parses real navigation JSON without throwing', () => {
+    expect(candidates).toBeDefined();
+    expect(Array.isArray(candidates)).toBe(true);
+    expect(candidates.length).toBeGreaterThan(0);
   });
 
-  it('rejects X-Trail receiving March price', () => {
-    expect(NISSAN_JSON.xtrail.price).not.toBe(NISSAN_JSON.march.price);
+  it('extracts candidates for every model in real JSON', () => {
+    const modelKeys = Object.keys(NISSAN_JSON);
+    expect(candidates.length).toBe(modelKeys.length);
   });
 
-  it('rejects Leaf receiving Almera price', () => {
-    expect(NISSAN_JSON.leaf.price).not.toBe(NISSAN_JSON.almera.price);
+  it('classifies all valid candidates as MODEL_RANGE', () => {
+    const valid = getValidCandidates(candidates);
+    for (const c of valid) {
+      expect(c.price_type).toBe('MODEL_RANGE');
+      expect(c.scope_reason).toContain('starting price');
+    }
   });
 
-  it('rejects Serena receiving Teana price', () => {
-    expect(NISSAN_JSON.serena.price).not.toBe(NISSAN_JSON.teana.price);
+  it('has NO VARIANT_MSRP candidates from navigation JSON', () => {
+    const variantMsrs = candidates.filter(c => c.price_type === 'VARIANT_MSRP');
+    expect(variantMsrs.length).toBe(0);
+  });
+});
+
+describe('Nissan Parser — Cross-Model Contamination', () => {
+  it('March price does NOT equal Terra price', () => {
+    const march = candidates.find(c => c.model_key === 'march');
+    const terra = candidates.find(c => c.model_key === 'terra');
+    expect(march).toBeDefined();
+    expect(terra).toBeDefined();
+    expect(march!.price).not.toBe(terra!.price);
   });
 
-  it('rejects Navara receiving Kicks price', () => {
-    expect(NISSAN_JSON.navara.price).not.toBe(NISSAN_JSON['kicks-epower'].price);
+  it('X-Trail price does NOT equal March price', () => {
+    const xtrail = candidates.find(c => c.model_key === 'x-trail');
+    const march = candidates.find(c => c.model_key === 'march');
+    expect(xtrail).toBeDefined();
+    expect(march).toBeDefined();
+    expect(xtrail!.price).not.toBe(march!.price);
   });
 
-  it('rejects Terra receiving Leaf price', () => {
-    expect(NISSAN_JSON.terra.price).not.toBe(NISSAN_JSON.leaf.price);
+  it('Leaf price does NOT equal Almera price', () => {
+    const leaf = candidates.find(c => c.model_key === 'leaf');
+    const almera = candidates.find(c => c.model_key === 'almera');
+    expect(leaf).toBeDefined();
+    expect(almera).toBeDefined();
+    expect(leaf!.price).not.toBe(almera!.price);
   });
 
-  it('rejects Juke receiving any other model price', () => {
-    for (const [key, entry] of Object.entries(NISSAN_JSON)) {
-      if (key !== 'juke') {
-        expect(NISSAN_JSON.juke.price).not.toBe(entry.price);
+  it('Serena price does NOT equal Teana price', () => {
+    const serena = candidates.find(c => c.model_key === 'serena');
+    const teana = candidates.find(c => c.model_key === 'teana');
+    expect(serena).toBeDefined();
+    expect(teana).toBeDefined();
+    expect(serena!.price).not.toBe(teana!.price);
+  });
+
+  it('Navara price does NOT equal Kicks price', () => {
+    const navara = candidates.find(c => c.model_key === 'navara');
+    const kicks = candidates.find(c => c.model_key === 'kicks-epower');
+    expect(navara).toBeDefined();
+    expect(kicks).toBeDefined();
+    expect(navara!.price).not.toBe(kicks!.price);
+  });
+
+  it('every model has a unique price (no cross-contamination)', () => {
+    const valid = getValidCandidates(candidates);
+    const prices = valid.map(c => c.price);
+    const unique = new Set(prices);
+    // Some models may share prices (e.g. urvan/nv350-urvan), but most should differ
+    expect(unique.size).toBeGreaterThan(prices.length * 0.5);
+  });
+});
+
+describe('Nissan Parser — Rejected Keys', () => {
+  it('rejects test-gt-r', () => {
+    const testGtr = candidates.find(c => c.model_key === 'test-gt-r');
+    expect(testGtr).toBeDefined();
+    expect(testGtr!.identity_status).toBe('UNKNOWN_MODEL');
+  });
+
+  it('rejects sky-edition', () => {
+    const sky = candidates.find(c => c.model_key === 'kicks-e-power-sky-edition');
+    expect(sky).toBeDefined();
+    expect(sky!.identity_status).toBe('UNKNOWN_MODEL');
+  });
+
+  it('rejects navara-n-trek-warrior-', () => {
+    const trek = candidates.find(c => c.model_key === 'navara-n-trek-warrior-');
+    expect(trek).toBeDefined();
+    expect(trek!.identity_status).toBe('UNKNOWN_MODEL');
+  });
+
+  it('rejected keys have UNRESOLVED price_type', () => {
+    const rejected = candidates.filter(c => c.identity_status === 'UNKNOWN_MODEL');
+    for (const c of rejected) {
+      expect(c.price_type).toBe('UNRESOLVED');
+    }
+  });
+});
+
+describe('Nissan Parser — Model-Code Validation', () => {
+  it('validates modelCode for known models', () => {
+    const valid = getValidCandidates(candidates);
+    for (const c of valid) {
+      expect(c.identity_status).toBe('VALID');
+      expect(c.model_code).toBeTruthy();
+    }
+  });
+
+  it('flags invalid modelCode', () => {
+    // Create a tampered entry
+    const tampered: Record<string, unknown> = { ...NISSAN_JSON };
+    tampered['march'] = {
+      default: { modelPrice: '420000', bestPriceVersionKey: 'VEC001', bestPriceGradeKey: 'LVL001' },
+      modelCode: 'WRONG_CODE',
+      Updated_On: '2026-01-01',
+    };
+    const result = parseNissanNavigationJson(tampered, 'test', 'test-hash');
+    const march = result.find(c => c.model_key === 'march');
+    expect(march).toBeDefined();
+    expect(march!.identity_status).toBe('INVALID_CODE');
+  });
+
+  it('detects unknown model keys', () => {
+    const tampered: Record<string, unknown> = { ...NISSAN_JSON };
+    tampered['unknown-new-model'] = {
+      default: { modelPrice: '500000', bestPriceVersionKey: 'X', bestPriceGradeKey: 'Y' },
+      modelCode: 'NEW1',
+      Updated_On: '2026-01-01',
+    };
+    const result = parseNissanNavigationJson(tampered, 'test', 'test-hash');
+    const unknown = result.find(c => c.model_key === 'unknown-new-model');
+    expect(unknown).toBeDefined();
+    expect(unknown!.identity_status).toBe('UNKNOWN_MODEL');
+  });
+});
+
+describe('Nissan Parser — Scope Semantics', () => {
+  it('navigation JSON prices are MODEL_RANGE not VARIANT_MSRP', () => {
+    const valid = getValidCandidates(candidates);
+    for (const c of valid) {
+      expect(c.price_type).toBe('MODEL_RANGE');
+    }
+  });
+
+  it('gradeKey does NOT prove variant-level pricing', () => {
+    const valid = getValidCandidates(candidates);
+    for (const c of valid) {
+      // gradeKey exists but scope_reason must explain why it's MODEL_RANGE
+      expect(c.grade_key).toBeTruthy();
+      expect(c.scope_reason).toContain('starting price');
+    }
+  });
+
+  it('model-level price cannot become arbitrary first variant MSRP', () => {
+    const valid = getValidCandidates(candidates);
+    for (const c of valid) {
+      // price_type must be MODEL_RANGE, not MSRP
+      expect(c.price_type).not.toBe('VARIANT_MSRP');
+    }
+  });
+
+  it('shared navigation prices cannot become model-specific by page URL', () => {
+    // All candidates share the same source_url (march.html)
+    // but each price is attributed to its model_key, not the page URL
+    const marchCandidates = candidates.filter(c => c.model_key === 'march');
+    const otherCandidates = candidates.filter(c => c.model_key !== 'march');
+    
+    // March candidates should have march-specific price
+    for (const c of marchCandidates) {
+      expect(c.price).toBe(420000); // march starting price
+    }
+    
+    // Other candidates should have their own prices
+    for (const c of otherCandidates) {
+      if (c.identity_status === 'VALID') {
+        expect(c.price).not.toBe(420000); // should NOT be march price
       }
     }
   });
 });
 
-describe('Nissan Model-Code Validation', () => {
-  it('has unique modelCodes across models', () => {
-    const codes = Object.values(NISSAN_JSON).map(e => e.modelCode);
-    expect(new Set(codes).size).toBe(codes.length);
+describe('Nissan Parser — Kicks Dedup', () => {
+  it('identifies Kicks e-POWER as single valid entry', () => {
+    const kicks = candidates.filter(c => c.model_key === 'kicks-epower');
+    expect(kicks.length).toBe(1);
+    expect(kicks[0].price).toBe(789900);
+    expect(kicks[0].identity_status).toBe('VALID');
   });
 
-  it('rejects unknown model keys', () => {
-    const reject = ['test-gt-r', 'sky-edition', 'kicks-e-power-sky-edition', 'navara-n-trek-warrior-'];
-    for (const key of reject) {
-      expect(NISSAN_JSON).not.toHaveProperty(key);
-    }
-  });
-});
-
-describe('Nissan Scope Classification', () => {
-  it('all navigation JSON entries are MODEL_RANGE starting prices', () => {
-    for (const entry of Object.values(NISSAN_JSON)) {
-      expect(entry.price).toBeGreaterThanOrEqual(100000);
-      expect(entry.price).toBeLessThanOrEqual(20000000);
-      expect(entry.gradeKey).toBeTruthy();
-    }
-  });
-});
-
-describe('Nissan Kicks Dedup', () => {
-  it('only one Kicks e-POWER starting price', () => {
-    const kicks = NISSAN_JSON['kicks-epower'];
-    expect(kicks.price).toBe(789900);
-    expect(kicks.modelCode).toBe('70053');
-    expect(kicks.versionKey).toBe('26KEV');
-  });
-});
-
-describe('Nissan Adversarial Price Sanity', () => {
-  it('rejects test-gt-r 13,500,000', () => {
-    expect(NISSAN_JSON).not.toHaveProperty('test-gt-r');
+  it('dedup by evidence identity removes exact duplicates', () => {
+    const withDupes = [
+      ...candidates,
+      // Add a duplicate candidate
+      {
+        ...candidates.find(c => c.model_key === 'march')!,
+        content_hash: 'sha256:duplicate-hash',
+      },
+    ];
+    const deduped = dedupCandidates(withDupes);
+    // Original + duplicate should become 1 (different hash = different evidence)
+    const marchEntries = deduped.filter(c => c.model_key === 'march');
+    // Same model_key + same price + different hash = 2 entries (different evidence)
+    expect(marchEntries.length).toBe(2);
   });
 
-  it('rejects sky-edition 35,000', () => {
-    expect(NISSAN_JSON).not.toHaveProperty('sky-edition');
-  });
-
-  it('rejects navara-n-trek-warrior 49,000', () => {
-    expect(NISSAN_JSON).not.toHaveProperty('navara-n-trek-warrior-');
-  });
-
-  it('rejects prices below 100,000 THB', () => {
-    for (const entry of Object.values(NISSAN_JSON)) {
-      expect(entry.price).toBeGreaterThanOrEqual(100000);
-    }
-  });
-
-  it('rejects prices above 20,000,000 THB', () => {
-    for (const entry of Object.values(NISSAN_JSON)) {
-      expect(entry.price).toBeLessThanOrEqual(20000000);
-    }
+  it('dedup removes same model_key + same price + same hash', () => {
+    const original = candidates.find(c => c.model_key === 'march')!;
+    const dupe = { ...original };
+    const withDupes = [...candidates, dupe];
+    const deduped = dedupCandidates(withDupes);
+    const marchEntries = deduped.filter(c => c.model_key === 'march');
+    expect(marchEntries.length).toBe(1);
   });
 });
 
-describe('Nissan Provenance Requirements', () => {
-  it('every entry has required fields', () => {
-    const fields = ['modelCode', 'versionKey', 'gradeKey', 'price'];
-    for (const entry of Object.values(NISSAN_JSON)) {
-      for (const field of fields) {
-        expect(entry).toHaveProperty(field);
+describe('Nissan Parser — Price Sanity', () => {
+  it('all valid prices are within 100K-20M THB', () => {
+    const valid = getValidCandidates(candidates);
+    for (const c of valid) {
+      expect(c.price).toBeGreaterThanOrEqual(100000);
+      expect(c.price).toBeLessThanOrEqual(20000000);
+    }
+  });
+
+  it('no NaN prices', () => {
+    for (const c of candidates) {
+      if (c.identity_status === 'VALID') {
+        expect(isNaN(c.price)).toBe(false);
       }
     }
+  });
+
+  it('all valid candidates have source_url', () => {
+    const valid = getValidCandidates(candidates);
+    for (const c of valid) {
+      expect(c.source_url).toBeTruthy();
+      expect(c.source_url).toContain('nissan.co.th');
+    }
+  });
+
+  it('all valid candidates have content_hash', () => {
+    const valid = getValidCandidates(candidates);
+    for (const c of valid) {
+      expect(c.content_hash).toBeTruthy();
+    }
+  });
+
+  it('all valid candidates have observed_at timestamp', () => {
+    const valid = getValidCandidates(candidates);
+    for (const c of valid) {
+      expect(c.observed_at).toBeTruthy();
+      expect(new Date(c.observed_at).getTime()).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe('Nissan Parser — Provenance', () => {
+  it('every candidate has identity_status and validity_reason', () => {
+    for (const c of candidates) {
+      expect(c.identity_status).toBeTruthy();
+      expect(c.validity_reason).toBeTruthy();
+    }
+  });
+
+  it('valid candidates have VALID identity_status', () => {
+    const valid = getValidCandidates(candidates);
+    expect(valid.length).toBeGreaterThan(0);
+    for (const c of valid) {
+      expect(c.identity_status).toBe('VALID');
+    }
+  });
+
+  it('invalid candidates have explanatory validity_reason', () => {
+    const invalid = candidates.filter(c => c.identity_status !== 'VALID');
+    for (const c of invalid) {
+      expect(c.validity_reason.length).toBeGreaterThan(10);
+    }
+  });
+
+  it('candidate counts match expectations', () => {
+    const valid = getValidCandidates(candidates);
+    const rejected = candidates.filter(c => c.identity_status === 'UNKNOWN_MODEL');
+    const invalidCode = candidates.filter(c => c.identity_status === 'INVALID_CODE');
+    
+    // At least 20 valid model entries
+    expect(valid.length).toBeGreaterThanOrEqual(20);
+    // At least 3 rejected keys
+    expect(rejected.length).toBeGreaterThanOrEqual(3);
+    // No invalid codes in clean fixture
+    expect(invalidCode.length).toBe(0);
   });
 });

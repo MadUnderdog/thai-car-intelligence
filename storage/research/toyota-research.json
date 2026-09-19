@@ -1,0 +1,73 @@
+{
+  "brand": "Toyota",
+  "thai_name": "โตโยต้า",
+  "official_url": "https://www.toyota.co.th",
+  "timestamp": "2026-09-19T20:31:09.981986",
+  "discovery": {
+    "models_found": 4,
+    "models": [
+      {
+        "name": "Compare",
+        "href": "https://www.toyota.co.th/en/model/compare"
+      },
+      {
+        "name": "Model Compare",
+        "href": "https://www.toyota.co.th/en/model/compare"
+      },
+      {
+        "name": "Catalogue",
+        "href": "https://www.toyota.co.th/model/catalogue"
+      },
+      {
+        "name": "Compare",
+        "href": "https://www.toyota.co.th/model/compare"
+      }
+    ],
+    "prices_found": 0
+  },
+  "models": [
+    {
+      "name": "Compare",
+      "url": "https://www.toyota.co.th/en/model/compare",
+      "specs": {
+        "range_km": 0
+      },
+      "prices": [],
+      "spec_count": 1
+    },
+    {
+      "name": "Model Compare",
+      "url": "https://www.toyota.co.th/en/model/compare",
+      "specs": {
+        "range_km": 0
+      },
+      "prices": [],
+      "spec_count": 1
+    },
+    {
+      "name": "Catalogue",
+      "url": "https://www.toyota.co.th/model/catalogue",
+      "specs": {},
+      "prices": [],
+      "spec_count": 0
+    },
+    {
+      "name": "Compare",
+      "url": "https://www.toyota.co.th/model/compare",
+      "specs": {},
+      "prices": [],
+      "spec_count": 0
+    }
+  ],
+  "network_requests": [],
+  "api_endpoints": [
+    {
+      "url": "https://www.toyota.co.th/component/api/tcoth/web-init",
+      "keys": [
+        "car_series"
+      ],
+      "content_type": "application/json"
+    }
+  ],
+  "errors": []
+}

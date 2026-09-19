@@ -33,15 +33,14 @@ export default function CarsPage() {
     if (search) params.set("q", search);
     if (brand) params.set("manufacturer", brand);
     if (fuelType) params.set("fuelType", fuelType);
+    if (bodyType) params.set("bodyType", bodyType);
+    if (sortBy) params.set("sortBy", sortBy);
     params.set("limit", "50");
     fetch(`/api/models?${params}`).then(r => r.json()).then(d => {
-      let results = d.results || [];
-      if (sortBy === "price_asc") results.sort((a: any, b: any) => (a.minPrice || 999999999) - (b.minPrice || 999999999));
-      if (sortBy === "price_desc") results.sort((a: any, b: any) => (b.minPrice || 0) - (a.minPrice || 0));
-      setModels(results);
+      setModels(d.results || []);
       setLoading(false);
     }).catch(() => setLoading(false));
-  }, [search, brand, fuelType, sortBy]);
+  }, [search, brand, fuelType, bodyType, sortBy]);
 
   const toggleCompare = (id: string) => {
     setCompareList(prev => prev.includes(id) ? prev.filter(x => x !== id) : prev.length < 4 ? [...prev, id] : prev);
@@ -49,34 +48,6 @@ export default function CarsPage() {
 
   const brands = ["Toyota", "Honda", "BYD", "MG", "Mazda", "Nissan", "Ford", "Hyundai", "Kia", "Tesla", "Isuzu", "Mitsubishi", "Suzuki"];
 
-  // Client-side body-type filter (slug → type mapping)
-  const BODY_TYPE_SLUGS: Record<string, string> = {
-    "honda-city": "sedan", "honda-city-hb": "hatchback", "honda-civic": "sedan",
-    "honda-civic-tr": "coupe", "honda-cr-v": "SUV", "honda-hr-v": "SUV",
-    "honda-br-v": "SUV", "honda-wr-v": "SUV", "honda-accord": "sedan",
-    "honda-en2": "sedan", "honda-super-one": "SUV",
-    "toyota-yaris": "hatchback", "toyota-yaris-ativ": "sedan",
-    "toyota-corolla-altis": "sedan", "toyota-camry": "sedan",
-    "toyota-fortuner": "SUV", "toyota-hilux": "pickup",
-    "toyota-yaris-cross": "SUV", "toyota-bz4x": "SUV",
-    "mg4": "hatchback", "mg-s5": "SUV", "mg-im5": "sedan", "mg-im6": "SUV",
-    "mg-zs": "SUV", "mg-zs-ev": "SUV", "mg3-hybrid": "hatchback",
-    "mg-hs-phev": "SUV", "mg-urban": "hatchback", "mg-ep": "sedan",
-    "mg-es": "sedan", "mg-extender": "pickup", "mg-cyberster": "coupe",
-    "mg-maxus7": "MPV", "mg-maxus9": "SUV", "mg-vs-hev": "sedan", "mg5": "sedan",
-    "atto-2": "SUV", "atto-3": "SUV", "dolphin": "hatchback",
-    "seal": "sedan", "seal-6": "sedan", "sealion-5": "SUV",
-    "sealion-6": "SUV", "sealion-7": "SUV", "m6": "SUV",
-    "denza-z9gt": "wagon", "geely-ex5": "SUV", "gwm-tank-500": "SUV",
-    "tesla-model-3": "sedan", "tesla-model-y": "SUV",
-    "hyundai-ioniq-5": "SUV", "hyundai-santa-fe": "SUV",
-    "nio-firefly": "hatchback", "nissan-kicks": "SUV",
-    "subaru-crosstrek": "SUV", "mazda-6e": "sedan", "avatr-11": "SUV",
-  };
-
-  const filteredModels = bodyType
-    ? models.filter((m) => BODY_TYPE_SLUGS[m.slug] === bodyType)
-    : models;
 
   return (
     <div className="container-narrow py-8">
@@ -131,7 +102,7 @@ export default function CarsPage() {
       )}
 
       {/* Results */}
-      <div className="text-sm text-[var(--color-gray-500)] mb-4">{filteredModels.length} รุ่น{bodyType ? ` (${bodyType})` : ""}</div>
+      <div className="text-sm text-[var(--color-gray-500)] mb-4">{models.length} รุ่น{bodyType ? ` (${bodyType})` : ""}</div>
 
       {loading ? (
         <div className="text-center py-12 text-[var(--color-gray-500)]">กำลังโหลด...</div>
@@ -139,7 +110,7 @@ export default function CarsPage() {
         <div className="text-center py-12 text-[var(--color-gray-500)]">ไม่พบรถยนต์</div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredModels.map(model => (
+          {models.map(model => (
             <div key={model.id} className="relative">
               <Link href={`/cars/${model.manufacturer.slug}/${model.slug}`}>
                 <Card variant="elevated" className="h-full overflow-hidden group">

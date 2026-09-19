@@ -34,6 +34,8 @@ export async function GET(req: NextRequest) {
   const url = new URL(req.url);
   const modelId = url.searchParams.get("modelId");
   const variantId = url.searchParams.get("variantId");
+  const page = Math.max(1, parseInt(url.searchParams.get("page") || "1"));
+  const limit = Math.min(50, Math.max(1, parseInt(url.searchParams.get("limit") || "20")));
   if (!modelId && !variantId) {
     return NextResponse.json({ error: "ต้องระบุ modelId หรือ variantId" }, { status: 400 });
   }
@@ -45,10 +47,12 @@ export async function GET(req: NextRequest) {
     ...(variantId ? { variantId } : { modelId }),
   };
 
-  const comments = await db.communityComment.findMany({
+  const [comments, total] = await Promise.all([
+    db.communityComment.findMany({
     where,
     orderBy: [{ upvotes: "desc" }, { createdAt: "desc" }],
-    take: 100,
+    skip: (page - 1) * limit,
+    take: limit,
     select: {
       id: true, authorName: true, body: true, upvotes: true, downvotes: true,
       isResearchLead: true, createdAt: true,
@@ -61,9 +65,12 @@ export async function GET(req: NextRequest) {
         },
       },
     },
-  });
+  }),
+    db.communityComment.count({ where }),
+  ]);
 
-  return NextResponse.json({ comments, total: comments.length });
+
+  return NextResponse.json({ comments, total, page, limit, hasMore: (page - 1) * limit + comments.length < total });
 }
 
 // POST /api/community/comments — create comment or reply

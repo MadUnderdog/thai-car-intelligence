@@ -173,46 +173,34 @@ export async function getModelDetail(manufacturerSlug: string, modelSlug: string
   };
 }
 
-function mapRow(r: any): CatalogVariant {
-  return {
-    id: r.id, nameTh: r.nameEn, nameEn: r.nameEn, slug: r.slug,
-    fuelType: r.fuelType, modelYear: null,
-    manufacturer: { id: r.manufacturerId, nameTh: r.manufacturerName, nameEn: r.manufacturerName, slug: r.manufacturerSlug },
-    model: { id: r.modelId, nameTh: r.modelName, nameEn: r.modelName, slug: r.modelSlug, modelYear: null },
-    prices: r.priceAmount ? [{ amount: Number(r.priceAmount), currency: "THB", type: "official", validFrom: "", validTo: null, observedAt: new Date().toISOString(), source: { id: "", url: "", titleTh: null, titleEn: null, documentStatus: "active", verificationStatus: null, verifiedAt: null, source: { id: "", nameTh: "", nameEn: "", type: "database", domain: "" } } }] : [],
-  };
-}
-
-/** Get cheapest variant with current price */
+/** Get cheapest variant with a current, verified-official price. */
 export async function getCheapestVariant(client: PrismaClient = db): Promise<CatalogVariant | null> {
-  const rows = await client.$queryRaw<any[]>`
-    SELECT v.id, v."nameEn", v.slug, v."fuelType",
-      cm.id as "modelId", cm."nameEn" as "modelName", cm.slug as "modelSlug",
-      m.id as "manufacturerId", m."nameEn" as "manufacturerName", m.slug as "manufacturerSlug",
-      p.amount::float as "priceAmount"
-    FROM "Variant" v
-    JOIN "CarModel" cm ON cm.id = v."modelId"
-    JOIN "Manufacturer" m ON m.id = cm."manufacturerId"
-    JOIN "Price" p ON p."variantId" = v.id AND p."isCurrent" = true
-    WHERE v.status = 'ACTIVE'
-    ORDER BY p.amount ASC LIMIT 1
-  `;
-  return rows[0] ? mapRow(rows[0]) : null;
+  const price = await client.price.findFirst({
+    where: currentOfficialPrice,
+    orderBy: { amount: 'asc' },
+    include: {
+      variant: {
+        where: { status: 'ACTIVE', model: { status: 'ACTIVE', manufacturer: { status: 'ACTIVE' } } },
+        include: variantInclude,
+      },
+    },
+  });
+  if (!price?.variant) return null;
+  return mapVariant(price.variant);
 }
 
-/** Get most expensive variant with current price */
+/** Get most expensive variant with a current, verified-official price. */
 export async function getMostExpensiveVariant(client: PrismaClient = db): Promise<CatalogVariant | null> {
-  const rows = await client.$queryRaw<any[]>`
-    SELECT v.id, v."nameEn", v.slug, v."fuelType",
-      cm.id as "modelId", cm."nameEn" as "modelName", cm.slug as "modelSlug",
-      m.id as "manufacturerId", m."nameEn" as "manufacturerName", m.slug as "manufacturerSlug",
-      p.amount::float as "priceAmount"
-    FROM "Variant" v
-    JOIN "CarModel" cm ON cm.id = v."modelId"
-    JOIN "Manufacturer" m ON m.id = cm."manufacturerId"
-    JOIN "Price" p ON p."variantId" = v.id AND p."isCurrent" = true
-    WHERE v.status = 'ACTIVE'
-    ORDER BY p.amount DESC LIMIT 1
-  `;
-  return rows[0] ? mapRow(rows[0]) : null;
+  const price = await client.price.findFirst({
+    where: currentOfficialPrice,
+    orderBy: { amount: 'desc' },
+    include: {
+      variant: {
+        where: { status: 'ACTIVE', model: { status: 'ACTIVE', manufacturer: { status: 'ACTIVE' } } },
+        include: variantInclude,
+      },
+    },
+  });
+  if (!price?.variant) return null;
+  return mapVariant(price.variant);
 }

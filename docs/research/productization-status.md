@@ -3,7 +3,7 @@
 **Date:** 2026-09-19
 **Branch:** fix/p1-provenance-gate
 **PR:** #3 (OPEN, UNMERGED)
-**HEAD:** 88f42a1 (latest push, with P12.6 gate hardening fixes applied locally)
+**HEAD:** b3abccb (P12.6 closure pass — gate hardening + ranking provenance fix pending)
 
 ## 1. Catalog Counts (verified from DB)
 
@@ -24,7 +24,7 @@
 Five defense layers (all deterministic, no LLM):
 
 1. **Source-type guard**: RESEARCH/UNVERIFIED/COMMUNITY/USER_SUBMISSION evidence rejected at gate level. Unknown types → fail-closed (rejected). Trusted: OFFICIAL_MANUFACTURER, OFFICIAL_BROCHURE, OFFICIAL_PRICE_LIST, AUTHORIZED_DEALER, VERIFIED_AUTOMOTIVE_REFERENCE.
-2. **Canonical model identity**: Exact brand+model pairing via 40+ canonical model entries with word-boundary matching. Longest-match-first prevents "MG EP" from matching "MG EP Plus" evidence. Cross-exclusion guards (e.g., Model Y excludes Model 3, IM5 excludes IM6).
+2. **Canonical model identity**: Exact brand+model pairing via 37 canonical model entries with word-boundary matching. Longest-match-first prevents "MG EP" from matching "MG EP Plus" evidence. Cross-exclusion guards (e.g., Model Y excludes Model 3, IM5 excludes IM6). Two entries ("mg ep", "mg hs") are **cross-exclusion sentinels** — they have no corresponding DB model but exist to prevent their variant (EP Plus, HS PHEV) from matching the base model query.
 3. **Brand consistency**: Evidence must reference the query's manufacturer brand. Prevents "Toyota City" for "Honda City" queries.
 4. **Entity specificity**: Query-specific non-brand terms must match evidence content.
 5. **Distance thresholds**: STRICT (0.30) for high-confidence, MAX (0.45) for entity-corroborated, absolute bound 0.60.
@@ -128,7 +128,9 @@ Demo page with visible "ข้อมูลจำลอง / Demo Data" warning b
 | Item | Expected | Actual | Status |
 |------|----------|--------|--------|
 | Verified prices | 13 | 13 | ✅ |
-| Canonical specs | 44 | 44 | ✅ (11 Dims + 19 Perf + 11 Batt + 3 Charg) |
+| Canonical specs (Dims+Perf+Batt+Charg) | 44 | 44 | ✅ (11+19+11+3) |
+| WarrantySpec (separate category) | 9 | 9 | ✅ (not included in canonical 44) |
+| Total specs (44+9) | 53 | 53 | ✅ (old count preserved as aggregate) |
 | VariantSpec | 165 | 165 | ✅ |
 | Embeddings | 99 | 99 | ✅ |
 | .env secrets | none exposed | clean | ✅ |
@@ -147,9 +149,11 @@ Demo page with visible "ข้อมูลจำลอง / Demo Data" warning b
 ## 14. Files Changed (P12.6)
 
 Modified:
-- `lib/ai/retrieval/evidence-gate-policy.ts` — canonical model identity table (40+ models), source-type defense-in-depth, word-boundary matching, longest-match-first specificity
-- `tests/unit/evidence-gate-adversarial.test.ts` — 52 adversarial tests (expanded from ~20, zero GAP/unsafe assertions)
-- `docs/research/productization-status.md` — this report (rewritten to current truth)
+- `lib/ai/retrieval/evidence-gate-policy.ts` — canonical model identity table (37 entries), source-type defense-in-depth, word-boundary matching, brand+model fail-closed, mixed-entity rejection
+- `lib/catalog/queries.ts` — ranking queries (cheapest/most-expensive) fixed to use verified-current-official price filter
+- `lib/search/thai-normalize.ts` — Thai aliases aligned with canonical model names
+- `tests/unit/evidence-gate-adversarial.test.ts` — 52 adversarial tests (zero vacuous assertions)
+- `docs/research/productization-status.md` — this report
 
 ## 15. Remaining Blockers
 
@@ -157,4 +161,4 @@ Modified:
 2. **LLM latency 1.3–14.7s** — LLM generation dominates, no safe reduction
 3. **MG IM6 no verified corpus** — data gap (no official evidence exists), correct behavior to return insufficient
 4. **Community admin UI** — API-only moderation, UI deferred
-5. **Canonical spec count 44 vs old claim 53** — old docs overcounted; actual canonical table count is 44 (11+19+11+3). Not a defect, a documentation correction.
+5. **Spec count definition** — canonical = 44 (Dims+Perf+Batt+Charg), Warranty = 9 (separate), old 53 = 44+9. Not a defect, a documentation clarification.

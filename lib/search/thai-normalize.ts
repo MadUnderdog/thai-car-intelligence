@@ -12,20 +12,20 @@ import { parseAutomotiveQuery } from "../ai/retrieval/query-parser";
 /** Canonical Thai→English model name mappings (from parser + catalog slugs) */
 const THAI_MODEL_MAP: Record<string, string> = {
   // Toyota
-  "คัมรี": "camry", "ยาริส": "yaris", "โคโรลล่า": "corolla",
+  "คัมรี": "camry", "ยาริส": "yaris", "โคโรลล่า": "corolla altis", "ยาริส ครอส": "yaris cross", "ยาริสครอส": "yaris cross",
   "ฟอร์จูนเนอร์": "fortuner", "ไฮลักซ์": "hilux", "อินโนวา": "innova",
   "วีลอส": "veloz", "อแวนซ่า": "avanza", "ครอสส์": "cross",
   // Honda
   "ซิตี้": "city", "ซีวิค": "civic", "ซีอาร์-วี": "cr-v",
   "เอชอาร์-วี": "hr-v", "บีอาร์-วี": "br-v", "ดับเบิลยูอาร์-วี": "wr-v",
-  "แอคคอร์ด": "accord", "ซูเปอร์วัน": "super-one",
+  "แอคคอร์ด": "accord", "ซูเปอร์วัน": "super-one", "ซุปเปอร์วัน": "super-one",
   // MG
   "เอ็มจี 4": "mg4", "เอ็มจี4": "mg4", "โฟร์": "mg4",
-  "เอส 5": "s5", "ไอเอ็ม 5": "im5", "ไอเอ็ม 6": "im6",
-  "ซีเอส": "zs", "เอชเอส": "hs", "เอพี": "ep", "วีเอส": "vs",
+  "เอส 5": "s5 ev", "ไอเอ็ม 5": "im5", "ไอเอ็ม 6": "im6",
+  "ซีเอส": "zs", "เอชเอส": "hs", "เอพี": "ep", "เอพี พลัส": "ep plus", "เอพี+": "ep plus", "วีเอส": "vs hev",
   // BYD
   "แอทโต 2": "atto-2", "แอทโต 3": "atto-3", "โดลฟิน": "dolphin",
-  "ซีล": "seal", "สิงโต": "sealion",
+  "ซีล": "seal", "สิงโต": "sealion 7",
   // Tesla
   "โมเดล 3": "model-3", "โมเดล วาย": "model-y",
   // Nissan

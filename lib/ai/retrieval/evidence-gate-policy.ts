@@ -133,7 +133,7 @@ const BRAND_TOKEN_MAP: Record<string, string> = {
   "มาสด้า": "mazda", "ซูบารุ": "subaru", "มิตซูบิชิ": "mitsubishi", "อีซูซุ": "isuzu",
   "เทสลา": "tesla", "จีลี่": "geely", "แอทโต": "atto", "โดลฟิน": "dolphin",
   "ซิตี้": "city", "ซิตี้แฮทช์": "city hatchback", "ซีวิค": "civic", "ซีอาร์-วี": "cr-v",
-  "เอชอาร์-วี": "hr-v", "แอคคอร์ด": "accord", "ซุปเปอร์วัน": "super one",
+  "เอชอาร์-วี": "hr-v", "แอคคอร์ด": "accord", "ซุปเปอร์วัน": "super one", "ซูเปอร์วัน": "super one",
   "ซีล": "seal", "สิงโต": "sealion", "คัมรี": "camry", "ยาริส": "yaris",
   "ฟอร์จูนเนอร์": "fortuner", "ไฮลักซ์": "hilux", "โคโรลล่า": "corolla altis",
   "ไอเอ็ม 5": "im5", "ไอเอ็ม 6": "im6", "เอส 5": "s5 ev",

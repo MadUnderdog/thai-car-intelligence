@@ -25,7 +25,7 @@ const FUEL_TYPE_MAP: Record<string, string> = {
 
 const MODEL_ALIASES: Record<string, string> = {
   "คัมรี": "camry", "ยาริส": "yaris", "แอทโต 2": "atto-2", "แอทโต 3": "atto-3",
-  "โดลฟิน": "dolphin", "ซีล": "seal", "สิงโต": "sealion", "เอ็มจี 4": "mg4",
+  "โดลฟิน": "dolphin", "ซีล": "seal", "สิงโต": "sealion 7", "เอ็มจี 4": "mg4",
 };
 
 const BRAND_ALIASES: Record<string, string> = {
@@ -113,7 +113,7 @@ function extractEntities(text: string): string[] {
     "camry", "yaris", "corolla", "fortuner", "hilux", "innova", "veloz", "avanza",
     "civic", "city", "hr-v", "cr-v", "accord", "super-one",
     "s5 ev", "mg4", "zs ev", "urban", "vs hev", "ep plus", "es",
-    "atto 2", "atto 3", "dolphin", "seal", "sealion",
+    "atto 2", "atto 3", "dolphin", "seal", "sealion 7",
     "almera", "kicks", "x-trail", "terra",
     "mazda2", "mazda3", "cx-3", "cx-30", "cx-5", "cx-80",
     "ranger", "everest", "territory",
@@ -138,7 +138,7 @@ function extractEntities(text: string): string[] {
   // Resolve Thai model names to English
   const thaiToEn: Record<string, string> = {
     "คัมรี": "camry", "ยาริส": "yaris", "โดลฟิน": "dolphin",
-    "ซีล": "seal", "สิงโต": "sealion", "แอทโต": "atto",
+    "ซีล": "seal", "สิงโต": "sealion 7", "แอทโต": "atto",
   };
   return entities.map((e) => thaiToEn[e] ?? e);
 }

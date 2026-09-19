@@ -433,15 +433,11 @@ describe("Evidence gate — adversarial audit (P12.6)", () => {
       content: "Tesla Model 3 sedan ราคา 1,290,000 บาท",
       distance: 0.20,
     });
-    // "model" alone is a THAI_QUERY_WORDS entry — no specific model name
+    // "model" is in THAI_QUERY_WORDS, so entitySpecificTerms may be empty.
+    // But 'tesla' is NOT in the query tokens, so the brand consistency guard
+    // must reject — a generic query must not accept brand-specific evidence.
     const result = gate("รถ model ราคา", [evidence]);
-    // "model" is in THAI_QUERY_WORDS, so entitySpecificTerms may be empty
-    // The canonical identity check should handle this
-    const accepted = acceptedIds(result);
-    // If "tesla" or "model 3" is found in query tokens, it might match
-    // But "model" alone shouldn't force acceptance of model 3 for all queries
-    // At minimum, this should not crash
-    expect(Array.isArray(accepted)).toBe(true);
+    expect(acceptedIds(result)).not.toContain("generic-model");
   });
 
   // ══════════════════════════════════════════════════════════════════════════

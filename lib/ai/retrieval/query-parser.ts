@@ -110,7 +110,7 @@ function extractEntities(text: string): string[] {
   const entities: string[] = [];
   // Known model names from DB (hardcoded common ones for fast lookup)
   const knownModels = [
-    "camry", "yaris", "corolla", "fortuner", "hilux", "innova", "veloz", "avanza",
+    "camry", "yaris", "corolla altis", "fortuner", "hilux", "innova", "veloz", "avanza",
     "civic", "city", "hr-v", "cr-v", "accord", "super-one",
     "s5 ev", "mg4", "zs ev", "urban", "vs hev", "ep plus", "es",
     "atto 2", "atto 3", "dolphin", "seal", "sealion 7",

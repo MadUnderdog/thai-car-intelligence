@@ -180,12 +180,15 @@ export async function getCheapestVariant(client: PrismaClient = db): Promise<Cat
     orderBy: { amount: 'asc' },
     include: {
       variant: {
-        where: { status: 'ACTIVE', model: { status: 'ACTIVE', manufacturer: { status: 'ACTIVE' } } },
         include: variantInclude,
       },
     },
   });
   if (!price?.variant) return null;
+  // Post-filter: variant must be ACTIVE with ACTIVE model/manufacturer
+  if (price.variant.status !== 'ACTIVE') return null;
+  if (price.variant.model?.status !== 'ACTIVE') return null;
+  if (price.variant.model?.manufacturer?.status !== 'ACTIVE') return null;
   return mapVariant(price.variant);
 }
 
@@ -196,11 +199,14 @@ export async function getMostExpensiveVariant(client: PrismaClient = db): Promis
     orderBy: { amount: 'desc' },
     include: {
       variant: {
-        where: { status: 'ACTIVE', model: { status: 'ACTIVE', manufacturer: { status: 'ACTIVE' } } },
         include: variantInclude,
       },
     },
   });
   if (!price?.variant) return null;
+  // Post-filter: variant must be ACTIVE with ACTIVE model/manufacturer
+  if (price.variant.status !== 'ACTIVE') return null;
+  if (price.variant.model?.status !== 'ACTIVE') return null;
+  if (price.variant.model?.manufacturer?.status !== 'ACTIVE') return null;
   return mapVariant(price.variant);
 }

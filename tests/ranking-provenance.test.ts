@@ -77,12 +77,9 @@ describe("ranking query provenance bypass fix", () => {
       // Must require VERIFIED source document
       expect(args.where).toEqual(currentOfficialPrice);
 
-      // Variant include must filter ACTIVE only
-      const variantInclude = args.include.variant;
-      expect(variantInclude.where).toEqual({
-        status: "ACTIVE",
-        model: { status: "ACTIVE", manufacturer: { status: "ACTIVE" } },
-      });
+      // Variant include must include prices with currentOfficialPrice filter
+      const variantInclude = args.include.variant.include.prices;
+      expect(variantInclude.where).toEqual(currentOfficialPrice);
     });
 
     it("returns variant with real provenance from the DB (not fabricated)", async () => {
@@ -90,6 +87,7 @@ describe("ranking query provenance bypass fix", () => {
       const mockResult = {
         variant: {
           id: "v1",
+          status: "ACTIVE",
           nameTh: "COROLLA ALTIS",
           nameEn: "COROLLA ALTIS",
           slug: "corolla-altis",
@@ -127,12 +125,14 @@ describe("ranking query provenance bypass fix", () => {
           ],
           model: {
             id: "m1",
+            status: "ACTIVE",
             nameTh: "COROLLA ALTIS",
             nameEn: "COROLLA ALTIS",
             slug: "corolla-altis",
             modelYear: 2025,
             manufacturer: {
               id: "man1",
+              status: "ACTIVE",
               nameTh: "โตโยต้า",
               nameEn: "Toyota",
               slug: "toyota",
@@ -188,6 +188,7 @@ describe("ranking query provenance bypass fix", () => {
       const mockResult = {
         variant: {
           id: "v2",
+          status: "ACTIVE",
           nameTh: "CAMRY",
           nameEn: "CAMRY",
           slug: "camry",
@@ -225,12 +226,14 @@ describe("ranking query provenance bypass fix", () => {
           ],
           model: {
             id: "m2",
+            status: "ACTIVE",
             nameTh: "CAMRY",
             nameEn: "CAMRY",
             slug: "camry",
             modelYear: 2025,
             manufacturer: {
               id: "man1",
+              status: "ACTIVE",
               nameTh: "โตโยต้า",
               nameEn: "Toyota",
               slug: "toyota",

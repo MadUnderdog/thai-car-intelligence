@@ -30,11 +30,22 @@ describe("Thai normalizer → canonical model consistency", () => {
     expect(result.resolvedModels).not.toContain("sealion");
   });
 
-  it("เอ็มจี สิงโต → brand mg + model sealion 7", () => {
+  it("สิงโต (alone) → model sealion 7", () => {
+    const result = normalizeThaiQuery("สิงโต");
+    expect(result.resolvedModels).toContain("sealion 7");
+  });
+
+  it("เอ็มจี สิงโต → normalizer resolves Thai→English independently (brand mg + model sealion 7)", () => {
     const result = normalizeThaiQuery("เอ็มจี สิงโต");
     expect(result.resolvedBrands).toContain("mg");
-    // gate expects "sealion 7" — but sealion 7 is BYD, not MG
-    // The normalizer resolves based on Thai→English map regardless of brand
+    // Normalizer resolves Thai→English independently of brand context.
+    // Sealion 7 is actually a BYD model — the gate handles cross-brand rejection.
+    expect(result.resolvedModels).toContain("sealion 7");
+  });
+
+  it("บีวายดี สิงโต → correct pairing: brand byd + model sealion 7", () => {
+    const result = normalizeThaiQuery("บีวายดี สิงโต");
+    expect(result.resolvedBrands).toContain("byd");
     expect(result.resolvedModels).toContain("sealion 7");
   });
 
@@ -169,9 +180,10 @@ describe("Thai normalizer → canonical model consistency", () => {
 
   // ── Mixed Thai + English queries ──
 
-  it("MG สิงโต → brand mg + model sealion 7", () => {
+  it("MG สิงโต → normalizer resolves independently (brand mg + model sealion 7, cross-brand)", () => {
     const result = normalizeThaiQuery("MG สิงโต");
     expect(result.resolvedBrands).toContain("mg");
+    // Sealion 7 is BYD; normalizer resolves Thai→English without brand validation.
     expect(result.resolvedModels).toContain("sealion 7");
   });
 

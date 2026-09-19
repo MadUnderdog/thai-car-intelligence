@@ -3,7 +3,7 @@
 **Date:** 2026-09-19
 **Branch:** fix/p1-provenance-gate
 **PR:** #3 (OPEN, UNMERGED)
-**HEAD:** a191de3 (P12.6 final closure — ranking provenance fix + search normalizer alignment + vacuous test elimination)
+**HEAD:** b61b39b (P12.6 final closure — ranking provenance fix + search normalizer alignment + vacuous test elimination)
 
 ## 1. Catalog Counts (verified from DB)
 

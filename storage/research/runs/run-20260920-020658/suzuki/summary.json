@@ -1,0 +1,34 @@
+{
+  "brand": "suzuki",
+  "brand_name": "Suzuki",
+  "started_at": "2026-09-20T02:10:39.068632",
+  "official_url": "https://www.suzuki.co.th",
+  "models_found": [],
+  "prices_found": [
+    375000,
+    599000,
+    649000,
+    699000,
+    779000
+  ],
+  "specs_found": [
+    {
+      "power_kw": 7.0,
+      "displacement_cc": 42.0
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.suzuki.co.th",
+      "status": "ok",
+      "length": 99394
+    },
+    {
+      "url": "https://www.headlightmag.com/?s=Suzuki",
+      "status": "ok",
+      "length": 48123
+    }
+  ],
+  "failures": [],
+  "finished_at": "2026-09-20T02:10:41.581420"
+}

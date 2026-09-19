@@ -1,0 +1,27 @@
+{
+  "brand": "tesla",
+  "brand_name": "Tesla",
+  "started_at": "2026-09-20T02:10:16.348567",
+  "official_url": "https://www.tesla.com/th_th",
+  "models_found": [],
+  "prices_found": [
+    440000,
+    478000,
+    1999000
+  ],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.headlightmag.com/?s=Tesla",
+      "status": "ok",
+      "length": 48190
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.tesla.com/th_th",
+      "error": "fetch_failed"
+    }
+  ],
+  "finished_at": "2026-09-20T02:10:18.508711"
+}

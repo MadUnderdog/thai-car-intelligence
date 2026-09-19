@@ -1,0 +1,23 @@
+{
+  "brand": "volvo",
+  "brand_name": "Volvo",
+  "started_at": "2026-09-20T02:10:20.418234",
+  "official_url": "https://www.volvo.no/th",
+  "models_found": [],
+  "prices_found": [],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.headlightmag.com/?s=Volvo",
+      "status": "ok",
+      "length": 48450
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.volvo.no/th",
+      "error": "fetch_failed"
+    }
+  ],
+  "finished_at": "2026-09-20T02:10:24.166375"
+}

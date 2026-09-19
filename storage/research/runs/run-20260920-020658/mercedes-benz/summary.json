@@ -1,0 +1,23 @@
+{
+  "brand": "mercedes-benz",
+  "brand_name": "Mercedes",
+  "started_at": "2026-09-20T02:10:44.389082",
+  "official_url": "https://www.mercedes-benz.co.th",
+  "models_found": [],
+  "prices_found": [],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.headlightmag.com/?s=Mercedes",
+      "status": "ok",
+      "length": 48298
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.mercedes-benz.co.th",
+      "error": "fetch_failed"
+    }
+  ],
+  "finished_at": "2026-09-20T02:10:56.376274"
+}

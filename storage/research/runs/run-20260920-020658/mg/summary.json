@@ -1,0 +1,25 @@
+{
+  "brand": "mg",
+  "brand_name": "MG",
+  "started_at": "2026-09-20T02:08:58.673916",
+  "official_url": "https://www.mgcars.com/th_th",
+  "models_found": [],
+  "prices_found": [
+    1549900
+  ],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.headlightmag.com/?s=MG",
+      "status": "ok",
+      "length": 48049
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.mgcars.com/th_th",
+      "error": "fetch_failed"
+    }
+  ],
+  "finished_at": "2026-09-20T02:09:00.505142"
+}

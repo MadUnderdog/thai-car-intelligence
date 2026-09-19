@@ -1,0 +1,36 @@
+{
+  "brand": "mitsubishi",
+  "brand_name": "Mitsubishi",
+  "started_at": "2026-09-20T02:08:57.914363",
+  "official_url": "https://www.mitsubishi-motors.co.th",
+  "models_found": [],
+  "prices_found": [
+    509000,
+    614000,
+    619000,
+    899000,
+    939000,
+    969000,
+    1139000,
+    2013000
+  ],
+  "specs_found": [
+    {
+      "displacement_cc": 790.0
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.mitsubishi-motors.co.th",
+      "status": "ok",
+      "length": 1100786
+    },
+    {
+      "url": "https://www.headlightmag.com/?s=Mitsubishi",
+      "status": "ok",
+      "length": 48195
+    }
+  ],
+  "failures": [],
+  "finished_at": "2026-09-20T02:09:01.929241"
+}

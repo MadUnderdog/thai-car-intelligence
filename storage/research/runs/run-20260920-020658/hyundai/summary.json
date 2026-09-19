@@ -1,0 +1,36 @@
+{
+  "brand": "hyundai",
+  "brand_name": "Hyundai",
+  "started_at": "2026-09-20T02:09:27.352055",
+  "official_url": "https://www.hyundai.com/th",
+  "models_found": [],
+  "prices_found": [
+    400000,
+    500000,
+    795000,
+    1449000,
+    1599000,
+    1659000,
+    1699000,
+    1999000,
+    2099000,
+    2299000,
+    2399000,
+    3999000
+  ],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.hyundai.com/th",
+      "status": "ok",
+      "length": 416882
+    },
+    {
+      "url": "https://www.headlightmag.com/?s=Hyundai",
+      "status": "ok",
+      "length": 48455
+    }
+  ],
+  "failures": [],
+  "finished_at": "2026-09-20T02:09:29.870181"
+}

@@ -1,0 +1,25 @@
+{
+  "brand": "honda",
+  "brand_name": "Honda",
+  "started_at": "2026-09-20T02:08:51.847623",
+  "official_url": "https://www.honda.co.th/th/car",
+  "models_found": [],
+  "prices_found": [
+    990000
+  ],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.headlightmag.com/?s=Honda",
+      "status": "ok",
+      "length": 48281
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.honda.co.th/th/car",
+      "error": "fetch_failed"
+    }
+  ],
+  "finished_at": "2026-09-20T02:08:55.455515"
+}

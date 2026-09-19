@@ -1,0 +1,32 @@
+{
+  "brand": "kia",
+  "brand_name": "Kia",
+  "started_at": "2026-09-20T02:09:14.757153",
+  "official_url": "https://www.kia.com/th",
+  "models_found": [],
+  "prices_found": [
+    550000,
+    595000,
+    1199000,
+    2019000
+  ],
+  "specs_found": [
+    {
+      "power_kw": 8.11
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.kia.com/th",
+      "status": "ok",
+      "length": 87752
+    },
+    {
+      "url": "https://www.headlightmag.com/?s=Kia",
+      "status": "ok",
+      "length": 48035
+    }
+  ],
+  "failures": [],
+  "finished_at": "2026-09-20T02:09:17.229935"
+}

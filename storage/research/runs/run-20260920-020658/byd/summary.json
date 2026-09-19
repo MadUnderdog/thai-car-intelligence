@@ -1,0 +1,25 @@
+{
+  "brand": "byd",
+  "brand_name": "BYD",
+  "started_at": "2026-09-20T02:09:13.564808",
+  "official_url": "https://www.byd.com/th",
+  "models_found": [],
+  "prices_found": [
+    1349900
+  ],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.headlightmag.com/?s=BYD",
+      "status": "ok",
+      "length": 48196
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.byd.com/th",
+      "error": "fetch_failed"
+    }
+  ],
+  "finished_at": "2026-09-20T02:09:14.369943"
+}

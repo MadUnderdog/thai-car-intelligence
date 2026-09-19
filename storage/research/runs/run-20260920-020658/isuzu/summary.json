@@ -1,0 +1,41 @@
+{
+  "brand": "isuzu",
+  "brand_name": "Isuzu",
+  "started_at": "2026-09-20T02:10:37.110467",
+  "official_url": "https://www.isuzu-tis.com",
+  "models_found": [],
+  "prices_found": [
+    595000,
+    668000,
+    749000,
+    768000,
+    937000,
+    939000,
+    1041000,
+    1066000,
+    1194000,
+    1297000,
+    1591000,
+    1759000
+  ],
+  "specs_found": [
+    {
+      "displacement_cc": 5.0,
+      "range_km": 0
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.isuzu-tis.com",
+      "status": "ok",
+      "length": 290085
+    },
+    {
+      "url": "https://www.headlightmag.com/?s=Isuzu",
+      "status": "ok",
+      "length": 48351
+    }
+  ],
+  "failures": [],
+  "finished_at": "2026-09-20T02:10:39.709145"
+}

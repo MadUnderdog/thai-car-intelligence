@@ -1,0 +1,23 @@
+{
+  "brand": "chery",
+  "brand_name": "Chery",
+  "started_at": "2026-09-20T02:09:44.552465",
+  "official_url": "https://www.cherythailand.com",
+  "models_found": [],
+  "prices_found": [],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.headlightmag.com/?s=Chery",
+      "status": "ok",
+      "length": 48013
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.cherythailand.com",
+      "error": "fetch_failed"
+    }
+  ],
+  "finished_at": "2026-09-20T02:09:46.475951"
+}

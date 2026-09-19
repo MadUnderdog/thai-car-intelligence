@@ -1,0 +1,25 @@
+{
+  "brand": "geely",
+  "brand_name": "Geely",
+  "started_at": "2026-09-20T02:09:48.074036",
+  "official_url": "https://www.geely.com/th",
+  "models_found": [],
+  "prices_found": [
+    799900
+  ],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.headlightmag.com/?s=Geely",
+      "status": "ok",
+      "length": 48407
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.geely.com/th",
+      "error": "fetch_failed"
+    }
+  ],
+  "finished_at": "2026-09-20T02:09:50.481715"
+}

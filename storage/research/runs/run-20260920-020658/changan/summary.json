@@ -1,0 +1,49 @@
+{
+  "brand": "changan",
+  "brand_name": "Changan",
+  "started_at": "2026-09-20T02:09:49.608080",
+  "official_url": "https://www.changan.co.th",
+  "models_found": [],
+  "prices_found": [
+    399000,
+    499000,
+    619900,
+    629900,
+    679900,
+    709900,
+    799000,
+    949000,
+    1099000,
+    1219000,
+    1329000,
+    1499000,
+    1549000,
+    1599000,
+    1649000,
+    1699000,
+    1949000,
+    1999000,
+    2099000
+  ],
+  "specs_found": [
+    {
+      "power_kw": 190.0,
+      "torque_nm": 4.0,
+      "displacement_cc": 17651.0
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.changan.co.th",
+      "status": "ok",
+      "length": 4437625
+    },
+    {
+      "url": "https://www.headlightmag.com/?s=Changan",
+      "status": "ok",
+      "length": 47801
+    }
+  ],
+  "failures": [],
+  "finished_at": "2026-09-20T02:09:55.798048"
+}

@@ -1,0 +1,26 @@
+{
+  "brand": "ford",
+  "brand_name": "Ford",
+  "started_at": "2026-09-20T02:09:21.190379",
+  "official_url": "https://www.ford.co.th",
+  "models_found": [],
+  "prices_found": [
+    1089000,
+    1599000
+  ],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.headlightmag.com/?s=Ford",
+      "status": "ok",
+      "length": 48528
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.ford.co.th",
+      "error": "fetch_failed"
+    }
+  ],
+  "finished_at": "2026-09-20T02:09:23.202791"
+}

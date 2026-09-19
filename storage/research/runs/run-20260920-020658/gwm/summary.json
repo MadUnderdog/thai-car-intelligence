@@ -1,0 +1,33 @@
+{
+  "brand": "gwm",
+  "brand_name": "GWM",
+  "started_at": "2026-09-20T02:09:46.029900",
+  "official_url": "https://www.gwm.co.th",
+  "models_found": [],
+  "prices_found": [
+    799000,
+    1349000
+  ],
+  "specs_found": [
+    {
+      "power_kw": 6.0,
+      "torque_nm": 642.0,
+      "displacement_cc": 462.0,
+      "battery_kwh": 58.3
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.gwm.co.th",
+      "status": "ok",
+      "length": 154661
+    },
+    {
+      "url": "https://www.headlightmag.com/?s=GWM",
+      "status": "ok",
+      "length": 47941
+    }
+  ],
+  "failures": [],
+  "finished_at": "2026-09-20T02:09:49.170417"
+}

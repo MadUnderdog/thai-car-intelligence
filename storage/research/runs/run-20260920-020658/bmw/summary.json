@@ -1,0 +1,23 @@
+{
+  "brand": "bmw",
+  "brand_name": "BMW",
+  "started_at": "2026-09-20T02:10:30.715405",
+  "official_url": "https://www.bmw.co.th",
+  "models_found": [],
+  "prices_found": [],
+  "specs_found": [],
+  "sources": [
+    {
+      "url": "https://www.headlightmag.com/?s=BMW",
+      "status": "ok",
+      "length": 48021
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.bmw.co.th",
+      "error": "fetch_failed"
+    }
+  ],
+  "finished_at": "2026-09-20T02:10:42.639183"
+}

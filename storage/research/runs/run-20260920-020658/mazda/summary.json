@@ -1,0 +1,32 @@
+{
+  "brand": "mazda",
+  "brand_name": "Mazda",
+  "started_at": "2026-09-20T02:09:17.634972",
+  "official_url": "https://www.mazda.co.th",
+  "models_found": [],
+  "prices_found": [
+    1199000
+  ],
+  "specs_found": [
+    {
+      "power_kw": 77.9,
+      "torque_nm": 2.0,
+      "displacement_cc": 1.0,
+      "battery_kwh": 77.9
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.mazda.co.th",
+      "status": "ok",
+      "length": 145009
+    },
+    {
+      "url": "https://www.headlightmag.com/?s=Mazda",
+      "status": "ok",
+      "length": 48118
+    }
+  ],
+  "failures": [],
+  "finished_at": "2026-09-20T02:09:20.256970"
+}

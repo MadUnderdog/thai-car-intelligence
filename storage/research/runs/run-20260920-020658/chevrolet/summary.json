@@ -1,0 +1,27 @@
+{
+  "brand": "chevrolet",
+  "brand_name": "Chevrolet",
+  "started_at": "2026-09-20T02:10:19.801724",
+  "official_url": "https://www.chevrolet.co.th",
+  "models_found": [],
+  "prices_found": [],
+  "specs_found": [
+    {
+      "displacement_cc": 58116.0
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.chevrolet.co.th",
+      "status": "ok",
+      "length": 120743
+    },
+    {
+      "url": "https://www.headlightmag.com/?s=Chevrolet",
+      "status": "ok",
+      "length": 48342
+    }
+  ],
+  "failures": [],
+  "finished_at": "2026-09-20T02:10:22.976994"
+}

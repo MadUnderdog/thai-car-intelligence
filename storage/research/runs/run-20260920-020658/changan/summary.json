@@ -1,18 +1,210 @@
 {
   "brand": "changan",
   "brand_name": "Changan",
-  "started_at": "2026-09-20T02:09:49.608080",
   "official_url": "https://www.changan.co.th",
-  "models_found": [],
-  "prices_found": [
+  "scraped_at": "2026-09-20T02:10:00+07:00",
+  "notes": "Prices extracted from changan.co.th promotion sections and individual model pages. Some models (S05, S05 REEV, HUNTER K50) render prices client-side only; regular prices listed where available.",
+  "models": [
+    {
+      "model": "NEVO Q05",
+      "sub_brand": "NEVO",
+      "type": "PHEV SUV",
+      "url": "https://www.changan.co.th/th/nevo-q05/",
+      "variants": [
+        {
+          "name": "NEVO Q05 MAX",
+          "regular_price_thb": 629900,
+          "promo_price_thb": 619900,
+          "promo_note": "ราคาพิเศษ from 1 Aug - 31 Aug 2569 (2026)"
+        },
+        {
+          "name": "NEVO Q05 ULTRA",
+          "regular_price_thb": 709900,
+          "promo_price_thb": 679900,
+          "promo_note": "ราคาพิเศษ from 1 Aug - 31 Aug 2569 (2026)"
+        }
+      ],
+      "specs": {
+        "power_kw": 162.0,
+        "engine": "PHEV (plug-in hybrid)"
+      }
+    },
+    {
+      "model": "DEEPAL NEW S07",
+      "sub_brand": "DEEPAL",
+      "type": "Electric SUV",
+      "url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "variants": [
+        {
+          "name": "DEEPAL NEW S07",
+          "regular_price_thb": 1219000,
+          "promo_price_thb": 1099000,
+          "promo_note": "ราคาพิเศษแนะนำช่วงเปิดตัว Early Bird (from 20 Oct 2568 to 31 Dec 2568)"
+        }
+      ],
+      "specs": {}
+    },
+    {
+      "model": "DEEPAL S07 L",
+      "sub_brand": "DEEPAL",
+      "type": "Electric SUV",
+      "url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "variants": [
+        {
+          "name": "DEEPAL S07 L",
+          "regular_price_thb": 1499000
+        }
+      ],
+      "specs": {},
+      "note": "Long range variant of S07"
+    },
+    {
+      "model": "DEEPAL L07",
+      "sub_brand": "DEEPAL",
+      "type": "Electric Sedan",
+      "url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "variants": [
+        {
+          "name": "DEEPAL L07",
+          "regular_price_thb": 1329000
+        }
+      ],
+      "specs": {}
+    },
+    {
+      "model": "DEEPAL E07 Plus",
+      "sub_brand": "DEEPAL",
+      "type": "Electric SUV/Crossover",
+      "url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "variants": [
+        {
+          "name": "DEEPAL E07 Plus",
+          "regular_price_thb": 1699000,
+          "promo_options": [
+            {"discount_thb": 50000, "price_thb": 1649000},
+            {"discount_thb": 100000, "price_thb": 1599000},
+            {"discount_thb": 150000, "price_thb": 1549000}
+          ]
+        }
+      ],
+      "specs": {
+        "power_kw": 252.0
+      }
+    },
+    {
+      "model": "DEEPAL E07 Performance AWD",
+      "sub_brand": "DEEPAL",
+      "type": "Electric SUV/Crossover AWD",
+      "url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "variants": [
+        {
+          "name": "DEEPAL E07 Performance AWD",
+          "regular_price_thb": 2099000,
+          "promo_options": [
+            {"discount_thb": 100000, "price_thb": 1999000},
+            {"discount_thb": 150000, "price_thb": 1949000}
+          ]
+        }
+      ],
+      "specs": {
+        "power_kw": 440.0
+      }
+    },
+    {
+      "model": "DEEPAL S05",
+      "sub_brand": "DEEPAL",
+      "type": "Electric SUV",
+      "url": "https://www.changan.co.th/th/deepal/s05-th/",
+      "variants": [
+        {
+          "name": "DEEPAL S05 BEV Lite",
+          "regular_price_thb": null,
+          "note": "Price loaded client-side; variant confirmed in promotion data"
+        },
+        {
+          "name": "DEEPAL S05 BEV Plus",
+          "regular_price_thb": null,
+          "note": "Price loaded client-side; variant confirmed in promotion data"
+        },
+        {
+          "name": "DEEPAL S05 BEV Max",
+          "regular_price_thb": null,
+          "note": "Price loaded client-side; variant confirmed in promotion data"
+        },
+        {
+          "name": "DEEPAL S05 BEV Max Long Range",
+          "regular_price_thb": null,
+          "note": "Price loaded client-side; variant confirmed in promotion data"
+        }
+      ],
+      "specs": {}
+    },
+    {
+      "model": "DEEPAL S05 REEV",
+      "sub_brand": "DEEPAL",
+      "type": "Electric SUV (Range Extended)",
+      "url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+      "variants": [
+        {
+          "name": "DEEPAL S05 REEV Max",
+          "regular_price_thb": null,
+          "note": "Price loaded client-side; variant confirmed in promotion data"
+        }
+      ],
+      "specs": {}
+    },
+    {
+      "model": "DEEPAL HUNTER K50",
+      "sub_brand": "DEEPAL",
+      "type": "Electric Pickup Truck",
+      "url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+      "variants": [
+        {
+          "name": "DEEPAL HUNTER K50 REEV PLUS AWD",
+          "regular_price_thb": null,
+          "note": "Price loaded client-side; variant confirmed in promotion data"
+        },
+        {
+          "name": "DEEPAL HUNTER K50 REEV Max AWD",
+          "regular_price_thb": null,
+          "note": "Price loaded client-side; variant confirmed in promotion data"
+        }
+      ],
+      "specs": {}
+    },
+    {
+      "model": "LUMIN L DC",
+      "sub_brand": "LUMIN",
+      "type": "Electric City Car",
+      "url": "https://www.changan.co.th/th/lumin/luminl-dc-th/",
+      "variants": [
+        {
+          "name": "LUMIN L DC",
+          "regular_price_thb": 499000,
+          "promo_price_thb": 399000,
+          "promo_note": "ราคาพิเศษ 399,000 บาท"
+        }
+      ],
+      "specs": {}
+    }
+  ],
+  "price_summary": {
+    "cheapest_model": "LUMIN L DC",
+    "cheapest_price_thb": 399000,
+    "most_expensive_model": "DEEPAL E07 Performance AWD",
+    "most_expensive_price_thb": 2099000,
+    "total_models": 10,
+    "total_variants_with_prices": 9,
+    "total_variants_missing_prices": 5,
+    "price_range_thb": "399,000 - 2,099,000"
+  },
+  "all_prices_found": [
     399000,
     499000,
     619900,
     629900,
     679900,
     709900,
-    799000,
-    949000,
     1099000,
     1219000,
     1329000,
@@ -25,25 +217,52 @@
     1999000,
     2099000
   ],
-  "specs_found": [
-    {
-      "power_kw": 190.0,
-      "torque_nm": 4.0,
-      "displacement_cc": 17651.0
-    }
-  ],
   "sources": [
     {
       "url": "https://www.changan.co.th",
       "status": "ok",
-      "length": 4437625
+      "note": "Main page with promotion data and model listings"
     },
     {
-      "url": "https://www.headlightmag.com/?s=Changan",
+      "url": "https://www.changan.co.th/th/nevo-q05/",
       "status": "ok",
-      "length": 47801
+      "note": "NEVO Q05 page with starting price and variant info"
+    },
+    {
+      "url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "status": "ok",
+      "note": "NEW S07 page"
+    },
+    {
+      "url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "status": "ok",
+      "note": "E07 Plus page"
+    },
+    {
+      "url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "status": "ok",
+      "note": "E07 Performance AWD page"
+    },
+    {
+      "url": "https://www.changan.co.th/th/lumin/luminl-dc-th/",
+      "status": "ok",
+      "note": "Lumin L DC page"
+    },
+    {
+      "url": "https://www.changan.co.th/th/deepal/s05-th/",
+      "status": "ok",
+      "note": "S05 page (prices client-side rendered)"
+    },
+    {
+      "url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+      "status": "ok",
+      "note": "S05 REEV page (prices client-side rendered)"
+    },
+    {
+      "url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+      "status": "ok",
+      "note": "HUNTER K50 page (prices client-side rendered)"
     }
   ],
-  "failures": [],
-  "finished_at": "2026-09-20T02:09:55.798048"
+  "failures": []
 }

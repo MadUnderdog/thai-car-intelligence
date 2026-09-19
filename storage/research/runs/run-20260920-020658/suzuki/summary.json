@@ -1,34 +1,106 @@
 {
   "brand": "suzuki",
   "brand_name": "Suzuki",
-  "started_at": "2026-09-20T02:10:39.068632",
   "official_url": "https://www.suzuki.co.th",
-  "models_found": [],
-  "prices_found": [
-    375000,
-    599000,
-    649000,
-    699000,
-    779000
-  ],
-  "specs_found": [
+  "research_date": "2026-09-20",
+  "currency": "THB",
+  "models_found": [
     {
-      "power_kw": 7.0,
-      "displacement_cc": 42.0
-    }
-  ],
-  "sources": [
-    {
-      "url": "https://www.suzuki.co.th",
-      "status": "ok",
-      "length": 99394
+      "model": "Fronx",
+      "segment": "Compact Crossover SUV",
+      "fuel_type": "Hybrid",
+      "engine": "K15B 1.5L + ISG mild hybrid",
+      "transmission": "CVT",
+      "drive": "FWD",
+      "source_url": "https://www.suzuki.co.th/model/fronx/",
+      "variants": [
+        {"grade": "GL", "price": 689000, "currency": "THB"},
+        {"grade": "GLX", "price": 749000, "currency": "THB"},
+        {"grade": "GLX PLUS", "price": 799000, "currency": "THB"}
+      ],
+      "promotions": [
+        {"grade": "GLX", "price": 649000, "note": "Suzuki Family special price"}
+      ]
     },
     {
-      "url": "https://www.headlightmag.com/?s=Suzuki",
-      "status": "ok",
-      "length": 48123
+      "model": "XL7 Hybrid",
+      "segment": "Compact 7-Seat SUV",
+      "fuel_type": "Hybrid",
+      "engine": "K15B 1.5L + ISG mild hybrid",
+      "transmission": "4AT",
+      "drive": "FWD",
+      "source_url": "https://www.suzuki.co.th/model/xl7/",
+      "variants": [
+        {"grade": "GLX", "price": 799000, "note": "Introductory price"},
+        {"grade": "GLX Higher Spec", "price": 825000}
+      ],
+      "note": "799000 is promotional introductory price"
+    },
+    {
+      "model": "XL7 Black Edition",
+      "segment": "Compact 7-Seat SUV",
+      "fuel_type": "Hybrid",
+      "engine": "K15B 1.5L + ISG mild hybrid",
+      "transmission": "4AT",
+      "drive": "FWD",
+      "source_url": "https://www.suzuki.co.th/model/xl7_black_edition/",
+      "variants": [
+        {"grade": "XL7 BLACK EDITION", "price": 835000}
+      ]
+    },
+    {
+      "model": "eVitara",
+      "segment": "Compact Electric SUV",
+      "fuel_type": "Electric BEV",
+      "battery": "61 kWh",
+      "drivetrain": "ALLGRIP-e",
+      "platform": "HEARTECT-e",
+      "source_url": "https://www.suzuki.co.th/model/eVITARA/",
+      "variants": [
+        {"grade": "ALL NEW SUZUKI e VITARA", "price": 2890000}
+      ],
+      "promotions": [
+        {"note": "Battery warranty up to 8 years included"}
+      ]
+    },
+    {
+      "model": "Jimny",
+      "segment": "Off-Road SUV",
+      "fuel_type": "Petrol",
+      "engine": "K15B 1.5L",
+      "transmission": "4AT",
+      "drive": "ALLGRIP PRO 4WD",
+      "source_url": "https://www.suzuki.co.th/model/jimny/",
+      "variants": [
+        {"grade": "AT SINGLE-TONE", "price": 1590000},
+        {"grade": "AT TWO-TONE", "price": 1620000}
+      ]
+    },
+    {
+      "model": "Carry",
+      "segment": "Mini Truck Commercial",
+      "fuel_type": "Petrol",
+      "engine": "K15B 1.5L",
+      "transmission": "5MT",
+      "drive": "RWD",
+      "source_url": "https://www.suzuki.co.th/model/carry/",
+      "variants": [
+        {"grade": "MT", "price": 375000}
+      ]
     }
   ],
-  "failures": [],
-  "finished_at": "2026-09-20T02:10:41.581420"
+  "all_prices_thb": [375000, 689000, 749000, 799000, 825000, 835000, 1590000, 1620000, 2890000],
+  "price_range": {"min": 375000, "max": 2890000},
+  "total_variants": 9,
+  "sources": [
+    {"url": "https://www.suzuki.co.th", "status": "ok"},
+    {"url": "https://www.suzuki.co.th/th/promotion", "status": "ok"},
+    {"url": "https://www.suzuki.co.th/model/fronx/equipment", "status": "ok"},
+    {"url": "https://www.suzuki.co.th/model/xl7/equipment", "status": "ok"},
+    {"url": "https://www.suzuki.co.th/model/xl7_black_edition/equipment", "status": "ok"},
+    {"url": "https://www.suzuki.co.th/model/eVITARA/equipment", "status": "ok"},
+    {"url": "https://www.suzuki.co.th/model/jimny/equipment", "status": "ok"},
+    {"url": "https://www.suzuki.co.th/model/carry/equipment", "status": "ok"}
+  ],
+  "failures": []
 }

@@ -1,32 +1,128 @@
 {
   "brand": "mazda",
   "brand_name": "Mazda",
-  "started_at": "2026-09-20T02:09:17.634972",
+  "brand_name_th": "มาสด้า",
   "official_url": "https://www.mazda.co.th",
-  "models_found": [],
-  "prices_found": [
-    1199000
-  ],
-  "specs_found": [
+  "extracted_at": "2026-09-20T02:09:00Z",
+  "currency": "THB",
+  "total_models": 10,
+  "total_variants": 37,
+  "notes": "Prices are starting prices for each variant. MX-5 prices not published (price on request). Some models have duplicate body style variants (sedan/hatchback) at same price.",
+  "models": [
     {
-      "power_kw": 77.9,
-      "torque_nm": 2.0,
-      "displacement_cc": 1.0,
-      "battery_kwh": 77.9
-    }
-  ],
-  "sources": [
-    {
-      "url": "https://www.mazda.co.th",
-      "status": "ok",
-      "length": 145009
+      "model_name": "MAZDA2 ESSENTIAL",
+      "slug": "mazda2-essential",
+      "type": "Sedan / Hatchback",
+      "body_styles": ["Sedan (New Wave)", "Hatchback (Sports)"],
+      "variants": [
+        {"variant": "1.3 PRIME", "price_thb": 529000, "price_display": "฿529,000", "engine": "Skyactiv-G 1.3L"},
+        {"variant": "1.3 ULTRA", "price_thb": 589000, "price_display": "฿589,000", "engine": "Skyactiv-G 1.3L"},
+        {"variant": "1.3 SIGNATURE", "price_thb": 659000, "price_display": "฿659,000", "engine": "Skyactiv-G 1.3L"},
+        {"variant": "XDL SIGNATURE", "price_thb": 749000, "price_display": "฿749,000", "engine": "Skyactiv-D 1.5L Diesel"}
+      ]
     },
     {
-      "url": "https://www.headlightmag.com/?s=Mazda",
-      "status": "ok",
-      "length": 48118
+      "model_name": "MAZDA3 FASTBACK",
+      "slug": "mazda3-fastback",
+      "type": "Hatchback",
+      "variants": [
+        {"variant": "2.0 C SPORTS", "price_thb": 979000, "price_display": "฿979,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "2.0 S SPORTS", "price_thb": 1069000, "price_display": "฿1,069,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "2.0 SP SPORTS", "price_thb": 1198000, "price_display": "฿1,198,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "CARBON EDITION SPORTS", "price_thb": 1210000, "price_display": "฿1,210,000", "engine": "Skyactiv-G 2.0L"}
+      ]
+    },
+    {
+      "model_name": "MAZDA3 SEDAN",
+      "slug": "mazda3-sedan",
+      "type": "Sedan",
+      "variants": [
+        {"variant": "2.0 C", "price_thb": 979000, "price_display": "฿979,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "2.0 S", "price_thb": 1069000, "price_display": "฿1,069,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "2.0 SP", "price_thb": 1198000, "price_display": "฿1,198,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "CARBON EDITION", "price_thb": 1210000, "price_display": "฿1,210,000", "engine": "Skyactiv-G 2.0L"}
+      ]
+    },
+    {
+      "model_name": "MAZDA CX-3 ESSENTIAL",
+      "slug": "mazda-cx3-essential",
+      "type": "Crossover SUV",
+      "variants": [
+        {"variant": "2.0 PRIME", "price_thb": 699000, "price_display": "฿699,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "2.0 ULTRA", "price_thb": 759000, "price_display": "฿759,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "2.0 ULTRA PLUS", "price_thb": 829000, "price_display": "฿829,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "2.0 SIGNATURE", "price_thb": 899000, "price_display": "฿899,000", "engine": "Skyactiv-G 2.0L"}
+      ]
+    },
+    {
+      "model_name": "MAZDA CX-30 ESSENTIAL",
+      "slug": "mazda-cx30-essential",
+      "type": "Crossover SUV",
+      "variants": [
+        {"variant": "2.0 PRIME", "price_thb": 899000, "price_display": "฿899,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "2.0 ULTRA", "price_thb": 999000, "price_display": "฿999,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "2.0 SIGNATURE", "price_thb": 1099000, "price_display": "฿1,099,000", "engine": "Skyactiv-G 2.0L"}
+      ]
+    },
+    {
+      "model_name": "MAZDA CX-5",
+      "slug": "mazda-cx5",
+      "type": "SUV",
+      "variants": [
+        {"variant": "2.0 S", "price_thb": 1219000, "price_display": "฿1,219,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "2.0 SP", "price_thb": 1299000, "price_display": "฿1,299,000", "engine": "Skyactiv-G 2.0L"},
+        {"variant": "XDL", "price_thb": 1669000, "price_display": "฿1,669,000", "engine": "Skyactiv-D 2.2L Diesel"}
+      ]
+    },
+    {
+      "model_name": "MAZDA CX-8",
+      "slug": "mazda-cx8",
+      "type": "SUV (7-seater)",
+      "variants": [
+        {"variant": "2.5 S", "price_thb": 1549000, "price_display": "฿1,549,000", "engine": "Skyactiv-G 2.5L"},
+        {"variant": "2.5 SP", "price_thb": 1619000, "price_display": "฿1,619,000", "engine": "Skyactiv-G 2.5L"},
+        {"variant": "2.5 SP EXCLUSIVE", "price_thb": 1699000, "price_display": "฿1,699,000", "engine": "Skyactiv-G 2.5L"},
+        {"variant": "XDL EXCLUSIVE", "price_thb": 2199000, "price_display": "฿2,199,000", "engine": "Skyactiv-D 2.2L Diesel"}
+      ]
+    },
+    {
+      "model_name": "MAZDA BT-50",
+      "slug": "new-mazda-bt50",
+      "type": "Pickup Truck",
+      "variants": [
+        {"variant": "FSC 2.2 XS HI-RACER 6MT", "price_thb": 762000, "price_display": "฿762,000", "engine": "2.2L Diesel", "transmission": "6MT"},
+        {"variant": "DBL 2.2 XT HI-RACER 8AT", "price_thb": 992000, "price_display": "฿992,000", "engine": "2.2L Diesel", "transmission": "8AT"},
+        {"variant": "DBL 3.0 XTR HI-RACER 6AT", "price_thb": 1242000, "price_display": "฿1,242,000", "engine": "3.0L Diesel", "transmission": "6AT"},
+        {"variant": "DBL 3.0 XTR 4x4 6AT", "price_thb": 1352000, "price_display": "฿1,352,000", "engine": "3.0L Diesel", "transmission": "6AT", "drive": "4WD"}
+      ]
+    },
+    {
+      "model_name": "THE ALL-ELECTRIC MAZDA6e",
+      "slug": "mazda6e",
+      "type": "Electric Sedan",
+      "powertrain": "BEV",
+      "variants": [
+        {"variant": "PREMIUM", "price_thb": 1169000, "price_display": "฿1,169,000"},
+        {"variant": "EXCLUSIVE", "price_thb": 1199000, "price_display": "฿1,199,000"}
+      ]
+    },
+    {
+      "model_name": "MAZDA6 20TH ANNIVERSARY EDITION",
+      "slug": "mazda6",
+      "type": "Sedan",
+      "variants": [
+        {"variant": "20TH ANNIVERSARY EDITION", "price_thb": 2499000, "price_display": "฿2,499,000"}
+      ]
+    },
+    {
+      "model_name": "NEW MAZDA MX-5",
+      "slug": "mazda-mx5",
+      "type": "Roadster",
+      "variants": [
+        {"variant": "2.0 RF", "price_thb": null, "price_display": "Price on request"},
+        {"variant": "2.0 RF 6MT", "price_thb": null, "price_display": "Price on request"}
+      ],
+      "note": "MX-5 prices not listed on official website"
     }
-  ],
-  "failures": [],
-  "finished_at": "2026-09-20T02:09:20.256970"
+  ]
 }

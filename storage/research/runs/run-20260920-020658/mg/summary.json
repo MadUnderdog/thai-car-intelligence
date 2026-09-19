@@ -1,25 +1,178 @@
 {
   "brand": "mg",
   "brand_name": "MG",
-  "started_at": "2026-09-20T02:08:58.673916",
   "official_url": "https://www.mgcars.com/th_th",
-  "models_found": [],
-  "prices_found": [
-    1549900
-  ],
-  "specs_found": [],
-  "sources": [
+  "research_date": "2026-09-20",
+  "data_source": "mgcars.com/th_th (Next.js RSC embedded JSON), 9carthai.com",
+  "note": "Prices in THB. Website returns SSR RSC payload with all model+variant+price data.",
+  "models": [
     {
-      "url": "https://www.headlightmag.com/?s=MG",
-      "status": "ok",
-      "length": 48049
+      "model": "MG EP PLUS",
+      "type": "Electric",
+      "body_type": "Sedan",
+      "variants": [
+        {"name": "EP PLUS", "price_thb": 771000}
+      ]
+    },
+    {
+      "model": "MG3 HYBRID+",
+      "type": "Hybrid",
+      "body_type": "Hatchback",
+      "variants": [
+        {"name": "MG3 HYBRID+ รุ่น D", "price_thb": 579900},
+        {"name": "MG3 HYBRID+ รุ่น X", "price_thb": 619900}
+      ]
+    },
+    {
+      "model": "MG ZS",
+      "type": "Petrol",
+      "body_type": "Crossover",
+      "variants": [
+        {"name": "MG ZS MODEL D", "price_thb": 599000},
+        {"name": "MG ZS 100TH SE", "price_thb": 659900},
+        {"name": "MG ZS MODEL V", "price_thb": 689000}
+      ]
+    },
+    {
+      "model": "MG ZS EV",
+      "type": "Electric",
+      "body_type": "Crossover",
+      "variants": [
+        {"name": "MG ZS EV MODEL D", "price_thb": 829900},
+        {"name": "MG ZS EV MODEL X", "price_thb": 899900},
+        {"name": "MG ZS EV 100TH SE", "price_thb": 899900}
+      ]
+    },
+    {
+      "model": "MG VS HEV",
+      "type": "Hybrid",
+      "body_type": "Crossover",
+      "variants": [
+        {"name": "MG VS HEV MODEL D", "price_thb": 699000},
+        {"name": "MG VS HEV MODEL X", "price_thb": 759000},
+        {"name": "MG VS HEV 100TH SE", "price_thb": 789900}
+      ]
+    },
+    {
+      "model": "MG5 PRO",
+      "type": "Petrol",
+      "body_type": "Sedan",
+      "variants": [
+        {"name": "MG5 PRO D", "price_thb": 629900},
+        {"name": "MG5 PRO X", "price_thb": 669900}
+      ]
+    },
+    {
+      "model": "MGS5 EV PLUS",
+      "type": "Electric",
+      "body_type": "SUV",
+      "variants": [
+        {"name": "MGS5 EV PLUS รุ่น D+", "price_thb": 749900},
+        {"name": "MGS5 EV PLUS รุ่น X+", "price_thb": 839900},
+        {"name": "MGS5 EV PLUS รุ่น V+", "price_thb": 959900}
+      ]
+    },
+    {
+      "model": "MG HS",
+      "type": "Petrol",
+      "body_type": "SUV",
+      "variants": [
+        {"name": "MG HS MODEL C", "price_thb": 939000},
+        {"name": "MG HS MODEL D", "price_thb": 1089000},
+        {"name": "MG HS MODEL X", "price_thb": 1159000}
+      ]
+    },
+    {
+      "model": "MG HS PHEV",
+      "type": "Plug-in Hybrid",
+      "body_type": "SUV",
+      "variants": [
+        {"name": "MG HS PHEV MODEL D", "price_thb": 1299000},
+        {"name": "MG HS PHEV MODEL X", "price_thb": 1379000}
+      ]
+    },
+    {
+      "model": "MG4 Electric",
+      "type": "Electric",
+      "body_type": "Hatchback",
+      "variants": [
+        {"name": "MG4 STANDARD", "price_thb": 579900},
+        {"name": "MG4 D STANDARD RANGE", "price_thb": 669900},
+        {"name": "MG4 X LONG RANGE", "price_thb": 749900}
+      ]
+    },
+    {
+      "model": "MG IM5",
+      "type": "Electric",
+      "body_type": "Sedan",
+      "variants": [
+        {"name": "MG IM5 PREMIUM LONG RANGE", "price_thb": 1549900},
+        {"name": "MG IM5 Premium", "price_thb": 1399900, "note": "from 9carthai listing"},
+        {"name": "MG IM5 Performance", "price_thb": 1799900, "note": "from 9carthai listing"}
+      ]
+    },
+    {
+      "model": "MG MAXUS 7",
+      "type": "Electric",
+      "body_type": "MPV",
+      "variants": [
+        {"name": "MG MAXUS 7 Model X", "price_thb": 1399000}
+      ]
+    },
+    {
+      "model": "MG MAXUS 9",
+      "type": "Electric",
+      "body_type": "MPV",
+      "variants": [
+        {"name": "MG MAXUS 9 V PLUS", "price_thb": 1849900}
+      ]
+    },
+    {
+      "model": "MG CYBERSTER",
+      "type": "Electric",
+      "body_type": "Roadster",
+      "variants": [
+        {"name": "MG CYBERSTER", "price_thb": 2499000}
+      ]
+    },
+    {
+      "model": "MG EXTENDER",
+      "type": "Petrol",
+      "body_type": "Pickup Truck",
+      "note": "Legacy model, some variants discontinued",
+      "variants": [
+        {"name": "EXTENDER 2.0 C 6MT", "price_thb": 589000},
+        {"name": "EXTENDER 2.0 D 6MT", "price_thb": 629000},
+        {"name": "EXTENDER 2.0 GRAND D 6MT", "price_thb": 669000},
+        {"name": "EXTENDER 2.0 GRAND D 6AT", "price_thb": 729000},
+        {"name": "EXTENDER 2.0 GRAND X 6MT", "price_thb": 739000, "note": "isDelete=true"},
+        {"name": "EXTENDER 2.0 GRAND D 6MT (new)", "price_thb": 769000},
+        {"name": "EXTENDER 2.0 GRAND X 6AT", "price_thb": 889000},
+        {"name": "EXTENDER 2.0 GRAND 4WD X 6AT", "price_thb": 1039000}
+      ]
+    },
+    {
+      "model": "MG EP (Electric)",
+      "type": "Electric",
+      "body_type": "Sedan",
+      "note": "Earlier model, replaced by EP PLUS",
+      "variants": [
+        {"name": "MG EP", "price_thb": 959000}
+      ]
     }
+  ],
+  "price_range_thb": {
+    "min": 579900,
+    "max": 2499000
+  },
+  "total_unique_variants": 42,
+  "sources": [
+    {"url": "https://www.mgcars.com/th_th", "status": "ok", "method": "curl+RSC parsing"},
+    {"url": "https://www.9carthai.com/?s=MG+ราคา", "status": "ok", "method": "curl+regex"}
   ],
   "failures": [
-    {
-      "url": "https://www.mgcars.com/th_th",
-      "error": "fetch_failed"
-    }
-  ],
-  "finished_at": "2026-09-20T02:09:00.505142"
+    {"url": "https://www.mgcars.com/th_th/cars/mg4", "error": "Next.js 404 (RSC data not in this route)"},
+    {"url": "https://www.mgcars.com/th_th/cars/mg-zs", "error": "Next.js 404 (RSC data not in this route)"},
+    {"url": "https://www.mgcars.com/th_th/cars/mg5", "error": "Next.js 404 (RSC data not in this route)"}
+  ]
 }

@@ -1,23 +1,139 @@
 {
   "brand": "volvo",
   "brand_name": "Volvo",
-  "started_at": "2026-09-20T02:10:20.418234",
-  "official_url": "https://www.volvo.no/th",
-  "models_found": [],
-  "prices_found": [],
-  "specs_found": [],
+  "market": "Thailand",
+  "researched_at": "2026-09-20T02:21:27.701829",
+  "currency": "THB",
   "sources": [
+    "https://www.headlightmag.com (search results with official prices)",
+    "https://www.9carthai.com (XC90 Recharge 2026 price)",
+    "https://www.volvocars.com/th (blocked by Cloudflare)",
+    "https://www.volvo.no/th (not a Thai site)"
+  ],
+  "price_range": {
+    "min_thb": 1590000,
+    "max_thb": 4890000
+  },
+  "models": [
     {
-      "url": "https://www.headlightmag.com/?s=Volvo",
-      "status": "ok",
-      "length": 48450
+      "model": "EX30",
+      "type": "Electric SUV",
+      "variants": [
+        {
+          "variant": "EX30 Single Motor Extended Range",
+          "price_thb": 1590000
+        },
+        {
+          "variant": "EX30 Cross Country",
+          "price_thb": 1890000
+        }
+      ],
+      "notes": "Range up to 480 km (WLTP)"
+    },
+    {
+      "model": "EX40 (XC40 Recharge MY2025)",
+      "type": "Electric SUV",
+      "variants": [
+        {
+          "variant": "EX40 Single Motor",
+          "price_thb": 1990000
+        },
+        {
+          "variant": "EX40 Twin Motor / BLACK Edition",
+          "price_thb": 2690000
+        }
+      ],
+      "notes": "Renamed from XC40 Recharge"
+    },
+    {
+      "model": "EC40 (C40 Recharge MY2025)",
+      "type": "Electric SUV Coupe",
+      "variants": [
+        {
+          "variant": "EC40 Single Motor",
+          "price_thb": 2090000
+        },
+        {
+          "variant": "EC40 Twin Motor / BLACK Edition",
+          "price_thb": 2790000
+        }
+      ],
+      "notes": "Renamed from C40 Recharge"
+    },
+    {
+      "model": "EX90",
+      "type": "Electric SUV (Flagship)",
+      "variants": [
+        {
+          "variant": "EX90 Twin Motor (408 hp)",
+          "price_thb": 4290000
+        },
+        {
+          "variant": "EX90 Twin Motor Performance (517 hp)",
+          "price_thb": 4890000
+        }
+      ],
+      "notes": "111 kWh battery"
+    },
+    {
+      "model": "ES90",
+      "type": "Electric Sedan",
+      "variants": [
+        {
+          "variant": "ES90 Single Motor",
+          "price_thb": 2990000
+        }
+      ],
+      "notes": "333 hp, 92 kWh battery, 755 km range (NEDC)"
+    },
+    {
+      "model": "XC60 Recharge (Minorchange 2025)",
+      "type": "Plug-in Hybrid SUV",
+      "variants": [
+        {
+          "variant": "XC60 Recharge",
+          "price_thb": 3590000
+        }
+      ],
+      "notes": "PHEV, 89 km electric range (NEDC)"
+    },
+    {
+      "model": "XC90 Recharge (Minorchange 2025)",
+      "type": "Plug-in Hybrid SUV (Flagship)",
+      "variants": [
+        {
+          "variant": "XC90 Recharge",
+          "price_thb": 4690000
+        }
+      ],
+      "notes": "2.0L Turbo PHEV, 76.7 km electric range"
+    },
+    {
+      "model": "XC90 Recharge 2026",
+      "type": "Plug-in Hybrid SUV (New Model)",
+      "variants": [
+        {
+          "variant": "XC90 Recharge 2026",
+          "price_thb": 4490000
+        }
+      ],
+      "notes": "New generation from 9carthai"
     }
   ],
-  "failures": [
-    {
-      "url": "https://www.volvo.no/th",
-      "error": "fetch_failed"
-    }
+  "total_variants": 12,
+  "all_prices_thb": [
+    1590000,
+    1890000,
+    1990000,
+    2090000,
+    2690000,
+    2790000,
+    2990000,
+    3590000,
+    4290000,
+    4490000,
+    4690000,
+    4890000
   ],
-  "finished_at": "2026-09-20T02:10:24.166375"
+  "notes": "All prices are official Thai retail prices as listed by Thai automotive media. Prices may not include accessories or special editions beyond BLACK Edition."
 }

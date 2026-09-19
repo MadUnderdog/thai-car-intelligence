@@ -1,25 +1,340 @@
 {
   "brand": "honda",
   "brand_name": "Honda",
-  "started_at": "2026-09-20T02:08:51.847623",
-  "official_url": "https://www.honda.co.th/th/car",
-  "models_found": [],
-  "prices_found": [
-    990000
-  ],
-  "specs_found": [],
-  "sources": [
+  "research_date": "2026-09-20",
+  "sources_tried": [
+    {
+      "url": "https://www.honda.co.th/th/car",
+      "status": "failed",
+      "note": "URL returns 404; correct path is /models"
+    },
+    {
+      "url": "https://www.honda.co.th/th/car/city",
+      "status": "failed",
+      "note": "URL returns 404; correct path is /city"
+    },
+    {
+      "url": "https://www.honda.co.th/th/car/civic",
+      "status": "failed",
+      "note": "URL returns 404; correct path is /civic"
+    },
+    {
+      "url": "https://www.honda.co.th/city",
+      "status": "ok",
+      "note": "Embedded JSON with full grade/price data"
+    },
+    {
+      "url": "https://www.honda.co.th/civic",
+      "status": "ok",
+      "note": "Embedded JSON with full grade/price data"
+    },
+    {
+      "url": "https://www.honda.co.th/models",
+      "status": "ok",
+      "note": "Master model list with all starting prices"
+    },
     {
       "url": "https://www.headlightmag.com/?s=Honda",
       "status": "ok",
-      "length": 48281
+      "note": "Thai automotive media; extracted 1 price (990000)"
+    },
+    {
+      "url": "https://www.9carthai.com/?s=Honda+ราคา",
+      "status": "not_tried",
+      "note": "Worker script attempted but blocked by SPA rendering"
+    }
+  ],
+  "models_found": [
+    {
+      "model": "City (e:HEV / Turbo)",
+      "slug": "city",
+      "type": "Sedan",
+      "engine_types": [
+        "Turbo",
+        "e:HEV"
+      ],
+      "starting_price": 569000,
+      "grades": [
+        {
+          "name": "S",
+          "price": 569000,
+          "engine": "Turbo",
+          "power_ps": 122,
+          "fuel_economy_kmpl": 22.7
+        },
+        {
+          "name": "e:HEV V",
+          "price": 619000,
+          "engine": "e:HEV",
+          "motor_torque_nm": 253,
+          "fuel_economy_kmpl": 27.8
+        },
+        {
+          "name": "e:HEV SV",
+          "price": 689000,
+          "engine": "e:HEV",
+          "motor_torque_nm": 253,
+          "fuel_economy_kmpl": 27.8
+        },
+        {
+          "name": "e:HEV RS",
+          "price": 739000,
+          "engine": "e:HEV",
+          "motor_torque_nm": 253,
+          "fuel_economy_kmpl": 27.8
+        }
+      ],
+      "note": "Honda SENSING standard on all grades"
+    },
+    {
+      "model": "City Hatchback (e:HEV / Turbo)",
+      "slug": "cityhatchback",
+      "type": "Hatchback",
+      "engine_types": [
+        "Turbo",
+        "e:HEV"
+      ],
+      "starting_price": 579000,
+      "note": "Launch promo price 579,000 THB valid until 30 Sep 2026"
+    },
+    {
+      "model": "WR-V",
+      "slug": "wrv",
+      "type": "SUV",
+      "starting_price": 799000,
+      "grades": [
+        {
+          "name": "SV",
+          "price": 799000
+        },
+        {
+          "name": "RS",
+          "price": 869000
+        }
+      ]
+    },
+    {
+      "model": "BR-V",
+      "slug": "brv",
+      "type": "MUV/7-Seater",
+      "starting_price": 915000,
+      "grades": [
+        {
+          "name": "E - Taffeta White",
+          "price": 915000
+        },
+        {
+          "name": "E - Crystal Black",
+          "price": 921000
+        },
+        {
+          "name": "EL - Crystal Black",
+          "price": 973000
+        },
+        {
+          "name": "EL - Premium Sunlight",
+          "price": 977000
+        }
+      ]
+    },
+    {
+      "model": "Civic (e:HEV)",
+      "slug": "civic",
+      "type": "Sedan",
+      "engine_types": [
+        "e:HEV"
+      ],
+      "starting_price": 949000,
+      "grades": [
+        {
+          "name": "e:HEV EL",
+          "price": 949000,
+          "motor_torque_nm": 315,
+          "fuel_economy_kmpl": 23.3,
+          "engine_cc": 1993
+        },
+        {
+          "name": "e:HEV EL+",
+          "price": 1109000,
+          "motor_torque_nm": 315,
+          "fuel_economy_kmpl": 23.3,
+          "engine_cc": 1993
+        },
+        {
+          "name": "e:HEV RS",
+          "price": 1259000,
+          "motor_torque_nm": 315,
+          "fuel_economy_kmpl": 23.3,
+          "engine_cc": 1993
+        }
+      ],
+      "note": "Full hybrid e:HEV 2.0L with Honda S+ Shift Technology, BOSE 12-speaker audio"
+    },
+    {
+      "model": "HR-V e:HEV",
+      "slug": "hrvehev",
+      "type": "SUV",
+      "starting_price": 959000,
+      "engine_types": [
+        "e:HEV"
+      ]
+    },
+    {
+      "model": "e:N1",
+      "slug": "en1",
+      "type": "EV",
+      "starting_price": 990000,
+      "engine_types": [
+        "EV"
+      ]
+    },
+    {
+      "model": "Accord e:HEV",
+      "slug": "accordehev",
+      "type": "Sedan",
+      "engine_types": [
+        "e:HEV"
+      ],
+      "starting_price": 1479000,
+      "grades": [
+        {
+          "name": "e:HEV E",
+          "price": 1479000
+        },
+        {
+          "name": "e:HEV EL",
+          "price": 1629000
+        },
+        {
+          "name": "e:HEV RS",
+          "price": 1764000
+        }
+      ]
+    },
+    {
+      "model": "CR-V (e:HEV / Turbo)",
+      "slug": "crv",
+      "type": "SUV",
+      "starting_price": 1409000,
+      "engine_types": [
+        "Turbo",
+        "e:HEV"
+      ]
+    },
+    {
+      "model": "e:N2",
+      "slug": "en2",
+      "type": "EV",
+      "starting_price": 1429000,
+      "engine_types": [
+        "EV"
+      ]
+    },
+    {
+      "model": "STEP WGN e:HEV SPADA",
+      "slug": "stepwgnehev",
+      "type": "MPV",
+      "starting_price": 1780000,
+      "engine_types": [
+        "e:HEV"
+      ]
+    },
+    {
+      "model": "Civic Type R",
+      "slug": "civictyper",
+      "type": "Performance",
+      "starting_price": 3990000,
+      "engine_types": [
+        "Turbo"
+      ]
+    }
+  ],
+  "all_variant_prices_thb": [
+    569000,
+    579000,
+    619000,
+    629000,
+    689000,
+    699000,
+    739000,
+    749000,
+    799000,
+    869000,
+    915000,
+    921000,
+    949000,
+    959000,
+    973000,
+    977000,
+    990000,
+    1089000,
+    1097000,
+    1101000,
+    1109000,
+    1189000,
+    1199000,
+    1259000,
+    1409000,
+    1429000,
+    1479000,
+    1559000,
+    1609000,
+    1619000,
+    1629000,
+    1669000,
+    1749000,
+    1764000,
+    1780000,
+    3990000
+  ],
+  "price_range_thb": {
+    "min": 569000,
+    "max": 3990000
+  },
+  "total_unique_prices": 36,
+  "total_models": 12,
+  "specs_extracted": [
+    {
+      "model": "City S",
+      "power_ps": 122,
+      "fuel_economy_kmpl": 22.7
+    },
+    {
+      "model": "City e:HEV",
+      "motor_torque_nm": 253,
+      "fuel_economy_kmpl": 27.8
+    },
+    {
+      "model": "Civic e:HEV",
+      "engine_cc": 1993,
+      "motor_torque_nm": 315,
+      "fuel_economy_kmpl": 23.3
     }
   ],
   "failures": [
     {
       "url": "https://www.honda.co.th/th/car",
-      "error": "fetch_failed"
+      "error": "404 - URL path changed; site restructured to Next.js SPA"
+    },
+    {
+      "url": "https://www.honda.co.th/th/car/city",
+      "error": "404 - Correct path is /city (no /th/car prefix)"
+    },
+    {
+      "url": "https://www.honda.co.th/th/car/civic",
+      "error": "404 - Correct path is /civic (no /th/car prefix)"
+    },
+    {
+      "url": "web_search (all queries)",
+      "error": "All web_search queries returned empty results"
+    },
+    {
+      "url": "web_extract",
+      "error": "Nous Tool Gateway unavailable"
+    },
+    {
+      "url": "Browser Use",
+      "error": "No CDP endpoint available"
     }
-  ],
-  "finished_at": "2026-09-20T02:08:55.455515"
+  ]
 }

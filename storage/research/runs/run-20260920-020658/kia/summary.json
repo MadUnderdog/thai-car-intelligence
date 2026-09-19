@@ -1,32 +1,211 @@
 {
   "brand": "kia",
   "brand_name": "Kia",
-  "started_at": "2026-09-20T02:09:14.757153",
+  "brand_name_th": "เกีย",
+  "country": "Thailand",
   "official_url": "https://www.kia.com/th",
-  "models_found": [],
-  "prices_found": [
-    550000,
-    595000,
-    1199000,
-    2019000
+  "research_date": "2026-09-20",
+  "promotion_period": "1-30 กันยายน 2569 (September 2026)",
+  "prices_currency": "THB",
+  "data_sources": [
+    "https://www.kia.com/th (official website)",
+    "https://www.kia.com/th/th/util/promotion.html (official promotions page)",
+    "https://www.kia.com/th/th/cars/ev5/specification.html (EV5 specs)",
+    "https://www.kia.com/th/th/cars/ev9/specification.html (EV9 specs)",
+    "https://www.kia.com/th/th/cars/carnival-hev/specification.html (Carnival HEV specs)",
+    "https://www.kia.com/th/th/cars/sorento-phev/specification.html (Sorento PHEV specs)",
+    "https://www.headlightmag.com (Thai automotive media)"
   ],
-  "specs_found": [
+  "models": [
     {
-      "power_kw": 8.11
-    }
-  ],
-  "sources": [
-    {
-      "url": "https://www.kia.com/th",
-      "status": "ok",
-      "length": 87752
+      "model_name": "Kia EV5",
+      "model_name_th": "เกีย อีวี5",
+      "body_type": "Electric SUV",
+      "fuel_type": "Electric",
+      "variants": [
+        {
+          "variant_name": "Air",
+          "retail_price_thb": null,
+          "promo_price_thb": 1080000,
+          "promo_discount_thb": null,
+          "drivetrain": "FWD",
+          "motor_power_kw": 160,
+          "motor_torque_nm": 310,
+          "battery_kwh": 64.2,
+          "battery_type": "LFP",
+          "range_km_nedc": 490,
+          "range_km_wltp": 400,
+          "charging_ac_kw": 7,
+          "charging_dc_kw": 102,
+          "dimensions_mm": "4615x1875x1715",
+          "wheelbase_mm": 2750,
+          "weight_kg": 1958,
+          "wheel_size": "18 inch alloy",
+          "tire_size": "225/60 R18",
+          "max_speed_kmh": 185,
+          "acceleration_0_100_sec": 8.5,
+          "features": ["LED headlights", "Panoramic sunroof", "12.3 inch display", "Wireless charger", "6 speakers", "ADAS suite"]
+        },
+        {
+          "variant_name": "Earth Long Range",
+          "retail_price_thb": 1599000,
+          "promo_price_thb": 1349000,
+          "promo_discount_thb": 50000,
+          "promo_note": "ราคาจำหน่ายใหม่ 1,349,000 + ส่วนลด 50,000 = ราคาพิเศษ 1,299,000 (limited)",
+          "limited_price_thb": 1299000,
+          "drivetrain": "FWD",
+          "motor_power_kw": 160,
+          "motor_torque_nm": 310,
+          "battery_kwh": 88.1,
+          "battery_type": "LFP",
+          "range_km_nedc": 665,
+          "range_km_wltp": 540,
+          "charging_ac_kw": "7 kW single-phase / 11 kW three-phase",
+          "charging_dc_kw": 141,
+          "dimensions_mm": "4615x1875x1715",
+          "wheelbase_mm": 2750,
+          "weight_kg": 2142,
+          "wheel_size": "19 inch alloy",
+          "tire_size": "235/55 R19",
+          "max_speed_kmh": 185,
+          "acceleration_0_100_sec": 8.9,
+          "features": ["LED headlights", "Panoramic sunroof", "12.3 inch display", "Harman Kardon 8 speakers", "HUD", "Wireless charger", "Driver seat massage", "ADAS suite"]
+        },
+        {
+          "variant_name": "Earth Exclusive AWD",
+          "retail_price_thb": null,
+          "promo_price_thb": 1455000,
+          "promo_discount_thb": null,
+          "drivetrain": "AWD",
+          "motor_front_power_kw": "217/160",
+          "motor_rear_power_kw": "100/74",
+          "total_power_kw": "308/230",
+          "total_torque_nm": 480,
+          "battery_kwh": 88.1,
+          "battery_type": "LFP",
+          "range_km_nedc": 620,
+          "range_km_wltp": 500,
+          "charging_ac_kw": "7 kW single-phase / 11 kW three-phase",
+          "charging_dc_kw": 141,
+          "dimensions_mm": "4615x1875x1715",
+          "wheelbase_mm": 2750,
+          "weight_kg": 2234,
+          "wheel_size": "19 inch alloy",
+          "tire_size": "235/55 R19",
+          "max_speed_kmh": 185,
+          "acceleration_0_100_sec": 6.1,
+          "features": ["LED headlights", "Panoramic sunroof", "12.3 inch display", "Harman Kardon 8 speakers", "HUD", "Wireless charger", "Driver seat massage", "GT-Line exterior", "ADAS suite"]
+        }
+      ]
     },
     {
-      "url": "https://www.headlightmag.com/?s=Kia",
-      "status": "ok",
-      "length": 48035
+      "model_name": "Kia Carnival HEV",
+      "model_name_th": "เกีย คาร์นิวัล HEV",
+      "body_type": "MPV",
+      "fuel_type": "Hybrid Electric (HEV)",
+      "variants": [
+        {
+          "variant_name": "HEV 7-seat Premium",
+          "retail_price_thb": 2499000,
+          "promo_price_thb": 2299000,
+          "promo_discount_thb": 200000
+        },
+        {
+          "variant_name": "HEV 7-seat Luxury",
+          "retail_price_thb": 2699000,
+          "promo_price_thb": 2599000,
+          "promo_discount_thb": 100000
+        }
+      ]
+    },
+    {
+      "model_name": "Kia Carnival Diesel",
+      "model_name_th": "เกีย คาร์นิวัล ดีเซล",
+      "body_type": "MPV",
+      "fuel_type": "Diesel",
+      "variants": [
+        {
+          "variant_name": "SXL (11 ที่นั่ง)",
+          "variant_name_en": "SXL (11-seater)",
+          "retail_price_thb": 2594000,
+          "promo_price_thb": 1999000,
+          "promo_discount_thb": 595000
+        },
+        {
+          "variant_name": "EX (11 ที่นั่ง)",
+          "variant_name_en": "EX (11-seater)",
+          "retail_price_thb": 2234000,
+          "promo_price_thb": 1999000,
+          "promo_discount_thb": 235000
+        }
+      ]
+    },
+    {
+      "model_name": "Kia Sorento PHEV",
+      "model_name_th": "เกีย โซเรนโต PHEV",
+      "body_type": "SUV",
+      "fuel_type": "Plug-in Hybrid Electric (PHEV)",
+      "variants": [
+        {
+          "variant_name": "Premium Plus PHEV",
+          "retail_price_thb": 2099000,
+          "promo_price_thb": 1549000,
+          "promo_discount_thb": 550000,
+          "promo_note": "เงินดาวน์ 550,000 บาท"
+        }
+      ]
+    },
+    {
+      "model_name": "Kia EV9 GT-Line",
+      "model_name_th": "เกีย อีวี9 GT-Line",
+      "body_type": "Electric SUV (Full-size)",
+      "fuel_type": "Electric",
+      "variants": [
+        {
+          "variant_name": "GT-Line AWD",
+          "retail_price_thb": null,
+          "promo_price_thb": null,
+          "promo_note": "No explicit price listed; financing: 0% interest, 25% down, 48 months. Free 1-year insurance, 7-year roadside assistance.",
+          "features": ["GT-Line exterior package"]
+        }
+      ]
+    },
+    {
+      "model_name": "Kia PV5 Cargo",
+      "model_name_th": "เกีย พีวี5 คาร์โก้",
+      "body_type": "Electric Van",
+      "fuel_type": "Electric",
+      "variants": [
+        {
+          "variant_name": "Cargo",
+          "retail_price_thb": null,
+          "promo_price_thb": 1199000,
+          "source": "headlightmag.com"
+        }
+      ]
     }
   ],
-  "failures": [],
-  "finished_at": "2026-09-20T02:09:17.229935"
+  "price_summary": {
+    "all_detected_prices_thb": [460000, 550000, 595000, 1080000, 1199000, 1299000, 1349000, 1455000, 1549000, 1599000, 1999000, 2099000, 2234000, 2299000, 2499000, 2594000, 2599000, 2699000],
+    "price_range_thb": {"min": 1080000, "max": 2699000},
+    "models_with_explicit_pricing": 5,
+    "models_missing_pricing": 1,
+    "missing_models_note": "EV9 GT-Line: retail price not displayed on official site; PV5 Cargo: price sourced from third-party media only"
+  },
+  "spec_data": {
+    "ev5_specs_source": "https://www.kia.com/th/th/cars/ev5/specification.html",
+    "ev9_specs_source": "https://www.kia.com/th/th/cars/ev9/specification.html",
+    "carnival_hev_specs_source": "https://www.kia.com/th/th/cars/carnival-hev/specification.html",
+    "sorento_phev_specs_source": "https://www.kia.com/th/th/cars/sorento-phev/specification.html"
+  },
+  "raw_prices_from_script": [550000, 595000, 1199000, 2019000],
+  "notes": [
+    "Prices extracted from Kia Thailand official website and promotional pages for September 2026",
+    "Promotional prices (ราคาพิเศษ) are lower than regular retail prices (ราคาจำหน่ายปกติ)",
+    "Some models show only promotional pricing; regular retail prices not always displayed",
+    "EV9 GT-Line has no explicit price on the website; only financing terms shown",
+    "PV5 Cargo price sourced from headlightmag.com (third-party)",
+    "The brand-research-worker.py script found 4 prices; manual extraction found 17 distinct prices across 6 models"
+  ],
+  "extracted_at": "2026-09-20T09:10:00+07:00"
 }

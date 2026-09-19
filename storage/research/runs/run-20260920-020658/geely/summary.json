@@ -1,25 +1,283 @@
 {
   "brand": "geely",
   "brand_name": "Geely",
-  "started_at": "2026-09-20T02:09:48.074036",
+  "brand_name_th": "จีลี่",
+  "distributor": "ธนบุรีนอยสเติน (Thanburi Neustern)",
   "official_url": "https://www.geely.com/th",
-  "models_found": [],
-  "prices_found": [
-    799900
+  "started_at": "2026-09-20T02:09:48.074036",
+  "finished_at": "2026-09-20T02:15:00.000000",
+  "models_found": [
+    "Geely EX2",
+    "Geely EX5",
+    "Geely EX5 MY2026",
+    "Geely Starray EM-R",
+    "Geely Riddara RD6",
+    "Geely Riddara ECON"
   ],
-  "specs_found": [],
+  "total_variants": 15,
+  "models": [
+    {
+      "model": "Geely EX2",
+      "type": "City EV",
+      "segment": "B-SUV / City Car",
+      "body_type": "Crossover SUV",
+      "powertrain": "BEV (100% Electric)",
+      "drive": "RWD",
+      "motor_power_kw": 85,
+      "motor_power_ps": 116,
+      "torque_nm": 150,
+      "battery_kwh": 39.4,
+      "battery_type": "Lithium-ion LFP",
+      "range_km_nedc": 395,
+      "range_km_wltp": 325,
+      "charging_ac_kw": 6.6,
+      "charging_dc_kw": 70,
+      "dc_charge_30_80_min": 25,
+      "dimensions_mm": "4135x1850x1580",
+      "wheelbase_mm": 2650,
+      "ground_clearance_mm": "160.8-162",
+      "acceleration_0_100": 11.5,
+      "top_speed_kmh": 130,
+      "v2l": true,
+      "warranty_battery_years": 8,
+      "warranty_battery_km": 150000,
+      "variants": [
+        {
+          "variant": "EX2 Pro",
+          "price_thb": 429990,
+          "price_thb_regular": 429990,
+          "price_note": "Regular price (increased from 399,990 after introductory 2,000 units)"
+        },
+        {
+          "variant": "EX2 Max",
+          "price_thb": 459990,
+          "price_thb_regular": 459990,
+          "price_note": "Regular price (increased from 429,990 after introductory 2,000 units)"
+        },
+        {
+          "variant": "EX2 Shooting Star",
+          "price_thb": 484990,
+          "price_thb_regular": 484990,
+          "price_note": "Special edition with body kit"
+        }
+      ]
+    },
+    {
+      "model": "Geely EX5",
+      "type": "Compact SUV EV",
+      "segment": "C-SUV",
+      "body_type": "SUV",
+      "powertrain": "BEV (100% Electric)",
+      "drive": "FWD",
+      "motor_power_kw": 160,
+      "motor_power_ps": 218,
+      "torque_nm": 320,
+      "battery_kwh": 60.22,
+      "battery_type": "Lithium-ion LFP",
+      "range_km_nedc": "490-495",
+      "range_km_wltp": "425-430",
+      "charging_ac_kw": 11,
+      "charging_dc_kw": 100,
+      "dc_charge_30_80_min": 20,
+      "dimensions_mm": "4615x1901x1670",
+      "wheelbase_mm": 2750,
+      "ground_clearance_mm": 173,
+      "v2l": false,
+      "warranty_battery_years": 8,
+      "warranty_battery_km": 180000,
+      "generation": "MY2026 (current)",
+      "variants": [
+        {
+          "variant": "EX5 Pro",
+          "price_thb": 739000,
+          "price_thb_regular": 799000,
+          "price_note": "Promotional price; regular 799,000 THB"
+        },
+        {
+          "variant": "EX5 Max",
+          "price_thb": 849000,
+          "price_thb_regular": 899000,
+          "price_note": "Promotional price; regular 899,000 THB or 0% interest 48 months with 25% down"
+        },
+        {
+          "variant": "EX5 Max+",
+          "price_thb": 899000,
+          "price_thb_regular": 929000,
+          "price_note": "First 400 units promotional; regular 929,000 THB. New variant with 68.39 kWh battery, 525 km NEDC range"
+        }
+      ]
+    },
+    {
+      "model": "Geely Starray EM-R",
+      "type": "Mid-size SUV REEV",
+      "segment": "D-SUV",
+      "body_type": "SUV",
+      "powertrain": "REEV (Range-Extended EV)",
+      "drive": "FWD",
+      "motor_power_kw": 160,
+      "motor_power_ps": 218,
+      "torque_nm": 262,
+      "engine": "1.5L 4-cylinder (generator)",
+      "battery_kwh": 18.4,
+      "battery_type": "Lithium-ion LFP",
+      "ev_range_km_nedc": 104.8,
+      "charging_ac_kw": 6.6,
+      "charging_dc_kw": 30,
+      "dc_charge_30_80_min": 20,
+      "ground_clearance_mm": 172,
+      "v2l": true,
+      "warranty_battery_years": 8,
+      "warranty_battery_km": 180000,
+      "variants": [
+        {
+          "variant": "Starray EM-R Pro",
+          "price_thb": 699900,
+          "price_thb_regular": 729900,
+          "price_note": "First 300 units promotional; regular 729,900 THB"
+        },
+        {
+          "variant": "Starray EM-R Max",
+          "price_thb": 799900,
+          "price_thb_regular": 829900,
+          "price_note": "First 300 units promotional; regular price estimated"
+        }
+      ]
+    },
+    {
+      "model": "Geely Riddara RD6",
+      "type": "Electric Pickup Truck",
+      "segment": "D-Pickup / Lifestyle",
+      "body_type": "Double Cab Pickup",
+      "powertrain": "BEV (100% Electric)",
+      "drive": "2WD / 4WD",
+      "motor_power_kw": 315,
+      "motor_power_ps": 428,
+      "torque_nm": 595,
+      "acceleration_0_100": 4.5,
+      "top_speed_kmh": 190,
+      "range_km_nedc": 503,
+      "warranty_battery_years": 8,
+      "warranty_battery_km": 200000,
+      "variants": [
+        {
+          "variant": "RD6 73.9kWh 2WD",
+          "price_thb": 899000,
+          "price_thb_regular": 999000,
+          "price_note": "Promotional; regular 999,000 THB"
+        },
+        {
+          "variant": "RD6 86kWh 2WD",
+          "price_thb": 999000,
+          "price_thb_regular": 1159000,
+          "price_note": "Promotional; regular 1,159,000 THB"
+        },
+        {
+          "variant": "RD6 73.9kWh 4WD",
+          "price_thb": 999000,
+          "price_thb_regular": 1149000,
+          "price_note": "Promotional; regular 1,149,000 THB"
+        },
+        {
+          "variant": "RD6 86kWh 4WD",
+          "price_thb": 1149000,
+          "price_thb_regular": 1299000,
+          "price_note": "Promotional; regular 1,299,000 THB"
+        }
+      ]
+    },
+    {
+      "model": "Geely Riddara ECON",
+      "type": "Electric Pickup Truck (Utility)",
+      "segment": "D-Pickup / Commercial",
+      "body_type": "Double Cab Pickup",
+      "powertrain": "BEV (100% Electric)",
+      "drive": "2WD",
+      "motor_power_kw": 180,
+      "torque_nm": 309,
+      "acceleration_0_100": 9,
+      "battery_kwh": 63,
+      "warranty_battery_years": 8,
+      "warranty_battery_km": 200000,
+      "variants": [
+        {
+          "variant": "ECON 63kWh 2WD",
+          "price_thb": 739000,
+          "price_thb_regular": 739000,
+          "price_note": "Base utility model"
+        }
+      ]
+    },
+    {
+      "model": "Geely Riddara ECON L",
+      "type": "Electric Pickup Truck (Utility Long Bed)",
+      "segment": "D-Pickup / Commercial",
+      "body_type": "Double Cab Pickup (Extended Bed)",
+      "powertrain": "BEV (100% Electric)",
+      "drive": "2WD / 4WD",
+      "motor_power_kw": 280,
+      "torque_nm": 485,
+      "battery_kwh": 73,
+      "bed_capacity_liters": 1380,
+      "payload_kg": 1235,
+      "towing_kg": 3000,
+      "warranty_battery_years": 8,
+      "warranty_battery_km": 200000,
+      "variants": [
+        {
+          "variant": "ECON L 73kWh 2WD",
+          "price_thb": null,
+          "price_note": "Pricing pending BIG MOTOR SALE 2026"
+        },
+        {
+          "variant": "ECON L 73kWh 4WD",
+          "price_thb": null,
+          "price_note": "Pricing pending BIG MOTOR SALE 2026"
+        }
+      ]
+    }
+  ],
+  "price_range_thb": {
+    "min": 429990,
+    "max": 1299000,
+    "min_model": "Geely EX2 Pro",
+    "max_model": "Riddara RD6 86kWh 4WD"
+  },
   "sources": [
     {
-      "url": "https://www.headlightmag.com/?s=Geely",
-      "status": "ok",
-      "length": 48407
+      "url": "https://www.headlightmag.com/official-price-geely-ex5/",
+      "description": "Geely EX5 official prices",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.headlightmag.com/official-price-geely-ex5-my2026/",
+      "description": "Geely EX5 MY2026 official prices",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.headlightmag.com/official-price-geely-ex2/",
+      "description": "Geely EX2 official prices",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.headlightmag.com/official-price-geely-starray-em-r-reev/",
+      "description": "Geely Starray EM-R official prices",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.autospinn.com/2026/09/installment-schedule-geely-riddara-rd6-2026-152362",
+      "description": "Riddara RD6 2026 pricing",
+      "status": "ok"
+    },
+    {
+      "url": "https://www.autospinn.com/2026/03/riddara-148458",
+      "description": "Riddara Motor Show 2026 pricing",
+      "status": "ok"
     }
   ],
   "failures": [
     {
       "url": "https://www.geely.com/th",
-      "error": "fetch_failed"
+      "error": "500 server error / SPA with no SSR data"
     }
-  ],
-  "finished_at": "2026-09-20T02:09:50.481715"
+  ]
 }

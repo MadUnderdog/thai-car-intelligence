@@ -1,23 +1,822 @@
 {
   "brand": "bmw",
   "brand_name": "BMW",
-  "started_at": "2026-09-20T02:10:30.715405",
   "official_url": "https://www.bmw.co.th",
-  "models_found": [],
-  "prices_found": [],
-  "specs_found": [],
+  "research_date": "2026-09-20",
+  "currency": "THB",
+  "total_models": 38,
+  "total_variants": 70,
+  "price_range": {
+    "min": 2199000,
+    "max": 17999000,
+    "min_model": "220 Gran Coupe M Sport Pro",
+    "max_model": "M4 CSL"
+  },
+  "models": [
+    {
+      "model": "220 Gran Coupe M Sport Pro",
+      "series": "2 Series",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "220 Gran Coupe M Sport Pro (F74)",
+          "price": 2199000,
+          "engine": "2.0L Turbo Petrol",
+          "power_hp": 204,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "220i Gran Coupe M Performance Edition",
+      "series": "2 Series",
+      "body_type": "Coupe",
+      "variants": [
+        {
+          "variant": "220i Gran Coupe M Performance Edition",
+          "price": 2259000,
+          "engine": "2.0L Turbo Petrol",
+          "power_hp": 204,
+          "assembly": "CKD",
+          "note": "Limited 50 units"
+        }
+      ]
+    },
+    {
+      "model": "M240i xDrive",
+      "series": "2 Series",
+      "body_type": "Coupe",
+      "variants": [
+        {
+          "variant": "M240i xDrive",
+          "price": 4239000,
+          "engine": "3.0L Turbo Petrol",
+          "power_hp": 382,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "320d M Sport",
+      "series": "3 Series",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "320d M Sport (LCI2)",
+          "price": 2799000,
+          "engine": "2.0L Turbo Diesel",
+          "power_hp": 190,
+          "assembly": "CKD"
+        },
+        {
+          "variant": "320d M Sport (MY2024)",
+          "price": 2399000,
+          "engine": "2.0L Turbo Diesel",
+          "power_hp": 190,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "330e M Sport",
+      "series": "3 Series",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "330e M Sport LCI2",
+          "price": 2999000,
+          "engine": "2.0L Turbo Petrol PHEV",
+          "power_hp": 292,
+          "battery_kwh": 22.3,
+          "electric_range_km": 101,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "M340i xDrive",
+      "series": "3 Series",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "M340i xDrive LCI2",
+          "price": 3999000,
+          "engine": "3.0L Turbo Petrol",
+          "power_hp": 387,
+          "assembly": "CKD"
+        },
+        {
+          "variant": "M340i xDrive (LCI)",
+          "price": 4099000,
+          "engine": "3.0L Turbo Petrol",
+          "power_hp": 387,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "3-Series Gran Sedan",
+      "series": "3 Series",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "3-Series Gran Sedan LCI",
+          "price": 2759000,
+          "engine": "2.0L Turbo Petrol",
+          "power_hp": 184,
+          "assembly": "Malaysia"
+        },
+        {
+          "variant": "3-Series Gran Sedan LCI (High)",
+          "price": 3099000,
+          "engine": "2.0L Turbo Petrol",
+          "power_hp": 184,
+          "assembly": "Malaysia"
+        }
+      ]
+    },
+    {
+      "model": "420i Coupe",
+      "series": "4 Series",
+      "body_type": "Coupe",
+      "variants": [
+        {
+          "variant": "420i Coupe M Sport (MY2024)",
+          "price": 3699000,
+          "engine": "2.0L Turbo Petrol",
+          "power_hp": 184,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "430i Coupe",
+      "series": "4 Series",
+      "body_type": "Coupe",
+      "variants": [
+        {
+          "variant": "430i Coupe M Sport (LCI)",
+          "price": 4219000,
+          "engine": "2.0L Turbo Petrol",
+          "power_hp": 245,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "M440i xDrive",
+      "series": "4 Series",
+      "body_type": "Coupe",
+      "variants": [
+        {
+          "variant": "M440i xDrive Coupe (LCI)",
+          "price": 5299000,
+          "engine": "3.0L Turbo Petrol",
+          "power_hp": 382,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M440i xDrive Coupe (G22)",
+          "price": 5399000,
+          "engine": "3.0L Turbo Petrol",
+          "power_hp": 382,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "520d",
+      "series": "5 Series",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "520d (G60)",
+          "price": 3799000,
+          "engine": "2.0L Turbo Diesel",
+          "power_hp": 197,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "530e",
+      "series": "5 Series",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "530e (MY2025)",
+          "price": 3299000,
+          "engine": "2.0L Turbo Petrol PHEV",
+          "power_hp": 299,
+          "assembly": "CKD"
+        },
+        {
+          "variant": "530e Inspiring (MY2025)",
+          "price": 3969000,
+          "engine": "2.0L Turbo Petrol PHEV",
+          "power_hp": 299,
+          "assembly": "CKD"
+        },
+        {
+          "variant": "530e Plug-in Hybrid (MY2023)",
+          "price": 3269000,
+          "engine": "2.0L Turbo Petrol PHEV",
+          "power_hp": 292,
+          "assembly": "CKD"
+        },
+        {
+          "variant": "530e Inspiring (MY2023)",
+          "price": 3829000,
+          "engine": "2.0L Turbo Petrol PHEV",
+          "power_hp": 292,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "M5",
+      "series": "5 Series",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "M5 (G90)",
+          "price": 12999000,
+          "engine": "4.4L V8 Turbo PHEV",
+          "power_hp": 728,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M5 High (G90)",
+          "price": 13699000,
+          "engine": "4.4L V8 Turbo PHEV",
+          "power_hp": 728,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M5 Touring (G99)",
+          "price": 13299000,
+          "engine": "4.4L V8 Turbo PHEV",
+          "power_hp": 728,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M5 Touring High (G99)",
+          "price": 13999000,
+          "engine": "4.4L V8 Turbo PHEV",
+          "power_hp": 728,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M5 Competition (LCI)",
+          "price": 13399000,
+          "engine": "4.4L V8 Turbo Petrol",
+          "power_hp": 625,
+          "assembly": "CBU",
+          "note": "50th Anniversary Edition"
+        }
+      ]
+    },
+    {
+      "model": "740d",
+      "series": "7 Series",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "740d M Sport (MY2024)",
+          "price": 6719000,
+          "engine": "3.0L Turbo Diesel",
+          "power_hp": 340,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "740d M Sport High (MY2024)",
+          "price": 7399000,
+          "engine": "3.0L Turbo Diesel",
+          "power_hp": 340,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "750e xDrive",
+      "series": "7 Series",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "750e xDrive M Sport",
+          "price": 6999000,
+          "engine": "3.0L Turbo Petrol PHEV",
+          "power_hp": 489,
+          "electric_range_km": 85,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "X1 sDrive18i",
+      "series": "X1",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "X1 sDrive18i (U11)",
+          "price": 2249000,
+          "engine": "1.5L Turbo Petrol",
+          "power_hp": 156,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "X1 sDrive20i",
+      "series": "X1",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "X1 sDrive 20i M Sport (MY2025)",
+          "price": 2399000,
+          "engine": "2.0L Turbo Petrol",
+          "power_hp": 204,
+          "assembly": "CKD"
+        },
+        {
+          "variant": "X1 sDrive 20i xLine",
+          "price": 2499000,
+          "engine": "2.0L Turbo Petrol",
+          "power_hp": 204,
+          "assembly": "CKD"
+        },
+        {
+          "variant": "X1 sDrive 20i M Sport",
+          "price": 2599000,
+          "engine": "2.0L Turbo Petrol",
+          "power_hp": 204,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "X1 xDrive30e",
+      "series": "X1",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "X1 xDrive30e M Sport (PHEV)",
+          "price": 2799000,
+          "engine": "1.5L Turbo Petrol PHEV",
+          "power_hp": 245,
+          "electric_range_km": 83,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "iX1 eDrive20L",
+      "series": "iX1",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "iX1 eDrive20L M Sport",
+          "price": 2499000,
+          "engine": "Electric",
+          "power_hp": 204,
+          "battery_kwh": 66.5,
+          "range_km": 433,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "iX2 xDrive30",
+      "series": "iX2",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "iX2 xDrive30 M Sport",
+          "price": 3399000,
+          "engine": "Electric",
+          "power_hp": 313,
+          "range_km": 449,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "X3 xDrive20d",
+      "series": "X3",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "X3 20d xDrive M Sport Pro (G45)",
+          "price": 3799000,
+          "engine": "2.0L Turbo Diesel",
+          "power_hp": 197,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "X3 M50",
+      "series": "X3",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "X3 M50 xDrive (G45)",
+          "price": 4499000,
+          "engine": "3.0L Turbo Petrol",
+          "power_hp": 398,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "X4 xDrive20d",
+      "series": "X4",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "X4 xDrive20d M Sport (LCI)",
+          "price": 4099000,
+          "engine": "2.0L Turbo Diesel",
+          "power_hp": 197,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "X5 xDrive30d",
+      "series": "X5",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "X5 xDrive30d M Sport LCI",
+          "price": 5099000,
+          "engine": "3.0L Turbo Diesel",
+          "power_hp": 286,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "X5 xDrive50e",
+      "series": "X5",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "X5 xDrive50e M Sport LCI (PHEV)",
+          "price": 5399000,
+          "engine": "3.0L Turbo Petrol PHEV",
+          "power_hp": 483,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "X6 xDrive40i",
+      "series": "X6",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "X6 xDrive40i M Sport LCI",
+          "price": 5899000,
+          "engine": "3.0L Turbo Petrol MHEV",
+          "power_hp": 381,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "X7 xDrive40d",
+      "series": "X7",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "X7 xDrive40d M Sport LCI",
+          "price": 6599000,
+          "engine": "3.0L Turbo Diesel",
+          "power_hp": 340,
+          "assembly": "CKD"
+        }
+      ]
+    },
+    {
+      "model": "M2",
+      "series": "M",
+      "body_type": "Coupe",
+      "variants": [
+        {
+          "variant": "M2 LCI",
+          "price": 6649000,
+          "engine": "3.0L Turbo Petrol",
+          "power_hp": 480,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M2 LCI High",
+          "price": 7349000,
+          "engine": "3.0L Turbo Petrol",
+          "power_hp": 480,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M2 CS (LCI)",
+          "price": 7999000,
+          "engine": "3.0L Turbo Petrol",
+          "power_hp": 530,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M2 CS High (LCI)",
+          "price": 8699000,
+          "engine": "3.0L Turbo Petrol",
+          "power_hp": 530,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "M3",
+      "series": "M",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "M3 Competition M xDrive Touring (LCI)",
+          "price": 10439000,
+          "engine": "3.0L Twin-Turbo Petrol",
+          "power_hp": 510,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M3 Competition M xDrive Touring High (LCI)",
+          "price": 11139000,
+          "engine": "3.0L Twin-Turbo Petrol",
+          "power_hp": 510,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M3 CS Touring (LCI)",
+          "price": 15499000,
+          "engine": "3.0L Twin-Turbo Petrol",
+          "power_hp": 551,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M3 CS",
+          "price": 14999000,
+          "engine": "3.0L Twin-Turbo Petrol",
+          "power_hp": 551,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "M4",
+      "series": "M",
+      "body_type": "Coupe",
+      "variants": [
+        {
+          "variant": "M4 CS (LCI)",
+          "price": 14999000,
+          "engine": "3.0L Twin-Turbo Petrol",
+          "power_hp": 551,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "M4 CSL",
+          "price": 17999000,
+          "engine": "3.0L Twin-Turbo Petrol",
+          "power_hp": 550,
+          "assembly": "CBU",
+          "note": "Limited 4 units from 1,000 worldwide"
+        }
+      ]
+    },
+    {
+      "model": "XM",
+      "series": "M",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "XM 50e",
+          "price": 6799000,
+          "engine": "3.0L Turbo Petrol PHEV",
+          "power_hp": 476,
+          "torque_nm": 700,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "XM",
+          "price": 14899000,
+          "engine": "4.4L V8 Turbo PHEV",
+          "power_hp": 653,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "i4 eDrive40",
+      "series": "i4",
+      "body_type": "Coupe",
+      "variants": [
+        {
+          "variant": "i4 eDrive40 (MY2023)",
+          "price": 3899000,
+          "engine": "Electric",
+          "power_hp": 340,
+          "range_km": 483,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "i4 M50 (MY2023)",
+          "price": 5259000,
+          "engine": "Electric",
+          "power_hp": 544,
+          "range_km": 512,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "i5 eDrive40",
+      "series": "i5",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "i5 eDrive40 M Sport (MY2026)",
+          "price": 3499000,
+          "engine": "Electric",
+          "power_hp": 340,
+          "range_km": 582,
+          "assembly": "CKD",
+          "note": "Assembled in Thailand"
+        },
+        {
+          "variant": "i5 (MY2024)",
+          "price": 4599000,
+          "engine": "Electric",
+          "power_hp": 340,
+          "range_km": 582,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "i5 M Sport Inspiring (MY2024)",
+          "price": 5599000,
+          "engine": "Electric",
+          "power_hp": 601,
+          "range_km": 582,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "i5 Touring",
+      "series": "i5",
+      "body_type": "Wagon",
+      "variants": [
+        {
+          "variant": "i5 Touring",
+          "price": 4899000,
+          "engine": "Electric",
+          "power_hp": 340,
+          "range_km": 560,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "i5 Touring High",
+          "price": 4999000,
+          "engine": "Electric",
+          "power_hp": 340,
+          "range_km": 560,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "i7 xDrive60",
+      "series": "i7",
+      "body_type": "Sedan",
+      "variants": [
+        {
+          "variant": "i7 xDrive60 (G70)",
+          "price": 7599000,
+          "engine": "Electric",
+          "power_hp": 544,
+          "range_km": 625,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "i7 xDrive60 High (G70)",
+          "price": 8599000,
+          "engine": "Electric",
+          "power_hp": 544,
+          "range_km": 625,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "i7 M70 xDrive",
+          "price": 9999000,
+          "engine": "Electric",
+          "power_hp": 659,
+          "torque_nm": 1015,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "iX xDrive40",
+      "series": "iX",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "iX xDrive40 Sport",
+          "price": 4999000,
+          "engine": "Electric",
+          "power_hp": 326,
+          "range_km": 425,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "iX xDrive50 Sport",
+          "price": 5999000,
+          "engine": "Electric",
+          "power_hp": 523,
+          "range_km": 630,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "iX xDrive40 (MY2023)",
+      "series": "iX",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "iX xDrive40 (MY2023)",
+          "price": 5299000,
+          "engine": "Electric",
+          "power_hp": 326,
+          "range_km": 425,
+          "assembly": "CBU"
+        },
+        {
+          "variant": "iX xDrive50 (MY2023)",
+          "price": 6299000,
+          "engine": "Electric",
+          "power_hp": 523,
+          "range_km": 630,
+          "assembly": "CBU"
+        }
+      ]
+    },
+    {
+      "model": "iX3",
+      "series": "iX3",
+      "body_type": "SUV",
+      "variants": [
+        {
+          "variant": "iX3 (NA5)",
+          "price": 3599000,
+          "engine": "Electric",
+          "power_hp": 469,
+          "battery_kwh": 113,
+          "range_km": 820,
+          "assembly": "CKD",
+          "note": "Dual motor"
+        },
+        {
+          "variant": "iX3 M Sport Inspiring (MY2023)",
+          "price": 2999000,
+          "engine": "Electric",
+          "power_hp": 286,
+          "range_km": 460,
+          "assembly": "CKD"
+        },
+        {
+          "variant": "iX3 M Sport Pro (MY2023)",
+          "price": 3699000,
+          "engine": "Electric",
+          "power_hp": 286,
+          "range_km": 460,
+          "assembly": "CKD"
+        }
+      ]
+    }
+  ],
+  "assembly_types": {
+    "CKD": "Assembled in Thailand",
+    "CBU": "Imported (Completely Built-Up)",
+    "Malaysia": "Assembled in Malaysia"
+  },
   "sources": [
     {
-      "url": "https://www.headlightmag.com/?s=BMW",
+      "url": "https://www.headlightmag.com",
       "status": "ok",
-      "length": 48021
+      "description": "Thai automotive news and price listings"
     }
   ],
-  "failures": [
-    {
-      "url": "https://www.bmw.co.th",
-      "error": "fetch_failed"
-    }
-  ],
-  "finished_at": "2026-09-20T02:10:42.639183"
+  "notes": [
+    "Prices are official Thai retail prices in THB",
+    "Some models have multiple model years with different prices",
+    "Assembly type affects pricing (CKD models typically cheaper)",
+    "BMW Thailand website (www.bmw.co.th) was not directly accessible via curl"
+  ]
 }

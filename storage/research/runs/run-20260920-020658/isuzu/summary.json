@@ -1,41 +1,242 @@
 {
   "brand": "isuzu",
   "brand_name": "Isuzu",
-  "started_at": "2026-09-20T02:10:37.110467",
+  "brand_name_th": "อีซูซุ",
+  "country": "Thailand",
   "official_url": "https://www.isuzu-tis.com",
-  "models_found": [],
-  "prices_found": [
-    595000,
-    668000,
-    749000,
-    768000,
-    937000,
-    939000,
-    1041000,
-    1066000,
-    1194000,
-    1297000,
-    1591000,
-    1759000
-  ],
-  "specs_found": [
-    {
-      "displacement_cc": 5.0,
-      "range_km": 0
-    }
-  ],
-  "sources": [
-    {
-      "url": "https://www.isuzu-tis.com",
-      "status": "ok",
-      "length": 290085
+  "data_source": "Official Isuzu Thailand website (isuzu-tis.com)",
+  "data_date": "2026-09-20",
+  "currency": "THB",
+  "total_variants": 31,
+  "models": {
+    "D-Max": {
+      "model_name_th": "ดีแมคซ์",
+      "type": "Pickup Truck",
+      "variants": [
+        {
+          "name": "Spacecab 2.2 Ddi S",
+          "price_thb": 668000,
+          "price_formatted": "668,000 บาท",
+          "sub_model": "Spacecab"
+        },
+        {
+          "name": "Spacecab 2.2 Ddi S A/T",
+          "price_thb": 712000,
+          "price_formatted": "712,000 บาท",
+          "sub_model": "Spacecab"
+        },
+        {
+          "name": "Spacecab 2.2 Ddi L",
+          "price_thb": 733000,
+          "price_formatted": "733,000 บาท",
+          "sub_model": "Spacecab"
+        },
+        {
+          "name": "Spacecab 2.2 Ddi L A/T",
+          "price_thb": 777000,
+          "price_formatted": "777,000 บาท",
+          "sub_model": "Spacecab"
+        },
+        {
+          "name": "Hi-Lander 2.2 Ddi L",
+          "price_thb": 778000,
+          "price_formatted": "778,000 บาท",
+          "sub_model": "Hi-Lander 2-door"
+        },
+        {
+          "name": "Hi-Lander 2.2 Ddi L A/T",
+          "price_thb": 822000,
+          "price_formatted": "822,000 บาท",
+          "sub_model": "Hi-Lander 2-door"
+        },
+        {
+          "name": "Hi-Lander 2.2 Ddi Z",
+          "price_thb": 841000,
+          "price_formatted": "841,000 บาท",
+          "sub_model": "Hi-Lander 2-door"
+        },
+        {
+          "name": "Hi-Lander 2.2 Ddi Z A/T",
+          "price_thb": 885000,
+          "price_formatted": "885,000 บาท",
+          "sub_model": "Hi-Lander 2-door"
+        },
+        {
+          "name": "Cab4 2.2 Ddi S",
+          "price_thb": 749000,
+          "price_formatted": "749,000 บาท",
+          "sub_model": "Cab4"
+        },
+        {
+          "name": "Cab4 2.2 Ddi S A/T",
+          "price_thb": 793000,
+          "price_formatted": "793,000 บาท",
+          "sub_model": "Cab4"
+        },
+        {
+          "name": "Cab4 2.2 Ddi L",
+          "price_thb": 829000,
+          "price_formatted": "829,000 บาท",
+          "sub_model": "Cab4"
+        },
+        {
+          "name": "Cab4 2.2 Ddi L A/T",
+          "price_thb": 873000,
+          "price_formatted": "873,000 บาท",
+          "sub_model": "Cab4"
+        },
+        {
+          "name": "Hi-Lander 2.2 Ddi L",
+          "price_thb": 885000,
+          "price_formatted": "885,000 บาท",
+          "sub_model": "Hi-Lander 4-door"
+        },
+        {
+          "name": "Hi-Lander 2.2 Ddi L A/T",
+          "price_thb": 924000,
+          "price_formatted": "924,000 บาท",
+          "sub_model": "Hi-Lander 4-door"
+        },
+        {
+          "name": "Cab4 2.2 Ddi Z A/T",
+          "price_thb": 939000,
+          "price_formatted": "939,000 บาท",
+          "sub_model": "Cab4"
+        },
+        {
+          "name": "Hi-Lander 2.2 Ddi Z",
+          "price_thb": 952000,
+          "price_formatted": "952,000 บาท",
+          "sub_model": "Hi-Lander 4-door"
+        },
+        {
+          "name": "Hi-Lander 2.2 Ddi Z A/T",
+          "price_thb": 991000,
+          "price_formatted": "991,000 บาท",
+          "sub_model": "Hi-Lander 4-door"
+        },
+        {
+          "name": "Hi-Lander 2.2 Ddi M A/T",
+          "price_thb": 1157000,
+          "price_formatted": "1,157,000 บาท",
+          "sub_model": "Hi-Lander 4-door"
+        },
+        {
+          "name": "Hi-Lander 3.0 Ddi M A/T",
+          "price_thb": 1184000,
+          "price_formatted": "1,184,000 บาท",
+          "sub_model": "Hi-Lander 4-door"
+        }
+      ],
+      "variant_count": 19,
+      "price_range": {
+        "min_thb": 668000,
+        "max_thb": 1184000,
+        "min_formatted": "668,000 บาท",
+        "max_formatted": "1,184,000 บาท"
+      }
     },
-    {
-      "url": "https://www.headlightmag.com/?s=Isuzu",
-      "status": "ok",
-      "length": 48351
+    "D-Max X-Series": {
+      "model_name_th": "ดีแมคซ์ เอ็กซ์-ซีรีส์",
+      "type": "Sport Pickup",
+      "variants": [
+        {
+          "name": "2.2 Ddi Speed 2-door",
+          "price_thb": 768000,
+          "price_formatted": "768,000 บาท",
+          "sub_model": "Speed"
+        },
+        {
+          "name": "2.2 Ddi Speed 4-door",
+          "price_thb": 864000,
+          "price_formatted": "864,000 บาท",
+          "sub_model": "Speed"
+        },
+        {
+          "name": "2.2 Ddi Hi-Lander 4-door",
+          "price_thb": 1002000,
+          "price_formatted": "1,002,000 บาท",
+          "sub_model": "Hi-Lander"
+        },
+        {
+          "name": "2.2 Ddi Hi-Lander 4-door A/T",
+          "price_thb": 1041000,
+          "price_formatted": "1,041,000 บาท",
+          "sub_model": "Hi-Lander"
+        }
+      ],
+      "variant_count": 4,
+      "price_range": {
+        "min_thb": 768000,
+        "max_thb": 1041000,
+        "min_formatted": "768,000 บาท",
+        "max_formatted": "1,041,000 บาท"
+      }
+    },
+    "MU-X": {
+      "model_name_th": "มิว-เอ็กซ์",
+      "type": "SUV",
+      "variants": [
+        {
+          "name": "2.2 Ddi Active A/T",
+          "price_thb": 1194000,
+          "price_formatted": "1,194,000 บาท",
+          "sub_model": "Active"
+        },
+        {
+          "name": "2.2 Ddi Elegant A/T",
+          "price_thb": 1429000,
+          "price_formatted": "1,429,000 บาท",
+          "sub_model": "Elegant"
+        },
+        {
+          "name": "2.2 Ddi Ultimate A/T",
+          "price_thb": 1554000,
+          "price_formatted": "1,554,000 บาท",
+          "sub_model": "Ultimate"
+        },
+        {
+          "name": "2.2 Ddi RS A/T",
+          "price_thb": 1624000,
+          "price_formatted": "1,624,000 บาท",
+          "sub_model": "RS"
+        },
+        {
+          "name": "2.2 Ddi Ultimate 4WD A/T",
+          "price_thb": 1654000,
+          "price_formatted": "1,654,000 บาท",
+          "sub_model": "Ultimate"
+        },
+        {
+          "name": "3.0 Ddi RS A/T",
+          "price_thb": 1659000,
+          "price_formatted": "1,659,000 บาท",
+          "sub_model": "RS"
+        },
+        {
+          "name": "2.2 Ddi RS 4WD A/T",
+          "price_thb": 1724000,
+          "price_formatted": "1,724,000 บาท",
+          "sub_model": "RS"
+        },
+        {
+          "name": "3.0 Ddi RS 4WD A/T",
+          "price_thb": 1759000,
+          "price_formatted": "1,759,000 บาท",
+          "sub_model": "RS"
+        }
+      ],
+      "variant_count": 8,
+      "price_range": {
+        "min_thb": 1194000,
+        "max_thb": 1759000,
+        "min_formatted": "1,194,000 บาท",
+        "max_formatted": "1,759,000 บาท"
+      }
     }
-  ],
-  "failures": [],
-  "finished_at": "2026-09-20T02:10:39.709145"
+  },
+  "price_range": {
+    "min_thb": 668000,
+    "max_thb": 1759000
+  }
 }

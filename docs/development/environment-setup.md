@@ -91,3 +91,40 @@ npx vitest run
 - Use strong, random values for `ADMIN_API_TOKEN`
 - Rotate API keys regularly
 - Use environment-specific `.env` files for different deployments
+
+## Local Development Server
+
+### Canonical Port: 3099
+
+The local development server runs on **port 3099**. This is the standard port for all local development and testing.
+
+### Starting the Dev Server
+
+```bash
+# From the project root
+npx next dev -p 3099
+
+# Or with admin token for admin routes
+ADMIN_API_TOKEN=your-token npx next dev -p 3099
+```
+
+### Accessing the Application
+
+- **Main app:** http://localhost:3099
+- **Catalog:** http://localhost:3099/cars
+- **AI Ask:** http://localhost:3099/ai-ask
+- **Compare:** http://localhost:3099/compare
+- **Admin moderation:** http://localhost:3099/admin/moderation
+
+### Stopping the Dev Server
+
+```bash
+pkill -f "next dev -p 3099"
+```
+
+### Notes
+
+- Port 3099 is used to avoid conflicts with other services (Docker containers on 3000, etc.)
+- The dev server reads `.env` from the project root
+- Hot reload is enabled by default
+- API routes are available at `/api/*`

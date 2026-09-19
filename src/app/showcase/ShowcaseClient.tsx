@@ -51,7 +51,7 @@ function Header() {
           <span className="text-lg font-bold text-[var(--color-primary-700)]">
             🚗 Thai Car Intelligence
           </span>
-          <Badge variant="info"> showcse </Badge>
+          <Badge variant="info"> showcase </Badge>
         </div>
         <nav className="flex items-center gap-4 text-sm text-[var(--color-gray-600)]">
           <a href="#" className="hover:text-[var(--color-primary-600)]">
@@ -115,16 +115,16 @@ function ModelHero() {
             <Badge variant="success">ใหม่</Badge>
             <Badge variant="info">ไฟฟ้า</Badge>
           </div>
-          <h1 className="text-3xl font-bold">Toyota bZ4X 2024</h1>
+          <h1 className="text-3xl font-bold">ตัวอย่างรุ่นรถ EV SUV</h1>
           <p className="text-[var(--color-primary-200)]">
-            รถยนต์ไฟฟ้า SUV ขนาดกลาง — ระยะทางวิ่งได้สูงสุด 516 กม.
+            ตัวอย่างข้อมูล vehicle hero block
           </p>
         </div>
         <div className="text-right">
           <p className="text-sm text-[var(--color-primary-300)]">
             ราคาเริ่มต้น
           </p>
-          <p className="text-3xl font-bold">฿1,999,000</p>
+          <p className="text-3xl font-bold">฿X,XXX,XXX</p>
         </div>
       </div>
     </div>
@@ -421,13 +421,13 @@ function CommunityComment() {
   const comments = [
     {
       author: "สมชาย รักรถ",
-      date: "12 ก.ย. 2024",
+      date: "ตัวอย่างวันที่",
       text: "ขับ bZ4X มา 3 เดือน ประหยัดค่าน้ำมันมาก แนะนำเลยครับ!",
       helpful: 24,
     },
     {
       author: "สายไฟ EV",
-      date: "8 ก.ย. 2024",
+      date: "ตัวอย่างวันที่",
       text: "ชาร์จเร็วจริงตามที่โฆษณาไว้ ใช้ได้จริงในชีวิตประจำวัน",
       helpful: 18,
     },
@@ -495,16 +495,18 @@ function ResearchWarning() {
 function ProvenanceBlock() {
   const sources = [
     {
-      name: "Toyota Thailand Official",
+      name: "ตัวอย่างแหล่งข้อมูล",
       url: "https://www.toyota.co.th",
       verified: true,
-      date: "2024-09-01",
+      date: "ตัวอย่างวันที่",
+      isDemo: true,
     },
     {
       name: "CAR250",
       url: "https://www.car250.com",
       verified: true,
-      date: "2024-09-05",
+      date: "ตัวอย่างวันที่",
+      isDemo: true,
     },
     {
       name: "EV Society Thailand",

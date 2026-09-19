@@ -62,6 +62,7 @@ export async function POST(request: Request) {
         whyThisAnswer: merged.merged,
         mode: "structured-catalog",
         status: "insufficient_evidence",
+        trust: { confidence: "CLARIFICATION_NEEDED", retrievalMode: "structured-catalog", verifiedEvidenceCount: 0, qualifiedEvidenceCount: 0, hasResearchObservations: false },
         vectorAvailable: merged.vectorAvailable,
       });
     }
@@ -173,6 +174,6 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     console.error("API /api/ai/ask error:", error);
-    return NextResponse.json({ answer: "ไม่สามารถประมวลผลคำถามได้ กรุณาลองใหม่", citations: [], whyThisAnswer: [], mode: "error", status: "unavailable" }, { status: 503 });
+    return NextResponse.json({ answer: "ไม่สามารถประมวลผลคำถามได้ กรุณาลองใหม่", citations: [], whyThisAnswer: [], mode: "error", status: "unavailable", trust: { confidence: "INSUFFICIENT", retrievalMode: "structured-catalog", verifiedEvidenceCount: 0, qualifiedEvidenceCount: 0, hasResearchObservations: false }, vectorAvailable: false }, { status: 503 });
   }
 }

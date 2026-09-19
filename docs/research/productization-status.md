@@ -1,4 +1,4 @@
-# Productization Status Report — P6
+# Productization Status Report — P7
 
 **Date:** 2026-09-19
 **Branch:** fix/p1-provenance-gate
@@ -133,3 +133,42 @@ Modified: `lib/ai/retrieval/evidence-merge.ts`, `src/app/api/ai/ask/route.ts`, `
 3. Brand-coherent but wrong vehicle-type queries → qualified path (correct behavior)
 4. MG IM6: no embedding corpus entry → MISS (data gap)
 5. Community admin UI deferred (API-only moderation)
+
+## P7 Additions
+
+### Vehicle-Type/Body-Type Intent (Part A)
+- Added `lib/ai/retrieval/body-type-intent.ts`: BODY_TYPE_MAP (Thai+English), KNOWN_BODY_TYPES (slug→type), NAME_TO_BODY_TYPE (DB model name→type, 50 entries)
+- Evidence gate now rejects body-type-violated vector evidence (longest-match-first to avoid "City" matching inside "City Hatchback")
+- AI Ask route filters structured catalog results by body type
+- Body-type regression: 8/8 PASS (exact, alias, brand-only, correct type, wrong type, ambiguous, unsupported, MG IM6)
+
+### MG IM6 Diagnosis (Part B)
+- 1 research observation (battery 90 kWh, DISCOVERED), 0 verified specs/price, 0 embeddings
+- RAG miss is correct behavior — no verified evidence exists
+- MG IM6 returns "qualified" when entity "mg" matches, insufficient otherwise
+
+### RAG After P7
+- Hit-set top-1: 25/25 (restored from 24/25 after body-type fix)
+- Body-type regression: 8/8
+- Gate regression: 6/6
+
+### Compare UI (Part E)
+- Missing data now shows "ยังไม่มีข้อมูลยืนยัน" instead of "—"
+- Added provenance note at bottom
+
+### Community Admin UI (Part F)
+- New: `src/app/admin/moderation/page.tsx` — minimal Thai moderation queue
+- Lists flagged/hidden comments with report brief
+- Actions: HIDE/DELETE/RESTORE
+- Bearer token auth
+
+### Files Added (P7)
+- `lib/ai/retrieval/body-type-intent.ts` — body-type intent extraction + mappings
+- `scripts/body-type-regression.ts` — 8-case body-type regression
+- `src/app/admin/moderation/page.tsx` — Thai admin moderation UI
+
+### Files Modified (P7)
+- `lib/ai/retrieval/evidence-gate-policy.ts` — body-type constraint in gate
+- `src/app/api/ai/ask/route.ts` — body-type filtering of structured results
+- `src/app/compare/CompareClient.tsx` — Thai missing-data state + provenance note
+- `docs/research/productization-status.md` — this report

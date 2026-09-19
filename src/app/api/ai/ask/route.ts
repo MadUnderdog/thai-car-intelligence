@@ -5,6 +5,7 @@ import { getAIProviderForModel, getConfiguredModels } from "../../../../../lib/a
 import { mergeEvidence, getVectorEvidence, type EvidenceItem } from "../../../../../lib/ai/retrieval/evidence-merge";
 import { evaluateEvidenceGate } from "../../../../../lib/ai/evidence-gate";
 import { parseAutomotiveQuery } from "../../../../../lib/ai/retrieval/query-parser";
+import { extractBodyType, KNOWN_BODY_TYPES } from "../../../../../lib/ai/retrieval/body-type-intent";
 
 const schema = z.object({ question: z.string().trim().min(1, "กรุณาระบุคำถาม").max(500, "คำถามยาวเกินไป") });
 export const dynamic = "force-dynamic";
@@ -20,7 +21,17 @@ export async function POST(request: Request) {
     const intent = parseAutomotiveQuery(question);
 
     // 1. Structured catalog retrieval
-    const variants = await searchQuestionCatalog(question);
+    const allVariants = await searchQuestionCatalog(question);
+
+    // 1b. Body-type constraint: if query explicitly mentions a body type,
+    // filter structured results to only vehicles of that type.
+    const queryBodyType = extractBodyType(question);
+    const variants = queryBodyType
+      ? allVariants.filter((v) => {
+          const known = KNOWN_BODY_TYPES[v.model.slug];
+          return !known || known === queryBodyType; // keep if known-matching or unknown (can't determine)
+        })
+      : allVariants;
 
     // 2. Vector evidence retrieval (supplemental, threshold-gated)
     const vectorResult = await getVectorEvidence(question);

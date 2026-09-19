@@ -16,6 +16,7 @@
 import type { EvidenceItem, MergedEvidence } from "./evidence-merge";
 import type { VectorSearchResult, VectorEvidence } from "../../search/vector-search";
 import { parseAutomotiveQuery } from "./query-parser";
+import { extractBodyType, KNOWN_BODY_TYPES, NAME_TO_BODY_TYPE } from "./body-type-intent";
 
 export const VECTOR_STRICT_DISTANCE = 0.30; // high-confidence nearest neighbor
 export const VECTOR_MAX_DISTANCE = 0.45;   // anything further = untrustworthy
@@ -131,10 +132,35 @@ export type GatedEvidence = VectorEvidence & { qualified: boolean };
 export function applyEvidenceThresholds(query: string, result: VectorSearchResult): VectorSearchResult {
   if (!result.available || result.evidence.length === 0) return result;
   const tokens = queryEntityTokens(query);
+  const bodyType = extractBodyType(query);
   const accepted: GatedEvidence[] = [];
   for (const v of result.evidence) {
     const decision = gateVectorEvidence(query, v, tokens);
-    if (decision.accepted) accepted.push({ ...v, qualified: v.distance > VECTOR_STRICT_DISTANCE });
+    if (!decision.accepted) continue;
+    // Body-type constraint: if query explicitly mentions a body type (SUV, sedan, etc.)
+    // and the evidence content references a KNOWN vehicle whose body type conflicts,
+    // reject it entirely (not qualified — wrong body type = wrong answer).
+    if (bodyType) {
+      const contentLower = v.content.toLowerCase();
+      // Find the LONGEST model name that appears in the content (word-boundary matched)
+      let longestMatch: { name: string; type: string } | null = null;
+      for (const [name, knownType] of Object.entries(NAME_TO_BODY_TYPE)) {
+        const nameLower = name.toLowerCase();
+        const idx = contentLower.indexOf(nameLower);
+        if (idx >= 0) {
+          const beforeOk = idx === 0 || /[\s,()]/.test(contentLower[idx - 1]);
+          const afterOk = idx + nameLower.length >= contentLower.length || /[\s,()]/.test(contentLower[idx + nameLower.length]);
+          if (beforeOk && afterOk) {
+            if (!longestMatch || name.length > longestMatch.name.length) {
+              longestMatch = { name, type: knownType };
+            }
+          }
+        }
+      }
+      // If the longest matching model has a conflicting body type, reject
+      if (longestMatch && longestMatch.type !== bodyType) continue;
+    }
+    accepted.push({ ...v, qualified: v.distance > VECTOR_STRICT_DISTANCE });
   }
   return { available: true, evidence: accepted };
 }

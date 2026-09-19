@@ -117,6 +117,7 @@ export async function POST(request: Request) {
       const vehicleList = variants.map((v) => `- ${v.manufacturer.nameEn} ${v.nameEn} (${v.fuelType ?? "N/A"})${v.prices?.[0] ? ` ราคา ${v.prices[0].amount.toLocaleString()} บาท` : ""}`).join("\n");
       const answer = `จากการค้นหาในฐานข้อมูล พบรถที่ตรงกับคำถาม ${variants.length} รุ่น:\n\n${vehicleList}\n\nหากต้องการข้อมูลเพิ่มเติมเรื่องราคา สเปก หรือเปรียบเทียบ สามารถถามได้เพิ่มเติม`;
 
+      const fallbackTiming = { parseMs: Math.round(tParse - t0), catalogMs: Math.round(tCatalog - tParse), vectorMs: Math.round(tVector - tCatalog), mergeGateMs: 0, llmMs: 0, totalMs: Math.round(tVector - t0) };
       return NextResponse.json({
         answer,
         citations: merged.merged,
@@ -124,8 +125,10 @@ export async function POST(request: Request) {
         mode: "structured-catalog",
         status: "ok",
         confidence: gate.confidence,
-        trust: provenance,
+        trust: { ...provenance, retrievalMode: "structured-catalog" },
         vectorAvailable: merged.vectorAvailable,
+        vectorEvidenceCount: merged.vector.length,
+        timing: fallbackTiming,
       });
     }
 

@@ -94,7 +94,7 @@ const THAI_QUERY_WORDS = new Set([
   "ราคา", "เท่าไหร่", "ราคาเท่าไหร่", "เท่าไร", "ราคากี่", "กี่บาท", "มี", "รถ", "รุ่น", "ที่", "ของ", "ไหม", "ครับ", "ค่ะ",
   "กี่", "เปรียบเทียบ", "เทียบ", "ไม่เกิน", "ต่ำกว่า", "มากกว่า", "ถูกที่สุด", "แพงที่สุด",
   "ระยะทาง", "กำลัง", "แรงม้า", "แบตเตอรี่", "ชาร์จ", "วิ่ง", "กี่km", "กี่kwh",
-  "weight", "compare", "price", "how", "much", "what", "is", "the", "have",
+  "weight", "compare", "price", "how", "much", "what", "is", "the", "have", "model", "electric", "ev", "hev",
 ]);
 
 function extractSpecificModelTerms(query: string): string[] {
@@ -106,7 +106,7 @@ function extractSpecificModelTerms(query: string): string[] {
     !Object.keys(BRAND_TOKEN_MAP).some((k) => k === w) &&
     !bodyTypeTerms.has(w) &&
     !THAI_QUERY_WORDS.has(w) &&
-    w.length > 2 // skip very short tokens
+    (w.length > 2 || KNOWN_BODY_TYPES[w] !== undefined) // allow short tokens that are known model parts
   );
 }
 

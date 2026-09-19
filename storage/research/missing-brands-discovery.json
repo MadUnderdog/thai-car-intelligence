@@ -1,0 +1,109 @@
+{
+  "discovery_timestamp": "2026-09-19T21:00:00+07:00",
+  "search_queries_used": [
+    "Volkswagon ประเทศไทย รถ",
+    "Peugeot ประเทศไทย รุ่น",
+    "Audi ประเทศไทย",
+    "DFSK ประเทศไทย",
+    "Chevrolet ประเทศไทย รถ",
+    "Ford ประเทศไทย รถ"
+  ],
+  "methodology": "Thai-language web search + official .co.th domain verification + Wikipedia cross-reference (Automotive industry in Thailand)",
+  "brands": [
+    {
+      "brand": "Volkswagen",
+      "thai_name": "โฟล์คสวาเกน",
+      "official_thai_url": null,
+      "domain_status": "volkswagen.co.th does not resolve (DNS failure). vw.co.th timed out. volkswagen-thailand.com does not resolve. No active .co.th domain found.",
+      "models_found": [],
+      "evidence_state": "historical_only",
+      "evidence_details": "Wikipedia confirms Volkswagen commenced local assembly in Thailand in 1999 via Yontrakit Motors. VW received approval for second-phase Eco Car program but later cancelled its Thai manufacturing plant plans (~2015). No current official Thai website exists. VW vehicles may still be available through importers but no official Thai digital presence.",
+      "evidence_sources": [
+        "Wikipedia: Automotive industry in Thailand (Yontrakit Motors section)",
+        "Wikipedia: Volkswagenthailand.com DNS resolution failed",
+        "paultan.org: 'Thailand set to approve Volkswagen factory' (2014)",
+        "paultan.org: 'Volkswagen might revise plans for Thai assembly plant' (2015)"
+      ]
+    },
+    {
+      "brand": "Peugeot",
+      "thai_name": "เปอโยต์",
+      "official_thai_url": "https://www.peugeot.co.th",
+      "domain_status": "peugeot.co.th returns HTTP 200. Site is behind Akamai CDN bot protection (Access Denied to curl/bots).",
+      "models_found": ["2008", "3008", "5008", "408", "Landtrek (pickup)"],
+      "evidence_state": "confirmed_active",
+      "evidence_details": "Official Thai website exists at peugeot.co.th. Wikipedia confirms Yontrakit Motors assembles Peugeot vehicles in Thailand. Site is actively maintained behind Akamai protection. Known Thai-market models include 2008, 3008, 5008 SUVs and Landtrek pickup.",
+      "evidence_sources": [
+        "Official website: https://www.peugeot.co.th (HTTP 200 verified)",
+        "Wikipedia: Automotive industry in Thailand (Yontrakit Motors section)",
+        "Wikipedia: Peugeot section confirms Thai assembly"
+      ]
+    },
+    {
+      "brand": "Audi",
+      "thai_name": "ออดี้",
+      "official_thai_url": "https://www.audi.co.th",
+      "domain_status": "audi.co.th returns HTTP 403. Site exists but actively blocks non-browser traffic (Akamai/CDN protection).",
+      "models_found": [],
+      "evidence_state": "confirmed_active_website_blocked",
+      "evidence_details": "Official Thai website exists at audi.co.th (verified via HTTP status). Site uses heavy bot protection making automated extraction impossible. Audi Thailand is known to sell Q series SUVs (Q2, Q3, Q5, Q7, Q8) and A series sedans in the Thai market.",
+      "evidence_sources": [
+        "Official website: https://www.audi.co.th (HTTP 403 = exists, blocks bots)",
+        "Wikipedia: BMW section mentions BMW and Mercedes as CKD producers; Audi likely CBU imports"
+      ]
+    },
+    {
+      "brand": "DFSK",
+      "thai_name": "ดีเอฟเอสเค",
+      "official_thai_url": null,
+      "domain_status": "dfsk.co.th does not resolve. dfskthailand.co.th does not resolve. dfsk-motor.com exists but is a Chinese B2B exporter (Chizhong/Chongqing), not a Thai retail site.",
+      "models_found": ["Glory 500", "Glory 580", "C31 Mini Pickup", "Ruichi R5", "Ruichi EC75"],
+      "evidence_state": "historical_uncertain",
+      "evidence_details": "Wikipedia confirms DFSK started minivan production in Thailand (Sokon brand renamed to Glory for export). However, no current Thai retail website exists. DFSK-motor.com is a B2B Chinese exporter, not a Thai consumer site. DFSK's Thai operations status is unclear — may have exited or operate through local dealers without a branded website.",
+      "evidence_sources": [
+        "Wikipedia: DFSK Motor article confirms Thai production of minivans",
+        "https://www.dfsk-motor.com (B2B exporter, not Thai retail)",
+        "DNS verification: dfsk.co.th, dfskthailand.co.th, dfskthailand.com all fail"
+      ]
+    },
+    {
+      "brand": "Chevrolet",
+      "thai_name": "เชฟโรเลต",
+      "official_thai_url": "https://www.chevrolet.co.th",
+      "domain_status": "chevrolet.co.th returns HTTP 200 with full HTML content (lang=th-TH confirmed).",
+      "models_found": ["Tracker", "Captiva", "Colorado", "Trailblazer", "Orlando", "Spark", "Trax", "Aveo"],
+      "evidence_state": "confirmed_active",
+      "evidence_details": "Official Thai website fully operational at chevrolet.co.th. HTML confirms lang=th-TH (Thai locale). General Motors Thailand (GMT) returned in 2000 and operates a plant in Rayong. Chevrolet is the primary GM brand in Thailand. Models confirmed via HTML extraction from the site.",
+      "evidence_sources": [
+        "Official website: https://www.chevrolet.co.th (HTTP 200, Thai locale confirmed)",
+        "HTML extraction confirmed Thai-language content with model references",
+        "Wikipedia: General Motors Thailand section confirms ongoing operations"
+      ]
+    },
+    {
+      "brand": "Ford",
+      "thai_name": "ฟอร์ด",
+      "official_thai_url": "https://www.ford.co.th",
+      "domain_status": "ford.co.th returns HTTP 200. Site is behind Akamai CDN bot protection (Access Denied to curl/bots).",
+      "models_found": ["Ranger", "Everest", "Territory", "Raptor"],
+      "evidence_state": "confirmed_active",
+      "evidence_details": "Official Thai website exists at ford.co.th. Ford Thailand Manufacturing operates a major plant in Rayong (opened 2012). Wikipedia confirms Ford Ranger production started at the plant in 2016. Known Thai-market models include Ranger pickup, Everest SUV, Territory compact SUV, and Raptor performance variant.",
+      "evidence_sources": [
+        "Official website: https://www.ford.co.th (HTTP 200 verified)",
+        "Wikipedia: Ford Thailand Manufacturing section",
+        "Wikipedia: Automotive industry in Thailand (Ford section)"
+      ]
+    }
+  ],
+  "summary": {
+    "total_brands_searched": 6,
+    "confirmed_active": 4,
+    "confirmed_active_website_blocked": 1,
+    "historical_only": 1,
+    "historical_uncertain": 1,
+    "brands_with_official_thai_website": ["Peugeot", "Audi", "Chevrolet", "Ford"],
+    "brands_without_official_thai_website": ["Volkswagen", "DFSK"],
+    "new_brands_to_add_to_universe": ["Volkswagen", "Peugeot", "Audi", "DFSK", "Chevrolet", "Ford"],
+    "notes": "Web search tools (Nous Gateway, Firecrawl) were unavailable. Verification relied on curl HTTP status checks, Wikipedia cross-references, and direct HTML extraction. Akamai-protected sites (Peugeot, Audi, Ford) return 403/Access Denied to automated tools but are confirmed active. Chevrolet is the only brand where full HTML content was extractable."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "brand": "Honda",
+  "thai_name": "ฮอนด้า",
+  "official_url": "https://www.honda.co.th",
+  "timestamp": "2026-09-19T20:30:52.760540",
+  "discovery": {
+    "models_found": 0,
+    "models": [],
+    "prices_found": 0
+  },
+  "models": [],
+  "network_requests": [],
+  "api_endpoints": [],
+  "errors": []
+}

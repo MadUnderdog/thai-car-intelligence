@@ -1,0 +1,342 @@
+[
+  {
+    "name_en": "Personal Cars",
+    "name_th": "รถเก๋ง",
+    "code": "yarisativ",
+    "model_code": "YASD",
+    "start_price": 569000,
+    "max_price": 729000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Personal Cars",
+    "name_th": "รถเก๋ง",
+    "code": "yarisativ_nightshade",
+    "model_code": "YASD",
+    "start_price": 709000,
+    "max_price": 709000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Personal Cars",
+    "name_th": "รถเก๋ง",
+    "code": "yarisativ_grsport",
+    "model_code": "YASD",
+    "start_price": 779000,
+    "max_price": 779000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Personal Cars",
+    "name_th": "รถเก๋ง",
+    "code": "yaris",
+    "model_code": "YARI",
+    "start_price": 584000,
+    "max_price": 689000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "SUV & PPV",
+    "name_th": "รถ SUV & PPV",
+    "code": "yariscross",
+    "model_code": "BSUV",
+    "start_price": 809000,
+    "max_price": 929000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "SUV & PPV",
+    "name_th": "รถ SUV & PPV",
+    "code": "yariscross_nightshade",
+    "model_code": "BSUV",
+    "start_price": 929000,
+    "max_price": 929000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Personal Cars",
+    "name_th": "รถเก๋ง",
+    "code": "altis",
+    "model_code": "COLA",
+    "start_price": 909000,
+    "max_price": 1009000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Personal Cars",
+    "name_th": "รถเก๋ง",
+    "code": "altis_grsport",
+    "model_code": "COLA",
+    "start_price": 1129000,
+    "max_price": 1129000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Personal Cars",
+    "name_th": "รถเก๋ง",
+    "code": "camry",
+    "model_code": "CARY",
+    "start_price": 1475000,
+    "max_price": 1809000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "GR",
+    "name_th": "GR",
+    "code": "gr86",
+    "model_code": "GR86",
+    "start_price": 2999000,
+    "max_price": 2999000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "GR",
+    "name_th": "GR",
+    "code": "gryaris",
+    "model_code": "gryaris",
+    "start_price": 3499000,
+    "max_price": 3499000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "GR",
+    "name_th": "GR",
+    "code": "grcorolla",
+    "model_code": "grcorolla",
+    "start_price": 4199000,
+    "max_price": 4199000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "GR",
+    "name_th": "GR",
+    "code": "grsupra",
+    "model_code": "SUPA",
+    "start_price": 5349000,
+    "max_price": 5749000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "SUV & PPV",
+    "name_th": "รถ SUV & PPV",
+    "code": "corollacross",
+    "model_code": "CSUV",
+    "start_price": 989000,
+    "max_price": 1204000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "SUV & PPV",
+    "name_th": "รถ SUV & PPV",
+    "code": "corollacross_grsport",
+    "model_code": "CSUV",
+    "start_price": 1254000,
+    "max_price": 1254000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "SUV & PPV",
+    "name_th": "รถ SUV & PPV",
+    "code": "bz4x",
+    "model_code": "C-HI",
+    "start_price": 1529000,
+    "max_price": 1649000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "SUV & PPV",
+    "name_th": "รถ SUV & PPV",
+    "code": "landcruiser_fj",
+    "model_code": "500D",
+    "start_price": 1289000,
+    "max_price": 1289000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "SUV & PPV",
+    "name_th": "รถ SUV & PPV",
+    "code": "fortuner_leader",
+    "model_code": "HLPV",
+    "start_price": 1239000,
+    "max_price": 1600000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "SUV & PPV",
+    "name_th": "รถ SUV & PPV",
+    "code": "fortuner_legender",
+    "model_code": "HLPV",
+    "start_price": 1643000,
+    "max_price": 1904000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "SUV & PPV",
+    "name_th": "รถ SUV & PPV",
+    "code": "fortuner_grsport",
+    "model_code": "HLPV",
+    "start_price": 1969000,
+    "max_price": 1969000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "MPV",
+    "name_th": "รถ MPV",
+    "code": "veloz",
+    "model_code": "VELO",
+    "start_price": 795000,
+    "max_price": 875000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "MPV",
+    "name_th": "รถ MPV",
+    "code": "innovazenix",
+    "model_code": "INNO",
+    "start_price": 1379000,
+    "max_price": 1489000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "MPV",
+    "name_th": "รถ MPV",
+    "code": "alphard",
+    "model_code": "ALPH",
+    "start_price": 3590000,
+    "max_price": 4590000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Commercial Cars",
+    "name_th": "รถเพื่อการพาณิชย์",
+    "code": "hilux_champ",
+    "model_code": "IMV0",
+    "start_price": 519000,
+    "max_price": 615000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Commercial Cars",
+    "name_th": "รถเพื่อการพาณิชย์",
+    "code": "hilux_revo_standard",
+    "model_code": "HRBCB",
+    "start_price": 584000,
+    "max_price": 674000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Commercial Cars",
+    "name_th": "รถเพื่อการพาณิชย์",
+    "code": "hilux_revo_zedition",
+    "model_code": "HR4D",
+    "start_price": 669000,
+    "max_price": 934000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Commercial Cars",
+    "name_th": "รถเพื่อการพาณิชย์",
+    "code": "hilux_travo_standard_4trex",
+    "model_code": "HTBC",
+    "start_price": 767000,
+    "max_price": 819000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Commercial Cars",
+    "name_th": "รถเพื่อการพาณิชย์",
+    "code": "hilux_travo_prerunner_4trex",
+    "model_code": "HT4D",
+    "start_price": 789000,
+    "max_price": 1090000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Commercial Cars",
+    "name_th": "รถเพื่อการพาณิชย์",
+    "code": "hilux_travo_overland",
+    "model_code": "HT4D",
+    "start_price": 1102000,
+    "max_price": 1366000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Commercial Cars",
+    "name_th": "รถเพื่อการพาณิชย์",
+    "code": "hilux_travo_e",
+    "model_code": "HTBE",
+    "start_price": 1491000,
+    "max_price": 1491000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Bus",
+    "name_th": "รถ Bus",
+    "code": "coaster",
+    "model_code": "COAS",
+    "start_price": 2175000,
+    "max_price": 2175000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Van",
+    "name_th": "รถ Van",
+    "code": "hiace",
+    "model_code": "HIAC",
+    "start_price": 1069000,
+    "max_price": 1204000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Van",
+    "name_th": "รถ Van",
+    "code": "commuter",
+    "model_code": "COMM",
+    "start_price": 1339000,
+    "max_price": 1369000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  },
+  {
+    "name_en": "Van",
+    "name_th": "รถ Van",
+    "code": "majesty",
+    "model_code": "MAJE",
+    "start_price": 1994000,
+    "max_price": 2339000,
+    "source": "https://www.toyota.co.th/component/api/tcoth/web-init",
+    "source_type": "OFFICIAL_MANUFACTURER_API"
+  }
+]

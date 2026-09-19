@@ -24,6 +24,7 @@ export default function CarsPage() {
   const [search, setSearch] = useState("");
   const [brand, setBrand] = useState("");
   const [fuelType, setFuelType] = useState("");
+  const [bodyType, setBodyType] = useState("");
   const [sortBy, setSortBy] = useState("price_asc");
   const [compareList, setCompareList] = useState<string[]>([]);
 
@@ -32,21 +33,21 @@ export default function CarsPage() {
     if (search) params.set("q", search);
     if (brand) params.set("manufacturer", brand);
     if (fuelType) params.set("fuelType", fuelType);
+    if (bodyType) params.set("bodyType", bodyType);
+    if (sortBy) params.set("sortBy", sortBy);
     params.set("limit", "50");
     fetch(`/api/models?${params}`).then(r => r.json()).then(d => {
-      let results = d.results || [];
-      if (sortBy === "price_asc") results.sort((a: any, b: any) => (a.minPrice || 999999999) - (b.minPrice || 999999999));
-      if (sortBy === "price_desc") results.sort((a: any, b: any) => (b.minPrice || 0) - (a.minPrice || 0));
-      setModels(results);
+      setModels(d.results || []);
       setLoading(false);
     }).catch(() => setLoading(false));
-  }, [search, brand, fuelType, sortBy]);
+  }, [search, brand, fuelType, bodyType, sortBy]);
 
   const toggleCompare = (id: string) => {
     setCompareList(prev => prev.includes(id) ? prev.filter(x => x !== id) : prev.length < 4 ? [...prev, id] : prev);
   };
 
   const brands = ["Toyota", "Honda", "BYD", "MG", "Mazda", "Nissan", "Ford", "Hyundai", "Kia", "Tesla", "Isuzu", "Mitsubishi", "Suzuki"];
+
 
   return (
     <div className="container-narrow py-8">
@@ -72,6 +73,15 @@ export default function CarsPage() {
           <option value="Petrol">เบนซิน</option>
           <option value="Diesel">ดีเซล</option>
         </select>
+        <select value={bodyType} onChange={e => setBodyType(e.target.value)} className="px-4 py-2 bg-white border border-[var(--color-gray-300)] rounded-[var(--radius-lg)]">
+          <option value="">ทุกประเภท</option>
+          <option value="SUV">SUV / ครอสโอเวอร์</option>
+          <option value="sedan">ซีดาน</option>
+          <option value="hatchback">แฮทช์แบ็ก</option>
+          <option value="pickup">กระบะ</option>
+          <option value="MPV">MPV / มินิแวน</option>
+          <option value="coupe">คูเป้</option>
+        </select>
         <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="px-4 py-2 bg-white border border-[var(--color-gray-300)] rounded-[var(--radius-lg)]">
           <option value="price_asc">ราคาต่ำ → สูง</option>
           <option value="price_desc">ราคาสูง → ต่ำ</option>
@@ -92,7 +102,7 @@ export default function CarsPage() {
       )}
 
       {/* Results */}
-      <div className="text-sm text-[var(--color-gray-500)] mb-4">{models.length} รุ่น</div>
+      <div className="text-sm text-[var(--color-gray-500)] mb-4">{models.length} รุ่น{bodyType ? ` (${bodyType})` : ""}</div>
 
       {loading ? (
         <div className="text-center py-12 text-[var(--color-gray-500)]">กำลังโหลด...</div>

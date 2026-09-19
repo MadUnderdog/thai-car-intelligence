@@ -25,7 +25,7 @@ const FUEL_TYPE_MAP: Record<string, string> = {
 
 const MODEL_ALIASES: Record<string, string> = {
   "คัมรี": "camry", "ยาริส": "yaris", "แอทโต 2": "atto-2", "แอทโต 3": "atto-3",
-  "โดลฟิน": "dolphin", "ซีล": "seal", "สิงโต": "sealion", "เอ็มจี 4": "mg4",
+  "โดลฟิน": "dolphin", "ซีล": "seal", "สิงโต": "sealion 7", "เอ็มจี 4": "mg4",
 };
 
 const BRAND_ALIASES: Record<string, string> = {
@@ -110,10 +110,10 @@ function extractEntities(text: string): string[] {
   const entities: string[] = [];
   // Known model names from DB (hardcoded common ones for fast lookup)
   const knownModels = [
-    "camry", "yaris", "corolla", "fortuner", "hilux", "innova", "veloz", "avanza",
+    "camry", "yaris", "corolla altis", "fortuner", "hilux", "innova", "veloz", "avanza",
     "civic", "city", "hr-v", "cr-v", "accord", "super-one",
     "s5 ev", "mg4", "zs ev", "urban", "vs hev", "ep plus", "es",
-    "atto 2", "atto 3", "dolphin", "seal", "sealion",
+    "atto 2", "atto 3", "dolphin", "seal", "sealion 7",
     "almera", "kicks", "x-trail", "terra",
     "mazda2", "mazda3", "cx-3", "cx-30", "cx-5", "cx-80",
     "ranger", "everest", "territory",
@@ -122,19 +122,25 @@ function extractEntities(text: string): string[] {
     "swift", "celerio", "ertiga", "jimny",
     "stargazer", "tucson", "ioniq 5", "ioniq 6", "staria", "คัมรี", "ยาริส", "โดลฟิน", "ซีล", "สิงโต", "แอทโต",
     "sonet", "stonic", "sportage", "ev6", "ev9",
-    "model 3", "model y",
+    "model 3", "model y", "im5", "im6",
   ];
   const lower = text.toLowerCase();
   for (const model of knownModels) {
-    if (lower.includes(model)) entities.push(model);
+    // Word-boundary match: check that model is not a substring of a larger word.
+    // E.g. "es" must not match inside "tesla", "seal", etc.
+    const idx = lower.indexOf(model);
+    if (idx < 0) continue;
+    const beforeOk = idx === 0 || /[\s,()\-]/.test(lower[idx - 1]);
+    const afterIdx = idx + model.length;
+    const afterOk = afterIdx >= lower.length || /[\s,()\-]/.test(lower[afterIdx]);
+    if (beforeOk && afterOk) entities.push(model);
   }
   // Resolve Thai model names to English
   const thaiToEn: Record<string, string> = {
     "คัมรี": "camry", "ยาริส": "yaris", "โดลฟิน": "dolphin",
-    "ซีล": "seal", "สิงโต": "sealion", "แอทโต": "atto",
+    "ซีล": "seal", "สิงโต": "sealion 7", "แอทโต": "atto",
   };
   return entities.map((e) => thaiToEn[e] ?? e);
-  return entities;
 }
 
 /** Parse a natural language automotive question into structured intent and filters. */

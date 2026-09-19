@@ -1,0 +1,29 @@
+{
+  "Ford Everest": {
+    "variants": [],
+    "ranges": [],
+    "specs": {}
+  },
+  "Toyota Yaris": {
+    "variants": [],
+    "ranges": [],
+    "specs": {}
+  },
+  "Mazda CX-5": {
+    "variants": [],
+    "ranges": [],
+    "specs": {}
+  },
+  "MG ZS": {
+    "variants": [],
+    "ranges": [],
+    "specs": {
+      "power": "164\nแรงม้า"
+    }
+  },
+  "Nissan Kicks": {
+    "variants": [],
+    "ranges": [],
+    "specs": {}
+  }
+}

@@ -1,0 +1,440 @@
+{
+  "urvan": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "1216500",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.07",
+    "modelCode": "X81C"
+  },
+  "note": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "530000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.16",
+    "modelCode": "J02C"
+  },
+  "terra": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "1299000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.22",
+    "modelCode": "P60A"
+  },
+  "navara-sc": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "559500",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.26",
+    "modelCode": "H60A"
+  },
+  "new-terra": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "1199000",
+      "bestPriceVersionKey": "JTSARS",
+      "bestPriceGradeKey": "29838-2_3_E_2WD_7AT"
+    },
+    "Updated_On": "2026.03.23.19.44.03",
+    "modelCode": "29838"
+  },
+  "navara-calibre-my21": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "765000",
+      "bestPriceVersionKey": "VEC005",
+      "bestPriceGradeKey": "LVL005"
+    },
+    "Updated_On": "2026.03.23.19.44.11",
+    "modelCode": "NACALI"
+  },
+  "kicks-epower": {
+    "Updated_On": "2026.06.29.12.04.45",
+    "modelCode": "70053",
+    "Retail with VAT": {
+      "priceDisclaimer": "",
+      "modelPrice": "789900",
+      "bestPriceVersionKey": "26KEV",
+      "bestPriceGradeKey": "70053-L1_V"
+    }
+  },
+  "xtrail-epower": {
+    "Updated_On": "2026.08.25.14.01.52",
+    "modelCode": "70006",
+    "Retail with VAT": {
+      "priceDisclaimer": "",
+      "modelPrice": "1699000",
+      "bestPriceVersionKey": "26XTE4",
+      "bestPriceGradeKey": "70006-E-POWER"
+    }
+  },
+  "new-navara-single-cab": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "595000",
+      "bestPriceVersionKey": "105S",
+      "bestPriceGradeKey": "29637-SC_SL_6MT"
+    },
+    "Updated_On": "2026.03.23.19.44.06",
+    "modelCode": "29637"
+  },
+  "navara": {
+    "Updated_On": "2026.03.23.19.43.54",
+    "modelCode": "70005",
+    "Retail with VAT": {
+      "priceDisclaimer": "",
+      "modelPrice": "1045000",
+      "bestPriceVersionKey": "25DCP2A",
+      "bestPriceGradeKey": "70005-DC_PRO-2X_7AT"
+    }
+  },
+  "test-gt-r": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "13500000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.19",
+    "modelCode": "TESTD52E"
+  },
+  "np300-navara-king-cab-": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "637000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.25",
+    "modelCode": "H60AKC"
+  },
+  "new-navara-pro-4x-and-pro-2x": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "1030000",
+      "bestPriceVersionKey": "144P",
+      "bestPriceGradeKey": "29643-DC_PRO-2X_7AT"
+    },
+    "Updated_On": "2026.03.23.19.43.57",
+    "modelCode": "29643"
+  },
+  "teana": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "1339000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.21",
+    "modelCode": "L42L"
+  },
+  "navara-single-cab": {
+    "Updated_On": "2026.03.23.19.44.02",
+    "modelCode": "70002",
+    "Retail with VAT": {
+      "priceDisclaimer": "",
+      "modelPrice": "606000",
+      "bestPriceVersionKey": "25SCSLM",
+      "bestPriceGradeKey": "70002-SC_SL_6MT"
+    }
+  },
+  "juke": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "837000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.10",
+    "modelCode": "P12C"
+  },
+  "np300-navara-double-cab-": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "693000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.24",
+    "modelCode": "H60ADC"
+  },
+  "serena-epower": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "1690000",
+      "bestPriceVersionKey": "SEC28",
+      "bestPriceGradeKey": "30176-HIGHWAY_STAR"
+    },
+    "Updated_On": "2026.03.23.19.43.51",
+    "modelCode": "30176"
+  },
+  "almera": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "445000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.26",
+    "modelCode": "L02B"
+  },
+  "new-navara-calibre": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "765000",
+      "bestPriceVersionKey": "120C",
+      "bestPriceGradeKey": "29621-KC_CALIBRE_E_6MT"
+    },
+    "Updated_On": "2026.03.23.19.43.59",
+    "modelCode": "29621"
+  },
+  "new-almera-22my": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "515000",
+      "bestPriceVersionKey": "BDYARBZ",
+      "bestPriceGradeKey": "29545-1_0L_TURBO_E_CVT"
+    },
+    "Updated_On": "2026.03.23.19.44.09",
+    "modelCode": "29545",
+    "Retail with VAT": {
+      "priceDisclaimer": "",
+      "modelPrice": "515000",
+      "bestPriceVersionKey": "BDYARBZ",
+      "bestPriceGradeKey": "29545-1_0L_TURBO_E_CVT"
+    }
+  },
+  "kicks-e-power-with-stylish-package": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "779900",
+      "bestPriceVersionKey": "E0951",
+      "bestPriceGradeKey": "29843-E-POWER_E"
+    },
+    "Updated_On": "2026.03.23.19.43.48",
+    "modelCode": "29843"
+  },
+  "kicks-e-power-sky-edition": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "35000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.17",
+    "modelCode": "KICKS-STLSH"
+  },
+  "new-almera": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "573000",
+      "bestPriceVersionKey": "BDYARBZ",
+      "bestPriceGradeKey": "29851-1_0L_TURBO_E_CVT"
+    },
+    "Updated_On": "2026.03.23.19.43.53",
+    "modelCode": "29851",
+    "Retail with VAT": {
+      "priceDisclaimer": "",
+      "modelPrice": "573000",
+      "bestPriceVersionKey": "BDYARBZ",
+      "bestPriceGradeKey": "29851-1_0L_TURBO_E_CVT"
+    }
+  },
+  "gt-r": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "",
+      "bestPriceVersionKey": "",
+      "bestPriceGradeKey": ""
+    },
+    "Updated_On": "2026.03.23.19.44.05",
+    "modelCode": "D52E"
+  },
+  "sylphy": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "833000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.20",
+    "modelCode": "L12F"
+  },
+  "new-kicks": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "779900",
+      "bestPriceVersionKey": "E0951",
+      "bestPriceGradeKey": "29843-E-POWER_E"
+    },
+    "Updated_On": "2026.03.23.19.43.52",
+    "modelCode": "29843"
+  },
+  "nv350-urvan": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "1216500",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.17",
+    "modelCode": "X81C"
+  },
+  "nissan-terra-mc": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "1199000",
+      "bestPriceVersionKey": "JTSARS",
+      "bestPriceGradeKey": "29464-2_3_E_2WD_7AT"
+    },
+    "Updated_On": "2026.03.23.19.44.14",
+    "modelCode": "29464"
+  },
+  "livina": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "672000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.28",
+    "modelCode": "N11Q"
+  },
+  "leaf": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "1990000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.15",
+    "modelCode": "B12P"
+  },
+  "almera-with-stylish-package": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "573000",
+      "bestPriceVersionKey": "BDYARBZ",
+      "bestPriceGradeKey": "29851-1_0L_TURBO_E_CVT"
+    },
+    "Updated_On": "2026.03.23.19.43.48",
+    "modelCode": "29851",
+    "Retail with VAT": {
+      "priceDisclaimer": "",
+      "modelPrice": "573000",
+      "bestPriceVersionKey": "BDYARBZ",
+      "bestPriceGradeKey": "29851-1_0L_TURBO_E_CVT"
+    }
+  },
+  "march": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "420000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.16",
+    "modelCode": "B02A"
+  },
+  "navara-n-trek-warrior-": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "49000",
+      "bestPriceVersionKey": "VEC008",
+      "bestPriceGradeKey": "LVL008"
+    },
+    "Updated_On": "2026.03.23.19.44.18",
+    "modelCode": "H60ADC-NTREK"
+  },
+  "navara-king-cab": {
+    "Updated_On": "2026.03.23.19.44.00",
+    "modelCode": "70003",
+    "Retail with VAT": {
+      "priceDisclaimer": "",
+      "modelPrice": "667000",
+      "bestPriceVersionKey": "25KCSLM",
+      "bestPriceGradeKey": "70003-KC_SL_6MT"
+    }
+  },
+  "navara-pro-4x-and-pro-2x": {
+    "Updated_On": "2026.03.23.19.43.56",
+    "modelCode": "70005",
+    "Retail with VAT": {
+      "priceDisclaimer": "",
+      "modelPrice": "1045000",
+      "bestPriceVersionKey": "25DCP2A",
+      "bestPriceGradeKey": "70005-DC_PRO-2X_7AT"
+    }
+  },
+  "new-navara-king-cab": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "649000",
+      "bestPriceVersionKey": "114K",
+      "bestPriceGradeKey": "29624-KC_SL_6MT"
+    },
+    "Updated_On": "2026.03.23.19.44.01",
+    "modelCode": "29624"
+  },
+  "serena": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "1469000",
+      "bestPriceVersionKey": "HWS01",
+      "bestPriceGradeKey": "30177-HIGHWAY_STAR"
+    },
+    "Updated_On": "2026.08.25.14.01.51",
+    "modelCode": "30177"
+  },
+  "x-trail": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "1350000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.22",
+    "modelCode": "P32R"
+  },
+  "navara-calibre": {
+    "Updated_On": "2026.03.23.19.43.58",
+    "modelCode": "70004",
+    "Retail with VAT": {
+      "priceDisclaimer": "",
+      "modelPrice": "758000",
+      "bestPriceVersionKey": "25KCCSLA",
+      "bestPriceGradeKey": "70004-KC_CALIBRE_SL_7AT"
+    }
+  },
+  "new-leaf": {
+    "Retail": {
+      "priceDisclaimer": "",
+      "modelPrice": "1590000",
+      "bestPriceVersionKey": "LEV1",
+      "bestPriceGradeKey": "29785-EV"
+    },
+    "Updated_On": "2026.03.23.19.44.04",
+    "modelCode": "29785"
+  },
+  "pulsar": {
+    "default": {
+      "priceDisclaimer": "",
+      "modelPrice": "781000",
+      "bestPriceVersionKey": "VEC001",
+      "bestPriceGradeKey": "LVL001"
+    },
+    "Updated_On": "2026.03.23.19.44.27",
+    "modelCode": "B12D"
+  }
+}

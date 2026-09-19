@@ -14,10 +14,10 @@ interface BadgeProps {
 
 const variantStyles: Record<BadgeVariant, string> = {
   default: "bg-[var(--color-gray-100)] text-[var(--color-gray-700)]",
-  success: "bg-[var(--color-success-50)] text-[var(--color-success-700)] border border-[var(--color-success-500)]/20",
-  warning: "bg-[var(--color-warning-50)] text-[var(--color-warning-600)] border border-[var(--color-warning-500)]/20",
-  danger: "bg-[var(--color-danger-50)] text-[var(--color-danger-600)] border border-[var(--color-danger-500)]/20",
-  info: "bg-[var(--color-primary-50)] text-[var(--color-primary-700)] border border-[var(--color-primary-500)]/20",
+  success: "bg-transparent text-[var(--color-success-700)] border border-[var(--color-success-500)]/40",
+  warning: "bg-transparent text-[var(--color-warning-600)] border border-[var(--color-warning-500)]/40",
+  danger: "bg-transparent text-[var(--color-danger-600)] border border-[var(--color-danger-500)]/40",
+  info: "bg-transparent text-[var(--color-primary-700)] border border-[var(--color-primary-500)]/40",
 };
 
 const sizeStyles: Record<BadgeSize, string> = {
@@ -27,7 +27,7 @@ const sizeStyles: Record<BadgeSize, string> = {
 
 export function Badge({ children, variant = "default", size = "sm", className = "" }: BadgeProps) {
   return (
-    <span className={`inline-flex items-center font-medium rounded-[var(--radius-full)] ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}>
+    <span className={`inline-flex items-center font-medium rounded-[var(--radius-sm)] ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}>
       {children}
     </span>
   );

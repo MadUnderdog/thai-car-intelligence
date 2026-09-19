@@ -172,3 +172,35 @@ Modified: `lib/ai/retrieval/evidence-merge.ts`, `src/app/api/ai/ask/route.ts`, `
 - `src/app/api/ai/ask/route.ts` — body-type filtering of structured results
 - `src/app/compare/CompareClient.tsx` — Thai missing-data state + provenance note
 - `docs/research/productization-status.md` — this report
+
+## P8 Additions
+
+### Trust Contract (Part A)
+- New: `lib/ai/trust-contract.ts` — unified FactualConfidence states (VERIFIED/QUALIFIED/INSUFFICIENT/CLARIFICATION_NEEDED/RESEARCH_UNVERIFIED)
+- ProvenanceMeta type with verifiedEvidenceCount, qualifiedEvidenceCount, hasResearchObservations
+- gateStateToConfidence() maps gate states to public contract
+- confidenceLabel() returns Thai labels
+- AI Ask route now returns `trust` field in all responses
+- 14 new trust contract tests (242 total vitest)
+
+### AI Ask UI (Part B)
+- Trust state badges: ✔️ข้อมูลยืนยันแล้ว / ⚠️ข้อมูลบางส่วน / ⛔ยังไม่มีข้อมูลยืนยัน / ❓กรุณาระบุให้ชัดเจน
+- Evidence count display (verified + qualified)
+- Source citations with links
+- All Thai text
+
+### Catalog Discovery (Part C)
+- Body type filter: SUV, Sedan, Hatchback, Pickup, MPV, Coupe
+- Client-side filtering using NAME_TO_BODY_TYPE slug mapping
+- Price display uses verified-only data (API-gated)
+- Compare selection (up to 4) with compare bar
+
+### Files Added (P8)
+- `lib/ai/trust-contract.ts` — trust contract types + helpers
+- `tests/trust-contract.test.ts` — 14 trust contract tests
+
+### Files Modified (P8)
+- `src/app/api/ai/ask/route.ts` — trust contract in all responses
+- `src/app/ai-ask/AIAskClient.tsx` — trust badges, evidence count, citations
+- `src/app/cars/page.tsx` — body type filter
+- `docs/research/productization-status.md` — this report

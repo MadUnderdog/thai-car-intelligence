@@ -6,6 +6,7 @@ import { mergeEvidence, getVectorEvidence, type EvidenceItem } from "../../../..
 import { evaluateEvidenceGate } from "../../../../../lib/ai/evidence-gate";
 import { parseAutomotiveQuery } from "../../../../../lib/ai/retrieval/query-parser";
 import { extractBodyType, KNOWN_BODY_TYPES } from "../../../../../lib/ai/retrieval/body-type-intent";
+import { gateStateToConfidence, type FactualConfidence, type ProvenanceMeta } from "../../../../../lib/ai/trust-contract";
 
 const schema = z.object({ question: z.string().trim().min(1, "กรุณาระบุคำถาม").max(500, "คำถามยาวเกินไป") });
 export const dynamic = "force-dynamic";
@@ -70,6 +71,7 @@ export async function POST(request: Request) {
         whyThisAnswer: [],
         mode: "structured-catalog",
         status: "insufficient_evidence",
+        trust: { confidence: "INSUFFICIENT", retrievalMode: "structured-catalog", verifiedEvidenceCount: 0, qualifiedEvidenceCount: 0, hasResearchObservations: false },
         vectorAvailable: merged.vectorAvailable,
       });
     }
@@ -89,6 +91,18 @@ export async function POST(request: Request) {
     );
     const qualifiedEvidence = merged.merged.filter((e) => qualifiedVectorIds.has(e.id));
 
+    // 5c. Build trust contract
+    const trustConfidence: FactualConfidence = gate.confidence === "insufficient"
+      ? (intent.type === "compare" && merged.merged.length < 2 ? "CLARIFICATION_NEEDED" : "INSUFFICIENT")
+      : gateStateToConfidence(true, qualifiedEvidence.length > 0, variants.length);
+    const provenance: ProvenanceMeta = {
+      confidence: trustConfidence,
+      retrievalMode: merged.vectorAvailable ? "ai-enhanced" : "structured-catalog",
+      verifiedEvidenceCount: merged.merged.filter((e) => e.official).length,
+      qualifiedEvidenceCount: qualifiedEvidence.length,
+      hasResearchObservations: merged.vector.some((v) => (v as { qualified?: boolean }).qualified),
+    };
+
     // 6. Get AI provider
     const models = getConfiguredModels();
     const provider = getAIProviderForModel(models.complex);
@@ -105,6 +119,7 @@ export async function POST(request: Request) {
         mode: "structured-catalog",
         status: "ok",
         confidence: gate.confidence,
+        trust: provenance,
         vectorAvailable: merged.vectorAvailable,
       });
     }
@@ -137,6 +152,7 @@ export async function POST(request: Request) {
       mode: "ai-enhanced",
       status: aiResult.status,
       confidence: aiResult.status === "ok" ? gate.confidence : "partial",
+      trust: provenance,
       vectorAvailable: merged.vectorAvailable,
       vectorEvidenceCount: merged.vector.length,
     });

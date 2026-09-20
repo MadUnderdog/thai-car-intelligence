@@ -1,0 +1,42 @@
+{
+  "autospinn": {
+    "articles_processed": 6,
+    "articles_with_data": 3,
+    "spec_observations": 7,
+    "price_observations": 0,
+    "brands": [
+      "gwm",
+      "volvo",
+      "smart"
+    ],
+    "note": "AutoSpinn has spec data but prices are in article body, not structured"
+  },
+  "autolifethailand": {
+    "articles_processed": 5,
+    "articles_with_data": 5,
+    "price_observations": 40,
+    "spec_observations": 16,
+    "prices": {
+      "Volvo XC90": 3690000,
+      "Mercedes C300 Electric": [
+        2404000,
+        3690000
+      ],
+      "BYD Seal 5 DM-i": 649900,
+      "BYD Sealion 5 DM-i": 744900
+    },
+    "note": "AutoLifeThailand has structured price data in articles"
+  },
+  "headlightmag_bulk": {
+    "articles_processed": 20,
+    "articles_with_prices": 6,
+    "total_prices": 7,
+    "brands": [
+      "toyota",
+      "hyundai",
+      "byd",
+      "gwm",
+      "mazda"
+    ]
+  }
+}

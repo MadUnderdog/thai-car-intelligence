@@ -106,12 +106,25 @@ def identify_brand_from_url(url: str) -> Optional[str]:
     return None
 
 def identify_model_from_title(title: str) -> Optional[Tuple[str, str]]:
-    """Returns (brand, model) if found."""
+    """Returns (brand, model) with LONGEST match first.
+
+    FIX: Original code returned the first match, which was often the brand
+    name (e.g. "BYD") instead of the specific model (e.g. "Seal"). This
+    caused all specs from the article to be attributed to the brand rather
+    than the model, leading to cross-model contamination in the DB.
+    """
     title_lower = title.lower()
+    best_brand = None
+    best_model = None
+    best_len = 0
     for brand, models in MODEL_PATTERNS.items():
         for model in models:
-            if model.lower() in title_lower:
-                return (brand, model)
+            if model.lower() in title_lower and len(model) > best_len:
+                best_brand = brand
+                best_model = model
+                best_len = len(model)
+    if best_brand and best_model:
+        return (best_brand, best_model)
     return None
 
 def extract_prices_from_article(text: str, model_name: str, brand: str, source_url: str, article_title: str) -> List[Dict]:

@@ -59,6 +59,20 @@ CATEGORY_URLS = [
 # 300 chars ≈ 1-2 paragraphs; stays within the same discussion section.
 MODEL_CONTEXT_WINDOW = 300
 
+# All known model aliases for cross-model detection in context.
+# Built lazily from MODEL_ALIASES on first use.
+_ALL_MODEL_ALIASES_LOWER = None
+
+def _get_all_model_aliases():
+    """Lazy-load all model aliases for cross-model detection."""
+    global _ALL_MODEL_ALIASES_LOWER
+    if _ALL_MODEL_ALIASES_LOWER is None:
+        _ALL_MODEL_ALIASES_LOWER = {
+            alias.lower(): canonical
+            for alias, canonical in MODEL_ALIASES.items()
+        }
+    return _ALL_MODEL_ALIASES_LOWER
+
 
 def _build_model_search_patterns(model_name: str, brand: str = "") -> list:
     """Build regex patterns to search for the model in article text."""
@@ -83,14 +97,62 @@ def _is_in_model_context(
     model_patterns: list,
     window: int = MODEL_CONTEXT_WINDOW
 ) -> bool:
-    """Check if model name appears within context window around a match."""
+    """Check if model name appears within context window around a match.
+    
+    Also checks that no OTHER model name is CLOSER to the match than
+    the article's subject model. This prevents cross-model contamination
+    where specs from comparison tables (mentioning ATTO 3, City, Civic, etc.)
+    get attributed to the article's subject model (e.g. Seal).
+    """
     ctx_start = max(0, match_start - window)
     ctx_end = min(len(clean_text), match_end + window)
     context = clean_text[ctx_start:ctx_end]
+    context_mid = (match_start - ctx_start + match_end - ctx_start) // 2
+    
+    # Check if the article's model appears in context
+    article_model_found = False
+    article_model_pos = None
     for pat in model_patterns:
-        if pat.search(context):
-            return True
-    return False
+        m = pat.search(context)
+        if m:
+            article_model_found = True
+            article_model_pos = (m.start() + m.end()) // 2
+            break
+    
+    if not article_model_found:
+        return False
+    
+    # Check for OTHER model names in context that are CLOSER to the spec
+    all_aliases = _get_all_model_aliases()
+    article_model_lower = None
+    for pat in model_patterns:
+        # Extract the literal string from the pattern
+        if hasattr(pat, 'pattern'):
+            # Simple pattern: just re.escape(model_name)
+            article_model_lower = pat.pattern.replace('\\', '').lower()
+            break
+    
+    closest_other_dist = float('inf')
+    closest_other_model = None
+    
+    for alias, canonical in all_aliases.items():
+        if canonical.lower() == (article_model_lower or ''):
+            continue  # Skip the article's own model
+        pos = context.find(alias)
+        if pos >= 0:
+            dist = abs(pos - context_mid)
+            if dist < closest_other_dist:
+                closest_other_dist = dist
+                closest_other_model = canonical
+    
+    # If another model is significantly closer, reject
+    if closest_other_model and article_model_pos is not None:
+        article_dist = abs(article_model_pos - context_mid)
+        # Require the article model to be at least 2x closer than the other model
+        if closest_other_dist < article_dist * 0.5:
+            return False
+    
+    return True
 
 
 def _validate_article_model_scope(

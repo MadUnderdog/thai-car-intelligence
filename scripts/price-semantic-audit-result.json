@@ -1,0 +1,7 @@
+{
+  "file_path": "/home/ubuntu/Projects/thai-car-intelligence/scripts/price-semantic-audit.sql",
+  "total_active": 400,
+  "suspicious_found": 352,
+  "quarantined": 0,
+  "summary": "Ran 7-section audit against 400 active (non-quarantined) prices. Found 352 suspicious prices (536 flagged records). Key findings: (1) URL series_code mismatch: 2 prices — Corolla Altis mapped to GR Corolla (grcorolla) and altis_grsport URLs, confirmed cross-model contamination. (2) Suspiciously high prices: 18 prices above thresholds — Corolla Altis HEV at 4.2M THB, Civic Type R at 3.99M, Kia EV9 at 3.9M, Yaris ICE at 3.5M (5x), Isuzu MU-X at 3.25M, Kia Carnival at 2.99M. (3) Cross-source disagreement >20%: 22 variants with 3+ sources disagreeing — worst: Yaris ICE 499% spread, Corolla Altis HEV 362%, X-Trail 292%, Mirage 222%. (4) Stale current prices >6 months: 0 (all fetched recently). (5) No VehicleUniverse match: 261 prices across BYD (ATTO 2, Dolphin, Seal, Sealion 7), Honda (Accord, City, Civic, CR-V, HR-V, WR-V), Toyota (Corolla Cross, bZ4X, Fortuner, Hilux, Innova Zenix, Veloz, Yaris, Yaris ATIV, Yaris Cross), Nissan (Kicks, Leaf, Livina, March, Serena, X-Trail), MG (MG4, MG5, ZS, EXTENDER, S5 EV PLUS, URBAN), Mitsubishi (Attrage, Pajero Sport), Mazda (CX-3, CX-5), Hyundai (Ioniq 5, Santa Fe). (6) Grouped by brand/model: 49 brand-model groups flagged. Top offenders: Nissan Navara (35), Toyota Yaris ATIV (20), Toyota Yaris Cross (19), Toyota Corolla Cross (18), Toyota Fortuner (18). No records were actually quarantined — this was an audit-only run."
+}

@@ -1,0 +1,19 @@
+{
+  "brand": "bmw",
+  "brand_display": "BMW",
+  "status": "NO_PRICES",
+  "source_url": "https://www.9carthai.com/bmw-price/",
+  "article_title": "BMW 2026-2027 ราคารถ บีเอ็มดับเบิลยู - 9CARTHAI : 9CARTHAI",
+  "prices": [],
+  "specs": [],
+  "sources": [
+    "https://www.9carthai.com/bmw-price/"
+  ],
+  "failures": [
+    {
+      "reason": "No model+price matches"
+    }
+  ],
+  "rejection_count": 0,
+  "extraction_ts": "2026-09-20T15:30:05.947771"
+}

@@ -1,0 +1,110 @@
+{
+  "brand": "bmw",
+  "prices": [
+    {
+      "brand": "bmw",
+      "model": "X5",
+      "variant": "__MODEL_RANGE__",
+      "amount": 15000000,
+      "source_url": "https://www.headlightmag.com/2026-06-11-picture-specs-lexus-lx500d-premium/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_official_price",
+      "content_hash": "5bee0ca6a74052cd",
+      "article_title": "ภาพคันจริง Lexus LX500d Premium | 15,000,000 บาท นำเข้าทั้งคัน (CBU) - HeadLight Magazine",
+      "evidence_excerpt": "er-wjs\")); ภาพคันจริง Lexus LX500d Premium &nbsp; ราคาอย่างเป็นทางการ Lexus LX500d Premium : 15,000,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศญี่ปุ่น &nbsp; ขนาดแ"
+    },
+    {
+      "brand": "bmw",
+      "model": "X5",
+      "variant": "Premium",
+      "amount": 15000000,
+      "source_url": "https://www.headlightmag.com/2026-06-11-picture-specs-lexus-lx500d-premium/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_table_row",
+      "content_hash": "f4488ff8cd32317c",
+      "article_title": "ภาพคันจริง Lexus LX500d Premium | 15,000,000 บาท นำเข้าทั้งคัน (CBU) - HeadLight Magazine",
+      "evidence_excerpt": "ภาพคันจริง Lexus LX500d Premium | 15,000,000 บาท นำเข้าทั้งคัน (CBU) - HeadLight Magazine window._wpemojiSettings = {\"baseUr"
+    },
+    {
+      "brand": "bmw",
+      "model": "X5",
+      "variant": "__GENERIC__",
+      "amount": 15000000,
+      "source_url": "https://www.headlightmag.com/2026-06-11-picture-specs-lexus-lx500d-premium/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_generic_price",
+      "content_hash": "f8a194190056d460",
+      "article_title": "ภาพคันจริง Lexus LX500d Premium | 15,000,000 บาท นำเข้าทั้งคัน (CBU) - HeadLight Magazine",
+      "evidence_excerpt": "ภาพคันจริง Lexus LX500d Premium | 15,000,000 บาท นำเข้าทั้งคัน (CBU) - HeadLight Magazine window._"
+    }
+  ],
+  "specs": [
+    {
+      "brand": "bmw",
+      "model": "X5",
+      "variant": "__MODEL__",
+      "field": "power_hp",
+      "value": "304.0",
+      "unit": "hp",
+      "source_url": "https://www.headlightmag.com/2026-06-11-picture-specs-lexus-lx500d-premium/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "44d183fb7e3c3676",
+      "article_title": "ภาพคันจริง Lexus LX500d Premium | 15,000,000 บาท นำเข้าทั้งคัน (CBU) - HeadLight Magazine",
+      "evidence_excerpt": "ซี พ่วงระบบอัดอากาศ Twin-Turbocharged กำลังสูงสุด 304 แรงม้า (HP) ที่ 4,000 รอบ/นาที แรงบิดสูงสุด 700 นิวตันเม"
+    },
+    {
+      "brand": "bmw",
+      "model": "X5",
+      "variant": "__MODEL__",
+      "field": "power_hp",
+      "value": "304.0",
+      "unit": "hp",
+      "source_url": "https://www.headlightmag.com/2026-06-11-picture-specs-lexus-lx500d-premium/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "44d183fb7e3c3676",
+      "article_title": "ภาพคันจริง Lexus LX500d Premium | 15,000,000 บาท นำเข้าทั้งคัน (CBU) - HeadLight Magazine",
+      "evidence_excerpt": ",000 &#8211; 15,500,000 บาท | ดีเซล V6 3.3L Turbo 304 แรงม้า 700 นิวตันเมตร lexus lx Lexus LX 500d Lexus LX 50"
+    },
+    {
+      "brand": "bmw",
+      "model": "X5",
+      "variant": "__MODEL__",
+      "field": "torque_nm",
+      "value": "700.0",
+      "unit": "Nm",
+      "source_url": "https://www.headlightmag.com/2026-06-11-picture-specs-lexus-lx500d-premium/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "f9ff4beb1fe7827e",
+      "article_title": "ภาพคันจริง Lexus LX500d Premium | 15,000,000 บาท นำเข้าทั้งคัน (CBU) - HeadLight Magazine",
+      "evidence_excerpt": "ด 304 แรงม้า (HP) ที่ 4,000 รอบ/นาที แรงบิดสูงสุด 700 นิวตันเมตร ที่ 1,600 – 2,600 รอบ/นาที จับคู่กับเกียร์อัตโนมั"
+    },
+    {
+      "brand": "bmw",
+      "model": "X5",
+      "variant": "__MODEL__",
+      "field": "torque_nm",
+      "value": "700.0",
+      "unit": "Nm",
+      "source_url": "https://www.headlightmag.com/2026-06-11-picture-specs-lexus-lx500d-premium/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "f9ff4beb1fe7827e",
+      "article_title": "ภาพคันจริง Lexus LX500d Premium | 15,000,000 บาท นำเข้าทั้งคัน (CBU) - HeadLight Magazine",
+      "evidence_excerpt": "; 15,500,000 บาท | ดีเซล V6 3.3L Turbo 304 แรงม้า 700 นิวตันเมตร lexus lx Lexus LX 500d Lexus LX 500d Premium Lexu"
+    }
+  ],
+  "sources": [
+    "https://www.headlightmag.com/2026-06-11-picture-specs-lexus-lx500d-premium/"
+  ],
+  "failures": []
+}

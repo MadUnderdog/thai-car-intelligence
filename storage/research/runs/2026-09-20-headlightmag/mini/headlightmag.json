@@ -1,0 +1,108 @@
+{
+  "brand": "mini",
+  "prices": [
+    {
+      "brand": "mini",
+      "model": "Mini",
+      "variant": "__MODEL_RANGE__",
+      "amount": 2099000,
+      "source_url": "https://www.headlightmag.com/official-price-mini-aceman-collections-mini-aceman-collections-multitone-shadow-jcw/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_official_price",
+      "content_hash": "169afd3a12af010f",
+      "article_title": "ราคาอย่างเป็นทางการ MINI ACEMAN Collections | Multitone | Shadow | JCW : 1,799,000 - 2,099,000 บาท - HeadLight Magazine",
+      "evidence_excerpt": "ราคาอย่างเป็นทางการ MINI ACEMAN Collections | Multitone | Shadow | JCW : 1,799,000 - 2,099,000 บาท - HeadLight Magazine window._wpemojiSettings = {\""
+    },
+    {
+      "brand": "mini",
+      "model": "Mini",
+      "variant": "__MODEL_RANGE__",
+      "amount": 1799000,
+      "source_url": "https://www.headlightmag.com/official-price-mini-aceman-collections-mini-aceman-collections-multitone-shadow-jcw/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_official_price",
+      "content_hash": "c7b172212d0cddbe",
+      "article_title": "ราคาอย่างเป็นทางการ MINI ACEMAN Collections | Multitone | Shadow | JCW : 1,799,000 - 2,099,000 บาท - HeadLight Magazine",
+      "evidence_excerpt": ");};return t;}(document,\"script\",\"twitter-wjs\")); ราคาอย่างเป็นทางการ MINI ACEMAN Collections Aceman SE Multitone Collection : 1,799,000 บาท Aceman SE Shadow Collection : 1,999,000 บาท Acema"
+    },
+    {
+      "brand": "mini",
+      "model": "Mini",
+      "variant": "__GENERIC__",
+      "amount": 2099000,
+      "source_url": "https://www.headlightmag.com/official-price-mini-aceman-collections-mini-aceman-collections-multitone-shadow-jcw/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_generic_price",
+      "content_hash": "202ea0d503279b29",
+      "article_title": "ราคาอย่างเป็นทางการ MINI ACEMAN Collections | Multitone | Shadow | JCW : 1,799,000 - 2,099,000 บาท - HeadLight Magazine",
+      "evidence_excerpt": "ราคาอย่างเป็นทางการ MINI ACEMAN Collections | Multitone | Shadow | JCW : 1,799,000 - 2,099,000 บาท - HeadLight Magazine window._wpemojiSettings = {\""
+    },
+    {
+      "brand": "mini",
+      "model": "Mini",
+      "variant": "__GENERIC__",
+      "amount": 1799000,
+      "source_url": "https://www.headlightmag.com/official-price-mini-aceman-collections-mini-aceman-collections-multitone-shadow-jcw/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_generic_price",
+      "content_hash": "c82c79df4b9f26da",
+      "article_title": "ราคาอย่างเป็นทางการ MINI ACEMAN Collections | Multitone | Shadow | JCW : 1,799,000 - 2,099,000 บาท - HeadLight Magazine",
+      "evidence_excerpt": "ent,\"script\",\"twitter-wjs\")); ราคาอย่างเป็นทางการ MINI ACEMAN Collections Aceman SE Multitone Collection : 1,799,000 บาท Aceman SE Shadow Collection : 1,999,000 บาท Acema"
+    }
+  ],
+  "specs": [
+    {
+      "brand": "mini",
+      "model": "Mini",
+      "variant": "__MODEL__",
+      "field": "power_hp",
+      "value": "218.0",
+      "unit": "hp",
+      "source_url": "https://www.headlightmag.com/official-price-mini-aceman-collections-mini-aceman-collections-multitone-shadow-jcw/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "8e5cb2583ee846d3",
+      "article_title": "ราคาอย่างเป็นทางการ MINI ACEMAN Collections | Multitone | Shadow | JCW : 1,799,000 - 2,099,000 บาท - HeadLight Magazine",
+      "evidence_excerpt": "D ด้วยมอเตอร์ไฟฟ้า กำลังสูงสุด 160 กิโลวัตต์ หรือ 218 แรงม้า (HP) แรงบิดสูงสุด 330 นิวตันเมตร พ่วงด้วยแบตเตอรี"
+    },
+    {
+      "brand": "mini",
+      "model": "Mini",
+      "variant": "__MODEL__",
+      "field": "torque_nm",
+      "value": "330.0",
+      "unit": "Nm",
+      "source_url": "https://www.headlightmag.com/official-price-mini-aceman-collections-mini-aceman-collections-multitone-shadow-jcw/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "2740abb3ffa82f5e",
+      "article_title": "ราคาอย่างเป็นทางการ MINI ACEMAN Collections | Multitone | Shadow | JCW : 1,799,000 - 2,099,000 บาท - HeadLight Magazine",
+      "evidence_excerpt": "ด 160 กิโลวัตต์ หรือ 218 แรงม้า (HP) แรงบิดสูงสุด 330 นิวตันเมตร พ่วงด้วยแบตเตอรี่ Lithium-ion NMC ความจุ 54.2 kWh"
+    },
+    {
+      "brand": "mini",
+      "model": "Mini",
+      "variant": "__MODEL__",
+      "field": "battery_kwh",
+      "value": "54.2",
+      "unit": "kWh",
+      "source_url": "https://www.headlightmag.com/official-price-mini-aceman-collections-mini-aceman-collections-multitone-shadow-jcw/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "2dec41c3e6a5130c",
+      "article_title": "ราคาอย่างเป็นทางการ MINI ACEMAN Collections | Multitone | Shadow | JCW : 1,799,000 - 2,099,000 บาท - HeadLight Magazine",
+      "evidence_excerpt": "วตันเมตร พ่วงด้วยแบตเตอรี่ Lithium-ion NMC ความจุ 54.2 kWh รองรับการชาร์จไฟฟ้ากระแสสลับ AC สูงสุด 11 kW และร"
+    }
+  ],
+  "sources": [
+    "https://www.headlightmag.com/official-price-mini-aceman-collections-mini-aceman-collections-multitone-shadow-jcw/"
+  ],
+  "failures": []
+}

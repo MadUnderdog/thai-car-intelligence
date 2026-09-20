@@ -1,0 +1,47 @@
+[
+  {
+    "brand": "mazda",
+    "model": "ภาพคันจริง Mazda 6e Exclusive",
+    "variant": "าร Mazda 6e Exclusive",
+    "price_thb": 1199000,
+    "price_type": "VARIANT_MSRP",
+    "source_url": "https://www.headlightmag.com/2026-09-28-picture-specs-mazda-6e-exclusive/",
+    "source_class": "AUTO_MEDIA",
+    "trust_state": "RESEARCH_UNVERIFIED",
+    "extraction_method": "media_article",
+    "evidence_excerpt": "da 6e Exclusive &nbsp; ราคาอย่างเป็นทางการ Mazda 6e Exclusive : 1,199,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศจีน พร้อมร",
+    "content_hash": "a6ce5cd384dc8d7a",
+    "timestamp": "2026-09-20T02:48:07.033268",
+    "article_title": "ภาพคันจริง Mazda 6e Exclusive"
+  },
+  {
+    "brand": "mazda",
+    "model": "ภาพคันจริง Mazda 6e Exclusive",
+    "variant": "อง Mazda 6e Exclusive",
+    "price_thb": 1199000,
+    "price_type": "VARIANT_MSRP",
+    "source_url": "https://www.headlightmag.com/2026-09-28-picture-specs-mazda-6e-exclusive/",
+    "source_class": "AUTO_MEDIA",
+    "trust_state": "RESEARCH_UNVERIFIED",
+    "extraction_method": "media_article",
+    "evidence_excerpt": "Mazda 6e ผลทดสอบ อัตราเร่ง อัตราสิ้นเปลือง Mazda 6e Exclusive : 1,199,000 บาท ราคาอย่างเป็นทางการ Mazda 6e : 1,169,00",
+    "content_hash": "23444e165c812270",
+    "timestamp": "2026-09-20T02:48:07.033283",
+    "article_title": "ภาพคันจริง Mazda 6e Exclusive"
+  },
+  {
+    "brand": "mazda",
+    "model": "ภาพคันจริง Mazda 6e Exclusive",
+    "variant": "นทางการ Mazda 6e",
+    "price_thb": 1169000,
+    "price_type": "VARIANT_MSRP",
+    "source_url": "https://www.headlightmag.com/2026-09-28-picture-specs-mazda-6e-exclusive/",
+    "source_class": "AUTO_MEDIA",
+    "trust_state": "RESEARCH_UNVERIFIED",
+    "extraction_method": "media_article",
+    "evidence_excerpt": "e Exclusive : 1,199,000 บาท ราคาอย่างเป็นทางการ Mazda 6e : 1,169,000 &#8211; 1,199,000 บาท | 258 แรงม้า RWD แ",
+    "content_hash": "dc57d51f13cb2ab7",
+    "timestamp": "2026-09-20T02:48:07.033287",
+    "article_title": "ภาพคันจริง Mazda 6e Exclusive"
+  }
+]

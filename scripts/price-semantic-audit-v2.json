@@ -1,0 +1,63 @@
+{
+  "by_brand": {
+    "MG": {
+      "WRONG_VARIANT": 8,
+      "MODEL_RANGE_MISUSED": 1,
+      "CROSS_SOURCE_CONFLICT": 6
+    },
+    "BYD": {
+      "VALID": 2,
+      "WRONG_VARIANT": 10,
+      "CROSS_SOURCE_CONFLICT": 13
+    },
+    "Kia": {
+      "VALID": 2,
+      "CROSS_SOURCE_CONFLICT": 4
+    },
+    "Honda": {
+      "VALID": 12,
+      "WRONG_VARIANT": 18
+    },
+    "Isuzu": {
+      "CROSS_SOURCE_CONFLICT": 10
+    },
+    "Mazda": {
+      "VALID": 1,
+      "WRONG_VARIANT": 1,
+      "CROSS_SOURCE_CONFLICT": 5
+    },
+    "Nissan": {
+      "VALID": 3,
+      "WRONG_VARIANT": 15,
+      "MODEL_RANGE_MISUSED": 1,
+      "CROSS_SOURCE_CONFLICT": 73
+    },
+    "Toyota": {
+      "VALID": 17,
+      "WRONG_MODEL": 1,
+      "WRONG_VARIANT": 33,
+      "MODEL_RANGE_MISUSED": 3,
+      "CROSS_SOURCE_CONFLICT": 124
+    },
+    "Hyundai": {
+      "VALID": 2,
+      "WRONG_VARIANT": 4
+    },
+    "Mitsubishi": {
+      "VALID": 7,
+      "WRONG_VARIANT": 5,
+      "CROSS_SOURCE_CONFLICT": 17
+    }
+  },
+  "file_path": "/home/ubuntu/Projects/thai-car-intelligence/scripts/price-semantic-audit-v2.json",
+  "valid_count": 46,
+  "total_classified": 398,
+  "disposition_counts": {
+    "VALID": 46,
+    "WRONG_MODEL": 1,
+    "WRONG_VARIANT": 94,
+    "MODEL_RANGE_MISUSED": 5,
+    "CROSS_SOURCE_CONFLICT": 252
+  },
+  "quarantine_candidates": 352
+}

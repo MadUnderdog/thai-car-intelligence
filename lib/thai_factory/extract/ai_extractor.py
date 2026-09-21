@@ -29,6 +29,10 @@ NAV_KEYWORDS = ["หน้าแรก", "Review By Brand", "View by Brand", "Vi
                 "Sign in", "Search", "Close", "Accept", "Read more", "Copyright",
                 "Privacy Policy", "Terms of Use", "WEBBOARD", "CONTACT"]
 
+# Price keywords for deterministic pre-scan
+_PRICE_KEYWORDS = re.compile(r'[\d,]+(?:\.\d+)?\s*(?:บาท|฿|THB|ล้าน|ล้านบาท)|xx,xxx|xxx,xxx|ราคา|price', re.I)
+_PRICE_EVIDENCE_KEYWORDS = re.compile(r'คาด|ประมาณ|ราคาเปิดตัว|ราคาเริ่มต้น|MSRP|โปรโมชัน|discount', re.I)
+
 
 # ─── AI Config ─────────────────────────────────────────────────────
 def _load_env():
@@ -99,7 +103,6 @@ def _is_nav_block(block):
 
 
 def _filter_article_blocks(blocks):
-    """Return block IDs that are article body (not nav/sidebar)."""
     ids = []
     heading_count = 0
     in_article = False
@@ -126,6 +129,24 @@ def _filter_article_blocks(blocks):
     return ids
 
 
+def _scan_price_blocks(blocks, article_ids):
+    """Deterministic pre-scan: find ALL article blocks containing price figures."""
+    price_ids = []
+    evidence_ids = []
+    for b in blocks:
+        if b.block_id not in article_ids:
+            continue
+        # Skip navigation/social/share blocks
+        t = b.content.strip()
+        if len(t) < 20 or t.startswith("Share") or "facebook.com/sharer" in t:
+            continue
+        if _PRICE_KEYWORDS.search(b.content):
+            price_ids.append(b.block_id)
+        if _PRICE_EVIDENCE_KEYWORDS.search(b.content):
+            evidence_ids.append(b.block_id)
+    return price_ids, evidence_ids
+
+
 # ─── Compact Serialization ─────────────────────────────────────────
 def _compact_line(block):
     h = block.heading_context[:40] if block.heading_context else ""
@@ -149,9 +170,8 @@ def _region_text(blocks, ids):
     return "\n".join(lines)
 
 
-# ─── Block Snapshots (for artifact) ───────────────────────────────
+# ─── Block Snapshots ───────────────────────────────────────────────
 def _build_block_snapshots(blocks, region_ids):
-    """Build block_id -> {content, heading, region_id} map."""
     snapshots = {}
     for b in blocks:
         if b.block_id in region_ids:
@@ -177,9 +197,15 @@ document_type: ARTICLE|PRICE_LIST|SPEC_SHEET|ROUNDUP|COMPARISON|LAUNCH|UNKNOWN
 decision: SINGLE_MODEL|SINGLE_VARIANT|MULTI_MODEL_EXPLICIT|COMPARISON|ROUNDUP|GENERIC_LISTING|UNKNOWN
 ALL VALUES UPPERCASE.
 
-IMPORTANT: price_block_ids MUST list every block containing a price figure (บาท, ราคา, THB, million, ล้าน).
-price_evidence_block_ids MUST list blocks containing price-type justification (คาด, ประมาณ, ราคาเปิดตัว, MSRP).
-If a block has both a price and its justification, include it in BOTH lists.
+CRITICAL RULES for price_block_ids:
+- EVERY block containing ANY price figure (บาท, ราคา, THB, million, ล้าน, xx,xxx) MUST be in price_block_ids.
+- price_evidence_block_ids MUST contain blocks with price-type justification words (คาด, ประมาณ, ราคาเปิดตัว).
+- If a block appears in BOTH lists, include it in BOTH.
+- Missing a price block = the observation will be REJECTED.
+
+DETERMINISTIC PRICE BLOCKS (pre-scanned):
+The following blocks have been identified as containing price content. You MUST include ALL of them in price_block_ids:
+{price_blocks}
 
 BLOCKS:
 {blocks}"""
@@ -199,11 +225,11 @@ def _stage_b_prompt(brand, model, blocks):
 field: price|engine_l|horsepower_hp|torque_nm|fuel_type|transmission|drivetrain|battery_kwh|range_km|seats|body_type
 Each observation MUST reference a block_id from below.
 evidence_quote MUST be exact substring of that block's content.
-The evidence_quote MUST be specific to the claimed field — not a generic nearby sentence.
+The evidence_quote MUST be specific to the claimed field.
 For price: the quote MUST contain the actual price figure.
-For fuel_type: the quote MUST contain a fuel/powertrain term (เบนซิน, ดีเซล, ไฟฟ้า, hybrid).
-For transmission: the quote MUST contain a transmission term (เกียร์อัตโนมัติ, CVT, manual, 6AT, 6MT).
-price_type_evidence_quote MUST contain the wording justifying price_type (ราคาเปิดตัว→MSRP, คาดเริ่มต้น→MODEL_RANGE, โปรโมชัน→PROMOTION).
+For fuel_type: the quote MUST contain a fuel/powertrain term.
+For transmission: the quote MUST contain a transmission term.
+price_type_evidence_quote MUST contain the wording justifying price_type.
 
 BLOCKS:
 {blocks}"""
@@ -219,8 +245,12 @@ def extract_observations(page):
     if len(article_ids) < 3:
         article_ids = all_ids
 
+    # Deterministic price pre-scan
+    price_ids, price_evidence_ids = _scan_price_blocks(page.blocks, article_ids)
+
     bt = _compact_text(page.blocks, article_ids)
-    pa = STAGE_A_PROMPT.format(blocks=bt)
+    price_blocks_text = "\n".join(f"  [{pid}] (MUST be in price_block_ids)" for pid in price_ids)
+    pa = STAGE_A_PROMPT.format(blocks=bt, price_blocks=price_blocks_text or "  (none found)")
     ra = _call_ai(pa)
     if not ra:
         return _empty("Stage A failed")
@@ -231,6 +261,22 @@ def extract_observations(page):
     if not ab_ids:
         ab_ids = article_ids
     regions = ra.get("vehicle_regions", [])
+
+    # Enforce: price_block_ids must include all pre-scanned price blocks
+    for reg in regions:
+        existing_pids = set(reg.get("price_block_ids", []))
+        # Add any pre-scanned price blocks that are in the region
+        region_blocks = set(reg.get("region_block_ids", []))
+        for pid in price_ids:
+            if pid in region_blocks or pid in ab_ids:
+                existing_pids.add(pid)
+        reg["price_block_ids"] = sorted(list(existing_pids))
+        # Same for price_evidence_block_ids
+        existing_peids = set(reg.get("price_evidence_block_ids", []))
+        for peid in price_evidence_ids:
+            if peid in region_blocks or peid in ab_ids:
+                existing_peids.add(peid)
+        reg["price_evidence_block_ids"] = sorted(list(existing_peids))
 
     all_obs, all_rej, all_rev = [], [], []
 
@@ -256,9 +302,7 @@ def extract_observations(page):
             return [], [], [{"brand": brand, "model": model, "error": "Stage B timeout/error"}]
 
         obs = rb.get("observations", [])
-        # Validate: block_id must be in the scoped set for this region
-        scoped_ids = scoped
-        v, r, rv = _validate(obs, scoped_ids, page.blocks, region)
+        v, r, rv = _validate(obs, scoped, page.blocks, region)
         return v, r, rv
 
     with ThreadPoolExecutor(max_workers=3) as ex:
@@ -303,7 +347,6 @@ def _validate_stage_a(result, block_ids):
         for bid in reg.get("region_block_ids", []):
             if bid not in block_ids:
                 errs.append(f"Region {i}: block '{bid}' not found")
-        # price_block_ids must be populated if any price data exists
         if not reg.get("price_block_ids"):
             errs.append(f"Region {i}: price_block_ids is empty — Stage A must identify price blocks")
     return errs
@@ -313,6 +356,8 @@ def _validate(observations, valid_ids, blocks, region):
     acc, rej, rev = [], [], []
     bmap = {b.block_id: b for b in blocks}
     rbrand = region.get("brand", "")
+    price_ids = set(region.get("price_block_ids", []))
+    price_evidence_ids = set(region.get("price_evidence_block_ids", []))
 
     for obs in observations:
         errs = []
@@ -323,6 +368,10 @@ def _validate(observations, valid_ids, blocks, region):
         bid = obs.get("block_id", "")
         if bid and bid not in valid_ids:
             errs.append(f"block_id '{bid}' not in region scope")
+        # Price observations must reference a price_block_id
+        if obs.get("field") == "price" and bid and price_ids:
+            if bid not in price_ids:
+                errs.append(f"Price block '{bid}' not in price_block_ids")
         # Evidence quote MUST be exact substring of the block
         q = obs.get("evidence_quote", "")
         if bid and q:
@@ -337,6 +386,18 @@ def _validate(observations, valid_ids, blocks, region):
             eblk = bmap.get(ebid)
             if eblk and q not in eblk.content:
                 errs.append(f"evidence_quote not in evidence_block {ebid}")
+        # price_type_evidence_block_id must be in price_evidence_block_ids
+        ptbid = obs.get("price_type_evidence_block_id", "")
+        if ptbid and price_evidence_ids and ptbid not in price_evidence_ids:
+            errs.append(f"price_type_evidence_block '{ptbid}' not in price_evidence_block_ids")
+        if ptbid and ptbid not in valid_ids:
+            errs.append(f"price_type_evidence_block '{ptbid}' not in region scope")
+        # price_type_evidence_quote must be in its block
+        ptq = obs.get("price_type_evidence_quote", "")
+        if ptbid and ptq:
+            ptblk = bmap.get(ptbid)
+            if ptblk and ptq not in ptblk.content:
+                errs.append(f"price_type_evidence_quote not in block {ptbid}")
         # Field validation
         f = obs.get("field", "")
         if f not in ALLOWED_FIELDS:
@@ -364,8 +425,6 @@ def _validate(observations, valid_ids, blocks, region):
 
 
 # ─── Code-based Normalization (deterministic, post-AI) ────────────
-import re as _re
-
 _BODY_TYPE_MAP = {
     "sedan": "Sedan", "c-sedan": "Sedan", "d-sedan": "Sedan",
     "suv": "SUV", "c-suv": "SUV", "b-suv": "SUV", "d-suv": "SUV", "compact suv": "SUV",
@@ -390,11 +449,10 @@ _DRIVETRAIN_MAP = {
     "awd": "AWD", "all-wheel drive": "AWD", "4wd": "4WD", "4x4": "4WD",
 }
 
-_BODY_RE = _re.compile(r"[Cc]-?SUV|[Bb]-?SUV|[Dd]-?SUV|SUV|MPV|PPV|Sedan|Hatchback|Coupe|Pickup", _re.I)
+_BODY_RE = re.compile(r"[Cc]-?SUV|[Bb]-?SUV|[Dd]-?SUV|SUV|MPV|PPV|Sedan|Hatchback|Coupe|Pickup", re.I)
 
 
 def _normalize_price_type(raw_value, price_type):
-    """Deterministic price_type normalization. Only normalizes, never creates semantics."""
     r = raw_value.lower()
     if "xx" in r or "xxx" in r:
         return "MODEL_RANGE"
@@ -406,42 +464,41 @@ def _normalize_price_type(raw_value, price_type):
 
 
 def _normalize_value(field, raw):
-    """Deterministic normalization. Transforms units/numbers only; never creates semantics."""
     r = raw.strip()
     if field == "price":
         if "xx" in r.lower() or "xxx" in r.lower():
-            m = _re.search(r"(\d)xx", r)
+            m = re.search(r"(\d)xx", r)
             if m:
                 base = int(m.group(1)) * 100000
                 return f"{base}-{base+99999} THB"
             return "UNRESOLVED THB"
-        nums = _re.findall(r"[\d,]+(?:\.\d+)?", r.replace(",", ""))
+        nums = re.findall(r"[\d,]+(?:\.\d+)?", r.replace(",", ""))
         if nums:
             return f"{nums[0].replace(',','')} THB"
         return "UNRESOLVED THB"
     elif field == "horsepower_hp":
-        m = _re.search(r"(\d+)", r)
+        m = re.search(r"(\d+)", r)
         return f"{m.group(1)} HP" if m else "UNRESOLVED HP"
     elif field == "torque_nm":
-        m = _re.search(r"(\d+)", r)
+        m = re.search(r"(\d+)", r)
         return f"{m.group(1)} Nm" if m else "UNRESOLVED Nm"
     elif field == "engine_l":
-        m = _re.search(r"(\d+\.?\d*)", r)
+        m = re.search(r"(\d+\.?\d*)", r)
         return f"{m.group(1)}L" if m else "UNRESOLVED L"
     elif field == "battery_kwh":
-        m = _re.search(r"(\d+\.?\d*)", r)
+        m = re.search(r"(\d+\.?\d*)", r)
         return f"{m.group(1)} kWh" if m else "UNRESOLVED kWh"
     elif field == "range_km":
-        m = _re.search(r"(\d+)", r)
+        m = re.search(r"(\d+)", r)
         return f"{m.group(1)} km" if m else "UNRESOLVED km"
     elif field == "seats":
-        m = _re.search(r"(\d+)\s*ที่นั่ง", r)
+        m = re.search(r"(\d+)\s*ที่นั่ง", r)
         if m:
             return m.group(1)
-        m = _re.search(r"(\d+)\s*seat", r.lower())
+        m = re.search(r"(\d+)\s*seat", r.lower())
         if m:
             return m.group(1)
-        m = _re.search(r"(\d+)", r)
+        m = re.search(r"(\d+)", r)
         return m.group(1) if m else "UNRESOLVED"
     elif field == "fuel_type":
         low = r.lower()
@@ -474,7 +531,6 @@ def _normalize_value(field, raw):
 
 
 def _apply_normalization(observations):
-    """Apply code-based normalization to all observations."""
     for obs in observations:
         obs["normalized_value"] = _normalize_value(obs.get("field", ""), obs.get("raw_value", ""))
         if obs.get("field") == "price":

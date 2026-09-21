@@ -1,65 +1,40 @@
 {
   "auditVersion": "2.0.0",
-  "runId": "ext-web-audit-20260921-rebuild",
-  "timestamp": "2026-09-21T04:30:00Z",
+  "runId": "ext-web-audit-20260921-115049",
+  "timestamp": "2026-09-21T04:50:49.233317+00:00",
+  "bundleCommitSHA": "58c5c483365f3c65bfdea59f156dda297e2fb7a5",
+  "generatorCommitSHA": "58c5c483365f3c65bfdea59f156dda297e2fb7a5",
   "branch": "fix/p1-provenance-gate",
-  "commitSHA": "1129c234b0757158b49edff7d56a4c8f96420c46",
   "dbSnapshot": {
-    "timestamp": "2026-09-21T04:30:00Z",
-    "postgresql": "16.14 (Debian 16.14-1.pgdg124+1)",
-    "prismaMigrations": 6,
-    "lastMigration": "2026-09-17T11:30:46.058618+00:00"
-  },
-  "sampleCounts": {
-    "priceSamples": 28,
-    "specSamples": 38,
-    "totalSourceUrls": 27,
-    "allEntityProven": true
-  },
-  "sourceBreakdown": {
-    "oemApiUrls": 17,
-    "specificModelPages": 9,
-    "articleUrls": 1
-  },
-  "rejectionLog": [
-    {
-      "type": "price",
-      "reason": "Generic brand page",
-      "urls": [
-        "https://www.9carthai.com/toyota-price/",
-        "https://www.9carthai.com/honda-price/",
-        "https://www.9carthai.com/byd-price/",
-        "https://www.9carthai.com/mg-price/",
-        "https://www.9carthai.com/nissan-price/"
-      ],
-      "action": "Replaced with specific model pages or OEM API URLs"
-    },
-    {
-      "type": "spec",
-      "reason": "series_code mismatch",
-      "details": "Corolla Altis HEV spec pointing to grcorolla (GR Corolla) URL",
-      "action": "Rejected 1 spec sample"
-    }
-  ],
-  "dbTotals": {
+    "timestamp": "2026-09-21T04:50:48.007309+00:00",
     "manufacturers": 34,
-    "carModels": 157,
+    "models": 157,
     "variants": 343,
-    "variantSpecs": 6993,
-    "activeSpecs": 6840,
-    "quarantinedSpecs": 153,
-    "currentPrices": 96,
-    "allPrices": 767,
-    "sources": 21,
-    "sourceDocuments": 2455
+    "prices_total": 767,
+    "prices_current": 96,
+    "prices_current_clean": 18,
+    "specs_total": 6993,
+    "specs_active": 6583,
+    "source_documents": 2455,
+    "observations": 0,
+    "quarantined_prices": 79,
+    "quarantined_specs": 410
   },
-  "dataGenerationCommitSHA": "276afda",
-  "repairedAt": "2026-09-21T04:04:32.249177+00:00",
-  "repairs": [
-    "Quarantined Nissan Almera E 200000 THB (not credible, official is 573000)",
-    "Quarantined Toyota Corolla Altis HEV 4199000 THB (GR Corolla contamination)",
-    "Quarantined Honda CR-V engine_cc=660 (should be 1993)",
-    "Quarantined Subaru Crosstrek range_km=19.5 (is fuel consumption, not range)",
-    "Quarantined BYD Seal Dynamic RWD fuel_type=Plug-in Hybrid (contradicts EV)"
-  ]
+  "samples": {
+    "price_samples": 28,
+    "spec_samples": 38,
+    "total": 66,
+    "real_urls": 66
+  },
+  "verification": {
+    "PASS_VALUE_AND_ENTITY": 33,
+    "VALUE_MATCH_ENTITY_MISMATCH": 9,
+    "SEMANTIC_MISMATCH": 16,
+    "VARIANT_MISMATCH": 8
+  },
+  "quarantine": {
+    "prices": 79,
+    "specs": 410,
+    "total": 489
+  }
 }

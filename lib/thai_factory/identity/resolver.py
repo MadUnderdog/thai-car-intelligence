@@ -225,3 +225,54 @@ class IdentityResolver:
                 best_brand = brand
                 best_pos = pos
         return best_brand or None
+
+
+# ─── Toyota Series Code Mapping ────────────────────────────────────
+# Maps Toyota OEM API series_code to canonical model name.
+# Used to validate that a source endpoint matches the asserted model.
+TOYOTA_SERIES_CODE_MAP: Dict[str, str] = {
+    "yaris": "Yaris",
+    "yarisativ": "Yaris ATIV",
+    "yaris_cross": "Yaris Cross",
+    "altis": "Corolla Altis",
+    "corollacross": "Corolla Cross",
+    "camry": "Camry",
+    "hilux": "Hilux",
+    "fortuner": "Fortuner",
+    "fortuner_le": "Fortuner Legender",
+    "innovacross": "Innova Zenix",
+    "innova": "Innova Zenix",
+    "veloz": "Veloz",
+    "avanza": "Avanza",
+    "bz4x": "bZ4X",
+    "grcorolla": "GR Corolla",
+    "gryaris": "GR Yaris",
+    "landcruiser": "Land Cruiser",
+    "alphard": "Alphard",
+    "hiace": "Hiace",
+    "commuter": "Commuter",
+}
+
+
+def validate_toyota_series_code(url: str, expected_model: str) -> Tuple[bool, str]:
+    """
+    Validate that a Toyota OEM API URL's series_code matches the expected model.
+    Returns (is_valid, reason).
+    """
+    if "toyota.co.th" not in url:
+        return True, "not_toyota_oem"
+
+    m = re.search(r"series_code=(\w+)", url)
+    if not m:
+        return True, "no_series_code"
+
+    series_code = m.group(1).lower()
+    mapped_model = TOYOTA_SERIES_CODE_MAP.get(series_code)
+
+    if not mapped_model:
+        return False, f"unknown_series_code:{series_code}"
+
+    if mapped_model.lower() == expected_model.lower():
+        return True, "series_code_matches"
+
+    return False, f"series_code_mismatch:{series_code}->{mapped_model}!=expected:{expected_model}"

@@ -196,6 +196,10 @@ class Observation:
     extractor_version: str = "1.0.0"
     observed_at: str = ""
 
+    # Confidence & scope
+    confidence: float = 0.7
+    scope_state: str = ""  # SINGLE_MODEL, MULTI_MODEL, COMPARISON, etc.
+
     # Persistence
     persisted: bool = False
     canonical_model_id: str = ""

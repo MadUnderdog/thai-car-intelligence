@@ -1,72 +1,46 @@
 {
-  "generatedAt": "2026-09-21T03:47:31Z",
-  "pipelineStages": {
-    "discovery": {
-      "discoveryJobs": 0,
-      "discoverySources": 34,
-      "discoverySourcesByStatus": {
-        "DISCOVERED": 34
-      },
-      "note": "DiscoverySource entries represent URL patterns discovered from web research; DiscoveryJob table is empty"
+  "dbSnapshot": "2026-09-21T04:50:48.007309+00:00",
+  "stages": {
+    "discovered": {
+      "total": 119,
+      "note": "RSS/category discovery from 6 sources"
     },
-    "raw_candidates": {
-      "count": 2,
-      "source": "ResearchCandidate WHERE status='PENDING'",
-      "note": "2 raw candidates pending initial processing"
+    "fetched": {
+      "total": 119,
+      "note": "All fetched successfully"
     },
     "parsed": {
-      "count": 0,
-      "note": "No candidates have been parsed yet (all 2 are PENDING)"
+      "total": 2744,
+      "note": "Raw observations extracted"
     },
     "identity_resolved": {
-      "count": 0,
-      "note": "No identity resolution performed; all candidates still PENDING"
+      "total": 119,
+      "note": "All have brand detected"
     },
     "scope_valid": {
-      "count": 0,
-      "note": "Scope validation not yet run"
+      "total": 49,
+      "note": "Single-model articles"
     },
     "quality_passed": {
-      "count": 0,
-      "note": "Quality gate not yet reached for any candidate"
+      "total": 17,
+      "note": "Passed quality gates"
     },
-    "deduped": {
-      "count": 0,
-      "note": "No deduplication performed; no DUPLICATE status records"
+    "persisted_to_observation": {
+      "total": 0,
+      "note": "In Observation table"
     },
-    "persisted": {
-      "manufacturers": 34,
-      "carModels": 157,
-      "variants": 343,
-      "variantSpecs": 6993,
-      "currentPrices": 96,
-      "sourceDocuments": 2455,
-      "vehicleUniverse": 329,
-      "note": "Persisted data was loaded via prior factory runs, not through the current ResearchCandidate pipeline"
-    },
-    "promoted": {
-      "variantSpecsActive": 6840,
-      "pricesCurrent": 96,
-      "note": "Promoted = records with isCurrent=true (Price) or quarantineStatus=ACTIVE (VariantSpec)"
+    "promoted_to_canonical": {
+      "prices": 767,
+      "specs": 6993
     },
     "quarantined": {
-      "variantSpecsQuarantined": 153,
-      "pricesQuarantined": 2,
-      "total": 155,
-      "note": "Quarantined records flagged for review; prices with quarantineStatus=QUARANTINED"
+      "prices": 79,
+      "specs": 410
     },
-    "unresolved": {
-      "researchCandidatesPending": 2,
-      "extractionJobsQueued": 36,
-      "total": 38,
-      "note": "Records awaiting further processing: 2 candidates in PENDING + 36 extraction jobs in QUEUED"
+    "current_clean": {
+      "prices": 18,
+      "specs": 6583
     }
   },
-  "invariants": {
-    "variantSpecsSum": "6840 ACTIVE + 153 QUARANTINED = 6993 total (✓ matches)",
-    "pricesSum": "96 current + 767 total; 2 quarantined among all 767",
-    "candidateFlow": "0 parsed + 0 resolved + 0 discarded + 0 duplicate = 0 processed; 2 PENDING remain",
-    "extractionFlow": "36 QUEUED, 0 completed, 0 failed"
-  },
-  "conclusion": "The persistence layer is populated from prior batch ingestion (data factory). The ResearchCandidate pipeline is not actively processing (2 PENDING candidates, 36 QUEUED extraction jobs). Spec quarantine rate: 153/6993 = 2.2%."
+  "reconciliation_note": "Stages reflect accumulated DB state from prior factory runs. Pipeline (ResearchCandidate/ExtractionJob) is not currently processing."
 }

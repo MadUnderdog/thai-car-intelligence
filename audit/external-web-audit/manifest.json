@@ -3,7 +3,7 @@
   "runId": "ext-web-audit-20260921-104731",
   "timestamp": "2026-09-21T03:47:31Z",
   "branch": "fix/p1-provenance-gate",
-  "commitSHA": "276afda",
+  "commitSHA": "1129c234b0757158b49edff7d56a4c8f96420c46",
   "dbSnapshot": {
     "timestamp": "2026-09-21T03:47:31.330609+00:00",
     "postgresql": "16.14 (Debian 16.14-1.pgdg124+1)",
@@ -54,5 +54,15 @@
     "sourceDocuments": 2455,
     "vehicleUniverse": 329,
     "extractionJobs": 36
-  }
+  },
+  "dataGenerationCommitSHA": "276afda",
+  "auditBundleCommitSHA": "1129c234b0757158b49edff7d56a4c8f96420c46",
+  "repairedAt": "2026-09-21T04:04:32.249177+00:00",
+  "repairs": [
+    "Quarantined Nissan Almera E 200000 THB (not credible, official is 573000)",
+    "Quarantined Toyota Corolla Altis HEV 4199000 THB (GR Corolla contamination)",
+    "Quarantined Honda CR-V engine_cc=660 (should be 1993)",
+    "Quarantined Subaru Crosstrek range_km=19.5 (is fuel consumption, not range)",
+    "Quarantined BYD Seal Dynamic RWD fuel_type=Plug-in Hybrid (contradicts EV)"
+  ]
 }

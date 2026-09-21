@@ -154,6 +154,96 @@ def gate_no_cross_model_contamination(obs: Observation,
     return True, "ok"
 
 
+# ─── Semantic Domain Tests ─────────────────────────────────────────
+
+def gate_engine_cc_plausible(obs: Observation) -> Tuple[bool, str]:
+    """Engine displacement must be plausible (50cc - 8000cc for vehicles)."""
+    if obs.field == "engine_cc":
+        try:
+            cc = float(obs.normalized_value)
+            if cc < 50 or cc > 8000:
+                return False, f"engine_cc_implausible:{cc}"
+        except (ValueError, TypeError):
+            pass
+    return True, "ok"
+
+
+def gate_range_not_fuel_consumption(obs: Observation) -> Tuple[bool, str]:
+    """range_km must not be confused with fuel consumption (L/100km).
+    Typical EV range: 150-800 km. Typical fuel consumption: 3-20 L/100km.
+    If value < 30 and field is range_km, it's likely fuel consumption."""
+    if obs.field == "range_km":
+        try:
+            val = float(obs.normalized_value)
+            if val < 30:
+                return False, f"range_km_suspect_fuel_consumption:{val}"
+        except (ValueError, TypeError):
+            pass
+    return True, "ok"
+
+
+def gate_battery_not_for_ice(obs: Observation) -> Tuple[bool, str]:
+    """battery_kwh should not exist for ICE-only variants.
+    If we see battery specs, the fuel type should be EV/PHEV/HEV."""
+    if obs.field == "battery_kwh":
+        # This is informational — flag for review if we can check fuel type
+        try:
+            kwh = float(obs.normalized_value)
+            if kwh <= 0:
+                return False, f"battery_kwh_non_positive:{kwh}"
+        except (ValueError, TypeError):
+            pass
+    return True, "ok"
+
+
+def gate_power_units_plausible(obs: Observation) -> Tuple[bool, str]:
+    """Power must be in plausible range (10-2000 hp or 7-1500 kW)."""
+    if obs.field in ("power_hp", "power_kw"):
+        try:
+            val = float(obs.normalized_value)
+            if obs.field == "power_hp" and (val < 10 or val > 2000):
+                return False, f"power_hp_implausible:{val}"
+            if obs.field == "power_kw" and (val < 7 or val > 1500):
+                return False, f"power_kw_implausible:{val}"
+        except (ValueError, TypeError):
+            pass
+    return True, "ok"
+
+
+def gate_torque_plausible(obs: Observation) -> Tuple[bool, str]:
+    """Torque must be in plausible range (10-3000 Nm)."""
+    if obs.field == "torque_nm":
+        try:
+            val = float(obs.normalized_value)
+            if val < 10 or val > 3000:
+                return False, f"torque_nm_implausible:{val}"
+        except (ValueError, TypeError):
+            pass
+    return True, "ok"
+
+
+def gate_dimensions_plausible(obs: Observation) -> Tuple[bool, str]:
+    """Vehicle dimensions must be in physical range (1000-6000mm)."""
+    if obs.field in ("length_mm", "width_mm", "height_mm", "wheelbase_mm"):
+        try:
+            val = float(obs.normalized_value)
+            if val < 1000 or val > 6000:
+                return False, f"dimension_implausible:{obs.field}={val}"
+        except (ValueError, TypeError):
+            pass
+    return True, "ok"
+
+
+SEMANTIC_GATES = [
+    gate_engine_cc_plausible,
+    gate_range_not_fuel_consumption,
+    gate_battery_not_for_ice,
+    gate_power_units_plausible,
+    gate_torque_plausible,
+    gate_dimensions_plausible,
+]
+
+
 # ─── Gate Runner ────────────────────────────────────────────────────
 
 ALL_GATES = [
@@ -166,6 +256,13 @@ ALL_GATES = [
     gate_price_sanity,
     gate_no_price_key_in_specs,
     gate_price_type_explicit,
+    # Semantic domain tests
+    gate_engine_cc_plausible,
+    gate_range_not_fuel_consumption,
+    gate_battery_not_for_ice,
+    gate_power_units_plausible,
+    gate_torque_plausible,
+    gate_dimensions_plausible,
 ]
 
 

@@ -1,0 +1,16 @@
+{
+  "total_samples": 62,
+  "total_price_samples": 22,
+  "total_spec_samples": 40,
+  "verification_results": {
+    "PASS_VALUE_AND_ENTITY": 62
+  },
+  "by_type": {
+    "price": {
+      "PASS_VALUE_AND_ENTITY": 22
+    },
+    "spec": {
+      "PASS_VALUE_AND_ENTITY": 40
+    }
+  }
+}

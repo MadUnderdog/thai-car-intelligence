@@ -74,7 +74,7 @@ def _call_ai(prompt, system="", temperature=0.1):
                "-H", "Content-Type: application/json", "-d", f"@{tmp}"]
         if "opencode.ai" in config["base_url"]:
             cmd.extend(["-H", f"x-opencode-session: session-{int(time.time()*1000)}"])
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
         if r.returncode != 0:
             return None
         resp = json.loads(r.stdout)

@@ -156,7 +156,337 @@ class HeadlightMagAdapter:
 
 # ─── Additional adapters follow same pattern ────────────────────────
 
-ADAPTERS = [HeadlightMagAdapter()]
+class AutoSpinnAdapter:
+    def metadata(self) -> SourceMetadata:
+        return SourceMetadata(
+            name="AutoSpinn", domain="autospinn.com",
+            source_class=SourceClass.AUTOMOTIVE_MEDIA,
+            trust_state=TrustState.QUALIFIED,
+            verification_state=VerificationState.NOT_OFFICIAL,
+            has_rss=True, has_category_pages=True,
+        )
+
+    def discover(self, max_articles=15) -> List[SourceRef]:
+        refs = []
+        rss_url = "https://www.autospinn.com/feed/"
+        try:
+            req = Request(rss_url, headers={"User-Agent": USER_AGENT})
+            with urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+                xml = resp.read().decode("utf-8", errors="replace")
+            root = ET.fromstring(xml)
+            for item in root.find("channel").findall("item")[:max_articles]:
+                link = item.find("link")
+                title = item.find("title")
+                pub = item.find("pubDate")
+                if link is not None and link.text:
+                    refs.append(SourceRef(
+                        url=link.text.strip(),
+                        title=title.text.strip() if title is not None and title.text else "",
+                        published_date=pub.text.strip() if pub is not None and pub.text else "",
+                        source_domain="autospinn.com",
+                        discovery_method="rss",
+                    ))
+        except Exception:
+            pass
+        return refs
+
+    def fetch(self, ref: SourceRef) -> DocumentSnapshot:
+        req = Request(ref.url, headers={"User-Agent": USER_AGENT})
+        with urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+            html = resp.read().decode("utf-8", errors="replace")
+        import re
+        text = re.sub(r"<script[^>]*>.*?</script>", " ", html, flags=re.DOTALL | re.I)
+        text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.DOTALL | re.I)
+        text = re.sub(r"<[^>]+>", " ", text)
+        text = re.sub(r"\s+", " ", text).strip()
+        content_hash = hashlib.sha256(text[:5000].encode()).hexdigest()[:16]
+        return DocumentSnapshot(
+            url=ref.url, html=html, text=text,
+            content_hash=content_hash, title=ref.title,
+            published_date=ref.published_date,
+        )
+
+    def extract(self, snapshot: DocumentSnapshot) -> List[Observation]:
+        import re
+        obs_list = []
+        text = snapshot.text
+        title = snapshot.title
+        for m in re.finditer(r'(?:ราคา|฿|price)[:\s]*(?:เริ่มต้น|เริ่ม)?\s*(\d{1,3}(?:,\d{3}){1,3})\s*(?:บาท|฿)?', text, re.I):
+            val = int(m.group(1).replace(",", ""))
+            if THB_MIN <= val <= THB_MAX:
+                excerpt = text[max(0, m.start()-60):m.end()+60]
+                obs_list.append(Observation(
+                    source_url=snapshot.url, source_domain="autospinn.com",
+                    source_class=SourceClass.AUTOMOTIVE_MEDIA,
+                    title=title, published_date=snapshot.published_date,
+                    field="price", raw_value=m.group(1),
+                    normalized_value=str(val), unit="THB",
+                    price_type=PriceType.MSRP,
+                    trust_state=TrustState.QUALIFIED,
+                    evidence_excerpt=excerpt[:200],
+                    content_hash=snapshot.content_hash,
+                ))
+        spec_patterns = [
+            (r'(\d{2,3})\s*(?:แรงม้า|hp|ps)\b', "power_hp", "hp"),
+            (r'(\d{2,4})\s*(?:นิวตันเมตร|nm)\b', "torque_nm", "Nm"),
+            (r'(\d{1,2}\.\d)\s*(?:ลิตร|liter|l)\b', "engine_l", "L"),
+            (r'(\d{3,4})\s*cc\b', "engine_cc", "cc"),
+        ]
+        for pattern, field, unit in spec_patterns:
+            for m in re.finditer(pattern, text, re.I):
+                excerpt = text[max(0, m.start()-40):m.end()+40]
+                obs_list.append(Observation(
+                    source_url=snapshot.url, source_domain="autospinn.com",
+                    source_class=SourceClass.AUTOMOTIVE_MEDIA,
+                    title=title, published_date=snapshot.published_date,
+                    field=field, raw_value=m.group(1),
+                    normalized_value=m.group(1), unit=unit,
+                    trust_state=TrustState.QUALIFIED,
+                    evidence_excerpt=excerpt[:200],
+                    content_hash=snapshot.content_hash,
+                ))
+        return obs_list
+
+
+class NineCarThaiAdapter:
+    def metadata(self) -> SourceMetadata:
+        return SourceMetadata(
+            name="9CARTHAI", domain="9carthai.com",
+            source_class=SourceClass.AUTOMOTIVE_MEDIA,
+            trust_state=TrustState.QUALIFIED,
+            verification_state=VerificationState.NOT_OFFICIAL,
+            has_rss=True, has_category_pages=True,
+        )
+
+    def discover(self, max_articles=15) -> List[SourceRef]:
+        refs = []
+        rss_url = "https://www.9carthai.com/feed/"
+        try:
+            req = Request(rss_url, headers={"User-Agent": USER_AGENT})
+            with urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+                xml = resp.read().decode("utf-8", errors="replace")
+            root = ET.fromstring(xml)
+            for item in root.find("channel").findall("item")[:max_articles]:
+                link = item.find("link")
+                title = item.find("title")
+                pub = item.find("pubDate")
+                if link is not None and link.text:
+                    refs.append(SourceRef(
+                        url=link.text.strip(),
+                        title=title.text.strip() if title is not None and title.text else "",
+                        published_date=pub.text.strip() if pub is not None and pub.text else "",
+                        source_domain="9carthai.com",
+                        discovery_method="rss",
+                    ))
+        except Exception:
+            pass
+        return refs
+
+    def fetch(self, ref: SourceRef) -> DocumentSnapshot:
+        req = Request(ref.url, headers={"User-Agent": USER_AGENT})
+        with urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+            html = resp.read().decode("utf-8", errors="replace")
+        import re
+        text = re.sub(r"<script[^>]*>.*?</script>", " ", html, flags=re.DOTALL | re.I)
+        text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.DOTALL | re.I)
+        text = re.sub(r"<[^>]+>", " ", text)
+        text = re.sub(r"\s+", " ", text).strip()
+        content_hash = hashlib.sha256(text[:5000].encode()).hexdigest()[:16]
+        return DocumentSnapshot(
+            url=ref.url, html=html, text=text,
+            content_hash=content_hash, title=ref.title,
+            published_date=ref.published_date,
+        )
+
+    def extract(self, snapshot: DocumentSnapshot) -> List[Observation]:
+        import re
+        obs_list = []
+        text = snapshot.text
+        title = snapshot.title
+        for m in re.finditer(r'(?:ราคา|฿|price)[:\s]*(?:เริ่มต้น|เริ่ม)?\s*(\d{1,3}(?:,\d{3}){1,3})\s*(?:บาท|฿)?', text, re.I):
+            val = int(m.group(1).replace(",", ""))
+            if THB_MIN <= val <= THB_MAX:
+                excerpt = text[max(0, m.start()-60):m.end()+60]
+                obs_list.append(Observation(
+                    source_url=snapshot.url, source_domain="9carthai.com",
+                    source_class=SourceClass.AUTOMOTIVE_MEDIA,
+                    title=title, published_date=snapshot.published_date,
+                    field="price", raw_value=m.group(1),
+                    normalized_value=str(val), unit="THB",
+                    price_type=PriceType.MSRP,
+                    trust_state=TrustState.QUALIFIED,
+                    evidence_excerpt=excerpt[:200],
+                    content_hash=snapshot.content_hash,
+                ))
+        spec_patterns = [
+            (r'(\d{2,3})\s*(?:แรงม้า|hp|ps)\b', "power_hp", "hp"),
+            (r'(\d{2,4})\s*(?:นิวตันเมตร|nm)\b', "torque_nm", "Nm"),
+            (r'(\d{1,2}\.\d)\s*(?:ลิตร|liter|l)\b', "engine_l", "L"),
+            (r'(\d{3,4})\s*cc\b', "engine_cc", "cc"),
+        ]
+        for pattern, field, unit in spec_patterns:
+            for m in re.finditer(pattern, text, re.I):
+                excerpt = text[max(0, m.start()-40):m.end()+40]
+                obs_list.append(Observation(
+                    source_url=snapshot.url, source_domain="9carthai.com",
+                    source_class=SourceClass.AUTOMOTIVE_MEDIA,
+                    title=title, published_date=snapshot.published_date,
+                    field=field, raw_value=m.group(1),
+                    normalized_value=m.group(1), unit=unit,
+                    trust_state=TrustState.QUALIFIED,
+                    evidence_excerpt=excerpt[:200],
+                    content_hash=snapshot.content_hash,
+                ))
+        return obs_list
+
+
+class AutoLifeThailandAdapter:
+    def metadata(self) -> SourceMetadata:
+        return SourceMetadata(
+            name="AutoLife Thailand", domain="autolifethailand.tv",
+            source_class=SourceClass.AUTOMOTIVE_MEDIA,
+            trust_state=TrustState.QUALIFIED,
+            verification_state=VerificationState.NOT_OFFICIAL,
+            has_rss=True, has_category_pages=False,
+        )
+
+    def discover(self, max_articles=15) -> List[SourceRef]:
+        refs = []
+        rss_url = "https://autolifethailand.tv/feed/"
+        try:
+            req = Request(rss_url, headers={"User-Agent": USER_AGENT})
+            with urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+                xml = resp.read().decode("utf-8", errors="replace")
+            root = ET.fromstring(xml)
+            for item in root.find("channel").findall("item")[:max_articles]:
+                link = item.find("link")
+                title = item.find("title")
+                pub = item.find("pubDate")
+                if link is not None and link.text:
+                    refs.append(SourceRef(
+                        url=link.text.strip(),
+                        title=title.text.strip() if title is not None and title.text else "",
+                        published_date=pub.text.strip() if pub is not None and pub.text else "",
+                        source_domain="autolifethailand.tv",
+                        discovery_method="rss",
+                    ))
+        except Exception:
+            pass
+        return refs
+
+    def fetch(self, ref: SourceRef) -> DocumentSnapshot:
+        req = Request(ref.url, headers={"User-Agent": USER_AGENT})
+        with urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+            html = resp.read().decode("utf-8", errors="replace")
+        import re
+        text = re.sub(r"<script[^>]*>.*?</script>", " ", html, flags=re.DOTALL | re.I)
+        text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.DOTALL | re.I)
+        text = re.sub(r"<[^>]+>", " ", text)
+        text = re.sub(r"\s+", " ", text).strip()
+        content_hash = hashlib.sha256(text[:5000].encode()).hexdigest()[:16]
+        return DocumentSnapshot(
+            url=ref.url, html=html, text=text,
+            content_hash=content_hash, title=ref.title,
+            published_date=ref.published_date,
+        )
+
+    def extract(self, snapshot: DocumentSnapshot) -> List[Observation]:
+        import re
+        obs_list = []
+        text = snapshot.text
+        title = snapshot.title
+        for m in re.finditer(r'(?:ราคา|฿|price)[:\s]*(?:เริ่มต้น|เริ่ม)?\s*(\d{1,3}(?:,\d{3}){1,3})\s*(?:บาท|฿)?', text, re.I):
+            val = int(m.group(1).replace(",", ""))
+            if THB_MIN <= val <= THB_MAX:
+                excerpt = text[max(0, m.start()-60):m.end()+60]
+                obs_list.append(Observation(
+                    source_url=snapshot.url, source_domain="autolifethailand.tv",
+                    source_class=SourceClass.AUTOMOTIVE_MEDIA,
+                    title=title, published_date=snapshot.published_date,
+                    field="price", raw_value=m.group(1),
+                    normalized_value=str(val), unit="THB",
+                    price_type=PriceType.MSRP,
+                    trust_state=TrustState.QUALIFIED,
+                    evidence_excerpt=excerpt[:200],
+                    content_hash=snapshot.content_hash,
+                ))
+        return obs_list
+
+
+class Car2DayAdapter:
+    def metadata(self) -> SourceMetadata:
+        return SourceMetadata(
+            name="Car2Day", domain="car2day.com",
+            source_class=SourceClass.AUTOMOTIVE_MEDIA,
+            trust_state=TrustState.QUALIFIED,
+            verification_state=VerificationState.NOT_OFFICIAL,
+            has_rss=True, has_category_pages=False,
+        )
+
+    def discover(self, max_articles=15) -> List[SourceRef]:
+        refs = []
+        rss_url = "https://www.car2day.com/feed/"
+        try:
+            req = Request(rss_url, headers={"User-Agent": USER_AGENT})
+            with urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+                xml = resp.read().decode("utf-8", errors="replace")
+            root = ET.fromstring(xml)
+            for item in root.find("channel").findall("item")[:max_articles]:
+                link = item.find("link")
+                title = item.find("title")
+                pub = item.find("pubDate")
+                if link is not None and link.text:
+                    refs.append(SourceRef(
+                        url=link.text.strip(),
+                        title=title.text.strip() if title is not None and title.text else "",
+                        published_date=pub.text.strip() if pub is not None and pub.text else "",
+                        source_domain="car2day.com",
+                        discovery_method="rss",
+                    ))
+        except Exception:
+            pass
+        return refs
+
+    def fetch(self, ref: SourceRef) -> DocumentSnapshot:
+        req = Request(ref.url, headers={"User-Agent": USER_AGENT})
+        with urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+            html = resp.read().decode("utf-8", errors="replace")
+        import re
+        text = re.sub(r"<script[^>]*>.*?</script>", " ", html, flags=re.DOTALL | re.I)
+        text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.DOTALL | re.I)
+        text = re.sub(r"<[^>]+>", " ", text)
+        text = re.sub(r"\s+", " ", text).strip()
+        content_hash = hashlib.sha256(text[:5000].encode()).hexdigest()[:16]
+        return DocumentSnapshot(
+            url=ref.url, html=html, text=text,
+            content_hash=content_hash, title=ref.title,
+            published_date=ref.published_date,
+        )
+
+    def extract(self, snapshot: DocumentSnapshot) -> List[Observation]:
+        import re
+        obs_list = []
+        text = snapshot.text
+        title = snapshot.title
+        for m in re.finditer(r'(?:ราคา|฿|price)[:\s]*(?:เริ่มต้น|เริ่ม)?\s*(\d{1,3}(?:,\d{3}){1,3})\s*(?:บาท|฿)?', text, re.I):
+            val = int(m.group(1).replace(",", ""))
+            if THB_MIN <= val <= THB_MAX:
+                excerpt = text[max(0, m.start()-60):m.end()+60]
+                obs_list.append(Observation(
+                    source_url=snapshot.url, source_domain="car2day.com",
+                    source_class=SourceClass.AUTOMOTIVE_MEDIA,
+                    title=title, published_date=snapshot.published_date,
+                    field="price", raw_value=m.group(1),
+                    normalized_value=str(val), unit="THB",
+                    price_type=PriceType.MSRP,
+                    trust_state=TrustState.QUALIFIED,
+                    evidence_excerpt=excerpt[:200],
+                    content_hash=snapshot.content_hash,
+                ))
+        return obs_list
+
+
+ADAPTERS = [HeadlightMagAdapter(), AutoSpinnAdapter(), NineCarThaiAdapter(), AutoLifeThailandAdapter(), Car2DayAdapter()]
 
 
 # ─── Coordinator ────────────────────────────────────────────────────

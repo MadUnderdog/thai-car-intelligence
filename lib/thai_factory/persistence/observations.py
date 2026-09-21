@@ -100,9 +100,10 @@ def resolve_variant_exact(brand: str, model: str, variant: str = "") -> Optional
         if rows:
             return rows[0]
 
-    # Stage 2: Try exact model match
+    # Stage 2: Try exact model match — only if exactly 1 variant exists
+    # FIX: Never pick first variant when multiple exist (model-level contamination)
     rows = _psql(f"""
-        SELECT v.id
+        SELECT v.id, v."nameEn"
         FROM "Variant" v
         JOIN "CarModel" cm ON v."modelId" = cm.id
         JOIN "Manufacturer" m ON cm."manufacturerId" = m.id
@@ -113,10 +114,15 @@ def resolve_variant_exact(brand: str, model: str, variant: str = "") -> Optional
           )
           AND v.status = 'ACTIVE'
         ORDER BY v."nameEn"
-        LIMIT 1
     """)
     if rows:
-        return rows[0]
+        if len(rows) == 1:
+            # Single variant — safe to map model-level data to it
+            return rows[0][0]
+        else:
+            # Multiple variants — do NOT pick first, return None
+            # Caller should mark as MODEL_LEVEL or NEEDS_REVIEW
+            return None
 
     # Stage 3: No exact match — return None (do NOT fuzzy match)
     return None
@@ -214,13 +220,14 @@ def persist_observations(observations: List[Observation],
                 continue
 
             price_id = str(uuid.uuid4())
-            # FIX: Do NOT auto-expire existing prices
+            # FIX: Use source publication date, not NOW()
             source_tier = obs.source_class.value if hasattr(obs.source_class, 'value') else str(obs.source_class)
+            valid_from = obs.published_date.replace("'", "") if obs.published_date else "NOW()"
             price_batch.append(
                 f'INSERT INTO "Price" (id, "variantId", "sourceDocumentId", "priceType", '
                 f'amount, currency, "validFrom", "isCurrent", confidence, "sourceTier", "sourceUrl") '
                 f'VALUES (\'{price_id}\', \'{variant_id}\', \'{doc_id}\', \'{pt}\'::"PriceType", '
-                f'{amount}, \'THB\', NOW(), true, 0.7, '
+                f'{amount}, \'THB\', \'{valid_from}\', true, 0.7, '
                 f'\'{source_tier}\', \'{obs.source_url[:500].replace(chr(39), "")}\')'
             )
             stats["prices_inserted"] += 1

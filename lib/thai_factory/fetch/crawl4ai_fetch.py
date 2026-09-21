@@ -57,6 +57,7 @@ class FetchProfile:
     cache_ttl_s: int = 3600
     timeout_s: int = 30
     requires_browser: bool = True  # False for true API endpoints
+    delay_before_return_html: float = 0.0  # seconds to wait for JS challenge
 
 
 PROFILES: Dict[str, FetchProfile] = {
@@ -65,7 +66,8 @@ PROFILES: Dict[str, FetchProfile] = {
     "autospinn": FetchProfile(name="AutoSpinn", mode="static",
                                rate_limit_ms=1500, requires_browser=True),
     "autolifethailand": FetchProfile(name="AutoLife Thailand", mode="static",
-                                      rate_limit_ms=1500, requires_browser=True),
+                                      rate_limit_ms=1500, requires_browser=True,
+                                      delay_before_return_html=7.0),
     "toyota_oem": FetchProfile(name="Toyota OEM API", mode="api",
                                 rate_limit_ms=2000, requires_browser=False),
 }
@@ -118,6 +120,8 @@ async def _async_crawl(url: str, profile: FetchProfile) -> DocumentSnapshot:
         crawl_config.css_selector = profile.wait_for
     if profile.js_code:
         crawl_config.js_code = profile.js_code
+    if profile.delay_before_return_html > 0:
+        crawl_config.delay_before_return_html = profile.delay_before_return_html
 
     async with AsyncWebCrawler(config=browser_config) as crawler:
         result = await crawler.arun(url=url, config=crawl_config)
@@ -215,7 +219,20 @@ def _fetch_http(url: str, profile: FetchProfile) -> DocumentSnapshot:
 
 def crawl(url: str, profile_name: str = "default") -> DocumentSnapshot:
     domain = _extract_domain(url)
-    profile = PROFILES.get(profile_name, PROFILES.get(domain, FetchProfile(name=domain)))
+    # Profile lookup: try exact domain, then try name without TLD
+    profile = PROFILES.get(profile_name)
+    if not profile:
+        profile = PROFILES.get(domain)
+    if not profile:
+        # Try matching without common TLDs
+        for tld in ['.tv', '.com', '.co.th', '.net']:
+            if domain.endswith(tld):
+                base = domain[:-len(tld)]
+                profile = PROFILES.get(base)
+                if profile:
+                    break
+    if not profile:
+        profile = FetchProfile(name=domain)
 
     cached = _get_cached(url, profile.cache_ttl_s)
     if cached:

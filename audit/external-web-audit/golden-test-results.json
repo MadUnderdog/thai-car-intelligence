@@ -1,98 +1,116 @@
 [
   {
+    "url": "https://autolifethailand.tv/wuling-eksion-ev-bev-suv-coming-thailand-28-sep-2026/",
+    "profile": "autolifethailand",
+    "status": "ok",
+    "blocks": 249,
+    "doc_type": "ARTICLE",
+    "scope": "SINGLE_MODEL",
+    "observations": 10,
+    "errors": [
+      "Obs 0: normalized_value '7xx,xxx' doesn't match raw_value 'เริ่มต้น 7xx,xxx บาท'",
+      "Obs 1: normalized_value '204' doesn't match raw_value '204 แรงม้า'",
+      "Obs 2: normalized_value '310' doesn't match raw_value '310 นิวตันเมตร'",
+      "Obs 3: normalized_value '69.2' doesn't match raw_value '69.2 kWh'",
+      "Obs 4: normalized_value '480' doesn't match raw_value '480 km.'",
+      "Obs 5: normalized_value '4910' doesn't match raw_value '4910 มิลลิเมตร'",
+      "Obs 6: normalized_value '1870' doesn't match raw_value '1870 มิลลิเมตร'",
+      "Obs 7: normalized_value '1770' doesn't match raw_value '1770 มิลลิเมตร'",
+      "Obs 8: normalized_value '2910' doesn't match raw_value '2910 มิลลิเมตร'",
+      "Obs 9: evidence_quote not found in block para_130",
+      "Obs 9: normalized_value '7' doesn't match raw_value '7 ที่นั่ง'"
+    ]
+  },
+  {
+    "url": "https://autolifethailand.tv/news-volvo-xc60-and-xc90-my-2027-launched/",
+    "profile": "autolifethailand",
+    "status": "ok",
+    "blocks": 149,
+    "doc_type": "ARTICLE",
+    "scope": "MULTI_MODEL_EXPLICIT",
+    "observations": 11,
+    "errors": []
+  },
+  {
+    "url": "https://autolifethailand.tv/news-mercedes-benz-c-300-4matic-electric-launched/",
+    "profile": "autolifethailand",
+    "status": "ok",
+    "blocks": 147,
+    "doc_type": "ARTICLE",
+    "scope": "SINGLE_MODEL",
+    "observations": 5,
+    "errors": [
+      "Obs 4: normalized_value '62,951' doesn't match raw_value '62,951 ยูโร'"
+    ]
+  },
+  {
     "url": "https://www.headlightmag.com/news-subaru-crosstrek-jdm-updated/",
     "profile": "headlightmag",
-    "total_obs": 2,
-    "prices": 2,
-    "specs": 0,
-    "entities": {
-      "volvo/- HeadLight Magazine": {
-        "prices": 2,
-        "specs": 0
-      }
-    },
-    "evidence_paths": [
-      "position:3102",
-      "position:3164"
+    "status": "ok",
+    "blocks": 97,
+    "doc_type": "ARTICLE",
+    "scope": "SINGLE_MODEL",
+    "observations": 9,
+    "errors": [
+      "Scope evidence block_id not found: 85",
+      "Scope evidence block_id not found: 86",
+      "Scope evidence block_id not found: 87",
+      "Scope evidence block_id not found: 88",
+      "Scope evidence block_id not found: 89",
+      "Scope evidence block_id not found: 90",
+      "Obs 0: normalized_value '3833500' doesn't match raw_value '3,833,500 เยน'",
+      "Obs 1: normalized_value '4053500' doesn't match raw_value '4,053,500 เยน'",
+      "Obs 2: normalized_value '160' doesn't match raw_value '160 แรงม้า'",
+      "Obs 3: normalized_value '209' doesn't match raw_value '209 นิวตันเมตร'",
+      "Obs 4: normalized_value '2498' doesn't match raw_value '2,498 ซีซี.'",
+      "Obs 5: normalized_value 'Hybrid e-BOXER' doesn't match raw_value 'Hybrid e-BOXER'",
+      "Obs 6: normalized_value 'CVT' doesn't match raw_value 'เกียร์อัตโนมัติ CVT'",
+      "Obs 7: normalized_value 'AWD' doesn't match raw_value 'ขับเคลื่อนสี่ล้อ'",
+      "Obs 8: normalized_value '19.5' doesn't match raw_value '19.5 กิโลเมตร/ลิตร'"
     ]
   },
   {
     "url": "https://www.headlightmag.com/all-new-honda-cr-v-g7-production-2027-debut-late-2026/",
     "profile": "headlightmag",
-    "total_obs": 0,
-    "prices": 0,
-    "specs": 0,
-    "entities": {},
-    "evidence_paths": []
+    "status": "ok",
+    "blocks": 95,
+    "doc_type": "ARTICLE",
+    "scope": "SINGLE_MODEL",
+    "observations": 2,
+    "errors": []
   },
   {
     "url": "https://www.headlightmag.com/2026-09-20-world-news-nissan-uk-factory-in-sunderland-will-produce-nissan-kicks-e-power-for-europe/",
     "profile": "headlightmag",
-    "total_obs": 0,
-    "prices": 0,
-    "specs": 0,
-    "entities": {},
-    "evidence_paths": []
+    "status": "ok",
+    "blocks": 100,
+    "doc_type": "ARTICLE",
+    "scope": "SINGLE_MODEL",
+    "observations": 1,
+    "errors": []
   },
   {
-    "url": "https://www.9carthai.com/new-byd-dolphin-price/",
-    "profile": "9carthai",
-    "total_obs": 64,
-    "prices": 64,
-    "specs": 0,
-    "entities": {
-      "byd/BYD Dolphin": {
-        "prices": 45,
-        "specs": 0
-      },
-      "mazda/BYD Dolphin": {
-        "prices": 15,
-        "specs": 0
-      },
-      "nissan/BYD Dolphin": {
-        "prices": 2,
-        "specs": 0
-      },
-      "honda/BYD Dolphin": {
-        "prices": 1,
-        "specs": 0
-      },
-      "toyota/BYD Dolphin": {
-        "prices": 1,
-        "specs": 0
-      }
-    },
-    "evidence_paths": [
-      "position:2174",
-      "position:2224",
-      "position:2707"
+    "url": "https://www.autospinn.com/2026/09/denza-z9gt-2026-152375",
+    "profile": "autospinn",
+    "status": "ok",
+    "blocks": 71,
+    "doc_type": "ARTICLE",
+    "scope": "SINGLE_MODEL",
+    "observations": 8,
+    "errors": [
+      "Obs 0: normalized_value '2899900' doesn't match raw_value '2,899,900 บาท'",
+      "Obs 4: normalized_value '1156' doesn't match raw_value '1,156 แรงม้า'",
+      "Obs 5: normalized_value '1210' doesn't match raw_value '1,210 นิวตันเมตร'",
+      "Obs 6: normalized_value '122.5' doesn't match raw_value '122.5 kWh'",
+      "Obs 7: normalized_value '701' doesn't match raw_value '701 กม.'"
     ]
   },
   {
-    "url": "https://www.9carthai.com/all-new-honda-accord-price/",
-    "profile": "9carthai",
-    "total_obs": 0,
-    "prices": 0,
-    "specs": 0,
-    "entities": {},
-    "evidence_paths": []
+    "url": "https://www.autospinn.com/2026/09/dlt-กรมการขนส-งทางบก-152370",
+    "status": "skip"
   },
   {
-    "url": "https://www.9carthai.com/new-toyota-yaris-cross-price/",
-    "profile": "9carthai",
-    "total_obs": 48,
-    "prices": 48,
-    "specs": 0,
-    "entities": {
-      "toyota/Toyota Yaris Cross": {
-        "prices": 48,
-        "specs": 0
-      }
-    },
-    "evidence_paths": [
-      "position:1471",
-      "position:1538",
-      "position:1606"
-    ]
+    "url": "https://www.autospinn.com/2026/09/toyota-yaris-cross-2026-152360",
+    "status": "skip"
   }
 ]

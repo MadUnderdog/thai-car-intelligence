@@ -1,0 +1,98 @@
+[
+  {
+    "url": "https://www.headlightmag.com/news-subaru-crosstrek-jdm-updated/",
+    "profile": "headlightmag",
+    "total_obs": 2,
+    "prices": 2,
+    "specs": 0,
+    "entities": {
+      "volvo/- HeadLight Magazine": {
+        "prices": 2,
+        "specs": 0
+      }
+    },
+    "evidence_paths": [
+      "position:3102",
+      "position:3164"
+    ]
+  },
+  {
+    "url": "https://www.headlightmag.com/all-new-honda-cr-v-g7-production-2027-debut-late-2026/",
+    "profile": "headlightmag",
+    "total_obs": 0,
+    "prices": 0,
+    "specs": 0,
+    "entities": {},
+    "evidence_paths": []
+  },
+  {
+    "url": "https://www.headlightmag.com/2026-09-20-world-news-nissan-uk-factory-in-sunderland-will-produce-nissan-kicks-e-power-for-europe/",
+    "profile": "headlightmag",
+    "total_obs": 0,
+    "prices": 0,
+    "specs": 0,
+    "entities": {},
+    "evidence_paths": []
+  },
+  {
+    "url": "https://www.9carthai.com/new-byd-dolphin-price/",
+    "profile": "9carthai",
+    "total_obs": 64,
+    "prices": 64,
+    "specs": 0,
+    "entities": {
+      "byd/BYD Dolphin": {
+        "prices": 45,
+        "specs": 0
+      },
+      "mazda/BYD Dolphin": {
+        "prices": 15,
+        "specs": 0
+      },
+      "nissan/BYD Dolphin": {
+        "prices": 2,
+        "specs": 0
+      },
+      "honda/BYD Dolphin": {
+        "prices": 1,
+        "specs": 0
+      },
+      "toyota/BYD Dolphin": {
+        "prices": 1,
+        "specs": 0
+      }
+    },
+    "evidence_paths": [
+      "position:2174",
+      "position:2224",
+      "position:2707"
+    ]
+  },
+  {
+    "url": "https://www.9carthai.com/all-new-honda-accord-price/",
+    "profile": "9carthai",
+    "total_obs": 0,
+    "prices": 0,
+    "specs": 0,
+    "entities": {},
+    "evidence_paths": []
+  },
+  {
+    "url": "https://www.9carthai.com/new-toyota-yaris-cross-price/",
+    "profile": "9carthai",
+    "total_obs": 48,
+    "prices": 48,
+    "specs": 0,
+    "entities": {
+      "toyota/Toyota Yaris Cross": {
+        "prices": 48,
+        "specs": 0
+      }
+    },
+    "evidence_paths": [
+      "position:1471",
+      "position:1538",
+      "position:1606"
+    ]
+  }
+]

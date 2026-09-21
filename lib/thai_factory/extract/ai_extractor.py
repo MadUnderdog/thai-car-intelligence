@@ -1,6 +1,6 @@
 """
 AI Extractor — two-stage extraction with strict validation.
-Compact prompts for latency. Parallel Stage B per region.
+Block snapshots for forensic evidence. Code normalization for determinism.
 """
 import hashlib
 import json
@@ -99,17 +99,15 @@ def _is_nav_block(block):
 
 
 def _filter_article_blocks(blocks):
-    """Return block IDs that are article body (not nav/sidebar). Aggressive filtering."""
+    """Return block IDs that are article body (not nav/sidebar)."""
     ids = []
     heading_count = 0
     in_article = False
-    article_heading = ""
     for b in blocks:
         if b.block_type == "heading":
             heading_count += 1
             if heading_count >= 2:
                 in_article = True
-                article_heading = b.content[:50]
             if not _is_nav_block(b) and heading_count >= 2:
                 ids.append(b.block_id)
             continue
@@ -117,15 +115,12 @@ def _filter_article_blocks(blocks):
             continue
         if not in_article:
             continue
-        # Only paragraphs and tables after article starts
         if b.block_type in ("paragraph", "table"):
             if len(b.content) > 30:
                 ids.append(b.block_id)
-        # Skip list items unless they contain price/spec data
         elif b.block_type == "list":
             if any(kw in b.content.lower() for kw in ["ราคา", "price", "บาท", "ล้าน", "cc", "hp", "kw"]):
                 ids.append(b.block_id)
-    # Cap at 40 most relevant blocks
     if len(ids) > 40:
         ids = ids[:40]
     return ids
@@ -133,14 +128,12 @@ def _filter_article_blocks(blocks):
 
 # ─── Compact Serialization ─────────────────────────────────────────
 def _compact_line(block):
-    """One-line compact representation: [id] TYPE (heading): first 120 chars."""
     h = block.heading_context[:40] if block.heading_context else ""
     c = block.content[:120].replace("\n", " ")
     return f"[{block.block_id}] {block.block_type.upper()}" + (f" ({h})" if h else "") + f": {c}"
 
 
 def _compact_text(blocks, ids):
-    """Compact one-per-line representation of blocks."""
     lines = []
     for b in blocks:
         if b.block_id in ids:
@@ -149,12 +142,25 @@ def _compact_text(blocks, ids):
 
 
 def _region_text(blocks, ids):
-    """Full content for specific block IDs."""
     lines = []
     for b in blocks:
         if b.block_id in ids:
             lines.append(f"[{b.block_id}] {b.block_type.upper()}: {b.content}")
     return "\n".join(lines)
+
+
+# ─── Block Snapshots (for artifact) ───────────────────────────────
+def _build_block_snapshots(blocks, region_ids):
+    """Build block_id -> {content, heading, region_id} map."""
+    snapshots = {}
+    for b in blocks:
+        if b.block_id in region_ids:
+            snapshots[b.block_id] = {
+                "content": b.content,
+                "heading_ancestry": b.heading_context or "",
+                "block_type": b.block_type,
+            }
+    return snapshots
 
 
 # ─── Stage A Prompt ────────────────────────────────────────────────
@@ -164,11 +170,16 @@ STAGE_A_PROMPT = """Map this article. Return JSON:
   "document_scope": {{"decision": "SINGLE_MODEL", "primary_brand": "", "primary_model": ""}},
   "article_body_block_ids": ["id1", "id2"],
   "vehicle_regions": [{{"brand": "X", "model": "Y", "region_block_ids": ["id"],
-                       "price_block_ids": ["id"], "spec_block_ids": ["id"]}}]
+                       "price_block_ids": ["id"], "spec_block_ids": ["id"],
+                       "price_evidence_block_ids": ["id"]}}]
 }}
 document_type: ARTICLE|PRICE_LIST|SPEC_SHEET|ROUNDUP|COMPARISON|LAUNCH|UNKNOWN
 decision: SINGLE_MODEL|SINGLE_VARIANT|MULTI_MODEL_EXPLICIT|COMPARISON|ROUNDUP|GENERIC_LISTING|UNKNOWN
-ALL VALUES UPPERCASE. Identify article body blocks and vehicle regions.
+ALL VALUES UPPERCASE.
+
+IMPORTANT: price_block_ids MUST list every block containing a price figure (บาท, ราคา, THB, million, ล้าน).
+price_evidence_block_ids MUST list blocks containing price-type justification (คาด, ประมาณ, ราคาเปิดตัว, MSRP).
+If a block has both a price and its justification, include it in BOTH lists.
 
 BLOCKS:
 {blocks}"""
@@ -186,7 +197,13 @@ def _stage_b_prompt(brand, model, blocks):
   }}]
 }}
 field: price|engine_l|horsepower_hp|torque_nm|fuel_type|transmission|drivetrain|battery_kwh|range_km|seats|body_type
-Each observation MUST reference a block_id from below. evidence_quote MUST be exact substring of block content.
+Each observation MUST reference a block_id from below.
+evidence_quote MUST be exact substring of that block's content.
+The evidence_quote MUST be specific to the claimed field — not a generic nearby sentence.
+For price: the quote MUST contain the actual price figure.
+For fuel_type: the quote MUST contain a fuel/powertrain term (เบนซิน, ดีเซล, ไฟฟ้า, hybrid).
+For transmission: the quote MUST contain a transmission term (เกียร์อัตโนมัติ, CVT, manual, 6AT, 6MT).
+price_type_evidence_quote MUST contain the wording justifying price_type (ราคาเปิดตัว→MSRP, คาดเริ่มต้น→MODEL_RANGE, โปรโมชัน→PROMOTION).
 
 BLOCKS:
 {blocks}"""
@@ -202,7 +219,6 @@ def extract_observations(page):
     if len(article_ids) < 3:
         article_ids = all_ids
 
-    # Stage A: compact representation
     bt = _compact_text(page.blocks, article_ids)
     pa = STAGE_A_PROMPT.format(blocks=bt)
     ra = _call_ai(pa)
@@ -216,7 +232,6 @@ def extract_observations(page):
         ab_ids = article_ids
     regions = ra.get("vehicle_regions", [])
 
-    # Stage B: parallel per region
     all_obs, all_rej, all_rev = [], [], []
 
     def run_region(region):
@@ -241,7 +256,9 @@ def extract_observations(page):
             return [], [], [{"brand": brand, "model": model, "error": "Stage B timeout/error"}]
 
         obs = rb.get("observations", [])
-        v, r, rv = _validate(obs, all_ids, page.blocks, region)
+        # Validate: block_id must be in the scoped set for this region
+        scoped_ids = scoped
+        v, r, rv = _validate(obs, scoped_ids, page.blocks, region)
         return v, r, rv
 
     with ThreadPoolExecutor(max_workers=3) as ex:
@@ -286,6 +303,9 @@ def _validate_stage_a(result, block_ids):
         for bid in reg.get("region_block_ids", []):
             if bid not in block_ids:
                 errs.append(f"Region {i}: block '{bid}' not found")
+        # price_block_ids must be populated if any price data exists
+        if not reg.get("price_block_ids"):
+            errs.append(f"Region {i}: price_block_ids is empty — Stage A must identify price blocks")
     return errs
 
 
@@ -296,20 +316,28 @@ def _validate(observations, valid_ids, blocks, region):
 
     for obs in observations:
         errs = []
+        # Required fields
         for fn in ["block_id", "field", "raw_value", "evidence_quote", "evidence_block_id"]:
             if not obs.get(fn):
                 errs.append(f"Missing: {fn}")
         bid = obs.get("block_id", "")
         if bid and bid not in valid_ids:
-            errs.append(f"block_id '{bid}' not found")
+            errs.append(f"block_id '{bid}' not in region scope")
+        # Evidence quote MUST be exact substring of the block
         q = obs.get("evidence_quote", "")
         if bid and q:
             blk = bmap.get(bid)
             if blk and q not in blk.content:
-                errs.append(f"quote not in block {bid}")
+                errs.append(f"evidence_quote not in block {bid}")
+        # Evidence block must exist and contain the quote
         ebid = obs.get("evidence_block_id", "")
         if ebid and ebid not in valid_ids:
-            errs.append(f"evidence_block_id '{ebid}' not found")
+            errs.append(f"evidence_block_id '{ebid}' not in region scope")
+        if ebid and q:
+            eblk = bmap.get(ebid)
+            if eblk and q not in eblk.content:
+                errs.append(f"evidence_quote not in evidence_block {ebid}")
+        # Field validation
         f = obs.get("field", "")
         if f not in ALLOWED_FIELDS:
             errs.append(f"Invalid field: {f}")
@@ -329,14 +357,10 @@ def _validate(observations, valid_ids, blocks, region):
 
         if errs:
             obs["validation_errors"] = errs
-            if any(x in " ".join(errs) for x in ["block_id", "quote", "Brand"]):
-                rej.append(obs)
-            else:
-                rev.append(obs)
+            rej.append(obs)
         else:
             acc.append(obs)
     return acc, rej, rev
-
 
 
 # ─── Code-based Normalization (deterministic, post-AI) ────────────
@@ -369,26 +393,23 @@ _DRIVETRAIN_MAP = {
 _BODY_RE = _re.compile(r"[Cc]-?SUV|[Bb]-?SUV|[Dd]-?SUV|SUV|MPV|PPV|Sedan|Hatchback|Coupe|Pickup", _re.I)
 
 
-
-
 def _normalize_price_type(raw_value, price_type):
-    """Deterministic price_type normalization."""
+    """Deterministic price_type normalization. Only normalizes, never creates semantics."""
     r = raw_value.lower()
     if "xx" in r or "xxx" in r:
-        return "MODEL_RANGE"  # Fuzzy price = model range estimate
+        return "MODEL_RANGE"
     if "ประมาณ" in r or "คาด" in r:
         return "MODEL_RANGE"
     if price_type in ("MSRP", "LIST_PRICE", "PROMOTION", "HISTORICAL"):
         return price_type
     return "UNKNOWN"
 
+
 def _normalize_value(field, raw):
-    """Deterministic normalization. Raw input varies; output must not."""
+    """Deterministic normalization. Transforms units/numbers only; never creates semantics."""
     r = raw.strip()
     if field == "price":
-        # Handle xx,xxx format (Thai: 7xx,xxx = 700,000-799,999)
         if "xx" in r.lower() or "xxx" in r.lower():
-            # Extract the leading digit
             m = _re.search(r"(\d)xx", r)
             if m:
                 base = int(m.group(1)) * 100000
@@ -414,14 +435,12 @@ def _normalize_value(field, raw):
         m = _re.search(r"(\d+)", r)
         return f"{m.group(1)} km" if m else "UNRESOLVED km"
     elif field == "seats":
-        # Look for "X ที่นั่ง" pattern first
         m = _re.search(r"(\d+)\s*ที่นั่ง", r)
         if m:
             return m.group(1)
         m = _re.search(r"(\d+)\s*seat", r.lower())
         if m:
             return m.group(1)
-        # Fallback: first number
         m = _re.search(r"(\d+)", r)
         return m.group(1) if m else "UNRESOLVED"
     elif field == "fuel_type":
@@ -429,19 +448,19 @@ def _normalize_value(field, raw):
         for k, v in _FUEL_MAP.items():
             if k in low:
                 return v
-        return r  # keep original if no match
+        return "UNRESOLVED"
     elif field == "drivetrain":
         low = r.lower()
         for k, v in _DRIVETRAIN_MAP.items():
             if k in low:
                 return v
-        return r.upper()[:10]
+        return "UNRESOLVED"
     elif field == "body_type":
         low = r.lower().strip()
         if low in _BODY_TYPE_MAP:
             return _BODY_TYPE_MAP[low]
         m = _BODY_RE.search(r)
-        return m.group(0).upper() if m else r.upper()[:10]
+        return m.group(0).upper() if m else "UNRESOLVED"
     elif field == "transmission":
         low = r.lower()
         if "auto" in low or "อัตโนมัติ" in low:
@@ -450,7 +469,7 @@ def _normalize_value(field, raw):
             return "Manual"
         if "cvt" in low:
             return "CVT"
-        return r
+        return "UNRESOLVED"
     return r
 
 

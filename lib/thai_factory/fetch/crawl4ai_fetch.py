@@ -17,7 +17,6 @@ from typing import Dict, List, Optional
 # Crawl4AI imports
 try:
     from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
-    from crawl4ai.extraction_strategies import JsonCssExtractionStrategy
     CRAWL4AI_AVAILABLE = True
 except ImportError:
     CRAWL4AI_AVAILABLE = False
@@ -170,9 +169,9 @@ async def _async_crawl(url: str, profile: FetchProfile) -> DocumentSnapshot:
         fetched_at=datetime.now(timezone.utc).isoformat(),
         raw_html=result.html or "",
         rendered_html=result.html or "",
-        markdown=result.markdown or "",
-        links=[a.get("href", "") for a in (result.links or []) if a.get("href")],
-        media=result.media or [],
+        markdown=(result.markdown.raw_markdown if hasattr(result.markdown, 'raw_markdown') else result.markdown if isinstance(result.markdown, str) else ""),
+        links=[a.get("href", "") for a in ((result.links or {}).get("internal", []) + (result.links or {}).get("external", [])) if isinstance(a, dict) and a.get("href")],
+        media=(result.media or {}).get("images", []) if isinstance(result.media, dict) else [],
         title=result.metadata.get("title", "") if result.metadata else "",
         content_hash=hashlib.sha256((result.html or "")[:5000].encode()).hexdigest()[:16],
         fetch_method="crawl4ai",

@@ -296,7 +296,7 @@ def _validate_extraction(result: Dict, page: CleanedPage) -> List[str]:
         quote = obs.get("evidence_quote", "")
         if bid and quote:
             block = next((b for b in page.blocks if b.block_id == bid), None)
-            if block and quote not in block.text:
+            if block and quote not in block.content:
                 errors.append(f"Obs {i}: evidence_quote not found in block {bid}")
 
         # Normalized value must correspond to raw value

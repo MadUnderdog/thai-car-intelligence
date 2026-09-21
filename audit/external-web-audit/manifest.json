@@ -1,0 +1,58 @@
+{
+  "auditVersion": "1.0.0",
+  "runId": "ext-web-audit-20260921-104731",
+  "timestamp": "2026-09-21T03:47:31Z",
+  "branch": "fix/p1-provenance-gate",
+  "commitSHA": "276afda",
+  "dbSnapshot": {
+    "timestamp": "2026-09-21T03:47:31.330609+00:00",
+    "postgresql": "16.14 (Debian 16.14-1.pgdg124+1)",
+    "prismaMigrations": 6,
+    "lastMigration": "2026-09-17T11:30:46.058618+00:00"
+  },
+  "sourceList": [
+    "9carthai.com",
+    "autospinn.com",
+    "autolifethailand.com",
+    "bxracingclub.com",
+    "car.kapook.com",
+    "carmanyou.com",
+    "chobrod.com",
+    "kaidee.com",
+    "motortrivia.com",
+    "motorvisa.com",
+    "pantip.com",
+    "roongroj.com",
+    "thailodge.com",
+    "thaicarlover.com",
+    "thaimotorshow.com",
+    "toyota.co.th",
+    "autospinn.com (blog)",
+    "motorvista.com",
+    "autospinn.com (model)",
+    "thaicarinfo.com",
+    "carbuzz.com"
+  ],
+  "sampleCounts": {
+    "priceSamples": 30,
+    "specSamples": 30,
+    "specNonToyotaSamples": 20,
+    "specToyotaSamples": 10
+  },
+  "dbTotals": {
+    "manufacturers": 34,
+    "carModels": 157,
+    "variants": 343,
+    "variantSpecs": 6993,
+    "activeSpecs": 6840,
+    "quarantinedSpecs": 153,
+    "currentPrices": 96,
+    "allPrices": 767,
+    "sources": 21,
+    "discoverySources": 34,
+    "researchCandidates": 2,
+    "sourceDocuments": 2455,
+    "vehicleUniverse": 329,
+    "extractionJobs": 36
+  }
+}

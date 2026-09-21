@@ -1,0 +1,119 @@
+{
+  "generatedAt": "2026-09-21T03:47:31.330609+00:00",
+  "postgresql": "16.14 (Debian 16.14-1.pgdg124+1)",
+  "prismaMigrations": 6,
+  "lastMigration": "2026-09-17T11:30:46.058618+00:00",
+  "tables": {
+    "Manufacturer": {
+      "total": 34,
+      "brands": {
+        "MG": 18,
+        "Toyota": 13,
+        "Honda": 11,
+        "BYD": 9,
+        "Nissan": 9,
+        "Mercedes-Benz": 8,
+        "BMW": 7,
+        "Mazda": 7,
+        "GWM": 6,
+        "Mitsubishi": 6,
+        "Kia": 5,
+        "Suzuki": 5,
+        "Changan": 4,
+        "Chery": 4,
+        "Ford": 4,
+        "Volvo": 4,
+        "Hyundai": 3,
+        "Lexus": 3,
+        "BAIC": 2,
+        "Chevrolet": 2,
+        "Geely": 2,
+        "Isuzu": 2,
+        "Jetour": 2,
+        "KG Mobility": 2,
+        "MINI": 2,
+        "NIO": 2,
+        "Porsche": 2,
+        "Subaru": 2,
+        "Tesla": 2,
+        "Zeekr": 2,
+        "Avatr": 1,
+        "Denza": 1,
+        "LDV": 1,
+        "Xpeng": 1
+      }
+    },
+    "CarModel": {
+      "total": 157
+    },
+    "Variant": {
+      "total": 343
+    },
+    "VariantSpec": {
+      "total": 6993,
+      "byQuarantineStatus": {
+        "ACTIVE": 6840,
+        "QUARANTINED": 153
+      },
+      "nonToyotaTotal": 153
+    },
+    "Price": {
+      "total": 767,
+      "currentPrices": 96,
+      "byPriceType": {
+        "MSRP": 65,
+        "LIST_PRICE": 30,
+        "PROMOTION": 1
+      },
+      "bySourceTier": {
+        "AUTO_MEDIA": 1,
+        "REFERENCE_MEDIA": 22,
+        "null": 73
+      },
+      "byBrand": {
+        "Toyota": 34,
+        "Honda": 20,
+        "Nissan": 16,
+        "MG": 11,
+        "BYD": 5,
+        "Mitsubishi": 4,
+        "Isuzu": 2,
+        "Volvo": 1,
+        "Denza": 1,
+        "Hyundai": 1,
+        "Kia": 1
+      },
+      "uniqueSourceUrls": 13
+    },
+    "Source": {
+      "total": 21
+    },
+    "DiscoverySource": {
+      "total": 34,
+      "byStatus": {
+        "DISCOVERED": 34
+      }
+    },
+    "ResearchCandidate": {
+      "total": 2,
+      "byStatus": {
+        "PENDING": 2
+      }
+    },
+    "SourceDocument": {
+      "total": 2455
+    },
+    "VehicleUniverse": {
+      "total": 329
+    },
+    "VariantFeature": {
+      "total": 0
+    },
+    "ExtractionJob": {
+      "total": 36,
+      "byStatus": {
+        "QUEUED": 36
+      }
+    }
+  }
+}

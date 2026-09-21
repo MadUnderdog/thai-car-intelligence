@@ -74,8 +74,18 @@ OUTPUT: Valid JSON matching the extraction schema provided in the user message."
 # CONFIG BOUNDARY: Generation uses ONLY these 3 env vars.
 # EMBEDDING_* must NEVER be used for generation.
 # No provider fallback. No hardcoded models. Fail-closed.
+#
+# OPENROUTER EXCEPTION (constrained, not automatic):
+#   model = inclusionai/ling-3.0-flash
+#   provider.only = ["novita"]
+#   provider.allow_fallbacks = false
+#   Caller must explicitly opt-in. Never auto-selected.
 
 _REQUIRED_GEN_CONFIG = ("AI_BASE_URL", "AI_API_KEY", "AI_MODEL")
+
+# OpenRouter allowlist — only this exact model+provider is permitted
+_OPENROUTER_ALLOWED_MODEL = "inclusionai/ling-3.0-flash"
+_OPENROUTER_ALLOWED_PROVIDERS = ["novita"]
 
 
 def _load_env() -> Dict:
@@ -129,14 +139,37 @@ def _get_ai_config() -> Dict:
     }
 
 
-def _call_ai(prompt: str, system: str = SYSTEM_PROMPT, temperature: float = 0.1) -> Optional[Dict]:
-    """Call AI gateway with structured extraction prompt. Uses temp file for large prompts."""
+def _call_ai(prompt: str, system: str = SYSTEM_PROMPT, temperature: float = 0.1,
+             use_openrouter: bool = False) -> Optional[Dict]:
+    """
+    Call AI gateway with structured extraction prompt.
+
+    Primary route: AI_BASE_URL / AI_API_KEY / AI_MODEL (OpenCode).
+    OpenRouter exception: use_openrouter=True sends constrained request:
+      model=inclusionai/ling-3.0-flash, provider.only=["novita"],
+      provider.allow_fallbacks=false. Requires EMBEDDING_API_KEY (same key
+      used for OpenRouter embedding). Never auto-selected.
+    """
     import tempfile
     config = _get_ai_config()
 
-    base_url = config["base_url"]
-    api_key = config["api_key"]
-    model = config["model"]
+    if use_openrouter:
+        # OpenRouter constrained exception
+        emb_key = _load_env().get("EMBEDDING_API_KEY", "")
+        if not emb_key:
+            raise ValueError("OpenRouter requires EMBEDDING_API_KEY")
+        base_url = "https://openrouter.ai/api/v1"
+        api_key = emb_key
+        model = _OPENROUTER_ALLOWED_MODEL
+        provider_constraint = {
+            "only": _OPENROUTER_ALLOWED_PROVIDERS,
+            "allow_fallbacks": False,
+        }
+    else:
+        base_url = config["base_url"]
+        api_key = config["api_key"]
+        model = config["model"]
+        provider_constraint = None
 
     if not api_key:
         return None
@@ -151,6 +184,10 @@ def _call_ai(prompt: str, system: str = SYSTEM_PROMPT, temperature: float = 0.1)
         "temperature": temperature,
         "response_format": {"type": "json_object"},
     }
+
+    # Add provider constraints for OpenRouter
+    if provider_constraint:
+        payload["provider"] = provider_constraint
 
     # Write payload to temp file to avoid argument list too long
     with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:

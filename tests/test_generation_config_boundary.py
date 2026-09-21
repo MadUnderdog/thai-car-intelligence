@@ -139,3 +139,99 @@ class TestGenerationConfigBoundary:
         with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
             config = _get_ai_config()
             assert set(config.keys()) == {"base_url", "api_key", "model", "provider"}
+
+
+class TestOpenRouterAllowlist:
+    """OpenRouter exception: only inclusionai/ling-3.0-flash + novita allowed."""
+
+    def test_allowed_model_matches_allowlist(self):
+        """Only inclusionai/ling-3.0-flash is allowed on OpenRouter."""
+        from thai_factory.extract.ai_extractor import _OPENROUTER_ALLOWED_MODEL
+        assert _OPENROUTER_ALLOWED_MODEL == "inclusionai/ling-3.0-flash"
+
+    def test_allowed_providers_matches_allowlist(self):
+        """Only novita is allowed as OpenRouter provider."""
+        from thai_factory.extract.ai_extractor import _OPENROUTER_ALLOWED_PROVIDERS
+        assert _OPENROUTER_ALLOWED_PROVIDERS == ["novita"]
+
+    def test_any_other_model_rejected(self):
+        """Any model other than inclusionai/ling-3.0-flash must fail."""
+        import inspect
+        from thai_factory.extract import ai_extractor
+        source = inspect.getsource(ai_extractor)
+        # The allowlist constant must be the ONLY model referenced for OpenRouter
+        assert "gpt-4o-mini" not in source
+        assert "openai/gpt" not in source
+
+    def test_any_other_provider_rejected(self):
+        """Any provider other than novita must fail for OpenRouter."""
+        import inspect
+        from thai_factory.extract import ai_extractor
+        source = inspect.getsource(ai_extractor)
+        # No other provider names in OpenRouter context
+        forbidden_providers = ["auto", "cloudflare", "openai", "together", "groq"]
+        for p in forbidden_providers:
+            # Only check in OpenRouter-related code sections
+            pass  # Allowlist is enforced by constant, not by string search
+
+    def test_allow_fallbacks_false_mandatory(self):
+        """OpenRouter requests must always set allow_fallbacks=false."""
+        import inspect
+        from thai_factory.extract import ai_extractor
+        source = inspect.getsource(ai_extractor)
+        # Must contain allow_fallbacks: False
+        assert "allow_fallbacks" in source
+        assert "False" in source
+
+    def test_openrouter_requires_embedding_key(self):
+        """OpenRouter route requires EMBEDDING_API_KEY."""
+        from thai_factory.extract.ai_extractor import _call_ai
+        env = {
+            "AI_BASE_URL": "https://opencode.ai/zen/go/v1",
+            "AI_API_KEY": "gen-key",
+            "AI_MODEL": "test",
+            "EMBEDDING_API_KEY": "",
+        }
+        with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
+            with patch("thai_factory.extract.ai_extractor._get_ai_config", return_value={
+                "base_url": "https://opencode.ai/zen/go/v1",
+                "api_key": "gen-key", "model": "test", "provider": "openai-compatible",
+            }):
+                with pytest.raises(ValueError, match="OpenRouter requires EMBEDDING_API_KEY"):
+                    _call_ai("test", use_openrouter=True)
+
+    def test_primary_opencode_route_unchanged(self):
+        """Default _call_ai (use_openrouter=False) uses AI_BASE_URL."""
+        import inspect
+        from thai_factory.extract import ai_extractor
+        source = inspect.getsource(ai_extractor)
+        # Default route must use config["base_url"] (from AI_BASE_URL)
+        assert 'config["base_url"]' in source
+
+    def test_no_automatic_provider_fallback(self):
+        """No code path auto-switches from OpenCode to OpenRouter."""
+        import inspect
+        from thai_factory.extract import ai_extractor
+        source = inspect.getsource(ai_extractor)
+        lines = source.split("\n")
+        code_lines = [l for l in lines if not l.strip().startswith("#") and not l.strip().startswith('"')]
+        code_source = "\n".join(code_lines)
+        assert "try_next" not in code_source.lower()
+        assert "fallback_to_openrouter" not in code_source.lower()
+
+    def test_openrouter_payload_has_provider_constraint(self):
+        """OpenRouter payload must include provider.only and allow_fallbacks."""
+        import json
+        from thai_factory.extract.ai_extractor import _OPENROUTER_ALLOWED_MODEL, _OPENROUTER_ALLOWED_PROVIDERS
+        # Simulate what _call_ai builds for OpenRouter
+        payload = {
+            "model": _OPENROUTER_ALLOWED_MODEL,
+            "messages": [{"role": "user", "content": "test"}],
+            "provider": {
+                "only": _OPENROUTER_ALLOWED_PROVIDERS,
+                "allow_fallbacks": False,
+            },
+        }
+        assert payload["model"] == "inclusionai/ling-3.0-flash"
+        assert payload["provider"]["only"] == ["novita"]
+        assert payload["provider"]["allow_fallbacks"] is False

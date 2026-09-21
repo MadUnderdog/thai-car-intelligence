@@ -1,20 +1,21 @@
 """
-Crawl4AI-based fetch layer for structured web acquisition.
+Crawl4AI-based fetch layer — Crawl4AI-only for HTML sources.
 
-Provides:
-- crawl(url, config) -> DocumentSnapshot
-- crawl_many(urls, config) -> list[DocumentSnapshot]
-- Per-source fetch profiles (static, SPA, paginated, API)
-- Cache/retry/rate-limit
+Architecture: Crawl4AI → DocumentSnapshot
+For HTML sources: Crawl4AI is the ONLY acquisition method.
+If Crawl4AI fails → explicit error (BLOCKED/TIMEOUT/CRAWL_FAILED).
+Direct HTTP allowed only for true API/JSON endpoints.
 """
 import asyncio
 import hashlib
 import time
+import urllib.request
+import urllib.error
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
+import json
 
-# Crawl4AI imports
 try:
     from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
     CRAWL4AI_AVAILABLE = True
@@ -24,7 +25,6 @@ except ImportError:
 
 @dataclass
 class DocumentSnapshot:
-    """Unified document snapshot from any fetch method."""
     url: str
     final_url: str = ""
     http_status: int = 0
@@ -38,68 +38,37 @@ class DocumentSnapshot:
     content_hash: str = ""
     fetch_method: str = "crawl4ai"
     published_date: str = ""
-    # Structured extraction hints
+    crawl_id: Optional[str] = None  # Crawl4AI request ID or None
     evidence_regions: List[Dict] = field(default_factory=list)
     tables: List[Dict] = field(default_factory=list)
     headings: List[Dict] = field(default_factory=list)
+    # Acquisition status
+    acquisition_status: str = "OK"  # OK, BLOCKED, TIMEOUT, CRAWL_FAILED, API_ONLY
 
 
 @dataclass
 class FetchProfile:
-    """Per-source fetch configuration."""
     name: str
     mode: str = "static"  # static, spa, paginated, api
-    wait_for: str = ""  # CSS selector or condition
-    js_code: str = ""  # JS to execute
+    wait_for: str = ""
+    js_code: str = ""
     max_pages: int = 1
     rate_limit_ms: int = 1000
     cache_ttl_s: int = 3600
     timeout_s: int = 30
+    requires_browser: bool = True  # False for true API endpoints
 
-
-# ─── Fetch Profiles ────────────────────────────────────────────────
 
 PROFILES: Dict[str, FetchProfile] = {
-    "headlightmag": FetchProfile(
-        name="HeadLight Magazine",
-        mode="static",
-        rate_limit_ms=1500,
-        cache_ttl_s=7200,
-    ),
-    "9carthai": FetchProfile(
-        name="9CARTHAI",
-        mode="static",
-        rate_limit_ms=1500,
-        cache_ttl_s=7200,
-    ),
-    "autospinn": FetchProfile(
-        name="AutoSpinn",
-        mode="static",
-        rate_limit_ms=1500,
-        cache_ttl_s=7200,
-    ),
-    "autolifethailand": FetchProfile(
-        name="AutoLife Thailand",
-        mode="static",
-        rate_limit_ms=1500,
-        cache_ttl_s=7200,
-    ),
-    "car2day": FetchProfile(
-        name="Car2Day",
-        mode="static",
-        rate_limit_ms=1500,
-        cache_ttl_s=7200,
-    ),
-    "toyota_oem": FetchProfile(
-        name="Toyota OEM API",
-        mode="api",
-        rate_limit_ms=2000,
-        cache_ttl_s=86400,
-    ),
+    "headlightmag": FetchProfile(name="HeadLight Magazine", mode="static",
+                                  rate_limit_ms=1500, requires_browser=True),
+    "autospinn": FetchProfile(name="AutoSpinn", mode="static",
+                               rate_limit_ms=1500, requires_browser=True),
+    "autolifethailand": FetchProfile(name="AutoLife Thailand", mode="static",
+                                      rate_limit_ms=1500, requires_browser=True),
+    "toyota_oem": FetchProfile(name="Toyota OEM API", mode="api",
+                                rate_limit_ms=2000, requires_browser=False),
 }
-
-
-# ─── Cache ─────────────────────────────────────────────────────────
 
 _cache: Dict[str, DocumentSnapshot] = {}
 _last_fetch: Dict[str, float] = {}
@@ -123,16 +92,14 @@ def _get_cached(url: str, ttl_s: int) -> Optional[DocumentSnapshot]:
     return None
 
 
-def _rate_limit(domain: str, ms: int):
+def _rate_limit(domain: str, min_interval_ms: int):
     now = time.time() * 1000
     last = _last_fetch.get(domain, 0)
-    wait = (ms - (now - last)) / 1000
+    wait = min_interval_ms - (now - last)
     if wait > 0:
-        time.sleep(wait)
+        time.sleep(wait / 1000)
     _last_fetch[domain] = time.time() * 1000
 
-
-# ─── Crawl4AI Fetch ────────────────────────────────────────────────
 
 def _extract_domain(url: str) -> str:
     from urllib.parse import urlparse
@@ -140,27 +107,44 @@ def _extract_domain(url: str) -> str:
 
 
 async def _async_crawl(url: str, profile: FetchProfile) -> DocumentSnapshot:
-    """Single URL crawl using Crawl4AI."""
-    browser_config = BrowserConfig(
-        headless=True,
-        browser_type="chromium",
-    )
-
+    browser_config = BrowserConfig(headless=True, browser_type="chromium")
     crawl_config = CrawlerRunConfig(
         word_count_threshold=10,
         wait_until="domcontentloaded",
         page_timeout=profile.timeout_s * 1000,
     )
-
     if profile.wait_for:
         crawl_config.wait_until = "networkidle"
         crawl_config.css_selector = profile.wait_for
-
     if profile.js_code:
         crawl_config.js_code = profile.js_code
 
     async with AsyncWebCrawler(config=browser_config) as crawler:
         result = await crawler.arun(url=url, config=crawl_config)
+
+    # Extract markdown
+    md = ""
+    if hasattr(result.markdown, 'raw_markdown'):
+        md = result.markdown.raw_markdown
+    elif isinstance(result.markdown, str):
+        md = result.markdown
+
+    # Extract links
+    links = []
+    if isinstance(result.links, dict):
+        for link_list in result.links.values():
+            if isinstance(link_list, list):
+                for a in link_list:
+                    if isinstance(a, dict) and a.get("href"):
+                        links.append(a["href"])
+
+    # Extract media
+    media = []
+    if isinstance(result.media, dict):
+        media = result.media.get("images", [])
+
+    # Extract metadata
+    meta = result.metadata if isinstance(result.metadata, dict) else {}
 
     snap = DocumentSnapshot(
         url=url,
@@ -169,29 +153,34 @@ async def _async_crawl(url: str, profile: FetchProfile) -> DocumentSnapshot:
         fetched_at=datetime.now(timezone.utc).isoformat(),
         raw_html=result.html or "",
         rendered_html=result.html or "",
-        markdown=(result.markdown.raw_markdown if hasattr(result.markdown, 'raw_markdown') else result.markdown if isinstance(result.markdown, str) else ""),
-        links=[a.get("href", "") for a in ((result.links or {}).get("internal", []) + (result.links or {}).get("external", [])) if isinstance(a, dict) and a.get("href")],
-        media=(result.media or {}).get("images", []) if isinstance(result.media, dict) else [],
-        title=result.metadata.get("title", "") if result.metadata else "",
+        markdown=md,
+        links=links,
+        media=media,
+        title=meta.get("title", ""),
         content_hash=hashlib.sha256((result.html or "")[:5000].encode()).hexdigest()[:16],
         fetch_method="crawl4ai",
-        published_date=result.metadata.get("article:published_time", "") if result.metadata else "",
+        published_date=meta.get("article:published_time", ""),
+        crawl_id=None,  # Crawl4AI doesn't expose request IDs in this API
     )
 
-    # Extract tables and headings for evidence paths
+    # Check for Cloudflare / blocked content
+    if md and ("Please wait while your request is being verified" in md
+               or "Checking your browser" in md
+               or len(md.strip()) < 100):
+        snap.acquisition_status = "BLOCKED"
+    elif result.status_code and result.status_code >= 400:
+        snap.acquisition_status = "CRAWL_FAILED"
+    elif not result.html or len(result.html) < 500:
+        snap.acquisition_status = "CRAWL_FAILED"
+
+    # Extract tables from HTML
     if result.html:
         import re
-        # Extract tables
         table_matches = re.findall(r'<table[^>]*>(.*?)</table>', result.html, re.DOTALL | re.I)
         for i, table_html in enumerate(table_matches[:5]):
             rows = re.findall(r'<tr[^>]*>(.*?)</tr>', table_html, re.DOTALL | re.I)
-            snap.tables.append({
-                "index": i,
-                "row_count": len(rows),
-                "html": table_html[:2000],
-            })
+            snap.tables.append({"index": i, "row_count": len(rows), "html": table_html[:2000]})
 
-        # Extract headings with context
         heading_matches = re.finditer(r'<(h[1-6])[^>]*>(.*?)</\1>', result.html, re.DOTALL | re.I)
         for m in heading_matches:
             snap.headings.append({
@@ -203,27 +192,44 @@ async def _async_crawl(url: str, profile: FetchProfile) -> DocumentSnapshot:
     return snap
 
 
+def _fetch_http(url: str, profile: FetchProfile) -> DocumentSnapshot:
+    """Direct HTTP for API/JSON endpoints only."""
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        resp = urllib.request.urlopen(req, timeout=profile.timeout_s)
+        body = resp.read().decode("utf-8", errors="replace")
+        return DocumentSnapshot(
+            url=url, final_url=url, http_status=resp.status,
+            fetched_at=datetime.now(timezone.utc).isoformat(),
+            raw_html=body, markdown=body,
+            content_hash=hashlib.sha256(body[:5000].encode()).hexdigest()[:16],
+            fetch_method="http",
+            acquisition_status="OK",
+        )
+    except Exception:
+        return DocumentSnapshot(
+            url=url, http_status=0, fetch_method="http_error",
+            acquisition_status="CRAWL_FAILED",
+        )
+
+
 def crawl(url: str, profile_name: str = "default") -> DocumentSnapshot:
-    """
-    Crawl a single URL using the appropriate fetch method.
-    Returns DocumentSnapshot with structured evidence.
-    """
     domain = _extract_domain(url)
     profile = PROFILES.get(profile_name, PROFILES.get(domain, FetchProfile(name=domain)))
 
-    # Check cache
     cached = _get_cached(url, profile.cache_ttl_s)
     if cached:
         return cached
 
-    # Rate limit
     _rate_limit(domain, profile.rate_limit_ms)
 
-    # API mode: use direct HTTP
-    if profile.mode == "api":
-        return _fetch_http(url, profile)
+    # API mode: direct HTTP allowed
+    if profile.mode == "api" or not profile.requires_browser:
+        snap = _fetch_http(url, profile)
+        _cache[_cache_key(url)] = snap
+        return snap
 
-    # Crawl4AI mode
+    # HTML sources: Crawl4AI ONLY — no HTTP fallback
     if CRAWL4AI_AVAILABLE:
         try:
             loop = asyncio.new_event_loop()
@@ -232,90 +238,24 @@ def crawl(url: str, profile_name: str = "default") -> DocumentSnapshot:
             _cache[_cache_key(url)] = snap
             return snap
         except Exception as e:
-            # Fallback to HTTP
-            pass
+            # Return explicit failure — do NOT fall back to HTTP
+            return DocumentSnapshot(
+                url=url, http_status=0, fetch_method="crawl4ai_error",
+                acquisition_status="CRAWL_FAILED",
+                fetched_at=datetime.now(timezone.utc).isoformat(),
+                content_hash="",
+            )
 
-    return _fetch_http(url, profile)
+    # Crawl4AI not available: explicit failure
+    return DocumentSnapshot(
+        url=url, http_status=0, fetch_method="unavailable",
+        acquisition_status="CRAWL_FAILED",
+        fetched_at=datetime.now(timezone.utc).isoformat(),
+    )
 
 
 def crawl_many(urls: List[str], profile_name: str = "default") -> List[DocumentSnapshot]:
-    """Crawl multiple URLs with rate limiting."""
     results = []
     for url in urls:
         results.append(crawl(url, profile_name))
     return results
-
-
-# ─── HTTP Fallback ─────────────────────────────────────────────────
-
-def _fetch_http(url: str, profile: FetchProfile) -> DocumentSnapshot:
-    """Direct HTTP fetch (for APIs or fallback)."""
-    import re
-    from urllib.request import Request, urlopen
-
-    domain = _extract_domain(url)
-    _rate_limit(domain, profile.rate_limit_ms)
-
-    try:
-        req = Request(url, headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/131"})
-        with urlopen(req, timeout=profile.timeout_s) as resp:
-            html = resp.read().decode("utf-8", errors="replace")
-            final_url = resp.url
-            status = resp.status
-
-        text = re.sub(r"<script[^>]*>.*?</script>", " ", html, flags=re.DOTALL | re.I)
-        text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.DOTALL | re.I)
-        text = re.sub(r"<[^>]+>", " ", text)
-        text = re.sub(r"\s+", " ", text).strip()
-
-        # Extract tables
-        tables = []
-        table_matches = re.findall(r'<table[^>]*>(.*?)</table>', html, re.DOTALL | re.I)
-        for i, table_html in enumerate(table_matches[:5]):
-            rows = re.findall(r'<tr[^>]*>(.*?)</tr>', table_html, re.DOTALL | re.I)
-            tables.append({"index": i, "row_count": len(rows), "html": table_html[:2000]})
-
-        # Extract headings
-        headings = []
-        heading_matches = re.finditer(r'<(h[1-6])[^>]*>(.*?)</\1>', html, re.DOTALL | re.I)
-        for m in heading_matches:
-            headings.append({
-                "level": m.group(1),
-                "text": re.sub(r'<[^>]+>', '', m.group(2)).strip(),
-                "position": m.start(),
-            })
-
-        # Extract title
-        title_match = re.search(r'<title[^>]*>(.*?)</title>', html, re.I | re.DOTALL)
-        title = re.sub(r'<[^>]+>', '', title_match.group(1)).strip() if title_match else ""
-
-        # Extract published date
-        pub_match = re.search(r'article:published_time["\s]+content="([^"]+)"', html, re.I)
-        if not pub_match:
-            pub_match = re.search(r'published_date["\s]+content="([^"]+)"', html, re.I)
-        pub_date = pub_match.group(1) if pub_match else ""
-
-        snap = DocumentSnapshot(
-            url=url,
-            final_url=final_url,
-            http_status=status,
-            fetched_at=datetime.now(timezone.utc).isoformat(),
-            raw_html=html,
-            rendered_html=html,
-            markdown=text,
-            title=title,
-            content_hash=hashlib.sha256(html[:5000].encode()).hexdigest()[:16],
-            fetch_method="http",
-            published_date=pub_date,
-            tables=tables,
-            headings=headings,
-        )
-        _cache[_cache_key(url)] = snap
-        return snap
-
-    except Exception as e:
-        return DocumentSnapshot(
-            url=url, final_url=url, http_status=0,
-            fetched_at=datetime.now(timezone.utc).isoformat(),
-            content_hash="", fetch_method="http_error",
-        )

@@ -1,16 +1,16 @@
 """
 Crawl4AI-based fetch layer — Crawl4AI-only for HTML sources.
 
-Architecture: Crawl4AI → DocumentSnapshot
-For HTML sources: Crawl4AI is the ONLY acquisition method.
-If Crawl4AI fails → explicit error (BLOCKED/TIMEOUT/CRAWL_FAILED).
-Direct HTTP allowed only for true API/JSON endpoints.
+Challenge handling:
+- Detect JS challenge pages (title/body markers)
+- Retry with increasing delays: 3s → 7s → 12s
+- Return JS_CHALLENGE_TIMEOUT if challenge can't resolve
+- Record attempt metadata for provenance
 """
 import asyncio
 import hashlib
 import time
 import urllib.request
-import urllib.error
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
@@ -21,6 +21,54 @@ try:
     CRAWL4AI_AVAILABLE = True
 except ImportError:
     CRAWL4AI_AVAILABLE = False
+
+# ─── Challenge Detection ───────────────────────────────────────────
+CHALLENGE_TITLE_MARKERS = [
+    "One moment, please...",
+    "Please wait while your request is being verified",
+    "Checking your browser",
+    "Just a moment...",
+    "Attention Required!",
+    "Access denied",
+]
+CHALLENGE_BODY_MARKERS = [
+    "Please wait while your request is being verified",
+    "Checking your browser",
+    "Verify you are human",
+    "Checking if the site connection is secure",
+    "Enable JavaScript and cookies to continue",
+]
+CHALLENGE_RETRY_DELAYS = [3.0, 7.0, 12.0]  # increasing delays per attempt
+
+
+def _is_challenge_page(title: str, markdown: str) -> bool:
+    """Detect if the page is a JS challenge / bot detection page."""
+    title_lower = title.lower()
+    for marker in CHALLENGE_TITLE_MARKERS:
+        if marker.lower() in title_lower:
+            return True
+    md_lower = markdown[:2000].lower()
+    for marker in CHALLENGE_BODY_MARKERS:
+        if marker.lower() in md_lower:
+            return True
+    # Very short markdown after large HTML = likely challenge
+    # Only check if we have SOME markdown but it's suspiciously short
+    # Don't flag legitimately short pages (like empty category pages)
+    return False
+
+
+@dataclass
+class CrawlAttempt:
+    """Record of a single crawl attempt."""
+    attempt_number: int
+    delay_used: float
+    success: bool
+    is_challenge: bool
+    http_status: int
+    final_url: str
+    content_hash: str
+    elapsed_s: float
+    title: str = ""
 
 
 @dataclass
@@ -38,26 +86,29 @@ class DocumentSnapshot:
     content_hash: str = ""
     fetch_method: str = "crawl4ai"
     published_date: str = ""
-    crawl_id: Optional[str] = None  # Crawl4AI request ID or None
+    crawl_id: Optional[str] = None
     evidence_regions: List[Dict] = field(default_factory=list)
-    tables: List[Dict] = field(default_factory=list)
-    headings: List[Dict] = field(default_factory=list)
     # Acquisition status
-    acquisition_status: str = "OK"  # OK, BLOCKED, TIMEOUT, CRAWL_FAILED, API_ONLY
+    acquisition_status: str = "OK"  # OK, BLOCKED, JS_CHALLENGE_TIMEOUT, CRAWL_FAILED, API_ONLY
+    # Attempt provenance
+    attempts: List[CrawlAttempt] = field(default_factory=list)
+    retry_count: int = 0
 
 
 @dataclass
 class FetchProfile:
     name: str
-    mode: str = "static"  # static, spa, paginated, api
+    mode: str = "static"
     wait_for: str = ""
     js_code: str = ""
     max_pages: int = 1
     rate_limit_ms: int = 1000
     cache_ttl_s: int = 3600
     timeout_s: int = 30
-    requires_browser: bool = True  # False for true API endpoints
-    delay_before_return_html: float = 0.0  # seconds to wait for JS challenge
+    requires_browser: bool = True
+    # Challenge retry policy
+    has_js_challenge: bool = False  # True for sources with JS challenge pages
+    challenge_retry_delays: List[float] = field(default_factory=lambda: list(CHALLENGE_RETRY_DELAYS))
 
 
 PROFILES: Dict[str, FetchProfile] = {
@@ -67,7 +118,8 @@ PROFILES: Dict[str, FetchProfile] = {
                                rate_limit_ms=1500, requires_browser=True),
     "autolifethailand": FetchProfile(name="AutoLife Thailand", mode="static",
                                       rate_limit_ms=1500, requires_browser=True,
-                                      delay_before_return_html=7.0),
+                                      has_js_challenge=True,
+                                      challenge_retry_delays=[3.0, 7.0, 12.0]),
     "toyota_oem": FetchProfile(name="Toyota OEM API", mode="api",
                                 rate_limit_ms=2000, requires_browser=False),
 }
@@ -108,92 +160,118 @@ def _extract_domain(url: str) -> str:
     return urlparse(url).netloc.replace("www.", "")
 
 
-async def _async_crawl(url: str, profile: FetchProfile) -> DocumentSnapshot:
+async def _single_crawl(url: str, delay: float) -> tuple:
+    """Single Crawl4AI crawl attempt. Returns (result_html, result_markdown, result_metadata, result_url, result_status)."""
     browser_config = BrowserConfig(headless=True, browser_type="chromium")
     crawl_config = CrawlerRunConfig(
         word_count_threshold=10,
         wait_until="domcontentloaded",
-        page_timeout=profile.timeout_s * 1000,
+        page_timeout=30000,
+        delay_before_return_html=delay,
     )
-    if profile.wait_for:
-        crawl_config.wait_until = "networkidle"
-        crawl_config.css_selector = profile.wait_for
-    if profile.js_code:
-        crawl_config.js_code = profile.js_code
-    if profile.delay_before_return_html > 0:
-        crawl_config.delay_before_return_html = profile.delay_before_return_html
-
     async with AsyncWebCrawler(config=browser_config) as crawler:
         result = await crawler.arun(url=url, config=crawl_config)
+    return result
 
-    # Extract markdown
-    md = ""
-    if hasattr(result.markdown, 'raw_markdown'):
-        md = result.markdown.raw_markdown
-    elif isinstance(result.markdown, str):
-        md = result.markdown
 
-    # Extract links
-    links = []
-    if isinstance(result.links, dict):
-        for link_list in result.links.values():
-            if isinstance(link_list, list):
-                for a in link_list:
-                    if isinstance(a, dict) and a.get("href"):
-                        links.append(a["href"])
+async def _async_crawl_with_retry(url: str, profile: FetchProfile) -> DocumentSnapshot:
+    """Crawl with retry policy for JS challenge pages."""
+    attempts = []
+    delays = profile.challenge_retry_delays if profile.has_js_challenge else [0.0]
 
-    # Extract media
-    media = []
-    if isinstance(result.media, dict):
-        media = result.media.get("images", [])
+    for attempt_num, delay in enumerate(delays):
+        start_time = time.time()
+        try:
+            result = await _single_crawl(url, delay)
+        except Exception as e:
+            elapsed = time.time() - start_time
+            attempts.append(CrawlAttempt(
+                attempt_number=attempt_num + 1, delay_used=delay,
+                success=False, is_challenge=False, http_status=0,
+                final_url=url, content_hash="", elapsed_s=elapsed,
+            ))
+            continue
 
-    # Extract metadata
-    meta = result.metadata if isinstance(result.metadata, dict) else {}
+        elapsed = time.time() - start_time
 
-    snap = DocumentSnapshot(
+        # Extract markdown
+        md = ""
+        if hasattr(result.markdown, 'raw_markdown'):
+            md = result.markdown.raw_markdown
+        elif isinstance(result.markdown, str):
+            md = result.markdown
+
+        # Extract metadata
+        meta = result.metadata if isinstance(result.metadata, dict) else {}
+        title = meta.get("title", "")
+
+        content_hash = hashlib.sha256((result.html or "")[:5000].encode()).hexdigest()[:16]
+
+        is_challenge = _is_challenge_page(title, md)
+        is_success = not is_challenge and len(md.strip()) > 100
+
+        attempts.append(CrawlAttempt(
+            attempt_number=attempt_num + 1, delay_used=delay,
+            success=is_success, is_challenge=is_challenge,
+            http_status=result.status_code or 0,
+            final_url=result.url or url,
+            content_hash=content_hash,
+            elapsed_s=elapsed,
+            title=title,
+        ))
+
+        if is_success:
+            # Build successful snapshot
+            links = []
+            if isinstance(result.links, dict):
+                for link_list in result.links.values():
+                    if isinstance(link_list, list):
+                        for a in link_list:
+                            if isinstance(a, dict) and a.get("href"):
+                                links.append(a["href"])
+
+            media = []
+            if isinstance(result.media, dict):
+                media = result.media.get("images", [])
+
+            snap = DocumentSnapshot(
+                url=url,
+                final_url=result.url or url,
+                http_status=result.status_code or 0,
+                fetched_at=datetime.now(timezone.utc).isoformat(),
+                raw_html=result.html or "",
+                rendered_html=result.html or "",
+                markdown=md,
+                links=links,
+                media=media,
+                title=title,
+                content_hash=content_hash,
+                fetch_method="crawl4ai",
+                published_date=meta.get("article:published_time", ""),
+                crawl_id=None,
+                acquisition_status="OK",
+                attempts=attempts,
+                retry_count=attempt_num,
+            )
+            return snap
+
+    # All attempts failed
+    last = attempts[-1] if attempts else None
+    status = "JS_CHALLENGE_TIMEOUT" if any(a.is_challenge for a in attempts) else "CRAWL_FAILED"
+
+    return DocumentSnapshot(
         url=url,
-        final_url=result.url or url,
-        http_status=result.status_code or 0,
+        final_url=last.final_url if last else url,
+        http_status=last.http_status if last else 0,
         fetched_at=datetime.now(timezone.utc).isoformat(),
-        raw_html=result.html or "",
-        rendered_html=result.html or "",
-        markdown=md,
-        links=links,
-        media=media,
-        title=meta.get("title", ""),
-        content_hash=hashlib.sha256((result.html or "")[:5000].encode()).hexdigest()[:16],
+        raw_html="",
+        markdown="",
+        content_hash="",
         fetch_method="crawl4ai",
-        published_date=meta.get("article:published_time", ""),
-        crawl_id=None,  # Crawl4AI doesn't expose request IDs in this API
+        acquisition_status=status,
+        attempts=attempts,
+        retry_count=len(attempts),
     )
-
-    # Check for Cloudflare / blocked content
-    if md and ("Please wait while your request is being verified" in md
-               or "Checking your browser" in md
-               or len(md.strip()) < 100):
-        snap.acquisition_status = "BLOCKED"
-    elif result.status_code and result.status_code >= 400:
-        snap.acquisition_status = "CRAWL_FAILED"
-    elif not result.html or len(result.html) < 500:
-        snap.acquisition_status = "CRAWL_FAILED"
-
-    # Extract tables from HTML
-    if result.html:
-        import re
-        table_matches = re.findall(r'<table[^>]*>(.*?)</table>', result.html, re.DOTALL | re.I)
-        for i, table_html in enumerate(table_matches[:5]):
-            rows = re.findall(r'<tr[^>]*>(.*?)</tr>', table_html, re.DOTALL | re.I)
-            snap.tables.append({"index": i, "row_count": len(rows), "html": table_html[:2000]})
-
-        heading_matches = re.finditer(r'<(h[1-6])[^>]*>(.*?)</\1>', result.html, re.DOTALL | re.I)
-        for m in heading_matches:
-            snap.headings.append({
-                "level": m.group(1),
-                "text": re.sub(r'<[^>]+>', '', m.group(2)).strip(),
-                "position": m.start(),
-            })
-
-    return snap
 
 
 def _fetch_http(url: str, profile: FetchProfile) -> DocumentSnapshot:
@@ -219,12 +297,10 @@ def _fetch_http(url: str, profile: FetchProfile) -> DocumentSnapshot:
 
 def crawl(url: str, profile_name: str = "default") -> DocumentSnapshot:
     domain = _extract_domain(url)
-    # Profile lookup: try exact domain, then try name without TLD
     profile = PROFILES.get(profile_name)
     if not profile:
         profile = PROFILES.get(domain)
     if not profile:
-        # Try matching without common TLDs
         for tld in ['.tv', '.com', '.co.th', '.net']:
             if domain.endswith(tld):
                 base = domain[:-len(tld)]
@@ -250,12 +326,11 @@ def crawl(url: str, profile_name: str = "default") -> DocumentSnapshot:
     if CRAWL4AI_AVAILABLE:
         try:
             loop = asyncio.new_event_loop()
-            snap = loop.run_until_complete(_async_crawl(url, profile))
+            snap = loop.run_until_complete(_async_crawl_with_retry(url, profile))
             loop.close()
             _cache[_cache_key(url)] = snap
             return snap
         except Exception as e:
-            # Return explicit failure — do NOT fall back to HTTP
             return DocumentSnapshot(
                 url=url, http_status=0, fetch_method="crawl4ai_error",
                 acquisition_status="CRAWL_FAILED",
@@ -263,7 +338,6 @@ def crawl(url: str, profile_name: str = "default") -> DocumentSnapshot:
                 content_hash="",
             )
 
-    # Crawl4AI not available: explicit failure
     return DocumentSnapshot(
         url=url, http_status=0, fetch_method="unavailable",
         acquisition_status="CRAWL_FAILED",

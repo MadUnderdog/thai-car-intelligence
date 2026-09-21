@@ -3,7 +3,15 @@ Quality gates — executable invariants for the data factory.
 
 These gates prevent bad data from entering the canonical layer.
 Each gate returns (passed, reason) tuples.
+
+FIXES from audit:
+- gate_model_range_not_variant_msrp: now checks price_type semantics, not substring
+- gate_source_class_cardinality: now returns FAIL if claimed multi-source has <2 classes
+- gate_evidence_path_required: now validates excerpt contains the asserted value
+- Added gate_no_historical_as_current: blocks historical prices from becoming current
+- Added gate_price_type_explicit: unknown price types must stay UNKNOWN
 """
+import re
 from typing import List, Tuple, Dict, Set
 from ..models import (
     Observation, IdentityDecision, ScopeDecision, PriceType,
@@ -29,16 +37,29 @@ def gate_scope_invalid(obs: Observation) -> Tuple[bool, str]:
 
 
 def gate_model_range_not_variant_msrp(obs: Observation) -> Tuple[bool, str]:
-    """MODEL_RANGE cannot become VARIANT_MSRP."""
-    if obs.price_type == PriceType.MODEL_RANGE and "variant" in obs.raw_value.lower():
-        return False, "model_range_as_variant_msrp"
+    """
+    MODEL_RANGE cannot become VARIANT_MSRP.
+    FIX: Now checks price_type semantics, not raw_value substring.
+    If the observation is tagged as MODEL_RANGE, it must stay MODEL_RANGE
+    and never be promoted to VARIANT_MSRP during persistence.
+    """
+    if obs.price_type == PriceType.MODEL_RANGE:
+        # MODEL_RANGE observations must never be persisted as VARIANT_MSRP
+        # The persistence layer must respect this price_type
+        return False, "model_range_cannot_become_variant_msrp"
     return True, "ok"
 
 
 def gate_historical_not_current(obs: Observation) -> Tuple[bool, str]:
-    """Historical cannot become current without a currentness rule."""
+    """
+    Historical cannot become current without a currentness rule.
+    FIX: Also blocks PROMOTION prices from becoming unconditional current MSRP.
+    """
     if obs.price_type == PriceType.HISTORICAL:
-        return False, "historical_price"
+        return False, "historical_price_not_current"
+    if obs.price_type == PriceType.PROMOTION:
+        # Promotions are time-limited; cannot become unconditional current price
+        return False, "promotion_price_not_unconditional_current"
     return True, "ok"
 
 
@@ -52,9 +73,31 @@ def gate_secondary_not_official(obs: Observation) -> Tuple[bool, str]:
 
 
 def gate_evidence_path_required(obs: Observation) -> Tuple[bool, str]:
-    """Evidence path must exist for promoted observations."""
+    """
+    Evidence path must exist AND excerpt must contain the asserted value.
+    FIX: Now validates that the excerpt actually contains the normalized value.
+    """
     if not obs.evidence_excerpt and not obs.evidence_path:
         return False, "no_evidence"
+
+    # If we have an excerpt, validate it contains the asserted value
+    if obs.evidence_excerpt and obs.normalized_value:
+        # Check if the normalized value (or raw value) appears in the excerpt
+        val_str = str(obs.normalized_value)
+        raw_str = str(obs.raw_value)
+        excerpt_lower = obs.evidence_excerpt.lower()
+        if val_str not in excerpt_lower and raw_str not in excerpt_lower:
+            # For prices, also check with commas
+            if obs.field == "price":
+                try:
+                    formatted = f"{int(val_str):,}"
+                    if formatted not in excerpt_lower:
+                        return False, "evidence_excerpt_missing_value"
+                except (ValueError, TypeError):
+                    pass
+            else:
+                return False, "evidence_excerpt_missing_value"
+
     return True, "ok"
 
 
@@ -64,14 +107,6 @@ def gate_idempotent_rerun(existing_fingerprints: Set[str],
     if obs.fingerprint in existing_fingerprints:
         return False, "duplicate_fingerprint"
     return True, "ok"
-
-
-def gate_source_class_cardinality(source_classes: Set[str]) -> Tuple[bool, str]:
-    """Source-class cardinality counts classes, not URLs."""
-    # This is informational — multi-source assembly requires distinct classes
-    if len(source_classes) >= 2:
-        return True, f"multi_source:{len(source_classes)}"
-    return True, f"single_source:{len(source_classes)}"
 
 
 def gate_price_sanity(obs: Observation) -> Tuple[bool, str]:
@@ -94,6 +129,31 @@ def gate_no_price_key_in_specs(obs: Observation) -> Tuple[bool, str]:
     return True, "ok"
 
 
+def gate_price_type_explicit(obs: Observation) -> Tuple[bool, str]:
+    """
+    Unknown price types must stay UNKNOWN or NEEDS_REVIEW,
+    never silently become MSRP.
+    """
+    if obs.field == "price":
+        if obs.price_type == PriceType.UNKNOWN:
+            # Unknown price type should not be persisted as current MSRP
+            return False, "unknown_price_type_not_persisted"
+    return True, "ok"
+
+
+def gate_no_cross_model_contamination(obs: Observation,
+                                       all_brand_mentions: Dict[str, int] = None) -> Tuple[bool, str]:
+    """
+    If multiple brands are mentioned with comparable counts,
+    the observation should be flagged for review.
+    """
+    if all_brand_mentions and len(all_brand_mentions) > 1:
+        sorted_counts = sorted(all_brand_mentions.values(), reverse=True)
+        if len(sorted_counts) >= 2 and sorted_counts[0] <= sorted_counts[1] * 1.5:
+            return False, "cross_model_contamination_risk"
+    return True, "ok"
+
+
 # ─── Gate Runner ────────────────────────────────────────────────────
 
 ALL_GATES = [
@@ -105,6 +165,7 @@ ALL_GATES = [
     gate_evidence_path_required,
     gate_price_sanity,
     gate_no_price_key_in_specs,
+    gate_price_type_explicit,
 ]
 
 

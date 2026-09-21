@@ -206,13 +206,18 @@ class Observation:
         if not self.observed_at:
             self.observed_at = datetime.now(timezone.utc).isoformat()
         if not self.observation_id:
-            raw = f"{self.source_url}|{self.brand}|{self.model}|{self.field}|{self.normalized_value}"
-            self.observation_id = hashlib.sha256(raw.encode()).hexdigest()[:16]
+            # Full SHA-256 for collision resistance
+            raw = f"{self.source_url}|{self.brand}|{self.model}|{self.variant}|{self.field}|{self.normalized_value}|{self.price_type.value if hasattr(self.price_type, 'value') else self.price_type}"
+            self.observation_id = hashlib.sha256(raw.encode()).hexdigest()
 
     @property
     def fingerprint(self) -> str:
-        """Dedup fingerprint: domain + content_hash + entity + field + value."""
-        return f"{self.source_domain}|{self.content_hash}|{self.brand}|{self.model}|{self.field}|{self.normalized_value}"
+        """
+        Dedup fingerprint: full SHA-256 including variant and price type.
+        FIX: Now includes variant to prevent cross-variant dedup collisions.
+        """
+        raw = f"{self.source_domain}|{self.source_url}|{self.brand}|{self.model}|{self.variant}|{self.field}|{self.normalized_value}|{self.price_type.value if hasattr(self.price_type, 'value') else self.price_type}"
+        return hashlib.sha256(raw.encode()).hexdigest()
 
     def to_dict(self) -> dict:
         d = asdict(self)

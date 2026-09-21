@@ -58,7 +58,9 @@ class DurableQueue:
         self._load()
 
     def _load(self):
-        """Load queue state from checkpoint file."""
+        """Load queue state from checkpoint file.
+        FIX: Corrupted checkpoint fails loudly instead of silently resetting.
+        """
         if os.path.exists(self.checkpoint_path):
             try:
                 with open(self.checkpoint_path) as f:
@@ -67,8 +69,12 @@ class DurableQueue:
                     job_data["state"] = JobState(job_data["state"])
                     job = Job(**job_data)
                     self.jobs[job.job_key] = job
-            except Exception:
-                pass
+            except (json.JSONDecodeError, KeyError, ValueError) as e:
+                # Corrupted checkpoint — fail loudly
+                raise RuntimeError(
+                    f"Corrupted queue checkpoint at {self.checkpoint_path}: {e}. "
+                    f"Use --reset to start fresh or fix the checkpoint manually."
+                )
 
     def save(self):
         """Persist queue state."""

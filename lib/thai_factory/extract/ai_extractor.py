@@ -1,7 +1,7 @@
 """
 AI Extractor — structured extraction using existing AI gateway.
 
-Uses OpenAI-compatible API (OpenRouter/OpenCode) with structured JSON output.
+Uses OpenAI-compatible API with structured JSON output.
 Two-stage extraction: document understanding + field extraction.
 """
 import json
@@ -71,9 +71,15 @@ OUTPUT: Valid JSON matching the extraction schema provided in the user message."
 
 
 # ─── AI Client ─────────────────────────────────────────────────────
+# CONFIG BOUNDARY: Generation uses ONLY these 3 env vars.
+# EMBEDDING_* must NEVER be used for generation.
+# No provider fallback. No hardcoded models. Fail-closed.
 
-def _get_ai_config() -> Dict:
-    """Load AI config from .env. Uses OpenRouter as primary, OpenCode as fallback."""
+_REQUIRED_GEN_CONFIG = ("AI_BASE_URL", "AI_API_KEY", "AI_MODEL")
+
+
+def _load_env() -> Dict:
+    """Load .env file into dict. Separated for testability."""
     config = {}
     env_path = os.path.join(os.path.dirname(__file__), "..", "..", "..", ".env")
     if os.path.exists(env_path):
@@ -82,23 +88,44 @@ def _get_ai_config() -> Dict:
                 line = line.strip()
                 if line and not line.startswith("#") and "=" in line:
                     key, _, val = line.partition("=")
-                    # Strip comments from value
                     val = val.split("#")[0].strip()
                     config[key.strip()] = val.strip().strip('"').strip("'")
+    return config
 
-    # Prefer OpenRouter for Python extraction (no session ID needed)
-    if "EMBEDDING_API_KEY" in config and config["EMBEDDING_API_KEY"]:
-        return {
-            "base_url": config.get("EMBEDDING_BASE_URL", "https://openrouter.ai/api/v1"),
-            "api_key": config["EMBEDDING_API_KEY"],
-            "model": "openai/gpt-4o-mini",
-        }
 
-    # Fallback to OpenCode
+def _get_ai_config() -> Dict:
+    """
+    Load generation config from .env. FAIL-CLOSED.
+    Uses ONLY AI_BASE_URL, AI_API_KEY, AI_MODEL.
+    Raises ValueError if any required config is missing.
+    Never uses EMBEDDING_* credentials. Never falls back to other providers.
+    """
+    config = _load_env()
+
+    # Validate required generation config
+    missing = [k for k in _REQUIRED_GEN_CONFIG if not config.get(k)]
+    if missing:
+        raise ValueError(
+            f"GENERATION CONFIG MISSING: {', '.join(missing)}. "
+            f"Required: AI_BASE_URL, AI_API_KEY, AI_MODEL. "
+            f"Cannot proceed without generation credentials."
+        )
+
+    # Verify we're NOT accidentally using embedding credentials
+    gen_url = config["AI_BASE_URL"]
+    gen_key = config["AI_API_KEY"]
+    emb_key = config.get("EMBEDDING_API_KEY", "")
+    if emb_key and gen_key == emb_key and "openrouter" in gen_url:
+        raise ValueError(
+            "CONFIG VIOLATION: AI_API_KEY == EMBEDDING_API_KEY with OpenRouter URL. "
+            "Generation must use AI_BASE_URL/AI_API_KEY/AI_MODEL only."
+        )
+
     return {
-        "base_url": config.get("AI_BASE_URL", "https://opencode.ai/zen/go/v1"),
-        "api_key": config.get("AI_API_KEY", ""),
-        "model": config.get("AI_MODEL", "glm-5.3-flash"),
+        "base_url": config["AI_BASE_URL"],
+        "api_key": config["AI_API_KEY"],
+        "model": config["AI_MODEL"],
+        "provider": config.get("AI_PROVIDER", "openai-compatible"),
     }
 
 
@@ -138,6 +165,10 @@ def _call_ai(prompt: str, system: str = SYSTEM_PROMPT, temperature: float = 0.1)
             "-H", "Content-Type: application/json",
             "-d", f"@{tmp_path}",
         ]
+
+        # OpenCode requires x-opencode-session header
+        if "opencode.ai" in base_url:
+            cmd.extend(["-H", f"x-opencode-session: session-{int(time.time()*1000)}"])
 
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
         if result.returncode != 0:

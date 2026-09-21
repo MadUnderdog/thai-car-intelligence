@@ -160,13 +160,13 @@ def _extract_domain(url: str) -> str:
     return urlparse(url).netloc.replace("www.", "")
 
 
-async def _single_crawl(url: str, delay: float) -> tuple:
+async def _single_crawl(url: str, delay: float, timeout_s: int = 30) -> tuple:
     """Single Crawl4AI crawl attempt. Returns (result_html, result_markdown, result_metadata, result_url, result_status)."""
     browser_config = BrowserConfig(headless=True, browser_type="chromium")
     crawl_config = CrawlerRunConfig(
         word_count_threshold=10,
         wait_until="domcontentloaded",
-        page_timeout=30000,
+        page_timeout=timeout_s * 1000,
         delay_before_return_html=delay,
     )
     async with AsyncWebCrawler(config=browser_config) as crawler:
@@ -182,7 +182,7 @@ async def _async_crawl_with_retry(url: str, profile: FetchProfile) -> DocumentSn
     for attempt_num, delay in enumerate(delays):
         start_time = time.time()
         try:
-            result = await _single_crawl(url, delay)
+            result = await _single_crawl(url, delay, profile.timeout_s)
         except Exception as e:
             elapsed = time.time() - start_time
             attempts.append(CrawlAttempt(
@@ -208,7 +208,7 @@ async def _async_crawl_with_retry(url: str, profile: FetchProfile) -> DocumentSn
         content_hash = hashlib.sha256((result.html or "")[:5000].encode()).hexdigest()[:16]
 
         is_challenge = _is_challenge_page(title, md)
-        is_success = not is_challenge and len(md.strip()) > 100
+        is_success = not is_challenge and len(md.strip()) > 100 and (result.status_code or 0) < 400
 
         attempts.append(CrawlAttempt(
             attempt_number=attempt_num + 1, delay_used=delay,

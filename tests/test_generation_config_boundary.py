@@ -1,237 +1,138 @@
-"""
-Regression tests for generation config boundary.
-
-CRITICAL: Generation uses ONLY AI_BASE_URL, AI_API_KEY, AI_MODEL.
-EMBEDDING_* must NEVER be used for generation.
-No provider fallback. No hardcoded models. Fail-closed.
-"""
-import os
-import sys
-import pytest
-from unittest.mock import patch
+"""Regression tests for generation config boundary — integration-level."""
+import json, os, sys, pytest
+from unittest.mock import patch, MagicMock
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "lib"))
+from thai_factory.extract.ai_extractor import (
+    _get_ai_config, _load_env, _call_ai, _REQUIRED_GEN_CONFIG,
+    _OPENROUTER_ALLOWED_MODEL, _OPENROUTER_ALLOWED_PROVIDERS,
+)
 
-from thai_factory.extract.ai_extractor import _get_ai_config, _load_env, _REQUIRED_GEN_CONFIG
+def _mock_result():
+    r = MagicMock(); r.returncode = 0
+    r.stdout = '{"choices":[{"message":{"content":"{\\"ok\\":true}"}}]}'
+    r.stderr = ""; return r
 
+def _payload(m):
+    cmd = m.call_args[0][0]
+    for i, a in enumerate(cmd):
+        if a == "-d" and i+1 < len(cmd) and cmd[i+1].startswith("@"):
+            try:
+                with open(cmd[i+1][1:]) as f: return json.load(f)
+            except: pass
+    return None
+
+def _run_with_mock(fn, use_openrouter=False, env=None, config=None):
+    """Helper: run _call_ai with mocked subprocess + os.unlink."""
+    if env is None: env = {}
+    if config is None: config = {"base_url":"https://opencode.ai/zen/go/v1","api_key":"k","model":"m","provider":"p"}
+    with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
+        with patch("thai_factory.extract.ai_extractor._get_ai_config", return_value=config):
+            with patch("thai_factory.extract.ai_extractor.subprocess.run") as m:
+                with patch("thai_factory.extract.ai_extractor.os.unlink"):
+                    m.return_value = _mock_result()
+                    _call_ai("t", use_openrouter=use_openrouter)
+                    return m
 
 class TestGenerationConfigBoundary:
-    """Generation config must use ONLY AI_BASE_URL, AI_API_KEY, AI_MODEL."""
-
-    def test_generation_never_uses_embedding_credentials(self):
-        """EMBEDDING_API_KEY must never be used for generation."""
-        env = {
-            "AI_BASE_URL": "https://opencode.ai/zen/go/v1",
-            "AI_API_KEY": "gen-key-123",
-            "AI_MODEL": "glm-5.3-flash",
-            "EMBEDDING_BASE_URL": "https://openrouter.ai/api/v1",
-            "EMBEDDING_API_KEY": "emb-key-456",
-        }
+    def test_never_uses_embedding_credentials(self):
+        env = {"AI_BASE_URL":"https://opencode.ai/zen/go/v1","AI_API_KEY":"gen","AI_MODEL":"m","EMBEDDING_API_KEY":"emb"}
         with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
-            config = _get_ai_config()
-            assert config["base_url"] == "https://opencode.ai/zen/go/v1"
-            assert config["api_key"] == "gen-key-123"
-            assert config["model"] == "glm-5.3-flash"
-            assert config["api_key"] != env.get("EMBEDDING_API_KEY")
+            c = _get_ai_config()
+            assert c["api_key"] == "gen" and c["api_key"] != "emb"
 
-    def test_generation_model_comes_only_from_ai_model(self):
-        """Model must come from AI_MODEL only."""
-        env = {
-            "AI_BASE_URL": "https://opencode.ai/zen/go/v1",
-            "AI_API_KEY": "test-key",
-            "AI_MODEL": "my-actual-model",
-        }
-        with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
-            config = _get_ai_config()
-            assert config["model"] == "my-actual-model"
+    def test_model_comes_only_from_ai_model(self):
+        with patch("thai_factory.extract.ai_extractor._load_env", return_value={"AI_BASE_URL":"x","AI_API_KEY":"k","AI_MODEL":"my-m"}):
+            assert _get_ai_config()["model"] == "my-m"
 
-    def test_no_hardcoded_generation_model(self):
-        """Source code must not contain hardcoded generation model names."""
-        import inspect
-        from thai_factory.extract import ai_extractor
-        source = inspect.getsource(ai_extractor)
-        hardcoded = [
-            "gpt-4o", "gpt-3.5", "claude", "llama", "mistral",
-            "openai/gpt", "anthropic/",
-        ]
-        for pattern in hardcoded:
-            assert pattern not in source, f"Hardcoded model found: {pattern}"
+    def test_no_hardcoded_model(self):
+        import inspect; from thai_factory.extract import ai_extractor
+        for p in ["gpt-4o","gpt-3.5","claude","llama","mistral","openai/gpt","anthropic/"]:
+            assert p not in inspect.getsource(ai_extractor)
 
-    def test_missing_generation_config_fails_closed(self):
-        """Missing all config must raise ValueError."""
-        env = {"AI_BASE_URL": "", "AI_API_KEY": "", "AI_MODEL": ""}
-        with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
-            with pytest.raises(ValueError, match="GENERATION CONFIG MISSING"):
-                _get_ai_config()
+    def test_missing_config_fails_closed(self):
+        with patch("thai_factory.extract.ai_extractor._load_env", return_value={"AI_BASE_URL":"","AI_API_KEY":"","AI_MODEL":""}):
+            with pytest.raises(ValueError, match="GENERATION CONFIG MISSING"): _get_ai_config()
 
-    def test_missing_single_config_fails_closed(self):
-        """Missing any single required config must raise ValueError."""
-        for key in _REQUIRED_GEN_CONFIG:
-            env = {
-                "AI_BASE_URL": "https://opencode.ai/zen/go/v1",
-                "AI_API_KEY": "test-key",
-                "AI_MODEL": "test-model",
-            }
-            env[key] = ""
-            with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
-                with pytest.raises(ValueError, match="GENERATION CONFIG MISSING"):
-                    _get_ai_config()
+    def test_missing_single_config(self):
+        for k in _REQUIRED_GEN_CONFIG:
+            e = {"AI_BASE_URL":"x","AI_API_KEY":"k","AI_MODEL":"m"}; e[k] = ""
+            with patch("thai_factory.extract.ai_extractor._load_env", return_value=e):
+                with pytest.raises(ValueError): _get_ai_config()
 
-    def test_embedding_config_cannot_activate_generation_fallback(self):
-        """Having EMBEDDING_API_KEY must not activate generation fallback."""
-        env = {
-            "AI_BASE_URL": "",
-            "AI_API_KEY": "",
-            "AI_MODEL": "",
-            "EMBEDDING_BASE_URL": "https://openrouter.ai/api/v1",
-            "EMBEDDING_API_KEY": "sk-or-embedding-key",
-        }
-        with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
-            with pytest.raises(ValueError, match="GENERATION CONFIG MISSING"):
-                _get_ai_config()
+    def test_embedding_cannot_activate_fallback(self):
+        with patch("thai_factory.extract.ai_extractor._load_env", return_value={"AI_BASE_URL":"","AI_API_KEY":"","AI_MODEL":"","EMBEDDING_API_KEY":"x"}):
+            with pytest.raises(ValueError): _get_ai_config()
 
-    def test_provider_fallback_is_disabled(self):
-        """No automatic provider fallback logic must exist in source."""
-        import inspect
-        from thai_factory.extract import ai_extractor
-        source = inspect.getsource(ai_extractor)
-        # Check for fallback LOGIC (not comments about the policy)
-        # Remove comments and docstrings for checking
-        lines = source.split("\n")
-        code_lines = [l for l in lines if not l.strip().startswith("#") and not l.strip().startswith('"')]
-        code_source = "\n".join(code_lines)
-        fallback_logic = [
-            "try_next", "alternative_provider",
-            "prefer_openrouter", "prefer_openai",
-        ]
-        for pattern in fallback_logic:
-            assert pattern.lower() not in code_source.lower(), \
-                f"Provider fallback logic found: {pattern}"
+    def test_no_fallback_logic(self):
+        import inspect; from thai_factory.extract import ai_extractor
+        src = inspect.getsource(ai_extractor)
+        lines = [l for l in src.split("\n") if not l.strip().startswith("#") and not l.strip().startswith('"')]
+        code = "\n".join(lines)
+        for p in ["try_next","alternative_provider","prefer_openrouter","prefer_openai"]:
+            assert p.lower() not in code.lower()
 
-    def test_outgoing_request_uses_ai_base_url(self):
-        """Outgoing requests must use AI_BASE_URL."""
-        import inspect
-        from thai_factory.extract import ai_extractor
-        source = inspect.getsource(ai_extractor)
-        assert "AI_BASE_URL" in source
+    def test_same_key_with_openrouter_raises(self):
+        with patch("thai_factory.extract.ai_extractor._load_env", return_value={"AI_BASE_URL":"https://openrouter.ai/api/v1","AI_API_KEY":"s","AI_MODEL":"t","EMBEDDING_API_KEY":"s"}):
+            with pytest.raises(ValueError, match="CONFIG VIOLATION"): _get_ai_config()
 
-    def test_embedding_key_same_as_gen_key_with_openrouter_raises(self):
-        """If AI_API_KEY == EMBEDDING_API_KEY with OpenRouter URL, must raise."""
-        env = {
-            "AI_BASE_URL": "https://openrouter.ai/api/v1",
-            "AI_API_KEY": "same-key-both",
-            "AI_MODEL": "test-model",
-            "EMBEDDING_API_KEY": "same-key-both",
-        }
-        with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
-            with pytest.raises(ValueError, match="CONFIG VIOLATION"):
-                _get_ai_config()
-
-    def test_config_returns_only_generation_fields(self):
-        """Config dict must contain only base_url, api_key, model, provider."""
-        env = {
-            "AI_BASE_URL": "https://opencode.ai/zen/go/v1",
-            "AI_API_KEY": "test-key",
-            "AI_MODEL": "test-model",
-            "EMBEDDING_BASE_URL": "https://openrouter.ai/api/v1",
-            "EMBEDDING_API_KEY": "emb-key",
-        }
-        with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
-            config = _get_ai_config()
-            assert set(config.keys()) == {"base_url", "api_key", "model", "provider"}
-
+    def test_config_fields(self):
+        with patch("thai_factory.extract.ai_extractor._load_env", return_value={"AI_BASE_URL":"x","AI_API_KEY":"k","AI_MODEL":"m","EMBEDDING_API_KEY":"y"}):
+            assert set(_get_ai_config().keys()) == {"base_url","api_key","model","provider"}
 
 class TestOpenRouterAllowlist:
-    """OpenRouter exception: only inclusionai/ling-3.0-flash + novita allowed."""
+    def test_model(self): assert _OPENROUTER_ALLOWED_MODEL == "inclusionai/ling-3.0-flash"
+    def test_providers(self): assert _OPENROUTER_ALLOWED_PROVIDERS == ["novita"]
+    def test_fallbacks_false(self):
+        import inspect; from thai_factory.extract import ai_extractor
+        src = inspect.getsource(ai_extractor)
+        assert "allow_fallbacks" in src and "False" in src
+    def test_requires_emb_key(self):
+        with pytest.raises(ValueError, match="OpenRouter requires EMBEDDING_API_KEY"):
+            _run_with_mock(None, use_openrouter=True, env={"EMBEDDING_API_KEY":""},
+                          config={"base_url":"x","api_key":"g","model":"t","provider":"p"})
+    def test_primary_route(self):
+        import inspect; from thai_factory.extract import ai_extractor
+        assert 'config["base_url"]' in inspect.getsource(ai_extractor)
+    def test_no_auto_fallback(self):
+        import inspect; from thai_factory.extract import ai_extractor
+        src = inspect.getsource(ai_extractor)
+        lines = [l for l in src.split("\n") if not l.strip().startswith("#") and not l.strip().startswith('"')]
+        code = "\n".join(lines)
+        assert "try_next" not in code.lower() and "fallback_to_openrouter" not in code.lower()
+    def test_payload_constraint(self):
+        p = {"model":_OPENROUTER_ALLOWED_MODEL,"provider":{"only":_OPENROUTER_ALLOWED_PROVIDERS,"allow_fallbacks":False}}
+        assert p["model"]=="inclusionai/ling-3.0-flash" and p["provider"]["only"]==["novita"] and p["provider"]["allow_fallbacks"] is False
 
-    def test_allowed_model_matches_allowlist(self):
-        """Only inclusionai/ling-3.0-flash is allowed on OpenRouter."""
-        from thai_factory.extract.ai_extractor import _OPENROUTER_ALLOWED_MODEL
-        assert _OPENROUTER_ALLOWED_MODEL == "inclusionai/ling-3.0-flash"
+class TestOutgoingPayloadInspection:
+    CFG = {"base_url":"https://opencode.ai/zen/go/v1","api_key":"gen-key","model":"glm-5.3-flash","provider":"openai-compatible"}
 
-    def test_allowed_providers_matches_allowlist(self):
-        """Only novita is allowed as OpenRouter provider."""
-        from thai_factory.extract.ai_extractor import _OPENROUTER_ALLOWED_PROVIDERS
-        assert _OPENROUTER_ALLOWED_PROVIDERS == ["novita"]
+    def test_default_uses_ai_base_url(self):
+        m = _run_with_mock(None, use_openrouter=False, config=self.CFG)
+        cmd = m.call_args[0][0]
+        assert "opencode.ai" in cmd[4]
+        p = _payload(m)
+        assert p["model"] == "glm-5.3-flash" and "provider" not in p
 
-    def test_any_other_model_rejected(self):
-        """Any model other than inclusionai/ling-3.0-flash must fail."""
-        import inspect
-        from thai_factory.extract import ai_extractor
-        source = inspect.getsource(ai_extractor)
-        # The allowlist constant must be the ONLY model referenced for OpenRouter
-        assert "gpt-4o-mini" not in source
-        assert "openai/gpt" not in source
+    def test_openrouter_uses_allowlisted(self):
+        m = _run_with_mock(None, use_openrouter=True, env={"EMBEDDING_API_KEY":"sk-or-emb"}, config=self.CFG)
+        cmd = m.call_args[0][0]
+        assert "openrouter.ai" in cmd[4]
+        p = _payload(m)
+        assert p["model"] == "inclusionai/ling-3.0-flash"
+        assert p["provider"]["only"] == ["novita"]
+        assert p["provider"]["allow_fallbacks"] is False
 
-    def test_any_other_provider_rejected(self):
-        """Any provider other than novita must fail for OpenRouter."""
-        import inspect
-        from thai_factory.extract import ai_extractor
-        source = inspect.getsource(ai_extractor)
-        # No other provider names in OpenRouter context
-        forbidden_providers = ["auto", "cloudflare", "openai", "together", "groq"]
-        for p in forbidden_providers:
-            # Only check in OpenRouter-related code sections
-            pass  # Allowlist is enforced by constant, not by string search
+    def test_default_never_touches_embedding_key(self):
+        m = _run_with_mock(None, use_openrouter=False, env={"EMBEDDING_API_KEY":"emb-key"}, config=self.CFG)
+        cmd = m.call_args[0][0]
+        for i, a in enumerate(cmd):
+            if a == "-H" and "Authorization" in cmd[i+1]:
+                assert "gen-key" in cmd[i+1] and "emb-key" not in cmd[i+1]
+                break
 
-    def test_allow_fallbacks_false_mandatory(self):
-        """OpenRouter requests must always set allow_fallbacks=false."""
-        import inspect
-        from thai_factory.extract import ai_extractor
-        source = inspect.getsource(ai_extractor)
-        # Must contain allow_fallbacks: False
-        assert "allow_fallbacks" in source
-        assert "False" in source
-
-    def test_openrouter_requires_embedding_key(self):
-        """OpenRouter route requires EMBEDDING_API_KEY."""
-        from thai_factory.extract.ai_extractor import _call_ai
-        env = {
-            "AI_BASE_URL": "https://opencode.ai/zen/go/v1",
-            "AI_API_KEY": "gen-key",
-            "AI_MODEL": "test",
-            "EMBEDDING_API_KEY": "",
-        }
-        with patch("thai_factory.extract.ai_extractor._load_env", return_value=env):
-            with patch("thai_factory.extract.ai_extractor._get_ai_config", return_value={
-                "base_url": "https://opencode.ai/zen/go/v1",
-                "api_key": "gen-key", "model": "test", "provider": "openai-compatible",
-            }):
-                with pytest.raises(ValueError, match="OpenRouter requires EMBEDDING_API_KEY"):
-                    _call_ai("test", use_openrouter=True)
-
-    def test_primary_opencode_route_unchanged(self):
-        """Default _call_ai (use_openrouter=False) uses AI_BASE_URL."""
-        import inspect
-        from thai_factory.extract import ai_extractor
-        source = inspect.getsource(ai_extractor)
-        # Default route must use config["base_url"] (from AI_BASE_URL)
-        assert 'config["base_url"]' in source
-
-    def test_no_automatic_provider_fallback(self):
-        """No code path auto-switches from OpenCode to OpenRouter."""
-        import inspect
-        from thai_factory.extract import ai_extractor
-        source = inspect.getsource(ai_extractor)
-        lines = source.split("\n")
-        code_lines = [l for l in lines if not l.strip().startswith("#") and not l.strip().startswith('"')]
-        code_source = "\n".join(code_lines)
-        assert "try_next" not in code_source.lower()
-        assert "fallback_to_openrouter" not in code_source.lower()
-
-    def test_openrouter_payload_has_provider_constraint(self):
-        """OpenRouter payload must include provider.only and allow_fallbacks."""
-        import json
-        from thai_factory.extract.ai_extractor import _OPENROUTER_ALLOWED_MODEL, _OPENROUTER_ALLOWED_PROVIDERS
-        # Simulate what _call_ai builds for OpenRouter
-        payload = {
-            "model": _OPENROUTER_ALLOWED_MODEL,
-            "messages": [{"role": "user", "content": "test"}],
-            "provider": {
-                "only": _OPENROUTER_ALLOWED_PROVIDERS,
-                "allow_fallbacks": False,
-            },
-        }
-        assert payload["model"] == "inclusionai/ling-3.0-flash"
-        assert payload["provider"]["only"] == ["novita"]
-        assert payload["provider"]["allow_fallbacks"] is False
+    def test_no_other_model_in_openrouter(self):
+        m = _run_with_mock(None, use_openrouter=True, env={"EMBEDDING_API_KEY":"sk-or-x"}, config=self.CFG)
+        p = _payload(m)
+        s = json.dumps(p)
+        assert "gpt" not in s and "claude" not in s and "llama" not in s

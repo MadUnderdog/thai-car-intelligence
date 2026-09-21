@@ -3,8 +3,35 @@
   "final_url": "https://autolifethailand.tv/wuling-eksion-ev-bev-suv-coming-thailand-28-sep-2026/",
   "acquisition_status": "OK",
   "content_hash": "b49ad66b589b5411",
-  "block_count": 316,
-  "article_block_count": 0,
+  "block_count": 317,
+  "article_block_count": 25,
+  "article_body_block_ids": [
+    "02fed911f6a227fb",
+    "0977273e66777360",
+    "2976fe62aa9588bd",
+    "2cfdf2bff760bb31",
+    "336857ecc4029579",
+    "33f8d222d359dfbe",
+    "3c8f78cd86f4e11a",
+    "554bb02741039261",
+    "5908b465993f53ba",
+    "5bdb5be76ff206e4",
+    "73118a35c4ec7cfc",
+    "7671ede95a49e82b",
+    "769aa916a7f5ab19",
+    "78a657eff51b5127",
+    "81f38cb7a1ad856d",
+    "8e34ebbe40826286",
+    "8f2faa44e25e693b",
+    "9dbbb548593c2e85",
+    "a56859ec8b376376",
+    "a78db18e2e1ff4e3",
+    "aeb1488ada857075",
+    "c08d84e60f6f5220",
+    "d0682eed3e1d5204",
+    "d514f3cd2a3fda12",
+    "dd945eff1bb5fbae"
+  ],
   "stage_a": {
     "document_type": "ARTICLE",
     "document_scope": {
@@ -38,15 +65,18 @@
           "2976fe62aa9588bd",
           "769aa916a7f5ab19",
           "d0682eed3e1d5204",
-          "a56859ec8b376376",
-          "33f8d222d359dfbe"
+          "a56859ec8b376376"
         ],
         "price_block_ids": [],
         "spec_block_ids": [
           "336857ecc4029579",
+          "aeb1488ada857075",
           "9dbbb548593c2e85",
           "2cfdf2bff760bb31",
+          "5908b465993f53ba",
+          "3c8f78cd86f4e11a",
           "5bdb5be76ff206e4",
+          "2976fe62aa9588bd",
           "769aa916a7f5ab19",
           "d0682eed3e1d5204",
           "a56859ec8b376376"
@@ -59,26 +89,26 @@
       {
         "block_id": "a56859ec8b376376",
         "field": "price",
-        "raw_value": "7xx,xxx บาท",
+        "raw_value": "คาดเริ่มต้น 7xx,xxx บาท",
         "normalized_value": "700000-799999 THB",
         "entity": {
           "brand": "Wuling",
           "model": "EKSION EV",
           "variant": ""
         },
-        "price_type": "UNKNOWN",
+        "price_type": "MODEL_RANGE",
         "confidence": "LOW",
         "evidence_quote": "ราคาประหยัด คาดเริ่มต้น 7xx,xxx บาท",
         "evidence_block_id": "a56859ec8b376376",
         "price_type_evidence_block_id": "a56859ec8b376376",
-        "price_type_evidence_quote": "ราคาประหยัด คาดเริ่มต้น 7xx,xxx บาท",
-        "fingerprint": "7d9b4a1a02589f6c"
+        "price_type_evidence_quote": "รอติดตามกันครับ ว่าราคาอย่างเป็นทางการ ของ Wuling EKSION EV รถไฟฟ้า100% SUV 7 ที่นั่ง จะเป็นอย่างไร",
+        "fingerprint": "935afcd50f84fd1e"
       },
       {
         "block_id": "336857ecc4029579",
         "field": "horsepower_hp",
         "raw_value": "204 แรงม้า",
-        "normalized_value": "204 hp",
+        "normalized_value": "204 HP",
         "entity": {
           "brand": "Wuling",
           "model": "EKSION EV",
@@ -88,9 +118,9 @@
         "confidence": "HIGH",
         "evidence_quote": "พละกำลังสูงสุด 204 แรงม้า",
         "evidence_block_id": "336857ecc4029579",
-        "price_type_evidence_block_id": "336857ecc4029579",
-        "price_type_evidence_quote": "พละกำลังสูงสุด 204 แรงม้า",
-        "fingerprint": "12fbab40e23d7e8f"
+        "price_type_evidence_block_id": "",
+        "price_type_evidence_quote": "",
+        "fingerprint": "bdebac5761bd5a22"
       },
       {
         "block_id": "336857ecc4029579",
@@ -106,14 +136,14 @@
         "confidence": "HIGH",
         "evidence_quote": "แรงบิด 310 นิวตันเมตร",
         "evidence_block_id": "336857ecc4029579",
-        "price_type_evidence_block_id": "336857ecc4029579",
-        "price_type_evidence_quote": "แรงบิด 310 นิวตันเมตร",
-        "fingerprint": "1e51d20389be72f5"
+        "price_type_evidence_block_id": "",
+        "price_type_evidence_quote": "",
+        "fingerprint": "0af9dd24a833ac1b"
       },
       {
-        "block_id": "a56859ec8b376376",
+        "block_id": "336857ecc4029579",
         "field": "fuel_type",
-        "raw_value": "รถไฟฟ้า100%",
+        "raw_value": "รถไฟฟ้า 100%",
         "normalized_value": "Electric",
         "entity": {
           "brand": "Wuling",
@@ -122,11 +152,29 @@
         },
         "price_type": "UNKNOWN",
         "confidence": "HIGH",
-        "evidence_quote": "รถไฟฟ้า100%",
-        "evidence_block_id": "a56859ec8b376376",
-        "price_type_evidence_block_id": "a56859ec8b376376",
-        "price_type_evidence_quote": "รถไฟฟ้า100%",
-        "fingerprint": "75e140d19a040c16"
+        "evidence_quote": "มอเตอร์ไฟฟ้า 1 ตัว",
+        "evidence_block_id": "336857ecc4029579",
+        "price_type_evidence_block_id": "",
+        "price_type_evidence_quote": "",
+        "fingerprint": "b04eec2cebbabec0"
+      },
+      {
+        "block_id": "336857ecc4029579",
+        "field": "transmission",
+        "raw_value": "Single-speed (EV)",
+        "normalized_value": "Single-speed (EV)",
+        "entity": {
+          "brand": "Wuling",
+          "model": "EKSION EV",
+          "variant": ""
+        },
+        "price_type": "UNKNOWN",
+        "confidence": "LOW",
+        "evidence_quote": "มอเตอร์ไฟฟ้า 1 ตัว",
+        "evidence_block_id": "336857ecc4029579",
+        "price_type_evidence_block_id": "",
+        "price_type_evidence_quote": "",
+        "fingerprint": "7124852c4c1f447d"
       },
       {
         "block_id": "336857ecc4029579",
@@ -142,9 +190,9 @@
         "confidence": "HIGH",
         "evidence_quote": "ขับเคลื่อนล้อหน้า FWD Front-Wheel Drive",
         "evidence_block_id": "336857ecc4029579",
-        "price_type_evidence_block_id": "336857ecc4029579",
-        "price_type_evidence_quote": "ขับเคลื่อนล้อหน้า FWD Front-Wheel Drive",
-        "fingerprint": "c64a554c1bd14261"
+        "price_type_evidence_block_id": "",
+        "price_type_evidence_quote": "",
+        "fingerprint": "d023216443f3ecb9"
       },
       {
         "block_id": "336857ecc4029579",
@@ -158,16 +206,16 @@
         },
         "price_type": "UNKNOWN",
         "confidence": "HIGH",
-        "evidence_quote": "ขนาดความจุ 69.2 kWh",
+        "evidence_quote": "แบตเตอรี่ Lithium-ion (LFP) ขนาดความจุ 69.2 kWh",
         "evidence_block_id": "336857ecc4029579",
-        "price_type_evidence_block_id": "336857ecc4029579",
-        "price_type_evidence_quote": "ขนาดความจุ 69.2 kWh",
+        "price_type_evidence_block_id": "",
+        "price_type_evidence_quote": "",
         "fingerprint": "37dc1309080cefb6"
       },
       {
         "block_id": "a56859ec8b376376",
         "field": "range_km",
-        "raw_value": "480 km. (NEDC)",
+        "raw_value": "480 km (NEDC)",
         "normalized_value": "480 km",
         "entity": {
           "brand": "Wuling",
@@ -178,15 +226,15 @@
         "confidence": "HIGH",
         "evidence_quote": "วิ่งระยะ 480 km. (NEDC)",
         "evidence_block_id": "a56859ec8b376376",
-        "price_type_evidence_block_id": "a56859ec8b376376",
-        "price_type_evidence_quote": "วิ่งระยะ 480 km. (NEDC)",
-        "fingerprint": "23fb6de260c7dc0c"
+        "price_type_evidence_block_id": "",
+        "price_type_evidence_quote": "",
+        "fingerprint": "8b5937cd333c7149"
       },
       {
         "block_id": "a56859ec8b376376",
         "field": "seats",
-        "raw_value": "7 ที่นั่ง",
-        "normalized_value": "7 seats",
+        "raw_value": "7 ที่นั่ง เบาะ 3 แถว",
+        "normalized_value": "7",
         "entity": {
           "brand": "Wuling",
           "model": "EKSION EV",
@@ -196,9 +244,9 @@
         "confidence": "HIGH",
         "evidence_quote": "เบาะ 3 แถว 7 ที่นั่ง",
         "evidence_block_id": "a56859ec8b376376",
-        "price_type_evidence_block_id": "a56859ec8b376376",
-        "price_type_evidence_quote": "เบาะ 3 แถว 7 ที่นั่ง",
-        "fingerprint": "1f879250b9c7f79a"
+        "price_type_evidence_block_id": "",
+        "price_type_evidence_quote": "",
+        "fingerprint": "4ca8d44c9a5639d7"
       },
       {
         "block_id": "a56859ec8b376376",
@@ -211,17 +259,17 @@
           "variant": ""
         },
         "price_type": "UNKNOWN",
-        "confidence": "MEDIUM",
-        "evidence_quote": "พิกัด C-SUV",
+        "confidence": "HIGH",
+        "evidence_quote": "พิกัด C-SUV เบาะ 3 แถว 7 ที่นั่ง",
         "evidence_block_id": "a56859ec8b376376",
-        "price_type_evidence_block_id": "a56859ec8b376376",
-        "price_type_evidence_quote": "พิกัด C-SUV",
-        "fingerprint": "9d7f2a736ebdf4c7"
+        "price_type_evidence_block_id": "",
+        "price_type_evidence_quote": "",
+        "fingerprint": "d64a897ef922111d"
       }
     ],
     "rejected": [],
     "needs_review": []
   },
   "validation_errors": [],
-  "total_time_s": 236.5
+  "total_time_s": 119.2
 }

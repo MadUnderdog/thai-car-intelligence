@@ -252,10 +252,12 @@ def extract_observations(page):
             all_rej.extend(r)
             all_rev.extend(rv)
 
+    _apply_normalization(all_obs)
     deduped = _dedup(all_obs)
     return {
         "document_type": ra.get("document_type", "UNKNOWN"),
         "document_scope": ra.get("document_scope", {}),
+        "article_body_block_ids": sorted(list(ab_ids)),
         "vehicle_regions": regions,
         "observations": deduped,
         "rejected": all_rej,
@@ -267,7 +269,7 @@ def extract_observations(page):
 def _empty(reason):
     return {"document_type": "UNKNOWN",
             "document_scope": {"decision": "UNKNOWN", "primary_brand": "", "primary_model": ""},
-            "vehicle_regions": [], "observations": [], "rejected": [],
+            "article_body_block_ids": [], "vehicle_regions": [], "observations": [], "rejected": [],
             "needs_review": [], "validation_errors": [reason]}
 
 
@@ -336,10 +338,135 @@ def _validate(observations, valid_ids, blocks, region):
     return acc, rej, rev
 
 
+
+# ─── Code-based Normalization (deterministic, post-AI) ────────────
+import re as _re
+
+_BODY_TYPE_MAP = {
+    "sedan": "Sedan", "c-sedan": "Sedan", "d-sedan": "Sedan",
+    "suv": "SUV", "c-suv": "SUV", "b-suv": "SUV", "d-suv": "SUV", "compact suv": "SUV",
+    "mpv": "MPV", "c-mpv": "MPV",
+    "pickup": "Pickup", "ppv": "PPV",
+    "hatchback": "Hatchback", "c-hatchback": "Hatchback",
+    "coupe": "Coupe",
+    "ev": "EV", "bev": "EV", "phev": "PHEV", "hev": "HEV",
+}
+
+_FUEL_MAP = {
+    "benzin": "Gasoline", "gasoline": "Gasoline", "petrol": "Gasoline",
+    "ดีเซล": "Diesel", "diesel": "Diesel",
+    "ไฟฟ้า": "Electric", "electric": "Electric", "รถไฟฟ้า": "Electric",
+    "รถไฟฟ้า100%": "Electric", "bev": "Electric",
+    "hybrid": "Hybrid", "phev": "PHEV",
+}
+
+_DRIVETRAIN_MAP = {
+    "fwd": "FWD", "front-wheel drive": "FWD", "ขับเคลื่อนล้อหน้า": "FWD",
+    "rwd": "RWD", "rear-wheel drive": "RWD", "ขับเคลื่อนล้อหลัง": "RWD",
+    "awd": "AWD", "all-wheel drive": "AWD", "4wd": "4WD", "4x4": "4WD",
+}
+
+_BODY_RE = _re.compile(r"[Cc]-?SUV|[Bb]-?SUV|[Dd]-?SUV|SUV|MPV|PPV|Sedan|Hatchback|Coupe|Pickup", _re.I)
+
+
+
+
+def _normalize_price_type(raw_value, price_type):
+    """Deterministic price_type normalization."""
+    r = raw_value.lower()
+    if "xx" in r or "xxx" in r:
+        return "MODEL_RANGE"  # Fuzzy price = model range estimate
+    if "ประมาณ" in r or "คาด" in r:
+        return "MODEL_RANGE"
+    if price_type in ("MSRP", "LIST_PRICE", "PROMOTION", "HISTORICAL"):
+        return price_type
+    return "UNKNOWN"
+
+def _normalize_value(field, raw):
+    """Deterministic normalization. Raw input varies; output must not."""
+    r = raw.strip()
+    if field == "price":
+        # Handle xx,xxx format (Thai: 7xx,xxx = 700,000-799,999)
+        if "xx" in r.lower() or "xxx" in r.lower():
+            # Extract the leading digit
+            m = _re.search(r"(\d)xx", r)
+            if m:
+                base = int(m.group(1)) * 100000
+                return f"{base}-{base+99999} THB"
+            return "UNRESOLVED THB"
+        nums = _re.findall(r"[\d,]+(?:\.\d+)?", r.replace(",", ""))
+        if nums:
+            return f"{nums[0].replace(',','')} THB"
+        return "UNRESOLVED THB"
+    elif field == "horsepower_hp":
+        m = _re.search(r"(\d+)", r)
+        return f"{m.group(1)} HP" if m else "UNRESOLVED HP"
+    elif field == "torque_nm":
+        m = _re.search(r"(\d+)", r)
+        return f"{m.group(1)} Nm" if m else "UNRESOLVED Nm"
+    elif field == "engine_l":
+        m = _re.search(r"(\d+\.?\d*)", r)
+        return f"{m.group(1)}L" if m else "UNRESOLVED L"
+    elif field == "battery_kwh":
+        m = _re.search(r"(\d+\.?\d*)", r)
+        return f"{m.group(1)} kWh" if m else "UNRESOLVED kWh"
+    elif field == "range_km":
+        m = _re.search(r"(\d+)", r)
+        return f"{m.group(1)} km" if m else "UNRESOLVED km"
+    elif field == "seats":
+        # Look for "X ที่นั่ง" pattern first
+        m = _re.search(r"(\d+)\s*ที่นั่ง", r)
+        if m:
+            return m.group(1)
+        m = _re.search(r"(\d+)\s*seat", r.lower())
+        if m:
+            return m.group(1)
+        # Fallback: first number
+        m = _re.search(r"(\d+)", r)
+        return m.group(1) if m else "UNRESOLVED"
+    elif field == "fuel_type":
+        low = r.lower()
+        for k, v in _FUEL_MAP.items():
+            if k in low:
+                return v
+        return r  # keep original if no match
+    elif field == "drivetrain":
+        low = r.lower()
+        for k, v in _DRIVETRAIN_MAP.items():
+            if k in low:
+                return v
+        return r.upper()[:10]
+    elif field == "body_type":
+        low = r.lower().strip()
+        if low in _BODY_TYPE_MAP:
+            return _BODY_TYPE_MAP[low]
+        m = _BODY_RE.search(r)
+        return m.group(0).upper() if m else r.upper()[:10]
+    elif field == "transmission":
+        low = r.lower()
+        if "auto" in low or "อัตโนมัติ" in low:
+            return "Automatic"
+        if "manual" in low or "เกียร์ธรรมดา" in low:
+            return "Manual"
+        if "cvt" in low:
+            return "CVT"
+        return r
+    return r
+
+
+def _apply_normalization(observations):
+    """Apply code-based normalization to all observations."""
+    for obs in observations:
+        obs["normalized_value"] = _normalize_value(obs.get("field", ""), obs.get("raw_value", ""))
+        if obs.get("field") == "price":
+            obs["price_type"] = _normalize_price_type(obs.get("raw_value", ""), obs.get("price_type", "UNKNOWN"))
+    return observations
+
+
 # ─── Deduplication ─────────────────────────────────────────────────
 def _obs_fp(obs):
     e = obs.get("entity", {})
-    parts = [obs.get("field", ""), obs.get("raw_value", ""),
+    parts = [obs.get("field", ""), obs.get("normalized_value", ""),
              e.get("brand", ""), e.get("model", ""), e.get("variant", ""),
              obs.get("price_type", "")]
     return hashlib.sha256("|".join(p.strip().lower() for p in parts).encode()).hexdigest()[:16]

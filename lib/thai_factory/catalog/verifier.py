@@ -466,16 +466,17 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
     # Equation: raw = filtered + rejected; filtered = accepted + unresolved
     source_accounting = {}
     
-    # OpenEV: all rows in artifact are accepted (no filtering pipeline visible)
+    # OpenEV: no pipeline state artifacts preserved; cannot independently reconstruct
     if "open_ev" in loaded:
         ev_rows = len(loaded["open_ev"].get("rows", []))
         source_accounting["openev"] = {
             "raw": ev_rows,
-            "filtered": ev_rows,
-            "accepted": ev_rows,
-            "rejected": 0,
-            "unresolved": 0,
-            "equation": f"{ev_rows} = {ev_rows} + 0 (filtered = accepted + rejected)",
+            "filtered": "NOT_APPLICABLE",
+            "accepted": "NOT_APPLICABLE",
+            "rejected": "NOT_APPLICABLE",
+            "unresolved": "NOT_APPLICABLE",
+            "note": "No acquisition state artifacts preserved; cannot independently reconstruct pipeline",
+            "status": "PARTIAL",
         }
     
     # HLM: classify by classification (every entry must belong to exactly one class)
@@ -500,7 +501,7 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
             "equation": f"{hlm_raw} = {hlm_model} + {hlm_variant} + {hlm_non_vehicle} + {hlm_unresolved}",
         }
     
-    # Fipe: model nodes and year nodes are separate
+    # Fipe: no pipeline state artifacts preserved; cannot independently reconstruct
     if "fipe_models" in loaded:
         fipe_model_count = sum(
             len(b.get("models", []))
@@ -508,35 +509,45 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
         )
         source_accounting["fipe_models"] = {
             "raw": fipe_model_count,
-            "filtered": fipe_model_count,
-            "accepted": fipe_model_count,
-            "rejected": 0,
-            "unresolved": 0,
-            "equation": f"{fipe_model_count} = {fipe_model_count} + 0",
+            "filtered": "NOT_APPLICABLE",
+            "accepted": "NOT_APPLICABLE",
+            "rejected": "NOT_APPLICABLE",
+            "unresolved": "NOT_APPLICABLE",
+            "note": "No acquisition state artifacts preserved; cannot independently reconstruct pipeline",
+            "status": "PARTIAL",
         }
     
     if "fipe_year" in loaded:
         fipe_year_count = len(loaded["fipe_year"].get("year_hierarchy", []))
         source_accounting["fipe_year"] = {
             "raw": fipe_year_count,
-            "filtered": fipe_year_count,
-            "accepted": fipe_year_count,
-            "rejected": 0,
-            "unresolved": 0,
-            "equation": f"{fipe_year_count} = {fipe_year_count} + 0",
+            "filtered": "NOT_APPLICABLE",
+            "accepted": "NOT_APPLICABLE",
+            "rejected": "NOT_APPLICABLE",
+            "unresolved": "NOT_APPLICABLE",
+            "note": "Reconstructed from cached API responses; no pipeline state preserved",
+            "status": "PARTIAL",
         }
 
-    # Verify all accounting equations are balanced
+    # Verify accounting equations where state is available
     accounting_balanced = True
+    accounting_partial = False
     for source, data in source_accounting.items():
-        if "equation_balanced" in data and not data["equation_balanced"]:
+        if data.get("status") == "PARTIAL":
+            accounting_partial = True
+        elif "equation_balanced" in data and not data["equation_balanced"]:
             accounting_balanced = False
-        elif "filtered" in data:
+        elif "filtered" in data and isinstance(data.get("filtered"), int):
             # Check: filtered = accepted + rejected
             if data.get("filtered", 0) != data.get("accepted", 0) + data.get("rejected", 0):
                 accounting_balanced = False
     
-    accounting_status = "PASS" if accounting_balanced else "FAIL"
+    if not accounting_balanced:
+        accounting_status = "FAIL"
+    elif accounting_partial:
+        accounting_status = "PARTIAL"
+    else:
+        accounting_status = "PASS"
     add_check("accounting", "source_state_equations", accounting_status,
               source_accounting=source_accounting)
 

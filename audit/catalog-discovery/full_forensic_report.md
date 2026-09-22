@@ -1,9 +1,9 @@
 # Forensic Audit Report
 
-**Generated**: 2026-09-22T13:54:19.134595+00:00
+**Generated**: 2026-09-22T14:21:35.747203+00:00
 **Project**: Thai Car Intelligence — Catalog Discovery
-**Source Commit SHA (verified)**: 5224c22006e94901efe4ec292d14ce11931d4c5c
-**Remote SHA**: 5224c22006e94901efe4ec292d14ce11931d4c5c
+**Source Commit SHA (verified)**: 934de617749edb34b5ba1d4fff8d4d4ca4aa5668
+**Remote SHA**: 934de617749edb34b5ba1d4fff8d4d4ca4aa5668
 **Local == Remote**: YES
 **Working Tree**: clean (pre-commit)
 
@@ -13,22 +13,23 @@
 |--------|------|------|--------|-----------------|-------------|
 | Fipe Models | IDENTITY_ENUMERATOR | 1,483 | PARTIAL | parallelum.com.br/fipe/api/v1/carros/marcas/ | Rate-limited |
 | Fipe Year | IDENTITY_ENUMERATOR | 133 | PARTIAL | parallelum.com.br/fipe/api/v1/carros/marcas/{id}/modelos/{id}/anos | Reconstructed |
-| open-ev-data | IDENTITY_ENUMERATOR | 26 | VERIFIED | raw.githubusercontent.com/open-ev-data/... | 5224c22006e9 |
-| Toyota Official | MARKET_TRUTH | 34 | VERIFIED | toyota.co.th/en/pricelist (Playwright) | Prior capture |
-| Mazda Official | MARKET_TRUTH | 10 | VERIFIED | mazda.co.th/en/vehicles (Playwright) | Prior capture |
+| open-ev-data | IDENTITY_ENUMERATOR | 26 | PARTIAL | raw.githubusercontent.com/open-ev-data/... | 934de617749e |
+| Toyota Official | MARKET_TRUTH | 34 | CAPTURED | toyota.co.th/en/pricelist (Playwright) | Prior capture |
+| Mazda Official | MARKET_TRUTH | 10 | CAPTURED | mazda.co.th/en/vehicles (Playwright) | Prior capture |
 | Thai Reference | MARKET_REFERENCE | 22 | UNVERIFIED | Knowledge base (NOT DLT) | N/A |
 | HeadLightMag | MEDIA_DISCOVERY | 64 | PARTIAL | headlightmag.com/wp-json/wp/v2/ | Prior capture |
+
+**Note**: OpenEV status is PARTIAL because upstream payload verification was attempted but not all rows could be independently verified. Toyota/Mazda are CAPTURED (prior Playwright captures) but not independently re-verified in this commit.
 
 ## 2. Source Accounting (Independently Recomputed)
 
 ### OpenEV
 - Raw: 26
-- Filtered: 26
-- Accepted: 26
-- Rejected: 0
-- Unresolved: 0
-- Equation: 26 = 26 + 0 ✓
-- Note: No filtering pipeline state preserved; all rows in final artifact
+- Filtered: NOT_APPLICABLE (no pipeline state preserved)
+- Accepted: NOT_APPLICABLE
+- Rejected: NOT_APPLICABLE
+- Unresolved: NOT_APPLICABLE
+- Status: PARTIAL — cannot independently reconstruct acquisition pipeline
 
 ### HeadLightMag
 - Raw: 64
@@ -41,28 +42,26 @@
 
 ### Fipe Models
 - Raw: 1,483
-- Filtered: 1,483
-- Accepted: 1,483
-- Rejected: 0
-- Unresolved: 0
-- Equation: 1,483 = 1,483 + 0 ✓
-- Note: No filtering pipeline state preserved
+- Filtered: NOT_APPLICABLE (no pipeline state preserved)
+- Accepted: NOT_APPLICABLE
+- Rejected: NOT_APPLICABLE
+- Unresolved: NOT_APPLICABLE
+- Status: PARTIAL — cannot independently reconstruct acquisition pipeline
 
 ### Fipe Year
 - Raw: 133
-- Filtered: 133
-- Accepted: 133
-- Rejected: 0
-- Unresolved: 0
-- Equation: 133 = 133 + 0 ✓
-- Note: Reconstructed from cached API responses
+- Filtered: NOT_APPLICABLE (reconstructed from cached API)
+- Accepted: NOT_APPLICABLE
+- Rejected: NOT_APPLICABLE
+- Unresolved: NOT_APPLICABLE
+- Status: PARTIAL — reconstructed from cached API responses
 
 ## 3. Verifier Results
 
 Total checks: 34
-- PASS: 28
+- PASS: 27
 - FAIL: 0
-- PARTIAL: 1
+- PARTIAL: 2
 - BLOCKED: 0
 - NOT_APPLICABLE: 5
 
@@ -100,7 +99,7 @@ Total checks: 34
 - **hlm/field_integrity**: PASS
 - **thai_ref/all_unverified**: PASS
 - **fipe/parent_resolution**: PASS
-- **accounting/source_state_equations**: PASS
+- **accounting/source_state_equations**: PARTIAL
 
 ## 4. Mutation Tests (12/12 PASS)
 
@@ -127,22 +126,25 @@ All 12 mutation tests assert FAIL/PARTIAL on corrupted fixtures:
 ## 6. Known Findings
 
 - HLM evidence accounting: PARTIAL — 19 entries lack article evidence
+- Source accounting: PARTIAL — OpenEV/Fipe lack pipeline state preservation
 - 10 duplicate HLM post IDs (expected multi-mention)
 - 26 OpenEV rows lack source_native_id (upstream)
 - 133 Fipe year rows reconstructed (not fresh API)
 - Thai market reference: 22 makes all UNVERIFIED
+- pre-existing import error in tests/test_generation_config_boundary.py
 
 ## 7. Unresolved Blockers
 
 - Fipe API rate limited (429, ~22h retry)
 - Thai DLT not accessible (timeout)
 - Third-party taxonomy sites blocked (WAF/JS/SSL)
+- pre-existing import error in test_generation_config_boundary.py
 
 ## 8. Tests
 
 - pytest tests/test_taxonomy_provenance.py: 44/44 passed
 - No xfailed, no skipped
-- Note: tests/test_generation_config_boundary.py has pre-existing import error
+- Note: tests/test_generation_config_boundary.py has pre-existing import error (not related to this work)
 
 ## 9. Reproduction
 
@@ -154,7 +156,7 @@ python3 -c "from lib.thai_factory.catalog.verifier import verify_artifacts; r=ve
 
 ## 10. Changed Files
 
-- lib/thai_factory/catalog/verifier.py (VERIFIER V7)
+- lib/thai_factory/catalog/verifier.py (VERIFIER V8)
 - tests/test_taxonomy_provenance.py (12 mutation tests)
 - audit/catalog-discovery/verifier_output.json
 - audit/catalog-discovery/full_forensic_report.md

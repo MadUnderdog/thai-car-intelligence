@@ -1,9 +1,9 @@
 {
   "artifact_dir": "audit/catalog-discovery",
   "total_checks": 34,
-  "passed": 28,
+  "passed": 27,
   "failed": 0,
-  "partial": 1,
+  "partial": 2,
   "blocked": 0,
   "not_applicable": 5,
   "checks": [
@@ -241,15 +241,16 @@
     {
       "section": "accounting",
       "check": "source_state_equations",
-      "status": "PASS",
+      "status": "PARTIAL",
       "source_accounting": {
         "openev": {
           "raw": 26,
-          "filtered": 26,
-          "accepted": 26,
-          "rejected": 0,
-          "unresolved": 0,
-          "equation": "26 = 26 + 0 (filtered = accepted + rejected)"
+          "filtered": "NOT_APPLICABLE",
+          "accepted": "NOT_APPLICABLE",
+          "rejected": "NOT_APPLICABLE",
+          "unresolved": "NOT_APPLICABLE",
+          "note": "No acquisition state artifacts preserved; cannot independently reconstruct pipeline",
+          "status": "PARTIAL"
         },
         "hlm": {
           "raw": 64,
@@ -263,19 +264,21 @@
         },
         "fipe_models": {
           "raw": 1483,
-          "filtered": 1483,
-          "accepted": 1483,
-          "rejected": 0,
-          "unresolved": 0,
-          "equation": "1483 = 1483 + 0"
+          "filtered": "NOT_APPLICABLE",
+          "accepted": "NOT_APPLICABLE",
+          "rejected": "NOT_APPLICABLE",
+          "unresolved": "NOT_APPLICABLE",
+          "note": "No acquisition state artifacts preserved; cannot independently reconstruct pipeline",
+          "status": "PARTIAL"
         },
         "fipe_year": {
           "raw": 133,
-          "filtered": 133,
-          "accepted": 133,
-          "rejected": 0,
-          "unresolved": 0,
-          "equation": "133 = 133 + 0"
+          "filtered": "NOT_APPLICABLE",
+          "accepted": "NOT_APPLICABLE",
+          "rejected": "NOT_APPLICABLE",
+          "unresolved": "NOT_APPLICABLE",
+          "note": "Reconstructed from cached API responses; no pipeline state preserved",
+          "status": "PARTIAL"
         }
       }
     }

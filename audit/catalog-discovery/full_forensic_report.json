@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-22T13:54:19.134758+00:00",
+  "generated_at": "2026-09-22T14:21:35.747398+00:00",
   "project": "thai-car-intelligence",
-  "commit_sha_verified": "5224c22006e94901efe4ec292d14ce11931d4c5c",
-  "remote_sha": "5224c22006e94901efe4ec292d14ce11931d4c5c",
+  "commit_sha_verified": "934de617749edb34b5ba1d4fff8d4d4ca4aa5668",
+  "remote_sha": "934de617749edb34b5ba1d4fff8d4d4ca4aa5668",
   "local_equals_remote": true,
   "verifier_summary": {
     "total_checks": 34,
-    "passed": 28,
+    "passed": 27,
     "failed": 0,
-    "partial": 1,
+    "partial": 2,
     "blocked": 0,
     "not_applicable": 5
   },
@@ -26,17 +26,17 @@
     "openev": {
       "role": "IDENTITY_ENUMERATOR",
       "rows": 26,
-      "status": "VERIFIED"
+      "status": "PARTIAL"
     },
     "toyota": {
       "role": "MARKET_TRUTH",
       "rows": 34,
-      "status": "VERIFIED"
+      "status": "CAPTURED"
     },
     "mazda": {
       "role": "MARKET_TRUTH",
       "rows": 10,
-      "status": "VERIFIED"
+      "status": "CAPTURED"
     },
     "thai_ref": {
       "role": "MARKET_REFERENCE",
@@ -52,11 +52,8 @@
   "source_accounting": {
     "openev": {
       "raw": 26,
-      "filtered": 26,
-      "accepted": 26,
-      "rejected": 0,
-      "unresolved": 0,
-      "equation_balanced": true
+      "status": "PARTIAL",
+      "note": "No pipeline state preserved"
     },
     "hlm": {
       "raw": 64,
@@ -68,17 +65,13 @@
     },
     "fipe_models": {
       "raw": 1483,
-      "filtered": 1483,
-      "accepted": 1483,
-      "rejected": 0,
-      "unresolved": 0
+      "status": "PARTIAL",
+      "note": "No pipeline state preserved"
     },
     "fipe_year": {
       "raw": 133,
-      "filtered": 133,
-      "accepted": 133,
-      "rejected": 0,
-      "unresolved": 0
+      "status": "PARTIAL",
+      "note": "Reconstructed from cached API"
     }
   },
   "mutation_tests": 12,
@@ -92,14 +85,17 @@
   ],
   "known_findings": [
     "HLM evidence accounting: PARTIAL \u2014 19 entries lack article evidence",
+    "Source accounting: PARTIAL \u2014 OpenEV/Fipe lack pipeline state preservation",
     "10 duplicate HLM post IDs (expected multi-mention)",
     "26 OpenEV rows lack source_native_id (upstream)",
     "133 Fipe year rows reconstructed (not fresh API)",
-    "Thai market reference: 22 makes all UNVERIFIED"
+    "Thai market reference: 22 makes all UNVERIFIED",
+    "pre-existing import error in tests/test_generation_config_boundary.py"
   ],
   "unresolved_blockers": [
     "Fipe API rate limited (429, ~22h retry)",
     "Thai DLT not accessible (timeout)",
-    "Third-party taxonomy sites blocked (WAF/JS/SSL)"
+    "Third-party taxonomy sites blocked (WAF/JS/SSL)",
+    "pre-existing import error in test_generation_config_boundary.py"
   ]
 }

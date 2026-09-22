@@ -1,0 +1,256 @@
+{
+  "mazda_models": [
+    {
+      "name": "NEW MAZDA2 ESSENTIAL​",
+      "price": 529000,
+      "source": "mazda_official"
+    },
+    {
+      "name": "MAZDA3 FASTBACK",
+      "price": 979000,
+      "source": "mazda_official"
+    },
+    {
+      "name": "MAZDA3 SEDAN",
+      "price": 979000,
+      "source": "mazda_official"
+    },
+    {
+      "name": "MAZDA6 20TH ANNIVERSARY EDITION",
+      "price": 2499000,
+      "source": "mazda_official"
+    },
+    {
+      "name": "THE ALL-ELECTRIC MAZDA6e",
+      "price": 1169000,
+      "source": "mazda_official"
+    },
+    {
+      "name": "NEW MAZDA CX-3 ESSENTIAL",
+      "price": 699000,
+      "source": "mazda_official"
+    },
+    {
+      "name": "NEW MAZDA CX-30 ESSENTIAL",
+      "price": 899000,
+      "source": "mazda_official"
+    },
+    {
+      "name": "NEW MAZDA CX-5",
+      "price": 1219000,
+      "source": "mazda_official"
+    },
+    {
+      "name": "MAZDA CX-8",
+      "price": 1549000,
+      "source": "mazda_official"
+    },
+    {
+      "name": "NEW MAZDA BT-50",
+      "price": 762000,
+      "source": "mazda_official"
+    }
+  ],
+  "headlightmag_links": [
+    {
+      "text": "J!MMY's REVIEW",
+      "href": "https://www.headlightmag.com/category/jimmy-review/"
+    },
+    {
+      "text": "View by Brand",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/"
+    },
+    {
+      "text": "ASTON MARTIN",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/aston-martin/"
+    },
+    {
+      "text": "ALFA ROMEO",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/alfa-romeo/"
+    },
+    {
+      "text": "AUDI",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/audi/"
+    },
+    {
+      "text": "BENTLEY",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/bentley/"
+    },
+    {
+      "text": "FORD",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/ford/"
+    },
+    {
+      "text": "BMW",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/bmws/"
+    },
+    {
+      "text": "FERRARI",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/ferrari/"
+    },
+    {
+      "text": "CHEVROLET",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/chevrolet/"
+    },
+    {
+      "text": "CHRYSLER",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/chrysler/"
+    },
+    {
+      "text": "CITROEN",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/citroen/"
+    },
+    {
+      "text": "DAIHATSU",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/daihatsu/"
+    },
+    {
+      "text": "DODGE",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/dodge/"
+    },
+    {
+      "text": "GM DAEWOO",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/gm-daewoo/"
+    },
+    {
+      "text": "HOLDEN",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/holden/"
+    },
+    {
+      "text": "HONDA",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/honda/"
+    },
+    {
+      "text": "HUMMER",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/hummer/"
+    },
+    {
+      "text": "HYUNDAI",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/hyundai/"
+    },
+    {
+      "text": "ISUZU",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/isuzu/"
+    },
+    {
+      "text": "JAGUAR",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/jaguar/"
+    },
+    {
+      "text": "JEEP",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/jeep/"
+    },
+    {
+      "text": "KIA",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/kia/"
+    },
+    {
+      "text": "LAMBORGHINI",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/lamborghini/"
+    },
+    {
+      "text": "LANDROVER",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/landrover/"
+    },
+    {
+      "text": "LEXUS",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/lexus/"
+    },
+    {
+      "text": "LINCOLN",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/lincoln/"
+    },
+    {
+      "text": "MASERATI",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/maserati/"
+    },
+    {
+      "text": "MAZDA",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/mazda/"
+    },
+    {
+      "text": "MERCEDES-BENZ",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/mercedes-benz/"
+    },
+    {
+      "text": "MINI",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/mini/"
+    },
+    {
+      "text": "MITSUBISHI",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/mitsubishi/"
+    },
+    {
+      "text": "NISSAN",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/nissan/"
+    },
+    {
+      "text": "PEUGEOT",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/peugeot/"
+    },
+    {
+      "text": "PORSCHE",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/porsche/"
+    },
+    {
+      "text": "SAAB",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/saab/"
+    },
+    {
+      "text": "SATURN",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/saturn/"
+    },
+    {
+      "text": "SEAT",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/seat/"
+    },
+    {
+      "text": "SKODA",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/skoda/"
+    },
+    {
+      "text": "SSANGYONG",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/ssangyong/"
+    },
+    {
+      "text": "SUBARU",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/subaru/"
+    },
+    {
+      "text": "SUZUKI",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/suzuki/"
+    },
+    {
+      "text": "TATA",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/tata/"
+    },
+    {
+      "text": "TOYOTA",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/toyota/"
+    },
+    {
+      "text": "VOLKSWAGEN",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/volkswagen/"
+    },
+    {
+      "text": "VOLVO",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/volvo/"
+    },
+    {
+      "text": "View by Segment",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-segment/"
+    },
+    {
+      "text": "K-car 660 cc",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-segment/k-car-660-cc/"
+    },
+    {
+      "text": "A-segment 660-1000 cc",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-segment/a-segment-660-1000-cc/"
+    },
+    {
+      "text": "sub B-segment 1000-1300 cc (Eco Car)",
+      "href": "https://www.headlightmag.com/category/jimmy-review/view-by-segment/sub-b-segment-1000-1300-cc/"
+    }
+  ]
+}

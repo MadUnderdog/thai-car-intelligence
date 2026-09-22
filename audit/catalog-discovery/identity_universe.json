@@ -1,0 +1,261 @@
+{
+  "target_date": "2026-09-22",
+  "sources": {
+    "toyota_official": {
+      "type": "official_oem",
+      "url": "https://www.toyota.co.th/en/pricelist",
+      "status": "OK",
+      "model_count": 34
+    },
+    "mazda_official": {
+      "type": "official_oem",
+      "url": "https://www.mazda.co.th/en/vehicles",
+      "status": "OK",
+      "model_count": 10
+    },
+    "bmw_official": {
+      "type": "official_oem",
+      "url": "https://www.bmw.co.th/en/all-models.html",
+      "status": "TIMEOUT",
+      "model_count": 0
+    }
+  },
+  "manufacturers": {
+    "Toyota": {
+      "models": [
+        {
+          "name": "Yaris ATIV",
+          "price_thb": 569000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Yaris ATIV Nightshade",
+          "price_thb": 709000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Yaris ATIV GR Sport",
+          "price_thb": 779000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Yaris",
+          "price_thb": 584000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Yaris Cross",
+          "price_thb": 809000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Yaris Cross Nightshade",
+          "price_thb": 929000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Corolla Altis",
+          "price_thb": 909000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Corolla Altis GR Sport",
+          "price_thb": 1129000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "CAMRY",
+          "price_thb": 1475000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "GR 86",
+          "price_thb": 2999000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "GR Yaris",
+          "price_thb": 3499000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "GR Corolla",
+          "price_thb": 4199000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "GR Supra",
+          "price_thb": 5349000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Corolla Cross",
+          "price_thb": 989000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Corolla Cross GR Sport",
+          "price_thb": 1254000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "bZ4X",
+          "price_thb": 1529000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Land Cruiser FJ",
+          "price_thb": 1289000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Fortuner Leader",
+          "price_thb": 1239000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Fortuner Legender",
+          "price_thb": 1643000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Fortuner GR Sport",
+          "price_thb": 1969000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Veloz",
+          "price_thb": 795000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Innova Zenix",
+          "price_thb": 1379000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Alphard",
+          "price_thb": 3590000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Hilux Champ",
+          "price_thb": 519000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Hilux Revo Standard Cab",
+          "price_thb": 584000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Hilux Revo Z Edition",
+          "price_thb": 669000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Hilux Travo Standard Cab 4TREX",
+          "price_thb": 767000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Hilux Travo Prerunner & 4TREX",
+          "price_thb": 789000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Hilux Travo Overland",
+          "price_thb": 1102000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Hilux Travo-e",
+          "price_thb": 1491000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Coaster",
+          "price_thb": 2175000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Hiace",
+          "price_thb": 1069000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Commuter",
+          "price_thb": 1339000,
+          "source": "toyota_official"
+        },
+        {
+          "name": "Majesty",
+          "price_thb": 1994000,
+          "source": "toyota_official"
+        }
+      ],
+      "model_count": 34
+    },
+    "Mazda": {
+      "models": [
+        {
+          "name": "NEW MAZDA2 ESSENTIAL​",
+          "price_thb": 529000,
+          "source": "mazda_official"
+        },
+        {
+          "name": "MAZDA3 FASTBACK",
+          "price_thb": 979000,
+          "source": "mazda_official"
+        },
+        {
+          "name": "MAZDA3 SEDAN",
+          "price_thb": 979000,
+          "source": "mazda_official"
+        },
+        {
+          "name": "MAZDA6 20TH ANNIVERSARY EDITION",
+          "price_thb": 2499000,
+          "source": "mazda_official"
+        },
+        {
+          "name": "THE ALL-ELECTRIC MAZDA6e",
+          "price_thb": 1169000,
+          "source": "mazda_official"
+        },
+        {
+          "name": "NEW MAZDA CX-3 ESSENTIAL",
+          "price_thb": 699000,
+          "source": "mazda_official"
+        },
+        {
+          "name": "NEW MAZDA CX-30 ESSENTIAL",
+          "price_thb": 899000,
+          "source": "mazda_official"
+        },
+        {
+          "name": "NEW MAZDA CX-5",
+          "price_thb": 1219000,
+          "source": "mazda_official"
+        },
+        {
+          "name": "MAZDA CX-8",
+          "price_thb": 1549000,
+          "source": "mazda_official"
+        },
+        {
+          "name": "NEW MAZDA BT-50",
+          "price_thb": 762000,
+          "source": "mazda_official"
+        }
+      ],
+      "model_count": 10
+    }
+  },
+  "summary": {
+    "total_candidates": 44,
+    "manufacturers": 2,
+    "sources_working": 2,
+    "sources_blocked": 1
+  }
+}

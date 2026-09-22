@@ -1,0 +1,1502 @@
+{
+  "toyota": [
+    {
+      "canonical_id": "53ce321eb9f0",
+      "manufacturer": "",
+      "model": "Yaris ATIV",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Yaris ATIV",
+          "source_id": "0",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 569000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Yaris ATIV",
+          "model": "Yaris ATIV",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "62b738c4905c",
+      "manufacturer": "",
+      "model": "Yaris ATIV",
+      "generation": "",
+      "body": "",
+      "variant": "Nightshade",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Yaris ATIV Nightshade",
+          "source_id": "1",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 709000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Yaris ATIV Nightshade",
+          "model": "Yaris ATIV",
+          "generation": "",
+          "body": "",
+          "variant": "Nightshade",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "fd83ceeb3a73",
+      "manufacturer": "",
+      "model": "Yaris ATIV",
+      "generation": "",
+      "body": "",
+      "variant": "GR Sport",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Yaris ATIV GR Sport",
+          "source_id": "2",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 779000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Yaris ATIV GR Sport",
+          "model": "Yaris ATIV",
+          "generation": "",
+          "body": "",
+          "variant": "GR Sport",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "ddd72ab734db",
+      "manufacturer": "",
+      "model": "Yaris",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Yaris",
+          "source_id": "3",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 584000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Yaris",
+          "model": "Yaris",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "d3a6ecad4577",
+      "manufacturer": "",
+      "model": "Yaris Cross",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Yaris Cross",
+          "source_id": "4",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 809000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Yaris Cross",
+          "model": "Yaris Cross",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "d0441dbc68b7",
+      "manufacturer": "",
+      "model": "Yaris Cross",
+      "generation": "",
+      "body": "",
+      "variant": "Nightshade",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Yaris Cross Nightshade",
+          "source_id": "5",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 929000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Yaris Cross Nightshade",
+          "model": "Yaris Cross",
+          "generation": "",
+          "body": "",
+          "variant": "Nightshade",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "6cf1f5a58d3e",
+      "manufacturer": "",
+      "model": "Corolla Altis",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Corolla Altis",
+          "source_id": "6",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 909000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Corolla Altis",
+          "model": "Corolla Altis",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "03ffcfb06f8a",
+      "manufacturer": "",
+      "model": "Corolla Altis",
+      "generation": "",
+      "body": "",
+      "variant": "GR Sport",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Corolla Altis GR Sport",
+          "source_id": "7",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1129000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Corolla Altis GR Sport",
+          "model": "Corolla Altis",
+          "generation": "",
+          "body": "",
+          "variant": "GR Sport",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "edcb7ae5b702",
+      "manufacturer": "",
+      "model": "CAMRY",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "CAMRY",
+          "source_id": "8",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1475000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "CAMRY",
+          "model": "CAMRY",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "ea7c11c14254",
+      "manufacturer": "",
+      "model": "GR 86",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "GR 86",
+          "source_id": "9",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 2999000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "GR 86",
+          "model": "GR 86",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "b6a491b744ed",
+      "manufacturer": "",
+      "model": "GR Yaris",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "GR Yaris",
+          "source_id": "10",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 3499000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "GR Yaris",
+          "model": "GR Yaris",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "66653dc08259",
+      "manufacturer": "",
+      "model": "GR Corolla",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "GR Corolla",
+          "source_id": "11",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 4199000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "GR Corolla",
+          "model": "GR Corolla",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "26f9be121130",
+      "manufacturer": "",
+      "model": "GR Supra",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "GR Supra",
+          "source_id": "12",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 5349000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "GR Supra",
+          "model": "GR Supra",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "6b0e7f1472ca",
+      "manufacturer": "",
+      "model": "Corolla Cross",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Corolla Cross",
+          "source_id": "13",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 989000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Corolla Cross",
+          "model": "Corolla Cross",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "e5072590a487",
+      "manufacturer": "",
+      "model": "Corolla Cross",
+      "generation": "",
+      "body": "",
+      "variant": "GR Sport",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Corolla Cross GR Sport",
+          "source_id": "14",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1254000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Corolla Cross GR Sport",
+          "model": "Corolla Cross",
+          "generation": "",
+          "body": "",
+          "variant": "GR Sport",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "0a231d0b3282",
+      "manufacturer": "",
+      "model": "bZ4X",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "bZ4X",
+          "source_id": "15",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1529000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "bZ4X",
+          "model": "bZ4X",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "d219203fb02d",
+      "manufacturer": "",
+      "model": "Land Cruiser FJ",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Land Cruiser FJ",
+          "source_id": "16",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1289000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Land Cruiser FJ",
+          "model": "Land Cruiser FJ",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "4fc370ec77c4",
+      "manufacturer": "",
+      "model": "Fortuner",
+      "generation": "",
+      "body": "",
+      "variant": "Leader",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Fortuner Leader",
+          "source_id": "17",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1239000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Fortuner Leader",
+          "model": "Fortuner",
+          "generation": "",
+          "body": "",
+          "variant": "Leader",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "d7b015861bc8",
+      "manufacturer": "",
+      "model": "Fortuner",
+      "generation": "",
+      "body": "",
+      "variant": "Legender",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Fortuner Legender",
+          "source_id": "18",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1643000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Fortuner Legender",
+          "model": "Fortuner",
+          "generation": "",
+          "body": "",
+          "variant": "Legender",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "c34f8c2d8379",
+      "manufacturer": "",
+      "model": "Fortuner",
+      "generation": "",
+      "body": "",
+      "variant": "GR Sport",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Fortuner GR Sport",
+          "source_id": "19",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1969000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Fortuner GR Sport",
+          "model": "Fortuner",
+          "generation": "",
+          "body": "",
+          "variant": "GR Sport",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "af16e5b2b92b",
+      "manufacturer": "",
+      "model": "Veloz",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Veloz",
+          "source_id": "20",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 795000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Veloz",
+          "model": "Veloz",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "e5d45e7eb5da",
+      "manufacturer": "",
+      "model": "Innova Zenix",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Innova Zenix",
+          "source_id": "21",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1379000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Innova Zenix",
+          "model": "Innova Zenix",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "e5b3337bdd7b",
+      "manufacturer": "",
+      "model": "Alphard",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Alphard",
+          "source_id": "22",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 3590000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Alphard",
+          "model": "Alphard",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "ac175a590daf",
+      "manufacturer": "",
+      "model": "Hilux",
+      "generation": "",
+      "body": "",
+      "variant": "Champ",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Hilux Champ",
+          "source_id": "23",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 519000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Hilux Champ",
+          "model": "Hilux",
+          "generation": "",
+          "body": "",
+          "variant": "Champ",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "b80a7b2a8b0d",
+      "manufacturer": "",
+      "model": "Hilux Revo",
+      "generation": "",
+      "body": "Standard Cab",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Hilux Revo Standard Cab",
+          "source_id": "24",
+          "decomposition_confidence": "medium"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 584000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Hilux Revo Standard Cab",
+          "model": "Hilux Revo",
+          "generation": "",
+          "body": "Standard Cab",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "canonical_id": "15615ed6f062",
+      "manufacturer": "",
+      "model": "Hilux Revo Z Edition",
+      "generation": "",
+      "body": "",
+      "variant": "EV",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Hilux Revo Z Edition",
+          "source_id": "25",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 669000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Hilux Revo Z Edition",
+          "model": "Hilux Revo Z Edition",
+          "generation": "",
+          "body": "",
+          "variant": "EV",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "e3383b2dfa4b",
+      "manufacturer": "",
+      "model": "Hilux Travo",
+      "generation": "",
+      "body": "Standard Cab",
+      "variant": "4TREX",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Hilux Travo Standard Cab 4TREX",
+          "source_id": "26",
+          "decomposition_confidence": "medium"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 767000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Hilux Travo Standard Cab 4TREX",
+          "model": "Hilux Travo",
+          "generation": "",
+          "body": "Standard Cab",
+          "variant": "4TREX",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "canonical_id": "3784f73e756b",
+      "manufacturer": "",
+      "model": "Hilux Travo",
+      "generation": "",
+      "body": "",
+      "variant": "Prerunner",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Hilux Travo Prerunner & 4TREX",
+          "source_id": "27",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 789000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Hilux Travo Prerunner & 4TREX",
+          "model": "Hilux Travo",
+          "generation": "",
+          "body": "",
+          "variant": "Prerunner",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "03a59b787f95",
+      "manufacturer": "",
+      "model": "Hilux Travo",
+      "generation": "",
+      "body": "",
+      "variant": "Overland",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Hilux Travo Overland",
+          "source_id": "28",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1102000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Hilux Travo Overland",
+          "model": "Hilux Travo",
+          "generation": "",
+          "body": "",
+          "variant": "Overland",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "5647acd4bd1c",
+      "manufacturer": "",
+      "model": "Hilux Travo-e",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Hilux Travo-e",
+          "source_id": "29",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1491000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Hilux Travo-e",
+          "model": "Hilux Travo-e",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "5743714d0d64",
+      "manufacturer": "",
+      "model": "Coaster",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Coaster",
+          "source_id": "30",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 2175000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Coaster",
+          "model": "Coaster",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "8c14e375d23d",
+      "manufacturer": "",
+      "model": "Hiace",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Hiace",
+          "source_id": "31",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1069000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Hiace",
+          "model": "Hiace",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "6b7a52b02fef",
+      "manufacturer": "",
+      "model": "Commuter",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Commuter",
+          "source_id": "32",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1339000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Commuter",
+          "model": "Commuter",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "c6d1fae393d9",
+      "manufacturer": "",
+      "model": "Majesty",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "toyota_official",
+          "source_label": "Majesty",
+          "source_id": "33",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1994000,
+      "price_level": "UNKNOWN",
+      "price_source": "toyota_official",
+      "decompositions": [
+        {
+          "raw_label": "Majesty",
+          "model": "Majesty",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    }
+  ],
+  "mazda": [
+    {
+      "canonical_id": "516db61d621e",
+      "manufacturer": "",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "generation": "",
+      "body": "",
+      "variant": "Essential",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "mazda_official",
+          "source_label": "NEW MAZDA2 ESSENTIAL",
+          "source_id": "0",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 529000,
+      "price_level": "UNKNOWN",
+      "price_source": "mazda_official",
+      "decompositions": [
+        {
+          "raw_label": "NEW MAZDA2 ESSENTIAL",
+          "model": "NEW MAZDA2 ESSENTIAL",
+          "generation": "",
+          "body": "",
+          "variant": "Essential",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "50b47409cd35",
+      "manufacturer": "",
+      "model": "MAZDA3 FASTBACK",
+      "generation": "",
+      "body": "Fastback",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "mazda_official",
+          "source_label": "MAZDA3 FASTBACK",
+          "source_id": "1",
+          "decomposition_confidence": "medium"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 979000,
+      "price_level": "UNKNOWN",
+      "price_source": "mazda_official",
+      "decompositions": [
+        {
+          "raw_label": "MAZDA3 FASTBACK",
+          "model": "MAZDA3 FASTBACK",
+          "generation": "",
+          "body": "Fastback",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "canonical_id": "0301230f215a",
+      "manufacturer": "",
+      "model": "MAZDA3 SEDAN",
+      "generation": "",
+      "body": "Sedan",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "mazda_official",
+          "source_label": "MAZDA3 SEDAN",
+          "source_id": "2",
+          "decomposition_confidence": "medium"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 979000,
+      "price_level": "UNKNOWN",
+      "price_source": "mazda_official",
+      "decompositions": [
+        {
+          "raw_label": "MAZDA3 SEDAN",
+          "model": "MAZDA3 SEDAN",
+          "generation": "",
+          "body": "Sedan",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "canonical_id": "4c993fd9838f",
+      "manufacturer": "",
+      "model": "MAZDA6 20TH ANNIVE",
+      "generation": "",
+      "body": "",
+      "variant": "RS",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "mazda_official",
+          "source_label": "MAZDA6 20TH ANNIVERSARY EDITION",
+          "source_id": "3",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 2499000,
+      "price_level": "UNKNOWN",
+      "price_source": "mazda_official",
+      "decompositions": [
+        {
+          "raw_label": "MAZDA6 20TH ANNIVERSARY EDITION",
+          "model": "MAZDA6 20TH ANNIVE",
+          "generation": "",
+          "body": "",
+          "variant": "RS",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "19f319304020",
+      "manufacturer": "",
+      "model": "THE ALL-ELECTRIC MAZDA6e",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "mazda_official",
+          "source_label": "THE ALL-ELECTRIC MAZDA6e",
+          "source_id": "4",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1169000,
+      "price_level": "UNKNOWN",
+      "price_source": "mazda_official",
+      "decompositions": [
+        {
+          "raw_label": "THE ALL-ELECTRIC MAZDA6e",
+          "model": "THE ALL-ELECTRIC MAZDA6e",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "b1bfef551b6e",
+      "manufacturer": "",
+      "model": "NEW MAZDA CX-3 ESSENTIAL",
+      "generation": "",
+      "body": "",
+      "variant": "Essential",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "mazda_official",
+          "source_label": "NEW MAZDA CX-3 ESSENTIAL",
+          "source_id": "5",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 699000,
+      "price_level": "UNKNOWN",
+      "price_source": "mazda_official",
+      "decompositions": [
+        {
+          "raw_label": "NEW MAZDA CX-3 ESSENTIAL",
+          "model": "NEW MAZDA CX-3 ESSENTIAL",
+          "generation": "",
+          "body": "",
+          "variant": "Essential",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "287e2e1c3376",
+      "manufacturer": "",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "generation": "",
+      "body": "",
+      "variant": "Essential",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "mazda_official",
+          "source_label": "NEW MAZDA CX-30 ESSENTIAL",
+          "source_id": "6",
+          "decomposition_confidence": "low"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 899000,
+      "price_level": "UNKNOWN",
+      "price_source": "mazda_official",
+      "decompositions": [
+        {
+          "raw_label": "NEW MAZDA CX-30 ESSENTIAL",
+          "model": "NEW MAZDA CX-30 ESSENTIAL",
+          "generation": "",
+          "body": "",
+          "variant": "Essential",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "canonical_id": "3ef3d9c5a2a2",
+      "manufacturer": "",
+      "model": "NEW MAZDA CX-5",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "mazda_official",
+          "source_label": "NEW MAZDA CX-5",
+          "source_id": "7",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1219000,
+      "price_level": "UNKNOWN",
+      "price_source": "mazda_official",
+      "decompositions": [
+        {
+          "raw_label": "NEW MAZDA CX-5",
+          "model": "NEW MAZDA CX-5",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "d0946e65bf8d",
+      "manufacturer": "",
+      "model": "MAZDA CX-8",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "mazda_official",
+          "source_label": "MAZDA CX-8",
+          "source_id": "8",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1549000,
+      "price_level": "UNKNOWN",
+      "price_source": "mazda_official",
+      "decompositions": [
+        {
+          "raw_label": "MAZDA CX-8",
+          "model": "MAZDA CX-8",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    },
+    {
+      "canonical_id": "5c316c0a8028",
+      "manufacturer": "",
+      "model": "NEW MAZDA BT-50",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "source_representations": [
+        {
+          "source_name": "mazda_official",
+          "source_label": "NEW MAZDA BT-50",
+          "source_id": "9",
+          "decomposition_confidence": "none"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 762000,
+      "price_level": "UNKNOWN",
+      "price_source": "mazda_official",
+      "decompositions": [
+        {
+          "raw_label": "NEW MAZDA BT-50",
+          "model": "NEW MAZDA BT-50",
+          "generation": "",
+          "body": "",
+          "variant": "",
+          "trim": "",
+          "powertrain": "",
+          "confidence": "none"
+        }
+      ]
+    }
+  ]
+}

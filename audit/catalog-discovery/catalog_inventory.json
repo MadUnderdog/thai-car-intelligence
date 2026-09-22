@@ -1,0 +1,138 @@
+{
+  "summary": {
+    "total_manufacturers": 3,
+    "total_models": 9,
+    "total_variants": 1,
+    "current": 8,
+    "upcoming": 0,
+    "discontinued": 0,
+    "with_price": 1,
+    "with_specs": 1
+  },
+  "manufacturers": [
+    {
+      "name": "Honda",
+      "thai_name": "ฮอนด้า",
+      "website": "https://www.honda.co.th",
+      "models": [
+        {
+          "name": "CR-V",
+          "status": "CURRENT",
+          "source_count": 1,
+          "strongest_source": "www.headlightmag.com",
+          "has_price": false,
+          "has_specs": false,
+          "variants": []
+        },
+        {
+          "name": "Civic",
+          "status": "CURRENT",
+          "source_count": 1,
+          "strongest_source": "www.headlightmag.com",
+          "has_price": false,
+          "has_specs": false,
+          "variants": []
+        },
+        {
+          "name": "Accord",
+          "status": "CURRENT",
+          "source_count": 1,
+          "strongest_source": "www.headlightmag.com",
+          "has_price": false,
+          "has_specs": false,
+          "variants": []
+        },
+        {
+          "name": "City",
+          "status": "CURRENT",
+          "source_count": 1,
+          "strongest_source": "www.headlightmag.com",
+          "has_price": false,
+          "has_specs": false,
+          "variants": []
+        }
+      ],
+      "model_count": 4,
+      "variant_count": 0
+    },
+    {
+      "name": "MG",
+      "thai_name": "เอ็มจี",
+      "website": "https://www.mgcars.com",
+      "models": [
+        {
+          "name": "ep",
+          "status": "CURRENT",
+          "source_count": 1,
+          "strongest_source": "www.headlightmag.com",
+          "has_price": false,
+          "has_specs": false,
+          "variants": []
+        },
+        {
+          "name": "MG3",
+          "status": "CURRENT",
+          "source_count": 1,
+          "strongest_source": "www.headlightmag.com",
+          "has_price": false,
+          "has_specs": false,
+          "variants": []
+        },
+        {
+          "name": "MG4",
+          "status": "CURRENT",
+          "source_count": 1,
+          "strongest_source": "www.headlightmag.com",
+          "has_price": false,
+          "has_specs": false,
+          "variants": []
+        }
+      ],
+      "model_count": 3,
+      "variant_count": 0
+    },
+    {
+      "name": "Wuling",
+      "thai_name": "วูลิง",
+      "website": "",
+      "models": [
+        {
+          "name": "EKSION",
+          "status": "CURRENT",
+          "source_count": 1,
+          "strongest_source": "autolifethailand.tv",
+          "has_price": false,
+          "has_specs": false,
+          "variants": []
+        },
+        {
+          "name": "EKSION EV",
+          "status": "UNKNOWN",
+          "source_count": 0,
+          "strongest_source": "",
+          "has_price": true,
+          "has_specs": true,
+          "variants": [
+            {
+              "name": "Standard",
+              "price_thb": 750000,
+              "fuel_type": "Electric",
+              "status": "UNKNOWN"
+            }
+          ]
+        }
+      ],
+      "model_count": 2,
+      "variant_count": 1
+    }
+  ],
+  "conflicts": [],
+  "unresolved": [],
+  "coverage": {
+    "total": 9,
+    "with_price": 1,
+    "with_specs": 1,
+    "price_coverage": 0.1111111111111111,
+    "specs_coverage": 0.1111111111111111
+  }
+}

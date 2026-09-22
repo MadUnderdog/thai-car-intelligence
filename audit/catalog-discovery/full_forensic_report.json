@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-22T13:38:39.859911+00:00",
+  "generated_at": "2026-09-22T13:54:19.134758+00:00",
   "project": "thai-car-intelligence",
-  "commit_sha_verified": "e5b91e7de8a7444729971b501de2e4e5bb4c2781",
-  "remote_sha": "e5b91e7de8a7444729971b501de2e4e5bb4c2781",
+  "commit_sha_verified": "5224c22006e94901efe4ec292d14ce11931d4c5c",
+  "remote_sha": "5224c22006e94901efe4ec292d14ce11931d4c5c",
   "local_equals_remote": true,
   "verifier_summary": {
     "total_checks": 34,
@@ -81,8 +81,15 @@
       "unresolved": 0
     }
   },
-  "mutation_tests": 9,
-  "tests_passed": 41,
+  "mutation_tests": 12,
+  "tests_passed": 44,
+  "changed_files": [
+    "lib/thai_factory/catalog/verifier.py",
+    "tests/test_taxonomy_provenance.py",
+    "audit/catalog-discovery/verifier_output.json",
+    "audit/catalog-discovery/full_forensic_report.md",
+    "audit/catalog-discovery/full_forensic_report.json"
+  ],
   "known_findings": [
     "HLM evidence accounting: PARTIAL \u2014 19 entries lack article evidence",
     "10 duplicate HLM post IDs (expected multi-mention)",

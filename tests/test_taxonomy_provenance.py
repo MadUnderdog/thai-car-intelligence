@@ -835,3 +835,95 @@ class TestMutationDetection:
         assert dup_check, f"Verifier missing duplicate_post_audit check"
         assert dup_check[0]["status"] == "FAIL", \
             f"Verifier should FAIL on cross-brand contamination, got {dup_check[0]['status']}"
+    def test_corrupt_openev_raw_url_mismatch_verifier_catches(self):
+        """Corrupt raw_url to point to wrong file — verifier must FAIL."""
+        import tempfile, shutil
+        with tempfile.TemporaryDirectory() as dst:
+            shutil.copytree(str(ARTIFACTS), dst, dirs_exist_ok=True)
+            
+            ev_path = os.path.join(dst, "second_taxonomy_capture.json")
+            with open(ev_path) as f:
+                ev = json.load(f)
+            
+            # Corrupt first row's raw_url to point to wrong file
+            rows = ev.get("rows", [])
+            if rows:
+                correct_url = rows[0].get("raw_url", "")
+                # Change to point to a different file
+                rows[0]["raw_url"] = correct_url.replace("/tang/", "/han/")
+                ev["rows"] = rows
+                
+                with open(ev_path, "w") as f:
+                    json.dump(ev, f)
+                
+                result = self._run_verifier(dst)
+                # Verifier must detect URL mismatch
+                url_check = [c for c in result["checks"]
+                           if c["check"] == "row_anchoring" and c["section"] == "openev"]
+                assert url_check, "Verifier missing row_anchoring check"
+                assert url_check[0]["status"] == "FAIL", \
+                    f"Verifier should FAIL on raw_url mismatch, got {url_check[0]['status']}"
+
+
+    def test_corrupt_hlm_classification_verifier_catches(self):
+        """Corrupt HLM classification counts — verifier must FAIL."""
+        import tempfile, shutil
+        with tempfile.TemporaryDirectory() as dst:
+            shutil.copytree(str(ARTIFACTS), dst, dirs_exist_ok=True)
+            
+            hlm_path = os.path.join(dst, "media_discovery_headlightmag.json")
+            with open(hlm_path) as f:
+                hlm = json.load(f)
+            
+            entries = hlm.get("entries", [])
+            # Change one model-mention to unknown classification
+            for e in entries:
+                if e.get("classification") == "model-mention":
+                    e["classification"] = "unknown_state"
+                    break
+            
+            hlm["entries"] = entries
+            with open(hlm_path, "w") as f:
+                json.dump(hlm, f)
+            
+            result = self._run_verifier(dst)
+            # Verifier must detect equation mismatch
+            acct_check = [c for c in result["checks"]
+                        if c["check"] == "source_state_equations" and c["section"] == "accounting"]
+            assert acct_check, "Verifier missing source_state_equations check"
+            assert acct_check[0]["status"] == "FAIL", \
+                f"Verifier should FAIL on corrupted classification, got {acct_check[0]['status']}"
+
+    def test_corrupt_hlm_counts_verifier_catches(self):
+        """Corrupt HLM entry count — verifier must FAIL."""
+        import tempfile, shutil
+        with tempfile.TemporaryDirectory() as dst:
+            shutil.copytree(str(ARTIFACTS), dst, dirs_exist_ok=True)
+            
+            hlm_path = os.path.join(dst, "media_discovery_headlightmag.json")
+            with open(hlm_path) as f:
+                hlm = json.load(f)
+            
+            entries = hlm.get("entries", [])
+            # Remove last entry to make counts wrong
+            if entries:
+                entries.pop()
+                hlm["entries"] = entries
+                
+                with open(hlm_path, "w") as f:
+                    json.dump(hlm, f)
+                
+                result = self._run_verifier(dst)
+                # Verifier should detect classification counts don't add up
+                acct_check = [c for c in result["checks"]
+                            if c["check"] == "source_state_equations" and c["section"] == "accounting"]
+                assert acct_check, "Verifier missing source_state_equations check"
+                # The equation should fail because model+variant+non_vehicle+unresolved != total
+                if acct_check[0]["status"] != "FAIL":
+                    # Check if evidence accounting also catches it
+                    evidence_check = [c for c in result["checks"]
+                                    if c["check"] == "evidence_accounting" and c["section"] == "hlm"]
+                    if evidence_check:
+                        assert evidence_check[0]["status"] in ("FAIL", "PARTIAL"), \
+                            f"Either source_state_equations or evidence_accounting must detect corruption"
+

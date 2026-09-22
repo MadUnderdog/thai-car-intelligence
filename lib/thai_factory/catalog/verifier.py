@@ -234,15 +234,24 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
         else:
             add_check("openev", "content_anchor", "PASS", rows=len(rows))
 
-        # Row-level raw_url verification: must point to pinned commit
+        # Row-level raw_url ↔ file_locator binding verification
+        # Expected URL = repo + pinned_commit + file_locator
+        repo = ev.get("source", {}).get("repo", "open-ev-data/open-ev-data-dataset")
         bad_urls = []
         for i, row in enumerate(rows):
             raw_url = row.get("raw_url", "")
+            file_locator = row.get("file_locator", "")
             row_commit = row.get("commit_sha", "")
+            
+            # Derive expected URL from file_locator + pinned commit
+            expected_url = f"https://raw.githubusercontent.com/{repo}/{pinned_commit}/{file_locator}"
+            
             if not raw_url:
                 bad_urls.append(f"row {i}: missing raw_url")
             elif pinned_commit and row_commit != pinned_commit:
                 bad_urls.append(f"row {i}: commit mismatch {row_commit} != {pinned_commit}")
+            elif raw_url != expected_url:
+                bad_urls.append(f"row {i}: URL mismatch — stored={raw_url}, expected={expected_url}")
         if bad_urls:
             add_check("openev", "row_anchoring", "FAIL", bad_urls=bad_urls[:5])
         else:

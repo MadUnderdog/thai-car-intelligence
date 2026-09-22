@@ -1,0 +1,123 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-22T17:00:00Z",
+  "git": {
+    "branch": "fix/p1-provenance-gate",
+    "local_head": "f46ddf261ec5d8d02cb90e9e0296c142cd923566",
+    "remote_head": "f46ddf261ec5d8d02cb90e9e0296c142cd923566",
+    "local_equals_remote": true,
+    "working_tree_clean": false,
+    "latest_commit_subject": "fix(p63): Artifact corrections — 8 concrete fixes from GitHub inspection"
+  },
+  "sources": [
+    {
+      "name": "Fipe API Models",
+      "role": "IDENTITY_ENUMERATOR",
+      "artifact_path": "audit/catalog-discovery/datasets/fipe_api_capture.json",
+      "acquisition_method": "api",
+      "locator": "https://parallelum.com.br/fipe/api/v1/carros",
+      "payload_hash": "d66ab979ec2ad265",
+      "observed_at": "2026-09-22T15:00:00Z",
+      "node_count": 1483,
+      "hierarchy_level": "model",
+      "status": "PARTIAL",
+      "limitations": "Brazilian reference, not Thai-specific"
+    },
+    {
+      "name": "Fipe API Year",
+      "role": "IDENTITY_ENUMERATOR",
+      "artifact_path": "audit/catalog-discovery/fipe_year_hierarchy.json",
+      "acquisition_method": "api",
+      "locator": "https://parallelum.com.br/fipe/api/v1/carros/marcas/{id}/modelos/{id}/anos",
+      "payload_hash": "3decf9219ade6e9f",
+      "observed_at": "2026-09-22T16:00:00Z",
+      "node_count": 133,
+      "hierarchy_level": "year",
+      "status": "PARTIAL",
+      "limitations": "Rate limited, only Toyota+Honda have year data"
+    },
+    {
+      "name": "open-ev-data",
+      "role": "IDENTITY_ENUMERATOR",
+      "artifact_path": "audit/catalog-discovery/second_taxonomy_capture.json",
+      "acquisition_method": "github_raw",
+      "locator": "https://github.com/open-ev-data/open-ev-data-dataset",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "license": "CDLA-Permissive-2.0",
+      "observed_at": "2026-09-22T16:30:00Z",
+      "node_count": 26,
+      "hierarchy_level": "trim",
+      "status": "VERIFIED",
+      "limitations": "EV-only, community-maintained"
+    },
+    {
+      "name": "Toyota Official",
+      "role": "MARKET_TRUTH",
+      "artifact_path": "audit/catalog-discovery/datasets/toyota_official_capture.json",
+      "acquisition_method": "playwright",
+      "locator": "https://www.toyota.co.th/en/pricelist",
+      "payload_hash": "89b2273ec79dbd09",
+      "observed_at": "2026-09-22T15:00:00Z",
+      "node_count": 34,
+      "hierarchy_level": "flat",
+      "status": "VERIFIED",
+      "limitations": "Flat price list"
+    },
+    {
+      "name": "Mazda Official",
+      "role": "MARKET_TRUTH",
+      "artifact_path": "audit/catalog-discovery/datasets/mazda_official_capture.json",
+      "acquisition_method": "playwright",
+      "locator": "https://www.mazda.co.th/en/vehicles",
+      "payload_hash": "22be446f19b73d41",
+      "observed_at": "2026-09-22T15:00:00Z",
+      "node_count": 10,
+      "hierarchy_level": "flat",
+      "status": "VERIFIED",
+      "limitations": "Flat lineup"
+    },
+    {
+      "name": "Thai Market Reference",
+      "role": "MARKET_REFERENCE",
+      "artifact_path": "audit/catalog-discovery/thai_market_reference.json",
+      "acquisition_method": "knowledge_base",
+      "locator": "Manual compilation",
+      "payload_hash": "",
+      "node_count": 22,
+      "hierarchy_level": "none",
+      "status": "UNVERIFIED",
+      "limitations": "NOT DLT data, knowledge base"
+    },
+    {
+      "name": "HeadLightMag",
+      "role": "MEDIA_DISCOVERY",
+      "artifact_path": "audit/catalog-discovery/media_discovery_headlightmag.json",
+      "acquisition_method": "wordpress_api",
+      "locator": "https://www.headlightmag.com/wp-json/wp/v2",
+      "payload_hash": "d5587c641ca2a00c",
+      "observed_at": "2026-09-22T16:00:00Z",
+      "node_count": 64,
+      "hierarchy_level": "none",
+      "status": "VERIFIED",
+      "limitations": "Category-level mentions, not taxonomy"
+    }
+  ],
+  "data_quality": {
+    "synthetic_ids": 0,
+    "missing_hashes": 0,
+    "orphan_parents": 0,
+    "hash_collisions": 0,
+    "media_in_taxonomy": 0,
+    "canonical_id_in_unreconciled": 0,
+    "fake_parent_child": 0
+  },
+  "tests": {
+    "file": "tests/test_taxonomy_provenance.py",
+    "command": "pytest tests/test_taxonomy_provenance.py -v",
+    "total": 32,
+    "passed": 32,
+    "failed": 0,
+    "xfail": 0,
+    "skipped": 0
+  }
+}

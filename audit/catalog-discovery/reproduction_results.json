@@ -1,0 +1,150 @@
+{
+  "reproduction_date": "2026-09-22",
+  "checks": [
+    {
+      "check": "artifact_exists_fipe_models",
+      "status": "PASS",
+      "path": "datasets/fipe_api_capture.json"
+    },
+    {
+      "check": "artifact_exists_fipe_year",
+      "status": "PASS",
+      "path": "fipe_year_hierarchy.json"
+    },
+    {
+      "check": "artifact_exists_open_ev",
+      "status": "PASS",
+      "path": "second_taxonomy_capture.json"
+    },
+    {
+      "check": "artifact_exists_toyota",
+      "status": "PASS",
+      "path": "datasets/toyota_official_capture.json"
+    },
+    {
+      "check": "artifact_exists_mazda",
+      "status": "PASS",
+      "path": "datasets/mazda_official_capture.json"
+    },
+    {
+      "check": "artifact_exists_hlm",
+      "status": "PASS",
+      "path": "media_discovery_headlightmag.json"
+    },
+    {
+      "check": "artifact_exists_thai_ref",
+      "status": "PASS",
+      "path": "thai_market_reference.json"
+    },
+    {
+      "check": "artifact_exists_raw_universe",
+      "status": "PASS",
+      "path": "raw_taxonomy_universe.json"
+    },
+    {
+      "check": "artifact_exists_source_matrix",
+      "status": "PASS",
+      "path": "source_matrix.json"
+    },
+    {
+      "check": "payload_hash_fipe_models",
+      "status": "PASS",
+      "hash": "d66ab979ec2ad265"
+    },
+    {
+      "check": "payload_hash_fipe_year",
+      "status": "PASS",
+      "hash": "d66ab979ec2ad265"
+    },
+    {
+      "check": "payload_hash_open_ev",
+      "status": "PASS",
+      "hash": "a83e075de394451701ed4432a9a899bbd81d0b1a3ac5960de78a3da3cf483e4a"
+    },
+    {
+      "check": "payload_hash_toyota",
+      "status": "PASS",
+      "hash": "89b2273ec79dbd09"
+    },
+    {
+      "check": "payload_hash_mazda",
+      "status": "PASS",
+      "hash": "22be446f19b73d41"
+    },
+    {
+      "check": "payload_hash_hlm",
+      "status": "PASS",
+      "hash": "d5587c641ca2a00c"
+    },
+    {
+      "check": "payload_hash_thai_ref",
+      "status": "PASS",
+      "hash": "",
+      "note": "Expected missing \u2014 built from other artifacts"
+    },
+    {
+      "check": "payload_hash_raw_universe",
+      "status": "PASS",
+      "hash": "",
+      "note": "Expected missing \u2014 built from other artifacts"
+    },
+    {
+      "check": "payload_hash_source_matrix",
+      "status": "PASS",
+      "hash": "",
+      "note": "Expected missing \u2014 built from other artifacts"
+    },
+    {
+      "check": "raw_universe_node_counts",
+      "status": "PASS",
+      "by_source": {
+        "fipe_brazilian_vehicle_reference": 1538,
+        "toyota_official_pricelist": 34,
+        "mazda_official_lineup": 10
+      },
+      "total": 1582
+    },
+    {
+      "check": "fipe_year_completeness",
+      "status": "PASS",
+      "year_rows": 133,
+      "completeness": "PARTIAL",
+      "note": "Year hierarchy is PARTIAL \u2014 133 rows"
+    },
+    {
+      "check": "open_ev_data_integrity",
+      "status": "PASS",
+      "rows": 26,
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "all_have_locators": true
+    },
+    {
+      "check": "headlightmag_integrity",
+      "status": "PASS",
+      "total": 64,
+      "with_article_evidence": 45,
+      "classifications": {
+        "model-mention": 49,
+        "non-vehicle": 11,
+        "unresolved": 2,
+        "variant-mention": 2
+      }
+    },
+    {
+      "check": "thai_reference_provenance",
+      "status": "PASS",
+      "makes": 22,
+      "all_unverified": true
+    },
+    {
+      "check": "source_matrix_fipe_hierarchy",
+      "status": "PASS",
+      "provides_hierarchy": true
+    }
+  ],
+  "summary": {
+    "total_checks": 24,
+    "passed": 24,
+    "failed": 0
+  }
+}

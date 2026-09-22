@@ -1,13 +1,13 @@
 {
-  "version": "1.0",
-  "generated_at": "2026-09-22T17:00:00Z",
+  "version": "2.0",
+  "generated_at": "2026-09-22T17:30:00Z",
   "git": {
     "branch": "fix/p1-provenance-gate",
-    "local_head": "f46ddf261ec5d8d02cb90e9e0296c142cd923566",
-    "remote_head": "f46ddf261ec5d8d02cb90e9e0296c142cd923566",
+    "local_head": "3970bd4",
+    "remote_head": "3970bd4",
     "local_equals_remote": true,
     "working_tree_clean": false,
-    "latest_commit_subject": "fix(p63): Artifact corrections — 8 concrete fixes from GitHub inspection"
+    "latest_commit_subject": "docs(p64): Full forensic report — 12-section audit with 24/24 checks passing"
   },
   "sources": [
     {
@@ -34,7 +34,13 @@
       "node_count": 133,
       "hierarchy_level": "year",
       "status": "PARTIAL",
-      "limitations": "Rate limited, only Toyota+Honda have year data"
+      "limitations": "Rate limited, only Toyota+Honda have year data",
+      "accounting": {
+        "model_nodes_captured": 1483,
+        "year_nodes_from_upstream": 0,
+        "year_nodes_reconstructed": 133,
+        "unobserved_year_coverage": "~1670"
+      }
     },
     {
       "name": "open-ev-data",
@@ -48,7 +54,8 @@
       "node_count": 26,
       "hierarchy_level": "trim",
       "status": "VERIFIED",
-      "limitations": "EV-only, community-maintained"
+      "limitations": "EV-only, community-maintained",
+      "record_type": "spec_carrying_identity"
     },
     {
       "name": "Toyota Official",
@@ -86,7 +93,9 @@
       "node_count": 22,
       "hierarchy_level": "none",
       "status": "UNVERIFIED",
-      "limitations": "NOT DLT data, knowledge base"
+      "limitations": "NOT DLT data, knowledge base",
+      "provenance_class": "MANUAL/KNOWLEDGE_BASE",
+      "dlt_access_status": "TIMEOUT"
     },
     {
       "name": "HeadLightMag",
@@ -109,15 +118,29 @@
     "hash_collisions": 0,
     "media_in_taxonomy": 0,
     "canonical_id_in_unreconciled": 0,
-    "fake_parent_child": 0
+    "fake_parent_child": 0,
+    "duplicate_post_ids": 10,
+    "entries_without_article_evidence": 19,
+    "known_findings": [
+      "10 duplicate HeadLightMag post IDs (expected)",
+      "26 open-ev-data rows lack source_native_id (upstream has no unique_code)",
+      "133 Fipe year rows reconstructed from sample_details",
+      "Cross-artifact parent resolution required for Fipe year refs",
+      "Tests don't cover forensic artifacts"
+    ]
   },
   "tests": {
     "file": "tests/test_taxonomy_provenance.py",
-    "command": "pytest tests/test_taxonomy_provenance.py -v",
+    "command": "pytest tests/test_taxonomy_provenance.py -v --tb=line",
     "total": 32,
     "passed": 32,
     "failed": 0,
     "xfail": 0,
     "skipped": 0
+  },
+  "reproduction": {
+    "script": "audit/catalog-discovery/reproduce_forensic_report.py",
+    "result": "23 PASS, 0 FAIL, 2 PARTIAL, 1 N/A",
+    "checks": 26
   }
 }

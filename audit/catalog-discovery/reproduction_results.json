@@ -1,150 +1,335 @@
 {
   "reproduction_date": "2026-09-22",
+  "git_head": "3970bd4f1dcb36374807238d06462c1fcdef26fa",
+  "summary": {
+    "total_checks": 26,
+    "passed": 23,
+    "failed": 0,
+    "partial": 2,
+    "not_applicable": 1
+  },
   "checks": [
     {
-      "check": "artifact_exists_fipe_models",
+      "section": "1_git",
+      "check": "local_equals_remote",
+      "status": "PASS",
+      "local_head": "3970bd4f1dcb36374807238d06462c1fcdef26fa",
+      "remote_head": "3970bd4f1dcb36374807238d06462c1fcdef26fa"
+    },
+    {
+      "section": "1_git",
+      "check": "working_tree_clean",
+      "status": "PARTIAL",
+      "note": "Untracked files may exist; committed state is verified"
+    },
+    {
+      "section": "2_artifacts",
+      "check": "exists_datasets_fipe_api_capture_json",
       "status": "PASS",
       "path": "datasets/fipe_api_capture.json"
     },
     {
-      "check": "artifact_exists_fipe_year",
+      "section": "2_artifacts",
+      "check": "exists_fipe_year_hierarchy_json",
       "status": "PASS",
       "path": "fipe_year_hierarchy.json"
     },
     {
-      "check": "artifact_exists_open_ev",
+      "section": "2_artifacts",
+      "check": "exists_second_taxonomy_capture_json",
       "status": "PASS",
       "path": "second_taxonomy_capture.json"
     },
     {
-      "check": "artifact_exists_toyota",
+      "section": "2_artifacts",
+      "check": "exists_datasets_toyota_official_capture_json",
       "status": "PASS",
       "path": "datasets/toyota_official_capture.json"
     },
     {
-      "check": "artifact_exists_mazda",
+      "section": "2_artifacts",
+      "check": "exists_datasets_mazda_official_capture_json",
       "status": "PASS",
       "path": "datasets/mazda_official_capture.json"
     },
     {
-      "check": "artifact_exists_hlm",
+      "section": "2_artifacts",
+      "check": "exists_media_discovery_headlightmag_json",
       "status": "PASS",
       "path": "media_discovery_headlightmag.json"
     },
     {
-      "check": "artifact_exists_thai_ref",
+      "section": "2_artifacts",
+      "check": "exists_thai_market_reference_json",
       "status": "PASS",
       "path": "thai_market_reference.json"
     },
     {
-      "check": "artifact_exists_raw_universe",
+      "section": "2_artifacts",
+      "check": "exists_raw_taxonomy_universe_json",
       "status": "PASS",
       "path": "raw_taxonomy_universe.json"
     },
     {
-      "check": "artifact_exists_source_matrix",
+      "section": "2_artifacts",
+      "check": "exists_source_matrix_json",
       "status": "PASS",
       "path": "source_matrix.json"
     },
     {
-      "check": "payload_hash_fipe_models",
+      "section": "2_artifacts",
+      "check": "exists_integration_summary_json",
       "status": "PASS",
-      "hash": "d66ab979ec2ad265"
+      "path": "integration_summary.json"
     },
     {
-      "check": "payload_hash_fipe_year",
+      "section": "2_artifacts",
+      "check": "exists_full_forensic_report_json",
       "status": "PASS",
-      "hash": "d66ab979ec2ad265"
+      "path": "full_forensic_report.json"
     },
     {
-      "check": "payload_hash_open_ev",
+      "section": "3_fipe_models",
+      "check": "model_node_count",
       "status": "PASS",
-      "hash": "a83e075de394451701ed4432a9a899bbd81d0b1a3ac5960de78a3da3cf483e4a"
+      "observed": 1483,
+      "by_brand": {
+        "Toyota": 222,
+        "Honda": 117,
+        "Mazda": 25,
+        "BMW": 323,
+        "Mercedes-Benz": 563,
+        "Nissan": 200,
+        "MG": 11,
+        "BYD": 22
+      }
     },
     {
-      "check": "payload_hash_toyota",
-      "status": "PASS",
-      "hash": "89b2273ec79dbd09"
-    },
-    {
-      "check": "payload_hash_mazda",
-      "status": "PASS",
-      "hash": "22be446f19b73d41"
-    },
-    {
-      "check": "payload_hash_hlm",
-      "status": "PASS",
-      "hash": "d5587c641ca2a00c"
-    },
-    {
-      "check": "payload_hash_thai_ref",
-      "status": "PASS",
-      "hash": "",
-      "note": "Expected missing \u2014 built from other artifacts"
-    },
-    {
-      "check": "payload_hash_raw_universe",
-      "status": "PASS",
-      "hash": "",
-      "note": "Expected missing \u2014 built from other artifacts"
-    },
-    {
-      "check": "payload_hash_source_matrix",
-      "status": "PASS",
-      "hash": "",
-      "note": "Expected missing \u2014 built from other artifacts"
-    },
-    {
-      "check": "raw_universe_node_counts",
-      "status": "PASS",
-      "by_source": {
-        "fipe_brazilian_vehicle_reference": 1538,
-        "toyota_official_pricelist": 34,
-        "mazda_official_lineup": 10
-      },
-      "total": 1582
-    },
-    {
-      "check": "fipe_year_completeness",
-      "status": "PASS",
-      "year_rows": 133,
+      "section": "4_fipe_year",
+      "check": "year_node_count",
+      "status": "PARTIAL",
+      "observed": 133,
       "completeness": "PARTIAL",
-      "note": "Year hierarchy is PARTIAL \u2014 133 rows"
+      "note": "PARTIAL \u2014 133 rows from sample_details, not fresh API calls"
     },
     {
-      "check": "open_ev_data_integrity",
+      "section": "4_fipe_year",
+      "check": "parent_child_resolution",
+      "status": "PASS",
+      "year_parents": 40,
+      "resolved": 40,
+      "unresolved": 0,
+      "unresolved_ids": [],
+      "note": "Cross-artifact: parent refs resolved against fipe_api_capture.json"
+    },
+    {
+      "section": "5_open_ev",
+      "check": "row_integrity",
       "status": "PASS",
       "rows": 26,
+      "all_have_file_locator": true,
+      "all_have_content_hash": true,
       "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
-      "all_have_locators": true
+      "license": "CDLA-Permissive-2.0"
     },
     {
-      "check": "headlightmag_integrity",
+      "section": "5_open_ev",
+      "check": "source_native_id_status",
+      "status": "NOT_APPLICABLE",
+      "null_count": 26,
+      "total": 26,
+      "note": "All source_native_id=null \u2014 upstream has no unique_code field"
+    },
+    {
+      "section": "6_headlightmag",
+      "check": "classification_counts",
       "status": "PASS",
       "total": 64,
-      "with_article_evidence": 45,
       "classifications": {
         "model-mention": 49,
         "non-vehicle": 11,
         "unresolved": 2,
         "variant-mention": 2
-      }
+      },
+      "with_article_evidence": 45,
+      "without_article_evidence": 19
     },
     {
-      "check": "thai_reference_provenance",
+      "section": "6_headlightmag",
+      "check": "duplicate_post_ids",
       "status": "PASS",
-      "makes": 22,
-      "all_unverified": true
+      "duplicate_count": 10,
+      "note": "Duplicate post IDs = one article supports multiple model mentions (expected)"
     },
     {
-      "check": "source_matrix_fipe_hierarchy",
+      "section": "6_headlightmag",
+      "check": "entries_without_article_evidence",
       "status": "PASS",
-      "provides_hierarchy": true
+      "count": 19,
+      "entries": [
+        {
+          "brand": null,
+          "raw_model": "CX-8",
+          "classification": "model-mention",
+          "category": "MAZDA"
+        },
+        {
+          "brand": null,
+          "raw_model": "CX-5",
+          "classification": "model-mention",
+          "category": "MAZDA"
+        },
+        {
+          "brand": null,
+          "raw_model": "ROADPACER",
+          "classification": "unresolved",
+          "category": "MAZDA"
+        },
+        {
+          "brand": null,
+          "raw_model": "CX-9",
+          "classification": "model-mention",
+          "category": "MAZDA"
+        },
+        {
+          "brand": null,
+          "raw_model": "MX-5",
+          "classification": "model-mention",
+          "category": "MAZDA"
+        },
+        {
+          "brand": null,
+          "raw_model": "Accord",
+          "classification": "model-mention",
+          "category": "HONDA"
+        },
+        {
+          "brand": null,
+          "raw_model": "City",
+          "classification": "model-mention",
+          "category": "HONDA"
+        },
+        {
+          "brand": null,
+          "raw_model": "Clarity-\u0e40\u0e23\u0e37\u0e2d\u0e19\u0e23\u0e48\u0e32\u0e07\u0e41\u0e2b\u0e48\u0e07\u0e1b\u0e31\u0e08\u0e08\u0e38\u0e1a\u0e31\u0e19..\u0e1a\u0e19\u0e40\u0e17\u0e04\u0e42\u0e19\u0e42\u0e25\u0e22\u0e35\u0e41\u0e2b\u0e48\u0e07\u0e2d\u0e19\u0e32\u0e04\u0e15",
+          "classification": "variant-mention",
+          "category": "HONDA"
+        },
+        {
+          "brand": null,
+          "raw_model": "R&#038;D,",
+          "classification": "non-vehicle",
+          "category": "HONDA"
+        },
+        {
+          "brand": null,
+          "raw_model": "Extender",
+          "classification": "non-vehicle",
+          "category": "MG"
+        },
+        {
+          "brand": null,
+          "raw_model": "RX8",
+          "classification": "model-mention",
+          "category": "MG"
+        },
+        {
+          "brand": null,
+          "raw_model": "Almera",
+          "classification": "model-mention",
+          "category": "NISSAN"
+        },
+        {
+          "brand": null,
+          "raw_model": "Note",
+          "classification": "model-mention",
+          "category": "NISSAN"
+        },
+        {
+          "brand": null,
+          "raw_model": "GT-R",
+          "classification": "model-mention",
+          "category": "NISSAN"
+        },
+        {
+          "brand": null,
+          "raw_model": "PRESEA",
+          "classification": "model-mention",
+          "category": "NISSAN"
+        },
+        {
+          "brand": null,
+          "raw_model": "SYLPHY",
+          "classification": "model-mention",
+          "category": "NISSAN"
+        },
+        {
+          "brand": null,
+          "raw_model": "VELOZ",
+          "classification": "model-mention",
+          "category": "TOYOTA"
+        },
+        {
+          "brand": null,
+          "raw_model": "C-HR",
+          "classification": "model-mention",
+          "category": "TOYOTA"
+        },
+        {
+          "brand": null,
+          "raw_model": "Majesty",
+          "classification": "model-mention",
+          "category": "TOYOTA"
+        }
+      ],
+      "reason": "Category-level mentions where model name not found in post titles"
+    },
+    {
+      "section": "7_thai_reference",
+      "check": "provenance_status",
+      "status": "PASS",
+      "total_makes": 22,
+      "all_unverified": true,
+      "dlt_verified": 0,
+      "note": "All UNVERIFIED \u2014 DLT data not accessible; knowledge base assertions"
+    },
+    {
+      "section": "7_thai_reference",
+      "check": "quality_scan",
+      "status": "PASS",
+      "suspicious_count": 1,
+      "suspicious": [
+        "Haval: Haval Cat"
+      ]
+    },
+    {
+      "section": "8_source_matrix",
+      "check": "role_consistency",
+      "status": "PASS",
+      "roles": {
+        "fipe_brazilian_vehicle_reference": "IDENTITY_ENUMERATOR",
+        "toyota_official_pricelist": "MARKET_TRUTH",
+        "mazda_official_lineup": "MARKET_TRUTH",
+        "headlightmag_wordpress_api": "MEDIA_DISCOVERY",
+        "bmw_official": "MARKET_TRUTH"
+      },
+      "drift": {}
+    },
+    {
+      "section": "9_tests",
+      "check": "test_results",
+      "status": "PASS",
+      "passed": 32,
+      "failed": 0,
+      "xfail": 0,
+      "skipped": 0
+    },
+    {
+      "section": "10_data_quality",
+      "check": "violation_scan",
+      "status": "PASS",
+      "violation_count": 0,
+      "violations": []
     }
-  ],
-  "summary": {
-    "total_checks": 24,
-    "passed": 24,
-    "failed": 0
-  }
+  ]
 }

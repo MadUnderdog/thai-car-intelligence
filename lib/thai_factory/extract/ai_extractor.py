@@ -1,6 +1,6 @@
 """
-AI Extractor — two-stage extraction with strict validation.
-Block snapshots for forensic evidence. Code normalization for determinism.
+AI Extractor — two-stage extraction with strict scope isolation.
+Region-scoped price ownership. No global price injection.
 """
 import hashlib
 import json
@@ -14,8 +14,6 @@ from typing import Dict, List, Optional, Tuple
 from .dom_cleaner import CleanedPage, ContentBlock
 
 _REQUIRED_GEN_CONFIG = ("AI_BASE_URL", "AI_API_KEY", "AI_MODEL")
-_OPENROUTER_ALLOWED_MODEL = "inclusionai/ling-3.0-flash"
-_OPENROUTER_ALLOWED_PROVIDERS = ["novita"]
 
 ALLOWED_FIELDS = {"price", "engine_l", "horsepower_hp", "torque_nm", "fuel_type",
                   "transmission", "drivetrain", "battery_kwh", "range_km", "seats", "body_type"}
@@ -27,9 +25,9 @@ ALLOWED_SCOPES = {"SINGLE_MODEL", "SINGLE_VARIANT", "MULTI_MODEL_EXPLICIT", "COM
 
 NAV_KEYWORDS = ["หน้าแรก", "Review By Brand", "View by Brand", "View by Segment",
                 "Sign in", "Search", "Close", "Accept", "Read more", "Copyright",
-                "Privacy Policy", "Terms of Use", "WEBBOARD", "CONTACT"]
+                "Privacy Policy", "Terms of Use", "WEBBOARD", "CONTACT",
+                "Must Read", "Related News", "Share"]
 
-# Price keywords for deterministic pre-scan
 _PRICE_KEYWORDS = re.compile(r'[\d,]+(?:\.\d+)?\s*(?:บาท|฿|THB|ล้าน|ล้านบาท)|xx,xxx|xxx,xxx|ราคา|price', re.I)
 _PRICE_EVIDENCE_KEYWORDS = re.compile(r'คาด|ประมาณ|ราคาเปิดตัว|ราคาเริ่มต้น|MSRP|โปรโมชัน|discount', re.I)
 
@@ -89,7 +87,7 @@ def _call_ai(prompt, system="", temperature=0.1):
         os.unlink(tmp)
 
 
-# ─── Block Filtering ───────────────────────────────────────────────
+# ─── Article Boundary Detection ────────────────────────────────────
 def _is_nav_block(block):
     t = block.content.strip()
     if len(t) < 15 and block.block_type == "list":
@@ -99,46 +97,65 @@ def _is_nav_block(block):
             return True
     if block.block_type == "list" and t.count("http") > 2:
         return True
+    # Reject blocks that are clearly sidebar/related content
+    if any(kw in t.lower() for kw in ["must read", "related news", "share", "facebook.com/sharer"]):
+        return True
+    if re.match(r'^\d+\s+(?:Article|News|Like|Read)', t):
+        return True
     return False
 
 
-def _filter_article_blocks(blocks):
+def _find_article_boundary(blocks):
+    """
+    Find the MAIN ARTICLE content boundary.
+    Returns block IDs that belong to the main article body.
+    Uses heading structure: article starts after second heading.
+    Stops at 'Related News' / 'Must Read' / navigation markers.
+    """
     ids = []
     heading_count = 0
     in_article = False
+    article_heading = ""
+    
     for b in blocks:
+        # Track headings
         if b.block_type == "heading":
             heading_count += 1
-            if heading_count >= 2:
+            # Article starts after second heading (title + first content heading)
+            if heading_count == 2:
                 in_article = True
+                article_heading = b.content[:50]
+            # Stop if we hit a "Related" / "Must Read" heading
+            if in_article and any(kw in b.content.lower() for kw in ["related", "must read", "more from"]):
+                break
             if not _is_nav_block(b) and heading_count >= 2:
                 ids.append(b.block_id)
             continue
-        if _is_nav_block(b):
-            continue
+        
         if not in_article:
             continue
+        
+        # Stop at navigation markers
+        if _is_nav_block(b):
+            continue
+        
+        # Only include paragraphs and tables in article body
         if b.block_type in ("paragraph", "table"):
             if len(b.content) > 30:
                 ids.append(b.block_id)
-        elif b.block_type == "list":
-            if any(kw in b.content.lower() for kw in ["ราคา", "price", "บาท", "ล้าน", "cc", "hp", "kw"]):
-                ids.append(b.block_id)
-    if len(ids) > 40:
-        ids = ids[:40]
+    
     return ids
 
 
 def _scan_price_blocks(blocks, article_ids):
-    """Deterministic pre-scan: find ALL article blocks containing price figures."""
+    """Deterministic pre-scan: find article blocks containing price figures."""
     price_ids = []
     evidence_ids = []
     for b in blocks:
         if b.block_id not in article_ids:
             continue
-        # Skip navigation/social/share blocks
         t = b.content.strip()
-        if len(t) < 20 or t.startswith("Share") or "facebook.com/sharer" in t:
+        if len(t) < 20 or "facebook.com/sharer" in t:
             continue
         if _PRICE_KEYWORDS.search(b.content):
             price_ids.append(b.block_id)
@@ -170,7 +187,6 @@ def _region_text(blocks, ids):
     return "\n".join(lines)
 
 
-# ─── Block Snapshots ───────────────────────────────────────────────
 def _build_block_snapshots(blocks, region_ids):
     snapshots = {}
     for b in blocks:
@@ -197,15 +213,13 @@ document_type: ARTICLE|PRICE_LIST|SPEC_SHEET|ROUNDUP|COMPARISON|LAUNCH|UNKNOWN
 decision: SINGLE_MODEL|SINGLE_VARIANT|MULTI_MODEL_EXPLICIT|COMPARISON|ROUNDUP|GENERIC_LISTING|UNKNOWN
 ALL VALUES UPPERCASE.
 
-CRITICAL RULES for price_block_ids:
-- EVERY block containing ANY price figure (บาท, ราคา, THB, million, ล้าน, xx,xxx) MUST be in price_block_ids.
-- price_evidence_block_ids MUST contain blocks with price-type justification words (คาด, ประมาณ, ราคาเปิดตัว).
-- If a block appears in BOTH lists, include it in BOTH.
-- Missing a price block = the observation will be REJECTED.
-
-DETERMINISTIC PRICE BLOCKS (pre-scanned):
-The following blocks have been identified as containing price content. You MUST include ALL of them in price_block_ids:
-{price_blocks}
+CRITICAL RULES:
+1. vehicle_regions must ONLY contain the PRIMARY vehicle discussed in this article.
+2. Do NOT create regions for sidebar/related content (BYD, ZEEKR, Mercedes, Volvo etc.)
+3. region_block_ids MUST only contain blocks about the PRIMARY vehicle.
+4. price_block_ids MUST only contain price blocks from THIS vehicle's region.
+5. If a block mentions a DIFFERENT vehicle brand, it is NOT in this region.
+6. Empty brand or model = REJECTED region.
 
 BLOCKS:
 {blocks}"""
@@ -225,10 +239,7 @@ def _stage_b_prompt(brand, model, blocks):
 field: price|engine_l|horsepower_hp|torque_nm|fuel_type|transmission|drivetrain|battery_kwh|range_km|seats|body_type
 Each observation MUST reference a block_id from below.
 evidence_quote MUST be exact substring of that block's content.
-The evidence_quote MUST be specific to the claimed field.
-For price: the quote MUST contain the actual price figure.
-For fuel_type: the quote MUST contain a fuel/powertrain term.
-For transmission: the quote MUST contain a transmission term.
+evidence_quote MUST be specific to the claimed field.
 price_type_evidence_quote MUST contain the wording justifying price_type.
 
 BLOCKS:
@@ -241,16 +252,18 @@ def extract_observations(page):
     if len(page.blocks) < 3:
         return _empty("Insufficient blocks")
 
-    article_ids = set(_filter_article_blocks(page.blocks))
+    # Step 1: Find MAIN ARTICLE boundary
+    article_ids = set(_find_article_boundary(page.blocks))
     if len(article_ids) < 3:
+        # Fallback: use all blocks but warn
         article_ids = all_ids
 
-    # Deterministic price pre-scan
+    # Step 2: Deterministic price pre-scan (within article boundary only)
     price_ids, price_evidence_ids = _scan_price_blocks(page.blocks, article_ids)
 
+    # Step 3: Stage A — map vehicle regions
     bt = _compact_text(page.blocks, article_ids)
-    price_blocks_text = "\n".join(f"  [{pid}] (MUST be in price_block_ids)" for pid in price_ids)
-    pa = STAGE_A_PROMPT.format(blocks=bt, price_blocks=price_blocks_text or "  (none found)")
+    pa = STAGE_A_PROMPT.format(blocks=bt)
     ra = _call_ai(pa)
     if not ra:
         return _empty("Stage A failed")
@@ -262,22 +275,32 @@ def extract_observations(page):
         ab_ids = article_ids
     regions = ra.get("vehicle_regions", [])
 
-    # Enforce: price_block_ids must include all pre-scanned price blocks
+    # Step 4: Reject empty-model regions
+    valid_regions = []
     for reg in regions:
-        existing_pids = set(reg.get("price_block_ids", []))
-        # Add any pre-scanned price blocks that are in the region
-        region_blocks = set(reg.get("region_block_ids", []))
-        for pid in price_ids:
-            if pid in region_blocks or pid in ab_ids:
-                existing_pids.add(pid)
-        reg["price_block_ids"] = sorted(list(existing_pids))
-        # Same for price_evidence_block_ids
-        existing_peids = set(reg.get("price_evidence_block_ids", []))
-        for peid in price_evidence_ids:
-            if peid in region_blocks or peid in ab_ids:
-                existing_peids.add(peid)
-        reg["price_evidence_block_ids"] = sorted(list(existing_peids))
+        if not reg.get("brand") or not reg.get("model"):
+            errs_a.append(f"Region rejected: empty brand/model (brand={reg.get('brand','')}, model={reg.get('model','')})")
+            continue
+        valid_regions.append(reg)
+    regions = valid_regions
 
+    # Step 5: Region-scoped price enforcement (NOT global injection)
+    for reg in regions:
+        region_blocks = set(reg.get("region_block_ids", []))
+        # price_block_ids = price_candidates ∩ region_block_ids
+        scoped_price = set(reg.get("price_block_ids", []))
+        for pid in price_ids:
+            if pid in region_blocks:
+                scoped_price.add(pid)
+        reg["price_block_ids"] = sorted(list(scoped_price))
+        # price_evidence_block_ids = evidence_candidates ∩ region_block_ids
+        scoped_evidence = set(reg.get("price_evidence_block_ids", []))
+        for peid in price_evidence_ids:
+            if peid in region_blocks:
+                scoped_evidence.add(peid)
+        reg["price_evidence_block_ids"] = sorted(list(scoped_evidence))
+
+    # Step 6: Stage B — parallel per region
     all_obs, all_rej, all_rev = [], [], []
 
     def run_region(region):
@@ -348,7 +371,9 @@ def _validate_stage_a(result, block_ids):
             if bid not in block_ids:
                 errs.append(f"Region {i}: block '{bid}' not found")
         if not reg.get("price_block_ids"):
-            errs.append(f"Region {i}: price_block_ids is empty — Stage A must identify price blocks")
+            errs.append(f"Region {i}: price_block_ids is empty")
+        if not reg.get("brand") or not reg.get("model"):
+            errs.append(f"Region {i}: empty brand/model")
     return errs
 
 
@@ -356,6 +381,7 @@ def _validate(observations, valid_ids, blocks, region):
     acc, rej, rev = [], [], []
     bmap = {b.block_id: b for b in blocks}
     rbrand = region.get("brand", "")
+    rmodel = region.get("model", "")
     price_ids = set(region.get("price_block_ids", []))
     price_evidence_ids = set(region.get("price_evidence_block_ids", []))
 
@@ -368,17 +394,17 @@ def _validate(observations, valid_ids, blocks, region):
         bid = obs.get("block_id", "")
         if bid and bid not in valid_ids:
             errs.append(f"block_id '{bid}' not in region scope")
-        # Price observations must reference a price_block_id
+        # Price obs must reference a price_block_id in THIS region
         if obs.get("field") == "price" and bid and price_ids:
             if bid not in price_ids:
-                errs.append(f"Price block '{bid}' not in price_block_ids")
-        # Evidence quote MUST be exact substring of the block
+                errs.append(f"Price block '{bid}' not in price_block_ids of this region")
+        # Evidence quote must be in the block
         q = obs.get("evidence_quote", "")
         if bid and q:
             blk = bmap.get(bid)
             if blk and q not in blk.content:
                 errs.append(f"evidence_quote not in block {bid}")
-        # Evidence block must exist and contain the quote
+        # Evidence block must contain quote
         ebid = obs.get("evidence_block_id", "")
         if ebid and ebid not in valid_ids:
             errs.append(f"evidence_block_id '{ebid}' not in region scope")
@@ -386,19 +412,26 @@ def _validate(observations, valid_ids, blocks, region):
             eblk = bmap.get(ebid)
             if eblk and q not in eblk.content:
                 errs.append(f"evidence_quote not in evidence_block {ebid}")
-        # price_type_evidence_block_id must be in price_evidence_block_ids
+        # price_type_evidence_block must be in price_evidence_block_ids
         ptbid = obs.get("price_type_evidence_block_id", "")
         if ptbid and price_evidence_ids and ptbid not in price_evidence_ids:
             errs.append(f"price_type_evidence_block '{ptbid}' not in price_evidence_block_ids")
         if ptbid and ptbid not in valid_ids:
             errs.append(f"price_type_evidence_block '{ptbid}' not in region scope")
-        # price_type_evidence_quote must be in its block
         ptq = obs.get("price_type_evidence_quote", "")
         if ptbid and ptq:
             ptblk = bmap.get(ptbid)
             if ptblk and ptq not in ptblk.content:
                 errs.append(f"price_type_evidence_quote not in block {ptbid}")
-        # Field validation
+        # Entity must match region
+        ent = obs.get("entity", {})
+        if not ent.get("brand"):
+            errs.append("Entity missing brand")
+        elif rbrand and ent["brand"].lower() != rbrand.lower():
+            errs.append(f"Brand '{ent['brand']}' != region '{rbrand}'")
+        if not ent.get("model"):
+            errs.append("Entity missing model")
+        # Field/value validation
         f = obs.get("field", "")
         if f not in ALLOWED_FIELDS:
             errs.append(f"Invalid field: {f}")
@@ -408,11 +441,6 @@ def _validate(observations, valid_ids, blocks, region):
         c = obs.get("confidence", "")
         if c not in ALLOWED_CONFIDENCE:
             errs.append(f"Invalid confidence: {c}")
-        ent = obs.get("entity", {})
-        if not ent.get("brand"):
-            errs.append("Entity missing brand")
-        elif rbrand and ent["brand"].lower() != rbrand.lower():
-            errs.append(f"Brand '{ent['brand']}' != region '{rbrand}'")
         if c in ("AMBIGUOUS", "UNRESOLVED"):
             errs.append(f"Confidence '{c}' not promoted")
 

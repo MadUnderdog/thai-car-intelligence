@@ -673,8 +673,8 @@ class TestMutationDetection:
 
         # Verifier must detect hash mismatch
         hash_check = [c for c in result["checks"]
-                     if c["check"] == "upstream_hash_verify" and c["section"] == "openev"]
-        assert hash_check, f"Verifier missing upstream_hash_verify check"
+                     if c["check"] == "object_hash_verify" and c["section"] == "openev"]
+        assert hash_check, f"Verifier missing object_hash_verify check"
         assert hash_check[0]["status"] == "FAIL", \
             f"Verifier should FAIL on corrupted content hash, got {hash_check[0]['status']}"
 

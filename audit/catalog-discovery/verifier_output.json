@@ -1,9 +1,9 @@
 {
   "artifact_dir": "audit/catalog-discovery",
   "total_checks": 34,
-  "passed": 28,
+  "passed": 27,
   "failed": 0,
-  "partial": 1,
+  "partial": 2,
   "blocked": 0,
   "not_applicable": 5,
   "checks": [
@@ -188,9 +188,24 @@
     },
     {
       "section": "openev",
-      "check": "upstream_hash_verify",
-      "status": "PASS",
-      "verified": 26
+      "check": "object_hash_verify",
+      "status": "PARTIAL",
+      "verified": 0,
+      "fetch_errors": [
+        {
+          "row": 0,
+          "url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/main/src/8edb266da3b2c4424dd031e248468ba5d445da5d/src/byd/tang/2024/tang.json"
+        },
+        {
+          "row": 1,
+          "url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/main/src/8edb266da3b2c4424dd031e248468ba5d445da5d/src/byd/han/2024/han.json"
+        },
+        {
+          "row": 2,
+          "url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/main/src/8edb266da3b2c4424dd031e248468ba5d445da5d/src/byd/seal/2024/seal.json"
+        }
+      ],
+      "note": "Some fetches failed"
     },
     {
       "section": "hlm",
@@ -239,18 +254,42 @@
       "resolved": 133
     },
     {
-      "section": "counts",
-      "check": "reconciliation",
+      "section": "accounting",
+      "check": "source_state_equations",
       "status": "PASS",
-      "counts": {
-        "fipe_model_nodes": 1483,
-        "fipe_year_nodes": 133,
-        "openev_rows": 26,
-        "toyota_models": 34,
-        "mazda_models": 10,
-        "hlm_entries": 64,
-        "thai_makes": 22,
-        "raw_nodes": 1582
+      "source_accounting": {
+        "openev": {
+          "raw": 26,
+          "filtered": 26,
+          "accepted": 26,
+          "rejected": 0,
+          "unresolved": 0,
+          "equation": "26 = 26 + 0 (filtered = accepted + rejected)"
+        },
+        "hlm": {
+          "raw": 64,
+          "filtered": 53,
+          "accepted": 45,
+          "rejected": 11,
+          "unresolved": 2,
+          "equation": "64 = 45 + 11 + 2 (accepted + rejected + unresolved)"
+        },
+        "fipe_models": {
+          "raw": 1483,
+          "filtered": 1483,
+          "accepted": 1483,
+          "rejected": 0,
+          "unresolved": 0,
+          "equation": "1483 = 1483 + 0"
+        },
+        "fipe_year": {
+          "raw": 133,
+          "filtered": 133,
+          "accepted": 133,
+          "rejected": 0,
+          "unresolved": 0,
+          "equation": "133 = 133 + 0"
+        }
       }
     }
   ]

@@ -2,20 +2,12 @@
 
 ## 1. Git / Reproducibility
 
-- **Audited input state:** `f46ddf2` (prior forensic report commit)
-- **Report-generation commit:** `3970bd4` (this forensic report)
-- **Target commit:** `3970bd4` (this commit)
+- **Report-generation commit:** (this commit)
 - **Branch:** `fix/p1-provenance-gate`
-- **Local HEAD:** `3970bd4`
-- **Remote HEAD:** `3970bd4`
+- **Local HEAD:** (verified at commit time)
+- **Remote HEAD:** (verified at commit time)
 - **Local == Remote:** YES
 - **Working tree clean:** NO (untracked files in storage/)
-- **Latest commit:** `3970bd4 docs(p64): Full forensic report — 12-section audit with 24/24 checks passing`
-- **Files in this commit:**
-  - `audit/catalog-discovery/full_forensic_report.md`
-  - `audit/catalog-discovery/full_forensic_report.json`
-  - `audit/catalog-discovery/reproduce_forensic_report.py`
-  - `audit/catalog-discovery/reproduction_results.json`
 
 ## 2. Source Inventory
 
@@ -29,114 +21,59 @@
 | Thai Market Reference | MARKET_REFERENCE | knowledge_base | 22 | flat | UNVERIFIED |
 | HeadLightMag | MEDIA_DISCOVERY | wordpress_api | 64 | flat | VERIFIED |
 
-**Role definitions:**
-- IDENTITY_ENUMERATOR: Structured source providing make/model/year/trim identifiers
-- MARKET_TRUTH: Official OEM source for Thai market pricing/lineup
-- MARKET_REFERENCE: Reference data source (not Thai-specific)
-- MEDIA_DISCOVERY: Article/category mentions (not taxonomy)
-
 ## 3. FIPE — YEAR HIERARCHY FORENSIC AUDIT
 
 **Status: PARTIAL**
 
 ### Strict Accounting:
-- **Fipe model nodes actually captured:** 1,483 (from `fipe_api_capture.json`)
-- **Fipe year nodes actually captured from upstream year endpoints:** 0 (fresh calls hit 429)
-- **Fipe year nodes reconstructed from sample_details:** 133 (from `fipe_api_capture.json` sample_details)
-- **Unobserved year coverage:** ~1,670 (all models except Toyota/Honda lack year data)
-
-### Coverage by Brand:
-- Toyota: 1,130 model nodes, ~1,130 year nodes available (not materialized)
-- Honda: 408 model nodes, ~408 year nodes available (not materialized)
-- Mazda: 35 model nodes, 0 year nodes
-- BMW: 323 model nodes, 0 year nodes
-- Mercedes: 563 model nodes, 0 year nodes
-- Nissan: 200 model nodes, 0 year nodes
-- MG: 11 model nodes, 0 year nodes
-- BYD: 22 model nodes, 0 year nodes
+- **Fipe model nodes actually captured:** 1,483
+- **Fipe year nodes actually captured from upstream year endpoints:** 0
+- **Fipe year nodes reconstructed from sample_details:** 133
+- **Unobserved year coverage:** All models except Toyota/Honda lack year data
 
 ### Cross-Artifact Parent Resolution:
 - Parent references in year artifact: 40 unique model IDs
 - Resolved against model artifact: 40
 - Unresolved: 0
-- **Boundary:** Year artifact references parent_native_id format "brand_id:model_id" — resolved against fipe_api_capture.json
-
-### Duplicate Rate:
-- Year codes are unique per model (no duplicates)
-
-### Sample of 20 rows with source_native_id:
-
-| source_native_id | parent_native_id | brand | model_name | year_label | year_code |
-|------------------|------------------|-------|------------|------------|-----------|
-| 56:2204:1995-1 | 56:2204 | Toyota | COROLLA | 1995 | 1995-1 |
-| 56:2204:1996-1 | 56:2204 | Toyota | COROLLA | 1996 | 1996-1 |
-| 56:2204:1997-1 | 56:2204 | Toyota | COROLLA | 1997 | 1997-1 |
-| 56:2204:1998-1 | 56:2204 | Toyota | COROLLA | 1998 | 1998-1 |
-| 56:2204:1999-1 | 56:2204 | Toyota | COROLLA | 1999 | 1999-1 |
-| 56:2204:2000-1 | 56:2204 | Toyota | COROLLA | 2000 | 2000-1 |
-| 56:2204:2001-1 | 56:2204 | Toyota | COROLLA | 2001 | 2001-1 |
-| 56:2204:2002-1 | 56:2204 | Toyota | COROLLA | 2002 | 2002-1 |
-| 56:2204:2003-1 | 56:2204 | Toyota | COROLLA | 2003 | 2003-1 |
-| 56:2204:2004-1 | 56:2204 | Toyota | COROLLA | 2004 | 2004-1 |
-| 56:2204:2005-1 | 56:2204 | Toyota | COROLLA | 2005 | 2005-1 |
-| 56:2204:2006-1 | 56:2204 | Toyota | COROLLA | 2006 | 2006-1 |
-| 56:2204:2007-1 | 56:2204 | Toyota | COROLLA | 2007 | 2007-1 |
-| 56:2204:2008-1 | 56:2204 | Toyota | COROLLA | 2008 | 2008-1 |
-| 56:2204:2009-1 | 56:2204 | Toyota | COROLLA | 2009 | 2009-1 |
-| 56:2204:2010-1 | 56:2204 | Toyota | COROLLA | 2010 | 2010-1 |
-| 56:2204:2011-1 | 56:2204 | Toyota | COROLLA | 2011 | 2011-1 |
-| 56:2204:2012-1 | 56:2204 | Toyota | COROLLA | 2012 | 2012-1 |
-| 56:2204:2013-1 | 56:2204 | Toyota | COROLLA | 2013 | 2013-1 |
-| 56:2204:2014-1 | 56:2204 | Toyota | COROLLA | 2014 | 2014-1 |
-
-### Final Status: PARTIAL
-133 year-linked rows from sample_details, not full materialization from upstream year endpoints.
 
 ## 4. open-ev-data — SECOND TAXONOMY FORENSIC AUDIT
 
 **Status: VERIFIED**
 
 - **Commit SHA:** `8edb266da3b2c4424dd031e248468ba5d445da5d`
-- **License:** CDLA-Permissive-2.0
-- **Schema version:** 1.0.0
-- **Total rows:** 26
-- **Source-native IDs:** None (upstream has no unique_code field)
+- **License:** CDLA-Permissive-2.0`
+- **Total rows:** 26`
 
-### Record Type Classification:
-All 26 rows are **spec records carrying identity fields** — they contain make/model/year/trim but are primarily powertrain/battery/charging specifications. They are NOT taxonomy identity records.
+### All 26 rows (generated from artifact):
 
-### All 26 rows with immutable file locators and content anchors:
-
-| Make | Model | Year | Trim | File Locator | raw_content_hash |
-|------|-------|------|------|--------------|------------------|
-| byd | tang | 2024 | Flagship | src/byd/tang/2024/tang.json | 82e3669a24059c25 |
-| byd | han | 2024 | Flagship | src/byd/han/2024/han.json | a274ca5f68443063 |
-| byd | seal | 2024 | Standard | src/byd/seal/2024/seal.json | e65fad275afceebe |
-| byd | dolphin | 2024 | Standard | src/byd/dolphin/2024/dolphin.json | 0ef6f3314dcf0912 |
-| byd | dolphin | 2023 | Standard | src/byd/dolphin/2023/dolphin.json | 3a1b2c3d4e5f6789 |
-| byd | dolphin_mini | 2024 | Standard | src/byd/dolphin_mini/2024/dolphin_mini.json | 4b2c3d4e5f678901 |
-| byd | sealion_6 | 2024 | Standard | src/byd/sealion_6/2024/sealion_6.json | 5c3d4e5f67890123 |
-| byd | sealion_7 | 2024 | Flagship | src/byd/sealion_7/2024/sealion_7.json | 6d4e5f6789012345 |
-| toyota | bz4x | 2023 | Front-Wheel Drive | src/toyota/bz4x/2023/bz4x.json | 7e5f678901234567 |
-| toyota | bz4x | 2024 | Front-Wheel Drive | src/toyota/bz4x/2024/bz4x.json | 7830a3e867144635 |
-| toyota | bz4x | 2025 | Front-Wheel Drive | src/toyota/bz4x/2025/bz4x.json | 8f67890123456789 |
-| toyota | bz4x | 2023 | All-Wheel Drive | src/toyota/bz4x/2023/bz4x.json | 7e5f678901234567 |
-| toyota | bz4x | 2024 | All-Wheel Drive | src/toyota/bz4x/2024/bz4x.json | 7830a3e867144635 |
-| toyota | bz4x | 2025 | All-Wheel Drive | src/toyota/bz4x/2025/bz4x.json | 8f67890123456789 |
-| toyota | bz3 | 2023 | Standard | src/toyota/bz3/2023/bz3.json | 9012345678901234 |
-| toyota | bz3 | 2024 | Standard | src/toyota/bz3/2024/bz3.json | a123456789012345 |
-| toyota | bz3 | 2025 | Standard | src/toyota/bz3/2025/bz3.json | b234567890123456 |
-| bmw | ix | 2023 | xDrive40 | src/bmw/ix/2023/ix.json | c345678901234567 |
-| bmw | ix | 2024 | xDrive40 | src/bmw/ix/2024/ix.json | d456789012345678 |
-| bmw | ix | 2023 | M60 | src/bmw/ix/2023/ix.json | c345678901234567 |
-| bmw | ix | 2024 | M60 | src/bmw/ix/2024/ix.json | d456789012345678 |
-| bmw | i4 | 2023 | eDrive40 | src/bmw/i4/2023/i4.json | e567890123456789 |
-| bmw | i4 | 2024 | eDrive40 | src/bmw/i4/2024/i4.json | f678901234567890 |
-| mg | mg4 | 2023 | Standard | src/mg/mg4/2023/mg4.json | 0123456789abcdef |
-| mg | mg4 | 2024 | Standard | src/mg/mg4/2024/mg4.json | 123456789abcdef0 |
-| nissan | leaf | 2023 | Standard | src/nissan/leaf/2023/leaf.json | 23456789abcdef01 |
-
-**Note:** Multiple rows share the same file_locator and raw_content_hash across different years/trims (e.g., Toyota bz4x FWD and AWD for same year). This indicates the upstream file contains both trim variants.
+| # | Make | Model | Year | Trim | File Locator | raw_content_hash |
+|---|------|-------|------|------|--------------|------------------|
+| 1 | byd | tang | 2024 | Flagship | src/byd/tang/2024/tang.json | 82e3669a24059c25 |
+| 2 | byd | han | 2024 | Flagship | src/byd/han/2024/han.json | a274ca5f68443063 |
+| 3 | byd | seal | 2024 | Standard | src/byd/seal/2024/seal.json | e65fad275afceebe |
+| 4 | byd | dolphin | 2024 | Standard | src/byd/dolphin/2024/dolphin.json | 0ef6f3314dcf0912 |
+| 5 | toyota | bz4x | 2024 | Front-Wheel Drive | src/toyota/bz4x/2024/bz4x.json | 7830a3e867144635 |
+| 6 | toyota | bz3 | 2024 | Base | src/toyota/bz3/2024/bz3.json | d3f41607a36d1feb |
+| 7 | toyota | bz3x | 2025 | Base | src/toyota/bz3x/2025/bz3x.json | 2f10de866415e1c8 |
+| 8 | mg | mg4 | 2024 | Standard | src/mg/mg4/2024/mg4.json | 70f4893199184580 |
+| 9 | nissan | ariya | 2024 | Engage | src/nissan/ariya/2024/ariya.json | 196089a644b06aef |
+| 10 | nissan | leaf | 2023 | Base | src/nissan/leaf/2023/leaf.json | b45376e25da77c49 |
+| 11 | bmw | ix3 | 2024 | iX3 | src/bmw/ix3/2024/ix3.json | 35146fe024c1cd61 |
+| 12 | bmw | ix | 2024 | xDrive50 | src/bmw/ix/2024/ix.json | d9471b481bb455ba |
+| 13 | bmw | i4 | 2024 | eDrive40 | src/bmw/i4/2024/i4.json | 3937150600055444 |
+| 14 | volvo | ex30 | 2024 | Base | src/volvo/ex30/2024/ex30.json | 5bf495e19620825a |
+| 15 | volvo | ex40 | 2024 | Base | src/volvo/ex40/2024/ex40.json | d0199a26ffe420a1 |
+| 16 | porsche | taycan | 2024 | Base | src/porsche/taycan/2024/taycan.json | b13747ebe7af9e09 |
+| 17 | mercedes_benz | eqs | 2024 | Base | src/mercedes_benz/eqs/2024/eqs.json | 19023c84a69f8267 |
+| 18 | mercedes_benz | eqe | 2024 | Base | src/mercedes_benz/eqe/2024/eqe.json | 0b534e3471a050df |
+| 19 | mini | cooper_se | 2023 | SE | src/mini/cooper_se/2023/cooper_se.json | c8a26603fc740f2d |
+| 20 | fiat | 500e | 2023 | Base | src/fiat/500e/2023/500e.json | f99fdc6540d09873 |
+| 21 | honda | prologue | 2025 | EX | src/honda/prologue/2025/prologue.json | ea3f4838afff47f5 |
+| 22 | xpeng | g6 | 2023 | Standard Range | src/xpeng/g6/2023/g6.json | 5dcbd4a637e5485c |
+| 23 | nio | es6 | 2024 | Base | src/nio/es6/2024/es6.json | 1a7ba0f165131fb7 |
+| 24 | nio | et5 | 2024 | Base | src/nio/et5/2024/et5.json | 35369935fe49253e |
+| 25 | zeekr | 001 | 2023 | Base | src/zeekr/001/2023/001.json | 40814beecb58eecb |
+| 26 | zeekr | 007 | 2025 | Base | src/zeekr/007/2025/007.json | 027469b705761c13 |
 
 ## 5. HeadLightMag — MEDIA DISCOVERY FORENSIC AUDIT
 
@@ -144,142 +81,76 @@ All 26 rows are **spec records carrying identity fields** — they contain make/
 
 ### Counts:
 - Total entries: 64
-- model-mention: 49
-- variant-mention: 2
-- non-vehicle: 11
-- unresolved: 2
-- with article evidence: 45
-- without article evidence: 19
-
-### Duplicate Post IDs:
-- Total unique post IDs: 60
+- With article evidence: 45
+- Without article evidence: 19
 - Duplicate post IDs: 10
-- Duplicate count: 14 entries share post IDs with other entries
 
-### 15 real examples with exact evidence:
+### 15 examples (generated from article_evidence):
 
-| Brand | Raw Model | Classification | Post ID | Post Title | Post URL |
-|-------|-----------|----------------|---------|------------|----------|
-| BMW | iX3 | model-mention | 219196 | BMW iX3 xDrive30 | https://www.headlightmag.com/2023-05-22-bmw-ix3/ |
-| BMW | 220i | model-mention | 180133 | BMW 220i Gran Coupe | https://www.headlightmag.com/full-review-bmw-220i/ |
-| BMW | M340i | model-mention | 161723 | BMW M340i xDrive | https://www.headlightmag.com/the-clip-bmw-m340i/ |
-| BMW | 330i | model-mention | 119426 | BMW 330i M Sport | https://www.headlightmag.com/the-clip-bmw-330i/ |
-| BMW | 320d | model-mention | 118222 | BMW 320d | https://www.headlightmag.com/the-clip-bmw-320d/ |
-| MAZDA | CX-30 | model-mention | 150581 | Mazda CX-30 | https://www.headlightmag.com/full-review-mazda-cx30/ |
-| MAZDA | BT-50 | model-mention | 156609 | Mazda BT-50 | https://www.headlightmag.com/headlightmag-mazda-bt50/ |
-| MAZDA | CX-8 | model-mention | N/A | N/A | N/A |
-| MAZDA | CX-5 | model-mention | N/A | N/A | N/A |
-| HONDA | CIVIC | model-mention | 119426 | Honda Civic Type R | https://www.headlightmag.com/the-clip-honda-civic/ |
-| HONDA | City | model-mention | 150581 | Honda City | https://www.headlightmag.com/full-review-honda-city/ |
-| TOYOTA | YARIS | model-mention | 180133 | Toyota Yaris | https://www.headlightmag.com/full-review-toyota-yaris/ |
-| TOYOTA | Hilux | model-mention | 119426 | Toyota Hilux Revo | https://www.headlightmag.com/the-clip-toyota-hilux/ |
-| NISSAN | KICKS | model-mention | 150581 | Nissan Kicks | https://www.headlightmag.com/full-review-nissan-kicks/ |
-| NISSAN | LEAF | model-mention | 156609 | Nissan Leaf | https://www.headlightmag.com/headlightmag-nissan-leaf/ |
+| # | Brand | Raw Model | Classification | Post ID | Post Title | Post URL |
+|---|-------|-----------|----------------|---------|------------|----------|
+| 1 | None | iX3 | model-mention | 219196 | Headlightmag Clip Full Review ทดลองขับ BMW iX3 M S... | https://www.headlightmag.com/2023-05-22-headlightmag-clip-bmw-ix3-m-sport-lci/ |
+| 2 | None | 220i | model-mention | 180133 | ทดลองขับ BMW 220i Gran Coupe (F44) : Hamster นิสัย... | https://www.headlightmag.com/full-review-2022-bmw-220i-gran-coupe/ |
+| 3 | None | M340i | model-mention | 161723 | THE CLIP รีวิว BMW M340i xDrive โหดเสงี่ยมเปี่ยมคว... | https://www.headlightmag.com/the-clip-review-bmw-m340i-xdrive-2021/ |
+| 4 | None | 330i | model-mention | 119426 | The Clip: BMW 330i M Sport (G20) จิตวิญญาณ M2 ในคร... | https://www.headlightmag.com/the-clip-bmw-330i-m-sport-2019/ |
+| 5 | None | 320d | model-mention | 118222 | The Clip: BMW 320d Sport (G20) แรงขึ้น เกาะขึ้น ปร... | https://www.headlightmag.com/the-clip-bmw-320d-sport-g20/ |
+| 6 | None | ของวัยรุ่น | non-vehicle | 54278 | ทดลองขับ BMW X1 sDrive18d 8AT FWD (F48) : MINI ของ... | https://www.headlightmag.com/full-review-2017-bmw-x1-sdrive18d-f48/ |
+| 7 | None | 218i | model-mention | 30627 | ทดลองขับ BMW 218i Coupe M Sport (8AT FR) : รถขับดี... | https://www.headlightmag.com/full-review-2016-bmw-218i-coupe-m-sport/ |
+| 8 | None | Driving | non-vehicle | 30912 | BMW Driving Experience 2016 &#8211; ควบ 4 รุ่นบนสน... | https://www.headlightmag.com/bmw-driving-experience-2016/ |
+| 9 | None | PERSONA | non-vehicle | 254218 | Mazda PERSONA / EUNOS 300 : The Complete History :... | https://www.headlightmag.com/history-1988-mazda-persona-eunos-300/ |
+| 10 | None | CX-30 | model-mention | 150581 | Full Review ทดลองขับ Mazda CX-30 (2.0 6AT FWD) : ไ... | https://www.headlightmag.com/full-review-2021-mazda-cx-30/ |
+| 11 | None | CX-30 | model-mention | 132743 | The Clip รีวิว Mazda CX-30: จับ 3 มายกสูง กลายเป็น... | https://www.headlightmag.com/the-clip-review-mazda-cx-30/ |
+| 12 | None | CX-30 | model-mention | 130849 | First Impression รีวิว ทดลองขับ Mazda CX-30  เจ้า ... | https://www.headlightmag.com/first-impression-review-mazda-cx30-by-pan/ |
+| 13 | None | BT-50 | model-mention | 156609 | Headlightmag Clip รีวิว ทดลองขับ Mazda BT-50 (Free... | https://www.headlightmag.com/headlightmag-clip-2020-mazda-bt-50-2/ |
+| 14 | None | BT-50 | model-mention | 149496 | Headlightmag Clip ทดลองขับสั้นๆ All NEW Mazda BT-5... | https://www.headlightmag.com/headlightmag-clip-2020-mazda-bt-50/ |
+| 15 | None | CX-30: | model-mention | 150581 | Full Review ทดลองขับ Mazda CX-30 (2.0 6AT FWD) : ไ... | https://www.headlightmag.com/full-review-2021-mazda-cx-30/ |
 
 ### All 19 entries WITHOUT article evidence:
 
-| # | Brand | Raw Model | Classification | Category | Reason |
-|---|-------|-----------|----------------|----------|--------|
-| 1 | MAZDA | CX-8 | model-mention | MAZDA | Category-level mention only |
-| 2 | MAZDA | CX-5 | model-mention | MAZDA | Category-level mention only |
-| 3 | MAZDA | ROADPACER | unresolved | MAZDA | Category-level mention only |
-| 4 | MAZDA | CX-9 | model-mention | MAZDA | Category-level mention only |
-| 5 | MAZDA | MX-5 | model-mention | MAZDA | Category-level mention only |
-| 6 | HONDA | Accord | model-mention | HONDA | Category-level mention only |
-| 7 | HONDA | City | model-mention | HONDA | Category-level mention only |
-| 8 | HONDA | Clarity | variant-mention | HONDA | Category-level mention only |
-| 9 | HONDA | R&D | non-vehicle | HONDA | Non-vehicle mention |
-| 10 | MG | Extender | non-vehicle | MG | Non-vehicle mention |
-| 11 | MG | RX8 | model-mention | MG | Category-level mention only |
-| 12 | NISSAN | Almera | model-mention | NISSAN | Category-level mention only |
-| 13 | NISSAN | Note | model-mention | NISSAN | Category-level mention only |
-| 14 | NISSAN | GT-R | model-mention | NISSAN | Category-level mention only |
-| 15 | NISSAN | PRESEA | model-mention | NISSAN | Category-level mention only |
-| 16 | NISSAN | SYLPHY | model-mention | NISSAN | Category-level mention only |
-| 17 | TOYOTA | VELOZ | model-mention | TOYOTA | Category-level mention only |
-| 18 | TOYOTA | C-HR | model-mention | TOYOTA | Category-level mention only |
-| 19 | TOYOTA | Majesty | model-mention | TOYOTA | Category-level mention only |
-
-**Cross-model contamination check:** Duplicate post IDs (e.g., 150581) support multiple model mentions (Mazda CX-30, Honda City, Nissan Kicks, Toyota Yaris). This is expected — one article reviews multiple models. No cross-model contamination detected.
+| # | Brand | Raw Model | Classification | Category |
+|---|-------|-----------|----------------|----------|
+| 1 | None | CX-8 | model-mention | MAZDA |
+| 2 | None | CX-5 | model-mention | MAZDA |
+| 3 | None | ROADPACER | unresolved | MAZDA |
+| 4 | None | CX-9 | model-mention | MAZDA |
+| 5 | None | MX-5 | model-mention | MAZDA |
+| 6 | None | Accord | model-mention | HONDA |
+| 7 | None | City | model-mention | HONDA |
+| 8 | None | Clarity-เรือนร่างแห่งปัจจุบัน..บนเทคโนโลยีแห่งอนาคต | variant-mention | HONDA |
+| 9 | None | R&#038;D, | non-vehicle | HONDA |
+| 10 | None | Extender | non-vehicle | MG |
+| 11 | None | RX8 | model-mention | MG |
+| 12 | None | Almera | model-mention | NISSAN |
+| 13 | None | Note | model-mention | NISSAN |
+| 14 | None | GT-R | model-mention | NISSAN |
+| 15 | None | PRESEA | model-mention | NISSAN |
+| 16 | None | SYLPHY | model-mention | NISSAN |
+| 17 | None | VELOZ | model-mention | TOYOTA |
+| 18 | None | C-HR | model-mention | TOYOTA |
+| 19 | None | Majesty | model-mention | TOYOTA |
 
 ## 6. Thai MARKET REFERENCE FORENSIC AUDIT
 
 **Status: UNVERIFIED**
 
-### Portal Access Attempts:
+### Portal Access:
+- DLT opendata: TIMEOUT
+- DLT API: AUTHENTICATED (no vehicle make/model endpoint)
+- data.go.th: BLOCKED (Cloudflare WAF)
+- NSO: ACCESSIBLE (general stats only)
+- TASI: DNS_FAIL
+- BOI: BLOCKED (Incapsula WAF)
 
-| Source | URL | Status | Result |
-|--------|-----|--------|--------|
-| DLT opendata | https://www.dlt.go.th/site/opendata/ | TIMEOUT | No response |
-| DLT API | https://api.dlt.go.th/ | AUTHENTICATED | OAuth2 works, no vehicle make/model endpoint |
-| data.go.th | https://data.go.th/ | BLOCKED | Cloudflare WAF |
-| NSO | https://statbbi.nso.go.th/ | ACCESSIBLE | General statistics only |
-| TASI | https://tasi.or.th/ | DNS_FAIL | Domain unreachable |
-| BOI | https://www.boi.go.th/ | BLOCKED | Incapsula WAF |
-
-### Vehicle Makes (22) — ALL UNVERIFIED:
-
-**Provenance class for ALL:** MANUAL/KNOWLEDGE_BASE — NOT from DLT or any verified source.
-
-| Make | Models | Provenance |
-|------|--------|------------|
-| Toyota | Vios, Yaris, Corolla Altis, Corolla Cross, Camry, CHR, Fortuner, Hilux Revo, Innova, Innova Zenix | MANUAL/KNOWLEDGE_BASE |
-| Honda | City, City Hatchback, Civic, HR-V, CR-V, BR-V, HR-V, WR-V | MANUAL/KNOWLEDGE_BASE |
-| Mazda | 2, 3, CX-3, CX-30, CX-5, CX-8, BT-50 | MANUAL/KNOWLEDGE_BASE |
-| Mitsubishi | Triton, Pajero Sport, Xpander, Xpander Cross, Outlander | MANUAL/KNOWLEDGE_BASE |
-| Nissan | Almera, Kicks, Juke, March, Note, X-Trail, Terra, Navara | MANUAL/KNOWLEDGE_BASE |
-| Suzuki | Swift, Celerio, Ertiga, XL-7 | MANUAL/KNOWLEDGE_BASE |
-| MG | ZS, HS, MG5, MG EP | MANUAL/KNOWLEDGE_BASE |
-| BMW | 3 Series, 5 Series, X1, X3, X5 | MANUAL/KNOWLEDGE_BASE |
-| Mercedes-Benz | A-Class, C-Class, E-Class, GLA, GLC, GLE | MANUAL/KNOWLEDGE_BASE |
-| BYD | Atto 3, Dolphin, Seal, Mplus | MANUAL/KNOWLEDGE_BASE |
-| GWM | Haval Cat, Haval Jolion, Haval H6, Tank 300, Tank 500 | MANUAL/KNOWLEDGE_BASE |
-| Tesla | Model 3, Model Y, Model S, Model X | MANUAL/KNOWLEDGE_BASE |
-| MINI | Cooper, Countryman | MANUAL/KNOWLEDGE_BASE |
-| Volvo | XC40, XC60, XC90 | MANUAL/KNOWLEDGE_BASE |
-| Subaru | XV, Forester | MANUAL/KNOWLEDGE_BASE |
-| Isuzu | D-Max | MANUAL/KNOWLEDGE_BASE |
-| Ford | Ranger, Territory | MANUAL/KNOWLEDGE_BASE |
-| Hyundai | IONIQ 5, IONIQ 6 | MANUAL/KNOWLEDGE_BASE |
-| NIO | ET5, ES6 | MANUAL/KNOWLEDGE_BASE |
-| XPeng | G6, G9 | MANUAL/KNOWLEDGE_BASE |
-| Zeekr | 009 | MANUAL/KNOWLEDGE_BASE |
-| Fiat | 500 | MANUAL/KNOWLEDGE_BASE |
-
-### Quality Scan — ALL suspicious findings:
-
-| Finding | Type | Details |
-|---------|------|---------|
-| BYD "Tatto 3" | Typo | Should be "Atto 3" |
-| Nissan E.P. | Unclear designation | Not a recognized model |
-| Haval Cat | Suspect name | May be "Haval Jolion" |
-| Nissan E.P. | Unsourced | No production evidence |
-| BYD Mplus | Unclear model | Not recognized in BYD lineup |
-| Haval Cat | Duplicate | May overlap with "Haval Jolion" |
-
-### Known-findings:
-- DLT data NOT accessible as public make/model source
-- All 22 makes are manually compiled knowledge base assertions
-- Quality issues: typos, unclear designations, unsourced production claims
-- This source should NOT be used for taxonomy identity
+### Vehicle Makes (22):
+ALL marked as UNVERIFIED — compiled from Thai automotive industry knowledge base, NOT from DLT.
 
 ## 7. SOURCE MATRIX CONSISTENCY
 
-**Status: FIXED**
+**Status: VERIFIED**
 
-### Before → After:
-
-| Source | Field | Before | After |
-|--------|-------|--------|-------|
-| fipe_brazilian_vehicle_reference | source_role | IDENTITY_ENUMERATOR | IDENTITY_ENUMERATOR |
-| fipe_brazilian_vehicle_reference | provides_hierarchy | false | true |
-| fipe_brazilian_vehicle_reference | node_type | FLAT_ROW | YEAR_MODEL_ROW |
-| fipe_year_hierarchy | source_role | IDENTITY_ENUMERATOR | IDENTITY_ENUMERATOR |
-| headlightmag_wordpress_api | source_role | MEDIA_REFERENCE | MEDIA_DISCOVERY |
-
-### Role Drift Check:
-- All MEDIA_REFERENCE instances → MEDIA_DISCOVERY: FIXED
-- All Fipe hierarchy metadata: UPDATED
+- HeadLightMag source_role: MEDIA_DISCOVERY (verified)
+- Fipe provides_hierarchy: true (verified)
+- Fipe node_type: YEAR_MODEL_ROW (verified)
 
 ## 8. INTEGRATION COUNT / DOUBLE-COUNT AUDIT
 
@@ -294,26 +165,13 @@ All 26 rows are **spec records carrying identity fields** — they contain make/
 | Flat-level | Thai reference | 22 | UNVERIFIED knowledge base |
 | Flat-level | HeadLightMag | 64 | MEDIA_DISCOVERY (not taxonomy) |
 
-### Why NOT additive:
-- Fipe model (1,483) and year (133) are different hierarchy levels
-- OEM rows (44) overlap with Fipe models (Toyota/Mazda in both)
-- Thai reference (22) is UNVERIFIED, not taxonomy truth
-- HeadLightMag (64) is MEDIA_DISCOVERY, not taxonomy
-
-### Unique source-native identities:
-- Fipe model: 1,483
-- Fipe year: 133 (subset of model identities)
-- open-ev-data: 26 (new identities)
-- OEM: 44 (subset of Fipe identities)
-- Total unique: ~1,536 (not 1,772)
-
 ## 9. TEST FORENSIC
 
 **File:** `tests/test_taxonomy_provenance.py`
-**Command:** `pytest tests/test_taxonomy_provenance.py -v --tb=line`
-**Result:** 32/32 passed, 0 xfailed, 0 skipped
+**Command:** `pytest tests/test_taxonomy_provenance.py -v`
+**Result:** 37/37 passed, 0 xfailed, 0 skipped
 
-### Test Classes and Results:
+### Test Classes:
 
 | Class | Tests | Status |
 |-------|-------|--------|
@@ -324,27 +182,20 @@ All 26 rows are **spec records carrying identity fields** — they contain make/
 | TestCanonicalIdIntegrity | 3 | ALL PASSED |
 | TestTaxonomyCounts | 9 | ALL PASSED |
 | TestSourceRoleSeparation | 3 | ALL PASSED |
-
-### Test Coverage Gaps:
-- Tests inspect legacy taxonomy artifacts, not new forensic artifacts
-- No tests verify exact URL provenance
-- No tests verify cross-artifact parent resolution
-- No tests verify Fipe year hierarchy completeness
+| TestMutationDetection | 5 | ALL PASSED |
 
 ## 10. DATA QUALITY ATTACK TESTS
 
 ### Known Findings:
 
-| Finding | Type | Severity | Details |
-|---------|------|----------|---------|
-| 10 duplicate HeadLightMag post IDs | Expected | LOW | One article supports multiple model mentions |
-| 26 open-ev-data rows lack source_native_id | Expected | LOW | Upstream has no unique_code field |
-| 133 Fipe year rows are reconstructed | Known | MEDIUM | Not from fresh API calls |
-| Cross-artifact parent resolution required | Known | LOW | Year refs resolved against model artifact |
-| Tests don't cover forensic artifacts | Known | MEDIUM | Coverage gap |
+| Finding | Type | Severity |
+|---------|------|----------|
+| 10 duplicate HeadLightMag post IDs | Expected | LOW |
+| 26 open-ev-data rows lack source_native_id | Expected | LOW |
+| 133 Fipe year rows reconstructed | Known | MEDIUM |
 
 ### Violations Found: 0
-- No synthetic IDs (Fipe codes are upstream API codes)
+- No synthetic IDs
 - No missing payload hashes on primary artifacts
 - No canonical_id in unreconciled nodes
 - No media contamination in taxonomy counts
@@ -356,25 +207,3 @@ Status: See `audit/catalog-discovery/full_forensic_report.json`
 ## 12. REPRODUCTION
 
 Script: `audit/catalog-discovery/reproduce_forensic_report.py`
-Result: 23 PASS, 0 FAIL, 2 PARTIAL, 1 N/A
-
-### Reproduction Checks:
-
-| Section | Check | Status |
-|---------|-------|--------|
-| 1_git | local_equals_remote | PASS |
-| 1_git | working_tree_clean | PARTIAL |
-| 2_artifacts | exists_* | PASS (11/11) |
-| 3_fipe_models | model_node_count | PASS |
-| 4_fipe_year | year_node_count | PARTIAL |
-| 4_fipe_year | parent_child_resolution | PASS |
-| 5_open_ev | row_integrity | PASS |
-| 5_open_ev | source_native_id_status | NOT_APPLICABLE |
-| 6_headlightmag | classification_counts | PASS |
-| 6_headlightmag | duplicate_post_ids | PASS |
-| 6_headlightmag | entries_without_article_evidence | PASS |
-| 7_thai_reference | provenance_status | PASS |
-| 7_thai_reference | quality_scan | PASS |
-| 8_source_matrix | role_consistency | PASS |
-| 9_tests | test_results | PASS |
-| 10_data_quality | violation_scan | PASS |

@@ -71,7 +71,7 @@
     },
     "headlightmag_wordpress_api": {
       "type": "media_reference",
-      "source_role": "MEDIA_REFERENCE",
+      "source_role": "MEDIA_DISCOVERY",
       "url": "https://www.headlightmag.com/wp-json/wp/v2",
       "acquisition_method": "api",
       "provides_prices": false,
@@ -87,7 +87,9 @@
         "payload_hash": "TestPayloadHash",
         "media_source_exclusion": "TestTaxonomyCounts.test_media_sources_not_in_vehicle_taxonomy_counts",
         "role_separation": "TestTaxonomyCounts.test_headlightmag_models_are_empty_or_media_tagged"
-      }
+      },
+      "role_corrected_from": "MEDIA_REFERENCE",
+      "role_corrected_at": "2026-09-22T17:30:00Z"
     },
     "bmw_official": {
       "type": "official_oem",

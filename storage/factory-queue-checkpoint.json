@@ -1,0 +1,155 @@
+{
+  "saved_at": "2026-09-21T03:31:20.123480+00:00",
+  "jobs": [
+    {
+      "job_key": "headlightmag.com|https://www.headlightmag.com/news-subaru-crosstrek-jdm-updated/",
+      "url": "https://www.headlightmag.com/news-subaru-crosstrek-jdm-updated/",
+      "source_domain": "headlightmag.com",
+      "state": "SUCCEEDED",
+      "attempts": 1,
+      "max_attempts": 3,
+      "last_error": "",
+      "created_at": "2026-09-21T03:31:06.786347+00:00",
+      "started_at": "2026-09-21T03:31:06.786410+00:00",
+      "completed_at": "2026-09-21T03:31:07.110944+00:00",
+      "result": {
+        "observations": 12
+      }
+    },
+    {
+      "job_key": "headlightmag.com|https://www.headlightmag.com/2026-09-21-new-cars-worldwide-opel-astra-gse-line-bev/",
+      "url": "https://www.headlightmag.com/2026-09-21-new-cars-worldwide-opel-astra-gse-line-bev/",
+      "source_domain": "headlightmag.com",
+      "state": "SUCCEEDED",
+      "attempts": 1,
+      "max_attempts": 3,
+      "last_error": "",
+      "created_at": "2026-09-21T03:31:06.786362+00:00",
+      "started_at": "2026-09-21T03:31:07.611320+00:00",
+      "completed_at": "2026-09-21T03:31:08.150422+00:00",
+      "result": {
+        "observations": 12
+      }
+    },
+    {
+      "job_key": "headlightmag.com|https://www.headlightmag.com/2026-09-20-new-cars-worldwide-land-rover-defender-wolf-series-ii/",
+      "url": "https://www.headlightmag.com/2026-09-20-new-cars-worldwide-land-rover-defender-wolf-series-ii/",
+      "source_domain": "headlightmag.com",
+      "state": "SUCCEEDED",
+      "attempts": 1,
+      "max_attempts": 3,
+      "last_error": "",
+      "created_at": "2026-09-21T03:31:06.786366+00:00",
+      "started_at": "2026-09-21T03:31:08.650633+00:00",
+      "completed_at": "2026-09-21T03:31:09.008908+00:00",
+      "result": {
+        "observations": 6
+      }
+    },
+    {
+      "job_key": "headlightmag.com|https://www.headlightmag.com/all-new-honda-cr-v-g7-production-2027-debut-late-2026/",
+      "url": "https://www.headlightmag.com/all-new-honda-cr-v-g7-production-2027-debut-late-2026/",
+      "source_domain": "headlightmag.com",
+      "state": "SUCCEEDED",
+      "attempts": 1,
+      "max_attempts": 3,
+      "last_error": "",
+      "created_at": "2026-09-21T03:31:06.786369+00:00",
+      "started_at": "2026-09-21T03:31:09.509283+00:00",
+      "completed_at": "2026-09-21T03:31:10.020851+00:00",
+      "result": {
+        "observations": 6
+      }
+    },
+    {
+      "job_key": "headlightmag.com|https://www.headlightmag.com/2026-09-20-world-news-nissan-uk-factory-in-sunderland-will-produce-nissan-kicks-e-power-for-europe/",
+      "url": "https://www.headlightmag.com/2026-09-20-world-news-nissan-uk-factory-in-sunderland-will-produce-nissan-kicks-e-power-for-europe/",
+      "source_domain": "headlightmag.com",
+      "state": "SUCCEEDED",
+      "attempts": 1,
+      "max_attempts": 3,
+      "last_error": "",
+      "created_at": "2026-09-21T03:31:06.786372+00:00",
+      "started_at": "2026-09-21T03:31:10.521138+00:00",
+      "completed_at": "2026-09-21T03:31:11.182153+00:00",
+      "result": {
+        "observations": 6
+      }
+    },
+    {
+      "job_key": "headlightmag.com|https://www.headlightmag.com/2026-09-20-world-news-nio-recalls-firefly-ev-steering-issue/",
+      "url": "https://www.headlightmag.com/2026-09-20-world-news-nio-recalls-firefly-ev-steering-issue/",
+      "source_domain": "headlightmag.com",
+      "state": "SUCCEEDED",
+      "attempts": 1,
+      "max_attempts": 3,
+      "last_error": "",
+      "created_at": "2026-09-21T03:31:06.786374+00:00",
+      "started_at": "2026-09-21T03:31:11.682524+00:00",
+      "completed_at": "2026-09-21T03:31:12.923912+00:00",
+      "result": {
+        "observations": 6
+      }
+    },
+    {
+      "job_key": "headlightmag.com|https://www.headlightmag.com/2026-09-19-world-news-audi-a4-e-tron-postponed-2029/",
+      "url": "https://www.headlightmag.com/2026-09-19-world-news-audi-a4-e-tron-postponed-2029/",
+      "source_domain": "headlightmag.com",
+      "state": "SUCCEEDED",
+      "attempts": 1,
+      "max_attempts": 3,
+      "last_error": "",
+      "created_at": "2026-09-21T03:31:06.786377+00:00",
+      "started_at": "2026-09-21T03:31:13.424285+00:00",
+      "completed_at": "2026-09-21T03:31:14.140437+00:00",
+      "result": {
+        "observations": 6
+      }
+    },
+    {
+      "job_key": "headlightmag.com|https://www.headlightmag.com/news-lexus-is-f-sport-mode-black-vi-my-2026-launched/",
+      "url": "https://www.headlightmag.com/news-lexus-is-f-sport-mode-black-vi-my-2026-launched/",
+      "source_domain": "headlightmag.com",
+      "state": "SUCCEEDED",
+      "attempts": 1,
+      "max_attempts": 3,
+      "last_error": "",
+      "created_at": "2026-09-21T03:31:06.786397+00:00",
+      "started_at": "2026-09-21T03:31:14.640813+00:00",
+      "completed_at": "2026-09-21T03:31:15.106120+00:00",
+      "result": {
+        "observations": 10
+      }
+    },
+    {
+      "job_key": "headlightmag.com|https://www.headlightmag.com/2026-09-19-new-cars-worldwide-mitsuoka-la1/",
+      "url": "https://www.headlightmag.com/2026-09-19-new-cars-worldwide-mitsuoka-la1/",
+      "source_domain": "headlightmag.com",
+      "state": "SUCCEEDED",
+      "attempts": 1,
+      "max_attempts": 3,
+      "last_error": "",
+      "created_at": "2026-09-21T03:31:06.786400+00:00",
+      "started_at": "2026-09-21T03:31:15.606334+00:00",
+      "completed_at": "2026-09-21T03:31:16.232664+00:00",
+      "result": {
+        "observations": 6
+      }
+    },
+    {
+      "job_key": "headlightmag.com|https://www.headlightmag.com/2026-09-19-new-cars-worldwide-gwm-tank-300-hooke-trail-edition-live-axle/",
+      "url": "https://www.headlightmag.com/2026-09-19-new-cars-worldwide-gwm-tank-300-hooke-trail-edition-live-axle/",
+      "source_domain": "headlightmag.com",
+      "state": "SUCCEEDED",
+      "attempts": 1,
+      "max_attempts": 3,
+      "last_error": "",
+      "created_at": "2026-09-21T03:31:06.786403+00:00",
+      "started_at": "2026-09-21T03:31:16.733037+00:00",
+      "completed_at": "2026-09-21T03:31:17.354267+00:00",
+      "result": {
+        "observations": 9
+      }
+    }
+  ]
+}

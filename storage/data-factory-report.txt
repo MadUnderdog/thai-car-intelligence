@@ -1,0 +1,68 @@
+======================================================================
+  THAI AUTOMOTIVE DATA FACTORY — SUMMARY REPORT
+  Run: factory-20260921-100953
+  Time: 2026-09-21T03:09:53.801135+00:00
+======================================================================
+
+  PIPELINE RESULTS:
+    Total observations: 127
+    Price observations: 124
+    Spec observations: 3
+    Brands found: 8
+
+  PERSISTENCE:
+    Prices inserted: 124
+    Specs inserted: 3
+    No variant match: 0
+
+  SCOPE DISTRIBUTION:
+    MULTI_MODEL: 50
+    SINGLE_MODEL: 72
+    UNKNOWN: 5
+
+  TRUST DISTRIBUTION:
+    UNVERIFIED: 127
+
+  BRANDS FOUND:
+    mg: 53
+    byd: 29
+    honda: 13
+    volvo: 12
+    toyota: 9
+    nissan: 9
+    subaru: 1
+    denza: 1
+
+  PER-SOURCE METRICS:
+    HeadLight Magazine:
+      Discovered: 13, Fetched: 13, Extracted: 196, Resolved: 0
+      Accepted: 0, Deduped: 0, Persisted: 0, Quarantined: 0
+    9CARTHAI:
+      Discovered: 12, Fetched: 12, Extracted: 681, Resolved: 0
+      Accepted: 0, Deduped: 0, Persisted: 0, Quarantined: 0
+    AutoSpinn:
+      Discovered: 15, Fetched: 15, Extracted: 114, Resolved: 0
+      Accepted: 0, Deduped: 0, Persisted: 0, Quarantined: 0
+    AutoLife Thailand:
+      Discovered: 11, Fetched: 11, Extracted: 313, Resolved: 0
+      Accepted: 0, Deduped: 0, Persisted: 0, Quarantined: 0
+    Car2Day:
+      Discovered: 10, Fetched: 10, Extracted: 187, Resolved: 0
+      Accepted: 0, Deduped: 0, Persisted: 0, Quarantined: 0
+    CheckRaka:
+      Discovered: 15, Fetched: 15, Extracted: 144, Resolved: 0
+      Accepted: 0, Deduped: 0, Persisted: 0, Quarantined: 0
+
+  TOP PRICES:
+    denza/z9gt: 2899900 THB (PROMOTION) [autospinn.com]
+    mg/cyberster: 2499000 THB (MSRP) [9carthai.com]
+    honda/accord: 1764000 THB (MSRP) [9carthai.com]
+    honda/accord: 1629000 THB (MSRP) [9carthai.com]
+    volvo/ex30: 1590000 THB (MSRP) [9carthai.com]
+    volvo/ex30: 1590000 THB (MSRP) [9carthai.com]
+    volvo/ex30: 1590000 THB (MSRP) [9carthai.com]
+    volvo/ex30: 1590000 THB (MSRP) [9carthai.com]
+    volvo/ex30: 1590000 THB (MSRP) [9carthai.com]
+    volvo/ex30: 1590000 THB (MSRP) [9carthai.com]
+
+======================================================================

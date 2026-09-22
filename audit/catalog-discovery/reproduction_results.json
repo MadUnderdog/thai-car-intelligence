@@ -1,6 +1,6 @@
 {
   "reproduction_date": "2026-09-22",
-  "git_head": "3970bd4f1dcb36374807238d06462c1fcdef26fa",
+  "git_head": "38d9275896e661b0dfb61f4e6e3726f4f2582cb5",
   "summary": {
     "total_checks": 26,
     "passed": 23,
@@ -13,8 +13,8 @@
       "section": "1_git",
       "check": "local_equals_remote",
       "status": "PASS",
-      "local_head": "3970bd4f1dcb36374807238d06462c1fcdef26fa",
-      "remote_head": "3970bd4f1dcb36374807238d06462c1fcdef26fa"
+      "local_head": "38d9275896e661b0dfb61f4e6e3726f4f2582cb5",
+      "remote_head": "38d9275896e661b0dfb61f4e6e3726f4f2582cb5"
     },
     {
       "section": "1_git",
@@ -319,7 +319,7 @@
       "section": "9_tests",
       "check": "test_results",
       "status": "PASS",
-      "passed": 32,
+      "passed": 37,
       "failed": 0,
       "xfail": 0,
       "skipped": 0

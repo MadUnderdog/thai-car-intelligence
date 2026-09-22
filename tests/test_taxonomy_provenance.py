@@ -599,56 +599,6 @@ class TestMutationDetection:
         import shutil
         shutil.copytree(src_dir, dst_dir)
 
-    def test_corrupt_openev_payload_hash_verifier_catches(self, tmp_path):
-        """Corrupted OpenEV payload_hash → verifier must detect FAIL/PARTIAL."""
-        src_dir = "audit/catalog-discovery"
-        dst_dir = tmp_path / "audit" / "catalog-discovery"
-        self._copy_artifacts(src_dir, dst_dir)
-
-        # Corrupt payload_hash to wrong value
-        ev_path = dst_dir / "second_taxonomy_capture.json"
-        with open(ev_path) as f:
-            data = json.load(f)
-        data["payload_hash"] = "0000000000000000"  # valid hex but wrong
-        with open(ev_path, 'w') as f:
-            json.dump(data, f)
-
-        result = self._run_verifier(dst_dir)
-
-        # Verifier must detect payload_hash mismatch
-        hash_check = [c for c in result["checks"]
-                     if c["check"] == "payload_hash_open_ev" and c["section"] == "hash_integrity"]
-        assert hash_check, f"Verifier missing payload_hash_open_ev check"
-        # Should be PASS because we only validate format, not compare to file
-        # But if hash is empty or invalid format, it should FAIL
-        assert hash_check[0]["status"] in ("PASS", "FAIL", "PARTIAL"), \
-            f"Unexpected status: {hash_check[0]['status']}"
-
-    def test_corrupt_openev_content_hash_verifier_catches(self, tmp_path):
-        """Corrupted OpenEV content hash (valid hex, wrong value) → verifier must detect."""
-        src_dir = "audit/catalog-discovery"
-        dst_dir = tmp_path / "audit" / "catalog-discovery"
-        self._copy_artifacts(src_dir, dst_dir)
-
-        # Corrupt content hash to valid-but-wrong hex
-        ev_path = dst_dir / "second_taxonomy_capture.json"
-        with open(ev_path) as f:
-            data = json.load(f)
-        # Replace all content hashes with a valid but wrong value
-        for row in data.get("rows", []):
-            row["raw_content_hash"] = "aabbccdd" * 4  # valid 32-char hex
-        with open(ev_path, 'w') as f:
-            json.dump(data, f)
-
-        result = self._run_verifier(dst_dir)
-
-        # Hash format check should still pass (valid hex)
-        hash_format = [c for c in result["checks"]
-                      if c["check"] == "hash_integrity" and c["section"] == "openev"]
-        assert hash_format, f"Verifier missing openev hash_integrity check"
-        assert hash_format[0]["status"] == "PASS", \
-            f"Valid hex should PASS format check: {hash_format[0]}"
-
     def test_corrupt_openev_empty_payload_hash_verifier_catches(self, tmp_path):
         """Empty OpenEV payload_hash → verifier must detect FAIL."""
         src_dir = "audit/catalog-discovery"
@@ -671,6 +621,28 @@ class TestMutationDetection:
         assert hash_check, f"Verifier missing payload_hash_open_ev check"
         assert hash_check[0]["status"] == "FAIL", \
             f"Verifier should FAIL on empty payload_hash, got {hash_check[0]['status']}"
+
+    def test_corrupt_openev_invalid_hash_format_verifier_catches(self, tmp_path):
+        """Invalid OpenEV payload_hash format → verifier must detect FAIL."""
+        src_dir = "audit/catalog-discovery"
+        dst_dir = tmp_path / "audit" / "catalog-discovery"
+        self._copy_artifacts(src_dir, dst_dir)
+
+        # Set payload_hash to invalid format (not hex)
+        ev_path = dst_dir / "second_taxonomy_capture.json"
+        with open(ev_path) as f:
+            data = json.load(f)
+        data["payload_hash"] = "NOT_A_VALID_HASH"
+        with open(ev_path, 'w') as f:
+            json.dump(data, f)
+
+        result = self._run_verifier(dst_dir)
+
+        hash_check = [c for c in result["checks"]
+                     if c["check"] == "payload_hash_open_ev" and c["section"] == "hash_integrity"]
+        assert hash_check, f"Verifier missing payload_hash_open_ev check"
+        assert hash_check[0]["status"] == "FAIL", \
+            f"Verifier should FAIL on invalid hash format, got {hash_check[0]['status']}"
 
     def test_corrupt_headlightmag_verifier_catches(self, tmp_path):
         """Removed HLM article evidence → verifier must detect via evidence accounting."""
@@ -772,3 +744,26 @@ class TestMutationDetection:
         assert media_check, f"Verifier missing media contamination check"
         assert media_check[0]["status"] == "FAIL", \
             f"Verifier should FAIL on media contamination, got {media_check[0]['status']}"
+
+    def test_corrupt_openev_row_anchoring_verifier_catches(self, tmp_path):
+        """Corrupted OpenEV row commit_sha → verifier must detect FAIL."""
+        src_dir = "audit/catalog-discovery"
+        dst_dir = tmp_path / "audit" / "catalog-discovery"
+        self._copy_artifacts(src_dir, dst_dir)
+
+        # Corrupt row commit_sha to wrong value
+        ev_path = dst_dir / "second_taxonomy_capture.json"
+        with open(ev_path) as f:
+            data = json.load(f)
+        for row in data.get("rows", []):
+            row["commit_sha"] = "0000000000000000000000000000000000000000"
+        with open(ev_path, 'w') as f:
+            json.dump(data, f)
+
+        result = self._run_verifier(dst_dir)
+
+        anchoring_check = [c for c in result["checks"]
+                          if c["check"] == "row_anchoring" and c["section"] == "openev"]
+        assert anchoring_check, f"Verifier missing row_anchoring check"
+        assert anchoring_check[0]["status"] == "FAIL", \
+            f"Verifier should FAIL on corrupted row anchoring, got {anchoring_check[0]['status']}"

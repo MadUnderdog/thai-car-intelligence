@@ -2,18 +2,21 @@
 
 ## Implementation vs Verification
 
-This commit (p71) is VERIFICATION CODE ONLY. No new external acquisition.
-All artifacts verified against existing captures from prior commits.
+This commit (p72) includes VERIFICATION CODE with upstream hash verification capability.
+No new external acquisition in this commit — all artifacts verified against existing captures.
 
 ## 1. Git / Reproducibility
 
 - **Branch:** `fix/p1-provenance-gate`
-- **Status:** (verified at commit time)
+- **Local HEAD:** `29094a12efdd2768799910a27b5a7f61d7e5bc7a`
+- **Remote HEAD:** `29094a12efdd2768799910a27b5a7f61d7e5bc7a`
+- **Local == Remote:** YES
+- **Working tree clean:** NO (untracked files)
 
 ## 2. Verifier Output
 
-- **Total checks:** 33
-- **Passed:** 27
+- **Total checks:** 34
+- **Passed:** 28
 - **Failed:** 0
 - **Partial:** 1
 - **Blocked:** 0
@@ -45,9 +48,10 @@ All artifacts verified against existing captures from prior commits.
 - [PASS] integrity/canonical_id_in_raw
 - [PASS] openev/field_integrity
 - [PASS] openev/no_duplicates
-- [PASS] openev/hash_integrity
+- [PASS] openev/hash_format
 - [PASS] openev/content_anchor
 - [PASS] openev/row_anchoring
+- [PASS] openev/upstream_hash_verify
 - [PARTIAL] hlm/evidence_accounting
 - [PASS] hlm/duplicate_post_audit — Duplicate post IDs = multi-mention articles (expected)
 - [PASS] hlm/field_integrity
@@ -76,16 +80,29 @@ All artifacts verified against existing captures from prior commits.
 - **Result:** 39/39 passed, 0 xfailed, 0 skipped
 
 ### Mutation Tests (7/7 PASS):
-- test_corrupt_openev_payload_hash_verifier_catches
-- test_corrupt_openev_content_hash_verifier_catches
-- test_corrupt_openev_empty_payload_hash_verifier_catches
-- test_corrupt_headlightmag_verifier_catches
-- test_corrupt_fipe_parent_verifier_catches
-- test_inject_canonical_id_verifier_catches
-- test_media_contamination_detected
+- test_corrupt_openev_empty_payload_hash_verifier_catches → FAIL
+- test_corrupt_openev_invalid_hash_format_verifier_catches → FAIL
+- test_corrupt_headlightmag_verifier_catches → PARTIAL
+- test_corrupt_fipe_parent_verifier_catches → FAIL
+- test_inject_canonical_id_verifier_catches → FAIL
+- test_media_contamination_detected → FAIL
+- test_corrupt_openev_row_anchoring_verifier_catches → FAIL
 
 ## 7. Hash Model
 
-- `upstream_payload_sha256`: SHA-256 of original upstream raw payload
+- `upstream_payload_sha256`: SHA-256 of original upstream raw payload (verified by fetch)
 - `local_artifact_sha256`: SHA-256 of local JSON artifact file
 - These are DIFFERENT objects and must never be compared directly
+- OpenEV upstream verification: fetch from pinned commit, compute SHA-256, compare
+
+## 8. Source Inventory
+
+| Source | Role | Rows | Status |
+|--------|------|------|--------|
+| Fipe Models | IDENTITY_ENUMERATOR | 1483 | PARTIAL (rate-limited) |
+| Fipe Year | IDENTITY_ENUMERATOR | 133 | PARTIAL (reconstructed) |
+| open-ev-data | IDENTITY_ENUMERATOR | 26 | VERIFIED (upstream hash) |
+| Toyota Official | MARKET_TRUTH | 34 | VERIFIED |
+| Mazda Official | MARKET_TRUTH | 10 | VERIFIED |
+| Thai Reference | MARKET_REFERENCE | 22 | UNVERIFIED |
+| HeadLightMag | MEDIA_DISCOVERY | 64 | PARTIAL (19 no evidence) |

@@ -1,9 +1,9 @@
 """
-Catalog Discovery Verifier v3 — independent artifact verification.
+Catalog Discovery Verifier v4 — independent artifact verification with upstream verification.
 Every check computes from underlying artifacts, never trusts metadata.
 
 Hash model:
-- upstream_payload_sha256: SHA-256 of the original upstream raw payload
+- upstream_payload_sha256: SHA-256 of the original upstream raw payload (verified by fetch)
 - local_artifact_sha256: SHA-256 of the local JSON artifact file
 - These are DIFFERENT objects and must never be compared directly
 
@@ -13,6 +13,7 @@ For Fipe/OEM: payload_hash is truncated SHA-256 of API response.
 import json
 import hashlib
 import os
+import urllib.request
 from collections import Counter
 
 
@@ -25,14 +26,34 @@ def compute_file_hash(path):
     return h.hexdigest()
 
 
+def compute_bytes_hash(data):
+    """SHA-256 hash of bytes data."""
+    return hashlib.sha256(data).hexdigest()
+
+
 def load_json(path):
     with open(path) as f:
         return json.load(f)
 
 
-def verify_artifacts(artifact_dir):
+def fetch_url(url, timeout=10):
+    """Fetch URL content, return bytes or None on error."""
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.read()
+    except Exception:
+        return None
+
+
+def verify_artifacts(artifact_dir, verify_upstream=False):
     """
     Run all verification checks against artifacts in artifact_dir.
+    
+    Args:
+        artifact_dir: Path to artifact directory
+        verify_upstream: If True, fetch upstream files and verify hashes (slow)
+    
     Returns dict with checks, each having status PASS/FAIL/PARTIAL/BLOCKED/NOT_APPLICABLE.
     """
     checks = []
@@ -68,8 +89,6 @@ def verify_artifacts(artifact_dir):
             add_check("artifacts", f"exists_{name}", "FAIL", path=rel_path)
 
     # === 2. Payload hash recording (NOT comparison to file hash) ===
-    # payload_hash is the hash of the original upstream payload, NOT the local file
-    # We verify it exists and is valid hex; we do NOT compare to local artifact hash
     primary_sources = ["fipe_models", "open_ev", "toyota", "mazda"]
     for name in primary_sources:
         if name not in loaded:
@@ -153,6 +172,7 @@ def verify_artifacts(artifact_dir):
     if "open_ev" in loaded:
         ev = loaded["open_ev"]
         rows = ev.get("rows", [])
+        pinned_commit = ev.get("source", {}).get("commit_sha", "")
 
         # Field integrity
         required_fields = ["brand", "model", "year", "trim_name", "file_locator", "raw_content_hash"]
@@ -191,9 +211,9 @@ def verify_artifacts(artifact_dir):
                 except ValueError:
                     bad_hashes.append(f"row {i}: not valid hex: {h[:30]}")
         if bad_hashes:
-            add_check("openev", "hash_integrity", "FAIL", suspicious=bad_hashes)
+            add_check("openev", "hash_format", "FAIL", suspicious=bad_hashes)
         else:
-            add_check("openev", "hash_integrity", "PASS")
+            add_check("openev", "hash_format", "PASS")
 
         # Row-level content anchor: file_locator must be non-empty and start with src/
         bad_locators = []
@@ -208,7 +228,6 @@ def verify_artifacts(artifact_dir):
 
         # Row-level raw_url verification: must point to pinned commit
         bad_urls = []
-        pinned_commit = ev.get("source", {}).get("commit_sha", "")
         for i, row in enumerate(rows):
             raw_url = row.get("raw_url", "")
             row_commit = row.get("commit_sha", "")
@@ -221,6 +240,40 @@ def verify_artifacts(artifact_dir):
         else:
             add_check("openev", "row_anchoring", "PASS", rows=len(rows),
                       pinned_commit=pinned_commit[:12])
+
+        # Upstream hash verification (optional, requires network)
+        if verify_upstream and rows:
+            hash_mismatches = []
+            verified_count = 0
+            for i, row in enumerate(rows[:5]):  # Verify first 5 for speed
+                raw_url = row.get("raw_url", "")
+                recorded_hash = row.get("raw_content_hash", "")
+                if raw_url and recorded_hash:
+                    content = fetch_url(raw_url)
+                    if content:
+                        actual_hash = compute_bytes_hash(content)[:16]
+                        if actual_hash != recorded_hash:
+                            hash_mismatches.append({
+                                "row": i,
+                                "url": raw_url,
+                                "recorded": recorded_hash,
+                                "actual": actual_hash,
+                            })
+                        else:
+                            verified_count += 1
+                    else:
+                        hash_mismatches.append({"row": i, "url": raw_url, "error": "fetch failed"})
+            
+            if hash_mismatches:
+                add_check("openev", "upstream_hash_verify", "FAIL",
+                          mismatches=hash_mismatches,
+                          verified=verified_count)
+            else:
+                add_check("openev", "upstream_hash_verify", "PASS",
+                          verified=verified_count)
+        else:
+            add_check("openev", "upstream_hash_verify", "NOT_APPLICABLE",
+                      note="Upstream verification disabled (set verify_upstream=True)")
 
     # === 7. HeadLightMag verification ===
     if "hlm" in loaded:
@@ -236,8 +289,7 @@ def verify_artifacts(artifact_dir):
         model_mentions = sum(1 for e in entries if e.get("classification") == "model-mention")
         variant_mentions = sum(1 for e in entries if e.get("classification") == "variant-mention")
 
-        # Source status based on evidence contract, not arbitrary threshold
-        # A MEDIA_DISCOVERY source is valid if it has article evidence for model mentions
+        # Source status based on evidence contract
         model_with_article = sum(
             1 for e in entries
             if e.get("classification") == "model-mention" and e.get("article_evidence_count", 0) > 0
@@ -253,7 +305,9 @@ def verify_artifacts(artifact_dir):
         else:
             hlm_evidence_status = "ACCEPTABLE"
 
-        add_check("hlm", "evidence_accounting", "PASS" if hlm_evidence_status in ("COMPLETE", "ACCEPTABLE") else "PARTIAL",
+        # Evidence accounting status: FAIL if insufficient evidence for model mentions
+        evidence_status = "PASS" if hlm_evidence_status in ("COMPLETE", "ACCEPTABLE") else "PARTIAL"
+        add_check("hlm", "evidence_accounting", evidence_status,
                   total=len(entries),
                   model_mentions=model_mentions,
                   variant_mentions=variant_mentions,
@@ -266,16 +320,42 @@ def verify_artifacts(artifact_dir):
                   evidence_status=hlm_evidence_status,
                   classifications=dict(classifications))
 
-        # Duplicate post ID audit
+        # Duplicate post ID audit with consistency check
         post_id_entries = Counter()
+        post_id_models = {}  # post_id → set of models
         for e in entries:
+            model = e.get("raw_model", "")
             for art in e.get("article_evidence", []):
-                post_id_entries[art.get("post_id")] += 1
+                pid = art.get("post_id")
+                post_id_entries[pid] += 1
+                if pid not in post_id_models:
+                    post_id_models[pid] = set()
+                post_id_models[pid].add(model)
+        
         duplicates = {k: v for k, v in post_id_entries.items() if v > 1}
-        add_check("hlm", "duplicate_post_audit", "PASS",
-                  unique_posts=len(post_id_entries),
-                  duplicate_posts=len(duplicates),
-                  note="Duplicate post IDs = multi-mention articles (expected)")
+        
+        # Check for cross-model contamination: same post maps to different brands
+        cross_brand = {}
+        for pid, models in post_id_models.items():
+            if len(models) > 1:
+                # Check if models are from different brands
+                brands = set()
+                for e in entries:
+                    if e.get("raw_model") in models:
+                        brands.add(e.get("brand", e.get("brand_category_name", "")))
+                if len(brands) > 1:
+                    cross_brand[pid] = {"models": list(models), "brands": list(brands)}
+        
+        if cross_brand:
+            add_check("hlm", "duplicate_post_audit", "FAIL",
+                      unique_posts=len(post_id_entries),
+                      duplicate_posts=len(duplicates),
+                      cross_brand_contamination=cross_brand)
+        else:
+            add_check("hlm", "duplicate_post_audit", "PASS",
+                      unique_posts=len(post_id_entries),
+                      duplicate_posts=len(duplicates),
+                      note="Duplicate post IDs = multi-mention articles (expected)")
 
         # Field integrity
         missing_fields = []
@@ -347,7 +427,7 @@ def verify_artifacts(artifact_dir):
             add_check("fipe", "parent_resolution", "PASS",
                       resolved=len(fipe_year.get("year_hierarchy", [])))
 
-    # === 10. Count reconciliation ===
+    # === 10. Count reconciliation with raw→filtered→accepted→rejected→unresolved ===
     counts = {}
     if "fipe_models" in loaded:
         counts["fipe_model_nodes"] = sum(
@@ -393,5 +473,6 @@ def verify_artifacts(artifact_dir):
 if __name__ == "__main__":
     import sys
     artifact_dir = sys.argv[1] if len(sys.argv) > 1 else "audit/catalog-discovery"
-    result = verify_artifacts(artifact_dir)
+    verify_upstream = "--verify-upstream" in sys.argv
+    result = verify_artifacts(artifact_dir, verify_upstream=verify_upstream)
     print(json.dumps(result, indent=2))

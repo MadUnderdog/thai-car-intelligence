@@ -1,10 +1,17 @@
 {
-  "version": "3.0",
-  "implementation_vs_verification": "VERIFICATION CODE ONLY \u2014 no new acquisition",
+  "version": "4.0",
+  "git": {
+    "sha": "29094a12efdd2768799910a27b5a7f61d7e5bc7a",
+    "branch": "fix/p1-provenance-gate",
+    "remote_sha": "29094a12efdd2768799910a27b5a7f61d7e5bc7a",
+    "local_equals_remote": true,
+    "working_tree_clean": false
+  },
+  "implementation_vs_verification": "VERIFICATION CODE with upstream hash verification \u2014 no new acquisition",
   "verifier_output": {
     "artifact_dir": "audit/catalog-discovery",
-    "total_checks": 33,
-    "passed": 27,
+    "total_checks": 34,
+    "passed": 28,
     "failed": 0,
     "partial": 1,
     "blocked": 0,
@@ -173,7 +180,7 @@
       },
       {
         "section": "openev",
-        "check": "hash_integrity",
+        "check": "hash_format",
         "status": "PASS"
       },
       {
@@ -188,6 +195,12 @@
         "status": "PASS",
         "rows": 26,
         "pinned_commit": "8edb266da3b2"
+      },
+      {
+        "section": "openev",
+        "check": "upstream_hash_verify",
+        "status": "PASS",
+        "verified": 5
       },
       {
         "section": "hlm",
@@ -271,6 +284,12 @@
     "passed": 39,
     "failed": 0,
     "xfail": 0,
-    "skipped": 0
+    "skipped": 0,
+    "mutation_tests": 7
+  },
+  "hash_model": {
+    "upstream_payload_sha256": "SHA-256 of original upstream raw payload (verified by fetch)",
+    "local_artifact_sha256": "SHA-256 of local JSON artifact file",
+    "note": "These are DIFFERENT objects and must never be compared directly"
   }
 }

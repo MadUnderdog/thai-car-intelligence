@@ -1,7 +1,7 @@
 {
   "artifact_dir": "audit/catalog-discovery",
-  "total_checks": 33,
-  "passed": 27,
+  "total_checks": 34,
+  "passed": 28,
   "failed": 0,
   "partial": 1,
   "blocked": 0,
@@ -170,7 +170,7 @@
     },
     {
       "section": "openev",
-      "check": "hash_integrity",
+      "check": "hash_format",
       "status": "PASS"
     },
     {
@@ -185,6 +185,12 @@
       "status": "PASS",
       "rows": 26,
       "pinned_commit": "8edb266da3b2"
+    },
+    {
+      "section": "openev",
+      "check": "upstream_hash_verify",
+      "status": "PASS",
+      "verified": 5
     },
     {
       "section": "hlm",

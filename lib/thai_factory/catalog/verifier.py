@@ -250,31 +250,29 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
                       pinned_commit=pinned_commit[:12])
 
         # Object-level upstream hash verification (requires network)
+        # Use each row's raw_url directly — it already points to the pinned commit
         if verify_upstream and rows:
             hash_mismatches = []
             verified_count = 0
             fetch_errors = []
             for i, row in enumerate(rows):  # Verify all rows
-                file_locator = row.get("file_locator", "")
+                raw_url = row.get("raw_url", "")
                 recorded_hash = row.get("raw_content_hash", "")
-                if file_locator and recorded_hash and pinned_commit:
-                    # Resolve exact URL from file_locator and pinned commit
-                    url = resolve_openev_url(base_url, pinned_commit, file_locator)
-                    content = fetch_url(url)
+                if raw_url and recorded_hash:
+                    content = fetch_url(raw_url)
                     if content:
                         actual_hash = compute_bytes_hash(content)[:16]
                         if actual_hash != recorded_hash:
                             hash_mismatches.append({
                                 "row": i,
-                                "file_locator": file_locator,
-                                "url": url,
+                                "url": raw_url,
                                 "recorded": recorded_hash,
                                 "actual": actual_hash,
                             })
                         else:
                             verified_count += 1
                     else:
-                        fetch_errors.append({"row": i, "url": url})
+                        fetch_errors.append({"row": i, "url": raw_url})
             
             if hash_mismatches:
                 add_check("openev", "object_hash_verify", "FAIL",
@@ -298,14 +296,20 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
         hlm = loaded["hlm"]
         entries = hlm.get("entries", [])
 
-        # Evidence accounting
+        # Evidence accounting — every entry must belong to exactly one classification
+        # Equation: raw = model_mentions + variant_mentions + non_vehicle + unresolved
         classifications = Counter(e.get("classification", "unknown") for e in entries)
+        raw = len(entries)
         with_article = sum(1 for e in entries if e.get("article_evidence_count", 0) > 0)
-        without_article = len(entries) - with_article
+        without_article = raw - with_article
         non_vehicle = sum(1 for e in entries if e.get("classification") == "non-vehicle")
         unresolved = sum(1 for e in entries if e.get("classification") == "unresolved")
         model_mentions = sum(1 for e in entries if e.get("classification") == "model-mention")
         variant_mentions = sum(1 for e in entries if e.get("classification") == "variant-mention")
+
+        # Verify equation: raw = model + variant + non_vehicle + unresolved
+        equation_sum = model_mentions + variant_mentions + non_vehicle + unresolved
+        equation_balanced = (equation_sum == raw)
 
         # Source status based on evidence contract
         model_with_article = sum(
@@ -314,7 +318,9 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
         )
         model_without_article = model_mentions - model_with_article
 
-        if model_without_article == 0 and non_vehicle == 0:
+        if not equation_balanced:
+            hlm_evidence_status = "EQUATION_MISMATCH"
+        elif model_without_article == 0 and non_vehicle == 0:
             hlm_evidence_status = "COMPLETE"
         elif model_without_article > 0 and model_without_article <= 5:
             hlm_evidence_status = "PARTIAL_EVIDENCE"
@@ -325,6 +331,8 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
 
         # Evidence accounting status
         evidence_status = "PASS" if hlm_evidence_status in ("COMPLETE", "ACCEPTABLE") else "PARTIAL"
+        if not equation_balanced:
+            evidence_status = "FAIL"
         add_check("hlm", "evidence_accounting", evidence_status,
                   total=len(entries),
                   model_mentions=model_mentions,
@@ -461,24 +469,26 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
             "equation": f"{ev_rows} = {ev_rows} + 0 (filtered = accepted + rejected)",
         }
     
-    # HLM: classify by evidence status
+    # HLM: classify by classification (every entry must belong to exactly one class)
     if "hlm" in loaded:
         entries = loaded["hlm"].get("entries", [])
         hlm_raw = len(entries)
-        hlm_with_article = sum(1 for e in entries if e.get("article_evidence_count", 0) > 0)
+        hlm_model = sum(1 for e in entries if e.get("classification") == "model-mention")
+        hlm_variant = sum(1 for e in entries if e.get("classification") == "variant-mention")
         hlm_non_vehicle = sum(1 for e in entries if e.get("classification") == "non-vehicle")
         hlm_unresolved = sum(1 for e in entries if e.get("classification") == "unresolved")
-        hlm_accepted = hlm_with_article
-        hlm_rejected = hlm_non_vehicle
-        hlm_unresolved_count = hlm_unresolved
+        hlm_sum = hlm_model + hlm_variant + hlm_non_vehicle + hlm_unresolved
+        hlm_equation_balanced = (hlm_sum == hlm_raw)
         
         source_accounting["hlm"] = {
             "raw": hlm_raw,
-            "filtered": hlm_raw - hlm_non_vehicle,
-            "accepted": hlm_accepted,
-            "rejected": hlm_rejected,
-            "unresolved": hlm_unresolved_count,
-            "equation": f"{hlm_raw} = {hlm_accepted} + {hlm_rejected} + {hlm_unresolved_count} (accepted + rejected + unresolved)",
+            "model_mentions": hlm_model,
+            "variant_mentions": hlm_variant,
+            "non_vehicle": hlm_non_vehicle,
+            "unresolved": hlm_unresolved,
+            "sum": hlm_sum,
+            "equation_balanced": hlm_equation_balanced,
+            "equation": f"{hlm_raw} = {hlm_model} + {hlm_variant} + {hlm_non_vehicle} + {hlm_unresolved}",
         }
     
     # Fipe: model nodes and year nodes are separate
@@ -507,7 +517,18 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
             "equation": f"{fipe_year_count} = {fipe_year_count} + 0",
         }
 
-    add_check("accounting", "source_state_equations", "PASS",
+    # Verify all accounting equations are balanced
+    accounting_balanced = True
+    for source, data in source_accounting.items():
+        if "equation_balanced" in data and not data["equation_balanced"]:
+            accounting_balanced = False
+        elif "filtered" in data:
+            # Check: filtered = accepted + rejected
+            if data.get("filtered", 0) != data.get("accepted", 0) + data.get("rejected", 0):
+                accounting_balanced = False
+    
+    accounting_status = "PASS" if accounting_balanced else "FAIL"
+    add_check("accounting", "source_state_equations", accounting_status,
               source_accounting=source_accounting)
 
     # Build summary

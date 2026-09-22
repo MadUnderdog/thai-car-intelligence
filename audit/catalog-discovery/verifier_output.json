@@ -1,9 +1,9 @@
 {
   "artifact_dir": "audit/catalog-discovery",
   "total_checks": 34,
-  "passed": 27,
+  "passed": 28,
   "failed": 0,
-  "partial": 2,
+  "partial": 1,
   "blocked": 0,
   "not_applicable": 5,
   "checks": [
@@ -189,23 +189,8 @@
     {
       "section": "openev",
       "check": "object_hash_verify",
-      "status": "PARTIAL",
-      "verified": 0,
-      "fetch_errors": [
-        {
-          "row": 0,
-          "url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/main/src/8edb266da3b2c4424dd031e248468ba5d445da5d/src/byd/tang/2024/tang.json"
-        },
-        {
-          "row": 1,
-          "url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/main/src/8edb266da3b2c4424dd031e248468ba5d445da5d/src/byd/han/2024/han.json"
-        },
-        {
-          "row": 2,
-          "url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/main/src/8edb266da3b2c4424dd031e248468ba5d445da5d/src/byd/seal/2024/seal.json"
-        }
-      ],
-      "note": "Some fetches failed"
+      "status": "PASS",
+      "verified": 26
     },
     {
       "section": "hlm",
@@ -268,11 +253,13 @@
         },
         "hlm": {
           "raw": 64,
-          "filtered": 53,
-          "accepted": 45,
-          "rejected": 11,
+          "model_mentions": 49,
+          "variant_mentions": 2,
+          "non_vehicle": 11,
           "unresolved": 2,
-          "equation": "64 = 45 + 11 + 2 (accepted + rejected + unresolved)"
+          "sum": 64,
+          "equation_balanced": true,
+          "equation": "64 = 49 + 2 + 11 + 2"
         },
         "fipe_models": {
           "raw": 1483,

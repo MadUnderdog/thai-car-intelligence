@@ -1,7 +1,5 @@
 """
-Catalog contracts — strict data-truth model.
-A. CatalogCandidate = source suggestion (unverified)
-B. CanonicalCatalogEntry = identity survived reconciliation with evidence
+Catalog contracts — strict data-truth model with reconciliation.
 """
 import hashlib
 from dataclasses import dataclass, field
@@ -11,36 +9,43 @@ from datetime import date
 
 
 class MarketStatus(Enum):
-    CURRENT = "CURRENT"          # Explicit current-market evidence
-    UPCOMING = "UPCOMING"        # Announced, not yet available
-    DISCONTINUED = "DISCONTINUED"  # No longer sold
-    HISTORICAL = "HISTORICAL"    # Past generation
-    UNKNOWN = "UNKNOWN"          # Insufficient evidence
+    CURRENT = "CURRENT"
+    UPCOMING = "UPCOMING"
+    DISCONTINUED = "DISCONTINUED"
+    HISTORICAL = "HISTORICAL"
+    UNKNOWN = "UNKNOWN"
 
 
 class EvidenceStrength(Enum):
-    OFFICIAL = "OFFICIAL"        # OEM/distributor website
-    LAUNCH_DOC = "LAUNCH_DOC"    # Official price list/brochure
+    OFFICIAL = "OFFICIAL"
+    LAUNCH_DOC = "LAUNCH_DOC"
     HIGH_QUALITY_MEDIA = "HIGH_QUALITY_MEDIA"
     SECONDARY = "SECONDARY"
     UNRESOLVED = "UNRESOLVED"
 
 
 class CandidateStatus(Enum):
-    CANDIDATE = "CANDIDATE"      # Suggested by source, not verified
-    VERIFIED = "VERIFIED"        # Identity confirmed by evidence
-    REJECTED = "REJECTED"        # Proven false or insufficient
-    MERGED = "MERGED"            # Merged into another entry
+    CANDIDATE = "CANDIDATE"
+    VERIFIED = "VERIFIED"
+    REJECTED = "REJECTED"
+    MERGED = "MERGED"
+
+
+class RelationshipType(Enum):
+    SAME_ENTITY = "SAME_ENTITY"
+    ALIAS = "ALIAS"
+    DISTINCT_ENTITY = "DISTINCT_ENTITY"
+    POSSIBLE_DUPLICATE = "POSSIBLE_DUPLICATE"
+    CONFLICT = "CONFLICT"
 
 
 @dataclass
 class EvidenceLink:
-    """Single piece of evidence with exact provenance."""
     source_url: str
     source_domain: str
     source_class: str  # "official", "media", "secondary"
     evidence_strength: EvidenceStrength
-    evidence_text: str  # Exact quote from source
+    evidence_text: str  # Exact quote
     evidence_type: str  # "identity", "price", "spec", "status"
     acquisition_method: str
     content_hash: str = ""
@@ -52,39 +57,37 @@ class EvidenceLink:
 
 
 @dataclass
+class Relationship:
+    """Relationship between two candidates."""
+    source_id: str
+    target_id: str
+    relationship_type: RelationshipType
+    evidence: List[EvidenceLink] = field(default_factory=list)
+    notes: str = ""
+
+
+@dataclass
 class CatalogCandidate:
-    """
-    A candidate identity suggested by a source.
-    NOT yet canonical — needs reconciliation.
-    """
-    # Identity (as stated by source)
     manufacturer_name: str = ""
-    model_name: str = ""           # Exact name from source
-    generation_name: str = ""      # If specified
-    variant_name: str = ""         # If specified
-    trim_code: str = ""            # If specified
+    model_name: str = ""
+    generation_name: str = ""
+    variant_name: str = ""
+    trim_code: str = ""
     
-    # Source context
     source_url: str = ""
     source_domain: str = ""
     source_class: str = ""
-    evidence_text: str = ""        # Exact quote containing the identity
+    evidence_text: str = ""
     acquisition_method: str = ""
     
-    # What was observed
-    is_body_mention: bool = False  # True if mentioned in article body
-    is_sidebar_mention: bool = False  # True if in sidebar/related
-    is_nav_mention: bool = False   # True if in navigation
+    is_body_mention: bool = False
+    is_sidebar_mention: bool = False
     
-    # Candidate status
     status: CandidateStatus = CandidateStatus.CANDIDATE
-    
-    # Evidence
     evidence: List[EvidenceLink] = field(default_factory=list)
     
     @property
     def canonical_id(self) -> str:
-        """Hierarchical canonical ID from manufacturer+model+generation+variant."""
         parts = [
             self.manufacturer_name.lower().strip(),
             self.model_name.lower().strip(),
@@ -96,11 +99,6 @@ class CatalogCandidate:
 
 @dataclass
 class CanonicalCatalogEntry:
-    """
-    Identity that survived reconciliation with explicit evidence.
-    Never auto-promoted from Candidate.
-    """
-    # Hierarchical identity
     manufacturer_name: str = ""
     manufacturer_name_thai: str = ""
     model_name: str = ""
@@ -108,32 +106,34 @@ class CanonicalCatalogEntry:
     generation_name: str = ""
     variant_name: str = ""
     
-    # Canonical IDs (hierarchical, collision-safe)
     manufacturer_id: str = ""
     model_id: str = ""
     generation_id: str = ""
     variant_id: str = ""
     
-    # Status (evidence-driven, never inferred)
     market_status: MarketStatus = MarketStatus.UNKNOWN
     
-    # Identity evidence (explicit quotes proving this identity exists)
     identity_evidence: List[EvidenceLink] = field(default_factory=list)
+    status_evidence: List[EvidenceLink] = field(default_factory=list)
     
-    # Price evidence (only if explicitly attached to this identity)
     price_thb: Optional[float] = None
-    price_type: str = ""  # MSRP, MODEL_RANGE, UNKNOWN
+    price_type: str = ""
     price_evidence: List[EvidenceLink] = field(default_factory=list)
     
-    # Spec evidence (only if explicitly attached)
     specs: Dict = field(default_factory=dict)
     spec_evidence: List[EvidenceLink] = field(default_factory=list)
     
-    # Aliases (proven to refer to same entity)
     aliases: List[str] = field(default_factory=list)
-    
-    # Conflicts (names/variants that couldn't be resolved)
     conflicts: List[str] = field(default_factory=list)
+    
+    def compute_ids(self):
+        def _hash(s):
+            return hashlib.sha256(s.lower().strip().encode()).hexdigest()[:12]
+        
+        self.manufacturer_id = _hash(self.manufacturer_name)
+        self.model_id = _hash(f"{self.manufacturer_name}|{self.model_name}")
+        self.generation_id = _hash(f"{self.manufacturer_name}|{self.model_name}|{self.generation_name}") if self.generation_name else ""
+        self.variant_id = _hash(f"{self.manufacturer_name}|{self.model_name}|{self.generation_name}|{self.variant_name}") if self.variant_name else ""
     
     @property
     def full_path(self) -> str:
@@ -145,61 +145,45 @@ class CanonicalCatalogEntry:
         if self.variant_name:
             parts.append(self.variant_name)
         return " > ".join(parts)
-    
-    def compute_ids(self):
-        """Compute hierarchical canonical IDs."""
-        def _hash(s):
-            return hashlib.sha256(s.lower().strip().encode()).hexdigest()[:12]
-        
-        self.manufacturer_id = _hash(self.manufacturer_name)
-        self.model_id = _hash(f"{self.manufacturer_name}|{self.model_name}")
-        self.generation_id = _hash(f"{self.manufacturer_name}|{self.model_name}|{self.generation_name}") if self.generation_name else ""
-        self.variant_id = _hash(f"{self.manufacturer_name}|{self.model_name}|{self.generation_name}|{self.variant_name}") if self.variant_name else ""
 
 
 @dataclass
 class CatalogInventory:
-    """
-    Complete catalog inventory with reconciliation metadata.
-    """
-    # Entries
     entries: List[CanonicalCatalogEntry] = field(default_factory=list)
-    
-    # Candidates that haven't been promoted
     candidates: List[CatalogCandidate] = field(default_factory=list)
     rejected_candidates: List[CatalogCandidate] = field(default_factory=list)
+    relationships: List[Relationship] = field(default_factory=list)
     
-    # Metadata
     target_date: str = ""
     manufacturers_seeded: int = 0
     manufacturers_discovered: int = 0
     
     def add_entry(self, entry: CanonicalCatalogEntry):
-        """Add canonical entry."""
         entry.compute_ids()
         self.entries.append(entry)
     
     def add_candidate(self, candidate: CatalogCandidate):
-        """Add candidate for reconciliation."""
         self.candidates.append(candidate)
     
     def get_by_manufacturer(self, manufacturer: str) -> List[CanonicalCatalogEntry]:
-        """Get entries for a manufacturer."""
         return [e for e in self.entries if e.manufacturer_name.lower() == manufacturer.lower()]
     
     def summary(self) -> Dict:
-        """Build summary statistics."""
         by_status = {}
         for e in self.entries:
             status = e.market_status.value
             by_status[status] = by_status.get(status, 0) + 1
         
         return {
-            "total_entries": len(self.entries),
-            "candidates": len(self.candidates),
-            "rejected": len(self.rejected_candidates),
+            "manufacturers_seeded": self.manufacturers_seeded,
+            "manufacturers_discovered": len(set(e.manufacturer_name for e in self.entries)),
+            "model_candidates": len([c for c in self.candidates if not c.variant_name]),
+            "canonical_models": len([e for e in self.entries if not e.variant_name]),
+            "variant_candidates": len([c for c in self.candidates if c.variant_name]),
+            "canonical_variants": len([e for e in self.entries if e.variant_name]),
+            "unresolved_variants": 0,
+            "conflicting_identities": len([r for r in self.relationships if r.relationship_type == RelationshipType.CONFLICT]),
             "by_status": by_status,
-            "with_price": sum(1 for e in self.entries if e.price_thb is not None),
-            "with_specs": sum(1 for e in self.entries if e.specs),
-            "manufacturers": list(set(e.manufacturer_name for e in self.entries)),
+            "with_price_evidence": sum(1 for e in self.entries if e.price_thb is not None),
+            "with_spec_evidence": sum(1 for e in self.entries if e.specs),
         }

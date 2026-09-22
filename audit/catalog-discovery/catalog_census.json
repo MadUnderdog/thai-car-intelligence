@@ -1,0 +1,351 @@
+{
+  "summary": {
+    "manufacturers_seeded": 10,
+    "manufacturers_discovered": 2,
+    "model_candidates": 44,
+    "canonical_models": 44,
+    "variant_candidates": 0,
+    "canonical_variants": 0,
+    "unresolved_variants": 0,
+    "conflicting_identities": 0,
+    "by_status": {
+      "UNKNOWN": 44
+    },
+    "with_price_evidence": 44,
+    "with_spec_evidence": 0
+  },
+  "by_manufacturer": [
+    {
+      "name": "Toyota",
+      "thai_name": "",
+      "models": [
+        {
+          "name": "Yaris ATIV",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Yaris ATIV Nightshade",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Yaris ATIV GR Sport",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Yaris",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Yaris Cross",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Yaris Cross Nightshade",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Corolla Altis",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Corolla Altis GR Sport",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "CAMRY",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "GR 86",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "GR Yaris",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "GR Corolla",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "GR Supra",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Corolla Cross",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Corolla Cross GR Sport",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "bZ4X",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Land Cruiser FJ",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Fortuner Leader",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Fortuner Legender",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Fortuner GR Sport",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Veloz",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Innova Zenix",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Alphard",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Hilux Champ",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Hilux Revo Standard Cab",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Hilux Revo Z Edition",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Hilux Travo Standard Cab 4TREX",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Hilux Travo Prerunner & 4TREX",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Hilux Travo Overland",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Hilux Travo-e",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Coaster",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Hiace",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Commuter",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "Majesty",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        }
+      ],
+      "model_count": 34
+    },
+    {
+      "name": "Mazda",
+      "thai_name": "",
+      "models": [
+        {
+          "name": "NEW MAZDA2 ESSENTIAL​",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "MAZDA3 FASTBACK",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "MAZDA3 SEDAN",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "MAZDA6 20TH ANNIVERSARY EDITION",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "THE ALL-ELECTRIC MAZDA6e",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "NEW MAZDA CX-3 ESSENTIAL",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "NEW MAZDA CX-30 ESSENTIAL",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "NEW MAZDA CX-5",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "MAZDA CX-8",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        },
+        {
+          "name": "NEW MAZDA BT-50",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": true,
+          "has_specs": false
+        }
+      ],
+      "model_count": 10
+    }
+  ],
+  "fabrication_audit": {
+    "issues": [],
+    "passed": true,
+    "issue_count": 0
+  },
+  "coverage": {
+    "total": 44,
+    "with_price": 44,
+    "with_specs": 0
+  }
+}

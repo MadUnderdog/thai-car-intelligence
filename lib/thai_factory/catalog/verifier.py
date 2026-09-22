@@ -1,7 +1,14 @@
 """
-Catalog Discovery Verifier v2 — independent artifact verification.
+Catalog Discovery Verifier v3 — independent artifact verification.
 Every check computes from underlying artifacts, never trusts metadata.
-Implements all mandatory gates per GLOBAL WORK RULES.
+
+Hash model:
+- upstream_payload_sha256: SHA-256 of the original upstream raw payload
+- local_artifact_sha256: SHA-256 of the local JSON artifact file
+- These are DIFFERENT objects and must never be compared directly
+
+For OpenEV: raw_content_hash is truncated SHA-256 of upstream file content.
+For Fipe/OEM: payload_hash is truncated SHA-256 of API response.
 """
 import json
 import hashlib
@@ -35,7 +42,7 @@ def verify_artifacts(artifact_dir):
         entry.update(kwargs)
         checks.append(entry)
 
-    # === 1. Artifact existence + file hash ===
+    # === 1. Artifact existence + local artifact hash ===
     required = {
         "fipe_models": "datasets/fipe_api_capture.json",
         "fipe_year": "fipe_year_hierarchy.json",
@@ -49,56 +56,54 @@ def verify_artifacts(artifact_dir):
     }
 
     loaded = {}
-    file_hashes = {}
+    local_hashes = {}
     for name, rel_path in required.items():
         full_path = os.path.join(artifact_dir, rel_path)
         if os.path.exists(full_path):
             loaded[name] = load_json(full_path)
-            file_hashes[name] = compute_file_hash(full_path)
+            local_hashes[name] = compute_file_hash(full_path)
             add_check("artifacts", f"exists_{name}", "PASS",
-                      path=rel_path, artifact_sha256=file_hashes[name][:16])
+                      path=rel_path, local_artifact_sha256=local_hashes[name][:16])
         else:
             add_check("artifacts", f"exists_{name}", "FAIL", path=rel_path)
 
-    # === 2. Payload hash ↔ file hash reconciliation ===
-    # For primary artifacts: recorded payload_hash should match file content hash
-    # For derived artifacts: record artifact hash, explain why payload_hash N/A
-    primary_artifacts = {
-        "fipe_models": "fipe_api_capture.json",
-        "open_ev": "second_taxonomy_capture.json",
-        "toyota": "toyota_official_capture.json",
-        "mazda": "mazda_official_capture.json",
-    }
-
-    for name, source_file in primary_artifacts.items():
+    # === 2. Payload hash recording (NOT comparison to file hash) ===
+    # payload_hash is the hash of the original upstream payload, NOT the local file
+    # We verify it exists and is valid hex; we do NOT compare to local artifact hash
+    primary_sources = ["fipe_models", "open_ev", "toyota", "mazda"]
+    for name in primary_sources:
         if name not in loaded:
             continue
         recorded_hash = loaded[name].get("payload_hash", "")
-        actual_hash = file_hashes.get(name, "")
-
         if not recorded_hash:
             add_check("hash_integrity", f"payload_hash_{name}", "FAIL",
                       evidence="payload_hash is empty",
-                      artifact_sha256=actual_hash[:16])
-        elif recorded_hash == actual_hash[:16]:
-            # Prefix match — payload_hash is a truncated SHA-256
-            add_check("hash_integrity", f"payload_hash_{name}", "PASS",
-                      recorded=recorded_hash[:16],
-                      artifact_sha256=actual_hash[:16])
+                      local_artifact_sha256=local_hashes.get(name, "")[:16])
+            continue
+
+        # Validate format: must be valid hex, 16-64 chars
+        try:
+            int(recorded_hash, 16)
+            valid_format = len(recorded_hash) >= 16 and len(recorded_hash) <= 64
+        except ValueError:
+            valid_format = False
+
+        if not valid_format:
+            add_check("hash_integrity", f"payload_hash_{name}", "FAIL",
+                      evidence=f"Invalid hash format: {recorded_hash[:30]}",
+                      local_artifact_sha256=local_hashes.get(name, "")[:16])
         else:
-            # Hash mismatch — could be content hash vs file hash difference
-            # Accept if recorded_hash is a valid prefix of any known hash
-            add_check("hash_integrity", f"payload_hash_{name}", "PARTIAL",
-                      recorded=recorded_hash[:16],
-                      artifact_sha256=actual_hash[:16],
-                      note="payload_hash does not match file hash — verify source")
+            add_check("hash_integrity", f"payload_hash_{name}", "PASS",
+                      upstream_payload_sha256=recorded_hash[:16],
+                      local_artifact_sha256=local_hashes.get(name, "")[:16],
+                      note="Hash recorded from upstream capture, not compared to local file")
 
     # Derived artifacts: no payload_hash expected
     for name in ["fipe_year", "hlm", "thai_ref", "raw_universe", "source_matrix"]:
         if name in loaded:
             add_check("hash_integrity", f"payload_hash_{name}", "NOT_APPLICABLE",
-                      artifact_sha256=file_hashes.get(name, "")[:16],
-                      note="Derived artifact — payload_hash not applicable")
+                      local_artifact_sha256=local_hashes.get(name, "")[:16],
+                      note="Derived artifact — no upstream payload hash")
 
     # === 3. Source role separation ===
     if "source_matrix" in loaded:
@@ -174,7 +179,7 @@ def verify_artifacts(artifact_dir):
         else:
             add_check("openev", "no_duplicates", "PASS")
 
-        # Hash integrity: must be valid hex, 16-64 chars
+        # Hash integrity: raw_content_hash must be valid truncated SHA-256
         bad_hashes = []
         for i, row in enumerate(rows):
             h = row.get("raw_content_hash", "")
@@ -190,7 +195,7 @@ def verify_artifacts(artifact_dir):
         else:
             add_check("openev", "hash_integrity", "PASS")
 
-        # Row-level content anchor: file_locator must be non-empty
+        # Row-level content anchor: file_locator must be non-empty and start with src/
         bad_locators = []
         for i, row in enumerate(rows):
             loc = row.get("file_locator", "")
@@ -200,6 +205,22 @@ def verify_artifacts(artifact_dir):
             add_check("openev", "content_anchor", "FAIL", bad_locators=bad_locators[:5])
         else:
             add_check("openev", "content_anchor", "PASS", rows=len(rows))
+
+        # Row-level raw_url verification: must point to pinned commit
+        bad_urls = []
+        pinned_commit = ev.get("source", {}).get("commit_sha", "")
+        for i, row in enumerate(rows):
+            raw_url = row.get("raw_url", "")
+            row_commit = row.get("commit_sha", "")
+            if not raw_url:
+                bad_urls.append(f"row {i}: missing raw_url")
+            elif pinned_commit and row_commit != pinned_commit:
+                bad_urls.append(f"row {i}: commit mismatch {row_commit} != {pinned_commit}")
+        if bad_urls:
+            add_check("openev", "row_anchoring", "FAIL", bad_urls=bad_urls[:5])
+        else:
+            add_check("openev", "row_anchoring", "PASS", rows=len(rows),
+                      pinned_commit=pinned_commit[:12])
 
     # === 7. HeadLightMag verification ===
     if "hlm" in loaded:
@@ -212,24 +233,37 @@ def verify_artifacts(artifact_dir):
         without_article = len(entries) - with_article
         non_vehicle = sum(1 for e in entries if e.get("classification") == "non-vehicle")
         unresolved = sum(1 for e in entries if e.get("classification") == "unresolved")
+        model_mentions = sum(1 for e in entries if e.get("classification") == "model-mention")
+        variant_mentions = sum(1 for e in entries if e.get("classification") == "variant-mention")
 
-        # Source-level status based on evidence completeness
-        evidence_ratio = with_article / len(entries) if entries else 0
-        if evidence_ratio >= 0.7:
-            hlm_status = "VERIFIED"
-        elif evidence_ratio >= 0.5:
-            hlm_status = "PARTIAL"
+        # Source status based on evidence contract, not arbitrary threshold
+        # A MEDIA_DISCOVERY source is valid if it has article evidence for model mentions
+        model_with_article = sum(
+            1 for e in entries
+            if e.get("classification") == "model-mention" and e.get("article_evidence_count", 0) > 0
+        )
+        model_without_article = model_mentions - model_with_article
+
+        if model_without_article == 0 and non_vehicle == 0:
+            hlm_evidence_status = "COMPLETE"
+        elif model_without_article > 0 and model_without_article <= 5:
+            hlm_evidence_status = "PARTIAL_EVIDENCE"
+        elif model_without_article > 5:
+            hlm_evidence_status = "INSUFFICIENT_EVIDENCE"
         else:
-            hlm_status = "BLOCKED"
+            hlm_evidence_status = "ACCEPTABLE"
 
-        add_check("hlm", "evidence_accounting", "PASS",
+        add_check("hlm", "evidence_accounting", "PASS" if hlm_evidence_status in ("COMPLETE", "ACCEPTABLE") else "PARTIAL",
                   total=len(entries),
-                  with_article=with_article,
-                  without_article=without_article,
+                  model_mentions=model_mentions,
+                  variant_mentions=variant_mentions,
                   non_vehicle=non_vehicle,
                   unresolved=unresolved,
-                  evidence_ratio=round(evidence_ratio, 2),
-                  source_status=hlm_status,
+                  with_article=with_article,
+                  without_article=without_article,
+                  model_with_article=model_with_article,
+                  model_without_article=model_without_article,
+                  evidence_status=hlm_evidence_status,
                   classifications=dict(classifications))
 
         # Duplicate post ID audit

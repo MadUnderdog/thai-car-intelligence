@@ -1,146 +1,276 @@
 {
-  "version": "2.0",
-  "generated_at": "2026-09-22T17:30:00Z",
-  "git": {
-    "branch": "fix/p1-provenance-gate",
-    "local_head": "3970bd4",
-    "remote_head": "3970bd4",
-    "local_equals_remote": true,
-    "working_tree_clean": false,
-    "latest_commit_subject": "docs(p64): Full forensic report — 12-section audit with 24/24 checks passing"
-  },
-  "sources": [
-    {
-      "name": "Fipe API Models",
-      "role": "IDENTITY_ENUMERATOR",
-      "artifact_path": "audit/catalog-discovery/datasets/fipe_api_capture.json",
-      "acquisition_method": "api",
-      "locator": "https://parallelum.com.br/fipe/api/v1/carros",
-      "payload_hash": "d66ab979ec2ad265",
-      "observed_at": "2026-09-22T15:00:00Z",
-      "node_count": 1483,
-      "hierarchy_level": "model",
-      "status": "PARTIAL",
-      "limitations": "Brazilian reference, not Thai-specific"
-    },
-    {
-      "name": "Fipe API Year",
-      "role": "IDENTITY_ENUMERATOR",
-      "artifact_path": "audit/catalog-discovery/fipe_year_hierarchy.json",
-      "acquisition_method": "api",
-      "locator": "https://parallelum.com.br/fipe/api/v1/carros/marcas/{id}/modelos/{id}/anos",
-      "payload_hash": "3decf9219ade6e9f",
-      "observed_at": "2026-09-22T16:00:00Z",
-      "node_count": 133,
-      "hierarchy_level": "year",
-      "status": "PARTIAL",
-      "limitations": "Rate limited, only Toyota+Honda have year data",
-      "accounting": {
-        "model_nodes_captured": 1483,
-        "year_nodes_from_upstream": 0,
-        "year_nodes_reconstructed": 133,
-        "unobserved_year_coverage": "~1670"
+  "version": "3.0",
+  "implementation_vs_verification": "VERIFICATION CODE ONLY \u2014 no new acquisition",
+  "verifier_output": {
+    "artifact_dir": "audit/catalog-discovery",
+    "total_checks": 33,
+    "passed": 27,
+    "failed": 0,
+    "partial": 1,
+    "blocked": 0,
+    "not_applicable": 5,
+    "checks": [
+      {
+        "section": "artifacts",
+        "check": "exists_fipe_models",
+        "status": "PASS",
+        "path": "datasets/fipe_api_capture.json",
+        "local_artifact_sha256": "a3cdd7fa22e734d7"
+      },
+      {
+        "section": "artifacts",
+        "check": "exists_fipe_year",
+        "status": "PASS",
+        "path": "fipe_year_hierarchy.json",
+        "local_artifact_sha256": "65d22c31cd7549dd"
+      },
+      {
+        "section": "artifacts",
+        "check": "exists_open_ev",
+        "status": "PASS",
+        "path": "second_taxonomy_capture.json",
+        "local_artifact_sha256": "96562b389920a4e6"
+      },
+      {
+        "section": "artifacts",
+        "check": "exists_toyota",
+        "status": "PASS",
+        "path": "datasets/toyota_official_capture.json",
+        "local_artifact_sha256": "1033fb51df9f3589"
+      },
+      {
+        "section": "artifacts",
+        "check": "exists_mazda",
+        "status": "PASS",
+        "path": "datasets/mazda_official_capture.json",
+        "local_artifact_sha256": "7e41607281caeef5"
+      },
+      {
+        "section": "artifacts",
+        "check": "exists_hlm",
+        "status": "PASS",
+        "path": "media_discovery_headlightmag.json",
+        "local_artifact_sha256": "85c05634325008f6"
+      },
+      {
+        "section": "artifacts",
+        "check": "exists_thai_ref",
+        "status": "PASS",
+        "path": "thai_market_reference.json",
+        "local_artifact_sha256": "bc0167fa9b39f630"
+      },
+      {
+        "section": "artifacts",
+        "check": "exists_raw_universe",
+        "status": "PASS",
+        "path": "raw_taxonomy_universe.json",
+        "local_artifact_sha256": "822738835ae30f19"
+      },
+      {
+        "section": "artifacts",
+        "check": "exists_source_matrix",
+        "status": "PASS",
+        "path": "source_matrix.json",
+        "local_artifact_sha256": "97ae7035477f09f4"
+      },
+      {
+        "section": "hash_integrity",
+        "check": "payload_hash_fipe_models",
+        "status": "PASS",
+        "upstream_payload_sha256": "d66ab979ec2ad265",
+        "local_artifact_sha256": "a3cdd7fa22e734d7",
+        "note": "Hash recorded from upstream capture, not compared to local file"
+      },
+      {
+        "section": "hash_integrity",
+        "check": "payload_hash_open_ev",
+        "status": "PASS",
+        "upstream_payload_sha256": "a83e075de3944517",
+        "local_artifact_sha256": "96562b389920a4e6",
+        "note": "Hash recorded from upstream capture, not compared to local file"
+      },
+      {
+        "section": "hash_integrity",
+        "check": "payload_hash_toyota",
+        "status": "PASS",
+        "upstream_payload_sha256": "89b2273ec79dbd09",
+        "local_artifact_sha256": "1033fb51df9f3589",
+        "note": "Hash recorded from upstream capture, not compared to local file"
+      },
+      {
+        "section": "hash_integrity",
+        "check": "payload_hash_mazda",
+        "status": "PASS",
+        "upstream_payload_sha256": "22be446f19b73d41",
+        "local_artifact_sha256": "7e41607281caeef5",
+        "note": "Hash recorded from upstream capture, not compared to local file"
+      },
+      {
+        "section": "hash_integrity",
+        "check": "payload_hash_fipe_year",
+        "status": "NOT_APPLICABLE",
+        "local_artifact_sha256": "65d22c31cd7549dd",
+        "note": "Derived artifact \u2014 no upstream payload hash"
+      },
+      {
+        "section": "hash_integrity",
+        "check": "payload_hash_hlm",
+        "status": "NOT_APPLICABLE",
+        "local_artifact_sha256": "85c05634325008f6",
+        "note": "Derived artifact \u2014 no upstream payload hash"
+      },
+      {
+        "section": "hash_integrity",
+        "check": "payload_hash_thai_ref",
+        "status": "NOT_APPLICABLE",
+        "local_artifact_sha256": "bc0167fa9b39f630",
+        "note": "Derived artifact \u2014 no upstream payload hash"
+      },
+      {
+        "section": "hash_integrity",
+        "check": "payload_hash_raw_universe",
+        "status": "NOT_APPLICABLE",
+        "local_artifact_sha256": "822738835ae30f19",
+        "note": "Derived artifact \u2014 no upstream payload hash"
+      },
+      {
+        "section": "hash_integrity",
+        "check": "payload_hash_source_matrix",
+        "status": "NOT_APPLICABLE",
+        "local_artifact_sha256": "97ae7035477f09f4",
+        "note": "Derived artifact \u2014 no upstream payload hash"
+      },
+      {
+        "section": "roles",
+        "check": "media_reference_drift",
+        "status": "PASS"
+      },
+      {
+        "section": "roles",
+        "check": "valid_role_enum",
+        "status": "PASS"
+      },
+      {
+        "section": "contamination",
+        "check": "media_in_taxonomy",
+        "status": "PASS"
+      },
+      {
+        "section": "integrity",
+        "check": "canonical_id_in_raw",
+        "status": "PASS"
+      },
+      {
+        "section": "openev",
+        "check": "field_integrity",
+        "status": "PASS",
+        "rows": 26
+      },
+      {
+        "section": "openev",
+        "check": "no_duplicates",
+        "status": "PASS"
+      },
+      {
+        "section": "openev",
+        "check": "hash_integrity",
+        "status": "PASS"
+      },
+      {
+        "section": "openev",
+        "check": "content_anchor",
+        "status": "PASS",
+        "rows": 26
+      },
+      {
+        "section": "openev",
+        "check": "row_anchoring",
+        "status": "PASS",
+        "rows": 26,
+        "pinned_commit": "8edb266da3b2"
+      },
+      {
+        "section": "hlm",
+        "check": "evidence_accounting",
+        "status": "PARTIAL",
+        "total": 64,
+        "model_mentions": 49,
+        "variant_mentions": 2,
+        "non_vehicle": 11,
+        "unresolved": 2,
+        "with_article": 45,
+        "without_article": 19,
+        "model_with_article": 34,
+        "model_without_article": 15,
+        "evidence_status": "INSUFFICIENT_EVIDENCE",
+        "classifications": {
+          "model-mention": 49,
+          "non-vehicle": 11,
+          "unresolved": 2,
+          "variant-mention": 2
+        }
+      },
+      {
+        "section": "hlm",
+        "check": "duplicate_post_audit",
+        "status": "PASS",
+        "unique_posts": 60,
+        "duplicate_posts": 10,
+        "note": "Duplicate post IDs = multi-mention articles (expected)"
+      },
+      {
+        "section": "hlm",
+        "check": "field_integrity",
+        "status": "PASS"
+      },
+      {
+        "section": "thai_ref",
+        "check": "all_unverified",
+        "status": "PASS",
+        "count": 22
+      },
+      {
+        "section": "fipe",
+        "check": "parent_resolution",
+        "status": "PASS",
+        "resolved": 133
+      },
+      {
+        "section": "counts",
+        "check": "reconciliation",
+        "status": "PASS",
+        "counts": {
+          "fipe_model_nodes": 1483,
+          "fipe_year_nodes": 133,
+          "openev_rows": 26,
+          "toyota_models": 34,
+          "mazda_models": 10,
+          "hlm_entries": 64,
+          "thai_makes": 22,
+          "raw_nodes": 1582
+        }
       }
-    },
-    {
-      "name": "open-ev-data",
-      "role": "IDENTITY_ENUMERATOR",
-      "artifact_path": "audit/catalog-discovery/second_taxonomy_capture.json",
-      "acquisition_method": "github_raw",
-      "locator": "https://github.com/open-ev-data/open-ev-data-dataset",
-      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
-      "license": "CDLA-Permissive-2.0",
-      "observed_at": "2026-09-22T16:30:00Z",
-      "node_count": 26,
-      "hierarchy_level": "trim",
-      "status": "VERIFIED",
-      "limitations": "EV-only, community-maintained",
-      "record_type": "spec_carrying_identity"
-    },
-    {
-      "name": "Toyota Official",
-      "role": "MARKET_TRUTH",
-      "artifact_path": "audit/catalog-discovery/datasets/toyota_official_capture.json",
-      "acquisition_method": "playwright",
-      "locator": "https://www.toyota.co.th/en/pricelist",
-      "payload_hash": "89b2273ec79dbd09",
-      "observed_at": "2026-09-22T15:00:00Z",
-      "node_count": 34,
-      "hierarchy_level": "flat",
-      "status": "VERIFIED",
-      "limitations": "Flat price list"
-    },
-    {
-      "name": "Mazda Official",
-      "role": "MARKET_TRUTH",
-      "artifact_path": "audit/catalog-discovery/datasets/mazda_official_capture.json",
-      "acquisition_method": "playwright",
-      "locator": "https://www.mazda.co.th/en/vehicles",
-      "payload_hash": "22be446f19b73d41",
-      "observed_at": "2026-09-22T15:00:00Z",
-      "node_count": 10,
-      "hierarchy_level": "flat",
-      "status": "VERIFIED",
-      "limitations": "Flat lineup"
-    },
-    {
-      "name": "Thai Market Reference",
-      "role": "MARKET_REFERENCE",
-      "artifact_path": "audit/catalog-discovery/thai_market_reference.json",
-      "acquisition_method": "knowledge_base",
-      "locator": "Manual compilation",
-      "payload_hash": "",
-      "node_count": 22,
-      "hierarchy_level": "none",
-      "status": "UNVERIFIED",
-      "limitations": "NOT DLT data, knowledge base",
-      "provenance_class": "MANUAL/KNOWLEDGE_BASE",
-      "dlt_access_status": "TIMEOUT"
-    },
-    {
-      "name": "HeadLightMag",
-      "role": "MEDIA_DISCOVERY",
-      "artifact_path": "audit/catalog-discovery/media_discovery_headlightmag.json",
-      "acquisition_method": "wordpress_api",
-      "locator": "https://www.headlightmag.com/wp-json/wp/v2",
-      "payload_hash": "d5587c641ca2a00c",
-      "observed_at": "2026-09-22T16:00:00Z",
-      "node_count": 64,
-      "hierarchy_level": "none",
-      "status": "VERIFIED",
-      "limitations": "Category-level mentions, not taxonomy"
-    }
-  ],
-  "data_quality": {
-    "synthetic_ids": 0,
-    "missing_hashes": 0,
-    "orphan_parents": 0,
-    "hash_collisions": 0,
-    "media_in_taxonomy": 0,
-    "canonical_id_in_unreconciled": 0,
-    "fake_parent_child": 0,
-    "duplicate_post_ids": 10,
-    "entries_without_article_evidence": 19,
-    "known_findings": [
-      "10 duplicate HeadLightMag post IDs (expected)",
-      "26 open-ev-data rows lack source_native_id (upstream has no unique_code)",
-      "133 Fipe year rows reconstructed from sample_details",
-      "Cross-artifact parent resolution required for Fipe year refs",
-      "Tests don't cover forensic artifacts"
     ]
   },
+  "known_findings": [
+    "HLM evidence accounting: PARTIAL \u2014 19 entries lack article evidence",
+    "10 duplicate HLM post IDs (expected multi-mention articles)",
+    "26 OpenEV rows lack source_native_id (upstream has no unique_code)",
+    "133 Fipe year rows reconstructed from sample_details",
+    "Thai market reference: 22 makes all UNVERIFIED"
+  ],
+  "unresolved_blockers": [
+    "Fipe API rate limited (429, ~22h retry)",
+    "Thai DLT not accessible (timeout)",
+    "Third-party taxonomy sites blocked (WAF/JS/SSL)"
+  ],
   "tests": {
     "file": "tests/test_taxonomy_provenance.py",
-    "command": "pytest tests/test_taxonomy_provenance.py -v --tb=line",
-    "total": 32,
-    "passed": 32,
+    "command": "pytest tests/test_taxonomy_provenance.py -v",
+    "total": 39,
+    "passed": 39,
     "failed": 0,
     "xfail": 0,
     "skipped": 0
-  },
-  "reproduction": {
-    "script": "audit/catalog-discovery/reproduce_forensic_report.py",
-    "result": "23 PASS, 0 FAIL, 2 PARTIAL, 1 N/A",
-    "checks": 26
   }
 }

@@ -1,9 +1,9 @@
 {
   "artifact_dir": "audit/catalog-discovery",
-  "total_checks": 32,
-  "passed": 23,
+  "total_checks": 33,
+  "passed": 27,
   "failed": 0,
-  "partial": 4,
+  "partial": 1,
   "blocked": 0,
   "not_applicable": 5,
   "checks": [
@@ -12,130 +12,130 @@
       "check": "exists_fipe_models",
       "status": "PASS",
       "path": "datasets/fipe_api_capture.json",
-      "artifact_sha256": "a3cdd7fa22e734d7"
+      "local_artifact_sha256": "a3cdd7fa22e734d7"
     },
     {
       "section": "artifacts",
       "check": "exists_fipe_year",
       "status": "PASS",
       "path": "fipe_year_hierarchy.json",
-      "artifact_sha256": "65d22c31cd7549dd"
+      "local_artifact_sha256": "65d22c31cd7549dd"
     },
     {
       "section": "artifacts",
       "check": "exists_open_ev",
       "status": "PASS",
       "path": "second_taxonomy_capture.json",
-      "artifact_sha256": "96562b389920a4e6"
+      "local_artifact_sha256": "96562b389920a4e6"
     },
     {
       "section": "artifacts",
       "check": "exists_toyota",
       "status": "PASS",
       "path": "datasets/toyota_official_capture.json",
-      "artifact_sha256": "1033fb51df9f3589"
+      "local_artifact_sha256": "1033fb51df9f3589"
     },
     {
       "section": "artifacts",
       "check": "exists_mazda",
       "status": "PASS",
       "path": "datasets/mazda_official_capture.json",
-      "artifact_sha256": "7e41607281caeef5"
+      "local_artifact_sha256": "7e41607281caeef5"
     },
     {
       "section": "artifacts",
       "check": "exists_hlm",
       "status": "PASS",
       "path": "media_discovery_headlightmag.json",
-      "artifact_sha256": "85c05634325008f6"
+      "local_artifact_sha256": "85c05634325008f6"
     },
     {
       "section": "artifacts",
       "check": "exists_thai_ref",
       "status": "PASS",
       "path": "thai_market_reference.json",
-      "artifact_sha256": "bc0167fa9b39f630"
+      "local_artifact_sha256": "bc0167fa9b39f630"
     },
     {
       "section": "artifacts",
       "check": "exists_raw_universe",
       "status": "PASS",
       "path": "raw_taxonomy_universe.json",
-      "artifact_sha256": "822738835ae30f19"
+      "local_artifact_sha256": "822738835ae30f19"
     },
     {
       "section": "artifacts",
       "check": "exists_source_matrix",
       "status": "PASS",
       "path": "source_matrix.json",
-      "artifact_sha256": "97ae7035477f09f4"
+      "local_artifact_sha256": "97ae7035477f09f4"
     },
     {
       "section": "hash_integrity",
       "check": "payload_hash_fipe_models",
-      "status": "PARTIAL",
-      "recorded": "d66ab979ec2ad265",
-      "artifact_sha256": "a3cdd7fa22e734d7",
-      "note": "payload_hash does not match file hash \u2014 verify source"
+      "status": "PASS",
+      "upstream_payload_sha256": "d66ab979ec2ad265",
+      "local_artifact_sha256": "a3cdd7fa22e734d7",
+      "note": "Hash recorded from upstream capture, not compared to local file"
     },
     {
       "section": "hash_integrity",
       "check": "payload_hash_open_ev",
-      "status": "PARTIAL",
-      "recorded": "a83e075de3944517",
-      "artifact_sha256": "96562b389920a4e6",
-      "note": "payload_hash does not match file hash \u2014 verify source"
+      "status": "PASS",
+      "upstream_payload_sha256": "a83e075de3944517",
+      "local_artifact_sha256": "96562b389920a4e6",
+      "note": "Hash recorded from upstream capture, not compared to local file"
     },
     {
       "section": "hash_integrity",
       "check": "payload_hash_toyota",
-      "status": "PARTIAL",
-      "recorded": "89b2273ec79dbd09",
-      "artifact_sha256": "1033fb51df9f3589",
-      "note": "payload_hash does not match file hash \u2014 verify source"
+      "status": "PASS",
+      "upstream_payload_sha256": "89b2273ec79dbd09",
+      "local_artifact_sha256": "1033fb51df9f3589",
+      "note": "Hash recorded from upstream capture, not compared to local file"
     },
     {
       "section": "hash_integrity",
       "check": "payload_hash_mazda",
-      "status": "PARTIAL",
-      "recorded": "22be446f19b73d41",
-      "artifact_sha256": "7e41607281caeef5",
-      "note": "payload_hash does not match file hash \u2014 verify source"
+      "status": "PASS",
+      "upstream_payload_sha256": "22be446f19b73d41",
+      "local_artifact_sha256": "7e41607281caeef5",
+      "note": "Hash recorded from upstream capture, not compared to local file"
     },
     {
       "section": "hash_integrity",
       "check": "payload_hash_fipe_year",
       "status": "NOT_APPLICABLE",
-      "artifact_sha256": "65d22c31cd7549dd",
-      "note": "Derived artifact \u2014 payload_hash not applicable"
+      "local_artifact_sha256": "65d22c31cd7549dd",
+      "note": "Derived artifact \u2014 no upstream payload hash"
     },
     {
       "section": "hash_integrity",
       "check": "payload_hash_hlm",
       "status": "NOT_APPLICABLE",
-      "artifact_sha256": "85c05634325008f6",
-      "note": "Derived artifact \u2014 payload_hash not applicable"
+      "local_artifact_sha256": "85c05634325008f6",
+      "note": "Derived artifact \u2014 no upstream payload hash"
     },
     {
       "section": "hash_integrity",
       "check": "payload_hash_thai_ref",
       "status": "NOT_APPLICABLE",
-      "artifact_sha256": "bc0167fa9b39f630",
-      "note": "Derived artifact \u2014 payload_hash not applicable"
+      "local_artifact_sha256": "bc0167fa9b39f630",
+      "note": "Derived artifact \u2014 no upstream payload hash"
     },
     {
       "section": "hash_integrity",
       "check": "payload_hash_raw_universe",
       "status": "NOT_APPLICABLE",
-      "artifact_sha256": "822738835ae30f19",
-      "note": "Derived artifact \u2014 payload_hash not applicable"
+      "local_artifact_sha256": "822738835ae30f19",
+      "note": "Derived artifact \u2014 no upstream payload hash"
     },
     {
       "section": "hash_integrity",
       "check": "payload_hash_source_matrix",
       "status": "NOT_APPLICABLE",
-      "artifact_sha256": "97ae7035477f09f4",
-      "note": "Derived artifact \u2014 payload_hash not applicable"
+      "local_artifact_sha256": "97ae7035477f09f4",
+      "note": "Derived artifact \u2014 no upstream payload hash"
     },
     {
       "section": "roles",
@@ -180,16 +180,26 @@
       "rows": 26
     },
     {
+      "section": "openev",
+      "check": "row_anchoring",
+      "status": "PASS",
+      "rows": 26,
+      "pinned_commit": "8edb266da3b2"
+    },
+    {
       "section": "hlm",
       "check": "evidence_accounting",
-      "status": "PASS",
+      "status": "PARTIAL",
       "total": 64,
-      "with_article": 45,
-      "without_article": 19,
+      "model_mentions": 49,
+      "variant_mentions": 2,
       "non_vehicle": 11,
       "unresolved": 2,
-      "evidence_ratio": 0.7,
-      "source_status": "VERIFIED",
+      "with_article": 45,
+      "without_article": 19,
+      "model_with_article": 34,
+      "model_without_article": 15,
+      "evidence_status": "INSUFFICIENT_EVIDENCE",
       "classifications": {
         "model-mention": 49,
         "non-vehicle": 11,

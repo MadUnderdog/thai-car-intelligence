@@ -1,0 +1,607 @@
+{
+  "_metadata": {
+    "role": "MARKET_REFERENCE",
+    "description": "Thai automotive market reference data - vehicle makes, models, production evidence, and trade statistics",
+    "created_at": "2026-09-22T09:37:21.616418Z",
+    "data_sources": [
+      "UN Comtrade API (comtradeapi.un.org)",
+      "DLT (Department of Land Transport) API discovery",
+      "Thai automotive industry knowledge base"
+    ],
+    "hs_codes_covered": [
+      "8703",
+      "8704",
+      "8711"
+    ],
+    "reporter_country": {
+      "code": "764",
+      "name": "Thailand",
+      "iso3": "THA"
+    }
+  },
+  "portal_access": {
+    "dlt_opendata": {
+      "url": "https://www.dlt.go.th/site/opendata/",
+      "status": "TIMEOUT",
+      "note": "old.dlt.go.th subdomain times out. DLT has restructured to new domain.",
+      "old_domain": "old.dlt.go.th",
+      "new_domain": "www.dlt.go.th"
+    },
+    "dlt_api": {
+      "url": "https://dltweb-main-api.dlt.go.th",
+      "status": "AUTHENTICATED",
+      "auth_method": "OAuth2 client_credentials with Basic auth",
+      "client_id": "dlt_web_client",
+      "token_endpoint": "/oauth2/client/access-token",
+      "note": "DLT API (dltweb-main-api.dlt.go.th) OAuth2 client_credentials flow works. Token obtained successfully. No public vehicle make/model list endpoint discovered - API serves check_traffic and site management functions only."
+    },
+    "data_go_th": {
+      "url": "https://data.go.th",
+      "status": "BLOCKED",
+      "note": "Cloudflare security block (Access Denied, IP 104.28.214.151)"
+    },
+    "nso_go_th": {
+      "url": "https://www.nso.go.th/",
+      "status": "ACCESSIBLE",
+      "note": "National Statistical Office - general statistics portal"
+    },
+    "tasi_or_th": {
+      "url": "https://www.tasi.or.th/",
+      "status": "DNS_FAIL",
+      "note": "Thai Automotive Industry Association - domain does not resolve"
+    },
+    "boi_go_th": {
+      "url": "https://www.boi.go.th/",
+      "status": "BLOCKED",
+      "note": "Board of Investment - Incapsula WAF block"
+    }
+  },
+  "vehicle_makes_thailand": [
+    {
+      "make": "Toyota",
+      "thai_name": "โตโยต้า",
+      "type": "manufacturer",
+      "production_base": "Thai Toyota Manufacturing (TTM)",
+      "established": "1964",
+      "models": [
+        "Corolla",
+        "Camry",
+        "Yaris",
+        "Vios",
+        "Fortuner",
+        "Hilux",
+        "Innova",
+        "Land Cruiser"
+      ]
+    },
+    {
+      "make": "Honda",
+      "thai_name": "ฮอนด้า",
+      "type": "manufacturer",
+      "production_base": "Thai Honda Manufacturing",
+      "established": "1966",
+      "models": [
+        "Civic",
+        "City",
+        "Jazz",
+        "CR-V",
+        "HR-V",
+        "BR-V",
+        "Brio",
+        "Accord"
+      ]
+    },
+    {
+      "make": "Nissan",
+      "thai_name": "นิสสัน",
+      "type": "manufacturer",
+      "production_base": "Thai Nissan Manufacturing",
+      "established": "1962",
+      "models": [
+        "Almera",
+        "Kicks",
+        "X-Trail",
+        "Navara",
+        "Terra",
+        "Sylphy",
+        "Note"
+      ]
+    },
+    {
+      "make": "Mitsubishi",
+      "thai_name": "มิตซูบิชิ",
+      "type": "manufacturer",
+      "production_base": "Mitsubishi Motors Thailand",
+      "established": "1961",
+      "models": [
+        "Triton",
+        "Pajero Sport",
+        "Attrage",
+        "Mirage",
+        "Xpander",
+        "Outlander"
+      ]
+    },
+    {
+      "make": "Isuzu",
+      "thai_name": "อีซูซุ",
+      "type": "manufacturer",
+      "production_base": "Isuzu Motors Thailand",
+      "established": "1966",
+      "models": [
+        "D-Max",
+        "Mu-X",
+        "MU-7",
+        "FSR",
+        "FRR"
+      ]
+    },
+    {
+      "make": "Mazda",
+      "thai_name": "มาสด้า",
+      "type": "manufacturer",
+      "production_base": "Mazda Sales (Thailand)",
+      "established": "1950",
+      "models": [
+        "Mazda2",
+        "Mazda3",
+        "CX-3",
+        "CX-5",
+        "CX-30",
+        "BT-50",
+        "CX-8",
+        "CX-60"
+      ]
+    },
+    {
+      "make": "Suzuki",
+      "thai_name": "ซูซูกิ",
+      "type": "manufacturer",
+      "production_base": "Suzuki Motor Thailand",
+      "established": "1967",
+      "models": [
+        "Swift",
+        "Celerio",
+        "Ertiga",
+        "XL-7",
+        "Jimny",
+        "Carry"
+      ]
+    },
+    {
+      "make": "Ford",
+      "thai_name": "ฟอร์ด",
+      "type": "manufacturer",
+      "production_base": "Ford Thailand Manufacturing",
+      "established": "1960",
+      "models": [
+        "Ranger",
+        "Everest",
+        "Territory",
+        "EcoSport",
+        "Raptor"
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "thai_name": "เชฟโรเลต",
+      "type": "manufacturer",
+      "production_base": "General Motors Thailand",
+      "established": "1960",
+      "models": [
+        "Colorado",
+        "Trailblazer",
+        "Cruze",
+        "Sonic",
+        "Captiva",
+        "Spin"
+      ],
+      "status": "exited Thailand 2020"
+    },
+    {
+      "make": "BMW",
+      "thai_name": "บีเอ็มดับเบิลยู",
+      "type": "manufacturer",
+      "production_base": "BMW Thailand",
+      "established": "1998",
+      "models": [
+        "3 Series",
+        "5 Series",
+        "7 Series",
+        "X1",
+        "X3",
+        "X5",
+        "Z4"
+      ]
+    },
+    {
+      "make": "Mercedes-Benz",
+      "thai_name": "เมอร์เซเดส-เบนซ์",
+      "type": "manufacturer",
+      "production_base": "Mercedes-Benz Thailand",
+      "established": "1998",
+      "models": [
+        "C-Class",
+        "E-Class",
+        "S-Class",
+        "A-Class",
+        "GLA",
+        "GLC",
+        "GLE"
+      ]
+    },
+    {
+      "make": "MG",
+      "thai_name": "เอ็มจี",
+      "type": "manufacturer",
+      "production_base": "SAIC Motor-CP (Thailand)",
+      "established": "2013",
+      "models": [
+        "MG3",
+        "MG5",
+        "ZS",
+        "HS",
+        "MG EP",
+        "MG4",
+        "MG5 EV"
+      ]
+    },
+    {
+      "make": "Tesla",
+      "thai_name": "เทสลา",
+      "type": "importer",
+      "production_base": "No local production",
+      "models": [
+        "Model 3",
+        "Model Y",
+        "Model S",
+        "Model X"
+      ],
+      "status": "import only"
+    },
+    {
+      "make": "BYD",
+      "thai_name": "บีวายดี",
+      "type": "manufacturer",
+      "production_base": "BYD Thailand",
+      "established": "2022",
+      "models": [
+        "Atto 3",
+        "Dolphin",
+        "Seal",
+        "Tatto 3",
+        "M6"
+      ],
+      "status": "new entrant"
+    },
+    {
+      "make": "Haval",
+      "thai_name": "ฮาaval",
+      "type": "manufacturer",
+      "production_base": "GWM Thailand (Great Wall Motor)",
+      "established": "2021",
+      "models": [
+        "H6",
+        "Jolion",
+        "Haval Cat"
+      ],
+      "status": "new entrant"
+    },
+    {
+      "make": "GWM",
+      "thai_name": "จีดับเบิลยูเอ็ม",
+      "type": "manufacturer",
+      "production_base": "Great Wall Motor Thailand",
+      "established": "2021",
+      "models": [
+        "Tank 300",
+        "Tank 500",
+        "Poer"
+      ],
+      "status": "new entrant"
+    },
+    {
+      "make": "Subaru",
+      "thai_name": "ซูบารุ",
+      "type": "manufacturer",
+      "production_base": "Subaru Thailand",
+      "models": [
+        "Forester",
+        "XV",
+        "Outback",
+        "BRZ",
+        "WRX"
+      ]
+    },
+    {
+      "make": "Kia",
+      "thai_name": "เกีย",
+      "type": "manufacturer",
+      "production_base": "Kia Thailand",
+      "models": [
+        "Cerato",
+        "Sportage",
+        "Sorento",
+        "Carnival",
+        "Sonet"
+      ]
+    },
+    {
+      "make": "Hyundai",
+      "thai_name": "ฮุนได",
+      "type": "manufacturer",
+      "production_base": "Hyundai Thailand",
+      "models": [
+        "Accent",
+        "Tucson",
+        "Santa Fe",
+        "Creta",
+        "Ioniq 5"
+      ]
+    },
+    {
+      "make": "Volvo",
+      "thai_name": "วอลโว่",
+      "type": "manufacturer",
+      "production_base": "Volvo Thailand",
+      "models": [
+        "XC40",
+        "XC60",
+        "XC90",
+        "S60",
+        "V60"
+      ]
+    },
+    {
+      "make": "Lexus",
+      "thai_name": "เลกซัส",
+      "type": "manufacturer",
+      "production_base": "Lexus Thailand",
+      "models": [
+        "IS",
+        "ES",
+        "LS",
+        "NX",
+        "RX",
+        "UX"
+      ]
+    },
+    {
+      "make": "Nissan E.P.",
+      "thai_name": "นิสสัน อี.พี.",
+      "type": "manufacturer",
+      "production_base": "Nissan Thailand EV",
+      "models": [
+        "Leaf",
+        "Ariya"
+      ],
+      "status": "EV specialist"
+    }
+  ],
+  "vehicle_year_reference": {
+    "note": "Thailand uses Buddhist Era (BE) calendar. 2024 CE = 2567 BE.",
+    "vehicle_registration_years": {
+      "first_registration": "Year the vehicle was first registered with DLT",
+      "model_year": "Year of manufacture",
+      "calendar_year": "Year of registration/plate change"
+    },
+    "known_production_periods": [
+      {
+        "make": "Toyota",
+        "model": "Corolla",
+        "production_years_thailand": "1964-present",
+        "generations": "10+"
+      },
+      {
+        "make": "Toyota",
+        "model": "Hilux",
+        "production_years_thailand": "1968-present",
+        "generations": "8+"
+      },
+      {
+        "make": "Honda",
+        "model": "Civic",
+        "production_years_thailand": "1996-present",
+        "generations": "8+"
+      },
+      {
+        "make": "Honda",
+        "model": "City",
+        "production_years_thailand": "1996-present",
+        "generations": "6+"
+      },
+      {
+        "make": "Nissan",
+        "model": "Almera",
+        "production_years_thailand": "1995-present",
+        "generations": "5+"
+      },
+      {
+        "make": "Mitsubishi",
+        "model": "Triton",
+        "production_years_thailand": "1978-present",
+        "generations": "6+"
+      },
+      {
+        "make": "Isuzu",
+        "model": "D-Max",
+        "production_years_thailand": "2002-present",
+        "generations": "3+"
+      },
+      {
+        "make": "Ford",
+        "model": "Ranger",
+        "production_years_thailand": "1998-present",
+        "generations": "5+"
+      },
+      {
+        "make": "MG",
+        "model": "MG3",
+        "production_years_thailand": "2014-present",
+        "generations": "2"
+      }
+    ]
+  },
+  "comtrade_export_data": {
+    "period": "2023",
+    "source": "UN Comtrade API",
+    "vehicle_categories": {
+      "passenger_cars_8703": {
+        "total_export_value_k_usd": 51391712010.94402,
+        "total_export_qty_k_units": 2002677.9949999996,
+        "record_count": 240
+      },
+      "trucks_8704": {
+        "total_export_value_k_usd": 38067270201.76005,
+        "total_export_qty_k_units": 502293.13300000015,
+        "record_count": 247
+      },
+      "motorcycles_8711": {
+        "total_export_value_k_usd": 11720646334.568,
+        "total_export_qty_k_units": 277260.7,
+        "record_count": 282
+      }
+    },
+    "top_export_destinations": [
+      {
+        "partner_code": 0,
+        "country": "World (aggregate)",
+        "export_value_k_usd": 25695856005.472,
+        "export_qty_k_units": 1001338.997
+      },
+      {
+        "partner_code": 702,
+        "country": "Singapore",
+        "export_value_k_usd": 12417751778.704,
+        "export_qty_k_units": 437768.136
+      },
+      {
+        "partner_code": 392,
+        "country": "Japan",
+        "export_value_k_usd": 7184692290.560001,
+        "export_qty_k_units": 357742.46300000005
+      },
+      {
+        "partner_code": 842,
+        "country": "United States",
+        "export_value_k_usd": 2199772632.992,
+        "export_qty_k_units": 72989.352
+      },
+      {
+        "partner_code": 36,
+        "country": "Australia",
+        "export_value_k_usd": 824163647.889,
+        "export_qty_k_units": 19549.884
+      },
+      {
+        "partner_code": 608,
+        "country": "Philippines",
+        "export_value_k_usd": 587833673.956,
+        "export_qty_k_units": 22040.262
+      },
+      {
+        "partner_code": 104,
+        "country": "Myanmar",
+        "export_value_k_usd": 358010447.104,
+        "export_qty_k_units": 10839.203
+      },
+      {
+        "partner_code": 704,
+        "country": "Vietnam",
+        "export_value_k_usd": 334877193.406,
+        "export_qty_k_units": 16190.841
+      },
+      {
+        "partner_code": 784,
+        "country": "United Arab Emirates",
+        "export_value_k_usd": 302563932.032,
+        "export_qty_k_units": 11374.762
+      },
+      {
+        "partner_code": 484,
+        "country": "Mexico",
+        "export_value_k_usd": 272876592.038,
+        "export_qty_k_units": 10521.306
+      },
+      {
+        "partner_code": 116,
+        "country": "Cambodia",
+        "export_value_k_usd": 251211278.333,
+        "export_qty_k_units": 11469.104
+      },
+      {
+        "partner_code": 276,
+        "country": "Germany",
+        "export_value_k_usd": 177976248.492,
+        "export_qty_k_units": 6730.126
+      },
+      {
+        "partner_code": 682,
+        "country": "Saudi Arabia",
+        "export_value_k_usd": 125638734.298,
+        "export_qty_k_units": 2976.488
+      },
+      {
+        "partner_code": 418,
+        "country": "Laos",
+        "export_value_k_usd": 112807263.936,
+        "export_qty_k_units": 3828.002
+      },
+      {
+        "partner_code": 710,
+        "country": "South Africa",
+        "export_value_k_usd": 105836400.78,
+        "export_qty_k_units": 3167.964
+      }
+    ]
+  },
+  "thai_vehicle_registration_system": {
+    "authority": "Department of Land Transport (DLT) - กรมการขนส่งทางบก",
+    "ministry": "Ministry of Transport (MOT) - กระทรวงคมนาคม",
+    "registration_format": {
+      "plate_number": "Provincial code + number (e.g., กก 1234 กรุงเทพมหานคร)",
+      "license_plate_color": {
+        "white_on_black": "Private vehicle",
+        "white_on_green": "Commercial vehicle (taxi, bus)",
+        "white_on_yellow": "Hire vehicle",
+        "white_on_blue": "Government vehicle",
+        "white_on_red": "Temporary/dealer vehicle",
+        "white_on_white": "EV vehicle (newest category)"
+      }
+    },
+    "vehicle_types": [
+      {
+        "type": "passenger_car",
+        "thai_name": "รถยนต์นั่ง",
+        "hs_code": "8703"
+      },
+      {
+        "type": "pickup_truck",
+        "thai_name": "รถกระบะ",
+        "hs_code": "8704"
+      },
+      {
+        "type": "motorcycle",
+        "thai_name": "รถจักรยานยนต์",
+        "hs_code": "8711"
+      },
+      {
+        "type": "bus",
+        "thai_name": "รถโดยสาร",
+        "hs_code": "8702"
+      },
+      {
+        "type": "truck",
+        "thai_name": "รถบรรทุก",
+        "hs_code": "8704"
+      }
+    ]
+  },
+  "data_availability_notes": {
+    "dlt_opendata": "DLT's open data portal (old.dlt.go.th/site/opendata) is inaccessible. The department has migrated to new infrastructure.",
+    "dlt_api": "DLT's new API (dltweb-main-api.dlt.go.th) is functional but serves primarily check_traffic and site management functions. No public vehicle make/model list endpoint was discovered.",
+    "data_go_th": "Thailand's national open data portal (data.go.th) is behind Cloudflare and blocks automated access from non-Thai IPs.",
+    "comtrade": "UN Comtrade provides reliable Thailand vehicle export data by HS code, but does not break down by make/model.",
+    "make_model_data": "Thai vehicle make/model data is not available as a structured dataset from government sources. The DLT register requires individual plate-number queries. Make/model lists must be compiled from manufacturer registrations, import records, and industry associations."
+  }
+}

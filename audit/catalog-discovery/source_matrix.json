@@ -1,0 +1,257 @@
+{
+  "_schema": "source_matrix — catalog of every data source, its role, known failure modes, and which test class covers it",
+  "generated_at": "2026-09-22",
+  "sources": {
+    "fipe_brazilian_vehicle_reference": {
+      "type": "api",
+      "source_role": "IDENTITY_ENUMERATOR",
+      "url": "https://parallelum.com.br/fipe/api/v1/carros",
+      "acquisition_method": "api",
+      "node_count_snapshot": 1538,
+      "provides_prices": false,
+      "provides_hierarchy": false,
+      "node_type": "FLAT_ROW",
+      "known_failure_modes": [
+        "Brazilian-only vehicle names not applicable to Thai market",
+        "Sequential source_native_ids (e.g., 2204, 2205) may look synthetic",
+        "Price_thb is always 0 (FIPE is not a Thai source)"
+      ],
+      "test_coverage": {
+        "payload_hash": "TestPayloadHash",
+        "synthetic_native_ids": "TestSourceNativeIds — fipe excluded from short-ID check",
+        "parent_child_edges": "TestParentChildEdges — flat sources",
+        "decomposition_evidence": "TestDecompositionEvidence",
+        "role_separation": "TestSourceRoleSeparation"
+      }
+    },
+    "toyota_official_pricelist": {
+      "type": "official_oem",
+      "source_role": "MARKET_TRUTH",
+      "url": "https://www.toyota.co.th/en/pricelist",
+      "acquisition_method": "playwright",
+      "node_count_snapshot": 34,
+      "provides_prices": true,
+      "provides_hierarchy": false,
+      "node_type": "OEM_PRICELIST_ROW",
+      "known_failure_modes": [
+        "Playwright capture may timeout or return stale HTML",
+        "Prices may change without notice (no version control)",
+        "Model names in English only (no Thai names)"
+      ],
+      "test_coverage": {
+        "payload_hash": "TestPayloadHash",
+        "source_native_ids": "TestSourceNativeIds",
+        "decomposition_evidence": "TestDecompositionEvidence",
+        "role_separation": "TestSourceRoleSeparation",
+        "count_consistency": "TestTaxonomyCounts"
+      }
+    },
+    "mazda_official_lineup": {
+      "type": "official_oem",
+      "source_role": "MARKET_TRUTH",
+      "url": "https://www.mazda.co.th/en/vehicles",
+      "acquisition_method": "playwright",
+      "node_count_snapshot": 10,
+      "provides_prices": true,
+      "provides_hierarchy": false,
+      "node_type": "OEM_PRICELIST_ROW",
+      "known_failure_modes": [
+        "Playwright capture may timeout",
+        "Mazda lineup has fewer models than Toyota — counts differ",
+        "Price includes hidden variants not listed"
+      ],
+      "test_coverage": {
+        "payload_hash": "TestPayloadHash",
+        "source_native_ids": "TestSourceNativeIds",
+        "role_separation": "TestSourceRoleSeparation",
+        "count_consistency": "TestTaxonomyCounts"
+      }
+    },
+    "headlightmag_wordpress_api": {
+      "type": "media_reference",
+      "source_role": "MEDIA_REFERENCE",
+      "url": "https://www.headlightmag.com/wp-json/wp/v2",
+      "acquisition_method": "api",
+      "provides_prices": false,
+      "provides_hierarchy": false,
+      "node_type": "ARTICLE_POST",
+      "known_failure_modes": [
+        "WordPress API may rate-limit or block requests",
+        "Article content is unstructured — prices embedded in prose",
+        "Cross-model contamination in roundup articles",
+        "Not a vehicle taxonomy source — must not inflate counts"
+      ],
+      "test_coverage": {
+        "payload_hash": "TestPayloadHash",
+        "media_source_exclusion": "TestTaxonomyCounts.test_media_sources_not_in_vehicle_taxonomy_counts",
+        "role_separation": "TestTaxonomyCounts.test_headlightmag_models_are_empty_or_media_tagged"
+      }
+    },
+    "bmw_official": {
+      "type": "official_oem",
+      "source_role": "MARKET_TRUTH",
+      "url": "https://www.bmw.co.th/en/all-models.html",
+      "acquisition_method": "playwright",
+      "node_count_snapshot": 0,
+      "status": "TIMEOUT",
+      "provides_prices": true,
+      "provides_hierarchy": false,
+      "known_failure_modes": [
+        "TIMEOUT — no data captured",
+        "CDN/WAF may block headless browsers",
+        "Model count will be 0 until resolved"
+      ],
+      "test_coverage": {
+        "count_consistency": "TestTaxonomyCounts — zero models acceptable for blocked sources"
+      }
+    }
+  },
+  "failure_matrix": [
+    {
+      "failure_mode": "missing_payload_hash",
+      "description": "Dataset file with acquisition_method but no payload_hash",
+      "severity": "HIGH",
+      "affected_sources": ["fipe_brazilian_vehicle_reference", "toyota_official_pricelist", "mazda_official_lineup", "headlightmag_wordpress_api"],
+      "test_class": "TestPayloadHash",
+      "test_method": "test_dataset_has_payload_hash",
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "synthetic_source_native_id",
+      "description": "Source-native IDs are sequential re-index (0,1,2...) from pipeline instead of upstream",
+      "severity": "HIGH",
+      "affected_sources": ["toyota_official_pricelist", "mazda_official_lineup"],
+      "test_class": "TestSourceNativeIds",
+      "test_methods": ["test_no_synthetic_sequential_native_ids", "test_source_native_id_not_empty", "test_source_native_id_preserved_across_pipeline"],
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "fake_parent_child_edge",
+      "description": "parent_native_id references a node that does not exist in the source tree",
+      "severity": "CRITICAL",
+      "affected_sources": ["fipe_brazilian_vehicle_reference", "toyota_official_pricelist", "mazda_official_lineup"],
+      "test_class": "TestParentChildEdges",
+      "test_methods": ["test_parent_edges_reference_existing_nodes", "test_no_circular_parent_edges", "test_flat_sources_have_no_children"],
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "high_decomposition_without_evidence",
+      "description": "Candidate claims HIGH decomposition confidence but has no evidence or only the generic flat-source excuse",
+      "severity": "HIGH",
+      "affected_sources": ["fipe_brazilian_vehicle_reference"],
+      "test_class": "TestDecompositionEvidence",
+      "test_methods": ["test_high_confidence_has_evidence", "test_medium_confidence_has_at_least_method", "test_normalized_decomposition_confidence_values"],
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "canonical_id_on_unreconciled",
+      "description": "identity_universe candidate carries a canonical_id that does not appear in reconciled_identity_universe",
+      "severity": "CRITICAL",
+      "affected_sources": ["fipe_brazilian_vehicle_reference", "toyota_official_pricelist", "mazda_official_lineup"],
+      "test_class": "TestCanonicalIdIntegrity",
+      "test_methods": ["test_no_canonical_id_in_unreconciled", "test_reconciled_canonical_ids_are_hex", "test_reconciled_entries_have_required_fields"],
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "taxonomy_count_mismatch",
+      "description": "Model counts inconsistent across harvest → inventory → census → normalized",
+      "severity": "MEDIUM",
+      "affected_sources": ["toyota_official_pricelist", "mazda_official_lineup"],
+      "test_class": "TestTaxonomyCounts",
+      "test_methods": ["test_harvest_tree_counts_match_node_totals", "test_catalog_inventory_model_counts_match_normalized", "test_census_model_count_matches_inventory", "test_identity_universe_candidate_count_matches"],
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "media_source_in_taxonomy_counts",
+      "description": "Media sources (headlightmag, 9carthai) counted as vehicle taxonomy sources",
+      "severity": "HIGH",
+      "affected_sources": ["headlightmag_wordpress_api"],
+      "test_class": "TestTaxonomyCounts",
+      "test_methods": ["test_media_sources_not_in_vehicle_taxonomy_counts", "test_headlightmag_models_are_empty_or_media_tagged"],
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "source_role_contamination",
+      "description": "IDENTITY_ENUMERATOR node carries price data, or MARKET_TRUTH node missing observed_at",
+      "severity": "HIGH",
+      "affected_sources": ["fipe_brazilian_vehicle_reference", "toyota_official_pricelist", "mazda_official_lineup"],
+      "test_class": "TestSourceRoleSeparation",
+      "test_methods": ["test_identity_enum_nodes_have_no_price", "test_market_truth_nodes_have_observed_at", "test_source_roles_are_consistent_within_tree"],
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "circular_parent_chain",
+      "description": "Node A's parent is B, B's parent is A (or longer cycle)",
+      "severity": "CRITICAL",
+      "affected_sources": ["fipe_brazilian_vehicle_reference"],
+      "test_class": "TestParentChildEdges",
+      "test_method": "test_no_circular_parent_edges",
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "empty_source_native_id",
+      "description": "Node is missing its source_native_id entirely",
+      "severity": "HIGH",
+      "affected_sources": ["fipe_brazilian_vehicle_reference", "toyota_official_pricelist", "mazda_official_lineup"],
+      "test_class": "TestSourceNativeIds",
+      "test_method": "test_source_native_id_not_empty",
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "canonical_id_non_hex",
+      "description": "Reconciled canonical_id is not a hex hash (could be a name, UUID, or sequential number)",
+      "severity": "MEDIUM",
+      "affected_sources": ["fipe_brazilian_vehicle_reference", "toyota_official_pricelist", "mazda_official_lineup"],
+      "test_class": "TestCanonicalIdIntegrity",
+      "test_method": "test_reconciled_canonical_ids_are_hex",
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "missing_source_representation_fields",
+      "description": "source_representations entry missing source_name, source_label, or source_id",
+      "severity": "MEDIUM",
+      "affected_sources": ["fipe_brazilian_vehicle_reference", "toyota_official_pricelist", "mazda_official_lineup"],
+      "test_class": "TestCanonicalIdIntegrity",
+      "test_method": "test_reconciled_entries_have_required_fields",
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "invalid_decomposition_confidence_enum",
+      "description": "Confidence value not in {none, low, medium, high}",
+      "severity": "MEDIUM",
+      "affected_sources": ["fipe_brazilian_vehicle_reference", "toyota_official_pricelist", "mazda_official_lineup"],
+      "test_class": "TestDecompositionEvidence",
+      "test_method": "test_normalized_decomposition_confidence_values",
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "invalid_source_role",
+      "description": "Tree declares a source_role not in {IDENTITY_ENUMERATOR, MARKET_TRUTH, MEDIA_REFERENCE}",
+      "severity": "MEDIUM",
+      "affected_sources": ["fipe_brazilian_vehicle_reference", "toyota_official_pricelist", "mazda_official_lineup"],
+      "test_class": "TestTaxonomyCounts",
+      "test_method": "test_harvest_trees_declare_valid_roles",
+      "current_status": "PASSING"
+    },
+    {
+      "failure_mode": "real_taxonomy_leak_to_inventory",
+      "description": "real_taxonomy_data.json contains data for a manufacturer not tracked in catalog_inventory",
+      "severity": "MEDIUM",
+      "affected_sources": ["fipe_brazilian_vehicle_reference"],
+      "test_class": "TestTaxonomyCounts",
+      "test_method": "test_real_taxonomy_carrier_vs_inventory",
+      "current_status": "PASSING"
+    }
+  ],
+  "summary": {
+    "total_sources": 5,
+    "total_failure_modes": 15,
+    "by_severity": {
+      "CRITICAL": 3,
+      "HIGH": 6,
+      "MEDIUM": 6
+    },
+    "test_classes": 7,
+    "test_methods": 24
+  }
+}

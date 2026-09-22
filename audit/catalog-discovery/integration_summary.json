@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "integrated_at": "2026-09-22T16:39:35.390257",
+  "source_roles": {
+    "IDENTITY_ENUMERATOR": {
+      "fipe_year_hierarchy": 133,
+      "fipe_models": 1483,
+      "open_ev_data": 26,
+      "total": 1642
+    },
+    "MARKET_TRUTH": {
+      "toyota_official": 34,
+      "mazda_official": 10,
+      "total": 44
+    },
+    "MARKET_REFERENCE": {
+      "thai_market": 22,
+      "total": 22
+    },
+    "MEDIA_DISCOVERY": {
+      "headlightmag": 64,
+      "total": 64
+    }
+  },
+  "total": 1772
+}

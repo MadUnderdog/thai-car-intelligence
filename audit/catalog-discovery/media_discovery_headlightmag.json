@@ -1,0 +1,668 @@
+{
+  "source": {
+    "role": "MEDIA_DISCOVERY",
+    "origin": "headlightmag_wordpress_categories",
+    "url": "https://www.headlightmag.com/wp-json/wp/v2",
+    "observed_at": "2026-09-22T14:22:32.146164",
+    "acquisition_method": "wordpress_api",
+    "payload_hash": "d5587c641ca2a00c"
+  },
+  "summary": {
+    "total_entries": 64,
+    "case_duplicates_removed": 10,
+    "by_classification": {
+      "model-mention": 49,
+      "non-vehicle": 11,
+      "unresolved": 2,
+      "variant-mention": 2
+    }
+  },
+  "entries": [
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "iX3",
+      "clean_model": "iX3",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "i Series"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "220i",
+      "clean_model": "220i",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "2 Series"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "M340i",
+      "clean_model": "M340i",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "M Series"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "330i",
+      "clean_model": "330i",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "3 Series"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "320d",
+      "clean_model": "320d",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "3 Series"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "ของวัยรุ่น",
+      "clean_model": "ของวัยรุ่น",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 10
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "218i",
+      "clean_model": "218i",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "2 Series"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "Driving",
+      "clean_model": "Driving",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 10
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "PERSONA",
+      "clean_model": "PERSONA",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-30",
+      "clean_model": "CX-30",
+      "classification": "model-mention",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "BT-50",
+      "clean_model": "BT-50",
+      "classification": "model-mention",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-30:",
+      "clean_model": "CX-30",
+      "classification": "model-mention",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "3-รีรัน",
+      "clean_model": "3-รีรัน",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-8",
+      "clean_model": "CX-8",
+      "classification": "model-mention",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-5",
+      "clean_model": "CX-5",
+      "classification": "model-mention",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-3",
+      "clean_model": "CX-3",
+      "classification": "model-mention",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "ROADPACER",
+      "clean_model": "ROADPACER",
+      "classification": "unresolved",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-9",
+      "clean_model": "CX-9",
+      "classification": "model-mention",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "MX-5",
+      "clean_model": "MX-5",
+      "classification": "model-mention",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "New",
+      "clean_model": "New",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 35
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "CIVIC",
+      "clean_model": "CIVIC",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "Super-ONE",
+      "clean_model": "Super-ONE",
+      "classification": "variant-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "WR-V",
+      "clean_model": "WR-V",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "e:N1",
+      "clean_model": "e:N1",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "CR-V",
+      "clean_model": "CR-V",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "BR-V",
+      "clean_model": "BR-V",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "Accord",
+      "clean_model": "Accord",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "HR-V",
+      "clean_model": "HR-V",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "City",
+      "clean_model": "City",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "Clarity-เรือนร่างแห่งปัจจุบัน..บนเทคโนโลยีแห่งอนาคต",
+      "clean_model": "Clarity-เรือนร่างแห่งปัจจุบัน..บนเทคโนโลยีแห่งอนาคต",
+      "classification": "variant-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "R&#038;D,",
+      "clean_model": "R&#038;D",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MERCEDES-BENZ",
+      "brand_category_id": 141,
+      "raw_model": "AMG",
+      "clean_model": "AMG",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MG",
+      "brand_category_id": 2599,
+      "raw_model": "URBAN",
+      "clean_model": "URBAN",
+      "classification": "model-mention",
+      "total_posts_in_category": 21
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MG",
+      "brand_category_id": 2599,
+      "raw_model": "Maxus",
+      "clean_model": "Maxus",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 21
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MG",
+      "brand_category_id": 2599,
+      "raw_model": "Extender",
+      "clean_model": "Extender",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 21
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MG",
+      "brand_category_id": 2599,
+      "raw_model": "HS,",
+      "clean_model": "HS",
+      "classification": "model-mention",
+      "total_posts_in_category": 21
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MG",
+      "brand_category_id": 2599,
+      "raw_model": "RX8",
+      "clean_model": "RX8",
+      "classification": "model-mention",
+      "total_posts_in_category": 21
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "KICKS",
+      "clean_model": "KICKS",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "QUEST",
+      "clean_model": "QUEST",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "X-TRAIL",
+      "clean_model": "X-TRAIL",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "SERENA",
+      "clean_model": "SERENA",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "SUNNY",
+      "clean_model": "SUNNY",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "AD-1",
+      "clean_model": "AD-1",
+      "classification": "unresolved",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "Navara",
+      "clean_model": "Navara",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "LEAF",
+      "clean_model": "LEAF",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "TERRA",
+      "clean_model": "TERRA",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "Almera",
+      "clean_model": "Almera",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "Note",
+      "clean_model": "Note",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "GT-R",
+      "clean_model": "GT-R",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "PRESEA",
+      "clean_model": "PRESEA",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "SYLPHY",
+      "clean_model": "SYLPHY",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "บ้านโพธิ์",
+      "clean_model": "บ้านโพธิ์",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "WiLL",
+      "clean_model": "WiLL",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Hilux",
+      "clean_model": "Hilux",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "YARIS",
+      "clean_model": "YARIS",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "CYNOS",
+      "clean_model": "CYNOS",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "CELICA",
+      "clean_model": "CELICA",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Origin",
+      "clean_model": "Origin",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "VELOZ",
+      "clean_model": "VELOZ",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Corolla",
+      "clean_model": "Corolla",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "C-HR",
+      "clean_model": "C-HR",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Camry",
+      "clean_model": "Camry",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Fortuner",
+      "clean_model": "Fortuner",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Majesty",
+      "clean_model": "Majesty",
+      "classification": "model-mention",
+      "total_posts_in_category": 40
+    }
+  ]
+}

@@ -1,0 +1,1179 @@
+{
+  "capture_id": "second_taxonomy_capture_v1",
+  "captured_at": "2026-09-22T15:30:00+07:00",
+  "source": {
+    "name": "open-ev-data/open-ev-data-dataset",
+    "url": "https://github.com/open-ev-data/open-ev-data-dataset",
+    "raw_url_pattern": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/main/src/{brand}/{model}/{year}/{model}.json",
+    "license": "CDLA-Permissive-2.0",
+    "license_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/main/LICENCE",
+    "license_type": "open_data",
+    "schema_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/main/schema.json",
+    "schema_version": "1.0.0",
+    "description": "Structured, versioned, community-maintained dataset of electric vehicle specifications following a Layered Canonical Dataset (LCD) architecture.",
+    "provenance_tier": "REFERENCE",
+    "provenance_notes": "Community-maintained open dataset. Each vehicle record is authored as layered JSON fragments compiled into canonical records. Not OEM-official but well-sourced with cited references.",
+    "data_type": "taxonomy",
+    "record_count": 26,
+    "field_coverage": {
+      "make": "brand field in path, present in all records",
+      "model": "model field in path, present in all records",
+      "year": "year field in JSON, present in all records",
+      "trim": "trim.slug and trim.name in JSON, present in all records",
+      "variant": "optional variant field in schema",
+      "powertrain": "drivetrain, motor config, power, torque",
+      "battery": "chemistry, capacity, thermal management, warranty",
+      "charging": "AC/DC power, connectors, protocols",
+      "range": "WLTP/EPA rated range",
+      "performance": "0-100, top speed",
+      "pricing": "MSRP by country/currency",
+      "sources": "cited source URLs per record"
+    }
+  },
+  "excluded_sources": {
+    "nhtsa_vpic_api": {
+      "url": "https://vpic.nhtsa.dot.gov/api/vehicles/",
+      "reason": "NHTSA VPIC API provides GetAllMakes (12,364 makes) and GetModelsForMakeId (e.g., 58 Toyota models) but lacks year and trim fields. DecodeVinValues requires VIN input and is not a catalog endpoint. No endpoint lists vehicles with make+model+year+trim without VIN knowledge.",
+      "tested_endpoints": [
+        {
+          "endpoint": "GetAllMakes",
+          "result": "12,364 makes, fields: Make_ID, Make_Name only"
+        },
+        {
+          "endpoint": "GetModelsForMakeId/448",
+          "result": "58 Toyota models, fields: Make_ID, Make_Name, Model_ID, Model_Name only"
+        },
+        {
+          "endpoint": "DecodeVinValues/{vin}",
+          "result": "Full decode (Make, Model, ModelYear, Trim, BasePrice, etc.) but requires VIN input"
+        },
+        {
+          "endpoint": "GetVehicle/{id}",
+          "result": "404 Not Found"
+        },
+        {
+          "endpoint": "GetEquipmentPlantCodes",
+          "result": "404 Not Found"
+        }
+      ],
+      "verdict": "NOT suitable as taxonomy source - no catalog listing with year/trim"
+    }
+  },
+  "field_mapping": {
+    "brand": {
+      "source_field": "brand (directory path)",
+      "example": "byd"
+    },
+    "model": {
+      "source_field": "model (directory path)",
+      "example": "seal"
+    },
+    "year": {
+      "source_field": "year",
+      "example": 2024
+    },
+    "trim": {
+      "source_field": "trim.name / trim.slug",
+      "example": "Standard / standard"
+    },
+    "drivetrain": {
+      "source_field": "powertrain.drivetrain",
+      "example": "rwd"
+    },
+    "power_kw": {
+      "source_field": "powertrain.system_power_kw",
+      "example": 150
+    },
+    "torque_nm": {
+      "source_field": "powertrain.system_torque_nm",
+      "example": 310
+    },
+    "battery_kwh": {
+      "source_field": "battery.pack_capacity_kwh_gross",
+      "example": 61.44
+    },
+    "range_km": {
+      "source_field": "range.rated[0].range_km",
+      "example": 460
+    },
+    "price": {
+      "source_field": "pricing.msrp[].amount",
+      "example": "319800 BRL (BR)"
+    },
+    "markets": {
+      "source_field": "markets[]",
+      "example": [
+        "TH",
+        "SG",
+        "BR"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "brand": "byd",
+      "model": "tang",
+      "year": 2024,
+      "trim_slug": "flagship",
+      "trim_name": "Flagship",
+      "markets": [
+        "BR",
+        "DE",
+        "NO",
+        "CN"
+      ],
+      "drivetrain": "awd",
+      "system_power_kw": 380,
+      "system_torque_nm": 680,
+      "battery_chemistry": "lfp",
+      "battery_capacity_kwh": 108.8,
+      "range_km": 530,
+      "acceleration_0_100": 4.9,
+      "top_speed_kmh": 180,
+      "curb_weight_kg": 2589,
+      "pricing": [
+        {
+          "currency": "BRL",
+          "amount": 529990,
+          "country": "BR",
+          "year": 2024
+        }
+      ],
+      "sources": [
+        {
+          "type": "oem",
+          "title": "BYD Europe - Tang",
+          "url": "https://www.byd.com/eu/car/tang"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "82e3669a24059c25"
+    },
+    {
+      "brand": "byd",
+      "model": "han",
+      "year": 2024,
+      "trim_slug": "flagship",
+      "trim_name": "Flagship",
+      "markets": [
+        "BR",
+        "DE",
+        "FR",
+        "CN"
+      ],
+      "drivetrain": "awd",
+      "system_power_kw": 380,
+      "system_torque_nm": 700,
+      "battery_chemistry": "lfp",
+      "battery_capacity_kwh": 85.4,
+      "range_km": 521,
+      "acceleration_0_100": 3.9,
+      "top_speed_kmh": 180,
+      "curb_weight_kg": 2250,
+      "pricing": [
+        {
+          "currency": "BRL",
+          "amount": 539990,
+          "country": "BR",
+          "year": 2024
+        }
+      ],
+      "sources": [
+        {
+          "type": "oem",
+          "title": "BYD Europe - Han",
+          "url": "https://www.byd.com/eu/car/han"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "a274ca5f68443063"
+    },
+    {
+      "brand": "byd",
+      "model": "seal",
+      "year": 2024,
+      "trim_slug": "standard",
+      "trim_name": "Standard",
+      "markets": [
+        "BR",
+        "DE",
+        "FR",
+        "IT",
+        "PT",
+        "GB",
+        "CN",
+        "JP",
+        "AU",
+        "NZ",
+        "TH",
+        "SG",
+        "MX"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 150,
+      "system_torque_nm": 310,
+      "battery_chemistry": "lfp",
+      "battery_capacity_kwh": 61.44,
+      "range_km": 460,
+      "acceleration_0_100": 7.5,
+      "top_speed_kmh": 180,
+      "curb_weight_kg": 1870,
+      "pricing": [
+        {
+          "currency": "BRL",
+          "amount": 319800,
+          "country": "BR",
+          "year": 2024
+        }
+      ],
+      "sources": [
+        {
+          "type": "oem",
+          "title": "BYD Brazil Official Website - Seal 2024",
+          "url": "https://www.byd.com/br"
+        },
+        {
+          "type": "oem",
+          "title": "BYD Europe Official Website - Seal",
+          "url": "https://www.byd.com/eu/car/seal.html"
+        },
+        {
+          "type": "oem",
+          "title": "BYD UK Official Website - Seal",
+          "url": "https://www.byd.com/en/car/seal"
+        },
+        {
+          "type": "oem",
+          "title": "BYD Germany Official Website - Seal",
+          "url": "https://www.byd.com/de/car/seal"
+        },
+        {
+          "type": "oem",
+          "title": "BYD Australia Official Website - Seal",
+          "url": "https://www.byd.com/au/car/seal"
+        },
+        {
+          "type": "oem",
+          "title": "BYD China Official Website - Seal",
+          "url": "https://www.byd.com/cn/car/seal"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "e65fad275afceebe"
+    },
+    {
+      "brand": "byd",
+      "model": "dolphin",
+      "year": 2024,
+      "trim_slug": "standard",
+      "trim_name": "Standard",
+      "markets": [
+        "BR",
+        "DE",
+        "FR",
+        "IT",
+        "PT",
+        "GB",
+        "CN",
+        "AU",
+        "NZ",
+        "TH",
+        "SG",
+        "MX"
+      ],
+      "drivetrain": "fwd",
+      "system_power_kw": 70,
+      "system_torque_nm": null,
+      "battery_chemistry": "lfp",
+      "battery_capacity_kwh": 44.9,
+      "range_km": 340,
+      "acceleration_0_100": 10.9,
+      "top_speed_kmh": 150,
+      "curb_weight_kg": 1405,
+      "pricing": [
+        {
+          "currency": "BRL",
+          "amount": 199800,
+          "country": "BR",
+          "year": 2024
+        }
+      ],
+      "sources": [
+        {
+          "type": "oem",
+          "title": "BYD Brazil Official Website - Dolphin 2024",
+          "url": "https://www.byd.com/br"
+        },
+        {
+          "type": "oem",
+          "title": "BYD Europe Official Website - Dolphin",
+          "url": "https://www.byd.com/eu/car/dolphin.html"
+        },
+        {
+          "type": "oem",
+          "title": "BYD UK Official Website - Dolphin",
+          "url": "https://www.byd.com/en/car/dolphin"
+        },
+        {
+          "type": "oem",
+          "title": "BYD Germany Official Website - Dolphin",
+          "url": "https://www.byd.com/de/car/dolphin"
+        },
+        {
+          "type": "oem",
+          "title": "BYD Australia Official Website - Dolphin",
+          "url": "https://www.byd.com/au/car/dolphin"
+        },
+        {
+          "type": "oem",
+          "title": "BYD China Official Website - Dolphin",
+          "url": "https://www.byd.com/cn/car/dolphin"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "0ef6f3314dcf0912"
+    },
+    {
+      "brand": "toyota",
+      "model": "bz4x",
+      "year": 2024,
+      "trim_slug": "fwd",
+      "trim_name": "Front-Wheel Drive",
+      "markets": [
+        "US",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "JP",
+        "CN"
+      ],
+      "drivetrain": "fwd",
+      "system_power_kw": 150,
+      "system_torque_nm": 266,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 72.8,
+      "range_km": 406,
+      "acceleration_0_100": 7.5,
+      "top_speed_kmh": 160,
+      "curb_weight_kg": 1920,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Toyota bZ4X 2024 Official Specifications",
+          "url": "https://www.toyota.com/bz4x"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "7830a3e867144635"
+    },
+    {
+      "brand": "toyota",
+      "model": "bz3",
+      "year": 2024,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "CN"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 180,
+      "system_torque_nm": 303,
+      "battery_chemistry": "lfp",
+      "battery_capacity_kwh": 65.3,
+      "range_km": 600,
+      "acceleration_0_100": 7.5,
+      "top_speed_kmh": 160,
+      "curb_weight_kg": 1710,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Toyota bZ3 2024 Official Specifications China",
+          "url": "https://www.toyota.com.cn/bz3"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "d3f41607a36d1feb"
+    },
+    {
+      "brand": "toyota",
+      "model": "bz3x",
+      "year": 2025,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "CN"
+      ],
+      "drivetrain": "fwd",
+      "system_power_kw": 150,
+      "system_torque_nm": 225,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 50.03,
+      "range_km": 430,
+      "acceleration_0_100": 8.0,
+      "top_speed_kmh": 160,
+      "curb_weight_kg": 1680,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Toyota bZ3X Official Specifications China",
+          "url": "https://www.toyota.com.cn/bz3x"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "2f10de866415e1c8"
+    },
+    {
+      "brand": "mg",
+      "model": "mg4",
+      "year": 2024,
+      "trim_slug": "standard",
+      "trim_name": "Standard",
+      "markets": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "PT",
+        "CN",
+        "AU",
+        "NZ",
+        "TH",
+        "BR"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 125,
+      "system_torque_nm": 250,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 51,
+      "range_km": 350,
+      "acceleration_0_100": 7.7,
+      "top_speed_kmh": 160,
+      "curb_weight_kg": 1685,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "MG Motor UK - MG4 Electric Specifications 2024",
+          "url": "https://www.mgmotor.co.uk/electric-cars/mg4-electric"
+        },
+        {
+          "type": "oem",
+          "title": "MG Motor Brazil - MG4 Electric",
+          "url": "https://www.mgmotor.com.br"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "70f4893199184580"
+    },
+    {
+      "brand": "nissan",
+      "model": "ariya",
+      "year": 2024,
+      "trim_slug": "engage",
+      "trim_name": "Engage",
+      "markets": [
+        "US",
+        "BR",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "CN",
+        "JP"
+      ],
+      "drivetrain": "fwd",
+      "system_power_kw": 160,
+      "system_torque_nm": 300,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 63,
+      "range_km": 383,
+      "acceleration_0_100": 7.5,
+      "top_speed_kmh": 160,
+      "curb_weight_kg": 1920,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Nissan Ariya 2024 Official Specifications",
+          "url": "https://www.nissanusa.com/vehicles/electric-cars/ariya.html"
+        },
+        {
+          "type": "regulatory",
+          "title": "EPA Fuel Economy Data - Nissan Ariya 2024",
+          "url": "https://www.fueleconomy.gov"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "196089a644b06aef"
+    },
+    {
+      "brand": "nissan",
+      "model": "leaf",
+      "year": 2023,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "US",
+        "BR",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "CN",
+        "JP"
+      ],
+      "drivetrain": "fwd",
+      "system_power_kw": 110,
+      "system_torque_nm": 320,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 40,
+      "range_km": 240,
+      "acceleration_0_100": 7.9,
+      "top_speed_kmh": 144,
+      "curb_weight_kg": 1580,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Nissan LEAF 2023 Official Specifications",
+          "url": "https://www.nissan.com.br/veiculos/eletricos/leaf.html"
+        },
+        {
+          "type": "regulatory",
+          "title": "EPA Fuel Economy Data - Nissan LEAF 2023",
+          "url": "https://www.fueleconomy.gov"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "b45376e25da77c49"
+    },
+    {
+      "brand": "bmw",
+      "model": "ix3",
+      "year": 2024,
+      "trim_slug": "ix3",
+      "trim_name": "iX3",
+      "markets": [
+        "DE",
+        "GB",
+        "CN"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 210,
+      "system_torque_nm": null,
+      "battery_chemistry": "nmc",
+      "battery_capacity_kwh": 80.0,
+      "range_km": 461,
+      "acceleration_0_100": 6.8,
+      "top_speed_kmh": 180,
+      "curb_weight_kg": 2260,
+      "pricing": [
+        {
+          "currency": "EUR",
+          "amount": 70400,
+          "country": "DE",
+          "year": 2024
+        }
+      ],
+      "sources": [
+        {
+          "type": "oem",
+          "title": "BMW iX3 2024",
+          "url": "https://www.bmw.com"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "35146fe024c1cd61"
+    },
+    {
+      "brand": "bmw",
+      "model": "ix",
+      "year": 2024,
+      "trim_slug": "xdrive50",
+      "trim_name": "xDrive50",
+      "markets": [
+        "US",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "CN",
+        "JP",
+        "BR"
+      ],
+      "drivetrain": "awd",
+      "system_power_kw": 385,
+      "system_torque_nm": 765,
+      "battery_chemistry": "nmc",
+      "battery_capacity_kwh": 111.5,
+      "range_km": 629,
+      "acceleration_0_100": 4.4,
+      "top_speed_kmh": 200,
+      "curb_weight_kg": 2585,
+      "pricing": [
+        {
+          "currency": "USD",
+          "amount": 85095,
+          "country": "US",
+          "year": 2024
+        }
+      ],
+      "sources": [
+        {
+          "type": "oem",
+          "title": "BMW iX xDrive50 2024 Specifications",
+          "url": "https://www.bmw.com"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "d9471b481bb455ba"
+    },
+    {
+      "brand": "bmw",
+      "model": "i4",
+      "year": 2024,
+      "trim_slug": "edrive40",
+      "trim_name": "eDrive40",
+      "markets": [
+        "US",
+        "DE",
+        "GB",
+        "FR"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 250,
+      "system_torque_nm": null,
+      "battery_chemistry": "nmc",
+      "battery_capacity_kwh": 83.9,
+      "range_km": 590,
+      "acceleration_0_100": 5.4,
+      "top_speed_kmh": 190,
+      "curb_weight_kg": 2050,
+      "pricing": [
+        {
+          "currency": "USD",
+          "amount": 57900,
+          "country": "US",
+          "year": 2024
+        }
+      ],
+      "sources": [
+        {
+          "type": "oem",
+          "title": "BMW i4 eDrive40 2024",
+          "url": "https://www.bmw.com"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "3937150600055444"
+    },
+    {
+      "brand": "volvo",
+      "model": "ex30",
+      "year": 2024,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "US",
+        "BR",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "CN",
+        "JP"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 200,
+      "system_torque_nm": 343,
+      "battery_chemistry": "lfp",
+      "battery_capacity_kwh": 51.0,
+      "range_km": 344,
+      "acceleration_0_100": 5.7,
+      "top_speed_kmh": 180,
+      "curb_weight_kg": 1830,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Volvo EX30 Official Specifications 2024",
+          "url": "https://www.volvocars.com/intl/v/cars/ex30"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "5bf495e19620825a"
+    },
+    {
+      "brand": "volvo",
+      "model": "ex40",
+      "year": 2024,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "US",
+        "BR",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "CN",
+        "JP"
+      ],
+      "drivetrain": "fwd",
+      "system_power_kw": 175,
+      "system_torque_nm": 330,
+      "battery_chemistry": "nmc",
+      "battery_capacity_kwh": 78.0,
+      "range_km": 425,
+      "acceleration_0_100": 7.4,
+      "top_speed_kmh": 160,
+      "curb_weight_kg": 2118,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Volvo EX40 Official Specifications 2024",
+          "url": "https://www.volvocars.com/intl/v/cars/ex40"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "d0199a26ffe420a1"
+    },
+    {
+      "brand": "porsche",
+      "model": "taycan",
+      "year": 2024,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "US",
+        "BR",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "CN",
+        "JP"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 300,
+      "system_torque_nm": 345,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 79.2,
+      "range_km": 431,
+      "acceleration_0_100": 5.4,
+      "top_speed_kmh": 230,
+      "curb_weight_kg": 2105,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Porsche Taycan 2024 Official Specifications",
+          "url": "https://www.porsche.com/international/models/taycan/taycan-models/taycan/"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "b13747ebe7af9e09"
+    },
+    {
+      "brand": "mercedes_benz",
+      "model": "eqs",
+      "year": 2024,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "US",
+        "BR",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "CN",
+        "JP"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 245,
+      "system_torque_nm": 568,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 107.8,
+      "range_km": 784,
+      "acceleration_0_100": 6.2,
+      "top_speed_kmh": 210,
+      "curb_weight_kg": 2480,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Mercedes-Benz EQS 2024 Official Specifications",
+          "url": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/eqs/"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "19023c84a69f8267"
+    },
+    {
+      "brand": "mercedes_benz",
+      "model": "eqe",
+      "year": 2024,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "US",
+        "BR",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "CN",
+        "JP"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 180,
+      "system_torque_nm": 550,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 90.6,
+      "range_km": 590,
+      "acceleration_0_100": 7.3,
+      "top_speed_kmh": 160,
+      "curb_weight_kg": 2340,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Mercedes-Benz EQE 2024 Official Specifications",
+          "url": "https://www.mercedes-benz.com/en/vehicles/passenger-cars/eqe/"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "0b534e3471a050df"
+    },
+    {
+      "brand": "mini",
+      "model": "cooper_se",
+      "year": 2023,
+      "trim_slug": "se",
+      "trim_name": "SE",
+      "markets": [
+        "US",
+        "BR",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "CN",
+        "JP"
+      ],
+      "drivetrain": "fwd",
+      "system_power_kw": 135,
+      "system_torque_nm": 270,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 32.6,
+      "range_km": 234,
+      "acceleration_0_100": 7.3,
+      "top_speed_kmh": 150,
+      "curb_weight_kg": 1365,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "MINI Cooper SE Electric Official Specifications",
+          "url": "https://www.mini.com/en_GB/home/range/mini-cooper-electric.html"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "c8a26603fc740f2d"
+    },
+    {
+      "brand": "fiat",
+      "model": "500e",
+      "year": 2023,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "US",
+        "BR",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "CN",
+        "JP"
+      ],
+      "drivetrain": "fwd",
+      "system_power_kw": 87,
+      "system_torque_nm": 220,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 42.0,
+      "range_km": 320,
+      "acceleration_0_100": 9.0,
+      "top_speed_kmh": 150,
+      "curb_weight_kg": 1365,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Fiat 500e Official Specifications",
+          "url": "https://www.fiat.com/fiat-500e"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "f99fdc6540d09873"
+    },
+    {
+      "brand": "honda",
+      "model": "prologue",
+      "year": 2025,
+      "trim_slug": "ex",
+      "trim_name": "EX",
+      "markets": [
+        "US",
+        "CA"
+      ],
+      "drivetrain": "fwd",
+      "system_power_kw": 215,
+      "system_torque_nm": 451,
+      "battery_chemistry": "li-ion",
+      "battery_capacity_kwh": 85,
+      "range_km": 476,
+      "acceleration_0_100": 7.2,
+      "top_speed_kmh": 180,
+      "curb_weight_kg": 2180,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Honda Prologue 2025 Official Specifications",
+          "url": "https://automobiles.honda.com/prologue"
+        },
+        {
+          "type": "regulatory",
+          "title": "EPA Fuel Economy Data - Honda Prologue",
+          "url": "https://www.fueleconomy.gov"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "ea3f4838afff47f5"
+    },
+    {
+      "brand": "xpeng",
+      "model": "g6",
+      "year": 2023,
+      "trim_slug": "standard_range",
+      "trim_name": "Standard Range",
+      "markets": [
+        "CN"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 190,
+      "system_torque_nm": 440,
+      "battery_chemistry": "lfp",
+      "battery_capacity_kwh": 66.0,
+      "range_km": 580,
+      "acceleration_0_100": 6.6,
+      "top_speed_kmh": 202,
+      "curb_weight_kg": 1995,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "XPeng G6 Official Specifications",
+          "url": "https://www.xpeng.com/en/models/g6"
+        },
+        {
+          "type": "press",
+          "title": "XPeng G6 Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/XPeng_G6"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "5dcbd4a637e5485c"
+    },
+    {
+      "brand": "nio",
+      "model": "es6",
+      "year": 2024,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "CN",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT"
+      ],
+      "drivetrain": "awd",
+      "system_power_kw": 480,
+      "system_torque_nm": 850,
+      "battery_chemistry": "nmc",
+      "battery_capacity_kwh": 75,
+      "range_km": 465,
+      "acceleration_0_100": 4.7,
+      "top_speed_kmh": 200,
+      "curb_weight_kg": 2350,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "NIO ES6 2024 Official Specifications",
+          "url": "https://www.nio.com/es6"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "1a7ba0f165131fb7"
+    },
+    {
+      "brand": "nio",
+      "model": "et5",
+      "year": 2024,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "CN",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT"
+      ],
+      "drivetrain": "awd",
+      "system_power_kw": 360,
+      "system_torque_nm": 700,
+      "battery_chemistry": "nmc",
+      "battery_capacity_kwh": 75,
+      "range_km": 550,
+      "acceleration_0_100": 4.3,
+      "top_speed_kmh": 200,
+      "curb_weight_kg": 2150,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "NIO ET5 2024 Official Specifications",
+          "url": "https://www.nio.com/et5"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "35369935fe49253e"
+    },
+    {
+      "brand": "zeekr",
+      "model": "001",
+      "year": 2023,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "CN",
+        "US",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "BR",
+        "JP"
+      ],
+      "drivetrain": "awd",
+      "system_power_kw": 400,
+      "system_torque_nm": 768,
+      "battery_chemistry": "nmc",
+      "battery_capacity_kwh": 100,
+      "range_km": 741,
+      "acceleration_0_100": 3.8,
+      "top_speed_kmh": 200,
+      "curb_weight_kg": 2290,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Zeekr 001 Official Specifications",
+          "url": "https://www.zeekr.com/001"
+        },
+        {
+          "type": "press",
+          "title": "Zeekr 001 Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Zeekr_001"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "40814beecb58eecb"
+    },
+    {
+      "brand": "zeekr",
+      "model": "007",
+      "year": 2025,
+      "trim_slug": "base",
+      "trim_name": "Base",
+      "markets": [
+        "CN",
+        "US",
+        "DE",
+        "GB",
+        "FR",
+        "PT",
+        "IT",
+        "BR",
+        "JP"
+      ],
+      "drivetrain": "rwd",
+      "system_power_kw": 310,
+      "system_torque_nm": 440,
+      "battery_chemistry": "lfp",
+      "battery_capacity_kwh": 75,
+      "range_km": 688,
+      "acceleration_0_100": 5.4,
+      "top_speed_kmh": 210,
+      "curb_weight_kg": 2050,
+      "pricing": null,
+      "sources": [
+        {
+          "type": "oem",
+          "title": "Zeekr 007 2025 Official Specifications",
+          "url": "https://www.zeekr.com/007"
+        },
+        {
+          "type": "press",
+          "title": "Zeekr 007 Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Zeekr_007"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "raw_content_hash": "027469b705761c13"
+    }
+  ],
+  "row_count": 26,
+  "unique_brands": 14,
+  "unique_models": 26,
+  "brands_covered": [
+    "bmw",
+    "byd",
+    "fiat",
+    "honda",
+    "mercedes_benz",
+    "mg",
+    "mini",
+    "nio",
+    "nissan",
+    "porsche",
+    "toyota",
+    "volvo",
+    "xpeng",
+    "zeekr"
+  ],
+  "payload_hash": "a83e075de394451701ed4432a9a899bbd81d0b1a3ac5960de78a3da3cf483e4a"
+}

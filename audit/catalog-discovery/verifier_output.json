@@ -1,118 +1,141 @@
 {
   "artifact_dir": "audit/catalog-discovery",
-  "total_checks": 30,
-  "passed": 25,
+  "total_checks": 32,
+  "passed": 23,
   "failed": 0,
-  "partial": 0,
+  "partial": 4,
+  "blocked": 0,
   "not_applicable": 5,
   "checks": [
     {
       "section": "artifacts",
       "check": "exists_fipe_models",
       "status": "PASS",
-      "path": "datasets/fipe_api_capture.json"
+      "path": "datasets/fipe_api_capture.json",
+      "artifact_sha256": "a3cdd7fa22e734d7"
     },
     {
       "section": "artifacts",
       "check": "exists_fipe_year",
       "status": "PASS",
-      "path": "fipe_year_hierarchy.json"
+      "path": "fipe_year_hierarchy.json",
+      "artifact_sha256": "65d22c31cd7549dd"
     },
     {
       "section": "artifacts",
       "check": "exists_open_ev",
       "status": "PASS",
-      "path": "second_taxonomy_capture.json"
+      "path": "second_taxonomy_capture.json",
+      "artifact_sha256": "96562b389920a4e6"
     },
     {
       "section": "artifacts",
       "check": "exists_toyota",
       "status": "PASS",
-      "path": "datasets/toyota_official_capture.json"
+      "path": "datasets/toyota_official_capture.json",
+      "artifact_sha256": "1033fb51df9f3589"
     },
     {
       "section": "artifacts",
       "check": "exists_mazda",
       "status": "PASS",
-      "path": "datasets/mazda_official_capture.json"
+      "path": "datasets/mazda_official_capture.json",
+      "artifact_sha256": "7e41607281caeef5"
     },
     {
       "section": "artifacts",
       "check": "exists_hlm",
       "status": "PASS",
-      "path": "media_discovery_headlightmag.json"
+      "path": "media_discovery_headlightmag.json",
+      "artifact_sha256": "85c05634325008f6"
     },
     {
       "section": "artifacts",
       "check": "exists_thai_ref",
       "status": "PASS",
-      "path": "thai_market_reference.json"
+      "path": "thai_market_reference.json",
+      "artifact_sha256": "bc0167fa9b39f630"
     },
     {
       "section": "artifacts",
       "check": "exists_raw_universe",
       "status": "PASS",
-      "path": "raw_taxonomy_universe.json"
+      "path": "raw_taxonomy_universe.json",
+      "artifact_sha256": "822738835ae30f19"
     },
     {
       "section": "artifacts",
       "check": "exists_source_matrix",
       "status": "PASS",
-      "path": "source_matrix.json"
+      "path": "source_matrix.json",
+      "artifact_sha256": "97ae7035477f09f4"
     },
     {
-      "section": "hash",
+      "section": "hash_integrity",
       "check": "payload_hash_fipe_models",
-      "status": "PASS",
-      "hash": "d66ab979ec2ad265"
+      "status": "PARTIAL",
+      "recorded": "d66ab979ec2ad265",
+      "artifact_sha256": "a3cdd7fa22e734d7",
+      "note": "payload_hash does not match file hash \u2014 verify source"
     },
     {
-      "section": "hash",
+      "section": "hash_integrity",
       "check": "payload_hash_open_ev",
-      "status": "PASS",
-      "hash": "a83e075de3944517"
+      "status": "PARTIAL",
+      "recorded": "a83e075de3944517",
+      "artifact_sha256": "96562b389920a4e6",
+      "note": "payload_hash does not match file hash \u2014 verify source"
     },
     {
-      "section": "hash",
+      "section": "hash_integrity",
       "check": "payload_hash_toyota",
-      "status": "PASS",
-      "hash": "89b2273ec79dbd09"
+      "status": "PARTIAL",
+      "recorded": "89b2273ec79dbd09",
+      "artifact_sha256": "1033fb51df9f3589",
+      "note": "payload_hash does not match file hash \u2014 verify source"
     },
     {
-      "section": "hash",
+      "section": "hash_integrity",
       "check": "payload_hash_mazda",
-      "status": "PASS",
-      "hash": "22be446f19b73d41"
+      "status": "PARTIAL",
+      "recorded": "22be446f19b73d41",
+      "artifact_sha256": "7e41607281caeef5",
+      "note": "payload_hash does not match file hash \u2014 verify source"
     },
     {
-      "section": "hash",
+      "section": "hash_integrity",
       "check": "payload_hash_fipe_year",
       "status": "NOT_APPLICABLE",
-      "note": "Derived artifact, no independent payload hash"
+      "artifact_sha256": "65d22c31cd7549dd",
+      "note": "Derived artifact \u2014 payload_hash not applicable"
     },
     {
-      "section": "hash",
+      "section": "hash_integrity",
       "check": "payload_hash_hlm",
       "status": "NOT_APPLICABLE",
-      "note": "Derived artifact, no independent payload hash"
+      "artifact_sha256": "85c05634325008f6",
+      "note": "Derived artifact \u2014 payload_hash not applicable"
     },
     {
-      "section": "hash",
+      "section": "hash_integrity",
       "check": "payload_hash_thai_ref",
       "status": "NOT_APPLICABLE",
-      "note": "Derived artifact, no independent payload hash"
+      "artifact_sha256": "bc0167fa9b39f630",
+      "note": "Derived artifact \u2014 payload_hash not applicable"
     },
     {
-      "section": "hash",
+      "section": "hash_integrity",
       "check": "payload_hash_raw_universe",
       "status": "NOT_APPLICABLE",
-      "note": "Derived artifact, no independent payload hash"
+      "artifact_sha256": "822738835ae30f19",
+      "note": "Derived artifact \u2014 payload_hash not applicable"
     },
     {
-      "section": "hash",
+      "section": "hash_integrity",
       "check": "payload_hash_source_matrix",
       "status": "NOT_APPLICABLE",
-      "note": "Derived artifact, no independent payload hash"
+      "artifact_sha256": "97ae7035477f09f4",
+      "note": "Derived artifact \u2014 payload_hash not applicable"
     },
     {
       "section": "roles",
@@ -147,22 +170,40 @@
     },
     {
       "section": "openev",
-      "check": "hash_genuine",
+      "check": "hash_integrity",
       "status": "PASS"
     },
     {
+      "section": "openev",
+      "check": "content_anchor",
+      "status": "PASS",
+      "rows": 26
+    },
+    {
       "section": "hlm",
-      "check": "evidence_counts",
+      "check": "evidence_accounting",
       "status": "PASS",
       "total": 64,
       "with_article": 45,
       "without_article": 19,
+      "non_vehicle": 11,
+      "unresolved": 2,
+      "evidence_ratio": 0.7,
+      "source_status": "VERIFIED",
       "classifications": {
         "model-mention": 49,
         "non-vehicle": 11,
         "unresolved": 2,
         "variant-mention": 2
       }
+    },
+    {
+      "section": "hlm",
+      "check": "duplicate_post_audit",
+      "status": "PASS",
+      "unique_posts": 60,
+      "duplicate_posts": 10,
+      "note": "Duplicate post IDs = multi-mention articles (expected)"
     },
     {
       "section": "hlm",
@@ -179,8 +220,7 @@
       "section": "fipe",
       "check": "parent_resolution",
       "status": "PASS",
-      "resolved": 40,
-      "total_parents": 40
+      "resolved": 133
     },
     {
       "section": "counts",

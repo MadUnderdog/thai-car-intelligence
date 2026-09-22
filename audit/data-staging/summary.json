@@ -1,45 +1,61 @@
 {
-  "generated_at": "2026-09-22T18:04:14.695159",
-  "total_observations": 1673,
-  "unique_brands": 30,
-  "unique_models": 1617,
-  "unique_variants": 65,
-  "price_observations": 85,
-  "spec_observations": 48,
-  "unique_source_urls": 44,
-  "source_class_counts": {
-    "OEM_OFFICIAL": 88,
-    "STRUCTURED_REF": 1509,
-    "MEDIA_DISCOVERY": 54,
-    "MARKETPLACE": 22
+  "generated_at": "2026-09-22T18:21:47.581013",
+  "total_raw_observations": 1679,
+  "identity": {
+    "unique_brands": 27,
+    "unique_model_candidates": 1599,
+    "unique_variant_candidates": 173,
+    "identity_levels": {
+      "VARIANT": 174,
+      "MODEL_OR_TRIM_UNKNOWN": 1483,
+      "BRAND_ONLY": 22
+    },
+    "unknown_or_conflicted": 1505
   },
-  "source_name_counts": {
-    "Toyota Thailand Official": 35,
-    "Mazda Thailand Official": 10,
-    "Fipe API (Toyota)": 222,
-    "Fipe API (Honda)": 117,
-    "Fipe API (Mazda)": 25,
-    "Fipe API (BMW)": 323,
-    "Fipe API (Mercedes-Benz)": 563,
-    "Fipe API (Nissan)": 200,
-    "Fipe API (MG)": 11,
-    "Fipe API (BYD)": 22,
-    "open-ev-data": 26,
-    "HeadLightMag": 54,
-    "Thai Market Reference": 22,
-    "Honda Thailand Official": 20,
-    "BYD Thailand Official": 8,
-    "MG Thailand Official": 8,
-    "Nissan Thailand Official": 7
+  "value_data": {
+    "price_observations": 148,
+    "spec_observations": 0
+  },
+  "sources": {
+    "unique_source_urls": 1524,
+    "source_class_counts": {
+      "OEM_OFFICIAL": 148,
+      "STRUCTURED_REF": 1509,
+      "MARKET_REFERENCE": 22
+    },
+    "source_name_counts": {
+      "Toyota Thailand Official": 25,
+      "Honda Thailand Official": 20,
+      "BYD Thailand Official": 9,
+      "MG Thailand Official": 10,
+      "Nissan Thailand Official": 7,
+      "Mazda Thailand Official": 10,
+      "Mitsubishi Thailand Official": 10,
+      "Haval Thailand Official": 9,
+      "Ford Thailand Official": 12,
+      "Isuzu Thailand Official": 7,
+      "Suzuki Thailand Official": 7,
+      "Tesla Thailand Official": 6,
+      "BMW Thailand Official": 9,
+      "Mercedes-Benz Thailand Official": 7,
+      "Fipe API (Toyota)": 222,
+      "Fipe API (Honda)": 117,
+      "Fipe API (Mazda)": 25,
+      "Fipe API (BMW)": 323,
+      "Fipe API (Mercedes-Benz)": 563,
+      "Fipe API (Nissan)": 200,
+      "Fipe API (MG)": 11,
+      "Fipe API (BYD)": 22,
+      "open-ev-data": 26,
+      "Thai Market Reference (knowledge base)": 22
+    }
   },
   "brands": [
     "bmw",
-    "brand - bmw",
     "byd",
     "chevrolet",
     "fiat",
     "ford",
-    "gwm",
     "haval",
     "honda",
     "hyundai",
@@ -48,7 +64,6 @@
     "lexus",
     "mazda",
     "mercedes-benz",
-    "mercedes_benz",
     "mg",
     "mini",
     "mitsubishi",

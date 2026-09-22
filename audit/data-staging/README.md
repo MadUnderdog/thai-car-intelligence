@@ -1,40 +1,39 @@
 # Vehicle Data Staging Dataset
 
-**Generated**: 2026-09-22T18:04:14.695159
-**Total Observations**: 1673
+**Generated**: 2024-09-22 (from actual rows)
+**Total raw observations**: 1,679
 
-## Summary
+## Separate Counts
 
-- **Unique Brands**: 30
-- **Unique Models**: 1617
-- **Unique Variants**: 65
-- **Price Observations**: 85
-- **Spec Observations**: 48
-- **Unique Source URLs**: 44
+### Identity
+- **Brands**: 27
+- **Model candidates**: 1,599 (normalized brand:model pairs)
+- **Variant candidates**: 173 (normalized brand:model:variant triples)
+- **Identity levels**:
+  - VARIANT: 174 (OEM official prices with exact variant)
+  - MODEL_OR_TRIM_UNKNOWN: 1,483 (Fipe API — model or trim level unknown)
+  - BRAND_ONLY: 22 (Thai reference — make only, no model)
+- **Unknown/conflicted identities**: 1,505
 
-## Source Classes
+### Value Data
+- **Price observations**: 148 (OEM official variant MSRP)
+- **Spec observations**: 0 (pending next collection)
 
-- **STRUCTURED_REF**: 1509
-- **OEM_OFFICIAL**: 88
-- **MEDIA_DISCOVERY**: 54
-- **MARKETPLACE**: 22
+### Sources
+- **Unique source URLs**: 1,524
+- **By class**:
+  - OEM_OFFICIAL: 148 (Toyota/Honda/BYD/MG/Nissan/Mazda/Mitsubishi/Haval/Ford/Isuzu/Suzuki/Tesla/BMW/Mercedes-Benz)
+  - STRUCTURED_REF: 1,509 (Fipe API + open-ev-data)
+  - MARKET_REFERENCE: 22 (Thai market knowledge base)
 
-## Top Sources
-
-- **Fipe API (Mercedes-Benz)**: 563
-- **Fipe API (BMW)**: 323
-- **Fipe API (Toyota)**: 222
-- **Fipe API (Nissan)**: 200
-- **Fipe API (Honda)**: 117
-- **HeadLightMag**: 54
-- **Toyota Thailand Official**: 35
-- **open-ev-data**: 26
-- **Fipe API (Mazda)**: 25
-- **Fipe API (BYD)**: 22
-
-## Brands Covered
-
-bmw, brand - bmw, byd, chevrolet, fiat, ford, gwm, haval, honda, hyundai, isuzu, kia, lexus, mazda, mercedes-benz, mercedes_benz, mg, mini, mitsubishi, nio, nissan, nissan e.p., porsche, subaru, suzuki, tesla, toyota, volvo, xpeng, zeekr
+## Source Precedence
+- OEM_OFFICIAL: 100
+- GOVERNMENT_DLT: 95
+- STRUCTURED_REF: 80
+- MEDIA_DISCOVERY: 60
+- MARKET_REFERENCE: 50
+- MARKETPLACE: 40
+- USER_CONTRIBUTED: 20
 
 ## File Format
 
@@ -42,26 +41,16 @@ Each line in `vehicle_observations.jsonl` is a JSON object with:
 - `observation_id`: Unique identifier
 - `timestamp`: When collected
 - `source`: Source class, URL, name, precedence, native_id
-- `identity`: Brand/model/variant (raw and normalized)
+- `identity`: Brand/model/variant (raw and normalized), identity_level
 - `price`: Value, type, currency, currentness
 - `specs`: Field/value pairs
 - `raw_labels`: Original source labels
 - `evidence_excerpt`: Text evidence
 
-## Usage
-
-```python
-import json
-
-with open('vehicle_observations.jsonl') as f:
-    for line in f:
-        obs = json.loads(line)
-        # Process observation
-```
-
 ## Notes
 
 - All observations preserve raw labels alongside normalized keys
-- Nothing is thrown away — uncertain records are kept for later review
-- Source precedence guides ranking, not deletion
-- This is staging data — not verified/canonical
+- Fipe rows marked as MODEL_OR_TRIM_UNKNOWN (not assumed models)
+- Thai Reference is MARKET_REFERENCE (not marketplace)
+- Price currentness is UNKNOWN unless source evidence establishes currentness
+- Nothing is thrown away — uncertain records kept for review

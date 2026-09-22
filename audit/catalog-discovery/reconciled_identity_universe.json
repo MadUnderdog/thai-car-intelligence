@@ -1,10 +1,9 @@
 {
   "version": "1.0",
   "target_date": "2026-09-22",
-  "candidate_count": 44,
+  "candidate_count": 118,
   "candidates": [
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Yaris ATIV",
       "generation": "",
@@ -13,13 +12,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_0"
+        "toyota_0"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Yaris ATIV",
-          "source_id": "0",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -29,10 +28,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Yaris ATIV",
       "generation": "",
@@ -41,13 +40,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_1"
+        "toyota_1"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Yaris ATIV Nightshade",
-          "source_id": "1",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -57,10 +56,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "source_structure",
       "decomposition_confidence": "high",
-      "decomposition_evidence": "Source lists both 'Yaris ATIV' and 'Yaris ATIV Nightshade' as separate rows; 'Nightshade' is a recognized trim grade"
+      "decomposition_evidence": "Source lists both 'Yaris ATIV' and 'Yaris ATIV Nightshade' as separate rows; 'Nightshade' is a recognized trim grade",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Yaris ATIV",
       "generation": "",
@@ -69,13 +68,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_2"
+        "toyota_2"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Yaris ATIV GR Sport",
-          "source_id": "2",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -85,10 +84,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "source_structure",
       "decomposition_confidence": "high",
-      "decomposition_evidence": "Source lists both 'Yaris ATIV' and 'Yaris ATIV GR Sport' as separate rows; 'GR Sport' is a recognized trim grade"
+      "decomposition_evidence": "Source lists both 'Yaris ATIV' and 'Yaris ATIV GR Sport' as separate rows; 'GR Sport' is a recognized trim grade",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Yaris",
       "generation": "",
@@ -97,13 +96,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_3"
+        "toyota_3"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Yaris",
-          "source_id": "3",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -113,10 +112,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Yaris Cross",
       "generation": "",
@@ -125,13 +124,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_4"
+        "toyota_4"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Yaris Cross",
-          "source_id": "4",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -141,10 +140,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Yaris Cross",
       "generation": "",
@@ -153,13 +152,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_5"
+        "toyota_5"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Yaris Cross Nightshade",
-          "source_id": "5",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -169,10 +168,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "source_structure",
       "decomposition_confidence": "high",
-      "decomposition_evidence": "Source lists both 'Yaris Cross' and 'Yaris Cross Nightshade' as separate rows; 'Nightshade' is a recognized trim grade"
+      "decomposition_evidence": "Source lists both 'Yaris Cross' and 'Yaris Cross Nightshade' as separate rows; 'Nightshade' is a recognized trim grade",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Corolla Altis",
       "generation": "",
@@ -181,13 +180,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_6"
+        "toyota_6"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Corolla Altis",
-          "source_id": "6",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -197,10 +196,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Corolla Altis",
       "generation": "",
@@ -209,13 +208,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_7"
+        "toyota_7"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Corolla Altis GR Sport",
-          "source_id": "7",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -225,10 +224,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "source_structure",
       "decomposition_confidence": "high",
-      "decomposition_evidence": "Source lists both 'Corolla Altis' and 'Corolla Altis GR Sport' as separate rows; 'GR Sport' is a recognized trim grade"
+      "decomposition_evidence": "Source lists both 'Corolla Altis' and 'Corolla Altis GR Sport' as separate rows; 'GR Sport' is a recognized trim grade",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "CAMRY",
       "generation": "",
@@ -237,13 +236,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_8"
+        "toyota_8"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "CAMRY",
-          "source_id": "8",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -253,10 +252,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "GR 86",
       "generation": "",
@@ -265,13 +264,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_9"
+        "toyota_9"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "GR 86",
-          "source_id": "9",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -281,10 +280,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "GR Yaris",
       "generation": "",
@@ -293,13 +292,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_10"
+        "toyota_10"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "GR Yaris",
-          "source_id": "10",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -309,10 +308,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "GR Corolla",
       "generation": "",
@@ -321,13 +320,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_11"
+        "toyota_11"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "GR Corolla",
-          "source_id": "11",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -337,10 +336,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "GR Supra",
       "generation": "",
@@ -349,13 +348,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_12"
+        "toyota_12"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "GR Supra",
-          "source_id": "12",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -365,10 +364,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Corolla Cross",
       "generation": "",
@@ -377,13 +376,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_13"
+        "toyota_13"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Corolla Cross",
-          "source_id": "13",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -393,10 +392,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Corolla Cross",
       "generation": "",
@@ -405,13 +404,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_14"
+        "toyota_14"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Corolla Cross GR Sport",
-          "source_id": "14",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -421,10 +420,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "source_structure",
       "decomposition_confidence": "high",
-      "decomposition_evidence": "Source lists both 'Corolla Cross' and 'Corolla Cross GR Sport' as separate rows; 'GR Sport' is a recognized trim grade"
+      "decomposition_evidence": "Source lists both 'Corolla Cross' and 'Corolla Cross GR Sport' as separate rows; 'GR Sport' is a recognized trim grade",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "bZ4X",
       "generation": "",
@@ -433,13 +432,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_15"
+        "toyota_15"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "bZ4X",
-          "source_id": "15",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -449,10 +448,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Land Cruiser FJ",
       "generation": "",
@@ -461,13 +460,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_16"
+        "toyota_16"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Land Cruiser FJ",
-          "source_id": "16",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -477,10 +476,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Fortuner Leader",
       "generation": "",
@@ -489,13 +488,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_17"
+        "toyota_17"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Fortuner Leader",
-          "source_id": "17",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -505,10 +504,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Fortuner Legender",
       "generation": "",
@@ -517,13 +516,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_18"
+        "toyota_18"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Fortuner Legender",
-          "source_id": "18",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -533,10 +532,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Fortuner GR Sport",
       "generation": "",
@@ -545,13 +544,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_19"
+        "toyota_19"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Fortuner GR Sport",
-          "source_id": "19",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -561,10 +560,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Veloz",
       "generation": "",
@@ -573,13 +572,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_20"
+        "toyota_20"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Veloz",
-          "source_id": "20",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -589,10 +588,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Innova Zenix",
       "generation": "",
@@ -601,13 +600,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_21"
+        "toyota_21"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Innova Zenix",
-          "source_id": "21",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -617,10 +616,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Alphard",
       "generation": "",
@@ -629,13 +628,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_22"
+        "toyota_22"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Alphard",
-          "source_id": "22",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -645,10 +644,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Hilux Champ",
       "generation": "",
@@ -657,13 +656,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_23"
+        "toyota_23"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Hilux Champ",
-          "source_id": "23",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -673,10 +672,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Hilux Revo Standard Cab",
       "generation": "",
@@ -685,13 +684,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_24"
+        "toyota_24"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Hilux Revo Standard Cab",
-          "source_id": "24",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -701,10 +700,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Hilux Revo Z Edition",
       "generation": "",
@@ -713,13 +712,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_25"
+        "toyota_25"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Hilux Revo Z Edition",
-          "source_id": "25",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -729,10 +728,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Hilux Travo Standard Cab 4TREX",
       "generation": "",
@@ -741,13 +740,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_26"
+        "toyota_26"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Hilux Travo Standard Cab 4TREX",
-          "source_id": "26",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -757,10 +756,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Hilux Travo Prerunner & 4TREX",
       "generation": "",
@@ -769,13 +768,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_27"
+        "toyota_27"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Hilux Travo Prerunner & 4TREX",
-          "source_id": "27",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -785,10 +784,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Hilux Travo Overland",
       "generation": "",
@@ -797,13 +796,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_28"
+        "toyota_28"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Hilux Travo Overland",
-          "source_id": "28",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -813,10 +812,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Hilux Travo-e",
       "generation": "",
@@ -825,13 +824,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_29"
+        "toyota_29"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Hilux Travo-e",
-          "source_id": "29",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -841,10 +840,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Coaster",
       "generation": "",
@@ -853,13 +852,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_30"
+        "toyota_30"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Coaster",
-          "source_id": "30",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -869,10 +868,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Hiace",
       "generation": "",
@@ -881,13 +880,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_31"
+        "toyota_31"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Hiace",
-          "source_id": "31",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -897,10 +896,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Commuter",
       "generation": "",
@@ -909,13 +908,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_32"
+        "toyota_32"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Commuter",
-          "source_id": "32",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -925,10 +924,10 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Toyota",
       "model": "Majesty",
       "generation": "",
@@ -937,13 +936,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "toyota_flat_33"
+        "toyota_33"
       ],
       "source_representations": [
         {
           "source_name": "toyota_official_pricelist",
           "source_label": "Majesty",
-          "source_id": "33",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -953,25 +952,25 @@
       "price_source": "toyota_official_pricelist",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Mazda",
-      "model": "NEW MAZDA2 ESSENTIAL",
+      "model": "NEW MAZDA2 ESSENTIAL​",
       "generation": "",
       "body": "",
       "variant": "",
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "mazda_flat_0"
+        "mazda_0"
       ],
       "source_representations": [
         {
           "source_name": "mazda_official_lineup",
-          "source_label": "NEW MAZDA2 ESSENTIAL",
-          "source_id": "0",
+          "source_label": "NEW MAZDA2 ESSENTIAL​",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -981,10 +980,10 @@
       "price_source": "mazda_official_lineup",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Mazda",
       "model": "MAZDA3 FASTBACK",
       "generation": "",
@@ -993,13 +992,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "mazda_flat_1"
+        "mazda_1"
       ],
       "source_representations": [
         {
           "source_name": "mazda_official_lineup",
           "source_label": "MAZDA3 FASTBACK",
-          "source_id": "1",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -1009,10 +1008,10 @@
       "price_source": "mazda_official_lineup",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Mazda",
       "model": "MAZDA3 SEDAN",
       "generation": "",
@@ -1021,13 +1020,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "mazda_flat_2"
+        "mazda_2"
       ],
       "source_representations": [
         {
           "source_name": "mazda_official_lineup",
           "source_label": "MAZDA3 SEDAN",
-          "source_id": "2",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -1037,10 +1036,10 @@
       "price_source": "mazda_official_lineup",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Mazda",
       "model": "MAZDA6 20TH ANNIVERSARY EDITION",
       "generation": "",
@@ -1049,13 +1048,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "mazda_flat_3"
+        "mazda_3"
       ],
       "source_representations": [
         {
           "source_name": "mazda_official_lineup",
           "source_label": "MAZDA6 20TH ANNIVERSARY EDITION",
-          "source_id": "3",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -1065,10 +1064,10 @@
       "price_source": "mazda_official_lineup",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Mazda",
       "model": "THE ALL-ELECTRIC MAZDA6e",
       "generation": "",
@@ -1077,13 +1076,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "mazda_flat_4"
+        "mazda_4"
       ],
       "source_representations": [
         {
           "source_name": "mazda_official_lineup",
           "source_label": "THE ALL-ELECTRIC MAZDA6e",
-          "source_id": "4",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -1093,10 +1092,10 @@
       "price_source": "mazda_official_lineup",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Mazda",
       "model": "NEW MAZDA CX-3 ESSENTIAL",
       "generation": "",
@@ -1105,13 +1104,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "mazda_flat_5"
+        "mazda_5"
       ],
       "source_representations": [
         {
           "source_name": "mazda_official_lineup",
           "source_label": "NEW MAZDA CX-3 ESSENTIAL",
-          "source_id": "5",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -1121,10 +1120,10 @@
       "price_source": "mazda_official_lineup",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Mazda",
       "model": "NEW MAZDA CX-30 ESSENTIAL",
       "generation": "",
@@ -1133,13 +1132,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "mazda_flat_6"
+        "mazda_6"
       ],
       "source_representations": [
         {
           "source_name": "mazda_official_lineup",
           "source_label": "NEW MAZDA CX-30 ESSENTIAL",
-          "source_id": "6",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -1149,10 +1148,10 @@
       "price_source": "mazda_official_lineup",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Mazda",
       "model": "NEW MAZDA CX-5",
       "generation": "",
@@ -1161,13 +1160,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "mazda_flat_7"
+        "mazda_7"
       ],
       "source_representations": [
         {
           "source_name": "mazda_official_lineup",
           "source_label": "NEW MAZDA CX-5",
-          "source_id": "7",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -1177,10 +1176,10 @@
       "price_source": "mazda_official_lineup",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Mazda",
       "model": "MAZDA CX-8",
       "generation": "",
@@ -1189,13 +1188,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "mazda_flat_8"
+        "mazda_8"
       ],
       "source_representations": [
         {
           "source_name": "mazda_official_lineup",
           "source_label": "MAZDA CX-8",
-          "source_id": "8",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -1205,10 +1204,10 @@
       "price_source": "mazda_official_lineup",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
     },
     {
-      "canonical_id": "",
       "manufacturer": "Mazda",
       "model": "NEW MAZDA BT-50",
       "generation": "",
@@ -1217,13 +1216,13 @@
       "trim": "",
       "powertrain": "",
       "raw_node_ids": [
-        "mazda_flat_9"
+        "mazda_9"
       ],
       "source_representations": [
         {
           "source_name": "mazda_official_lineup",
           "source_label": "NEW MAZDA BT-50",
-          "source_id": "9",
+          "source_id": null,
           "node_type": "FLAT_ROW"
         }
       ],
@@ -1233,7 +1232,2080 @@
       "price_source": "mazda_official_lineup",
       "decomposition_method": "none",
       "decomposition_confidence": "none",
-      "decomposition_evidence": "Source is flat; no hierarchy declared"
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": ""
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "iX3",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_0"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "BMW iX3",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "ea52dd636e99"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "220i",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_1"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "BMW 220i",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "98d0dd7d276e"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "M340i",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_2"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "BMW M340i",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "a6c91d4d9c32"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "330i",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_3"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "BMW 330i",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "5a2b8acda406"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "320d",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_4"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "BMW 320d",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "693bb7ccaf47"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "ของวัยรุ่น",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_5"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "BMW ของวัยรุ่น",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "3b1d89cff497"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "218i",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_6"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "BMW 218i",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "1ecd3b0a8ff9"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Driving",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_7"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "BMW Driving",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "b9957771e069"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "PERSONA",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_8"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda PERSONA",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "1bd61fcd4664"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "CX-30",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_9"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda CX-30",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "5b19f35242c0"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "BT-50",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_10"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda BT-50",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "8f52453dc782"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "CX-30:",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_11"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda CX-30:",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "e007063dcbf0"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "3-รีรัน",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_12"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda 3-รีรัน",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "d4c1334f3903"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "CX-8",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_13"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda CX-8",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "c4865bcd3bda"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "CX-5",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_14"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda CX-5",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "38e550115d37"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "CX-3",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_15"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda CX-3",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "fe743e20ba38"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "ROADPACER",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_16"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda ROADPACER",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "70a641c745d4"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "CX-9",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_17"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda CX-9",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "2b922e0a2a85"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MX-5",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_18"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda MX-5",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "46cc556c8b43"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "New",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_19"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mazda New",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "acd6f47754e1"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CIVIC",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_20"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda CIVIC",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "c03c11cf592b"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Super-ONE",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_21"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda Super-ONE",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "786174f46b1f"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "WR-V",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_22"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda WR-V",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "95ca3836d792"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "e:N1",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_23"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda e:N1",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "3e8d629c57ec"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Civic",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_24"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda Civic",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "c03c11cf592b"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CR-V",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_25"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda CR-V",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "6379a6d67778"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "BR-V",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_26"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda BR-V",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "7ca952eec25e"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Accord",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_27"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda Accord",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "5e6e8c45f0b8"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "HR-V",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_28"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda HR-V",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "916568880bf3"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "City",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_29"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda City",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "ce6e9e5447cc"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CITY",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_30"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda CITY",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "ce6e9e5447cc"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Clarity-เรือนร่างแห่งปัจจุบัน..บนเทคโนโลยีแห่งอนาคต",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_31"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda Clarity-เรือนร่างแห่งปัจจุบัน..บนเทคโนโลยีแห่งอนาคต",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "5cab42f8a852"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "R&#038;D,",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_32"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Honda R&#038;D,",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "00194d62954d"
+    },
+    {
+      "manufacturer": "Mercedes",
+      "model": "AMG",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_33"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Mercedes AMG",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "1192ad95c39d"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "URBAN",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_34"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "MG URBAN",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "d957bed80f3d"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Maxus",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_35"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "MG Maxus",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "833fb96e40eb"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Extender",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_36"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "MG Extender",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "d2dc2e830b57"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "HS,",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_37"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "MG HS,",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "11f86c8aba95"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "RX8",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_38"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "MG RX8",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "19f469ae8da9"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "KICKS",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_39"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan KICKS",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "a934f4800712"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "QUEST",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_40"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan QUEST",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "371785894b75"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "X-TRAIL",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_41"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan X-TRAIL",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "69fda152994d"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "SERENA",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_42"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan SERENA",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "38d81045fa8b"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "SUNNY",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_43"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan SUNNY",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "42a3ef6826f8"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "AD-1",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_44"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan AD-1",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "99a430fbd028"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Navara",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_45"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan Navara",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "ec1669e1c745"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "LEAF",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_46"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan LEAF",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "32efec02ca47"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "TERRA",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_47"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan TERRA",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "a71e4346f6aa"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Terra",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_48"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan Terra",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "a71e4346f6aa"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Almera",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_49"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan Almera",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "1983837ef0f5"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "NAVARA",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_50"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan NAVARA",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "ec1669e1c745"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Kicks",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_51"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan Kicks",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "a934f4800712"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "ALMERA",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_52"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan ALMERA",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "1983837ef0f5"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Note",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_53"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan Note",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "446422d4f948"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "NOTE",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_54"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan NOTE",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "446422d4f948"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "GT-R",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_55"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan GT-R",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "5ae331494bf8"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "PRESEA",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_56"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan PRESEA",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "ae076c4ca5fa"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "SYLPHY",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_57"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan SYLPHY",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "fa11ca0e40cf"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Sylphy",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_58"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Nissan Sylphy",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "fa11ca0e40cf"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "บ้านโพธิ์",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_59"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota บ้านโพธิ์",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "d8d6d29b72e4"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "WiLL",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_60"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota WiLL",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "a9fff04a451f"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Hilux",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_61"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota Hilux",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "bf98bd3b121a"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "YARIS",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_62"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota YARIS",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "25cd4c963807"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "CYNOS",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_63"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota CYNOS",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "1d0eb21e62d5"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "CELICA",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_64"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota CELICA",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "326a66b0961b"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Origin",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_65"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota Origin",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "b5e213b6dcd6"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Yaris",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_66"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota Yaris",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "25cd4c963807"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "VELOZ",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_67"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota VELOZ",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "b174dba26446"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Corolla",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_68"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota Corolla",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "5efeaae8dbc3"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "C-HR",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_69"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota C-HR",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "355649aa61b9"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Camry",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_70"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota Camry",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "c7b9315a8a1f"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Fortuner",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_71"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota Fortuner",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "ee0b506ea5aa"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "COROLLA",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_72"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota COROLLA",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "5efeaae8dbc3"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Majesty",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "hl_73"
+      ],
+      "source_representations": [
+        {
+          "source_name": "headlightmag_wordpress_categories",
+          "source_label": "Toyota Majesty",
+          "source_id": "",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 0,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "headlightmag_wordpress_categories",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared",
+      "candidate_id": "db1d734e9679"
     }
   ]
 }

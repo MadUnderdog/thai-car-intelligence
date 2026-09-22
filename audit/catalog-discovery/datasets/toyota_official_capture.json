@@ -1,0 +1,147 @@
+{
+  "source": "toyota_official_pricelist",
+  "url": "https://www.toyota.co.th/en/pricelist",
+  "observed_at": "2026-09-22T14:24:03.036498",
+  "acquisition_method": "playwright",
+  "payload_hash": "89b2273ec79dbd09",
+  "content_length": 357424,
+  "text_length": 7446,
+  "models": [
+    {
+      "name": "Yaris ATIV",
+      "price": 569000
+    },
+    {
+      "name": "Yaris ATIV Nightshade",
+      "price": 709000
+    },
+    {
+      "name": "Yaris ATIV GR Sport",
+      "price": 779000
+    },
+    {
+      "name": "Yaris",
+      "price": 584000
+    },
+    {
+      "name": "Yaris Cross",
+      "price": 809000
+    },
+    {
+      "name": "Yaris Cross Nightshade",
+      "price": 929000
+    },
+    {
+      "name": "Corolla Altis",
+      "price": 909000
+    },
+    {
+      "name": "Corolla Altis GR Sport",
+      "price": 1129000
+    },
+    {
+      "name": "CAMRY",
+      "price": 1475000
+    },
+    {
+      "name": "GR 86",
+      "price": 2999000
+    },
+    {
+      "name": "GR Yaris",
+      "price": 3499000
+    },
+    {
+      "name": "GR Corolla",
+      "price": 4199000
+    },
+    {
+      "name": "GR Supra",
+      "price": 5349000
+    },
+    {
+      "name": "Corolla Cross",
+      "price": 989000
+    },
+    {
+      "name": "Corolla Cross GR Sport",
+      "price": 1254000
+    },
+    {
+      "name": "bZ4X",
+      "price": 1529000
+    },
+    {
+      "name": "Land Cruiser FJ",
+      "price": 1289000
+    },
+    {
+      "name": "Fortuner Leader",
+      "price": 1239000
+    },
+    {
+      "name": "Fortuner Legender",
+      "price": 1643000
+    },
+    {
+      "name": "Fortuner GR Sport",
+      "price": 1969000
+    },
+    {
+      "name": "Veloz",
+      "price": 795000
+    },
+    {
+      "name": "Innova Zenix",
+      "price": 1379000
+    },
+    {
+      "name": "Alphard",
+      "price": 3590000
+    },
+    {
+      "name": "Hilux Champ",
+      "price": 519000
+    },
+    {
+      "name": "Hilux Revo Standard Cab",
+      "price": 584000
+    },
+    {
+      "name": "Hilux Revo Z Edition",
+      "price": 669000
+    },
+    {
+      "name": "Hilux Travo Standard Cab 4TREX",
+      "price": 767000
+    },
+    {
+      "name": "Hilux Travo Prerunner & 4TREX",
+      "price": 789000
+    },
+    {
+      "name": "Hilux Travo Overland",
+      "price": 1102000
+    },
+    {
+      "name": "Hilux Travo-e",
+      "price": 1491000
+    },
+    {
+      "name": "Coaster",
+      "price": 2175000
+    },
+    {
+      "name": "Hiace",
+      "price": 1069000
+    },
+    {
+      "name": "Commuter",
+      "price": 1339000
+    },
+    {
+      "name": "Majesty",
+      "price": 1994000
+    }
+  ]
+}

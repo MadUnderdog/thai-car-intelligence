@@ -1,103 +1,30 @@
 {
-  "generated_at": "2026-09-22T14:34:06.876969+00:00",
+  "generated_at": "2026-09-22T17:35:45.710715+00:00",
   "project": "thai-car-intelligence",
-  "commit_sha_verified": "1ce622068a041aa68597e7003da2df989db6d32d",
-  "remote_sha": "1ce622068a041aa68597e7003da2df989db6d32d",
+  "commit_sha_verified": "b0aed37993c42b148bc16769a1543973d4175230",
+  "remote_sha": "b0aed37993c42b148bc16769a1543973d4175230",
   "local_equals_remote": true,
-  "verifier_summary": {
-    "total_checks": 36,
-    "passed": 27,
-    "failed": 0,
-    "partial": 4,
-    "blocked": 0,
-    "not_applicable": 5
-  },
-  "source_inventory": {
-    "fipe_models": {
-      "role": "IDENTITY_ENUMERATOR",
-      "rows": 1483,
-      "status": "PARTIAL"
-    },
-    "fipe_year": {
-      "role": "IDENTITY_ENUMERATOR",
-      "rows": 133,
-      "status": "PARTIAL"
-    },
-    "openev": {
-      "role": "IDENTITY_ENUMERATOR",
-      "rows": 26,
-      "status": "PARTIAL"
-    },
-    "toyota": {
-      "role": "MARKET_TRUTH",
-      "rows": 34,
-      "status": "CAPTURED"
-    },
-    "mazda": {
-      "role": "MARKET_TRUTH",
-      "rows": 10,
-      "status": "CAPTURED"
-    },
-    "thai_ref": {
-      "role": "MARKET_REFERENCE",
-      "rows": 22,
-      "status": "UNVERIFIED"
-    },
-    "hlm": {
-      "role": "MEDIA_DISCOVERY",
-      "rows": 64,
-      "status": "PARTIAL"
-    }
-  },
-  "source_accounting": {
-    "openev": {
-      "raw": 26,
-      "status": "PARTIAL",
-      "note": "No pipeline state preserved"
-    },
-    "hlm": {
-      "raw": 64,
-      "model_mentions": 49,
-      "variant_mentions": 2,
-      "non_vehicle": 11,
-      "unresolved": 2,
-      "equation_balanced": true
-    },
-    "fipe_models": {
-      "raw": 1483,
-      "status": "PARTIAL",
-      "note": "No pipeline state preserved"
-    },
-    "fipe_year": {
-      "raw": 133,
-      "status": "PARTIAL",
-      "note": "Reconstructed from cached API"
-    }
-  },
-  "mutation_tests": 12,
-  "tests_passed": 44,
-  "changed_files": [
-    "lib/thai_factory/catalog/verifier.py",
-    "tests/test_taxonomy_provenance.py",
-    "audit/catalog-discovery/verifier_output.json",
-    "audit/catalog-discovery/full_forensic_report.md",
-    "audit/catalog-discovery/full_forensic_report.json"
+  "architecture_pivot": "Two-lane pipeline (Discovery/Quarantine + Acceptance/Promotion)",
+  "new_components": [
+    "lib/thai_factory/acceptance/evidence_packet.py",
+    "lib/thai_factory/acceptance/runner.py",
+    "lib/thai_factory/acceptance/ledger.py",
+    "tests/test_gold_set.py"
   ],
-  "known_findings": [
-    "HLM evidence accounting: PARTIAL \u2014 19 entries lack article evidence",
-    "HLM semantic mapping: PARTIAL \u2014 some same-brand multi-model articles",
-    "Source accounting: PARTIAL \u2014 OpenEV/Fipe lack pipeline state preservation",
-    "OpenEV object existence: PARTIAL \u2014 GitHub API verification attempted",
-    "10 duplicate HLM post IDs (expected multi-mention)",
-    "26 OpenEV rows lack source_native_id (upstream)",
-    "133 Fipe year rows reconstructed (not fresh API)",
-    "Thai market reference: 22 makes all UNVERIFIED",
-    "pre-existing import error in tests/test_generation_config_boundary.py"
-  ],
-  "unresolved_blockers": [
+  "gold_set_tests": 10,
+  "gold_set_passed": 10,
+  "total_tests_passed": 54,
+  "blockers": [
+    "pre-existing import error in test_generation_config_boundary.py",
     "Fipe API rate limited (429, ~22h retry)",
     "Thai DLT not accessible (timeout)",
-    "Third-party taxonomy sites blocked (WAF/JS/SSL)",
-    "pre-existing import error in test_generation_config_boundary.py"
+    "Third-party taxonomy sites blocked (WAF/JS/SSL)"
+  ],
+  "next_steps": [
+    "Database forensic audit: inspect 174 price rows + 6,985 VariantSpec rows",
+    "HLM semantic contract: independently fetch/verify WordPress posts",
+    "OpenEV contract: GitHub API object metadata / Git tree verification",
+    "Build acceptance runner integration with live DB",
+    "Reconciliation ledger with row-level provenance"
   ]
 }

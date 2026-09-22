@@ -98,7 +98,7 @@ def _is_nav_block(block):
     if block.block_type == "list" and t.count("http") > 2:
         return True
     # Reject blocks that are clearly sidebar/related content
-    if any(kw in t.lower() for kw in ["must read", "related news", "share", "facebook.com/sharer"]):
+    if any(kw in t.lower() for kw in ["must read", "related news", "facebook.com/sharer"]):
         return True
     if re.match(r'^\d+\s+(?:Article|News|Like|Read)', t):
         return True

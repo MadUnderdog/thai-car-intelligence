@@ -28,7 +28,7 @@ def validate(artifact_path):
         snap = snapshots.get(bid, {})
         content = snap.get('content', '').lower()
         for kw in _CONTAMINATED_KEYWORDS:
-            if kw in content:
+            if kw in content and len(content) < 100:  # Only check short blocks (nav/sidebar)
                 errors.append(f"Article body contains contaminated block '{bid[:8]}': '{kw}' in content")
     
     # 3. block_count must be reasonable

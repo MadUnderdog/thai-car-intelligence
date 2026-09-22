@@ -1,0 +1,1239 @@
+{
+  "version": "1.0",
+  "target_date": "2026-09-22",
+  "candidate_count": 44,
+  "candidates": [
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Yaris ATIV",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_0"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Yaris ATIV",
+          "source_id": "0",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 569000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Yaris ATIV",
+      "generation": "",
+      "body": "",
+      "variant": "Nightshade",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_1"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Yaris ATIV Nightshade",
+          "source_id": "1",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 709000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "source_structure",
+      "decomposition_confidence": "high",
+      "decomposition_evidence": "Source lists both 'Yaris ATIV' and 'Yaris ATIV Nightshade' as separate rows; 'Nightshade' is a recognized trim grade"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Yaris ATIV",
+      "generation": "",
+      "body": "",
+      "variant": "GR Sport",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_2"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Yaris ATIV GR Sport",
+          "source_id": "2",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 779000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "source_structure",
+      "decomposition_confidence": "high",
+      "decomposition_evidence": "Source lists both 'Yaris ATIV' and 'Yaris ATIV GR Sport' as separate rows; 'GR Sport' is a recognized trim grade"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Yaris",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_3"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Yaris",
+          "source_id": "3",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 584000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Yaris Cross",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_4"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Yaris Cross",
+          "source_id": "4",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 809000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Yaris Cross",
+      "generation": "",
+      "body": "",
+      "variant": "Nightshade",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_5"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Yaris Cross Nightshade",
+          "source_id": "5",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 929000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "source_structure",
+      "decomposition_confidence": "high",
+      "decomposition_evidence": "Source lists both 'Yaris Cross' and 'Yaris Cross Nightshade' as separate rows; 'Nightshade' is a recognized trim grade"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Corolla Altis",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_6"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Corolla Altis",
+          "source_id": "6",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 909000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Corolla Altis",
+      "generation": "",
+      "body": "",
+      "variant": "GR Sport",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_7"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Corolla Altis GR Sport",
+          "source_id": "7",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1129000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "source_structure",
+      "decomposition_confidence": "high",
+      "decomposition_evidence": "Source lists both 'Corolla Altis' and 'Corolla Altis GR Sport' as separate rows; 'GR Sport' is a recognized trim grade"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "CAMRY",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_8"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "CAMRY",
+          "source_id": "8",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1475000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "GR 86",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_9"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "GR 86",
+          "source_id": "9",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 2999000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "GR Yaris",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_10"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "GR Yaris",
+          "source_id": "10",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 3499000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "GR Corolla",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_11"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "GR Corolla",
+          "source_id": "11",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 4199000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "GR Supra",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_12"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "GR Supra",
+          "source_id": "12",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 5349000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Corolla Cross",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_13"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Corolla Cross",
+          "source_id": "13",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 989000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Corolla Cross",
+      "generation": "",
+      "body": "",
+      "variant": "GR Sport",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_14"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Corolla Cross GR Sport",
+          "source_id": "14",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1254000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "source_structure",
+      "decomposition_confidence": "high",
+      "decomposition_evidence": "Source lists both 'Corolla Cross' and 'Corolla Cross GR Sport' as separate rows; 'GR Sport' is a recognized trim grade"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "bZ4X",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_15"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "bZ4X",
+          "source_id": "15",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1529000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Land Cruiser FJ",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_16"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Land Cruiser FJ",
+          "source_id": "16",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1289000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Fortuner Leader",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_17"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Fortuner Leader",
+          "source_id": "17",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1239000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Fortuner Legender",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_18"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Fortuner Legender",
+          "source_id": "18",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1643000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Fortuner GR Sport",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_19"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Fortuner GR Sport",
+          "source_id": "19",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1969000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Veloz",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_20"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Veloz",
+          "source_id": "20",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 795000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Innova Zenix",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_21"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Innova Zenix",
+          "source_id": "21",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1379000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Alphard",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_22"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Alphard",
+          "source_id": "22",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 3590000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Hilux Champ",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_23"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Hilux Champ",
+          "source_id": "23",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 519000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Hilux Revo Standard Cab",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_24"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Hilux Revo Standard Cab",
+          "source_id": "24",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 584000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Hilux Revo Z Edition",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_25"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Hilux Revo Z Edition",
+          "source_id": "25",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 669000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Hilux Travo Standard Cab 4TREX",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_26"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Hilux Travo Standard Cab 4TREX",
+          "source_id": "26",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 767000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Hilux Travo Prerunner & 4TREX",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_27"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Hilux Travo Prerunner & 4TREX",
+          "source_id": "27",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 789000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Hilux Travo Overland",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_28"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Hilux Travo Overland",
+          "source_id": "28",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1102000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Hilux Travo-e",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_29"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Hilux Travo-e",
+          "source_id": "29",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1491000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Coaster",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_30"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Coaster",
+          "source_id": "30",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 2175000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Hiace",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_31"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Hiace",
+          "source_id": "31",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1069000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Commuter",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_32"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Commuter",
+          "source_id": "32",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1339000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Toyota",
+      "model": "Majesty",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "toyota_flat_33"
+      ],
+      "source_representations": [
+        {
+          "source_name": "toyota_official_pricelist",
+          "source_label": "Majesty",
+          "source_id": "33",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1994000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "toyota_official_pricelist",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "mazda_flat_0"
+      ],
+      "source_representations": [
+        {
+          "source_name": "mazda_official_lineup",
+          "source_label": "NEW MAZDA2 ESSENTIAL",
+          "source_id": "0",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 529000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "mazda_official_lineup",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 FASTBACK",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "mazda_flat_1"
+      ],
+      "source_representations": [
+        {
+          "source_name": "mazda_official_lineup",
+          "source_label": "MAZDA3 FASTBACK",
+          "source_id": "1",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 979000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "mazda_official_lineup",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "mazda_flat_2"
+      ],
+      "source_representations": [
+        {
+          "source_name": "mazda_official_lineup",
+          "source_label": "MAZDA3 SEDAN",
+          "source_id": "2",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 979000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "mazda_official_lineup",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Mazda",
+      "model": "MAZDA6 20TH ANNIVERSARY EDITION",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "mazda_flat_3"
+      ],
+      "source_representations": [
+        {
+          "source_name": "mazda_official_lineup",
+          "source_label": "MAZDA6 20TH ANNIVERSARY EDITION",
+          "source_id": "3",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 2499000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "mazda_official_lineup",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Mazda",
+      "model": "THE ALL-ELECTRIC MAZDA6e",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "mazda_flat_4"
+      ],
+      "source_representations": [
+        {
+          "source_name": "mazda_official_lineup",
+          "source_label": "THE ALL-ELECTRIC MAZDA6e",
+          "source_id": "4",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1169000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "mazda_official_lineup",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-3 ESSENTIAL",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "mazda_flat_5"
+      ],
+      "source_representations": [
+        {
+          "source_name": "mazda_official_lineup",
+          "source_label": "NEW MAZDA CX-3 ESSENTIAL",
+          "source_id": "5",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 699000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "mazda_official_lineup",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "mazda_flat_6"
+      ],
+      "source_representations": [
+        {
+          "source_name": "mazda_official_lineup",
+          "source_label": "NEW MAZDA CX-30 ESSENTIAL",
+          "source_id": "6",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 899000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "mazda_official_lineup",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-5",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "mazda_flat_7"
+      ],
+      "source_representations": [
+        {
+          "source_name": "mazda_official_lineup",
+          "source_label": "NEW MAZDA CX-5",
+          "source_id": "7",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1219000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "mazda_official_lineup",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Mazda",
+      "model": "MAZDA CX-8",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "mazda_flat_8"
+      ],
+      "source_representations": [
+        {
+          "source_name": "mazda_official_lineup",
+          "source_label": "MAZDA CX-8",
+          "source_id": "8",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 1549000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "mazda_official_lineup",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    },
+    {
+      "canonical_id": "",
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "generation": "",
+      "body": "",
+      "variant": "",
+      "trim": "",
+      "powertrain": "",
+      "raw_node_ids": [
+        "mazda_flat_9"
+      ],
+      "source_representations": [
+        {
+          "source_name": "mazda_official_lineup",
+          "source_label": "NEW MAZDA BT-50",
+          "source_id": "9",
+          "node_type": "FLAT_ROW"
+        }
+      ],
+      "source_count": 1,
+      "price_thb": 762000,
+      "price_evidence_level": "UNKNOWN",
+      "price_source": "mazda_official_lineup",
+      "decomposition_method": "none",
+      "decomposition_confidence": "none",
+      "decomposition_evidence": "Source is flat; no hierarchy declared"
+    }
+  ]
+}

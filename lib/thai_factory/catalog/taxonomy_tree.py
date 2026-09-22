@@ -1,44 +1,27 @@
 """
-Taxonomy Tree — raw source-native hierarchy + normalized candidate graph.
+Taxonomy Tree — raw source-native hierarchy.
 Two artifacts: raw_taxonomy_universe.json + reconciled_identity_universe.json.
 """
 import hashlib
 import json
-import re
 from dataclasses import dataclass, field, asdict
-from enum import Enum
-from typing import List, Dict, Optional, Set, Tuple
+from typing import List, Dict, Optional
 from datetime import datetime
-
-
-class NodeType(Enum):
-    MANUFACTURER = "MANUFACTURER"
-    MODEL = "MODEL"
-    GENERATION = "GENERATION"
-    BODY = "BODY"
-    VARIANT = "VARIANT"
-    POWERTRAIN = "POWERTRAIN"
-    UNKNOWN = "UNKNOWN"
-
-
-class SourceRole(Enum):
-    IDENTITY_ENUMERATOR = "IDENTITY_ENUMERATOR"
-    MARKET_TRUTH = "MARKET_TRUTH"
 
 
 @dataclass
 class TaxonomyNode:
     """Single node in the source-native taxonomy tree."""
     source_id: str
-    source_role: str
+    source_role: str  # MARKET_TRUTH | IDENTITY_ENUMERATOR
     source_url: str
     source_name: str
     
     source_native_id: str = ""
     source_native_label: str = ""
-    parent_native_id: str = ""
+    parent_native_id: str = ""  # empty for root nodes
     
-    node_type: str = "UNKNOWN"
+    node_type: str = "FLAT_ROW"  # MANUFACTURER | MODEL | GENERATION | BODY | VARIANT | POWERTRAIN | FLAT_ROW
     
     year_model_year: str = ""
     generation_name: str = ""
@@ -48,18 +31,11 @@ class TaxonomyNode:
     powertrain: str = ""
     
     price_thb: int = 0
-    price_level: str = "UNKNOWN"  # MODEL | GENERATION | VARIANT | POWERTRAIN | UNKNOWN
+    price_evidence_level: str = "UNKNOWN"  # MODEL | GENERATION | VARIANT | POWERTRAIN | UNKNOWN
     
     observed_at: str = ""
-    effective_from: str = ""
-    effective_to: str = ""
-    
     evidence_context: str = ""
     raw_payload_hash: str = ""
-    
-    # For decomposition tracking
-    raw_label: str = ""
-    decomposed_from: str = ""  # Which parent node this was decomposed from
 
 
 @dataclass
@@ -88,7 +64,7 @@ class RawTaxonomyTree:
 
 
 @dataclass
-class NormalizedCandidate:
+class ReconciledCandidate:
     """Normalized identity candidate with decomposition."""
     canonical_id: str = ""
     
@@ -100,14 +76,17 @@ class NormalizedCandidate:
     trim: str = ""
     powertrain: str = ""
     
+    raw_node_ids: List[str] = field(default_factory=list)
     source_representations: List[Dict] = field(default_factory=list)
     source_count: int = 0
     
     price_thb: int = 0
-    price_level: str = "UNKNOWN"
+    price_evidence_level: str = "UNKNOWN"
     price_source: str = ""
     
-    decompositions: List[Dict] = field(default_factory=list)
+    decomposition_method: str = ""  # source_structure | suffix_pattern | none
+    decomposition_confidence: str = ""  # high | medium | low | none
+    decomposition_evidence: str = ""
     
     def compute_id(self):
         parts = [
@@ -119,90 +98,15 @@ class NormalizedCandidate:
         self.canonical_id = hashlib.sha256("|".join(parts).encode()).hexdigest()[:12]
 
 
-class TaxonomyNormalizer:
-    """Decomposes source labels into model/variant hierarchy."""
+def build_raw_toyota() -> RawTaxonomyTree:
+    """Build raw taxonomy from Toyota official pricelist.
     
-    # Known trim/grade suffixes (used as fallback only)
-    TRIM_SUFFIXES = [
-        "GR Sport", "GR-S", "RS", "e:HEV", "HEV", "EV", "PHEV",
-        "Leader", "Legender", "Standard", "Prerunner", "4TREX",
-        "Essential", "Fastback", "Sedan", "Crossover",
-        "Nightshade", "Overland", "Champ",
-        "Standard Cab", "Double Cab", "Smart Cab",
-        "Z Edition", "R Plus", "S Plus",
-    ]
-    
-    # Known body patterns
-    BODY_PATTERNS = [
-        "Standard Cab", "Double Cab", "Smart Cab", "Mega Cab",
-        "Fastback", "Sedan", "SUV", "Crossover", "Hatchback",
-        "Pickup", "PPV", "MPV", "Van",
-    ]
-    
-    def decompose_label(self, label: str, parent_label: str = "") -> Dict:
-        """Decompose a source label into model/variant hierarchy.
-        
-        Uses signals:
-        1. Parent-child relationship from source
-        2. URL path structure
-        3. Explicit headings
-        4. Price-list row structure
-        5. Naming patterns (fallback only)
-        """
-        result = {
-            "raw_label": label,
-            "model": "",
-            "generation": "",
-            "body": "",
-            "variant": "",
-            "trim": "",
-            "powertrain": "",
-            "confidence": "low",
-        }
-        
-        # If we have parent, use it as model hint
-        if parent_label:
-            # Check if label starts with parent
-            if label.lower().startswith(parent_label.lower()):
-                remainder = label[len(parent_label):].strip()
-                if remainder:
-                    result["model"] = parent_label
-                    result["variant"] = remainder
-                    result["confidence"] = "medium"
-                    return result
-        
-        # Try to decompose by known patterns
-        for body in self.BODY_PATTERNS:
-            if body.lower() in label.lower():
-                parts = label.split(body, 1)
-                result["model"] = parts[0].strip()
-                result["body"] = body
-                if len(parts) > 1 and parts[1].strip():
-                    result["variant"] = parts[1].strip()
-                result["confidence"] = "medium"
-                return result
-        
-        # Try trim suffix decomposition
-        for trim in self.TRIM_SUFFIXES:
-            if trim.lower() in label.lower():
-                parts = label.split(trim, 1)
-                model_part = parts[0].strip()
-                if model_part:
-                    result["model"] = model_part
-                    result["variant"] = trim
-                    result["confidence"] = "low"
-                    return result
-        
-        # No decomposition possible
-        result["model"] = label
-        result["confidence"] = "none"
-        return result
-
-
-def build_raw_taxonomy_toyota() -> RawTaxonomyTree:
-    """Build raw taxonomy from Toyota official pricelist."""
+    IMPORTANT: The source is a FLAT price list with no explicit hierarchy.
+    Every row is a FLAT_ROW. We do NOT falsely declare MODEL vs VARIANT.
+    The hierarchy will be inferred during reconciliation with evidence.
+    """
     tree = RawTaxonomyTree(
-        source_name="toyota_official",
+        source_name="toyota_official_pricelist",
         source_url="https://www.toyota.co.th/en/pricelist",
         source_role="MARKET_TRUTH",
         observed_at=datetime.now().isoformat(),
@@ -210,8 +114,8 @@ def build_raw_taxonomy_toyota() -> RawTaxonomyTree:
     )
     
     # Real Toyota data from official pricelist
-    # Format: (source_label, price_thb)
-    models = [
+    # These are FLAT rows — the source does not explicitly declare hierarchy
+    rows = [
         ("Yaris ATIV", 569000),
         ("Yaris ATIV Nightshade", 709000),
         ("Yaris ATIV GR Sport", 779000),
@@ -248,37 +152,41 @@ def build_raw_taxonomy_toyota() -> RawTaxonomyTree:
         ("Majesty", 1994000),
     ]
     
-    for i, (label, price) in enumerate(models):
+    for i, (label, price) in enumerate(rows):
         node = TaxonomyNode(
-            source_id=f"toyota_{i}",
+            source_id=f"toyota_flat_{i}",
             source_role="MARKET_TRUTH",
             source_url="https://www.toyota.co.th/en/pricelist",
-            source_name="toyota_official",
+            source_name="toyota_official_pricelist",
             source_native_id=str(i),
             source_native_label=label,
-            node_type="MODEL",  # Will be decomposed later
+            node_type="FLAT_ROW",  # Honest: source is flat, no hierarchy declared
             price_thb=price,
-            price_level="UNKNOWN",
+            price_evidence_level="UNKNOWN",  # Cannot determine level from flat source
             observed_at=tree.observed_at,
-            evidence_context=f"Price list entry: {label} = ฿{price:,}",
-            raw_label=label,
+            evidence_context=f"Price list row: {label} = ฿{price:,}",
         )
         tree.add_node(node)
     
     return tree
 
 
-def build_raw_taxonomy_mazda() -> RawTaxonomyTree:
-    """Build raw taxonomy from Mazda official lineup."""
+def build_raw_mazda() -> RawTaxonomyTree:
+    """Build raw taxonomy from Mazda official lineup.
+    
+    The source shows models with "Starting from X THB".
+    Marketing prefixes like "NEW" and body suffixes are part of the label.
+    We preserve them as-is and do not decompose at raw level.
+    """
     tree = RawTaxonomyTree(
-        source_name="mazda_official",
+        source_name="mazda_official_lineup",
         source_url="https://www.mazda.co.th/en/vehicles",
         source_role="MARKET_TRUTH",
         observed_at=datetime.now().isoformat(),
         acquisition_method="playwright",
     )
     
-    models = [
+    rows = [
         ("NEW MAZDA2 ESSENTIAL", 529000),
         ("MAZDA3 FASTBACK", 979000),
         ("MAZDA3 SEDAN", 979000),
@@ -291,20 +199,19 @@ def build_raw_taxonomy_mazda() -> RawTaxonomyTree:
         ("NEW MAZDA BT-50", 762000),
     ]
     
-    for i, (label, price) in enumerate(models):
+    for i, (label, price) in enumerate(rows):
         node = TaxonomyNode(
-            source_id=f"mazda_{i}",
+            source_id=f"mazda_flat_{i}",
             source_role="MARKET_TRUTH",
             source_url="https://www.mazda.co.th/en/vehicles",
-            source_name="mazda_official",
+            source_name="mazda_official_lineup",
             source_native_id=str(i),
             source_native_label=label,
-            node_type="MODEL",
+            node_type="FLAT_ROW",
             price_thb=price,
-            price_level="UNKNOWN",
+            price_evidence_level="UNKNOWN",
             observed_at=tree.observed_at,
-            evidence_context=f"Lineup entry: {label} = ฿{price:,}",
-            raw_label=label,
+            evidence_context=f"Lineup row: {label} = ฿{price:,}",
         )
         tree.add_node(node)
     

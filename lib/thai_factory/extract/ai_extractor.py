@@ -1,6 +1,6 @@
 """
 AI Extractor — two-stage extraction with strict scope isolation.
-Region-scoped price ownership. No global price injection.
+Fail-closed article boundary. No global price injection.
 """
 import hashlib
 import json
@@ -23,13 +23,27 @@ ALLOWED_DOC_TYPES = {"ARTICLE", "PRICE_LIST", "SPEC_SHEET", "ROUNDUP", "COMPARIS
 ALLOWED_SCOPES = {"SINGLE_MODEL", "SINGLE_VARIANT", "MULTI_MODEL_EXPLICIT", "COMPARISON",
                   "ROUNDUP", "GENERIC_LISTING", "UNKNOWN"}
 
+# Navigation/blocking keywords — structural, not length-based
 NAV_KEYWORDS = ["หน้าแรก", "Review By Brand", "View by Brand", "View by Segment",
                 "Sign in", "Search", "Close", "Accept", "Read more", "Copyright",
                 "Privacy Policy", "Terms of Use", "WEBBOARD", "CONTACT",
                 "Must Read", "Related News", "Share"]
 
+# Site-wide structural markers — these blocks are NEVER article content
+SITE_WIDE_MARKERS = ["Must Read", "Related News", "Share", "facebook.com/sharer",
+                     "Copyright", "Privacy Policy", "Terms of Use", "WEBBOARD",
+                     "CONTACT", "Sign in", "Search"]
+
 _PRICE_KEYWORDS = re.compile(r'[\d,]+(?:\.\d+)?\s*(?:บาท|฿|THB|ล้าน|ล้านบาท)|xx,xxx|xxx,xxx|ราคา|price', re.I)
 _PRICE_EVIDENCE_KEYWORDS = re.compile(r'คาด|ประมาณ|ราคาเปิดตัว|ราคาเริ่มต้น|MSRP|โปรโมชัน|discount', re.I)
+
+# Price type semantic cues — the quote MUST contain these to justify the classification
+_PRICE_TYPE_CUES = {
+    "MODEL_RANGE": re.compile(r'คาด|ประมาณ|เริ่มต้น|จาก|range|คาดการณ์|estimat', re.I),
+    "MSRP": re.compile(r'ราคาเปิดตัว|ราคาจำหน่าย|ประกาศราคา|official price|MSRP', re.I),
+    "PROMOTION": re.compile(r'โปรโมชัน|ส่วนลด|discount|จอง|pre-order', re.I),
+    "HISTORICAL": re.compile(r'ราคาเดิม|เมื่อ|ปีที่แล้ว|history|เดิม', re.I),
+}
 
 
 # ─── AI Config ─────────────────────────────────────────────────────
@@ -87,62 +101,90 @@ def _call_ai(prompt, system="", temperature=0.1):
         os.unlink(tmp)
 
 
-# ─── Article Boundary Detection ────────────────────────────────────
-def _is_nav_block(block):
+# ─── Structural Contamination Detection ────────────────────────────
+def _is_site_wide_block(block):
+    """Structural check: is this block a site-wide element?"""
     t = block.content.strip()
-    if len(t) < 15 and block.block_type == "list":
-        return True
-    for kw in NAV_KEYWORDS:
-        if t.lower() == kw.lower() or t.lower().startswith(kw.lower()):
+    # Exact match for known site-wide markers
+    for marker in SITE_WIDE_MARKERS:
+        if t.lower() == marker.lower():
             return True
-    if block.block_type == "list" and t.count("http") > 2:
-        return True
-    # Reject blocks that are clearly sidebar/related content
-    if any(kw in t.lower() for kw in ["must read", "related news", "facebook.com/sharer"]):
+        # Prefix match for navigation items
+        if t.lower().startswith(marker.lower()):
+            return True
+    # Social/share blocks
+    if "facebook.com/sharer" in t:
         return True
     if re.match(r'^\d+\s+(?:Article|News|Like|Read)', t):
+        return True
+    # Very short list items are navigation
+    if block.block_type == "list" and len(t) < 30:
         return True
     return False
 
 
 def _find_article_boundary(blocks):
     """
-    Find the MAIN ARTICLE content boundary.
-    Returns block IDs that belong to the main article body.
-    Uses heading structure: article starts after second heading.
-    Stops at 'Related News' / 'Must Read' / navigation markers.
+    Find MAIN ARTICLE content boundary.
+    FAIL-CLOSED: if boundary cannot be established, return empty list.
+    
+    Strategy:
+    1. Skip metadata blocks
+    2. Skip site-wide/navigation blocks
+    3. Find first heading that's NOT navigation
+    4. Include all subsequent blocks until end marker
     """
     ids = []
-    heading_count = 0
-    in_article = False
-    article_heading = ""
+    found_article_heading = False
+    skip_navigation = True  # Skip until we find real content
     
     for b in blocks:
-        # Track headings
-        if b.block_type == "heading":
-            heading_count += 1
-            # Article starts after second heading (title + first content heading)
-            if heading_count == 2:
-                in_article = True
-                article_heading = b.content[:50]
-            # Stop if we hit a "Related" / "Must Read" heading
-            if in_article and any(kw in b.content.lower() for kw in ["related", "must read", "more from"]):
-                break
-            if not _is_nav_block(b) and heading_count >= 2:
-                ids.append(b.block_id)
+        # Skip metadata
+        if b.block_type == "metadata":
             continue
         
-        if not in_article:
+        # Skip site-wide blocks
+        if _is_site_wide_block(b):
             continue
         
-        # Stop at navigation markers
-        if _is_nav_block(b):
+        # Skip navigation lists (brand lists, category lists)
+        if b.block_type == "list" and skip_navigation:
             continue
         
-        # Only include paragraphs and tables in article body
-        if b.block_type in ("paragraph", "table"):
-            if len(b.content) > 30:
-                ids.append(b.block_id)
+        # Skip short paragraphs (likely navigation)
+        if b.block_type == "paragraph" and len(b.content) < 100 and skip_navigation:
+            continue
+        
+        # Found substantial content - article starts here
+        if b.block_type == "heading" and len(b.content.strip()) > 10:
+            found_article_heading = True
+            skip_navigation = False
+            ids.append(b.block_id)
+            continue
+        
+        # Found substantial paragraph - article starts here
+        if b.block_type == "paragraph" and len(b.content) > 200:
+            found_article_heading = True
+            skip_navigation = False
+            ids.append(b.block_id)
+            continue
+        
+        if not found_article_heading:
+            continue
+        
+        # Stop at end markers
+        if b.block_type == "heading" and any(kw in b.content.lower() for kw in ["related", "must read", "more from"]):
+            break
+        
+        # Include article content
+        if b.block_type in ("paragraph", "table", "heading"):
+            if b.block_type == "paragraph" and len(b.content) < 30:
+                continue
+            ids.append(b.block_id)
+    
+    # FAIL-CLOSED: if < 3 blocks, return empty (no fallback to all_ids)
+    if len(ids) < 3:
+        return []
     
     return ids
 
@@ -155,7 +197,7 @@ def _scan_price_blocks(blocks, article_ids):
         if b.block_id not in article_ids:
             continue
         t = b.content.strip()
-        if len(t) < 20 or "facebook.com/sharer" in t:
+        if "facebook.com/sharer" in t:
             continue
         if _PRICE_KEYWORDS.search(b.content):
             price_ids.append(b.block_id)
@@ -252,11 +294,10 @@ def extract_observations(page):
     if len(page.blocks) < 3:
         return _empty("Insufficient blocks")
 
-    # Step 1: Find MAIN ARTICLE boundary
+    # Step 1: Find MAIN ARTICLE boundary (FAIL-CLOSED)
     article_ids = set(_find_article_boundary(page.blocks))
-    if len(article_ids) < 3:
-        # Fallback: use all blocks but warn
-        article_ids = all_ids
+    if not article_ids:
+        return _empty("SCOPE_FAILED: could not establish article boundary")
 
     # Step 2: Deterministic price pre-scan (within article boundary only)
     price_ids, price_evidence_ids = _scan_price_blocks(page.blocks, article_ids)
@@ -299,6 +340,12 @@ def extract_observations(page):
             if peid in region_blocks:
                 scoped_evidence.add(peid)
         reg["price_evidence_block_ids"] = sorted(list(scoped_evidence))
+
+    # Re-validate after enforcement
+    errs_a = [e for e in errs_a if "price_block_ids is empty" not in e]
+    for i, reg in enumerate(regions):
+        if not reg.get("price_block_ids"):
+            errs_a.append(f"Region {i}: price_block_ids is empty after enforcement")
 
     # Step 6: Stage B — parallel per region
     all_obs, all_rej, all_rev = [], [], []
@@ -423,6 +470,12 @@ def _validate(observations, valid_ids, blocks, region):
             ptblk = bmap.get(ptbid)
             if ptblk and ptq not in ptblk.content:
                 errs.append(f"price_type_evidence_quote not in block {ptbid}")
+        # Price type semantic validation
+        if obs.get("field") == "price" and obs.get("price_type"):
+            pt = obs["price_type"]
+            if pt in _PRICE_TYPE_CUES and ptq:
+                if not _PRICE_TYPE_CUES[pt].search(ptq):
+                    errs.append(f"price_type '{pt}' not justified by evidence_quote: '{ptq[:50]}'")
         # Entity must match region
         ent = obs.get("entity", {})
         if not ent.get("brand"):

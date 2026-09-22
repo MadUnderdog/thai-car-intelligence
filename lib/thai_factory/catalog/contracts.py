@@ -1,41 +1,48 @@
 """
-Catalog contracts — the data model for Thai market vehicle identity.
-Separates: Manufacturer → Model → Generation → Variant/Trim → Powertrain
+Catalog contracts — strict data-truth model.
+A. CatalogCandidate = source suggestion (unverified)
+B. CanonicalCatalogEntry = identity survived reconciliation with evidence
 """
 import hashlib
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional, List, Set
+from typing import Optional, List, Dict
 from datetime import date
 
 
 class MarketStatus(Enum):
-    """Market availability status."""
-    CURRENT = "CURRENT"          # Currently sold/marketed
-    UPCOMING = "UPCOMING"        # Announced but not yet available
-    DISCONTINUED = "DISCONTINUED"  # No longer sold but was available
-    HISTORICAL = "HISTORICAL"    # Past generation, not relevant now
-    UNKNOWN = "UNKNOWN"          # Cannot determine
+    CURRENT = "CURRENT"          # Explicit current-market evidence
+    UPCOMING = "UPCOMING"        # Announced, not yet available
+    DISCONTINUED = "DISCONTINUED"  # No longer sold
+    HISTORICAL = "HISTORICAL"    # Past generation
+    UNKNOWN = "UNKNOWN"          # Insufficient evidence
 
 
 class EvidenceStrength(Enum):
-    """Strength of identity evidence."""
     OFFICIAL = "OFFICIAL"        # OEM/distributor website
     LAUNCH_DOC = "LAUNCH_DOC"    # Official price list/brochure
-    HIGH_QUALITY_MEDIA = "HIGH_QUALITY_MEDIA"  # Reputable Thai automotive media
-    SECONDARY = "SECONDARY"      # Other sources
-    UNRESOLVED = "UNRESOLVED"    # Cannot determine
+    HIGH_QUALITY_MEDIA = "HIGH_QUALITY_MEDIA"
+    SECONDARY = "SECONDARY"
+    UNRESOLVED = "UNRESOLVED"
+
+
+class CandidateStatus(Enum):
+    CANDIDATE = "CANDIDATE"      # Suggested by source, not verified
+    VERIFIED = "VERIFIED"        # Identity confirmed by evidence
+    REJECTED = "REJECTED"        # Proven false or insufficient
+    MERGED = "MERGED"            # Merged into another entry
 
 
 @dataclass
 class EvidenceLink:
-    """A single piece of evidence for identity."""
+    """Single piece of evidence with exact provenance."""
     source_url: str
     source_domain: str
     source_class: str  # "official", "media", "secondary"
     evidence_strength: EvidenceStrength
-    evidence_text: str  # What the source says
-    acquisition_method: str  # Which adapter acquired it
+    evidence_text: str  # Exact quote from source
+    evidence_type: str  # "identity", "price", "spec", "status"
+    acquisition_method: str
     content_hash: str = ""
     observed_at: str = ""
     
@@ -45,213 +52,154 @@ class EvidenceLink:
 
 
 @dataclass
-class Powertrain:
-    """Powertrain specification for a variant."""
-    fuel_type: str = ""          # Gasoline, Diesel, Electric, Hybrid, PHEV
-    engine_displacement_l: float = 0.0
-    engine_code: str = ""
-    horsepower_hp: int = 0
-    torque_nm: int = 0
-    transmission: str = ""       # Automatic, Manual, CVT, DCT
-    drivetrain: str = ""         # FWD, RWD, AWD, 4WD
-    battery_kwh: float = 0.0
-    range_km: int = 0
-    motor_count: int = 0
+class CatalogCandidate:
+    """
+    A candidate identity suggested by a source.
+    NOT yet canonical — needs reconciliation.
+    """
+    # Identity (as stated by source)
+    manufacturer_name: str = ""
+    model_name: str = ""           # Exact name from source
+    generation_name: str = ""      # If specified
+    variant_name: str = ""         # If specified
+    trim_code: str = ""            # If specified
+    
+    # Source context
+    source_url: str = ""
+    source_domain: str = ""
+    source_class: str = ""
+    evidence_text: str = ""        # Exact quote containing the identity
+    acquisition_method: str = ""
+    
+    # What was observed
+    is_body_mention: bool = False  # True if mentioned in article body
+    is_sidebar_mention: bool = False  # True if in sidebar/related
+    is_nav_mention: bool = False   # True if in navigation
+    
+    # Candidate status
+    status: CandidateStatus = CandidateStatus.CANDIDATE
     
     # Evidence
     evidence: List[EvidenceLink] = field(default_factory=list)
+    
+    @property
+    def canonical_id(self) -> str:
+        """Hierarchical canonical ID from manufacturer+model+generation+variant."""
+        parts = [
+            self.manufacturer_name.lower().strip(),
+            self.model_name.lower().strip(),
+            self.generation_name.lower().strip() if self.generation_name else "",
+            self.variant_name.lower().strip() if self.variant_name else "",
+        ]
+        return hashlib.sha256("|".join(parts).encode()).hexdigest()[:16]
 
 
 @dataclass
-class Variant:
-    """A specific trim/variant of a model."""
-    # Identity
-    variant_name: str = ""         # e.g. "RS", "E", "Comfort"
-    variant_name_thai: str = ""    # Thai name if different
-    trim_code: str = ""            # OEM trim code if known
+class CanonicalCatalogEntry:
+    """
+    Identity that survived reconciliation with explicit evidence.
+    Never auto-promoted from Candidate.
+    """
+    # Hierarchical identity
+    manufacturer_name: str = ""
+    manufacturer_name_thai: str = ""
+    model_name: str = ""
+    model_name_thai: str = ""
+    generation_name: str = ""
+    variant_name: str = ""
     
-    # What this variant is
-    body_type: str = ""            # Sedan, SUV, MPV, Hatchback
-    seats: int = 0
+    # Canonical IDs (hierarchical, collision-safe)
+    manufacturer_id: str = ""
+    model_id: str = ""
+    generation_id: str = ""
+    variant_id: str = ""
     
-    # Price (opportunistic)
+    # Status (evidence-driven, never inferred)
+    market_status: MarketStatus = MarketStatus.UNKNOWN
+    
+    # Identity evidence (explicit quotes proving this identity exists)
+    identity_evidence: List[EvidenceLink] = field(default_factory=list)
+    
+    # Price evidence (only if explicitly attached to this identity)
     price_thb: Optional[float] = None
-    price_type: str = ""           # MSRP, MODEL_RANGE, PROMOTION
-    price_source_url: str = ""
-    price_observed_at: str = ""
+    price_type: str = ""  # MSRP, MODEL_RANGE, UNKNOWN
+    price_evidence: List[EvidenceLink] = field(default_factory=list)
     
-    # Powertrain (opportunistic)
-    powertrain: Optional[Powertrain] = None
+    # Spec evidence (only if explicitly attached)
+    specs: Dict = field(default_factory=dict)
+    spec_evidence: List[EvidenceLink] = field(default_factory=list)
     
-    # Identity evidence
-    identity_evidence: List[EvidenceLink] = field(default_factory=list)
-    
-    # Status
-    market_status: MarketStatus = MarketStatus.UNKNOWN
-    
-    # Aliases
+    # Aliases (proven to refer to same entity)
     aliases: List[str] = field(default_factory=list)
     
-    @property
-    def canonical_id(self) -> str:
-        """Deterministic canonical ID from variant name."""
-        if self.variant_name:
-            return hashlib.sha256(self.variant_name.lower().strip().encode()).hexdigest()[:12]
-        return ""
-
-
-@dataclass
-class Generation:
-    """A model generation / facelift / model year."""
-    generation_name: str = ""      # e.g. "11th Gen", "2024", "Facelift"
-    model_year: str = ""           # e.g. "2024", "2025"
-    start_date: Optional[date] = None
-    end_date: Optional[date] = None
-    
-    # Variants in this generation
-    variants: List[Variant] = field(default_factory=list)
-    
-    # Identity evidence
-    identity_evidence: List[EvidenceLink] = field(default_factory=list)
-    
-    # Status
-    market_status: MarketStatus = MarketStatus.UNKNOWN
-    
-    @property
-    def canonical_id(self) -> str:
-        if self.generation_name:
-            return hashlib.sha256(self.generation_name.lower().strip().encode()).hexdigest()[:12]
-        return ""
-
-
-@dataclass
-class Model:
-    """A vehicle model under a manufacturer."""
-    # Identity
-    model_name: str = ""           # e.g. "Civic", "Camry", "Atto 3"
-    model_name_thai: str = ""      # Thai name if different
-    model_code: str = ""           # OEM model code if known
-    
-    # What it is
-    segment: str = ""              # B-Sedan, C-SUV, D-MPV
-    body_type: str = ""            # Primary body type
-    
-    # Generations
-    generations: List[Generation] = field(default_factory=list)
-    
-    # Identity evidence
-    identity_evidence: List[EvidenceLink] = field(default_factory=list)
-    
-    # Status
-    market_status: MarketStatus = MarketStatus.UNKNOWN
-    
-    # Aliases
-    aliases: List[str] = field(default_factory=list)
-    
-    @property
-    def canonical_id(self) -> str:
-        if self.model_name:
-            return hashlib.sha256(self.model_name.lower().strip().encode()).hexdigest()[:12]
-        return ""
-
-
-@dataclass
-class Manufacturer:
-    """A vehicle manufacturer / brand."""
-    # Identity
-    manufacturer_name: str = ""    # e.g. "Honda", "Toyota", "BYD"
-    manufacturer_name_thai: str = ""  # Thai name if different
-    
-    # Official presence
-    official_website: str = ""
-    official_website_th: str = ""
-    thai_distributor: str = ""
-    
-    # Models
-    models: List[Model] = field(default_factory=list)
-    
-    # Identity evidence
-    identity_evidence: List[EvidenceLink] = field(default_factory=list)
-    
-    # Status
-    market_status: MarketStatus = MarketStatus.CURRENT
-    
-    @property
-    def canonical_id(self) -> str:
-        if self.manufacturer_name:
-            return hashlib.sha256(self.manufacturer_name.lower().strip().encode()).hexdigest()[:12]
-        return ""
-
-
-@dataclass
-class CatalogIdentity:
-    """Complete identity chain: Manufacturer → Model → Generation → Variant."""
-    manufacturer: Manufacturer
-    model: Optional[Model] = None
-    generation: Optional[Generation] = None
-    variant: Optional[Variant] = None
+    # Conflicts (names/variants that couldn't be resolved)
+    conflicts: List[str] = field(default_factory=list)
     
     @property
     def full_path(self) -> str:
-        parts = [self.manufacturer.manufacturer_name]
-        if self.model:
-            parts.append(self.model.model_name)
-        if self.generation:
-            parts.append(self.generation.generation_name)
-        if self.variant:
-            parts.append(self.variant.variant_name)
+        parts = [self.manufacturer_name]
+        if self.model_name:
+            parts.append(self.model_name)
+        if self.generation_name:
+            parts.append(self.generation_name)
+        if self.variant_name:
+            parts.append(self.variant_name)
         return " > ".join(parts)
     
-    @property
-    def canonical_id(self) -> str:
-        parts = [self.manufacturer.canonical_id]
-        if self.model:
-            parts.append(self.model.canonical_id)
-        if self.generation:
-            parts.append(self.generation.canonical_id)
-        if self.variant:
-            parts.append(self.variant.canonical_id)
-        return "-".join(parts)
+    def compute_ids(self):
+        """Compute hierarchical canonical IDs."""
+        def _hash(s):
+            return hashlib.sha256(s.lower().strip().encode()).hexdigest()[:12]
+        
+        self.manufacturer_id = _hash(self.manufacturer_name)
+        self.model_id = _hash(f"{self.manufacturer_name}|{self.model_name}")
+        self.generation_id = _hash(f"{self.manufacturer_name}|{self.model_name}|{self.generation_name}") if self.generation_name else ""
+        self.variant_id = _hash(f"{self.manufacturer_name}|{self.model_name}|{self.generation_name}|{self.variant_name}") if self.variant_name else ""
 
 
 @dataclass
-class CatalogEntry:
-    """A single entry in the catalog inventory."""
-    identity: CatalogIdentity
-    market_status: MarketStatus = MarketStatus.UNKNOWN
+class CatalogInventory:
+    """
+    Complete catalog inventory with reconciliation metadata.
+    """
+    # Entries
+    entries: List[CanonicalCatalogEntry] = field(default_factory=list)
     
-    # Source count
-    source_count: int = 0
-    strongest_source: str = ""
-    strongest_strength: EvidenceStrength = EvidenceStrength.UNRESOLVED
+    # Candidates that haven't been promoted
+    candidates: List[CatalogCandidate] = field(default_factory=list)
+    rejected_candidates: List[CatalogCandidate] = field(default_factory=list)
     
-    # Evidence links
-    all_evidence: List[EvidenceLink] = field(default_factory=list)
+    # Metadata
+    target_date: str = ""
+    manufacturers_seeded: int = 0
+    manufacturers_discovered: int = 0
     
-    # Conflicts
-    conflicting_names: List[str] = field(default_factory=list)
-    unresolved_issues: List[str] = field(default_factory=list)
+    def add_entry(self, entry: CanonicalCatalogEntry):
+        """Add canonical entry."""
+        entry.compute_ids()
+        self.entries.append(entry)
     
-    # Enrichment status
-    has_price: bool = False
-    has_specs: bool = False
-    enrichment_coverage: float = 0.0  # 0-1
+    def add_candidate(self, candidate: CatalogCandidate):
+        """Add candidate for reconciliation."""
+        self.candidates.append(candidate)
     
-    def add_evidence(self, evidence: EvidenceLink):
-        """Add evidence and update counts."""
-        self.all_evidence.append(evidence)
-        self.source_count = len(set(e.source_domain for e in self.all_evidence))
+    def get_by_manufacturer(self, manufacturer: str) -> List[CanonicalCatalogEntry]:
+        """Get entries for a manufacturer."""
+        return [e for e in self.entries if e.manufacturer_name.lower() == manufacturer.lower()]
+    
+    def summary(self) -> Dict:
+        """Build summary statistics."""
+        by_status = {}
+        for e in self.entries:
+            status = e.market_status.value
+            by_status[status] = by_status.get(status, 0) + 1
         
-        # Update strongest source
-        strength_order = {
-            EvidenceStrength.OFFICIAL: 0,
-            EvidenceStrength.LAUNCH_DOC: 1,
-            EvidenceStrength.HIGH_QUALITY_MEDIA: 2,
-            EvidenceStrength.SECONDARY: 3,
-            EvidenceStrength.UNRESOLVED: 4,
+        return {
+            "total_entries": len(self.entries),
+            "candidates": len(self.candidates),
+            "rejected": len(self.rejected_candidates),
+            "by_status": by_status,
+            "with_price": sum(1 for e in self.entries if e.price_thb is not None),
+            "with_specs": sum(1 for e in self.entries if e.specs),
+            "manufacturers": list(set(e.manufacturer_name for e in self.entries)),
         }
-        current_strength = strength_order.get(self.strongest_strength, 4)
-        new_strength = strength_order.get(evidence.evidence_strength, 4)
-        if new_strength < current_strength:
-            self.strongest_strength = evidence.evidence_strength
-            self.strongest_source = evidence.source_domain

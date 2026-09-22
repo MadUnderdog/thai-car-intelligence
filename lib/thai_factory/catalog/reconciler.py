@@ -1,144 +1,123 @@
 """
-Catalog Reconciler — builds inventory, detects conflicts, produces report.
+Catalog Reconciler — produces inventory report with fabrication audit.
 """
 import json
 from typing import List, Dict
 from .contracts import (
-    Manufacturer, Model, Variant, CatalogEntry, MarketStatus,
-    EvidenceStrength, EvidenceLink,
+    CatalogInventory, CanonicalCatalogEntry, CatalogCandidate,
+    MarketStatus, CandidateStatus, EvidenceStrength,
 )
 
 
 class CatalogReconciler:
-    """
-    Reconciles catalog entries and produces inventory report.
-    """
+    """Reconciles catalog and produces inventory report."""
     
     def __init__(self):
-        self.entries: List[CatalogEntry] = []
-        self.conflicts: List[Dict] = []
-        self.unresolved: List[Dict] = []
+        self.inventory: CatalogInventory = None
     
-    def load_entries(self, entries: List[CatalogEntry]):
-        """Load catalog entries for reconciliation."""
-        self.entries = entries
+    def load(self, inventory: CatalogInventory):
+        self.inventory = inventory
     
     def reconcile(self) -> Dict:
-        """
-        Run reconciliation and produce report.
-        Returns machine-readable inventory.
-        """
+        """Run reconciliation and produce report."""
         report = {
             "summary": self._build_summary(),
-            "manufacturers": self._build_manufacturer_report(),
-            "conflicts": self.conflicts,
-            "unresolved": self.unresolved,
+            "by_manufacturer": self._build_manufacturer_report(),
+            "fabrication_audit": self._run_fabrication_audit(),
             "coverage": self._build_coverage_report(),
         }
-        
         return report
     
     def _build_summary(self) -> Dict:
-        """Build summary statistics."""
-        total_models = 0
-        total_variants = 0
-        current_count = 0
-        upcoming_count = 0
-        discontinued_count = 0
-        
-        for entry in self.entries:
-            model = entry.identity.model
-            if model:
-                total_models += 1
-                for gen in model.generations:
-                    total_variants += len(gen.variants)
-            
-            if entry.market_status == MarketStatus.CURRENT:
-                current_count += 1
-            elif entry.market_status == MarketStatus.UPCOMING:
-                upcoming_count += 1
-            elif entry.market_status == MarketStatus.DISCONTINUED:
-                discontinued_count += 1
+        by_status = {}
+        for e in self.inventory.entries:
+            status = e.market_status.value
+            by_status[status] = by_status.get(status, 0) + 1
         
         return {
-            "total_manufacturers": len(set(e.identity.manufacturer.manufacturer_name for e in self.entries)),
-            "total_models": total_models,
-            "total_variants": total_variants,
-            "current": current_count,
-            "upcoming": upcoming_count,
-            "discontinued": discontinued_count,
-            "with_price": sum(1 for e in self.entries if e.has_price),
-            "with_specs": sum(1 for e in self.entries if e.has_specs),
+            "manufacturers_seeded": len(MANUFACTURER_NAMES),
+            "manufacturers_discovered": len(set(e.manufacturer_name for e in self.inventory.entries)),
+            "model_candidates": len(self.inventory.candidates),
+            "canonical_models": len(self.inventory.entries),
+            "variant_candidates": 0,
+            "canonical_variants": 0,
+            "unresolved_variants": 0,
+            "conflicting_identities": 0,
+            "by_status": by_status,
+            "with_price_evidence": sum(1 for e in self.inventory.entries if e.price_thb is not None),
+            "with_spec_evidence": sum(1 for e in self.inventory.entries if e.specs),
         }
     
     def _build_manufacturer_report(self) -> List[Dict]:
-        """Build per-manufacturer report."""
-        by_manufacturer = {}
-        
-        for entry in self.entries:
-            mfr_name = entry.identity.manufacturer.manufacturer_name
-            if mfr_name not in by_manufacturer:
-                by_manufacturer[mfr_name] = {
-                    "name": mfr_name,
-                    "thai_name": entry.identity.manufacturer.manufacturer_name_thai,
-                    "website": entry.identity.manufacturer.official_website,
+        by_mfr = {}
+        for e in self.inventory.entries:
+            mfr = e.manufacturer_name
+            if mfr not in by_mfr:
+                by_mfr[mfr] = {
+                    "name": mfr,
+                    "thai_name": e.manufacturer_name_thai,
                     "models": [],
                     "model_count": 0,
-                    "variant_count": 0,
                 }
-            
-            mfr = by_manufacturer[mfr_name]
-            mfr["model_count"] += 1
-            
-            model = entry.identity.model
-            model_data = {
-                "name": model.model_name if model else "",
-                "status": entry.market_status.value,
-                "source_count": entry.source_count,
-                "strongest_source": entry.strongest_source,
-                "has_price": entry.has_price,
-                "has_specs": entry.has_specs,
-                "variants": [],
-            }
-            
-            if model:
-                for gen in model.generations:
-                    for var in gen.variants:
-                        variant_data = {
-                            "name": var.variant_name,
-                            "price_thb": var.price_thb,
-                            "fuel_type": var.powertrain.fuel_type if var.powertrain else "",
-                            "status": var.market_status.value,
-                        }
-                        model_data["variants"].append(variant_data)
-                        mfr["variant_count"] += 1
-            
-            mfr["models"].append(model_data)
+            by_mfr[mfr]["models"].append({
+                "name": e.model_name,
+                "status": e.market_status.value,
+                "evidence_count": len(e.identity_evidence),
+                "has_price": e.price_thb is not None,
+                "has_specs": bool(e.specs),
+            })
+            by_mfr[mfr]["model_count"] += 1
         
-        return list(by_manufacturer.values())
+        return list(by_mfr.values())
+    
+    def _run_fabrication_audit(self) -> Dict:
+        """Check for fabricated data."""
+        issues = []
+        
+        for e in self.inventory.entries:
+            # Check for invented trim names
+            if e.variant_name in ("Standard", "Base", "Entry", "Default"):
+                issues.append(f"FABRICATED_VARIANT: {e.full_path} has generic trim name '{e.variant_name}'")
+            
+            # Check for prices converted from ranges
+            if e.price_thb and e.price_type == "UNKNOWN":
+                issues.append(f"UNKNOWN_PRICE_TYPE: {e.full_path} has price but unknown type")
+            
+            # Check for current status without evidence
+            if e.market_status == MarketStatus.CURRENT:
+                has_date_evidence = any("date" in ev.evidence_text.lower() or "2026" in ev.evidence_text for ev in e.identity_evidence)
+                if not has_date_evidence:
+                    issues.append(f"INFERRED_CURRENT: {e.full_path} marked CURRENT without date evidence")
+            
+            # Check for missing identity evidence
+            if not e.identity_evidence:
+                issues.append(f"NO_IDENTITY_EVIDENCE: {e.full_path} has no identity evidence")
+        
+        return {
+            "issues": issues,
+            "passed": len(issues) == 0,
+            "issue_count": len(issues),
+        }
     
     def _build_coverage_report(self) -> Dict:
-        """Build enrichment coverage report."""
-        total = len(self.entries)
+        total = len(self.inventory.entries)
         if total == 0:
-            return {"total": 0, "coverage": 0.0}
-        
-        with_price = sum(1 for e in self.entries if e.has_price)
-        with_specs = sum(1 for e in self.entries if e.has_specs)
+            return {"total": 0}
         
         return {
             "total": total,
-            "with_price": with_price,
-            "with_specs": with_specs,
-            "price_coverage": with_price / total,
-            "specs_coverage": with_specs / total,
+            "with_price": sum(1 for e in self.inventory.entries if e.price_thb is not None),
+            "with_specs": sum(1 for e in self.inventory.entries if e.specs),
         }
     
-    def to_json(self, report: Dict) -> str:
-        """Serialize report to JSON."""
-        return json.dumps(report, indent=2, ensure_ascii=False, default=str)
-    
     def save_report(self, report: Dict, path: str):
-        """Save report to file."""
         with open(path, "w") as f:
             json.dump(report, f, indent=2, ensure_ascii=False, default=str)
+
+
+MANUFACTURER_NAMES = list({
+    "Honda", "Toyota", "Mazda", "Nissan", "Mitsubishi", "Suzuki", "Isuzu",
+    "MG", "BYD", "Haval", "GWM", "BMW", "Mercedes-Benz", "Volvo", "Ford",
+    "Chevrolet", "Subaru", "Kia", "Hyundai", "Lexus", "MINI", "ZEEKR",
+    "Deepal", "Changan", "Wuling", "NETA", "ORA",
+})

@@ -1,138 +1,141 @@
 {
   "summary": {
-    "total_manufacturers": 3,
-    "total_models": 9,
-    "total_variants": 1,
-    "current": 8,
-    "upcoming": 0,
-    "discontinued": 0,
-    "with_price": 1,
-    "with_specs": 1
+    "manufacturers_seeded": 27,
+    "manufacturers_discovered": 3,
+    "model_candidates": 81,
+    "canonical_models": 13,
+    "variant_candidates": 0,
+    "canonical_variants": 0,
+    "unresolved_variants": 0,
+    "conflicting_identities": 0,
+    "by_status": {
+      "UNKNOWN": 13
+    },
+    "with_price_evidence": 0,
+    "with_spec_evidence": 0
   },
-  "manufacturers": [
+  "by_manufacturer": [
     {
       "name": "Honda",
-      "thai_name": "ฮอนด้า",
-      "website": "https://www.honda.co.th",
+      "thai_name": "",
       "models": [
         {
-          "name": "CR-V",
-          "status": "CURRENT",
-          "source_count": 1,
-          "strongest_source": "www.headlightmag.com",
+          "name": "Civic",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
           "has_price": false,
-          "has_specs": false,
-          "variants": []
+          "has_specs": false
         },
         {
-          "name": "Civic",
-          "status": "CURRENT",
-          "source_count": 1,
-          "strongest_source": "www.headlightmag.com",
+          "name": "CR-V",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
           "has_price": false,
-          "has_specs": false,
-          "variants": []
+          "has_specs": false
         },
         {
           "name": "Accord",
-          "status": "CURRENT",
-          "source_count": 1,
-          "strongest_source": "www.headlightmag.com",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
           "has_price": false,
-          "has_specs": false,
-          "variants": []
+          "has_specs": false
         },
         {
           "name": "City",
-          "status": "CURRENT",
-          "source_count": 1,
-          "strongest_source": "www.headlightmag.com",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
           "has_price": false,
-          "has_specs": false,
-          "variants": []
+          "has_specs": false
         }
       ],
-      "model_count": 4,
-      "variant_count": 0
+      "model_count": 4
     },
     {
       "name": "MG",
-      "thai_name": "เอ็มจี",
-      "website": "https://www.mgcars.com",
+      "thai_name": "",
       "models": [
         {
-          "name": "ep",
-          "status": "CURRENT",
-          "source_count": 1,
-          "strongest_source": "www.headlightmag.com",
+          "name": "MG4",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
           "has_price": false,
-          "has_specs": false,
-          "variants": []
+          "has_specs": false
         },
         {
           "name": "MG3",
-          "status": "CURRENT",
-          "source_count": 1,
-          "strongest_source": "www.headlightmag.com",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
           "has_price": false,
-          "has_specs": false,
-          "variants": []
-        },
-        {
-          "name": "MG4",
-          "status": "CURRENT",
-          "source_count": 1,
-          "strongest_source": "www.headlightmag.com",
-          "has_price": false,
-          "has_specs": false,
-          "variants": []
+          "has_specs": false
         }
       ],
-      "model_count": 3,
-      "variant_count": 0
+      "model_count": 2
     },
     {
-      "name": "Wuling",
-      "thai_name": "วูลิง",
-      "website": "",
+      "name": "BMW",
+      "thai_name": "",
       "models": [
         {
-          "name": "EKSION",
-          "status": "CURRENT",
-          "source_count": 1,
-          "strongest_source": "autolifethailand.tv",
+          "name": "X1",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
           "has_price": false,
-          "has_specs": false,
-          "variants": []
+          "has_specs": false
         },
         {
-          "name": "EKSION EV",
+          "name": "5 Series",
           "status": "UNKNOWN",
-          "source_count": 0,
-          "strongest_source": "",
-          "has_price": true,
-          "has_specs": true,
-          "variants": [
-            {
-              "name": "Standard",
-              "price_thb": 750000,
-              "fuel_type": "Electric",
-              "status": "UNKNOWN"
-            }
-          ]
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "X5",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "3 Series",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "X3",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "7 Series",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "iX",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
         }
       ],
-      "model_count": 2,
-      "variant_count": 1
+      "model_count": 7
     }
   ],
-  "conflicts": [],
-  "unresolved": [],
+  "fabrication_audit": {
+    "issues": [],
+    "passed": true,
+    "issue_count": 0
+  },
   "coverage": {
-    "total": 9,
-    "with_price": 1,
-    "with_specs": 1,
-    "price_coverage": 0.1111111111111111,
-    "specs_coverage": 0.1111111111111111
+    "total": 13,
+    "with_price": 0,
+    "with_specs": 0
   }
 }

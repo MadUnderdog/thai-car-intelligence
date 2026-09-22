@@ -1,13 +1,13 @@
 """Thai market catalog discovery and reconciliation."""
 from .contracts import (
-    Manufacturer, Model, Variant, Generation, Powertrain,
-    MarketStatus, CatalogEntry, CatalogIdentity, EvidenceLink,
+    CatalogCandidate, CanonicalCatalogEntry, CatalogInventory,
+    MarketStatus, CandidateStatus, EvidenceLink, EvidenceStrength,
 )
 from .discovery import CatalogDiscovery
 from .reconciler import CatalogReconciler
 
 __all__ = [
-    "Manufacturer", "Model", "Variant", "Generation", "Powertrain",
-    "MarketStatus", "CatalogEntry", "CatalogIdentity", "EvidenceLink",
+    "CatalogCandidate", "CanonicalCatalogEntry", "CatalogInventory",
+    "MarketStatus", "CandidateStatus", "EvidenceLink", "EvidenceStrength",
     "CatalogDiscovery", "CatalogReconciler",
 ]

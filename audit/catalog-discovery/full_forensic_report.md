@@ -1,9 +1,9 @@
 # Forensic Audit Report
 
-**Generated**: 2026-09-22T14:21:35.747203+00:00
+**Generated**: 2026-09-22T14:34:06.876797+00:00
 **Project**: Thai Car Intelligence — Catalog Discovery
-**Source Commit SHA (verified)**: 934de617749edb34b5ba1d4fff8d4d4ca4aa5668
-**Remote SHA**: 934de617749edb34b5ba1d4fff8d4d4ca4aa5668
+**Source Commit SHA (verified)**: 1ce622068a041aa68597e7003da2df989db6d32d
+**Remote SHA**: 1ce622068a041aa68597e7003da2df989db6d32d
 **Local == Remote**: YES
 **Working Tree**: clean (pre-commit)
 
@@ -13,13 +13,11 @@
 |--------|------|------|--------|-----------------|-------------|
 | Fipe Models | IDENTITY_ENUMERATOR | 1,483 | PARTIAL | parallelum.com.br/fipe/api/v1/carros/marcas/ | Rate-limited |
 | Fipe Year | IDENTITY_ENUMERATOR | 133 | PARTIAL | parallelum.com.br/fipe/api/v1/carros/marcas/{id}/modelos/{id}/anos | Reconstructed |
-| open-ev-data | IDENTITY_ENUMERATOR | 26 | PARTIAL | raw.githubusercontent.com/open-ev-data/... | 934de617749e |
+| open-ev-data | IDENTITY_ENUMERATOR | 26 | PARTIAL | raw.githubusercontent.com/open-ev-data/... | 1ce622068a04 |
 | Toyota Official | MARKET_TRUTH | 34 | CAPTURED | toyota.co.th/en/pricelist (Playwright) | Prior capture |
 | Mazda Official | MARKET_TRUTH | 10 | CAPTURED | mazda.co.th/en/vehicles (Playwright) | Prior capture |
 | Thai Reference | MARKET_REFERENCE | 22 | UNVERIFIED | Knowledge base (NOT DLT) | N/A |
 | HeadLightMag | MEDIA_DISCOVERY | 64 | PARTIAL | headlightmag.com/wp-json/wp/v2/ | Prior capture |
-
-**Note**: OpenEV status is PARTIAL because upstream payload verification was attempted but not all rows could be independently verified. Toyota/Mazda are CAPTURED (prior Playwright captures) but not independently re-verified in this commit.
 
 ## 2. Source Accounting (Independently Recomputed)
 
@@ -58,10 +56,10 @@
 
 ## 3. Verifier Results
 
-Total checks: 34
+Total checks: 36
 - PASS: 27
 - FAIL: 0
-- PARTIAL: 2
+- PARTIAL: 4
 - BLOCKED: 0
 - NOT_APPLICABLE: 5
 
@@ -93,10 +91,12 @@ Total checks: 34
 - **openev/hash_format**: PASS
 - **openev/content_anchor**: PASS
 - **openev/row_anchoring**: PASS
+- **openev/object_existence**: PARTIAL
 - **openev/object_hash_verify**: PASS
 - **hlm/evidence_accounting**: PARTIAL
 - **hlm/duplicate_post_audit**: PASS
 - **hlm/field_integrity**: PASS
+- **hlm/semantic_mapping**: PARTIAL
 - **thai_ref/all_unverified**: PASS
 - **fipe/parent_resolution**: PASS
 - **accounting/source_state_equations**: PARTIAL
@@ -126,25 +126,27 @@ All 12 mutation tests assert FAIL/PARTIAL on corrupted fixtures:
 ## 6. Known Findings
 
 - HLM evidence accounting: PARTIAL — 19 entries lack article evidence
+- HLM semantic mapping: PARTIAL — some same-brand multi-model articles
 - Source accounting: PARTIAL — OpenEV/Fipe lack pipeline state preservation
+- OpenEV object existence: PARTIAL — GitHub API verification attempted
 - 10 duplicate HLM post IDs (expected multi-mention)
 - 26 OpenEV rows lack source_native_id (upstream)
 - 133 Fipe year rows reconstructed (not fresh API)
 - Thai market reference: 22 makes all UNVERIFIED
-- pre-existing import error in tests/test_generation_config_boundary.py
+- pre-existing import error in tests/test_generation_config_boundary.py (not related to this work)
 
 ## 7. Unresolved Blockers
 
 - Fipe API rate limited (429, ~22h retry)
 - Thai DLT not accessible (timeout)
 - Third-party taxonomy sites blocked (WAF/JS/SSL)
-- pre-existing import error in test_generation_config_boundary.py
+- pre-existing import error in test_generation_config_boundary.py (not related to this work)
 
 ## 8. Tests
 
 - pytest tests/test_taxonomy_provenance.py: 44/44 passed
 - No xfailed, no skipped
-- Note: tests/test_generation_config_boundary.py has pre-existing import error (not related to this work)
+- Note: tests/test_generation_config_boundary.py has pre-existing test failures (not related to this work)
 
 ## 9. Reproduction
 
@@ -156,7 +158,7 @@ python3 -c "from lib.thai_factory.catalog.verifier import verify_artifacts; r=ve
 
 ## 10. Changed Files
 
-- lib/thai_factory/catalog/verifier.py (VERIFIER V8)
+- lib/thai_factory/catalog/verifier.py (VERIFIER V9)
 - tests/test_taxonomy_provenance.py (12 mutation tests)
 - audit/catalog-discovery/verifier_output.json
 - audit/catalog-discovery/full_forensic_report.md

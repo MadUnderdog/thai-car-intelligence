@@ -1,9 +1,9 @@
 {
   "artifact_dir": "audit/catalog-discovery",
-  "total_checks": 34,
+  "total_checks": 36,
   "passed": 27,
   "failed": 0,
-  "partial": 2,
+  "partial": 4,
   "blocked": 0,
   "not_applicable": 5,
   "checks": [
@@ -188,6 +188,40 @@
     },
     {
       "section": "openev",
+      "check": "object_existence",
+      "status": "PARTIAL",
+      "verified": 0,
+      "errors": [
+        {
+          "row": 0,
+          "file_locator": "src/byd/tang/2024/tang.json",
+          "error": "HTTP Error 403: rate limit exceeded"
+        },
+        {
+          "row": 1,
+          "file_locator": "src/byd/han/2024/han.json",
+          "error": "HTTP Error 403: rate limit exceeded"
+        },
+        {
+          "row": 2,
+          "file_locator": "src/byd/seal/2024/seal.json",
+          "error": "HTTP Error 403: rate limit exceeded"
+        },
+        {
+          "row": 3,
+          "file_locator": "src/byd/dolphin/2024/dolphin.json",
+          "error": "HTTP Error 403: rate limit exceeded"
+        },
+        {
+          "row": 4,
+          "file_locator": "src/toyota/bz4x/2024/bz4x.json",
+          "error": "HTTP Error 403: rate limit exceeded"
+        }
+      ],
+      "note": "GitHub API verification attempted"
+    },
+    {
+      "section": "openev",
       "check": "object_hash_verify",
       "status": "PASS",
       "verified": 26
@@ -225,6 +259,80 @@
       "section": "hlm",
       "check": "field_integrity",
       "status": "PASS"
+    },
+    {
+      "section": "hlm",
+      "check": "semantic_mapping",
+      "status": "PARTIAL",
+      "semantic_issues": [
+        {
+          "post_id": 150581,
+          "issue": "same_brand_multi_model",
+          "models": [
+            "CX-30",
+            "CX-30:",
+            "CX-3"
+          ]
+        },
+        {
+          "post_id": 132743,
+          "issue": "same_brand_multi_model",
+          "models": [
+            "CX-30",
+            "CX-30:",
+            "CX-3"
+          ]
+        },
+        {
+          "post_id": 130849,
+          "issue": "same_brand_multi_model",
+          "models": [
+            "CX-30",
+            "CX-30:",
+            "CX-3"
+          ]
+        },
+        {
+          "post_id": 149496,
+          "issue": "same_brand_multi_model",
+          "models": [
+            "New",
+            "BT-50"
+          ]
+        },
+        {
+          "post_id": 118510,
+          "issue": "same_brand_multi_model",
+          "models": [
+            "3-\u0e23\u0e35\u0e23\u0e31\u0e19",
+            "New"
+          ]
+        }
+      ],
+      "model_without_evidence": [
+        {
+          "entry_idx": 13,
+          "model": "CX-8"
+        },
+        {
+          "entry_idx": 14,
+          "model": "CX-5"
+        },
+        {
+          "entry_idx": 17,
+          "model": "CX-9"
+        },
+        {
+          "entry_idx": 18,
+          "model": "MX-5"
+        },
+        {
+          "entry_idx": 26,
+          "model": "Accord"
+        }
+      ],
+      "total_post_ids": 60,
+      "inconsistent_post_ids": 10
     },
     {
       "section": "thai_ref",

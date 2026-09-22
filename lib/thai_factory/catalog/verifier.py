@@ -258,6 +258,35 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
             add_check("openev", "row_anchoring", "PASS", rows=len(rows),
                       pinned_commit=pinned_commit[:12])
 
+        # Object existence: verify each file_locator exists at pinned commit via GitHub API
+        existence_errors = []
+        existence_verified = 0
+        for i, row in enumerate(rows):
+            file_locator = row.get("file_locator", "")
+            if file_locator and pinned_commit:
+                # Use GitHub API to check if file exists at commit
+                api_url = f"https://api.github.com/repos/{repo}/contents/{file_locator}?ref={pinned_commit}"
+                try:
+                    import urllib.request
+                    req = urllib.request.Request(api_url, headers={'User-Agent': 'Mozilla/5.0'})
+                    with urllib.request.urlopen(req, timeout=5) as resp:
+                        if resp.status == 200:
+                            existence_verified += 1
+                        else:
+                            existence_errors.append({"row": i, "file_locator": file_locator, "status": resp.status})
+                except Exception as e:
+                    existence_errors.append({"row": i, "file_locator": file_locator, "error": str(e)[:100]})
+        
+        if existence_errors:
+            add_check("openev", "object_existence", "PARTIAL",
+                      verified=existence_verified,
+                      errors=existence_errors[:5],
+                      note="GitHub API verification attempted")
+        else:
+            add_check("openev", "object_existence", "PASS",
+                      verified=existence_verified,
+                      pinned_commit=pinned_commit[:12])
+
         # Object-level upstream hash verification (requires network)
         # Use each row's raw_url directly — it already points to the pinned commit
         if verify_upstream and rows:
@@ -401,6 +430,74 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
             add_check("hlm", "field_integrity", "FAIL", missing=missing_fields[:5])
         else:
             add_check("hlm", "field_integrity", "PASS")
+
+        # Semantic mapping: post_id ↔ URL ↔ title ↔ model consistency
+        semantic_issues = []
+        post_id_map = {}  # post_id → list of (url, title, model) tuples
+        for i, e in enumerate(entries):
+            model = e.get("raw_model", "")
+            for art in e.get("article_evidence", []):
+                post_id = art.get("post_id")
+                url = art.get("url", "")
+                title = art.get("title", "")
+                if post_id:
+                    if post_id not in post_id_map:
+                        post_id_map[post_id] = []
+                    post_id_map[post_id].append({
+                        "url": url,
+                        "title": title,
+                        "model": model,
+                        "entry_idx": i,
+                    })
+        
+        # Check for inconsistencies: same post_id with different models
+        for post_id, mappings in post_id_map.items():
+            models = set(m["model"] for m in mappings)
+            if len(models) > 1:
+                # Check if models are from different brands (cross-brand contamination)
+                brands = set()
+                for m in mappings:
+                    for e in entries:
+                        if e.get("raw_model") == m["model"]:
+                            brands.add(e.get("brand", e.get("brand_category_name", "")))
+                            break
+                if len(brands) > 1:
+                    semantic_issues.append({
+                        "post_id": post_id,
+                        "issue": "cross_brand_contamination",
+                        "models": list(models),
+                        "brands": list(brands),
+                    })
+                else:
+                    # Same brand, different models — could be legitimate multi-model article
+                    # or same-brand wrong-model contamination
+                    semantic_issues.append({
+                        "post_id": post_id,
+                        "issue": "same_brand_multi_model",
+                        "models": list(models),
+                    })
+        
+        # Check for model-mention entries without article evidence
+        model_without_evidence = []
+        for i, e in enumerate(entries):
+            if e.get("classification") == "model-mention" and e.get("article_evidence_count", 0) == 0:
+                model_without_evidence.append({
+                    "entry_idx": i,
+                    "model": e.get("raw_model", ""),
+                })
+        
+        if semantic_issues or model_without_evidence:
+            # PARTIAL if same-brand only, FAIL if cross-brand
+            has_cross_brand = any(i["issue"] == "cross_brand_contamination" for i in semantic_issues)
+            status = "FAIL" if has_cross_brand else "PARTIAL"
+            add_check("hlm", "semantic_mapping", status,
+                      semantic_issues=semantic_issues[:5],
+                      model_without_evidence=model_without_evidence[:5],
+                      total_post_ids=len(post_id_map),
+                      inconsistent_post_ids=len(semantic_issues))
+        else:
+            add_check("hlm", "semantic_mapping", "PASS",
+                      total_post_ids=len(post_id_map))
 
     # === 8. Thai reference ===
     if "thai_ref" in loaded:

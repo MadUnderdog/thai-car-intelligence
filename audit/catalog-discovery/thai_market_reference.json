@@ -17,7 +17,10 @@
       "code": "764",
       "name": "Thailand",
       "iso3": "THA"
-    }
+    },
+    "data_quality": "UNVERIFIED",
+    "dlt_status": "TIMEOUT - no public make-model endpoint",
+    "attribution_correction": "Content is from Thai automotive industry knowledge base, NOT harvested from DLT"
   },
   "portal_access": {
     "dlt_opendata": {
@@ -72,7 +75,10 @@
         "Hilux",
         "Innova",
         "Land Cruiser"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Honda",
@@ -89,7 +95,10 @@
         "BR-V",
         "Brio",
         "Accord"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Nissan",
@@ -105,7 +114,10 @@
         "Terra",
         "Sylphy",
         "Note"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Mitsubishi",
@@ -120,7 +132,10 @@
         "Mirage",
         "Xpander",
         "Outlander"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Isuzu",
@@ -134,7 +149,10 @@
         "MU-7",
         "FSR",
         "FRR"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Mazda",
@@ -151,7 +169,10 @@
         "BT-50",
         "CX-8",
         "CX-60"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Suzuki",
@@ -166,7 +187,10 @@
         "XL-7",
         "Jimny",
         "Carry"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Ford",
@@ -180,7 +204,10 @@
         "Territory",
         "EcoSport",
         "Raptor"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Chevrolet",
@@ -196,7 +223,10 @@
         "Captiva",
         "Spin"
       ],
-      "status": "exited Thailand 2020"
+      "status": "exited Thailand 2020",
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "BMW",
@@ -212,7 +242,10 @@
         "X3",
         "X5",
         "Z4"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Mercedes-Benz",
@@ -228,7 +261,10 @@
         "GLA",
         "GLC",
         "GLE"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "MG",
@@ -244,7 +280,10 @@
         "MG EP",
         "MG4",
         "MG5 EV"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Tesla",
@@ -257,7 +296,10 @@
         "Model S",
         "Model X"
       ],
-      "status": "import only"
+      "status": "import only",
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "BYD",
@@ -269,10 +311,14 @@
         "Atto 3",
         "Dolphin",
         "Seal",
-        "Tatto 3",
+        "Atto 3",
         "M6"
       ],
-      "status": "new entrant"
+      "status": "new entrant",
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false,
+      "quality_notes": "Fixed 'Tatto 3' → 'Atto 3'"
     },
     {
       "make": "Haval",
@@ -285,7 +331,10 @@
         "Jolion",
         "Haval Cat"
       ],
-      "status": "new entrant"
+      "status": "new entrant",
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "GWM",
@@ -298,7 +347,10 @@
         "Tank 500",
         "Poer"
       ],
-      "status": "new entrant"
+      "status": "new entrant",
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Subaru",
@@ -311,7 +363,10 @@
         "Outback",
         "BRZ",
         "WRX"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Kia",
@@ -324,7 +379,10 @@
         "Sorento",
         "Carnival",
         "Sonet"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Hyundai",
@@ -337,7 +395,10 @@
         "Santa Fe",
         "Creta",
         "Ioniq 5"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Volvo",
@@ -350,7 +411,10 @@
         "XC90",
         "S60",
         "V60"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Lexus",
@@ -364,7 +428,10 @@
         "NX",
         "RX",
         "UX"
-      ]
+      ],
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false
     },
     {
       "make": "Nissan E.P.",
@@ -375,7 +442,11 @@
         "Leaf",
         "Ariya"
       ],
-      "status": "EV specialist"
+      "status": "EV specialist",
+      "provenance_level": "UNVERIFIED",
+      "provenance_source": "Thai automotive industry knowledge base (NOT DLT)",
+      "dlt_verified": false,
+      "quality_notes": "Unclear designation"
     }
   ],
   "vehicle_year_reference": {

@@ -12,7 +12,8 @@
       "UNKNOWN": 44
     },
     "with_price_evidence": 44,
-    "with_spec_evidence": 0
+    "with_spec_evidence": 0,
+    "total_candidates": 44
   },
   "by_manufacturer": [
     {
@@ -265,7 +266,7 @@
       "thai_name": "",
       "models": [
         {
-          "name": "NEW MAZDA2 ESSENTIAL​",
+          "name": "NEW MAZDA2 ESSENTIAL\u200b",
           "status": "UNKNOWN",
           "evidence_count": 1,
           "has_price": true,

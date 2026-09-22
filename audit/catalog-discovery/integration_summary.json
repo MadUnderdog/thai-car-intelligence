@@ -1,26 +1,48 @@
 {
   "version": "1.0",
-  "integrated_at": "2026-09-22T16:39:35.390257",
-  "source_roles": {
+  "node_level_semantics": {
     "IDENTITY_ENUMERATOR": {
-      "fipe_year_hierarchy": 133,
-      "fipe_models": 1483,
-      "open_ev_data": 26,
+      "fipe_model_rows": {
+        "count": 1483,
+        "level": "model"
+      },
+      "fipe_year_rows": {
+        "count": 133,
+        "level": "year",
+        "status": "PARTIAL"
+      },
+      "open_ev_data_rows": {
+        "count": 26,
+        "level": "trim"
+      },
       "total": 1642
     },
     "MARKET_TRUTH": {
-      "toyota_official": 34,
-      "mazda_official": 10,
+      "toyota_official": {
+        "count": 34,
+        "level": "flat_price_list"
+      },
+      "mazda_official": {
+        "count": 10,
+        "level": "flat_price_list"
+      },
       "total": 44
     },
     "MARKET_REFERENCE": {
-      "thai_market": 22,
+      "thai_makes": {
+        "count": 22,
+        "level": "unverified_knowledge_base"
+      },
       "total": 22
     },
     "MEDIA_DISCOVERY": {
-      "headlightmag": 64,
+      "headlightmag": {
+        "count": 64,
+        "level": "category_mentions",
+        "with_article_evidence": 45
+      },
       "total": 64
     }
   },
-  "total": 1772
+  "no_double_counting": "Fipe model (1483) and year (133) are different hierarchy levels"
 }

@@ -8,7 +8,12 @@
     "total_year_rows": 133,
     "unique_brands": 8,
     "unique_model_pairs": 40,
-    "payload_hash": "d66ab979ec2ad265"
+    "payload_hash": "d66ab979ec2ad265",
+    "completeness": "PARTIAL",
+    "partial_reason": "Year data sourced from sample_details in fipe_api_capture.json; fresh API calls hit 429 rate limit",
+    "total_fipe_models": 1483,
+    "year_linked_rows": 133,
+    "coverage_note": "Only Toyota and Honda have year data; Mazda/BMW/Mercedes/Nissan/MG/BYD returned 0 years due to rate limiting"
   },
   "year_hierarchy": [
     {

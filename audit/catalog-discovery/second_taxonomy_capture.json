@@ -28,7 +28,9 @@
       "performance": "0-100, top speed",
       "pricing": "MSRP by country/currency",
       "sources": "cited source URLs per record"
-    }
+    },
+    "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+    "locator_note": "Each row traced to exact file path in GitHub repo at specific commit"
   },
   "excluded_sources": {
     "nhtsa_vpic_api": {
@@ -147,7 +149,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "82e3669a24059c25"
+      "raw_content_hash": "82e3669a24059c25",
+      "source_native_id": null,
+      "file_locator": "src/byd/tang/2024/tang.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/byd/tang/2024/tang.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "byd",
@@ -186,7 +193,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "a274ca5f68443063"
+      "raw_content_hash": "a274ca5f68443063",
+      "source_native_id": null,
+      "file_locator": "src/byd/han/2024/han.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/byd/han/2024/han.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "byd",
@@ -259,7 +271,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "e65fad275afceebe"
+      "raw_content_hash": "e65fad275afceebe",
+      "source_native_id": null,
+      "file_locator": "src/byd/seal/2024/seal.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/byd/seal/2024/seal.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "byd",
@@ -331,7 +348,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "0ef6f3314dcf0912"
+      "raw_content_hash": "0ef6f3314dcf0912",
+      "source_native_id": null,
+      "file_locator": "src/byd/dolphin/2024/dolphin.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/byd/dolphin/2024/dolphin.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "toyota",
@@ -367,7 +389,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "7830a3e867144635"
+      "raw_content_hash": "7830a3e867144635",
+      "source_native_id": null,
+      "file_locator": "src/toyota/bz4x/2024/bz4x.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/toyota/bz4x/2024/bz4x.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "toyota",
@@ -396,7 +423,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "d3f41607a36d1feb"
+      "raw_content_hash": "d3f41607a36d1feb",
+      "source_native_id": null,
+      "file_locator": "src/toyota/bz3/2024/bz3.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/toyota/bz3/2024/bz3.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "toyota",
@@ -425,7 +457,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "2f10de866415e1c8"
+      "raw_content_hash": "2f10de866415e1c8",
+      "source_native_id": null,
+      "file_locator": "src/toyota/bz3x/2025/bz3x.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/toyota/bz3x/2025/bz3x.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "mg",
@@ -468,7 +505,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "70f4893199184580"
+      "raw_content_hash": "70f4893199184580",
+      "source_native_id": null,
+      "file_locator": "src/mg/mg4/2024/mg4.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/mg/mg4/2024/mg4.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "nissan",
@@ -510,7 +552,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "196089a644b06aef"
+      "raw_content_hash": "196089a644b06aef",
+      "source_native_id": null,
+      "file_locator": "src/nissan/ariya/2024/ariya.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/nissan/ariya/2024/ariya.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "nissan",
@@ -552,7 +599,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "b45376e25da77c49"
+      "raw_content_hash": "b45376e25da77c49",
+      "source_native_id": null,
+      "file_locator": "src/nissan/leaf/2023/leaf.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/nissan/leaf/2023/leaf.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "bmw",
@@ -590,7 +642,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "35146fe024c1cd61"
+      "raw_content_hash": "35146fe024c1cd61",
+      "source_native_id": null,
+      "file_locator": "src/bmw/ix3/2024/ix3.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/bmw/ix3/2024/ix3.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "bmw",
@@ -634,7 +691,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "d9471b481bb455ba"
+      "raw_content_hash": "d9471b481bb455ba",
+      "source_native_id": null,
+      "file_locator": "src/bmw/ix/2024/ix.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/bmw/ix/2024/ix.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "bmw",
@@ -673,7 +735,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "3937150600055444"
+      "raw_content_hash": "3937150600055444",
+      "source_native_id": null,
+      "file_locator": "src/bmw/i4/2024/i4.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/bmw/i4/2024/i4.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "volvo",
@@ -710,7 +777,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "5bf495e19620825a"
+      "raw_content_hash": "5bf495e19620825a",
+      "source_native_id": null,
+      "file_locator": "src/volvo/ex30/2024/ex30.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/volvo/ex30/2024/ex30.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "volvo",
@@ -747,7 +819,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "d0199a26ffe420a1"
+      "raw_content_hash": "d0199a26ffe420a1",
+      "source_native_id": null,
+      "file_locator": "src/volvo/ex40/2024/ex40.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/volvo/ex40/2024/ex40.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "porsche",
@@ -784,7 +861,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "b13747ebe7af9e09"
+      "raw_content_hash": "b13747ebe7af9e09",
+      "source_native_id": null,
+      "file_locator": "src/porsche/taycan/2024/taycan.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/porsche/taycan/2024/taycan.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "mercedes_benz",
@@ -821,7 +903,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "19023c84a69f8267"
+      "raw_content_hash": "19023c84a69f8267",
+      "source_native_id": null,
+      "file_locator": "src/mercedes_benz/eqs/2024/eqs.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/mercedes_benz/eqs/2024/eqs.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "mercedes_benz",
@@ -858,7 +945,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "0b534e3471a050df"
+      "raw_content_hash": "0b534e3471a050df",
+      "source_native_id": null,
+      "file_locator": "src/mercedes_benz/eqe/2024/eqe.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/mercedes_benz/eqe/2024/eqe.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "mini",
@@ -895,7 +987,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "c8a26603fc740f2d"
+      "raw_content_hash": "c8a26603fc740f2d",
+      "source_native_id": null,
+      "file_locator": "src/mini/cooper_se/2023/cooper_se.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/mini/cooper_se/2023/cooper_se.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "fiat",
@@ -932,7 +1029,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "f99fdc6540d09873"
+      "raw_content_hash": "f99fdc6540d09873",
+      "source_native_id": null,
+      "file_locator": "src/fiat/500e/2023/500e.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/fiat/500e/2023/500e.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "honda",
@@ -967,7 +1069,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "ea3f4838afff47f5"
+      "raw_content_hash": "ea3f4838afff47f5",
+      "source_native_id": null,
+      "file_locator": "src/honda/prologue/2025/prologue.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/honda/prologue/2025/prologue.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "xpeng",
@@ -1001,7 +1108,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "5dcbd4a637e5485c"
+      "raw_content_hash": "5dcbd4a637e5485c",
+      "source_native_id": null,
+      "file_locator": "src/xpeng/g6/2023/g6.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/xpeng/g6/2023/g6.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "nio",
@@ -1035,7 +1147,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "1a7ba0f165131fb7"
+      "raw_content_hash": "1a7ba0f165131fb7",
+      "source_native_id": null,
+      "file_locator": "src/nio/es6/2024/es6.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/nio/es6/2024/es6.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "nio",
@@ -1069,7 +1186,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "35369935fe49253e"
+      "raw_content_hash": "35369935fe49253e",
+      "source_native_id": null,
+      "file_locator": "src/nio/et5/2024/et5.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/nio/et5/2024/et5.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "zeekr",
@@ -1111,7 +1233,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "40814beecb58eecb"
+      "raw_content_hash": "40814beecb58eecb",
+      "source_native_id": null,
+      "file_locator": "src/zeekr/001/2023/001.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/zeekr/001/2023/001.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     },
     {
       "brand": "zeekr",
@@ -1153,7 +1280,12 @@
         }
       ],
       "schema_version": "1.0.0",
-      "raw_content_hash": "027469b705761c13"
+      "raw_content_hash": "027469b705761c13",
+      "source_native_id": null,
+      "file_locator": "src/zeekr/007/2025/007.json",
+      "raw_url": "https://raw.githubusercontent.com/open-ev-data/open-ev-data-dataset/8edb266da3b2c4424dd031e248468ba5d445da5d/src/zeekr/007/2025/007.json",
+      "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+      "locator_type": "github_raw_file"
     }
   ],
   "row_count": 26,

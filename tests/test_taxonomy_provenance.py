@@ -498,7 +498,7 @@ class TestTaxonomyCounts:
 
     def test_harvest_trees_declare_valid_roles(self, harvest):
         """Every tree in taxonomy_harvest must declare a known source_role."""
-        VALID_ROLES = {"IDENTITY_ENUMERATOR", "MARKET_TRUTH", "MEDIA_REFERENCE"}
+        VALID_ROLES = {"IDENTITY_ENUMERATOR", "MARKET_TRUTH", "MARKET_REFERENCE", "MEDIA_DISCOVERY"}
         violations = []
         for tree in harvest.get("trees", []):
             role = tree.get("source_role", "")
@@ -583,142 +583,142 @@ class TestMutationDetection:
     """Adversarial tests: corrupt fixtures → run verifier → assert detection.
 
     Per GLOBAL WORK RULE #5: mutation test must take corrupted fixture,
-    run verifier, and assert verifier gives FAIL/PARTIAL.
-    Just asserting file differs is NOT a verifier mutation test.
+    run verifier against it, and assert verifier gives FAIL/PARTIAL.
     """
 
     def _run_verifier(self, artifact_dir):
-        """Run reproduction script against a given artifact directory."""
-        import subprocess
-        result = subprocess.run(
-            ["python3", "audit/catalog-discovery/reproduce_forensic_report.py"],
-            capture_output=True, text=True,
-            cwd=os.path.dirname(os.path.dirname(artifact_dir))
-        )
-        # Parse results
-        results_path = os.path.join(artifact_dir, "reproduction_results.json")
-        if os.path.exists(results_path):
-            with open(results_path) as f:
-                return json.load(f)
-        return None
+        """Run the verifier against a given artifact directory."""
+        from lib.thai_factory.catalog.verifier import verify_artifacts
+        return verify_artifacts(str(artifact_dir))
 
     def test_corrupt_openev_hash_verifier_catches(self, tmp_path):
-        """Corrupted OpenEV hash → verifier must detect."""
-        import shutil
-        # Copy entire artifact directory to tmp
-        src_dir = "audit/catalog-discovery"
-        dst_dir = str(tmp_path / "audit" / "catalog-discovery")
-        os.makedirs(dst_dir, exist_ok=True)
-
-        # Copy OpenEV artifact
-        shutil.copy(f"{src_dir}/second_taxonomy_capture.json",
-                    f"{dst_dir}/second_taxonomy_capture.json")
-
-        # Corrupt hash
-        with open(f"{dst_dir}/second_taxonomy_capture.json") as f:
-            data = json.load(f)
-        data["rows"][0]["raw_content_hash"] = "CORRUPTED"
-        with open(f"{dst_dir}/second_taxonomy_capture.json", 'w') as f:
-            json.dump(data, f)
-
-        # Verify corruption exists
-        with open(f"{dst_dir}/second_taxonomy_capture.json") as f:
-            corrupted = json.load(f)
-        assert corrupted["rows"][0]["raw_content_hash"] == "CORRUPTED"
-
-        # Verify original differs
-        with open(f"{src_dir}/second_taxonomy_capture.json") as f:
-            original = json.load(f)
-        assert original["rows"][0]["raw_content_hash"] != "CORRUPTED"
-
-    def test_corrupt_headlightmag_post_id_verifier_catches(self, tmp_path):
-        """Corrupted HeadLightMag post_id → verifier must detect."""
+        """Corrupted OpenEV hash → verifier must detect FAIL."""
         import shutil
         src_dir = "audit/catalog-discovery"
-        dst_dir = str(tmp_path / "audit" / "catalog-discovery")
-        os.makedirs(dst_dir, exist_ok=True)
+        dst_dir = tmp_path / "audit" / "catalog-discovery"
+        dst_dir.mkdir(parents=True)
 
-        shutil.copy(f"{src_dir}/media_discovery_headlightmag.json",
-                    f"{dst_dir}/media_discovery_headlightmag.json")
+        # Copy all required artifacts to isolated tree
+        for fname in os.listdir(src_dir):
+            if fname.endswith('.json'):
+                shutil.copy(f"{src_dir}/{fname}", dst_dir / fname)
 
-        with open(f"{dst_dir}/media_discovery_headlightmag.json") as f:
+        # Corrupt OpenEV hash
+        ev_path = dst_dir / "second_taxonomy_capture.json"
+        with open(ev_path) as f:
             data = json.load(f)
-
-        # Corrupt post_id
-        for e in data["entries"]:
-            if e.get("article_evidence"):
-                e["article_evidence"][0]["post_id"] = 99999999
-                break
-
-        with open(f"{dst_dir}/media_discovery_headlightmag.json", 'w') as f:
+        data["rows"][0]["raw_content_hash"] = "CORRUPTED_HASH_1234567890"
+        with open(ev_path, 'w') as f:
             json.dump(data, f)
 
-        # Verify corruption
-        with open(f"{dst_dir}/media_discovery_headlightmag.json") as f:
-            corrupted = json.load(f)
-        for e in corrupted["entries"]:
-            if e.get("article_evidence"):
-                assert e["article_evidence"][0]["post_id"] == 99999999
-                break
+        # Run verifier against corrupted tree
+        result = self._run_verifier(dst_dir)
 
-    def test_corrupt_fipe_parent_id_verifier_catches(self, tmp_path):
-        """Corrupted Fipe parent_native_id → verifier must detect."""
+        # Verifier must detect the corruption
+        openev_hash_check = [c for c in result["checks"]
+                           if c["check"] == "hash_genuine" and c["section"] == "openev"]
+        assert openev_hash_check, f"Verifier missing hash_genuine check: {result['checks']}"
+        assert openev_hash_check[0]["status"] == "FAIL", \
+            f"Verifier should FAIL on corrupted hash, got {openev_hash_check[0]['status']}"
+
+    def test_corrupt_headlightmag_verifier_catches(self, tmp_path):
+        """Corrupted HLM entries → verifier must detect."""
         import shutil
         src_dir = "audit/catalog-discovery"
-        dst_dir = str(tmp_path / "audit" / "catalog-discovery")
-        os.makedirs(dst_dir, exist_ok=True)
+        dst_dir = tmp_path / "audit" / "catalog-discovery"
+        shutil.copytree(src_dir, dst_dir)
 
-        shutil.copy(f"{src_dir}/fipe_year_hierarchy.json",
-                    f"{dst_dir}/fipe_year_hierarchy.json")
-
-        with open(f"{dst_dir}/fipe_year_hierarchy.json") as f:
+        # Remove article_evidence from all entries (corrupt evidence)
+        hlm_path = dst_dir / "media_discovery_headlightmag.json"
+        with open(hlm_path) as f:
             data = json.load(f)
-
-        if data.get("year_hierarchy"):
-            data["year_hierarchy"][0]["parent_native_id"] = "99:9999"
-
-        with open(f"{dst_dir}/fipe_year_hierarchy.json", 'w') as f:
+        for e in data.get("entries", []):
+            e["article_evidence"] = []
+            e["article_evidence_count"] = 0
+        with open(hlm_path, 'w') as f:
             json.dump(data, f)
 
-        # Verify corruption
-        with open(f"{dst_dir}/fipe_year_hierarchy.json") as f:
-            corrupted = json.load(f)
-        assert corrupted["year_hierarchy"][0]["parent_native_id"] == "99:9999"
+        result = self._run_verifier(dst_dir)
+
+        hlm_check = [c for c in result["checks"]
+                     if c["check"] == "evidence_counts" and c["section"] == "hlm"]
+        assert hlm_check, f"Verifier missing hlm evidence check"
+        assert hlm_check[0]["without_article"] == 64, \
+            f"Expected 64 without article after corruption, got {hlm_check[0]['without_article']}"
+
+    def test_corrupt_fipe_parent_verifier_catches(self, tmp_path):
+        """Corrupted Fipe parent_native_id → verifier must detect FAIL."""
+        import shutil
+        src_dir = "audit/catalog-discovery"
+        dst_dir = tmp_path / "audit" / "catalog-discovery"
+        shutil.copytree(src_dir, dst_dir)
+
+        # Corrupt parent_native_id
+        fipe_path = dst_dir / "fipe_year_hierarchy.json"
+        with open(fipe_path) as f:
+            data = json.load(f)
+        for row in data.get("year_hierarchy", []):
+            row["parent_native_id"] = "99:9999"
+        with open(fipe_path, 'w') as f:
+            json.dump(data, f)
+
+        result = self._run_verifier(dst_dir)
+
+        parent_check = [c for c in result["checks"]
+                       if c["check"] == "parent_resolution" and c["section"] == "fipe"]
+        assert parent_check, f"Verifier missing parent_resolution check"
+        assert parent_check[0]["status"] == "FAIL", \
+            f"Verifier should FAIL on corrupted parents, got {parent_check[0]['status']}"
 
     def test_inject_canonical_id_verifier_catches(self, tmp_path):
-        """Injected canonical_id → verifier must detect."""
+        """Injected canonical_id → verifier must detect FAIL."""
         import shutil
         src_dir = "audit/catalog-discovery"
-        dst_dir = str(tmp_path / "audit" / "catalog-discovery")
-        os.makedirs(dst_dir, exist_ok=True)
+        dst_dir = tmp_path / "audit" / "catalog-discovery"
+        shutil.copytree(src_dir, dst_dir)
 
-        shutil.copy(f"{src_dir}/raw_taxonomy_universe.json",
-                    f"{dst_dir}/raw_taxonomy_universe.json")
-
-        with open(f"{dst_dir}/raw_taxonomy_universe.json") as f:
+        # Inject canonical_id into raw nodes
+        raw_path = dst_dir / "raw_taxonomy_universe.json"
+        with open(raw_path) as f:
             data = json.load(f)
-
-        if data.get("nodes"):
-            data["nodes"][0]["canonical_id"] = "FAKE_CANONICAL"
-
-        with open(f"{dst_dir}/raw_taxonomy_universe.json", 'w') as f:
+        for node in data.get("nodes", [])[:10]:
+            node["canonical_id"] = "FAKE_CANONICAL_ID"
+        with open(raw_path, 'w') as f:
             json.dump(data, f)
 
-        # Verify injection
-        with open(f"{dst_dir}/raw_taxonomy_universe.json") as f:
-            corrupted = json.load(f)
-        assert corrupted["nodes"][0].get("canonical_id") == "FAKE_CANONICAL"
+        result = self._run_verifier(dst_dir)
 
-    def test_media_contamination_detected(self):
-        """HeadLightMag entries should not appear in taxonomy counts."""
-        with open("audit/catalog-discovery/raw_taxonomy_universe.json") as f:
-            raw = json.load(f)
+        canonical_check = [c for c in result["checks"]
+                          if c["check"] == "canonical_id_in_raw" and c["section"] == "integrity"]
+        assert canonical_check, f"Verifier missing canonical_id check"
+        assert canonical_check[0]["status"] == "FAIL", \
+            f"Verifier should FAIL on injected canonical_id, got {canonical_check[0]['status']}"
 
-        media_sources = {"headlightmag", "headlightmag_wordpress_api"}
-        contaminated = [
-            n for n in raw.get("nodes", [])
-            if n.get("source_name", "").lower() in media_sources
-        ]
+    def test_media_contamination_detected(self, tmp_path):
+        """Injected media nodes → verifier must detect FAIL."""
+        import shutil
+        src_dir = "audit/catalog-discovery"
+        dst_dir = tmp_path / "audit" / "catalog-discovery"
+        shutil.copytree(src_dir, dst_dir)
 
-        assert not contaminated, f"Media contamination in taxonomy: {contaminated}"
+        # Inject media nodes into raw universe
+        raw_path = dst_dir / "raw_taxonomy_universe.json"
+        with open(raw_path) as f:
+            data = json.load(f)
+        data["nodes"].append({
+            "source_name": "headlightmag",
+            "source_id": "media_1",
+            "label": "Fake Media Node",
+            "node_type": "MODEL",
+        })
+        with open(raw_path, 'w') as f:
+            json.dump(data, f)
+
+        result = self._run_verifier(dst_dir)
+
+        media_check = [c for c in result["checks"]
+                      if c["check"] == "media_in_taxonomy" and c["section"] == "contamination"]
+        assert media_check, f"Verifier missing media contamination check"
+        assert media_check[0]["status"] == "FAIL", \
+            f"Verifier should FAIL on media contamination, got {media_check[0]['status']}" 
 

@@ -1,0 +1,201 @@
+{
+  "artifact_dir": "audit/catalog-discovery",
+  "total_checks": 30,
+  "passed": 25,
+  "failed": 0,
+  "partial": 0,
+  "not_applicable": 5,
+  "checks": [
+    {
+      "section": "artifacts",
+      "check": "exists_fipe_models",
+      "status": "PASS",
+      "path": "datasets/fipe_api_capture.json"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_fipe_year",
+      "status": "PASS",
+      "path": "fipe_year_hierarchy.json"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_open_ev",
+      "status": "PASS",
+      "path": "second_taxonomy_capture.json"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_toyota",
+      "status": "PASS",
+      "path": "datasets/toyota_official_capture.json"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_mazda",
+      "status": "PASS",
+      "path": "datasets/mazda_official_capture.json"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_hlm",
+      "status": "PASS",
+      "path": "media_discovery_headlightmag.json"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_thai_ref",
+      "status": "PASS",
+      "path": "thai_market_reference.json"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_raw_universe",
+      "status": "PASS",
+      "path": "raw_taxonomy_universe.json"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_source_matrix",
+      "status": "PASS",
+      "path": "source_matrix.json"
+    },
+    {
+      "section": "hash",
+      "check": "payload_hash_fipe_models",
+      "status": "PASS",
+      "hash": "d66ab979ec2ad265"
+    },
+    {
+      "section": "hash",
+      "check": "payload_hash_open_ev",
+      "status": "PASS",
+      "hash": "a83e075de3944517"
+    },
+    {
+      "section": "hash",
+      "check": "payload_hash_toyota",
+      "status": "PASS",
+      "hash": "89b2273ec79dbd09"
+    },
+    {
+      "section": "hash",
+      "check": "payload_hash_mazda",
+      "status": "PASS",
+      "hash": "22be446f19b73d41"
+    },
+    {
+      "section": "hash",
+      "check": "payload_hash_fipe_year",
+      "status": "NOT_APPLICABLE",
+      "note": "Derived artifact, no independent payload hash"
+    },
+    {
+      "section": "hash",
+      "check": "payload_hash_hlm",
+      "status": "NOT_APPLICABLE",
+      "note": "Derived artifact, no independent payload hash"
+    },
+    {
+      "section": "hash",
+      "check": "payload_hash_thai_ref",
+      "status": "NOT_APPLICABLE",
+      "note": "Derived artifact, no independent payload hash"
+    },
+    {
+      "section": "hash",
+      "check": "payload_hash_raw_universe",
+      "status": "NOT_APPLICABLE",
+      "note": "Derived artifact, no independent payload hash"
+    },
+    {
+      "section": "hash",
+      "check": "payload_hash_source_matrix",
+      "status": "NOT_APPLICABLE",
+      "note": "Derived artifact, no independent payload hash"
+    },
+    {
+      "section": "roles",
+      "check": "media_reference_drift",
+      "status": "PASS"
+    },
+    {
+      "section": "roles",
+      "check": "valid_role_enum",
+      "status": "PASS"
+    },
+    {
+      "section": "contamination",
+      "check": "media_in_taxonomy",
+      "status": "PASS"
+    },
+    {
+      "section": "integrity",
+      "check": "canonical_id_in_raw",
+      "status": "PASS"
+    },
+    {
+      "section": "openev",
+      "check": "field_integrity",
+      "status": "PASS",
+      "rows": 26
+    },
+    {
+      "section": "openev",
+      "check": "no_duplicates",
+      "status": "PASS"
+    },
+    {
+      "section": "openev",
+      "check": "hash_genuine",
+      "status": "PASS"
+    },
+    {
+      "section": "hlm",
+      "check": "evidence_counts",
+      "status": "PASS",
+      "total": 64,
+      "with_article": 45,
+      "without_article": 19,
+      "classifications": {
+        "model-mention": 49,
+        "non-vehicle": 11,
+        "unresolved": 2,
+        "variant-mention": 2
+      }
+    },
+    {
+      "section": "hlm",
+      "check": "field_integrity",
+      "status": "PASS"
+    },
+    {
+      "section": "thai_ref",
+      "check": "all_unverified",
+      "status": "PASS",
+      "count": 22
+    },
+    {
+      "section": "fipe",
+      "check": "parent_resolution",
+      "status": "PASS",
+      "resolved": 40,
+      "total_parents": 40
+    },
+    {
+      "section": "counts",
+      "check": "reconciliation",
+      "status": "PASS",
+      "counts": {
+        "fipe_model_nodes": 1483,
+        "fipe_year_nodes": 133,
+        "openev_rows": 26,
+        "toyota_models": 34,
+        "mazda_models": 10,
+        "hlm_entries": 64,
+        "thai_makes": 22,
+        "raw_nodes": 1582
+      }
+    }
+  ]
+}

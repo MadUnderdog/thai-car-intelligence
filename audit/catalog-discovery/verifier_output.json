@@ -190,7 +190,7 @@
       "section": "openev",
       "check": "upstream_hash_verify",
       "status": "PASS",
-      "verified": 5
+      "verified": 26
     },
     {
       "section": "hlm",

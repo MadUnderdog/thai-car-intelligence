@@ -589,10 +589,10 @@ class TestMutationDetection:
     4. Assert verifier status is FAIL or PARTIAL
     """
 
-    def _run_verifier(self, artifact_dir):
+    def _run_verifier(self, artifact_dir, verify_upstream=False):
         """Run the verifier against a given artifact directory."""
         from lib.thai_factory.catalog.verifier import verify_artifacts
-        return verify_artifacts(str(artifact_dir))
+        return verify_artifacts(str(artifact_dir), verify_upstream=verify_upstream)
 
     def _copy_artifacts(self, src_dir, dst_dir):
         """Copy all artifacts to isolated temp tree."""
@@ -605,7 +605,6 @@ class TestMutationDetection:
         dst_dir = tmp_path / "audit" / "catalog-discovery"
         self._copy_artifacts(src_dir, dst_dir)
 
-        # Set payload_hash to empty
         ev_path = dst_dir / "second_taxonomy_capture.json"
         with open(ev_path) as f:
             data = json.load(f)
@@ -615,7 +614,6 @@ class TestMutationDetection:
 
         result = self._run_verifier(dst_dir)
 
-        # Verifier must detect empty payload_hash
         hash_check = [c for c in result["checks"]
                      if c["check"] == "payload_hash_open_ev" and c["section"] == "hash_integrity"]
         assert hash_check, f"Verifier missing payload_hash_open_ev check"
@@ -628,7 +626,6 @@ class TestMutationDetection:
         dst_dir = tmp_path / "audit" / "catalog-discovery"
         self._copy_artifacts(src_dir, dst_dir)
 
-        # Set payload_hash to invalid format (not hex)
         ev_path = dst_dir / "second_taxonomy_capture.json"
         with open(ev_path) as f:
             data = json.load(f)
@@ -644,13 +641,49 @@ class TestMutationDetection:
         assert hash_check[0]["status"] == "FAIL", \
             f"Verifier should FAIL on invalid hash format, got {hash_check[0]['status']}"
 
+    def test_corrupt_openev_content_hash_with_mock_fetch(self, tmp_path):
+        """Valid-but-wrong OpenEV content hash → verifier must detect FAIL via mock fetch."""
+        import shutil
+        from unittest.mock import patch
+        import hashlib
+
+        src_dir = "audit/catalog-discovery"
+        dst_dir = tmp_path / "audit" / "catalog-discovery"
+        self._copy_artifacts(src_dir, dst_dir)
+
+        # Corrupt first row's raw_content_hash to valid-but-wrong hex
+        ev_path = dst_dir / "second_taxonomy_capture.json"
+        with open(ev_path) as f:
+            data = json.load(f)
+        original_hash = data["rows"][0]["raw_content_hash"]
+        data["rows"][0]["raw_content_hash"] = "bbbbbbbbbbbbbbbb"  # valid hex, wrong value
+        with open(ev_path, 'w') as f:
+            json.dump(data, f)
+
+        # Mock fetch to return original content (which has different hash)
+        original_content = b'{"brand": "byd", "model": "tang"}'  # Simulated original
+        original_hash_actual = hashlib.sha256(original_content).hexdigest()[:16]
+
+        def mock_fetch(url, timeout=10):
+            return original_content
+
+        # Run verifier with mocked fetch
+        with patch('lib.thai_factory.catalog.verifier.fetch_url', mock_fetch):
+            result = self._run_verifier(dst_dir, verify_upstream=True)
+
+        # Verifier must detect hash mismatch
+        hash_check = [c for c in result["checks"]
+                     if c["check"] == "upstream_hash_verify" and c["section"] == "openev"]
+        assert hash_check, f"Verifier missing upstream_hash_verify check"
+        assert hash_check[0]["status"] == "FAIL", \
+            f"Verifier should FAIL on corrupted content hash, got {hash_check[0]['status']}"
+
     def test_corrupt_headlightmag_verifier_catches(self, tmp_path):
         """Removed HLM article evidence → verifier must detect via evidence accounting."""
         src_dir = "audit/catalog-discovery"
         dst_dir = tmp_path / "audit" / "catalog-discovery"
         self._copy_artifacts(src_dir, dst_dir)
 
-        # Remove all article evidence
         hlm_path = dst_dir / "media_discovery_headlightmag.json"
         with open(hlm_path) as f:
             data = json.load(f)
@@ -662,13 +695,11 @@ class TestMutationDetection:
 
         result = self._run_verifier(dst_dir)
 
-        # Verifier must detect zero article evidence and return PARTIAL
         evidence_check = [c for c in result["checks"]
                          if c["check"] == "evidence_accounting" and c["section"] == "hlm"]
         assert evidence_check, f"Verifier missing hlm evidence_accounting check"
         assert evidence_check[0]["with_article"] == 0, \
             f"Expected 0 with_article after corruption, got {evidence_check[0]['with_article']}"
-        # With 0% evidence, status should be PARTIAL (not PASS)
         assert evidence_check[0]["status"] == "PARTIAL", \
             f"Expected PARTIAL status with 0% evidence, got {evidence_check[0]['status']}"
 
@@ -678,12 +709,11 @@ class TestMutationDetection:
         dst_dir = tmp_path / "audit" / "catalog-discovery"
         self._copy_artifacts(src_dir, dst_dir)
 
-        # Corrupt parent_native_id to invalid format
         fipe_path = dst_dir / "fipe_year_hierarchy.json"
         with open(fipe_path) as f:
             data = json.load(f)
         for row in data.get("year_hierarchy", []):
-            row["parent_native_id"] = "99:9999"  # invalid brand:model
+            row["parent_native_id"] = "99:9999"
         with open(fipe_path, 'w') as f:
             json.dump(data, f)
 
@@ -701,7 +731,6 @@ class TestMutationDetection:
         dst_dir = tmp_path / "audit" / "catalog-discovery"
         self._copy_artifacts(src_dir, dst_dir)
 
-        # Inject canonical_id into raw nodes
         raw_path = dst_dir / "raw_taxonomy_universe.json"
         with open(raw_path) as f:
             data = json.load(f)
@@ -724,7 +753,6 @@ class TestMutationDetection:
         dst_dir = tmp_path / "audit" / "catalog-discovery"
         self._copy_artifacts(src_dir, dst_dir)
 
-        # Inject media nodes into raw universe
         raw_path = dst_dir / "raw_taxonomy_universe.json"
         with open(raw_path) as f:
             data = json.load(f)
@@ -751,7 +779,6 @@ class TestMutationDetection:
         dst_dir = tmp_path / "audit" / "catalog-discovery"
         self._copy_artifacts(src_dir, dst_dir)
 
-        # Corrupt row commit_sha to wrong value
         ev_path = dst_dir / "second_taxonomy_capture.json"
         with open(ev_path) as f:
             data = json.load(f)
@@ -767,3 +794,44 @@ class TestMutationDetection:
         assert anchoring_check, f"Verifier missing row_anchoring check"
         assert anchoring_check[0]["status"] == "FAIL", \
             f"Verifier should FAIL on corrupted row anchoring, got {anchoring_check[0]['status']}"
+
+    def test_hlm_cross_model_contamination_detected(self, tmp_path):
+        """HLM cross-model post mapping → verifier must detect FAIL."""
+        import shutil
+        src_dir = "audit/catalog-discovery"
+        dst_dir = tmp_path / "audit" / "catalog-discovery"
+        self._copy_artifacts(src_dir, dst_dir)
+
+        # Inject cross-model contamination: same post maps to different brands
+        hlm_path = dst_dir / "media_discovery_headlightmag.json"
+        with open(hlm_path) as f:
+            data = json.load(f)
+        
+        # Add fake entries with same post_id but different brands
+        fake_entry_1 = {
+            "brand": "TOYOTA",
+            "raw_model": "Corolla",
+            "classification": "model-mention",
+            "article_evidence_count": 1,
+            "article_evidence": [{"post_id": 99999, "post_url": "https://example.com/1", "post_title": "Toyota Test"}]
+        }
+        fake_entry_2 = {
+            "brand": "HONDA",
+            "raw_model": "Civic",
+            "classification": "model-mention",
+            "article_evidence_count": 1,
+            "article_evidence": [{"post_id": 99999, "post_url": "https://example.com/2", "post_title": "Honda Test"}]
+        }
+        data["entries"].extend([fake_entry_1, fake_entry_2])
+        
+        with open(hlm_path, 'w') as f:
+            json.dump(data, f)
+
+        result = self._run_verifier(dst_dir)
+
+        # Verifier must detect cross-brand contamination
+        dup_check = [c for c in result["checks"]
+                    if c["check"] == "duplicate_post_audit" and c["section"] == "hlm"]
+        assert dup_check, f"Verifier missing duplicate_post_audit check"
+        assert dup_check[0]["status"] == "FAIL", \
+            f"Verifier should FAIL on cross-brand contamination, got {dup_check[0]['status']}"

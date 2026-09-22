@@ -1,9 +1,9 @@
 {
-  "version": "4.0",
+  "version": "5.0",
   "git": {
-    "sha": "29094a12efdd2768799910a27b5a7f61d7e5bc7a",
+    "sha": "95055bf8cb2b43971a033cc9919c95d9c5df7d50",
     "branch": "fix/p1-provenance-gate",
-    "remote_sha": "29094a12efdd2768799910a27b5a7f61d7e5bc7a",
+    "remote_sha": "95055bf8cb2b43971a033cc9919c95d9c5df7d50",
     "local_equals_remote": true,
     "working_tree_clean": false
   },
@@ -200,7 +200,7 @@
         "section": "openev",
         "check": "upstream_hash_verify",
         "status": "PASS",
-        "verified": 5
+        "verified": 26
       },
       {
         "section": "hlm",
@@ -280,12 +280,12 @@
   "tests": {
     "file": "tests/test_taxonomy_provenance.py",
     "command": "pytest tests/test_taxonomy_provenance.py -v",
-    "total": 39,
-    "passed": 39,
+    "total": 41,
+    "passed": 41,
     "failed": 0,
     "xfail": 0,
     "skipped": 0,
-    "mutation_tests": 7
+    "mutation_tests": 9
   },
   "hash_model": {
     "upstream_payload_sha256": "SHA-256 of original upstream raw payload (verified by fetch)",

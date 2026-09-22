@@ -2,14 +2,14 @@
 
 ## Implementation vs Verification
 
-This commit (p72) includes VERIFICATION CODE with upstream hash verification capability.
-No new external acquisition in this commit — all artifacts verified against existing captures.
+This commit (p73) includes VERIFICATION CODE with upstream hash verification.
+No new external acquisition — all artifacts verified against existing captures.
 
 ## 1. Git / Reproducibility
 
 - **Branch:** `fix/p1-provenance-gate`
-- **Local HEAD:** `29094a12efdd2768799910a27b5a7f61d7e5bc7a`
-- **Remote HEAD:** `29094a12efdd2768799910a27b5a7f61d7e5bc7a`
+- **Local HEAD:** `95055bf8cb2b43971a033cc9919c95d9c5df7d50`
+- **Remote HEAD:** `95055bf8cb2b43971a033cc9919c95d9c5df7d50`
 - **Local == Remote:** YES
 - **Working tree clean:** NO (untracked files)
 
@@ -22,7 +22,13 @@ No new external acquisition in this commit — all artifacts verified against ex
 - **Blocked:** 0
 - **Not Applicable:** 5
 
-## 3. Check Details
+## 3. OpenEV Upstream Verification
+
+- **Status:** PASS
+- **Verified:** 26 rows
+- **Mismatches:** 0
+
+## 4. Check Details
 
 - [PASS] artifacts/exists_fipe_models
 - [PASS] artifacts/exists_fipe_year
@@ -59,7 +65,7 @@ No new external acquisition in this commit — all artifacts verified against ex
 - [PASS] fipe/parent_resolution
 - [PASS] counts/reconciliation
 
-## 4. Known Findings
+## 5. Known Findings
 
 1. HLM evidence accounting: PARTIAL — 19 entries lack article evidence
 2. 10 duplicate HLM post IDs (expected multi-mention articles)
@@ -67,35 +73,36 @@ No new external acquisition in this commit — all artifacts verified against ex
 4. 133 Fipe year rows reconstructed from sample_details (not fresh API)
 5. Thai market reference: 22 makes all UNVERIFIED (not DLT data)
 
-## 5. Unresolved Blockers
+## 6. Unresolved Blockers
 
 - Fipe API rate limited (429, ~22h retry)
 - Thai DLT not accessible (timeout)
 - Third-party taxonomy sites blocked (WAF/JS/SSL)
 
-## 6. Test Results
+## 7. Test Results
 
 - **File:** tests/test_taxonomy_provenance.py
 - **Command:** pytest tests/test_taxonomy_provenance.py -v
-- **Result:** 39/39 passed, 0 xfailed, 0 skipped
+- **Result:** 41/41 passed, 0 xfailed, 0 skipped
 
-### Mutation Tests (7/7 PASS):
+### Mutation Tests (9/9 PASS):
 - test_corrupt_openev_empty_payload_hash_verifier_catches → FAIL
 - test_corrupt_openev_invalid_hash_format_verifier_catches → FAIL
-- test_corrupt_headlightmag_verifier_catches → PARTIAL
+- test_corrupt_openev_content_hash_with_mock_fetch → FAIL (mock fetch)
+- test_corrupt_headlightmag_verifier_catches → PARTIAL (0% evidence)
 - test_corrupt_fipe_parent_verifier_catches → FAIL
 - test_inject_canonical_id_verifier_catches → FAIL
 - test_media_contamination_detected → FAIL
 - test_corrupt_openev_row_anchoring_verifier_catches → FAIL
+- test_hlm_cross_model_contamination_detected → FAIL
 
-## 7. Hash Model
+## 8. Hash Model
 
 - `upstream_payload_sha256`: SHA-256 of original upstream raw payload (verified by fetch)
 - `local_artifact_sha256`: SHA-256 of local JSON artifact file
 - These are DIFFERENT objects and must never be compared directly
-- OpenEV upstream verification: fetch from pinned commit, compute SHA-256, compare
 
-## 8. Source Inventory
+## 9. Source Inventory
 
 | Source | Role | Rows | Status |
 |--------|------|------|--------|

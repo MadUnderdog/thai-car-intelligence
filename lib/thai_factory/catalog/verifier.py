@@ -245,7 +245,7 @@ def verify_artifacts(artifact_dir, verify_upstream=False):
         if verify_upstream and rows:
             hash_mismatches = []
             verified_count = 0
-            for i, row in enumerate(rows[:5]):  # Verify first 5 for speed
+            for i, row in enumerate(rows):  # Verify all rows
                 raw_url = row.get("raw_url", "")
                 recorded_hash = row.get("raw_content_hash", "")
                 if raw_url and recorded_hash:

@@ -207,6 +207,8 @@ def test_staging_counts_match_extractors():
     toyota_expected = len(collect_toyota())
     mazda_expected = len(collect_mazda())
     nissan_expected = len(collect_nissan())
+    from collect_multi_oem import collect_honda
+    honda_expected = len(collect_honda())
 
     counts = {}
     with open(STAGING_FILE) as f:
@@ -223,3 +225,47 @@ def test_staging_counts_match_extractors():
         f"Mazda staging count mismatch"
     assert counts.get('Nissan Thailand Official', 0) == nissan_expected, \
         f"Nissan staging count mismatch"
+    assert counts.get('Honda Thailand Official', 0) == honda_expected, \
+        f"Honda staging count mismatch"
+
+
+# ─── Honda Extraction Tests (from fixture) ───
+
+def test_honda_fixture_exists():
+    """Honda fixture must be committed and non-empty."""
+    path = f"{FIXTURE_DIR}/honda_city_page.html"
+    assert os.path.exists(path), f"Honda fixture missing: {path}"
+    assert os.path.getsize(path) > 10000, f"Honda fixture too small: {os.path.getsize(path)}"
+
+
+def test_honda_extraction_count():
+    """Honda City extractor must produce 4 observations from fixture."""
+    from collect_multi_oem import collect_honda
+    observations = collect_honda()
+    assert len(observations) == 4, f"Expected 4 Honda City variants, got {len(observations)}"
+
+
+def test_honda_specific_variants():
+    """Honda City variants must extract with correct prices."""
+    from collect_multi_oem import collect_honda
+    observations = collect_honda()
+    lookup = {obs['identity']['variant_raw']: obs for obs in observations}
+    
+    assert 'S' in lookup, f"S variant not found. Got: {list(lookup.keys())}"
+    assert lookup['S']['price']['value_thb'] == 569000
+    
+    assert 'e:HEV RS' in lookup, f"e:HEV RS not found"
+    assert lookup['e:HEV RS']['price']['value_thb'] == 739000
+
+
+def test_honda_variant_level():
+    """Honda observations must be VARIANT level with model=City."""
+    from collect_multi_oem import collect_honda
+    observations = collect_honda()
+    for obs in observations:
+        assert obs['identity']['identity_level'] == 'VARIANT', \
+            f"identity_level should be VARIANT, got {obs['identity']['identity_level']}"
+        assert obs['identity']['model_raw'] == 'City', \
+            f"model_raw should be City, got {obs['identity']['model_raw']}"
+        assert obs['identity']['variant_raw'] is not None, \
+            f"variant_raw should not be None"

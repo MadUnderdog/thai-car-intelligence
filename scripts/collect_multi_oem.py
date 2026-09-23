@@ -288,6 +288,101 @@ def collect_nissan():
     return observations
 
 
+
+
+# ─── Honda Adapter (DOM — Grade Levels section) ───
+HONDA_CITY_JS = """
+(() => {
+    const items = [];
+    const text = document.body.innerText;
+    
+    const gradeIdx = text.indexOf('Grade Levels');
+    if (gradeIdx === -1) return items;
+    
+    const section = text.substring(gradeIdx, gradeIdx + 1000);
+    const lines = section.split('\\n').map(l => l.trim()).filter(l => l);
+    
+    for (let i = 0; i < lines.length - 1; i++) {
+        const priceLine = lines[i + 1];
+        const priceMatch = priceLine.match(/([\\d,]+)\\s*THB/);
+        if (priceMatch) {
+            const price = parseInt(priceMatch[1].replace(/,/g, ''));
+            const variant = lines[i];
+            if (price > 100000 && price < 10000000 && 
+                !variant.match(/[\\d,]/) && 
+                variant !== 'Grade Levels') {
+                items.push({
+                    variant: variant,
+                    price: price,
+                    evidence: variant + ' | ' + priceLine
+                });
+            }
+        }
+    }
+    return items;
+})()
+"""
+
+
+def collect_honda():
+    """Collect from Honda — DOM extraction from Grade Levels section."""
+    print("=== Honda Thailand Official (DOM) ===")
+    html, error = load_fixture("honda_city")
+    if error:
+        print(f"  {error}")
+        return []
+
+    results, artifact = extract_from_html(html, "honda_city", HONDA_CITY_JS, fixture_path=f"{FIXTURE_DIR}/honda_city_page.html")
+    if not results:
+        print("  Extraction returned no results")
+        return []
+
+    observations = []
+    for item in results:
+        variant = item.get('variant', 'Unknown')
+        observations.append({
+            "observation_id": hashlib.sha256(f"honda_city:{variant}:{item['price']}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": "https://www.honda.co.th/en/city",
+                "name": "Honda Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "playwright_dom",
+                "artifact_path": artifact,
+            },
+            "identity": {
+                "brand_raw": "Honda",
+                "model_raw": "City",
+                "variant_raw": variant,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "brand_normalized": "honda",
+                "model_normalized": "city",
+                "variant_normalized": variant.lower().replace(" ", "-"),
+                "identity_level": "VARIANT",
+            },
+            "price": {
+                "value_thb": item['price'],
+                "type": "MSRP_STARTING",
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {},
+            "evidence_excerpt": item['evidence'],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "selector": "#Grade Levels section",
+                "method": "dom_text_section",
+            },
+        })
+
+    print(f"  Extracted: {len(observations)} variants from fixture")
+    return observations
+
 # ─── Main Collection ───
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
@@ -302,6 +397,9 @@ def main():
 
     nissan = collect_nissan()
     all_observations.extend(nissan)
+
+    honda = collect_honda()
+    all_observations.extend(honda)
 
     # Load existing Fipe/OpenEV
     existing = []
@@ -318,7 +416,8 @@ def main():
     print(f"Toyota (JSON-LD fixture): {len(toyota)}")
     print(f"Mazda (DOM fixture): {len(mazda)}")
     print(f"Nissan (DOM fixture): {len(nissan)}")
-    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan)}")
+    print(f"Honda (DOM fixture): {len(honda)}")
+    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 
     # Write staging
@@ -330,10 +429,10 @@ def main():
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "provenance": {
-            "fixture_based_extraction": len(toyota) + len(mazda) + len(nissan),
+            "fixture_based_extraction": len(toyota) + len(mazda) + len(nissan) + len(honda),
             "from_existing_structured_data": len(existing),
         },
-        "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan)},
+        "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda)},
         "total": len(all_observations) + len(existing),
     }
     with open("audit/data-staging/summary.json", 'w') as f:

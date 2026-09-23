@@ -1,43 +1,31 @@
 {
-  "generated_at": "2026-09-22T18:21:47.581013",
-  "total_raw_observations": 1679,
+  "generated_at": "2026-09-23T04:23:09.862305",
+  "total_raw_observations": 1608,
+  "provenance": {
+    "genuinely_fetched_this_run": 99,
+    "from_existing_artifacts": 1509
+  },
   "identity": {
-    "unique_brands": 27,
-    "unique_model_candidates": 1599,
-    "unique_variant_candidates": 173,
+    "unique_brands": 16,
+    "unique_model_candidates": 1542,
+    "unique_variant_candidates": 125,
     "identity_levels": {
-      "VARIANT": 174,
-      "MODEL_OR_TRIM_UNKNOWN": 1483,
-      "BRAND_ONLY": 22
-    },
-    "unknown_or_conflicted": 1505
+      "VARIANT": 125,
+      "MODEL_OR_TRIM_UNKNOWN": 1483
+    }
   },
   "value_data": {
-    "price_observations": 148,
+    "price_observations": 99,
     "spec_observations": 0
   },
   "sources": {
-    "unique_source_urls": 1524,
+    "unique_source_urls": 1510,
     "source_class_counts": {
-      "OEM_OFFICIAL": 148,
-      "STRUCTURED_REF": 1509,
-      "MARKET_REFERENCE": 22
+      "OEM_OFFICIAL": 99,
+      "STRUCTURED_REF": 1509
     },
     "source_name_counts": {
-      "Toyota Thailand Official": 25,
-      "Honda Thailand Official": 20,
-      "BYD Thailand Official": 9,
-      "MG Thailand Official": 10,
-      "Nissan Thailand Official": 7,
-      "Mazda Thailand Official": 10,
-      "Mitsubishi Thailand Official": 10,
-      "Haval Thailand Official": 9,
-      "Ford Thailand Official": 12,
-      "Isuzu Thailand Official": 7,
-      "Suzuki Thailand Official": 7,
-      "Tesla Thailand Official": 6,
-      "BMW Thailand Official": 9,
-      "Mercedes-Benz Thailand Official": 7,
+      "Toyota Thailand Official": 99,
       "Fipe API (Toyota)": 222,
       "Fipe API (Honda)": 117,
       "Fipe API (Mazda)": 25,
@@ -46,34 +34,22 @@
       "Fipe API (Nissan)": 200,
       "Fipe API (MG)": 11,
       "Fipe API (BYD)": 22,
-      "open-ev-data": 26,
-      "Thai Market Reference (knowledge base)": 22
+      "open-ev-data": 26
     }
   },
   "brands": [
     "bmw",
     "byd",
-    "chevrolet",
     "fiat",
-    "ford",
-    "haval",
     "honda",
-    "hyundai",
-    "isuzu",
-    "kia",
-    "lexus",
     "mazda",
     "mercedes-benz",
+    "mercedes_benz",
     "mg",
     "mini",
-    "mitsubishi",
     "nio",
     "nissan",
-    "nissan e.p.",
     "porsche",
-    "subaru",
-    "suzuki",
-    "tesla",
     "toyota",
     "volvo",
     "xpeng",

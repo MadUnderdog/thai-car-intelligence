@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T04:23:09.862305",
+  "generated_at": "2026-09-23T06:21:31.931708",
   "total_raw_observations": 1608,
   "provenance": {
     "genuinely_fetched_this_run": 99,
@@ -7,52 +7,10 @@
   },
   "identity": {
     "unique_brands": 16,
-    "unique_model_candidates": 1542,
-    "unique_variant_candidates": 125,
-    "identity_levels": {
-      "VARIANT": 125,
-      "MODEL_OR_TRIM_UNKNOWN": 1483
-    }
+    "unique_variant_candidates": 125
   },
   "value_data": {
     "price_observations": 99,
     "spec_observations": 0
-  },
-  "sources": {
-    "unique_source_urls": 1510,
-    "source_class_counts": {
-      "OEM_OFFICIAL": 99,
-      "STRUCTURED_REF": 1509
-    },
-    "source_name_counts": {
-      "Toyota Thailand Official": 99,
-      "Fipe API (Toyota)": 222,
-      "Fipe API (Honda)": 117,
-      "Fipe API (Mazda)": 25,
-      "Fipe API (BMW)": 323,
-      "Fipe API (Mercedes-Benz)": 563,
-      "Fipe API (Nissan)": 200,
-      "Fipe API (MG)": 11,
-      "Fipe API (BYD)": 22,
-      "open-ev-data": 26
-    }
-  },
-  "brands": [
-    "bmw",
-    "byd",
-    "fiat",
-    "honda",
-    "mazda",
-    "mercedes-benz",
-    "mercedes_benz",
-    "mg",
-    "mini",
-    "nio",
-    "nissan",
-    "porsche",
-    "toyota",
-    "volvo",
-    "xpeng",
-    "zeekr"
-  ]
+  }
 }

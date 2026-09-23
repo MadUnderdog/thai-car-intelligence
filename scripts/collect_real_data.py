@@ -111,71 +111,139 @@ asyncio.run(main())
 
 
 def extract_toyota_prices(html: str, url: str, artifact_path: str) -> List[Dict]:
-    """Extract Toyota prices from actual page HTML."""
+    """Extract Toyota prices from JSON-LD structured data in actual page HTML.
+    
+    Parses the application/ld+json script tag which contains:
+    @graph → CollectionPage → mainEntity → itemListElement → Vehicle → hasVariant → offers
+    
+    Each observation has exact model/variant/price linked to the same JSON-LD record.
+    """
     observations = []
+    import re, json as _json
     
-    # Parse the actual HTML for price data
-    # Look for price patterns in the page
-    import re
+    # Extract JSON-LD blocks from HTML
+    jsonld_pattern = re.compile(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', re.DOTALL)
+    jsonld_blocks = jsonld_pattern.findall(html)
     
-    # Common Thai price patterns
-    price_pattern = re.compile(r'(\d{1,3}(?:,\d{3})*)\s*(?:บาท|THB|฿)', re.IGNORECASE)
-    model_pattern = re.compile(r'(?:Corolla|Camry|Yaris|Hilux|Fortuner|bZ4X|Land Cruiser)', re.IGNORECASE)
-    
-    # Find price blocks
-    prices_found = price_pattern.findall(html)
-    models_found = model_pattern.findall(html)
-    
-    # If we found actual prices on the page, create observations
-    if prices_found:
-        for i, price_str in enumerate(prices_found[:20]):  # Limit to first 20
-            price = int(price_str.replace(',', ''))
-            if price > 100000:  # Reasonable car price range
-                # Try to find associated model
-                model = models_found[i] if i < len(models_found) else "Unknown"
+    for block in jsonld_blocks:
+        try:
+            data = _json.loads(block)
+        except _json.JSONDecodeError:
+            continue
+        
+        if '@graph' not in data:
+            continue
+        
+        for item in data['@graph']:
+            if item.get('@type') != 'CollectionPage':
+                continue
+            
+            main_entity = item.get('mainEntity', {})
+            if main_entity.get('@type') != 'ItemList':
+                continue
+            
+            for list_item in main_entity.get('itemListElement', []):
+                vehicle = list_item.get('item', {})
+                if vehicle.get('@type') != 'Vehicle':
+                    continue
                 
-                observations.append({
-                    "observation_id": hashlib.sha256(
-                        f"{url}:{model}:{price}".encode()
-                    ).hexdigest()[:16],
-                    "timestamp": datetime.utcnow().isoformat(),
-                    "source": {
-                        "class": "OEM_OFFICIAL",
-                        "url": url,
-                        "name": "Toyota Thailand Official",
-                        "precedence": SOURCE_PRECEDENCE["OEM_OFFICIAL"],
-                        "native_id": None,
-                        "immutable_revision": None,
-                        "extraction_method": "playwright_html_parse",
-                        "artifact_path": artifact_path,
-                    },
-                    "identity": {
-                        "brand_raw": "Toyota",
-                        "model_raw": model,
-                        "variant_raw": None,
-                        "year": 2024,
-                        "fuel_powertrain_raw": None,
-                        "brand_normalized": "toyota",
-                        "model_normalized": model.lower().replace(" ", "-"),
-                        "variant_normalized": None,
-                        "identity_level": "MODEL",
-                    },
-                    "price": {
-                        "value_thb": price,
-                        "type": "MSRP",
-                        "currency": "THB",
-                        "currentness": "UNKNOWN",  # Only set CURRENT if page explicitly says current
-                    },
-                    "specs": {},
-                    "raw_labels": {"price_text": f"{price_str} บาท"},
-                    "evidence_excerpt": f"Price found on page: {price_str} บาท",
-                    "evidence_locator": {
-                        "artifact_path": artifact_path,
-                        "html_pattern": f"price_text_{price_str}",
-                    },
-                })
+                vehicle_name = vehicle.get('name', '').strip()
+                vehicle_url = vehicle.get('url', url)
+                vehicle_config = vehicle.get('vehicleConfiguration', '')
+                
+                for variant in vehicle.get('hasVariant', []):
+                    variant_name = variant.get('name', '').strip()
+                    variant_config = variant.get('vehicleConfiguration', '')
+                    offers = variant.get('offers', {})
+                    
+                    price_str = offers.get('price')
+                    currency = offers.get('priceCurrency', 'THB')
+                    availability_url = offers.get('availability', '')
+                    availability = availability_url.split('/')[-1] if availability_url else 'UNKNOWN'
+                    
+                    if not price_str:
+                        continue
+                    
+                    try:
+                        price = int(price_str)
+                    except (ValueError, TypeError):
+                        continue
+                    
+                    if price <= 0:
+                        continue
+                    
+                    # Determine currentness from availability
+                    if availability == 'InStock':
+                        currentness = 'CURRENT'
+                    elif availability == 'OutOfStock':
+                        currentness = 'UNKNOWN'
+                    else:
+                        currentness = 'UNKNOWN'
+                    
+                    # Clean model/variant names
+                    # vehicle_name is like "Toyota Corolla Altis", strip brand prefix
+                    model_name = vehicle_name
+                    for prefix in ['Toyota ', 'Toyota']:
+                        if model_name.startswith(prefix):
+                            model_name = model_name[len(prefix):].strip()
+                    
+                    # variant_config is the trim name
+                    trim_name = variant_config if variant_config else variant_name
+                    
+                    # Build JSON-LD locator path
+                    position = list_item.get('position', '?')
+                    json_path = f"@graph[CollectionPage].mainEntity.itemListElement[{position}].item.hasVariant[{trim_name}].offers.price"
+                    
+                    observations.append({
+                        "observation_id": hashlib.sha256(
+                            f"{url}:{model_name}:{trim_name}:{price}".encode()
+                        ).hexdigest()[:16],
+                        "timestamp": datetime.utcnow().isoformat(),
+                        "source": {
+                            "class": "OEM_OFFICIAL",
+                            "url": url,
+                            "name": "Toyota Thailand Official",
+                            "precedence": SOURCE_PRECEDENCE["OEM_OFFICIAL"],
+                            "native_id": None,
+                            "immutable_revision": None,
+                            "extraction_method": "playwright_jsonld_parse",
+                            "artifact_path": artifact_path,
+                        },
+                        "identity": {
+                            "brand_raw": "Toyota",
+                            "model_raw": model_name,
+                            "variant_raw": trim_name,
+                            "year": None,  # Not hardcoded — year not in JSON-LD
+                            "fuel_powertrain_raw": None,
+                            "brand_normalized": "toyota",
+                            "model_normalized": model_name.lower().replace(" ", "-"),
+                            "variant_normalized": trim_name.lower().replace(" ", "-") if trim_name else None,
+                            "identity_level": "VARIANT",
+                        },
+                        "price": {
+                            "value_thb": price,
+                            "type": "MSRP",
+                            "currency": currency,
+                            "currentness": currentness,
+                        },
+                        "specs": {},
+                        "raw_labels": {
+                            "vehicle_name_raw": vehicle_name,
+                            "variant_name_raw": variant_name,
+                            "vehicleConfiguration": variant_config,
+                            "price_raw": price_str,
+                            "availability_raw": availability,
+                        },
+                        "evidence_excerpt": f"JSON-LD Vehicle '{vehicle_name}' → variant '{trim_name}' → price {price_str} {currency} ({availability})",
+                        "evidence_locator": {
+                            "artifact_path": artifact_path,
+                            "json_path": json_path,
+                            "ldplusjson_block": True,
+                        },
+                    })
     
     return observations
+
 
 
 def collect_fipe() -> List[Dict]:

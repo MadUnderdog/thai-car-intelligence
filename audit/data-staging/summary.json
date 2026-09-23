@@ -1,16 +1,13 @@
 {
-  "generated_at": "2026-09-23T06:21:31.931708",
-  "total_raw_observations": 1608,
+  "generated_at": "2026-09-23T07:32:26.266480+00:00",
   "provenance": {
-    "genuinely_fetched_this_run": 99,
-    "from_existing_artifacts": 1509
+    "fixture_based_extraction": 119,
+    "from_existing_structured_data": 0
   },
-  "identity": {
-    "unique_brands": 16,
-    "unique_variant_candidates": 125
+  "by_source": {
+    "toyota": 99,
+    "mazda": 10,
+    "nissan": 10
   },
-  "value_data": {
-    "price_observations": 99,
-    "spec_observations": 0
-  }
+  "total": 119
 }

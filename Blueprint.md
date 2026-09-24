@@ -3242,7 +3242,7 @@ This is the required architecture for version 1 production data ingestion.
 
 # Part II — Data acquisition factory & daily update roadmap (A–I)
 
-> Added 2026-09-24, branch `fix/p1-provenance-gate`, baseline commit `e1d2809`.
+> Added 2026-09-24, branch `fix/p1-provenance-gate`, baseline commit `4cbe677` (pre-rewrite `e1d28098ca44`; SHAs re-anchored by the 2026-09-24 credential-purge history rewrite — see §100).
 >
 > This part is **normative** for the data acquisition/update factory. Earlier sections remain background design: §16 (update agent), §17 (update conflict), §28 (source crawler design), §29 (change detection), §75–77 (cron/refresh). Where they conflict with this part, **this part wins**. Do not create competing plan documents; update this part in-place.
 
@@ -3492,12 +3492,13 @@ audit / reporting                     audit/daily-runs/ + audit/data-staging/sum
 
 ---
 
-# 100. H. Current verified state (baseline @ `e1d2809`)
+# 100. H. Current verified state (baseline @ `66a6daa`)
 
 VERIFIED facts (independently checked against the remote tree):
 
-- Branch/commit: `fix/p1-provenance-gate` @ `e1d2809`.
-- Tests: **80/80** (17 provenance/boundary + 63 extraction fixtures), all offline from committed artifacts.
+- Branch/commit: `fix/p1-provenance-gate` @ `66a6daacabf0f17caa0147f32ae7205f56e3e283` (security-remediated history. SHA map after the credential-purge rewrite: `e1d2809`→`4cbe677`, `c847dbf`→`cc8f7af`, `b33a0ef`→`7a952cb`).
+- **Credential purge (2026-09-24)**: two third-party Google Maps browser keys (from captured Nissan/Porsche HTML) removed from tracked fixtures; branch history rewritten and force-pushed; fresh-clone per-commit scan = 0 matches; `AcquisitionWriter` now redacts incidental credentials before hashing (3 guard tests). **GitHub secret-scanning alert status: UNVERIFIED** — the alerts API returned 401 without authentication, so no alert-closure is claimed. **Key rotation: EXTERNAL** — the keys belong to Nissan Thailand / Porsche Thailand Google Cloud projects; rotation is owner-side, has not been performed, and remains outside this repository's control.
+- Tests: **83/83** (17 provenance/boundary + 3 credential-guard + 63 extraction fixtures), all offline from committed artifacts.
 - Staging: **176/176** rows carry SHA-256, `provenance_state` and a canonical locator.
 - Provenance: **2/8 sources `ACQUISITION_VERIFIED`** (Lexus, Honda Models — sidecar-backed), **6/8 `LEGACY_UNVERIFIED`** (Toyota, Mazda, Nissan, Honda City, Isuzu, BMW).
 - Rows by source/identity: Toyota 99 VARIANT · Mazda 10 MODEL · Nissan 10 MODEL · Honda City 4 VARIANT · Isuzu 6 MODEL · BMW 35 MODEL · Lexus 6 MODEL · Honda Models 6 MODEL. All `currentness=UNKNOWN` except rows explicitly dated by their source.
@@ -3523,7 +3524,7 @@ Known non-blocking follow-ups (logged, not fixed now):
 
 - **Objective**: breadth — coverage registry covering every in-scope Thai brand, each either sidecar-captured or blocked-with-evidence.
 - **Deliverables**: `audit/coverage/oem-registry.json` + generated view; new `.prov.json` captures via `AcquisitionWriter`; adapter + tests per newly parsed OEM; acquisition run reports.
-- **Entry**: provenance architecture accepted (`b33a0ef`); first sidecar exercised (`c847dbf`). ✅
+- **Entry**: provenance architecture accepted (`7a952cb`, pre-rewrite `b33a0ef`); first sidecar exercised (`cc8f7af`, pre-rewrite `c847dbf`). ✅
 - **Exit**: registry = 100% of in-scope brands; every reachable OEM `PARSED_TESTED`; every blocked brand has blocker evidence + ladder ≤2 alternates/cycle tried.
 - **Blockers allowed**: 403/404/DNS/TLS/timeouts (documented), Fipe 429 (retry window ~22 h).
 - **Do NOT work on**: verifier rewrites, production DB bulk load, AI reconciliation, test-framework expansion beyond per-adapter needs, provenance redesign.

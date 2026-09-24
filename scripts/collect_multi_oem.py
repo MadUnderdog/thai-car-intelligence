@@ -258,14 +258,14 @@ NISSAN_JS = """
 
 
 def collect_nissan():
-    """Collect from Nissan — DOM extraction from fixture."""
-    print("=== Nissan Thailand Official (DOM) ===")
-    html, error = load_fixture("nissan")
+    """Collect from Nissan — DOM extraction from sidecar-verified recapture (new official domain)."""
+    print("=== Nissan Thailand Official (sidecar-verified recapture) ===")
+    html, error = load_fixture("nissan_new_home")
     if error:
         print(f"  {error}")
         return []
 
-    results, artifact = extract_from_html(html, "nissan", NISSAN_JS, fixture_path=f"{FIXTURE_DIR}/nissan_page.html")
+    results, artifact = extract_from_html(html, "nissan_new_home", NISSAN_JS, fixture_path=f"{FIXTURE_DIR}/nissan_new_home_page.html")
     if not results:
         print("  Extraction returned no results")
         return []
@@ -281,7 +281,7 @@ def collect_nissan():
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "source": {
                 "class": "OEM_OFFICIAL",
-                "url": "https://www.nissan.co.th",
+                "url": "https://www.nissan.co.th/",
                 "name": "Nissan Thailand Official",
                 "precedence": 100,
                 "native_id": None,
@@ -574,24 +574,34 @@ BMW_JS = """
 (() => {
     const items = [];
     const cards = document.querySelectorAll('.cmp-allmodelscard__root');
-    
+
     cards.forEach((card, idx) => {
         const text = card.textContent;
-        const priceMatch = text.match(/เริ่มต้น\\s*฿([\\d,]+)/);
-        if (!priceMatch) return;
-        
-        const price = parseInt(priceMatch[1].replace(/,/g, ''));
-        if (price < 500000 || price > 20000000) return;
-        
-        const nameEl = card.querySelector('.cmp-allmodelscarddetail__wrapper, h2, h3');
-        if (!nameEl) return;
-        let model = nameEl.textContent.trim().replace(/\\s+/g, ' ');
-        
-        const modelMatch = model.match(/^(.*?)(?:รุ่นรถยนต์|รถยนต์ M)/);
-        if (modelMatch) model = modelMatch[1].trim();
-        
-        if (!model || model.length < 2 || model.includes('฿')) return;
-        
+        let price = null;
+        const m1 = text.match(/เริ่มต้น\\s*฿([\\d,]+)/);
+        const m2 = text.match(/From THB([\\d,]+)/);
+        if (m1) price = parseInt(m1[1].replace(/,/g, ''));
+        else if (m2) price = parseInt(m2[1].replace(/,/g, ''));
+        if (!price || price < 500000 || price > 20000000) return;
+
+        let model = null;
+        const bodyType = card.querySelector('.cmp-allmodelscarddetail__body-type');
+        const series = card.querySelector('.cmp-allmodelscarddetail__series');
+        if (bodyType && series) {
+            const addLabel = card.querySelector('.cmp-allmodelscarddetail__additional-label');
+            model = [bodyType, addLabel, series]
+                .map(x => x ? x.textContent.trim() : '')
+                .filter(Boolean).join(' ').replace(/\\s+/g, ' ').trim();
+        } else {
+            const nameEl = card.querySelector('.cmp-allmodelscarddetail__wrapper, h2, h3');
+            if (!nameEl) return;
+            model = nameEl.textContent.trim().replace(/\\s+/g, ' ');
+            const modelMatch = model.match(/^(.*?)(?:รุ่นรถยนต์|รถยนต์ M)/);
+            if (modelMatch) model = modelMatch[1].trim();
+        }
+
+        if (!model || model.length < 2 || model.includes('฿') || model.includes('THB')) return;
+
         const path = [];
         let el = card;
         while (el && el !== document.body) {
@@ -599,30 +609,25 @@ BMW_JS = """
             path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (childIdx + 1) + ')');
             el = el.parentElement;
         }
-        
-        items.push({
-            model: model,
-            price: price,
-            cardIndex: idx,
-            domPath: path.join(' > '),
-            evidence: text.trim().replace(/\\s+/g, ' ').substring(0, 150)
-        });
+        items.push({ model: model, price: price, cardIndex: idx, domPath: path.join(' > '),
+                     evidence: text.trim().replace(/\\s+/g, ' ').substring(0, 150) });
     });
-    
     return items;
 })()
 """
 
 
 def collect_bmw():
-    """Collect from BMW — DOM extraction from allmodelscard."""
-    print("=== BMW Thailand Official (DOM) ===")
-    html, error = load_fixture("bmw_models")
-    if error:
-        print(f"  {error}")
+    """Collect from BMW — DOM extraction from sidecar-verified recapture artifact."""
+    print("=== BMW Thailand Official (sidecar-verified recapture) ===")
+    artifact_file = f"{FIXTURE_DIR}/bmw_all_models_verified.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
         return []
+    with open(artifact_file) as f:
+        html = f.read()
 
-    results, artifact = extract_from_html(html, "bmw_models", BMW_JS, fixture_path=f"{FIXTURE_DIR}/bmw_models_page.html")
+    results, artifact = extract_from_html(html, "bmw_models_verified", BMW_JS, fixture_path=artifact_file)
     if not results:
         print("  Extraction returned no results")
         return []
@@ -644,7 +649,7 @@ def collect_bmw():
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "source": {
                 "class": "OEM_OFFICIAL",
-                "url": "https://www.bmw.co.th/th/all-models.html",
+                "url": "https://www.bmw.co.th/en/all-models.html",
                 "name": "BMW Thailand Official",
                 "precedence": 100,
                 "native_id": None,
@@ -749,15 +754,19 @@ def collect_lexus():
                 "artifact_sha256": prov.get('sha256') or hashlib.sha256(open(artifact, 'rb').read()).hexdigest(),
                 "captured_at": prov["captured_at"],
                 "provenance_state": prov["provenance_state"],
+                "class": "OEM_OFFICIAL",
             },
             "identity": {
                 "level": "MODEL",
+                "identity_level": "MODEL",
                 "model_raw": model,
                 "variant_raw": None,
             },
             "price": {
                 "value_thb": price,
                 "price_type": "MSRP_STARTING" if is_starting else "EXACT_VARIANT",
+                "type": "MSRP_STARTING" if is_starting else "EXACT_VARIANT",
+                "currency": "THB",
                 "currentness": "UNKNOWN",
             },
             "evidence": {
@@ -839,15 +848,19 @@ def collect_honda_models():
                                 "artifact_sha256": prov.get('sha256') or hashlib.sha256(open(artifact, 'rb').read()).hexdigest(),
                                 "captured_at": prov["captured_at"],
                                 "provenance_state": prov["provenance_state"],
+                                "class": "OEM_OFFICIAL",
                             },
                             "identity": {
                                 "level": "MODEL",
+                                "identity_level": "MODEL",
                                 "model_raw": model,
                                 "variant_raw": None,
                             },
                             "price": {
                                 "value_thb": price,
                                 "price_type": "MSRP_STARTING",
+                                "type": "MSRP_STARTING",
+                                "currency": "THB",
                                 "currentness": "UNKNOWN",
                             },
                             "evidence": {
@@ -862,6 +875,121 @@ def collect_honda_models():
             
             card = card.parent
     
+    print(f"  Extracted: {len(observations)} models from fixture")
+    return observations
+
+
+# ─── MG Adapter (DOM — promo cards with source-labelled starting price) ───
+
+MG_JS = """
+(() => {
+    const items = [];
+    const seen = new Set();
+    const cards = document.querySelectorAll('div.p-5');
+    cards.forEach((card, idx) => {
+        const spans = card.querySelectorAll('span.font-bold');
+        spans.forEach(span => {
+            const t = span.textContent.replace(/\\s+/g, ' ').trim();
+            if (!t.includes('ราคา') || !t.includes('เริ่มต้น')) return;
+            const pm = t.match(/([\\d][\\d,]{4,})\\s*บาท/);
+            if (!pm) return;
+            const price = parseInt(pm[1].replace(/,/g, ''));
+            if (price < 100000 || price > 10000000) return;
+            const mm = t.match(/MG\\s?[A-Za-z0-9]+(?:\\s+[A-Za-z0-9]+)*/);
+            if (!mm) return;
+            const model = mm[0].trim();
+            const key = model + ':' + price;
+            if (seen.has(key)) return;
+            seen.add(key);
+            const path = [];
+            let el = span;
+            while (el && el !== document.body) {
+                const childIdx = Array.from(el.parentElement.children).indexOf(el);
+                path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (childIdx + 1) + ')');
+                el = el.parentElement;
+            }
+            items.push({ model: model, price: price, cardIndex: idx, domPath: path.join(' > '),
+                         evidence: t.substring(0, 200) });
+        });
+    });
+    return items;
+})()
+"""
+
+
+def collect_mg():
+    """Collect from MG — DOM extraction from sidecar-verified capture."""
+    print("=== MG Thailand Official (DOM) ===")
+    artifact_file = f"{FIXTURE_DIR}/mg_home_page.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
+        return []
+    with open(artifact_file) as f:
+        html = f.read()
+
+    results, artifact = extract_from_html(html, "mg_home", MG_JS, fixture_path=artifact_file)
+    if not results:
+        print("  Extraction returned no results")
+        return []
+
+    with open(artifact, 'rb') as f:
+        artifact_hash = hashlib.sha256(f.read()).hexdigest()
+    prov = get_fixture_provenance(artifact)
+
+    observations = []
+    seen = set()
+    for item in results:
+        model = item['model']
+        key = f"{model}:{item['price']}"
+        if key in seen:
+            continue
+        seen.add(key)
+
+        observations.append({
+            "observation_id": hashlib.sha256(f"mg:{model}:{item['price']}:{item['domPath']}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": "https://www.mgcars.com/th/",
+                "name": "MG Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "playwright_dom",
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "brand_raw": "MG",
+                "model_raw": model,
+                "variant_raw": None,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "brand_normalized": "mg",
+                "model_normalized": model.lower().replace(" ", "-"),
+                "variant_normalized": None,
+                "identity_level": "MODEL",
+            },
+            "price": {
+                "value_thb": item['price'],
+                "type": "MSRP_STARTING",
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {},
+            "evidence_excerpt": item['evidence'],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "canonical_locator": item['domPath'],
+                "card_index": item['cardIndex'],
+                "method": "dom_card",
+            },
+        })
+
     print(f"  Extracted: {len(observations)} models from fixture")
     return observations
 
@@ -892,6 +1020,8 @@ def main():
     all_observations.extend(lexus)
     honda_models = collect_honda_models()
     all_observations.extend(honda_models)
+    mg = collect_mg()
+    all_observations.extend(mg)
 
     # Load existing Fipe/OpenEV
     existing = []
@@ -913,7 +1043,8 @@ def main():
     print(f"BMW (DOM fixture): {len(bmw)}")
     print(f"Lexus (DOM fixture): {len(lexus)}")
     print(f"Honda Models (DOM fixture): {len(honda_models)}")
-    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw)}")
+    print(f"MG (DOM fixture): {len(mg)}")
+    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 
     # Write staging
@@ -922,13 +1053,18 @@ def main():
         for obs in all_observations + existing:
             f.write(json.dumps(obs) + '\n')
 
+    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "provenance": {
-            "fixture_based_extraction": len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw),
+            "fixture_based_extraction": len(oem_obs),
+            "acquisition_verified": sum(1 for o in oem_obs if o['source'].get('provenance_state') == 'ACQUISITION_VERIFIED'),
+            "legacy_unverified": sum(1 for o in oem_obs if o['source'].get('provenance_state') == 'LEGACY_UNVERIFIED'),
             "from_existing_structured_data": len(existing),
         },
-        "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda), "isuzu": len(isuzu), "bmw": len(bmw)},
+        "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda),
+                       "isuzu": len(isuzu), "bmw": len(bmw), "lexus": len(lexus),
+                       "honda_models": len(honda_models), "mg": len(mg)},
         "total": len(all_observations) + len(existing),
     }
     with open("audit/data-staging/summary.json", 'w') as f:

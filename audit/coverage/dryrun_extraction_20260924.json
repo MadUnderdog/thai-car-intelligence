@@ -1,0 +1,301 @@
+{
+  "bmw": [
+    {
+      "model": "SAV New iX Models Electric From THB5,799,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 5799000,
+      "cardIndex": 0,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAV New iX Models Electric From THB5,799,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves"
+    },
+    {
+      "model": "SAV New iX3 Models Electric From THB3,459,000",
+      "price": 3459000,
+      "cardIndex": 1,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAV New iX3 Models Electric From THB3,459,000 Build & Price Discover now Request an offer Continue to \"Compare\""
+    },
+    {
+      "model": "SAC iX2 Models Electric From THB3,259,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 3259000,
+      "cardIndex": 2,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAC iX2 Models Electric From THB3,259,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves th"
+    },
+    {
+      "model": "SAV iX1 L Models Electric From THB2,359,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 2359000,
+      "cardIndex": 3,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAV iX1 L Models Electric From THB2,359,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves "
+    },
+    {
+      "model": "Sedan New i5 Models Electric From THB3,299,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 3299000,
+      "cardIndex": 4,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan New i5 Models Electric From THB3,299,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserv"
+    },
+    {
+      "model": "SAV XM Models Hybrid From THB6,499,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 6499000,
+      "cardIndex": 6,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAV XM Models Hybrid From THB6,499,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the r"
+    },
+    {
+      "model": "SAV X5 Models Hybrid From THB5,269,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 5269000,
+      "cardIndex": 8,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(11) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAV X5 Models Hybrid From THB5,269,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the r"
+    },
+    {
+      "model": "Sedan 7 series Models Hybrid From THB6,869,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 6869000,
+      "cardIndex": 9,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(12) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan 7 series Models Hybrid From THB6,869,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserv"
+    },
+    {
+      "model": "Sedan 7 series M Models Hybrid From THB7,229,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 7229000,
+      "cardIndex": 10,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(13) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan 7 series M Models Hybrid From THB7,229,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company rese"
+    },
+    {
+      "model": "Sedan 5 series Models Hybrid From THB3,109,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 3109000,
+      "cardIndex": 11,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(14) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan 5 series Models Hybrid From THB3,109,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserv"
+    },
+    {
+      "model": "Sedan M5 Models Hybrid From THB12,679,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 12679000,
+      "cardIndex": 12,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(15) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan M5 Models Hybrid From THB12,679,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves th"
+    },
+    {
+      "model": "Touring M5 Models Hybrid From THB12,979,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 12979000,
+      "cardIndex": 13,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(16) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Touring M5 Models Hybrid From THB12,979,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves "
+    },
+    {
+      "model": "Sedan 3 series Models Hybrid From THB2,879,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 2879000,
+      "cardIndex": 14,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(17) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan 3 series Models Hybrid From THB2,879,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserv"
+    },
+    {
+      "model": "SAC X6 Models Petrol From THB5,769,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 5769000,
+      "cardIndex": 15,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(19) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAC X6 Models Petrol From THB5,769,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the r"
+    },
+    {
+      "model": "SAV X3 M Models Petrol From THB4,379,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 4379000,
+      "cardIndex": 16,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(20) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAV X3 M Models Petrol From THB4,379,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the"
+    },
+    {
+      "model": "SAV X1 Models Petrol From THB2,279,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 2279000,
+      "cardIndex": 17,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(21) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAV X1 Models Petrol From THB2,279,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the r"
+    },
+    {
+      "model": "Coupé 4 series Models Petrol From THB3,479,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 3479000,
+      "cardIndex": 18,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(22) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Coupé 4 series Models Petrol From THB3,479,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserv"
+    },
+    {
+      "model": "Coupé 4 series M Models Petrol From THB5,179,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 5179000,
+      "cardIndex": 19,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(23) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Coupé 4 series M Models Petrol From THB5,179,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company rese"
+    },
+    {
+      "model": "Coupé M4 Models Petrol From THB10,099,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 10099000,
+      "cardIndex": 20,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(24) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Coupé M4 Models Petrol From THB10,099,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves th"
+    },
+    {
+      "model": "Convertible 4 series Models Petrol From THB4,379,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 4379000,
+      "cardIndex": 21,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(25) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Convertible 4 series Models Petrol From THB4,379,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company "
+    },
+    {
+      "model": "Sedan 3 series M Models Petrol From THB3,879,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 3879000,
+      "cardIndex": 22,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(26) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan 3 series M Models Petrol From THB3,879,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company rese"
+    },
+    {
+      "model": "Sedan M3 Models Petrol From THB14,799,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 14799000,
+      "cardIndex": 23,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(27) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan M3 Models Petrol From THB14,799,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves th"
+    },
+    {
+      "model": "Sedan 3 series Models Petrol From THB2,779,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 2779000,
+      "cardIndex": 24,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(28) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan 3 series Models Petrol From THB2,779,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserv"
+    },
+    {
+      "model": "Touring M3 Models Petrol From THB10,199,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 10199000,
+      "cardIndex": 25,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(29) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Touring M3 Models Petrol From THB10,199,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves "
+    },
+    {
+      "model": "Coupé M2 Models Petrol From THB6,419,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 6419000,
+      "cardIndex": 26,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(30) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Coupé M2 Models Petrol From THB6,419,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the"
+    },
+    {
+      "model": "Coupé 2 series Models Petrol From THB2,079,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 2079000,
+      "cardIndex": 27,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(31) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Coupé 2 series Models Petrol From THB2,079,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserv"
+    },
+    {
+      "model": "Roadster Z4 Models Petrol From THB4,129,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 4129000,
+      "cardIndex": 28,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(32) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Roadster Z4 Models Petrol From THB4,129,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves "
+    },
+    {
+      "model": "Roadster Z4 M Model Petrol From THB5,129,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 5129000,
+      "cardIndex": 29,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(33) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Roadster Z4 M Model Petrol From THB5,129,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves"
+    },
+    {
+      "model": "SAV X7 Models Diesel From THB6,469,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 6469000,
+      "cardIndex": 30,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(35) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAV X7 Models Diesel From THB6,469,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the r"
+    },
+    {
+      "model": "SAV X5 Models Diesel From THB4,969,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 4969000,
+      "cardIndex": 31,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(36) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAV X5 Models Diesel From THB4,969,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the r"
+    },
+    {
+      "model": "SAC X4 Models Diesel From THB4,069,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 4069000,
+      "cardIndex": 32,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(37) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAC X4 Models Diesel From THB4,069,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the r"
+    },
+    {
+      "model": "SAV X3 Models Diesel From THB3,679,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 3679000,
+      "cardIndex": 33,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(38) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "SAV X3 Models Diesel From THB3,679,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the r"
+    },
+    {
+      "model": "Sedan 7 series Models Diesel From THB6,549,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 6549000,
+      "cardIndex": 34,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(39) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan 7 series Models Diesel From THB6,549,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserv"
+    },
+    {
+      "model": "Sedan 5 series Models Diesel From THB3,609,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 3609000,
+      "cardIndex": 35,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(40) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan 5 series Models Diesel From THB3,609,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserv"
+    },
+    {
+      "model": "Sedan 3 series Models Diesel From THB2,679,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserves the right to change prices and equipment without prior notice. This price is not included BSI Standard package.",
+      "price": 2679000,
+      "cardIndex": 36,
+      "domPath": "div:nth-child(29) > div:nth-child(1) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(41) > div:nth-child(1) > div:nth-child(1)",
+      "evidence": "Sedan 3 series Models Diesel From THB2,679,000 Illustrations show optional equipment at an additional cost. The prices 7% VAT included. Company reserv"
+    }
+  ],
+  "nissan": [],
+  "mg": [
+    {
+      "model": "MG Urban",
+      "price": 549900,
+      "cardIndex": 0,
+      "domPath": "div:nth-child(1) > main:nth-child(4) > div:nth-child(4) > div:nth-child(2)",
+      "evidence": "New MG Urban รถ EV ที่จะทำให้ชีวิตคุณง่ายขึ้น ราคา Early Bird เริ่มต้น 549,900 บาท*"
+    },
+    {
+      "model": "MGS5 EV PLUS",
+      "price": 649900,
+      "cardIndex": 0,
+      "domPath": "div:nth-child(1) > main:nth-child(4) > div:nth-child(4) > div:nth-child(2)",
+      "evidence": "NEW MGS5 EV PLUS ราคาพิเศษเริ่มต้น 649,900 บาท"
+    },
+    {
+      "model": "MG4",
+      "price": 599900,
+      "cardIndex": 0,
+      "domPath": "div:nth-child(1) > main:nth-child(4) > div:nth-child(4) > div:nth-child(2)",
+      "evidence": "NEW MG4 รุ่นปี 2026 ราคาพิเศษเริ่มต้น 599,900 บาท*"
+    },
+    {
+      "model": "MG MAXUS 7",
+      "price": 1299000,
+      "cardIndex": 0,
+      "domPath": "div:nth-child(1) > main:nth-child(4) > div:nth-child(4) > div:nth-child(2)",
+      "evidence": "NEW MG MAXUS 7 ราคาพิเศษเริ่มต้น 1,299,000 บาท (ภายใต้มาตรการ EV 3.5)"
+    },
+    {
+      "model": "MG MAXUS 9",
+      "price": 1799900,
+      "cardIndex": 0,
+      "domPath": "div:nth-child(1) > main:nth-child(4) > div:nth-child(4) > div:nth-child(2)",
+      "evidence": "สุขเต็มแม็กซ์ไปด้วยกัน กับ NEW MG MAXUS 9 ราคาพิเศษเริ่มต้น 1,799,900 บาท"
+    },
+    {
+      "model": "MG ZS",
+      "price": 599000,
+      "cardIndex": 0,
+      "domPath": "div:nth-child(1) > main:nth-child(4) > div:nth-child(4) > div:nth-child(2)",
+      "evidence": "MG ZS รถ SUV ที่คุ้มที่สุด ราคาเริ่มต้น 599,000 บาท"
+    },
+    {
+      "model": "MG HS PHEV",
+      "price": 899000,
+      "cardIndex": 0,
+      "domPath": "div:nth-child(1) > main:nth-child(4) > div:nth-child(4) > div:nth-child(2)",
+      "evidence": "เป็นเจ้าของ MG HS PHEV ได้ในราคาพิเศษเริ่มต้น 899,000 บาท"
+    }
+  ]
+}

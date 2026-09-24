@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.changan.co.th/th/",
+  "captured_at": "2026-09-24T13:48:42.529465+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "28c9f50b86238b6d69b2cd3737068795367ab06875243cc4193d5c98ae770ecd",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "changan_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

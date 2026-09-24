@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mgcars.com/th",
+  "captured_at": "2026-09-24T13:48:36.580895+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "mg_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

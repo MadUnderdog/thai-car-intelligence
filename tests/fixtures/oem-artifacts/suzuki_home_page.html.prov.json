@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/",
+  "captured_at": "2026-09-24T13:48:31.621323+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "suzuki_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -210,7 +210,7 @@ def test_staging_counts_match_extractors():
     toyota_expected = len(collect_toyota())
     mazda_expected = len(collect_mazda())
     nissan_expected = len(collect_nissan())
-    from collect_multi_oem import collect_honda, collect_isuzu, collect_bmw
+    from collect_multi_oem import collect_honda, collect_isuzu, collect_bmw, collect_mg
     honda_expected = len(collect_honda())
     isuzu_expected = len(collect_isuzu())
     bmw_expected = len(collect_bmw())
@@ -236,6 +236,8 @@ def test_staging_counts_match_extractors():
         f"Isuzu staging count mismatch"
     assert counts.get('BMW Thailand Official', 0) == bmw_expected, \
         f"BMW staging count mismatch"
+    assert counts.get('MG Thailand Official', 0) == len(collect_mg()), \
+        f"MG staging count mismatch"
 
 
 # ─── Honda Extraction Tests (from fixture) ───
@@ -493,17 +495,17 @@ def test_bmw_extraction_count():
 
 
 def test_bmw_specific_models():
-    """Specific BMW models must extract with correct prices."""
+    """Specific BMW models must extract with correct prices (verified recapture artifact)."""
     from collect_multi_oem import collect_bmw
     observations = collect_bmw()
     models = {obs['identity']['model_raw']: obs for obs in observations}
     
     # Check specific known models exist with correct prices
-    assert 'SAV ใหม่ iX' in models, f"iX not found. Models: {list(models.keys())[:5]}"
-    assert models['SAV ใหม่ iX']['price']['value_thb'] == 5799000
+    assert 'SAV New iX' in models, f"iX not found. Models: {list(models.keys())[:5]}"
+    assert models['SAV New iX']['price']['value_thb'] == 5799000
     
-    assert 'Sedan ซีรีย์3' in models, f"3 Series not found"
-    assert models['Sedan ซีรีย์3']['price']['value_thb'] == 2679000
+    assert 'Sedan 3 series' in models, f"3 Series not found"
+    assert models['Sedan 3 series']['price']['value_thb'] == 2679000
     
     assert 'Sedan M3' in models, f"M3 not found"
     assert models['Sedan M3']['price']['value_thb'] == 14799000
@@ -688,53 +690,57 @@ asyncio.run(main())
 
 # ─── Manifest Provenance Tests ───
 
-def test_captured_at_uses_manifest_not_mtime():
-    """captured_at must come from acquisition manifest, NOT filesystem mtime."""
+def test_captured_at_uses_acquisition_record_not_mtime():
+    """captured_at must come from the acquisition record (manifest or sidecar), NOT filesystem mtime."""
     from collect_multi_oem import collect_bmw, collect_honda, load_manifest
     import os
-    
+    import json as _json
+
     manifest = load_manifest()
-    assert 'bmw_models_page.html' in manifest, "BMW not in manifest"
-    assert manifest['bmw_models_page.html']['captured_at'] is not None, \
-        "BMW captured_at should be set in manifest"
-    
-    # Get actual observations
-    bmw_obs = collect_bmw()
+    assert 'honda_city_page.html' in manifest, "Honda not in manifest"
+    assert manifest['honda_city_page.html']['captured_at'] is not None, \
+        "Honda captured_at should be set in manifest"
+
+    # Honda (legacy capture) still sources its time from the manifest
     honda_obs = collect_honda()
-    
-    # BMW should use manifest timestamp, not mtime
-    bmw_captured = bmw_obs[0]['source']['captured_at']
-    assert bmw_captured == manifest['bmw_models_page.html']['captured_at'], \
-        f"BMW captured_at should match manifest, got {bmw_captured}"
-    
-    # Honda should use manifest timestamp
     honda_captured = honda_obs[0]['source']['captured_at']
     assert honda_captured == manifest['honda_city_page.html']['captured_at'], \
         f"Honda captured_at should match manifest, got {honda_captured}"
-    
-    # Verify it's NOT the file mtime
-    bmw_path = 'tests/fixtures/oem-artifacts/bmw_models_page.html'
-    mtime_iso = datetime.fromtimestamp(os.path.getmtime(bmw_path), tz=timezone.utc).isoformat()
-    # Manifest timestamp should be different from mtime (or explicitly UNKNOWN)
-    assert bmw_captured != mtime_iso or bmw_captured == 'UNKNOWN', \
-        f"captured_at should not be derived from mtime"
+
+    # BMW now sources its time from the sidecar of the genuine recapture
+    with open('tests/fixtures/oem-artifacts/bmw_all_models_verified.html.prov.json') as f:
+        bmw_sidecar = _json.load(f)
+    bmw_obs = collect_bmw()
+    bmw_captured = bmw_obs[0]['source']['captured_at']
+    assert bmw_captured == bmw_sidecar['captured_at'], \
+        f"BMW captured_at should match sidecar, got {bmw_captured}"
+    assert bmw_obs[0]['source']['provenance_state'] == 'ACQUISITION_VERIFIED', \
+        "BMW recapture must be ACQUISITION_VERIFIED"
+
+    # Neither timestamp may be derived from file mtime
+    for obs, path in [
+        (bmw_obs[0], 'tests/fixtures/oem-artifacts/bmw_all_models_verified.html'),
+        (honda_obs[0], 'tests/fixtures/oem-artifacts/honda_city_page.html'),
+    ]:
+        mtime_iso = datetime.fromtimestamp(os.path.getmtime(path), tz=timezone.utc).isoformat()
+        assert obs['source']['captured_at'] != mtime_iso, \
+            "captured_at must not be derived from mtime"
 
 
-def test_unknown_capture_time_for_mazda_nissan():
-    """Fixtures without provenance must have UNKNOWN captured_at."""
+def test_mazda_legacy_unknown_but_nissan_recapture_has_sidecar_time():
+    """Legacy fixtures without provenance keep UNKNOWN; genuine recapture gets sidecar time."""
     from collect_multi_oem import collect_mazda, collect_nissan
-    
+
     mazda_obs = collect_mazda()
-    nissan_obs = collect_nissan()
-    
-    # These have no provenance record
     assert mazda_obs[0]['source']['captured_at'] == 'UNKNOWN', \
         f"Mazda captured_at should be UNKNOWN, got {mazda_obs[0]['source']['captured_at']}"
-    assert nissan_obs[0]['source']['captured_at'] == 'UNKNOWN', \
-        f"Nissan captured_at should be UNKNOWN, got {nissan_obs[0]['source']['captured_at']}"
 
+    # Nissan was genuinely recaptured via AcquisitionWriter — sidecar time, not UNKNOWN
+    nissan_obs = collect_nissan()
+    assert nissan_obs[0]['source']['provenance_state'] == 'ACQUISITION_VERIFIED'
+    assert nissan_obs[0]['source']['captured_at'] != 'UNKNOWN', \
+        "Nissan recapture must carry a real captured_at from its sidecar"
 
-# ─── BMW Canonical Locator Resolution Test ───
 
 def test_bmw_canonical_locator_resolves_to_exact_card():
     """Each stored canonical_locator must resolve to exactly one card with model+price."""
@@ -743,7 +749,9 @@ def test_bmw_canonical_locator_resolves_to_exact_card():
     from playwright.async_api import async_playwright
     
     observations = collect_bmw()
-    html, _ = load_fixture("bmw_models")
+    # Resolve against the exact artifact the observations were extracted from
+    with open(observations[0]['evidence_locator']['artifact_path'], encoding='utf-8') as f:
+        html = f.read()
     
     async def resolve_locators():
         async with async_playwright() as p:
@@ -980,4 +988,236 @@ def test_honda_models_canonical_locator_present():
     for o in obs:
         locator = o['evidence']['evidence_locator']['canonical_locator']
         assert locator, f"Missing locator for {o['identity']['model_raw']}"
+
+
+# ─── MG Extraction Tests (sidecar-verified capture) ───
+
+
+def test_mg_artifact_and_sidecar_exist():
+    """MG artifact must be committed with a matching ACQUISITION_VERIFIED sidecar."""
+    import hashlib as _hashlib
+    path = f"{FIXTURE_DIR}/mg_home_page.html"
+    assert os.path.exists(path), f"MG artifact missing: {path}"
+    assert os.path.getsize(path) > 10000, f"MG artifact too small: {os.path.getsize(path)}"
+    sc_path = path + ".prov.json"
+    assert os.path.exists(sc_path), f"MG sidecar missing: {sc_path}"
+    with open(sc_path) as f:
+        sc = json.load(f)
+    assert sc['provenance_state'] == 'ACQUISITION_VERIFIED'
+    assert sc['source_url'].startswith('https://www.mgcars.com/th')
+    with open(path, 'rb') as f:
+        assert _hashlib.sha256(f.read()).hexdigest() == sc['sha256'], \
+            "sidecar sha256 must match artifact bytes"
+
+
+def test_mg_extraction_count():
+    """MG extractor must produce >= 5 MODEL rows from the verified capture."""
+    from collect_multi_oem import collect_mg
+    observations = collect_mg()
+    assert len(observations) >= 5, f"Expected >= 5 MG models, got {len(observations)}"
+
+
+def test_mg_specific_models():
+    """Specific MG models must extract with correct source-labelled starting prices."""
+    from collect_multi_oem import collect_mg
+    observations = collect_mg()
+    lookup = {}
+    for obs in observations:
+        lookup.setdefault(obs['identity']['model_raw'], obs)
+
+    assert 'MG ZS' in lookup, f"MG ZS not found. Models: {list(lookup)}"
+    assert lookup['MG ZS']['price']['value_thb'] == 599000
+
+    assert 'MG HS PHEV' in lookup, f"MG HS PHEV not found"
+    assert lookup['MG HS PHEV']['price']['value_thb'] == 899000
+
+    assert 'MG4' in lookup, f"MG4 not found"
+    assert lookup['MG4']['price']['value_thb'] == 599900
+
+    assert 'MG MAXUS 9' in lookup, f"MG MAXUS 9 not found"
+    assert lookup['MG MAXUS 9']['price']['value_thb'] == 1799900
+
+
+def test_mg_identity_model_level():
+    """MG observations must be MODEL identity, brand MG, no invented variants."""
+    from collect_multi_oem import collect_mg
+    for obs in collect_mg():
+        assert obs['identity']['identity_level'] == 'MODEL'
+        assert obs['identity']['variant_raw'] is None, \
+            f"variant must not be invented: {obs['identity']['model_raw']}"
+        assert obs['identity']['brand_normalized'] == 'mg'
+
+
+def test_mg_price_semantics():
+    """MG prices must be MSRP_STARTING/THB/UNKNOWN and the excerpt must be source-labelled เริ่มต้น."""
+    from collect_multi_oem import collect_mg
+    for obs in collect_mg():
+        assert obs['price']['type'] == 'MSRP_STARTING'
+        assert obs['price']['currency'] == 'THB'
+        assert obs['price']['currentness'] == 'UNKNOWN'
+        assert 'เริ่มต้น' in obs['evidence_excerpt'], \
+            f"price not labelled starting by the source: {obs['evidence_excerpt'][:80]}"
+
+
+def test_mg_same_record_model_price():
+    """Model and price must come from the SAME source span (evidence contains both)."""
+    from collect_multi_oem import collect_mg
+    for obs in collect_mg():
+        excerpt = obs['evidence_excerpt']
+        model = obs['identity']['model_raw']
+        price_digits = str(obs['price']['value_thb'])
+        assert model in excerpt, f"model not in evidence: {excerpt[:80]}"
+        assert price_digits in excerpt.replace(',', ''), \
+            f"price {price_digits} not in evidence: {excerpt[:80]}"
+
+
+def test_mg_locator_unique():
+    """Every MG canonical locator must be unique within the capture."""
+    from collect_multi_oem import collect_mg
+    locators = [obs['evidence_locator']['canonical_locator'] for obs in collect_mg()]
+    assert len(locators) == len(set(locators)), "duplicate canonical locators"
+
+
+def test_mg_provenance_verified():
+    """MG rows must carry ACQUISITION_VERIFIED provenance + sidecar captured_at."""
+    from collect_multi_oem import collect_mg
+    with open(f"{FIXTURE_DIR}/mg_home_page.html.prov.json") as f:
+        sc = json.load(f)
+    for obs in collect_mg():
+        assert obs['source']['provenance_state'] == 'ACQUISITION_VERIFIED'
+        assert obs['source']['captured_at'] == sc['captured_at']
+        assert obs['source']['artifact_sha256'] == sc['sha256']
+
+
+def test_mg_locator_resolves_to_exact_card():
+    """Each stored canonical_locator must re-resolve against the artifact to the SAME record."""
+    from collect_multi_oem import collect_mg
+    from playwright.async_api import async_playwright
+
+    observations = collect_mg()
+    with open(observations[0]['evidence_locator']['artifact_path'], encoding='utf-8') as f:
+        html = f.read()
+
+    async def resolve_locators():
+        async with async_playwright() as p:
+            browser = await p.chromium.launch(headless=True)
+            page = await browser.new_page()
+            await page.set_content(html, timeout=60000, wait_until='domcontentloaded')
+            results = []
+            for obs in observations:
+                locator = obs['evidence_locator']['canonical_locator']
+                model = obs['identity']['model_raw']
+                price = obs['price']['value_thb']
+                resolved = await page.evaluate(f"""
+                    (() => {{
+                        const parts = {repr(locator)}.split(' > ');
+                        let el = document.body;
+                        for (const part of parts) {{
+                            const parenIdx = part.indexOf(':nth-child(');
+                            if (parenIdx === -1) return {{found: false}};
+                            const tag = part.substring(0, parenIdx);
+                            const idx = parseInt(part.substring(parenIdx + 11, part.length - 1));
+                            const children = Array.from(el.children);
+                            const child = children[idx - 1];
+                            if (!child || child.tagName.toLowerCase() !== tag) return {{found: false}};
+                            el = child;
+                        }}
+                        const text = el.textContent.replace(/\\s+/g, ' ');
+                        return {{
+                            found: true,
+                            hasModel: text.includes({repr(model)}),
+                            hasPrice: text.replace(/,/g, '').includes({repr(str(price))}),
+                            isRecordSpan: el.tagName.toLowerCase() === 'span'
+                                && el.classList.contains('font-bold'),
+                        }};
+                    }})()
+                """)
+                results.append(resolved)
+            await browser.close()
+            return results
+
+    results = asyncio.run(resolve_locators())
+    assert len(results) == len(observations)
+    for r in results:
+        assert r.get('found'), "locator failed to resolve"
+        assert r.get('hasModel'), "resolved record missing model"
+        assert r.get('hasPrice'), "resolved record missing price"
+        assert r.get('isRecordSpan'), "locator did not land on the record span"
+
+
+def test_mg_adjacent_prices_cannot_swap():
+    """Mutation: swapping prices between two MG cards must change extraction."""
+    from collect_multi_oem import MG_JS
+
+    html, _ = load_fixture("mg_home")
+    mutated = html.replace('599,000 บาท', 'XXXTMPXXX')
+    mutated = mutated.replace('899,000 บาท', '599,000 บาท')
+    mutated = mutated.replace('XXXTMPXXX', '899,000 บาท')
+
+    def run_extract(data):
+        import json as _json
+        script = f'''
+import asyncio, json
+from playwright.async_api import async_playwright
+
+HTML = {repr(data)}
+JS = {repr(MG_JS)}
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
+        await page.set_content(HTML, timeout=60000, wait_until="domcontentloaded")
+        result = await page.evaluate(JS)
+        print(json.dumps(result))
+        await browser.close()
+
+asyncio.run(main())
+'''
+        with open('/tmp/mg_mutation_swap.py', 'w') as f:
+            f.write(script)
+        result = subprocess.run(['python3', '/tmp/mg_mutation_swap.py'], capture_output=True, text=True, timeout=60)
+        return json.loads(result.stdout.strip())
+
+    original = {r['model']: r['price'] for r in run_extract(html)}
+    mutated_res = {r['model']: r['price'] for r in run_extract(mutated)}
+
+    assert original.get('MG ZS') == 599000, f"original MG ZS wrong: {original.get('MG ZS')}"
+    assert original.get('MG HS PHEV') == 899000, f"original HS PHEV wrong: {original.get('MG HS PHEV')}"
+    assert mutated_res.get('MG ZS') == 899000, \
+        f"mutated MG ZS should be 899000, got {mutated_res.get('MG ZS')}"
+    assert mutated_res.get('MG HS PHEV') == 599000, \
+        f"mutated HS PHEV should be 599000, got {mutated_res.get('MG HS PHEV')}"
+
+
+def test_mg_dealer_capture_yields_no_rows():
+    """The dealer-redirect capture must NOT yield business rows through the MG adapter."""
+    from collect_multi_oem import MG_JS
+
+    html, _ = load_fixture("mg_models")  # dealer capture (jnt.co.th)
+    assert html is not None
+
+    script = f'''
+import asyncio, json
+from playwright.async_api import async_playwright
+
+HTML = {repr(html)}
+JS = {repr(MG_JS)}
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
+        await page.set_content(HTML, timeout=60000, wait_until="domcontentloaded")
+        result = await page.evaluate(JS)
+        print(json.dumps(result))
+        await browser.close()
+
+asyncio.run(main())
+'''
+    with open('/tmp/mg_dealer_check.py', 'w') as f:
+        f.write(script)
+    result = subprocess.run(['python3', '/tmp/mg_dealer_check.py'], capture_output=True, text=True, timeout=60)
+    rows = json.loads(result.stdout.strip())
+    assert rows == [], f"Dealer capture must yield no business rows, got {len(rows)}"
 

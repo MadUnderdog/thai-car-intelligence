@@ -1,18 +1,21 @@
 {
-  "generated_at": "2026-09-24T12:43:14.522903+00:00",
+  "generated_at": "2026-09-24T14:25:34.768626+00:00",
   "provenance": {
-    "fixture_based_extraction": 176,
-    "note": "All rows are fixture-derived from committed HTML artifacts, not fresh/current market acquisition"
+    "fixture_based_extraction": 183,
+    "acquisition_verified": 64,
+    "legacy_unverified": 119,
+    "from_existing_structured_data": 0
   },
   "by_source": {
-    "Toyota Thailand Official": 99,
-    "Mazda Thailand Official": 10,
-    "Nissan Thailand Official": 10,
-    "Honda Thailand Official": 4,
-    "Isuzu Thailand Official": 6,
-    "BMW Thailand Official": 35,
-    "Lexus Thailand Official": 6,
-    "Honda Models Page": 6
+    "toyota": 99,
+    "mazda": 10,
+    "nissan": 10,
+    "honda": 4,
+    "isuzu": 6,
+    "bmw": 35,
+    "lexus": 6,
+    "honda_models": 6,
+    "mg": 7
   },
-  "total": 176
+  "total": 183
 }

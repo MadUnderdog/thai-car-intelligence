@@ -102,21 +102,24 @@ async def main():
     
     # OEM targets - accessible official pages
     targets = [
-        # Already have fixtures - skip
-        # ('https://www.toyota.co.th/en/pricelist', 'toyota_page.html', None),
-        
-        # New OEMs to try
-        ('https://www.ford.co.th/models', 'ford_models_page.html', '[class*="model"], .vehicle-card, article'),
-        ('https://www.chevrolet.co.th/completecar.html', 'chevrolet_models_page.html', '[class*="model"], .vehicle-card'),
-        ('https://www.mitsubishi-motors.co.th/models', 'mitsubishi_models_page.html', '[class*="model"], .vehicle-card'),
-        ('https://www.subaru-club.com/th/models', 'subaru_models_page.html', '[class*="model"], .vehicle-card'),
-        ('https://www.volvo.co.th/en/models.html', 'volvo_models_page.html', '[class*="model"], .vehicle-card'),
-        ('https://www.mercedes-benz.co.th/passengercars.html', 'mercedes_models_page.html', '[class*="model"], .vehicle-card'),
-        ('https://www.audi.co.th/th/models.html', 'audi_models_page.html', '[class*="model"], .vehicle-card'),
-        ('https://www.lexus.co.th/th/models.html', 'lexus_models_page.html', '[class*="model"], .vehicle-card'),
-        ('https://www.neta.co.th/models', 'neta_models_page.html', '[class*="model"], .vehicle-card'),
-        ('https://www.deepal.co.th/models', 'deepal_models_page.html', '[class*="model"], .vehicle-card'),
-        ('https://www.avancemotors.com/th/models', 'avance_models_page.html', '[class*="model"], .vehicle-card'),
+        # Cycle 2026-09-24 (post-probe): reachable primaries/alternates not yet captured via AcquisitionWriter
+        ('https://www.nissan.co.th/', 'nissan_new_home_page.html', None),
+        ('https://www.mazda.co.th/', 'mazda_home_page.html', None),
+        ('https://www.mitsubishi-motors.co.th/', 'mitsubishi_home_page.html', None),
+        ('https://www.isuzu.co.th/', 'isuzu_th_home_page.html', None),
+        ('https://www.suzuki.co.th/', 'suzuki_home_page.html', None),
+        ('https://www.mgcars.com/th/', 'mg_home_page.html', None),
+        ('https://www.chevrolet.co.th/', 'chevrolet_home_page.html', None),
+        ('https://www.changan.co.th/', 'changan_home_page.html', None),
+        ('https://www.gwm.co.th/', 'gwm_home_page.html', None),
+        ('https://www.jaguar.co.th/', 'jaguar_home_page.html', None),
+        ('https://www.landrover.co.th/', 'landrover_home_page.html', None),
+        ('https://www.smart.co.th/', 'smart_home_page.html', None),
+        ('https://www.kia.com/th/', 'kia_home_page.html', None),
+        # §94 timeout retries (same-run, Playwright; probe was requests-level)
+        ('https://www.bmw.co.th/en/all-models.html', 'bmw_all_models_verified.html', None),
+        ('https://www.mercedes-benz.co.th/', 'mercedes_home_page.html', None),
+        ('https://www.mini.co.th/', 'mini_home_page.html', None),
     ]
     
     results = []

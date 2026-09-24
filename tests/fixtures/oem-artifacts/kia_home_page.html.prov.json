@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.kia.com/th/th",
+  "captured_at": "2026-09-24T13:48:59.939645+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "53e94ea876b441b4563e125b8f9de8ddba5c628f3d7593c1c73d31310e016d89",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "kia_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,128 @@
+{
+  "nissan_new_home_page.html": {
+    "bytes": 1395160,
+    "baht_sign": 23,
+    "baht_word": 1,
+    "price_word": 45,
+    "ld": 1,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "mazda_home_page.html": {
+    "bytes": 378821,
+    "baht_sign": 0,
+    "baht_word": 36,
+    "price_word": 41,
+    "ld": 0,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "mitsubishi_home_page.html": {
+    "bytes": 1109632,
+    "baht_sign": 12,
+    "baht_word": 0,
+    "price_word": 59,
+    "ld": 0,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "isuzu_th_home_page.html": {
+    "bytes": 16329,
+    "baht_sign": 0,
+    "baht_word": 0,
+    "price_word": 0,
+    "ld": 0,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "suzuki_home_page.html": {
+    "bytes": 152788,
+    "baht_sign": 0,
+    "baht_word": 19,
+    "price_word": 10,
+    "ld": 0,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "mg_home_page.html": {
+    "bytes": 1745522,
+    "baht_sign": 18,
+    "baht_word": 248,
+    "price_word": 228,
+    "ld": 0,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "changan_home_page.html": {
+    "bytes": 4437809,
+    "baht_sign": 0,
+    "baht_word": 1208,
+    "price_word": 213,
+    "ld": 0,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "gwm_home_page.html": {
+    "bytes": 203000,
+    "baht_sign": 0,
+    "baht_word": 0,
+    "price_word": 0,
+    "ld": 0,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "jaguar_home_page.html": {
+    "bytes": 519778,
+    "baht_sign": 1,
+    "baht_word": 0,
+    "price_word": 0,
+    "ld": 2,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "landrover_home_page.html": {
+    "bytes": 451077,
+    "baht_sign": 1,
+    "baht_word": 1,
+    "price_word": 9,
+    "ld": 2,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "smart_home_page.html": {
+    "bytes": 950241,
+    "baht_sign": 0,
+    "baht_word": 0,
+    "price_word": 0,
+    "ld": 2,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "kia_home_page.html": {
+    "bytes": 101555,
+    "baht_sign": 0,
+    "baht_word": 6,
+    "price_word": 3,
+    "ld": 0,
+    "car_ld": 0,
+    "offer_ld": 0
+  },
+  "bmw_all_models_verified.html": {
+    "bytes": 677684,
+    "baht_sign": 0,
+    "baht_word": 0,
+    "price_word": 0,
+    "ld": 2,
+    "car_ld": 1,
+    "offer_ld": 0
+  },
+  "mini_home_page.html": {
+    "bytes": 424227,
+    "baht_sign": 41,
+    "baht_word": 0,
+    "price_word": 0,
+    "ld": 1,
+    "car_ld": 0,
+    "offer_ld": 0
+  }
+}

@@ -367,7 +367,7 @@ def collect_isuzu():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
-                "captured_at": "2026-09-24T05:00:00Z",
+                "captured_at": datetime.fromtimestamp(os.path.getmtime(artifact), tz=timezone.utc).isoformat() if os.path.exists(artifact) else "UNKNOWN",
             },
             "identity": {
                 "brand_raw": "Isuzu",
@@ -494,7 +494,7 @@ def collect_honda():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
-                "captured_at": "2026-09-23T14:00:00Z",
+                "captured_at": datetime.fromtimestamp(os.path.getmtime(artifact), tz=timezone.utc).isoformat() if os.path.exists(artifact) else "UNKNOWN",
             },
             "identity": {
                 "brand_raw": "Honda",
@@ -615,7 +615,7 @@ def collect_bmw():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
-                "captured_at": "2026-09-24T05:00:00Z",
+                "captured_at": datetime.fromtimestamp(os.path.getmtime(artifact), tz=timezone.utc).isoformat() if os.path.exists(artifact) else "UNKNOWN",
             },
             "identity": {
                 "brand_raw": "BMW",

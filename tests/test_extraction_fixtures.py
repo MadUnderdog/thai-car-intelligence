@@ -12,7 +12,7 @@ import subprocess
 import asyncio
 
 sys.path.insert(0, 'scripts')
-from collect_multi_oem import collect_toyota, collect_mazda, collect_nissan
+from collect_multi_oem import collect_toyota, collect_mazda, collect_nissan, load_fixture
 
 FIXTURE_DIR = "tests/fixtures/oem-artifacts"
 STAGING_FILE = "audit/data-staging/vehicle_observations.jsonl"
@@ -497,13 +497,15 @@ def test_bmw_specific_models():
     observations = collect_bmw()
     models = {obs['identity']['model_raw']: obs for obs in observations}
     
-    # iX should exist
-    has_ix = any('iX' in m for m in models)
-    assert has_ix, f"iX not found. Models: {list(models.keys())[:5]}"
+    # Check specific known models exist with correct prices
+    assert 'SAV ใหม่ iX' in models, f"iX not found. Models: {list(models.keys())[:5]}"
+    assert models['SAV ใหม่ iX']['price']['value_thb'] == 5799000
     
-    # 3 Series should exist
-    has_3series = any('ซีรีย์3' in m or '3' in m for m in models)
-    assert has_3series, f"3 Series not found"
+    assert 'Sedan ซีรีย์3' in models, f"3 Series not found"
+    assert models['Sedan ซีรีย์3']['price']['value_thb'] == 2679000
+    
+    assert 'Sedan M3' in models, f"M3 not found"
+    assert models['Sedan M3']['price']['value_thb'] == 14799000
 
 
 def test_bmw_model_level():
@@ -518,14 +520,21 @@ def test_bmw_model_level():
 
 
 def test_bmw_evidence_contains_both():
-    """Evidence excerpt must contain BOTH model name and price."""
+    """Evidence excerpt must contain BOTH model name and price from same card."""
     from collect_multi_oem import collect_bmw
     observations = collect_bmw()
     for obs in observations:
         excerpt = obs['evidence_excerpt']
+        model = obs['identity']['model_raw']
         price_str = str(obs['price']['value_thb'])
+        # Price must be in evidence
         assert price_str in excerpt.replace(',', ''), \
             f"Price {price_str} not in evidence: {excerpt[:60]}"
+        # Model name (or key part of it) must be in evidence
+        model_key = model.split()[-1] if model else ''
+        if model_key and len(model_key) > 1:
+            assert model_key in excerpt or model in excerpt, \
+                f"Model '{model}' not in evidence: {excerpt[:80]}"
 
 
 def test_bmw_canonical_locator():
@@ -537,3 +546,140 @@ def test_bmw_canonical_locator():
             f"canonical_locator missing"
         assert 'artifact_sha256' in obs['source'], \
             f"artifact_sha256 missing"
+
+
+# ─── BMW Mutation Tests ───
+
+def test_bmw_canonical_locator_unique():
+    """Each BMW observation must have a unique canonical locator."""
+    from collect_multi_oem import collect_bmw
+    observations = collect_bmw()
+    locators = [obs['evidence_locator']['canonical_locator'] for obs in observations]
+    assert len(locators) == len(set(locators)), \
+        f"Duplicate locators found: {len(locators) - len(set(locators))} duplicates"
+
+
+def test_bmw_same_card_model_price():
+    """Evidence excerpt must contain BOTH model name and price from same card."""
+    from collect_multi_oem import collect_bmw
+    
+    observations = collect_bmw()
+    
+    # Verify evidence excerpt contains both model and price
+    passed = 0
+    for obs in observations:
+        excerpt = obs['evidence_excerpt']
+        model = obs['identity']['model_raw']
+        price_str = str(obs['price']['value_thb'])
+        
+        # Price must be in evidence (with or without commas)
+        price_in_evidence = price_str in excerpt.replace(',', '') or price_str in excerpt
+        # Model name must be in evidence
+        model_in_evidence = model in excerpt
+        
+        if price_in_evidence and model_in_evidence:
+            passed += 1
+    
+    assert passed == len(observations), \
+        f"Same-card verification: {passed}/{len(observations)} passed"
+
+
+def test_bmw_adjacent_prices_cannot_swap():
+    """Mutation test: swapping prices between adjacent BMW cards must change extraction."""
+    from collect_multi_oem import BMW_JS, load_fixture
+    import subprocess
+    import json
+    import asyncio
+    
+    html, _ = load_fixture("bmw_models")
+    
+    # Swap two known prices: 5,799,000 <-> 3,459,000
+    mutated = html.replace('฿5,799,000', 'XXX_TMP_XXX')
+    mutated = mutated.replace('฿3,459,000', '฿5,799,000')
+    mutated = mutated.replace('XXX_TMP_XXX', '฿3,459,000')
+    
+    async def extract_js(data):
+        script = f'''
+import asyncio
+import json
+from playwright.async_api import async_playwright
+
+HTML = {repr(data)}
+JS = {repr(BMW_JS)}
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
+        await page.set_content(HTML, timeout=60000, wait_until="domcontentloaded")
+        result = await page.evaluate(JS)
+        print(json.dumps(result))
+        await browser.close()
+
+asyncio.run(main())
+'''
+        with open('/tmp/bmw_mutation.py', 'w') as f:
+            f.write(script)
+        result = subprocess.run(['python3', '/tmp/bmw_mutation.py'], capture_output=True, text=True, timeout=60)
+        return json.loads(result.stdout.strip())
+    
+    original = asyncio.run(extract_js(html))
+    mutated_results = asyncio.run(extract_js(mutated))
+    
+    # Build lookup
+    orig_prices = {r['model']: r['price'] for r in original}
+    mut_prices = {r['model']: r['price'] for r in mutated_results}
+    
+    # Verify prices swapped
+    assert orig_prices.get('SAV ใหม่ iX') == 5799000, "Original iX price wrong"
+    assert mut_prices.get('SAV ใหม่ iX') == 3459000, \
+        f"Mutated iX price should be 3459000, got {mut_prices.get('SAV ใหม่ iX')}"
+
+
+def test_bmw_deleting_price_causes_deterministic_failure():
+    """Mutation test: deleting a price must cause extraction to return fewer results."""
+    from collect_multi_oem import BMW_JS, load_fixture
+    import subprocess
+    import json
+    import asyncio
+    
+    html, _ = load_fixture("bmw_models")
+    
+    # Delete one price
+    mutated = html.replace('฿14,799,000', '')
+    
+    async def extract_js(data):
+        script = f'''
+import asyncio
+import json
+from playwright.async_api import async_playwright
+
+HTML = {repr(data)}
+JS = {repr(BMW_JS)}
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
+        await page.set_content(HTML, timeout=60000, wait_until="domcontentloaded")
+        result = await page.evaluate(JS)
+        print(json.dumps(result))
+        await browser.close()
+
+asyncio.run(main())
+'''
+        with open('/tmp/bmw_mutation2.py', 'w') as f:
+            f.write(script)
+        result = subprocess.run(['python3', '/tmp/bmw_mutation2.py'], capture_output=True, text=True, timeout=60)
+        return json.loads(result.stdout.strip())
+    
+    original = asyncio.run(extract_js(html))
+    mutated_results = asyncio.run(extract_js(mutated))
+    
+    assert len(original) >= 30, f"Original should have >=30, got {len(original)}"
+    assert len(mutated_results) < len(original), \
+        f"Mutated should have fewer results: {len(mutated_results)} vs {len(original)}"
+    
+    # M3 should be gone
+    models = [r['model'] for r in mutated_results]
+    assert 'Sedan M3' not in models, "M3 should be removed after price deletion"

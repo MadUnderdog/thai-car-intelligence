@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu-tis.com/",
+  "captured_at": "2026-09-24T18:55:02.764941+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "313163cf3f44b691a8a22eacf8710a26cfb487fe557ee7f61d916bdff045c083",
+  "session_id": "acquisition_20260924_185458",
+  "artifact_filename": "isuzu_tis_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -126,7 +126,9 @@ def collect_toyota():
     sys.path.insert(0, 'scripts')
     from collect_real_data import extract_toyota_prices
 
-    fixture_path = f"{FIXTURE_DIR}/toyota_page.html"
+    # switched to the sidecar-verified recapture of the SAME manifest URL
+    # (content verified identical to the legacy capture: same 99 rows)
+    fixture_path = f"{FIXTURE_DIR}/toyota_pricelist_page.html"
     if not os.path.exists(fixture_path):
         print("  No Toyota fixture found")
         return []
@@ -334,74 +336,91 @@ def collect_nissan():
 
 
 
-# ─── Isuzu Adapter (DOM — figure cards) ───
-ISUZU_JS = """
+ISUZU_TIS_JS = r"""
 (() => {
     const items = [];
-    const figures = document.querySelectorAll('figure');
-    
-    figures.forEach((fig, idx) => {
-        const text = fig.textContent;
-        const priceMatch = text.match(/([\\d,]+)\\s*THB/);
-        if (!priceMatch) return;
-        
-        const price = parseInt(priceMatch[1].replace(/,/g, ''));
-        if (price < 100000 || price > 10000000) return;
-        
-        // Extract model name from card text (before price)
-        const modelMatch = text.match(/^([A-Z0-9][A-Z0-9\-\s]+?)(?:เริ่มต้น|[\\d,])/);
-        const model = modelMatch ? modelMatch[1].trim() : null;
-        if (!model || model.length < 2) return;
-        
-        // Build DOM path
+    const figures = document.querySelectorAll('figure[data-test^="lineup-item-"]');
+    const seen = new Set();
+    for (const fig of figures) {
+        const dt = fig.getAttribute('data-test') || '';
+        if (dt.includes('-button')) continue;
+        const priceEl = fig.querySelector('[data-test="pricing"]');
+        const img = fig.querySelector('img[alt]');
+        if (!priceEl || !img) continue;
+        const priceText = priceEl.textContent.replace(/\s+/g, ' ').trim();
+        if (!priceText.includes('เริ่มต้น')) continue;
+        const pm = priceText.match(/([\d,]+)\s*THB/);
+        if (!pm) continue;
+        const price = parseInt(pm[1].replace(/,/g, ''));
+        if (!price || price < 100000 || price > 10000000) continue;
+
+        // model from img alt, splitting ONLY the published ' - ' tagline separator;
+        // fallback = the figure's own label (never a body-style like '4 DOORS')
+        const alt = (img.getAttribute('alt') || '').replace(/\s+/g, ' ').trim();
+        let model = '';
+        if (alt.includes(' - ')) {
+            model = alt.split(' - ')[0].trim();
+        } else {
+            const figText = fig.textContent.replace(/\s+/g, ' ').trim();
+            const before = figText.split(priceText)[0].trim();
+            if (before && !/^\d+\s*DOORS$/i.test(before)) model = before;
+        }
+        if (!model) continue;
+        const key = model + ':' + price;
+        if (seen.has(key)) continue;
+        seen.add(key);
+
         const path = [];
         let el = fig;
         while (el && el !== document.body) {
-            const childIdx = Array.from(el.parentElement.children).indexOf(el);
-            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (childIdx + 1) + ')');
+            const idx = Array.from(el.parentElement.children).indexOf(el);
+            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (idx + 1) + ')');
             el = el.parentElement;
         }
-        
-        items.push({
-            model: model,
-            price: price,
-            figIndex: idx,
-            domPath: path.join(' > '),
-            evidence: text.trim().replace(/\\s+/g, ' ').substring(0, 150)
-        });
-    });
-    
+        items.push({ model: model, price: price, priceText: priceText,
+                     selector: path.join(' > '),
+                     alt: alt,
+                     evidence: (alt + ' | ' + fig.textContent.replace(/\s+/g, ' ').trim()).substring(0, 240) });
+    }
     return items;
 })()
 """
 
 
 def collect_isuzu():
-    """Collect from Isuzu — DOM extraction from figure cards."""
-    print("=== Isuzu Thailand Official (DOM) ===")
-    html, error = load_fixture("isuzu")
-    if error:
-        print(f"  {error}")
+    """Collect from Isuzu — isuzu-tis.com lineup figures (sidecar-verified recapture)."""
+    print("=== Isuzu Thailand Official (DOM, isuzu-tis recapture) ===")
+    artifact_file = f"{FIXTURE_DIR}/isuzu_tis_page.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
         return []
+    with open(artifact_file) as f:
+        html = f.read()
 
-    results, artifact = extract_from_html(html, "isuzu", ISUZU_JS, fixture_path=f"{FIXTURE_DIR}/isuzu_page.html")
+    results, artifact = extract_from_html(html, "isuzu_tis_page", ISUZU_TIS_JS, fixture_path=artifact_file)
     if not results:
         print("  Extraction returned no results")
         return []
 
-    # Compute artifact hash
     with open(artifact, 'rb') as f:
         artifact_hash = hashlib.sha256(f.read()).hexdigest()
+    prov = get_fixture_provenance(artifact)
 
     observations = []
+    seen = set()
     for item in results:
         model = item['model']
+        key = f"{model}:{item['price']}"
+        if key in seen:
+            continue
+        seen.add(key)
+
         observations.append({
-            "observation_id": hashlib.sha256(f"isuzu:{model}:{item['price']}:{item['domPath']}".encode()).hexdigest()[:16],
+            "observation_id": hashlib.sha256(f"isuzu:{model}:{item['price']}:{item.get('selector', '')}".encode()).hexdigest()[:16],
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "source": {
                 "class": "OEM_OFFICIAL",
-                "url": "https://www.isuzu-tis.com/",
+                "url": prov.get("source_url", "https://www.isuzu-tis.com/"),
                 "name": "Isuzu Thailand Official",
                 "precedence": 100,
                 "native_id": None,
@@ -409,8 +428,8 @@ def collect_isuzu():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
-                "captured_at": get_fixture_provenance(artifact)["captured_at"],
-                "provenance_state": get_fixture_provenance(artifact)["provenance_state"],
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
             },
             "identity": {
                 "brand_raw": "Isuzu",
@@ -430,19 +449,18 @@ def collect_isuzu():
                 "currentness": "UNKNOWN",
             },
             "specs": {},
-            "raw_labels": {},
+            "raw_labels": {"img_alt": item.get('alt', '')},
             "evidence_excerpt": item['evidence'],
             "evidence_locator": {
                 "artifact_path": artifact,
-                "artifact_sha256": artifact_hash,
-                "canonical_locator": item['domPath'],
-                "card_index": item['figIndex'],
-                "method": "dom_card",
+                "selector": item.get('selector'),
+                "method": "dom_query",
             },
         })
 
-    print(f"  Extracted: {len(observations)} models from fixture")
+    print(f"  Extracted: {len(observations)} unique model/price pairs from isuzu_tis_page")
     return observations
+
 
 # ─── Honda Adapter (DOM — Grade Levels section) ───
 HONDA_CITY_JS = """
@@ -1913,6 +1931,133 @@ def collect_landrover_pricesheet():
     print("=== Land Rover Thailand Official (PDF price sheet) ===")
     return _collect_price_sheet("TH_LandRover_PriceSheet.pdf.b64", "Land Rover", "Land Rover Thailand Official")
 
+
+def collect_porsche():
+    """Collect from Porsche Thailand — RSC flight data on the official model page.
+
+    Each model object carries modelName + modelRange (family) + modelYear +
+    price.value from ONE flight node = same-record by construction.
+    """
+    print("=== Porsche Thailand Official (RSC flight data) ===")
+    artifact_file = f"{FIXTURE_DIR}/porsche_macan_model_page.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
+        return []
+    with open(artifact_file, encoding='utf-8', errors='ignore') as f:
+        raw = f.read()
+
+    # flight payload HTML-escapes quotes
+    text = raw.replace('&quot;', '"')
+
+    # split on model-object starts; each chunk = one model node until the next
+    chunks = text.split('"modelType":[0,')[1:]
+    artifact_hash = hashlib.sha256(open(artifact_file, 'rb').read()).hexdigest()
+    prov = get_fixture_provenance(artifact_file)
+
+    parsed = []
+    for ch in chunks:
+        name_m = re.search(r'"modelName":\[0,"([^"]+)"\]', ch)
+        range_m = re.search(r'"modelRange":\[0,"([^"]+)"\]', ch)
+        year_m = re.search(r'"modelYear":\[0,"([^"]+)"\]', ch)
+        price_m = re.search(r'"price":\[0,\{"value":\[0,(\d+)\],"currencyCode":\[0,"THB"\]', ch)
+        if not (name_m and range_m and price_m):
+            continue
+        name = name_m.group(1)
+        fam = range_m.group(1)
+        price = int(price_m.group(1))
+        year = int(year_m.group(1)) if year_m else None
+        if not price or price < 100000 or price > 100000000:
+            continue
+        # fuel + drive + power from the SAME node (best-effort, informational)
+        fuel_m = re.search(r'"fuelTypeText":\[0,"([^"]+)"\]', ch)
+        drive_m = re.search(r'"wheelDrive":\[0,"([^"]+)"\]', ch)
+        hp_m = re.search(r'"powerHp":\[0,\{"label":\[[^\]]*\],"formattedValue":\[[^\]]*\],"value":\[0,(\d+)\]', ch)
+        parsed.append({
+            'name': name, 'family': fam, 'year': year, 'price': price,
+            'fuel': fuel_m.group(1) if fuel_m else None,
+            'drive': drive_m.group(1) if drive_m else None,
+            'hp': int(hp_m.group(1)) if hp_m else None,
+        })
+
+    observations = []
+    seen = set()
+    skipped_ambiguous = set()
+    for r in parsed:
+        key = (r['family'], r['name'], r['year'], r['price'])
+        if key in seen:
+            continue
+        seen.add(key)
+
+        # name collision with DIFFERENT price/year = ambiguous generation → fail closed
+        siblings = [p for p in parsed if p['name'] == r['name']]
+        prices = {(p['price'], p['year']) for p in siblings}
+        if len({p['price'] for p in siblings}) > 1:
+            if len({p['year'] for p in siblings}) == len({p['price'] for p in siblings}) and r['year'] is not None:
+                pass  # distinct years disambiguate
+            else:
+                skipped_ambiguous.add(r['name'])
+                continue
+
+        is_variant = r['name'] != r['family']
+        model_raw = r['family'] if is_variant else r['name']
+        variant_raw = r['name'] if is_variant else None
+        price_type = 'EXACT_VARIANT' if is_variant else 'MSRP'
+        locator_key = f"{r['name']}|{r['year']}|{r['price']}"
+
+        observations.append({
+            "observation_id": hashlib.sha256(f"porsche:{model_raw}:{variant_raw}:{r['year']}:{r['price']}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": prov.get("source_url"),
+                "name": "Porsche Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "rsc_flight_parse",
+                "artifact_path": artifact_file,
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "brand_raw": "Porsche",
+                "model_raw": model_raw,
+                "variant_raw": variant_raw,
+                "year": r['year'],
+                "fuel_powertrain_raw": r['fuel'],
+                "brand_normalized": "porsche",
+                "model_normalized": model_raw.lower().replace(" ", "-"),
+                "variant_normalized": variant_raw.lower().replace(" ", "-") if variant_raw else None,
+                "identity_level": "VARIANT" if is_variant else "MODEL",
+            },
+            "price": {
+                "value_thb": r['price'],
+                "type": price_type,
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {
+                "fuel": r['fuel'],
+                "drive": r['drive'],
+                "power_ps": r['hp'],
+            },
+            "raw_labels": {"model_year": r['year'], "model_name_published": r['name']},
+            "evidence_excerpt": f"{r['family']} / {r['name']} / {r['year']} / THB {r['price']:,}"[:220],
+            "evidence_locator": {
+                "artifact_path": artifact_file,
+                "selector": locator_key,
+                "method": "rsc_node",
+            },
+        })
+
+    if skipped_ambiguous:
+        print(f"  SKIPPED ambiguous names (conflicting prices, no year disambiguation): {sorted(skipped_ambiguous)}")
+    print(f"  Extracted: {len(observations)} model/price nodes from porsche_macan_model_page")
+    return observations
+
+
+
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
 
@@ -1968,6 +2113,9 @@ def main():
     landrover_sheet = collect_landrover_pricesheet()
     all_observations.extend(landrover_sheet)
 
+    porsche = collect_porsche()
+    all_observations.extend(porsche)
+
     # Load existing Fipe/OpenEV
     existing = []
     prev_staging = "audit/data-staging/vehicle_observations_prev.jsonl"
@@ -1997,7 +2145,8 @@ def main():
     print(f"Changan own-brand: {len(changan_prices)}")
     print(f"Jaguar price sheet (PDF): {len(jaguar_sheet)}")
     print(f"Land Rover price sheet (PDF): {len(landrover_sheet)}")
-    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg) + len(mitsubishi) + len(suzuki) + len(mini) + len(deepal) + len(kia_promos) + len(changan_prices) + len(jaguar_sheet) + len(landrover_sheet)}")
+    print(f"Porsche RSC nodes: {len(porsche)}")
+    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg) + len(mitsubishi) + len(suzuki) + len(mini) + len(deepal) + len(kia_promos) + len(changan_prices) + len(jaguar_sheet) + len(landrover_sheet) + len(porsche)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 
     # Write staging
@@ -2006,7 +2155,7 @@ def main():
         for obs in all_observations + existing:
             f.write(json.dumps(obs) + '\n')
 
-    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg + mitsubishi + suzuki + mini + deepal + kia_promos + changan_prices + jaguar_sheet + landrover_sheet
+    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg + mitsubishi + suzuki + mini + deepal + kia_promos + changan_prices + jaguar_sheet + landrover_sheet + porsche
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "provenance": {
@@ -2017,7 +2166,7 @@ def main():
         },
         "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda),
                        "isuzu": len(isuzu), "bmw": len(bmw), "lexus": len(lexus),
-                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal), "kia_promos": len(kia_promos), "changan": len(changan_prices), "jaguar_sheet": len(jaguar_sheet), "landrover_sheet": len(landrover_sheet)},
+                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal), "kia_promos": len(kia_promos), "changan": len(changan_prices), "jaguar_sheet": len(jaguar_sheet), "landrover_sheet": len(landrover_sheet), "porsche": len(porsche)},
         "total": len(all_observations) + len(existing),
     }
     with open("audit/data-staging/summary.json", 'w') as f:

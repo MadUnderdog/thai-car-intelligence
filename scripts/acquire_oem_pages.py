@@ -102,11 +102,11 @@ async def main():
     
     # OEM targets - accessible official pages
     targets = [
-        # Cycle 2026-09-24-4: own-brand Changan product pages (links from captured homepage)
-        ('https://www.changan.co.th/th/lumin/luminl-dc-th/', 'changan_lumin_page.html', None),
-        ('https://www.changan.co.th/th/nevo-q05/', 'changan_nevo_q05_page.html', None),
-        # rendered recapture: price list may hydrate after load
-        ('https://www.changan.co.th/th/promotion/', 'changan_promotion_page.html', None),
+        # Toyota pricelist renders client-side → wait for the JSON-LD payload
+        ('https://www.toyota.co.th/en/pricelist', 'toyota_pricelist_page.html',
+         'script[type="application/ld+json"]'),
+        # GWM alternate #2: official mall (products publish prices)
+        ('https://mall.gwm.co.th/', 'gwm_mall_home.html', None),
     ]
     
     results = []

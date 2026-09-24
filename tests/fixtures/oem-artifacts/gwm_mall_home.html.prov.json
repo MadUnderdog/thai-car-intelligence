@@ -1,0 +1,9 @@
+{
+  "source_url": "https://mall.gwm.co.th/",
+  "captured_at": "2026-09-24T18:57:21.003203+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "1fcace8cd75949fb222c18076ff9991768f1caf7e360626bc7899d1d77cf9874",
+  "session_id": "acquisition_20260924_185700",
+  "artifact_filename": "gwm_mall_home.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

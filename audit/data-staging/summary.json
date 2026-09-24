@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-24T18:01:19.944483+00:00",
+  "generated_at": "2026-09-24T19:03:25.173112+00:00",
   "provenance": {
-    "fixture_based_extraction": 223,
-    "acquisition_verified": 114,
-    "legacy_unverified": 109,
+    "fixture_based_extraction": 295,
+    "acquisition_verified": 291,
+    "legacy_unverified": 4,
     "from_existing_structured_data": 0
   },
   "by_source": {
@@ -23,7 +23,8 @@
     "kia_promos": 3,
     "changan": 4,
     "jaguar_sheet": 1,
-    "landrover_sheet": 11
+    "landrover_sheet": 11,
+    "porsche": 72
   },
-  "total": 223
+  "total": 295
 }

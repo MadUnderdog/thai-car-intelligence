@@ -242,13 +242,15 @@ def test_staging_counts_match_extractors():
         f"MG staging count mismatch"
 
 
-    from collect_multi_oem import collect_kia_promos, collect_jaguar_pricesheet, collect_landrover_pricesheet
+    from collect_multi_oem import collect_kia_promos, collect_jaguar_pricesheet, collect_landrover_pricesheet, collect_porsche
     assert counts.get('Kia Thailand Official', 0) == len(collect_kia_promos()), \
         "Kia staging count mismatch"
     assert counts.get('Jaguar Thailand Official', 0) == len(collect_jaguar_pricesheet()), \
         "Jaguar staging count mismatch"
     assert counts.get('Land Rover Thailand Official', 0) == len(collect_landrover_pricesheet()), \
         "Land Rover staging count mismatch"
+    assert counts.get('Porsche Thailand Official', 0) == len(collect_porsche()), \
+        "Porsche staging count mismatch"
 
 
 # ─── Honda Extraction Tests (from fixture) ───
@@ -458,11 +460,16 @@ def test_isuzu_specific_models():
     observations = collect_isuzu()
     lookup = {obs['identity']['model_raw']: obs for obs in observations}
     
-    assert 'V-CROSS' in lookup, f"V-CROSS not found"
-    assert lookup['V-CROSS']['price']['value_thb'] == 937000
-    
+    assert 'NEW ISUZU V-CROSS 4x4' in lookup, f"V-CROSS not found: {list(lookup)}"
+    assert lookup['NEW ISUZU V-CROSS 4x4']['price']['value_thb'] == 937000
+
     assert 'MU-X' in lookup, f"MU-X not found"
     assert lookup['MU-X']['price']['value_thb'] == 1194000
+
+    # body styles must never surface as model names (legacy defect fixed)
+    for bad in ('4 DOORS', '2 DOORS'):
+        assert bad not in lookup, f"body style leaked into model names: {bad}"
+    assert 'NEW ISUZU D-MAX HI-LANDER' in lookup, "HI-LANDER (alt-derived) not found"
 
 
 def test_isuzu_model_level():
@@ -2170,3 +2177,207 @@ def test_price_sheet_corrupted_artifact_fails_closed(tmp_path, monkeypatch):
     except AssertionError:
         raised = True
     assert raised, "corrupted PDF payload must fail closed (AssertionError on magic bytes)"
+
+
+# ─── Toyota Sidecar-Verified Recapture ───
+
+def test_toyota_recapture_sidecar_verified():
+    """Toyota switched to the recapture of the same manifest URL with a real sidecar."""
+    from collect_multi_oem import collect_toyota
+    path = f"{FIXTURE_DIR}/toyota_pricelist_page.html"
+    assert os.path.exists(path)
+    sc = json.load(open(path + '.prov.json'))
+    assert sc['provenance_state'] == 'ACQUISITION_VERIFIED'
+    assert sc['captured_at'] != 'UNKNOWN'
+    assert sc['source_url'] == 'https://www.toyota.co.th/en/pricelist'
+    obs = collect_toyota()
+    assert len(obs) >= 50
+    for o in obs:
+        assert o['source']['artifact_path'].endswith('toyota_pricelist_page.html')
+        assert o['source']['provenance_state'] == 'ACQUISITION_VERIFIED'
+        assert o['source']['captured_at'] != 'UNKNOWN'
+        assert o['evidence_locator'].get('ldplusjson_block') is True
+
+
+# ─── Isuzu Recapture (isuzu-tis.com, img-alt model binding) ───
+
+def test_isuzu_recapture_artifact_and_sidecar():
+    path = f"{FIXTURE_DIR}/isuzu_tis_page.html"
+    assert os.path.exists(path), f"missing {path}"
+    sc = json.load(open(path + '.prov.json'))
+    assert sc['provenance_state'] == 'ACQUISITION_VERIFIED'
+    assert sc['captured_at'] != 'UNKNOWN'
+    assert 'isuzu-tis.com' in sc['source_url']
+
+
+def test_isuzu_rows_from_sidecar_artifact():
+    from collect_multi_oem import collect_isuzu
+    obs = collect_isuzu()
+    assert len(obs) == 6
+    for o in obs:
+        assert o['source']['artifact_path'].endswith('isuzu_tis_page.html')
+        assert o['source']['provenance_state'] == 'ACQUISITION_VERIFIED'
+        assert o['price']['type'] == 'MSRP_STARTING'
+        assert 'เริ่มต้น' in o['evidence_excerpt'], "starting marker lost from evidence"
+        # same record: model (from img alt) AND price both ride in one evidence excerpt
+        assert o['identity']['model_raw'] in o['evidence_excerpt']
+
+
+def test_isuzu_locator_resolves_to_same_record():
+    from playwright.async_api import async_playwright
+    from collect_multi_oem import collect_isuzu
+    obs = collect_isuzu()
+    html = open(obs[0]['evidence_locator']['artifact_path'], encoding='utf-8').read()
+
+    WALK_JS = """(args) => {
+        const parts = args.selector.split(' > ');
+        let el = document.body;
+        for (const part of parts) {
+            const m = part.match(/^(\\w+):nth-child\\((\\d+)\\)$/);
+            if (!m) return {found: false};
+            el = el.children[parseInt(m[2], 10) - 1];
+            if (!el || el.tagName.toLowerCase() !== m[1]) return {found: false};
+        }
+        const t = (el.textContent || '').replace(/\\s+/g, ' ');
+        const alts = Array.from(el.querySelectorAll('img[alt]')).map(i => i.alt).join(' | ');
+        const all = t + ' || ' + alts;
+        return {found: true, hasModel: all.includes(args.model), hasPrice: all.includes(args.price)};
+    }"""
+
+    async def resolve():
+        results = []
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.set_content(html)
+            for o in obs:
+                results.append(await page.evaluate(WALK_JS, {
+                    "selector": o['evidence_locator']['selector'],
+                    "model": o['identity']['model_raw'],
+                    "price": f"{o['price']['value_thb']:,}",
+                }))
+            await browser.close()
+        return results
+
+    results = asyncio.run(resolve())
+    for o, r in zip(obs, results):
+        assert r.get('found'), f"chain did not resolve: {o['identity']['model_raw']}"
+        assert r.get('hasModel'), f"model (img alt) missing from figure: {o['identity']['model_raw']}"
+        assert r.get('hasPrice'), f"price missing from figure: {o['identity']['model_raw']}"
+
+
+def test_isuzu_mutation_price_swap_detected(tmp_path, monkeypatch):
+    import collect_multi_oem as cmo
+    from collect_multi_oem import collect_isuzu
+    orig = {o['identity']['model_raw']: o['price']['value_thb'] for o in collect_isuzu()}
+    assert orig.get('NEW ISUZU V-CROSS 4x4') == 937000
+    assert orig.get('MU-X') == 1194000
+
+    html = open(f"{cmo.FIXTURE_DIR}/isuzu_tis_page.html", encoding='utf-8').read()
+    mutated = html.replace('937,000', '__T__').replace('1,194,000', '937,000').replace('__T__', '1,194,000')
+    assert mutated != html
+    open(str(tmp_path / 'isuzu_tis_page.html'), 'w', encoding='utf-8').write(mutated)
+    monkeypatch.setattr(cmo, 'FIXTURE_DIR', str(tmp_path))
+
+    m = {o['identity']['model_raw']: o['price']['value_thb'] for o in cmo.collect_isuzu()}
+    assert m.get('NEW ISUZU V-CROSS 4x4') == 1194000, "swap not detected on V-CROSS"
+    assert m.get('MU-X') == 937000, "swap not detected on MU-X"
+
+
+# ─── Porsche RSC Flight-Data Tests ───
+
+def test_porsche_artifact_and_sidecar():
+    path = f"{FIXTURE_DIR}/porsche_macan_model_page.html"
+    assert os.path.exists(path), f"missing {path}"
+    assert os.path.getsize(path) > 100000
+    sc = json.load(open(path + '.prov.json'))
+    assert sc['provenance_state'] == 'ACQUISITION_VERIFIED'
+    assert sc['captured_at'] != 'UNKNOWN'
+    assert 'porsche.com' in sc['source_url']
+
+
+def test_porsche_extraction_count_and_families():
+    from collect_multi_oem import collect_porsche
+    obs = collect_porsche()
+    assert len(obs) == 72, f"expected 72 nodes (74 pairs minus 2 ambiguous Macan GTS), got {len(obs)}"
+    fams = {o['identity']['model_raw'] for o in obs}
+    assert fams == {'718', '911', 'Taycan', 'Panamera', 'Macan', 'Cayenne'}
+    for o in obs:
+        assert o['source']['name'] == 'Porsche Thailand Official'
+        assert o['source']['provenance_state'] == 'ACQUISITION_VERIFIED'
+        assert o['price']['currency'] == 'THB'
+
+
+def test_porsche_identity_and_price_semantics():
+    from collect_multi_oem import collect_porsche
+    obs = collect_porsche()
+    lookup = {o['identity']['variant_raw'] or o['identity']['model_raw']: o for o in obs}
+    # VARIANT rows: family + derivative from one flight node
+    c4s = lookup['911 Carrera 4S']
+    assert c4s['identity']['model_raw'] == '911'
+    assert c4s['identity']['identity_level'] == 'VARIANT'
+    assert c4s['price']['value_thb'] == 14790000
+    assert c4s['price']['type'] == 'EXACT_VARIANT'
+    assert c4s['identity']['year'] == 2027
+    assert c4s['specs'].get('fuel') == 'Gasoline'
+    # name == family → MODEL-level, plain MSRP
+    taycan = lookup['Taycan']
+    assert taycan['identity']['identity_level'] == 'MODEL'
+    assert taycan['identity']['variant_raw'] is None
+    assert taycan['price']['type'] == 'MSRP'
+    assert taycan['price']['value_thb'] == 7190000
+    # price types distribution: EXACT_VARIANT for derivatives
+    exact = sum(1 for o in obs if o['price']['type'] == 'EXACT_VARIANT')
+    msrp = sum(1 for o in obs if o['price']['type'] == 'MSRP')
+    assert exact + msrp == len(obs) and exact > msrp
+
+
+def test_porsche_ambiguous_generation_fail_closed():
+    """'Macan GTS' appears with two prices but no year disambiguation → zero rows."""
+    from collect_multi_oem import collect_porsche
+    obs = collect_porsche()
+    names = [o['identity']['variant_raw'] or o['identity']['model_raw'] for o in obs]
+    assert 'Macan GTS' not in names, "ambiguous generation must not be staged"
+    # the unambiguous GTS derivatives remain
+    assert 'Macan 4S Electric' in names or 'Macan GTS' not in names
+
+
+def test_porsche_locator_resolves_in_flight_node():
+    """Re-parsing the artifact finds the node carrying family+name+year+price together."""
+    from collect_multi_oem import collect_porsche
+    obs = collect_porsche()
+    artifact = obs[0]['evidence_locator']['artifact_path']
+    text = open(artifact, encoding='utf-8', errors='ignore').read().replace('&quot;', '"')
+    chunks = text.split('"modelType":[0,')[1:]
+    for o in obs[:20]:
+        name = o['identity']['variant_raw'] or o['identity']['model_raw']
+        fam = o['identity']['model_raw']
+        price = o['price']['value_thb']
+        matched = None
+        for ch in chunks:
+            if f'"modelName":[0,"{name}"]' in ch and f'"modelRange":[0,"{fam}"]' in ch:
+                if f'"value":[0,{price}]' in ch:
+                    matched = ch
+                    break
+        assert matched, f"no single flight node binds {fam}/{name}/{price}"
+        if o['identity']['year']:
+            assert f'"modelYear":[0,"{o["identity"]["year"]}"]' in matched
+
+
+def test_porsche_mutation_price_detected(tmp_path, monkeypatch):
+    """Mutating the numeric price in flight data changes the extracted row."""
+    import collect_multi_oem as cmo
+    from collect_multi_oem import collect_porsche
+    orig = {o['identity']['variant_raw'] or o['identity']['model_raw']: o['price']['value_thb']
+            for o in collect_porsche()}
+    assert orig['911 Carrera 4S'] == 14790000
+
+    raw = open(f"{cmo.FIXTURE_DIR}/porsche_macan_model_page.html", encoding='utf-8', errors='ignore').read()
+    mutated = raw.replace('&quot;value&quot;:[0,14790000]', '&quot;value&quot;:[0,14190000]')
+    assert mutated != raw, "mutation target not found"
+    open(str(tmp_path / 'porsche_macan_model_page.html'), 'w', encoding='utf-8').write(mutated)
+    monkeypatch.setattr(cmo, 'FIXTURE_DIR', str(tmp_path))
+
+    m = {o['identity']['variant_raw'] or o['identity']['model_raw']: o['price']['value_thb']
+         for o in cmo.collect_porsche()}
+    assert m['911 Carrera 4S'] == 14190000, "flight-data mutation not detected"

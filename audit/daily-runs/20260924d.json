@@ -1,0 +1,127 @@
+{
+  "cycle": "P97 — horizontal acquisition: >50% coverage push",
+  "generated_at": "2026-09-24T19:19:28+00:00",
+  "coverage": {
+    "parsed": 17,
+    "in_scope": 32,
+    "percent": 53.1,
+    "parsed_brands": [
+      "BMW",
+      "Changan",
+      "Deepal",
+      "Honda",
+      "Isuzu",
+      "Jaguar",
+      "Kia",
+      "Land Rover",
+      "Lexus",
+      "MG",
+      "MINI",
+      "Mazda",
+      "Mitsubishi",
+      "Nissan",
+      "Porsche",
+      "Suzuki",
+      "Toyota"
+    ],
+    "previous": {
+      "parsed": 14,
+      "percent": 43.8
+    }
+  },
+  "conversions": [
+    {
+      "brand": "Toyota",
+      "from": "LEGACY_UNVERIFIED",
+      "to": "ACQUISITION_VERIFIED",
+      "evidence": "toyota_pricelist_page.html + sidecar; same manifest URL recapture; content identical to legacy (99 VARIANT rows, 0 differences)",
+      "rows": 99
+    },
+    {
+      "brand": "Isuzu",
+      "from": "LEGACY_UNVERIFIED",
+      "to": "ACQUISITION_VERIFIED",
+      "evidence": "isuzu_tis_page.html + sidecar; 6 lineup figures, img-alt model binding; fixed body-style-as-model defect ('4 DOORS'/'2 DOORS')",
+      "rows": 6
+    },
+    {
+      "brand": "Porsche",
+      "from": "NONE",
+      "to": "PARSED_TESTED+ACQUISITION_VERIFIED",
+      "evidence": "porsche_macan_model_page.html + sidecar; RSC flight data: modelRange+modelYear+price.value from ONE node; 74 pairs − 2 ambiguous Macan GTS = 72 nodes",
+      "rows": 72
+    }
+  ],
+  "retry_and_fallback": {
+    "run_time_utc": "2026-09-24T19:19:28+00:00",
+    "next_retry_at_earliest": "2026-09-25T13:41:49+00:00",
+    "result": "no next_retry_at had elapsed at run time — blocked cohort untouched (no probes to 403/DNS/TLS hosts)",
+    "reachable_alternates_this_cycle": [
+      "Toyota /en/pricelist recapture (verified)",
+      "Isuzu isuzu-tis.com recapture (verified)",
+      "Porsche official model page (verified)",
+      "GWM alternate 1 /en/gwm-data-car-models → redirect home, 0 prices",
+      "GWM alternate 2 mall.gwm.co.th → SPA shell, 0 SSR prices (2/2 alternates used, moved on)"
+    ],
+    "smart": "not due (next_retry_at 2026-09-25T14:16Z); dealer-redirect target unresolved, no hammer"
+  },
+  "artifacts": {
+    "html": 42,
+    "sidecars": 36,
+    "pdf_b64": 2,
+    "new_this_cycle": [
+      "toyota_pricelist_page.html",
+      "isuzu_tis_page.html",
+      "porsche_macan_model_page.html",
+      "gwm_data_models_page.html",
+      "gwm_mall_home.html"
+    ]
+  },
+  "rows": {
+    "total": 295,
+    "identity": {
+      "VARIANT": 186,
+      "MODEL": 109
+    },
+    "price_types": {
+      "MSRP": 110,
+      "MSRP_STARTING": 103,
+      "EXACT_VARIANT": 82
+    },
+    "provenance": {
+      "ACQUISITION_VERIFIED": 291,
+      "LEGACY_UNVERIFIED": 4
+    }
+  },
+  "tests": {
+    "total": 205,
+    "passed": 205,
+    "failed": 0,
+    "extraction": 131,
+    "acquisition": 20,
+    "taxonomy": 44,
+    "gold": 10,
+    "duration_s": 407.48
+  },
+  "security": {
+    "new_artifacts_credential_scan": 0,
+    "staged_diff_scan": "pending-commit",
+    "github_secret_scanning": "UNVERIFIED (401 unauthenticated)",
+    "owner_rotation": "EXTERNAL — not performed"
+  },
+  "compliance": {
+    "skills_ops_this_cycle": 0,
+    "session_states_on_disk": 0,
+    "production_db": "untouched",
+    "verifier": "FROZEN",
+    "pr3": "OPEN/unmerged"
+  },
+  "blockers": [
+    "4 LEGACY_UNVERIFIED rows remain (Honda City source lacks sidecar — recapture pending)",
+    "GWM official site publishes no SSR prices (home/models/data-endpoint/mall all price-free)",
+    "Macan GTS ambiguity: two THB values, no year disambiguation → 2 nodes dropped fail-closed",
+    "14 blocked OEMs: next retry windows 2026-10-01/08/24 — not reached this cycle",
+    "Smart wrong-target: official Smart EV Thailand URL not yet identified",
+    "pre-existing test_generation_config_boundary.py import error untouched"
+  ]
+}

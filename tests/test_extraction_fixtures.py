@@ -1221,3 +1221,477 @@ asyncio.run(main())
     rows = json.loads(result.stdout.strip())
     assert rows == [], f"Dealer capture must yield no business rows, got {len(rows)}"
 
+
+# ══════════════════════════════════════════════════════════════════
+# Cycle 2026-09-24-3: captured-unparsed → PARSED_TESTED conversions
+# (Mitsubishi, Suzuki, MINI, Deepal-via-Changan)
+# ══════════════════════════════════════════════════════════════════
+
+def _fx(fn):
+    return f"{FIXTURE_DIR}/{fn}"
+
+
+MUTATION_RUNNER = """
+import asyncio, json, sys
+from playwright.async_api import async_playwright
+JS = sys.argv[1]
+HTML = open(sys.argv[2], encoding="utf-8", errors="ignore").read()
+async def main():
+    async with async_playwright() as p:
+        b = await p.chromium.launch()
+        page = await b.new_page()
+        await page.set_content(HTML)
+        res = await page.evaluate(JS)
+        print(json.dumps({i["model"]: i["price"] for i in res}))
+        await b.close()
+asyncio.run(main())
+"""
+
+
+def test_mitsubishi_artifact_and_sidecar():
+    """Mitsubishi capture exists with AcquisitionWriter sidecar (VERIFIED)."""
+    import json as _json
+    import hashlib as _hashlib
+    artifact = _fx("mitsubishi_home_page.html")
+    sidecar = _fx("mitsubishi_home_page.html.prov.json")
+    assert os.path.exists(artifact), "mitsubishi_home_page.html missing"
+    assert os.path.exists(sidecar), "sidecar missing"
+    sc = _json.load(open(sidecar))
+    assert sc["provenance_state"] == "ACQUISITION_VERIFIED"
+    actual = _hashlib.sha256(open(artifact, "rb").read()).hexdigest()
+    assert sc["sha256"] == actual, "sidecar sha must match artifact bytes"
+
+
+def test_mitsubishi_extraction_count():
+    """Mitsubishi nav-links yield the model lineup (deduped)."""
+    from collect_multi_oem import collect_mitsubishi
+    obs = collect_mitsubishi()
+    assert len(obs) >= 5, f"expected >=5, got {len(obs)}"
+
+
+def test_mitsubishi_specific_models():
+    """Known Mitsubishi models with correct starting prices."""
+    from collect_multi_oem import collect_mitsubishi
+    lookup = {o["identity"]["model_raw"]: o for o in collect_mitsubishi()}
+    assert lookup["ไทรทัน"]["price"]["value_thb"] == 614000
+    assert lookup["เอ็กซ์แพนเดอร์ เอชอีวี"]["price"]["value_thb"] == 939000
+    assert lookup["ปาเจโร สปอร์ต"]["price"]["value_thb"] == 1139000
+
+
+def test_mitsubishi_identity_and_price_semantics():
+    """MODEL level, MSRP_STARTING (site says ราคาเริ่มต้น), THB, UNKNOWN."""
+    from collect_multi_oem import collect_mitsubishi
+    for o in collect_mitsubishi():
+        assert o["identity"]["identity_level"] == "MODEL"
+        assert o["identity"]["variant_raw"] is None
+        assert o["identity"]["brand_normalized"] == "mitsubishi"
+        assert o["price"]["type"] == "MSRP_STARTING"
+        assert o["price"]["currency"] == "THB"
+        assert o["price"]["currentness"] == "UNKNOWN"
+        assert "ราคาเริ่มต้น" in o["evidence_excerpt"], "starting-price wording must be in evidence"
+        assert o["source"]["provenance_state"] == "ACQUISITION_VERIFIED"
+
+
+def test_mitsubishi_locator_resolves_to_same_record():
+    """Re-resolve canonical locator: card contains BOTH model and price."""
+    import asyncio
+    from playwright.async_api import async_playwright
+    from collect_multi_oem import collect_mitsubishi
+    obs = collect_mitsubishi()
+    html = open(obs[0]["evidence_locator"]["artifact_path"], encoding="utf-8").read()
+
+    async def resolve():
+        results = []
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.set_content(html)
+            for o in obs:
+                resolved = await page.evaluate(
+                    """(args) => {
+                        const els = document.querySelectorAll(args.path);
+                        if (!els.length) return {found: false};
+                        const el = els[0];
+                        return {
+                            found: true,
+                            text: el.textContent,
+                            hasModel: el.textContent.includes(args.model),
+                            hasPrice: el.textContent.includes(args.price)
+                        };
+                    }""",
+                    {"path": o["evidence_locator"]["canonical_locator"],
+                     "model": o["identity"]["model_raw"],
+                     "price": f'{o["price"]["value_thb"]:,}'}
+                )
+                results.append(resolved)
+            await browser.close()
+        return results
+
+    results = asyncio.run(resolve())
+    assert len(results) == len(obs)
+    for r in results:
+        assert r.get("found"), "locator resolved to nothing"
+        assert r.get("hasModel"), "model not in resolved record (same-record violated)"
+        assert r.get("hasPrice"), "price not in resolved record (same-record violated)"
+
+
+def test_mitsubishi_mutation_price_swap_detected():
+    """Swapping two prices across nav cards changes the model→price map."""
+    import subprocess as _subprocess
+    import json as _json
+    from collect_multi_oem import MITSUBISHI_JS
+    artifact = _fx("mitsubishi_home_page.html")
+    data = open(artifact, encoding="utf-8").read()
+    assert data.count("฿939,000") >= 1 and data.count("฿614,000") >= 1
+    mutated = data.replace("฿939,000", "฿__TMP__").replace("฿614,000", "฿939,000").replace("฿__TMP__", "฿614,000")
+    assert mutated != data
+    script = """
+import asyncio, json, sys
+from playwright.async_api import async_playwright
+JS = sys.argv[1]
+HTML = open(sys.argv[2], encoding="utf-8", errors="ignore").read()
+async def main():
+    async with async_playwright() as p:
+        b = await p.chromium.launch()
+        page = await b.new_page()
+        await page.set_content(HTML)
+        res = await page.evaluate(JS)
+        print(json.dumps({i["model"]: i["price"] for i in res}))
+        await b.close()
+asyncio.run(main())
+"""
+    open("/tmp/mits_mutation.py", "w").write(script)
+    tmp_html = "/tmp/mits_mutated.html"
+    open(tmp_html, "w").write(mutated)
+    out = _subprocess.run(["python3", "/tmp/mits_mutation.py", MITSUBISHI_JS, tmp_html],
+                          capture_output=True, text=True, timeout=120)
+    assert out.returncode == 0, out.stderr[-500:]
+    mut_map = _json.loads(out.stdout)
+    assert mut_map.get("ไทรทัน") == 939000, "swapped price not detected on Triton"
+    assert mut_map.get("เอ็กซ์แพนเดอร์ เอชอีวี") == 614000, "swapped price not detected on Xpander"
+
+
+def test_suzuki_artifact_and_sidecar():
+    """Suzuki root capture (not the old /error page) has a sidecar."""
+    import json as _json
+    import hashlib as _hashlib
+    artifact = _fx("suzuki_home_page.html")
+    assert os.path.exists(artifact)
+    sc = _json.load(open(artifact + ".prov.json"))
+    assert sc["provenance_state"] == "ACQUISITION_VERIFIED"
+    assert sc["sha256"] == _hashlib.sha256(open(artifact, "rb").read()).hexdigest()
+
+
+def test_suzuki_extraction_count():
+    from collect_multi_oem import collect_suzuki
+    obs = collect_suzuki()
+    assert len(obs) >= 4, f"expected >=4, got {len(obs)}"
+
+
+def test_suzuki_specific_models():
+    from collect_multi_oem import collect_suzuki
+    lookup = {o["identity"]["model_raw"]: o for o in collect_suzuki()}
+    assert lookup["ALL NEW SUZUKI FRONX"]["price"]["value_thb"] == 689000
+    assert lookup["JIMNY"]["price"]["value_thb"] == 1590000
+    assert lookup["ALL NEW SUZUKI e VITARA"]["price"]["value_thb"] == 2890000
+
+
+def test_suzuki_price_type_follows_source_phrasing():
+    """เริ่มต้นที่ → MSRP_STARTING; ราคาพิเศษ/ราคาเพียง/plain → MSRP (evidence keeps phrase)."""
+    from collect_multi_oem import collect_suzuki
+    lookup = {o["identity"]["model_raw"]: o for o in collect_suzuki()}
+    fronx = lookup["ALL NEW SUZUKI FRONX"]
+    assert fronx["price"]["type"] == "MSRP_STARTING"
+    assert "เริ่มต้นที่" in fronx["evidence_excerpt"]
+    xl7 = lookup["XL7 HYBRID"]
+    assert xl7["price"]["type"] == "MSRP"
+    assert "ราคาพิเศษ" in xl7["evidence_excerpt"], "promo phrase must stay visible in evidence"
+    carry = lookup["CARRY"]
+    assert carry["price"]["type"] == "MSRP"
+    for o in lookup.values():
+        assert o["identity"]["identity_level"] == "MODEL"
+        assert o["price"]["currency"] == "THB"
+        assert o["source"]["provenance_state"] == "ACQUISITION_VERIFIED"
+
+
+def test_suzuki_locator_resolves_to_same_record():
+    import asyncio
+    from playwright.async_api import async_playwright
+    from collect_multi_oem import collect_suzuki
+    obs = collect_suzuki()
+    html = open(obs[0]["evidence_locator"]["artifact_path"], encoding="utf-8").read()
+
+    async def resolve():
+        results = []
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.set_content(html)
+            for o in obs:
+                resolved = await page.evaluate(
+                    """(args) => {
+                        const els = document.querySelectorAll(args.path);
+                        if (!els.length) return {found: false};
+                        const el = els[0];
+                        return {found: true, hasModel: el.textContent.includes(args.model),
+                                hasPrice: el.textContent.includes(args.price)};
+                    }""",
+                    {"path": o["evidence_locator"]["canonical_locator"],
+                     "model": o["identity"]["model_raw"],
+                     "price": f'{o["price"]["value_thb"]:,}'}
+                )
+                results.append(resolved)
+            await browser.close()
+        return results
+
+    results = asyncio.run(resolve())
+    for r in results:
+        assert r.get("found")
+        assert r.get("hasModel"), "model not in resolved card"
+        assert r.get("hasPrice"), "price not in resolved card"
+
+
+def test_suzuki_mutation_price_swap_detected():
+    import subprocess as _subprocess
+    import json as _json
+    from collect_multi_oem import SUZUKI_JS
+    artifact = _fx("suzuki_home_page.html")
+    data = open(artifact, encoding="utf-8").read()
+    assert "689,000" in data and "1,590,000" in data
+    mutated = data.replace("689,000", "__TMP__").replace("1,590,000", "689,000").replace("__TMP__", "1,590,000")
+    open("/tmp/mits_mutation.py", "w").write(MUTATION_RUNNER)
+    open("/tmp/suz_mutated.html", "w").write(mutated)
+    out = _subprocess.run(["python3", "/tmp/mits_mutation.py", SUZUKI_JS, "/tmp/suz_mutated.html"],
+                          capture_output=True, text=True, timeout=120)
+    assert out.returncode == 0, out.stderr[-500:]
+    mut_map = _json.loads(out.stdout)
+    assert mut_map.get("ALL NEW SUZUKI FRONX") == 1590000, "swap not detected"
+    assert mut_map.get("JIMNY") == 689000, "swap not detected"
+
+
+def test_mini_artifact_and_sidecar():
+    import json as _json
+    import hashlib as _hashlib
+    artifact = _fx("mini_home_page.html")
+    assert os.path.exists(artifact)
+    sc = _json.load(open(artifact + ".prov.json"))
+    assert sc["provenance_state"] == "ACQUISITION_VERIFIED"
+    assert sc["sha256"] == _hashlib.sha256(open(artifact, "rb").read()).hexdigest()
+
+
+def test_mini_extraction_count():
+    from collect_multi_oem import collect_mini
+    obs = collect_mini()
+    assert len(obs) >= 4, f"expected >=4, got {len(obs)}"
+
+
+def test_mini_specific_models():
+    from collect_multi_oem import collect_mini
+    lookup = {o["identity"]["model_raw"]: o for o in collect_mini()}
+    assert lookup["ALL-ELECTRIC MINI COOPER"]["price"]["value_thb"] == 1555000
+    assert lookup["MINI COUNTRYMAN"]["price"]["value_thb"] == 2799000
+    assert lookup["JOHN COOPER WORKS"]["price"]["value_thb"] == 2199000
+
+
+def test_mini_msrp_distinguished_from_finance():
+    """MSRP only: 'From X ฿' source-labelled, >=100k; finance (MTHLY) values never staged."""
+    from collect_multi_oem import collect_mini
+    finance_values = {8888, 9999, 11111, 17999, 28999}   # displayed ฿/MTHLY installments
+    obs = collect_mini()
+    assert obs, "no MINI rows"
+    for o in obs:
+        assert o["price"]["value_thb"] >= 100000, "finance-scale value staged!"
+        assert o["price"]["value_thb"] not in finance_values, "installment value staged!"
+        assert "MTHLY" not in o["evidence_excerpt"].split("From")[0] or "From" in o["evidence_excerpt"]
+        assert "From " in o["evidence_excerpt"], "MSRP must be source-labelled 'From' (starting)"
+        assert o["price"]["type"] == "MSRP_STARTING"
+        assert o["identity"]["identity_level"] == "MODEL"
+        assert o["source"]["provenance_state"] == "ACQUISITION_VERIFIED"
+    prices = [o["price"]["value_thb"] for o in obs]
+    assert len(set(prices)) == len(prices), "duplicate prices suggest finance/MSRP collision"
+
+
+def test_mini_locator_resolves_to_same_record():
+    import asyncio
+    from playwright.async_api import async_playwright
+    from collect_multi_oem import collect_mini
+    obs = collect_mini()
+    html = open(obs[0]["evidence_locator"]["artifact_path"], encoding="utf-8").read()
+
+    async def resolve():
+        results = []
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.set_content(html)
+            for o in obs:
+                resolved = await page.evaluate(
+                    """(args) => {
+                        const els = document.querySelectorAll(args.path);
+                        if (!els.length) return {found: false};
+                        const el = els[0];
+                        return {found: true, hasModel: el.textContent.includes(args.model),
+                                hasPrice: el.textContent.includes(args.price)};
+                    }""",
+                    {"path": o["evidence_locator"]["canonical_locator"],
+                     "model": o["identity"]["model_raw"],
+                     "price": f'{o["price"]["value_thb"]:,}'}
+                )
+                results.append(resolved)
+            await browser.close()
+        return results
+
+    results = asyncio.run(resolve())
+    for r in results:
+        assert r.get("found")
+        assert r.get("hasModel"), "model not in resolved item"
+        assert r.get("hasPrice"), "price not in resolved item"
+
+
+def test_mini_mutation_finance_not_rescued():
+    """Delete the MSRP text → MINI_JS must not fall back to the installment value."""
+    import subprocess as _subprocess
+    import json as _json
+    from collect_multi_oem import MINI_JS
+    artifact = _fx("mini_home_page.html")
+    data = open(artifact, encoding="utf-8").read()
+    assert "1,555,000" in data
+    mutated = data.replace("1,555,000", "1,555,000 ฿ / MTHLY * ")   # poison the MSRP leaf pattern
+    mutated = mutated.replace("From 1,555,000 ฿ / MTHLY * ", "From ")
+    open("/tmp/mits_mutation.py", "w").write(MUTATION_RUNNER)
+    open("/tmp/mini_mutated.html", "w").write(mutated)
+    out = _subprocess.run(["python3", "/tmp/mits_mutation.py", MINI_JS, "/tmp/mini_mutated.html"],
+                          capture_output=True, text=True, timeout=120)
+    assert out.returncode == 0, out.stderr[-500:]
+    mut_map = _json.loads(out.stdout)
+    assert mut_map.get("ALL-ELECTRIC MINI COOPER") is None, "MSRP removed but row survived — finance fallback leak"
+
+
+def test_deepal_artifact_and_sidecar():
+    import json as _json
+    import hashlib as _hashlib
+    artifact = _fx("changan_home_page.html")
+    assert os.path.exists(artifact)
+    sc = _json.load(open(artifact + ".prov.json"))
+    assert sc["provenance_state"] == "ACQUISITION_VERIFIED"
+    assert sc["sha256"] == _hashlib.sha256(open(artifact, "rb").read()).hexdigest()
+
+
+def test_deepal_extraction_count():
+    from collect_multi_oem import collect_deepal
+    obs = collect_deepal()
+    assert len(obs) >= 4, f"expected >=4, got {len(obs)}"
+
+
+def test_deepal_specific_models_from_published_slugs():
+    from collect_multi_oem import collect_deepal
+    lookup = {o["identity"]["model_raw"]: o for o in collect_deepal()}
+    assert lookup["s07"]["price"]["value_thb"] == 1219000
+    assert lookup["hunter-k50"]["price"]["value_thb"] == 1099000
+    assert lookup["s05-reev"]["price"]["value_thb"] == 949000
+    # brand comes from the published URL segment — never merged into 'Changan'
+    for o in lookup.values():
+        assert o["identity"]["brand_raw"] == "thdeepal", o["identity"]["brand_raw"]
+        assert o["identity"]["brand_normalized"] == "deepal"
+
+
+def test_deepal_identity_and_price_semantics():
+    from collect_multi_oem import collect_deepal
+    for o in collect_deepal():
+        assert o["identity"]["identity_level"] == "MODEL"
+        assert o["price"]["type"] == "MSRP_STARTING"
+        assert "ราคาเริ่มต้น" in o["evidence_excerpt"]
+        assert "link:" in o["evidence_excerpt"], "card must carry its product link as model evidence"
+        assert o["source"]["provenance_state"] == "ACQUISITION_VERIFIED"
+        assert o["source"]["name"] == "Changan Thailand Official"
+
+
+def test_deepal_locator_resolves_to_same_record_with_link():
+    """Resolved card carries the price AND the product link whose slug is the model."""
+    import asyncio
+    import re as _re
+    from playwright.async_api import async_playwright
+    from collect_multi_oem import collect_deepal
+    obs = collect_deepal()
+    html = open(obs[0]["evidence_locator"]["artifact_path"], encoding="utf-8").read()
+
+    async def resolve():
+        results = []
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.set_content(html)
+            for o in obs:
+                resolved = await page.evaluate(
+                    """(args) => {
+                        const els = document.querySelectorAll(args.path);
+                        if (!els.length) return {found: false};
+                        const el = els[0];
+                        const a = el.querySelector('a[href*="-th"]');
+                        return {found: true, hasPrice: el.textContent.includes(args.price),
+                                href: a ? a.getAttribute('href') : null};
+                    }""",
+                    {"path": o["evidence_locator"]["canonical_locator"],
+                     "price": f'{o["price"]["value_thb"]:,}'}
+                )
+                results.append((o["identity"]["model_raw"], resolved))
+            await browser.close()
+        return results
+
+    results = asyncio.run(resolve())
+    for model, r in results:
+        assert r.get("found"), "locator resolved to nothing"
+        assert r.get("hasPrice"), "price not in resolved card (same-record violated)"
+        href = r.get("href") or ""
+        assert _re.search(r"/" + _re.escape(model) + r"-th/?$", href), \
+            f"model {model!r} not bound to link {href!r} in same card"
+
+
+def test_deepal_mutation_link_price_swap_detected():
+    """Swap prices between two cards → the model→price map must change."""
+    import subprocess as _subprocess
+    import json as _json
+    from collect_multi_oem import DEEPAL_JS
+    artifact = _fx("changan_home_page.html")
+    data = open(artifact, encoding="utf-8").read()
+    assert "1,099,000" in data and "1,219,000" in data
+    mutated = data.replace("1,099,000", "__TMP__").replace("1,219,000", "1,099,000").replace("__TMP__", "1,219,000")
+    open("/tmp/mits_mutation.py", "w").write(MUTATION_RUNNER)
+    open("/tmp/deepal_mutated.html", "w").write(mutated)
+    out = _subprocess.run(["python3", "/tmp/mits_mutation.py", DEEPAL_JS, "/tmp/deepal_mutated.html"],
+                          capture_output=True, text=True, timeout=120)
+    assert out.returncode == 0, out.stderr[-500:]
+    mut_map = _json.loads(out.stdout)
+    assert mut_map.get("hunter-k50") == 1219000, "swap not detected"
+    assert mut_map.get("s07") == 1099000, "swap not detected"
+
+
+def test_smart_wrong_target_capture_yields_no_rows():
+    """smart.co.th capture (wrong target) must never stage business rows."""
+    smart_artifact = _fx("smart_home_page.html")
+    if not os.path.exists(smart_artifact):
+        return
+    rows = [line for line in open(STAGING_FILE, encoding="utf-8") if line.strip()]
+    assert rows, "staging missing"
+    for line in rows:
+        assert "smart_home_page.html" not in line, "Smart wrong-target artifact produced a staged row"
+        assert "smartsecurity" not in line
+
+
+def test_recaptured_range_pages_have_sidecars_no_prices():
+    """GWM/Jaguar/LandRover/Kia/Isuzu range recaptures: VERIFIED sidecars, no price rows staged."""
+    import json as _json
+    import hashlib as _hashlib
+    recaptured = ["gwm_models_page.html", "jaguar_range_page.html",
+                  "landrover_discovery_page.html", "landrover_range_rover_page.html",
+                  "isuzu_th_rendered_page.html", "kia_cars_page.html"]
+    for fn in recaptured:
+        artifact = _fx(fn)
+        assert os.path.exists(artifact), f"{fn} missing"
+        sc = _json.load(open(artifact + ".prov.json"))
+        assert sc["provenance_state"] == "ACQUISITION_VERIFIED"
+        assert sc["sha256"] == _hashlib.sha256(open(artifact, "rb").read()).hexdigest()
+    # none of these artifacts staged rows (no prices published on range pages)
+    content = open(STAGING_FILE, encoding="utf-8").read()
+    for fn in recaptured:
+        assert fn not in content, f"{fn} has no adapter yet but rows reference it"

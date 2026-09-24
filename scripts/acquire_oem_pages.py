@@ -102,24 +102,15 @@ async def main():
     
     # OEM targets - accessible official pages
     targets = [
-        # Cycle 2026-09-24 (post-probe): reachable primaries/alternates not yet captured via AcquisitionWriter
-        ('https://www.nissan.co.th/', 'nissan_new_home_page.html', None),
-        ('https://www.mazda.co.th/', 'mazda_home_page.html', None),
-        ('https://www.mitsubishi-motors.co.th/', 'mitsubishi_home_page.html', None),
-        ('https://www.isuzu.co.th/', 'isuzu_th_home_page.html', None),
-        ('https://www.suzuki.co.th/', 'suzuki_home_page.html', None),
-        ('https://www.mgcars.com/th/', 'mg_home_page.html', None),
-        ('https://www.chevrolet.co.th/', 'chevrolet_home_page.html', None),
-        ('https://www.changan.co.th/', 'changan_home_page.html', None),
-        ('https://www.gwm.co.th/', 'gwm_home_page.html', None),
-        ('https://www.jaguar.co.th/', 'jaguar_home_page.html', None),
-        ('https://www.landrover.co.th/', 'landrover_home_page.html', None),
-        ('https://www.smart.co.th/', 'smart_home_page.html', None),
-        ('https://www.kia.com/th/', 'kia_home_page.html', None),
-        # §94 timeout retries (same-run, Playwright; probe was requests-level)
-        ('https://www.bmw.co.th/en/all-models.html', 'bmw_all_models_verified.html', None),
-        ('https://www.mercedes-benz.co.th/', 'mercedes_home_page.html', None),
-        ('https://www.mini.co.th/', 'mini_home_page.html', None),
+        # Cycle 2026-09-24-3: model-list/range recaptures for captured-unparsed brands
+        ('https://www.gwm.co.th/en/models', 'gwm_models_page.html', None),
+        ('https://www.jaguar.co.th/jaguar-range', 'jaguar_range_page.html', None),
+        ('https://www.landrover.co.th/discovery/overview', 'landrover_discovery_page.html', None),
+        ('https://www.landrover.co.th/range-rover/overview', 'landrover_range_rover_page.html', None),
+        # rendered recapture: first capture was a 16KB JS shell
+        ('https://www.isuzu.co.th/', 'isuzu_th_rendered_page.html', 'footer'),
+        # structure-derived candidate from captured homepage (/th/th/cars/<model>/gallery links)
+        ('https://www.kia.com/th/th/cars', 'kia_cars_page.html', None),
     ]
     
     results = []

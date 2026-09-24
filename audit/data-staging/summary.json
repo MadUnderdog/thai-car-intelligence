@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-24T14:25:34.768626+00:00",
+  "generated_at": "2026-09-24T14:47:03.801262+00:00",
   "provenance": {
-    "fixture_based_extraction": 183,
-    "acquisition_verified": 64,
+    "fixture_based_extraction": 204,
+    "acquisition_verified": 85,
     "legacy_unverified": 119,
     "from_existing_structured_data": 0
   },
@@ -15,7 +15,11 @@
     "bmw": 35,
     "lexus": 6,
     "honda_models": 6,
-    "mg": 7
+    "mg": 7,
+    "mitsubishi": 6,
+    "suzuki": 5,
+    "mini": 5,
+    "deepal": 5
   },
-  "total": 183
+  "total": 204
 }

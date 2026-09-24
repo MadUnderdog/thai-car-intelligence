@@ -879,6 +879,468 @@ def collect_honda_models():
     return observations
 
 
+# ─── MITSUBISHI adapter (DOM) ───
+
+MITSUBISHI_JS = """
+(() => {
+    const items = [];
+    const seen = new Set();
+    const prices = document.querySelectorAll('[class*="navLinkPrice"]');
+    prices.forEach((p, idx) => {
+        const a = p.closest('a');
+        if (!a) return;
+        const at = a.textContent.replace(/\\s+/g, ' ').trim();
+        if (!at.includes('ราคาเริ่มต้น')) return;
+        const pm = at.match(/฿\\s*([\\d,]{6,})/);
+        if (!pm) return;
+        const price = parseInt(pm[1].replace(/,/g, ''));
+        if (price < 100000 || price > 10000000) return;
+        const model = at.split('ราคาเริ่มต้น')[0].trim();
+        if (!model) return;
+        const key = model + ':' + price;
+        if (seen.has(key)) return;
+        seen.add(key);
+        const path = [];
+        let el = a;
+        while (el && el !== document.body) {
+            const i = Array.from(el.parentElement.children).indexOf(el);
+            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (i + 1) + ')');
+            el = el.parentElement;
+        }
+        items.push({ model: model, price: price, cardIndex: idx, domPath: path.join(' > '),
+                     evidence: at.substring(0, 200) });
+    });
+    return items;
+})()
+"""
+
+# ─── SUZUKI adapter (DOM) ───
+
+SUZUKI_JS = """
+(() => {
+    const items = [];
+    const seen = new Set();
+    const cards = document.querySelectorAll('div.product-main-content');
+    cards.forEach((card, idx) => {
+        const t = card.textContent.replace(/\\s+/g, ' ').trim();
+        const mm = t.match(/^([A-Za-z][A-Za-z0-9 \\-]*?)\\s*(?=[\\u0E00-\\u0E7F]|\\d{1,3},\\d{3})/);
+        if (!mm) return;
+        const model = mm[1].trim();
+        const h4 = card.querySelector('h4');
+        if (!h4) return;
+        const ht = h4.textContent.replace(/\\s+/g, ' ').trim();
+        const pm = ht.match(/(\\d[\\d,]{4,})/);
+        if (!pm) return;
+        const price = parseInt(pm[1].replace(/,/g, ''));
+        if (price < 100000 || price > 10000000) return;
+        const key = model + ':' + price;
+        if (seen.has(key)) return;
+        seen.add(key);
+        const path = [];
+        let el = card;
+        while (el && el !== document.body) {
+            const i = Array.from(el.parentElement.children).indexOf(el);
+            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (i + 1) + ')');
+            el = el.parentElement;
+        }
+        items.push({ model: model, price: price, starting: ht.includes('เริ่มต้น'),
+                     cardIndex: idx, domPath: path.join(' > '), evidence: t.substring(0, 200) });
+    });
+    return items;
+})()
+"""
+
+# ─── MINI adapter (DOM) ───
+
+MINI_JS = """
+(() => {
+    const items = [];
+    const seen = new Set();
+    const nodes = document.querySelectorAll('div.md-ppni-item-inner');
+    nodes.forEach((item, idx) => {
+        const clone = item.cloneNode(true);
+        clone.querySelectorAll('style, script, noscript').forEach(n => n.remove());
+        const t = clone.textContent.replace(/\\s+/g, ' ').trim();
+        const mm = t.match(/^([^0-9]*?)(?=\\d{1,3},\\d{3})/);
+        if (!mm) return;
+        const model = mm[1].trim();
+        if (!model) return;
+        let msrp = null;
+        const cands = item.querySelectorAll('span, strong');
+        for (const el of cands) {
+            const txt = el.textContent.replace(/\\s+/g, ' ').trim();
+            if (el.children.length === 0 && /^[\\d,]{6,9}\\s*฿$/.test(txt)) {
+                msrp = parseInt(txt.replace(/[^\\d]/g, ''));
+                break;
+            }
+        }
+        if (msrp === null) return;
+        if (msrp < 100000 || msrp > 10000000) return;
+        if (!/From\\s+[\\d,]+\\s*฿/.test(t)) return;
+        const key = model + ':' + msrp;
+        if (seen.has(key)) return;
+        seen.add(key);
+        const path = [];
+        let el = item;
+        while (el && el !== document.body) {
+            const i = Array.from(el.parentElement.children).indexOf(el);
+            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (i + 1) + ')');
+            el = el.parentElement;
+        }
+        items.push({ model: model, price: msrp, cardIndex: idx, domPath: path.join(' > '),
+                     evidence: t.substring(0, 200) });
+    });
+    return items;
+})()
+"""
+
+# ─── DEEPAL adapter (DOM) ───
+
+DEEPAL_JS = """
+(() => {
+    const items = [];
+    const seen = new Set();
+    const cards = document.querySelectorAll('div.swiper-slide.bg-changan-primary');
+    cards.forEach((card, idx) => {
+        const link = card.querySelector('a[href*="-th"]');
+        if (!link) return;
+        const href = link.getAttribute('href') || '';
+        const hm = href.match(/\\/([a-z0-9]+)\\/([a-z0-9\\-]+?)-th\\/?$/);
+        if (!hm) return;
+        const brandSeg = hm[1];
+        const model = hm[2];
+        const t = card.textContent.replace(/\\s+/g, ' ').trim();
+        if (!t.includes('ราคาเริ่มต้น')) return;
+        const pm = t.match(/([\\d][\\d,]{5,})\\s*บาท/);
+        if (!pm) return;
+        const price = parseInt(pm[1].replace(/,/g, ''));
+        if (price < 100000 || price > 10000000) return;
+        const key = model + ':' + price;
+        if (seen.has(key)) return;
+        seen.add(key);
+        const path = [];
+        let el = card;
+        while (el && el !== document.body) {
+            const i = Array.from(el.parentElement.children).indexOf(el);
+            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (i + 1) + ')');
+            el = el.parentElement;
+        }
+        items.push({ model: model, brandSeg: brandSeg, price: price, cardIndex: idx,
+                     domPath: path.join(' > '),
+                     evidence: (t + ' | link: ' + href).substring(0, 240) });
+    });
+    return items;
+})()
+"""
+
+def collect_mitsubishi():
+    """Collect from Mitsubishi Thailand Official — DOM extraction from sidecar-verified capture."""
+    print("=== Mitsubishi Thailand Official (DOM) ===")
+    artifact_file = f"{FIXTURE_DIR}/mitsubishi_home_page.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
+        return []
+    with open(artifact_file) as f:
+        html = f.read()
+
+    results, artifact = extract_from_html(html, "mitsubishi_home_page", MITSUBISHI_JS, fixture_path=artifact_file)
+    if not results:
+        print("  Extraction returned no results")
+        return []
+
+    with open(artifact, 'rb') as f:
+        artifact_hash = hashlib.sha256(f.read()).hexdigest()
+    prov = get_fixture_provenance(artifact)
+
+    observations = []
+    seen = set()
+    for item in results:
+        model = item['model']
+        key = f"{model}:{item['price']}"
+        if key in seen:
+            continue
+        seen.add(key)
+        price_type = 'MSRP_STARTING'
+
+        observations.append({
+            "observation_id": hashlib.sha256(f"mitsubishi:{model}:{item['price']}:{item['domPath']}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": "https://www.mitsubishi-motors.co.th/",
+                "name": "Mitsubishi Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "playwright_dom",
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "brand_raw": "Mitsubishi",
+                "brand_normalized": "mitsubishi",
+                "model_raw": model,
+                "variant_raw": None,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "model_normalized": model.lower().replace(" ", "-"),
+                "variant_normalized": None,
+                "identity_level": "MODEL",
+            },
+            "price": {
+                "value_thb": item['price'],
+                "type": price_type,
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {},
+            "evidence_excerpt": item['evidence'],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "canonical_locator": item['domPath'],
+                "card_index": item['cardIndex'],
+                "method": "dom_card",
+            },
+        })
+
+    print(f"  Extracted: {len(observations)} models from fixture")
+    return observations
+
+def collect_suzuki():
+    """Collect from Suzuki Thailand Official — DOM extraction from sidecar-verified capture."""
+    print("=== Suzuki Thailand Official (DOM) ===")
+    artifact_file = f"{FIXTURE_DIR}/suzuki_home_page.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
+        return []
+    with open(artifact_file) as f:
+        html = f.read()
+
+    results, artifact = extract_from_html(html, "suzuki_home_page", SUZUKI_JS, fixture_path=artifact_file)
+    if not results:
+        print("  Extraction returned no results")
+        return []
+
+    with open(artifact, 'rb') as f:
+        artifact_hash = hashlib.sha256(f.read()).hexdigest()
+    prov = get_fixture_provenance(artifact)
+
+    observations = []
+    seen = set()
+    for item in results:
+        model = item['model']
+        key = f"{model}:{item['price']}"
+        if key in seen:
+            continue
+        seen.add(key)
+        price_type = 'MSRP_STARTING' if item.get('starting') else 'MSRP'
+
+        observations.append({
+            "observation_id": hashlib.sha256(f"suzuki:{model}:{item['price']}:{item['domPath']}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": "https://www.suzuki.co.th/",
+                "name": "Suzuki Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "playwright_dom",
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "brand_raw": "Suzuki",
+                "brand_normalized": "suzuki",
+                "model_raw": model,
+                "variant_raw": None,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "model_normalized": model.lower().replace(" ", "-"),
+                "variant_normalized": None,
+                "identity_level": "MODEL",
+            },
+            "price": {
+                "value_thb": item['price'],
+                "type": price_type,
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {},
+            "evidence_excerpt": item['evidence'],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "canonical_locator": item['domPath'],
+                "card_index": item['cardIndex'],
+                "method": "dom_card",
+            },
+        })
+
+    print(f"  Extracted: {len(observations)} models from fixture")
+    return observations
+
+def collect_mini():
+    """Collect from MINI Thailand Official — DOM extraction from sidecar-verified capture."""
+    print("=== MINI Thailand Official (DOM) ===")
+    artifact_file = f"{FIXTURE_DIR}/mini_home_page.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
+        return []
+    with open(artifact_file) as f:
+        html = f.read()
+
+    results, artifact = extract_from_html(html, "mini_home_page", MINI_JS, fixture_path=artifact_file)
+    if not results:
+        print("  Extraction returned no results")
+        return []
+
+    with open(artifact, 'rb') as f:
+        artifact_hash = hashlib.sha256(f.read()).hexdigest()
+    prov = get_fixture_provenance(artifact)
+
+    observations = []
+    seen = set()
+    for item in results:
+        model = item['model']
+        key = f"{model}:{item['price']}"
+        if key in seen:
+            continue
+        seen.add(key)
+        price_type = 'MSRP_STARTING'
+
+        observations.append({
+            "observation_id": hashlib.sha256(f"mini:{model}:{item['price']}:{item['domPath']}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": "https://www.mini.co.th/",
+                "name": "MINI Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "playwright_dom",
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "brand_raw": "MINI",
+                "brand_normalized": "mini",
+                "model_raw": model,
+                "variant_raw": None,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "model_normalized": model.lower().replace(" ", "-"),
+                "variant_normalized": None,
+                "identity_level": "MODEL",
+            },
+            "price": {
+                "value_thb": item['price'],
+                "type": price_type,
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {},
+            "evidence_excerpt": item['evidence'],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "canonical_locator": item['domPath'],
+                "card_index": item['cardIndex'],
+                "method": "dom_card",
+            },
+        })
+
+    print(f"  Extracted: {len(observations)} models from fixture")
+    return observations
+
+def collect_deepal():
+    """Collect from Changan Thailand Official — DOM extraction from sidecar-verified capture."""
+    print("=== Changan Thailand Official (DOM) ===")
+    artifact_file = f"{FIXTURE_DIR}/changan_home_page.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
+        return []
+    with open(artifact_file) as f:
+        html = f.read()
+
+    results, artifact = extract_from_html(html, "changan_home_page", DEEPAL_JS, fixture_path=artifact_file)
+    if not results:
+        print("  Extraction returned no results")
+        return []
+
+    with open(artifact, 'rb') as f:
+        artifact_hash = hashlib.sha256(f.read()).hexdigest()
+    prov = get_fixture_provenance(artifact)
+
+    observations = []
+    seen = set()
+    for item in results:
+        model = item['model']
+        key = f"{model}:{item['price']}"
+        if key in seen:
+            continue
+        seen.add(key)
+        price_type = 'MSRP_STARTING'
+
+        observations.append({
+            "observation_id": hashlib.sha256(f"deepal:{model}:{item['price']}:{item['domPath']}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": "https://www.changan.co.th/",
+                "name": "Changan Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "playwright_dom",
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "brand_raw": item.get("brandSeg", "thdeepal"),
+                "brand_normalized": "deepal",
+                "model_raw": model,
+                "variant_raw": None,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "model_normalized": model.lower().replace(" ", "-"),
+                "variant_normalized": None,
+                "identity_level": "MODEL",
+            },
+            "price": {
+                "value_thb": item['price'],
+                "type": price_type,
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {},
+            "evidence_excerpt": item['evidence'],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "canonical_locator": item['domPath'],
+                "card_index": item['cardIndex'],
+                "method": "dom_card",
+            },
+        })
+
+    print(f"  Extracted: {len(observations)} models from fixture")
+    return observations
+
 # ─── MG Adapter (DOM — promo cards with source-labelled starting price) ───
 
 MG_JS = """
@@ -1023,6 +1485,18 @@ def main():
     mg = collect_mg()
     all_observations.extend(mg)
 
+    mitsubishi = collect_mitsubishi()
+    all_observations.extend(mitsubishi)
+
+    suzuki = collect_suzuki()
+    all_observations.extend(suzuki)
+
+    mini = collect_mini()
+    all_observations.extend(mini)
+
+    deepal = collect_deepal()
+    all_observations.extend(deepal)
+
     # Load existing Fipe/OpenEV
     existing = []
     prev_staging = "audit/data-staging/vehicle_observations_prev.jsonl"
@@ -1044,7 +1518,11 @@ def main():
     print(f"Lexus (DOM fixture): {len(lexus)}")
     print(f"Honda Models (DOM fixture): {len(honda_models)}")
     print(f"MG (DOM fixture): {len(mg)}")
-    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg)}")
+    print(f"Mitsubishi (DOM fixture): {len(mitsubishi)}")
+    print(f"Suzuki (DOM fixture): {len(suzuki)}")
+    print(f"MINI (DOM fixture): {len(mini)}")
+    print(f"Deepal via Changan (DOM fixture): {len(deepal)}")
+    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg) + len(mitsubishi) + len(suzuki) + len(mini) + len(deepal)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 
     # Write staging
@@ -1053,7 +1531,7 @@ def main():
         for obs in all_observations + existing:
             f.write(json.dumps(obs) + '\n')
 
-    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg
+    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg + mitsubishi + suzuki + mini + deepal
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "provenance": {
@@ -1064,7 +1542,7 @@ def main():
         },
         "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda),
                        "isuzu": len(isuzu), "bmw": len(bmw), "lexus": len(lexus),
-                       "honda_models": len(honda_models), "mg": len(mg)},
+                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal)},
         "total": len(all_observations) + len(existing),
     }
     with open("audit/data-staging/summary.json", 'w') as f:

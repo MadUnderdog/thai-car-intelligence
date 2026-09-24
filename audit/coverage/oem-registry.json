@@ -1,6 +1,6 @@
 {
   "schema": "oem-coverage-registry/1 \u2014 Blueprint.md \u00a793",
-  "generated_at": "2026-09-24T14:16:16.748942+00:00",
+  "generated_at": "2026-09-24T15:11:34.814997+00:00",
   "probe_evidence": "audit/coverage/probe_20260924.json",
   "coverage_rule": "coverage_% = brands with provenance_status=ACQUISITION_VERIFIED AND adapter_status=PARSED_TESTED \u00f7 in_scope brands (\u00a793). Attempt/captured/blocked counts are operational telemetry, never coverage.",
   "scope_candidates_unresolved": [
@@ -227,10 +227,10 @@
       "source_type": "OFFICIAL_SITE",
       "access_status": "REACHABLE",
       "acquisition_method": "playwright",
-      "adapter_status": "NONE",
+      "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": null,
-      "last_success_sha256": null,
+      "last_success_at": "2026-09-24T13:48:27.092513+00:00",
+      "last_success_sha256": "eaa2b0f9e01fcbc45532782f931eeee7c00801cda5c480294c8c1a4f8ffee498",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:31.560336+00:00",
@@ -247,8 +247,8 @@
           "artifact": "mitsubishi_home_page.html",
           "sha256": "eaa2b0f9e01fcbc45532782f931eeee7c00801cda5c480294c8c1a4f8ffee498",
           "provenance_state": "ACQUISITION_VERIFIED",
-          "parsed": false,
-          "note": "captured; price spans present \u2014 adapter follow-up"
+          "parsed": true,
+          "note": "nav-header model links \u2014 collect_mitsubishi, 6 MODEL MSRP_STARTING"
         }
       ]
     },
@@ -275,7 +275,7 @@
         "bytes": 15873,
         "title": "ISUZU Group Thailand"
       },
-      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
       "fallback_ladder": [],
       "captured_endpoints": [
         {
@@ -293,6 +293,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "isuzu.co.th root (16KB shell) \u2014 needs JS-rendered recapture follow-up"
+        },
+        {
+          "url": "https://www.isuzu.co.th/",
+          "artifact": "isuzu_th_rendered_page.html",
+          "sha256": "7f7956308b83ffc60da13e47efb95ad37839bc5de4141126c2916c50199e90f1",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "range/model page capture: official page publishes NO prices \u2192 no adapter (parseable-structure rule); stored as evidence"
         }
       ]
     },
@@ -306,10 +314,10 @@
       "source_type": "OFFICIAL_SITE",
       "access_status": "REACHABLE",
       "acquisition_method": "playwright",
-      "adapter_status": "NONE",
+      "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": null,
-      "last_success_sha256": null,
+      "last_success_at": "2026-09-24T13:48:31.621323+00:00",
+      "last_success_sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:31.564646+00:00",
@@ -342,8 +350,8 @@
           "artifact": "suzuki_home_page.html",
           "sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
           "provenance_state": "ACQUISITION_VERIFIED",
-          "parsed": false,
-          "note": "root captured after prior ERROR_PAGE capture; product prices present \u2014 adapter follow-up"
+          "parsed": true,
+          "note": "product cards \u2014 collect_suzuki, 5 MODEL (mixed MSRP_STARTING/MSRP per source phrasing)"
         }
       ]
     },
@@ -753,24 +761,45 @@
       "in_scope": true,
       "official_name": "Deepal Thailand",
       "source_urls": [
+        "https://www.changan.co.th/",
         "https://www.deepal.co.th/"
       ],
       "source_type": "OFFICIAL_SITE",
-      "access_status": "BLOCKED_DNS",
+      "access_status": "REACHABLE",
       "acquisition_method": null,
-      "adapter_status": "NONE",
-      "provenance_status": "NONE",
-      "last_success_at": null,
-      "last_success_sha256": null,
-      "blocker_evidence": {
-        "checked_at": "2026-09-24T13:41:33.550677+00:00",
-        "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.deepal.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.deepal.co.th'",
-        "url": "https://www.deepal.co.th/"
-      },
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-24T13:48:42.529465+00:00",
+      "last_success_sha256": "28c9f50b86238b6d69b2cd3737068795367ab06875243cc4193d5c98ae770ecd",
+      "blocker_evidence": null,
       "probe_reachable_evidence": null,
       "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
-      "fallback_ladder": [],
-      "captured_endpoints": []
+      "fallback_ladder": [
+        {
+          "url": "https://www.deepal.co.th/",
+          "checked_at": "2026-09-24T13:41:33.550677+00:00",
+          "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.deepal.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.deepal.co.th'",
+          "result": "BLOCKED_DNS",
+          "cycle": "2026-09-24"
+        },
+        {
+          "url": "https://www.changan.co.th/",
+          "checked_at": "2026-09-24T15:11:34.814997+00:00",
+          "http_status_or_error": "REACHABLE \u2014 Deepal products published on operator site (changan.co.th cards link /thdeepal/<model>-th/)",
+          "result": "CAPTURED_PARSED",
+          "cycle": "2026-09-24-3"
+        }
+      ],
+      "captured_endpoints": [
+        {
+          "url": "https://www.changan.co.th/th/",
+          "artifact": "changan_home_page.html",
+          "sha256": "28c9f50b86238b6d69b2cd3737068795367ab06875243cc4193d5c98ae770ecd",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "sibling official source: Changan (same operator) cards carry Deepal product links \u2014 collect_deepal, 5 MODEL MSRP_STARTING; brand_raw=thdeepal (published segment), never merged into Changan"
+        }
+      ]
     },
     {
       "brand": "Avance",
@@ -827,7 +856,7 @@
           "sha256": "28c9f50b86238b6d69b2cd3737068795367ab06875243cc4193d5c98ae770ecd",
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
-          "note": "captured (4.4MB); 5 price grid cells \u2014 adapter follow-up"
+          "note": "page cards are Deepal-brand products (parsed by collect_deepal, rows brand=deepal) \u2014 no Changan-brand price rows yet"
         }
       ]
     },
@@ -853,7 +882,7 @@
         "bytes": 154968,
         "title": "GWM Thailand - Home"
       },
-      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
       "fallback_ladder": [],
       "captured_endpoints": [
         {
@@ -863,6 +892,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "captured (/en); no price elements \u2014 adapter follow-up"
+        },
+        {
+          "url": "https://www.gwm.co.th/en/models",
+          "artifact": "gwm_models_page.html",
+          "sha256": "e7a9070ab8c8d78cc09be23870fec1c6f27e7475eb03aae4d803f34d2e10e487",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "range/model page capture: official page publishes NO prices \u2192 no adapter (parseable-structure rule); stored as evidence"
         }
       ]
     },
@@ -936,7 +973,7 @@
         "bytes": 414900,
         "title": "Jaguar | Inspire Like No Other | Challenge Convention | Jaguar Thailand"
       },
-      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
       "fallback_ladder": [],
       "captured_endpoints": [
         {
@@ -946,6 +983,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "captured; no price elements \u2014 needs model-list URL follow-up"
+        },
+        {
+          "url": "https://www.jaguar.co.th/jaguar-range/overview",
+          "artifact": "jaguar_range_page.html",
+          "sha256": "12ad7deb8700dbc94a3f448a91d054ad9bfb571b18664aeaee7fe074fc894151",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "range/model page capture: official page publishes NO prices \u2192 no adapter (parseable-structure rule); stored as evidence"
         }
       ]
     },
@@ -971,7 +1016,7 @@
         "bytes": 394441,
         "title": "Land Rover | \u0e2a\u0e33\u0e23\u0e27\u0e08\u0e23\u0e16 SUV \u0e41\u0e25\u0e30\u0e23\u0e16 4x4 \u0e2a\u0e38\u0e14\u0e2b\u0e23\u0e39 | Land Rover Thailand"
       },
-      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
       "fallback_ladder": [],
       "captured_endpoints": [
         {
@@ -981,6 +1026,22 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "captured; no price elements \u2014 needs model-list URL follow-up"
+        },
+        {
+          "url": "https://www.landrover.co.th/discovery/overview",
+          "artifact": "landrover_discovery_page.html",
+          "sha256": "660b8fa629d46378a53922ecfad55b702ff923dee28654d7f86a9f09c3d51ce2",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "range/model page capture: official page publishes NO prices \u2192 no adapter (parseable-structure rule); stored as evidence"
+        },
+        {
+          "url": "https://www.landrover.co.th/range-rover/overview",
+          "artifact": "landrover_range_rover_page.html",
+          "sha256": "aa02b1b04953577fa44ccd302b403f07fc266853c7f64e6c48393fcfdb6f9c29",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "range/model page capture: official page publishes NO prices \u2192 no adapter (parseable-structure rule); stored as evidence"
         }
       ]
     },
@@ -994,10 +1055,10 @@
       "source_type": "OFFICIAL_SITE",
       "access_status": "REACHABLE",
       "acquisition_method": "playwright",
-      "adapter_status": "NONE",
+      "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": null,
-      "last_success_sha256": null,
+      "last_success_at": "2026-09-24T13:49:07.774046+00:00",
+      "last_success_sha256": "b662bd5b0cca816295643f72ac8b880a2ee82d017d25a40edd5ddca363783273",
       "blocker_evidence": {
         "checked_at": "2026-09-24T13:41:34.397258+00:00",
         "http_status_or_error": "Timeout after 15s",
@@ -1012,8 +1073,8 @@
           "artifact": "mini_home_page.html",
           "sha256": "b662bd5b0cca816295643f72ac8b880a2ee82d017d25a40edd5ddca363783273",
           "provenance_state": "ACQUISITION_VERIFIED",
-          "parsed": false,
-          "note": "timeout-retry succeeded; MSRP + finance prices mixed \u2014 careful adapter follow-up"
+          "parsed": true,
+          "note": "product items \u2014 collect_mini, 5 MODEL MSRP_STARTING (\"From X \u0e3f\"), finance values excluded"
         }
       ]
     },
@@ -1078,7 +1139,7 @@
         "bytes": 94379,
         "title": "\u0e40\u0e01\u0e35\u0e22 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 | Kia Thailand"
       },
-      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
       "fallback_ladder": [],
       "captured_endpoints": [
         {
@@ -1088,6 +1149,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "captured (/th/th); no price elements \u2014 needs model-list URL follow-up"
+        },
+        {
+          "url": "https://www.kia.com/th/th",
+          "artifact": "kia_cars_page.html",
+          "sha256": "d068ec29fcbefa7b3f2b571845e25f847c17e71658540c6bf772326e4d5581b0",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "range/model page capture: official page publishes NO prices \u2192 no adapter (parseable-structure rule); stored as evidence"
         }
       ]
     },
@@ -1134,5 +1203,5 @@
       "fallback_ladder": []
     }
   ],
-  "cycle": "2026-09-24-2: probe + acquisition + adapter updates"
+  "cycle": "2026-09-24-3: captured-unparsed \u2192 PARSED_TESTED (Mitsubishi/Suzuki/MINI/Deepal) + range recaptures"
 }

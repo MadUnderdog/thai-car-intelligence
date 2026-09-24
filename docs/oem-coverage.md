@@ -1,18 +1,18 @@
 # OEM Coverage View
 
 > GENERATED from `audit/coverage/oem-registry.json` by `scripts/generate_coverage_view.py` — do not edit by hand.
-> Generated at: 2026-09-24T14:18:07.258927+00:00
+> Generated at: 2026-09-24T15:11:34.847254+00:00
 
 ## Coverage
 
 ```text
 coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
-         = 5 / 32 = 15.6%
+         = 9 / 32 = 28.1%
 ```
 
-- Verified + parsed-tested brands: Honda, Nissan, MG, BMW, Lexus
-- Currently reachable endpoints: 17 / 32
-- Blocked endpoints: 15 / 32
+- Verified + parsed-tested brands: Honda, Nissan, Mitsubishi, Suzuki, MG, BMW, Lexus, Deepal, MINI
+- Currently reachable endpoints: 18 / 32
+- Blocked endpoints: 14 / 32
 - Scope candidates unresolved: 2
 
 > Attempt, capture and blocked counts are **operational telemetry, never market coverage** (§93).
@@ -25,9 +25,9 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 | Honda | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Nissan | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Mazda | yes | 🟢 `REACHABLE` | PARSED_TESTED | LEGACY_UNVERIFIED | UNKNOWN | 2026-09-25 |
-| Mitsubishi | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
+| Mitsubishi | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Isuzu | yes | 🟢 `REACHABLE` | PARSED_TESTED | LEGACY_UNVERIFIED | 2026-09-24 | 2026-09-25 |
-| Suzuki | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
+| Suzuki | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | MG | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | BYD | yes | ⛔ `BLOCKED_HTTP_404` | NONE | NONE | — | 2026-10-08 |
 | Tesla | yes | ⛔ `BLOCKED_HTTP_403` | NONE | NONE | — | 2026-10-01 |
@@ -41,7 +41,7 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 | Porsche | yes | 🟢 `REACHABLE` | NONE | NONE | — | 2026-09-25 |
 | Lexus | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | NETA | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
-| Deepal | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
+| Deepal | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-10-01 |
 | Avance | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
 | Changan | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
 | GWM | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
@@ -49,7 +49,7 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 | Chery | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
 | Jaguar | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
 | Land Rover | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
-| MINI | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
+| MINI | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Smart | yes | ⚠️ `DEALER_REDIRECT` | NONE | NONE | — | 2026-09-25 |
 | Kia | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
 | Peugeot | yes | ⛔ `BLOCKED_HTTP_403` | NONE | NONE | — | 2026-10-01 |
@@ -68,7 +68,6 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 - **Volvo** `BLOCKED_TLS` — SSLError: HTTPSConnectionPool(host='www.volvo.co.th', port=443): Max retries exceeded with url: /en/models.html (Caused by SSLErro at <https://www.volvo.co.th/en/models.html> (checked 2026-09-24T13:41:32Z); retry 2026-10-24
 - **Subaru** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.subaru.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.subaru.co.th' at <https://www.subaru.co.th/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
 - **NETA** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.neta.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.neta.co.th', po at <https://www.neta.co.th/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
-- **Deepal** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.deepal.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.deepal.co.th' at <https://www.deepal.co.th/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
 - **Avance** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.avancemotors.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.avancemot at <https://www.avancemotors.com/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
 - **Haval** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.haval.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.haval.co.th',  at <https://www.haval.co.th/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
 - **Chery** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.chery.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.chery.co.th',  at <https://www.chery.co.th/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
@@ -95,13 +94,14 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
   - `mazda_page.html` ← https://www.mazda.co.th/en/vehicles · LEGACY_UNVERIFIED · parsed · cd8ca9667ce5
   - `mazda_home_page.html` ← https://www.mazda.co.th/th · ACQUISITION_VERIFIED · unparsed · 3e49287146ee
 - **Mitsubishi**
-  - `mitsubishi_home_page.html` ← https://www.mitsubishi-motors.co.th/th?rd=true · ACQUISITION_VERIFIED · unparsed · eaa2b0f9e01f
+  - `mitsubishi_home_page.html` ← https://www.mitsubishi-motors.co.th/th?rd=true · ACQUISITION_VERIFIED · parsed · eaa2b0f9e01f
 - **Isuzu**
   - `isuzu_page.html` ← https://www.isuzu.com · LEGACY_UNVERIFIED · parsed · e9d00350296d
   - `isuzu_th_home_page.html` ← https://www.isuzu.co.th/ · ACQUISITION_VERIFIED · unparsed · 5d27fa1ffd76
+  - `isuzu_th_rendered_page.html` ← https://www.isuzu.co.th/ · ACQUISITION_VERIFIED · unparsed · 7f7956308b83
 - **Suzuki**
   - `suzuki_models_page.html` ← https://www.suzuki.co.th/error · ACQUISITION_VERIFIED · unparsed · c22e9bcffbec
-  - `suzuki_home_page.html` ← https://www.suzuki.co.th/ · ACQUISITION_VERIFIED · unparsed · 2b9c4cc94730
+  - `suzuki_home_page.html` ← https://www.suzuki.co.th/ · ACQUISITION_VERIFIED · parsed · 2b9c4cc94730
 - **MG**
   - `mg_models_page.html` ← https://www.jnt.co.th/ · ACQUISITION_VERIFIED · unparsed · b502e443cf65
   - `mg_home_page.html` ← https://www.mgcars.com/th · ACQUISITION_VERIFIED · parsed · ee75dda64330
@@ -112,17 +112,24 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
   - `porsche_home_page.html` ← https://www.porsche.com/pap/_thailand_/ · ACQUISITION_VERIFIED · unparsed · e7a53c39351f
 - **Lexus**
   - `lexus_models_page.html` ← https://www.lexus.co.th/th.html · ACQUISITION_VERIFIED · parsed · be1f5d866979
+- **Deepal**
+  - `changan_home_page.html` ← https://www.changan.co.th/th/ · ACQUISITION_VERIFIED · parsed · 28c9f50b8623
 - **Changan**
   - `changan_home_page.html` ← https://www.changan.co.th/th/ · ACQUISITION_VERIFIED · unparsed · 28c9f50b8623
 - **GWM**
   - `gwm_home_page.html` ← https://www.gwm.co.th/en · ACQUISITION_VERIFIED · unparsed · c311d963f280
+  - `gwm_models_page.html` ← https://www.gwm.co.th/en/models · ACQUISITION_VERIFIED · unparsed · e7a9070ab8c8
 - **Jaguar**
   - `jaguar_home_page.html` ← https://www.jaguar.co.th/ · ACQUISITION_VERIFIED · unparsed · 05d97f701cf4
+  - `jaguar_range_page.html` ← https://www.jaguar.co.th/jaguar-range/overview · ACQUISITION_VERIFIED · unparsed · 12ad7deb8700
 - **Land Rover**
   - `landrover_home_page.html` ← https://www.landrover.co.th/ · ACQUISITION_VERIFIED · unparsed · e82a21773190
+  - `landrover_discovery_page.html` ← https://www.landrover.co.th/discovery/overview · ACQUISITION_VERIFIED · unparsed · 660b8fa629d4
+  - `landrover_range_rover_page.html` ← https://www.landrover.co.th/range-rover/overview · ACQUISITION_VERIFIED · unparsed · aa02b1b04953
 - **MINI**
-  - `mini_home_page.html` ← https://www.mini.co.th/en_TH/home.html · ACQUISITION_VERIFIED · unparsed · b662bd5b0cca
+  - `mini_home_page.html` ← https://www.mini.co.th/en_TH/home.html · ACQUISITION_VERIFIED · parsed · b662bd5b0cca
 - **Smart**
   - `smart_home_page.html` ← https://www.smartsecurity.in.th/ · ACQUISITION_VERIFIED · unparsed · 503b08966576
 - **Kia**
   - `kia_home_page.html` ← https://www.kia.com/th/th · ACQUISITION_VERIFIED · unparsed · 53e94ea876b4
+  - `kia_cars_page.html` ← https://www.kia.com/th/th · ACQUISITION_VERIFIED · unparsed · d068ec29fcbe

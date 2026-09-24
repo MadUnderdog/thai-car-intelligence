@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-24T09:29:49.562941+00:00",
+  "generated_at": "2026-09-24T11:18:52.579174+00:00",
   "provenance": {
-    "fixture_based_extraction": 164,
+    "fixture_based_extraction": 170,
     "note": "All rows are fixture-derived from committed HTML artifacts, not fresh/current market acquisition"
   },
   "by_source": {
@@ -10,7 +10,8 @@
     "Nissan Thailand Official": 10,
     "Honda Thailand Official": 4,
     "Isuzu Thailand Official": 6,
-    "BMW Thailand Official": 35
+    "BMW Thailand Official": 35,
+    "Lexus Thailand Official": 6
   },
-  "total": 164
+  "total": 170
 }

@@ -821,3 +821,85 @@ def test_bmw_canonical_locator_resolves_to_exact_card():
     price_count = sum(1 for r in results if r['hasPrice'])
     assert price_count == len(results), \
         f"Only {price_count}/{len(results)} contain price"
+
+
+# ─── Lexus Tests ───
+
+def test_lexus_fixture_exists():
+    assert os.path.exists(f"{FIXTURE_DIR}/lexus_models_page.html"), "Lexus fixture missing"
+
+def test_lexus_fixture_sidecar_exists():
+    assert os.path.exists(f"{FIXTURE_DIR}/lexus_models_page.html.prov.json"), "Lexus sidecar missing"
+
+def test_lexus_extraction_count():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_lexus
+    obs = collect_lexus()
+    assert len(obs) == 6, f"Expected 6 Lexus models, got {len(obs)}"
+
+def test_lexus_specific_models():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_lexus
+    obs = collect_lexus()
+    models = {o['identity']['model_raw']: o for o in obs}
+    
+    assert 'LBX' in models, "LBX not found"
+    assert models['LBX']['price']['value_thb'] == 2430000
+    assert models['LBX']['price']['price_type'] == 'MSRP_STARTING'
+    
+    assert 'NX' in models, "NX not found"
+    assert models['NX']['price']['value_thb'] == 3310000
+    
+    assert 'RX' in models, "RX not found"
+    assert models['RX']['price']['value_thb'] == 4520000
+
+def test_lexus_model_level():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_lexus
+    obs = collect_lexus()
+    for o in obs:
+        assert o['identity']['level'] == 'MODEL'
+        assert o['identity']['variant_raw'] is None
+
+def test_lexus_currentness_unknown():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_lexus
+    obs = collect_lexus()
+    for o in obs:
+        assert o['price']['currentness'] == 'UNKNOWN'
+
+def test_lexus_evidence_contains_both():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_lexus
+    obs = collect_lexus()
+    for o in obs:
+        model = o['identity']['model_raw']
+        price = str(o['price']['value_thb'])
+        excerpt = o['evidence']['excerpt']
+        assert model in excerpt, f"Model {model} not in evidence"
+        assert price in excerpt.replace(',', ''), f"Price {price} not in evidence"
+
+def test_lexus_sidecar_provenance():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_lexus
+    obs = collect_lexus()
+    for o in obs:
+        assert o['source']['provenance_state'] == 'ACQUISITION_VERIFIED'
+        assert o['source']['captured_at'] != 'UNKNOWN'
+
+def test_lexus_canonical_locator_present():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_lexus
+    obs = collect_lexus()
+    for o in obs:
+        locator = o['evidence']['evidence_locator']['canonical_locator']
+        assert locator, f"Missing locator for {o['identity']['model_raw']}"
+        assert 'nth-child' in locator or ':' in locator
+

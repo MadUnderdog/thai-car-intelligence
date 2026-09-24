@@ -14,6 +14,7 @@ import re
 import os
 import sys
 import hashlib
+import tempfile
 from datetime import datetime, timezone
 
 # Add lib to path for provenance module
@@ -686,6 +687,92 @@ def collect_bmw():
     print(f"  Extracted: {len(observations)} models from fixture")
     return observations
 
+
+
+# ─── Lexus Adapter (DOM — ul.tab__item_models > li) ───
+def collect_lexus():
+    """Collect from Lexus — ul.tab__item_models cards from fixture."""
+    print("=== Lexus Thailand Official (DOM) ===")
+    html, err = load_fixture("lexus_models")
+    if err:
+        print(f"  {err}")
+        return []
+    
+    from bs4 import BeautifulSoup
+    import re
+    
+    soup = BeautifulSoup(html, 'html.parser')
+    model_list = soup.select_one('ul.tab__item_models')
+    
+    if not model_list:
+        print("  No model list found")
+        return []
+    
+    observations = []
+    artifact = f"{FIXTURE_DIR}/lexus_models_page.html"
+    prov = get_fixture_provenance(artifact)
+    
+    for li in model_list.find_all('li', recursive=False):
+        text = li.get_text().strip()
+        
+        # Extract model name (first uppercase-starting token)
+        model_match = re.match(r'^([A-Z][A-Za-z0-9]*)', text)
+        if not model_match:
+            continue
+        model = model_match.group(1)
+        
+        # Extract price
+        price_match = re.search(r'(?:เริ่มต้น|ราคา)\s*([\d,]+)', text)
+        if not price_match:
+            continue
+        price = int(price_match.group(1).replace(',', ''))
+        
+        # Determine price type
+        is_starting = 'เริ่มต้น' in text
+        
+        # Build DOM path
+        path = []
+        el = li
+        while el and el.name and el.name != 'body':
+            parent = el.parent
+            if parent:
+                child_idx = list(parent.children).index(el) + 1
+                path.insert(0, f"{el.name}:nth-child({child_idx})")
+            el = parent
+        
+        observations.append({
+            "source": {
+                "name": "Lexus Thailand Official",
+                "url": "https://www.lexus.co.th/th.html",
+                "acquisition_method": "playwright_fixture",
+                "artifact_path": artifact,
+                "artifact_sha256": prov.get('sha256') or hashlib.sha256(open(artifact, 'rb').read()).hexdigest(),
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "level": "MODEL",
+                "model_raw": model,
+                "variant_raw": None,
+            },
+            "price": {
+                "value_thb": price,
+                "price_type": "MSRP_STARTING" if is_starting else "EXACT_VARIANT",
+                "currentness": "UNKNOWN",
+            },
+            "evidence": {
+                "excerpt": text[:500],
+                "evidence_locator": {
+                    "canonical_locator": ' > '.join(path),
+                    "convenience_selector": f"ul.tab__item_models > li # {model}",
+                },
+            },
+        })
+    
+    print(f"  Extracted: {len(observations)} models from fixture")
+    return observations
+
+
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
 
@@ -708,6 +795,8 @@ def main():
 
     bmw = collect_bmw()
     all_observations.extend(bmw)
+    lexus = collect_lexus()
+    all_observations.extend(lexus)
 
     # Load existing Fipe/OpenEV
     existing = []
@@ -727,6 +816,7 @@ def main():
     print(f"Honda (DOM fixture): {len(honda)}")
     print(f"Isuzu (DOM fixture): {len(isuzu)}")
     print(f"BMW (DOM fixture): {len(bmw)}")
+    print(f"Lexus (DOM fixture): {len(lexus)}")
     print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 

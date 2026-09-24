@@ -209,8 +209,9 @@ def test_staging_counts_match_extractors():
     toyota_expected = len(collect_toyota())
     mazda_expected = len(collect_mazda())
     nissan_expected = len(collect_nissan())
-    from collect_multi_oem import collect_honda
+    from collect_multi_oem import collect_honda, collect_isuzu
     honda_expected = len(collect_honda())
+    isuzu_expected = len(collect_isuzu())
 
     counts = {}
     with open(STAGING_FILE) as f:
@@ -229,6 +230,8 @@ def test_staging_counts_match_extractors():
         f"Nissan staging count mismatch"
     assert counts.get('Honda Thailand Official', 0) == honda_expected, \
         f"Honda staging count mismatch"
+    assert counts.get('Isuzu Thailand Official', 0) == isuzu_expected, \
+        f"Isuzu staging count mismatch"
 
 
 # ─── Honda Extraction Tests (from fixture) ───
@@ -414,3 +417,56 @@ def test_honda_artifact_hash_present():
             f"artifact_sha256 not full SHA-256: {obs['source']['artifact_sha256']}"
         assert 'artifact_sha256' in obs['evidence_locator'], \
             f"evidence_locator.artifact_sha256 missing"
+
+
+# ─── Isuzu Extraction Tests (from fixture) ───
+
+def test_isuzu_fixture_exists():
+    """Isuzu fixture must be committed and non-empty."""
+    path = f"{FIXTURE_DIR}/isuzu_page.html"
+    assert os.path.exists(path), f"Isuzu fixture missing: {path}"
+    assert os.path.getsize(path) > 10000, f"Isuzu fixture too small: {os.path.getsize(path)}"
+
+
+def test_isuzu_extraction_count():
+    """Isuzu extractor must produce 6 observations from fixture."""
+    from collect_multi_oem import collect_isuzu
+    observations = collect_isuzu()
+    assert len(observations) == 6, f"Expected 6 Isuzu models, got {len(observations)}"
+
+
+def test_isuzu_specific_models():
+    """Specific Isuzu models must extract with correct prices."""
+    from collect_multi_oem import collect_isuzu
+    observations = collect_isuzu()
+    lookup = {obs['identity']['model_raw']: obs for obs in observations}
+    
+    assert 'V-CROSS' in lookup, f"V-CROSS not found"
+    assert lookup['V-CROSS']['price']['value_thb'] == 937000
+    
+    assert 'MU-X' in lookup, f"MU-X not found"
+    assert lookup['MU-X']['price']['value_thb'] == 1194000
+
+
+def test_isuzu_model_level():
+    """Isuzu observations must be MODEL level."""
+    from collect_multi_oem import collect_isuzu
+    observations = collect_isuzu()
+    for obs in observations:
+        assert obs['identity']['identity_level'] == 'MODEL', \
+            f"identity_level should be MODEL, got {obs['identity']['identity_level']}"
+        assert obs['identity']['variant_raw'] is None, \
+            f"variant_raw should be None for MODEL-level"
+
+
+def test_isuzu_evidence_contains_both():
+    """Evidence excerpt must contain BOTH model name and price."""
+    from collect_multi_oem import collect_isuzu
+    observations = collect_isuzu()
+    for obs in observations:
+        excerpt = obs['evidence_excerpt']
+        model = obs['identity']['model_raw']
+        price_str = str(obs['price']['value_thb'])
+        assert model in excerpt, f"Model '{model}' not in evidence: {excerpt[:60]}"
+        assert price_str in excerpt.replace(',', ''), \
+            f"Price {price_str} not in evidence: {excerpt[:60]}"

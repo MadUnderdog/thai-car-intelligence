@@ -290,6 +290,117 @@ def collect_nissan():
 
 
 
+
+
+# ─── Isuzu Adapter (DOM — figure cards) ───
+ISUZU_JS = """
+(() => {
+    const items = [];
+    const figures = document.querySelectorAll('figure');
+    
+    figures.forEach((fig, idx) => {
+        const text = fig.textContent;
+        const priceMatch = text.match(/([\\d,]+)\\s*THB/);
+        if (!priceMatch) return;
+        
+        const price = parseInt(priceMatch[1].replace(/,/g, ''));
+        if (price < 100000 || price > 10000000) return;
+        
+        // Extract model name from card text (before price)
+        const modelMatch = text.match(/^([A-Z0-9][A-Z0-9\-\s]+?)(?:เริ่มต้น|[\\d,])/);
+        const model = modelMatch ? modelMatch[1].trim() : null;
+        if (!model || model.length < 2) return;
+        
+        // Build DOM path
+        const path = [];
+        let el = fig;
+        while (el && el !== document.body) {
+            const childIdx = Array.from(el.parentElement.children).indexOf(el);
+            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (childIdx + 1) + ')');
+            el = el.parentElement;
+        }
+        
+        items.push({
+            model: model,
+            price: price,
+            figIndex: idx,
+            domPath: path.join(' > '),
+            evidence: text.trim().replace(/\\s+/g, ' ').substring(0, 150)
+        });
+    });
+    
+    return items;
+})()
+"""
+
+
+def collect_isuzu():
+    """Collect from Isuzu — DOM extraction from figure cards."""
+    print("=== Isuzu Thailand Official (DOM) ===")
+    html, error = load_fixture("isuzu")
+    if error:
+        print(f"  {error}")
+        return []
+
+    results, artifact = extract_from_html(html, "isuzu", ISUZU_JS, fixture_path=f"{FIXTURE_DIR}/isuzu_page.html")
+    if not results:
+        print("  Extraction returned no results")
+        return []
+
+    # Compute artifact hash
+    with open(artifact, 'rb') as f:
+        artifact_hash = hashlib.sha256(f.read()).hexdigest()
+
+    observations = []
+    for item in results:
+        model = item['model']
+        observations.append({
+            "observation_id": hashlib.sha256(f"isuzu:{model}:{item['price']}:{item['domPath']}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": "https://www.isuzu-tis.com/",
+                "name": "Isuzu Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "playwright_dom",
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "captured_at": "2026-09-24T05:00:00Z",
+            },
+            "identity": {
+                "brand_raw": "Isuzu",
+                "model_raw": model,
+                "variant_raw": None,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "brand_normalized": "isuzu",
+                "model_normalized": model.lower().replace(" ", "-"),
+                "variant_normalized": None,
+                "identity_level": "MODEL",
+            },
+            "price": {
+                "value_thb": item['price'],
+                "type": "MSRP_STARTING",
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {},
+            "evidence_excerpt": item['evidence'],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "canonical_locator": item['domPath'],
+                "card_index": item['figIndex'],
+                "method": "dom_card",
+            },
+        })
+
+    print(f"  Extracted: {len(observations)} models from fixture")
+    return observations
+
 # ─── Honda Adapter (DOM — Grade Levels section) ───
 HONDA_CITY_JS = """
 (() => {
@@ -437,6 +548,9 @@ def main():
     honda = collect_honda()
     all_observations.extend(honda)
 
+    isuzu = collect_isuzu()
+    all_observations.extend(isuzu)
+
     # Load existing Fipe/OpenEV
     existing = []
     prev_staging = "audit/data-staging/vehicle_observations_prev.jsonl"
@@ -453,7 +567,8 @@ def main():
     print(f"Mazda (DOM fixture): {len(mazda)}")
     print(f"Nissan (DOM fixture): {len(nissan)}")
     print(f"Honda (DOM fixture): {len(honda)}")
-    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda)}")
+    print(f"Isuzu (DOM fixture): {len(isuzu)}")
+    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 
     # Write staging
@@ -465,10 +580,10 @@ def main():
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "provenance": {
-            "fixture_based_extraction": len(toyota) + len(mazda) + len(nissan) + len(honda),
+            "fixture_based_extraction": len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu),
             "from_existing_structured_data": len(existing),
         },
-        "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda)},
+        "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda), "isuzu": len(isuzu)},
         "total": len(all_observations) + len(existing),
     }
     with open("audit/data-staging/summary.json", 'w') as f:

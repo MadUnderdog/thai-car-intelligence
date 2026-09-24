@@ -1,14 +1,15 @@
 {
-  "generated_at": "2026-09-23T12:08:08.510764+00:00",
+  "generated_at": "2026-09-24T05:17:41.581774+00:00",
   "provenance": {
-    "fixture_based_extraction": 123,
+    "fixture_based_extraction": 129,
     "from_existing_structured_data": 0
   },
   "by_source": {
     "toyota": 99,
     "mazda": 10,
     "nissan": 10,
-    "honda": 4
+    "honda": 4,
+    "isuzu": 6
   },
-  "total": 123
+  "total": 129
 }

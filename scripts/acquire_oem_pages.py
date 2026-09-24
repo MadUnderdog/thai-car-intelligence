@@ -102,15 +102,11 @@ async def main():
     
     # OEM targets - accessible official pages
     targets = [
-        # Cycle 2026-09-24-3: model-list/range recaptures for captured-unparsed brands
-        ('https://www.gwm.co.th/en/models', 'gwm_models_page.html', None),
-        ('https://www.jaguar.co.th/jaguar-range', 'jaguar_range_page.html', None),
-        ('https://www.landrover.co.th/discovery/overview', 'landrover_discovery_page.html', None),
-        ('https://www.landrover.co.th/range-rover/overview', 'landrover_range_rover_page.html', None),
-        # rendered recapture: first capture was a 16KB JS shell
-        ('https://www.isuzu.co.th/', 'isuzu_th_rendered_page.html', 'footer'),
-        # structure-derived candidate from captured homepage (/th/th/cars/<model>/gallery links)
-        ('https://www.kia.com/th/th/cars', 'kia_cars_page.html', None),
+        # Cycle 2026-09-24-4: own-brand Changan product pages (links from captured homepage)
+        ('https://www.changan.co.th/th/lumin/luminl-dc-th/', 'changan_lumin_page.html', None),
+        ('https://www.changan.co.th/th/nevo-q05/', 'changan_nevo_q05_page.html', None),
+        # rendered recapture: price list may hydrate after load
+        ('https://www.changan.co.th/th/promotion/', 'changan_promotion_page.html', None),
     ]
     
     results = []

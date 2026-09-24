@@ -1,0 +1,9 @@
+{
+  "source_url": "https://cdn-jaguarlandrover.com/system/apio/th/TH_Jaguar_PriceSheet.pdf",
+  "captured_at": "2026-09-24T17:47:27.974887+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "9806c8ba7068655ecfcfade272c0e102b3579e519bef43f6076c54913642a8ed",
+  "session_id": "acquisition_20260924_pdf_pricesheets",
+  "artifact_filename": "TH_Jaguar_PriceSheet.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

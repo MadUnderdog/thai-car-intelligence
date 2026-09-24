@@ -15,6 +15,7 @@ import os
 import sys
 import hashlib
 import tempfile
+import time
 from datetime import datetime, timezone
 
 # Add lib to path for provenance module
@@ -70,17 +71,35 @@ async def main():
 
 asyncio.run(main())
 '''
-    with open('/tmp/extract_js.py', 'w') as f:
-        f.write(script_content)
+    # Unique script path per attempt (no shared /tmp file to race on), generous
+    # timeout, and retries: a transient chromium launch/set_content failure must
+    # not silently hide rows (observed intermittent Suzuki "no results").
+    last_err = None
+    for attempt in range(3):
+        script_path = os.path.join(
+            tempfile.gettempdir(), f"extract_js_{name}_{os.getpid()}_{attempt}.py")
+        with open(script_path, 'w') as f:
+            f.write(script_content)
+        try:
+            result = subprocess.run(['python3', script_path],
+                                    capture_output=True, text=True, timeout=90)
+            if result.returncode == 0 and result.stdout.strip():
+                data = json.loads(result.stdout.strip())
+                if isinstance(data, list):
+                    return data, artifact_path
+                last_err = data  # {"error": ...} from the browser script
+            else:
+                last_err = f"rc={result.returncode} stderr={result.stderr[-200:]}"
+        except Exception as e:
+            last_err = repr(e)
+        finally:
+            try:
+                os.unlink(script_path)
+            except OSError:
+                pass
+        time.sleep(1 + attempt)
 
-    try:
-        result = subprocess.run(['python3', '/tmp/extract_js.py'], capture_output=True, text=True, timeout=30)
-        if result.returncode == 0 and result.stdout:
-            data = json.loads(result.stdout.strip())
-            return data, artifact_path
-    except:
-        pass
-
+    print(f"  extract_from_html({name}) FAILED after 3 attempts: {last_err}")
     return None, artifact_path
 
 
@@ -133,61 +152,49 @@ def collect_toyota():
 
 
 # ─── Mazda Adapter (DOM — .cardCarModelMega_content) ───
-MAZDA_JS = """
-(() => {
-    const cards = document.querySelectorAll('.cardCarModelMega_content');
-    return Array.from(cards).map((card, idx) => {
-        const text = card.textContent;
-        const priceMatch = text.match(/([\d,]+)\s*THB/);
-        const modelEl = card.querySelector('h3, h4, .model-name, strong');
-        const modelText = modelEl ? modelEl.textContent.trim() : text.split('Starting')[0].trim();
-        return {
-            model: modelText.replace(/\\u200b/g, ''),
-            price: priceMatch ? parseInt(priceMatch[1].replace(/,/g, '')) : null,
-            selector: '.cardCarModelMega_content:nth-child(' + (idx + 1) + ')',
-            evidence: text.trim().replace(/\\s+/g, ' ')
-        };
-    }).filter(item => item.price && item.price > 100000);
-})()
-"""
-
-
 def collect_mazda():
-    """Collect from Mazda — DOM extraction from fixture."""
-    print("=== Mazda Thailand Official (DOM) ===")
-    html, error = load_fixture("mazda")
-    if error:
-        print(f"  {error}")
+    """Collect from Mazda — root capture: h2 'MODEL | TAGLINE' + div.infoPrice ('เริ่มต้นที่')."""
+    print("=== Mazda Thailand Official (DOM, root capture) ===")
+    artifact_file = f"{FIXTURE_DIR}/mazda_home_page.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
         return []
+    with open(artifact_file) as f:
+        html = f.read()
 
-    results, artifact = extract_from_html(html, "mazda", MAZDA_JS, fixture_path=f"{FIXTURE_DIR}/mazda_page.html")
+    results, artifact = extract_from_html(html, "mazda_home_page", MAZDA_ROOT_JS, fixture_path=artifact_file)
     if not results:
         print("  Extraction returned no results")
         return []
+
+    with open(artifact, 'rb') as f:
+        artifact_hash = hashlib.sha256(f.read()).hexdigest()
+    prov = get_fixture_provenance(artifact)
 
     seen = set()
     observations = []
     for item in results:
         model = item['model']
-        if model in seen:
+        key = f"{model}:{item['price']}"
+        if key in seen:
             continue
-        seen.add(model)
+        seen.add(key)
 
         observations.append({
-            "observation_id": hashlib.sha256(f"mazda:{model}:{item['price']}".encode()).hexdigest()[:16],
+            "observation_id": hashlib.sha256(f"mazda:{model}:{item['price']}:{item.get('selector', '')}".encode()).hexdigest()[:16],
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "source": {
                 "class": "OEM_OFFICIAL",
-                "url": "https://www.mazda.co.th/en/vehicles",
+                "url": prov.get("source_url", "https://www.mazda.co.th/"),
                 "name": "Mazda Thailand Official",
                 "precedence": 100,
                 "native_id": None,
                 "immutable_revision": None,
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
-                "artifact_sha256": hashlib.sha256(open(artifact, 'rb').read()).hexdigest() if os.path.exists(artifact) else None,
-                "captured_at": get_fixture_provenance(artifact)["captured_at"],
-                "provenance_state": get_fixture_provenance(artifact)["provenance_state"],
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
             },
             "identity": {
                 "brand_raw": "Mazda",
@@ -207,16 +214,16 @@ def collect_mazda():
                 "currentness": "UNKNOWN",
             },
             "specs": {},
-            "raw_labels": {},
+            "raw_labels": {"price_text": item.get('priceText', '')},
             "evidence_excerpt": item['evidence'],
             "evidence_locator": {
                 "artifact_path": artifact,
-                "selector": item['selector'],
+                "selector": item.get('selector'),
                 "method": "dom_query",
             },
         })
 
-    print(f"  Extracted: {len(observations)} unique models from fixture")
+    print(f"  Extracted: {len(observations)} unique model/price pairs from mazda_home_page")
     return observations
 
 
@@ -1456,6 +1463,456 @@ def collect_mg():
     return observations
 
 
+# ─── Mazda root-capture extractor (h2 'MODEL | TAGLINE' + infoPrice) ───
+MAZDA_ROOT_JS = r"""
+(() => {
+    const items = [];
+    const cards = document.querySelectorAll('div.cardeExploRerangerInfo_content');
+    const seen = new Set();
+    for (const card of cards) {
+        const h2 = card.querySelector('h2');
+        const priceEl = card.querySelector('div.infoPrice');
+        if (!h2 || !priceEl) continue;
+        const priceText = priceEl.textContent.replace(/\s+/g, ' ').trim();
+        if (!priceText.includes('เริ่มต้นที่')) continue;
+        const pm = priceText.match(/([\d,]+)\s*บาท/);
+        if (!pm) continue;
+        const price = parseInt(pm[1].replace(/,/g, ''));
+        if (!price || price < 100000 || price > 10000000) continue;
+        const full = h2.textContent.replace(/​/g, ' ').replace(/\s+/g, ' ').trim();
+        const model = full.split('|')[0].trim();
+        if (!model) continue;
+        const key = model + ':' + price;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        const path = [];
+        let el = card;
+        while (el && el !== document.body) {
+            const idx = Array.from(el.parentElement.children).indexOf(el);
+            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (idx + 1) + ')');
+            el = el.parentElement;
+        }
+        items.push({ model: model, price: price, priceText: priceText,
+                     selector: path.join(' > '),
+                     evidence: (full + ' | ' + priceText).substring(0, 220) });
+    }
+    return items;
+})()
+"""
+
+
+def collect_kia_promos():
+    """Collect from Kia — kv promo cards: span.title + .kv_desc campaign price (ล้านบาท)."""
+    print("=== Kia Thailand Official (DOM promo cards) ===")
+    artifact_file = f"{FIXTURE_DIR}/kia_cars_page.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
+        return []
+    with open(artifact_file) as f:
+        html = f.read()
+
+    results, artifact = extract_from_html(html, "kia_cars_page", KIA_JS, fixture_path=artifact_file)
+    if not results:
+        print("  Extraction returned no results")
+        return []
+
+    with open(artifact, 'rb') as f:
+        artifact_hash = hashlib.sha256(f.read()).hexdigest()
+    prov = get_fixture_provenance(artifact)
+
+    observations = []
+    seen = set()
+    for item in results:
+        model = item['title']
+        key = f"{model}:{item['price']}"
+        if key in seen:
+            continue
+        seen.add(key)
+        price_type = 'MSRP_STARTING' if item['starting'] else 'MSRP'
+
+        observations.append({
+            "observation_id": hashlib.sha256(f"kia:{model}:{item['price']}:{item.get('selector', '')}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": prov.get("source_url", "https://www.kia.com/th/th/cars"),
+                "name": "Kia Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "playwright_dom",
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "brand_raw": "Kia",
+                "model_raw": model,
+                "variant_raw": None,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "brand_normalized": "kia",
+                "model_normalized": model.lower().replace(" ", "-"),
+                "variant_normalized": None,
+                "identity_level": "MODEL",
+            },
+            "price": {
+                "value_thb": item['price'],
+                "type": price_type,
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {"promo_text": item.get('desc', '')},
+            "evidence_excerpt": item['evidence'],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "selector": item.get('selector'),
+                "method": "dom_query",
+            },
+        })
+
+    print(f"  Extracted: {len(observations)} campaign-priced models from kia_cars_page")
+    return observations
+
+
+KIA_JS = r"""
+(() => {
+    const items = [];
+    const seen = new Set();
+    document.querySelectorAll('.kv_desc').forEach(d => {
+        const card = d.parentElement;
+        const t = card ? card.querySelector('span.title') : null;
+        if (!t) return;
+        const title = t.textContent.trim();
+        const desc = d.textContent.replace(/\s+/g, ' ').trim();
+        let m = desc.match(/ราคาพิเศษเริ่มต้น\s*([\d.]+)\s*ล้านบาท/);
+        let starting = true;
+        if (!m) {
+            m = desc.match(/ในราคาพิเศษ\s*([\d.]+)\s*ล้านบาท/);
+            starting = false;
+        }
+        if (!m) return;
+        const price = Math.round(parseFloat(m[1]) * 1000000);
+        if (!price || price < 100000 || price > 10000000) return;
+        const key = title + ':' + price;
+        if (seen.has(key)) return;
+        seen.add(key);
+        const path = [];
+        let el = d;
+        while (el && el !== document.body) {
+            const idx = Array.from(el.parentElement.children).indexOf(el);
+            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (idx + 1) + ')');
+            el = el.parentElement;
+        }
+        items.push({ title: title, price: price, starting: starting,
+                     selector: path.join(' > '), desc: desc,
+                     evidence: (title + ' — ' + desc).substring(0, 240) });
+    });
+    return items;
+})()
+"""
+
+
+# ─── Changan own-brand prices (3 artifacts) ───
+Q05_JS = r"""
+(() => {
+    const items = [];
+    const seen = new Set();
+    document.querySelectorAll('.bCarModelItemDetails').forEach(el => {
+        const h2 = el.querySelector('h2');
+        const p = el.querySelector('.bHead p');
+        if (!h2 || !p) return;
+        const t = p.textContent.replace(/\s+/g, ' ').trim();
+        if (!t.includes('ราคาเริ่มต้น')) return;
+        const m = t.match(/([\d,]+)\s*THB/);
+        if (!m) return;
+        const price = parseInt(m[1].replace(/,/g, ''));
+        if (!price) return;
+        const model = h2.textContent.trim();
+        const key = model + ':' + price;
+        if (seen.has(key)) return;
+        seen.add(key);
+        const path = [];
+        let node = el;
+        while (node && node !== document.body) {
+            const idx = Array.from(node.parentElement.children).indexOf(node);
+            path.unshift(node.tagName.toLowerCase() + ':nth-child(' + (idx + 1) + ')');
+            node = node.parentElement;
+        }
+        items.push({ model: model, price: price, selector: path.join(' > '),
+                     evidence: (model + ' | ' + t).substring(0, 220) });
+    });
+    return items;
+})()
+"""
+
+
+def _changan_row(artifact, artifact_hash, prov, *, model, variant, price, price_type,
+                 identity_level, evidence, selector, method, tag, raw_labels):
+    return {
+        "observation_id": hashlib.sha256(f"{tag}:{model}:{variant or ''}:{price}:{selector or ''}".encode()).hexdigest()[:16],
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "source": {
+            "class": "OEM_OFFICIAL",
+            "url": prov.get("source_url", "https://www.changan.co.th/"),
+            "name": "Changan Thailand Official",
+            "precedence": 100,
+            "native_id": None,
+            "immutable_revision": None,
+            "extraction_method": method,
+            "artifact_path": artifact,
+            "artifact_sha256": artifact_hash,
+            "captured_at": prov["captured_at"],
+            "provenance_state": prov["provenance_state"],
+        },
+        "identity": {
+            "brand_raw": "Changan",
+            "model_raw": model,
+            "variant_raw": variant,
+            "year": None,
+            "fuel_powertrain_raw": None,
+            "brand_normalized": "changan",
+            "model_normalized": model.lower().replace(" ", "-"),
+            "variant_normalized": variant.lower().replace(" ", "-") if variant else None,
+            "identity_level": identity_level,
+        },
+        "price": {
+            "value_thb": price,
+            "type": price_type,
+            "currency": "THB",
+            "currentness": "UNKNOWN",
+        },
+        "specs": {},
+        "raw_labels": raw_labels,
+        "evidence_excerpt": evidence,
+        "evidence_locator": {
+            "artifact_path": artifact,
+            "selector": selector,
+            "method": method,
+        },
+    }
+
+
+def collect_changan_prices():
+    """Collect own-brand Changan prices: NEVO Q05 page (visible DOM), Lumin calc reference,
+    promotion-page Q05 trim offers (ราคาพิเศษ + จากราคา list)."""
+    print("=== Changan Thailand Official (own-brand) ===")
+    observations = []
+
+    # 1. NEVO Q05 product page — visible DOM card
+    q05_file = f"{FIXTURE_DIR}/changan_nevo_q05_page.html"
+    if os.path.exists(q05_file):
+        with open(q05_file) as f:
+            html = f.read()
+        results, artifact = extract_from_html(html, "changan_nevo_q05_page", Q05_JS, fixture_path=q05_file)
+        if results:
+            artifact_hash = hashlib.sha256(open(artifact, 'rb').read()).hexdigest()
+            prov = get_fixture_provenance(artifact)
+            seen = set()
+            for item in results:
+                key = f"{item['model']}:{item['price']}"
+                if key in seen:
+                    continue
+                seen.add(key)
+                observations.append(_changan_row(
+                    artifact, artifact_hash, prov,
+                    model=item['model'], variant=None, price=item['price'],
+                    price_type='MSRP_STARTING', identity_level='MODEL',
+                    evidence=item['evidence'], selector=item.get('selector'),
+                    method='playwright_dom', tag='changan_q05', raw_labels={}))
+    else:
+        print(f"  Fixture not found: {q05_file}")
+
+    # 2. Lumin product page — calc-footnote model reference 'รุ่น <model> ราคา <n> บาท'
+    lumin_file = f"{FIXTURE_DIR}/changan_lumin_page.html"
+    if os.path.exists(lumin_file):
+        with open(lumin_file) as f:
+            html = f.read()
+        artifact_hash = hashlib.sha256(open(lumin_file, 'rb').read()).hexdigest()
+        prov = get_fixture_provenance(lumin_file)
+        seen = set()
+        for m in re.finditer(r'รุ่น\s+((?:Lumin\s+){1,2}[A-Z]{1,3}\s+DC)\s+ราคา\s*([\d,]+)\s*บาท', html):
+            model, price = m.group(1), int(m.group(2).replace(',', ''))
+            if not price or price < 100000 or price > 10000000:
+                continue
+            key = f"{model}:{price}"
+            if key in seen:
+                continue
+            seen.add(key)
+            ctx = re.sub(r'\s+', ' ', html[max(0, m.start() - 60):m.end() + 60])
+            observations.append(_changan_row(
+                lumin_file, artifact_hash, prov,
+                model=model, variant=None, price=price,
+                price_type='MSRP', identity_level='MODEL',
+                evidence=ctx[:220], selector=m.group(0),
+                method='regex_text', tag='changan_lumin', raw_labels={}))
+        print(f"  Lumin matches: {len(seen)}")
+    else:
+        print(f"  Fixture not found: {lumin_file}")
+
+    # 3. Promotion page — Q05 trim offers (dedupe; page embeds offers multiple times)
+    promo_file = f"{FIXTURE_DIR}/changan_promotion_page.html"
+    if os.path.exists(promo_file):
+        with open(promo_file) as f:
+            html = f.read()
+        artifact_hash = hashlib.sha256(open(promo_file, 'rb').read()).hexdigest()
+        prov = get_fixture_provenance(promo_file)
+        seen = set()
+        for m in re.finditer(
+                r'รุ่น\s+(NEVO Q05 (?:MAX|ULTRA))\s+ราคาพิเศษ\s*([\d,]+)\s*บาท\s*\(จากราคา\s*([\d,]+)\s*บาท\)',
+                html):
+            trim, promo, listp = m.group(1), int(m.group(2).replace(',', '')), int(m.group(3).replace(',', ''))
+            key = f"{trim}:{listp}"
+            if key in seen:
+                continue
+            seen.add(key)
+            model = ' '.join(trim.split()[:2])
+            observations.append(_changan_row(
+                promo_file, artifact_hash, prov,
+                model=model, variant=trim, price=listp,
+                price_type='MSRP', identity_level='VARIANT',
+                evidence=m.group(0)[:220], selector=m.group(0),
+                method='regex_text', tag='changan_promo',
+                raw_labels={'ราคาพิเศษ_thb': promo}))
+        print(f"  Q05 trim offers (deduped): {len(seen)}")
+    else:
+        print(f"  Fixture not found: {promo_file}")
+
+    print(f"  Changan own-brand rows: {len(observations)}")
+    return observations
+
+
+# ─── Official JLR price-sheet PDFs (base64 artifacts → pdftotext lines) ───
+def _pdf_text(b64_path):
+    """Decode a base64 PDF artifact and return pdftotext -layout output."""
+    import base64 as _b64
+    with open(b64_path) as f:
+        data = _b64.b64decode(f.read())
+    assert data[:4] == b'%PDF', f"not a PDF after decode: {b64_path}"
+    with tempfile.NamedTemporaryFile(suffix='.pdf', delete=False) as tf:
+        tf.write(data)
+        tmp_pdf = tf.name
+    out = tmp_pdf + '.txt'
+    try:
+        subprocess.run(['pdftotext', '-layout', tmp_pdf, out],
+                       check=True, capture_output=True, timeout=60)
+        with open(out, encoding='utf-8', errors='ignore') as f:
+            return f.read()
+    finally:
+        for p in (tmp_pdf, out):
+            try:
+                os.unlink(p)
+            except OSError:
+                pass
+
+
+def _parse_price_sheet(text):
+    """Parse a JLR price-sheet: ALL-CAPS section + variant lines with MY token + THB price."""
+    rows = []
+    section = None
+    for i, raw in enumerate(text.splitlines()):
+        s = raw.strip()
+        if not s:
+            continue
+        if (re.fullmatch(r'[A-Z][A-Z0-9 \-]{2,}', s) and 'THB' not in s
+                and 'MY' not in s and not s.startswith(('TERMS', 'Effective'))):
+            section = s
+            continue
+        m = re.search(r'(MY\d+(?:\.\d+)?)', s)
+        p = re.search(r'THB\s+([\d,]{7,})', s)
+        if m and p and section:
+            price = int(p.group(1).replace(',', ''))
+            variant = s[:m.start()].strip()
+            rows.append({
+                'section': section, 'variant': variant, 'year': m.group(1),
+                'price': price, 'starting': '**' in variant, 'line': i,
+                'line_text': s,
+            })
+    return rows
+
+
+def _collect_price_sheet(artifact_name, brand, source_name):
+    artifact_file = f"{FIXTURE_DIR}/{artifact_name}"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
+        return []
+    text = _pdf_text(artifact_file)
+    rows = _parse_price_sheet(text)
+    if not rows:
+        print(f"  No price rows parsed from {artifact_name}")
+        return []
+
+    artifact_hash = hashlib.sha256(open(artifact_file, 'rb').read()).hexdigest()
+    prov = get_fixture_provenance(artifact_file)
+
+    observations = []
+    seen = set()
+    for r in rows:
+        variant_clean = r['variant'].rstrip('*').strip()
+        key = f"{r['section']}:{variant_clean}:{r['price']}"
+        if key in seen:
+            continue
+        seen.add(key)
+        observations.append({
+            "observation_id": hashlib.sha256(f"{source_name}:{r['section']}:{variant_clean}:{r['price']}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": prov.get("source_url"),
+                "name": source_name,
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "pdftotext_line",
+                "artifact_path": artifact_file,
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "brand_raw": brand,
+                "model_raw": r['section'],
+                "variant_raw": variant_clean,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "brand_normalized": brand.lower().replace(" ", "-"),
+                "model_normalized": r['section'].lower().replace(" ", "-"),
+                "variant_normalized": variant_clean.lower().replace(" ", "-"),
+                "identity_level": "VARIANT",
+            },
+            "price": {
+                "value_thb": r['price'],
+                "type": "MSRP_STARTING" if r['starting'] else "EXACT_VARIANT",
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {"model_year": r['year'],
+                           "price_sheet": artifact_name,
+                           "starting_marker": r['starting']},
+            "evidence_excerpt": f"{r['section']}: {r['line_text']}"[:220],
+            "evidence_locator": {
+                "artifact_path": artifact_file,
+                "selector": r['line_text'],
+                "method": "pdf_text_line",
+            },
+        })
+
+    print(f"  {brand} price sheet: {len(observations)} variant rows from {artifact_name}")
+    return observations
+
+
+def collect_jaguar_pricesheet():
+    print("=== Jaguar Thailand Official (PDF price sheet) ===")
+    return _collect_price_sheet("TH_Jaguar_PriceSheet.pdf.b64", "Jaguar", "Jaguar Thailand Official")
+
+
+def collect_landrover_pricesheet():
+    print("=== Land Rover Thailand Official (PDF price sheet) ===")
+    return _collect_price_sheet("TH_LandRover_PriceSheet.pdf.b64", "Land Rover", "Land Rover Thailand Official")
+
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
 
@@ -1477,6 +1934,8 @@ def main():
     all_observations.extend(isuzu)
 
     bmw = collect_bmw()
+
+
     all_observations.extend(bmw)
     lexus = collect_lexus()
     all_observations.extend(lexus)
@@ -1496,6 +1955,18 @@ def main():
 
     deepal = collect_deepal()
     all_observations.extend(deepal)
+
+    kia_promos = collect_kia_promos()
+    all_observations.extend(kia_promos)
+
+    changan_prices = collect_changan_prices()
+    all_observations.extend(changan_prices)
+
+    jaguar_sheet = collect_jaguar_pricesheet()
+    all_observations.extend(jaguar_sheet)
+
+    landrover_sheet = collect_landrover_pricesheet()
+    all_observations.extend(landrover_sheet)
 
     # Load existing Fipe/OpenEV
     existing = []
@@ -1522,7 +1993,11 @@ def main():
     print(f"Suzuki (DOM fixture): {len(suzuki)}")
     print(f"MINI (DOM fixture): {len(mini)}")
     print(f"Deepal via Changan (DOM fixture): {len(deepal)}")
-    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg) + len(mitsubishi) + len(suzuki) + len(mini) + len(deepal)}")
+    print(f"Kia promo cards: {len(kia_promos)}")
+    print(f"Changan own-brand: {len(changan_prices)}")
+    print(f"Jaguar price sheet (PDF): {len(jaguar_sheet)}")
+    print(f"Land Rover price sheet (PDF): {len(landrover_sheet)}")
+    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg) + len(mitsubishi) + len(suzuki) + len(mini) + len(deepal) + len(kia_promos) + len(changan_prices) + len(jaguar_sheet) + len(landrover_sheet)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 
     # Write staging
@@ -1531,7 +2006,7 @@ def main():
         for obs in all_observations + existing:
             f.write(json.dumps(obs) + '\n')
 
-    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg + mitsubishi + suzuki + mini + deepal
+    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg + mitsubishi + suzuki + mini + deepal + kia_promos + changan_prices + jaguar_sheet + landrover_sheet
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "provenance": {
@@ -1542,7 +2017,7 @@ def main():
         },
         "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda),
                        "isuzu": len(isuzu), "bmw": len(bmw), "lexus": len(lexus),
-                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal)},
+                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal), "kia_promos": len(kia_promos), "changan": len(changan_prices), "jaguar_sheet": len(jaguar_sheet), "landrover_sheet": len(landrover_sheet)},
         "total": len(all_observations) + len(existing),
     }
     with open("audit/data-staging/summary.json", 'w') as f:

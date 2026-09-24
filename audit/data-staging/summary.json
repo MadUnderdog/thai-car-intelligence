@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-24T14:47:03.801262+00:00",
+  "generated_at": "2026-09-24T18:01:19.944483+00:00",
   "provenance": {
-    "fixture_based_extraction": 204,
-    "acquisition_verified": 85,
-    "legacy_unverified": 119,
+    "fixture_based_extraction": 223,
+    "acquisition_verified": 114,
+    "legacy_unverified": 109,
     "from_existing_structured_data": 0
   },
   "by_source": {
@@ -19,7 +19,11 @@
     "mitsubishi": 6,
     "suzuki": 5,
     "mini": 5,
-    "deepal": 5
+    "deepal": 5,
+    "kia_promos": 3,
+    "changan": 4,
+    "jaguar_sheet": 1,
+    "landrover_sheet": 11
   },
-  "total": 204
+  "total": 223
 }

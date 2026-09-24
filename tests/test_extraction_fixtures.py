@@ -113,16 +113,18 @@ def test_mazda_specific_models():
 
 
 def test_mazda_locator_is_dom_selector():
-    """Mazda evidence locator must be DOM selector, not text pattern."""
+    """Mazda evidence locator must be a resolved nth-child DOM chain from the root capture."""
     observations = collect_mazda()
+    assert observations, "no Mazda observations"
     for obs in observations:
         locator = obs['evidence_locator']
         assert locator.get('method') == 'dom_query', \
             f"method is not dom_query for {obs['identity']['model_raw']}"
-        assert 'selector' in locator, \
-            f"selector missing for {obs['identity']['model_raw']}"
-        assert 'cardCarModelMega' in locator['selector'], \
-            f"selector doesn't reference cardCarModelMega: {locator['selector']}"
+        selector = locator.get('selector') or ''
+        assert ' > ' in selector and ':nth-child(' in selector, \
+            f"selector is not an nth-child chain: {selector!r}"
+        assert 'mazda_home_page.html' in locator['artifact_path'], \
+            f"root capture artifact expected, got {locator['artifact_path']}"
 
 
 def test_mazda_model_level_only():
@@ -238,6 +240,15 @@ def test_staging_counts_match_extractors():
         f"BMW staging count mismatch"
     assert counts.get('MG Thailand Official', 0) == len(collect_mg()), \
         f"MG staging count mismatch"
+
+
+    from collect_multi_oem import collect_kia_promos, collect_jaguar_pricesheet, collect_landrover_pricesheet
+    assert counts.get('Kia Thailand Official', 0) == len(collect_kia_promos()), \
+        "Kia staging count mismatch"
+    assert counts.get('Jaguar Thailand Official', 0) == len(collect_jaguar_pricesheet()), \
+        "Jaguar staging count mismatch"
+    assert counts.get('Land Rover Thailand Official', 0) == len(collect_landrover_pricesheet()), \
+        "Land Rover staging count mismatch"
 
 
 # ─── Honda Extraction Tests (from fixture) ───
@@ -728,12 +739,21 @@ def test_captured_at_uses_acquisition_record_not_mtime():
 
 
 def test_mazda_legacy_unknown_but_nissan_recapture_has_sidecar_time():
-    """Legacy fixtures without provenance keep UNKNOWN; genuine recapture gets sidecar time."""
-    from collect_multi_oem import collect_mazda, collect_nissan
+    """Legacy fixtures without provenance keep UNKNOWN; switched collectors carry sidecar time."""
+    from collect_multi_oem import collect_mazda, collect_nissan, get_fixture_provenance
 
+    # the OLD mazda fixture has no sidecar and no manifest entry — stays UNKNOWN
+    legacy = get_fixture_provenance(f"{FIXTURE_DIR}/mazda_page.html")
+    assert legacy['captured_at'] == 'UNKNOWN', \
+        f"legacy mazda fixture should stay UNKNOWN, got {legacy['captured_at']}"
+
+    # collect_mazda switched to the sidecar-verified root capture
     mazda_obs = collect_mazda()
-    assert mazda_obs[0]['source']['captured_at'] == 'UNKNOWN', \
-        f"Mazda captured_at should be UNKNOWN, got {mazda_obs[0]['source']['captured_at']}"
+    assert mazda_obs[0]['source']['artifact_path'].endswith('mazda_home_page.html'), \
+        "collect_mazda must read the root capture"
+    assert mazda_obs[0]['source']['provenance_state'] == 'ACQUISITION_VERIFIED'
+    assert mazda_obs[0]['source']['captured_at'] != 'UNKNOWN', \
+        f"Mazda root capture must carry sidecar time, got {mazda_obs[0]['source']['captured_at']}"
 
     # Nissan was genuinely recaptured via AcquisitionWriter — sidecar time, not UNKNOWN
     nissan_obs = collect_nissan()
@@ -1679,7 +1699,7 @@ def test_smart_wrong_target_capture_yields_no_rows():
 
 
 def test_recaptured_range_pages_have_sidecars_no_prices():
-    """GWM/Jaguar/LandRover/Kia/Isuzu range recaptures: VERIFIED sidecars, no price rows staged."""
+    """Range recaptures: VERIFIED sidecars; price-free pages stage nothing, kia_cars only its3 promo cards."""
     import json as _json
     import hashlib as _hashlib
     recaptured = ["gwm_models_page.html", "jaguar_range_page.html",
@@ -1691,7 +1711,462 @@ def test_recaptured_range_pages_have_sidecars_no_prices():
         sc = _json.load(open(artifact + ".prov.json"))
         assert sc["provenance_state"] == "ACQUISITION_VERIFIED"
         assert sc["sha256"] == _hashlib.sha256(open(artifact, "rb").read()).hexdigest()
-    # none of these artifacts staged rows (no prices published on range pages)
+    # the truly price-free range pages stage NO rows
     content = open(STAGING_FILE, encoding="utf-8").read()
-    for fn in recaptured:
+    price_free = [fn for fn in recaptured if fn != "kia_cars_page.html"]
+    for fn in price_free:
         assert fn not in content, f"{fn} has no adapter yet but rows reference it"
+    # kia_cars changed: the CARS LIST stays price-free, but the page hosts dated
+    # promo kv-cards (span.title + .kv_desc) — only those3 rows may reference it,
+    # and only with the original ล้านบาท campaign label in evidence
+    rows = [json.loads(line) for line in content.splitlines()
+            if line.strip() and "kia_cars_page.html" in line]
+    assert len(rows) == 3, f"expected exactly 3 promo-card rows from kia_cars, got {len(rows)}"
+    for r in rows:
+        assert "ล้านบาท" in r["evidence_excerpt"], "row not bound to the published campaign label"
+        assert r["source"]["extraction_method"] == "playwright_dom"
+        assert r["identity"]["identity_level"] == "MODEL"
+
+
+# ─── Mazda Root-Capture Tests (mazda_home_page.html, 'MODEL | TAGLINE' h2) ───
+
+def test_mazda_root_capture_artifact_and_sidecar():
+    """Root capture artifact + sidecar are committed and verified."""
+    path = f"{FIXTURE_DIR}/mazda_home_page.html"
+    assert os.path.exists(path), f"missing {path}"
+    assert os.path.getsize(path) > 10000
+    sc = json.load(open(path + '.prov.json'))
+    assert sc['provenance_state'] == 'ACQUISITION_VERIFIED'
+    assert sc['captured_at'] != 'UNKNOWN'
+    assert sc['source_url'].startswith('https://www.mazda.co.th')
+
+
+def test_mazda_root_model_names_tagline_stripped():
+    """Published tagline after '|' is not part of model_raw; evidence keeps both."""
+    observations = collect_mazda()
+    assert len(observations) >= 8, f"expected >=8, got {len(observations)}"
+    for obs in observations:
+        model = obs['identity']['model_raw']
+        assert '|' not in model, f"tagline separator leaked into model: {model}"
+        assert ' | ' in obs['evidence_excerpt'], f"evidence lost full h2 text: {obs['evidence_excerpt'][:80]}"
+        assert model in obs['evidence_excerpt'], "model not present in its own evidence"
+        assert obs['price']['type'] == 'MSRP_STARTING'
+        assert obs['source']['artifact_path'].endswith('mazda_home_page.html')
+        assert obs['source']['provenance_state'] == 'ACQUISITION_VERIFIED'
+
+
+def test_mazda_locator_resolves_to_same_record():
+    """Re-resolving each nth-child chain yields a card containing BOTH model and price."""
+    from playwright.async_api import async_playwright
+    observations = collect_mazda()
+    html = open(observations[0]['evidence_locator']['artifact_path'], encoding='utf-8').read()
+
+    WALK_JS = """(args) => {
+        const parts = args.selector.split(' > ');
+        let el = document.body;
+        for (const part of parts) {
+            const m = part.match(/^(\\w+):nth-child\\((\\d+)\\)$/);
+            if (!m) return {found: false, reason: 'parse ' + part};
+            el = el.children[parseInt(m[2], 10) - 1];
+            if (!el || el.tagName.toLowerCase() !== m[1]) return {found: false, reason: 'miss ' + part};
+        }
+        const t = (el.textContent || '').replace(/\\s+/g, ' ');
+        return {found: true, hasModel: t.includes(args.model), hasPrice: t.includes(args.price)};
+    }"""
+
+    async def resolve():
+        results = []
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.set_content(html)
+            for o in observations:
+                results.append(await page.evaluate(WALK_JS, {
+                    "selector": o['evidence_locator']['selector'],
+                    "model": o['identity']['model_raw'],
+                    "price": f"{o['price']['value_thb']:,}",
+                }))
+            await browser.close()
+        return results
+
+    results = asyncio.run(resolve())
+    assert len(results) == len(observations)
+    for o, r in zip(observations, results):
+        assert r.get('found'), f"chain did not resolve: {r}"
+        assert r.get('hasModel'), f"model missing from resolved card: {o['identity']['model_raw']}"
+        assert r.get('hasPrice'), f"price missing from resolved card: {o['identity']['model_raw']}"
+
+
+def test_mazda_mutation_price_swap_detected(tmp_path, monkeypatch):
+    """Swapping two prices in the artifact changes the extracted model→price map."""
+    import collect_multi_oem as cmo
+    orig = {o['identity']['model_raw']: o['price']['value_thb'] for o in cmo.collect_mazda()}
+    assert orig.get('NEW MAZDA2 ESSENTIAL') == 529000
+    assert orig.get('NEW MAZDA CX-3 ESSENTIAL') == 699000
+
+    html = open(f"{cmo.FIXTURE_DIR}/mazda_home_page.html", encoding='utf-8').read()
+    mutated = html.replace('529,000', '__T__').replace('699,000', '529,000').replace('__T__', '699,000')
+    assert mutated != html
+    open(str(tmp_path / 'mazda_home_page.html'), 'w', encoding='utf-8').write(mutated)
+    monkeypatch.setattr(cmo, 'FIXTURE_DIR', str(tmp_path))
+
+    m = {o['identity']['model_raw']: o['price']['value_thb'] for o in cmo.collect_mazda()}
+    assert m.get('NEW MAZDA2 ESSENTIAL') == 699000, "swap not detected on MAZDA2"
+    assert m.get('NEW MAZDA CX-3 ESSENTIAL') == 529000, "swap not detected on CX-3"
+    assert m != orig
+
+
+# ─── Kia Tests (kia_cars_page.html promo cards) ───
+
+def test_kia_artifact_and_sidecar():
+    path = f"{FIXTURE_DIR}/kia_cars_page.html"
+    assert os.path.exists(path), f"missing {path}"
+    sc = json.load(open(path + '.prov.json'))
+    assert sc['provenance_state'] == 'ACQUISITION_VERIFIED'
+    assert sc['captured_at'] != 'UNKNOWN'
+    assert 'kia.com' in sc['source_url']
+
+
+def test_kia_extraction_count_and_prices():
+    from collect_multi_oem import collect_kia_promos
+    obs = collect_kia_promos()
+    assert len(obs) == 3, f"expected 3 priced promo cards, got {len(obs)}"
+    lookup = {o['identity']['model_raw']: o for o in obs}
+    assert lookup['The Kia EV5']['price']['value_thb'] == 1080000
+    assert lookup['The Kia EV5']['price']['type'] == 'MSRP_STARTING'
+    assert lookup['The Kia Carnival Diesel SXL']['price']['value_thb'] == 1999000
+    assert lookup['The Kia Carnival Diesel SXL']['price']['type'] == 'MSRP'
+    assert lookup['The Kia Sorento PHEV']['price']['value_thb'] == 1549000
+    assert lookup['The Kia Sorento PHEV']['price']['type'] == 'MSRP'
+    for o in obs:
+        assert o['identity']['identity_level'] == 'MODEL'
+        assert o['identity']['brand_normalized'] == 'kia'
+        assert o['source']['name'] == 'Kia Thailand Official'
+        assert o['price']['currency'] == 'THB'
+
+
+def test_kia_promo_not_discount_or_interest():
+    """Discount amounts and interest offers must not be staged as vehicle prices."""
+    from collect_multi_oem import collect_kia_promos
+    obs = collect_kia_promos()
+    values = {o['price']['value_thb'] for o in obs}
+    for decoy in (595000, 550000, 200000, 2990, 0):
+        assert decoy not in values, f"decoy value staged as price: {decoy}"
+    ev = ' '.join(o['evidence_excerpt'] for o in obs)
+    assert '1 - 30 ก.ย. 2026' in ev, "campaign period missing from evidence"
+    for o in obs:
+        assert 'ล้านบาท' in o['evidence_excerpt'], "original million-baht label must stay in evidence"
+
+
+def test_kia_locator_resolves_to_same_record():
+    from playwright.async_api import async_playwright
+    from collect_multi_oem import collect_kia_promos
+    obs = collect_kia_promos()
+    html = open(obs[0]['evidence_locator']['artifact_path'], encoding='utf-8').read()
+
+    WALK_JS = """(args) => {
+        const parts = args.selector.split(' > ');
+        let el = document.body;
+        for (const part of parts) {
+            const m = part.match(/^(\\w+):nth-child\\((\\d+)\\)$/);
+            if (!m) return {found: false};
+            el = el.children[parseInt(m[2], 10) - 1];
+            if (!el || el.tagName.toLowerCase() !== m[1]) return {found: false};
+        }
+        const card = el.parentElement;
+        const t = (card ? card.textContent : '').replace(/\\s+/g, ' ');
+        return {found: true, hasModel: t.includes(args.model), hasPrice: t.includes(args.price)};
+    }"""
+
+    async def resolve():
+        results = []
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.set_content(html)
+            for o in obs:
+                price_txt = f"{o['price']['value_thb'] / 1_000_000:.3f} ล้านบาท"
+                results.append(await page.evaluate(WALK_JS, {
+                    "selector": o['evidence_locator']['selector'],
+                    "model": o['identity']['model_raw'],
+                    "price": price_txt,
+                }))
+            await browser.close()
+        return results
+
+    results = asyncio.run(resolve())
+    for o, r in zip(obs, results):
+        assert r.get('found'), f"chain did not resolve for {o['identity']['model_raw']}"
+        assert r.get('hasModel'), f"model missing from resolved card: {o['identity']['model_raw']}"
+        assert r.get('hasPrice'), f"price missing from resolved card: {o['identity']['model_raw']}"
+
+
+def test_kia_mutation_price_swap_detected(tmp_path, monkeypatch):
+    import collect_multi_oem as cmo
+    from collect_multi_oem import collect_kia_promos
+    orig = {o['identity']['model_raw']: o['price']['value_thb'] for o in collect_kia_promos()}
+    assert orig.get('The Kia Carnival Diesel SXL') == 1999000
+    assert orig.get('The Kia Sorento PHEV') == 1549000
+
+    html = open(f"{cmo.FIXTURE_DIR}/kia_cars_page.html", encoding='utf-8').read()
+    mutated = html.replace('1.999 ล้านบาท', '__T__').replace('1.549 ล้านบาท', '1.999 ล้านบาท').replace('__T__', '1.549 ล้านบาท')
+    assert mutated != html
+    open(str(tmp_path / 'kia_cars_page.html'), 'w', encoding='utf-8').write(mutated)
+    monkeypatch.setattr(cmo, 'FIXTURE_DIR', str(tmp_path))
+
+    m = {o['identity']['model_raw']: o['price']['value_thb'] for o in cmo.collect_kia_promos()}
+    assert m.get('The Kia Carnival Diesel SXL') == 1549000, "swap not detected on Carnival"
+    assert m.get('The Kia Sorento PHEV') == 1999000, "swap not detected on Sorento"
+
+
+# ─── Changan Own-Brand Tests (Q05 page, Lumin page, promotion page) ───
+
+def test_changan_own_artifacts_and_sidecars():
+    for name in ('changan_nevo_q05_page.html', 'changan_lumin_page.html', 'changan_promotion_page.html'):
+        path = f"{FIXTURE_DIR}/{name}"
+        assert os.path.exists(path), f"missing {path}"
+        sc = json.load(open(path + '.prov.json'))
+        assert sc['provenance_state'] == 'ACQUISITION_VERIFIED'
+        assert sc['captured_at'] != 'UNKNOWN'
+        assert sc['source_url'].startswith('https://www.changan.co.th')
+
+
+def test_changan_own_price_rows():
+    from collect_multi_oem import collect_changan_prices
+    obs = collect_changan_prices()
+    assert len(obs) == 4, f"expected 4 own-brand rows, got {len(obs)}"
+    by_variant = {o['identity']['variant_raw']: o for o in obs}
+    q05 = by_variant[None] if None in by_variant else None
+    # model-level rows (variant None): Q05 page + Lumin page
+    model_rows = {o['identity']['model_raw']: o for o in obs if o['identity']['variant_raw'] is None}
+    assert model_rows['NEVO Q05']['price']['value_thb'] == 629900
+    assert model_rows['NEVO Q05']['price']['type'] == 'MSRP_STARTING'
+    assert model_rows['NEVO Q05']['source']['artifact_path'].endswith('changan_nevo_q05_page.html')
+    assert model_rows['Lumin L DC']['price']['value_thb'] == 499000
+    assert model_rows['Lumin L DC']['price']['type'] == 'MSRP'
+    assert model_rows['Lumin L DC']['source']['artifact_path'].endswith('changan_lumin_page.html')
+    # trim offers: list price staged, promo kept in raw_labels
+    trim_rows = {o['identity']['variant_raw']: o for o in obs if o['identity']['variant_raw'] is not None}
+    assert set(trim_rows) == {'NEVO Q05 MAX', 'NEVO Q05 ULTRA'}
+    assert trim_rows['NEVO Q05 MAX']['price']['value_thb'] == 629900
+    assert trim_rows['NEVO Q05 MAX']['raw_labels']['ราคาพิเศษ_thb'] == 619900
+    assert trim_rows['NEVO Q05 ULTRA']['price']['value_thb'] == 709900
+    assert trim_rows['NEVO Q05 ULTRA']['raw_labels']['ราคาพิเศษ_thb'] == 679900
+    for o in trim_rows.values():
+        assert o['identity']['identity_level'] == 'VARIANT'
+        assert o['price']['type'] == 'MSRP'
+        assert o['identity']['model_raw'] == 'NEVO Q05'
+
+
+def test_changan_brand_integrity_own_vs_deepal():
+    """Own-brand rows stay Changan; Deepal products never merge into Changan."""
+    from collect_multi_oem import collect_changan_prices, collect_deepal
+    own = collect_changan_prices()
+    deepal = collect_deepal()
+    deepal_models = {o['identity']['model_raw'] for o in deepal}
+    for o in own:
+        assert o['identity']['brand_normalized'] == 'changan'
+        assert o['identity']['model_raw'] not in deepal_models, \
+            f"Deepal model merged into Changan: {o['identity']['model_raw']}"
+        assert o['source']['name'] == 'Changan Thailand Official'
+    for o in deepal:
+        assert o['identity']['brand_normalized'] == 'deepal', \
+            f"Deepal brand mutated: {o['identity']['brand_normalized']}"
+
+
+def test_changan_own_locators_re_resolve():
+    """q05 DOM chain resolves; regex locators re-locate model AND price in one match."""
+    from playwright.async_api import async_playwright
+    from collect_multi_oem import collect_changan_prices
+    obs = collect_changan_prices()
+    dom_rows = [o for o in obs if o['evidence_locator']['method'] == 'playwright_dom']
+    regex_rows = [o for o in obs if o['evidence_locator']['method'] == 'regex_text']
+    assert len(dom_rows) == 1 and len(regex_rows) == 3
+
+    # DOM chain: card contains h2 model + price text
+    html = open(dom_rows[0]['evidence_locator']['artifact_path'], encoding='utf-8').read()
+    WALK_JS = """(args) => {
+        const parts = args.selector.split(' > ');
+        let el = document.body;
+        for (const part of parts) {
+            const m = part.match(/^(\\w+):nth-child\\((\\d+)\\)$/);
+            if (!m) return {found: false};
+            el = el.children[parseInt(m[2], 10) - 1];
+            if (!el || el.tagName.toLowerCase() !== m[1]) return {found: false};
+        }
+        const t = (el.textContent || '').replace(/\\s+/g, ' ');
+        return {found: true, hasModel: t.includes(args.model), hasPrice: t.includes(args.price)};
+    }"""
+
+    async def resolve_one():
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.set_content(html)
+            r = await page.evaluate(WALK_JS, {
+                "selector": dom_rows[0]['evidence_locator']['selector'],
+                "model": dom_rows[0]['identity']['model_raw'],
+                "price": f"{dom_rows[0]['price']['value_thb']:,}",
+            })
+            await browser.close()
+            return r
+
+    r = asyncio.run(resolve_one())
+    assert r.get('found') and r.get('hasModel') and r.get('hasPrice'), r
+
+    # regex rows: selector itself contains model + price, and re-locates in the artifact
+    for o in regex_rows:
+        art = open(o['evidence_locator']['artifact_path'], encoding='utf-8').read()
+        sel = o['evidence_locator']['selector']
+        assert sel in art, f"regex locator no longer present in artifact: {sel[:60]}"
+        target = o['identity']['variant_raw'] or o['identity']['model_raw']
+        assert target in sel, "model/variant not in the matched record"
+        assert f"{o['price']['value_thb']:,}" in sel, "price not in the matched record"
+
+
+def test_changan_own_mutation_price_swap_detected(tmp_path, monkeypatch):
+    """Mutating all three artifacts changes every extracted price → binding proven."""
+    import collect_multi_oem as cmo
+    from collect_multi_oem import collect_changan_prices
+    orig = {}
+    for o in collect_changan_prices():
+        orig[o['identity']['variant_raw'] or o['identity']['model_raw']] = o['price']['value_thb']
+    assert orig == {'NEVO Q05': 629900, 'Lumin L DC': 499000, 'NEVO Q05 MAX': 629900, 'NEVO Q05 ULTRA': 709900}
+
+    q05 = open(f"{cmo.FIXTURE_DIR}/changan_nevo_q05_page.html", encoding='utf-8').read()
+    open(str(tmp_path / 'changan_nevo_q05_page.html'), 'w', encoding='utf-8').write(
+        q05.replace('629,900', '729,900'))
+
+    lumin = open(f"{cmo.FIXTURE_DIR}/changan_lumin_page.html", encoding='utf-8').read()
+    open(str(tmp_path / 'changan_lumin_page.html'), 'w', encoding='utf-8').write(
+        lumin.replace('499,000', '549,000'))
+
+    promo = open(f"{cmo.FIXTURE_DIR}/changan_promotion_page.html", encoding='utf-8').read()
+    mutated_promo = promo.replace('629,900', '__T__').replace('709,900', '629,900').replace('__T__', '709,900')
+    assert mutated_promo != promo
+    open(str(tmp_path / 'changan_promotion_page.html'), 'w', encoding='utf-8').write(mutated_promo)
+
+    monkeypatch.setattr(cmo, 'FIXTURE_DIR', str(tmp_path))
+    m = {}
+    for o in cmo.collect_changan_prices():
+        m[o['identity']['variant_raw'] or o['identity']['model_raw']] = o['price']['value_thb']
+    assert m.get('NEVO Q05') == 729900, "Q05 mutation not detected"
+    assert m.get('Lumin L DC') == 549000, "Lumin mutation not detected"
+    assert m.get('NEVO Q05 MAX') == 709900, "MAX trim swap not detected"
+    assert m.get('NEVO Q05 ULTRA') == 629900, "ULTRA trim swap not detected"
+
+
+# ─── JLR Official Price-Sheet PDF Tests (base64 artifacts) ───
+
+def test_price_sheet_b64_artifacts_and_sidecars():
+    import base64 as _b64
+    for name in ('TH_Jaguar_PriceSheet.pdf.b64', 'TH_LandRover_PriceSheet.pdf.b64'):
+        path = f"{FIXTURE_DIR}/{name}"
+        assert os.path.exists(path), f"missing {path}"
+        assert os.path.getsize(path) > 10000, f"too small: {path}"
+        sc = json.load(open(path + '.prov.json'))
+        assert sc['provenance_state'] == 'ACQUISITION_VERIFIED'
+        assert sc['acquisition_method'] == 'http_get_pdf_base64'
+        assert sc['captured_at'] != 'UNKNOWN'
+        assert sc['source_url'].endswith('.pdf')
+        # sidecar sha binds the bytes on disk
+        actual = hashlib.sha256(open(path, 'rb').read()).hexdigest()
+        assert actual == sc['sha256'], "sidecar sha != artifact sha"
+        # decoded payload is the original PDF
+        data = _b64.b64decode(open(path, encoding='utf-8').read())
+        assert data[:4] == b'%PDF', "decoded payload is not a PDF"
+
+
+def test_jaguar_price_sheet_rows():
+    from collect_multi_oem import collect_jaguar_pricesheet
+    obs = collect_jaguar_pricesheet()
+    assert len(obs) == 1, f"expected 1 F-TYPE row, got {len(obs)}"
+    o = obs[0]
+    assert o['identity']['brand_normalized'] == 'jaguar'
+    assert o['identity']['model_raw'] == 'F-TYPE'
+    assert o['identity']['variant_raw'] == '2.0 RWD Coupe R-Dynamic Plus'
+    assert o['identity']['identity_level'] == 'VARIANT'
+    assert o['price']['value_thb'] == 6999000
+    assert o['price']['type'] == 'EXACT_VARIANT'
+    assert o['raw_labels']['model_year'] == 'MY24'
+    assert o['evidence_locator']['method'] == 'pdf_text_line'
+    assert 'F-TYPE:' in o['evidence_excerpt']
+
+
+def test_landrover_price_sheet_rows():
+    from collect_multi_oem import collect_landrover_pricesheet
+    obs = collect_landrover_pricesheet()
+    assert len(obs) == 11, f"expected 11 rows, got {len(obs)}"
+    lookup = {(o['identity']['model_raw'], o['identity']['variant_raw']): o for o in obs}
+    velar = lookup[('RANGE ROVER VELAR', '2.0 AWD Dynamic SE Plus')]
+    assert velar['price']['value_thb'] == 4999000
+    assert velar['price']['type'] == 'EXACT_VARIANT'
+    assert velar['raw_labels']['model_year'] == 'MY26'
+    sv = lookup[('RANGE ROVER', '3.0 AWD SV LWB Plus')]
+    assert sv['price']['value_thb'] == 17499000
+    assert sv['price']['type'] == 'MSRP_STARTING', "** marker must map to starting price"
+    assert sv['raw_labels']['starting_marker'] is True
+    exact = [o for o in obs if o['price']['type'] == 'EXACT_VARIANT']
+    starting = [o for o in obs if o['price']['type'] == 'MSRP_STARTING']
+    assert len(exact) == 10 and len(starting) == 1
+    for o in obs:
+        assert o['identity']['identity_level'] == 'VARIANT'
+        assert o['identity']['brand_normalized'] == 'land-rover'
+        assert o['price']['currency'] == 'THB'
+        assert o['raw_labels']['price_sheet'] == 'TH_LandRover_PriceSheet.pdf.b64'
+
+
+def test_price_sheet_locator_resolves_in_extracted_text():
+    """Re-running pdftotext finds each line anchor under its section header."""
+    from collect_multi_oem import _pdf_text, _parse_price_sheet
+    for artifact, expected in (('TH_Jaguar_PriceSheet.pdf.b64', 1),
+                               ('TH_LandRover_PriceSheet.pdf.b64', 11)):
+        path = f"{FIXTURE_DIR}/{artifact}"
+        text = _pdf_text(path)
+        lines = text.splitlines()
+        parsed = _parse_price_sheet(text)
+        assert len(parsed) == expected
+        for row in parsed:
+            idx = lines.index(row['line_text']) if row['line_text'] in lines else None
+            assert idx is not None, f"line anchor not found: {row['line_text'][:60]}"
+            # nearest preceding ALL-CAPS section header == model
+            section_idx = None
+            for j in range(idx - 1, -1, -1):
+                s = lines[j].strip()
+                if s == row['section']:
+                    section_idx = j
+                    break
+            assert section_idx is not None, f"section header {row['section']} not above its row"
+            assert f"THB {row['price']:,}" in row['line_text']
+
+
+def test_price_sheet_mutation_price_in_text_changes_output():
+    """Parser reads price from extracted text — mutating text changes the row."""
+    from collect_multi_oem import _pdf_text, _parse_price_sheet
+    text = _pdf_text(f"{FIXTURE_DIR}/TH_LandRover_PriceSheet.pdf.b64")
+    pristine = _parse_price_sheet(text)
+    velar_price = [r['price'] for r in pristine if r['section'] == 'RANGE ROVER VELAR'
+                   and r['variant'] == '2.0 AWD Dynamic SE Plus']
+    assert velar_price == [4999000]
+    mutated = text.replace('4,999,000', '4,111,000')
+    assert mutated != text
+    rows = _parse_price_sheet(mutated)
+    changed = [r['price'] for r in rows if r['section'] == 'RANGE ROVER VELAR'
+               and r['variant'] == '2.0 AWD Dynamic SE Plus']
+    assert changed == [4111000], f"parser did not follow the mutated text: {changed}"
+
+
+def test_price_sheet_corrupted_artifact_fails_closed(tmp_path, monkeypatch):
+    """A corrupted base64 artifact must raise, never emit rows."""
+    import base64 as _b64
+    import collect_multi_oem as cmo
+    open(str(tmp_path / 'TH_Jaguar_PriceSheet.pdf.b64'), 'w').write(
+        _b64.b64encode(b'this is definitely not a pdf payload').decode())
+    monkeypatch.setattr(cmo, 'FIXTURE_DIR', str(tmp_path))
+    raised = False
+    try:
+        rows = cmo.collect_jaguar_pricesheet()
+        assert rows == [], "corrupted artifact must not produce rows"
+    except AssertionError:
+        raised = True
+    assert raised, "corrupted PDF payload must fail closed (AssertionError on magic bytes)"

@@ -1,16 +1,16 @@
 # OEM Coverage View
 
 > GENERATED from `audit/coverage/oem-registry.json` by `scripts/generate_coverage_view.py` — do not edit by hand.
-> Generated at: 2026-09-24T15:11:34.847254+00:00
+> Generated at: 2026-09-24T18:12:10.591276+00:00
 
 ## Coverage
 
 ```text
 coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
-         = 9 / 32 = 28.1%
+         = 14 / 32 = 43.8%
 ```
 
-- Verified + parsed-tested brands: Honda, Nissan, Mitsubishi, Suzuki, MG, BMW, Lexus, Deepal, MINI
+- Verified + parsed-tested brands: Honda, Nissan, Mazda, Mitsubishi, Suzuki, MG, BMW, Lexus, Deepal, Changan, Jaguar, Land Rover, MINI, Kia
 - Currently reachable endpoints: 18 / 32
 - Blocked endpoints: 14 / 32
 - Scope candidates unresolved: 2
@@ -24,7 +24,7 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 | Toyota | yes | 🟢 `REACHABLE` | PARSED_TESTED | LEGACY_UNVERIFIED | 2026-09-23 | 2026-09-25 |
 | Honda | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Nissan | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
-| Mazda | yes | 🟢 `REACHABLE` | PARSED_TESTED | LEGACY_UNVERIFIED | UNKNOWN | 2026-09-25 |
+| Mazda | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Mitsubishi | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Isuzu | yes | 🟢 `REACHABLE` | PARSED_TESTED | LEGACY_UNVERIFIED | 2026-09-24 | 2026-09-25 |
 | Suzuki | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
@@ -43,15 +43,15 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 | NETA | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
 | Deepal | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-10-01 |
 | Avance | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
-| Changan | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
+| Changan | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | GWM | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
 | Haval | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
 | Chery | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
-| Jaguar | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
-| Land Rover | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
+| Jaguar | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
+| Land Rover | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | MINI | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Smart | yes | ⚠️ `DEALER_REDIRECT` | NONE | NONE | — | 2026-09-25 |
-| Kia | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
+| Kia | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Peugeot | yes | ⛔ `BLOCKED_HTTP_403` | NONE | NONE | — | 2026-10-01 |
 | Perodua | no | ❓ `UNKNOWN` | NONE | NONE | — | — |
 
@@ -91,8 +91,8 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
   - `nissan_page.html` ← https://www.nissan-thailand.com · LEGACY_UNVERIFIED · parsed · 861be1b78785
   - `nissan_new_home_page.html` ← https://www.nissan.co.th/ · ACQUISITION_VERIFIED · parsed · cec34588e44f
 - **Mazda**
-  - `mazda_page.html` ← https://www.mazda.co.th/en/vehicles · LEGACY_UNVERIFIED · parsed · cd8ca9667ce5
-  - `mazda_home_page.html` ← https://www.mazda.co.th/th · ACQUISITION_VERIFIED · unparsed · 3e49287146ee
+  - `mazda_page.html` ← https://www.mazda.co.th/en/vehicles · LEGACY_UNVERIFIED · unparsed · cd8ca9667ce5
+  - `mazda_home_page.html` ← https://www.mazda.co.th/th · ACQUISITION_VERIFIED · parsed · 3e49287146ee
 - **Mitsubishi**
   - `mitsubishi_home_page.html` ← https://www.mitsubishi-motors.co.th/th?rd=true · ACQUISITION_VERIFIED · parsed · eaa2b0f9e01f
 - **Isuzu**
@@ -116,20 +116,25 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
   - `changan_home_page.html` ← https://www.changan.co.th/th/ · ACQUISITION_VERIFIED · parsed · 28c9f50b8623
 - **Changan**
   - `changan_home_page.html` ← https://www.changan.co.th/th/ · ACQUISITION_VERIFIED · unparsed · 28c9f50b8623
+  - `changan_nevo_q05_page.html` ← https://www.changan.co.th/th/nevo-q05/ · ACQUISITION_VERIFIED · parsed · b7cb2be2088c
+  - `changan_lumin_page.html` ← https://www.changan.co.th/th/lumin/luminl-dc-th/ · ACQUISITION_VERIFIED · parsed · 8d84d5f80f5e
+  - `changan_promotion_page.html` ← https://www.changan.co.th/th/promotion/ · ACQUISITION_VERIFIED · parsed · d1f57ae37d4d
 - **GWM**
   - `gwm_home_page.html` ← https://www.gwm.co.th/en · ACQUISITION_VERIFIED · unparsed · c311d963f280
   - `gwm_models_page.html` ← https://www.gwm.co.th/en/models · ACQUISITION_VERIFIED · unparsed · e7a9070ab8c8
 - **Jaguar**
   - `jaguar_home_page.html` ← https://www.jaguar.co.th/ · ACQUISITION_VERIFIED · unparsed · 05d97f701cf4
   - `jaguar_range_page.html` ← https://www.jaguar.co.th/jaguar-range/overview · ACQUISITION_VERIFIED · unparsed · 12ad7deb8700
+  - `TH_Jaguar_PriceSheet.pdf.b64` ← https://cdn-jaguarlandrover.com/system/apio/th/TH_Jaguar_PriceSheet.pdf · ACQUISITION_VERIFIED · parsed · 9806c8ba7068
 - **Land Rover**
   - `landrover_home_page.html` ← https://www.landrover.co.th/ · ACQUISITION_VERIFIED · unparsed · e82a21773190
   - `landrover_discovery_page.html` ← https://www.landrover.co.th/discovery/overview · ACQUISITION_VERIFIED · unparsed · 660b8fa629d4
   - `landrover_range_rover_page.html` ← https://www.landrover.co.th/range-rover/overview · ACQUISITION_VERIFIED · unparsed · aa02b1b04953
+  - `TH_LandRover_PriceSheet.pdf.b64` ← https://cdn-jaguarlandrover.com/system/apio/th/TH_LandRover_PriceSheet.pdf · ACQUISITION_VERIFIED · parsed · 38497d2d7377
 - **MINI**
   - `mini_home_page.html` ← https://www.mini.co.th/en_TH/home.html · ACQUISITION_VERIFIED · parsed · b662bd5b0cca
 - **Smart**
   - `smart_home_page.html` ← https://www.smartsecurity.in.th/ · ACQUISITION_VERIFIED · unparsed · 503b08966576
 - **Kia**
   - `kia_home_page.html` ← https://www.kia.com/th/th · ACQUISITION_VERIFIED · unparsed · 53e94ea876b4
-  - `kia_cars_page.html` ← https://www.kia.com/th/th · ACQUISITION_VERIFIED · unparsed · d068ec29fcbe
+  - `kia_cars_page.html` ← https://www.kia.com/th/th · ACQUISITION_VERIFIED · parsed · d068ec29fcbe

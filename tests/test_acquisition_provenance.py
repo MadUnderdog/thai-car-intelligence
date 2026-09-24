@@ -1,0 +1,303 @@
+"""
+Boundary tests for acquisition-side provenance.
+
+These tests execute the actual AcquisitionWriter with a controlled clock,
+prove manifest timestamp comes from acquisition call, and verify hash mismatch => hard failure.
+
+NOT circular: writer emits X → persists X + hash → reader verifies X + hash.
+"""
+import os
+import json
+import hashlib
+import pytest
+from datetime import datetime, timezone
+
+# Add parent directory to path
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'lib'))
+
+from thai_factory.acquisition.provenance import (
+    AcquisitionWriter,
+    AcquisitionReader,
+    LegacyManifestReader,
+    get_provenance_for_fixture,
+    ProvenanceError,
+)
+
+
+# ─── Acquisition Writer Tests (boundary: capture-time provenance) ───
+
+def test_writer_records_capture_time_from_clock(tmp_path):
+    """Writer must record captured_at from the clock callable, not retrofitted."""
+    fixed_time = "2026-01-15T12:00:00Z"
+    
+    provenance = AcquisitionWriter.write(
+        content="<html><body>test</body></html>",
+        source_url="https://example.com/test",
+        acquisition_method="playwright",
+        output_dir=str(tmp_path),
+        filename="test_page.html",
+        session_id="test_session_001",
+        clock=lambda: fixed_time,
+    )
+    
+    assert provenance['captured_at'] == fixed_time, \
+        f"captured_at should come from clock, got {provenance['captured_at']}"
+    assert provenance['source_url'] == "https://example.com/test"
+    assert provenance['session_id'] == "test_session_001"
+    assert len(provenance['sha256']) == 64  # SHA-256 hex
+
+
+def test_writer_creates_artifact_and_sidecar_together(tmp_path):
+    """Writer must create artifact + sidecar as a pair."""
+    provenance = AcquisitionWriter.write(
+        content="<html>content</html>",
+        source_url="https://example.com",
+        acquisition_method="http_get",
+        output_dir=str(tmp_path),
+        filename="page.html",
+        session_id="run_123",
+        clock=lambda: "2026-01-15T10:00:00Z",
+    )
+    
+    artifact_path = tmp_path / "page.html"
+    sidecar_path = tmp_path / "page.html.prov.json"
+    
+    assert artifact_path.exists(), "Artifact not created"
+    assert sidecar_path.exists(), "Sidecar not created"
+    
+    # Sidecar must match returned provenance
+    with open(sidecar_path) as f:
+        saved = json.load(f)
+    assert saved == provenance
+
+
+def test_writer_sha256_matches_content(tmp_path):
+    """SHA-256 in sidecar must match artifact content."""
+    content = "<html><body>Toyota Corolla Altis</body></html>"
+    
+    AcquisitionWriter.write(
+        content=content,
+        source_url="https://toyota.co.th",
+        acquisition_method="playwright",
+        output_dir=str(tmp_path),
+        filename="toyota.html",
+        session_id="run_456",
+        clock=lambda: "2026-01-15T11:00:00Z",
+    )
+    
+    # Verify hash manually
+    expected_hash = hashlib.sha256(content.encode('utf-8')).hexdigest()
+    
+    with open(tmp_path / "toyota.html.prov.json") as f:
+        saved = json.load(f)
+    
+    assert saved['sha256'] == expected_hash
+
+
+# ─── Acquisition Reader Tests (boundary: hash verification) ───
+
+def test_reader_verifies_correct_hash(tmp_path):
+    """Reader must accept artifact with matching hash."""
+    content = "<html>valid content</html>"
+    
+    AcquisitionWriter.write(
+        content=content,
+        source_url="https://example.com",
+        acquisition_method="playwright",
+        output_dir=str(tmp_path),
+        filename="valid.html",
+        session_id="run_789",
+        clock=lambda: "2026-01-15T12:00:00Z",
+    )
+    
+    read_content, provenance = AcquisitionReader.read(str(tmp_path / "valid.html"))
+    assert read_content == content
+    assert provenance['captured_at'] == "2026-01-15T12:00:00Z"
+
+
+def test_reader_fails_on_hash_mismatch(tmp_path):
+    """Reader must RAISE on SHA-256 mismatch, not silently continue."""
+    content = "<html>original content</html>"
+    
+    AcquisitionWriter.write(
+        content=content,
+        source_url="https://example.com",
+        acquisition_method="playwright",
+        output_dir=str(tmp_path),
+        filename="tampered.html",
+        session_id="run_000",
+        clock=lambda: "2026-01-15T12:00:00Z",
+    )
+    
+    # Tamper with artifact (change content but keep sidecar)
+    tampered_path = tmp_path / "tampered.html"
+    with open(tampered_path, 'w') as f:
+        f.write("<html>TAMPERED CONTENT</html>")
+    
+    # Reader must raise ProvenanceError
+    with pytest.raises(ProvenanceError) as exc_info:
+        AcquisitionReader.read(str(tampered_path))
+    
+    assert "SHA-256 mismatch" in str(exc_info.value)
+
+
+def test_reader_fails_on_missing_sidecar(tmp_path):
+    """Reader must RAISE if sidecar missing."""
+    # Create artifact without sidecar
+    artifact_path = tmp_path / "orphan.html"
+    with open(artifact_path, 'w') as f:
+        f.write("<html>no sidecar</html>")
+    
+    with pytest.raises(ProvenanceError) as exc_info:
+        AcquisitionReader.read(str(artifact_path))
+    
+    assert "sidecar not found" in str(exc_info.value)
+
+
+def test_reader_fails_on_missing_required_field(tmp_path):
+    """Reader must RAISE if provenance missing required fields."""
+    content = "<html>content</html>"
+    
+    AcquisitionWriter.write(
+        content=content,
+        source_url="https://example.com",
+        acquisition_method="playwright",
+        output_dir=str(tmp_path),
+        filename="incomplete.html",
+        session_id="run_111",
+        clock=lambda: "2026-01-15T12:00:00Z",
+    )
+    
+    # Remove required field from sidecar
+    sidecar_path = tmp_path / "incomplete.html.prov.json"
+    with open(sidecar_path) as f:
+        prov = json.load(f)
+    del prov['source_url']
+    with open(sidecar_path, 'w') as f:
+        json.dump(prov, f)
+    
+    with pytest.raises(ProvenanceError) as exc_info:
+        AcquisitionReader.read(str(tmp_path / "incomplete.html"))
+    
+    assert "missing required field" in str(exc_info.value)
+
+
+# ─── Legacy Manifest Tests (fallback for historical fixtures) ───
+
+def test_legacy_manifest_returns_unknown_for_missing_entry(tmp_path):
+    """Legacy manifest should return UNKNOWN for fixtures not in manifest."""
+    manifest_path = tmp_path / "manifest.json"
+    with open(manifest_path, 'w') as f:
+        json.dump({}, f)
+    
+    reader = LegacyManifestReader(str(manifest_path))
+    prov = reader.get_provenance("unknown_fixture.html")
+    
+    assert prov['captured_at'] == 'UNKNOWN'
+    assert prov['legacy'] == True
+
+
+def test_legacy_manifest_returns_timestamp_for_known_entry(tmp_path):
+    """Legacy manifest should return captured_at for known entries."""
+    manifest_path = tmp_path / "manifest.json"
+    manifest = {
+        "known.html": {
+            "source_url": "https://example.com",
+            "captured_at": "2026-01-15T08:00:00Z",
+            "acquisition_method": "playwright",
+            "session_context": "historical_run",
+            "sha256": "abc123...",
+        }
+    }
+    with open(manifest_path, 'w') as f:
+        json.dump(manifest, f)
+    
+    reader = LegacyManifestReader(str(manifest_path))
+    prov = reader.get_provenance("known.html")
+    
+    assert prov['captured_at'] == "2026-01-15T08:00:00Z"
+    assert prov['legacy'] == True
+
+
+def test_legacy_manifest_treats_empty_string_as_unknown(tmp_path):
+    """Legacy manifest should treat empty captured_at as UNKNOWN."""
+    manifest_path = tmp_path / "manifest.json"
+    manifest = {
+        "empty.html": {
+            "captured_at": "",
+            "source_url": "https://example.com",
+        }
+    }
+    with open(manifest_path, 'w') as f:
+        json.dump(manifest, f)
+    
+    reader = LegacyManifestReader(str(manifest_path))
+    prov = reader.get_provenance("empty.html")
+    
+    assert prov['captured_at'] == 'UNKNOWN'
+
+
+# ─── Unified Getter Tests ───
+
+def test_getter_prefers_sidecar_over_legacy(tmp_path):
+    """get_provenance_for_fixture should prefer sidecar when available."""
+    content = "<html>with sidecar</html>"
+    
+    # Write with sidecar
+    AcquisitionWriter.write(
+        content=content,
+        source_url="https://new.com",
+        acquisition_method="playwright",
+        output_dir=str(tmp_path),
+        filename="both.html",
+        session_id="run_new",
+        clock=lambda: "2026-02-01T10:00:00Z",
+    )
+    
+    # Also create legacy manifest with different timestamp
+    manifest_path = tmp_path / "manifest.json"
+    with open(manifest_path, 'w') as f:
+        json.dump({"both.html": {"captured_at": "2020-01-01T00:00:00Z"}}, f)
+    
+    prov = get_provenance_for_fixture(
+        str(tmp_path / "both.html"),
+        legacy_manifest_path=str(manifest_path),
+    )
+    
+    # Should use sidecar (new timestamp), not legacy
+    assert prov['captured_at'] == "2026-02-01T10:00:00Z"
+    assert not prov.get('legacy', False)
+
+
+def test_getter_falls_back_to_legacy(tmp_path):
+    """get_provenance_for_fixture should fall back to legacy when no sidecar."""
+    # Create artifact without sidecar
+    artifact_path = tmp_path / "legacy_only.html"
+    with open(artifact_path, 'w') as f:
+        f.write("<html>legacy</html>")
+    
+    # Create legacy manifest
+    manifest_path = tmp_path / "manifest.json"
+    with open(manifest_path, 'w') as f:
+        json.dump({"legacy_only.html": {"captured_at": "2025-06-01T12:00:00Z"}}, f)
+    
+    prov = get_provenance_for_fixture(
+        str(artifact_path),
+        legacy_manifest_path=str(manifest_path),
+    )
+    
+    assert prov['captured_at'] == "2025-06-01T12:00:00Z"
+    assert prov['legacy'] == True
+
+
+def test_getter_returns_unknown_when_no_provenance(tmp_path):
+    """get_provenance_for_fixture should return UNKNOWN when no provenance available."""
+    artifact_path = tmp_path / "no_provenance.html"
+    with open(artifact_path, 'w') as f:
+        f.write("<html>no prov</html>")
+    
+    prov = get_provenance_for_fixture(str(artifact_path))
+    
+    assert prov['captured_at'] == 'UNKNOWN'
+    assert prov['legacy'] == True

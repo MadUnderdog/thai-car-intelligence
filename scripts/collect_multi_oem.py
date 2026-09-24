@@ -16,6 +16,10 @@ import sys
 import hashlib
 from datetime import datetime, timezone
 
+# Add lib to path for provenance module
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'lib'))
+from thai_factory.acquisition.provenance import get_provenance_for_fixture
+
 FIXTURE_DIR = "tests/fixtures/oem-artifacts"
 ARTIFACT_DIR = "audit/data-staging/raw-artifacts"
 STAGING_FILE = "audit/data-staging/vehicle_observations.jsonl"
@@ -90,15 +94,10 @@ def load_manifest():
         return json.load(f)
 
 
-def get_captured_at(artifact_path, manifest=None):
-    """Get captured_at from manifest, NOT from file mtime."""
-    if manifest is None:
-        manifest = load_manifest()
-    
-    filename = os.path.basename(artifact_path) if artifact_path else None
-    if filename and filename in manifest:
-        return manifest[filename].get('captured_at') or 'UNKNOWN'
-    return 'UNKNOWN'
+def get_fixture_provenance(artifact_path):
+    """Get provenance from sidecar (preferred) or legacy manifest."""
+    legacy_manifest = f"{FIXTURE_DIR}/acquisition_manifest.json"
+    return get_provenance_for_fixture(artifact_path, legacy_manifest_path=legacy_manifest)
 
 # ─── Toyota Adapter (JSON-LD) ───
 def collect_toyota():
@@ -121,12 +120,11 @@ def collect_toyota():
         fixture_path
     )
     
-    # Add captured_at from manifest
-    captured_at = get_captured_at(fixture_path)
-    artifact_hash = hashlib.sha256(open(fixture_path, 'rb').read()).hexdigest()
+    # Add provenance from sidecar/legacy manifest
+    prov = get_fixture_provenance(fixture_path)
     for obs in observations:
-        obs['source']['captured_at'] = captured_at
-        obs['source']['artifact_sha256'] = artifact_hash
+        obs['source']['captured_at'] = prov['captured_at']
+        obs['source']['artifact_sha256'] = prov.get('sha256') or hashlib.sha256(open(fixture_path, 'rb').read()).hexdigest()
     
     print(f"  Extracted: {len(observations)} variants from fixture")
     return observations
@@ -186,7 +184,7 @@ def collect_mazda():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": hashlib.sha256(open(artifact, 'rb').read()).hexdigest() if os.path.exists(artifact) else None,
-                "captured_at": get_captured_at(artifact),
+                "captured_at": get_fixture_provenance(artifact)["captured_at"],
             },
             "identity": {
                 "brand_raw": "Mazda",
@@ -288,7 +286,7 @@ def collect_nissan():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": hashlib.sha256(open(artifact, 'rb').read()).hexdigest() if os.path.exists(artifact) else None,
-                "captured_at": get_captured_at(artifact),
+                "captured_at": get_fixture_provenance(artifact)["captured_at"],
             },
             "identity": {
                 "brand_raw": "Nissan",
@@ -400,7 +398,7 @@ def collect_isuzu():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
-                "captured_at": get_captured_at(artifact),
+                "captured_at": get_fixture_provenance(artifact)["captured_at"],
             },
             "identity": {
                 "brand_raw": "Isuzu",
@@ -527,7 +525,7 @@ def collect_honda():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
-                "captured_at": get_captured_at(artifact),
+                "captured_at": get_fixture_provenance(artifact)["captured_at"],
             },
             "identity": {
                 "brand_raw": "Honda",
@@ -648,7 +646,7 @@ def collect_bmw():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
-                "captured_at": get_captured_at(artifact),
+                "captured_at": get_fixture_provenance(artifact)["captured_at"],
             },
             "identity": {
                 "brand_raw": "BMW",

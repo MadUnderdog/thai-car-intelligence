@@ -8,6 +8,8 @@ import json
 import os
 import sys
 import hashlib
+import subprocess
+import asyncio
 
 sys.path.insert(0, 'scripts')
 from collect_multi_oem import collect_toyota, collect_mazda, collect_nissan
@@ -269,3 +271,146 @@ def test_honda_variant_level():
             f"model_raw should be City, got {obs['identity']['model_raw']}"
         assert obs['identity']['variant_raw'] is not None, \
             f"variant_raw should not be None"
+
+
+# ─── Honda Mutation Tests ───
+
+def test_honda_evidence_contains_both_variant_and_price():
+    """Evidence excerpt must contain BOTH variant name and price from same card."""
+    from collect_multi_oem import collect_honda
+    observations = collect_honda()
+    for obs in observations:
+        excerpt = obs['evidence_excerpt']
+        variant = obs['identity']['variant_raw']
+        price_str = str(obs['price']['value_thb'])
+        assert variant in excerpt, \
+            f"Variant '{variant}' not in evidence: {excerpt[:80]}"
+        assert price_str in excerpt.replace(',', ''), \
+            f"Price {price_str} not in evidence: {excerpt[:80]}"
+
+
+def test_honda_locator_is_unique_per_card():
+    """Each Honda observation must have a unique locator."""
+    from collect_multi_oem import collect_honda
+    observations = collect_honda()
+    locators = [obs['evidence_locator']['selector'] for obs in observations]
+    assert len(locators) == len(set(locators)), \
+        f"Duplicate locators found: {locators}"
+
+
+def test_honda_adjacent_prices_cannot_swap():
+    """Mutation test: swapping prices between adjacent grades must produce different extraction."""
+    import asyncio
+    from playwright.async_api import async_playwright
+    from collect_multi_oem import HONDA_CITY_JS, load_fixture, FIXTURE_DIR
+    
+    html, _ = load_fixture("honda_city")
+    
+    # Swap prices: 569,000 <-> 619,000
+    mutated = html.replace('569,000 THB', 'XXX_PLACEHOLDER_XXX')
+    mutated = mutated.replace('619,000 THB', '569,000 THB')
+    mutated = mutated.replace('XXX_PLACEHOLDER_XXX', '619,000 THB')
+    
+    async def extract(data):
+        script = f'''
+import asyncio
+import json
+from playwright.async_api import async_playwright
+
+HTML = {repr(data)}
+JS = {repr(HONDA_CITY_JS)}
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
+        await page.set_content(HTML)
+        result = await page.evaluate(JS)
+        print(json.dumps(result))
+        await browser.close()
+
+asyncio.run(main())
+'''
+        with open('/tmp/mutation_test.py', 'w') as f:
+            f.write(script)
+        result = subprocess.run(['python3', '/tmp/mutation_test.py'], capture_output=True, text=True, timeout=30)
+        return json.loads(result.stdout.strip())
+    
+    # Extract from original
+    original_results = asyncio.run(extract(html))
+    
+    # Extract from mutated (prices swapped)
+    mutated_results = asyncio.run(extract(mutated))
+    
+    # Verify prices swapped
+    orig_prices = {r['variant']: r['price'] for r in original_results}
+    mut_prices = {r['variant']: r['price'] for r in mutated_results}
+    
+    assert orig_prices != mut_prices, "Mutation did not change extraction"
+    
+    # S price should be different in mutated
+    assert orig_prices.get('S') == 569000, "Original S price wrong"
+    assert mut_prices.get('S') == 619000, f"Mutated S price should be 619000, got {mut_prices.get('S')}"
+    assert orig_prices.get('e:HEV V') == 619000, "Original e:HEV V price wrong"
+    assert mut_prices.get('e:HEV V') == 569000, f"Mutated e:HEV V price should be 569000, got {mut_prices.get('e:HEV V')}"
+
+
+def test_honda_deleting_price_causes_deterministic_failure():
+    """Mutation test: deleting a price must cause extraction to return fewer results."""
+    from collect_multi_oem import HONDA_CITY_JS, load_fixture
+    import subprocess
+    import json
+    
+    html, _ = load_fixture("honda_city")
+    
+    # Delete one price
+    mutated = html.replace('739,000 THB', '')
+    
+    async def extract_js(data):
+        script = f'''
+import asyncio
+import json
+from playwright.async_api import async_playwright
+
+HTML = {repr(data)}
+JS = {repr(HONDA_CITY_JS)}
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
+        await page.set_content(HTML)
+        result = await page.evaluate(JS)
+        print(json.dumps(result))
+        await browser.close()
+
+asyncio.run(main())
+'''
+        with open('/tmp/mutation_test2.py', 'w') as f:
+            f.write(script)
+        result = subprocess.run(['python3', '/tmp/mutation_test2.py'], capture_output=True, text=True, timeout=30)
+        return json.loads(result.stdout.strip())
+    
+    import asyncio
+    original_results = asyncio.run(extract_js(html))
+    mutated_results = asyncio.run(extract_js(mutated))
+    
+    assert len(original_results) == 4, f"Original should have 4 results, got {len(original_results)}"
+    assert len(mutated_results) == 3, f"Mutated should have 3 results (deleted price), got {len(mutated_results)}"
+    
+    # e:HEV RS should be gone
+    variants = [r['variant'] for r in mutated_results]
+    assert 'e:HEV RS' not in variants, "e:HEV RS should be removed after price deletion"
+
+
+def test_honda_artifact_hash_present():
+    """Every Honda observation must carry artifact SHA-256 hash."""
+    from collect_multi_oem import collect_honda
+    observations = collect_honda()
+    for obs in observations:
+        assert 'artifact_sha256' in obs['source'], \
+            f"artifact_sha256 missing for {obs['identity']['variant_raw']}"
+        assert len(obs['source']['artifact_sha256']) == 64, \
+            f"artifact_sha256 not full SHA-256: {obs['source']['artifact_sha256']}"
+        assert 'artifact_sha256' in obs['evidence_locator'], \
+            f"evidence_locator.artifact_sha256 missing"

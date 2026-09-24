@@ -294,38 +294,64 @@ def collect_nissan():
 HONDA_CITY_JS = """
 (() => {
     const items = [];
-    const text = document.body.innerText;
     
-    const gradeIdx = text.indexOf('Grade Levels');
-    if (gradeIdx === -1) return items;
+    // Find "Grade Levels" heading
+    const gradeHeading = Array.from(document.querySelectorAll('div, h2, h3, h4, span, p')).find(el => 
+        el.textContent.trim() === 'Grade Levels' && el.children.length === 0
+    );
+    if (!gradeHeading) return items;
     
-    const section = text.substring(gradeIdx, gradeIdx + 1000);
-    const lines = section.split('\\n').map(l => l.trim()).filter(l => l);
-    
-    for (let i = 0; i < lines.length - 1; i++) {
-        const priceLine = lines[i + 1];
-        const priceMatch = priceLine.match(/([\\d,]+)\\s*THB/);
-        if (priceMatch) {
-            const price = parseInt(priceMatch[1].replace(/,/g, ''));
-            const variant = lines[i];
-            if (price > 100000 && price < 10000000 && 
-                !variant.match(/[\\d,]/) && 
-                variant !== 'Grade Levels') {
-                items.push({
-                    variant: variant,
-                    price: price,
-                    evidence: variant + ' | ' + priceLine
-                });
-            }
-        }
+    // Walk up to find container with [data-active] cards
+    let container = gradeHeading.parentElement;
+    for (let i = 0; i < 5; i++) {
+        if (!container) break;
+        if (container.querySelectorAll('[data-active]').length >= 3) break;
+        container = container.parentElement;
     }
+    if (!container) return items;
+    
+    // Get all grade cards — each contains BOTH variant name AND price
+    const cards = container.querySelectorAll('[data-active]');
+    
+    cards.forEach((card, idx) => {
+        const text = card.textContent;
+        const priceMatch = text.match(/([\\d,]+)\\s*THB/);
+        if (!priceMatch) return;
+        
+        const price = parseInt(priceMatch[1].replace(/,/g, ''));
+        if (price < 100000 || price > 10000000) return;
+        
+        // Get variant name from first text content
+        const variantEl = card.querySelector('div:first-child');
+        const variant = variantEl ? variantEl.textContent.trim().split('\\n')[0].trim() : null;
+        if (!variant || variant.match(/[\\d,]/)) return;
+        
+        // Build deterministic DOM path
+        const path = [];
+        let el = card;
+        while (el && el !== document.body) {
+            const childIdx = Array.from(el.parentElement.children).indexOf(el);
+            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (childIdx + 1) + ')');
+            el = el.parentElement;
+        }
+        
+        items.push({
+            variant: variant,
+            price: price,
+            dataActive: card.getAttribute('data-active'),
+            cardIndex: idx,
+            domPath: path.join(' > '),
+            evidence: text.trim().replace(/\\s+/g, ' ').substring(0, 120)
+        });
+    });
+    
     return items;
 })()
 """
 
 
 def collect_honda():
-    """Collect from Honda — DOM extraction from Grade Levels section."""
+    """Collect from Honda City — DOM extraction from grade cards."""
     print("=== Honda Thailand Official (DOM) ===")
     html, error = load_fixture("honda_city")
     if error:
@@ -337,11 +363,15 @@ def collect_honda():
         print("  Extraction returned no results")
         return []
 
+    # Compute artifact hash
+    with open(artifact, 'rb') as f:
+        artifact_hash = hashlib.sha256(f.read()).hexdigest()
+
     observations = []
     for item in results:
-        variant = item.get('variant', 'Unknown')
+        variant = item['variant']
         observations.append({
-            "observation_id": hashlib.sha256(f"honda_city:{variant}:{item['price']}".encode()).hexdigest()[:16],
+            "observation_id": hashlib.sha256(f"honda_city:{variant}:{item['price']}:{item['domPath']}".encode()).hexdigest()[:16],
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "source": {
                 "class": "OEM_OFFICIAL",
@@ -352,6 +382,8 @@ def collect_honda():
                 "immutable_revision": None,
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "captured_at": "2026-09-23T14:00:00Z",
             },
             "identity": {
                 "brand_raw": "Honda",
@@ -375,15 +407,19 @@ def collect_honda():
             "evidence_excerpt": item['evidence'],
             "evidence_locator": {
                 "artifact_path": artifact,
-                "selector": "#Grade Levels section",
-                "method": "dom_text_section",
+                "artifact_sha256": artifact_hash,
+                "dom_path": item['domPath'],
+                "card_index": item['cardIndex'],
+                "data_active": item['dataActive'],
+                "selector": f"[data-active='{item['dataActive']}']:nth-of-type({item['cardIndex'] + 1})",
+                "method": "dom_card",
             },
         })
 
     print(f"  Extracted: {len(observations)} variants from fixture")
     return observations
 
-# ─── Main Collection ───
+
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
 

@@ -3237,3 +3237,341 @@ AI → scrape → save → hope
 ```
 
 This is the required architecture for version 1 production data ingestion.
+
+---
+
+# Part II — Data acquisition factory & daily update roadmap (A–I)
+
+> Added 2026-09-24, branch `fix/p1-provenance-gate`, baseline commit `e1d2809`.
+>
+> This part is **normative** for the data acquisition/update factory. Earlier sections remain background design: §16 (update agent), §17 (update conflict), §28 (source crawler design), §29 (change detection), §75–77 (cron/refresh). Where they conflict with this part, **this part wins**. Do not create competing plan documents; update this part in-place.
+
+---
+
+# 93. A. OEM coverage & coverage registry
+
+## Goal
+
+Cover every vehicle brand/model **officially sold in Thailand**, tracked in a maintainable coverage registry. Full Thailand-market coverage may **never be claimed** unless the registry objectively proves it (every in-scope brand either captured-with-sidecar or blocked-with-evidence and ladder exhausted).
+
+## Registry
+
+Single source of truth: `audit/coverage/oem-registry.json` (machine) with a generated human view `docs/oem-coverage.md`. One row per brand × source endpoint:
+
+```text
+brand                  official brand/importer name (as published)
+in_scope               bool — officially sold in Thailand?
+source_urls[]          ordered candidate official URLs (primary first)
+source_type            OFFICIAL_SITE | OFFICIAL_PDF | OFFICIAL_STRUCTURED_DATA |
+                       OFFICIAL_PRESS | DEALER | SECONDARY
+access_status          REACHABLE | BLOCKED_HTTP_403 | BLOCKED_HTTP_404 |
+                       BLOCKED_DNS | BLOCKED_TLS | BLOCKED_TIMEOUT |
+                       ERROR_PAGE | DEALER_REDIRECT | UNKNOWN
+acquisition_method     playwright | http_get | None
+adapter_status         NONE | DISCOVERED | PARSED | PARSED_TESTED
+provenance_status      ACQUISITION_VERIFIED | LEGACY_UNVERIFIED | NONE
+last_success_at        ISO timestamp of last capture that produced parseable data
+last_success_sha256    artifact hash from that capture
+blocker_evidence       {checked_at, http_status_or_error, url} — real probe result
+next_retry_at          timestamp from backoff policy (§94)
+fallback_ladder[]      alternates already tried + result (evidence, not guesses)
+```
+
+## Coverage claim rule
+
+```text
+coverage_% = brands with provenance_status=ACQUISITION_VERIFIED AND adapter_status=PARSED_TESTED
+             ÷ in_scope brands
+```
+
+Attempt counts, captured counts and blocked counts are **operational telemetry**, never market coverage.
+
+## Fallback ladder (per blocked brand, in order)
+
+1. Primary model-list/price page (as published).
+2. ≤2 sensible alternates per acquisition cycle (`/models`, `/model-list`, `/cars`, sitemap-listed model pages). **Then move on** — do not loop on one domain.
+3. Official PDF price list / brochure (documented on an official page).
+4. Official structured data (JSON-LD, sitemap XML, published API/JSON endpoints).
+5. Official press/release page carrying prices.
+
+If all fail: record `access_status` + `blocker_evidence`, set `next_retry_at` from §94, continue horizontally. A captured page that redirects to an error page or a dealer domain is stored but marked `ERROR_PAGE`/`DEALER_REDIRECT`; no adapter may extract business rows from it.
+
+---
+
+# 94. B. Daily acquisition / update system
+
+## Pipeline
+
+```text
+DISCOVER → ACQUIRE → HASH/PROVENANCE → DIFF → QUARANTINE
+   → EVIDENCE PACKET → ACCEPTANCE → PROMOTION → DB → AUDIT LOG
+```
+
+## Acquisition contract (hard rules)
+
+- Every **new** capture goes through `AcquisitionWriter.write()` and produces artifact + `.prov.json` **from the same acquisition event**: `source_url`, `captured_at` (runtime clock at capture), `acquisition_method`, `sha256`, `session_id`, `provenance_state=ACQUISITION_VERIFIED`.
+- Reads go through `AcquisitionReader` (fail-closed: hash mismatch or missing sidecar ⇒ `ProvenanceError`, no silent continue).
+- Never retrofit timestamps/hashes after capture. Legacy fixtures stay `LEGACY_UNVERIFIED` until genuinely recaptured.
+- `captured_at` (source acquisition), `artifact_mtime` (filesystem bookkeeping), `staging_timestamp` (extraction run) are three separate concepts; never substituted.
+
+## Idempotency
+
+- Artifacts are content-addressed by SHA-256.
+- Re-capture with **same SHA** ⇒ record only `{run_id, source, status: UNCHANGED}`; **no new business rows**, no ChangeCandidate, no alert.
+- Re-capture with **new SHA** ⇒ run parser; compare extracted output to last accepted output:
+  - identical output ⇒ `CONTENT_CHANGED_OUTPUT_UNCHANGED` (store artifact, log only),
+  - different output ⇒ create **ChangeCandidate** `{source, old_sha, new_sha, field_level_diff[]}` → QUARANTINE.
+- Two consecutive runs over the same artifact must yield an identical observation set (no duplicates) — enforced by test (§98).
+
+## Retry / backoff / source-failure handling
+
+```text
+BLOCKED_HTTP_403   → no UA rotation, no bypass; retry +7d, then monthly
+BLOCKED_HTTP_404   → ladder (≤2 alternates/cycle); retry +14d (redesigns happen)
+BLOCKED_DNS        → retry weekly ×4, then monthly
+BLOCKED_TLS        → retry monthly; NEVER disable certificate verification
+BLOCKED_TIMEOUT    → retry next run ×2 with backoff (30s, 120s), then cycle-blocked
+5xx / transient    → same-run retry (30s, 120s), else RETRY_NEXT_RUN
+ERROR_PAGE /
+DEALER_REDIRECT    → store capture, extract nothing, fix URL target in registry
+```
+
+Per-host politeness: ≥5 s between requests, capped requests per host per day, jittered schedule.
+
+## Alerting (signal, not noise)
+
+Alert **only** on: price change for a tracked model; model/variant added or removed; new conflict record; hash/provenance verification failure; source state transition (reachable → blocked); promotion-gate failure.
+
+Never alert on: unchanged capture, repeated known blocker, expected ladder outcome.
+
+One daily digest (MD + JSON) per run: `audit/daily-runs/YYYYMMDD.{md,json}` — following the global rule that every data run ends with a full report.
+
+---
+
+# 95. C. Data quality & acceptance rules
+
+Explicit prohibitions and the mechanism that prevents each:
+
+```text
+model/variant cross-contamination
+    → identity level (MODEL|VARIANT) declared per adapter and per row;
+      locator re-resolution must find the extracted name+price in ONE card;
+      variant names are never created by splitting (no invented Standard/Base/Entry).
+
+historical/stale price becomes current
+    → currentness defaults to UNKNOWN; CURRENT requires dated in-stock/price-list
+      evidence within the freshness window (§43); fixture rows are never "current".
+
+MSRP starting range mislabeled as exact variant price
+    → price_type is mandatory: MSRP_STARTING (เริ่มต้น/ราคาเริ่มต้น/starting at)
+      vs EXACT_VARIANT (grade-specific). Never converted between types.
+
+duplicate parser paths
+    → one canonical adapter per (source, page-type), recorded in the registry;
+      any second path must state why and must produce identical rows in a test.
+
+shared media/article price-block contamination
+    → MEDIA_DISCOVERY class rows never become official prices; article price blocks
+      need a vehicle-scoped locator or they stay unextracted.
+
+placeholder / duplicated specs
+    → null/empty and repeated-sentinel scans in staging validation;
+      placeholder values quarantined, not promoted.
+
+secondary source promoted to official
+    → trust tiers (official_verified > secondary_verified > reference > inferred)
+      are non-increasing; only an official artifact can set official_verified.
+
+provenance mistaken for semantic correctness
+    → ACQUISITION_VERIFIED proves capture integrity only; semantic acceptance
+      is a separate gate (§98). The two are reported separately, always.
+```
+
+## Mandatory fields on every observation
+
+```text
+identity.level + identity names | price.type + value + currentness
+scope (Thailand official market) | source.class + trust tier
+evidence.locator (canonical, re-resolvable) + evidence.excerpt (same record)
+provenance: sha256 + captured_at + provenance_state + session_id
+```
+
+Rows missing any field are quarantined, not staged as accepted.
+
+---
+
+# 96. D. Multi-source assembly
+
+- **Field-level provenance**: an assembled model/variant stores `{field → {value, source_id, artifact_sha256, locator, observed_at, trust_tier}}`. Never one blob of provenance per row.
+- **Join keys**: `manufacturer_slug + model_slug + variant_slug + model_year`, resolved through an alias table with its own evidence. Joins never match on display strings alone; `candidate_id` until reconciliation produces a `canonical_id`.
+- **Source classes** (roles): `IDENTITY_ENUMERATOR` (names/lineup), `MARKET_TRUTH` (official price/spec), `MARKET_REFERENCE` (reference datasets e.g. FIPE/Thai DLT), `MEDIA_DISCOVERY` (articles, discovery only). Roles never silently upgrade.
+- **Conflict policy**: within the same trust tier, newest dated observation wins; across tiers, higher tier wins but the conflict is still recorded. Nothing is ever silently overwritten.
+- **Contamination tests required**: field attributed to source A must carry evidence from A's artifact (hash match); a test must fail if source B's locator is attached to source A's value.
+
+---
+
+# 97. E. Evidence packets & change management
+
+## EvidencePacket contents
+
+```text
+packet_id, created_at, run_id
+observation(s) with identity/price/scope semantics
+artifact: path + sha256 + sidecar provenance (captured_at, method, session, state)
+canonical locator + independently re-resolved excerpt (model + price in one record)
+source.class + trust tier + source_url (openable in a browser)
+conflicts[] — each side with ITS OWN evidence (never merged into one value)
+diff vs previous accepted packet (for change candidates)
+status: QUARANTINED | ACCEPTED | REJECTED
+acceptance decision + reason + gate results; append-only ledger entry
+```
+
+## Conflict representation
+
+A conflict is an explicit record holding both observations with their separate artifacts/locators. Unresolved conflicts **remain quarantined indefinitely** — never averaged, never majority-voted into the dataset.
+
+## AI role (later, after volume)
+
+AI reads packets and proposes reconciliation (alias merges, conflict resolution, dedupe). It must **cite packet ids**, may only emit decisions + rationale, and **cannot introduce facts not present in packets**. Proposals pass the same acceptance gates as heuristic decisions before promotion. No AI reconciliation layer is built before real volume exists.
+
+---
+
+# 98. F. Testing & quality gates
+
+## Required test categories
+
+```text
+1  sidecar/hash integrity        tamper artifact → extraction FAILS (ProvenanceError)
+2  locator re-resolution         stored locator → re-resolve against committed
+                                 artifact → resolved card contains model + price
+3  current vs stale conflict     dated evidence vs UNKNOWN → correct currentness
+4  model-range vs variant MSRP   เริ่มต้น → MSRP_STARTING, grade price → EXACT_VARIANT
+5  duplicate/idempotent rerun    same artifact twice → identical observation set
+6  cross-model contamination     adjacent price swap / deleted price / mismatch
+                                 → extraction changes deterministically
+7  provenance/trust preservation ACQUISITION_VERIFIED vs LEGACY_UNVERIFIED survive
+                                 extraction → staging unchanged
+8  multi-source assembly         per-field source matches its artifact hash
+9  promotion gates               ungated row cannot reach accepted set
+10 daily update regression       fixture-based daily-run replay, no live web in CI
+```
+
+Every adapter ships with tests from categories 1, 2, 4, 6 before its rows are trusted.
+
+## Objective acceptance gates: acquisition → production DB
+
+```text
+G1  every row from new captures: sidecar present + hash verifies fail-closed
+G2  every active adapter: locator re-resolution + mutation tests green
+G3  identity/price-type/currentness consistent with source wording (rule table)
+G4  idempotent rerun proven (no duplicate business rows)
+G5  cross-source contamination suite green
+G6  sample audit: random rows re-opened in a browser show the same number
+G7  producer ≠ verifier: verifier code path independent of extractor
+G8  gate report (MD+JSON) committed with counts before any promotion writes
+```
+
+A gate failure blocks promotion; it does not trigger an architecture rewrite.
+
+---
+
+# 99. G. Operating model
+
+```text
+one canonical acquisition framework   lib/thai_factory/acquisition/ (writer/reader/ladder)
+per-OEM adapters (only where DOM differs)  scripts/collect_multi_oem.py → lib adapters
+coverage registry (single source of truth) audit/coverage/oem-registry.json
+scheduler / orchestrator              cron (Phase 4); manual runs before that
+diff / change queue                   audit/change-queue/*.jsonl (ChangeCandidates)
+evidence packet store                 lib/thai_factory/acceptance/ + storage/quarantine
+acceptance / promotion worker         AcceptanceRunner + append-only AcceptanceLedger
+audit / reporting                     audit/daily-runs/ + audit/data-staging/summary.json
+```
+
+**Defect policy (anti-perfectionism):** before changing code, identify the failing boundary and reproduce it with one end-to-end record. If the architecture already satisfies that boundary, stop patching. Non-blocking defects are logged as follow-ups (registry/ledger) and work continues horizontally. Only stop for: corrupted data, broken provenance, wrong identity semantics, or broken evidence integrity. **No endless verifier rewrites** — the verifier stays frozen (v9).
+
+---
+
+# 100. H. Current verified state (baseline @ `e1d2809`)
+
+VERIFIED facts (independently checked against the remote tree):
+
+- Branch/commit: `fix/p1-provenance-gate` @ `e1d2809`.
+- Tests: **80/80** (17 provenance/boundary + 63 extraction fixtures), all offline from committed artifacts.
+- Staging: **176/176** rows carry SHA-256, `provenance_state` and a canonical locator.
+- Provenance: **2/8 sources `ACQUISITION_VERIFIED`** (Lexus, Honda Models — sidecar-backed), **6/8 `LEGACY_UNVERIFIED`** (Toyota, Mazda, Nissan, Honda City, Isuzu, BMW).
+- Rows by source/identity: Toyota 99 VARIANT · Mazda 10 MODEL · Nissan 10 MODEL · Honda City 4 VARIANT · Isuzu 6 MODEL · BMW 35 MODEL · Lexus 6 MODEL · Honda Models 6 MODEL. All `currentness=UNKNOWN` except rows explicitly dated by their source.
+- Acquisition attempts: 25 OEM endpoints across 2 sessions — 5 captured (with sidecars), 20 blocked. **These are operational telemetry, not market coverage** (see §93).
+- Sidecars present in tree: `lexus_models_page.html.prov.json`, `honda_models_page.html.prov.json`, plus captured-but-unparsed `porsche_home_page`, `toyota_model_page`, `suzuki_models_page`, `mg_models_page` (all `ACQUISITION_VERIFIED`).
+
+LEGACY / unproven (explicitly not claimed):
+
+- Legacy manifest timestamps for Toyota/Honda/Isuzu/BMW are `LEGACY_UNVERIFIED` — retained as historical notes, never called "real acquisition".
+- Mazda/Nissan `captured_at = UNKNOWN` (no acquisition record).
+- Blocked/captured counts do not establish Thailand-market coverage.
+
+Known non-blocking follow-ups (logged, not fixed now):
+
+- Lexus adapter writes `acquisition_method: "playwright_fixture"` while its sidecar says `playwright` — propagate the sidecar value when the adapter is next touched.
+- Lexus locator test checks presence only; stronger re-resolution test to be added under Phase 2 (pattern already proven on BMW).
+
+---
+
+# 101. I. Phased roadmap
+
+## Phase 1 — Broad OEM acquisition coverage ← CURRENT
+
+- **Objective**: breadth — coverage registry covering every in-scope Thai brand, each either sidecar-captured or blocked-with-evidence.
+- **Deliverables**: `audit/coverage/oem-registry.json` + generated view; new `.prov.json` captures via `AcquisitionWriter`; adapter + tests per newly parsed OEM; acquisition run reports.
+- **Entry**: provenance architecture accepted (`b33a0ef`); first sidecar exercised (`c847dbf`). ✅
+- **Exit**: registry = 100% of in-scope brands; every reachable OEM `PARSED_TESTED`; every blocked brand has blocker evidence + ladder ≤2 alternates/cycle tried.
+- **Blockers allowed**: 403/404/DNS/TLS/timeouts (documented), Fipe 429 (retry window ~22 h).
+- **Do NOT work on**: verifier rewrites, production DB bulk load, AI reconciliation, test-framework expansion beyond per-adapter needs, provenance redesign.
+
+## Phase 2 — Normalized provenance + adapter quality
+
+- **Objective**: all active adapters propagate sidecar provenance verbatim (no invented labels) and pass re-resolution + mutation tests.
+- **Deliverables**: `acquisition_method` propagation fix (Lexus cleanup), per-adapter re-resolution tests, mutation tests complete for all adapters.
+- **Entry**: Phase 1 registry exists for the adapters in question.
+- **Exit**: zero label mismatches; every adapter satisfies §98 categories 1/2/4/6.
+- **Do NOT work on**: provenance architecture changes (reopen only on a concrete end-to-end defect), new OEM hunting (stays Phase 1).
+
+## Phase 3 — Evidence packets / acceptance / promotion
+
+- **Objective**: wire the existing EvidencePacket/AcceptanceRunner/Ledger framework to real captures: QUARANTINE → PACKET → ACCEPTANCE → PROMOTION.
+- **Deliverables**: packets for verified rows, acceptance gate report (G1–G8), first promotion into the accepted set with ledger entries.
+- **Entry**: Phase 2 exit for the sources being promoted.
+- **Exit**: first real promotion run with a committed gate report; zero ungated rows.
+- **Do NOT work on**: production canonical DB writes before gates pass; PR #3 stays open.
+
+## Phase 4 — Daily diff + scheduled updates + alerting
+
+- **Objective**: idempotent scheduled runs implementing §94 end-to-end.
+- **Deliverables**: scheduler, diff/ChangeCandidate queue, daily digests, alert rules.
+- **Entry**: Phase 3 promotion working for ≥ the verified sources.
+- **Exit**: 7 consecutive green daily runs, alerts only on meaningful changes, no duplicate rows.
+- **Do NOT work on**: new source classes, AI reconciliation.
+
+## Phase 5 — Multi-source assembly + semantic enrichment at scale
+
+- **Objective**: field-level multi-source assembly (§96) + AI-assisted reconciliation after volume.
+- **Deliverables**: assembled records with per-field provenance, alias table, contamination tests, AI proposals citing packet ids.
+- **Entry**: sustained volume from Phase 4.
+- **Exit**: contamination suite green; unresolved conflicts provably still quarantined.
+- **Do NOT work on**: enrichment from any old/contaminated DB.
+
+## Phase 6 — Production hardening & observability
+
+- **Objective**: production promotion with full audit trail, freshness SLOs, monitoring.
+- **Deliverables**: production promotion worker, audit queries, freshness/coverage dashboards, incident runbooks.
+- **Entry**: Phase 5 exit + all G1–G8 gates green on the promoted set.
+- **Exit**: production DB receives only accepted packets; every field traceable to artifact + locator.
+- **Do NOT work on**: expanding scope beyond Thailand official-market catalog.
+
+## Standing constraints (all phases)
+
+- PR #3 open/unmerged; branch `fix/p1-provenance-gate` until told otherwise.
+- No production DB expansion with unverified data; no model/provider/config changes; embedding config never used for generation; only approved generation models.
+- No skills/self-improvement/memory/reference edits from data work.
+- Raw artifacts immutable; every price observation must have a source URL a buyer can open and see the same number.
+- Report every data run as (a) exact remote SHA, (b) artifact count + bytes, (c) per-OEM rows by identity level, (d) hash coverage, (e) locator coverage, (f) tests + blockers — and nothing claims "verified/current" that evidence does not prove.

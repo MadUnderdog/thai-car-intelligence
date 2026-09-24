@@ -773,6 +773,99 @@ def collect_lexus():
     return observations
 
 
+
+
+# ─── Honda Models Page Adapter (DOM — model cards with เริ่มต้น) ───
+def collect_honda_models():
+    """Collect from Honda models page — model cards with starting price."""
+    print("=== Honda Models Page (DOM) ===")
+    html, err = load_fixture("honda_models")
+    if err:
+        print(f"  {err}")
+        return []
+    
+    from bs4 import BeautifulSoup
+    import re
+    
+    soup = BeautifulSoup(html, 'html.parser')
+    
+    observations = []
+    artifact = f"{FIXTURE_DIR}/honda_models_page.html"
+    prov = get_fixture_provenance(artifact)
+    
+    # Find all elements with starting price
+    price_elements = soup.find_all(string=re.compile(r'เริ่มต้น\s*[\d,]+'))
+    
+    seen = set()
+    for elem in price_elements:
+        # Walk up to find compact card
+        card = elem.parent
+        for depth in range(3):
+            if not card or not card.parent:
+                break
+            
+            card_text = card.get_text()
+            
+            # Check for compact card with model + price
+            if len(card_text) < 200:
+                model_match = re.search(r'(?:ใหม่|New)?\s*([A-Z][A-Za-z0-9]+(?:\s+[A-Z][A-Za-z0-9]+)*)\s*เริ่มต้น\s*([\d,]+)', card_text)
+                if model_match:
+                    model = model_match.group(1).strip()
+                    price = int(model_match.group(2).replace(',', ''))
+                    
+                    if model not in seen:
+                        seen.add(model)
+                        
+                        # Build DOM path
+                        path = []
+                        el = card
+                        while el and el.name and el.name != 'body':
+                            parent = el.parent
+                            if parent:
+                                children = [c for c in parent.children if c.name]
+                                try:
+                                    child_idx = children.index(el) + 1
+                                    path.insert(0, f"{el.name}:nth-child({child_idx})")
+                                except:
+                                    pass
+                            el = parent
+                        
+                        observations.append({
+                            "source": {
+                                "name": "Honda Models Page",
+                                "url": "https://www.honda.co.th/models",
+                                "acquisition_method": prov.get('acquisition_method', 'playwright_fixture'),
+                                "artifact_path": artifact,
+                                "artifact_sha256": prov.get('sha256') or hashlib.sha256(open(artifact, 'rb').read()).hexdigest(),
+                                "captured_at": prov["captured_at"],
+                                "provenance_state": prov["provenance_state"],
+                            },
+                            "identity": {
+                                "level": "MODEL",
+                                "model_raw": model,
+                                "variant_raw": None,
+                            },
+                            "price": {
+                                "value_thb": price,
+                                "price_type": "MSRP_STARTING",
+                                "currentness": "UNKNOWN",
+                            },
+                            "evidence": {
+                                "excerpt": card_text[:500],
+                                "evidence_locator": {
+                                    "canonical_locator": ' > '.join(path),
+                                    "convenience_selector": f"div # {model}",
+                                },
+                            },
+                        })
+                    break
+            
+            card = card.parent
+    
+    print(f"  Extracted: {len(observations)} models from fixture")
+    return observations
+
+
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
 
@@ -797,6 +890,8 @@ def main():
     all_observations.extend(bmw)
     lexus = collect_lexus()
     all_observations.extend(lexus)
+    honda_models = collect_honda_models()
+    all_observations.extend(honda_models)
 
     # Load existing Fipe/OpenEV
     existing = []
@@ -817,6 +912,7 @@ def main():
     print(f"Isuzu (DOM fixture): {len(isuzu)}")
     print(f"BMW (DOM fixture): {len(bmw)}")
     print(f"Lexus (DOM fixture): {len(lexus)}")
+    print(f"Honda Models (DOM fixture): {len(honda_models)}")
     print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 

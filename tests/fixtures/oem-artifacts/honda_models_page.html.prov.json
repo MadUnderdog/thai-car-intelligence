@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/models",
+  "captured_at": "2026-09-24T11:39:25.386866+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "6eb120085da19d8751db8687849019c499077170c96e9501b2dc80b3e572deef",
+  "session_id": "acquisition_20260924_113822",
+  "artifact_filename": "honda_models_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

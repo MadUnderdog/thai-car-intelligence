@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.jnt.co.th/",
+  "captured_at": "2026-09-24T11:36:42.908247+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "b502e443cf6578c5158b778599fb1efd58fb2cfee372ed737309761ab268993f",
+  "session_id": "acquisition_20260924_113550",
+  "artifact_filename": "mg_models_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

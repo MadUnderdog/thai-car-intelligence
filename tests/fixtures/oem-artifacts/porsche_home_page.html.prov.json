@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/",
+  "captured_at": "2026-09-24T11:38:54.313322+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "a5ae80520f954c91d589e703071ed8d06294b033094fabba8ba34955a76803e0",
+  "session_id": "acquisition_20260924_113822",
+  "artifact_filename": "porsche_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

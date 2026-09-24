@@ -903,3 +903,81 @@ def test_lexus_canonical_locator_present():
         assert locator, f"Missing locator for {o['identity']['model_raw']}"
         assert 'nth-child' in locator or ':' in locator
 
+
+
+# ─── Honda Models Page Tests ───
+
+def test_honda_models_fixture_exists():
+    assert os.path.exists(f"{FIXTURE_DIR}/honda_models_page.html"), "Honda models fixture missing"
+
+def test_honda_models_fixture_sidecar_exists():
+    assert os.path.exists(f"{FIXTURE_DIR}/honda_models_page.html.prov.json"), "Honda models sidecar missing"
+
+def test_honda_models_extraction_count():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_honda_models
+    obs = collect_honda_models()
+    assert len(obs) == 6, f"Expected 6 Honda models, got {len(obs)}"
+
+def test_honda_models_specific_models():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_honda_models
+    obs = collect_honda_models()
+    models = {o['identity']['model_raw']: o for o in obs}
+    
+    assert 'City' in models, "City not found"
+    assert models['City']['price']['value_thb'] == 569000
+    assert models['City']['price']['price_type'] == 'MSRP_STARTING'
+    
+    assert 'City Hatchback' in models, "City Hatchback not found"
+    assert models['City Hatchback']['price']['value_thb'] == 579000
+
+def test_honda_models_model_level():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_honda_models
+    obs = collect_honda_models()
+    for o in obs:
+        assert o['identity']['level'] == 'MODEL'
+        assert o['identity']['variant_raw'] is None
+
+def test_honda_models_currentness_unknown():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_honda_models
+    obs = collect_honda_models()
+    for o in obs:
+        assert o['price']['currentness'] == 'UNKNOWN'
+
+def test_honda_models_evidence_contains_both():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_honda_models
+    obs = collect_honda_models()
+    for o in obs:
+        model = o['identity']['model_raw']
+        price = str(o['price']['value_thb'])
+        excerpt = o['evidence']['excerpt']
+        assert model in excerpt, f"Model {model} not in evidence"
+        assert price in excerpt.replace(',', ''), f"Price {price} not in evidence"
+
+def test_honda_models_sidecar_provenance():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_honda_models
+    obs = collect_honda_models()
+    for o in obs:
+        assert o['source']['provenance_state'] == 'ACQUISITION_VERIFIED'
+        assert o['source']['captured_at'] != 'UNKNOWN'
+
+def test_honda_models_canonical_locator_present():
+    import sys
+    sys.path.insert(0, 'scripts')
+    from collect_multi_oem import collect_honda_models
+    obs = collect_honda_models()
+    for o in obs:
+        locator = o['evidence']['evidence_locator']['canonical_locator']
+        assert locator, f"Missing locator for {o['identity']['model_raw']}"
+

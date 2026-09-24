@@ -31,7 +31,7 @@ class AcquisitionWriter:
         clock: Optional[Callable[[], str]] = None,
     ) -> dict:
         """
-        Write artifact and provenance sidecar atomically.
+        Write artifact and provenance sidecar as a pair.
         
         Args:
             content: Raw HTML/content to store
@@ -75,6 +75,7 @@ class AcquisitionWriter:
             "sha256": sha256,
             "session_id": session_id,
             "artifact_filename": filename,
+            "provenance_state": "ACQUISITION_VERIFIED",
         }
         with open(sidecar_path, 'w', encoding='utf-8') as f:
             json.dump(provenance, f, indent=2, ensure_ascii=False)
@@ -174,13 +175,22 @@ class LegacyManifestReader:
         if captured_at == '':
             captured_at = None
         
+        # If no real acquisition record, captured_at must be UNKNOWN
+        # Only retain if manifest has explicit non-empty captured_at
+        if not captured_at:
+            captured_at = 'UNKNOWN'
+            provenance_state = 'LEGACY_UNVERIFIED'
+        else:
+            provenance_state = 'LEGACY_UNVERIFIED'  # Still unverified - no hash binding
+        
         return {
             "source_url": entry.get('source_url', 'UNKNOWN'),
-            "captured_at": captured_at or 'UNKNOWN',
+            "captured_at": captured_at,
             "acquisition_method": entry.get('acquisition_method', 'UNKNOWN'),
             "session_id": entry.get('session_context', 'UNKNOWN'),
-            "sha256": entry.get('sha256'),  # May be present but not verified
+            "sha256": entry.get('sha256'),  # Present but not verified
             "artifact_filename": filename,
+            "provenance_state": provenance_state,
             "legacy": True,
         }
 
@@ -216,5 +226,6 @@ def get_provenance_for_fixture(
         "session_id": 'UNKNOWN',
         "sha256": None,
         "artifact_filename": filename,
+        "provenance_state": "LEGACY_UNVERIFIED",
         "legacy": True,
     }

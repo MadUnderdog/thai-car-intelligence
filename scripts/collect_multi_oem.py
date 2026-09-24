@@ -124,6 +124,7 @@ def collect_toyota():
     prov = get_fixture_provenance(fixture_path)
     for obs in observations:
         obs['source']['captured_at'] = prov['captured_at']
+        obs['source']['provenance_state'] = prov['provenance_state']
         obs['source']['artifact_sha256'] = prov.get('sha256') or hashlib.sha256(open(fixture_path, 'rb').read()).hexdigest()
     
     print(f"  Extracted: {len(observations)} variants from fixture")
@@ -185,6 +186,7 @@ def collect_mazda():
                 "artifact_path": artifact,
                 "artifact_sha256": hashlib.sha256(open(artifact, 'rb').read()).hexdigest() if os.path.exists(artifact) else None,
                 "captured_at": get_fixture_provenance(artifact)["captured_at"],
+                "provenance_state": get_fixture_provenance(artifact)["provenance_state"],
             },
             "identity": {
                 "brand_raw": "Mazda",
@@ -287,6 +289,7 @@ def collect_nissan():
                 "artifact_path": artifact,
                 "artifact_sha256": hashlib.sha256(open(artifact, 'rb').read()).hexdigest() if os.path.exists(artifact) else None,
                 "captured_at": get_fixture_provenance(artifact)["captured_at"],
+                "provenance_state": get_fixture_provenance(artifact)["provenance_state"],
             },
             "identity": {
                 "brand_raw": "Nissan",
@@ -399,6 +402,7 @@ def collect_isuzu():
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
                 "captured_at": get_fixture_provenance(artifact)["captured_at"],
+                "provenance_state": get_fixture_provenance(artifact)["provenance_state"],
             },
             "identity": {
                 "brand_raw": "Isuzu",
@@ -526,6 +530,7 @@ def collect_honda():
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
                 "captured_at": get_fixture_provenance(artifact)["captured_at"],
+                "provenance_state": get_fixture_provenance(artifact)["provenance_state"],
             },
             "identity": {
                 "brand_raw": "Honda",
@@ -647,6 +652,7 @@ def collect_bmw():
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
                 "captured_at": get_fixture_provenance(artifact)["captured_at"],
+                "provenance_state": get_fixture_provenance(artifact)["provenance_state"],
             },
             "identity": {
                 "brand_raw": "BMW",

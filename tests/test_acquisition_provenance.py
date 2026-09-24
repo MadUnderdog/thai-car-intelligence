@@ -301,3 +301,121 @@ def test_getter_returns_unknown_when_no_provenance(tmp_path):
     
     assert prov['captured_at'] == 'UNKNOWN'
     assert prov['legacy'] == True
+
+
+# ─── Integration Test: End-to-end acquisition → provenance → verification → extraction ───
+
+def test_integration_acquisition_to_extraction(tmp_path):
+    """
+    Integration: run actual capture/writer path, then feed through get_provenance_for_fixture.
+    Proves: sidecar path selected, hash verification occurs, tampering fails.
+    """
+    # Step 1: Simulate acquisition - capture and write with AcquisitionWriter
+    content = "<html><body><h1>Toyota Corolla Altis</h1><p>฿1,099,000</p></body></html>"
+    fixed_time = "2026-09-25T10:30:00Z"
+    
+    provenance = AcquisitionWriter.write(
+        content=content,
+        source_url="https://www.toyota.co.th/en/pricelist",
+        acquisition_method="playwright",
+        output_dir=str(tmp_path),
+        filename="integration_test.html",
+        session_id="integration_run_001",
+        clock=lambda: fixed_time,
+    )
+    
+    artifact_path = str(tmp_path / "integration_test.html")
+    
+    # Step 2: Feed through get_provenance_for_fixture - should select sidecar path
+    from thai_factory.acquisition.provenance import get_provenance_for_fixture
+    
+    prov = get_provenance_for_fixture(artifact_path)
+    
+    # Prove sidecar path selected (not legacy)
+    assert not prov.get('legacy', False), "Should use sidecar, not legacy fallback"
+    assert prov['provenance_state'] == 'ACQUISITION_VERIFIED'
+    assert prov['captured_at'] == fixed_time
+    assert prov['sha256'] == provenance['sha256']
+    
+    # Step 3: Verify hash verification occurs (read succeeds)
+    read_content, read_prov = AcquisitionReader.read(artifact_path)
+    assert read_content == content
+    assert read_prov['provenance_state'] == 'ACQUISITION_VERIFIED'
+    
+    # Step 4: Tamper with artifact - extraction/read must fail
+    with open(artifact_path, 'w') as f:
+        f.write("<html><body>TAMPERED - price changed to ฿999,000</body></html>")
+    
+    with pytest.raises(ProvenanceError) as exc_info:
+        AcquisitionReader.read(artifact_path)
+    
+    assert "SHA-256 mismatch" in str(exc_info.value)
+    
+    # Also verify get_provenance_for_fixture fails on tampered artifact
+    with pytest.raises(ProvenanceError):
+        get_provenance_for_fixture(artifact_path)
+
+
+def test_provenance_state_acquisition_verified(tmp_path):
+    """ACQUISITION_VERIFIED only for artifacts with sidecar hash binding."""
+    AcquisitionWriter.write(
+        content="<html>verified</html>",
+        source_url="https://example.com",
+        acquisition_method="http_get",
+        output_dir=str(tmp_path),
+        filename="verified.html",
+        session_id="run_v",
+        clock=lambda: "2026-01-15T12:00:00Z",
+    )
+    
+    from thai_factory.acquisition.provenance import get_provenance_for_fixture
+    prov = get_provenance_for_fixture(str(tmp_path / "verified.html"))
+    
+    assert prov['provenance_state'] == 'ACQUISITION_VERIFIED'
+    assert not prov.get('legacy', False)
+
+
+def test_provenance_state_legacy_unverified(tmp_path):
+    """LEGACY_UNVERIFIED for fixtures without sidecar (even if in manifest)."""
+    # Create artifact without sidecar
+    artifact_path = tmp_path / "legacy.html"
+    with open(artifact_path, 'w') as f:
+        f.write("<html>legacy fixture</html>")
+    
+    # Create legacy manifest WITH timestamp
+    manifest_path = tmp_path / "manifest.json"
+    with open(manifest_path, 'w') as f:
+        json.dump({"legacy.html": {"captured_at": "2025-01-01T00:00:00Z"}}, f)
+    
+    from thai_factory.acquisition.provenance import get_provenance_for_fixture
+    prov = get_provenance_for_fixture(
+        str(artifact_path),
+        legacy_manifest_path=str(manifest_path),
+    )
+    
+    # Must be LEGACY_UNVERIFIED (no hash binding)
+    assert prov['provenance_state'] == 'LEGACY_UNVERIFIED'
+    assert prov['legacy'] == True
+    # Timestamp retained from manifest, but state is unverified
+    assert prov['captured_at'] == "2025-01-01T00:00:00Z"
+
+
+def test_legacy_without_manifest_is_unknown(tmp_path):
+    """Fixtures with no manifest entry must have captured_at=UNKNOWN."""
+    artifact_path = tmp_path / "no_manifest.html"
+    with open(artifact_path, 'w') as f:
+        f.write("<html>no manifest</html>")
+    
+    # Empty manifest
+    manifest_path = tmp_path / "manifest.json"
+    with open(manifest_path, 'w') as f:
+        json.dump({}, f)
+    
+    from thai_factory.acquisition.provenance import get_provenance_for_fixture
+    prov = get_provenance_for_fixture(
+        str(artifact_path),
+        legacy_manifest_path=str(manifest_path),
+    )
+    
+    assert prov['captured_at'] == 'UNKNOWN'
+    assert prov['provenance_state'] == 'LEGACY_UNVERIFIED'

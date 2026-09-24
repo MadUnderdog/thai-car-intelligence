@@ -531,6 +531,124 @@ def collect_honda():
     return observations
 
 
+
+# ─── BMW Adapter (DOM — .cmp-allmodelscard__root) ───
+BMW_JS = """
+(() => {
+    const items = [];
+    const cards = document.querySelectorAll('.cmp-allmodelscard__root');
+    
+    cards.forEach((card, idx) => {
+        const text = card.textContent;
+        const priceMatch = text.match(/เริ่มต้น\\s*฿([\\d,]+)/);
+        if (!priceMatch) return;
+        
+        const price = parseInt(priceMatch[1].replace(/,/g, ''));
+        if (price < 500000 || price > 20000000) return;
+        
+        const nameEl = card.querySelector('.cmp-allmodelscarddetail__wrapper, h2, h3');
+        if (!nameEl) return;
+        let model = nameEl.textContent.trim().replace(/\\s+/g, ' ');
+        
+        const modelMatch = model.match(/^(.*?)(?:รุ่นรถยนต์|รถยนต์ M)/);
+        if (modelMatch) model = modelMatch[1].trim();
+        
+        if (!model || model.length < 2 || model.includes('฿')) return;
+        
+        const path = [];
+        let el = card;
+        while (el && el !== document.body) {
+            const childIdx = Array.from(el.parentElement.children).indexOf(el);
+            path.unshift(el.tagName.toLowerCase() + ':nth-child(' + (childIdx + 1) + ')');
+            el = el.parentElement;
+        }
+        
+        items.push({
+            model: model,
+            price: price,
+            cardIndex: idx,
+            domPath: path.join(' > '),
+            evidence: text.trim().replace(/\\s+/g, ' ').substring(0, 150)
+        });
+    });
+    
+    return items;
+})()
+"""
+
+
+def collect_bmw():
+    """Collect from BMW — DOM extraction from allmodelscard."""
+    print("=== BMW Thailand Official (DOM) ===")
+    html, error = load_fixture("bmw_models")
+    if error:
+        print(f"  {error}")
+        return []
+
+    results, artifact = extract_from_html(html, "bmw_models", BMW_JS, fixture_path=f"{FIXTURE_DIR}/bmw_models_page.html")
+    if not results:
+        print("  Extraction returned no results")
+        return []
+
+    with open(artifact, 'rb') as f:
+        artifact_hash = hashlib.sha256(f.read()).hexdigest()
+
+    observations = []
+    seen = set()
+    for item in results:
+        model = item['model']
+        key = f"{model}:{item['price']}"
+        if key in seen:
+            continue
+        seen.add(key)
+        
+        observations.append({
+            "observation_id": hashlib.sha256(f"bmw:{model}:{item['price']}:{item['domPath']}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": "https://www.bmw.co.th/th/all-models.html",
+                "name": "BMW Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "playwright_dom",
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "captured_at": "2026-09-24T05:00:00Z",
+            },
+            "identity": {
+                "brand_raw": "BMW",
+                "model_raw": model,
+                "variant_raw": None,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "brand_normalized": "bmw",
+                "model_normalized": model.lower().replace(" ", "-"),
+                "variant_normalized": None,
+                "identity_level": "MODEL",
+            },
+            "price": {
+                "value_thb": item['price'],
+                "type": "MSRP_STARTING",
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {},
+            "evidence_excerpt": item['evidence'],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "canonical_locator": item['domPath'],
+                "card_index": item['cardIndex'],
+                "method": "dom_card",
+            },
+        })
+
+    print(f"  Extracted: {len(observations)} models from fixture")
+    return observations
+
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
 
@@ -551,6 +669,9 @@ def main():
     isuzu = collect_isuzu()
     all_observations.extend(isuzu)
 
+    bmw = collect_bmw()
+    all_observations.extend(bmw)
+
     # Load existing Fipe/OpenEV
     existing = []
     prev_staging = "audit/data-staging/vehicle_observations_prev.jsonl"
@@ -568,7 +689,8 @@ def main():
     print(f"Nissan (DOM fixture): {len(nissan)}")
     print(f"Honda (DOM fixture): {len(honda)}")
     print(f"Isuzu (DOM fixture): {len(isuzu)}")
-    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu)}")
+    print(f"BMW (DOM fixture): {len(bmw)}")
+    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 
     # Write staging
@@ -580,10 +702,10 @@ def main():
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "provenance": {
-            "fixture_based_extraction": len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu),
+            "fixture_based_extraction": len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw),
             "from_existing_structured_data": len(existing),
         },
-        "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda), "isuzu": len(isuzu)},
+        "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda), "isuzu": len(isuzu), "bmw": len(bmw)},
         "total": len(all_observations) + len(existing),
     }
     with open("audit/data-staging/summary.json", 'w') as f:

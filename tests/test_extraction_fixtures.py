@@ -209,9 +209,10 @@ def test_staging_counts_match_extractors():
     toyota_expected = len(collect_toyota())
     mazda_expected = len(collect_mazda())
     nissan_expected = len(collect_nissan())
-    from collect_multi_oem import collect_honda, collect_isuzu
+    from collect_multi_oem import collect_honda, collect_isuzu, collect_bmw
     honda_expected = len(collect_honda())
     isuzu_expected = len(collect_isuzu())
+    bmw_expected = len(collect_bmw())
 
     counts = {}
     with open(STAGING_FILE) as f:
@@ -232,6 +233,8 @@ def test_staging_counts_match_extractors():
         f"Honda staging count mismatch"
     assert counts.get('Isuzu Thailand Official', 0) == isuzu_expected, \
         f"Isuzu staging count mismatch"
+    assert counts.get('BMW Thailand Official', 0) == bmw_expected, \
+        f"BMW staging count mismatch"
 
 
 # ─── Honda Extraction Tests (from fixture) ───
@@ -470,3 +473,67 @@ def test_isuzu_evidence_contains_both():
         assert model in excerpt, f"Model '{model}' not in evidence: {excerpt[:60]}"
         assert price_str in excerpt.replace(',', ''), \
             f"Price {price_str} not in evidence: {excerpt[:60]}"
+
+
+# ─── BMW Extraction Tests (from fixture) ───
+
+def test_bmw_fixture_exists():
+    """BMW fixture must be committed and non-empty."""
+    path = f"{FIXTURE_DIR}/bmw_models_page.html"
+    assert os.path.exists(path), f"BMW fixture missing: {path}"
+    assert os.path.getsize(path) > 10000, f"BMW fixture too small: {os.path.getsize(path)}"
+
+
+def test_bmw_extraction_count():
+    """BMW extractor must produce >= 30 observations from fixture."""
+    from collect_multi_oem import collect_bmw
+    observations = collect_bmw()
+    assert len(observations) >= 30, f"Expected >= 30 BMW models, got {len(observations)}"
+
+
+def test_bmw_specific_models():
+    """Specific BMW models must extract with correct prices."""
+    from collect_multi_oem import collect_bmw
+    observations = collect_bmw()
+    models = {obs['identity']['model_raw']: obs for obs in observations}
+    
+    # iX should exist
+    has_ix = any('iX' in m for m in models)
+    assert has_ix, f"iX not found. Models: {list(models.keys())[:5]}"
+    
+    # 3 Series should exist
+    has_3series = any('ซีรีย์3' in m or '3' in m for m in models)
+    assert has_3series, f"3 Series not found"
+
+
+def test_bmw_model_level():
+    """BMW observations must be MODEL level."""
+    from collect_multi_oem import collect_bmw
+    observations = collect_bmw()
+    for obs in observations:
+        assert obs['identity']['identity_level'] == 'MODEL', \
+            f"identity_level should be MODEL"
+        assert obs['identity']['variant_raw'] is None, \
+            f"variant_raw should be None"
+
+
+def test_bmw_evidence_contains_both():
+    """Evidence excerpt must contain BOTH model name and price."""
+    from collect_multi_oem import collect_bmw
+    observations = collect_bmw()
+    for obs in observations:
+        excerpt = obs['evidence_excerpt']
+        price_str = str(obs['price']['value_thb'])
+        assert price_str in excerpt.replace(',', ''), \
+            f"Price {price_str} not in evidence: {excerpt[:60]}"
+
+
+def test_bmw_canonical_locator():
+    """BMW observations must have canonical_locator (DOM path)."""
+    from collect_multi_oem import collect_bmw
+    observations = collect_bmw()
+    for obs in observations:
+        assert 'canonical_locator' in obs['evidence_locator'], \
+            f"canonical_locator missing"
+        assert 'artifact_sha256' in obs['source'], \
+            f"artifact_sha256 missing"

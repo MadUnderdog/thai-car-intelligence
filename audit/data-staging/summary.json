@@ -1,15 +1,16 @@
 {
-  "generated_at": "2026-09-24T05:17:41.581774+00:00",
+  "generated_at": "2026-09-24T05:39:17.497662+00:00",
   "provenance": {
-    "fixture_based_extraction": 129,
-    "from_existing_structured_data": 0
+    "fixture_based_extraction": 164,
+    "note": "All rows are fixture-derived from committed HTML artifacts, not fresh/current market acquisition"
   },
   "by_source": {
-    "toyota": 99,
-    "mazda": 10,
-    "nissan": 10,
-    "honda": 4,
-    "isuzu": 6
+    "Toyota Thailand Official": 99,
+    "Mazda Thailand Official": 10,
+    "Nissan Thailand Official": 10,
+    "Honda Thailand Official": 4,
+    "Isuzu Thailand Official": 6,
+    "BMW Thailand Official": 35
   },
-  "total": 129
+  "total": 164
 }

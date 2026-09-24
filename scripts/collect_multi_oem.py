@@ -79,6 +79,27 @@ asyncio.run(main())
     return None, artifact_path
 
 
+
+
+def load_manifest():
+    """Load acquisition manifest with real capture timestamps."""
+    path = f"{FIXTURE_DIR}/acquisition_manifest.json"
+    if not os.path.exists(path):
+        return {}
+    with open(path) as f:
+        return json.load(f)
+
+
+def get_captured_at(artifact_path, manifest=None):
+    """Get captured_at from manifest, NOT from file mtime."""
+    if manifest is None:
+        manifest = load_manifest()
+    
+    filename = os.path.basename(artifact_path) if artifact_path else None
+    if filename and filename in manifest:
+        return manifest[filename].get('captured_at') or 'UNKNOWN'
+    return 'UNKNOWN'
+
 # ─── Toyota Adapter (JSON-LD) ───
 def collect_toyota():
     """Collect from Toyota — JSON-LD structured data from fixture."""
@@ -99,6 +120,14 @@ def collect_toyota():
         "https://www.toyota.co.th/en/pricelist",
         fixture_path
     )
+    
+    # Add captured_at from manifest
+    captured_at = get_captured_at(fixture_path)
+    artifact_hash = hashlib.sha256(open(fixture_path, 'rb').read()).hexdigest()
+    for obs in observations:
+        obs['source']['captured_at'] = captured_at
+        obs['source']['artifact_sha256'] = artifact_hash
+    
     print(f"  Extracted: {len(observations)} variants from fixture")
     return observations
 
@@ -156,6 +185,8 @@ def collect_mazda():
                 "immutable_revision": None,
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
+                "artifact_sha256": hashlib.sha256(open(artifact, 'rb').read()).hexdigest() if os.path.exists(artifact) else None,
+                "captured_at": get_captured_at(artifact),
             },
             "identity": {
                 "brand_raw": "Mazda",
@@ -256,6 +287,8 @@ def collect_nissan():
                 "immutable_revision": None,
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
+                "artifact_sha256": hashlib.sha256(open(artifact, 'rb').read()).hexdigest() if os.path.exists(artifact) else None,
+                "captured_at": get_captured_at(artifact),
             },
             "identity": {
                 "brand_raw": "Nissan",
@@ -367,7 +400,7 @@ def collect_isuzu():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
-                "captured_at": datetime.fromtimestamp(os.path.getmtime(artifact), tz=timezone.utc).isoformat() if os.path.exists(artifact) else "UNKNOWN",
+                "captured_at": get_captured_at(artifact),
             },
             "identity": {
                 "brand_raw": "Isuzu",
@@ -494,7 +527,7 @@ def collect_honda():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
-                "captured_at": datetime.fromtimestamp(os.path.getmtime(artifact), tz=timezone.utc).isoformat() if os.path.exists(artifact) else "UNKNOWN",
+                "captured_at": get_captured_at(artifact),
             },
             "identity": {
                 "brand_raw": "Honda",
@@ -615,7 +648,7 @@ def collect_bmw():
                 "extraction_method": "playwright_dom",
                 "artifact_path": artifact,
                 "artifact_sha256": artifact_hash,
-                "captured_at": datetime.fromtimestamp(os.path.getmtime(artifact), tz=timezone.utc).isoformat() if os.path.exists(artifact) else "UNKNOWN",
+                "captured_at": get_captured_at(artifact),
             },
             "identity": {
                 "brand_raw": "BMW",

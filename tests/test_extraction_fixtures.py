@@ -10,6 +10,7 @@ import sys
 import hashlib
 import subprocess
 import asyncio
+from datetime import datetime, timezone
 
 sys.path.insert(0, 'scripts')
 from collect_multi_oem import collect_toyota, collect_mazda, collect_nissan, load_fixture
@@ -683,3 +684,140 @@ asyncio.run(main())
     # M3 should be gone
     models = [r['model'] for r in mutated_results]
     assert 'Sedan M3' not in models, "M3 should be removed after price deletion"
+
+
+# ─── Manifest Provenance Tests ───
+
+def test_captured_at_uses_manifest_not_mtime():
+    """captured_at must come from acquisition manifest, NOT filesystem mtime."""
+    from collect_multi_oem import collect_bmw, collect_honda, load_manifest
+    import os
+    
+    manifest = load_manifest()
+    assert 'bmw_models_page.html' in manifest, "BMW not in manifest"
+    assert manifest['bmw_models_page.html']['captured_at'] is not None, \
+        "BMW captured_at should be set in manifest"
+    
+    # Get actual observations
+    bmw_obs = collect_bmw()
+    honda_obs = collect_honda()
+    
+    # BMW should use manifest timestamp, not mtime
+    bmw_captured = bmw_obs[0]['source']['captured_at']
+    assert bmw_captured == manifest['bmw_models_page.html']['captured_at'], \
+        f"BMW captured_at should match manifest, got {bmw_captured}"
+    
+    # Honda should use manifest timestamp
+    honda_captured = honda_obs[0]['source']['captured_at']
+    assert honda_captured == manifest['honda_city_page.html']['captured_at'], \
+        f"Honda captured_at should match manifest, got {honda_captured}"
+    
+    # Verify it's NOT the file mtime
+    bmw_path = 'tests/fixtures/oem-artifacts/bmw_models_page.html'
+    mtime_iso = datetime.fromtimestamp(os.path.getmtime(bmw_path), tz=timezone.utc).isoformat()
+    # Manifest timestamp should be different from mtime (or explicitly UNKNOWN)
+    assert bmw_captured != mtime_iso or bmw_captured == 'UNKNOWN', \
+        f"captured_at should not be derived from mtime"
+
+
+def test_unknown_capture_time_for_mazda_nissan():
+    """Fixtures without provenance must have UNKNOWN captured_at."""
+    from collect_multi_oem import collect_mazda, collect_nissan
+    
+    mazda_obs = collect_mazda()
+    nissan_obs = collect_nissan()
+    
+    # These have no provenance record
+    assert mazda_obs[0]['source']['captured_at'] == 'UNKNOWN', \
+        f"Mazda captured_at should be UNKNOWN, got {mazda_obs[0]['source']['captured_at']}"
+    assert nissan_obs[0]['source']['captured_at'] == 'UNKNOWN', \
+        f"Nissan captured_at should be UNKNOWN, got {nissan_obs[0]['source']['captured_at']}"
+
+
+# ─── BMW Canonical Locator Resolution Test ───
+
+def test_bmw_canonical_locator_resolves_to_exact_card():
+    """Each stored canonical_locator must resolve to exactly one card with model+price."""
+    from collect_multi_oem import collect_bmw, load_fixture
+    import asyncio
+    from playwright.async_api import async_playwright
+    
+    observations = collect_bmw()
+    html, _ = load_fixture("bmw_models")
+    
+    async def resolve_locators():
+        async with async_playwright() as p:
+            browser = await p.chromium.launch(headless=True)
+            page = await browser.new_page()
+            await page.set_content(html, timeout=60000, wait_until='domcontentloaded')
+            
+            # Get all card count
+            card_count = await page.evaluate("document.querySelectorAll('.cmp-allmodelscard__root').length")
+            
+            results = []
+            for obs in observations:
+                locator = obs['evidence_locator']['canonical_locator']
+                model = obs['identity']['model_raw']
+                price = obs['price']['value_thb']
+                
+                # Resolve locator (DOM path) and verify it contains model+price
+                try:
+                    resolved = await page.evaluate(f"""
+                        (() => {{
+                            // Parse DOM path like "div:nth-child(97) > div:nth-child(1) > ..."
+                            const pathStr = {repr(locator)};
+                            const parts = pathStr.split(' > ');
+                            let el = document.body;
+                            
+                            for (const part of parts) {{
+                                const parenIdx = part.indexOf(':nth-child(');
+                                if (parenIdx === -1) return {{found: false, error: 'bad part: ' + part}};
+                                const tag = part.substring(0, parenIdx);
+                                const idx = parseInt(part.substring(parenIdx + 11, part.length - 1));
+                                const children = Array.from(el.children);
+                                const child = children[idx - 1];
+                                if (!child || child.tagName.toLowerCase() !== tag) return {{found: false, error: 'no child: ' + part}};
+                                el = child;
+                            }}
+                            
+                            if (!el) return {{found: false}};
+                            const text = el.textContent.replace(/\s+/g, ' ');
+                            const modelNorm = {repr(model)}.replace(/\s+/g, ' ');
+                            const hasModel = text.includes(modelNorm);
+                            const hasPrice = text.replace(/,/g, '').includes({repr(str(price))});
+                            return {{found: true, hasModel, hasPrice, isCard: el.classList.contains('cmp-allmodelscard__root')}};
+                        }})()
+                    """)
+                    results.append({
+                        'found': resolved.get('found', False),
+                        'hasModel': resolved.get('hasModel', False),
+                        'hasPrice': resolved.get('hasPrice', False),
+                        'isCard': resolved.get('isCard', False)
+                    })
+                except:
+                    results.append({'found': False, 'hasModel': False, 'hasPrice': False, 'isCard': False})
+            
+            await browser.close()
+            return card_count, results
+    
+    card_count, results = asyncio.run(resolve_locators())
+    
+    # All locators should resolve
+    found_count = sum(1 for r in results if r['found'])
+    assert found_count == len(results), \
+        f"Only {found_count}/{len(results)} locators resolved"
+    
+    # All should be actual cards
+    card_count_resolved = sum(1 for r in results if r['isCard'])
+    assert card_count_resolved == len(results), \
+        f"Only {card_count_resolved}/{len(results)} resolved to .cmp-allmodelscard__root"
+    
+    # All should contain model
+    model_count = sum(1 for r in results if r['hasModel'])
+    assert model_count == len(results), \
+        f"Only {model_count}/{len(results)} contain model name"
+    
+    # All should contain price
+    price_count = sum(1 for r in results if r['hasPrice'])
+    assert price_count == len(results), \
+        f"Only {price_count}/{len(results)} contain price"

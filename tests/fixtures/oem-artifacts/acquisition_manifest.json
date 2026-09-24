@@ -1,0 +1,51 @@
+{
+  "toyota_page.html": {
+    "source_url": "https://www.toyota.co.th/en/pricelist",
+    "captured_at": "2026-09-23T04:21:13Z",
+    "acquisition_method": "playwright",
+    "session_context": "P82 real acquisition run",
+    "sha256": "c25bf262437aec7b61992000a9de5f85c6fbaca9144dde1f3cca017313c54632"
+  },
+  "mazda_page.html": {
+    "source_url": "https://www.mazda.co.th/en/vehicles",
+    "captured_at": null,
+    "acquisition_method": "playwright",
+    "session_context": "UNKNOWN - no provenance record",
+    "sha256": "cd8ca9667ce505a921252a80ee9647c39791866f549bf1005962b113a8f02968"
+  },
+  "nissan_page.html": {
+    "source_url": "https://www.nissan.co.th",
+    "captured_at": null,
+    "acquisition_method": "playwright",
+    "session_context": "UNKNOWN - no provenance record",
+    "sha256": "a6965511e184496cbfa84e73ba9ebc39e434eddd12a551991c2c86913970bea5"
+  },
+  "honda_city_page.html": {
+    "source_url": "https://www.honda.co.th/en/city",
+    "captured_at": "2026-09-23T14:00:00Z",
+    "acquisition_method": "playwright",
+    "session_context": "P86 Honda fetch",
+    "sha256": "8d11ebd4f720e679b209ba8ced3e9d20dcfa5fe671c1f3dd86206e5aa3b8df64"
+  },
+  "isuzu_page.html": {
+    "source_url": "https://www.isuzu-tis.com/",
+    "captured_at": "2026-09-24T05:10:00Z",
+    "acquisition_method": "playwright",
+    "session_context": "P88 Isuzu fetch",
+    "sha256": "e9d00350296d15205cbb1558b94a9d6a219161c81130c9e83afbcc3aa49703f6"
+  },
+  "bmw_models_page.html": {
+    "source_url": "https://www.bmw.co.th/th/all-models.html",
+    "captured_at": "2026-09-24T05:31:00Z",
+    "acquisition_method": "playwright",
+    "session_context": "P88 BMW fetch",
+    "sha256": "14df123658148a014f40c52f343ae7d23da088595cb3939e03c965ed3c3c5c45"
+  },
+  "bmw_page.html": {
+    "source_url": "https://www.bmw.co.th/th/home.html",
+    "captured_at": "2026-09-24T05:05:00Z",
+    "acquisition_method": "playwright",
+    "session_context": "P88 BMW homepage fetch",
+    "sha256": "56338407c63792cabc31bd612b18c9531709c2fa9175e76e0f65e219d6e59b67"
+  }
+}

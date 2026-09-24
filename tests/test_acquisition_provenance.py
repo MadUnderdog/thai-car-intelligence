@@ -419,3 +419,67 @@ def test_legacy_without_manifest_is_unknown(tmp_path):
     
     assert prov['captured_at'] == 'UNKNOWN'
     assert prov['provenance_state'] == 'LEGACY_UNVERIFIED'
+
+
+# ─── Credential Guard Tests (secret-scanning remediation) ───
+
+def test_writer_redacts_incidental_credentials(tmp_path):
+    """AcquisitionWriter must redact Google API keys BEFORE hashing/writing."""
+    fake_key = "AIza" + "0" * 35  # syntactically valid Google API key shape, fake value
+    content = f'<html><script>const cfg = {{"apiKey": "{fake_key}"}};</script></html>'
+
+    prov = AcquisitionWriter.write(
+        content=content,
+        source_url="https://example.com/leaky",
+        acquisition_method="playwright",
+        output_dir=str(tmp_path),
+        filename="leaky.html",
+        session_id="sec_test_001",
+        clock=lambda: "2026-01-15T12:00:00Z",
+    )
+
+    stored = open(tmp_path / "leaky.html", encoding="utf-8").read()
+    assert fake_key not in stored, "credential leaked into stored artifact"
+    assert "[REDACTED:google_api_key]" in stored
+    # sha256 binds the sanitized bytes actually on disk
+    import hashlib as _hl
+    assert prov["sha256"] == _hl.sha256(stored.encode("utf-8")).hexdigest()
+    # sanitization disclosed in sidecar
+    assert prov.get("sanitized") is True
+    assert prov["sanitizations"][0]["pattern"] == "google_api_key"
+    assert prov["sanitizations"][0]["count"] == 1
+    # fail-closed reader still accepts (hash consistent with stored file)
+    read_content, read_prov = AcquisitionReader.read(str(tmp_path / "leaky.html"))
+    assert fake_key not in read_content
+    assert read_prov["sha256"] == prov["sha256"]
+
+
+def test_fixture_tree_contains_no_credentials():
+    """Committed OEM fixtures must never contain credential material."""
+    import re as _re
+    patterns = [
+        _re.compile(r"AIza[0-9A-Za-z_-]{30,}"),
+        _re.compile(r"GOCSPX-[0-9A-Za-z_-]{30,}"),
+        _re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
+    ]
+    fixture_dir = os.path.join(os.path.dirname(__file__), "fixtures", "oem-artifacts")
+    offenders = []
+    for root, _dirs, files in os.walk(fixture_dir):
+        for name in files:
+            path = os.path.join(root, name)
+            try:
+                txt = open(path, encoding="utf-8", errors="ignore").read()
+            except Exception:
+                continue
+            for pat in patterns:
+                if pat.search(txt):
+                    offenders.append(f"{name}:{pat.pattern}")
+    assert not offenders, f"credential material in fixtures: {offenders}"
+
+
+def test_sanitize_credentials_function():
+    from thai_factory.acquisition.provenance import sanitize_credentials
+    fake_key = "AIza" + "1" * 35
+    content, notes = sanitize_credentials(f"key={fake_key}; GOCSPX-{'A'*40} end")
+    assert fake_key not in content and "GOCSPX-" not in content
+    assert [n["pattern"] for n in notes] == ["google_api_key", "google_oauth_token"]

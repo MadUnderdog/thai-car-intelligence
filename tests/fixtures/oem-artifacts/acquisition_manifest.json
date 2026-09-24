@@ -18,7 +18,12 @@
     "captured_at": null,
     "acquisition_method": "playwright",
     "session_context": "UNKNOWN - no provenance record",
-    "sha256": "a6965511e184496cbfa84e73ba9ebc39e434eddd12a551991c2c86913970bea5"
+    "sha256": "861be1b787856911b62438fcc9e21056a3543187bc6088a718dd087f9af76d69",
+    "post_capture_sanitization": {
+      "reason": "secret-scanning redaction of incidental third-party Google API key",
+      "sha256_before": "a6965511e184496cbfa84e73ba9ebc39e434eddd12a551991c2c86913970bea5",
+      "sha256_after": "861be1b787856911b62438fcc9e21056a3543187bc6088a718dd087f9af76d69"
+    }
   },
   "honda_city_page.html": {
     "source_url": "https://www.honda.co.th/en/city",

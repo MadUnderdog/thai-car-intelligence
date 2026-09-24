@@ -8,6 +8,7 @@ The reader verifies the hash binding before any extraction.
 """
 import json
 import hashlib
+import re
 import os
 from datetime import datetime, timezone
 from typing import Optional, Tuple, Callable
@@ -15,6 +16,31 @@ from typing import Optional, Tuple, Callable
 
 class ProvenanceError(Exception):
     """Raised when provenance verification fails (hash mismatch, missing sidecar)."""
+
+
+
+# ─── Credential guard: incidental secrets must never enter stored artifacts ───
+# Patterns mirror GitHub secret-scanning detectors for the credential classes we
+# have actually seen in captured OEM HTML (Google Maps/browser API keys), plus
+# generic high-risk material. Redaction happens BEFORE hashing so the sidecar
+# sha256 always binds the sanitized bytes actually written to disk.
+CREDENTIAL_PATTERNS = [
+    ("google_api_key", re.compile(r"AIza[0-9A-Za-z_-]{30,}")),
+    ("google_oauth_token", re.compile(r"GOCSPX-[0-9A-Za-z_-]{30,}")),
+    ("private_key_block", re.compile(
+        r"-----BEGIN [A-Z ]*PRIVATE KEY-----.*?-----END [A-Z ]*PRIVATE KEY-----",
+        re.DOTALL)),
+]
+
+
+def sanitize_credentials(content: str) -> tuple:
+    """Redact credential material. Returns (sanitized_content, notes[])."""
+    notes = []
+    for name, pattern in CREDENTIAL_PATTERNS:
+        content, n = pattern.subn(f"[REDACTED:{name}]", content)
+        if n:
+            notes.append({"pattern": name, "count": n})
+    return content, notes
 
 
 class AcquisitionWriter:
@@ -48,6 +74,10 @@ class AcquisitionWriter:
         Raises:
             ValueError if clock returns invalid time
         """
+        # Credential guard: redact before capture-time hashing so sha256 binds
+        # the sanitized bytes that are actually written to disk.
+        content, sanitizations = sanitize_credentials(content)
+
         # Capture time from runtime clock AT THIS MOMENT
         if clock is None:
             captured_at = datetime.now(timezone.utc).isoformat()
@@ -56,7 +86,7 @@ class AcquisitionWriter:
             if not isinstance(captured_at, str):
                 raise ValueError(f"clock must return ISO string, got {type(captured_at)}")
         
-        # Compute SHA-256 of content
+        # Compute SHA-256 of the (sanitized) content
         content_bytes = content.encode('utf-8')
         sha256 = hashlib.sha256(content_bytes).hexdigest()
         
@@ -77,6 +107,9 @@ class AcquisitionWriter:
             "artifact_filename": filename,
             "provenance_state": "ACQUISITION_VERIFIED",
         }
+        if sanitizations:
+            provenance["sanitized"] = True
+            provenance["sanitizations"] = sanitizations
         with open(sidecar_path, 'w', encoding='utf-8') as f:
             json.dump(provenance, f, indent=2, ensure_ascii=False)
         

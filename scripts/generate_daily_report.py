@@ -246,6 +246,17 @@ def main():
         except Exception:
             not_due.append(entry)
 
+    # a blocker re-checked during today's run WAS retried this cycle, even when
+    # its next window has already moved into the future (DEALER_REDIRECT,
+    # §94, is re-probed daily). Reported instead of asserted by hand.
+    retried = [{"brand": b.get("brand"),
+                "access_status": b.get("access_status"),
+                "checked_at": (b.get("blocker_evidence") or {}).get("checked_at"),
+                "outcome": (b.get("blocker_evidence") or {}).get("http_status_or_error")}
+               for b in brands
+               if str(((b.get("blocker_evidence") or {}).get("checked_at") or ""))
+               .startswith(now.date().isoformat())]
+
     report = {
         "report_id": f"daily-run-{datetime.date.today().isoformat()}{args.suffix}",
         "generated_at": now.isoformat(),
@@ -326,6 +337,7 @@ def main():
         "coverage_wave": coverage_wave,
         "tests": tests,
         "retry_windows": {"elapsed_now": due, "not_yet_due": not_due,
+                          "retried_this_cycle": retried,
                           "blocked_brand_count": len(blocked)},
         "not_touched": [
             "production database", "AI model/provider/config", "verifier (FROZEN)",
@@ -415,8 +427,11 @@ def main():
         f"changed/new files: {report['tests'].get('credential_scan_changed_or_new_files', 0)} hits",
         "",
         "## Retry windows",
-        f"- elapsed now: {len(due)} · not yet due: {len(not_due)} · blocked: {len(blocked)} "
-        f"(no retry was due this cycle, so no fallback was attempted)",
+        f"- retried this cycle: {len(retried)} · elapsed now: {len(due)} · "
+        f"not yet due: {len(not_due)} · blocked: {len(blocked)}",
+    ] + [
+        f"  - retried {d['brand']}: {d['access_status']} checked {d['checked_at']} — {d['outcome']}"
+        for d in retried
     ] + [
         f"  - {d['brand']}: {d['access_status']} — next retry {d['next_retry_at']}"
         for d in sorted(not_due, key=lambda d: d["next_retry_at"] or "")

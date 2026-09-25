@@ -2424,6 +2424,145 @@ def collect_gwm_prices():
     return observations
 
 
+# ─── Subaru Thailand (DOM — section.lineup lineup cards) ───
+# The registry's primary host www.subaru.co.th is NXDOMAIN (BLOCKED_DNS); this
+# adapter reads the official TC Subaru (Thailand) lineup page published on the
+# Subaru Asia property instead. One card holds the model name AND its
+# ราคาเริ่มต้น figure, so name+price always come from the same record.
+SUBARU_JS = r"""
+(() => {
+    const cssPath = (el) => {
+        const parts = [];
+        let node = el;
+        while (node && node.nodeType === 1 && node !== document.documentElement) {
+            let sel = node.tagName.toLowerCase();
+            const parent = node.parentElement;
+            if (parent) {
+                const sameTag = Array.prototype.filter.call(
+                    parent.children, (c) => c.tagName === node.tagName);
+                if (sameTag.length > 1) {
+                    sel += ':nth-of-type(' + (sameTag.indexOf(node) + 1) + ')';
+                }
+            }
+            parts.unshift(sel);
+            node = parent;
+        }
+        return parts.join(' > ');
+    };
+
+    const items = [];
+    const cards = document.querySelectorAll('section.lineup .lineup-list__item');
+    for (const card of cards) {
+        const nameEl = card.querySelector('.lineup-list__ttl');
+        const priceEl = card.querySelector('.lineup-list__price');
+        if (!nameEl || !priceEl) continue;
+
+        const priceText = priceEl.textContent.replace(/\s+/g, ' ').trim();
+        // ราคาเริ่มต้น (starting price) is the published marker; without it the
+        // figure is not typed as MSRP_STARTING, and this adapter stages nothing.
+        if (priceText.indexOf('ราคาเริ่มต้น') === -1) continue;
+
+        const m = priceText.match(/\d{1,3}(?:,\d{3})+|\d{4,}/);
+        if (!m) continue;
+        const price = parseInt(m[0].replace(/,/g, ''), 10);
+        if (!price || price < 100000 || price > 10000000) continue;
+
+        const model = nameEl.textContent.replace(/\s+/g, ' ').trim();
+        if (!model) continue;
+
+        items.push({
+            model: model,
+            price: price,
+            priceText: priceText,
+            marker: 'ราคาเริ่มต้น',
+            selector: 'section.lineup .lineup-list__item',
+            dom_path: cssPath(card),
+            evidence: card.textContent.replace(/\s+/g, ' ').trim().substring(0, 200)
+        });
+    }
+    return items;
+})()
+"""
+
+
+def collect_subaru():
+    """Collect Subaru Thailand lineup prices: model cards with ราคาเริ่มต้น."""
+    print("=== Subaru Thailand Official (DOM, lineup starting prices) ===")
+    artifact_file = f"{FIXTURE_DIR}/subaru_th_home_page.html"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
+        return []
+    with open(artifact_file) as f:
+        html = f.read()
+
+    results, artifact = extract_from_html(html, "subaru_th_home_page", SUBARU_JS,
+                                          fixture_path=artifact_file)
+    if not results:
+        print("  Extraction returned no results")
+        return []
+
+    artifact_hash = hashlib.sha256(open(artifact, 'rb').read()).hexdigest()
+    prov = get_fixture_provenance(artifact)
+
+    seen = set()
+    observations = []
+    for item in results:
+        key = f"{item['model']}:{item['price']}"
+        if key in seen:
+            continue
+        seen.add(key)
+
+        observations.append({
+            "observation_id": hashlib.sha256(
+                f"subaru:{item['model']}:{item['price']}:{item.get('dom_path', '')}".encode()
+            ).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": prov.get("source_url", "https://www.subaru.asia/th/th/"),
+                "name": "Subaru Thailand Official",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "playwright_dom",
+                "artifact_path": artifact,
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "brand_raw": "Subaru",
+                "model_raw": item['model'],
+                "variant_raw": None,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "brand_normalized": "subaru",
+                "model_normalized": item['model'].lower().replace(" ", "-"),
+                "variant_normalized": None,
+                "identity_level": "MODEL",
+            },
+            "price": {
+                "value_thb": item['price'],
+                "type": "MSRP_STARTING",
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {"price_text": item.get('priceText', ''),
+                           "price_marker": item.get('marker', '')},
+            "evidence_excerpt": item['evidence'],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "dom_path": item.get('dom_path'),
+                "selector": item.get('dom_path'),
+                "method": "dom_query",
+            },
+        })
+
+    print(f"  Extracted: {len(observations)} unique model/price pairs from subaru_th_home_page")
+    return observations
+
+
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
 
@@ -2485,6 +2624,9 @@ def main():
     gwm = collect_gwm_prices()
     all_observations.extend(gwm)
 
+    subaru = collect_subaru()
+    all_observations.extend(subaru)
+
     # Load existing Fipe/OpenEV
     existing = []
     prev_staging = "audit/data-staging/vehicle_observations_prev.jsonl"
@@ -2516,7 +2658,8 @@ def main():
     print(f"Land Rover price sheet (PDF): {len(landrover_sheet)}")
     print(f"Porsche RSC nodes: {len(porsche)}")
     print(f"GWM model price pages: {len(gwm)}")
-    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg) + len(mitsubishi) + len(suzuki) + len(mini) + len(deepal) + len(kia_promos) + len(changan_prices) + len(jaguar_sheet) + len(landrover_sheet) + len(porsche) + len(gwm)}")
+    print(f"Subaru lineup (starting prices): {len(subaru)}")
+    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg) + len(mitsubishi) + len(suzuki) + len(mini) + len(deepal) + len(kia_promos) + len(changan_prices) + len(jaguar_sheet) + len(landrover_sheet) + len(porsche) + len(gwm) + len(subaru)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 
     # Write staging
@@ -2525,7 +2668,7 @@ def main():
         for obs in all_observations + existing:
             f.write(json.dumps(obs) + '\n')
 
-    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg + mitsubishi + suzuki + mini + deepal + kia_promos + changan_prices + jaguar_sheet + landrover_sheet + porsche + gwm
+    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg + mitsubishi + suzuki + mini + deepal + kia_promos + changan_prices + jaguar_sheet + landrover_sheet + porsche + gwm + subaru
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "provenance": {
@@ -2536,7 +2679,7 @@ def main():
         },
         "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda),
                        "isuzu": len(isuzu), "bmw": len(bmw), "lexus": len(lexus),
-                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal), "kia_promos": len(kia_promos), "changan": len(changan_prices), "jaguar_sheet": len(jaguar_sheet), "landrover_sheet": len(landrover_sheet), "porsche": len(porsche), "gwm": len(gwm)},
+                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal), "kia_promos": len(kia_promos), "changan": len(changan_prices), "jaguar_sheet": len(jaguar_sheet), "landrover_sheet": len(landrover_sheet), "porsche": len(porsche), "gwm": len(gwm), "subaru": len(subaru)},
         "total": len(all_observations) + len(existing),
     }
     with open("audit/data-staging/summary.json", 'w') as f:

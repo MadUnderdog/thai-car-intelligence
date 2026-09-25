@@ -2546,3 +2546,140 @@ def test_honda_same_record_evidence_on_recapture():
         if var in other:
             assert other[var].replace(",", "") not in ev.replace(",", ""), \
                 f"{var} evidence carries a foreign price: {ev[:90]}"
+
+
+# ─── Subaru Thailand (subaru.asia/th/th — alternate host, TC Subaru (Thailand)) ───
+
+SUBARU_EXPECTED = {
+    "ALL NEW FORESTER": 2590000,
+    "CROSSTREK": 2350000,
+    "WRX WAGON": 2895200,
+    "WRX": 2875200,
+    "BRZ": 2483000,
+}
+
+
+def test_subaru_artifact_and_sidecar():
+    """The captured lineup page must ship with a capture-time sidecar bound to the bytes."""
+    path = f"{FIXTURE_DIR}/subaru_th_home_page.html"
+    assert os.path.exists(path), f"missing {path}"
+    assert os.path.getsize(path) > 10000, f"artifact too small: {os.path.getsize(path)}"
+    sc = json.load(open(path + ".prov.json"))
+    assert sc["provenance_state"] == "ACQUISITION_VERIFIED"
+    assert sc["captured_at"] != "UNKNOWN"
+    assert sc["source_url"] == "https://www.subaru.asia/th/th/"
+    assert sc["acquisition_method"] == "http_get"
+    import hashlib as _h
+    actual = _h.sha256(open(path, "rb").read()).hexdigest()
+    assert sc["sha256"] == actual, "sidecar sha256 does not bind the artifact bytes"
+
+
+def test_subaru_rows_from_sidecar_artifact():
+    """Every staged Subaru row: MODEL identity, MSRP_STARTING, same-card evidence."""
+    from collect_multi_oem import collect_subaru
+    obs = collect_subaru()
+    assert len(obs) == len(SUBARU_EXPECTED), f"expected 5 rows, got {len(obs)}"
+    seen = {}
+    for o in obs:
+        assert o["source"]["artifact_path"].endswith("subaru_th_home_page.html")
+        assert o["source"]["provenance_state"] == "ACQUISITION_VERIFIED"
+        assert o["source"]["url"] == "https://www.subaru.asia/th/th/"
+        assert o["identity"]["brand_normalized"] == "subaru"
+        # MODEL vs VARIANT strictness: the lineup publishes model-level starting
+        # prices only, so no trim may be invented by splitting
+        assert o["identity"]["identity_level"] == "MODEL"
+        assert o["identity"]["variant_raw"] is None
+        assert o["price"]["type"] == "MSRP_STARTING"
+        assert o["price"]["currentness"] == "UNKNOWN"
+        assert "ราคาเริ่มต้น" in o["evidence_excerpt"], "starting-price marker lost"
+        # same record: the model name AND its figure ride in one card excerpt
+        assert o["identity"]["model_raw"] in o["evidence_excerpt"]
+        assert f"{o['price']['value_thb']:,}" in o["evidence_excerpt"], (
+            f"price missing from its own card: {o['evidence_excerpt'][:120]}")
+        seen[o["identity"]["model_raw"]] = o["price"]["value_thb"]
+    assert seen == SUBARU_EXPECTED, f"model/price set drifted: {seen}"
+
+
+def test_subaru_artifact_proves_brand_and_market():
+    """The bytes themselves must prove brand = Subaru and market = Thailand
+    (sibling-brand separation): no Haval/GWM/Deepal claim may ride on this page."""
+    raw = open(f"{FIXTURE_DIR}/subaru_th_home_page.html", encoding="utf-8").read()
+    assert "TC Subaru (Thailand) Co.,Ltd." in raw, "Thai importer copyright missing"
+    assert "<title>Subaru Thailand" in raw, "Subaru Thailand title missing"
+    assert '<html lang="th">' in raw, "page is not the Thai-language market page"
+    for sibling in ("HAVAL", "GWM", "Deepal", "Changan"):
+        assert sibling not in raw, f"sibling brand {sibling} present in a Subaru artifact"
+
+
+def test_subaru_locator_resolves_to_same_record():
+    """Each document-absolute nth-of-type chain must land on ONE card carrying
+    that row's model name and figure."""
+    from playwright.async_api import async_playwright
+    from collect_multi_oem import collect_subaru
+    obs = collect_subaru()
+    html = open(obs[0]["evidence_locator"]["artifact_path"], encoding="utf-8").read()
+
+    WALK_JS = """(args) => {
+        const parts = args.selector.split(' > ');
+        let cur = document.body;
+        for (let i = (parts[0] === 'body' ? 1 : 0); i < parts.length; i++) {
+            const m = parts[i].match(/^([a-z0-9]+)(?::nth-of-type\((\d+)\))?$/);
+            if (!m) return {found: false, why: 'parse:' + parts[i]};
+            const tag = m[1];
+            const idx = m[2] ? parseInt(m[2], 10) : 1;
+            const same = Array.prototype.filter.call(
+                cur.children, (c) => c.tagName.toLowerCase() === tag);
+            const el = same[idx - 1];
+            if (!el) return {found: false, why: 'missing:' + parts[i]};
+            cur = el;
+        }
+        const t = (cur.textContent || '').replace(/\s+/g, ' ').trim();
+        return {found: true,
+                hasModel: t.includes(args.model),
+                hasPrice: t.includes(args.price)};
+    }"""
+
+    async def resolve():
+        out = []
+        async with async_playwright() as p:
+            b = await p.chromium.launch()
+            page = await b.new_page()
+            await page.set_content(html, wait_until="domcontentloaded")
+            for o in obs:
+                out.append(await page.evaluate(WALK_JS, {
+                    "selector": o["evidence_locator"]["dom_path"],
+                    "model": o["identity"]["model_raw"],
+                    "price": f"{o['price']['value_thb']:,}",
+                }))
+            await b.close()
+        return out
+
+    results = asyncio.run(resolve())
+    for o, r in zip(obs, results):
+        assert r.get("found"), f"chain did not resolve: {o['identity']['model_raw']} {r}"
+        assert r.get("hasModel"), f"model missing at locator: {o['identity']['model_raw']}"
+        assert r.get("hasPrice"), f"price missing at locator: {o['identity']['model_raw']}"
+
+
+def test_subaru_mutation_price_swap_detected(tmp_path, monkeypatch):
+    """Rewrite the figures inside the cards: the adapter must report the swap."""
+    import collect_multi_oem as cmo
+    from collect_multi_oem import collect_subaru
+
+    src = f"{cmo.FIXTURE_DIR}/subaru_th_home_page.html"
+    html = open(src, encoding="utf-8").read()
+    mutated = (html.replace("2,590,000", "__T__")
+                    .replace("2,350,000", "2,590,000")
+                    .replace("__T__", "2,350,000"))
+    assert mutated != html
+    tmp = str(tmp_path)
+    open(f"{tmp}/subaru_th_home_page.html", "w", encoding="utf-8").write(mutated)
+    # no sidecar is copied on purpose: the mutated bytes must not inherit the
+    # original capture-time hash — AcquisitionReader fails closed on a mismatch,
+    # which is the behaviour this repo requires
+    monkeypatch.setattr(cmo, "FIXTURE_DIR", tmp)
+
+    m = {o["identity"]["model_raw"]: o["price"]["value_thb"] for o in cmo.collect_subaru()}
+    assert m.get("ALL NEW FORESTER") == 2350000, "swap not detected on Forester"
+    assert m.get("CROSSTREK") == 2590000, "swap not detected on Crosstrek"
+    assert m.get("BRZ") == 2483000, "untouched row moved"

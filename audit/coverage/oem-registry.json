@@ -1,6 +1,6 @@
 {
   "schema": "oem-coverage-registry/1 — Blueprint.md §93",
-  "generated_at": "2026-09-25T07:53:14.580506+00:00",
+  "generated_at": "2026-09-25T14:16:39.761675+00:00",
   "probe_evidence": "audit/coverage/probe_20260924.json",
   "coverage_rule": "coverage_% = brands with provenance_status=ACQUISITION_VERIFIED AND adapter_status=PARSED_TESTED ÷ in_scope brands (§93). Attempt/captured/blocked counts are operational telemetry, never coverage.",
   "scope_candidates_unresolved": [
@@ -668,24 +668,52 @@
       "in_scope": true,
       "official_name": "Subaru Thailand",
       "source_urls": [
+        "https://www.subaru.asia/th/th/",
         "https://www.subaru.co.th/"
       ],
       "source_type": "OFFICIAL_SITE",
-      "access_status": "BLOCKED_DNS",
-      "acquisition_method": null,
-      "adapter_status": "NONE",
-      "provenance_status": "NONE",
-      "last_success_at": null,
-      "last_success_sha256": null,
-      "blocker_evidence": {
-        "checked_at": "2026-09-24T13:41:33.132436+00:00",
-        "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.subaru.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.subaru.co.th'",
-        "url": "https://www.subaru.co.th/"
+      "access_status": "REACHABLE",
+      "acquisition_method": "http_get",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-25T13:22:55.814644+00:00",
+      "last_success_sha256": "7626c14f97a7cc97a2bb4102290d5aa5256df0de8f714d4f270bcd235be36141",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-25T13:22:55.814644+00:00",
+        "http_status": 200,
+        "url": "https://www.subaru.asia/th/th/",
+        "bytes": 71052,
+        "title": "Subaru Thailand | Vehicles for Any Lifestyle"
       },
-      "probe_reachable_evidence": null,
       "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
-      "fallback_ladder": [],
-      "captured_endpoints": []
+      "fallback_ladder": [
+        {
+          "url": "https://www.subaru.co.th/",
+          "checked_at": "2026-09-24T13:41:33.132436+00:00",
+          "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.subaru.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.subaru.co.th'",
+          "result": "BLOCKED_DNS",
+          "cycle": "2026-09-24"
+        },
+        {
+          "url": "https://www.subaru.asia/th/th/",
+          "checked_at": "2026-09-25T13:22:55.814644+00:00",
+          "http_status_or_error": "HTTP_200 (host resolves; official TC Subaru (Thailand) lineup page, page lang=th, prices published in THB)",
+          "result": "REACHABLE",
+          "cycle": "2026-09-25-2",
+          "note": "alternate official route — parsed, see captured_endpoints"
+        }
+      ],
+      "captured_endpoints": [
+        {
+          "url": "https://www.subaru.asia/th/th/",
+          "artifact": "subaru_th_home_page.html",
+          "sha256": "7626c14f97a7cc97a2bb4102290d5aa5256df0de8f714d4f270bcd235be36141",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official TC Subaru (Thailand) lineup page on subaru.asia (registry primary www.subaru.co.th is NXDOMAIN): 5 MODEL rows, ราคาเริ่มต้น -> MSRP_STARTING, same-card locator via collect_subaru"
+        }
+      ]
     },
     {
       "brand": "Porsche",
@@ -1126,7 +1154,16 @@
       },
       "probe_reachable_evidence": null,
       "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
-      "fallback_ladder": [],
+      "fallback_ladder": [
+        {
+          "url": "https://www.chery-thailand.com/",
+          "checked_at": "2026-09-25T13:49:52.256002+00:00",
+          "http_status_or_error": "HTTP_200 (host resolves; page footer '© Copyright 2025 Chery(Thailand).All Right Reserved.'; 0 published price figures on / , /models/tiggo8 and /models/chery-q — raw and Chromium-rendered)",
+          "result": "NO_PRICE_EVIDENCE",
+          "cycle": "2026-09-25-2",
+          "note": "alternate official host discovered (primary www.chery.co.th still NXDOMAIN); probe-only, no artifact staged, no adapter — §93 ladder <=2 alternates/cycle reached"
+        }
+      ],
       "captured_endpoints": []
     },
     {
@@ -1289,8 +1326,8 @@
       "last_success_at": null,
       "last_success_sha256": null,
       "blocker_evidence": {
-        "checked_at": "2026-09-24T14:16:16.748942+00:00",
-        "http_status_or_error": "REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (security company, not smart cars) — fix URL target in registry",
+        "checked_at": "2026-09-25T14:16:39.761675+00:00",
+        "http_status_or_error": "REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (HTTP 200) — unchanged since 2026-09-24; body sha256 e99e6e9a09a9f52c…; URL-decision evidence in audit/coverage/smart-url-decision-20260925/",
         "url": "https://www.smart.co.th/"
       },
       "probe_reachable_evidence": {
@@ -1300,7 +1337,7 @@
         "bytes": 953384,
         "title": ""
       },
-      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "next_retry_at": "2026-09-26T14:16:39.761675+00:00",
       "fallback_ladder": [],
       "captured_endpoints": [
         {
@@ -1399,5 +1436,5 @@
       "fallback_ladder": []
     }
   ],
-  "cycle": "2026-09-25-1"
+  "cycle": "2026-09-25-2"
 }

@@ -1,18 +1,18 @@
 # OEM Coverage View
 
 > GENERATED from `audit/coverage/oem-registry.json` by `scripts/generate_coverage_view.py` — do not edit by hand.
-> Generated at: 2026-09-25T07:57:06.248478+00:00
+> Generated at: 2026-09-25T14:17:01.004115+00:00
 
 ## Coverage
 
 ```text
 coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
-         = 18 / 32 = 56.2%
+         = 19 / 32 = 59.4%
 ```
 
-- Verified + parsed-tested brands: Toyota, Honda, Nissan, Mazda, Mitsubishi, Isuzu, Suzuki, MG, BMW, Porsche, Lexus, Deepal, Changan, GWM, Jaguar, Land Rover, MINI, Kia
-- Currently reachable endpoints: 18 / 32
-- Blocked endpoints: 14 / 32
+- Verified + parsed-tested brands: Toyota, Honda, Nissan, Mazda, Mitsubishi, Isuzu, Suzuki, MG, BMW, Subaru, Porsche, Lexus, Deepal, Changan, GWM, Jaguar, Land Rover, MINI, Kia
+- Currently reachable endpoints: 19 / 32
+- Blocked endpoints: 13 / 32
 - Scope candidates unresolved: 2
 
 > Attempt, capture and blocked counts are **operational telemetry, never market coverage** (§93).
@@ -37,7 +37,7 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 | Audi | yes | ⛔ `BLOCKED_HTTP_403` | NONE | NONE | — | 2026-10-01 |
 | BMW | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Volvo | yes | ⛔ `BLOCKED_TLS` | NONE | NONE | — | 2026-10-24 |
-| Subaru | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
+| Subaru | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-25 | 2026-10-01 |
 | Porsche | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Lexus | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | NETA | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
@@ -50,7 +50,7 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 | Jaguar | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Land Rover | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | MINI | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
-| Smart | yes | ⚠️ `DEALER_REDIRECT` | NONE | NONE | — | 2026-09-25 |
+| Smart | yes | ⚠️ `DEALER_REDIRECT` | NONE | NONE | — | 2026-09-26 |
 | Kia | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Peugeot | yes | ⛔ `BLOCKED_HTTP_403` | NONE | NONE | — | 2026-10-01 |
 | Perodua | no | ❓ `UNKNOWN` | NONE | NONE | — | — |
@@ -66,12 +66,12 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
   - ladder: BLOCKED_HTTP_403 — probe=BLOCKED_TIMEOUT; acquisition attempt → HTTP_403 via Playwright (probe was BLOCKED_TIMEOUT — browser-level block) at <https://www.mercedes-benz.co.th/> (2026-09-24T14:16:16)
 - **Audi** `BLOCKED_HTTP_403` — HTTP_403 at <https://www.audi.co.th/> (checked 2026-09-24T13:41:32Z); retry 2026-10-01
 - **Volvo** `BLOCKED_TLS` — SSLError: HTTPSConnectionPool(host='www.volvo.co.th', port=443): Max retries exceeded with url: /en/models.html (Caused by SSLErro at <https://www.volvo.co.th/en/models.html> (checked 2026-09-24T13:41:32Z); retry 2026-10-24
-- **Subaru** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.subaru.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.subaru.co.th' at <https://www.subaru.co.th/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
 - **NETA** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.neta.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.neta.co.th', po at <https://www.neta.co.th/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
 - **Avance** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.avancemotors.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.avancemot at <https://www.avancemotors.com/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
 - **Haval** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.haval.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.haval.co.th',  at <https://www.haval.co.th/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
 - **Chery** `BLOCKED_DNS` — ConnectionError: HTTPSConnectionPool(host='www.chery.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.chery.co.th',  at <https://www.chery.co.th/> (checked 2026-09-24T13:41:33Z); retry 2026-10-01
-- **Smart** `DEALER_REDIRECT` — REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (security company, not smart cars) — fix URL target in registry at <https://www.smart.co.th/> (checked 2026-09-24T14:16:16Z); retry 2026-09-25
+  - ladder: NO_PRICE_EVIDENCE — HTTP_200 (host resolves; page footer '© Copyright 2025 Chery(Thailand).All Right Reserved.'; 0 published price figures on / , /models/tiggo8 and /models/chery-q — raw and Chromium-rendered) at <https://www.chery-thailand.com/> (2026-09-25T13:49:52)
+- **Smart** `DEALER_REDIRECT` — REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (HTTP 200) — unchanged since 2026-09-24; body sha256 e99e6e9a09a9f52c…; URL-decision evidence in audit/coverage/smart-url-decision-20260925/ at <https://www.smart.co.th/> (checked 2026-09-25T14:16:39Z); retry 2026-09-26
 - **Peugeot** `BLOCKED_HTTP_403` — HTTP_403 at <https://www.peugeot.co.th/> (checked 2026-09-24T13:41:35Z); retry 2026-10-01
 
 ## Scope candidates — unresolved
@@ -111,6 +111,8 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 - **BMW**
   - `bmw_models_page.html` ← https://www.bmw.co.th/en/all-models.html · LEGACY_UNVERIFIED · parsed · 14df12365814
   - `bmw_all_models_verified.html` ← https://www.bmw.co.th/en/all-models.html · ACQUISITION_VERIFIED · parsed · 6b88cd605511
+- **Subaru**
+  - `subaru_th_home_page.html` ← https://www.subaru.asia/th/th/ · ACQUISITION_VERIFIED · parsed · 7626c14f97a7
 - **Porsche**
   - `porsche_home_page.html` ← https://www.porsche.com/pap/_thailand_/ · ACQUISITION_VERIFIED · unparsed · e7a53c39351f
   - `porsche_macan_model_page.html` ← https://www.porsche.com/pap/_thailand_/models/macan/#modelRangeId=macan · ACQUISITION_VERIFIED · parsed · 7e0630709119

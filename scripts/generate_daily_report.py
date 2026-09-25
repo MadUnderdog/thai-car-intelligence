@@ -114,28 +114,41 @@ def main():
     media_html = [f for f in os.listdir(media_dir) if f.endswith(".html")] if os.path.isdir(media_dir) else []
     media_side = [f for f in os.listdir(media_dir) if f.endswith(".prov.json")] if os.path.isdir(media_dir) else []
 
-    # ── this cycle's coverage wave: GWM Thailand, newly parsed ──
-    gwm_rows = [r for r in official
-                if (r["source"].get("name") or "").startswith("GWM")]
-    gwm_arts = sorted(f for f in oem_html if f.startswith("gwm_th_model_"))
-    gwm_side = sorted(f for f in oem_side if f.startswith("gwm_th_model_"))
-    price_free = sorted(f for f in oem_html
-                        if f.startswith(("gwm_home_page", "gwm_models_page",
-                                         "gwm_data_models_page", "gwm_mall_home")))
-    rej_files = sorted(glob.glob(os.path.join(REPO, "audit", "coverage",
-                                              "gwm_price_candidates_*.json")))
+    # ── this cycle's coverage wave: the most recently promoted verified brand,
+    # recomputed from the registry + staging (never carried over by hand) ──
+    verified = [b for b in brands
+                if b.get("in_scope")
+                and b.get("provenance_status") == "ACQUISITION_VERIFIED"
+                and b.get("adapter_status") == "PARSED_TESTED"]
+    wave_brand = max((b for b in verified if b.get("last_success_at")),
+                     key=lambda b: b["last_success_at"], default=None)
+    wave_name = (wave_brand or {}).get("brand") or ""
+    wave_rows = [r for r in official
+                 if (r["source"].get("name") or "").startswith(wave_name)]
+    endpoints = (wave_brand or {}).get("captured_endpoints") or []
+    wave_arts = sorted({e["artifact"] for e in endpoints if e.get("artifact")})
+    wave_side = sorted(a for a in wave_arts
+                       if os.path.exists(os.path.join(oem_dir, a + ".prov.json")))
+    price_free = sorted({e["artifact"] for e in endpoints
+                         if e.get("artifact") and not e.get("parsed")})
+    promoted = next((e for e in sorted(endpoints,
+                                       key=lambda e: bool(e.get("parsed")), reverse=True)
+                     if e.get("parsed")), {})
+    rej_files = sorted(glob.glob(os.path.join(
+        REPO, "audit", "coverage", f"{wave_name.lower()}_*candidates*.json")))
     rejected = load(rej_files[-1]).get("rejected_candidates", []) if rej_files else []
     coverage_wave = {
-        "brand": "GWM",
-        "source": "www.gwm.co.th — sitemap index -> server-rendered /th/models/<slug>",
+        "brand": wave_name,
+        "source": promoted.get("url")
+                  or ((wave_brand or {}).get("source_urls") or ["—"])[0],
         "newly_covered": True,
-        "artifacts": len(gwm_arts),
-        "sidecars": len(gwm_side),
-        "rows_staged": len(gwm_rows),
+        "artifacts": len(wave_arts),
+        "sidecars": len(wave_side),
+        "rows_staged": len(wave_rows),
         "identity": dict(collections.Counter(
-            r["identity"].get("identity_level") for r in gwm_rows)),
+            r["identity"].get("identity_level") for r in wave_rows)),
         "price_type": dict(collections.Counter(
-            r["price"].get("type") for r in gwm_rows)),
+            r["price"].get("type") for r in wave_rows)),
         "rejected_candidates": len(rejected),
         "rejected_reasons": dict(collections.Counter(
             c.get("reason") for c in rejected)),
@@ -344,12 +357,18 @@ def main():
         " / ".join(f"{k} {v}" for k, v in sorted(cw["identity"].items())),
         "- price types: " +
         ", ".join(f"{k} {v}" for k, v in sorted(cw["price_type"].items())),
-        f"- rejected {cw['rejected_candidates']} published figures, never staged: " +
-        "; ".join(f"{n}x {reason}" for reason, n in sorted(cw["rejected_reasons"].items())) +
-        f" (values: {', '.join(str(v) for v in cw['rejected_values_thb'])})",
-        f"- candidates log: {cw['candidates_log']}",
-        "- price-free GWM artifacts staged nothing: " +
-        ", ".join(cw["price_free_artifacts_staging_nothing"]),
+        f"- rejected {cw['rejected_candidates']} published figures, never staged" +
+        (": " + "; ".join(f"{n}x {reason}"
+                          for reason, n in sorted(cw["rejected_reasons"].items())) +
+         f" (values: {', '.join(str(v) for v in cw['rejected_values_thb'])})"
+         if cw["rejected_candidates"] else ""),
+    ] + (
+        [f"- candidates log: {cw['candidates_log']}"] if cw.get("candidates_log") else []
+    ) + (
+        ["- captured endpoints staged nothing (no parser yet): " +
+         ", ".join(cw["price_free_artifacts_staging_nothing"])]
+        if cw.get("price_free_artifacts_staging_nothing") else []
+    ) + [
         "",
         "## Locator integrity",
         f"- before: {li['before']['total']} ambiguous rows "

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-25T07:50:35.077038+00:00",
+  "generated_at": "2026-09-25T13:30:55.735771+00:00",
   "provenance": {
-    "fixture_based_extraction": 324,
-    "acquisition_verified": 324,
+    "fixture_based_extraction": 329,
+    "acquisition_verified": 329,
     "legacy_unverified": 0,
     "from_existing_structured_data": 0
   },
@@ -25,7 +25,8 @@
     "jaguar_sheet": 1,
     "landrover_sheet": 11,
     "porsche": 72,
-    "gwm": 29
+    "gwm": 29,
+    "subaru": 5
   },
-  "total": 324
+  "total": 329
 }

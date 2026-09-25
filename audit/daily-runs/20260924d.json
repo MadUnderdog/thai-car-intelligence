@@ -1,6 +1,8 @@
 {
-  "cycle": "P97 — horizontal acquisition: >50% coverage push",
-  "generated_at": "2026-09-24T19:19:28+00:00",
+  "cycle": "P97+ registry evidence/integrity repair",
+  "generated_at": "2026-09-25T03:20:03.243596+00:00",
+  "baseline_commit": "4e31cc6e0db8381d773ae668b4cce942b15c61a4",
+  "defect_sha_inspected": "aa291068875dc35570ac9396ca2be091cf6fc048",
   "coverage": {
     "parsed": 17,
     "in_scope": 32,
@@ -25,57 +27,32 @@
       "Toyota"
     ],
     "previous": {
-      "parsed": 14,
-      "percent": 43.8
+      "parsed": 17,
+      "percent": 53.1
     }
   },
-  "conversions": [
-    {
-      "brand": "Toyota",
-      "from": "LEGACY_UNVERIFIED",
-      "to": "ACQUISITION_VERIFIED",
-      "evidence": "toyota_pricelist_page.html + sidecar; same manifest URL recapture; content identical to legacy (99 VARIANT rows, 0 differences)",
-      "rows": 99
-    },
-    {
-      "brand": "Isuzu",
-      "from": "LEGACY_UNVERIFIED",
-      "to": "ACQUISITION_VERIFIED",
-      "evidence": "isuzu_tis_page.html + sidecar; 6 lineup figures, img-alt model binding; fixed body-style-as-model defect ('4 DOORS'/'2 DOORS')",
-      "rows": 6
-    },
-    {
-      "brand": "Porsche",
-      "from": "NONE",
-      "to": "PARSED_TESTED+ACQUISITION_VERIFIED",
-      "evidence": "porsche_macan_model_page.html + sidecar; RSC flight data: modelRange+modelYear+price.value from ONE node; 74 pairs − 2 ambiguous Macan GTS = 72 nodes",
-      "rows": 72
-    }
-  ],
-  "retry_and_fallback": {
-    "run_time_utc": "2026-09-24T19:19:28+00:00",
-    "next_retry_at_earliest": "2026-09-25T13:41:49+00:00",
-    "result": "no next_retry_at had elapsed at run time — blocked cohort untouched (no probes to 403/DNS/TLS hosts)",
-    "reachable_alternates_this_cycle": [
-      "Toyota /en/pricelist recapture (verified)",
-      "Isuzu isuzu-tis.com recapture (verified)",
-      "Porsche official model page (verified)",
-      "GWM alternate 1 /en/gwm-data-car-models → redirect home, 0 prices",
-      "GWM alternate 2 mall.gwm.co.th → SPA shell, 0 SSR prices (2/2 alternates used, moved on)"
+  "registry_invariants": {
+    "verified_parsed_brands": 17,
+    "all_last_success_sha_match_promoted_artifact": true,
+    "no_legacy_last_success_target": true,
+    "last_success_at_at_or_after_capture": true,
+    "generated_at_ge_all_last_success_at": true,
+    "generated_at": "2026-09-25T03:09:14.147213+00:00",
+    "max_last_success_at": "2026-09-24T18:57:17.345495+00:00",
+    "regression_test": "tests/test_registry_invariants.py — 7 tests; clean=7 pass, mutated(legacy sha + null sha + stale generated_at)=3 fail, restored=7 pass",
+    "repaired": [
+      "Toyota.last_success_sha256 c25bf262… (LEGACY toyota_page.html) -> 5d0ba584bcc369b7… (toyota_pricelist_page.html)",
+      "Isuzu.last_success_sha256 e9d00350… (LEGACY isuzu_page.html) -> 313163cf3f44b691… (isuzu_tis_page.html)",
+      "Porsche.last_success_sha256 None -> 7e0630709119b244… (porsche_macan_model_page.html)",
+      "generated_at 2026-09-24T18:11:58Z -> 2026-09-25T03:09:14.147213+00:00 (>= max last_success_at)"
     ],
-    "smart": "not due (next_retry_at 2026-09-25T14:16Z); dealer-redirect target unresolved, no hammer"
+    "rebuild_method": "derived from disk artifacts + .prov.json sidecars (sha256 recomputed, captured_at re-read); endpoint sha256 re-verified against disk for all 33 brands; atomic temp-file replace — no string patching"
   },
   "artifacts": {
     "html": 42,
     "sidecars": 36,
     "pdf_b64": 2,
-    "new_this_cycle": [
-      "toyota_pricelist_page.html",
-      "isuzu_tis_page.html",
-      "porsche_macan_model_page.html",
-      "gwm_data_models_page.html",
-      "gwm_mall_home.html"
-    ]
+    "new_this_cycle": []
   },
   "rows": {
     "total": 295,
@@ -93,35 +70,151 @@
       "LEGACY_UNVERIFIED": 4
     }
   },
+  "rejected_or_ambiguous_rows": [
+    {
+      "brand": "Porsche",
+      "nodes": 2,
+      "names": [
+        "Macan GTS"
+      ],
+      "reason": "two distinct THB values (7,290,000 / 7,390,000) for the same published name with no modelYear disambiguation in the RSC node → dropped fail-closed, no row staged"
+    }
+  ],
   "tests": {
-    "total": 205,
-    "passed": 205,
+    "total": 212,
+    "passed": 212,
     "failed": 0,
     "extraction": 131,
     "acquisition": 20,
     "taxonomy": 44,
     "gold": 10,
-    "duration_s": 407.48
+    "registry_invariants": 7,
+    "duration_s": 397.03
+  },
+  "toolchain": {
+    "prisma_validate": "PASS rc=0 (pre-existing schema warning: onDelete SetNull on required ref)",
+    "tsc_noEmit": "PASS rc=0",
+    "next_build": "PASS rc=0 (Next.js 16.3.2, 10/10 static pages)"
   },
   "security": {
-    "new_artifacts_credential_scan": 0,
+    "changed_files_credential_scan": 0,
     "staged_diff_scan": "pending-commit",
-    "github_secret_scanning": "UNVERIFIED (401 unauthenticated)",
+    "github_secret_scanning": "UNVERIFIED (401 unauthenticated — no closure claimed)",
     "owner_rotation": "EXTERNAL — not performed"
   },
   "compliance": {
-    "skills_ops_this_cycle": 0,
-    "session_states_on_disk": 0,
+    "skills_restored": {
+      "data-engineering/source-backed-data-ingestion/SKILL.md": "9d39c8eb3dfc1009fc94579f692252f17838523f2f86ca0882c5e6eb0944d35c",
+      "references/browser-extraction-and-field-provenance.md": "625a2b733c7a1c187319225332463b4a7c7491a4d28f68b0fd9709da8aef22e1"
+    },
+    "expected_pre_task_sha": {
+      "SKILL.md": "9d39c8eb3dfc1009fc94579f692252f17838523f2f86ca0882c5e6eb0944d35c",
+      "browser-extraction-and-field-provenance.md": "625a2b733c7a1c187319225332463b4a7c7491a4d28f68b0fd9709da8aef22e1"
+    },
+    "state_files_on_disk": 0,
     "production_db": "untouched",
     "verifier": "FROZEN",
     "pr3": "OPEN/unmerged"
   },
+  "blocked_and_retry": [
+    {
+      "brand": "Smart",
+      "access_status": "DEALER_REDIRECT",
+      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "evidence": "REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (security company, not smart cars) — fix URL target in registry"
+    },
+    {
+      "brand": "Audi",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "evidence": "HTTP_403"
+    },
+    {
+      "brand": "Avance",
+      "access_status": "BLOCKED_DNS",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "evidence": "ConnectionError: HTTPSConnectionPool(host='www.avancemotors.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.avancemot"
+    },
+    {
+      "brand": "Chery",
+      "access_status": "BLOCKED_DNS",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "evidence": "ConnectionError: HTTPSConnectionPool(host='www.chery.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.chery.co.th', "
+    },
+    {
+      "brand": "Ford",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "evidence": "HTTP_403"
+    },
+    {
+      "brand": "Haval",
+      "access_status": "BLOCKED_DNS",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "evidence": "ConnectionError: HTTPSConnectionPool(host='www.haval.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.haval.co.th', "
+    },
+    {
+      "brand": "NETA",
+      "access_status": "BLOCKED_DNS",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "evidence": "ConnectionError: HTTPSConnectionPool(host='www.neta.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.neta.co.th', po"
+    },
+    {
+      "brand": "Peugeot",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "evidence": "HTTP_403"
+    },
+    {
+      "brand": "Subaru",
+      "access_status": "BLOCKED_DNS",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "evidence": "ConnectionError: HTTPSConnectionPool(host='www.subaru.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.subaru.co.th'"
+    },
+    {
+      "brand": "Tesla",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "evidence": "HTTP_403"
+    },
+    {
+      "brand": "Chevrolet",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+      "evidence": "HTTP_403 via Playwright (requests GET earlier returned 200 — browser-level block)"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+      "evidence": "HTTP_403 via Playwright (probe was BLOCKED_TIMEOUT — browser-level block)"
+    },
+    {
+      "brand": "BYD",
+      "access_status": "BLOCKED_HTTP_404",
+      "next_retry_at": "2026-10-08T13:41:49.738574+00:00",
+      "evidence": "HTTP_404"
+    },
+    {
+      "brand": "Volvo",
+      "access_status": "BLOCKED_TLS",
+      "next_retry_at": "2026-10-24T13:41:49.738574+00:00",
+      "evidence": "SSLError: HTTPSConnectionPool(host='www.volvo.co.th', port=443): Max retries exceeded with url: /en/models.html (Caused by SSLErro"
+    },
+    {
+      "brand": "Perodua",
+      "access_status": "UNKNOWN",
+      "next_retry_at": null,
+      "evidence": null
+    }
+  ],
   "blockers": [
     "4 LEGACY_UNVERIFIED rows remain (Honda City source lacks sidecar — recapture pending)",
     "GWM official site publishes no SSR prices (home/models/data-endpoint/mall all price-free)",
-    "Macan GTS ambiguity: two THB values, no year disambiguation → 2 nodes dropped fail-closed",
-    "14 blocked OEMs: next retry windows 2026-10-01/08/24 — not reached this cycle",
-    "Smart wrong-target: official Smart EV Thailand URL not yet identified",
-    "pre-existing test_generation_config_boundary.py import error untouched"
+    "Macan GTS ambiguity: 2 THB values, no year disambiguation → 2 nodes dropped fail-closed",
+    "14 blocked OEMs: next_retry_at 2026-10-01 / 10-08 / 10-24 — none reached at run time",
+    "Smart wrong-target: next_retry_at 2026-09-25T14:16Z — not yet reached",
+    "pre-existing test_generation_config_boundary.py import error untouched (separated, unrelated)",
+    "pre-existing prisma schema warning onDelete:SetNull on required ref (unrelated, warning only)"
   ]
 }

@@ -1,7 +1,7 @@
 # OEM Coverage View
 
 > GENERATED from `audit/coverage/oem-registry.json` by `scripts/generate_coverage_view.py` — do not edit by hand.
-> Generated at: 2026-09-24T19:11:53.907972+00:00
+> Generated at: 2026-09-25T03:10:31.636575+00:00
 
 ## Coverage
 

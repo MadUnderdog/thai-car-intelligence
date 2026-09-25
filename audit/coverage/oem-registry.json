@@ -1,6 +1,6 @@
 {
   "schema": "oem-coverage-registry/1 — Blueprint.md §93",
-  "generated_at": "2026-09-24T18:11:58.910683+00:00",
+  "generated_at": "2026-09-25T03:09:14.147213+00:00",
   "probe_evidence": "audit/coverage/probe_20260924.json",
   "coverage_rule": "coverage_% = brands with provenance_status=ACQUISITION_VERIFIED AND adapter_status=PARSED_TESTED ÷ in_scope brands (§93). Attempt/captured/blocked counts are operational telemetry, never coverage.",
   "scope_candidates_unresolved": [
@@ -32,7 +32,7 @@
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
       "last_success_at": "2026-09-24T18:57:17.345495+00:00",
-      "last_success_sha256": "c25bf262437aec7b61992000a9de5f85c6fbaca9144dde1f3cca017313c54632",
+      "last_success_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:31.558735+00:00",
@@ -275,7 +275,7 @@
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
       "last_success_at": "2026-09-24T18:55:02.764941+00:00",
-      "last_success_sha256": "e9d00350296d15205cbb1558b94a9d6a219161c81130c9e83afbcc3aa49703f6",
+      "last_success_sha256": "313163cf3f44b691a8a22eacf8710a26cfb487fe557ee7f61d916bdff045c083",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:31.560775+00:00",
@@ -693,7 +693,7 @@
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
       "last_success_at": "2026-09-24T18:55:11.625114+00:00",
-      "last_success_sha256": null,
+      "last_success_sha256": "7e0630709119b244bb69f100d3e591afd410158bf7be0f9560598793db1fd727",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:33.183384+00:00",

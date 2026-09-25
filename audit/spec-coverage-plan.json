@@ -25,7 +25,11 @@
             "displacement": 14,
             "fuel_consumption": 73
           },
-          "marker_total": 312
+          "marker_total": 312,
+          "structure": "structured_field",
+          "structured_fields": 657,
+          "spec_blocks": 0,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/mazda_home_page.html",
@@ -37,7 +41,11 @@
             "displacement": 65,
             "fuel_consumption": 20
           },
-          "marker_total": 105
+          "marker_total": 105,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 144,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/porsche_macan_model_page.html",
@@ -49,7 +57,11 @@
             "displacement": 0,
             "fuel_consumption": 0
           },
-          "marker_total": 83
+          "marker_total": 83,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 38,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_sahar.html",
@@ -61,7 +73,11 @@
             "displacement": 1,
             "fuel_consumption": 0
           },
-          "marker_total": 8
+          "marker_total": 8,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_ora-5-ev.html",
@@ -73,7 +89,11 @@
             "displacement": 1,
             "fuel_consumption": 0
           },
-          "marker_total": 7
+          "marker_total": 7,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_ora-5-hev.html",
@@ -85,7 +105,11 @@
             "displacement": 2,
             "fuel_consumption": 0
           },
-          "marker_total": 6
+          "marker_total": 6,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500.html",
@@ -97,7 +121,11 @@
             "displacement": 1,
             "fuel_consumption": 0
           },
-          "marker_total": 6
+          "marker_total": 6,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500-diesel.html",
@@ -109,7 +137,11 @@
             "displacement": 2,
             "fuel_consumption": 0
           },
-          "marker_total": 5
+          "marker_total": 5,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-300.html",
@@ -121,7 +153,11 @@
             "displacement": 1,
             "fuel_consumption": 0
           },
-          "marker_total": 3
+          "marker_total": 3,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/jaguar_range_page.html",
@@ -133,7 +169,11 @@
             "displacement": 0,
             "fuel_consumption": 0
           },
-          "marker_total": 3
+          "marker_total": 3,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/changan_home_page.html",
@@ -145,7 +185,11 @@
             "displacement": 0,
             "fuel_consumption": 0
           },
-          "marker_total": 2
+          "marker_total": 2,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 5,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/changan_nevo_q05_page.html",
@@ -157,7 +201,11 @@
             "displacement": 0,
             "fuel_consumption": 0
           },
-          "marker_total": 2
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_data_models_page.html",
@@ -169,7 +217,11 @@
             "displacement": 0,
             "fuel_consumption": 0
           },
-          "marker_total": 2
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_home_page.html",
@@ -181,7 +233,11 @@
             "displacement": 0,
             "fuel_consumption": 0
           },
-          "marker_total": 2
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_sahar-diesel.html",
@@ -193,7 +249,11 @@
             "displacement": 1,
             "fuel_consumption": 0
           },
-          "marker_total": 2
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500-3t-diesel.html",
@@ -205,7 +265,11 @@
             "displacement": 0,
             "fuel_consumption": 1
           },
-          "marker_total": 2
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_wey-g9.html",
@@ -217,7 +281,11 @@
             "displacement": 0,
             "fuel_consumption": 0
           },
-          "marker_total": 2
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/mitsubishi_home_page.html",
@@ -229,7 +297,11 @@
             "displacement": 0,
             "fuel_consumption": 2
           },
-          "marker_total": 2
+          "marker_total": 2,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 5,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/mini_home_page.html",
@@ -241,7 +313,11 @@
             "displacement": 0,
             "fuel_consumption": 1
           },
-          "marker_total": 1
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         }
       ],
       "why_highest_value": "the figures exist in artifacts we already hold, so cost is extraction + tests only, and provenance is already sidecar-backed"
@@ -360,12 +436,6 @@
           "#technical-data-XABDC1",
           "#technical-data-XABDE1",
           "#technical-data-XABFD1"
-        ],
-        "tests/fixtures/oem-artifacts/smart_home_page.html": [
-          "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22b976560c-3122-4351-878f-453f337b7245%22%3A%221358%22%2C%22b278a256-2757-4f19-9313-c05c783bec92%22%3A%222377%22%7D&amp;beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNestedLoginSocialBarMenuItems%2C.UseNewLoginBarDropdownMenuAlignment%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.a11yContrast%2C.addIdAsClassName%2C.allowWebpAvifTransforms%2C.builderBoxSizingBorderBox%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dom_store%2C.dontApplyDacOverridesOnBoBApps%2C.dynamicPageLinkTarget%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.fixDocumentLinkInPremiumPreview%2C.fixFirefoxLinkBarIntrinsicSizing%2C.fixRemappedFullNameCompType%2C.imageEncodingAVIF%2C.interactionsUseReactionEffectId%2C.isClassNameToRootEnabled%2C.logVsmFeaturesModuleDiff%2C.motionTimeAnimationsCSS%2C.resolveManifestInTB%2C.responsiveContainerRoleGroup%2C.sectionA11yProps%2C.shouldUseResponsiveImages%2C.splitSlotSelectors%2C.stopResolvingInnerSelectors_VAG%2C.svgResolver_2%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useFragmentHrefForTopBottomAnchor%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps%2C.useWowImageInFastGallery%2C.vsmFeaturesModule%2C.vsm_interactions_v1&amp;blocksBuilderManifestGeneratorVersion=1.129.0&amp;commonConfig=%7B%22siteRevision%22%3A%224%22%2C%22branchId%22%3A%22fc987cea-8b94-4537-aa28-46ec063396cb%22%7D&amp;contentType=application%2Fjson&amp;deviceType=Desktop&amp;dfCk=6&amp;dfVersion=1.5593.0&amp;disableStaticPagesUrlHierarchy=false&amp;editorName=Unknown&amp;experiments=dm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&amp;externalBaseUrl=https%3A%2F%2Fwww.smartsecurity.in.th&amp;fileId=973ee3de.bundle.min&amp;formFactor=desktop&amp;hasTPAWorkerOnSite=false&amp;hasUserDomainMedia=false&amp;isBuilderComponentModel=false&amp;isHttps=true&amp;isInSeo=false&amp;isMultilingualEnabled=false&amp;isPremiumDomain=true&amp;isTrackClicksAnalyticsEnabled=false&amp;isUrlMigrated=true&amp;isWixCodeOnPage=false&amp;isWixCodeOnSite=false&amp;language=en&amp;languageResolutionMethod=QueryParam&amp;metaSiteId=3fff584d-bf1b-4df3-99a3-f0ab72202c10&amp;module=thunderbolt-features&amp;originalLanguage=en&amp;pageId=da92a3_8f5825ade9a92abd31a82e3290f58214_2.json&amp;pilerExperiments=specs.piler.useEditorReactComponents&amp;quickActionsMenuEnabled=false&amp;registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%5D&amp;remoteWidgetStructureBuilderVersion=1.251.0&amp;siteId=9693686c-e198-4368-b939-1093c9f92587&amp;siteRevision=4&amp;staticHTMLComponentUrl=https%3A%2F%2Fwww-smartsecurity-in-th.filesusr.com%2F&amp;useSandboxInHTMLComp=false&amp;viewMode=desktop",
-          "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22b976560c-3122-4351-878f-453f337b7245%22%3A%221358%22%2C%22b278a256-2757-4f19-9313-c05c783bec92%22%3A%222377%22%7D&amp;beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNestedLoginSocialBarMenuItems%2C.UseNewLoginBarDropdownMenuAlignment%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.a11yContrast%2C.addIdAsClassName%2C.allowWebpAvifTransforms%2C.builderBoxSizingBorderBox%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dom_store%2C.dontApplyDacOverridesOnBoBApps%2C.dynamicPageLinkTarget%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.fixDocumentLinkInPremiumPreview%2C.fixFirefoxLinkBarIntrinsicSizing%2C.fixRemappedFullNameCompType%2C.imageEncodingAVIF%2C.interactionsUseReactionEffectId%2C.isClassNameToRootEnabled%2C.logVsmFeaturesModuleDiff%2C.motionTimeAnimationsCSS%2C.resolveManifestInTB%2C.responsiveContainerRoleGroup%2C.sectionA11yProps%2C.shouldUseResponsiveImages%2C.splitSlotSelectors%2C.stopResolvingInnerSelectors_VAG%2C.svgResolver_2%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useFragmentHrefForTopBottomAnchor%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps%2C.useWowImageInFastGallery%2C.vsmFeaturesModule%2C.vsm_interactions_v1&amp;blocksBuilderManifestGeneratorVersion=1.129.0&amp;commonConfig=%7B%22siteRevision%22%3A%224%22%2C%22branchId%22%3A%22fc987cea-8b94-4537-aa28-46ec063396cb%22%7D&amp;contentType=application%2Fjson&amp;deviceType=Desktop&amp;dfCk=6&amp;dfVersion=1.5593.0&amp;disableStaticPagesUrlHierarchy=false&amp;editorName=Unknown&amp;experiments=dm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&amp;externalBaseUrl=https%3A%2F%2Fwww.smartsecurity.in.th&amp;fileId=973ee3de.bundle.min&amp;formFactor=desktop&amp;hasTPAWorkerOnSite=false&amp;hasUserDomainMedia=false&amp;isBuilderComponentModel=false&amp;isHttps=true&amp;isInSeo=false&amp;isMultilingualEnabled=false&amp;isPremiumDomain=true&amp;isTrackClicksAnalyticsEnabled=false&amp;isUrlMigrated=true&amp;isWixCodeOnPage=false&amp;isWixCodeOnSite=false&amp;language=en&amp;languageResolutionMethod=QueryParam&amp;metaSiteId=3fff584d-bf1b-4df3-99a3-f0ab72202c10&amp;module=thunderbolt-features&amp;originalLanguage=en&amp;pageId=da92a3_b9b9824ebb2ae1c038df8ce1359a6102_3.json&amp;pilerExperiments=specs.piler.useEditorReactComponents&amp;quickActionsMenuEnabled=false&amp;registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%5D&amp;remoteWidgetStructureBuilderVersion=1.251.0&amp;siteId=9693686c-e198-4368-b939-1093c9f92587&amp;siteRevision=4&amp;staticHTMLComponentUrl=https%3A%2F%2Fwww-smartsecurity-in-th.filesusr.com%2F&amp;useSandboxInHTMLComp=false&amp;viewMode=desktop",
-          "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22b976560c-3122-4351-878f-453f337b7245%22%3A%221358%22%2C%22b278a256-2757-4f19-9313-c05c783bec92%22%3A%222377%22%7D&amp;beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNestedLoginSocialBarMenuItems%2C.UseNewLoginBarDropdownMenuAlignment%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicPageLinkTarget%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.fixFirefoxLinkBarIntrinsicSizing%2C.isClassNameToRootEnabled%2C.logVsmPlatformDiff%2C.migrateSdkDataMappers%2C.resolveManifestInTB%2C.splitSlotSelectors%2C.stopResolvingInnerSelectors_VAG%2C.svgResolver_2%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useWowImageInFastGallery&amp;blocksBuilderManifestGeneratorVersion=1.129.0&amp;commonConfig=%7B%22siteRevision%22%3A%224%22%2C%22branchId%22%3A%22fc987cea-8b94-4537-aa28-46ec063396cb%22%7D&amp;contentType=application%2Fjson&amp;dfCk=6&amp;dfVersion=1.5593.0&amp;editorName=Unknown&amp;experiments=dm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&amp;externalBaseUrl=https%3A%2F%2Fwww.smartsecurity.in.th&amp;fileId=13cc0853.bundle.min&amp;formFactor=desktop&amp;hasTPAWorkerOnSite=false&amp;hasUserDomainMedia=false&amp;isBuilderComponentModel=false&amp;isHttps=true&amp;isInSeo=false&amp;isPremiumDomain=true&amp;isUrlMigrated=true&amp;isWixCodeOnPage=false&amp;isWixCodeOnSite=false&amp;language=en&amp;metaSiteId=3fff584d-bf1b-4df3-99a3-f0ab72202c10&amp;module=thunderbolt-platform&amp;originalLanguage=en&amp;pageId=da92a3_8f5825ade9a92abd31a82e3290f58214_2.json&amp;pilerExperiments=specs.piler.useEditorReactComponents&amp;quickActionsMenuEnabled=false&amp;registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%5D&amp;remoteWidgetStructureBuilderVersion=1.251.0&amp;siteId=9693686c-e198-4368-b939-1093c9f92587&amp;siteRevision=4&amp;staticHTMLComponentUrl=https%3A%2F%2Fwww-smartsecurity-in-th.filesusr.com%2F&amp;viewMode=desktop",
-          "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%221522827f-c56c-a5c9-2ac9-00f9e6ae12d3%22%3A%221903%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22b976560c-3122-4351-878f-453f337b7245%22%3A%221358%22%2C%22b278a256-2757-4f19-9313-c05c783bec92%22%3A%222377%22%7D&amp;beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNestedLoginSocialBarMenuItems%2C.UseNewLoginBarDropdownMenuAlignment%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicPageLinkTarget%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.fixFirefoxLinkBarIntrinsicSizing%2C.isClassNameToRootEnabled%2C.logVsmPlatformDiff%2C.migrateSdkDataMappers%2C.resolveManifestInTB%2C.splitSlotSelectors%2C.stopResolvingInnerSelectors_VAG%2C.svgResolver_2%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useWowImageInFastGallery&amp;blocksBuilderManifestGeneratorVersion=1.129.0&amp;commonConfig=%7B%22siteRevision%22%3A%224%22%2C%22branchId%22%3A%22fc987cea-8b94-4537-aa28-46ec063396cb%22%7D&amp;contentType=application%2Fjson&amp;dfCk=6&amp;dfVersion=1.5593.0&amp;editorName=Unknown&amp;experiments=dm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&amp;externalBaseUrl=https%3A%2F%2Fwww.smartsecurity.in.th&amp;fileId=13cc0853.bundle.min&amp;formFactor=desktop&amp;hasTPAWorkerOnSite=false&amp;hasUserDomainMedia=false&amp;isBuilderComponentModel=false&amp;isHttps=true&amp;isInSeo=false&amp;isPremiumDomain=true&amp;isUrlMigrated=true&amp;isWixCodeOnPage=false&amp;isWixCodeOnSite=false&amp;language=en&amp;metaSiteId=3fff584d-bf1b-4df3-99a3-f0ab72202c10&amp;module=thunderbolt-platform&amp;originalLanguage=en&amp;pageId=da92a3_b9b9824ebb2ae1c038df8ce1359a6102_3.json&amp;pilerExperiments=specs.piler.useEditorReactComponents&amp;quickActionsMenuEnabled=false&amp;registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%5D&amp;remoteWidgetStructureBuilderVersion=1.251.0&amp;siteId=9693686c-e198-4368-b939-1093c9f92587&amp;siteRevision=4&amp;staticHTMLComponentUrl=https%3A%2F%2Fwww-smartsecurity-in-th.filesusr.com%2F&amp;viewMode=desktop"
         ]
       },
       "why_second": "the link targets are published by the OEM pages we already fetched, so the structure is known to exist before any request is made"
@@ -393,5 +463,116 @@
     "every spec row needs same-record model binding, a resolvable locator and a mutation test",
     "placeholder-looking values are counted and reported, never promoted",
     "spec expansion never blocks Phase 1 coverage work"
-  ]
+  ],
+  "route_safety": {
+    "rule": "a tier-2 target whose host is registry-blocked or a wrong target is planning-only until that brand's next_retry_at; this file makes no request",
+    "registry_hosts_not_reachable": {
+      "www.byd.com": {
+        "brand": "BYD",
+        "access_status": "BLOCKED_HTTP_404",
+        "next_retry_at": "2026-10-08T13:41:49.738574+00:00"
+      },
+      "www.tesla.com": {
+        "brand": "Tesla",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.ford.co.th": {
+        "brand": "Ford",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.chevrolet.co.th": {
+        "brand": "Chevrolet",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T14:16:16.748942+00:00"
+      },
+      "www.mercedes-benz.co.th": {
+        "brand": "Mercedes-Benz",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T14:16:16.748942+00:00"
+      },
+      "www.audi.co.th": {
+        "brand": "Audi",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.volvo.co.th": {
+        "brand": "Volvo",
+        "access_status": "BLOCKED_TLS",
+        "next_retry_at": "2026-10-24T13:41:49.738574+00:00"
+      },
+      "www.volvocars.com": {
+        "brand": "Volvo",
+        "access_status": "BLOCKED_TLS",
+        "next_retry_at": "2026-10-24T13:41:49.738574+00:00"
+      },
+      "www.subaru.co.th": {
+        "brand": "Subaru",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.neta.co.th": {
+        "brand": "NETA",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.avancemotors.com": {
+        "brand": "Avance",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.haval.co.th": {
+        "brand": "Haval",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.chery.co.th": {
+        "brand": "Chery",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.smart.co.th": {
+        "brand": "Smart",
+        "access_status": "DEALER_REDIRECT",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00"
+      },
+      "www.peugeot.co.th": {
+        "brand": "Peugeot",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.perodua.com.my": {
+        "brand": "Perodua",
+        "access_status": "UNKNOWN",
+        "next_retry_at": null
+      }
+    },
+    "tier2_hosts": {
+      "api.www.changan.co.th": {
+        "targets": 1,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
+      "www.honda.co.th": {
+        "targets": 2,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
+      "www.jaguar.co.th": {
+        "targets": 6,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      }
+    },
+    "excluded_wrong_target_artifacts": {
+      "smart_home_page.html": {
+        "brand": "Smart",
+        "note": "WRONG-TARGET capture — must yield NO business rows; smart.co.th does not belong to the car brand"
+      }
+    }
+  }
 }

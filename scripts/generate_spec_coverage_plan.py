@@ -14,6 +14,8 @@ import re
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ART_DIR = os.path.join(REPO, "tests", "fixtures", "oem-artifacts")
 OUT = os.path.join(REPO, "audit", "spec-coverage-plan.json")
+REGISTRY = os.path.join(REPO, "audit", "coverage", "oem-registry.json")
+STAGING = os.path.join(REPO, "audit", "data-staging", "vehicle_observations.jsonl")
 
 # spec-bearing signals only (price patterns are excluded on purpose)
 MARKERS = {
@@ -26,6 +28,30 @@ MARKERS = {
 }
 SPEC_LINK = re.compile(r'href="([^"]*(?:spec|specification|technical)[^"]*)"', re.I)
 
+# Structured spec fields published inside the page's own data payload / spec blocks.
+# Their presence is what makes an artifact a *high-confidence* spec source: the value
+# sits in a named field next to the model it belongs to, instead of free prose.
+STRUCTURED_KEYS = re.compile(
+    r'"(?:spec\d*key|spec\d*value|maxout|maxtorque|displacement|enginetype|'
+    r'fuelconsumption|torque|power|battery|capacity)"\s*:',
+    re.I,
+)
+SPEC_BLOCK = re.compile(r'class="[^"]*(?:itemInfo|spec|engine|technical)[^"]*"', re.I)
+
+
+def structure_signal(raw: str) -> dict:
+    """Classify how a captured artifact carries its spec figures."""
+    structured = len(STRUCTURED_KEYS.findall(raw))
+    blocks = len(SPEC_BLOCK.findall(raw))
+    if structured:
+        kind, confidence = "structured_field", "high"
+    elif blocks:
+        kind, confidence = "spec_block_dom", "high"
+    else:
+        kind, confidence = "prose_only", "medium"
+    return {"structure": kind, "structured_fields": structured,
+            "spec_blocks": blocks, "confidence": confidence}
+
 
 def scan():
     in_hand, links = [], {}
@@ -37,8 +63,10 @@ def scan():
         spec_links = SPEC_LINK.findall(raw)
         total = sum(counts.values())
         if total:
-            in_hand.append({"artifact": f"tests/fixtures/oem-artifacts/{name}",
-                            "marker_counts": counts, "marker_total": total})
+            entry = {"artifact": f"tests/fixtures/oem-artifacts/{name}",
+                     "marker_counts": counts, "marker_total": total}
+            entry.update(structure_signal(raw))
+            in_hand.append(entry)
         if spec_links:
             links[f"tests/fixtures/oem-artifacts/{name}"] = sorted(set(spec_links))
     in_hand.sort(key=lambda x: -x["marker_total"])
@@ -69,8 +97,84 @@ def staged_state() -> dict:
     }
 
 
+def wrong_target_artifacts() -> dict:
+    """Captures the registry itself marks as belonging to some other business.
+
+    Their bytes may never feed a plan: spec links discovered inside a
+    wrong-target page point at that other business, not at the brand.
+    """
+    with open(REGISTRY, encoding="utf-8") as f:
+        reg = json.load(f)
+    out = {}
+    for brand in reg.get("brands", []):
+        for endpoint in (brand.get("captured_endpoints") or []):
+            note = endpoint.get("note") or ""
+            if "WRONG-TARGET" in note.upper():
+                out[endpoint.get("artifact")] = {"brand": brand.get("brand"), "note": note}
+    return out
+
+
+def route_safety(links: dict, excluded: dict) -> dict:
+    """Which tier-2 targets are legal to fetch this cycle.
+
+    The spec plan must never schedule a request against a host the OEM registry
+    currently records as blocked or as a wrong target, before that brand's
+    next_retry_at. Planning stays offline; these flags are what the next spec
+    cycle has to respect.
+    """
+    with open(REGISTRY, encoding="utf-8") as f:
+        reg = json.load(f)
+    registry_hosts = {}
+
+    def note(url, brand: dict, status: str):
+        m = re.match(r"https?://([^/:]+)", url or "")
+        if not m:
+            return
+        registry_hosts.setdefault(m.group(1).lower(), {
+            "brand": brand.get("brand"),
+            "access_status": status,
+            "next_retry_at": brand.get("next_retry_at"),
+        })
+
+    for brand in reg.get("brands", []):
+        status = brand.get("access_status") or ""
+        if status == "REACHABLE" or not status:
+            continue
+        for url in (brand.get("source_urls") or []):
+            note(url, brand, status)
+        note((brand.get("blocker_evidence") or {}).get("url"), brand, status)
+
+    tier2_hosts = {}
+    for urls in links.values():
+        for url in urls:
+            m = re.match(r"https?://([^/:]+)", url)
+            if not m:
+                continue
+            host = m.group(1).lower()
+            record = registry_hosts.get(host)
+            seen = tier2_hosts.get(host, {"targets": 0})
+            seen["targets"] += 1
+            seen["registry_state"] = (record or {}).get("access_status", "not_in_registry")
+            seen["blocked_or_wrong_target"] = bool(record)
+            seen["next_retry_at"] = (record or {}).get("next_retry_at")
+            tier2_hosts[host] = seen
+    return {
+        "rule": "a tier-2 target whose host is registry-blocked or a wrong target is "
+                "planning-only until that brand's next_retry_at; this file makes no request",
+        "registry_hosts_not_reachable": registry_hosts,
+        "tier2_hosts": tier2_hosts,
+        "excluded_wrong_target_artifacts": excluded,
+    }
+
+
 def main() -> int:
     in_hand, links = scan()
+    excluded = wrong_target_artifacts()
+    if excluded:
+        in_hand = [e for e in in_hand
+                   if e["artifact"].rsplit("/", 1)[-1] not in excluded]
+        links = {k: v for k, v in links.items()
+                 if k.rsplit("/", 1)[-1] not in excluded}
     plan = {
         "purpose": "evidence-led spec expansion; this file stages no specs and fetches nothing",
         "current_state": {
@@ -125,13 +229,17 @@ def main() -> int:
             "placeholder-looking values are counted and reported, never promoted",
             "spec expansion never blocks Phase 1 coverage work",
         ],
+        "route_safety": route_safety(links, excluded),
     }
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(plan, f, ensure_ascii=False, indent=2)
     print(json.dumps({
         "in_hand_artifacts": len(in_hand),
-        "top": [(e["artifact"].rsplit("/", 1)[-1], e["marker_total"]) for e in in_hand[:5]],
+        "top": [(e["artifact"].rsplit("/", 1)[-1], e["marker_total"], e["confidence"])
+                for e in in_hand[:5]],
         "linked_spec_pages": {k.rsplit("/", 1)[-1]: len(v) for k, v in links.items()},
+        "tier2_hosts_flagged_blocked": [h for h, v in plan["route_safety"]["tier2_hosts"].items()
+                                        if v["blocked_or_wrong_target"]],
     }, ensure_ascii=False, indent=2))
     return 0
 

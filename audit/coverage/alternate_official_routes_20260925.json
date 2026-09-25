@@ -1,0 +1,244 @@
+{
+  "artifact": "alternate_official_routes_20260925",
+  "generated_at": "2026-09-25T09:53:06.779927+00:00",
+  "cycle": "2026-09-25-1",
+  "purpose": "prepared, evidence-backed official alternate routes for the 14 uncovered brands; planning only — no blocked endpoint was requested this cycle",
+  "rules_honoured": [
+    "no request to any host the OEM registry records as BLOCKED_* before its next_retry_at",
+    "no TLS/certificate bypass; every check used default certificate validation",
+    "DNS-dead hosts were checked with lookups only, never hammered",
+    "search engines were used for candidate discovery only; every candidate below is marked verified-unverified, and unverified ones must be opened before use",
+    "no sibling-brand evidence staged; brand attribution still requires the published page itself to prove the queried brand"
+  ],
+  "smart_registry_url_decision": {
+    "brand": "Smart",
+    "registry_source_url": "https://www.smart.co.th/",
+    "decision": "NOT_CHANGED",
+    "reason": "no evidence supports a corrected official Thai URL target; smart.co.th belongs to an unrelated security company and no official smart web property for Thailand was found",
+    "evidence": [
+      {
+        "claim": "smart.co.th is not the car brand",
+        "evidence": "registry capture smart_home_page.html -> https://www.smartsecurity.in.th/ (note: WRONG-TARGET capture, yields no business rows)",
+        "state": "already captured before this cycle"
+      },
+      {
+        "claim": "the brand's own .com has no Thailand market",
+        "evidence": "audit/coverage/smart-url-decision-20260925/smart_com_th_en.html (sha256 e9c40c01a39c9f68bb5dc084746295d9723ba8ce7490f07a63078b7e7d4e52ee): https://www.smart.com/th/en -> 302 -> https://global.smart.com/ (200, 4837 B, ssl_verify_result=0); THB markers: 0",
+        "state": "captured this cycle"
+      },
+      {
+        "claim": "the official country selector lists no Thailand",
+        "evidence": "same capture: server-rendered market links are at/be/de/ch/es/fr/uk/it/nl/pt/se/fi plus www.smart.com and smartcar.fi — no Thailand entry",
+        "state": "captured this cycle"
+      },
+      {
+        "claim": "the Thai distributor arrangement is PROTON; no Thai site published",
+        "evidence": "audit/coverage/smart-url-decision-20260925/smart_newsroom_proton_thailand.html (sha256 f69470837143eb1e7a6941e070f69bb1f40ae3fc7ff9556c905f1c79a6a07a05): official smart newsroom JSON-LD 'smart and PROTON Sign General Distributer Agreement for Malaysia and Thailand', datePublished 2022-08-18",
+        "state": "captured this cycle"
+      },
+      {
+        "claim": "plausible substitute domains do not exist or do not belong to the brand",
+        "evidence": "smartthailand.co.th, smart-thailand.com, smartautomobile.co.th, thonburigroup.com -> NXDOMAIN; smartthailand.com -> 200 but a 114-byte empty page (not the brand)",
+        "state": "checked this cycle"
+      }
+    ],
+    "consequence": "the 2026-09-25T14:16:16Z retry re-probes https://www.smart.co.th/ unchanged; registry url target stays as-is until evidence says otherwise"
+  },
+  "routes": [
+    {
+      "brand": "Volvo",
+      "blocked_host": "www.volvo.co.th",
+      "access_status": "BLOCKED_TLS",
+      "next_retry_at": "2026-10-24T13:41:49.738574+00:00",
+      "prepared_routes": [
+        {
+          "url": "https://www.volvocars.com/th/",
+          "host_already_in_registry_source_urls": true,
+          "checked_at": "2026-09-25T09:53:06.779927+00:00",
+          "result": "HTTP_403 'Access Denied' from a non-browser client (ssl_verify_result=0, normal certificate validation)",
+          "state": "host differs from the TLS-broken host and is certificate-valid; browser-level attempt deferred to next_retry_at"
+        },
+        {
+          "url": "https://www.volvocars.com/en-th/",
+          "state": "discovery_unverified",
+          "note": "Thailand locale on the same certificate-valid global host"
+        }
+      ]
+    },
+    {
+      "brand": "Ford",
+      "blocked_host": "www.ford.co.th",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "prepared_routes": [
+        {
+          "url": "https://www.ford.co.th/en/buying/price-list/",
+          "state": "discovery_unverified",
+          "note": "official price-list page published by the brand itself; same host as the block, so it is a ladder rung for the retry window, not a request now"
+        },
+        {
+          "url": "https://www.ford.co.th/trucks/ford-ranger/",
+          "state": "discovery_unverified"
+        }
+      ]
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "blocked_host": "www.mercedes-benz.co.th",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+      "prepared_routes": [
+        {
+          "url": "https://www.mercedes-benz.co.th/en/passengercars/models.html?group=all",
+          "state": "discovery_unverified",
+          "note": "official all-models index"
+        },
+        {
+          "url": "https://www.mercedes-benz.co.th/en/passengercars/configurator.html",
+          "state": "discovery_unverified",
+          "note": "official configurator — the strict EXACT_VARIANT price surface"
+        }
+      ]
+    },
+    {
+      "brand": "Chevrolet",
+      "blocked_host": "www.chevrolet.co.th",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+      "prepared_routes": [
+        {
+          "url": "https://www.chevrolet.co.th/",
+          "state": "registry probe=REACHABLE (200) but acquisition attempt HTTP_403 via Playwright; browser-level retry only, no request this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Haval",
+      "blocked_host": "www.haval.co.th",
+      "access_status": "BLOCKED_DNS",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "prepared_routes": [
+        {
+          "url": "https://www.gwm.co.th/th/models/haval-h6",
+          "state": "already captured (zero fetch, ACQUISITION_VERIFIED), parsed under GWM",
+          "caveat": "NOT staged as Haval rows: the page is published by GWM Thailand and labels the model, not the brand — sibling-brand rule requires the published page itself to prove the queried brand",
+          "action_when_provable": "re-read the capture for explicit HAVAL brand markup; only then build Haval rows from the same bytes"
+        }
+      ]
+    },
+    {
+      "brand": "NETA",
+      "blocked_host": "www.neta.co.th",
+      "access_status": "BLOCKED_DNS",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "prepared_routes": [
+        {
+          "url": "https://netaauto.com/",
+          "state": "dns_resolves_but_https_timeout",
+          "detail": "TCP/TLS connection timed out after 30s from this network; no certificate error observed"
+        }
+      ]
+    },
+    {
+      "brand": "BYD",
+      "blocked_host": "www.byd.com",
+      "access_status": "BLOCKED_HTTP_404",
+      "next_retry_at": "2026-10-08T13:41:49.738574+00:00",
+      "prepared_routes": [
+        {
+          "url": "https://www.byd.com/th/",
+          "state": "HTTP_404 (registry, 2026-09-24)",
+          "note": "host and certificate are healthy — the blocker is path-level, so the 2026-10-08 retry should start with the site's own locale/sitemap discovery instead of re-requesting the same path"
+        }
+      ]
+    },
+    {
+      "brand": "Avance",
+      "blocked_host": "www.avancemotors.com",
+      "access_status": "BLOCKED_DNS",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "prepared_routes": [],
+      "rejected_candidates": [
+        {
+          "url": "https://avancethailand.com/",
+          "checked_at": "2026-09-25T09:53:06.779927+00:00",
+          "result": "HTTP_200, ssl_verify_result=0, but AVANCE(Thailand) Co.,Ltd. is a jewellery/creative company (lab-grown diamonds, artists) — name collision, not the car brand",
+          "action": "rejected as a source; never register it for this brand"
+        }
+      ]
+    },
+    {
+      "brand": "Tesla",
+      "blocked_host": "www.tesla.com",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "prepared_routes": [],
+      "note": "host and certificate resolve normally; the 403 is edge-level, so only a ladder retry inside the window is legitimate — no alternate official host found"
+    },
+    {
+      "brand": "Audi",
+      "blocked_host": "www.audi.co.th",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "prepared_routes": [],
+      "note": "DNS resolves (52.223.9.235 / 76.223.75.243); block is edge-level; retry only"
+    },
+    {
+      "brand": "Peugeot",
+      "blocked_host": "www.peugeot.co.th",
+      "access_status": "BLOCKED_HTTP_403",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "prepared_routes": [],
+      "note": "DNS resolves; block is edge-level; retry only"
+    },
+    {
+      "brand": "Subaru",
+      "blocked_host": "www.subaru.co.th",
+      "access_status": "BLOCKED_DNS",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "prepared_routes": [],
+      "note": "apex and www both NXDOMAIN; alternate-host discovery still open (search engines rate-limited this cycle)"
+    },
+    {
+      "brand": "Chery",
+      "blocked_host": "www.chery.co.th",
+      "access_status": "BLOCKED_DNS",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "prepared_routes": [],
+      "note": "apex, www, cherythailand.com and cherythailand.co.th all NXDOMAIN"
+    }
+  ],
+  "dns_observations": {
+    "subaru.co.th": "nxdomain",
+    "www.subaru.co.th": "nxdomain",
+    "neta.co.th": "nxdomain",
+    "www.neta.co.th": "nxdomain",
+    "chery.co.th": "nxdomain",
+    "www.chery.co.th": "nxdomain",
+    "cherythailand.com": "nxdomain",
+    "cherythailand.co.th": "nxdomain",
+    "haval.co.th": "nxdomain",
+    "www.haval.co.th": "nxdomain",
+    "avancemotors.com": "nxdomain",
+    "www.avancemotors.com": "nxdomain",
+    "byd.co.th": "nxdomain",
+    "www.byd.co.th": "nxdomain",
+    "smartthailand.co.th": "nxdomain",
+    "smart-thailand.com": "nxdomain",
+    "smartautomobile.co.th": "nxdomain",
+    "thonburigroup.com": "nxdomain",
+    "volvo.co.th": "resolves",
+    "www.volvo.co.th": "resolves",
+    "peugeot.co.th": "resolves",
+    "www.peugeot.co.th": "resolves",
+    "audi.co.th": "resolves",
+    "www.audi.co.th": "resolves",
+    "byd.com": "resolves",
+    "www.byd.com": "resolves",
+    "tesla.com": "resolves",
+    "www.tesla.com": "resolves",
+    "smart.co.th": "resolves",
+    "www.smart.co.th": "resolves"
+  },
+  "not_covered_this_cycle": "no uncovered brand earned PARSED_TESTED: every remaining brand is either inside its retry window or has no reachable official price-bearing route yet"
+}

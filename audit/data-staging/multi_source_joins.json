@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-09-25T04:27:26.313036+00:00",
+  "staged_rows": 295,
+  "join_rule": "same (brand_normalized, model_normalized, price_thb) supported by >=2 DISTINCT captured artifacts, each ACQUISITION_VERIFIED; no inferred joins",
+  "source_classes_present_in_staging": [
+    "OEM_OFFICIAL"
+  ],
+  "source_class_caveat": "all staged rows are class OEM_OFFICIAL — there is currently NO second source class in staging, so >=2 independent source classes is not achievable yet; these joins are cross-ARTIFACT (independent official pages) rather than cross-class",
+  "distinct_source_urls": 20,
+  "join_count": 2,
+  "target_was": ">=10 examples only when evidence genuinely supports them",
+  "joins": [
+    {
+      "join_key": {
+        "brand": "changan",
+        "model": "nevo-q05",
+        "price_thb": 629900
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "55e1f7a02ffa7f82",
+          "source_name": "Changan Thailand Official",
+          "source_url": "https://www.changan.co.th/th/nevo-q05/",
+          "artifact_path": "tests/fixtures/oem-artifacts/changan_nevo_q05_page.html",
+          "artifact_sha256": "b7cb2be2088c07caf194991b686c2ad174ab5f696741e7b096259936aabd313c",
+          "captured_at": "2026-09-24T17:47:32.887361+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "NEVO Q05",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 629900,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/changan_nevo_q05_page.html",
+            "selector": "div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(1) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > article:nth-child(1) > div:nth-child(2)",
+            "method": "playwright_dom"
+          },
+          "evidence_excerpt": "NEVO Q05 | ราคาเริ่มต้น 629,900 THB"
+        },
+        {
+          "observation_id": "bd781559166df133",
+          "source_name": "Changan Thailand Official",
+          "source_url": "https://www.changan.co.th/th/promotion/",
+          "artifact_path": "tests/fixtures/oem-artifacts/changan_promotion_page.html",
+          "artifact_sha256": "d1f57ae37d4d1a69aabb17ea1909c35414ce52c7c8ff1aa1a8ce6d4ea037d237",
+          "captured_at": "2026-09-24T17:47:37.094363+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "NEVO Q05",
+          "variant_raw": "NEVO Q05 MAX",
+          "price_type": "MSRP",
+          "price_thb": 629900,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/changan_promotion_page.html",
+            "selector": "รุ่น NEVO Q05 MAX ราคาพิเศษ 619,900 บาท  (จากราคา 629,900 บาท)",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "รุ่น NEVO Q05 MAX ราคาพิเศษ 619,900 บาท  (จากราคา 629,900 บาท)"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "honda",
+        "model": "city",
+        "price_thb": 569000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "e47956095a6e9a04",
+          "source_name": "Honda Thailand Official",
+          "source_url": "https://www.honda.co.th/en/city",
+          "artifact_path": "tests/fixtures/oem-artifacts/honda_city_recapture.html",
+          "artifact_sha256": "1953984e5b3b48e0a7bfc374fd67b5bf0dd8f9ab2305fec014f2cf51a03990df",
+          "captured_at": "2026-09-25T04:07:07.005816+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "City",
+          "variant_raw": "S",
+          "price_type": "MSRP_STARTING",
+          "price_thb": 569000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/honda_city_recapture.html",
+            "artifact_sha256": "1953984e5b3b48e0a7bfc374fd67b5bf0dd8f9ab2305fec014f2cf51a03990df",
+            "dom_path": "main:nth-child(5) > div:nth-child(7) > section:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)",
+            "card_index": 0,
+            "data_active": "0",
+            "selector": "[data-active='0']:nth-of-type(1)",
+            "method": "dom_card"
+          },
+          "evidence_excerpt": "S569,000 บาท"
+        },
+        {
+          "observation_id": "3b119ce20181c56f",
+          "source_name": "Honda Models Page",
+          "source_url": "https://www.honda.co.th/models",
+          "artifact_path": "tests/fixtures/oem-artifacts/honda_models_page.html",
+          "artifact_sha256": "6eb120085da19d8751db8687849019c499077170c96e9501b2dc80b3e572deef",
+          "captured_at": "2026-09-24T11:39:25.386866+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "City",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 569000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/honda_models_page.html",
+            "artifact_sha256": "6eb120085da19d8751db8687849019c499077170c96e9501b2dc80b3e572deef",
+            "canonical_locator": "main:nth-child(5) > div:nth-child(3) > section:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
+            "selector": "div # City",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "ใหม่Cityเริ่มต้น 569,000 บาทe:HEVTurbo"
+        }
+      ]
+    }
+  ]
+}

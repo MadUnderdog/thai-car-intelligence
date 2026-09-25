@@ -102,11 +102,9 @@ async def main():
     
     # OEM targets - accessible official pages
     targets = [
-        # Toyota pricelist renders client-side → wait for the JSON-LD payload
-        ('https://www.toyota.co.th/en/pricelist', 'toyota_pricelist_page.html',
-         'script[type="application/ld+json"]'),
-        # GWM alternate #2: official mall (products publish prices)
-        ('https://mall.gwm.co.th/', 'gwm_mall_home.html', None),
+        # Honda City grade cards render client-side → wait for [data-active] cards
+        ('https://www.honda.co.th/en/city', 'honda_city_recapture.html',
+         '[data-active]'),
     ]
     
     results = []

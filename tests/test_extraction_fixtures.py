@@ -324,14 +324,26 @@ def test_honda_adjacent_prices_cannot_swap():
     """Mutation test: swapping prices between adjacent grades must produce different extraction."""
     import asyncio
     from playwright.async_api import async_playwright
-    from collect_multi_oem import HONDA_CITY_JS, load_fixture, FIXTURE_DIR
-    
-    html, _ = load_fixture("honda_city")
-    
-    # Swap prices: 569,000 <-> 619,000
-    mutated = html.replace('569,000 THB', 'XXX_PLACEHOLDER_XXX')
-    mutated = mutated.replace('619,000 THB', '569,000 THB')
-    mutated = mutated.replace('XXX_PLACEHOLDER_XXX', '619,000 THB')
+    from collect_multi_oem import HONDA_CITY_JS, FIXTURE_DIR
+
+    # mutate the LIVE artifact the collector actually reads (sidecar-verified recapture)
+    with open(f"{FIXTURE_DIR}/honda_city_recapture.html", encoding="utf-8") as f:
+        html = f.read()
+
+    # Prices render with a locale-dependent marker ('THB' in en, 'บาท' in th) and
+    # the SAME number can appear in both a card and a JSON blob — swap every
+    # marker-attached occurrence in ONE pass so each occurrence keeps its marker.
+    import re
+    a, b = r'569,000', r'619,000'
+    pat = re.compile(f'({a}|{b})\\s*(THB|\u0e1a\u0e32\u0e17)')
+    mutated = pat.sub(lambda m: (b if m.group(1) == a else a) + ' ' + m.group(2), html)
+    assert mutated != html, "mutation produced identical HTML"
+    # every marker-attached occurrence of BOTH grades must have moved
+    assert len(pat.findall(html)) >= 4, \
+        f"expected both grades in both locales, got {pat.findall(html)}"
+    assert pat.search(mutated) is not None
+    # the numbers themselves must survive (they are the values being swapped)
+    assert '569,000' in mutated and '619,000' in mutated
     
     async def extract(data):
         script = f'''
@@ -353,9 +365,12 @@ async def main():
 
 asyncio.run(main())
 '''
-        with open('/tmp/mutation_test.py', 'w') as f:
+        import tempfile
+        with tempfile.NamedTemporaryFile('w', suffix='.py', delete=False, dir='/tmp') as f:
             f.write(script)
-        result = subprocess.run(['python3', '/tmp/mutation_test.py'], capture_output=True, text=True, timeout=30)
+            path = f.name
+        result = subprocess.run(['python3', path], capture_output=True, text=True, timeout=30)
+        os.unlink(path)
         return json.loads(result.stdout.strip())
     
     # Extract from original
@@ -379,14 +394,24 @@ asyncio.run(main())
 
 def test_honda_deleting_price_causes_deterministic_failure():
     """Mutation test: deleting a price must cause extraction to return fewer results."""
-    from collect_multi_oem import HONDA_CITY_JS, load_fixture
+    from collect_multi_oem import HONDA_CITY_JS, FIXTURE_DIR
     import subprocess
     import json
-    
-    html, _ = load_fixture("honda_city")
-    
-    # Delete one price
-    mutated = html.replace('739,000 THB', '')
+    import os
+
+    # mutate the LIVE artifact the collector actually reads
+    with open(f"{FIXTURE_DIR}/honda_city_recapture.html", encoding="utf-8") as f:
+        html = f.read()
+
+    # Delete every marker-attached occurrence of one grade price (locale-robust)
+    import re
+    pat = re.compile(r'739,000\s*(THB|\u0e1a\u0e32\u0e17)')
+    hits = pat.findall(html)
+    assert hits, "e:HEV RS price marker not found in either locale"
+    mutated = pat.sub('', html)
+    assert mutated != html, "mutation produced identical HTML"
+    assert '739,000 THB' not in mutated and '739,000 บาท' not in mutated, \
+        "price deletion incomplete"
     
     async def extract_js(data):
         script = f'''
@@ -408,9 +433,12 @@ async def main():
 
 asyncio.run(main())
 '''
-        with open('/tmp/mutation_test2.py', 'w') as f:
+        import tempfile
+        with tempfile.NamedTemporaryFile('w', suffix='.py', delete=False, dir='/tmp') as f:
             f.write(script)
-        result = subprocess.run(['python3', '/tmp/mutation_test2.py'], capture_output=True, text=True, timeout=30)
+            path = f.name
+        result = subprocess.run(['python3', path], capture_output=True, text=True, timeout=30)
+        os.unlink(path)
         return json.loads(result.stdout.strip())
     
     import asyncio
@@ -717,13 +745,20 @@ def test_captured_at_uses_acquisition_record_not_mtime():
     manifest = load_manifest()
     assert 'honda_city_page.html' in manifest, "Honda not in manifest"
     assert manifest['honda_city_page.html']['captured_at'] is not None, \
-        "Honda captured_at should be set in manifest"
+        "Legacy manifest entry should still be recorded (historical artifact)"
 
-    # Honda (legacy capture) still sources its time from the manifest
+    # Honda now sources its time from the SIDECAR of the verified recapture
+    # (the same official URL, proven row-equivalent to the legacy capture)
     honda_obs = collect_honda()
     honda_captured = honda_obs[0]['source']['captured_at']
-    assert honda_captured == manifest['honda_city_page.html']['captured_at'], \
-        f"Honda captured_at should match manifest, got {honda_captured}"
+    with open('tests/fixtures/oem-artifacts/honda_city_recapture.html.prov.json') as f:
+        honda_sidecar = _json.load(f)
+    assert honda_captured == honda_sidecar['captured_at'], \
+        f"Honda captured_at should match sidecar, got {honda_captured}"
+    assert honda_obs[0]['source']['provenance_state'] == 'ACQUISITION_VERIFIED', \
+        "Honda recapture must be ACQUISITION_VERIFIED"
+    assert honda_captured != manifest['honda_city_page.html']['captured_at'], \
+        "Honda must no longer source its time from the legacy manifest"
 
     # BMW now sources its time from the sidecar of the genuine recapture
     with open('tests/fixtures/oem-artifacts/bmw_all_models_verified.html.prov.json') as f:
@@ -738,7 +773,7 @@ def test_captured_at_uses_acquisition_record_not_mtime():
     # Neither timestamp may be derived from file mtime
     for obs, path in [
         (bmw_obs[0], 'tests/fixtures/oem-artifacts/bmw_all_models_verified.html'),
-        (honda_obs[0], 'tests/fixtures/oem-artifacts/honda_city_page.html'),
+        (honda_obs[0], 'tests/fixtures/oem-artifacts/honda_city_recapture.html'),
     ]:
         mtime_iso = datetime.fromtimestamp(os.path.getmtime(path), tz=timezone.utc).isoformat()
         assert obs['source']['captured_at'] != mtime_iso, \
@@ -2381,3 +2416,129 @@ def test_porsche_mutation_price_detected(tmp_path, monkeypatch):
     m = {o['identity']['variant_raw'] or o['identity']['model_raw']: o['price']['value_thb']
          for o in cmo.collect_porsche()}
     assert m['911 Carrera 4S'] == 14190000, "flight-data mutation not detected"
+
+
+# ─── Honda City Sidecar Recapture ───
+
+def test_honda_recapture_fixture_and_sidecar():
+    """The recapture of the same official URL must exist with a real sidecar."""
+    path = f"{FIXTURE_DIR}/honda_city_recapture.html"
+    assert os.path.exists(path), f"missing {path}"
+    assert os.path.getsize(path) > 10000
+    sc_path = path + ".prov.json"
+    assert os.path.exists(sc_path), "sidecar missing"
+    sc = json.load(open(sc_path, encoding="utf-8"))
+    assert sc["provenance_state"] == "ACQUISITION_VERIFIED"
+    assert sc["captured_at"] != "UNKNOWN"
+    assert "honda.co.th/en/city" in sc["source_url"], sc["source_url"]
+
+
+def test_honda_rows_come_from_verified_recapture():
+    """Every staged Honda City row must be provenance-verified, not LEGACY."""
+    from collect_multi_oem import collect_honda
+    obs = collect_honda()
+    assert len(obs) == 4
+    for o in obs:
+        assert o["source"]["artifact_path"].endswith("honda_city_recapture.html"), \
+            f"row still sourced from legacy artifact: {o['source']['artifact_path']}"
+        assert o["source"]["provenance_state"] == "ACQUISITION_VERIFIED"
+        assert o["source"]["captured_at"] != "UNKNOWN"
+
+
+def test_honda_recapture_proves_same_rows_as_legacy():
+    """The upgrade is only legitimate if the fresh capture proves the same rows."""
+    from collect_multi_oem import HONDA_CITY_JS, FIXTURE_DIR, extract_from_html
+
+    def pairs(fn):
+        with open(f"{FIXTURE_DIR}/{fn}", encoding="utf-8") as f:
+            html = f.read()
+        res, _ = extract_from_html(html, "equiv", HONDA_CITY_JS,
+                                   fixture_path=f"{FIXTURE_DIR}/{fn}")
+        return sorted((r["variant"], r["price"]) for r in (res or []))
+
+    legacy = pairs("honda_city_page.html")
+    recapture = pairs("honda_city_recapture.html")
+    assert len(legacy) == 4 and len(recapture) == 4
+    assert legacy == recapture, (
+        f"recapture does not prove the legacy rows: legacy={legacy} recapture={recapture}")
+
+
+def test_honda_currency_marker_locale_equivalence():
+    """The same official price renders as 'THB' (en) or 'บาท' (th) — both must parse identically."""
+    from collect_multi_oem import HONDA_CITY_JS, FIXTURE_DIR, extract_from_html
+
+    with open(f"{FIXTURE_DIR}/honda_city_recapture.html", encoding="utf-8") as f:
+        recapture = f.read()
+    with open(f"{FIXTURE_DIR}/honda_city_page.html", encoding="utf-8") as f:
+        legacy = f.read()
+
+    assert "บาท" in recapture, "expected Thai currency marker in recapture"
+    assert "569,000 THB" in legacy, "expected English currency marker in legacy"
+
+    # same numeric price, two marker spellings
+    html_variant = legacy.replace("569,000 THB", "569,000 บาท")
+    assert html_variant != legacy
+    res, _ = extract_from_html(html_variant, "locale", HONDA_CITY_JS,
+                               fixture_path=f"{FIXTURE_DIR}/honda_city_page.html")
+    lookup = {r["variant"]: r["price"] for r in (res or [])}
+    assert lookup.get("S") == 569000, f"locale swap broke S price: {lookup}"
+
+
+def test_honda_recapture_locator_resolves_to_same_record():
+    """Re-walk each canonical dom_path in the recapture and confirm model+price bind."""
+    from playwright.async_api import async_playwright
+    from collect_multi_oem import collect_honda
+
+    obs = collect_honda()
+    html = open(obs[0]["evidence_locator"]["artifact_path"], encoding="utf-8").read()
+
+    WALK = """(args) => {
+        const parts = args.path.split(' > ');
+        let el = document.body;
+        for (const part of parts) {
+            const m = part.match(/^(\w+):nth-child\((\d+)\)$/);
+            if (!m) return {found: false};
+            el = el.children[parseInt(m[2], 10) - 1];
+            if (!el || el.tagName.toLowerCase() !== m[1]) return {found: false};
+        }
+        const t = (el.textContent || '').replace(/\s+/g, ' ');
+        return {found: true, hasVariant: t.includes(args.variant),
+                hasPrice: t.includes(args.price)};
+    }"""
+
+    async def run():
+        out = []
+        async with async_playwright() as p:
+            b = await p.chromium.launch()
+            page = await b.new_page()
+            await page.set_content(html)
+            for o in obs:
+                out.append(await page.evaluate(WALK, {
+                    "path": o["evidence_locator"]["dom_path"],
+                    "variant": o["identity"]["variant_raw"],
+                    "price": f"{o['price']['value_thb']:,}",
+                }))
+            await b.close()
+        return out
+
+    results = asyncio.run(run())
+    for o, r in zip(obs, results):
+        assert r.get("found"), f"dom_path did not resolve: {o['identity']['variant_raw']}"
+        assert r.get("hasVariant"), f"variant missing at locator: {o['identity']['variant_raw']}"
+        assert r.get("hasPrice"), f"price missing at locator: {o['identity']['variant_raw']}"
+
+
+def test_honda_same_record_evidence_on_recapture():
+    """Variant AND price must ride together in one card excerpt (no cross-card bleed)."""
+    from collect_multi_oem import collect_honda
+    for o in collect_honda():
+        ev = o["evidence_excerpt"]
+        var = o["identity"]["variant_raw"]
+        price = str(o["price"]["value_thb"])
+        assert var in ev, f"{var} not in evidence: {ev[:90]}"
+        assert price in ev.replace(",", ""), f"{price} not in evidence: {ev[:90]}"
+        # a variant name must never carry another grade's price
+        other = {"S": "619,000", "e:HEV V": "569,000"}
+        if var in other:
+            assert other[var].replace(",", "") not in ev.replace(",", ""), \
+                f"{var} evidence carries a foreign price: {ev[:90]}"

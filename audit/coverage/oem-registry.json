@@ -1,6 +1,6 @@
 {
   "schema": "oem-coverage-registry/1 — Blueprint.md §93",
-  "generated_at": "2026-09-25T03:09:14.147213+00:00",
+  "generated_at": "2026-09-25T04:17:53.706343+00:00",
   "probe_evidence": "audit/coverage/probe_20260924.json",
   "coverage_rule": "coverage_% = brands with provenance_status=ACQUISITION_VERIFIED AND adapter_status=PARSED_TESTED ÷ in_scope brands (§93). Attempt/captured/blocked counts are operational telemetry, never coverage.",
   "scope_candidates_unresolved": [
@@ -83,8 +83,8 @@
       "acquisition_method": "playwright",
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": "2026-09-24T11:39:25.386866+00:00",
-      "last_success_sha256": "6eb120085da19d8751db8687849019c499077170c96e9501b2dc80b3e572deef",
+      "last_success_at": "2026-09-25T04:07:07.005816+00:00",
+      "last_success_sha256": "1953984e5b3b48e0a7bfc374fd67b5bf0dd8f9ab2305fec014f2cf51a03990df",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:31.559136+00:00",
@@ -109,8 +109,16 @@
           "artifact": "honda_city_page.html",
           "sha256": "8d11ebd4f720e679b209ba8ced3e9d20dcfa5fe671c1f3dd86206e5aa3b8df64",
           "provenance_state": "LEGACY_UNVERIFIED",
+          "parsed": false,
+          "note": "legacy capture (no sidecar) — 4 VARIANT rows; superseded by honda_city_recapture.html (row-equivalent, sidecar-verified)"
+        },
+        {
+          "url": "https://www.honda.co.th/en/city",
+          "artifact": "honda_city_recapture.html",
+          "sha256": "1953984e5b3b48e0a7bfc374fd67b5bf0dd8f9ab2305fec014f2cf51a03990df",
+          "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
-          "note": "4 VARIANT rows"
+          "note": "sidecar-verified recapture of the same official URL; proven row-equivalent to the legacy capture (identical 4 variant/price pairs); price marker renders as 'บาท' (th locale) — extractor accepts both THB/บาท; replaces honda_city_page.html as the staged source"
         }
       ]
     },

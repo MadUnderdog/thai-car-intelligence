@@ -1,7 +1,7 @@
 # OEM Coverage View
 
 > GENERATED from `audit/coverage/oem-registry.json` by `scripts/generate_coverage_view.py` — do not edit by hand.
-> Generated at: 2026-09-25T03:10:31.636575+00:00
+> Generated at: 2026-09-25T04:28:19.800300+00:00
 
 ## Coverage
 
@@ -22,7 +22,7 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 | Brand | In scope | Access | Adapter | Provenance | Last success (data) | Next retry |
 |---|---|---|---|---|---|---|
 | Toyota | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
-| Honda | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
+| Honda | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-25 | 2026-09-25 |
 | Nissan | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Mazda | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
 | Mitsubishi | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
@@ -87,7 +87,8 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
   - `toyota_pricelist_page.html` ← https://www.toyota.co.th/en/pricelist · ACQUISITION_VERIFIED · parsed · 5d0ba584bcc3
 - **Honda**
   - `honda_models_page.html` ← https://www.honda.co.th/models · ACQUISITION_VERIFIED · parsed · 6eb120085da1
-  - `honda_city_page.html` ← https://www.honda.co.th/en/city · LEGACY_UNVERIFIED · parsed · 8d11ebd4f720
+  - `honda_city_page.html` ← https://www.honda.co.th/en/city · LEGACY_UNVERIFIED · unparsed · 8d11ebd4f720
+  - `honda_city_recapture.html` ← https://www.honda.co.th/en/city · ACQUISITION_VERIFIED · parsed · 1953984e5b3b
 - **Nissan**
   - `nissan_page.html` ← https://www.nissan-thailand.com · LEGACY_UNVERIFIED · parsed · 861be1b78785
   - `nissan_new_home_page.html` ← https://www.nissan.co.th/ · ACQUISITION_VERIFIED · parsed · cec34588e44f

@@ -467,6 +467,8 @@ HONDA_CITY_JS = """
 (() => {
     const items = [];
     
+    // Currency marker: the same official price renders as 'THB' (en locale)
+    // or บาท (th locale) on the same /en/city page - both accepted.
     // Find "Grade Levels" heading
     const gradeHeading = Array.from(document.querySelectorAll('div, h2, h3, h4, span, p')).find(el => 
         el.textContent.trim() === 'Grade Levels' && el.children.length === 0
@@ -487,7 +489,7 @@ HONDA_CITY_JS = """
     
     cards.forEach((card, idx) => {
         const text = card.textContent;
-        const priceMatch = text.match(/([\\d,]+)\\s*THB/);
+        const priceMatch = text.match(/([\\d,]+)\\s*(?:THB|บาท)/);
         if (!priceMatch) return;
         
         const price = parseInt(priceMatch[1].replace(/,/g, ''));
@@ -523,14 +525,21 @@ HONDA_CITY_JS = """
 
 
 def collect_honda():
-    """Collect from Honda City — DOM extraction from grade cards."""
-    print("=== Honda Thailand Official (DOM) ===")
-    html, error = load_fixture("honda_city")
-    if error:
-        print(f"  {error}")
-        return []
+    """Collect from Honda City — DOM extraction from grade cards.
 
-    results, artifact = extract_from_html(html, "honda_city", HONDA_CITY_JS, fixture_path=f"{FIXTURE_DIR}/honda_city_page.html")
+    Reads the sidecar-verified recapture of the same official URL. The recapture
+    was proven row-equivalent to the legacy capture (same 4 variants/prices);
+    legacy `honda_city_page.html` stays committed for cross-capture comparison.
+    """
+    print("=== Honda Thailand Official (DOM) ===")
+    fixture_path = f"{FIXTURE_DIR}/honda_city_recapture.html"
+    if not os.path.exists(fixture_path):
+        print(f"  Recapture fixture not found: {fixture_path}")
+        return []
+    with open(fixture_path) as f:
+        html = f.read()
+
+    results, artifact = extract_from_html(html, "honda_city", HONDA_CITY_JS, fixture_path=fixture_path)
     if not results:
         print("  Extraction returned no results")
         return []
@@ -781,19 +790,42 @@ def collect_lexus():
                 "provenance_state": prov["provenance_state"],
                 "class": "OEM_OFFICIAL",
             },
+            "observation_id": hashlib.sha256(
+                f"lexus:{model}:{price}:{' > '.join(path)}".encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "identity": {
+                "brand_raw": "Lexus",
                 "level": "MODEL",
                 "identity_level": "MODEL",
                 "model_raw": model,
                 "variant_raw": None,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "brand_normalized": "lexus",
+                "model_normalized": model.lower().replace(" ", "-"),
+                "variant_normalized": None,
             },
             "price": {
                 "value_thb": price,
-                "price_type": "MSRP_STARTING" if is_starting else "EXACT_VARIANT",
-                "type": "MSRP_STARTING" if is_starting else "EXACT_VARIANT",
+                # MODEL-level row: EXACT_VARIANT would contradict the identity level.
+                # 'เริ่มต้น' present -> starting price; bare 'ราคา' -> the displayed
+                # model price (no starting marker, so do not claim one).
+                "price_type": "MSRP_STARTING" if is_starting else "MSRP",
+                "type": "MSRP_STARTING" if is_starting else "MSRP",
                 "currency": "THB",
                 "currentness": "UNKNOWN",
             },
+            "specs": {},
+            "raw_labels": {},
+            "evidence_excerpt": text[:500],
+            "evidence_locator": {
+                "artifact_path": artifact,
+                "artifact_sha256": hashlib.sha256(open(artifact, 'rb').read()).hexdigest(),
+                "canonical_locator": ' > '.join(path),
+                "selector": f"ul.tab__item_models > li # {model}",
+                "method": "dom_query",
+            },
+            # nested shape kept for backwards compatibility with existing tests
             "evidence": {
                 "excerpt": text[:500],
                 "evidence_locator": {
@@ -875,11 +907,21 @@ def collect_honda_models():
                                 "provenance_state": prov["provenance_state"],
                                 "class": "OEM_OFFICIAL",
                             },
+                            "observation_id": hashlib.sha256(
+                                f"honda_models:{model}:{price}:{' > '.join(path)}".encode()
+                            ).hexdigest()[:16],
+                            "timestamp": datetime.now(timezone.utc).isoformat(),
                             "identity": {
+                                "brand_raw": "Honda",
                                 "level": "MODEL",
                                 "identity_level": "MODEL",
                                 "model_raw": model,
                                 "variant_raw": None,
+                                "year": None,
+                                "fuel_powertrain_raw": None,
+                                "brand_normalized": "honda",
+                                "model_normalized": model.lower().replace(" ", "-"),
+                                "variant_normalized": None,
                             },
                             "price": {
                                 "value_thb": price,
@@ -888,6 +930,18 @@ def collect_honda_models():
                                 "currency": "THB",
                                 "currentness": "UNKNOWN",
                             },
+                            "specs": {},
+                            "raw_labels": {},
+                            "evidence_excerpt": card_text[:500],
+                            "evidence_locator": {
+                                "artifact_path": artifact,
+                                "artifact_sha256": hashlib.sha256(
+                                    open(artifact, 'rb').read()).hexdigest(),
+                                "canonical_locator": ' > '.join(path),
+                                "selector": f"div # {model}",
+                                "method": "dom_query",
+                            },
+                            # nested shape kept for backwards compatibility with existing tests
                             "evidence": {
                                 "excerpt": card_text[:500],
                                 "evidence_locator": {

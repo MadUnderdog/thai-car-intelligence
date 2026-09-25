@@ -1,0 +1,151 @@
+{
+  "report_id": "daily-run-2026-09-25d",
+  "generated_at": "2026-09-25T07:00:53.591757+00:00",
+  "commit": "74a967deb59cf9790fdc1902a1877a64b698104e",
+  "branch": "fix/p1-provenance-gate",
+  "locator_integrity": {
+    "before": {
+      "total": 20,
+      "toyota_json_path": 10,
+      "nissan_shared_selector": 10
+    },
+    "after": {
+      "ambiguous_full_locators": 0,
+      "duplicate_json_path": 0,
+      "duplicate_dom_path": 0,
+      "rows": 295
+    },
+    "resolution": {
+      "engine": "scripts/resolve_locators.py",
+      "rule": "every accepted row must resolve to exactly one matching record",
+      "official_rows": 295,
+      "media_rows": 60
+    },
+    "mutation_proof": {
+      "swap": "price rewrite on every row -> zero matches",
+      "delete": "record deletion -> zero, or the identical record (pages whose own framework rebuilds the node)"
+    }
+  },
+  "secondary_source_layer": {
+    "source_class": "AUTOMOTIVE_MEDIA",
+    "trust_state": "RESEARCH_UNVERIFIED",
+    "registry": "storage/thai-source-registry.json",
+    "batch": "3 documented brand_price_page_crawl pages",
+    "artifacts": 3,
+    "sidecars": 3,
+    "records": 60,
+    "fail_closed_skips": "records without a unique locator or a model heading were dropped",
+    "file": "audit/data-staging/media_observations.jsonl"
+  },
+  "cross_class_joins": {
+    "file": "audit/data-staging/cross_class_joins.json",
+    "join_count": 11,
+    "target": ">=3 genuine",
+    "target_met": true,
+    "join_keys": [
+      "toyota/alphard/3590000",
+      "toyota/alphard/4290000",
+      "toyota/alphard/4590000",
+      "toyota/camry/1475000",
+      "toyota/camry/1659000",
+      "toyota/camry/1809000",
+      "toyota/veloz/795000",
+      "toyota/veloz/875000",
+      "toyota/yaris/584000",
+      "toyota/yaris/644000",
+      "toyota/yaris/689000"
+    ],
+    "by_class_pair": {
+      "OEM_OFFICIAL+AUTOMOTIVE_MEDIA": 11
+    }
+  },
+  "toyota_currentness_policy": {
+    "file": "audit/policies/toyota-currentness.json",
+    "decision": "keep_current",
+    "basis": "availability_instock",
+    "basis_not_claimed": [
+      "source_dated_price_validity",
+      "capture_time_as_effective_date"
+    ],
+    "rows_unchanged": true,
+    "demotion_target": "UNKNOWN",
+    "demotion_rows": 96
+  },
+  "spec_coverage_plan": {
+    "file": "audit/spec-coverage-plan.json",
+    "current": {
+      "rows_with_specs": 72,
+      "total_rows": 295,
+      "coverage_pct": 24.4,
+      "brands_with_specs": [
+        "porsche"
+      ],
+      "note": "measured by tests/test_p98_semantic_audit.py; concentration is by source rather than placeholder/duplicate contamination"
+    },
+    "tiers": [
+      {
+        "tier": 1,
+        "name": "already-captured bytes (zero fetch)"
+      },
+      {
+        "tier": 2,
+        "name": "official spec pages linked by captured documents"
+      },
+      {
+        "tier": 3,
+        "name": "secondary media (AUTOMOTIVE_MEDIA / RESEARCH_UNVERIFIED)"
+      }
+    ],
+    "staged_now": 0
+  },
+  "staging": {
+    "official_rows": 295,
+    "identity": {
+      "null": 283,
+      "MODEL": 12
+    },
+    "price_type": {
+      "MSRP": 112,
+      "MSRP_STARTING": 103,
+      "EXACT_VARIANT": 80
+    },
+    "provenance": {
+      "ACQUISITION_VERIFIED": 295
+    },
+    "media_rows": 60
+  },
+  "fixtures": {
+    "oem_html": 43,
+    "oem_sidecars": 37,
+    "oem_pdf": 2,
+    "media_html": 3,
+    "media_sidecars": 3
+  },
+  "coverage": {
+    "verified_parsed": 17,
+    "denominator": 32,
+    "percent": 53.1,
+    "blocked": 14
+  },
+  "tests": {
+    "pytest": "349 passed",
+    "log": "/tmp/full_suite_p100.log",
+    "prisma_validate": "rc=0",
+    "tsc_noemit": "rc=0",
+    "credential_scan_changed_or_new_files": 0,
+    "credential_scan_files_checked": 23
+  },
+  "retry_windows": {
+    "elapsed_now": [],
+    "not_yet_due": [],
+    "blocked_brand_count": 14
+  },
+  "not_touched": [
+    "production database",
+    "AI model/provider/config",
+    "verifier (FROZEN)",
+    "PR #3 merge state",
+    "skills/references/memory/self-improvement",
+    "blocked hosts before next_retry_at"
+  ]
+}

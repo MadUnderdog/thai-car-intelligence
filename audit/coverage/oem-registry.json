@@ -1,6 +1,6 @@
 {
   "schema": "oem-coverage-registry/1 — Blueprint.md §93",
-  "generated_at": "2026-09-25T04:17:53.706343+00:00",
+  "generated_at": "2026-09-25T07:53:14.580506+00:00",
   "probe_evidence": "audit/coverage/probe_20260924.json",
   "coverage_rule": "coverage_% = brands with provenance_status=ACQUISITION_VERIFIED AND adapter_status=PARSED_TESTED ÷ in_scope brands (§93). Attempt/captured/blocked counts are operational telemetry, never coverage.",
   "scope_candidates_unresolved": [
@@ -927,11 +927,11 @@
       ],
       "source_type": "OFFICIAL_SITE",
       "access_status": "REACHABLE",
-      "acquisition_method": "playwright",
-      "adapter_status": "NONE",
+      "acquisition_method": "http_get",
+      "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": null,
-      "last_success_sha256": null,
+      "last_success_at": "2026-09-25T07:46:42.819370+00:00",
+      "last_success_sha256": "23c92f204509784ee4058f48161233c1d9bb980cfe463e8bf801d27ec7b76558",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:33.631169+00:00",
@@ -974,6 +974,110 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "alternate 2 — official mall is a client-rendered SPA shell (textlen=18), 0 SSR prices; both alternates exhausted this cycle, no adapter"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/haval-h6",
+          "artifact": "gwm_th_model_haval-h6.html",
+          "sha256": "236ada0f0db7e723f3e5d9ad2a6a5a5d930770792331e1c652d1ad90be37f4b5",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/ora-5-ev",
+          "artifact": "gwm_th_model_ora-5-ev.html",
+          "sha256": "6ca2b21a3d8475b9838c471a5bd19a77f79e0d4a5a1432c663b54d17448128f2",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/ora-5-hev",
+          "artifact": "gwm_th_model_ora-5-hev.html",
+          "sha256": "8182d7d5c3e1f12312b2d48c3546d47b957135029a5a0c664727c9a64dc1a89a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/poer",
+          "artifact": "gwm_th_model_poer.html",
+          "sha256": "f83c07e4ff58143e064e492a9689bfed16987587823fdf87f395c736c9884b62",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/sahar-diesel",
+          "artifact": "gwm_th_model_sahar-diesel.html",
+          "sha256": "662b719e379fda7e7d3fb8fed9176077ab97c9fc13b712c405911c3ff4336d70",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/sahar",
+          "artifact": "gwm_th_model_sahar.html",
+          "sha256": "b1bdea00126fcec2d5327402b5ba12e265d4730d18dfd0cb5d494f0b4a27425c",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-300-diesel",
+          "artifact": "gwm_th_model_tank-300-diesel.html",
+          "sha256": "a54714afc4fd6d966d47b563d6c534152628882c472fa4495019410eb3ff47f0",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-300-limited-lb",
+          "artifact": "gwm_th_model_tank-300-limited-lb.html",
+          "sha256": "3e458640a5c104ba8981c7fa721574f6bb36d26c422a2eab3d40ef6790a0b3c5",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-300",
+          "artifact": "gwm_th_model_tank-300.html",
+          "sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-500-3t-diesel",
+          "artifact": "gwm_th_model_tank-500-3t-diesel.html",
+          "sha256": "a47b4c5ddac3751b35bd8a3b5a3c6b2a7e7215511827acfe595594192b62f7cf",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-500-diesel",
+          "artifact": "gwm_th_model_tank-500-diesel.html",
+          "sha256": "434bb47d85368cba8c1700a67fb4df3de95002d0d5db64be885dfdfd9da32a48",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-500",
+          "artifact": "gwm_th_model_tank-500.html",
+          "sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/wey-g9",
+          "artifact": "gwm_th_model_wey-g9.html",
+          "sha256": "23c92f204509784ee4058f48161233c1d9bb980cfe463e8bf801d27ec7b76558",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
         }
       ]
     },
@@ -1295,5 +1399,5 @@
       "fallback_ladder": []
     }
   ],
-  "cycle": "2026-09-24-4"
+  "cycle": "2026-09-25-1"
 }

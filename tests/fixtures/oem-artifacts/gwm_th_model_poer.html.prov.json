@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/poer",
+  "captured_at": "2026-09-25T07:46:31.451991+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "f83c07e4ff58143e064e492a9689bfed16987587823fdf87f395c736c9884b62",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_poer.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-25T04:25:44.005185+00:00",
+  "generated_at": "2026-09-25T07:50:35.077038+00:00",
   "provenance": {
-    "fixture_based_extraction": 295,
-    "acquisition_verified": 295,
+    "fixture_based_extraction": 324,
+    "acquisition_verified": 324,
     "legacy_unverified": 0,
     "from_existing_structured_data": 0
   },
@@ -24,7 +24,8 @@
     "changan": 4,
     "jaguar_sheet": 1,
     "landrover_sheet": 11,
-    "porsche": 72
+    "porsche": 72,
+    "gwm": 29
   },
-  "total": 295
+  "total": 324
 }

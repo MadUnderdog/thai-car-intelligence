@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/wey-g9",
+  "captured_at": "2026-09-25T07:46:42.819370+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "23c92f204509784ee4058f48161233c1d9bb980cfe463e8bf801d27ec7b76558",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_wey-g9.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

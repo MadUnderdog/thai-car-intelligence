@@ -125,7 +125,7 @@ def extract_toyota_prices(html: str, url: str, artifact_path: str) -> List[Dict]
     jsonld_pattern = re.compile(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', re.DOTALL)
     jsonld_blocks = jsonld_pattern.findall(html)
     
-    for block in jsonld_blocks:
+    for block_idx, block in enumerate(jsonld_blocks):
         try:
             data = _json.loads(block)
         except _json.JSONDecodeError:
@@ -142,7 +142,7 @@ def extract_toyota_prices(html: str, url: str, artifact_path: str) -> List[Dict]
             if main_entity.get('@type') != 'ItemList':
                 continue
             
-            for list_item in main_entity.get('itemListElement', []):
+            for list_idx, list_item in enumerate(main_entity.get('itemListElement', [])):
                 vehicle = list_item.get('item', {})
                 if vehicle.get('@type') != 'Vehicle':
                     continue
@@ -151,7 +151,7 @@ def extract_toyota_prices(html: str, url: str, artifact_path: str) -> List[Dict]
                 vehicle_url = vehicle.get('url', url)
                 vehicle_config = vehicle.get('vehicleConfiguration', '')
                 
-                for variant in vehicle.get('hasVariant', []):
+                for var_idx, variant in enumerate(vehicle.get('hasVariant', [])):
                     variant_name = variant.get('name', '').strip()
                     variant_config = variant.get('vehicleConfiguration', '')
                     offers = variant.get('offers', {})
@@ -190,9 +190,18 @@ def extract_toyota_prices(html: str, url: str, artifact_path: str) -> List[Dict]
                     # variant_config is the trim name
                     trim_name = variant_config if variant_config else variant_name
                     
-                    # Build JSON-LD locator path
+                    # Build a deterministic JSON-LD locator path.
+                    # `position` alone collides across separate ld+json blocks (two
+                    # models both publish position=1 with the same trim name), so the
+                    # block index, list index and the vehicle's own name are part of
+                    # the path — resolution walks block -> list item -> hasVariant
+                    # and validates every name along the way.
                     position = list_item.get('position', '?')
-                    json_path = f"@graph[CollectionPage].mainEntity.itemListElement[{position}].item.hasVariant[{trim_name}].offers.price"
+                    json_path = (
+                        f"ldjson[{block_idx}].itemListElement[{list_idx}]"
+                        f".item[name={vehicle_name}]"
+                        f".hasVariant[{var_idx}][{trim_name}].offers.price"
+                    )
                     
                     observations.append({
                         "observation_id": hashlib.sha256(
@@ -239,6 +248,15 @@ def extract_toyota_prices(html: str, url: str, artifact_path: str) -> List[Dict]
                             "artifact_path": artifact_path,
                             "json_path": json_path,
                             "ldplusjson_block": True,
+                            # resolution anchors (deterministic indices) + the names
+                            # they must validate against, so a path can never resolve
+                            # to a different model that shares a position/trim name
+                            "ldjson_block_index": block_idx,
+                            "item_list_index": list_idx,
+                            "variant_index": var_idx,
+                            "item_name": vehicle_name,
+                            "variant_name": trim_name,
+                            "method": "ldjson_path",
                         },
                     })
     

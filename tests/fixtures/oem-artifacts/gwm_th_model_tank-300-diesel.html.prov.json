@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/tank-300-diesel",
+  "captured_at": "2026-09-25T07:46:36.521430+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "a54714afc4fd6d966d47b563d6c534152628882c472fa4495019410eb3ff47f0",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_tank-300-diesel.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/haval-h6",
+  "captured_at": "2026-09-25T07:46:27.673923+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "236ada0f0db7e723f3e5d9ad2a6a5a5d930770792331e1c652d1ad90be37f4b5",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_haval-h6.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

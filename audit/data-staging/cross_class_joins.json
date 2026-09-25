@@ -1,0 +1,728 @@
+{
+  "purpose": "cross-source-class corroboration; media never promotes to official",
+  "generated_by": "scripts/build_cross_class_joins.py",
+  "official_file": "audit/data-staging/vehicle_observations.jsonl",
+  "media_file": "audit/data-staging/media_observations.jsonl",
+  "join_rule": "same brand_normalized+model_normalized and exact price value, both sides independently evidenced (artifact SHA + locator + excerpt)",
+  "join_count": 11,
+  "by_class_pair": {
+    "OEM_OFFICIAL+AUTOMOTIVE_MEDIA": 11
+  },
+  "joins": [
+    {
+      "join_key": "toyota/alphard/3590000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "alphard",
+        "official_name": "Alphard",
+        "media_name": "Alphard"
+      },
+      "field": "price",
+      "value_thb": 3590000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "substring",
+      "official": {
+        "observation_id": "361e52d1bcec447c",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[22].item[name=Toyota Alphard].hasVariant[3][Alphard HEV Smart].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 22,
+          "variant_index": 3,
+          "item_name": "Toyota Alphard",
+          "variant_name": "Alphard HEV Smart",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota Alphard' → variant 'Alphard HEV Smart' → price 3590000 THB (InStock)",
+        "variant_raw": "Alphard HEV Smart",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 3590000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_000",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "ALPHARD.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img decoding=\"async\"",
+          "text_offset": 33880
+        },
+        "excerpt": "ALPHARD.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img decoding=\"async\"",
+        "variant_raw": "HEV SMART",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 3590000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "toyota/alphard/4290000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "alphard",
+        "official_name": "Alphard",
+        "media_name": "Alphard"
+      },
+      "field": "price",
+      "value_thb": 4290000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "substring",
+      "official": {
+        "observation_id": "33911b34e7f040fa",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[22].item[name=Toyota Alphard].hasVariant[1][Alphard HEV Premium].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 22,
+          "variant_index": 1,
+          "item_name": "Toyota Alphard",
+          "variant_name": "Alphard HEV Premium",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota Alphard' → variant 'Alphard HEV Premium' → price 4290000 THB (InStock)",
+        "variant_raw": "Alphard HEV Premium",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 4290000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_001",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "ALPHARD.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img decoding=\"async\"",
+          "text_offset": 33880
+        },
+        "excerpt": "ALPHARD.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img decoding=\"async\"",
+        "variant_raw": "HEV PREMIUM",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 4290000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "toyota/alphard/4590000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "alphard",
+        "official_name": "Alphard",
+        "media_name": "Alphard"
+      },
+      "field": "price",
+      "value_thb": 4590000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "substring",
+      "official": {
+        "observation_id": "57c66968ff4f093d",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[22].item[name=Toyota Alphard].hasVariant[0][Alphard HEV Premium Luxury].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 22,
+          "variant_index": 0,
+          "item_name": "Toyota Alphard",
+          "variant_name": "Alphard HEV Premium Luxury",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota Alphard' → variant 'Alphard HEV Premium Luxury' → price 4590000 THB (InStock)",
+        "variant_raw": "Alphard HEV Premium Luxury",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 4590000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_002",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "ALPHARD.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img decoding=\"async\"",
+          "text_offset": 33880
+        },
+        "excerpt": "ALPHARD.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img decoding=\"async\"",
+        "variant_raw": "HEV PREMIUM LUXURY",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 4590000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "toyota/camry/1475000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "camry",
+        "official_name": "CAMRY",
+        "media_name": "Camry"
+      },
+      "field": "price",
+      "value_thb": 1475000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "exact",
+      "official": {
+        "observation_id": "6fa25ed5865c3532",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[10].item[name=Toyota CAMRY].hasVariant[2][HEV Smart].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 10,
+          "variant_index": 2,
+          "item_name": "Toyota CAMRY",
+          "variant_name": "HEV Smart",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota CAMRY' → variant 'HEV Smart' → price 1475000 THB (InStock)",
+        "variant_raw": "HEV Smart",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 1475000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_003",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "CAMRY-HYBRID-1.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading",
+          "text_offset": 37531
+        },
+        "excerpt": "CAMRY-HYBRID-1.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading",
+        "variant_raw": "HEV SMART",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 1475000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "toyota/camry/1659000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "camry",
+        "official_name": "CAMRY",
+        "media_name": "Camry"
+      },
+      "field": "price",
+      "value_thb": 1659000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "exact",
+      "official": {
+        "observation_id": "2a1db3062d49e190",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[10].item[name=Toyota CAMRY].hasVariant[1][HEV Premium].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 10,
+          "variant_index": 1,
+          "item_name": "Toyota CAMRY",
+          "variant_name": "HEV Premium",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota CAMRY' → variant 'HEV Premium' → price 1659000 THB (InStock)",
+        "variant_raw": "HEV Premium",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 1659000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_004",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "CAMRY-HYBRID-1.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading",
+          "text_offset": 37531
+        },
+        "excerpt": "CAMRY-HYBRID-1.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading",
+        "variant_raw": "HEV PREMIUM",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 1659000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "toyota/camry/1809000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "camry",
+        "official_name": "CAMRY",
+        "media_name": "Camry"
+      },
+      "field": "price",
+      "value_thb": 1809000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "exact",
+      "official": {
+        "observation_id": "90db656ff3864a7f",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[10].item[name=Toyota CAMRY].hasVariant[0][HEV Premium Luxury].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 10,
+          "variant_index": 0,
+          "item_name": "Toyota CAMRY",
+          "variant_name": "HEV Premium Luxury",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota CAMRY' → variant 'HEV Premium Luxury' → price 1809000 THB (InStock)",
+        "variant_raw": "HEV Premium Luxury",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 1809000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_005",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "CAMRY-HYBRID-1.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading",
+          "text_offset": 37531
+        },
+        "excerpt": "CAMRY-HYBRID-1.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading",
+        "variant_raw": "HEV PREMIUM LUXURY",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 1809000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "toyota/veloz/795000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "veloz",
+        "official_name": "Veloz",
+        "media_name": "Veloz"
+      },
+      "field": "price",
+      "value_thb": 795000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "exact",
+      "official": {
+        "observation_id": "eebc66a6cb33907b",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[20].item[name=Toyota Veloz].hasVariant[1][Smart].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 20,
+          "variant_index": 1,
+          "item_name": "Toyota Veloz",
+          "variant_name": "Smart",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota Veloz' → variant 'Smart' → price 795000 THB (InStock)",
+        "variant_raw": "Smart",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 795000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_018",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "VELOZ.png\" rel=\"gallery\" data-fancybox-group=\"gallery\"><img loading=\"lazy\" decoding=\"",
+          "text_offset": 62971
+        },
+        "excerpt": "VELOZ.png\" rel=\"gallery\" data-fancybox-group=\"gallery\"><img loading=\"lazy\" decoding=\"",
+        "variant_raw": "Smart",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 795000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "toyota/veloz/875000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "veloz",
+        "official_name": "Veloz",
+        "media_name": "Veloz"
+      },
+      "field": "price",
+      "value_thb": 875000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "exact",
+      "official": {
+        "observation_id": "47b74c53bc1212f7",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[20].item[name=Toyota Veloz].hasVariant[0][Premium].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 20,
+          "variant_index": 0,
+          "item_name": "Toyota Veloz",
+          "variant_name": "Premium",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota Veloz' → variant 'Premium' → price 875000 THB (InStock)",
+        "variant_raw": "Premium",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 875000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_019",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "VELOZ.png\" rel=\"gallery\" data-fancybox-group=\"gallery\"><img loading=\"lazy\" decoding=\"",
+          "text_offset": 62971
+        },
+        "excerpt": "VELOZ.png\" rel=\"gallery\" data-fancybox-group=\"gallery\"><img loading=\"lazy\" decoding=\"",
+        "variant_raw": "Premium",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 875000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "toyota/yaris/584000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "yaris",
+        "official_name": "Yaris",
+        "media_name": "Yaris"
+      },
+      "field": "price",
+      "value_thb": 584000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "substring",
+      "official": {
+        "observation_id": "7cd5a5edeca20b0c",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[7].item[name=Toyota Yaris].hasVariant[2][Sport].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 7,
+          "variant_index": 2,
+          "item_name": "Toyota Yaris",
+          "variant_name": "Sport",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota Yaris' → variant 'Sport' → price 584000 THB (InStock)",
+        "variant_raw": "Sport",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 584000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_020",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "YARIS-2026.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading=\"la",
+          "text_offset": 64142
+        },
+        "excerpt": "YARIS-2026.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading=\"la",
+        "variant_raw": "Sport AT",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 584000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "toyota/yaris/644000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "yaris",
+        "official_name": "Yaris",
+        "media_name": "Yaris"
+      },
+      "field": "price",
+      "value_thb": 644000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "substring",
+      "official": {
+        "observation_id": "75f9370cb6b0562d",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[7].item[name=Toyota Yaris].hasVariant[1][Smart].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 7,
+          "variant_index": 1,
+          "item_name": "Toyota Yaris",
+          "variant_name": "Smart",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota Yaris' → variant 'Smart' → price 644000 THB (InStock)",
+        "variant_raw": "Smart",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 644000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_021",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "YARIS-2026.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading=\"la",
+          "text_offset": 64142
+        },
+        "excerpt": "YARIS-2026.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading=\"la",
+        "variant_raw": "Smart AT",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 644000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "toyota/yaris/689000",
+      "model": {
+        "brand": "toyota",
+        "normalized": "yaris",
+        "official_name": "Yaris",
+        "media_name": "Yaris"
+      },
+      "field": "price",
+      "value_thb": 689000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "substring",
+      "official": {
+        "observation_id": "4aeeaea0ee374768",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Toyota Thailand Official",
+        "source_url": "https://www.toyota.co.th/en/pricelist",
+        "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+        "artifact_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+        "captured_at": "2026-09-24T18:57:17.345495+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+          "json_path": "ldjson[0].itemListElement[7].item[name=Toyota Yaris].hasVariant[0][Premium].offers.price",
+          "ldplusjson_block": true,
+          "ldjson_block_index": 0,
+          "item_list_index": 7,
+          "variant_index": 0,
+          "item_name": "Toyota Yaris",
+          "variant_name": "Premium",
+          "method": "ldjson_path"
+        },
+        "excerpt": "JSON-LD Vehicle 'Toyota Yaris' → variant 'Premium' → price 689000 THB (InStock)",
+        "variant_raw": "Premium",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 689000,
+        "price_type": "MSRP"
+      },
+      "media": {
+        "observation_id": "media_9carthai_toyota_022",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/toyota-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+        "artifact_sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+        "captured_at": "2026-09-25T06:34:55.695509+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "method": "text_search",
+          "selector": "YARIS-2026.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading=\"la",
+          "text_offset": 64142
+        },
+        "excerpt": "YARIS-2026.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading=\"la",
+        "variant_raw": "Sport Premium AT",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 689000,
+        "price_type": "MSRP"
+      }
+    }
+  ]
+}

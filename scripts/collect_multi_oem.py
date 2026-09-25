@@ -61,7 +61,12 @@ async def main():
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
         try:
-            await page.set_content(HTML_CONTENT)
+            # Wait for the parsed DOM, not for remote subresources: these saved
+            # AEM pages keep absolute image/style URLs, so waiting for "load"
+            # lets network latency alone fail an attempt (the intermittent
+            # Suzuki "no results" the retries above were added for).
+            await page.set_content(HTML_CONTENT, timeout=60000,
+                                   wait_until="domcontentloaded")
             result = await page.evaluate(EXTRACT_JS)
             print(json.dumps(result))
         except Exception as e:
@@ -232,32 +237,56 @@ def collect_mazda():
 # ─── Nissan Adapter (DOM — .vehicle-in-category-wrapper) ───
 NISSAN_JS = """
 (() => {
+    // Full document-absolute CSS path using nth-of-type per level: every card gets
+    // its own path, so a locator can never resolve to a neighbouring vehicle.
+    const cssPath = (el) => {
+        const parts = [];
+        let node = el;
+        while (node && node.nodeType === 1 && node !== document.documentElement) {
+            let sel = node.tagName.toLowerCase();
+            const parent = node.parentElement;
+            if (parent) {
+                const sameTag = Array.prototype.filter.call(
+                    parent.children, (c) => c.tagName === node.tagName);
+                if (sameTag.length > 1) {
+                    sel += ':nth-of-type(' + (sameTag.indexOf(node) + 1) + ')';
+                }
+            }
+            parts.unshift(sel);
+            node = parent;
+        }
+        return parts.join(' > ');
+    };
+
     const items = [];
     const priceEls = document.querySelectorAll('.price-figure');
     const seen = new Set();
-    
-    for (const priceEl of priceEls) {
+
+    for (let idx = 0; idx < priceEls.length; idx++) {
+        const priceEl = priceEls[idx];
         const parent = priceEl.closest('.vehicle-in-category-wrapper');
         if (!parent) continue;
-        
+
         const nameEl = parent.querySelector('h2, h3, h4, [class*="name"], [class*="title"]');
         if (!nameEl) continue;
-        
+
         const name = nameEl.textContent.trim();
         const priceText = priceEl.textContent.trim();
         const priceMatch = priceText.match(/[\\d,]+/);
         const price = priceMatch ? parseInt(priceMatch[0].replace(/,/g, '')) : null;
-        
+
         if (!price || price < 100000 || price > 10000000) continue;
-        
+
         const key = name + ':' + price;
         if (seen.has(key)) continue;
         seen.add(key);
-        
+
         items.push({
             model: name,
             price: price,
             selector: '.vehicle-in-category-wrapper:has(.price-figure)',
+            dom_path: cssPath(parent),
+            price_index: idx,
             evidence: parent.textContent.trim().replace(/\\s+/g, ' ').substring(0, 200)
         });
     }
@@ -323,7 +352,12 @@ def collect_nissan():
             "evidence_excerpt": item['evidence'],
             "evidence_locator": {
                 "artifact_path": artifact,
+                "artifact_sha256": hashlib.sha256(open(artifact, 'rb').read()).hexdigest() if os.path.exists(artifact) else None,
+                # convenience selector matches every card; dom_path is the canonical,
+                # document-absolute locator that resolves to exactly this vehicle
                 "selector": item['selector'],
+                "dom_path": item.get('dom_path'),
+                "price_index": item.get('price_index'),
                 "method": "dom_query",
             },
         })
@@ -769,15 +803,20 @@ def collect_lexus():
         # Determine price type
         is_starting = 'เริ่มต้น' in text
         
-        # Build DOM path
+        # Build a CSS-accurate DOM path.
+        # bs4's .children includes NavigableString nodes, so the index must be
+        # taken over ELEMENT siblings only — otherwise :nth-child(N) points at
+        # a different node in the browser and the locator resolves nowhere.
         path = []
         el = li
         while el and el.name and el.name != 'body':
             parent = el.parent
             if parent:
-                child_idx = list(parent.children).index(el) + 1
+                elements = [c for c in parent.children if getattr(c, 'name', None)]
+                child_idx = elements.index(el) + 1 if el in elements else 1
                 path.insert(0, f"{el.name}:nth-child({child_idx})")
             el = parent
+        li_index = (lambda: [x for x in model_list.find_all('li', recursive=False)].index(li) + 1)()
         
         observations.append({
             "source": {
@@ -822,7 +861,7 @@ def collect_lexus():
                 "artifact_path": artifact,
                 "artifact_sha256": hashlib.sha256(open(artifact, 'rb').read()).hexdigest(),
                 "canonical_locator": ' > '.join(path),
-                "selector": f"ul.tab__item_models > li # {model}",
+                "selector": f"ul.tab__item_models > li.model_sort_item:nth-of-type({li_index})",
                 "method": "dom_query",
             },
             # nested shape kept for backwards compatibility with existing tests
@@ -830,7 +869,7 @@ def collect_lexus():
                 "excerpt": text[:500],
                 "evidence_locator": {
                     "canonical_locator": ' > '.join(path),
-                    "convenience_selector": f"ul.tab__item_models > li # {model}",
+                    "convenience_selector": f"ul.tab__item_models > li.model_sort_item:nth-of-type({li_index})",
                 },
             },
         })
@@ -1722,7 +1761,8 @@ Q05_JS = r"""
 
 
 def _changan_row(artifact, artifact_hash, prov, *, model, variant, price, price_type,
-                 identity_level, evidence, selector, method, tag, raw_labels):
+                 identity_level, evidence, selector, method, tag, raw_labels,
+                 text_offset=None):
     return {
         "observation_id": hashlib.sha256(f"{tag}:{model}:{variant or ''}:{price}:{selector or ''}".encode()).hexdigest()[:16],
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -1763,6 +1803,10 @@ def _changan_row(artifact, artifact_hash, prov, *, model, variant, price, price_
             "artifact_path": artifact,
             "selector": selector,
             "method": method,
+            # character offset of this occurrence in the decoded artifact text: the page
+            # repeats the offer string inside several JSON blobs, so an
+            # occurrence index is what makes the locator single-valued
+            "text_offset": text_offset,
         },
     }
 
@@ -1819,7 +1863,8 @@ def collect_changan_prices():
                 model=model, variant=None, price=price,
                 price_type='MSRP', identity_level='MODEL',
                 evidence=ctx[:220], selector=m.group(0),
-                method='regex_text', tag='changan_lumin', raw_labels={}))
+                method='regex_text', tag='changan_lumin', raw_labels={},
+                text_offset=m.start()))
         print(f"  Lumin matches: {len(seen)}")
     else:
         print(f"  Fixture not found: {lumin_file}")
@@ -1847,7 +1892,7 @@ def collect_changan_prices():
                 price_type='MSRP', identity_level='VARIANT',
                 evidence=m.group(0)[:220], selector=m.group(0),
                 method='regex_text', tag='changan_promo',
-                raw_labels={'ราคาพิเศษ_thb': promo}))
+                raw_labels={'ราคาพิเศษ_thb': promo}, text_offset=m.start()))
         print(f"  Q05 trim offers (deduped): {len(seen)}")
     else:
         print(f"  Fixture not found: {promo_file}")
@@ -2111,6 +2156,273 @@ def collect_porsche():
     return observations
 
 
+# ─── GWM Thailand — official /th/models/<slug> price pages ──────────────────
+# The GWM homepage, /en/models and mall.gwm.co.th are price-free (recorded, no
+# adapter). The 13 server-rendered model detail pages discovered through
+# gwm.co.th/sitemap.xml do publish figures, in two independent places:
+#
+#   A. the hero `.kv-content .desc` block — labelled ราคาเริ่มต้น / "MSRP :" /
+#      or a bare number;
+#   B. the configurator colour cards — data-title="฿N" on .btn-item together
+#      with data-car-img, whose path names the trim.
+#
+# Rule that decides what may be staged: a hero figure is staged ONLY when the
+# exact same figure is published as a configurator card price on the SAME
+# artifact. Anything else is campaign-derived (list minus the month's ส่วนลด),
+# so its price type cannot be established from this artifact alone and it is
+# written to the rejection log instead of being typed as MSRP/MSRP_STARTING.
+GWM_MIN_PRICE = 100_000
+GWM_MAX_PRICE = 10_000_000
+GWM_CANDIDATES_LOG = "audit/coverage/gwm_price_candidates_20260925.json"
+
+
+def _gwm_variant_from_img(img):
+    """Configurator image path -> trim slug, or None when the path names no trim.
+
+    …/model/<page>/360/<trim>/file.png        -> <trim>
+    …/model/<page>/a/b/<trim>/file.webp        -> <trim>   (last segment)
+    …/model/<page>/360/file.png                -> None     (colour-only path)
+    …/model/<page>/file.webp                   -> None     (no trim segment)
+    """
+    import posixpath
+    dirp = posixpath.dirname(img or "")
+    if not dirp:
+        return None
+    if "/360/" in dirp + "/":
+        trimmed = (dirp + "/").split("/360/", 1)[1].strip("/")
+        return trimmed or None
+    m = re.search(r"/model/[^/]+/(.+)$", dirp)
+    if m and m.group(1):
+        segs = [s for s in m.group(1).split("/") if s]
+        if segs:
+            return segs[-1]
+    return None
+
+
+def _gwm_card_needle(raw, price, img):
+    """Exact source slice binding ONE configurator card: its own data-title
+    figure plus the data-car-img path that names the trim.
+
+    The slice must stay inside a single tag (no '<' between the two attributes),
+    otherwise it would run backwards across neighbouring colour buttons and drag
+    their figures into this record's evidence. Returns (needle, offset).
+    """
+    marker = f'data-car-img="{img}"'
+    figure = f"{price:,}"
+    for mm in re.finditer(re.escape(marker), raw):
+        start = raw.rfind('data-title="', 0, mm.start())
+        if start < 0:
+            continue
+        head = raw[start:mm.end()]
+        if "<" in head:          # crossed into another element
+            continue
+        if not head.startswith('data-title="'):
+            continue
+        if figure not in head:
+            continue
+        return head, start
+    return None, None
+
+
+def parse_gwm_page(raw, artifact, artifact_hash, prov):
+    """Parse one GWM model page. Returns (observations, rejected_candidates).
+
+    Both lists are exhaustive over what the page publishes: every hero figure
+    the page shows is either staged or returned as a rejected candidate with a
+    reason, so nothing is dropped silently.
+    """
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(raw, "html.parser")
+    kv = soup.select_one(".kv-content")
+    title_el = kv.select_one(".title") if kv else None
+    desc = kv.select_one(".desc") if kv else None
+    if kv is None or title_el is None or desc is None:
+        return [], []
+
+    title = " ".join(title_el.get_text(" ", strip=True).split())
+    container = kv.find_parent(id=True)
+    cid = str(container.get("id")) if container and container.get("id") else None
+    if not cid or len(soup.select("#" + cid)) != 1:
+        return [], []  # no page-unique, single-valued anchor available
+
+    source_url = prov.get("source_url", "https://www.gwm.co.th/")
+    captured_at = prov["captured_at"]
+
+    def _source(method):
+        return {
+            "class": "OEM_OFFICIAL",
+            "url": source_url,
+            "name": "GWM Thailand Official",
+            "precedence": 100,
+            "native_id": None,
+            "immutable_revision": None,
+            "extraction_method": method,
+            "artifact_path": artifact,
+            "artifact_sha256": artifact_hash,
+            "captured_at": captured_at,
+            "provenance_state": prov["provenance_state"],
+        }
+
+    def _identity(variant, level, powertrain=None):
+        return {
+            "brand_raw": "GWM",
+            "model_raw": title,
+            "variant_raw": variant,
+            "year": None,
+            "fuel_powertrain_raw": powertrain,
+            "brand_normalized": "gwm",
+            "model_normalized": title.lower().replace(" ", "-"),
+            "variant_normalized": variant.lower().replace(" ", "-") if variant else None,
+            "identity_level": level,
+        }
+
+    def _row(variant, level, price, price_type, evidence, locator, raw_labels,
+             method, powertrain=None):
+        tag = f"gwm:{artifact}:{title}:{variant or ''}:{price}:{locator.get('dom_path') or locator.get('text_offset')}"
+        return {
+            "observation_id": hashlib.sha256(tag.encode()).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": _source(method),
+            "identity": _identity(variant, level, powertrain),
+            "price": {"value_thb": price, "type": price_type, "currency": "THB",
+                      "currentness": "UNKNOWN"},
+            "specs": {},
+            "raw_labels": raw_labels,
+            "evidence_excerpt": evidence[:400],
+            "evidence_locator": locator,
+        }
+
+    def _candidate(span_index, value, label, reason, text):
+        return {
+            "artifact": artifact, "source_url": source_url, "model": title,
+            "span_index": span_index, "price_label": label,
+            "value_thb": value, "reason": reason, "raw_text": text[:200],
+        }
+
+    observations, rejected = [], []
+
+    # ── A. configurator cards: the figures this site publishes as buyable ──
+    cards = []  # (price, data-car-img)
+    for btn in soup.select(".btn-item[data-title]"):
+        m = re.search(r"฿\s*([\d,]+)", str(btn.get("data-title") or ""))
+        if not m:
+            continue
+        price = int(m.group(1).replace(",", ""))
+        if not (GWM_MIN_PRICE <= price <= GWM_MAX_PRICE):
+            continue
+        cards.append((price, str(btn.get("data-car-img") or "")))
+    card_prices = {p for p, _ in cards}
+
+    # ── B. hero price block ──
+    spans = desc.find_all("span", recursive=False)
+    for idx, span in enumerate(spans):
+        text = " ".join(span.get_text(" ", strip=True).split())
+        m = re.search(r"([\d][\d,]{4,})", text)
+        if not m:
+            continue
+        value = int(m.group(1).replace(",", ""))
+        prev = " ".join(spans[idx - 1].get_text(" ", strip=True).split()) if idx else ""
+        prev_carries_figure = bool(re.search(r"[\d][\d,]{4,}", prev))
+
+        if "เริ่มต้น" in text:
+            label, price_type = "ราคาเริ่มต้น", "MSRP_STARTING"
+            marker = ""
+        elif "เริ่มต้น" in prev and not prev_carries_figure:
+            # label and figure live in sibling spans (ราคาเริ่มต้น: / 1,669,000.-)
+            label, price_type, marker = "ราคาเริ่มต้น", "MSRP_STARTING", prev
+        elif "msrp" in text.lower():
+            label, price_type, marker = "MSRP", "MSRP", ""
+        else:
+            label, price_type, marker = None, "MSRP", ""
+
+        powertrain = None
+        if label == "ราคาเริ่มต้น" and "ราคาเริ่มต้น" in text:
+            head = text.split("ราคาเริ่มต้น")[0].strip()
+            if 0 < len(head) <= 8:
+                powertrain = head
+
+        if not (GWM_MIN_PRICE <= value <= GWM_MAX_PRICE):
+            rejected.append(_candidate(idx, value, label, "outside_model_price_floor", text))
+            continue
+        if value not in card_prices:
+            rejected.append(
+                _candidate(idx, value, label,
+                           "not_published_as_a_configurator_price_on_this_artifact", text))
+            continue
+
+        selector = f"#{cid} .desc > span:nth-of-type({idx + 1})"
+        if len(soup.select(selector)) != 1:
+            rejected.append(_candidate(idx, value, label, "locator_not_single_valued", text))
+            continue
+
+        evidence = " | ".join(x for x in (title, marker, text) if x)
+        observations.append(_row(
+            variant=None, level="MODEL", price=value, price_type=price_type,
+            evidence=evidence,
+            locator={"artifact_path": artifact, "artifact_sha256": artifact_hash,
+                     "dom_path": selector, "selector": selector, "method": "dom_query"},
+            raw_labels={"price_label": label or "unlabeled", "raw_source_text": (marker + " " + text).strip(),
+                        "configurator_corroborated": True},
+            method="html_dom", powertrain=powertrain))
+
+    # ── C. configurator cards -> EXACT_VARIANT, only when the trim is named ──
+    by_variant = {}
+    for price, img in cards:
+        variant = _gwm_variant_from_img(img)
+        if not variant:
+            continue
+        by_variant.setdefault(variant, {}).setdefault(price, img)
+
+    for variant, priced in sorted(by_variant.items()):
+        if len(priced) != 1:
+            continue  # a trim that resolves to two figures proves nothing
+        price, img = next(iter(priced.items()))
+        needle, offset = _gwm_card_needle(raw, price, img)
+        if needle is None:
+            rejected.append(_candidate(None, price, variant, "card_needle_not_found", img))
+            continue
+        observations.append(_row(
+            variant=variant, level="VARIANT", price=price, price_type="EXACT_VARIANT",
+            evidence=needle,
+            locator={"artifact_path": artifact, "artifact_sha256": artifact_hash,
+                     "selector": needle, "text_offset": offset, "method": "regex_text"},
+            raw_labels={"data_title": f"฿{price:,}", "image_path": img},
+            method="regex_text"))
+
+    return observations, rejected
+
+
+def collect_gwm_prices():
+    """Collect from GWM Thailand — the 13 official model price pages."""
+    print("=== GWM Thailand Official (model price pages) ===")
+    observations, rejected = [], []
+    for fn in sorted(os.listdir(FIXTURE_DIR)):
+        if not (fn.startswith("gwm_th_model_") and fn.endswith(".html")):
+            continue
+        artifact = f"{FIXTURE_DIR}/{fn}"
+        with open(artifact, encoding="utf-8") as f:
+            raw = f.read()
+        artifact_hash = hashlib.sha256(open(artifact, "rb").read()).hexdigest()
+        prov = get_fixture_provenance(artifact)
+        rows, cand = parse_gwm_page(raw, artifact, artifact_hash, prov)
+        observations.extend(rows)
+        rejected.extend(cand)
+        print(f"  {fn:38} rows={len(rows):2} rejected={len(cand)}")
+
+    os.makedirs(os.path.dirname(GWM_CANDIDATES_LOG), exist_ok=True)
+    with open(GWM_CANDIDATES_LOG, "w", encoding="utf-8") as f:
+        json.dump({
+            "brand": "GWM",
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "rule": ("a hero price is staged only when the identical figure is "
+                     "published as a configurator card price on the same artifact; "
+                     "campaign-derived figures are rejected rather than typed"),
+            "staged_rows": len(observations),
+            "rejected_candidates": rejected,
+        }, f, ensure_ascii=False, indent=2)
+    print(f"  GWM rows: {len(observations)} staged, {len(rejected)} rejected -> {GWM_CANDIDATES_LOG}")
+    return observations
+
 
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
@@ -2170,6 +2482,9 @@ def main():
     porsche = collect_porsche()
     all_observations.extend(porsche)
 
+    gwm = collect_gwm_prices()
+    all_observations.extend(gwm)
+
     # Load existing Fipe/OpenEV
     existing = []
     prev_staging = "audit/data-staging/vehicle_observations_prev.jsonl"
@@ -2200,7 +2515,8 @@ def main():
     print(f"Jaguar price sheet (PDF): {len(jaguar_sheet)}")
     print(f"Land Rover price sheet (PDF): {len(landrover_sheet)}")
     print(f"Porsche RSC nodes: {len(porsche)}")
-    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg) + len(mitsubishi) + len(suzuki) + len(mini) + len(deepal) + len(kia_promos) + len(changan_prices) + len(jaguar_sheet) + len(landrover_sheet) + len(porsche)}")
+    print(f"GWM model price pages: {len(gwm)}")
+    print(f"Genuinely extracted from fixtures: {len(toyota) + len(mazda) + len(nissan) + len(honda) + len(isuzu) + len(bmw) + len(lexus) + len(honda_models) + len(mg) + len(mitsubishi) + len(suzuki) + len(mini) + len(deepal) + len(kia_promos) + len(changan_prices) + len(jaguar_sheet) + len(landrover_sheet) + len(porsche) + len(gwm)}")
     print(f"Total: {len(all_observations) + len(existing)}")
 
     # Write staging
@@ -2209,7 +2525,7 @@ def main():
         for obs in all_observations + existing:
             f.write(json.dumps(obs) + '\n')
 
-    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg + mitsubishi + suzuki + mini + deepal + kia_promos + changan_prices + jaguar_sheet + landrover_sheet + porsche
+    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg + mitsubishi + suzuki + mini + deepal + kia_promos + changan_prices + jaguar_sheet + landrover_sheet + porsche + gwm
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "provenance": {
@@ -2220,7 +2536,7 @@ def main():
         },
         "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda),
                        "isuzu": len(isuzu), "bmw": len(bmw), "lexus": len(lexus),
-                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal), "kia_promos": len(kia_promos), "changan": len(changan_prices), "jaguar_sheet": len(jaguar_sheet), "landrover_sheet": len(landrover_sheet), "porsche": len(porsche)},
+                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal), "kia_promos": len(kia_promos), "changan": len(changan_prices), "jaguar_sheet": len(jaguar_sheet), "landrover_sheet": len(landrover_sheet), "porsche": len(porsche), "gwm": len(gwm)},
         "total": len(all_observations) + len(existing),
     }
     with open("audit/data-staging/summary.json", 'w') as f:

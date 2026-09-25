@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/tank-500",
+  "captured_at": "2026-09-25T07:46:39.041454+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_tank-500.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

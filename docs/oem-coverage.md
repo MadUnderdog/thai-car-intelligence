@@ -1,16 +1,16 @@
 # OEM Coverage View
 
 > GENERATED from `audit/coverage/oem-registry.json` by `scripts/generate_coverage_view.py` — do not edit by hand.
-> Generated at: 2026-09-25T04:28:19.800300+00:00
+> Generated at: 2026-09-25T07:57:06.248478+00:00
 
 ## Coverage
 
 ```text
 coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
-         = 17 / 32 = 53.1%
+         = 18 / 32 = 56.2%
 ```
 
-- Verified + parsed-tested brands: Toyota, Honda, Nissan, Mazda, Mitsubishi, Isuzu, Suzuki, MG, BMW, Porsche, Lexus, Deepal, Changan, Jaguar, Land Rover, MINI, Kia
+- Verified + parsed-tested brands: Toyota, Honda, Nissan, Mazda, Mitsubishi, Isuzu, Suzuki, MG, BMW, Porsche, Lexus, Deepal, Changan, GWM, Jaguar, Land Rover, MINI, Kia
 - Currently reachable endpoints: 18 / 32
 - Blocked endpoints: 14 / 32
 - Scope candidates unresolved: 2
@@ -44,7 +44,7 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
 | Deepal | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-10-01 |
 | Avance | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
 | Changan | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
-| GWM | yes | 🟢 `REACHABLE` | NONE | ACQUISITION_VERIFIED | — | 2026-09-25 |
+| GWM | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-25 | 2026-09-25 |
 | Haval | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
 | Chery | yes | ⛔ `BLOCKED_DNS` | NONE | NONE | — | 2026-10-01 |
 | Jaguar | yes | 🟢 `REACHABLE` | PARSED_TESTED | ACQUISITION_VERIFIED | 2026-09-24 | 2026-09-25 |
@@ -128,6 +128,19 @@ coverage = brands(ACQUISITION_VERIFIED AND PARSED_TESTED) / in_scope
   - `gwm_models_page.html` ← https://www.gwm.co.th/en/models · ACQUISITION_VERIFIED · unparsed · e7a9070ab8c8
   - `gwm_data_models_page.html` ← https://www.gwm.co.th/en/gwm-data-car-models · ACQUISITION_VERIFIED · unparsed · d09dec4fa516
   - `gwm_mall_home.html` ← https://mall.gwm.co.th/ · ACQUISITION_VERIFIED · unparsed · 1fcace8cd759
+  - `gwm_th_model_haval-h6.html` ← https://www.gwm.co.th/th/models/haval-h6 · ACQUISITION_VERIFIED · parsed · 236ada0f0db7
+  - `gwm_th_model_ora-5-ev.html` ← https://www.gwm.co.th/th/models/ora-5-ev · ACQUISITION_VERIFIED · parsed · 6ca2b21a3d84
+  - `gwm_th_model_ora-5-hev.html` ← https://www.gwm.co.th/th/models/ora-5-hev · ACQUISITION_VERIFIED · parsed · 8182d7d5c3e1
+  - `gwm_th_model_poer.html` ← https://www.gwm.co.th/th/models/poer · ACQUISITION_VERIFIED · parsed · f83c07e4ff58
+  - `gwm_th_model_sahar-diesel.html` ← https://www.gwm.co.th/th/models/sahar-diesel · ACQUISITION_VERIFIED · parsed · 662b719e379f
+  - `gwm_th_model_sahar.html` ← https://www.gwm.co.th/th/models/sahar · ACQUISITION_VERIFIED · parsed · b1bdea00126f
+  - `gwm_th_model_tank-300-diesel.html` ← https://www.gwm.co.th/th/models/tank-300-diesel · ACQUISITION_VERIFIED · parsed · a54714afc4fd
+  - `gwm_th_model_tank-300-limited-lb.html` ← https://www.gwm.co.th/th/models/tank-300-limited-lb · ACQUISITION_VERIFIED · parsed · 3e458640a5c1
+  - `gwm_th_model_tank-300.html` ← https://www.gwm.co.th/th/models/tank-300 · ACQUISITION_VERIFIED · parsed · c1d3072c46c5
+  - `gwm_th_model_tank-500-3t-diesel.html` ← https://www.gwm.co.th/th/models/tank-500-3t-diesel · ACQUISITION_VERIFIED · parsed · a47b4c5ddac3
+  - `gwm_th_model_tank-500-diesel.html` ← https://www.gwm.co.th/th/models/tank-500-diesel · ACQUISITION_VERIFIED · parsed · 434bb47d8536
+  - `gwm_th_model_tank-500.html` ← https://www.gwm.co.th/th/models/tank-500 · ACQUISITION_VERIFIED · parsed · 409b6ea36511
+  - `gwm_th_model_wey-g9.html` ← https://www.gwm.co.th/th/models/wey-g9 · ACQUISITION_VERIFIED · parsed · 23c92f204509
 - **Jaguar**
   - `jaguar_home_page.html` ← https://www.jaguar.co.th/ · ACQUISITION_VERIFIED · unparsed · 05d97f701cf4
   - `jaguar_range_page.html` ← https://www.jaguar.co.th/jaguar-range/overview · ACQUISITION_VERIFIED · unparsed · 12ad7deb8700

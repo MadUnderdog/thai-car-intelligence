@@ -252,6 +252,10 @@ def test_staging_counts_match_extractors():
     assert counts.get('Porsche Thailand Official', 0) == len(collect_porsche()), \
         "Porsche staging count mismatch"
 
+    from collect_multi_oem import collect_gwm_prices
+    assert counts.get('GWM Thailand Official', 0) == len(collect_gwm_prices()), \
+        "GWM staging count mismatch"
+
 
 # ─── Honda Extraction Tests (from fixture) ───
 

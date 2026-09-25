@@ -1,11 +1,11 @@
 {
   "reproduction_date": "2026-09-22",
-  "git_head": "38d9275896e661b0dfb61f4e6e3726f4f2582cb5",
+  "git_head": "1d442101911e59c6619caf93682943706d8714c6",
   "summary": {
     "total_checks": 26,
-    "passed": 23,
+    "passed": 24,
     "failed": 0,
-    "partial": 2,
+    "partial": 1,
     "not_applicable": 1
   },
   "checks": [
@@ -13,13 +13,13 @@
       "section": "1_git",
       "check": "local_equals_remote",
       "status": "PASS",
-      "local_head": "38d9275896e661b0dfb61f4e6e3726f4f2582cb5",
-      "remote_head": "38d9275896e661b0dfb61f4e6e3726f4f2582cb5"
+      "local_head": "1d442101911e59c6619caf93682943706d8714c6",
+      "remote_head": "1d442101911e59c6619caf93682943706d8714c6"
     },
     {
       "section": "1_git",
       "check": "working_tree_clean",
-      "status": "PARTIAL",
+      "status": "PASS",
       "note": "Untracked files may exist; committed state is verified"
     },
     {

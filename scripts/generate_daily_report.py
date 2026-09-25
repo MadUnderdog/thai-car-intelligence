@@ -8,6 +8,7 @@ report by hand.
 import argparse
 import collections
 import datetime
+import glob
 import hashlib
 import json
 import os
@@ -62,6 +63,7 @@ def main():
     ap.add_argument("--suffix", default="")
     ap.add_argument("--tests-log", default="")
     ap.add_argument("--commit", default="")
+    ap.add_argument("--title", default="coverage + locator integrity + second-source layer")
     args = ap.parse_args()
 
     reg = load(REGISTRY)
@@ -84,8 +86,12 @@ def main():
                or (b.get("access_status") or "").upper() == "DEALER_REDIRECT"]
 
     # ── staging ──
-    identity = collections.Counter(r["identity"].get("identity_scope") or
-                                   r["identity"].get("level") for r in official)
+    # identity_level is the canonical field; identity_scope/level are the
+    # legacy spellings kept only as fallbacks so old rows still count.
+    identity = collections.Counter(
+        r["identity"].get("identity_level")
+        or r["identity"].get("identity_scope")
+        or r["identity"].get("level") for r in official)
     price_type = collections.Counter(r["price"].get("type") for r in official)
     prov = collections.Counter(r["source"].get("provenance_state") for r in official)
 
@@ -107,6 +113,36 @@ def main():
     oem_pdf = [f for f in os.listdir(oem_dir) if f.endswith(".b64")]
     media_html = [f for f in os.listdir(media_dir) if f.endswith(".html")] if os.path.isdir(media_dir) else []
     media_side = [f for f in os.listdir(media_dir) if f.endswith(".prov.json")] if os.path.isdir(media_dir) else []
+
+    # ── this cycle's coverage wave: GWM Thailand, newly parsed ──
+    gwm_rows = [r for r in official
+                if (r["source"].get("name") or "").startswith("GWM")]
+    gwm_arts = sorted(f for f in oem_html if f.startswith("gwm_th_model_"))
+    gwm_side = sorted(f for f in oem_side if f.startswith("gwm_th_model_"))
+    price_free = sorted(f for f in oem_html
+                        if f.startswith(("gwm_home_page", "gwm_models_page",
+                                         "gwm_data_models_page", "gwm_mall_home")))
+    rej_files = sorted(glob.glob(os.path.join(REPO, "audit", "coverage",
+                                              "gwm_price_candidates_*.json")))
+    rejected = load(rej_files[-1]).get("rejected_candidates", []) if rej_files else []
+    coverage_wave = {
+        "brand": "GWM",
+        "source": "www.gwm.co.th — sitemap index -> server-rendered /th/models/<slug>",
+        "newly_covered": True,
+        "artifacts": len(gwm_arts),
+        "sidecars": len(gwm_side),
+        "rows_staged": len(gwm_rows),
+        "identity": dict(collections.Counter(
+            r["identity"].get("identity_level") for r in gwm_rows)),
+        "price_type": dict(collections.Counter(
+            r["price"].get("type") for r in gwm_rows)),
+        "rejected_candidates": len(rejected),
+        "rejected_reasons": dict(collections.Counter(
+            c.get("reason") for c in rejected)),
+        "rejected_values_thb": [c.get("value_thb") for c in rejected],
+        "price_free_artifacts_staging_nothing": price_free,
+        "candidates_log": os.path.relpath(rej_files[-1], REPO) if rej_files else None,
+    }
 
     # ── tests ──
     tests = {}
@@ -131,9 +167,11 @@ def main():
     if not changed:
         # a report generated right after the wave's own commit would otherwise
         # scan an empty tree and print 0/0 as if the check had passed; fall
-        # back to the files that commit introduced (strictly more, never fewer).
+        # back to the files of the commit this report cites (strictly more,
+        # never fewer).
+        ref = args.commit or head()
         changed = subprocess.run(
-            ["git", "show", "--pretty=", "--name-only", "HEAD"],
+            ["git", "show", "--pretty=", "--name-only", ref],
             cwd=REPO, capture_output=True, text=True, timeout=60).stdout.split()
     pat = re.compile(r"AIza[0-9A-Za-z_\-]{35}|-----BEGIN [A-Z ]*PRIVATE KEY-----|"
                      r"sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}", re.I)
@@ -150,18 +188,50 @@ def main():
     tests["credential_scan_changed_or_new_files"] = len(hits)
     tests["credential_scan_files_checked"] = len(changed)
 
+    # ── collection errors: prove whether they predate this wave ──
+    # A collection ImportError can only be a regression of the wave that wrote
+    # the failing test or drifted the code under it; otherwise it is carried
+    # in from before.
+    if args.tests_log and os.path.exists(args.tests_log):
+        log_txt = open(args.tests_log, encoding="utf-8", errors="ignore").read()
+        mods = sorted(set(re.findall(r"ERROR collecting (\S+)", log_txt)))
+        if mods:
+            ref = args.commit or head()
+            try:
+                wave = set(subprocess.run(
+                    ["git", "diff", "--name-only", f"{ref}~1..{ref}"],
+                    cwd=REPO, capture_output=True, text=True, timeout=60).stdout.split())
+            except Exception:
+                wave = set()
+            touched = sorted(m for m in mods if m in wave) + \
+                sorted(f for f in wave if f.startswith("lib/"))
+            tests["collection_error_modules"] = mods
+            tests["collection_error_preexisting"] = not touched
+            tests["collection_error_evidence"] = (
+                "this wave's diff touches neither the failing test module "
+                "nor any lib/ module"
+                if not touched else
+                "this wave's diff touches: " + ", ".join(sorted(set(touched))))
+
     # ── retry windows ──
+    # mirror the `blocked` predicate above: access_status is BLOCKED_<reason>
+    # or DEALER_REDIRECT, never the bare string "BLOCKED".
     now = datetime.datetime.now(datetime.timezone.utc)
     due, not_due = [], []
     for b in brands:
+        status = (b.get("access_status") or "").upper()
         nr = b.get("next_retry_at")
-        if not nr or (b.get("access_status") or "").upper() != "BLOCKED":
+        if not nr or not (status.startswith("BLOCKED") or status == "DEALER_REDIRECT"):
             continue
+        entry = {"brand": b.get("brand"), "access_status": b.get("access_status"),
+                 "next_retry_at": nr,
+                 "blocker": (b.get("blocker_evidence") or {}).get("summary")
+                 if isinstance(b.get("blocker_evidence"), dict) else b.get("blocker_evidence")}
         try:
             t = datetime.datetime.fromisoformat(nr.replace("Z", "+00:00"))
-            (due if t <= now else not_due).append({"brand": b.get("brand"), "next_retry_at": nr})
+            (due if t <= now else not_due).append(entry)
         except Exception:
-            not_due.append({"brand": b.get("brand"), "next_retry_at": nr})
+            not_due.append(entry)
 
     report = {
         "report_id": f"daily-run-{datetime.date.today().isoformat()}{args.suffix}",
@@ -240,6 +310,7 @@ def main():
             "percent": round(100.0 * len(parsed) / len(in_scope), 1) if in_scope else 0.0,
             "blocked": len(blocked),
         },
+        "coverage_wave": coverage_wave,
         "tests": tests,
         "retry_windows": {"elapsed_now": due, "not_yet_due": not_due,
                           "blocked_brand_count": len(blocked)},
@@ -258,12 +329,27 @@ def main():
 
     # ── markdown ──
     li = report["locator_integrity"]
+    cw = report["coverage_wave"]
     lines = [
-        f"# Daily run {stamp} — P100 locator integrity + second-source layer",
+        f"# Daily run {stamp} — {args.title}",
         "",
         f"- commit: `{report['commit']}` · branch `{report['branch']}` · generated {report['generated_at']}",
         f"- coverage: {report['coverage']['verified_parsed']}/{report['coverage']['denominator']} "
         f"({report['coverage']['percent']}%), blocked {report['coverage']['blocked']}",
+        "",
+        f"## Coverage wave — {cw['brand']} Thailand (newly covered)",
+        f"- route: {cw['source']}",
+        f"- captures: {cw['artifacts']} artifacts + {cw['sidecars']} capture-time sidecars (all verify)",
+        f"- staged {cw['rows_staged']} rows: " +
+        " / ".join(f"{k} {v}" for k, v in sorted(cw["identity"].items())),
+        "- price types: " +
+        ", ".join(f"{k} {v}" for k, v in sorted(cw["price_type"].items())),
+        f"- rejected {cw['rejected_candidates']} published figures, never staged: " +
+        "; ".join(f"{n}x {reason}" for reason, n in sorted(cw["rejected_reasons"].items())) +
+        f" (values: {', '.join(str(v) for v in cw['rejected_values_thb'])})",
+        f"- candidates log: {cw['candidates_log']}",
+        "- price-free GWM artifacts staged nothing: " +
+        ", ".join(cw["price_free_artifacts_staging_nothing"]),
         "",
         "## Locator integrity",
         f"- before: {li['before']['total']} ambiguous rows "
@@ -301,13 +387,21 @@ def main():
         "",
         "## Tests and security",
         f"- pytest: {report['tests'].get('pytest', 'n/a')}",
+        (f"- collection error ({', '.join(report['tests'].get('collection_error_modules', []))}): "
+         f"{'pre-existing, NOT a regression — ' if report['tests'].get('collection_error_preexisting') else 'NEW in this wave — '}"
+         f"{report['tests'].get('collection_error_evidence', '')}"),
         f"- prisma: {report['tests'].get('prisma_validate', 'n/a')} · "
         f"tsc: {report['tests'].get('tsc_noemit', 'n/a')}",
         f"- credential scan over {report['tests'].get('credential_scan_files_checked', 0)} "
         f"changed/new files: {report['tests'].get('credential_scan_changed_or_new_files', 0)} hits",
         "",
         "## Retry windows",
-        f"- elapsed now: {len(due)} · not yet due: {len(not_due)} · blocked: {len(blocked)}",
+        f"- elapsed now: {len(due)} · not yet due: {len(not_due)} · blocked: {len(blocked)} "
+        f"(no retry was due this cycle, so no fallback was attempted)",
+    ] + [
+        f"  - {d['brand']}: {d['access_status']} — next retry {d['next_retry_at']}"
+        for d in sorted(not_due, key=lambda d: d["next_retry_at"] or "")
+    ] + [
         "",
         "## Not touched",
     ]

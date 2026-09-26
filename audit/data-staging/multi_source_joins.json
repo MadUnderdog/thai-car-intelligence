@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-26T08:35:37.745561+00:00",
-  "staged_rows": 479,
+  "generated_at": "2026-09-26T14:39:12.042492+00:00",
+  "staged_rows": 503,
   "join_rule": "same (brand_normalized, model_normalized, price_thb) supported by >=2 DISTINCT captured artifacts, each ACQUISITION_VERIFIED; no inferred joins",
   "source_classes_present_in_staging": [
     "OEM_OFFICIAL"
   ],
   "source_class_caveat": "all staged rows are class OEM_OFFICIAL — there is currently NO second source class in staging, so >=2 independent source classes is not achievable yet; these joins are cross-ARTIFACT (independent official pages) rather than cross-class",
-  "distinct_source_urls": 38,
-  "join_count": 20,
+  "distinct_source_urls": 44,
+  "join_count": 23,
   "target_was": ">=10 examples only when evidence genuinely supports them",
   "joins": [
     {
@@ -138,6 +138,72 @@
             "method": "dom_card"
           },
           "evidence_excerpt": "S569,000 บาท"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "kia",
+        "model": "the-kia-ev5",
+        "price_thb": 1080000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "b03ff18b7d3aa89f",
+          "source_name": "Kia Thailand Campaign Pages",
+          "source_url": "https://www.kia.com/th/th/util/promotion/thekiacarnival-diesel-2026.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/kia_promo_carnival_diesel.html",
+          "artifact_sha256": "037b6a63056077c2ba58caa4bdef0fa27f81c591c36bc015078508795365ff23",
+          "captured_at": "2026-09-26T13:46:06.265703+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "The Kia EV5",
+          "variant_raw": "The Kia EV5 Air",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 1080000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/kia_promo_carnival_diesel.html",
+            "selector": "The Kia EV5 Air ราคาพิเศษ 1,080,000",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "The Kia EV5 Air ราคาพิเศษ 1,080,000"
+        },
+        {
+          "observation_id": "d5292118ff296d30",
+          "source_name": "Kia Thailand Official",
+          "source_url": "https://www.kia.com/th/th",
+          "artifact_path": "tests/fixtures/oem-artifacts/kia_cars_page.html",
+          "artifact_sha256": "d068ec29fcbefa7b3f2b571845e25f847c17e71658540c6bf772326e4d5581b0",
+          "captured_at": "2026-09-24T14:39:48.569427+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "The Kia EV5",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 1080000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/kia_cars_page.html",
+            "selector": "div:nth-child(15) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "The Kia EV5 — ราคาพิเศษเริ่มต้น 1.080 ล้านบาท*1 - 30 ก.ย. 2026"
         }
       ]
     },
@@ -1320,6 +1386,138 @@
             "method": "regex_text"
           },
           "evidence_excerpt": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่ > e-POWER * = ฿1,699,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "suzuki",
+        "model": "all-new-suzuki-fronx",
+        "price_thb": 689000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (MSRP, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "3249cddc03a4f0b7",
+          "source_name": "Suzuki Thailand Spec & Price Tables",
+          "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+          "artifact_path": "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html",
+          "artifact_sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+          "captured_at": "2026-09-26T13:48:21.789804+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "ALL NEW SUZUKI FRONX",
+          "variant_raw": "GL",
+          "price_type": "MSRP",
+          "price_thb": 689000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html",
+            "selector": "class=\"model-celerio\">GL\n                  <br><h3 id=\"iwp6d\">689,000\n                  </h3>",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "ALL NEW SUZUKI FRONX > GL = 689000 THB (GRADE & PRICE table)"
+        },
+        {
+          "observation_id": "7e7d6746fe09bc67",
+          "source_name": "Suzuki Thailand Official",
+          "source_url": "https://www.suzuki.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/suzuki_home_page.html",
+          "artifact_sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+          "captured_at": "2026-09-24T13:48:31.621323+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "ALL NEW SUZUKI FRONX",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 689000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/suzuki_home_page.html",
+            "selector": null,
+            "method": "dom_card"
+          },
+          "evidence_excerpt": "ALL NEW SUZUKI FRONX เริ่มต้นที่ 689,000 บาท นิยามใหม่ของการขับขี่สไตล์สปอร์ต SUV ที่สะท้อน“ความเป็นตัวคุณ” ได้อย่างแท้จริง ดูเพิ่มเติม"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "suzuki",
+        "model": "jimny",
+        "price_thb": 1590000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (MSRP, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "029e80fe76213db9",
+          "source_name": "Suzuki Thailand Official",
+          "source_url": "https://www.suzuki.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/suzuki_home_page.html",
+          "artifact_sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+          "captured_at": "2026-09-24T13:48:31.621323+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "JIMNY",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 1590000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/suzuki_home_page.html",
+            "selector": null,
+            "method": "dom_card"
+          },
+          "evidence_excerpt": "JIMNY เริ่มต้นที่ 1,590,000 บาท ปลดล็อกอิสระแห่งการเดินทางกับรถยนต์ออฟโรด พร้อมระบบความปลอดภัยสุดครบครัน Suzuki Safety Support ให้คุณมั่นใจทุกเส้นทาง ​ ดูเพิ่มเติม"
+        },
+        {
+          "observation_id": "7036345a3b46d383",
+          "source_name": "Suzuki Thailand Spec & Price Tables",
+          "source_url": "https://www.suzuki.co.th/model/jimny/equipment",
+          "artifact_path": "tests/fixtures/oem-artifacts/suzuki_jimny_equipment.html",
+          "artifact_sha256": "a452cae65124f01c9c5a320149f989960afb9d1294e310966af8ac7c8271a1d1",
+          "captured_at": "2026-09-26T13:48:26.476137+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "JIMNY",
+          "variant_raw": "AT (SINGLE-TONE)",
+          "price_type": "MSRP",
+          "price_thb": 1590000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/suzuki_jimny_equipment.html",
+            "selector": "class=\"model-jimmy\">AT (SINGLE-TONE)\n                    <br><h3>1,590,000\n                    </h3>",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "JIMNY > AT (SINGLE-TONE) = 1590000 THB (GRADE & PRICE table)"
         }
       ]
     }

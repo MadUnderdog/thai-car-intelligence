@@ -30,6 +30,19 @@ PARSED_ARTIFACTS = {
     "mitsubishi_all_models_price.html",
     "lexus_price_list.html",
     "bmw_price_list.html",
+    # P101 — first-party variant/grade layers parsed into staged rows
+    "MINI_PriceSheet_20260327.pdf.b64",
+    "suzuki_fronx_equipment.html",
+    "suzuki_xl7_equipment.html",
+    "suzuki_jimny_equipment.html",
+    "kia_promo_carnival_diesel.html",
+    "kia_promo_carnival_hev.html",
+    "deepal_s05.html",
+    "deepal_s05_reev.html",
+    "deepal_s07.html",
+    "deepal_e07_plus.html",
+    "deepal_e07_awd.html",
+    "deepal_hunter_k50.html",
 }
 
 # artifact filename prefix -> registry brand
@@ -46,7 +59,18 @@ BRAND_OF = {
     "suzuki_": "Suzuki",
     "Suzuki_": "Suzuki",
     "Changan_": "Changan",
+    "changan_": "Changan",
     "GWM_": "GWM",
+    "gwm_": "GWM",
+    "subaru_": "Subaru",
+    "deepal_": "Deepal",
+    "jaguar_": "Jaguar",
+    "landrover_": "Land Rover",
+    "honda_": "Honda",
+    "toyota_": "Toyota",
+    "porsche_": "Porsche",
+    "mini_": "MINI",
+    "MINI_": "MINI",
 }
 
 

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/brochure-hub.html",
+  "captured_at": "2026-09-26T13:47:33.167318+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "3ed40e03eeff0bfdf367f3e5d980449a4fd200236fe8241ef43d482906599c7a",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "nissan_brochure_hub.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

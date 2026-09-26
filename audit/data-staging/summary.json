@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T08:34:30.625720+00:00",
+  "generated_at": "2026-09-26T14:39:11.252845+00:00",
   "dedupe": {
     "rule": "first staged source keeps the identity+price record; a later source publishing the identical fact is not re-staged (\u00a798)",
     "dropped_rows": 6,
@@ -43,8 +43,8 @@
     ]
   },
   "provenance": {
-    "fixture_based_extraction": 479,
-    "acquisition_verified": 479,
+    "fixture_based_extraction": 503,
+    "acquisition_verified": 503,
     "legacy_unverified": 0,
     "from_existing_structured_data": 0
   },
@@ -75,7 +75,7 @@
     "nissan_grade_table": 23,
     "bmw_price_list": 49
   },
-  "total": 479,
-  "staged_rows_after_dedupe": 479,
+  "total": 503,
+  "staged_rows_after_dedupe": 503,
   "by_source_note": "counts are rows extracted per source before the identity+price dedupe; staged = after dedupe"
 }

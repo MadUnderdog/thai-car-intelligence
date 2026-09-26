@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T08:35:37.841868+00:00",
+  "generated_at": "2026-09-26T14:39:20.373668+00:00",
   "blueprint_sections": [
     "§5.2 models",
     "§5.3 variants/trims",
@@ -16,9 +16,9 @@
   "totals": {
     "oems_in_scope": 32,
     "oems_with_staged_rows": 19,
-    "models": 188,
-    "variants": 349,
-    "rows": 479
+    "models": 194,
+    "variants": 372,
+    "rows": 503
   },
   "oems": [
     {
@@ -145,14 +145,14 @@
         }
       ],
       "layers_checked": [
+        "brochure_pdf",
+        "configurator",
         "lineup_index",
         "price_or_grade_table"
       ],
       "layers_not_checked": [
         "model_page",
-        "brochure_pdf",
         "structured_payload",
-        "configurator",
         "press_release"
       ],
       "gaps": [
@@ -186,15 +186,13 @@
             "Touring M3",
             "Touring M5"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, price_or_grade_table"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, configurator, lineup_index, price_or_grade_table"
         },
         {
           "type": "layers_not_checked",
           "layers": [
             "model_page",
-            "brochure_pdf",
             "structured_payload",
-            "configurator",
             "press_release"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
@@ -278,12 +276,12 @@
         "brochure_pdf",
         "lineup_index",
         "model_page",
+        "press_release",
         "price_or_grade_table"
       ],
       "layers_not_checked": [
         "structured_payload",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
@@ -292,14 +290,13 @@
           "models": [
             "Lumin L DC"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page, price_or_grade_table"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page, press_release, price_or_grade_table"
         },
         {
           "type": "layers_not_checked",
           "layers": [
             "structured_payload",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -398,12 +395,12 @@
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
       "catalog": {
-        "models": 5,
-        "variants": 0,
-        "rows": 5,
+        "models": 7,
+        "variants": 1,
+        "rows": 7,
         "identity_levels": {
-          "MODEL": 5,
-          "VARIANT": 0
+          "MODEL": 6,
+          "VARIANT": 1
         }
       },
       "sources": [
@@ -416,14 +413,24 @@
           "methods": [
             "playwright_dom"
           ]
+        },
+        {
+          "source": "Changan Thailand Campaign Pages",
+          "rows": 2,
+          "artifacts": [
+            "deepal_s05.html"
+          ],
+          "methods": [
+            "regex_text"
+          ]
         }
       ],
       "layers_checked": [
         "lineup_index",
-        "model_page"
+        "model_page",
+        "price_or_grade_table"
       ],
       "layers_not_checked": [
-        "price_or_grade_table",
         "brochure_pdf",
         "structured_payload",
         "configurator",
@@ -432,20 +439,20 @@
       "gaps": [
         {
           "type": "models_without_published_variant_rows",
-          "count": 5,
+          "count": 6,
           "models": [
+            "L07",
             "e07-plus",
             "hunter-k50",
             "s05",
             "s05-reev",
             "s07"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, model_page"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, model_page, price_or_grade_table"
         },
         {
           "type": "layers_not_checked",
           "layers": [
-            "price_or_grade_table",
             "brochure_pdf",
             "structured_payload",
             "configurator",
@@ -667,15 +674,15 @@
         }
       ],
       "layers_checked": [
+        "brochure_pdf",
         "lineup_index",
         "model_page",
+        "press_release",
         "price_or_grade_table",
         "structured_payload"
       ],
       "layers_not_checked": [
-        "brochure_pdf",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
@@ -691,14 +698,12 @@
             "e:N1",
             "e:N2"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, model_page, price_or_grade_table, structured_payload"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page, press_release, price_or_grade_table, structured_payload"
         },
         {
           "type": "layers_not_checked",
           "layers": [
-            "brochure_pdf",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -733,14 +738,14 @@
       ],
       "layers_checked": [
         "brochure_pdf",
-        "lineup_index"
+        "lineup_index",
+        "press_release"
       ],
       "layers_not_checked": [
         "model_page",
         "price_or_grade_table",
         "structured_payload",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
@@ -754,7 +759,7 @@
             "NEW ISUZU V-CROSS 4x4",
             "X-SERIES"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, press_release"
         },
         {
           "type": "layers_not_checked",
@@ -762,8 +767,7 @@
             "model_page",
             "price_or_grade_table",
             "structured_payload",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -799,21 +803,20 @@
       "layers_checked": [
         "brochure_pdf",
         "lineup_index",
+        "press_release",
         "price_or_grade_table",
         "structured_payload"
       ],
       "layers_not_checked": [
         "model_page",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
           "type": "layers_not_checked",
           "layers": [
             "model_page",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -827,11 +830,11 @@
       "provenance_status": "ACQUISITION_VERIFIED",
       "catalog": {
         "models": 3,
-        "variants": 0,
-        "rows": 3,
+        "variants": 3,
+        "rows": 6,
         "identity_levels": {
           "MODEL": 3,
-          "VARIANT": 0
+          "VARIANT": 3
         }
       },
       "sources": [
@@ -844,38 +847,45 @@
           "methods": [
             "playwright_dom"
           ]
+        },
+        {
+          "source": "Kia Thailand Campaign Pages",
+          "rows": 3,
+          "artifacts": [
+            "kia_promo_carnival_diesel.html"
+          ],
+          "methods": [
+            "regex_text"
+          ]
         }
       ],
       "layers_checked": [
         "brochure_pdf",
-        "lineup_index"
+        "lineup_index",
+        "press_release",
+        "price_or_grade_table"
       ],
       "layers_not_checked": [
         "model_page",
-        "price_or_grade_table",
         "structured_payload",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
           "type": "models_without_published_variant_rows",
-          "count": 3,
+          "count": 2,
           "models": [
             "The Kia Carnival Diesel SXL",
-            "The Kia EV5",
             "The Kia Sorento PHEV"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, press_release, price_or_grade_table"
         },
         {
           "type": "layers_not_checked",
           "layers": [
             "model_page",
-            "price_or_grade_table",
             "structured_payload",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -911,21 +921,20 @@
       "layers_checked": [
         "brochure_pdf",
         "lineup_index",
+        "press_release",
         "price_or_grade_table",
         "structured_payload"
       ],
       "layers_not_checked": [
         "model_page",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
           "type": "layers_not_checked",
           "layers": [
             "model_page",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -969,23 +978,21 @@
         }
       ],
       "layers_checked": [
+        "brochure_pdf",
         "lineup_index",
         "model_page",
+        "press_release",
         "price_or_grade_table",
         "structured_payload"
       ],
       "layers_not_checked": [
-        "brochure_pdf",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
           "type": "layers_not_checked",
           "layers": [
-            "brochure_pdf",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -1020,14 +1027,14 @@
       ],
       "layers_checked": [
         "lineup_index",
-        "model_page"
+        "model_page",
+        "press_release"
       ],
       "layers_not_checked": [
         "price_or_grade_table",
         "brochure_pdf",
         "structured_payload",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
@@ -1042,7 +1049,7 @@
             "MG4",
             "MGS5 EV PLUS"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, model_page"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, model_page, press_release"
         },
         {
           "type": "layers_not_checked",
@@ -1050,8 +1057,7 @@
             "price_or_grade_table",
             "brochure_pdf",
             "structured_payload",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -1064,12 +1070,12 @@
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
       "catalog": {
-        "models": 5,
-        "variants": 0,
-        "rows": 5,
+        "models": 9,
+        "variants": 13,
+        "rows": 18,
         "identity_levels": {
           "MODEL": 5,
-          "VARIANT": 0
+          "VARIANT": 13
         }
       },
       "sources": [
@@ -1082,38 +1088,44 @@
           "methods": [
             "playwright_dom"
           ]
+        },
+        {
+          "source": "MINI Thailand Price Sheet",
+          "rows": 13,
+          "artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ],
+          "methods": [
+            "pdftotext_line"
+          ]
         }
       ],
       "layers_checked": [
         "brochure_pdf",
+        "configurator",
         "lineup_index",
-        "price_or_grade_table"
+        "model_page",
+        "price_or_grade_table",
+        "structured_payload"
       ],
       "layers_not_checked": [
-        "model_page",
-        "structured_payload",
-        "configurator",
         "press_release"
       ],
       "gaps": [
         {
           "type": "models_without_published_variant_rows",
-          "count": 5,
+          "count": 4,
           "models": [
             "ALL-ELECTRIC MINI ACEMAN",
             "ALL-ELECTRIC MINI COOPER",
             "JOHN COOPER WORKS",
-            "MINI COUNTRYMAN",
             "MINI Cooper Convertible"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, price_or_grade_table"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, configurator, lineup_index, model_page, price_or_grade_table, structured_payload"
         },
         {
           "type": "layers_not_checked",
           "layers": [
-            "model_page",
-            "structured_payload",
-            "configurator",
             "press_release"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
@@ -1148,15 +1160,15 @@
         }
       ],
       "layers_checked": [
+        "brochure_pdf",
         "lineup_index",
-        "model_page"
+        "model_page",
+        "press_release"
       ],
       "layers_not_checked": [
         "price_or_grade_table",
-        "brochure_pdf",
         "structured_payload",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
@@ -1174,16 +1186,14 @@
             "NEW MAZDA2 ESSENTIAL",
             "THE ALL-ELECTRIC MAZDA6e"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, model_page"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page, press_release"
         },
         {
           "type": "layers_not_checked",
           "layers": [
             "price_or_grade_table",
-            "brochure_pdf",
             "structured_payload",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -1270,15 +1280,15 @@
         }
       ],
       "layers_checked": [
+        "brochure_pdf",
         "lineup_index",
+        "press_release",
         "price_or_grade_table"
       ],
       "layers_not_checked": [
         "model_page",
-        "brochure_pdf",
         "structured_payload",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
@@ -1289,16 +1299,14 @@
             "เอ็กซ์แพนเดอร์ เอชอีวี",
             "ไทรทัน"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, price_or_grade_table"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, press_release, price_or_grade_table"
         },
         {
           "type": "layers_not_checked",
           "layers": [
             "model_page",
-            "brochure_pdf",
             "structured_payload",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -1385,15 +1393,15 @@
         }
       ],
       "layers_checked": [
+        "brochure_pdf",
         "lineup_index",
+        "press_release",
         "price_or_grade_table"
       ],
       "layers_not_checked": [
         "model_page",
-        "brochure_pdf",
         "structured_payload",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
@@ -1402,16 +1410,14 @@
           "models": [
             "นิสสัน เทอร์ร่า"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, price_or_grade_table"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, press_release, price_or_grade_table"
         },
         {
           "type": "layers_not_checked",
           "layers": [
             "model_page",
-            "brochure_pdf",
             "structured_payload",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -1488,15 +1494,15 @@
         }
       ],
       "layers_checked": [
+        "configurator",
         "lineup_index",
-        "model_page"
+        "model_page",
+        "press_release"
       ],
       "layers_not_checked": [
         "price_or_grade_table",
         "brochure_pdf",
-        "structured_payload",
-        "configurator",
-        "press_release"
+        "structured_payload"
       ],
       "gaps": [
         {
@@ -1504,9 +1510,7 @@
           "layers": [
             "price_or_grade_table",
             "brochure_pdf",
-            "structured_payload",
-            "configurator",
-            "press_release"
+            "structured_payload"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -1583,15 +1587,15 @@
         }
       ],
       "layers_checked": [
-        "lineup_index"
+        "brochure_pdf",
+        "lineup_index",
+        "press_release"
       ],
       "layers_not_checked": [
         "model_page",
         "price_or_grade_table",
-        "brochure_pdf",
         "structured_payload",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
@@ -1604,17 +1608,15 @@
             "WRX",
             "WRX WAGON"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, press_release"
         },
         {
           "type": "layers_not_checked",
           "layers": [
             "model_page",
             "price_or_grade_table",
-            "brochure_pdf",
             "structured_payload",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -1628,11 +1630,11 @@
       "provenance_status": "ACQUISITION_VERIFIED",
       "catalog": {
         "models": 5,
-        "variants": 0,
-        "rows": 5,
+        "variants": 6,
+        "rows": 11,
         "identity_levels": {
           "MODEL": 5,
-          "VARIANT": 0
+          "VARIANT": 6
         }
       },
       "sources": [
@@ -1645,39 +1647,46 @@
           "methods": [
             "playwright_dom"
           ]
+        },
+        {
+          "source": "Suzuki Thailand Spec & Price Tables",
+          "rows": 6,
+          "artifacts": [
+            "suzuki_fronx_equipment.html",
+            "suzuki_jimny_equipment.html",
+            "suzuki_xl7_equipment.html"
+          ],
+          "methods": [
+            "regex_text"
+          ]
         }
       ],
       "layers_checked": [
         "brochure_pdf",
         "lineup_index",
-        "model_page"
+        "model_page",
+        "press_release",
+        "price_or_grade_table"
       ],
       "layers_not_checked": [
-        "price_or_grade_table",
         "structured_payload",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
           "type": "models_without_published_variant_rows",
-          "count": 5,
+          "count": 2,
           "models": [
-            "ALL NEW SUZUKI FRONX",
             "ALL NEW SUZUKI e VITARA",
-            "CARRY",
-            "JIMNY",
-            "XL7 HYBRID"
+            "CARRY"
           ],
-          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page"
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page, press_release, price_or_grade_table"
         },
         {
           "type": "layers_not_checked",
           "layers": [
-            "price_or_grade_table",
             "structured_payload",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }
@@ -1756,21 +1765,20 @@
       "layers_checked": [
         "lineup_index",
         "model_page",
+        "press_release",
         "price_or_grade_table",
         "structured_payload"
       ],
       "layers_not_checked": [
         "brochure_pdf",
-        "configurator",
-        "press_release"
+        "configurator"
       ],
       "gaps": [
         {
           "type": "layers_not_checked",
           "layers": [
             "brochure_pdf",
-            "configurator",
-            "press_release"
+            "configurator"
           ],
           "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
         }

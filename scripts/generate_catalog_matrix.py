@@ -60,6 +60,12 @@ SOURCE_LAYERS = {
     "Mitsubishi Thailand Price Tables": {"lineup_index", "price_or_grade_table"},
     "Nissan Thailand Grade Price Table": {"lineup_index", "price_or_grade_table"},
     "BMW Thailand Price List": {"lineup_index", "price_or_grade_table"},
+    # P101 — first-party variant/grade layers
+    "MINI Thailand Price Sheet": {"price_or_grade_table", "brochure_pdf"},
+    "Suzuki Thailand Spec & Price Tables": {"price_or_grade_table"},
+    "Kia Thailand Campaign Pages": {"price_or_grade_table"},
+    "Changan Thailand Campaign Pages": {"price_or_grade_table"},
+    "Isuzu Thailand Model Brochures": {"brochure_pdf"},
 }
 
 # endpoint captures held in the registry but not parsed into rows yet
@@ -71,6 +77,10 @@ ARTIFACT_LAYERS = [
     (("brochure", "e-catalog", "catalog"), {"brochure_pdf"}),
     (("car_", "_model_", "models/", "model-"), {"model_page"}),
     (("home", "all-models", "model-list", "index"), {"lineup_index"}),
+    # P101 — first-party press/news, configurator and grade-table captures
+    (("press", "news", "article", "stories"), {"press_release"}),
+    (("configurator", "configure", "config_"), {"configurator"}),
+    (("equipment", "price-calculator"), {"price_or_grade_table"}),
 ]
 
 

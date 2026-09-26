@@ -3030,6 +3030,281 @@ def collect_bmw_price_list():
     return obs
 
 
+# ─── P101 catalog completeness: first-party variant/grade layers ───────────
+# Model vs VARIANT identity stays strict: every row below is staged under the
+# model label the OFFICIAL artifact itself publishes (§98 — no inferred joins
+# across differently-labelled model identities).
+
+_MINI_SECTION_EXCLUDE = ("FINANCIAL", "SERVICES", "FREEDOM", "ALL IN")
+
+
+def _parse_mini_price_sheet(text):
+    """Parse the MINI Thailand official price sheet (pdftotext -layout).
+
+    Structure: standalone model-section headers ("MINI COOPER.") followed by
+    variant rows: <VARIANT NAME> <suggested retail price> <price with MSI>
+    <term> <installment> <future value/balloon>. Returns the published section
+    (model label), variant name and suggested retail price per row.
+    """
+    header = re.compile(r'^(MINI[A-Z0-9 &\-]*?[A-Z0-9])\.\s*$')
+    money = r'\d{1,3}(?:,\d{3}){2,}'
+    row = re.compile(r'^(?P<name>[A-Za-z0-9][A-Za-z0-9 \-–&/()]{3,}?)\s+'
+                     r'(?P<p1>' + money + r')(?:\s+(?P<p2>' + money + r'))?')
+    section, rows, seen = None, [], set()
+    for i, raw in enumerate(text.splitlines()):
+        s = raw.strip()
+        if not s:
+            continue
+        m = header.match(s)
+        if m:
+            section = m.group(1).strip().rstrip('.')
+            continue
+        if not section or any(k in section for k in _MINI_SECTION_EXCLUDE):
+            continue
+        hit = row.match(s)
+        if not hit or 'MINI' not in hit.group('name').upper():
+            continue
+        variant = hit.group('name').strip()
+        if (section, variant) in seen:      # variant repeated in a later table
+            continue
+        seen.add((section, variant))
+        rows.append({
+            'section': section, 'variant': variant,
+            'price': int(hit.group('p1').replace(',', '')),
+            'price_with_msi': int(hit.group('p2').replace(',', ''))
+            if hit.group('p2') else None,
+            'line': i, 'line_text': s,
+        })
+    return rows
+
+
+def collect_mini_pricesheet():
+    """MINI Thailand: official price sheet PDF → VARIANT rows (P101)."""
+    print("=== MINI Thailand Official (official price-sheet PDF, P101) ===")
+    artifact_name = "MINI_PriceSheet_20260327.pdf.b64"
+    artifact_file = f"{FIXTURE_DIR}/{artifact_name}"
+    if not os.path.exists(artifact_file):
+        print(f"  Fixture not found: {artifact_file}")
+        return []
+    text = _pdf_text(artifact_file)
+    rows = _parse_mini_price_sheet(text)
+    if not rows:
+        print(f"  No price rows parsed from {artifact_name}")
+        return []
+    artifact_hash = hashlib.sha256(open(artifact_file, 'rb').read()).hexdigest()
+    prov = get_fixture_provenance(artifact_file)
+    observations = []
+    for r in rows:
+        model_raw = r['section']
+        variant_clean = r['variant'].strip()
+        observations.append({
+            "observation_id": hashlib.sha256(
+                f"MINI Thailand Price Sheet:{model_raw}:{variant_clean}:{r['price']}".encode()
+            ).hexdigest()[:16],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source": {
+                "class": "OEM_OFFICIAL",
+                "url": prov.get("source_url"),
+                "name": "MINI Thailand Price Sheet",
+                "precedence": 100,
+                "native_id": None,
+                "immutable_revision": None,
+                "extraction_method": "pdftotext_line",
+                "artifact_path": artifact_file,
+                "artifact_sha256": artifact_hash,
+                "captured_at": prov["captured_at"],
+                "provenance_state": prov["provenance_state"],
+            },
+            "identity": {
+                "brand_raw": "MINI",
+                "model_raw": model_raw,
+                "variant_raw": variant_clean,
+                "year": None,
+                "fuel_powertrain_raw": None,
+                "brand_normalized": "mini",
+                "model_normalized": model_raw.lower().replace(" ", "-"),
+                "variant_normalized": variant_clean.lower().replace(" ", "-"),
+                "identity_level": "VARIANT",
+            },
+            "price": {
+                "value_thb": r['price'],
+                "type": "EXACT_VARIANT",
+                "currency": "THB",
+                "currentness": "UNKNOWN",
+            },
+            "specs": {},
+            "raw_labels": {
+                "published_model_section": model_raw,
+                "price_with_msi_thb": r['price_with_msi'],
+                "price_sheet": artifact_name,
+                "line_no": r['line'],
+            },
+            "evidence_excerpt":
+                f"{model_raw}: {variant_clean} = {r['price']} THB "
+                f"(suggested retail price, official price sheet)",
+            "evidence_locator": {
+                "artifact_path": artifact_file,
+                "selector": r['line_text'],
+                "method": "pdf_text_line",
+            },
+        })
+    print(f"  MINI price sheet: {len(observations)} variant rows from {artifact_name}")
+    return observations
+
+
+def _p101_html(name):
+    """Load a P101-captured HTML artifact with its verified provenance."""
+    path = f"{FIXTURE_DIR}/{name}"
+    if not os.path.exists(path):
+        print(f"  Fixture not found: {path}")
+        return None
+    text = open(path, encoding='utf-8', errors='replace').read()
+    return {
+        'path': path,
+        'text': text,
+        'sha': hashlib.sha256(open(path, 'rb').read()).hexdigest(),
+        'prov': get_fixture_provenance(path),
+    }
+
+
+_SUZUKI_GRADE_CELL = re.compile(
+    r'class="model-[a-z0-9]+">\s*(?P<grade>[^<>]{1,40}?)\s*<br>\s*'
+    r'<h3[^>]*>\s*(?P<p1>\d{1,3}(?:,\d{3}){1,2})\*?\s*</h3>'
+    r'(?:\s*<h3[^>]*>\s*(?P<p2>\d{1,3}(?:,\d{3}){1,2})\s*</h3>)?', re.S)
+_SUZUKI_MODEL = re.compile(r'href="(/model/[^"]+)"[^>]*>\s*([^<]{3,60}?)\s*<', re.S)
+
+
+def collect_suzuki_grades():
+    """Suzuki Thailand: official SPEC&PRICE grade tables → VARIANT rows (P101)."""
+    print("=== Suzuki Thailand Official (equipment/spec&price pages, P101) ===")
+    out = []
+    for name in ("suzuki_fronx_equipment.html", "suzuki_xl7_equipment.html",
+                 "suzuki_jimny_equipment.html"):
+        art = _p101_html(name)
+        if not art:
+            continue
+        page_url = art['prov'].get('source_url') or ''
+        slug = re.search(r'/model/([^/]+)/', page_url + '/')
+        slug = slug.group(1).lower() if slug else ''
+        labels = [t.strip() for u, t in _SUZUKI_MODEL.findall(art['text'])
+                  if t.strip() and u.rstrip('/').split('/')[-1].lower() == slug]
+        if not labels:
+            print(f"  {name}: no published model label in breadcrumb — skipped")
+            continue
+        model_raw = labels[-1].rstrip('/')
+        seen = set()
+        for hit in _SUZUKI_GRADE_CELL.finditer(art['text']):
+            grade = hit.group('grade').strip()
+            if not grade or grade in seen:
+                continue
+            seen.add(grade)
+            p1 = int(hit.group('p1').replace(',', ''))
+            p2 = int(hit.group('p2').replace(',', '')) if hit.group('p2') else None
+            out.append(_catalog_row(
+                source_name="Suzuki Thailand Spec & Price Tables",
+                source_url=art['prov'].get("source_url"),
+                extraction_method="regex_text", artifact=f"{FIXTURE_DIR}/{name}",
+                artifact_hash=art['sha'],
+                prov=art['prov'], tag="suzuki_equipment_grade", brand="Suzuki",
+                model=model_raw, variant=grade,
+                price=p2 if p2 else p1, price_type="MSRP",
+                identity_level="VARIANT",
+                evidence=f"{model_raw} > {grade} = {p2 if p2 else p1} THB (GRADE & PRICE table)",
+                selector=hit.group(0)[:160],
+                text_offset=hit.start(),
+                raw_labels={"promo_price_thb": p1 if p2 else None,
+                            "full_price_thb": p2,
+                            "page": art['prov'].get("source_url")}))
+        print(f"  {name}: {len(seen)} grades for {model_raw!r}")
+    print(f"  Suzuki grade rows: {len(out)}")
+    return out
+
+
+_KIA_EV5_TRIM = re.compile(
+    r'The Kia (?P<variant>EV5 [A-Za-z0-9][A-Za-z0-9 \-]{1,32}?)\s*'
+    r'(?:ราคาพิเศษ|ราคาจำหน่ายใหม่|ราคา)\s*(?P<p>\d{1,3}(?:,\d{3}){2,})')
+
+
+def collect_kia_ev5_variants():
+    """Kia Thailand: official September-2026 campaign pages → EV5 VARIANT rows."""
+    print("=== Kia Thailand Official (campaign pages, P101) ===")
+    out, seen = [], set()
+    for name in ("kia_promo_carnival_diesel.html", "kia_promo_carnival_hev.html"):
+        art = _p101_html(name)
+        if not art:
+            continue
+        for hit in _KIA_EV5_TRIM.finditer(art['text']):
+            variant = "The Kia " + hit.group('variant').strip().rstrip('.')
+            if variant in seen:
+                continue
+            seen.add(variant)
+            price = int(hit.group('p').replace(',', ''))
+            out.append(_catalog_row(
+                source_name="Kia Thailand Campaign Pages",
+                source_url=art['prov'].get("source_url"),
+                extraction_method="regex_text", artifact=f"{FIXTURE_DIR}/{name}",
+                artifact_hash=art['sha'],
+                prov=art['prov'], tag="kia_campaign_variant", brand="Kia",
+                model="The Kia EV5", variant=variant,
+                price=price, price_type="EXACT_VARIANT", identity_level="VARIANT",
+                evidence=hit.group(0)[:240],
+                selector=hit.group(0)[:160], text_offset=hit.start(),
+                raw_labels={"page": art['prov'].get("source_url")}))
+    print(f"  Kia EV5 variant rows: {len(out)}")
+    return out
+
+
+# Deepal publishes trim prices inside official campaign copy. Pattern A states
+# the full price of a named trim ("ราคา Deepal S07 L มูลค่า 1,499,000 บาท") and
+# is staged with a figure; pattern B sits inside discount prose whose figure may
+# be post-discount, so those rows carry identity + evidence only (price=None).
+_DEEPAL_PRICE_OF = re.compile(
+    r'ราคา\s*Deepal\s+(?P<n>[A-Za-z0-9][A-Za-z0-9\- ]{1,28}?)\s+มูลค่า\s*'
+    r'(?P<p>\d{1,3}(?:,\d{3}){2,})')
+
+
+
+def collect_deepal_variants():
+    """Deepal (Changan Thailand official): campaign copy → VARIANT rows (P101)."""
+    print("=== Deepal via Changan Thailand Official (P101) ===")
+    out, seen = [], set()
+    for name in ("deepal_s05.html", "deepal_s05_reev.html", "deepal_s07.html",
+                 "deepal_e07_plus.html", "deepal_e07_awd.html",
+                 "deepal_hunter_k50.html"):
+        art = _p101_html(name)
+        if not art:
+            continue
+        added = 0
+        for hit in _DEEPAL_PRICE_OF.finditer(art['text']):
+            label = hit.group('n').strip()
+            tokens = label.split()
+            if len(tokens) == 1:            # publishes a MODEL price ("L07")
+                model, variant, level = label, None, "MODEL"
+            else:                            # publishes a TRIM price ("S07 L")
+                model, variant, level = tokens[0], label, "VARIANT"
+            price = int(hit.group('p').replace(',', ''))
+            key = (model, variant, price)
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(_catalog_row(
+                source_name="Changan Thailand Campaign Pages",
+                source_url=art['prov'].get("source_url"),
+                extraction_method="regex_text", artifact=f"{FIXTURE_DIR}/{name}",
+                artifact_hash=art['sha'],
+                prov=art['prov'], tag="deepal_price_of", brand="Deepal",
+                model=model, variant=variant, price=price,
+                price_type="MSRP" if level == "MODEL" else "EXACT_VARIANT",
+                identity_level=level,
+                evidence=hit.group(0)[:240],
+                selector=hit.group(0)[:160], text_offset=hit.start(),
+                raw_labels={"page": art['prov'].get("source_url")}))
+            added += 1
+        print(f"  {name}: {added} rows")
+    print(f"  Deepal rows: {len(out)}")
+    return out
+
+
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
 
@@ -3105,6 +3380,17 @@ def main():
     all_observations.extend(nissan_grades)
     bmw_prices = collect_bmw_price_list()
     all_observations.extend(bmw_prices)
+
+    # P101 catalog completeness: first-party variant/grade layers for OEMs
+    # whose staged catalog had models but no published variant rows.
+    mini_sheet = collect_mini_pricesheet()
+    all_observations.extend(mini_sheet)
+    suzuki_grades = collect_suzuki_grades()
+    all_observations.extend(suzuki_grades)
+    kia_variants = collect_kia_ev5_variants()
+    all_observations.extend(kia_variants)
+    deepal_rows = collect_deepal_variants()
+    all_observations.extend(deepal_rows)
 
     # §98 — no duplicate identity+price records. The FIRST staged source keeps
     # its observation_id; a later source publishing the identical (brand, model,

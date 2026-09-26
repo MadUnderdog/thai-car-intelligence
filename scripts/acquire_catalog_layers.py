@@ -113,7 +113,68 @@ BATCH_B = [
      "GWM_ORA5BEV_Catalog.pdf.b64", "pdf", "official GWM ORA 5 BEV catalog PDF"),
 ]
 
-BATCHES = {"A": BATCH_A, "B": BATCH_B}
+
+# P101 batch C: first-party catalog-completeness layers (variant/grade, brochure,
+# price-index, press and configurator) discovered by Pass C traversal of artifacts
+# already held in tests/fixtures/oem-artifacts (see `discovered_from` in each note).
+TARGETS_C = [
+    ('https://configure.mini.co.th/en_TH/model-ranges', 'MINI_configurator_model_ranges.html', 'html', 'P101 catalog completeness: discovered in mini_home_page.html (legacy fixture, no sidecar)'),
+    ('https://www.bmw.co.th/en/topics/brochure.html', 'bmw_brochure_page.html', 'html', 'P101 catalog completeness: discovered in bmw_all_models_verified.html'),
+    ('https://configure.bmw.co.th/en_TH/configure/G20/24FWZ7U', 'bmw_configurator_3series.html', 'html', 'P101 catalog completeness: discovered in bmw_all_models_verified.html'),
+    ('https://www.changan.co.th/th/news/', 'changan_press_news.html', 'html', 'P101 catalog completeness: discovered in changan_home_page.html'),
+    ('https://www.changan.co.th/th/deepal/e07-performance-awd/', 'deepal_e07_awd.html', 'html', 'P101 catalog completeness: discovered in changan_home_page.html'),
+    ('https://www.changan.co.th/th/deepal/e07-plus-th/', 'deepal_e07_plus.html', 'html', 'P101 catalog completeness: discovered in changan_home_page.html'),
+    ('https://www.changan.co.th/th/deepal/hunter-k50-th/', 'deepal_hunter_k50.html', 'html', 'P101 catalog completeness: discovered in changan_home_page.html'),
+    ('https://www.changan.co.th/th/deepal/s05-th/', 'deepal_s05.html', 'html', 'P101 catalog completeness: discovered in changan_home_page.html'),
+    ('https://www.changan.co.th/th/deepal/s05-reev-th/', 'deepal_s05_reev.html', 'html', 'P101 catalog completeness: discovered in changan_home_page.html'),
+    ('https://www.changan.co.th/th/deepal/s07-th/', 'deepal_s07.html', 'html', 'P101 catalog completeness: discovered in changan_home_page.html'),
+    ('https://assets.honda.co.th/www-assets/model/2026/06/26/i6hZNelHYNX0LptCvSY8sw1hN3honOd6.pdf?response-content-disposition=attachment%3B%20filename%3DNew Honda City - Catalog.pdf', 'honda_brochure_1.pdf', 'pdf', 'P101 catalog completeness: discovered in honda_models_page.html'),
+    ('https://assets.honda.co.th/www-assets/model/2026/06/26/bc5ZpbNVUtvUdaYcQMT8N6WdinDUVwDx.pdf?response-content-disposition=attachment%3B%20filename%3DNew Honda City Hatchback - Catalog.pdf', 'honda_brochure_2.pdf', 'pdf', 'P101 catalog completeness: discovered in honda_models_page.html'),
+    ('https://www.honda.co.th/news', 'honda_press_news.html', 'html', 'P101 catalog completeness: discovered in honda_models_page.html'),
+    ('https://assets.isuzu-tis.com/2_door_brochure_2026_4aed74da60.pdf', 'isuzu_brochure_2door.pdf', 'pdf', 'P101 catalog completeness: discovered in isuzu_brochure_page.html'),
+    ('https://assets.isuzu-tis.com/4_door_brochure_2026_be4df560bb.pdf', 'isuzu_brochure_4door.pdf', 'pdf', 'P101 catalog completeness: discovered in isuzu_brochure_page.html'),
+    ('https://assets.isuzu-tis.com/mu_x_brochure_2026_5d17d1513d.pdf', 'isuzu_brochure_mux.pdf', 'pdf', 'P101 catalog completeness: discovered in isuzu_brochure_page.html'),
+    ('https://assets.isuzu-tis.com/spark_brochure_2026_ed212091cf.pdf', 'isuzu_brochure_spark.pdf', 'pdf', 'P101 catalog completeness: discovered in isuzu_brochure_page.html'),
+    ('https://assets.isuzu-tis.com/v_cross_brochure_2026_23a52b3f0d.pdf', 'isuzu_brochure_vcross.pdf', 'pdf', 'P101 catalog completeness: discovered in isuzu_brochure_page.html'),
+    ('https://assets.isuzu-tis.com/x_series_brochure_2026_6f67fd7b71.pdf', 'isuzu_brochure_xseries.pdf', 'pdf', 'P101 catalog completeness: discovered in isuzu_brochure_page.html'),
+    ('https://www.isuzu.co.th/news', 'isuzu_press_news.html', 'html', 'P101 catalog completeness: discovered in isuzu_th_home_page.html'),
+    ('https://www.jaguar.co.th/about-jaguar/news', 'jaguar_press_news.html', 'html', 'P101 catalog completeness: discovered in jaguar_home_page.html'),
+    ('https://www.kia.com/th/th/discover-kia/article/review-the-new-kia-carnival-hev-7-seater-3.html', 'kia_press_article_carnival.html', 'html', 'P101 catalog completeness: discovered in kia_home_page.html'),
+    ('https://www.kia.com/th/th/util/promotion/thekiacarnival-diesel-2026.html', 'kia_promo_carnival_diesel.html', 'html', 'P101 catalog completeness: discovered in kia_home_page.html'),
+    ('https://www.kia.com/th/th/util/promotion/thekiacarnival-hev-2026.html', 'kia_promo_carnival_hev.html', 'html', 'P101 catalog completeness: discovered in kia_home_page.html'),
+    ('https://www.kia.com/content/dam/kwcms/th/th/pdf/TheKiaPV5_Cargo_th.pdf', 'kia_pv5_brochure.pdf', 'pdf', 'P101 catalog completeness: discovered in kia_cars_page.html'),
+    ('https://www.landrover.co.th/explore-land-rover/articles', 'landrover_press_articles.html', 'html', 'P101 catalog completeness: discovered in landrover_home_page.html'),
+    ('https://www.lexus.co.th/th/price-and-model-tools/model-brochures.html', 'lexus_brochures.html', 'html', 'P101 catalog completeness: discovered in lexus_models_page.html'),
+    ('https://www.lexus.co.th/th/discover-lexus/news-and-events.html', 'lexus_press_news.html', 'html', 'P101 catalog completeness: discovered in lexus_models_page.html'),
+    ('https://www.mazda.co.th/s3fs-public/2024-12/v2_brochure-new-mazda-bt50.pdf?VersionId=Whzmuz5YnnWl0XkLVQTrsrvp8eokHNRB', 'mazda_brochure_bt50.pdf', 'pdf', 'P101 catalog completeness: discovered in mazda_car_new-mazda-bt50.html'),
+    ('https://www.mazda.co.th/s3fs-public/2025-03/brochure-mazda-cx5.pdf?VersionId=VA_c9P6y6nt7uww1DHVXHSXN3dZoA88V', 'mazda_brochure_cx5.pdf', 'pdf', 'P101 catalog completeness: discovered in mazda_car_mazda-cx5.html'),
+    ('https://www.mazda.co.th/s3fs-public/2025-03/brochure_mazda2_essential_26032025.pdf?VersionId=AfXNz7AmQsbwFurYSIj4Rc0LOJo9UwWw', 'mazda_brochure_mazda2.pdf', 'pdf', 'P101 catalog completeness: discovered in mazda_car_mazda2-essential.html'),
+    ('https://www.mazda.co.th/th/news-update', 'mazda_press_news.html', 'html', 'P101 catalog completeness: discovered in mazda_home_page.html'),
+    ('https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec', 'mazda_spec_mazda-cx30-essential.html', 'html', 'P101 catalog completeness: discovered in mazda_car_mazda-cx30-essential.html'),
+    ('https://www.mazda.co.th/th/cars/mazda-cx5/spec', 'mazda_spec_mazda-cx5.html', 'html', 'P101 catalog completeness: discovered in mazda_car_mazda-cx5.html'),
+    ('https://www.mazda.co.th/th/cars/mazda2-essential/spec', 'mazda_spec_mazda2-essential.html', 'html', 'P101 catalog completeness: discovered in mazda_car_mazda2-essential.html'),
+    ('https://www.mazda.co.th/th/cars/mazda3-sedan/spec', 'mazda_spec_mazda3-sedan.html', 'html', 'P101 catalog completeness: discovered in mazda_car_mazda3-sedan.html'),
+    ('https://www.mazda.co.th/th/cars/new-mazda-bt50/spec', 'mazda_spec_new-mazda-bt50.html', 'html', 'P101 catalog completeness: discovered in mazda_car_new-mazda-bt50.html'),
+    ('https://www.mgcars.com/th/news', 'mg_press_news.html', 'html', 'P101 catalog completeness: discovered in mg_car_mg-hs.html'),
+    ('https://www.mgcars.com/th/price-calculator', 'mg_price_calculator.html', 'html', 'P101 catalog completeness: discovered in mg_car_mg-zs.html'),
+    ('https://www.mitsubishi-motors.co.th/th/download-a-brochure', 'mitsubishi_brochures.html', 'html', 'P101 catalog completeness: discovered in mitsubishi_home_page.html'),
+    ('https://www.mitsubishi-motors.co.th/th/news-activity/news', 'mitsubishi_press_news.html', 'html', 'P101 catalog completeness: discovered in mitsubishi_all_models_price.html'),
+    ('https://www.nissan.co.th/vehicles/brochure-hub.html', 'nissan_brochure_hub.html', 'html', 'P101 catalog completeness: discovered in nissan_new_home_page.html'),
+    ('https://www.nissan.co.th/news.html', 'nissan_press_news.html', 'html', 'P101 catalog completeness: discovered in nissan_new_home_page.html'),
+    ('https://www.porsche.com/stories/design/porsche-paint-to-sample-colours-and-configurator-guide/', 'porsche_press_story.html', 'html', 'P101 catalog completeness: discovered in porsche_home_page.html'),
+    ('https://www.subaru.asia/th/th/contact-us/brochure.php', 'subaru_brochure_page.html', 'html', 'P101 catalog completeness: discovered in subaru_th_home_page.html'),
+    ('https://www.subaru.asia/th/th/about-us/news.php', 'subaru_press_news.html', 'html', 'P101 catalog completeness: discovered in subaru_th_home_page.html'),
+    ('https://www.subaru.asia/th/th/promotions/sales/217/forester-special-deals/', 'subaru_promo_forester.html', 'html', 'P101 catalog completeness: discovered in subaru_th_home_page.html'),
+    ('https://www.suzuki.co.th/upload/file/Brochure/ALL_NEW_SUZUKI_FRONX_BROCHURE.pdf', 'suzuki_fronx_brochure.pdf', 'pdf', 'P101 catalog completeness: discovered in suzuki_model_fronx.html'),
+    ('https://www.suzuki.co.th/model/fronx/equipment', 'suzuki_fronx_equipment.html', 'html', 'P101 catalog completeness: discovered in suzuki_model_fronx.html'),
+    ('https://www.suzuki.co.th/upload/file/Brochure/SUZUKI_JIMNY_BROCHURE.pdf', 'suzuki_jimny_brochure.pdf', 'pdf', 'P101 catalog completeness: discovered in suzuki_model_jimny.html'),
+    ('https://www.suzuki.co.th/model/jimny/equipment', 'suzuki_jimny_equipment.html', 'html', 'P101 catalog completeness: discovered in suzuki_model_jimny.html'),
+    ('https://www.suzuki.co.th/news', 'suzuki_press_news.html', 'html', 'P101 catalog completeness: discovered in suzuki_home_page.html'),
+    ('https://www.suzuki.co.th/model/xl7/equipment', 'suzuki_xl7_equipment.html', 'html', 'P101 catalog completeness: discovered in suzuki_model_xl7.html'),
+    ('https://www.toyota.co.th/news', 'toyota_press_news.html', 'html', 'P101 catalog completeness: discovered in toyota_pricelist_page.html'),
+]
+
+BATCHES = {"A": BATCH_A, "B": BATCH_B, "C": TARGETS_C}
 
 
 async def capture_html(url, filename, page, sem_by_host, last_hit):
@@ -171,6 +232,29 @@ def capture_pdf(url, filename):
             "sha256": prov["sha256"], "captured_at": prov["captured_at"], "host": host}
 
 
+
+def layer_hint(filename):
+    """Deterministic capture-layer label written into the capture log."""
+    f = filename.lower()
+    if f.endswith(".pdf") and "pricesheet" in f.replace("_", "").replace("-", ""):
+        return "price_sheet_pdf"
+    if f.endswith(".pdf"):
+        return "brochure_pdf"
+    if "configurator" in f or "configure" in f:
+        return "configurator"
+    if any(k in f for k in ("press", "news", "article", "stories")):
+        return "press_release"
+    if any(k in f for k in ("price", "grade", "calculator")):
+        return "price_or_grade_table"
+    if any(k in f for k in ("spec", "equipment")):
+        return "spec_or_equipment"
+    if any(k in f for k in ("brochure", "catalog")):
+        return "brochure_pdf"
+    if "promo" in f:
+        return "promotion"
+    return "model_page_or_price_index"
+
+
 async def run_batch(name):
     global SESSION_ID
     SESSION_ID = f"catalog_layers_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}"
@@ -193,7 +277,7 @@ async def run_batch(name):
                     continue
                 res = await capture_html(url, filename, page, {}, last_hit)
                 res["note"] = _note
-                res["layer"] = "model_page_or_price_index"
+                res["layer"] = layer_hint(filename)
                 results.append(res)
                 mark = "OK " if res["success"] else "ERR"
                 print(f"  [{mark}] {filename} "
@@ -208,7 +292,7 @@ async def run_batch(name):
         last_hit[host] = time.monotonic()
         res = capture_pdf(url, filename)
         res["note"] = note
-        res["layer"] = "brochure_or_price_sheet_pdf"
+        res["layer"] = layer_hint(filename)
         results.append(res)
         mark = "OK " if res["success"] else "ERR"
         print(f"  [{mark}] {filename} {res.get('size', 0)} bytes "
@@ -234,9 +318,9 @@ async def run_batch(name):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--batch", choices=["A", "B", "all"], default="A")
+    ap.add_argument("--batch", choices=["A", "B", "C", "all"], default="A")
     args = ap.parse_args()
-    names = ["A", "B"] if args.batch == "all" else [args.batch]
+    names = ["A", "B", "C"] if args.batch == "all" else [args.batch]
     for n in names:
         asyncio.run(run_batch(n))
 

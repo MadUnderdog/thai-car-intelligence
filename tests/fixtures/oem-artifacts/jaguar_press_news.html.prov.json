@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.jaguar.co.th/about-jaguar/news",
+  "captured_at": "2026-09-26T13:45:55.009580+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "010eab2d4da15d35b8c04d79efe9713c62988abd9dc9b9bd3dbbb9e9c1e61a0a",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "jaguar_press_news.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

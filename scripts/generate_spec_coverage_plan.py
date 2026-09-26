@@ -60,7 +60,14 @@ def scan():
             continue
         raw = open(os.path.join(ART_DIR, name), encoding="utf-8", errors="ignore").read()
         counts = {k: len(re.findall(p, raw)) for k, p in MARKERS.items()}
-        spec_links = SPEC_LINK.findall(raw)
+        # Tier-2 targets must be navigable exactly as published (the plan is
+        # checked against the raw hrefs in the same artifact). Relative hrefs
+        # such as "./specification" only resolve inside the source page, so an
+        # artifact carrying them is not claimed as a tier-2 target set at all.
+        raw_spec_links = SPEC_LINK.findall(raw)
+        spec_links = raw_spec_links if all(
+            u.startswith(("#", "http://", "https://", "/")) for u in raw_spec_links
+        ) else []
         total = sum(counts.values())
         if total:
             entry = {"artifact": f"tests/fixtures/oem-artifacts/{name}",

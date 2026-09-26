@@ -1,6 +1,6 @@
 {
   "schema": "oem-coverage-registry/1 — Blueprint.md §93",
-  "generated_at": "2026-09-26T08:11:47.883271+00:00",
+  "generated_at": "2026-09-26T14:39:11.990704+00:00",
   "probe_evidence": "audit/coverage/probe_20260924.json",
   "coverage_rule": "coverage_% = brands with provenance_status=ACQUISITION_VERIFIED AND adapter_status=PARSED_TESTED ÷ in_scope brands (§93). Attempt/captured/blocked counts are operational telemetry, never coverage.",
   "scope_candidates_unresolved": [
@@ -67,6 +67,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "sidecar-verified recapture of the same manifest URL — content verified identical to legacy capture (same 99 VARIANT rows); collect_toyota switched to this artifact"
+        },
+        {
+          "url": "https://www.toyota.co.th/news",
+          "artifact": "toyota_press_news.html",
+          "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in toyota_pricelist_page.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -119,6 +127,30 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "sidecar-verified recapture of the same official URL; proven row-equivalent to the legacy capture (identical 4 variant/price pairs); price marker renders as 'บาท' (th locale) — extractor accepts both THB/บาท; replaces honda_city_page.html as the staged source"
+        },
+        {
+          "url": "https://www.honda.co.th/news",
+          "artifact": "honda_press_news.html",
+          "sha256": "d1c3f480d96472d2ce556419c3c2002e0d559129f126f619a1bf351c73fa5e69",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in honda_models_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.honda.co.th/www-assets/model/2026/06/26/i6hZNelHYNX0LptCvSY8sw1hN3honOd6.pdf?response-content-disposition=attachment%3B%20filename%3DNew Honda City - Catalog.pdf",
+          "artifact": "honda_brochure_1.pdf",
+          "sha256": "c2aca38d49ca1716db6680b620e32a32563845ab14346588d6fc1bf05890b344",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in honda_models_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.honda.co.th/www-assets/model/2026/06/26/bc5ZpbNVUtvUdaYcQMT8N6WdinDUVwDx.pdf?response-content-disposition=attachment%3B%20filename%3DNew Honda City Hatchback - Catalog.pdf",
+          "artifact": "honda_brochure_2.pdf",
+          "sha256": "8b026a671233995bd13f51d3b89a26f83c9387ef74c096577a3c2ba683d53028",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in honda_models_page.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -194,6 +226,22 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "P100 catalog layer (model_page_or_price_index): official all-models index (link from nissan.co.th nav) — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.nissan.co.th/vehicles/brochure-hub.html",
+          "artifact": "nissan_brochure_hub.html",
+          "sha256": "3ed40e03eeff0bfdf367f3e5d980449a4fd200236fe8241ef43d482906599c7a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in nissan_new_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.nissan.co.th/news.html",
+          "artifact": "nissan_press_news.html",
+          "sha256": "977bbc7868fc00530cd82ec41ebe93ffd828821b52657b69f615f4953fbebd5e",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in nissan_new_home_page.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -286,6 +334,78 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/news-update",
+          "artifact": "mazda_press_news.html",
+          "sha256": "cebebcf6d790a5d145671310e00753d74d22bec171da5e3a8acca3e10bc3b8ed",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in mazda_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+          "artifact": "mazda_spec_mazda-cx30-essential.html",
+          "sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in mazda_car_mazda-cx30-essential.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda-cx5/spec",
+          "artifact": "mazda_spec_mazda-cx5.html",
+          "sha256": "0d4b4a5bf103f1bbf68fd49de00b77187a6d86650f685c641d5a42e396fc94ca",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in mazda_car_mazda-cx5.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda2-essential/spec",
+          "artifact": "mazda_spec_mazda2-essential.html",
+          "sha256": "9f36c21a525da4a6e5cc312109aafa44ed9159c15b9f5cc6975716e1d0c1c595",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in mazda_car_mazda2-essential.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda3-sedan/spec",
+          "artifact": "mazda_spec_mazda3-sedan.html",
+          "sha256": "11d0e43e5400fe8e8a74638c212984106a56a1520614a036c0e68599c2bb76df",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in mazda_car_mazda3-sedan.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/new-mazda-bt50/spec",
+          "artifact": "mazda_spec_new-mazda-bt50.html",
+          "sha256": "4c185ae70c282f0877ab8feaa37c6a2bfdf426698e60f1679d27fe6c78b6a8be",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in mazda_car_new-mazda-bt50.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/s3fs-public/2024-12/v2_brochure-new-mazda-bt50.pdf?VersionId=Whzmuz5YnnWl0XkLVQTrsrvp8eokHNRB",
+          "artifact": "mazda_brochure_bt50.pdf",
+          "sha256": "4418a29b8745df59b67edc6b3e2d89c5d1ffc529afebcd436c2228ad1f0bece8",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in mazda_car_new-mazda-bt50.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/s3fs-public/2025-03/brochure-mazda-cx5.pdf?VersionId=VA_c9P6y6nt7uww1DHVXHSXN3dZoA88V",
+          "artifact": "mazda_brochure_cx5.pdf",
+          "sha256": "c3dc4b64ab6311f046564e57f7661cb5d8d8015021417be144ce3a7feb25ae86",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in mazda_car_mazda-cx5.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/s3fs-public/2025-03/brochure_mazda2_essential_26032025.pdf?VersionId=AfXNz7AmQsbwFurYSIj4Rc0LOJo9UwWw",
+          "artifact": "mazda_brochure_mazda2.pdf",
+          "sha256": "c1b43c938ef247d3f20d5dbab26ebe25207d57b7922032fcf156b31aa191d087",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in mazda_car_mazda2-essential.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -329,6 +449,22 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "P100 catalog layer (model_page_or_price_index): official all-models price page (link from mitsubishi home)"
+        },
+        {
+          "url": "https://www.mitsubishi-motors.co.th/th/download-a-brochure",
+          "artifact": "mitsubishi_brochures.html",
+          "sha256": "fca08965d87e16b335bb4584cc95e795086b22a31caf11ac7cf696cbb3a69d39",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in mitsubishi_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mitsubishi-motors.co.th/th/news-activity/news",
+          "artifact": "mitsubishi_press_news.html",
+          "sha256": "638f32e42b3691387285d7c49122faa8e0698ab6bc3918dd450b2b3bc5abe861",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in mitsubishi_all_models_price.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -398,6 +534,62 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "P100 catalog layer (model_page_or_price_index): official Isuzu brochure download page (link from isuzu-tis.com) — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.isuzu.co.th/news",
+          "artifact": "isuzu_press_news.html",
+          "sha256": "82c0dedad1de6131d41b4ab7c211f1b358e1927d4e1631c6a6f97cf0e944a3db",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in isuzu_th_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/2_door_brochure_2026_4aed74da60.pdf",
+          "artifact": "isuzu_brochure_2door.pdf",
+          "sha256": "6f17343094265c3ebb8c74c440529a3d89583dbb88e25336ba1cb2b2be1b7ba1",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/4_door_brochure_2026_be4df560bb.pdf",
+          "artifact": "isuzu_brochure_4door.pdf",
+          "sha256": "bc56c415bc8da8d71745230da3a6d440c384360aa72e50483683ce38d63a9449",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/mu_x_brochure_2026_5d17d1513d.pdf",
+          "artifact": "isuzu_brochure_mux.pdf",
+          "sha256": "918be06f322878515a374377b03e8e29f6f80c5a19cda0607faeb2b30e6c2561",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/spark_brochure_2026_ed212091cf.pdf",
+          "artifact": "isuzu_brochure_spark.pdf",
+          "sha256": "f632b102ef33d4a9b96dd7d6a9f275d7ace990659d8e1dac79bfb3f0af42f929",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/v_cross_brochure_2026_23a52b3f0d.pdf",
+          "artifact": "isuzu_brochure_vcross.pdf",
+          "sha256": "84a1fa3940f71b601e99f60fe9bfd1c7253db0855923b6bd0e836ea41fb3e75f",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/x_series_brochure_2026_6f67fd7b71.pdf",
+          "artifact": "isuzu_brochure_xseries.pdf",
+          "sha256": "e279beec73ff6cda74417279c8cbd9b7a47dcd657511e6d8f7b1a281a6f1ca0d",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -413,8 +605,8 @@
       "acquisition_method": "playwright",
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": "2026-09-24T13:48:31.621323+00:00",
-      "last_success_sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+      "last_success_at": "2026-09-26T13:48:37.393584+00:00",
+      "last_success_sha256": "85af513324ad48ebf82f51eff1703b220f686902e15c61eaec39b2a46ba3dd9b",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:31.564646+00:00",
@@ -481,6 +673,54 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official Suzuki e-catalog PDF (link from suzuki.co.th) — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/fronx/equipment",
+          "artifact": "suzuki_fronx_equipment.html",
+          "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in suzuki_model_fronx.html"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/jimny/equipment",
+          "artifact": "suzuki_jimny_equipment.html",
+          "sha256": "a452cae65124f01c9c5a320149f989960afb9d1294e310966af8ac7c8271a1d1",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in suzuki_model_jimny.html"
+        },
+        {
+          "url": "https://www.suzuki.co.th/news",
+          "artifact": "suzuki_press_news.html",
+          "sha256": "c091cb3879304abd1af5302575e4302b9b8a3e3e046c21d7831e52352c9b01c7",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in suzuki_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/xl7/equipment",
+          "artifact": "suzuki_xl7_equipment.html",
+          "sha256": "85af513324ad48ebf82f51eff1703b220f686902e15c61eaec39b2a46ba3dd9b",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in suzuki_model_xl7.html"
+        },
+        {
+          "url": "https://www.suzuki.co.th/upload/file/Brochure/ALL_NEW_SUZUKI_FRONX_BROCHURE.pdf",
+          "artifact": "suzuki_fronx_brochure.pdf",
+          "sha256": "2df5786395493aa391df5f554ec5d24a76e7924f49c648ed8efad82dfc91eb36",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in suzuki_model_fronx.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/upload/file/Brochure/SUZUKI_JIMNY_BROCHURE.pdf",
+          "artifact": "suzuki_jimny_brochure.pdf",
+          "sha256": "70af18b3651fc0d56baa7ac54b955a8e26d81e151d81f146e814ffe0164eddbc",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in suzuki_model_jimny.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -564,6 +804,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "P100 catalog layer (model_page_or_price_index): official MG model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mgcars.com/th/news",
+          "artifact": "mg_press_news.html",
+          "sha256": "25a5b75280482f0d52d7b3c0176c19740774a49ef2c9e2ca95cefc218675353a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in mg_car_mg-hs.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -779,6 +1027,22 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "P100 catalog layer (model_page_or_price_index): official BMW price list topic page (link from bmw all-models)"
+        },
+        {
+          "url": "https://www.bmw.co.th/en/topics/brochure.html",
+          "artifact": "bmw_brochure_page.html",
+          "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in bmw_all_models_verified.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://configure.bmw.co.th/en_TH/configure/G20/24FWZ7U/FMAH7,P0C31,S0161,S01AG,S01HY,S0258,S02TB,S02VB,S02VL,S0316,S0322,S0337,S0423,S0428,S0430,S0431,S043W,S0459,S0465,S0481,S0488,S0491,S0493,S04NW,S04UR,S0534,S0548,S0552,S05AC,S05AS,S05DC,S05DF,S05DM,S0676,S06AC,S06AE,S06AK,S06C4,S06NX,S06PA,S06U3,S06VB,S0704,S0710,S0715,S0760,S0775,S07NM,S0825,S0853,S088A,S08KM,S08LL,S08S3,S08SX,S08TD,S08WD,S08WM,S0992,S09C6",
+          "artifact": "bmw_configurator_3series.html",
+          "sha256": "1c7dad413e27f036671cf77dc531ae43aef3b67d3cf133ab0719aa08a1d851bb",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (configurator): P101 catalog completeness: discovered in bmw_all_models_verified.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -856,6 +1120,30 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "official TC Subaru (Thailand) lineup page on subaru.asia (registry primary www.subaru.co.th is NXDOMAIN): 5 MODEL rows, ราคาเริ่มต้น -> MSRP_STARTING, same-card locator via collect_subaru"
+        },
+        {
+          "url": "https://www.subaru.asia/th/th/contact-us/brochure.php",
+          "artifact": "subaru_brochure_page.html",
+          "sha256": "7d137d6a49ee3c3b75f6e9d9ce9dc37ab7ebfcd234d2a0fe82bfa0df5ec2ffb6",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in subaru_th_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.subaru.asia/th/th/about-us/news.php",
+          "artifact": "subaru_press_news.html",
+          "sha256": "f4f77556ee843fdc73281c98306854481f6e11c0b73b860f478e9f51edb919ec",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in subaru_th_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.subaru.asia/th/th/promotions/",
+          "artifact": "subaru_promo_forester.html",
+          "sha256": "c2cfa60bd49a27bd7e0cb74a517a8989e6fcdfa35f1f0e5f0af60e0b59037647",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (promotion): P101 catalog completeness: discovered in subaru_th_home_page.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -900,6 +1188,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "RSC flight data — 72 nodes (74 name/price pairs minus 2 ambiguous 'Macan GTS' dropped fail-closed): modelRange family + modelYear + price.value from ONE node; derivative=EXACT_VARIANT, name==family=MSRP"
+        },
+        {
+          "url": "https://www.porsche.com/stories/design/porsche-paint-to-sample-colours-and-configurator-guide/",
+          "artifact": "porsche_press_story.html",
+          "sha256": "d1b87f9f5d86fa8a7fbdf356931e2a7b850e61905aa58cd49d00a6f4be852bd9",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in porsche_home_page.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -943,6 +1239,22 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "P100 catalog layer (model_page_or_price_index): official Lexus price list tool (link from lexus.co.th models page)"
+        },
+        {
+          "url": "https://www.lexus.co.th/th/price-and-model-tools/model-brochures.html",
+          "artifact": "lexus_brochures.html",
+          "sha256": "18d9308ccafa4f122369d7f8127f43b409b0193e998b76d0fb3abbc692d64121",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in lexus_models_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.lexus.co.th/th/discover-lexus/news-and-events.html",
+          "artifact": "lexus_press_news.html",
+          "sha256": "2bc6b11151aaf6a11796f5c1f383cbdaa6fa0fce8796aa305ecffb06c0f80697",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in lexus_models_page.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -983,8 +1295,8 @@
       "acquisition_method": null,
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": "2026-09-24T13:48:42.529465+00:00",
-      "last_success_sha256": "28c9f50b86238b6d69b2cd3737068795367ab06875243cc4193d5c98ae770ecd",
+      "last_success_at": "2026-09-26T13:45:38.611101+00:00",
+      "last_success_sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
       "blocker_evidence": null,
       "probe_reachable_evidence": null,
       "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
@@ -1012,6 +1324,54 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "sibling official source: Changan (same operator) cards carry Deepal product links — collect_deepal, 5 MODEL MSRP_STARTING; brand_raw=thdeepal (published segment), never merged into Changan"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+          "artifact": "deepal_e07_awd.html",
+          "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+          "artifact": "deepal_e07_plus.html",
+          "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+          "artifact": "deepal_hunter_k50.html",
+          "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/s05-th/",
+          "artifact": "deepal_s05.html",
+          "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+          "artifact": "deepal_s05_reev.html",
+          "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/s07-th/",
+          "artifact": "deepal_s07.html",
+          "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
         }
       ]
     },
@@ -1103,6 +1463,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official Changan NEVO Q05 spec sheet PDF (link from changan.co.th) — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.changan.co.th/th/news/",
+          "artifact": "changan_press_news.html",
+          "sha256": "c1ef82169bdc0699687ca21eb3a35db8f4d970b284bd4fb285e2a2effca3ec6d",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in changan_home_page.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -1391,6 +1759,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "official JLR distributor price sheet (linked from jaguar.co.th) — base64 PDF artifact, pdftotext, 1 VARIANT row(s), effective 1 Aug 2026 (recorded, currentness UNKNOWN)"
+        },
+        {
+          "url": "https://www.jaguar.co.th/about-jaguar/news",
+          "artifact": "jaguar_press_news.html",
+          "sha256": "010eab2d4da15d35b8c04d79efe9713c62988abd9dc9b9bd3dbbb9e9c1e61a0a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in jaguar_home_page.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -1451,6 +1827,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "official JLR distributor price sheet (linked from land rover.co.th) — base64 PDF artifact, pdftotext, 11 VARIANT row(s), effective 1 Aug 2026 (recorded, currentness UNKNOWN)"
+        },
+        {
+          "url": "https://www.landrover.co.th/explore-land-rover/articles",
+          "artifact": "landrover_press_articles.html",
+          "sha256": "0b1d90f8e1fea61a689bfb8a25265e221d3d82cf423e861c18f6b5d7c707eb1b",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in landrover_home_page.html — captured as evidence, not parsed"
         }
       ]
     },
@@ -1466,8 +1850,8 @@
       "acquisition_method": "playwright",
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": "2026-09-24T13:49:07.774046+00:00",
-      "last_success_sha256": "b662bd5b0cca816295643f72ac8b880a2ee82d017d25a40edd5ddca363783273",
+      "last_success_at": "2026-09-26T07:44:33.271754+00:00",
+      "last_success_sha256": "f65a020f704f88e00c025a5dbcf735e25666d6fcb060324aad4b5b9b7b41be55",
       "blocker_evidence": {
         "checked_at": "2026-09-24T13:41:34.397258+00:00",
         "http_status_or_error": "Timeout after 15s",
@@ -1490,8 +1874,16 @@
           "artifact": "MINI_PriceSheet_20260327.pdf.b64",
           "sha256": "f65a020f704f88e00c025a5dbcf735e25666d6fcb060324aad4b5b9b7b41be55",
           "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official MINI Thailand price sheet PDF (link from mini.co.th home)"
+        },
+        {
+          "url": "https://configure.mini.co.th/en_TH/model-ranges",
+          "artifact": "MINI_configurator_model_ranges.html",
+          "sha256": "6510083d83376e721ac0e64902edc27e383c4041fe0f4f9aeeb74ff3f4723b61",
+          "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
-          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official MINI Thailand price sheet PDF (link from mini.co.th home) — captured as evidence, not parsed"
+          "note": "P100 catalog layer (configurator): P101 catalog completeness: discovered in mini_home_page.html (legacy fixture, no sidecar) — captured as evidence, not parsed"
         }
       ]
     },
@@ -1546,8 +1938,8 @@
       "acquisition_method": "playwright",
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": "2026-09-24T14:39:48.569427+00:00",
-      "last_success_sha256": "d068ec29fcbefa7b3f2b571845e25f847c17e71658540c6bf772326e4d5581b0",
+      "last_success_at": "2026-09-26T13:46:11.649389+00:00",
+      "last_success_sha256": "eb77846aa83f459d51d4a85238a6914fada44a57e3f29f1f004e77411cd3c2a4",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:34.847383+00:00",
@@ -1582,6 +1974,38 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": false,
           "note": "P100 catalog layer (model_page_or_price_index): official Kia brochure hub (link from kia.com/th/th) — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.kia.com/th/th/discover-kia/article/review-the-new-kia-carnival-hev-7-seater-3.html",
+          "artifact": "kia_press_article_carnival.html",
+          "sha256": "2176decfe080560f1c55a58d68efd0c09ebf9e178466eeb3486cf57aa9078a06",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in kia_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.kia.com/th/th/util/promotion/thekiacarnival-diesel-2026.html",
+          "artifact": "kia_promo_carnival_diesel.html",
+          "sha256": "037b6a63056077c2ba58caa4bdef0fa27f81c591c36bc015078508795365ff23",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (promotion): P101 catalog completeness: discovered in kia_home_page.html"
+        },
+        {
+          "url": "https://www.kia.com/th/th/util/promotion/thekiacarnival-hev-2026.html",
+          "artifact": "kia_promo_carnival_hev.html",
+          "sha256": "eb77846aa83f459d51d4a85238a6914fada44a57e3f29f1f004e77411cd3c2a4",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (promotion): P101 catalog completeness: discovered in kia_home_page.html"
+        },
+        {
+          "url": "https://www.kia.com/content/dam/kwcms/th/th/pdf/TheKiaPV5_Cargo_th.pdf",
+          "artifact": "kia_pv5_brochure.pdf",
+          "sha256": "2a2f0737e327d805138cf5542a24206f3f2f6af2ed7c27582ea4e69c0dfa9d88",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in kia_cars_page.html — captured as evidence, not parsed"
         }
       ]
     },

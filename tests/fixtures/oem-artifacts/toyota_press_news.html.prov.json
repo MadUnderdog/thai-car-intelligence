@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/news",
+  "captured_at": "2026-09-26T13:48:42.300907+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "toyota_press_news.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

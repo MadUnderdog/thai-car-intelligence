@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mgcars.com/th/news",
+  "captured_at": "2026-09-26T13:47:11.172703+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "25a5b75280482f0d52d7b3c0176c19740774a49ef2c9e2ca95cefc218675353a",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "mg_press_news.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

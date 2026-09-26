@@ -135,7 +135,10 @@ def test_toyota_locator_rejects_a_foreign_model(baseline):
 
 
 def test_nissan_rows_carry_a_unique_dom_path():
-    nissan = [r for r in _rows() if r["source"]["name"].startswith("Nissan")]
+    # P100: the grade-price table is a DIFFERENT artifact with its own
+    # regex_text locators (covered in test_p100_catalog_layers); this test
+    # scopes to the lineup source it was written against.
+    nissan = [r for r in _rows() if r["source"]["name"] == "Nissan Thailand Official"]
     assert len(nissan) == 10, f"expected 10 Nissan rows, got {len(nissan)}"
     paths = []
     for r in nissan:

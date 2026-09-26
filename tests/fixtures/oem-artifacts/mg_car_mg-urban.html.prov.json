@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mgcars.com/th/cars/mg-urban",
+  "captured_at": "2026-09-26T07:46:06.134064+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27",
+  "session_id": "catalog_layers_20260926_074454",
+  "artifact_filename": "mg_car_mg-urban.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

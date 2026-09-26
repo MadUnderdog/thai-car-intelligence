@@ -4,11 +4,131 @@
   "official_file": "audit/data-staging/vehicle_observations.jsonl",
   "media_file": "audit/data-staging/media_observations.jsonl",
   "join_rule": "same brand_normalized+model_normalized and exact price value, both sides independently evidenced (artifact SHA + locator + excerpt)",
-  "join_count": 11,
+  "join_count": 13,
   "by_class_pair": {
-    "OEM_OFFICIAL+AUTOMOTIVE_MEDIA": 11
+    "OEM_OFFICIAL+AUTOMOTIVE_MEDIA": 13
   },
   "joins": [
+    {
+      "join_key": "honda/wr-v/799000",
+      "model": {
+        "brand": "honda",
+        "normalized": "wr-v",
+        "official_name": "WR-V",
+        "media_name": "WR-V"
+      },
+      "field": "price",
+      "value_thb": 799000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "exact",
+      "official": {
+        "observation_id": "7d2689bce5e24867",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Honda Thailand Grade List",
+        "source_url": "https://www.honda.co.th/models",
+        "artifact_path": "tests/fixtures/oem-artifacts/honda_models_page.html",
+        "artifact_sha256": "6eb120085da19d8751db8687849019c499077170c96e9501b2dc80b3e572deef",
+        "captured_at": "2026-09-24T11:39:25.386866+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/honda_models_page.html",
+          "selector": "\\\"title\\\":\\\"SV\\\",\\\"grade_price\\\":799000,\\\"grade_price_hide\\\":false",
+          "method": "regex_text",
+          "text_offset": 376841
+        },
+        "excerpt": "WR-V (slug wrv) > SV = 799000 THB (grade_price)",
+        "variant_raw": "SV",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 799000,
+        "price_type": "EXACT_VARIANT"
+      },
+      "media": {
+        "observation_id": "media_9carthai_honda_020",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/honda-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_honda_price.html",
+        "artifact_sha256": "21169e86d5a8cf2757a18347c41ff7fef2594ad7e77053a5660b6045682668a0",
+        "captured_at": "2026-09-25T06:35:08.389894+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_honda_price.html",
+          "method": "text_search",
+          "selector": "WR-V-Modulo-2.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading",
+          "text_offset": 50166
+        },
+        "excerpt": "WR-V-Modulo-2.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading",
+        "variant_raw": "SV",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 799000,
+        "price_type": "MSRP"
+      }
+    },
+    {
+      "join_key": "honda/wr-v/869000",
+      "model": {
+        "brand": "honda",
+        "normalized": "wr-v",
+        "official_name": "WR-V",
+        "media_name": "WR-V"
+      },
+      "field": "price",
+      "value_thb": 869000,
+      "classes": [
+        "OEM_OFFICIAL",
+        "AUTOMOTIVE_MEDIA"
+      ],
+      "variant_alignment": "exact",
+      "official": {
+        "observation_id": "19d29ba066e02d3c",
+        "source_class": "OEM_OFFICIAL",
+        "trust_state": "ACQUISITION_VERIFIED",
+        "source_name": "Honda Thailand Grade List",
+        "source_url": "https://www.honda.co.th/models",
+        "artifact_path": "tests/fixtures/oem-artifacts/honda_models_page.html",
+        "artifact_sha256": "6eb120085da19d8751db8687849019c499077170c96e9501b2dc80b3e572deef",
+        "captured_at": "2026-09-24T11:39:25.386866+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/oem-artifacts/honda_models_page.html",
+          "selector": "\\\"title\\\":\\\"RS\\\",\\\"grade_price\\\":869000,\\\"grade_price_hide\\\":false",
+          "method": "regex_text",
+          "text_offset": 381084
+        },
+        "excerpt": "WR-V (slug wrv) > RS = 869000 THB (grade_price)",
+        "variant_raw": "RS",
+        "identity_scope": null,
+        "field": "price",
+        "value_thb": 869000,
+        "price_type": "EXACT_VARIANT"
+      },
+      "media": {
+        "observation_id": "media_9carthai_honda_021",
+        "source_class": "AUTOMOTIVE_MEDIA",
+        "trust_state": "RESEARCH_UNVERIFIED",
+        "source_name": "9CARTHAI",
+        "source_url": "https://www.9carthai.com/honda-price/",
+        "artifact_path": "tests/fixtures/media-artifacts/9carthai_honda_price.html",
+        "artifact_sha256": "21169e86d5a8cf2757a18347c41ff7fef2594ad7e77053a5660b6045682668a0",
+        "captured_at": "2026-09-25T06:35:08.389894+00:00",
+        "locator": {
+          "artifact_path": "tests/fixtures/media-artifacts/9carthai_honda_price.html",
+          "method": "text_search",
+          "selector": "WR-V-Modulo-2.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading",
+          "text_offset": 50166
+        },
+        "excerpt": "WR-V-Modulo-2.jpg\" class=\"fancybox image\" data-fancybox-group=\"gallery\"><img loading",
+        "variant_raw": "RS",
+        "identity_scope": "VARIANT",
+        "field": "price",
+        "value_thb": 869000,
+        "price_type": "MSRP"
+      }
+    },
     {
       "join_key": "toyota/alphard/3590000",
       "model": {

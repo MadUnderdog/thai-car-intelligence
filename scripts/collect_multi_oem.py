@@ -2563,6 +2563,473 @@ def collect_subaru():
     return observations
 
 
+# ─── P100 catalog-first: deeper catalog layers (grade / trim identity) ──────
+# These adapters read the DEEPER first-party layers reached by §59 Pass C
+# internal-link traversal (grade tables, all-model price indexes, price-list
+# JSON, model-page grade payloads). They exist to complete the MODEL/VARIANT
+# identity catalog; price is taken only from the same record as the identity.
+
+def _catalog_row(*, source_name, source_url, extraction_method, artifact,
+                 artifact_hash, prov, tag, brand, model, variant, price,
+                 price_type, identity_level, evidence, selector,
+                 text_offset=None, raw_labels=None):
+    """One staged observation whose locator is bound to this exact record."""
+    return {
+        "observation_id": hashlib.sha256(
+            f"{tag}:{model}:{variant or ''}:{price}:{text_offset if text_offset is not None else selector}"
+            .encode()).hexdigest()[:16],
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "source": {
+            "class": "OEM_OFFICIAL",
+            "url": source_url,
+            "name": source_name,
+            "precedence": 100,
+            "native_id": None,
+            "immutable_revision": None,
+            "extraction_method": extraction_method,
+            "artifact_path": artifact,
+            "artifact_sha256": artifact_hash,
+            "captured_at": prov["captured_at"],
+            "provenance_state": prov["provenance_state"],
+        },
+        "identity": {
+            "brand_raw": brand,
+            "model_raw": model,
+            "variant_raw": variant,
+            "year": None,
+            "fuel_powertrain_raw": None,
+            "brand_normalized": brand.lower().replace(" ", "-"),
+            "model_normalized": model.lower().replace(" ", "-"),
+            "variant_normalized": variant.lower().replace(" ", "-") if variant else None,
+            "identity_level": identity_level,
+        },
+        "price": {
+            "value_thb": price,
+            "type": price_type,
+            "currency": "THB",
+            "currentness": "UNKNOWN",
+        },
+        "specs": {},
+        "raw_labels": raw_labels or {},
+        "evidence_excerpt": evidence[:240],
+        "evidence_locator": {
+            "artifact_path": artifact,
+            "selector": selector,
+            "method": "regex_text",
+            # exact character offset of THIS record in the artifact bytes: the
+            # payload repeats strings, so the offset is what makes the locator
+            # single-valued (same contract as the Changan regex_text rows)
+            "text_offset": text_offset,
+        },
+    }
+
+
+def _split_json_array_elements(raw, bracket_idx):
+    """Split a raw JSON array (starting at '[' == bracket_idx) into element
+    substrings, returned as (abs_start, abs_end_exclusive, text). Handles the
+    RSC-style backslash-escaped quotes found inside flight payloads."""
+    assert raw[bracket_idx] == "["
+    i = bracket_idx + 1
+    depth = 1
+    in_str, esc, start = False, False, None
+    out = []
+    while i < len(raw):
+        c = raw[i]
+        if in_str:
+            if esc:
+                esc = False
+            elif c == "\\":
+                esc = True
+            elif c == '"':
+                in_str = False
+        else:
+            if c == '"':
+                in_str = True
+            elif c in "[{":
+                if depth == 1 and start is None and c == "{":
+                    start = i
+                depth += 1
+            elif c in "]}":
+                depth -= 1
+                if depth == 1 and start is not None:
+                    out.append((start, i + 1, raw[start:i + 1]))
+                    start = None
+                if depth == 0:
+                    break
+        i += 1
+    return out
+
+
+def _load_js_json(raw, varname):
+    """Extract a plain (unescaped) JSON value assigned to a JS variable."""
+    m = re.search(re.escape(varname) + r"\s*=\s*", raw)
+    if not m:
+        return None
+    i = m.end()
+    while i < len(raw) and raw[i] in " \t\r\n":
+        i += 1
+    if i >= len(raw) or raw[i] not in "[{":
+        return None
+    close = "]" if raw[i] == "[" else "}"
+    depth, in_str, esc, j = 0, False, False, i
+    while j < len(raw):
+        c = raw[j]
+        if in_str:
+            if esc:
+                esc = False
+            elif c == "\\":
+                esc = True
+            elif c == '"':
+                in_str = False
+        else:
+            if c == '"':
+                in_str = True
+            elif c in "[{":
+                depth += 1
+            elif c in "]}":
+                depth -= 1
+                if depth == 0:
+                    break
+        j += 1
+    try:
+        return json.loads(raw[i:j + 1])
+    except Exception:
+        return None
+
+
+def _catalog_artifact(name):
+    """Load a sidecar-verified artifact: (raw, absolute-ish path, sha, prov)."""
+    path = f"{FIXTURE_DIR}/{name}"
+    if not os.path.exists(path):
+        print(f"  Fixture not found: {path}")
+        return None
+    with open(path, encoding="utf-8", errors="ignore") as f:
+        raw = f.read()
+    sha = hashlib.sha256(open(path, "rb").read()).hexdigest()
+    prov = get_fixture_provenance(path)
+    if prov.get("provenance_state") != "ACQUISITION_VERIFIED":
+        print(f"  REFUSING {name}: provenance_state={prov.get('provenance_state')}")
+        return None
+    return raw, path, sha, prov
+
+
+def collect_honda_grade_list():
+    """Honda /models RSC payload — every published grade of every published model.
+
+    The page publishes, per model object, {"title": <model>, "slug": <slug>,
+    "grades": [{"title": <grade>, "grade_price": <int>, "grade_price_hide": bool}]}.
+    Model attribution = the nearest preceding model object of the same payload;
+    identity (model + grade) and price come from ONE grade record.
+    """
+    print("=== Honda Thailand Grade List (RSC grade payload) ===")
+    art = _catalog_artifact("honda_models_page.html")
+    if not art:
+        return []
+    raw, path, sha, prov = art
+
+    slug_pat = re.compile(r'\\"slug\\":\\"([A-Za-z0-9\-]+)\\"')
+    # field order on every published grade record: title -> price -> hide flag
+    grade_pat = re.compile(
+        r'\\"title\\":\\"([^"\\]+)\\",\\"grade_price\\":([0-9]+),'
+        r'\\"grade_price_hide\\":(true|false)')
+
+    models = []                      # (offset, slug, model_title)
+    for m in slug_pat.finditer(raw):
+        win = raw[max(0, m.start() - 900):m.start()]
+        titles = list(re.finditer(r'\\"title\\":\\"([^"\\]+)\\"', win))
+        if not titles:
+            continue
+        models.append((m.start(), m.group(1), titles[-1].group(1)))
+
+    obs, seen = [], set()
+    for gm in grade_pat.finditer(raw):
+        owner = None
+        for pos, slug, title in models:
+            if pos < gm.start():
+                owner = (slug, title)
+            else:
+                break
+        if not owner:
+            continue
+        slug, model = owner
+        gtitle, price, hidden = gm.group(1), int(gm.group(2)), gm.group(3) == "true"
+        if hidden or price <= 0:
+            continue                  # published without a figure: identity only
+        key = (slug, gtitle, price)
+        if key in seen:
+            continue
+        seen.add(key)
+        level = "MODEL" if gtitle.strip() == model.strip() else "VARIANT"
+        obs.append(_catalog_row(
+            source_name="Honda Thailand Grade List",
+            source_url=prov.get("source_url"),
+            extraction_method="rsc_grade_payload",
+            artifact=path, artifact_hash=sha, prov=prov,
+            tag="honda_grades", brand="Honda",
+            model=model,
+            variant=None if level == "MODEL" else gtitle,
+            price=price,
+            # §95/§98: a MODEL-level row may not carry a grade-specific figure —
+            # where the published grade IS the model name the figure is model MSRP
+            price_type="EXACT_VARIANT" if level == "VARIANT" else "MSRP",
+            identity_level=level,
+            evidence=f"{model} (slug {slug}) > {gtitle} = {price} THB (grade_price)",
+            selector=gm.group(0), text_offset=gm.start(),
+            raw_labels={"grade_slug": slug, "grade_price_hide": hidden}))
+    print(f"  grade rows: {len(obs)}")
+    return obs
+
+
+def collect_lexus_price_list():
+    """Lexus official price-list tool — window.data_global_models JSON.
+
+    Each car object carries modelname (published grade name), price and its own
+    model URL; the enclosing group carries the published model-family title.
+    """
+    print("=== Lexus Thailand Price List (published JSON) ===")
+    art = _catalog_artifact("lexus_price_list.html")
+    if not art:
+        return []
+    raw, path, sha, prov = art
+    data = _load_js_json(raw, "window.data_global_models")
+    if not data:
+        print("  window.data_global_models not found")
+        return []
+
+    obs, seen_offsets, seen_keys = [], set(), set()
+    for group in data:
+        family = (group.get("title") or "").strip()
+        for car in group.get("cars", []):
+            mp = car.get("mpdata") or {}
+            name = mp.get("modelname")
+            price = mp.get("price")
+            if not name or not isinstance(price, (int, float)) or not price:
+                continue
+            price = int(price)
+            # family heading is published with inconsistent casing ("LBX", "ux"):
+            # take the family from the GRADE's own leading characters when they
+            # match the heading case-insensitively, otherwise keep the heading
+            if name[:len(family)].lower() == family.lower() and family:
+                family_name = name[:len(family)]
+            else:
+                family_name = family
+            key = (family_name, name, price)
+            if key in seen_keys:
+                continue
+            # locate THIS record in the artifact bytes: name token -> price token
+            name_tok = f'"modelname":"{name}"'
+            off = raw.find(name_tok)
+            while off != -1 and off in seen_offsets:
+                off = raw.find(name_tok, off + 1)
+            if off == -1:
+                continue
+            price_tok = ""
+            poff = -1
+            # the payload switches to scientific notation above 1e7 (1.5E7),
+            # so the token is matched structurally and its value verified
+            for pm in re.finditer(r'"price":([0-9]+(?:\.[0-9]+)?(?:[Ee][+-]?[0-9]+)?)',
+                                  raw[off:off + 4000]):
+                if abs(float(pm.group(1)) - price) < 0.5:
+                    price_tok, poff = pm.group(0), off + pm.start()
+                    break
+            if poff == -1:
+                continue
+            seen_offsets.add(off)
+            seen_keys.add(key)
+            level = "MODEL" if name.strip() == family_name.strip() else "VARIANT"
+            obs.append(_catalog_row(
+                source_name="Lexus Thailand Price List",
+                source_url=prov.get("source_url"),
+                extraction_method="published_json_payload",
+                artifact=path, artifact_hash=sha, prov=prov,
+                tag="lexus_pricelist", brand="Lexus",
+                model=family_name, variant=None if level == "MODEL" else name,
+                price=price,
+                price_type="MSRP_STARTING" if "เริ่มต้น" in (mp.get("fromtext") or "") or
+                          "เริ่มต้น" in (mp.get("desc") or "") else "MSRP",
+                identity_level=level,
+                evidence=f"{family_name} > {name} = {price} THB "
+                         f"({(mp.get('desc') or mp.get('startingprice') or '').strip()})",
+                selector=raw[off:poff + len(price_tok)], text_offset=off,
+                raw_labels={"startingprice": mp.get("startingprice"),
+                            "group_title": group.get("title"),
+                            "model_url": mp.get("url")}))
+    print(f"  grade rows: {len(obs)}")
+    return obs
+
+
+def collect_mitsubishi_price_tables():
+    """Mitsubishi 'ราคารถทุกรุ่น' — per-model HTML tables of รุ่น / ราคา rows."""
+    print("=== Mitsubishi Thailand Price Tables (published grade tables) ===")
+    art = _catalog_artifact("mitsubishi_all_models_price.html")
+    if not art:
+        return []
+    raw, path, sha, prov = art
+
+    heads = [(m.start(), re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", m.group(1))).strip())
+             for m in re.finditer(r"<h[1-6][^>]*>(.*?)</h[1-6]>", raw, re.S)]
+    heads = [(p, h) for p, h in heads if h and h not in ("รุ่น", "ราคา")]
+
+    obs, seen = [], set()
+    for tm in re.finditer(r"<table[^>]*>.*?</table>", raw, re.S):
+        prev = [h for p, h in heads if p < tm.start()]
+        if not prev:
+            continue
+        model = prev[-1]
+        for rm in re.finditer(r"<tr[^>]*>.*?</tr>", tm.group(0), re.S):
+            row_raw = rm.group(0)
+            cells = re.findall(r"<td[^>]*>(.*?)</td>", row_raw, re.S)
+            if len(cells) < 2:
+                continue
+            label = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", cells[0]))
+            label = label.replace("&nbsp;", " ").replace("\xa0", " ").replace("&amp;", "&").strip()
+            pm = re.search(r"([0-9]{1,3}(?:,[0-9]{3})+)\s*(?:&nbsp;|​|\s)*บาท",
+                           re.sub(r"<[^>]+>", "", cells[1]))
+            if not label or not pm:
+                continue
+            price = int(pm.group(1).replace(",", ""))
+            if price < 100000 or price > 20000000:
+                continue
+            # model identity comes from the section heading above the table;
+            # the row label may repeat it (optionally behind the brand word)
+            row_label = label
+            if row_label.startswith("มิตซูบิชิ "):
+                row_label = row_label[len("มิตซูบิชิ "):].strip()
+            if row_label == model:
+                level, variant = "MODEL", None
+            elif model in row_label:
+                rest = row_label.replace(model, "", 1).strip()
+                if rest:
+                    level, variant = "VARIANT", rest
+                else:
+                    level, variant = "MODEL", None
+            else:
+                level, variant = "VARIANT", label
+            key = (model, variant, price)
+            if key in seen:
+                continue
+            seen.add(key)
+            abs_off = tm.start() + rm.start()
+            obs.append(_catalog_row(
+                source_name="Mitsubishi Thailand Price Tables",
+                source_url=prov.get("source_url"),
+                extraction_method="html_table_parse",
+                artifact=path, artifact_hash=sha, prov=prov,
+                tag="mitsubishi_tables", brand="Mitsubishi",
+                model=model,
+                variant=variant,
+                price=price, price_type="MSRP",
+                identity_level=level,
+                evidence=f"{model} | {label} | {price:,} บาท",
+                selector=row_raw, text_offset=abs_off,
+                raw_labels={"row_label": label}))
+    print(f"  rows: {len(obs)}")
+    return obs
+
+
+def collect_nissan_grade_prices():
+    """Nissan 'ตารางราคาทุกรุ่น' — group-car cards with version + block-price."""
+    print("=== Nissan Thailand Grade Price Table (published grade cards) ===")
+    art = _catalog_artifact("nissan_all_grade_price.html")
+    if not art:
+        return []
+    raw, path, sha, prov = art
+
+    obs, seen = [], set()
+    groups = list(re.finditer(r'<div class="group-car">', raw))
+    for gi, gm in enumerate(groups):
+        g_end = groups[gi + 1].start() if gi + 1 < len(groups) else len(raw)
+        blob = raw[gm.start():g_end]
+        hm = re.search(r"<h3>([^<]+)</h3>", blob)
+        if not hm:
+            continue
+        model = hm.group(1).strip()
+        for bm in re.finditer(r'<div class="block-inner version">', blob):
+            b_start = gm.start() + bm.start()
+            rest = raw[b_start:g_end]
+            nm = re.search(r'<span class="version-name">([^<]+)</span>', rest)
+            if not nm:
+                continue
+            version = re.sub(r"\s+", " ", nm.group(1)).strip()
+            pm = re.search(r'฿([0-9,]+)', rest[:6000])
+            if not pm:
+                continue
+            price = int(pm.group(1).replace(",", ""))
+            if price < 100000 or price > 20000000:
+                continue
+            needle_end = b_start + pm.end()
+            key = (model, version, price)
+            if key in seen:
+                continue
+            seen.add(key)
+            obs.append(_catalog_row(
+                source_name="Nissan Thailand Grade Price Table",
+                source_url=prov.get("source_url"),
+                extraction_method="html_card_parse",
+                artifact=path, artifact_hash=sha, prov=prov,
+                tag="nissan_grade_table", brand="Nissan",
+                model=model, variant=version,
+                price=price, price_type="EXACT_VARIANT",
+                identity_level="VARIANT",
+                evidence=f"{model} > {version} = ฿{price:,}",
+                selector=raw[b_start:needle_end], text_offset=b_start,
+                raw_labels={"version_name_raw": version}))
+    print(f"  grade rows: {len(obs)}")
+    return obs
+
+
+def collect_bmw_price_list():
+    """BMW official price list — per-series tables of variant + SRP rows."""
+    print("=== BMW Thailand Price List (published price tables) ===")
+    art = _catalog_artifact("bmw_price_list.html")
+    if not art:
+        return []
+    raw, path, sha, prov = art
+
+    heads = [(m.start(), re.sub(r"\s+", " ", m.group(1)).strip().rstrip(". ").strip())
+             for m in re.finditer(r'<h2 class="cmp-title__text[^"]*">(.*?)</h2>', raw, re.S)]
+
+    obs, seen = [], set()
+    for tm in re.finditer(r'<table[^>]*class="cmp-contenttable__table[^"]*"[^>]*>.*?</table>', raw, re.S):
+        prev = [h for p, h in heads if p < tm.start()]
+        if not prev:
+            continue
+        model = re.sub(r"\s+", " ", prev[-1]).strip()
+        for rm in re.finditer(r"<tr[^>]*>.*?</tr>", tm.group(0), re.S):
+            row_raw = rm.group(0)
+            cells = re.findall(r"<(?:td|th)[^>]*>(.*?)</(?:td|th)>", row_raw, re.S)
+            cells = [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", c)).replace("&nbsp;", " ").strip()
+                     for c in cells]
+            if len(cells) < 2 or not cells[0]:
+                continue
+            pm = re.fullmatch(r"([0-9]{1,3}(?:,[0-9]{3})+)", cells[1])
+            if not pm:
+                continue      # header row (Suggested Retail Price…)
+            price = int(pm.group(1).replace(",", ""))
+            if price < 100000 or price > 30000000:
+                continue
+            variant = cells[0]
+            key = (model, variant, price)
+            if key in seen:
+                continue
+            seen.add(key)
+            abs_off = tm.start() + rm.start()
+            obs.append(_catalog_row(
+                source_name="BMW Thailand Price List",
+                source_url=prov.get("source_url"),
+                extraction_method="html_table_parse",
+                artifact=path, artifact_hash=sha, prov=prov,
+                tag="bmw_pricelist", brand="BMW",
+                model=model, variant=variant,
+                price=price, price_type="MSRP",
+                identity_level="VARIANT",
+                evidence=f"{model} > {variant} = {price} THB (Suggested Retail Price)",
+                selector=row_raw, text_offset=abs_off,
+                raw_labels={"price_column": cells[1]}))
+    print(f"  grade rows: {len(obs)}")
+    return obs
+
+
 def main():
     print("=== REAL MULTI-OEM ACQUISITION (FIXTURE-BASED) ===\n")
 
@@ -2627,6 +3094,45 @@ def main():
     subaru = collect_subaru()
     all_observations.extend(subaru)
 
+    # P100 catalog-first: deeper catalog layers (grade/trim identity)
+    honda_grades = collect_honda_grade_list()
+    all_observations.extend(honda_grades)
+    lexus_prices = collect_lexus_price_list()
+    all_observations.extend(lexus_prices)
+    mitsubishi_tables = collect_mitsubishi_price_tables()
+    all_observations.extend(mitsubishi_tables)
+    nissan_grades = collect_nissan_grade_prices()
+    all_observations.extend(nissan_grades)
+    bmw_prices = collect_bmw_price_list()
+    all_observations.extend(bmw_prices)
+
+    # §98 — no duplicate identity+price records. The FIRST staged source keeps
+    # its observation_id; a later source publishing the identical (brand, model,
+    # variant, price) fact is not staged twice — cross-artifact agreement is
+    # captured in audit/data-staging/multi_source_joins.json instead.
+    seen_keys, deduped, dropped_dupes = set(), [], []
+    for obs in all_observations:
+        ident = obs.get("identity") or {}
+        price_val = (obs.get("price") or {}).get("value_thb")
+        b, m = ident.get("brand_normalized"), ident.get("model_normalized")
+        if not b or not m or price_val is None:
+            deduped.append(obs)              # never drop an incomplete row
+            continue
+        key = (b, m, ident.get("variant_normalized"), price_val)
+        if key in seen_keys:
+            dropped_dupes.append(obs)
+            continue
+        seen_keys.add(key)
+        deduped.append(obs)
+    if dropped_dupes:
+        print(f"  dedupe: {len(dropped_dupes)} identity+price duplicate(s) not "
+              f"re-staged:")
+        for o in dropped_dupes:
+            i = o["identity"]
+            print(f"    - {o['source']['name']}: {i['model_raw']} / "
+                  f"{i.get('variant_raw')} @ {o['price']['value_thb']:,}")
+    all_observations = deduped
+
     # Load existing Fipe/OpenEV
     existing = []
     prev_staging = "audit/data-staging/vehicle_observations_prev.jsonl"
@@ -2668,9 +3174,21 @@ def main():
         for obs in all_observations + existing:
             f.write(json.dumps(obs) + '\n')
 
-    oem_obs = toyota + mazda + nissan + honda + isuzu + bmw + lexus + honda_models + mg + mitsubishi + suzuki + mini + deepal + kia_promos + changan_prices + jaguar_sheet + landrover_sheet + porsche + gwm + subaru
+    # post-dedupe list (P100): only rows actually written to staging
+    oem_obs = all_observations
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "dedupe": {
+            "rule": "first staged source keeps the identity+price record; a later "
+                    "source publishing the identical fact is not re-staged (§98)",
+            "dropped_rows": len(dropped_dupes),
+            "dropped": [
+                {"source": o["source"]["name"],
+                 "model": o["identity"]["model_raw"],
+                 "variant": o["identity"].get("variant_raw"),
+                 "price_thb": o["price"]["value_thb"]}
+                for o in dropped_dupes],
+        },
         "provenance": {
             "fixture_based_extraction": len(oem_obs),
             "acquisition_verified": sum(1 for o in oem_obs if o['source'].get('provenance_state') == 'ACQUISITION_VERIFIED'),
@@ -2679,8 +3197,14 @@ def main():
         },
         "by_source": {"toyota": len(toyota), "mazda": len(mazda), "nissan": len(nissan), "honda": len(honda),
                        "isuzu": len(isuzu), "bmw": len(bmw), "lexus": len(lexus),
-                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal), "kia_promos": len(kia_promos), "changan": len(changan_prices), "jaguar_sheet": len(jaguar_sheet), "landrover_sheet": len(landrover_sheet), "porsche": len(porsche), "gwm": len(gwm), "subaru": len(subaru)},
+                       "honda_models": len(honda_models), "mg": len(mg), "mitsubishi": len(mitsubishi), "suzuki": len(suzuki), "mini": len(mini), "deepal": len(deepal), "kia_promos": len(kia_promos), "changan": len(changan_prices), "jaguar_sheet": len(jaguar_sheet), "landrover_sheet": len(landrover_sheet), "porsche": len(porsche), "gwm": len(gwm), "subaru": len(subaru),
+                       "honda_grades": len(honda_grades), "lexus_price_list": len(lexus_prices),
+                       "mitsubishi_price_tables": len(mitsubishi_tables),
+                       "nissan_grade_table": len(nissan_grades), "bmw_price_list": len(bmw_prices)},
         "total": len(all_observations) + len(existing),
+        "staged_rows_after_dedupe": len(all_observations),
+        "by_source_note": "counts are rows extracted per source before the "
+                          "identity+price dedupe; staged = after dedupe",
     }
     with open("audit/data-staging/summary.json", 'w') as f:
         json.dump(summary, f, indent=2)

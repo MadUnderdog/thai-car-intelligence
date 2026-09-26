@@ -1,8 +1,50 @@
 {
-  "generated_at": "2026-09-25T13:30:55.735771+00:00",
+  "generated_at": "2026-09-26T08:34:30.625720+00:00",
+  "dedupe": {
+    "rule": "first staged source keeps the identity+price record; a later source publishing the identical fact is not re-staged (\u00a798)",
+    "dropped_rows": 6,
+    "dropped": [
+      {
+        "source": "Honda Thailand Grade List",
+        "model": "City",
+        "variant": "S",
+        "price_thb": 569000
+      },
+      {
+        "source": "Honda Thailand Grade List",
+        "model": "City",
+        "variant": "e:HEV V",
+        "price_thb": 619000
+      },
+      {
+        "source": "Honda Thailand Grade List",
+        "model": "City",
+        "variant": "e:HEV SV",
+        "price_thb": 689000
+      },
+      {
+        "source": "Honda Thailand Grade List",
+        "model": "City",
+        "variant": "e:HEV RS",
+        "price_thb": 739000
+      },
+      {
+        "source": "Mitsubishi Thailand Price Tables",
+        "model": "\u0e40\u0e2d\u0e47\u0e01\u0e0b\u0e4c\u0e41\u0e1e\u0e19\u0e40\u0e14\u0e2d\u0e23\u0e4c \u0e40\u0e2d\u0e0a\u0e2d\u0e35\u0e27\u0e35",
+        "variant": null,
+        "price_thb": 939000
+      },
+      {
+        "source": "Mitsubishi Thailand Price Tables",
+        "model": "\u0e40\u0e2d\u0e47\u0e01\u0e0b\u0e4c\u0e41\u0e1e\u0e19\u0e40\u0e14\u0e2d\u0e23\u0e4c \u0e04\u0e23\u0e2d\u0e2a \u0e40\u0e2d\u0e0a\u0e2d\u0e35\u0e27\u0e35",
+        "variant": null,
+        "price_thb": 969000
+      }
+    ]
+  },
   "provenance": {
-    "fixture_based_extraction": 329,
-    "acquisition_verified": 329,
+    "fixture_based_extraction": 479,
+    "acquisition_verified": 479,
     "legacy_unverified": 0,
     "from_existing_structured_data": 0
   },
@@ -26,7 +68,14 @@
     "landrover_sheet": 11,
     "porsche": 72,
     "gwm": 29,
-    "subaru": 5
+    "subaru": 5,
+    "honda_grades": 36,
+    "lexus_price_list": 27,
+    "mitsubishi_price_tables": 21,
+    "nissan_grade_table": 23,
+    "bmw_price_list": 49
   },
-  "total": 329
+  "total": 479,
+  "staged_rows_after_dedupe": 479,
+  "by_source_note": "counts are rows extracted per source before the identity+price dedupe; staged = after dedupe"
 }

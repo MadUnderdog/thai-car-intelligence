@@ -2,8 +2,8 @@
   "purpose": "evidence-led spec expansion; this file stages no specs and fetches nothing",
   "current_state": {
     "rows_with_specs": 72,
-    "total_rows": 329,
-    "coverage_pct": 21.9,
+    "total_rows": 479,
+    "coverage_pct": 15.0,
     "brands_with_specs": [
       "porsche"
     ],
@@ -29,6 +29,22 @@
           "structure": "structured_field",
           "structured_fields": 657,
           "spec_blocks": 0,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+          "marker_counts": {
+            "thai_ps": 111,
+            "torque_nm": 73,
+            "kw": 38,
+            "kwh": 3,
+            "displacement": 14,
+            "fuel_consumption": 70
+          },
+          "marker_total": 309,
+          "structure": "structured_field",
+          "structured_fields": 657,
+          "spec_blocks": 11,
           "confidence": "high"
         },
         {
@@ -62,6 +78,166 @@
           "structured_fields": 0,
           "spec_blocks": 38,
           "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "marker_counts": {
+            "thai_ps": 42,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 40,
+            "fuel_consumption": 0
+          },
+          "marker_total": 82,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_car_mg-zs.html",
+          "marker_counts": {
+            "thai_ps": 15,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 9,
+            "fuel_consumption": 8
+          },
+          "marker_total": 32,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_car_new-mazda-bt50.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 19,
+            "fuel_consumption": 11
+          },
+          "marker_total": 31,
+          "structure": "structured_field",
+          "structured_fields": 4,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx5.html",
+          "marker_counts": {
+            "thai_ps": 8,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 15,
+            "fuel_consumption": 4
+          },
+          "marker_total": 27,
+          "structure": "structured_field",
+          "structured_fields": 3,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html",
+          "marker_counts": {
+            "thai_ps": 5,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 11,
+            "fuel_consumption": 6
+          },
+          "marker_total": 22,
+          "structure": "structured_field",
+          "structured_fields": 3,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda3-sedan.html",
+          "marker_counts": {
+            "thai_ps": 9,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 10,
+            "fuel_consumption": 3
+          },
+          "marker_total": 22,
+          "structure": "structured_field",
+          "structured_fields": 4,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_car_mg-hs.html",
+          "marker_counts": {
+            "thai_ps": 21,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 21,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_car_mg-urban.html",
+          "marker_counts": {
+            "thai_ps": 11,
+            "torque_nm": 0,
+            "kw": 9,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 20,
+          "structure": "structured_field",
+          "structured_fields": 1,
+          "spec_blocks": 39,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda2-essential.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 8,
+            "fuel_consumption": 6
+          },
+          "marker_total": 15,
+          "structure": "structured_field",
+          "structured_fields": 8,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_car_mg-im6.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 0,
+            "kw": 4,
+            "kwh": 4,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 11,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_sahar.html",
@@ -318,6 +494,54 @@
           "structured_fields": 0,
           "spec_blocks": 0,
           "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_all_models.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/suzuki_model_jimny.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/suzuki_model_xl7.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         }
       ],
       "why_highest_value": "the figures exist in artifacts we already hold, so cost is extraction + tests only, and provenance is already sidecar-backed"
@@ -345,6 +569,12 @@
           "/th/topics/offers-and-services/personal-services/technical-campaign.html",
           "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
         ],
+        "tests/fixtures/oem-artifacts/bmw_price_list.html": [
+          "/en/all-models.html?specialCategory=c",
+          "/en/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/en/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/en/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
         "tests/fixtures/oem-artifacts/changan_nevo_q05_page.html": [
           "/images/nevo/q05/pdf/Q05-Specs-sheet-th.pdf",
           "https://api.www.changan.co.th/uploads/Q05_Specs_sheet_en_99kw_for_export_model_2ecb16b06b.pdf"
@@ -364,6 +594,9 @@
         ],
         "tests/fixtures/oem-artifacts/honda_page.html": [
           "/en/service/special-service"
+        ],
+        "tests/fixtures/oem-artifacts/isuzu_brochure_page.html": [
+          "/specialoffer"
         ],
         "tests/fixtures/oem-artifacts/isuzu_page.html": [
           "/specialoffer",
@@ -411,6 +644,25 @@
         ],
         "tests/fixtures/oem-artifacts/landrover_range_rover_page.html": [
           "/fleet-business/specialist-vehicles"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html": [
+          "/_next/static/chunks/pages/cars/%5Bslug%5D/spec-21232b9731bd7d75.js",
+          "/th/cars/mazda-cx30-essential/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_car_mazda-cx5.html": [
+          "/_next/static/chunks/pages/cars/%5Bslug%5D/spec-21232b9731bd7d75.js",
+          "/th/cars/mazda-cx5/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_car_mazda2-essential.html": [
+          "/_next/static/chunks/pages/cars/%5Bslug%5D/spec-21232b9731bd7d75.js",
+          "/th/cars/mazda2-essential/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_car_mazda3-sedan.html": [
+          "/_next/static/chunks/pages/cars/%5Bslug%5D/spec-21232b9731bd7d75.js",
+          "/th/cars/mazda3-sedan/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_car_new-mazda-bt50.html": [
+          "/th/cars/new-mazda-bt50/spec"
         ],
         "tests/fixtures/oem-artifacts/mini_home_page.html": [
           "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",

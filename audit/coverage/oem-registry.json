@@ -1,6 +1,6 @@
 {
   "schema": "oem-coverage-registry/1 — Blueprint.md §93",
-  "generated_at": "2026-09-25T14:16:39.761675+00:00",
+  "generated_at": "2026-09-26T08:11:47.883271+00:00",
   "probe_evidence": "audit/coverage/probe_20260924.json",
   "coverage_rule": "coverage_% = brands with provenance_status=ACQUISITION_VERIFIED AND adapter_status=PARSED_TESTED ÷ in_scope brands (§93). Attempt/captured/blocked counts are operational telemetry, never coverage.",
   "scope_candidates_unresolved": [
@@ -135,8 +135,8 @@
       "acquisition_method": "playwright",
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": "2026-09-24T13:48:19.963226+00:00",
-      "last_success_sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+      "last_success_at": "2026-09-26T07:44:05.915769+00:00",
+      "last_success_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:42:57.240914+00:00",
@@ -178,6 +178,22 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "new official domain homepage — NISSAN_JS re-extracted, 10 MODEL rows"
+        },
+        {
+          "url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact": "nissan_all_grade_price.html",
+          "sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): official all-grade price table (link from nissan.co.th nav)"
+        },
+        {
+          "url": "https://www.nissan.co.th/vehicles/all-models.html",
+          "artifact": "nissan_all_models.html",
+          "sha256": "24d6526c31c8f72be7e9d2a2253bac1698005d34db355bd252188806b3203a8a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official all-models index (link from nissan.co.th nav) — captured as evidence, not parsed"
         }
       ]
     },
@@ -230,6 +246,46 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "root capture — collect_mazda, 10 MODEL MSRP_STARTING; h2 model split at published \"|\" (tagline kept in evidence)"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda-cx5",
+          "artifact": "mazda_car_mazda-cx5.html",
+          "sha256": "ca9e7c60533c34b8d04dbeab2d1925a22190e56c17416dbc51752c6d3db65e02",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+          "artifact": "mazda_car_mazda2-essential.html",
+          "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda3-sedan",
+          "artifact": "mazda_car_mazda3-sedan.html",
+          "sha256": "1df796474960d5b42246781aca8e969b0ca56b3d8cdfb027bcbf5b973d228c04",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+          "artifact": "mazda_car_new-mazda-bt50.html",
+          "sha256": "01df606fe74c1ce1702dc7907be3f0719b8a223d7a14c21c0586dde2376a4876",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+          "artifact": "mazda_car_mazda-cx30-essential.html",
+          "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
         }
       ]
     },
@@ -245,8 +301,8 @@
       "acquisition_method": "playwright",
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": "2026-09-24T13:48:27.092513+00:00",
-      "last_success_sha256": "eaa2b0f9e01fcbc45532782f931eeee7c00801cda5c480294c8c1a4f8ffee498",
+      "last_success_at": "2026-09-26T07:44:16.432014+00:00",
+      "last_success_sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:31.560336+00:00",
@@ -265,6 +321,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "nav-header model links — collect_mitsubishi, 6 MODEL MSRP_STARTING"
+        },
+        {
+          "url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+          "artifact": "mitsubishi_all_models_price.html",
+          "sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): official all-models price page (link from mitsubishi home)"
         }
       ]
     },
@@ -326,6 +390,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "lineup figures (data-test=lineup-item-*): img-alt model binding + data-test=pricing — 6 MODEL MSRP_STARTING; fixes legacy body-style-as-model labels ('4 DOORS'/'2 DOORS')"
+        },
+        {
+          "url": "https://www.isuzu-tis.com/download-brochure",
+          "artifact": "isuzu_brochure_page.html",
+          "sha256": "64cf78e986eef66d854116a95e135481dd1bc862216713647fc8974b682c2eeb",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Isuzu brochure download page (link from isuzu-tis.com) — captured as evidence, not parsed"
         }
       ]
     },
@@ -377,6 +449,38 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "product cards — collect_suzuki, 5 MODEL (mixed MSRP_STARTING/MSRP per source phrasing)"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/fronx",
+          "artifact": "suzuki_model_fronx.html",
+          "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Suzuki model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/xl7",
+          "artifact": "suzuki_model_xl7.html",
+          "sha256": "29c2c89334c904b7c2b71ee1f3cd8d8c463323486f07f04d6ad5dfd13a9c95ae",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Suzuki model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/jimny",
+          "artifact": "suzuki_model_jimny.html",
+          "sha256": "09f1319028977a1c13b4f3b8795d76a36ba81b70f8e90435d56c36fba16a00f9",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Suzuki model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/upload/file/Catalog/Suzuki_Collection_E-Catalog_2024.pdf",
+          "artifact": "Suzuki_Collection_E-Catalog_2024.pdf.b64",
+          "sha256": "cc7d52408d2aacdd3fe3cda079a01fa34df47e9e9920947c9d19a68f712ca26f",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official Suzuki e-catalog PDF (link from suzuki.co.th) — captured as evidence, not parsed"
         }
       ]
     },
@@ -428,6 +532,38 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "promo cards — collect_mg, 7 MODEL rows MSRP_STARTING"
+        },
+        {
+          "url": "https://www.mgcars.com/th/cars/mg-zs",
+          "artifact": "mg_car_mg-zs.html",
+          "sha256": "01f41293474e78e363c30b6ea59e34bf6a94eaab4f1d6506ae1af64cdda111ab",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official MG model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mgcars.com/th/cars/mg-hs",
+          "artifact": "mg_car_mg-hs.html",
+          "sha256": "85cb146b64179d3bacf3328f5284ba3839c29dae743d275dea1bdca26537deab",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official MG model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mgcars.com/th/cars/mg-im6",
+          "artifact": "mg_car_mg-im6.html",
+          "sha256": "92731131cc6ec4229899f209da231379260793628775a806d8e09733037eb8e6",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official MG model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mgcars.com/th/cars/mg-urban",
+          "artifact": "mg_car_mg-urban.html",
+          "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official MG model page — captured as evidence, not parsed"
         }
       ]
     },
@@ -609,8 +745,8 @@
       "acquisition_method": "playwright",
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": "2026-09-24T13:49:02.210559+00:00",
-      "last_success_sha256": "6b88cd605511852757b288d27015c0a740b2319ca0530cabb5394f38093b1e28",
+      "last_success_at": "2026-09-26T07:44:28.929592+00:00",
+      "last_success_sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
       "blocker_evidence": {
         "checked_at": "2026-09-24T13:41:32.390590+00:00",
         "http_status_or_error": "Timeout after 15s",
@@ -635,6 +771,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "genuine recapture of all-models — BMW_JS dual-format, 35 MODEL rows"
+        },
+        {
+          "url": "https://www.bmw.co.th/en/topics/price-list.html",
+          "artifact": "bmw_price_list.html",
+          "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): official BMW price list topic page (link from bmw all-models)"
         }
       ]
     },
@@ -771,8 +915,8 @@
       "acquisition_method": "playwright",
       "adapter_status": "PARSED_TESTED",
       "provenance_status": "ACQUISITION_VERIFIED",
-      "last_success_at": "2026-09-24T11:08:47.206830+00:00",
-      "last_success_sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "last_success_at": "2026-09-26T07:44:21.388806+00:00",
+      "last_success_sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
       "blocker_evidence": null,
       "probe_reachable_evidence": {
         "checked_at": "2026-09-24T13:41:33.209510+00:00",
@@ -791,6 +935,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "6 MODEL rows"
+        },
+        {
+          "url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+          "artifact": "lexus_price_list.html",
+          "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): official Lexus price list tool (link from lexus.co.th models page)"
         }
       ]
     },
@@ -943,6 +1095,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "promotion offers — 2 VARIANT rows NEVO Q05 MAX/ULTRA (list 629,900/709,900; ราคาพิเศษ 619,900/679,900 kept in raw_labels)"
+        },
+        {
+          "url": "https://www.changan.co.th/images/nevo/q05/pdf/Q05-Specs-sheet-th.pdf",
+          "artifact": "Changan_NEVOQ05_SpecSheet_th.pdf.b64",
+          "sha256": "44e2bebaeed9b269fa9e22d39488228c74ddec4d30fc91c85ec751d3391d02c4",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official Changan NEVO Q05 spec sheet PDF (link from changan.co.th) — captured as evidence, not parsed"
         }
       ]
     },
@@ -1106,6 +1266,22 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/haval-h6-hev/0901_th_h6.pdf",
+          "artifact": "GWM_HavalH6_Brochure.pdf.b64",
+          "sha256": "1357854fcb52dd6b8a4277832cab71734f76a21a447f60d02289627648e15443",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official GWM Haval H6 brochure PDF — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/th/model/ora-5/tc_ora5_bev_catalog_th_220326.pdf",
+          "artifact": "GWM_ORA5BEV_Catalog.pdf.b64",
+          "sha256": "7a6356d20d7ccd6a2f1a78011cf0615f901e16efea9f6a7de827ff0f6f01067f",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official GWM ORA 5 BEV catalog PDF — captured as evidence, not parsed"
         }
       ]
     },
@@ -1308,6 +1484,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "product items — collect_mini, 5 MODEL MSRP_STARTING (\"From X ฿\"), finance values excluded"
+        },
+        {
+          "url": "https://www.mini.co.th/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2026/MINI-Price-Sheet-Revised-27-Mar-2026.pdf.asset.1774933915613.pdf",
+          "artifact": "MINI_PriceSheet_20260327.pdf.b64",
+          "sha256": "f65a020f704f88e00c025a5dbcf735e25666d6fcb060324aad4b5b9b7b41be55",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official MINI Thailand price sheet PDF (link from mini.co.th home) — captured as evidence, not parsed"
         }
       ]
     },
@@ -1390,6 +1574,14 @@
           "provenance_state": "ACQUISITION_VERIFIED",
           "parsed": true,
           "note": "promo kv cards — collect_kia_promos, 3 MODEL rows (EV5 1,080,000 MSRP_STARTING; Carnival Diesel SXL 1,999,000; Sorento PHEV 1,549,000 MSRP), campaign 1-30 Sep 2026 in evidence; cars list itself price-free"
+        },
+        {
+          "url": "https://www.kia.com/th/th/shopping-tools/download-a-brochure.html",
+          "artifact": "kia_brochure_hub.html",
+          "sha256": "9fac60a97de9550ce94a015c0700c68249645e103fd869d3edf094e08fc65f43",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Kia brochure hub (link from kia.com/th/th) — captured as evidence, not parsed"
         }
       ]
     },

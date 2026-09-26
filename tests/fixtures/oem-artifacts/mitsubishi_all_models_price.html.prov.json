@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+  "captured_at": "2026-09-26T07:44:16.432014+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+  "session_id": "catalog_layers_20260926_074356",
+  "artifact_filename": "mitsubishi_all_models_price.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

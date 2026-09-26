@@ -1,0 +1,243 @@
+{
+  "run_id": "daily_20260924_phase1_parse_wave",
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T15:12:14.699651+00:00",
+  "cycle": "2026-09-24-3: captured-unparsed → PARSED_TESTED (Mitsubishi/Suzuki/MINI/Deepal) + range recaptures",
+  "baseline_commit": "9b95f2be9661561da1db97bac53ed15a011ff9f6",
+  "acquisition": {
+    "session_id": "acquisition_20260924_143915",
+    "attempted": 6,
+    "captured_with_sidecars": 6,
+    "blocked": [],
+    "note": "model-list/range recaptures + rendered Isuzu; all VERIFIED, none publish prices"
+  },
+  "registry": {
+    "file": "audit/coverage/oem-registry.json",
+    "rows": 33,
+    "in_scope": 32,
+    "reachable": 18,
+    "blocked": 14,
+    "coverage_rule": "coverage_% = brands with provenance_status=ACQUISITION_VERIFIED AND adapter_status=PARSED_TESTED ÷ in_scope brands (§93). Attempt/captured/blocked counts are operational telemetry, never coverage.",
+    "coverage_counted_brands": [
+      "Honda",
+      "Nissan",
+      "Mitsubishi",
+      "Suzuki",
+      "MG",
+      "BMW",
+      "Lexus",
+      "Deepal",
+      "MINI"
+    ],
+    "coverage_pct": 28.1,
+    "previous_coverage_pct": 15.6,
+    "note": "captured/reachable/blocked counts are telemetry, never market coverage"
+  },
+  "conversions_this_unit": {
+    "Mitsubishi": "ACQUISITION_VERIFIED/NONE → PARSED_TESTED (6 MODEL, MSRP_STARTING)",
+    "Suzuki": "→ PARSED_TESTED (5 MODEL; เริ่มต้นที่→MSRP_STARTING, ราคาพิเศษ/ราคาเพียง/plain→MSRP, phrase kept in evidence)",
+    "MINI": "→ PARSED_TESTED (5 MODEL, \"From X ฿\" MSRP only; MTHLY installment values excluded + guard test)",
+    "Deepal": "→ PARSED_TESTED via sibling operator source changan.co.th (5 MODEL from published /thdeepal/<model>-th/ links; brand never merged into Changan)"
+  },
+  "artifacts": {
+    "html_total": 34,
+    "sidecars_total": 26,
+    "new_this_unit": [
+      "gwm_models_page.html",
+      "jaguar_range_page.html",
+      "landrover_discovery_page.html",
+      "landrover_range_rover_page.html",
+      "isuzu_th_rendered_page.html",
+      "kia_cars_page.html"
+    ]
+  },
+  "staging": {
+    "total_rows": 204,
+    "by_source_name": {
+      "Toyota Thailand Official": 99,
+      "Mazda Thailand Official": 10,
+      "Nissan Thailand Official": 10,
+      "Honda Thailand Official": 4,
+      "Isuzu Thailand Official": 6,
+      "BMW Thailand Official": 35,
+      "Lexus Thailand Official": 6,
+      "Honda Models Page": 6,
+      "MG Thailand Official": 7,
+      "Mitsubishi Thailand Official": 6,
+      "Suzuki Thailand Official": 5,
+      "MINI Thailand Official": 5,
+      "Changan Thailand Official": 5
+    },
+    "identity_levels": {
+      "VARIANT": 103,
+      "MODEL": 101
+    },
+    "price_types": {
+      "MSRP": 102,
+      "MSRP_STARTING": 100,
+      "EXACT_VARIANT": 2
+    },
+    "provenance_states": {
+      "LEGACY_UNVERIFIED": 119,
+      "ACQUISITION_VERIFIED": 85
+    },
+    "summary_file": {
+      "generated_at": "2026-09-24T14:47:03.801262+00:00",
+      "provenance": {
+        "fixture_based_extraction": 204,
+        "acquisition_verified": 85,
+        "legacy_unverified": 119,
+        "from_existing_structured_data": 0
+      },
+      "by_source": {
+        "toyota": 99,
+        "mazda": 10,
+        "nissan": 10,
+        "honda": 4,
+        "isuzu": 6,
+        "bmw": 35,
+        "lexus": 6,
+        "honda_models": 6,
+        "mg": 7,
+        "mitsubishi": 6,
+        "suzuki": 5,
+        "mini": 5,
+        "deepal": 5
+      },
+      "total": 204
+    }
+  },
+  "tests": {
+    "total": 174,
+    "passed": 174,
+    "failed": 0,
+    "suites": "extraction (100 incl 26 new: 4 brands × semantics/re-resolution/mutations + MINI finance guard + Smart extract-nothing + recapture sidecars), acquisition/guard (20), taxonomy (44), gold (10)"
+  },
+  "blockers": [
+    {
+      "brand": "BYD",
+      "status": "BLOCKED_HTTP_404",
+      "url": "https://www.byd.com/th/",
+      "error": "HTTP_404",
+      "checked_at": "2026-09-24T13:41:31.848172+00:00",
+      "next_retry_at": "2026-10-08T13:41:49.738574+00:00"
+    },
+    {
+      "brand": "Tesla",
+      "status": "BLOCKED_HTTP_403",
+      "url": "https://www.tesla.com/th_th",
+      "error": "HTTP_403",
+      "checked_at": "2026-09-24T13:41:32.086082+00:00",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+    },
+    {
+      "brand": "Ford",
+      "status": "BLOCKED_HTTP_403",
+      "url": "https://www.ford.co.th/",
+      "error": "HTTP_403",
+      "checked_at": "2026-09-24T13:41:32.087860+00:00",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+    },
+    {
+      "brand": "Chevrolet",
+      "status": "BLOCKED_HTTP_403",
+      "url": "https://www.chevrolet.co.th/",
+      "error": "HTTP_403 via Playwright (requests GET earlier returned 200 — browser-level block)",
+      "checked_at": "2026-09-24T14:16:16.748942+00:00",
+      "next_retry_at": "2026-10-01T14:16:16.748942+00:00"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "status": "BLOCKED_HTTP_403",
+      "url": "https://www.mercedes-benz.co.th/",
+      "error": "HTTP_403 via Playwright (probe was BLOCKED_TIMEOUT — browser-level block)",
+      "checked_at": "2026-09-24T14:16:16.748942+00:00",
+      "next_retry_at": "2026-10-01T14:16:16.748942+00:00"
+    },
+    {
+      "brand": "Audi",
+      "status": "BLOCKED_HTTP_403",
+      "url": "https://www.audi.co.th/",
+      "error": "HTTP_403",
+      "checked_at": "2026-09-24T13:41:32.369118+00:00",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+    },
+    {
+      "brand": "Volvo",
+      "status": "BLOCKED_TLS",
+      "url": "https://www.volvo.co.th/en/models.html",
+      "error": "SSLError: HTTPSConnectionPool(host='www.volvo.co.th', port=443): Max retries exceeded with url: /en/models.html (Caused by SSLErro",
+      "checked_at": "2026-09-24T13:41:32.815537+00:00",
+      "next_retry_at": "2026-10-24T13:41:49.738574+00:00"
+    },
+    {
+      "brand": "Subaru",
+      "status": "BLOCKED_DNS",
+      "url": "https://www.subaru.co.th/",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.subaru.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.subaru.co.th'",
+      "checked_at": "2026-09-24T13:41:33.132436+00:00",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+    },
+    {
+      "brand": "NETA",
+      "status": "BLOCKED_DNS",
+      "url": "https://www.neta.co.th/",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.neta.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.neta.co.th', po",
+      "checked_at": "2026-09-24T13:41:33.300875+00:00",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+    },
+    {
+      "brand": "Avance",
+      "status": "BLOCKED_DNS",
+      "url": "https://www.avancemotors.com/",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.avancemotors.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.avancemot",
+      "checked_at": "2026-09-24T13:41:33.586368+00:00",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+    },
+    {
+      "brand": "Haval",
+      "status": "BLOCKED_DNS",
+      "url": "https://www.haval.co.th/",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.haval.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.haval.co.th', ",
+      "checked_at": "2026-09-24T13:41:33.654558+00:00",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+    },
+    {
+      "brand": "Chery",
+      "status": "BLOCKED_DNS",
+      "url": "https://www.chery.co.th/",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.chery.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.chery.co.th', ",
+      "checked_at": "2026-09-24T13:41:33.757563+00:00",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+    },
+    {
+      "brand": "Smart",
+      "status": "DEALER_REDIRECT",
+      "url": "https://www.smart.co.th/",
+      "error": "REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (security company, not smart cars) — fix URL target in registry",
+      "checked_at": "2026-09-24T14:16:16.748942+00:00",
+      "next_retry_at": "2026-09-25T14:16:16.748942+00:00"
+    },
+    {
+      "brand": "Peugeot",
+      "status": "BLOCKED_HTTP_403",
+      "url": "https://www.peugeot.co.th/",
+      "error": "HTTP_403",
+      "checked_at": "2026-09-24T13:41:35.062412+00:00",
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+    }
+  ],
+  "no_price_finding": "GWM /en/models, Jaguar /jaguar-range, Land Rover overview pages, Kia /cars, isuzu.co.th rendered: official pages publish NO prices → stored VERIFIED/unparsed, no adapter (parseable-structure rule)",
+  "security_status": {
+    "github_secret_scanning_alerts": "UNVERIFIED — alerts API 401 unauthenticated; NO closure claimed",
+    "third_party_key_rotation": "EXTERNAL — owner-side; NOT performed",
+    "staged_diff_credential_scan": "see commit step (0 expected)"
+  },
+  "follow_ups": [
+    "Changan-brand products (non-Deepal) not published with prices on homepage — need Changan lineup page",
+    "Mazda-home tagline binding (existing follow-up, unchanged)",
+    "Scope candidates unresolved: Hyundai, Daihatsu (DNS)",
+    "Blocked 14 remain on next_retry_at schedule — no hammering",
+    "GitHub alert closure needs authenticated access; rotation external"
+  ]
+}

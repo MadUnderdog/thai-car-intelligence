@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/sahar",
+  "captured_at": "2026-09-25T07:46:32.717230+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "b1bdea00126fcec2d5327402b5ba12e265d4730d18dfd0cb5d494f0b4a27425c",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_sahar.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

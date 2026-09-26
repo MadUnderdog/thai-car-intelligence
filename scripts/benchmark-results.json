@@ -1,0 +1,621 @@
+{
+  "timestamp": "2026-09-18T17:20:10.233Z",
+  "models": {
+    "glm-5.3-flash": {
+      "cases": 24,
+      "successful": 24,
+      "correct": 22,
+      "avgLatency": 6532,
+      "totalTokens": 10858,
+      "byCategory": {
+        "price": {
+          "total": 5,
+          "correct": 5
+        },
+        "spec": {
+          "total": 5,
+          "correct": 5
+        },
+        "variant": {
+          "total": 4,
+          "correct": 4
+        },
+        "comparison": {
+          "total": 3,
+          "correct": 3
+        },
+        "alias": {
+          "total": 2,
+          "correct": 2
+        },
+        "ambiguous": {
+          "total": 2,
+          "correct": 0
+        },
+        "unsupported": {
+          "total": 2,
+          "correct": 2
+        },
+        "conflict": {
+          "total": 1,
+          "correct": 1
+        }
+      }
+    },
+    "mimo-v2.5": {
+      "cases": 24,
+      "successful": 24,
+      "correct": 19,
+      "avgLatency": 5770,
+      "totalTokens": 9117,
+      "byCategory": {
+        "price": {
+          "total": 5,
+          "correct": 5
+        },
+        "spec": {
+          "total": 5,
+          "correct": 5
+        },
+        "variant": {
+          "total": 4,
+          "correct": 2
+        },
+        "comparison": {
+          "total": 3,
+          "correct": 2
+        },
+        "alias": {
+          "total": 2,
+          "correct": 2
+        },
+        "ambiguous": {
+          "total": 2,
+          "correct": 0
+        },
+        "unsupported": {
+          "total": 2,
+          "correct": 2
+        },
+        "conflict": {
+          "total": 1,
+          "correct": 1
+        }
+      }
+    }
+  },
+  "cases": {
+    "glm-5.3-flash": [
+      {
+        "id": "p1",
+        "category": "price",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 10823,
+        "inputTokens": 211,
+        "outputTokens": 277,
+        "error": null
+      },
+      {
+        "id": "p2",
+        "category": "price",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 2039,
+        "inputTokens": 211,
+        "outputTokens": 157,
+        "error": null
+      },
+      {
+        "id": "p3",
+        "category": "price",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 5333,
+        "inputTokens": 220,
+        "outputTokens": 274,
+        "error": null
+      },
+      {
+        "id": "p4",
+        "category": "price",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 4889,
+        "inputTokens": 211,
+        "outputTokens": 134,
+        "error": null
+      },
+      {
+        "id": "p5",
+        "category": "price",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 8465,
+        "inputTokens": 214,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "s1",
+        "category": "spec",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 2676,
+        "inputTokens": 206,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "s2",
+        "category": "spec",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 8725,
+        "inputTokens": 215,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "s3",
+        "category": "spec",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 5485,
+        "inputTokens": 213,
+        "outputTokens": 217,
+        "error": null
+      },
+      {
+        "id": "s4",
+        "category": "spec",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 1867,
+        "inputTokens": 210,
+        "outputTokens": 42,
+        "error": null
+      },
+      {
+        "id": "s5",
+        "category": "spec",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 6859,
+        "inputTokens": 222,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "v1",
+        "category": "variant",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 2570,
+        "inputTokens": 234,
+        "outputTokens": 193,
+        "error": null
+      },
+      {
+        "id": "v2",
+        "category": "variant",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 11368,
+        "inputTokens": 226,
+        "outputTokens": 223,
+        "error": null
+      },
+      {
+        "id": "v3",
+        "category": "variant",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 8719,
+        "inputTokens": 233,
+        "outputTokens": 103,
+        "error": null
+      },
+      {
+        "id": "v4",
+        "category": "variant",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 4877,
+        "inputTokens": 228,
+        "outputTokens": 214,
+        "error": null
+      },
+      {
+        "id": "c1",
+        "category": "comparison",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 5037,
+        "inputTokens": 232,
+        "outputTokens": 240,
+        "error": null
+      },
+      {
+        "id": "c2",
+        "category": "comparison",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 11326,
+        "inputTokens": 244,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "c3",
+        "category": "comparison",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 7718,
+        "inputTokens": 223,
+        "outputTokens": 229,
+        "error": null
+      },
+      {
+        "id": "a1",
+        "category": "alias",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 8082,
+        "inputTokens": 211,
+        "outputTokens": 292,
+        "error": null
+      },
+      {
+        "id": "a2",
+        "category": "alias",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 12306,
+        "inputTokens": 206,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "am1",
+        "category": "ambiguous",
+        "success": true,
+        "correct": false,
+        "grounded": true,
+        "latency": 9017,
+        "inputTokens": 240,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "am2",
+        "category": "ambiguous",
+        "success": true,
+        "correct": false,
+        "grounded": true,
+        "latency": 7024,
+        "inputTokens": 213,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "u1",
+        "category": "unsupported",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 3378,
+        "inputTokens": 182,
+        "outputTokens": 217,
+        "error": null
+      },
+      {
+        "id": "u2",
+        "category": "unsupported",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 4562,
+        "inputTokens": 182,
+        "outputTokens": 225,
+        "error": null
+      },
+      {
+        "id": "x1",
+        "category": "conflict",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 3614,
+        "inputTokens": 260,
+        "outputTokens": 174,
+        "error": null
+      }
+    ],
+    "mimo-v2.5": [
+      {
+        "id": "p1",
+        "category": "price",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 7920,
+        "inputTokens": 140,
+        "outputTokens": 200,
+        "error": null
+      },
+      {
+        "id": "p2",
+        "category": "price",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 2377,
+        "inputTokens": 140,
+        "outputTokens": 81,
+        "error": null
+      },
+      {
+        "id": "p3",
+        "category": "price",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 2999,
+        "inputTokens": 147,
+        "outputTokens": 63,
+        "error": null
+      },
+      {
+        "id": "p4",
+        "category": "price",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 6558,
+        "inputTokens": 140,
+        "outputTokens": 265,
+        "error": null
+      },
+      {
+        "id": "p5",
+        "category": "price",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 6356,
+        "inputTokens": 143,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "s1",
+        "category": "spec",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 6683,
+        "inputTokens": 136,
+        "outputTokens": 258,
+        "error": null
+      },
+      {
+        "id": "s2",
+        "category": "spec",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 6511,
+        "inputTokens": 147,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "s3",
+        "category": "spec",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 6842,
+        "inputTokens": 147,
+        "outputTokens": 263,
+        "error": null
+      },
+      {
+        "id": "s4",
+        "category": "spec",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 5267,
+        "inputTokens": 141,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "s5",
+        "category": "spec",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 4593,
+        "inputTokens": 149,
+        "outputTokens": 194,
+        "error": null
+      },
+      {
+        "id": "v1",
+        "category": "variant",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 5645,
+        "inputTokens": 160,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "v2",
+        "category": "variant",
+        "success": true,
+        "correct": false,
+        "grounded": true,
+        "latency": 7129,
+        "inputTokens": 152,
+        "outputTokens": 255,
+        "error": null
+      },
+      {
+        "id": "v3",
+        "category": "variant",
+        "success": true,
+        "correct": false,
+        "grounded": true,
+        "latency": 6933,
+        "inputTokens": 160,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "v4",
+        "category": "variant",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 5553,
+        "inputTokens": 154,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "c1",
+        "category": "comparison",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 6873,
+        "inputTokens": 158,
+        "outputTokens": 268,
+        "error": null
+      },
+      {
+        "id": "c2",
+        "category": "comparison",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 8271,
+        "inputTokens": 172,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "c3",
+        "category": "comparison",
+        "success": true,
+        "correct": false,
+        "grounded": true,
+        "latency": 7380,
+        "inputTokens": 149,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "a1",
+        "category": "alias",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 3564,
+        "inputTokens": 140,
+        "outputTokens": 132,
+        "error": null
+      },
+      {
+        "id": "a2",
+        "category": "alias",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 2385,
+        "inputTokens": 136,
+        "outputTokens": 60,
+        "error": null
+      },
+      {
+        "id": "am1",
+        "category": "ambiguous",
+        "success": true,
+        "correct": false,
+        "grounded": true,
+        "latency": 6668,
+        "inputTokens": 172,
+        "outputTokens": 300,
+        "error": null
+      },
+      {
+        "id": "am2",
+        "category": "ambiguous",
+        "success": true,
+        "correct": false,
+        "grounded": true,
+        "latency": 4939,
+        "inputTokens": 148,
+        "outputTokens": 227,
+        "error": null
+      },
+      {
+        "id": "u1",
+        "category": "unsupported",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 3750,
+        "inputTokens": 118,
+        "outputTokens": 111,
+        "error": null
+      },
+      {
+        "id": "u2",
+        "category": "unsupported",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 5311,
+        "inputTokens": 118,
+        "outputTokens": 234,
+        "error": null
+      },
+      {
+        "id": "x1",
+        "category": "conflict",
+        "success": true,
+        "correct": true,
+        "grounded": true,
+        "latency": 7984,
+        "inputTokens": 180,
+        "outputTokens": 259,
+        "error": null
+      }
+    ]
+  }
+}

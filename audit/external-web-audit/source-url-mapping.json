@@ -1,0 +1,697 @@
+{
+  "summary": {
+    "total_price_samples": 28,
+    "total_spec_samples": 38,
+    "total_source_urls": 27,
+    "all_entity_proven": true
+  },
+  "source_urls": [
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yaris",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Yaris",
+          "variant": "Yaris",
+          "grade": "Premium",
+          "amount": 689000
+        },
+        {
+          "brand": "Toyota",
+          "model": "Yaris",
+          "variant": "Yaris",
+          "grade": "Smart",
+          "amount": 644000
+        },
+        {
+          "brand": "Toyota",
+          "model": "Yaris",
+          "variant": "Yaris",
+          "grade": "Sport",
+          "amount": 584000
+        }
+      ],
+      "spec_samples": [
+        {
+          "model": "Yaris",
+          "variant": "ICE",
+          "key": "interior.dome_lamp",
+          "valueEn": "Yes",
+          "series_code": "yaris"
+        },
+        {
+          "model": "Yaris",
+          "variant": "Premium",
+          "key": "dimension.seating_capacity",
+          "valueEn": "5",
+          "series_code": "yaris"
+        },
+        {
+          "model": "Yaris",
+          "variant": "Smart",
+          "key": "interior.console_covering_material",
+          "valueEn": "Urethane",
+          "series_code": "yaris"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Yaris ATIV",
+          "variant": "Yaris ATIV",
+          "grade": "HEV Premium",
+          "amount": 729000
+        },
+        {
+          "brand": "Toyota",
+          "model": "Yaris ATIV",
+          "variant": "Yaris ATIV",
+          "grade": "Premium",
+          "amount": 679000
+        },
+        {
+          "brand": "Toyota",
+          "model": "Yaris ATIV",
+          "variant": "Yaris ATIV",
+          "grade": "Smart",
+          "amount": 599000
+        }
+      ],
+      "spec_samples": [
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV",
+          "key": "engine.max_output_eec_net_kwps___rpm",
+          "valueEn": "69 (94) / 6,000",
+          "series_code": "yarisativ"
+        },
+        {
+          "model": "Yaris Ativ",
+          "variant": "Smart",
+          "key": "transmission_and_suspension.suspension_front___rear",
+          "valueEn": "Front: MacPherson strut with stabilizer bar / Rear: Torsion beam with coil spring and stabilizer bar",
+          "series_code": "yarisativ"
+        },
+        {
+          "model": "Yaris Ativ",
+          "variant": "Premium",
+          "key": "interior.driver_seat",
+          "valueEn": "Manually adjustable – 6 directions",
+          "series_code": "yarisativ"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV",
+          "key": "safety.side_impact_protection_beam",
+          "valueEn": "With",
+          "series_code": "yarisativ"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "GR Sport",
+          "key": "speedometer_and_convenience_items.speedometer",
+          "valueEn": "Digital",
+          "series_code": "yarisativ"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV",
+          "key": "interior.front_passenger_seat_storage",
+          "valueEn": "With",
+          "series_code": "yarisativ"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV",
+          "key": "dimension.wheelbase_mm",
+          "valueEn": "2,620",
+          "series_code": "yarisativ"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV",
+          "key": "spec.immobilizer.system",
+          "valueEn": "With",
+          "series_code": "yarisativ"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV",
+          "key": "safety.high_mount_stop_lamp",
+          "valueEn": "LED",
+          "series_code": "yarisativ"
+        },
+        {
+          "model": "Yaris Ativ",
+          "variant": "Premium",
+          "key": "interior.seat_material",
+          "valueEn": "Leather & Synthetic Leather",
+          "series_code": "yarisativ"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ_grsport",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Yaris ATIV",
+          "variant": "Yaris ATIV GR Sport",
+          "grade": "HEV GR Sport",
+          "amount": 779000
+        }
+      ],
+      "spec_samples": [
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV",
+          "key": "speedometer_and_convenience_items.steering_wheel_switch",
+          "valueEn": "With",
+          "series_code": "yarisativ_grsport"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV",
+          "key": "spec.sunglasses.holder",
+          "valueEn": "With",
+          "series_code": "yarisativ_grsport"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV",
+          "key": "spec.outside.door.handle",
+          "valueEn": "Body-colored",
+          "series_code": "yarisativ_grsport"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=corollacross",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Corolla Cross",
+          "variant": "Corolla Cross",
+          "grade": "HEV Premium Luxury",
+          "amount": 1204000
+        },
+        {
+          "brand": "Toyota",
+          "model": "Corolla Cross",
+          "variant": "Corolla Cross",
+          "grade": "HEV Smart",
+          "amount": 989000
+        }
+      ],
+      "spec_samples": [
+        {
+          "model": "Corolla Cross",
+          "variant": "HEV",
+          "key": "safety.automatic_high_beam_ahb",
+          "valueEn": "Yes",
+          "series_code": "corollacross"
+        },
+        {
+          "model": "Corolla Cross",
+          "variant": "HEV",
+          "key": "spec.speaker",
+          "valueEn": "6 Positions",
+          "series_code": "corollacross"
+        },
+        {
+          "model": "Corolla Cross",
+          "variant": "HEV",
+          "key": "spec.sun.visor",
+          "valueEn": "With vanity mirrors and illumination for the driver and front passenger",
+          "series_code": "corollacross"
+        },
+        {
+          "model": "Corolla Cross",
+          "variant": "HEV",
+          "key": "spec.immobilizer.system",
+          "valueEn": "Yes",
+          "series_code": "corollacross"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=altis",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Corolla Altis",
+          "variant": "Corolla Altis",
+          "grade": "HEV Premium",
+          "amount": 1009000
+        },
+        {
+          "brand": "Toyota",
+          "model": "Corolla Altis",
+          "variant": "Corolla Altis",
+          "grade": "1.8G",
+          "amount": 909000
+        }
+      ],
+      "spec_samples": [
+        {
+          "model": "Corolla Altis",
+          "variant": "HEV",
+          "key": "spec.suspension",
+          "valueEn": "Independent MacPherson strut with stabilizer bar / Independent double wishbone with stabilizer bar",
+          "series_code": "altis"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_leader",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Fortuner",
+          "variant": "Fortuner Leader",
+          "grade": "2.4 Leader G",
+          "amount": 1400000
+        },
+        {
+          "brand": "Toyota",
+          "model": "Fortuner",
+          "variant": "Fortuner Leader",
+          "grade": "2.4 Leader S",
+          "amount": 1239000
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_champ",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Hilux",
+          "variant": "Hilux Champ",
+          "grade": "2.4 AT SWB Attractive Package",
+          "amount": 602000
+        }
+      ],
+      "spec_samples": [
+        {
+          "model": "Hilux",
+          "variant": "ICE",
+          "key": "handling.turningRadiusM",
+          "valueEn": "4.7",
+          "series_code": "hilux_champ"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=veloz",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Veloz",
+          "variant": "Veloz",
+          "grade": "Premium",
+          "amount": 875000
+        }
+      ],
+      "spec_samples": [
+        {
+          "model": "Veloz",
+          "variant": "Smart",
+          "key": "engine_and_electric_motor.max_output_kwps",
+          "valueEn": "-",
+          "series_code": "veloz"
+        },
+        {
+          "model": "Veloz",
+          "variant": "Premium",
+          "key": "dimension.seating_capacity",
+          "valueEn": "7",
+          "series_code": "veloz"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=innovazenix",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Innova Zenix",
+          "variant": "Innova Zenix",
+          "grade": "HEV Premium",
+          "amount": 1489000
+        }
+      ],
+      "spec_samples": [
+        {
+          "model": "Innova Zenix",
+          "variant": "HEV",
+          "key": "spec.front.fog.lamp",
+          "valueEn": "LED",
+          "series_code": "innovazenix"
+        },
+        {
+          "model": "Innova Zenix",
+          "variant": "HEV",
+          "key": "spec.driver.seat",
+          "valueEn": "8-way power adjustable",
+          "series_code": "innovazenix"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yariscross",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Yaris Cross",
+          "variant": "Yaris Cross",
+          "grade": "HEV Premium Luxury",
+          "amount": 909000
+        }
+      ],
+      "spec_samples": [
+        {
+          "model": "Yaris Cross",
+          "variant": "HEV",
+          "key": "speedometer_and_convenience_items.driving_video_recorder_dvr",
+          "valueEn": "Front and Rear",
+          "series_code": "yariscross"
+        },
+        {
+          "model": "Yaris Cross",
+          "variant": "HEV",
+          "key": "spec.front.passenger.seat",
+          "valueEn": "Manual Adjust",
+          "series_code": "yariscross"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yariscross_nightshade",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Toyota",
+          "model": "Yaris Cross",
+          "variant": "Yaris Cross Nightshade",
+          "grade": "NIGHTSHADE",
+          "amount": 929000
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.autospinn.com/2026/09/denza-z9gt-2026-152375",
+      "source_tier": "AUTO_MEDIA",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Denza",
+          "model": "Z9GT",
+          "variant": "EV",
+          "grade": "EV",
+          "amount": 2899900
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.9carthai.com/new-byd-dolphin-price/",
+      "source_tier": "REFERENCE_MEDIA_SPECIFIC",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "BYD",
+          "model": "Dolphin",
+          "variant": "Dynamic",
+          "grade": "Standard Range",
+          "amount": 449900
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.9carthai.com/new-byd-seal-5-price/",
+      "source_tier": "REFERENCE_MEDIA_SPECIFIC",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "BYD",
+          "model": "Seal",
+          "variant": "Dynamic RWD",
+          "grade": "Dynamic RWD",
+          "amount": 999900
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.9carthai.com/all-new-honda-accord-price/",
+      "source_tier": "REFERENCE_MEDIA_SPECIFIC",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Honda",
+          "model": "Accord",
+          "variant": "e:HEV",
+          "grade": "e:HEV RS",
+          "amount": 1764000
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.9carthai.com/new-honda-super-one-price/",
+      "source_tier": "REFERENCE_MEDIA_SPECIFIC",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Honda",
+          "model": "Super-ONE",
+          "variant": "G",
+          "grade": "G",
+          "amount": 990000
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.9carthai.com/new-honda-wr-v-price/",
+      "source_tier": "REFERENCE_MEDIA_SPECIFIC",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Honda",
+          "model": "WR-V",
+          "variant": "Other",
+          "grade": "RS",
+          "amount": 869000
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.9carthai.com/new-mg-cyberster-price/",
+      "source_tier": "REFERENCE_MEDIA_SPECIFIC",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "MG",
+          "model": "CYBERSTER",
+          "variant": "EV",
+          "grade": "EV",
+          "amount": 2499000
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.9carthai.com/new-mg-ep-price/",
+      "source_tier": "REFERENCE_MEDIA_SPECIFIC",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "MG",
+          "model": "EP Plus",
+          "variant": "EV",
+          "grade": "EV",
+          "amount": 771000
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.9carthai.com/new-mg-zs-price/",
+      "source_tier": "REFERENCE_MEDIA_SPECIFIC",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "MG",
+          "model": "ZS",
+          "variant": "Standard",
+          "grade": "V",
+          "amount": 689000
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.9carthai.com/new-nissan-kicks-price/",
+      "source_tier": "REFERENCE_MEDIA_SPECIFIC",
+      "entity_proven": true,
+      "price_samples": [
+        {
+          "brand": "Nissan",
+          "model": "Kicks",
+          "variant": "e-Power",
+          "grade": "SV",
+          "amount": 899900
+        }
+      ],
+      "spec_samples": []
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=camry",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [],
+      "spec_samples": [
+        {
+          "model": "Camry",
+          "variant": "HEV",
+          "key": "battery.type",
+          "valueEn": "Lithium-ion",
+          "series_code": "camry"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ_nightshade",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [],
+      "spec_samples": [
+        {
+          "model": "Yaris ATIV",
+          "variant": "Nightshade",
+          "key": "speedometer_and_convenience_items.pm_25_filter_system",
+          "valueEn": "ระบบกรองฝุ่น PM2.5",
+          "series_code": "yarisativ_nightshade"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV",
+          "key": "spec.isofix.car.seat",
+          "valueEn": "With",
+          "series_code": "yarisativ_nightshade"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "Nightshade",
+          "key": "safety.clearance_sonar",
+          "valueEn": "Front: 2 positions / Rear: 4 positions",
+          "series_code": "yarisativ_nightshade"
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "Nightshade",
+          "key": "safety.emergency_stop_signal_ess",
+          "valueEn": "With",
+          "series_code": "yarisativ_nightshade"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=corollacross_grsport",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [],
+      "spec_samples": [
+        {
+          "model": "Corolla Cross",
+          "variant": "HEV",
+          "key": "safety.high_mount_stop_lamp",
+          "valueEn": "LED",
+          "series_code": "corollacross_grsport"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=bz4x",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [],
+      "spec_samples": [
+        {
+          "model": "bZ4X",
+          "variant": "AWD",
+          "key": "battery.battery_type",
+          "valueEn": "Lithium-Ion",
+          "series_code": "bz4x"
+        },
+        {
+          "model": "bZ4X",
+          "variant": "FWD",
+          "key": "interior.map_lamp",
+          "valueEn": "With",
+          "series_code": "bz4x"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_legender",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [],
+      "spec_samples": [
+        {
+          "model": "Fortuner",
+          "variant": "ICE",
+          "key": "spec.taillight",
+          "valueEn": "LED Light Guiding",
+          "series_code": "fortuner_legender"
+        }
+      ]
+    },
+    {
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_grsport",
+      "source_tier": "OEM_API",
+      "entity_proven": true,
+      "price_samples": [],
+      "spec_samples": [
+        {
+          "model": "Fortuner",
+          "variant": "ICE",
+          "key": "engine.max_torque_eec_net_nm___rpm",
+          "valueEn": "550 / 1,600 - 2,800",
+          "series_code": "fortuner_grsport"
+        }
+      ]
+    }
+  ]
+}

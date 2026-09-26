@@ -1,0 +1,124 @@
+{
+  "brand": "mitsubishi",
+  "prices": [
+    {
+      "brand": "mitsubishi",
+      "model": "Mitsubishi",
+      "variant": "__MODEL_RANGE__",
+      "amount": 619000,
+      "source_url": "https://www.headlightmag.com/official-price-mitsubishi-attrage-my2026/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_official_price",
+      "content_hash": "057b7c6fdaa8f579",
+      "article_title": "ราคาอย่างเป็นทางการ Mitsubishi Attrage MY2026 : 564,000 - 619,000 บาท | ปรับดีไซน์ เครื่องยนต์ EURO6 - HeadLight Magazine",
+      "evidence_excerpt": "ราคาอย่างเป็นทางการ Mitsubishi Attrage MY2026 : 564,000 - 619,000 บาท | ปรับดีไซน์ เครื่องยนต์ EURO6 - HeadLight Magazi"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "Mitsubishi",
+      "variant": "__MODEL_RANGE__",
+      "amount": 564000,
+      "source_url": "https://www.headlightmag.com/official-price-mitsubishi-attrage-my2026/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_official_price",
+      "content_hash": "1a2c3abbe4ca10e7",
+      "article_title": "ราคาอย่างเป็นทางการ Mitsubishi Attrage MY2026 : 564,000 - 619,000 บาท | ปรับดีไซน์ เครื่องยนต์ EURO6 - HeadLight Magazine",
+      "evidence_excerpt": ");};return t;}(document,\"script\",\"twitter-wjs\")); ราคาอย่างเป็นทางการ Mitsubishi Attrage MY2026 Attrage 1.2 Active CVT : 564,000 บาท Attrage 1.2 Smart CVT : 619,000 บาท &nbsp; ความเป"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "Mitsubishi",
+      "variant": "__GENERIC__",
+      "amount": 619000,
+      "source_url": "https://www.headlightmag.com/official-price-mitsubishi-attrage-my2026/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_generic_price",
+      "content_hash": "43cd9b90484a01f2",
+      "article_title": "ราคาอย่างเป็นทางการ Mitsubishi Attrage MY2026 : 564,000 - 619,000 บาท | ปรับดีไซน์ เครื่องยนต์ EURO6 - HeadLight Magazine",
+      "evidence_excerpt": "ราคาอย่างเป็นทางการ Mitsubishi Attrage MY2026 : 564,000 - 619,000 บาท | ปรับดีไซน์ เครื่องยนต์ EURO6 - HeadLight Magazi"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "Mitsubishi",
+      "variant": "__GENERIC__",
+      "amount": 564000,
+      "source_url": "https://www.headlightmag.com/official-price-mitsubishi-attrage-my2026/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_generic_price",
+      "content_hash": "a6d3d2e1f62d14a8",
+      "article_title": "ราคาอย่างเป็นทางการ Mitsubishi Attrage MY2026 : 564,000 - 619,000 บาท | ปรับดีไซน์ เครื่องยนต์ EURO6 - HeadLight Magazine",
+      "evidence_excerpt": "ent,\"script\",\"twitter-wjs\")); ราคาอย่างเป็นทางการ Mitsubishi Attrage MY2026 Attrage 1.2 Active CVT : 564,000 บาท Attrage 1.2 Smart CVT : 619,000 บาท &nbsp; ความเป"
+    }
+  ],
+  "specs": [
+    {
+      "brand": "mitsubishi",
+      "model": "Mitsubishi",
+      "variant": "__MODEL__",
+      "field": "power_hp",
+      "value": "204.0",
+      "unit": "hp",
+      "source_url": "https://www.headlightmag.com/2026-mitsubishi-pajero-world-premiere-launch/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "d77cb495a52744a3",
+      "article_title": "ข้อมูลทั้งหมดของ All NEW Mitsubishi PAJERO สานต่อตำนาน Flagship SUV สาย Off-road - HeadLight Magazine",
+      "evidence_excerpt": " Variable-Geometry Turbocharger (VGT) กำลังสูงสุด 204 แรงม้า (PS) ที่ 3,500 รอบ/นาที แรงบิดสูงสุด 480 นิวตันเม"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "Mitsubishi",
+      "variant": "__MODEL__",
+      "field": "torque_nm",
+      "value": "480.0",
+      "unit": "Nm",
+      "source_url": "https://www.headlightmag.com/2026-mitsubishi-pajero-world-premiere-launch/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "560eb9977099b99d",
+      "article_title": "ข้อมูลทั้งหมดของ All NEW Mitsubishi PAJERO สานต่อตำนาน Flagship SUV สาย Off-road - HeadLight Magazine",
+      "evidence_excerpt": "ด 204 แรงม้า (PS) ที่ 3,500 รอบ/นาที แรงบิดสูงสุด 480 นิวตันเมตร ที่ 1,750 – 2,500 รอบ/นาที จับคู่กับเกียร์เกียร์อ"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "Mitsubishi",
+      "variant": "__MODEL__",
+      "field": "power_hp",
+      "value": "78.0",
+      "unit": "hp",
+      "source_url": "https://www.headlightmag.com/official-price-mitsubishi-attrage-my2026/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "9ba0754396899674",
+      "article_title": "ราคาอย่างเป็นทางการ Mitsubishi Attrage MY2026 : 564,000 - 619,000 บาท | ปรับดีไซน์ เครื่องยนต์ EURO6 - HeadLight Magazine",
+      "evidence_excerpt": "LTI 32 Bit พร้อมระบบแปรผันวาล์ว MIVEC กำลังสูงสุด 78 แรงม้า (PS) ที่ 6,000 รอบ/นาที แรงบิดสูงสุด 100 นิวตันเม"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "Mitsubishi",
+      "variant": "__MODEL__",
+      "field": "torque_nm",
+      "value": "100.0",
+      "unit": "Nm",
+      "source_url": "https://www.headlightmag.com/official-price-mitsubishi-attrage-my2026/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "d60212d32e447c0a",
+      "article_title": "ราคาอย่างเป็นทางการ Mitsubishi Attrage MY2026 : 564,000 - 619,000 บาท | ปรับดีไซน์ เครื่องยนต์ EURO6 - HeadLight Magazine",
+      "evidence_excerpt": "ุด 78 แรงม้า (PS) ที่ 6,000 รอบ/นาที แรงบิดสูงสุด 100 นิวตันเมตร ที่ 4,000 รอบ/นาที จับคู่กับเกียร์อัตโนมัติ Invec"
+    }
+  ],
+  "sources": [
+    "https://www.headlightmag.com/2026-mitsubishi-pajero-world-premiere-launch/",
+    "https://www.headlightmag.com/official-price-mitsubishi-attrage-my2026/"
+  ],
+  "failures": []
+}

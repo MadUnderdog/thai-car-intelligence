@@ -1,0 +1,414 @@
+{
+  "discovery_timestamp": "2026-09-19T20:44:58.081339",
+  "target_url": "https://www.toyota.co.th/en/model/camry",
+  "key_findings": {
+    "summary": "All spec data (engine, power, torque, dimensions, battery, safety, equipment) is embedded in the /en/model/api/car/ endpoint response. There are NO separate spec/engine/dimension endpoints — the 301 redirects for those patterns confirm they don't exist.",
+    "primary_spec_endpoint": "GET https://www.toyota.co.th/en/model/api/car/?series_code={series_code}",
+    "spec_location": "Response data[0].grades[].specifications[] — array of 10 spec groups per grade",
+    "spec_groups_per_grade": [
+      "อุปกรณ์ภายนอก (Exterior Equipment)",
+      "อุปกรณ์ภายใน (Interior Equipment)",
+      "มาตรวัดและอุปกรณ์อำนวยความสะดวก (Instrument & Convenience)",
+      "ระบบความปลอดภัย (Safety Systems)",
+      "เครื่องยนต์ (Engine — power, torque, displacement, fuel)",
+      "ขนาดรถยนต์ (Vehicle Dimensions — L×W×H, wheelbase, seats)",
+      "ระบบขับเคลื่อน และระบบกันสะเทือน (Drivetrain & Suspension)",
+      "เครื่องยนต์และมอเตอร์ไฟฟ้า (Combined Engine+Motor Power)",
+      "มอเตอร์ไฟฟ้า (Electric Motor)",
+      "แบตเตอรี่ (Battery)"
+    ]
+  },
+  "discovered_endpoints": {
+    "primary": {
+      "url": "GET /en/model/api/car/?series_code={series_code}",
+      "full_url": "https://www.toyota.co.th/en/model/api/car/?series_code={series_code}",
+      "method": "GET",
+      "content_type": "application/json",
+      "response_size_bytes": 46227,
+      "description": "Main car model endpoint. Contains ALL spec data embedded in grades[].specifications[]",
+      "parameters": {
+        "series_code": "Car model code (e.g., 'camry', 'corolla-cross', 'yaris-ativ')"
+      },
+      "response_structure": {
+        "statusCode": "200",
+        "message": "success",
+        "data": [
+          {
+            "id": "int — internal ID",
+            "code": "string — series code (e.g., 'camry')",
+            "model_code": "string — model code (e.g., 'CARY')",
+            "model_year": "string — model year code",
+            "title": "string — Thai name",
+            "title_en": "string — English name",
+            "start_price": "int — starting price in THB",
+            "type": "string — vehicle type in Thai",
+            "type_id": "int",
+            "schema_vehicle_type": "string — e.g., 'D-Segment Sedan'",
+            "slogan": "string — Thai slogan",
+            "slogan_en": "string — English slogan",
+            "fuel_types": "JSON string — fuel type info",
+            "seats": "JSON string — seat configuration",
+            "is_4x4": "int — 0 or 1",
+            "technologies": "JSON string array — technology IDs",
+            "philosophy": "string — brand philosophy text",
+            "picture": "string — main model image path",
+            "logo": "string — logo image path",
+            "version": "int — content version",
+            "grade_group": [
+              {
+                "id": "int",
+                "title": "string",
+                "title_en": "string",
+                "grade_ids": "int[]"
+              }
+            ],
+            "grades": [
+              {
+                "id": "int — grade ID",
+                "title": "string — Thai grade name",
+                "title_en": "string — English grade name",
+                "price": "int — price in THB",
+                "grade_code": "string — manufacturer grade code",
+                "suffix_code": "string",
+                "is_hybrid": "int — 0=pure ICE, 2=hybrid",
+                "transmission": "string — Thai transmission type",
+                "transmission_en": "string — English transmission type",
+                "total_seat": "int",
+                "picture": "string — grade image path",
+                "version": "int",
+                "colors": [
+                  {
+                    "id": "int",
+                    "title": "string — color name in Thai",
+                    "title_en": "string — English color name",
+                    "code": "string — color code",
+                    "picture": "string — exterior image",
+                    "interior": "string — interior image",
+                    "rotate_images": "string[] — 360° rotation images"
+                  }
+                ],
+                "specifications": [
+                  {
+                    "title": "string — spec group name in Thai",
+                    "title_en": "string — spec group name in English",
+                    "items": [
+                      {
+                        "title": "string — spec item name in Thai",
+                        "title_en": "string — spec item name in English",
+                        "value": "string — spec value"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "metadata": [
+              {
+                "meta_key": "string — page section (e.g., 'overview', 'specification')",
+                "meta_segment": "string — vehicle segment",
+                "meta_title": "string — Thai page title",
+                "meta_title_en": "string — English page title",
+                "meta_description": "string — Thai meta description",
+                "meta_description_en": "string — English meta description"
+              }
+            ],
+            "overview": {
+              "philosophies": "array",
+              "special_offers": "array",
+              "accessories": "array",
+              "technologies": "array",
+              "services": "array",
+              "reviews": "array"
+            }
+          }
+        ]
+      }
+    },
+    "supplementary": {
+      "accessories_package": {
+        "url": "GET /en/model/api/accessories/package-tmt/?series_code={series_code}",
+        "full_url": "https://www.toyota.co.th/en/model/api/accessories/package-tmt/?series_code={series_code}",
+        "description": "Accessory packages for a model",
+        "response_size_bytes": 341,
+        "response_structure": {
+          "data": [
+            {
+              "id": "int",
+              "title": "string",
+              "title_en": "string",
+              "package_type": "string",
+              "min_price": "int",
+              "max_price": "int",
+              "remark": "string",
+              "thumb": "string",
+              "images": "string[]",
+              "url": "string"
+            }
+          ]
+        }
+      },
+      "gallery": {
+        "url": "GET /en/model/api/gallery/?series_code={series_code}",
+        "full_url": "https://www.toyota.co.th/en/model/api/gallery/?series_code={series_code}",
+        "description": "Gallery images for a model",
+        "response_size_bytes": 14421
+      },
+      "car_series_list": {
+        "url": "GET /en/model/api/car-series/",
+        "full_url": "https://www.toyota.co.th/en/model/api/car-series/",
+        "description": "All car series grouped by vehicle category",
+        "response_size_bytes": 140487,
+        "response_structure": {
+          "data": [
+            {
+              "code": "string — category code (e.g., 'gr', 'personal_car', 'commercial')",
+              "title": "string — Thai category name",
+              "title_en": "string — English category name",
+              "picture": "string",
+              "feature": "int",
+              "series": [
+                {
+                  "id": "int",
+                  "code": "string — series code",
+                  "model_code": "string",
+                  "model_year": "string",
+                  "title": "string",
+                  "title_en": "string",
+                  "slogan": "string",
+                  "slogan_en": "string",
+                  "start_price": "int",
+                  "max_price": "int",
+                  "picture": "string",
+                  "logo": "string"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "web_init": {
+        "url": "POST /component/api/tcoth/web-init",
+        "full_url": "https://www.toyota.co.th/component/api/tcoth/web-init",
+        "method": "POST",
+        "content_type": "application/json",
+        "request_body": "{}",
+        "description": "Site initialization — returns navigation, footer, and all car series with prices",
+        "response_size_bytes": 57950,
+        "response_structure": {
+          "nav_main": "array — main navigation items",
+          "nav_top": "array — top navigation items",
+          "nav_footer": "array — footer navigation items",
+          "search_keyword_highlights": "array",
+          "car_series": [
+            {
+              "id": "int",
+              "code": "string — series code",
+              "model_code": "string",
+              "model_year": "string",
+              "title": "string",
+              "title_en": "string",
+              "start_price": "int",
+              "max_price": "int",
+              "type_code": "string — vehicle type code",
+              "type_name": "string — Thai type name",
+              "type_name_en": "string — English type name",
+              "picture": "string",
+              "logo": "string"
+            }
+          ]
+        }
+      },
+      "nav_footer": {
+        "url": "POST /component/api/tcoth/nav-footer",
+        "full_url": "https://www.toyota.co.th/component/api/tcoth/nav-footer",
+        "method": "POST",
+        "description": "Navigation and footer content"
+      }
+    }
+  },
+  "nonexistent_endpoints": {
+    "description": "These endpoints return 301 redirects (to parent page) — they do NOT exist as separate API endpoints",
+    "tested": [
+      "GET /en/model/api/spec/?series_code=camry",
+      "GET /en/model/api/grade/?series_code=camry",
+      "GET /en/model/api/variant/?series_code=camry",
+      "GET /en/model/api/equipment/?series_code=camry",
+      "GET /en/model/api/dimension/?series_code=camry",
+      "GET /en/model/api/engine/?series_code=camry",
+      "GET /en/model/api/color/?series_code=camry",
+      "GET /en/model/api/comparison/?series_code=camry",
+      "GET /en/model/api/feature/?series_code=camry"
+    ]
+  },
+  "spec_data_map": {
+    "description": "How to extract specific data from the car API response",
+    "power_torque_engine": {
+      "path": "data[0].grades[n].specifications[4] (เครื่องยนต์ / Engine)",
+      "example_items": [
+        {
+          "title": "รุ่น / แบบ",
+          "title_en": "Model / Type",
+          "value": "A25A-FXS / 4 สูบ แถวเรียง DOHC 16 วาล์ว แบบ Dual VVT-i"
+        },
+        {
+          "title": "ปริมาตรกระบอกสูบ (ซีซี)",
+          "title_en": "Displacement (cc)",
+          "value": "2,487"
+        },
+        {
+          "title": "กำลังสูงสุด (กิโลวัตต์(แรงม้า PS) / รอบต่อนาที)",
+          "title_en": "Max Power (kW(PS) / rpm)",
+          "value": "137(186)/6,000"
+        },
+        {
+          "title": "แรงบิดสูงสุด EEC net นิวตัน-เมตร/ รอบต่อนาที",
+          "title_en": "Max Torque EEC net (Nm / rpm)",
+          "value": "221/3,600-5,200"
+        },
+        {
+          "title": "น้ำมันเชื้อเพลิง",
+          "title_en": "Fuel Type",
+          "value": "เบนซิน รองรับ E20"
+        }
+      ]
+    },
+    "dimensions": {
+      "path": "data[0].grades[n].specifications[5] (ขนาดรถยนต์ / Vehicle Dimensions)",
+      "example_items": [
+        {
+          "title": "มิติภายนอก ยาว x กว้าง x สูง (มม.)",
+          "title_en": "Exterior Dimensions L×W×H (mm)",
+          "value": "4,920 x 1,840 x 1,445"
+        },
+        {
+          "title": "กระบะภายใน ยาว x กว้าง x สูง (มม.)",
+          "title_en": "Interior Dimensions L×W×H (mm)",
+          "value": "ไม่มี (N/A)"
+        },
+        {
+          "title": "จำนวนที่นั่ง",
+          "title_en": "Number of Seats",
+          "value": "5"
+        },
+        {
+          "title": "ความยาวช่วงล้อ (มม.)",
+          "title_en": "Wheelbase (mm)",
+          "value": "2,825"
+        }
+      ]
+    },
+    "hybrid_motor": {
+      "path": "data[0].grades[n].specifications[7-8] (เครื่องยนต์และมอเตอร์ไฟฟ้า / มอเตอร์ไฟฟ้า)",
+      "combined_power": {
+        "title": "กำลังสูงสุด (กิโลวัตต์(แรงม้า PS))",
+        "value": "227"
+      },
+      "motor_power": {
+        "title": "กำลังสูงสุด (กิโลวัตต์(แรงม้า PS))",
+        "value": "100(136)"
+      },
+      "motor_torque": {
+        "title": "แรงบิดสูงสุด EEC net (นิวตันเมตร)",
+        "value": "208"
+      }
+    },
+    "battery": {
+      "path": "data[0].grades[n].specifications[9] (แบตเตอรี่ / Battery)",
+      "example_items": [
+        {
+          "title": "ชนิดแบตเตอรี่",
+          "title_en": "Battery Type",
+          "value": "Lithium-ion"
+        }
+      ]
+    },
+    "drivetrain_suspension": {
+      "path": "data[0].grades[n].specifications[6] (ระบบขับเคลื่อน และระบบกันสะเทือน)",
+      "example_items": [
+        {
+          "title": "ระบบขับเคลื่อน",
+          "title_en": "Drivetrain",
+          "value": "ขับเคลื่อน 2 ล้อ (FWD)"
+        },
+        {
+          "title": "ระบบส่งกำลัง",
+          "title_en": "Transmission",
+          "value": "อัตโนมัติ E-CVT"
+        },
+        {
+          "title": "ระบบกันสะเทือนหน้า / หลัง",
+          "title_en": "Front/Rear Suspension",
+          "value": "..."
+        },
+        {
+          "title": "ล้อและยาง",
+          "title_en": "Wheels & Tires",
+          "value": "ล้ออัลลอยขนาด 18 นิ้ว พร้อมยางขนาด 235/45 R18"
+        }
+      ]
+    },
+    "exterior_equipment": {
+      "path": "data[0].grades[n].specifications[0] (อุปกรณ์ภายนอก)",
+      "example_items": [
+        {
+          "title": "ไฟหน้า",
+          "title_en": "Headlights",
+          "value": "LED โปรเจคเตอร์"
+        },
+        {
+          "title": "หลังคา Sunroof / Moonroof",
+          "title_en": "Sunroof / Moonroof",
+          "value": "Panoramic Roof"
+        },
+        {
+          "title": "ไฟท้าย",
+          "title_en": "Tail lights",
+          "value": "Full LED"
+        }
+      ]
+    },
+    "safety": {
+      "path": "data[0].grades[n].specifications[3] (ระบบความปลอดภัย)",
+      "example_items": [
+        {
+          "title": "ถุงลมเสริมความปลอดภัย SRS",
+          "title_en": "SRS Airbags",
+          "value": "คู่หน้า / ด้านข้าง / ม่านด้านข้าง / หัวเข่าด้านคนขับ"
+        },
+        {
+          "title": "ระบบช่วยเตือนมุมอับสายตา (BSM)",
+          "title_en": "BSM",
+          "value": "พร้อม RCTA + SEA"
+        },
+        {
+          "title": "ระบบควบคุมความเร็วอัตโนมัติ (Cruise Control)",
+          "title_en": "Cruise Control",
+          "value": "Dynamic Radar Cruise Control All-speed"
+        }
+      ]
+    }
+  },
+  "usage_example": {
+    "description": "To get spec data for any Toyota Thailand model:",
+    "steps": [
+      "1. Get series codes from POST /component/api/tcoth/web-init (returns car_series with codes)",
+      "2. OR get all series from GET /en/model/api/car-series/ (grouped by category)",
+      "3. Fetch full model+spec data from GET /en/model/api/car/?series_code={code}",
+      "4. Parse data[0].grades[].specifications[] for detailed specs",
+      "5. Specifications are in Thai — use title_en for English labels"
+    ],
+    "sample_series_codes": [
+      "camry",
+      "corolla-cross",
+      "corolla-altis",
+      "yaris-ativ",
+      "hilux-revo",
+      "fortuner",
+      "innova-crysta",
+      "veloz",
+      "avanza",
+      "alphard",
+      "bZ4X"
+    ]
+  }
+}

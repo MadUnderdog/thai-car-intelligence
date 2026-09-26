@@ -1,0 +1,188 @@
+{
+  "brand": "chery",
+  "brand_name": "Chery",
+  "official_url": "https://www.cherythailand.com",
+  "started_at": "2026-09-20T02:09:44.552465",
+  "finished_at": "2026-09-20T02:15:00.000000",
+  "sources": [
+    {
+      "url": "https://www.9carthai.com/chery-price/",
+      "status": "ok",
+      "type": "thai_automotive_media",
+      "note": "Main Chery price overview page"
+    },
+    {
+      "url": "https://www.9carthai.com/new-chery-q-price/",
+      "status": "ok",
+      "type": "thai_automotive_media",
+      "note": "Detailed Chery Q article"
+    },
+    {
+      "url": "https://www.9carthai.com/new-chery-v23-price/",
+      "status": "ok",
+      "type": "thai_automotive_media",
+      "note": "Detailed Chery V23 article"
+    },
+    {
+      "url": "https://www.9carthai.com/new-chery-tiggo-8-csh-phev-price/",
+      "status": "ok",
+      "type": "thai_automotive_media",
+      "note": "Tiggo 8 CSH PHEV preview - price pending"
+    },
+    {
+      "url": "https://www.headlightmag.com/?s=Chery",
+      "status": "ok",
+      "type": "thai_automotive_media"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.cherythailand.com",
+      "error": "DNS_NXDOMAIN - domain does not resolve"
+    }
+  ],
+  "models_found": [
+    {
+      "model": "CHERY Q",
+      "year": "2026",
+      "type": "Electric Hatchback",
+      "variants": [
+        {
+          "variant": "CHERY Q (Base)",
+          "price_thb": 449000,
+          "price_display": "449,000",
+          "drive": null
+        },
+        {
+          "variant": "CHERY Q QLICK",
+          "price_thb": 469900,
+          "promo_price_thb": 449900,
+          "price_display": "469,900 (promo 449,900)",
+          "drive": "FWD",
+          "dimensions_mm": "4195x1811x1574"
+        },
+        {
+          "variant": "CHERY Q QOOL",
+          "price_thb": 499900,
+          "promo_price_thb": 479900,
+          "price_display": "499,900 (promo 479,900)",
+          "drive": "FWD"
+        },
+        {
+          "variant": "CHERY Q QUINT",
+          "price_thb": 539900,
+          "promo_price_thb": 519900,
+          "price_display": "539,900 (promo 519,900)",
+          "drive": "FWD"
+        }
+      ]
+    },
+    {
+      "model": "CHERY V23",
+      "year": "2026",
+      "type": "Electric SUV",
+      "variants": [
+        {
+          "variant": "CHERY V23 PLAY 2WD",
+          "price_thb": 689900,
+          "price_display": "689,900",
+          "drive": "2WD"
+        },
+        {
+          "variant": "CHERY V23 PLUS 2WD",
+          "price_thb": 749900,
+          "price_display": "749,900",
+          "drive": "2WD"
+        },
+        {
+          "variant": "CHERY V23 PEAK 4WD",
+          "price_thb": 879900,
+          "price_display": "879,900",
+          "drive": "4WD"
+        }
+      ]
+    },
+    {
+      "model": "CHERY TIGGO 8 CSH PHEV",
+      "year": "2025-2026",
+      "type": "PHEV SUV",
+      "status": "price_pending",
+      "price_note": "ราคาจะประกาศอย่างเป็นทางการเร็วๆ นี้",
+      "variants": [
+        {
+          "variant": "TIGGO 8 CSH PHEV ESTEEM 2WD",
+          "price_thb": null,
+          "price_display": "TBA",
+          "drive": "2WD",
+          "specs": {
+            "power_total_hp": 204,
+            "ev_range_km_nedc": 95,
+            "total_range_km": 1200,
+            "battery_kwh": 18.4,
+            "fuel_consumption_l_100km": 1.3
+          }
+        },
+        {
+          "variant": "TIGGO 8 CSH PHEV ELITE 4WD",
+          "price_thb": null,
+          "price_display": "TBA",
+          "drive": "4WD",
+          "specs": {
+            "ev_range_km_nedc": 78
+          }
+        }
+      ]
+    }
+  ],
+  "sub_brands_in_thailand": [
+    {
+      "brand": "OMODA",
+      "model": "OMODA C5",
+      "price_thb": 629000,
+      "price_display": "629,000"
+    },
+    {
+      "brand": "JAECOO",
+      "model": "JAECOO 5 EV",
+      "price_thb": 549000,
+      "price_display": "549,000"
+    },
+    {
+      "brand": "JAECOO",
+      "model": "JAECOO 6",
+      "price_thb": 1099000,
+      "price_display": "1,099,000"
+    },
+    {
+      "brand": "JAECOO",
+      "model": "JAECOO 6 EV",
+      "price_thb": null,
+      "price_display": "TBA"
+    },
+    {
+      "brand": "JAECOO",
+      "model": "JAECOO 6T EV",
+      "price_thb": null,
+      "price_display": "TBA"
+    },
+    {
+      "brand": "JAECOO",
+      "model": "JAECOO 7 SHS",
+      "price_thb": null,
+      "price_display": "TBA"
+    }
+  ],
+  "prices_found": [449000, 449900, 469900, 479900, 499900, 519900, 539900, 549000, 629000, 689900, 749900, 879900, 1099000],
+  "price_range_thb": {
+    "min": 449000,
+    "max": 1099000,
+    "currency": "THB"
+  },
+  "summary": {
+    "total_models_with_prices": 6,
+    "total_variants_with_prices": 10,
+    "total_models_pending_price": 4,
+    "price_range": "449,000 - 1,099,000 THB",
+    "note": "Official Chery Thailand website does not resolve via DNS. All prices sourced from 9carthai.com."
+  }
+}

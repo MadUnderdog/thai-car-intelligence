@@ -1,0 +1,165 @@
+{
+  "brand": "hyundai",
+  "brand_name": "Hyundai",
+  "country": "Thailand",
+  "official_url": "https://www.hyundai.com/th",
+  "researched_at": "2026-09-20",
+  "currency": "THB",
+  "models": [
+    {
+      "name": "IONIQ 5 N",
+      "slug": "ioniq5-n",
+      "category": "Performance EV",
+      "body_type": "SUV",
+      "fuel_type": "Electric",
+      "origin": "Imported",
+      "variants": [
+        {
+          "name": "IONIQ 5 N",
+          "price_thb": 3999000
+        }
+      ]
+    },
+    {
+      "name": "IONIQ 5 N Line (MY2026)",
+      "slug": "the-new-2026-ioniq5-n-line",
+      "category": "EV",
+      "body_type": "Crossover",
+      "fuel_type": "Electric",
+      "origin": "CKD Thailand",
+      "variants": [
+        {
+          "name": "IONIQ 5 N Line",
+          "price_thb": 1699000,
+          "special_price_thb": 1449000,
+          "special_note": "2nd lot special price for units 401-600 (from 1,699,000)"
+        }
+      ]
+    },
+    {
+      "name": "SANTA FE Hybrid (MY2026)",
+      "slug": "all-new-santa-fe-hybrid",
+      "category": "SUV",
+      "body_type": "SUV",
+      "fuel_type": "1.6L Turbo Hybrid",
+      "origin": "CBU from Malaysia",
+      "variants": [
+        {
+          "name": "Exclusive",
+          "price_thb": 1599000
+        },
+        {
+          "name": "Prestige",
+          "price_thb": 1749000
+        },
+        {
+          "name": "Inspiration AWD",
+          "price_thb": 1799000,
+          "note": "NEW variant for MY2026"
+        }
+      ]
+    },
+    {
+      "name": "PALISADE Diesel",
+      "slug": "palisade",
+      "category": "SUV",
+      "body_type": "Large SUV",
+      "fuel_type": "2.2L Diesel",
+      "origin": "CBU from Vietnam",
+      "variants": [
+        {
+          "name": "Exclusive (2WD)",
+          "price_thb": 2299000,
+          "special_price_thb": 1799000,
+          "special_note": "September promo price (normal 2,299,000)"
+        },
+        {
+          "name": "Prestige (HTRAC AWD)",
+          "price_thb": 2499000,
+          "special_price_thb": 1999000,
+          "special_note": "September promo price (normal 2,499,000)"
+        }
+      ]
+    },
+    {
+      "name": "STARIA Hybrid",
+      "slug": "the-new-staria-hybrid",
+      "category": "MPV",
+      "body_type": "MPV",
+      "fuel_type": "Turbo Hybrid",
+      "origin": "Imported",
+      "variants": [
+        {
+          "name": "Modern",
+          "price_thb": 2099000
+        },
+        {
+          "name": "Premium",
+          "price_thb": 2399000
+        }
+      ]
+    },
+    {
+      "name": "STARIA Diesel",
+      "slug": "staria",
+      "category": "MPV",
+      "body_type": "MPV",
+      "fuel_type": "Diesel",
+      "origin": "Imported",
+      "variants": [
+        {
+          "name": "STARIA Diesel",
+          "price_thb": 1659000
+        }
+      ]
+    },
+    {
+      "name": "STARIA Premium (Diesel)",
+      "slug": "staria-premium",
+      "category": "MPV",
+      "body_type": "MPV",
+      "fuel_type": "Diesel",
+      "origin": "Imported",
+      "variants": [
+        {
+          "name": "STARIA Diesel Premium",
+          "price_thb": 1999000
+        }
+      ]
+    },
+    {
+      "name": "STARGAZER",
+      "slug": "the-new-stargazer",
+      "category": "MPV",
+      "body_type": "MPV",
+      "fuel_type": "Petrol",
+      "origin": "Imported",
+      "variants": [
+        {
+          "name": "Trend 6",
+          "price_thb": 795000,
+          "special_price_thb": 719000,
+          "special_note": "Introductory price for first 100 units"
+        },
+        {
+          "name": "Smart 6",
+          "price_thb": 875000,
+          "special_price_thb": 799000,
+          "special_note": "Introductory price for first 100 units"
+        }
+      ]
+    }
+  ],
+  "price_range_thb": {
+    "min": 719000,
+    "max": 3999000
+  },
+  "total_variants": 14,
+  "total_models": 8,
+  "sources": [
+    "https://www.hyundai.com/th",
+    "https://www.hyundai.com/th/th/find-a-car",
+    "https://www.headlightmag.com",
+    "https://buyonline.hyundai.com/th"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/news",
+  "captured_at": "2026-09-26T13:48:31.812058+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "c091cb3879304abd1af5302575e4302b9b8a3e3e046c21d7831e52352c9b01c7",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "suzuki_press_news.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

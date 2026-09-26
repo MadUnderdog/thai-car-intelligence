@@ -1,0 +1,242 @@
+{
+  "brand": "mitsubishi",
+  "brand_name": "Mitsubishi",
+  "brand_name_th": "มิตซูบิชิ",
+  "official_url": "https://www.mitsubishi-motors.co.th",
+  "price_page_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+  "research_date": "2026-09-20",
+  "currency": "THB",
+  "data_source": "mitsubishi-motors.co.th GraphQL API (all-models-price page)",
+  "models": [
+    {
+      "model_name": "Xpander HEV",
+      "model_name_th": "เอ็กซ์แพนเดอร์ เอชอีวี",
+      "segment": "MPV",
+      "fuel_type": "HEV",
+      "variants": [
+        {
+          "variant_name": "Xpander HEV",
+          "variant_name_th": "เอ็กซ์แพนเดอร์ เอชอีวี",
+          "price_thb": 939000,
+          "price_display": "939,000 บาท",
+          "notes": "WHITE DIAMOND หลังคาดำ เพิ่ม 15,000 บาท"
+        }
+      ]
+    },
+    {
+      "model_name": "Xpander Cross HEV",
+      "model_name_th": "เอ็กซ์แพนเดอร์ ครอส เอชอีวี",
+      "segment": "SUV/MPV Crossover",
+      "fuel_type": "HEV",
+      "variants": [
+        {
+          "variant_name": "Xpander Cross HEV",
+          "variant_name_th": "เอ็กซ์แพนเดอร์ ครอส เอชอีวี",
+          "price_thb": 969000,
+          "price_display": "969,000 บาท",
+          "notes": "WHITE DIAMOND หลังคาดำ / GREEN BRONZE หลังคาดำ เพิ่ม 15,000 บาท"
+        }
+      ]
+    },
+    {
+      "model_name": "Xforce HEV",
+      "model_name_th": "เอ็กซ์ฟอร์ส เอชอีวี",
+      "segment": "SUV",
+      "fuel_type": "HEV",
+      "variants": [
+        {
+          "variant_name": "IGNITE",
+          "variant_name_th": "มิตซูบิชิ เอ็กซ์ฟอร์ส เอชอีวี IGNITE",
+          "price_thb": 899000,
+          "price_display": "899,000 บาท",
+          "notes": "WHITE DIAMOND เพิ่ม 10,000 บาท"
+        },
+        {
+          "variant_name": "ULTIMATE",
+          "variant_name_th": "มิตซูบิชิ เอ็กซ์ฟอร์ส เอชอีวี ULTIMATE",
+          "price_thb": 1039000,
+          "price_display": "1,039,000 บาท",
+          "notes": "WHITE DIAMOND หลังคาดำ เพิ่ม 20,000 บาท"
+        },
+        {
+          "variant_name": "ULTIMATE X",
+          "variant_name_th": "มิตซูบิชิ เอ็กซ์ฟอร์ส เอชอีวี ULTIMATE X",
+          "price_thb": 1089000,
+          "price_display": "1,089,000 บาท"
+        }
+      ]
+    },
+    {
+      "model_name": "Triton",
+      "model_name_th": "ไทรทัน",
+      "segment": "Pickup Truck",
+      "fuel_type": "Diesel",
+      "categories": [
+        {
+          "category": "Triton Athlete",
+          "category_th": "ไทรทัน แอทลีท",
+          "variants": [
+            {
+              "variant_name": "Double Cab Athlete 4WD AT",
+              "variant_name_th": "ดับเบิ้ล แค็บ แอทลีท 4WD AT",
+              "price_thb": 1299000,
+              "price_display": "1,299,000 บาท",
+              "notes": "YAMABUKI ORANGE METALLIC / WHITE DIAMOND เพิ่ม 10,000 บาท"
+            }
+          ]
+        },
+        {
+          "category": "Triton Single Cab 4WD",
+          "category_th": "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ",
+          "variants": [
+            {
+              "variant_name": "Single Cab 2.4 PRO 4WD",
+              "variant_name_th": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD",
+              "price_thb": 714000,
+              "price_display": "714,000 บาท"
+            },
+            {
+              "variant_name": "Single Cab 2.4 PRO 4WD AT",
+              "variant_name_th": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD AT",
+              "price_thb": 764000,
+              "price_display": "764,000 บาท"
+            },
+            {
+              "variant_name": "Single Cab 2.4 PRO 4WD AT SWB",
+              "variant_name_th": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD AT SWB",
+              "price_thb": 949000,
+              "price_display": "949,000 บาท"
+            }
+          ],
+          "notes": "METALLIC สี เพิ่ม 7,000 บาท"
+        },
+        {
+          "category": "Triton Double Cab Plus",
+          "category_th": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+          "variants": [
+            {
+              "variant_name": "Double Cab Plus 2.4 PRIME",
+              "variant_name_th": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+              "price_thb": 924000,
+              "price_display": "924,000 บาท"
+            },
+            {
+              "variant_name": "Double Cab Plus 2.4 PRIME AT",
+              "variant_name_th": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+              "price_thb": 969000,
+              "price_display": "969,000 บาท"
+            },
+            {
+              "variant_name": "Double Cab Plus 2.4 ULTRA AT",
+              "variant_name_th": "ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+              "price_thb": 1059000,
+              "price_display": "1,059,000 บาท"
+            },
+            {
+              "variant_name": "Double Cab 2.4 PRIME 4WD",
+              "variant_name_th": "ดับเบิ้ล แค็บ 2.4 PRIME 4WD",
+              "price_thb": 1049000,
+              "price_display": "1,049,000 บาท"
+            }
+          ],
+          "notes": "WHITE DIAMOND เพิ่ม 10,000 บาท"
+        },
+        {
+          "category": "Triton 2WD",
+          "category_th": "ไทรทัน ขับเคลื่อน 2 ล้อ",
+          "variants": [
+            {
+              "variant_name": "Single Cab 2.4 PRO",
+              "variant_name_th": "ซิงเกิ้ล แค็บ 2.4 PRO",
+              "price_thb": 614000,
+              "price_display": "614,000 บาท"
+            },
+            {
+              "variant_name": "Double Cab 2.4 PRO",
+              "variant_name_th": "ดับเบิ้ล แค็บ 2.4 PRO",
+              "price_thb": 727000,
+              "price_display": "727,000 บาท"
+            }
+          ],
+          "notes": "METALLIC สี เพิ่ม 7,000 บาท"
+        }
+      ]
+    },
+    {
+      "model_name": "Pajero Sport",
+      "model_name_th": "ปาเจโร สปอร์ต",
+      "segment": "SUV",
+      "fuel_type": "Diesel",
+      "categories": [
+        {
+          "category": "Pajero Sport Elite Edition",
+          "category_th": "ปาเจโร สปอร์ต อีลีท เอดิชัน ใหม่",
+          "variants": [
+            {
+              "variant_name": "2.4 Elite Edition 2WD",
+              "variant_name_th": "2.4 ELITE EDITION 2WD",
+              "price_thb": 1579000,
+              "price_display": "1,579,000 บาท",
+              "notes": "WHITE DIAMOND WITH BLACK ROOF เพิ่ม 20,000 บาท / MEDIUM RED WITH BLACK ROOF เพิ่ม 5,000 บาท"
+            },
+            {
+              "variant_name": "2.4 Elite Edition 4WD",
+              "variant_name_th": "2.4 ELITE EDITION 4WD",
+              "price_thb": 1689000,
+              "price_display": "1,689,000 บาท",
+              "notes": "WHITE DIAMOND WITH BLACK ROOF เพิ่ม 20,000 บาท / MEDIUM RED WITH BLACK ROOF เพิ่ม 5,000 บาท"
+            }
+          ]
+        },
+        {
+          "category": "Pajero Sport",
+          "category_th": "ปาเจโร สปอร์ต",
+          "variants": [
+            {
+              "variant_name": "2.4 GT",
+              "variant_name_th": "2.4 GT",
+              "price_thb": 1139000,
+              "price_display": "1,139,000 บาท"
+            },
+            {
+              "variant_name": "2.4 PRIME",
+              "variant_name_th": "2.4 PRIME",
+              "price_thb": 1389000,
+              "price_display": "1,389,000 บาท",
+              "notes": "WHITE DIAMOND เพิ่ม 15,000 บาท"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model_name": "Mirage",
+      "model_name_th": "มิราจ",
+      "segment": "Economy Car",
+      "fuel_type": "Gasoline",
+      "variants": [
+        {
+          "variant_name": "ACTIVE",
+          "variant_name_th": "ACTIVE",
+          "price_thb": 509000,
+          "price_display": "509,000 บาท",
+          "notes": "WHITE DIAMOND เพิ่ม 7,000 บาท"
+        },
+        {
+          "variant_name": "SMART",
+          "variant_name_th": "SMART",
+          "price_thb": 579000,
+          "price_display": "579,000 บาท",
+          "notes": "WHITE DIAMOND เพิ่ม 7,000 บาท"
+        }
+      ]
+    }
+  ],
+  "price_range": {
+    "lowest_thb": 509000,
+    "highest_thb": 1689000,
+    "lowest_model": "Mirage ACTIVE",
+    "highest_model": "Pajero Sport 2.4 Elite Edition 4WD"
+  },
+  "total_variants": 21
+}

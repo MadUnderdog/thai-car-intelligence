@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-09-26T14:39:11.252845+00:00",
+  "dedupe": {
+    "rule": "first staged source keeps the identity+price record; a later source publishing the identical fact is not re-staged (\u00a798)",
+    "dropped_rows": 6,
+    "dropped": [
+      {
+        "source": "Honda Thailand Grade List",
+        "model": "City",
+        "variant": "S",
+        "price_thb": 569000
+      },
+      {
+        "source": "Honda Thailand Grade List",
+        "model": "City",
+        "variant": "e:HEV V",
+        "price_thb": 619000
+      },
+      {
+        "source": "Honda Thailand Grade List",
+        "model": "City",
+        "variant": "e:HEV SV",
+        "price_thb": 689000
+      },
+      {
+        "source": "Honda Thailand Grade List",
+        "model": "City",
+        "variant": "e:HEV RS",
+        "price_thb": 739000
+      },
+      {
+        "source": "Mitsubishi Thailand Price Tables",
+        "model": "\u0e40\u0e2d\u0e47\u0e01\u0e0b\u0e4c\u0e41\u0e1e\u0e19\u0e40\u0e14\u0e2d\u0e23\u0e4c \u0e40\u0e2d\u0e0a\u0e2d\u0e35\u0e27\u0e35",
+        "variant": null,
+        "price_thb": 939000
+      },
+      {
+        "source": "Mitsubishi Thailand Price Tables",
+        "model": "\u0e40\u0e2d\u0e47\u0e01\u0e0b\u0e4c\u0e41\u0e1e\u0e19\u0e40\u0e14\u0e2d\u0e23\u0e4c \u0e04\u0e23\u0e2d\u0e2a \u0e40\u0e2d\u0e0a\u0e2d\u0e35\u0e27\u0e35",
+        "variant": null,
+        "price_thb": 969000
+      }
+    ]
+  },
+  "provenance": {
+    "fixture_based_extraction": 503,
+    "acquisition_verified": 503,
+    "legacy_unverified": 0,
+    "from_existing_structured_data": 0
+  },
+  "by_source": {
+    "toyota": 99,
+    "mazda": 10,
+    "nissan": 10,
+    "honda": 4,
+    "isuzu": 6,
+    "bmw": 35,
+    "lexus": 6,
+    "honda_models": 6,
+    "mg": 7,
+    "mitsubishi": 6,
+    "suzuki": 5,
+    "mini": 5,
+    "deepal": 5,
+    "kia_promos": 3,
+    "changan": 4,
+    "jaguar_sheet": 1,
+    "landrover_sheet": 11,
+    "porsche": 72,
+    "gwm": 29,
+    "subaru": 5,
+    "honda_grades": 36,
+    "lexus_price_list": 27,
+    "mitsubishi_price_tables": 21,
+    "nissan_grade_table": 23,
+    "bmw_price_list": 49
+  },
+  "total": 503,
+  "staged_rows_after_dedupe": 503,
+  "by_source_note": "counts are rows extracted per source before the identity+price dedupe; staged = after dedupe"
+}

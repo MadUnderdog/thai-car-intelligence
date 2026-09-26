@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/s3fs-public/2025-03/brochure-mazda-cx5.pdf?VersionId=VA_c9P6y6nt7uww1DHVXHSXN3dZoA88V",
+  "captured_at": "2026-09-26T13:49:33.784405+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "c3dc4b64ab6311f046564e57f7661cb5d8d8015021417be144ce3a7feb25ae86",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "mazda_brochure_cx5.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

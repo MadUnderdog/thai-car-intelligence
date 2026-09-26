@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/th/news-activity/news",
+  "captured_at": "2026-09-26T13:47:23.319987+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "638f32e42b3691387285d7c49122faa8e0698ab6bc3918dd450b2b3bc5abe861",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "mitsubishi_press_news.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

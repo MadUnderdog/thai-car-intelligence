@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.landrover.co.th/range-rover/overview",
+  "captured_at": "2026-09-24T14:39:25.427969+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "aa02b1b04953577fa44ccd302b403f07fc266853c7f64e6c48393fcfdb6f9c29",
+  "session_id": "acquisition_20260924_143915",
+  "artifact_filename": "landrover_range_rover_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

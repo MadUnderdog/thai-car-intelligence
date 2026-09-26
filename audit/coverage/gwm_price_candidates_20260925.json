@@ -1,0 +1,108 @@
+{
+  "brand": "GWM",
+  "generated_at": "2026-09-26T14:42:49.942982+00:00",
+  "rule": "a hero price is staged only when the identical figure is published as a configurator card price on the same artifact; campaign-derived figures are rejected rather than typed",
+  "staged_rows": 29,
+  "rejected_candidates": [
+    {
+      "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_haval-h6.html",
+      "source_url": "https://www.gwm.co.th/th/models/haval-h6",
+      "model": "GWM HAVAL H6",
+      "span_index": 0,
+      "price_label": "ราคาเริ่มต้น",
+      "value_thb": 899000,
+      "reason": "not_published_as_a_configurator_price_on_this_artifact",
+      "raw_text": "HEV ราคาเริ่มต้น ฿899,000.-"
+    },
+    {
+      "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_haval-h6.html",
+      "source_url": "https://www.gwm.co.th/th/models/haval-h6",
+      "model": "GWM HAVAL H6",
+      "span_index": 1,
+      "price_label": "ราคาเริ่มต้น",
+      "value_thb": 959000,
+      "reason": "not_published_as_a_configurator_price_on_this_artifact",
+      "raw_text": "PHEV ราคาเริ่มต้น ฿959,000.-"
+    },
+    {
+      "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_ora-5-ev.html",
+      "source_url": "https://www.gwm.co.th/th/models/ora-5-ev",
+      "model": "ORA 5 EV",
+      "span_index": 0,
+      "price_label": "ราคาเริ่มต้น",
+      "value_thb": 649000,
+      "reason": "not_published_as_a_configurator_price_on_this_artifact",
+      "raw_text": "ราคาเริ่มต้น 649,000.-"
+    },
+    {
+      "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_ora-5-hev.html",
+      "source_url": "https://www.gwm.co.th/th/models/ora-5-hev",
+      "model": "ORA 5 HEV",
+      "span_index": 0,
+      "price_label": "ราคาเริ่มต้น",
+      "value_thb": 709000,
+      "reason": "not_published_as_a_configurator_price_on_this_artifact",
+      "raw_text": "ราคาเริ่มต้น 709,000.-"
+    },
+    {
+      "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_sahar-diesel.html",
+      "source_url": "https://www.gwm.co.th/th/models/sahar-diesel",
+      "model": "GWM POER SAHAR DIESEL",
+      "span_index": 0,
+      "price_label": "ราคาเริ่มต้น",
+      "value_thb": 799000,
+      "reason": "not_published_as_a_configurator_price_on_this_artifact",
+      "raw_text": "ราคาเริ่มต้น 799,000.-"
+    },
+    {
+      "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-300-diesel.html",
+      "source_url": "https://www.gwm.co.th/th/models/tank-300-diesel",
+      "model": "TANK 300 DIESEL",
+      "span_index": 0,
+      "price_label": "ราคาเริ่มต้น",
+      "value_thb": 1029000,
+      "reason": "not_published_as_a_configurator_price_on_this_artifact",
+      "raw_text": "ราคาเริ่มต้น 1,029,000.-"
+    },
+    {
+      "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-300.html",
+      "source_url": "https://www.gwm.co.th/th/models/tank-300",
+      "model": "TANK 300 HEV",
+      "span_index": 0,
+      "price_label": "ราคาเริ่มต้น",
+      "value_thb": 1279000,
+      "reason": "not_published_as_a_configurator_price_on_this_artifact",
+      "raw_text": "ราคาเริ่มต้น 1,279,000.-"
+    },
+    {
+      "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500-3t-diesel.html",
+      "source_url": "https://www.gwm.co.th/th/models/tank-500-3t-diesel",
+      "model": "TANK 500 3.0T DIESEL",
+      "span_index": 2,
+      "price_label": null,
+      "value_thb": 50000,
+      "reason": "outside_model_price_floor",
+      "raw_text": "50,000.-"
+    },
+    {
+      "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500-diesel.html",
+      "source_url": "https://www.gwm.co.th/th/models/tank-500-diesel",
+      "model": "TANK 500 DIESEL",
+      "span_index": 0,
+      "price_label": "ราคาเริ่มต้น",
+      "value_thb": 1399000,
+      "reason": "not_published_as_a_configurator_price_on_this_artifact",
+      "raw_text": "ราคาเริ่มต้น 1,399,000.-"
+    },
+    {
+      "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500.html",
+      "source_url": "https://www.gwm.co.th/th/models/tank-500",
+      "model": "TANK 500 HEV",
+      "span_index": 1,
+      "price_label": "MSRP",
+      "value_thb": 1549000,
+      "reason": "not_published_as_a_configurator_price_on_this_artifact",
+      "raw_text": "MSRP : 1,549,000.-"
+    }
+  ]
+}

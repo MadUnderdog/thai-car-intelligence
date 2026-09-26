@@ -1,0 +1,257 @@
+{
+  "session_id": "acquisition_20260924_134815",
+  "captured": [
+    {
+      "success": true,
+      "filename": "nissan_new_home_page.html",
+      "provenance": {
+        "source_url": "https://www.nissan.co.th/",
+        "captured_at": "2026-09-24T13:48:19.963226+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "nissan_new_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED",
+        "sanitized": true,
+        "sanitizations": [
+          {
+            "pattern": "google_api_key",
+            "count": 1
+          }
+        ]
+      },
+      "size": 1395174,
+      "final_url": "https://www.nissan.co.th/"
+    },
+    {
+      "success": true,
+      "filename": "mazda_home_page.html",
+      "provenance": {
+        "source_url": "https://www.mazda.co.th/th",
+        "captured_at": "2026-09-24T13:48:24.077293+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "3e49287146ee978fbe8a1919a21df334ae7ce75414be7b161b53650a2f38ed49",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "mazda_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 378821,
+      "final_url": "https://www.mazda.co.th/th"
+    },
+    {
+      "success": true,
+      "filename": "mitsubishi_home_page.html",
+      "provenance": {
+        "source_url": "https://www.mitsubishi-motors.co.th/th?rd=true",
+        "captured_at": "2026-09-24T13:48:27.092513+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "eaa2b0f9e01fcbc45532782f931eeee7c00801cda5c480294c8c1a4f8ffee498",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "mitsubishi_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED",
+        "sanitized": true,
+        "sanitizations": [
+          {
+            "pattern": "google_api_key",
+            "count": 2
+          }
+        ]
+      },
+      "size": 1109660,
+      "final_url": "https://www.mitsubishi-motors.co.th/th?rd=true"
+    },
+    {
+      "success": true,
+      "filename": "isuzu_th_home_page.html",
+      "provenance": {
+        "source_url": "https://www.isuzu.co.th/",
+        "captured_at": "2026-09-24T13:48:28.821578+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "5d27fa1ffd767a3eefe7b4d94f5ef29ae2e86cac94839a4c5e906265dbf29d39",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "isuzu_th_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 16329,
+      "final_url": "https://www.isuzu.co.th/"
+    },
+    {
+      "success": true,
+      "filename": "suzuki_home_page.html",
+      "provenance": {
+        "source_url": "https://www.suzuki.co.th/",
+        "captured_at": "2026-09-24T13:48:31.621323+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "suzuki_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 152788,
+      "final_url": "https://www.suzuki.co.th/"
+    },
+    {
+      "success": true,
+      "filename": "mg_home_page.html",
+      "provenance": {
+        "source_url": "https://www.mgcars.com/th",
+        "captured_at": "2026-09-24T13:48:36.580895+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "mg_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 1745522,
+      "final_url": "https://www.mgcars.com/th"
+    },
+    {
+      "success": true,
+      "filename": "changan_home_page.html",
+      "provenance": {
+        "source_url": "https://www.changan.co.th/th/",
+        "captured_at": "2026-09-24T13:48:42.529465+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "28c9f50b86238b6d69b2cd3737068795367ab06875243cc4193d5c98ae770ecd",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "changan_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 4437809,
+      "final_url": "https://www.changan.co.th/th/"
+    },
+    {
+      "success": true,
+      "filename": "gwm_home_page.html",
+      "provenance": {
+        "source_url": "https://www.gwm.co.th/en",
+        "captured_at": "2026-09-24T13:48:47.019638+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "c311d963f280270552a673091f4b1e0b549fdb1e9936bbe6c79b758814d95ebe",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "gwm_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 203000,
+      "final_url": "https://www.gwm.co.th/en"
+    },
+    {
+      "success": true,
+      "filename": "jaguar_home_page.html",
+      "provenance": {
+        "source_url": "https://www.jaguar.co.th/",
+        "captured_at": "2026-09-24T13:48:48.917711+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "05d97f701cf4222bfd14729dfbc911a52d517143bad66231506330bdfa5fd02a",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "jaguar_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED",
+        "sanitized": true,
+        "sanitizations": [
+          {
+            "pattern": "google_api_key",
+            "count": 1
+          }
+        ]
+      },
+      "size": 519792,
+      "final_url": "https://www.jaguar.co.th/"
+    },
+    {
+      "success": true,
+      "filename": "landrover_home_page.html",
+      "provenance": {
+        "source_url": "https://www.landrover.co.th/",
+        "captured_at": "2026-09-24T13:48:50.679730+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "e82a21773190cb8bfe6cd0d0cfabc4361aedc6cc8375629eef9918555de35abe",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "landrover_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED",
+        "sanitized": true,
+        "sanitizations": [
+          {
+            "pattern": "google_api_key",
+            "count": 1
+          }
+        ]
+      },
+      "size": 451091,
+      "final_url": "https://www.landrover.co.th/"
+    },
+    {
+      "success": true,
+      "filename": "smart_home_page.html",
+      "provenance": {
+        "source_url": "https://www.smartsecurity.in.th/",
+        "captured_at": "2026-09-24T13:48:55.080714+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "503b08966576be442cf3b0c0facb8030c4400498cec4bbbe7cf3acb10f4d3412",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "smart_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 950241,
+      "final_url": "https://www.smartsecurity.in.th/"
+    },
+    {
+      "success": true,
+      "filename": "kia_home_page.html",
+      "provenance": {
+        "source_url": "https://www.kia.com/th/th",
+        "captured_at": "2026-09-24T13:48:59.939645+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "53e94ea876b441b4563e125b8f9de8ddba5c628f3d7593c1c73d31310e016d89",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "kia_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 101555,
+      "final_url": "https://www.kia.com/th/th"
+    },
+    {
+      "success": true,
+      "filename": "bmw_all_models_verified.html",
+      "provenance": {
+        "source_url": "https://www.bmw.co.th/en/all-models.html",
+        "captured_at": "2026-09-24T13:49:02.210559+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "6b88cd605511852757b288d27015c0a740b2319ca0530cabb5394f38093b1e28",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "bmw_all_models_verified.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 677684,
+      "final_url": "https://www.bmw.co.th/en/all-models.html"
+    },
+    {
+      "success": true,
+      "filename": "mini_home_page.html",
+      "provenance": {
+        "source_url": "https://www.mini.co.th/en_TH/home.html",
+        "captured_at": "2026-09-24T13:49:07.774046+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "b662bd5b0cca816295643f72ac8b880a2ee82d017d25a40edd5ddca363783273",
+        "session_id": "acquisition_20260924_134815",
+        "artifact_filename": "mini_home_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 424227,
+      "final_url": "https://www.mini.co.th/en_TH/home.html"
+    }
+  ],
+  "blocked": [
+    {
+      "success": false,
+      "blocker": "HTTP_403",
+      "url": "https://www.chevrolet.co.th/",
+      "filename": "chevrolet_home_page.html"
+    },
+    {
+      "success": false,
+      "blocker": "HTTP_403",
+      "url": "https://www.mercedes-benz.co.th/",
+      "filename": "mercedes_home_page.html"
+    }
+  ]
+}

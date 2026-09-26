@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.smartsecurity.in.th/",
+  "captured_at": "2026-09-24T13:48:55.080714+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "503b08966576be442cf3b0c0facb8030c4400498cec4bbbe7cf3acb10f4d3412",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "smart_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

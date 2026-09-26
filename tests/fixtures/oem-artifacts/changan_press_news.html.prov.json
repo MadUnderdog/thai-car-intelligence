@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.changan.co.th/th/news/",
+  "captured_at": "2026-09-26T13:45:05.279399+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "c1ef82169bdc0699687ca21eb3a35db8f4d970b284bd4fb285e2a2effca3ec6d",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "changan_press_news.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

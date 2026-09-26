@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.subaru.asia/th/th/about-us/news.php",
+  "captured_at": "2026-09-26T13:48:05.019766+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "f4f77556ee843fdc73281c98306854481f6e11c0b73b860f478e9f51edb919ec",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "subaru_press_news.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

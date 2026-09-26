@@ -1,0 +1,282 @@
+{
+  "report_id": "daily-run-2026-09-25e",
+  "generated_at": "2026-09-25T08:57:43.524810+00:00",
+  "commit": "974ce81d658194fe2f6af32c64ea11ef84d2edf4",
+  "branch": "fix/p1-provenance-gate",
+  "locator_integrity": {
+    "before": {
+      "total": 20,
+      "toyota_json_path": 10,
+      "nissan_shared_selector": 10
+    },
+    "after": {
+      "ambiguous_full_locators": 0,
+      "duplicate_json_path": 0,
+      "duplicate_dom_path": 0,
+      "rows": 324
+    },
+    "resolution": {
+      "engine": "scripts/resolve_locators.py",
+      "rule": "every accepted row must resolve to exactly one matching record",
+      "official_rows": 324,
+      "media_rows": 60
+    },
+    "mutation_proof": {
+      "swap": "price rewrite on every row -> zero matches",
+      "delete": "record deletion -> zero, or the identical record (pages whose own framework rebuilds the node)"
+    }
+  },
+  "secondary_source_layer": {
+    "source_class": "AUTOMOTIVE_MEDIA",
+    "trust_state": "RESEARCH_UNVERIFIED",
+    "registry": "storage/thai-source-registry.json",
+    "batch": "3 documented brand_price_page_crawl pages",
+    "artifacts": 3,
+    "sidecars": 3,
+    "records": 60,
+    "fail_closed_skips": "records without a unique locator or a model heading were dropped",
+    "file": "audit/data-staging/media_observations.jsonl"
+  },
+  "cross_class_joins": {
+    "file": "audit/data-staging/cross_class_joins.json",
+    "join_count": 11,
+    "target": ">=3 genuine",
+    "target_met": true,
+    "join_keys": [
+      "toyota/alphard/3590000",
+      "toyota/alphard/4290000",
+      "toyota/alphard/4590000",
+      "toyota/camry/1475000",
+      "toyota/camry/1659000",
+      "toyota/camry/1809000",
+      "toyota/veloz/795000",
+      "toyota/veloz/875000",
+      "toyota/yaris/584000",
+      "toyota/yaris/644000",
+      "toyota/yaris/689000"
+    ],
+    "by_class_pair": {
+      "OEM_OFFICIAL+AUTOMOTIVE_MEDIA": 11
+    }
+  },
+  "toyota_currentness_policy": {
+    "file": "audit/policies/toyota-currentness.json",
+    "decision": "keep_current",
+    "basis": "availability_instock",
+    "basis_not_claimed": [
+      "source_dated_price_validity",
+      "capture_time_as_effective_date"
+    ],
+    "rows_unchanged": true,
+    "demotion_target": "UNKNOWN",
+    "demotion_rows": 96
+  },
+  "spec_coverage_plan": {
+    "file": "audit/spec-coverage-plan.json",
+    "current": {
+      "rows_with_specs": 72,
+      "total_rows": 324,
+      "coverage_pct": 22.2,
+      "brands_with_specs": [
+        "porsche"
+      ],
+      "note": "recomputed from audit/data-staging/vehicle_observations.jsonl at generation time; concentration is by source rather than placeholder/duplicate contamination"
+    },
+    "tiers": [
+      {
+        "tier": 1,
+        "name": "already-captured bytes (zero fetch)"
+      },
+      {
+        "tier": 2,
+        "name": "official spec pages linked by captured documents"
+      },
+      {
+        "tier": 3,
+        "name": "secondary media (AUTOMOTIVE_MEDIA / RESEARCH_UNVERIFIED)"
+      }
+    ],
+    "staged_now": 0
+  },
+  "staging": {
+    "official_rows": 324,
+    "identity": {
+      "VARIANT": 203,
+      "MODEL": 121
+    },
+    "price_type": {
+      "MSRP": 122,
+      "MSRP_STARTING": 105,
+      "EXACT_VARIANT": 97
+    },
+    "provenance": {
+      "ACQUISITION_VERIFIED": 324
+    },
+    "media_rows": 60
+  },
+  "fixtures": {
+    "oem_html": 56,
+    "oem_sidecars": 50,
+    "oem_pdf": 2,
+    "media_html": 3,
+    "media_sidecars": 3
+  },
+  "coverage": {
+    "verified_parsed": 18,
+    "denominator": 32,
+    "percent": 56.2,
+    "blocked": 14
+  },
+  "coverage_wave": {
+    "brand": "GWM",
+    "source": "www.gwm.co.th — sitemap index -> server-rendered /th/models/<slug>",
+    "newly_covered": true,
+    "artifacts": 13,
+    "sidecars": 13,
+    "rows_staged": 29,
+    "identity": {
+      "VARIANT": 17,
+      "MODEL": 12
+    },
+    "price_type": {
+      "EXACT_VARIANT": 17,
+      "MSRP": 10,
+      "MSRP_STARTING": 2
+    },
+    "rejected_candidates": 10,
+    "rejected_reasons": {
+      "not_published_as_a_configurator_price_on_this_artifact": 9,
+      "outside_model_price_floor": 1
+    },
+    "rejected_values_thb": [
+      899000,
+      959000,
+      649000,
+      709000,
+      799000,
+      1029000,
+      1279000,
+      50000,
+      1399000,
+      1549000
+    ],
+    "price_free_artifacts_staging_nothing": [
+      "gwm_data_models_page.html",
+      "gwm_home_page.html",
+      "gwm_mall_home.html",
+      "gwm_models_page.html"
+    ],
+    "candidates_log": "audit/coverage/gwm_price_candidates_20260925.json"
+  },
+  "tests": {
+    "pytest": "372 passed, 1 errors",
+    "log": "/tmp/full_suite_p101c.log",
+    "prisma_validate": "rc=0",
+    "tsc_noemit": "rc=0",
+    "credential_scan_changed_or_new_files": 0,
+    "credential_scan_files_checked": 61,
+    "collection_error_modules": [
+      "tests/test_generation_config_boundary.py"
+    ],
+    "collection_error_preexisting": true,
+    "collection_error_evidence": "this wave's diff touches neither the failing test module nor any lib/ module"
+  },
+  "retry_windows": {
+    "elapsed_now": [],
+    "not_yet_due": [
+      {
+        "brand": "BYD",
+        "access_status": "BLOCKED_HTTP_404",
+        "next_retry_at": "2026-10-08T13:41:49.738574+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Tesla",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Ford",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Chevrolet",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Mercedes-Benz",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Audi",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Volvo",
+        "access_status": "BLOCKED_TLS",
+        "next_retry_at": "2026-10-24T13:41:49.738574+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Subaru",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "NETA",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Avance",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Haval",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Chery",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Smart",
+        "access_status": "DEALER_REDIRECT",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+        "blocker": null
+      },
+      {
+        "brand": "Peugeot",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "blocker": null
+      }
+    ],
+    "blocked_brand_count": 14
+  },
+  "not_touched": [
+    "production database",
+    "AI model/provider/config",
+    "verifier (FROZEN)",
+    "PR #3 merge state",
+    "skills/references/memory/self-improvement",
+    "blocked hosts before next_retry_at"
+  ]
+}

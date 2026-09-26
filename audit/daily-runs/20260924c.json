@@ -1,0 +1,195 @@
+{
+ "run_id": "daily_20260924_phase1_parse_wave_2",
+ "date": "2026-09-24",
+ "generated_at": "2026-09-24T18:47:25.442665+00:00",
+ "cycle": "2026-09-24-4: price-sheet PDFs + own-brand Changan + Kia promo + Mazda root switch",
+ "baseline_commit": "abcb1cd7aa522daaeff56292754f95616dee4f43",
+ "acquisition": {
+  "changan_own_brand": {
+   "session": "acquisition_20260924_174728",
+   "attempted": 3,
+   "captured": 3,
+   "artifacts": [
+    "changan_lumin_page.html",
+    "changan_nevo_q05_page.html",
+    "changan_promotion_page.html"
+   ]
+  },
+  "jlr_price_sheets": {
+   "session": "acquisition_20260924_pdf_pricesheets",
+   "method": "http_get_pdf_base64 (stdlib urllib, TLS verify on, Chrome UA)",
+   "artifacts": [
+    {
+     "file": "TH_Jaguar_PriceSheet.pdf.b64",
+     "bytes": 293792,
+     "roundtrip": "base64 decode == original %PDF bytes"
+    },
+    {
+     "file": "TH_LandRover_PriceSheet.pdf.b64",
+     "bytes": 180715,
+     "roundtrip": "base64 decode == original %PDF bytes"
+    }
+   ]
+  },
+  "cycle3_recaptures_referenced": [
+   "gwm_models_page.html",
+   "jaguar_range_page.html",
+   "landrover_discovery_page.html",
+   "landrover_range_rover_page.html",
+   "isuzu_th_rendered_page.html",
+   "kia_cars_page.html"
+  ]
+ },
+ "registry": {
+  "file": "audit/coverage/oem-registry.json",
+  "rows": 33,
+  "in_scope": 32,
+  "reachable": 18,
+  "blocked": 14,
+  "coverage_parsed_tested": "14/32",
+  "coverage_pct": 43.8,
+  "newly_parsed_this_cycle": [
+   "Mazda",
+   "Kia",
+   "Changan",
+   "Jaguar",
+   "Land Rover"
+  ],
+  "note": "Deepal sibling-source relationship (changan.co.th host, /thdeepal/ slugs) preserved; Changan marked parsed ONLY after own-brand evidence (NEVO Q05/Lumin/promo trims)"
+ },
+ "adapters_parsed_tested": [
+  "BMW",
+  "Changan",
+  "Deepal",
+  "Honda",
+  "Jaguar",
+  "Kia",
+  "Land Rover",
+  "Lexus",
+  "MG",
+  "MINI",
+  "Mazda",
+  "Mitsubishi",
+  "Nissan",
+  "Suzuki"
+ ],
+ "staging": {
+  "file": "audit/data-staging/vehicle_observations.jsonl",
+  "total": 223,
+  "identity": {
+   "VARIANT": 117,
+   "MODEL": 106
+  },
+  "price": {
+   "MSRP": 107,
+   "MSRP_STARTING": 103,
+   "EXACT_VARIANT": 13
+  },
+  "prov": {
+   "LEGACY_UNVERIFIED": 109,
+   "ACQUISITION_VERIFIED": 114
+  },
+  "by_source_new": {
+   "Mazda Thailand Official": 10,
+   "Kia Thailand Official": 3,
+   "Changan Thailand Official (all)": 9,
+   "Jaguar Thailand Official": 1,
+   "Land Rover Thailand Official": 11
+  }
+ },
+ "artifacts": {
+  "html": 37,
+  "sidecars": 31,
+  "b64_pdfs": 2
+ },
+ "blockers": [
+  {
+   "brand": "BYD",
+   "status": "BLOCKED_HTTP_404",
+   "next_retry_at": "2026-10-08"
+  },
+  {
+   "brand": "Tesla",
+   "status": "BLOCKED_HTTP_403",
+   "next_retry_at": "2026-10-01"
+  },
+  {
+   "brand": "Ford",
+   "status": "BLOCKED_HTTP_403",
+   "next_retry_at": "2026-10-01"
+  },
+  {
+   "brand": "Chevrolet",
+   "status": "BLOCKED_HTTP_403",
+   "next_retry_at": "2026-10-01"
+  },
+  {
+   "brand": "Mercedes-Benz",
+   "status": "BLOCKED_HTTP_403",
+   "next_retry_at": "2026-10-01"
+  },
+  {
+   "brand": "Audi",
+   "status": "BLOCKED_HTTP_403",
+   "next_retry_at": "2026-10-01"
+  },
+  {
+   "brand": "Volvo",
+   "status": "BLOCKED_TLS",
+   "next_retry_at": "2026-10-24"
+  },
+  {
+   "brand": "Subaru",
+   "status": "BLOCKED_DNS",
+   "next_retry_at": "2026-10-01"
+  },
+  {
+   "brand": "NETA",
+   "status": "BLOCKED_DNS",
+   "next_retry_at": "2026-10-01"
+  },
+  {
+   "brand": "Avance",
+   "status": "BLOCKED_DNS",
+   "next_retry_at": "2026-10-01"
+  },
+  {
+   "brand": "Haval",
+   "status": "BLOCKED_DNS",
+   "next_retry_at": "2026-10-01"
+  },
+  {
+   "brand": "Chery",
+   "status": "BLOCKED_DNS",
+   "next_retry_at": "2026-10-01"
+  },
+  {
+   "brand": "Smart",
+   "status": "DEALER_REDIRECT",
+   "next_retry_at": "2026-09-25"
+  },
+  {
+   "brand": "Peugeot",
+   "status": "BLOCKED_HTTP_403",
+   "next_retry_at": "2026-10-01"
+  }
+ ],
+ "tests": {
+  "extraction+provenance+taxonomy+gold": "194/194 passed",
+  "duration_s": 386,
+  "note": "includes 20 new tests (Mazda root, Kia, Changan own-brand, JLR price sheets) + hardened extract_from_html (retry x3, timeout 90s, unique script path) after intermittent Suzuki subprocess flake"
+ },
+ "security_status": {
+  "staged_diff_credential_scan": 0,
+  "new_artifact_credential_scan": 0,
+  "github_secret_scanning_alerts": "UNVERIFIED (401 unauthenticated) — no closure claimed",
+  "owner_key_rotation": "EXTERNAL — not performed",
+  "skills_references_memory": "untouched (0 session-produced states; 15:19Z skill patch burst reverted to pre-task blobs)"
+ },
+ "follow_ups": [
+  "Deepal promo-page offers (S05/E07/S07 sentences) — richer parse deferred",
+  "Lumin campaign offers (399,000/409,000 promo lines, Jan-Feb 2026 dates) — deferred",
+  "GWM/Changan-lineup price endpoints: official pages still price-free",
+  "Mazda legacy fixture mazda_page.html retained as UNKNOWN-provenance reference; collector switched to root"
+ ]
+}

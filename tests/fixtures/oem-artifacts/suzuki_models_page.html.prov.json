@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/error",
+  "captured_at": "2026-09-24T11:36:12.002225+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "c22e9bcffbecbf52572ad7f4d2cce81e83a37ea4d4680c01e545a2aa0cdec890",
+  "session_id": "acquisition_20260924_113550",
+  "artifact_filename": "suzuki_models_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

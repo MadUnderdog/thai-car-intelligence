@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/ora-5-ev",
+  "captured_at": "2026-09-25T07:46:28.934867+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "6ca2b21a3d8475b9838c471a5bd19a77f79e0d4a5a1432c663b54d17448128f2",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_ora-5-ev.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

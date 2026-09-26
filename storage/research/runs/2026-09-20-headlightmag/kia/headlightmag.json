@@ -1,0 +1,82 @@
+{
+  "brand": "kia",
+  "prices": [
+    {
+      "brand": "kia",
+      "model": "Kia",
+      "variant": "__MODEL_RANGE__",
+      "amount": 1199000,
+      "source_url": "https://www.headlightmag.com/official-price-kia-pv5-cargo/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_official_price",
+      "content_hash": "46ee8e8afd0fb938",
+      "article_title": "ราคาอย่างเป็นทางการ KIA PV5 Cargo : 1,199,000 บาท | รถตู้บรรทุก ขุมพลังไฟฟ้า วิ่งไกล 384 km. (NEDC) - HeadLight Magazine",
+      "evidence_excerpt": "ราคาอย่างเป็นทางการ KIA PV5 Cargo : 1,199,000 บาท | รถตู้บรรทุก ขุมพลังไฟฟ้า วิ่งไกล 384 km. (NEDC)"
+    },
+    {
+      "brand": "kia",
+      "model": "Kia",
+      "variant": "__GENERIC__",
+      "amount": 1199000,
+      "source_url": "https://www.headlightmag.com/official-price-kia-pv5-cargo/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_generic_price",
+      "content_hash": "df93f9f35c42187f",
+      "article_title": "ราคาอย่างเป็นทางการ KIA PV5 Cargo : 1,199,000 บาท | รถตู้บรรทุก ขุมพลังไฟฟ้า วิ่งไกล 384 km. (NEDC) - HeadLight Magazine",
+      "evidence_excerpt": "ราคาอย่างเป็นทางการ KIA PV5 Cargo : 1,199,000 บาท | รถตู้บรรทุก ขุมพลังไฟฟ้า วิ่งไกล 384 km. (NEDC)"
+    }
+  ],
+  "specs": [
+    {
+      "brand": "kia",
+      "model": "Kia",
+      "variant": "__MODEL__",
+      "field": "power_hp",
+      "value": "122.0",
+      "unit": "hp",
+      "source_url": "https://www.headlightmag.com/official-price-kia-pv5-cargo/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "66b0a8675cf3c5d4",
+      "article_title": "ราคาอย่างเป็นทางการ KIA PV5 Cargo : 1,199,000 บาท | รถตู้บรรทุก ขุมพลังไฟฟ้า วิ่งไกล 384 km. (NEDC) - HeadLight Magazine",
+      "evidence_excerpt": "Synchronous Motor กำลังสูงสุด 89.4 กิโลวัตต์ หรือ 122 แรงม้า (PS) แรงบิดสูงสุด 250 นิวตันเมตร พร้อมแบตเตอรี่ L"
+    },
+    {
+      "brand": "kia",
+      "model": "Kia",
+      "variant": "__MODEL__",
+      "field": "torque_nm",
+      "value": "250.0",
+      "unit": "Nm",
+      "source_url": "https://www.headlightmag.com/official-price-kia-pv5-cargo/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "f3afa8f9b3ff9461",
+      "article_title": "ราคาอย่างเป็นทางการ KIA PV5 Cargo : 1,199,000 บาท | รถตู้บรรทุก ขุมพลังไฟฟ้า วิ่งไกล 384 km. (NEDC) - HeadLight Magazine",
+      "evidence_excerpt": " 89.4 กิโลวัตต์ หรือ 122 แรงม้า (PS) แรงบิดสูงสุด 250 นิวตันเมตร พร้อมแบตเตอรี่ Lithium-ion ความจุ 51.5 kWh รองรับ"
+    },
+    {
+      "brand": "kia",
+      "model": "Kia",
+      "variant": "__MODEL__",
+      "field": "battery_kwh",
+      "value": "51.5",
+      "unit": "kWh",
+      "source_url": "https://www.headlightmag.com/official-price-kia-pv5-cargo/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "01897b484436ca57",
+      "article_title": "ราคาอย่างเป็นทางการ KIA PV5 Cargo : 1,199,000 บาท | รถตู้บรรทุก ขุมพลังไฟฟ้า วิ่งไกล 384 km. (NEDC) - HeadLight Magazine",
+      "evidence_excerpt": " 250 นิวตันเมตร พร้อมแบตเตอรี่ Lithium-ion ความจุ 51.5 kWh รองรับการชาร์จด้วยไฟฟ้ากระแสสลับ AC สูงสุด 11 kW "
+    }
+  ],
+  "sources": [
+    "https://www.headlightmag.com/official-price-kia-pv5-cargo/"
+  ],
+  "failures": []
+}

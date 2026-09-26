@@ -1,0 +1,1126 @@
+{
+  "purpose": "evidence-led spec expansion; this file stages no specs and fetches nothing",
+  "current_state": {
+    "rows_with_specs": 72,
+    "total_rows": 503,
+    "coverage_pct": 14.3,
+    "brands_with_specs": [
+      "porsche"
+    ],
+    "note": "recomputed from audit/data-staging/vehicle_observations.jsonl at generation time; concentration is by source rather than placeholder/duplicate contamination"
+  },
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "already-captured bytes (zero fetch)",
+      "action": "parse with the same-record binding already required for prices (model card + spec cell + mutation tests); no new acquisition",
+      "evidence": [
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+          "marker_counts": {
+            "thai_ps": 111,
+            "torque_nm": 73,
+            "kw": 38,
+            "kwh": 3,
+            "displacement": 14,
+            "fuel_consumption": 73
+          },
+          "marker_total": 312,
+          "structure": "structured_field",
+          "structured_fields": 657,
+          "spec_blocks": 0,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_brochures.html",
+          "marker_counts": {
+            "thai_ps": 111,
+            "torque_nm": 73,
+            "kw": 38,
+            "kwh": 3,
+            "displacement": 14,
+            "fuel_consumption": 70
+          },
+          "marker_total": 309,
+          "structure": "structured_field",
+          "structured_fields": 657,
+          "spec_blocks": 0,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_press_news.html",
+          "marker_counts": {
+            "thai_ps": 111,
+            "torque_nm": 73,
+            "kw": 38,
+            "kwh": 3,
+            "displacement": 14,
+            "fuel_consumption": 70
+          },
+          "marker_total": 309,
+          "structure": "structured_field",
+          "structured_fields": 657,
+          "spec_blocks": 350,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+          "marker_counts": {
+            "thai_ps": 111,
+            "torque_nm": 73,
+            "kw": 38,
+            "kwh": 3,
+            "displacement": 14,
+            "fuel_consumption": 70
+          },
+          "marker_total": 309,
+          "structure": "structured_field",
+          "structured_fields": 657,
+          "spec_blocks": 11,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_home_page.html",
+          "marker_counts": {
+            "thai_ps": 20,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 65,
+            "fuel_consumption": 20
+          },
+          "marker_total": 105,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 144,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_macan_model_page.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 83,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 83,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 38,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "marker_counts": {
+            "thai_ps": 42,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 40,
+            "fuel_consumption": 0
+          },
+          "marker_total": 82,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/kia_press_article_carnival.html",
+          "marker_counts": {
+            "thai_ps": 7,
+            "torque_nm": 1,
+            "kw": 5,
+            "kwh": 0,
+            "displacement": 7,
+            "fuel_consumption": 15
+          },
+          "marker_total": 35,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_car_mg-zs.html",
+          "marker_counts": {
+            "thai_ps": 15,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 9,
+            "fuel_consumption": 8
+          },
+          "marker_total": 32,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_car_new-mazda-bt50.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 19,
+            "fuel_consumption": 11
+          },
+          "marker_total": 31,
+          "structure": "structured_field",
+          "structured_fields": 4,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx5.html",
+          "marker_counts": {
+            "thai_ps": 8,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 15,
+            "fuel_consumption": 4
+          },
+          "marker_total": 27,
+          "structure": "structured_field",
+          "structured_fields": 3,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html",
+          "marker_counts": {
+            "thai_ps": 5,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 11,
+            "fuel_consumption": 6
+          },
+          "marker_total": 22,
+          "structure": "structured_field",
+          "structured_fields": 3,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda3-sedan.html",
+          "marker_counts": {
+            "thai_ps": 9,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 10,
+            "fuel_consumption": 3
+          },
+          "marker_total": 22,
+          "structure": "structured_field",
+          "structured_fields": 4,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx5.html",
+          "marker_counts": {
+            "thai_ps": 9,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 9,
+            "fuel_consumption": 3
+          },
+          "marker_total": 21,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 35,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_spec_new-mazda-bt50.html",
+          "marker_counts": {
+            "thai_ps": 2,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 9,
+            "fuel_consumption": 10
+          },
+          "marker_total": 21,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 32,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_car_mg-hs.html",
+          "marker_counts": {
+            "thai_ps": 21,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 21,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda3-sedan.html",
+          "marker_counts": {
+            "thai_ps": 9,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 8,
+            "fuel_consumption": 3
+          },
+          "marker_total": 20,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 32,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_car_mg-urban.html",
+          "marker_counts": {
+            "thai_ps": 11,
+            "torque_nm": 0,
+            "kw": 9,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 20,
+          "structure": "structured_field",
+          "structured_fields": 1,
+          "spec_blocks": 39,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html",
+          "marker_counts": {
+            "thai_ps": 4,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 9,
+            "fuel_consumption": 5
+          },
+          "marker_total": 18,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 35,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda2-essential.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 8,
+            "fuel_consumption": 6
+          },
+          "marker_total": 15,
+          "structure": "structured_field",
+          "structured_fields": 8,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_car_mg-im6.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 0,
+            "kw": 4,
+            "kwh": 4,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 11,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_sahar.html",
+          "marker_counts": {
+            "thai_ps": 5,
+            "torque_nm": 2,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 8,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_ora-5-ev.html",
+          "marker_counts": {
+            "thai_ps": 2,
+            "torque_nm": 1,
+            "kw": 3,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 7,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda2-essential.html",
+          "marker_counts": {
+            "thai_ps": 2,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 2,
+            "fuel_consumption": 3
+          },
+          "marker_total": 7,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 35,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_ora-5-hev.html",
+          "marker_counts": {
+            "thai_ps": 4,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 2,
+            "fuel_consumption": 0
+          },
+          "marker_total": 6,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500.html",
+          "marker_counts": {
+            "thai_ps": 5,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 6,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500-diesel.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 2,
+            "fuel_consumption": 0
+          },
+          "marker_total": 5,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/deepal_e07_awd.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 3,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 3,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/deepal_e07_plus.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 3,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 3,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-300.html",
+          "marker_counts": {
+            "thai_ps": 2,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 3,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/jaguar_range_page.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 3,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 3,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/changan_home_page.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 5,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/changan_nevo_q05_page.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_data_models_page.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 1,
+            "kw": 1,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_home_page.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 1,
+            "kw": 1,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_sahar-diesel.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500-3t-diesel.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_wey-g9.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 1,
+            "kw": 1,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mitsubishi_home_page.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 2
+          },
+          "marker_total": 2,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 5,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_press_news.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mini_home_page.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_all_models.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/subaru_press_news.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/suzuki_model_jimny.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/suzuki_model_xl7.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        }
+      ],
+      "why_highest_value": "the figures exist in artifacts we already hold, so cost is extraction + tests only, and provenance is already sidecar-backed"
+    },
+    {
+      "tier": 2,
+      "name": "official spec pages linked by captured documents",
+      "action": "small, laddered acquisition of the linked URLs only, one brand per cycle, each earning its own artifact + sidecar + adapter gate",
+      "evidence": {
+        "tests/fixtures/oem-artifacts/bmw_all_models_verified.html": [
+          "/en/all-models.html?specialCategory=c",
+          "/en/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/en/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/en/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_brochure_page.html": [
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2025/4-20241113-02_EN.pdf.asset.1745391120720.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2025/7-20250130-02_EN.pdf.asset.1745391122471.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2025/BMW_NEWiX1L_Leaflet_AUG_2026.pdf.asset.1785989516866.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2025/M5-20250130-05_EN.pdf.asset.1745391122834.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2025/iX1_L-20260605-01_EN.pdf.asset.1785989516884.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2026/4-20260714-01_EN_.pdf.asset.1784613825320.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2026/M2.-20260714-01_EN.pdf.asset.1784613855280.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2026/M3-20260714-01_EN.pdf.asset.1784613825286.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2026/M4-20251104-02_EN.pdf.asset.1784613825408.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2026/M4-20260714-01_EN.pdf.asset.1784613855331.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2026/M5-20260714-01_EN.pdf.asset.1784613855363.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2026/X6-20260223-01_EN.pdf.asset.1784613825379.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2026/XM-20251126-01_EN_.pdf.asset.1784613825337.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/Topics/Specs/2026/i5-20260714-01_EN.pdf.asset.1784613855387.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/specsheet/2-20260622-01_EN.pdf.asset.1782449002094.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/specsheet/3-20260112-01_EN_Li.pdf.asset.1768894796753.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/specsheet/5-20260417-01_EN.pdf.asset.1779077254663.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/specsheet/M3-20230815-01_EN.pdf.asset.1724906649579.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/specsheet/X1-20260417-01_EN.pdf.asset.1778752587091.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/specsheet/X5-20260417-01_EN.pdf.asset.1779077254643.pdf",
+          "/content/dam/bmw/marketTH/bmw_co_th/specsheet/X7-20260529-01_EN.pdf.asset.1782449621294.pdf",
+          "/en/all-models.html?specialCategory=c",
+          "/en/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/en/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/en/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_models_page.html": [
+          "/th/all-models.html?specialCategory=c",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_page.html": [
+          "/th/all-models.html?specialCategory=c",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_price_list.html": [
+          "/en/all-models.html?specialCategory=c",
+          "/en/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/en/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/en/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/changan_nevo_q05_page.html": [
+          "/images/nevo/q05/pdf/Q05-Specs-sheet-th.pdf",
+          "https://api.www.changan.co.th/uploads/Q05_Specs_sheet_en_99kw_for_export_model_2ecb16b06b.pdf"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_e07_awd.html": [
+          "https://www.changan.co.th/en/deepal/e07-peformance-awd-en/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_e07_plus.html": [
+          "https://www.changan.co.th/en/deepal/e07-plus-en/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/honda_city_page.html": [
+          "/en/city/specification",
+          "/en/service/special-service",
+          "https://www.honda.co.th/en/city/specification"
+        ],
+        "tests/fixtures/oem-artifacts/honda_city_recapture.html": [
+          "/city/specification",
+          "/service/special-service",
+          "https://www.honda.co.th/en/city/specification"
+        ],
+        "tests/fixtures/oem-artifacts/honda_models_page.html": [
+          "/service/special-service"
+        ],
+        "tests/fixtures/oem-artifacts/honda_page.html": [
+          "/en/service/special-service"
+        ],
+        "tests/fixtures/oem-artifacts/honda_press_news.html": [
+          "/service/special-service"
+        ],
+        "tests/fixtures/oem-artifacts/isuzu_brochure_page.html": [
+          "/specialoffer"
+        ],
+        "tests/fixtures/oem-artifacts/isuzu_page.html": [
+          "/specialoffer",
+          "/specialoffer/ppv",
+          "/specialoffer/ppv/mu-x-financial",
+          "/specialoffer/ppv/mu-x-financial-normalmodel",
+          "/specialoffer/ppv/mu-x-isuzutrustedcare",
+          "/specialoffer/pup",
+          "/specialoffer/pup/cab-4-financial",
+          "/specialoffer/pup/hilander-2-doors-financial",
+          "/specialoffer/pup/isuzutrustedcare",
+          "/specialoffer/pup/spark-4x4-financial",
+          "/specialoffer/pup/x-series-financial-2doors"
+        ],
+        "tests/fixtures/oem-artifacts/isuzu_tis_page.html": [
+          "/specialoffer",
+          "/specialoffer/ppv",
+          "/specialoffer/ppv/mu-x-financial",
+          "/specialoffer/ppv/mu-x-financial-normalmodel",
+          "/specialoffer/ppv/mu-x-isuzutrustedcare",
+          "/specialoffer/pup",
+          "/specialoffer/pup/cab-4-financial",
+          "/specialoffer/pup/hilander-2-doors-financial",
+          "/specialoffer/pup/isuzutrustedcare",
+          "/specialoffer/pup/spark-4x4-financial",
+          "/specialoffer/pup/x-series-financial-2doors"
+        ],
+        "tests/fixtures/oem-artifacts/jaguar_home_page.html": [
+          "/about-jaguar-special-vehicle-operations",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview"
+        ],
+        "tests/fixtures/oem-artifacts/jaguar_press_news.html": [
+          "/about-jaguar-special-vehicle-operations",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview"
+        ],
+        "tests/fixtures/oem-artifacts/jaguar_range_page.html": [
+          "/about-jaguar-special-vehicle-operations",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview"
+        ],
+        "tests/fixtures/oem-artifacts/landrover_discovery_page.html": [
+          "/fleet-business/specialist-vehicles"
+        ],
+        "tests/fixtures/oem-artifacts/landrover_home_page.html": [
+          "/fleet-business/specialist-vehicles"
+        ],
+        "tests/fixtures/oem-artifacts/landrover_press_articles.html": [
+          "/fleet-business/specialist-vehicles"
+        ],
+        "tests/fixtures/oem-artifacts/landrover_range_rover_page.html": [
+          "/fleet-business/specialist-vehicles"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html": [
+          "/_next/static/chunks/pages/cars/%5Bslug%5D/spec-21232b9731bd7d75.js",
+          "/th/cars/mazda-cx30-essential/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_car_mazda-cx5.html": [
+          "/_next/static/chunks/pages/cars/%5Bslug%5D/spec-21232b9731bd7d75.js",
+          "/th/cars/mazda-cx5/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_car_mazda2-essential.html": [
+          "/_next/static/chunks/pages/cars/%5Bslug%5D/spec-21232b9731bd7d75.js",
+          "/th/cars/mazda2-essential/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_car_mazda3-sedan.html": [
+          "/_next/static/chunks/pages/cars/%5Bslug%5D/spec-21232b9731bd7d75.js",
+          "/th/cars/mazda3-sedan/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_car_new-mazda-bt50.html": [
+          "/th/cars/new-mazda-bt50/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html": [
+          "/cars/mazda-cx30-essential/spec",
+          "/en/cars/mazda-cx30-essential/spec",
+          "/th/cars/mazda-cx30-essential/spec#"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx5.html": [
+          "/cars/mazda-cx5/spec",
+          "/en/cars/mazda-cx5/spec",
+          "/th/cars/mazda-cx5/spec#"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_spec_mazda2-essential.html": [
+          "/cars/mazda2-essential/spec",
+          "/en/cars/mazda2-essential/spec",
+          "/th/cars/mazda2-essential/spec#"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_spec_mazda3-sedan.html": [
+          "/cars/mazda3-sedan/spec",
+          "/en/cars/mazda3-sedan/spec",
+          "/th/cars/mazda3-sedan/spec#"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_spec_new-mazda-bt50.html": [
+          "/cars/new-mazda-bt50/spec",
+          "/en/cars/new-mazda-bt50/spec",
+          "/th/cars/new-mazda-bt50/spec#"
+        ],
+        "tests/fixtures/oem-artifacts/mini_home_page.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/convenience-no-matter-what-you-choose.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mitsubishi_home_page.html": [
+          "/th/news-activity/news/MMTh-Kong-Thabbok-Upatham-Sustainable-Technical-Skills-Development"
+        ],
+        "tests/fixtures/oem-artifacts/mitsubishi_press_news.html": [
+          "/th/news-activity/news/MMTh-Donates-Engines-and-Powertrain-Set-to-Lopburi-Technical-College10",
+          "/th/news-activity/news/MMTh-Donates-New-4N16-Engines-Chiangrai-Industrial-Community-Education-College-Enhance-Technical-Skills-Development",
+          "/th/news-activity/news/MMTh-Invites-Customers-to-Experience-Full-Hybrid-Vehicles-All-New-Mitsubishi-XFORCE-HEV-And-HEV-PLAY-Special-Campaigns-46th-Bangkok-International-Moto-Show-2025",
+          "/th/news-activity/news/MMTh-Kong-Thabbok-Upatham-Sustainable-Technical-Skills-Development",
+          "/th/news-activity/news/MMTh-Launches-Special-Aftersales-Service-Campaign-Peak-Travel-Season",
+          "/th/news-activity/news/MMTh-Launches-Special-Campaign-Offering-30-Discount-Vehicles-Expired-Warranty",
+          "/th/news-activity/news/MMTh-Showcases-High-Tech-Vehicles-Special-Offers-BIG-MOTOR-SALE-2024",
+          "/th/news-activity/news/MMTh-Showcases-MITSUBISHI-eMOTION-Offering-Mega-Deal-Special-Campaign-at-Motor-Expo-2024",
+          "/th/news-activity/news/MMTh-XFORCE-HEV-Cutting-Edge-Models-and-Exclusive-Special-Offers-at-BIG-MOTOR-SALE-2025",
+          "/th/news-activity/news/MMTh-aftersales-service-excellence-offering-complimentary-35-point-vehicle-inspection",
+          "/th/news-activity/news/MMTh-specifications-all-new-mitsubishi-pajero-official-thai-launch-19-oct",
+          "/th/news-activity/news/mitsubishi-motors-thailand-launches-mitsubishi-pajero-sport-special-edition",
+          "/th/news-activity/news/mitsubishi-motors-thailand-unveils-mitsubishi-xpander-special-edition-making-you-the-coolest-daddy",
+          "/th/news-activity/news/unveil-spec-prices-of-athlete-and-dc-4wd-ultra"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_press_news.html": [
+          "/news/nissan-bangkok-motorshow47-core-models-and-special-deals.html",
+          "/news/nissan-invites-customers-for-one-stop-service-car-check-offering-services-and-special-promotions.html"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_macan_model_page.html": [
+          "#technical-data-95BAU1",
+          "#technical-data-95BBV1",
+          "#technical-data-95BBW1",
+          "#technical-data-XABAA1",
+          "#technical-data-XABBB1",
+          "#technical-data-XABDC1",
+          "#technical-data-XABDE1",
+          "#technical-data-XABFD1"
+        ],
+        "tests/fixtures/oem-artifacts/subaru_th_home_page.html": [
+          "/th/th/promotions/sales/217/forester-special-deals/"
+        ],
+        "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html": [
+          "/model/fronx/specification"
+        ],
+        "tests/fixtures/oem-artifacts/suzuki_jimny_equipment.html": [
+          "/model/jimny/specification"
+        ],
+        "tests/fixtures/oem-artifacts/suzuki_xl7_equipment.html": [
+          "/model/xl7/specification"
+        ]
+      },
+      "why_second": "the link targets are published by the OEM pages we already fetched, so the structure is known to exist before any request is made"
+    },
+    {
+      "tier": 3,
+      "name": "secondary media (AUTOMOTIVE_MEDIA / RESEARCH_UNVERIFIED)",
+      "action": "only where an article's own scope proves the model, and only ever as secondary corroboration — never promoted to official, never a source of official spec values",
+      "evidence": {
+        "registry_patterns": [
+          "\\d+ (?:แรงม้า|hp|PS) ... \\d+ (?:Nm|นิวตันเมตร)"
+        ],
+        "registry_source": "storage/thai-source-registry.json (headlightmag known_article_patterns)",
+        "captured_media_artifacts": [
+          "tests/fixtures/media-artifacts/9carthai_toyota_price.html",
+          "tests/fixtures/media-artifacts/9carthai_honda_price.html",
+          "tests/fixtures/media-artifacts/9carthai_mazda_price.html"
+        ]
+      },
+      "why_third": "media figures are research-unverified by construction; they may only corroborate, so they cannot lead spec coverage"
+    }
+  ],
+  "guardrails": [
+    "no mass harvesting: one source per cycle, adapter only for real parseable structure",
+    "every spec row needs same-record model binding, a resolvable locator and a mutation test",
+    "placeholder-looking values are counted and reported, never promoted",
+    "spec expansion never blocks Phase 1 coverage work"
+  ],
+  "route_safety": {
+    "rule": "a tier-2 target whose host is registry-blocked or a wrong target is planning-only until that brand's next_retry_at; this file makes no request",
+    "registry_hosts_not_reachable": {
+      "www.byd.com": {
+        "brand": "BYD",
+        "access_status": "BLOCKED_HTTP_404",
+        "next_retry_at": "2026-10-08T13:41:49.738574+00:00"
+      },
+      "www.tesla.com": {
+        "brand": "Tesla",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.ford.co.th": {
+        "brand": "Ford",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.chevrolet.co.th": {
+        "brand": "Chevrolet",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T14:16:16.748942+00:00"
+      },
+      "www.mercedes-benz.co.th": {
+        "brand": "Mercedes-Benz",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T14:16:16.748942+00:00"
+      },
+      "www.audi.co.th": {
+        "brand": "Audi",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.volvo.co.th": {
+        "brand": "Volvo",
+        "access_status": "BLOCKED_TLS",
+        "next_retry_at": "2026-10-24T13:41:49.738574+00:00"
+      },
+      "www.volvocars.com": {
+        "brand": "Volvo",
+        "access_status": "BLOCKED_TLS",
+        "next_retry_at": "2026-10-24T13:41:49.738574+00:00"
+      },
+      "www.neta.co.th": {
+        "brand": "NETA",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.avancemotors.com": {
+        "brand": "Avance",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.haval.co.th": {
+        "brand": "Haval",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.chery.co.th": {
+        "brand": "Chery",
+        "access_status": "BLOCKED_DNS",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.smart.co.th": {
+        "brand": "Smart",
+        "access_status": "DEALER_REDIRECT",
+        "next_retry_at": "2026-09-26T14:16:39.761675+00:00"
+      },
+      "www.peugeot.co.th": {
+        "brand": "Peugeot",
+        "access_status": "BLOCKED_HTTP_403",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+      },
+      "www.perodua.com.my": {
+        "brand": "Perodua",
+        "access_status": "UNKNOWN",
+        "next_retry_at": null
+      }
+    },
+    "tier2_hosts": {
+      "api.www.changan.co.th": {
+        "targets": 1,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
+      "www.changan.co.th": {
+        "targets": 2,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
+      "www.honda.co.th": {
+        "targets": 2,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
+      "www.jaguar.co.th": {
+        "targets": 10,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      }
+    },
+    "excluded_wrong_target_artifacts": {
+      "smart_home_page.html": {
+        "brand": "Smart",
+        "note": "WRONG-TARGET capture — must yield NO business rows; smart.co.th does not belong to the car brand"
+      }
+    }
+  }
+}

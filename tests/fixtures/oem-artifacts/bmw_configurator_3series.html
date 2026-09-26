@@ -1,0 +1,527 @@
+<!DOCTYPE html><html lang="en-TH" class="js-focus-visible" data-js-focus-visible="" page="configure" subtheme="ncar" style="--js-naas-header-height-offset: 0px; --js-naas-footer-height: 0px; --js-stage-height: 0px; --js-overlapping-content-height: 72px; --header-height: 76px; --js-footer-height: 439px;"><head><meta name="neo-shared-resources" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+  <meta name="description" content="Default title">
+
+  <title id="pageTitle">Configurator</title>
+
+  <!-- INTEGRATING TRON LIBRARY INTO CON -->
+      <link rel="preload" href="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/launch-5084d47f16b4.min.js" as="script"><script async="" src="https://www.bmw.com/p15r/c/Facebook.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?l=gDataLayer&amp;id=AW-11048092914"></script><script async="" src="https://www.bmw.com/p15r/c/GoogleAdvertising.min.js"></script><script async="" src="https://d.line-scdn.net/n/line_tag/public/release/v1/lt.js"></script><script async="" src="//t.contentsquare.net/uxa/027d76006ad45.js"></script><script async="" src="https://www.bmw.com/p15r/c/WebVitals.min.js"></script><script id="AdobeLaunch" async="" src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/launch-5084d47f16b4.min.js"></script><script type="module">
+        import(`https://tron.bmwgroup.com/generic-configurator/archive/v4/TRONgenericConfiguratorTracking.js`).then((tron) => {
+          const tronTracking = tron.default;
+          window.TRONgenericConfiguratorTracking = new tronTracking();
+        });
+      </script>
+
+
+  <script>
+    if (window.navigator && navigator.serviceWorker) {
+      navigator.serviceWorker.getRegistrations()
+        .then(function (registrations) {
+          for (let registration of registrations) {
+            registration.unregister();
+          }
+        });
+    }
+  </script>
+
+  <!-- See https://goo.gl/qRE0vM -->
+  <meta name="theme-color" content="#3f51b5">
+
+  <!-- No bots allowed in the configurator -->
+  <meta name="robots" content="noindex,nofollow">
+
+  <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Default title">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Default title">
+
+  <meta name="msapplication-TileColor" content="#3f51b5">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Start of the head-fragment to be included in other pages, e.g. via ESI -->
+  <meta name="con-meta" content="head-snippet-start">
+
+  <!-- EU AI Act Art. 50 — BMW default baseline transparency marking (CompositeSyntheticDigitalSource) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "digitalSourceType": "https://schema.org/CompositeSyntheticDigitalSource"
+  }
+  </script>
+
+  <script>
+    /**
+     * Create a tag in the dom via document.write - this guarantees correct order of execution for script tags.
+     * @param {string} tagName - The name of the tag to be created.
+     * @param {object} attributes - Key value pairs of html attributes to be set.
+     */
+    function loadTag(tagName, attributes) {
+      let tag = `<${tagName}`;
+      Object.keys(attributes).forEach(value => {
+        if (value === 'disabled' && (!attributes[value] || attributes[value] === 'false')) {
+          return;
+        }
+        tag += ` ${value}="${attributes[value]}" `;
+      });
+      tag += `></${tagName}>`;
+      document.write(tag);
+    }
+
+    /**
+     * Extracts a base path of a url path before the last occurrence of a locale pattern de_DE.
+     * @param urlString - Current url.
+     * @returns {string} - Extracted base path.
+     * @fixme: use endpoint instead of the pattern. You can do an exact string search here no need for a regex.
+     */
+    function extractConBasePath(urlString) {
+      const endpoint = '/en_TH';
+      const path = new URL(urlString).pathname;
+      return path.indexOf(endpoint) === -1 ? '' : path.split(endpoint)[0];
+    }
+
+    const basePath = extractConBasePath(window.location);
+    const base = document.createElement("base");
+    // this is required for the correct functionality of the router path
+    base.href = `${basePath}/`;
+    document.head.appendChild(base);
+
+    window.__conGlobal = {
+      basePath,
+    };
+  </script><base href="/">
+
+  <script>
+    loadTag('link', { rel: 'icon', href: `${window.__conGlobal.basePath}/assets/bmw/images/favicon.ico` });
+  </script><link rel="icon" href="/assets/bmw/images/favicon.ico">
+  <!-- See https://goo.gl/OOhYW5 -->
+  <script>
+    loadTag('link', { rel: 'manifest', crossorigin: 'use-credentials', href: `${window.__conGlobal.basePath}/en_TH/manifest.json` });
+  </script><link rel="manifest" crossorigin="use-credentials" href="/en_TH/manifest.json">
+
+  <!-- Homescreen icons -->
+  <script>
+    loadTag('link', {
+      rel: 'apple-touch-icon',
+      sizes: '48x48',
+      href: `${window.__conGlobal.basePath}/assets/bmw/images/manifest/icon-48x48.png`,
+    });
+  </script><link rel="apple-touch-icon" sizes="48x48" href="/assets/bmw/images/manifest/icon-48x48.png">
+  <script>
+    loadTag('link', {
+      rel: 'apple-touch-icon',
+      sizes: '72x72',
+      href: `${window.__conGlobal.basePath}/assets/bmw/images/manifest/icon-72x72.png`,
+    });
+  </script><link rel="apple-touch-icon" sizes="72x72" href="/assets/bmw/images/manifest/icon-72x72.png">
+  <script>
+    loadTag('link', {
+      rel: 'apple-touch-icon',
+      sizes: '96x96',
+      href: `${window.__conGlobal.basePath}/assets/bmw/images/manifest/icon-96x96.png`,
+    });
+  </script><link rel="apple-touch-icon" sizes="96x96" href="/assets/bmw/images/manifest/icon-96x96.png">
+  <script>
+    loadTag('link', {
+      rel: 'apple-touch-icon',
+      sizes: '144x144',
+      href: `${window.__conGlobal.basePath}/assets/bmw/images/manifest/icon-144x144.png`,
+    });
+  </script><link rel="apple-touch-icon" sizes="144x144" href="/assets/bmw/images/manifest/icon-144x144.png">
+  <script>
+    loadTag('link', {
+      rel: 'apple-touch-icon',
+      sizes: '192x192',
+      href: `${window.__conGlobal.basePath}/assets/bmw/images/manifest/icon-192x192.png`,
+    });
+  </script><link rel="apple-touch-icon" sizes="192x192" href="/assets/bmw/images/manifest/icon-192x192.png">
+  <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+  <script>
+    loadTag('link', {
+      name: 'msapplication-TileImage',
+      href: `${window.__conGlobal.basePath}/assets/bmw/images/manifest/icon-144x144.png`,
+    });
+  </script><link name="msapplication-TileImage" href="/assets/bmw/images/manifest/icon-144x144.png">
+
+  <!-- Theme overrides -->
+  <script>
+    loadTag('link', {
+      rel: 'stylesheet',
+      href: `${window.__conGlobal.basePath}/assets/bmw/styles/theme.css`,
+    });
+  </script><link rel="stylesheet" href="/assets/bmw/styles/theme.css">
+
+  <!-- Print variants -->
+  <script>
+    loadTag('link', {
+      rel: 'stylesheet',
+      media: 'print',
+      href: `${window.__conGlobal.basePath}/assets/bmw/styles/print.css`,
+    });
+  </script><link rel="stylesheet" media="print" href="/assets/bmw/styles/print.css">
+
+  <!-- Zoom overrides -->
+
+  <!-- End of the head-fragment to be included in other pages, e.g. via ESI -->
+  <meta name="con-meta" content="head-snippet-end">
+
+  <!-- Preloading scripts -->
+  <script>
+    loadTag('link', {
+      rel: 'preload',
+      href: `${window.__conGlobal.basePath}/en_TH/settings.53a0c009.json`,
+      as: 'fetch',
+      crossorigin: 'anonymous'
+    });
+    loadTag('link', {
+      rel: 'preload',
+      href: `${window.__conGlobal.basePath}/en_TH/locale.4b70a4d7.json`,
+      as: 'fetch',
+      crossorigin: 'anonymous'
+    });
+  </script><link rel="preload" href="/en_TH/settings.53a0c009.json" as="fetch" crossorigin="anonymous"><link rel="preload" href="/en_TH/locale.4b70a4d7.json" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="https://www.bmw.co.th/de/shop/ls/wishlist/assets/proxy_api/v1/main.js" as="script">
+
+  <!-- FaaS - Forms as a Service -->
+
+  <!-- Preload & set up font families -->
+  <script>
+    document.write(`
+      <link rel="preload" href="${window.__conGlobal.basePath}/assets/bmw/fonts/FontDefinitionSansSerifLight.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="${window.__conGlobal.basePath}/assets/bmw/fonts/FontDefinitionSansSerifBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    `);
+  </script>
+      <link rel="preload" href="/assets/bmw/fonts/FontDefinitionSansSerifLight.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/assets/bmw/fonts/FontDefinitionSansSerifBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+
+  <script>
+    document.write(`
+      <style>
+        :root {
+      --font-family-icons: FontDefinitionIcons;
+      --font-family-sans-serif-regular: FontDefinitionSansSerifRegular, -apple-system, sans-serif;
+      --font-family-sans-serif-bold: FontDefinitionSansSerifBold, -apple-system, sans-serif;
+      --font-family-sans-serif-light: FontDefinitionSansSerifLight, -apple-system, sans-serif;
+      --font-family-sans-serif-thin: FontDefinitionSansSerifThin, -apple-system, sans-serif;
+      --font-family-normal: Arial, Verdana, Tahoma, 'Trebuchet MS', Roboto, Noto, -apple-system, sans-serif;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionIcons';
+      src: url('${window.__conGlobal.basePath}/assets/bmw/fonts/FontDefinitionIcons.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifLight';
+      src: url('${window.__conGlobal.basePath}/assets/bmw/fonts/FontDefinitionSansSerifLight.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifBold';
+      src: url('${window.__conGlobal.basePath}/assets/bmw/fonts/FontDefinitionSansSerifBold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifRegular';
+      src: url('${window.__conGlobal.basePath}/assets/bmw/fonts/FontDefinitionSansSerifRegular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifThin';
+      src: url('${window.__conGlobal.basePath}/assets/bmw/fonts/FontDefinitionSansSerifThin.woff2') format('woff2');
+      font-weight: 100;
+      font-style: normal;
+      font-display: swap;
+    }
+      </style>
+    `);
+  </script>
+      <style>
+        :root {
+      --font-family-icons: FontDefinitionIcons;
+      --font-family-sans-serif-regular: FontDefinitionSansSerifRegular, -apple-system, sans-serif;
+      --font-family-sans-serif-bold: FontDefinitionSansSerifBold, -apple-system, sans-serif;
+      --font-family-sans-serif-light: FontDefinitionSansSerifLight, -apple-system, sans-serif;
+      --font-family-sans-serif-thin: FontDefinitionSansSerifThin, -apple-system, sans-serif;
+      --font-family-normal: Arial, Verdana, Tahoma, 'Trebuchet MS', Roboto, Noto, -apple-system, sans-serif;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionIcons';
+      src: url('/assets/bmw/fonts/FontDefinitionIcons.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifLight';
+      src: url('/assets/bmw/fonts/FontDefinitionSansSerifLight.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifBold';
+      src: url('/assets/bmw/fonts/FontDefinitionSansSerifBold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifRegular';
+      src: url('/assets/bmw/fonts/FontDefinitionSansSerifRegular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifThin';
+      src: url('/assets/bmw/fonts/FontDefinitionSansSerifThin.woff2') format('woff2');
+      font-weight: 100;
+      font-style: normal;
+      font-display: swap;
+    }
+      </style>
+    
+
+  <!-- Consent controller API - no dynamic base path needed consent url always absolute -->
+  <script src="https://www.bmw.com/etc/clientlibs/wcmp/consentcontroller.fallback/epaas.js" onload="consentcontroller.api.initialize({'tenant':'configurator_bmw_co_th','locale':'en_TH','async':false,'devmode':false})"></script><script src="https://www.bmw.com/p15r.js?tenant=configurator_bmw_co_th" async=""></script>
+
+  <!-- Activate preloading scripts -->
+  <script src="https://www.bmw.co.th/de/shop/ls/wishlist/assets/proxy_api/v1/main.js" type="text/javascript"></script><script src="https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement.min.js" async=""></script><script src="https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement_Module_ActivityMap.min.js" async=""></script>
+
+
+
+  <!-- DNS-Prefetching is used to resolve the IP adresses of backends prior to their first -->
+  <!-- use. This allows for faster requests to those backends later, as the resolution of -->
+  <!-- the IP address already took place. Preconnect is used to perform the initial -->
+  <!-- SSL-negotiation with a backend prior to the first request to the backend. -->
+  <!-- https://www.w3.org/TR/resource-hints/ -->
+  <link rel="preconnect" href="" crossorigin="">
+  <link rel="preconnect" href="" crossorigin="">
+  <link rel="preconnect" href="" crossorigin="">
+
+  <!-- CSS global overwrites + spinner styling -->
+  <script>
+    loadTag('link', {
+      rel: 'stylesheet',
+      href: `${window.__conGlobal.basePath}/styles/global.css`,
+    });
+  </script><link rel="stylesheet" href="/styles/global.css">
+
+  <!-- ES6 support check -->
+  <script>
+    /**
+     * Checks if ES6 is supported.
+     * @return {boolean} Returns true if ES6 is supported.
+     */
+    function checkES6() {
+      if (typeof Symbol === 'undefined' || typeof fetch === 'undefined') {
+        return false;
+      }
+      try {
+        eval('class Foo{}');
+        eval('var bar = (x) => x+1');
+      } catch (e) {
+        return false;
+      }
+      return true;
+    }
+
+    function isBrowserUpdateRequired() {
+      const minBrowserVersionSetting = { Safari: 11, Edge: 81 };
+
+      const { userAgent } = navigator;
+      let browserName;
+      let fullVersion;
+      let verOffset;
+      if ((verOffset = userAgent.indexOf('Edge')) != -1) {
+        // Edge: the version is after "Edge"
+        browserName = 'Edge';
+        fullVersion = userAgent.substring(verOffset + 5);
+      } else if ((verOffset = userAgent.indexOf('Chrome')) != -1) {
+        // Chrome: the version is after "Chrome"
+        browserName = 'Chrome';
+        fullVersion = userAgent.substring(verOffset + 7);
+      } else if ((verOffset = userAgent.indexOf('Safari')) != -1) {
+        // Safari: the version is after "Safari" or after "Version"
+        browserName = 'Safari';
+        fullVersion = userAgent.substring(verOffset + 7);
+        if ((verOffset = userAgent.indexOf('Version')) != -1) fullVersion = userAgent.substring(verOffset + 8);
+      } else if ((verOffset = userAgent.indexOf('Firefox')) != -1) {
+        // Firefox: the version is after "Firefox"
+        browserName = 'Firefox';
+        fullVersion = userAgent.substring(verOffset + 8);
+      }
+
+      // For all other browsers only with checkES6 to check the compatibility
+
+      if (browserName && fullVersion && minBrowserVersionSetting[browserName] &&
+        fullVersion < (`${minBrowserVersionSetting[browserName]}`)) {
+        return true;
+      }
+      return false;
+    }
+
+    if (!checkES6() || isBrowserUpdateRequired()) {
+      window.location.href = 'error.html';
+    }
+  </script>
+
+  <base href="/">
+<script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RCff359e2a210e4a5a8e740f7ee964a576-source.min.js" async=""></script><script src="https://www.bmw.com/epaas/onlineaudit-1.0.0.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RC348134730e854c7db2a84dd4c9204aff-source.min.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RC5c052b9cc0dc4016ab71b041e76e74d8-source.min.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RC0c22cc7dc30c4b36be3a73bb7de72216-source.min.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RCa8c1a43ca656440a99f3573f4e9b5d69-source.min.js" async=""></script><script src="https://sf-mco.aws.bmw.cloud/frontend-components/general/vendor_neo.8595331b.js"></script><script src="https://sf-mco.aws.bmw.cloud/frontend-components/general/vendor_otel.504154df.js"></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RC16ce4bd61dc44235a0098167ae322d68-source.min.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RCbf42f24778c844339f496c059fe0984f-source.min.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RCdcc24aa33e654d8ea0284663c449149c-source.min.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RC903c738c940644d78223049355ab87dd-source.min.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RC1ab75f96cef340a3bf38b42dd5884e82-source.min.js" async=""></script><cs-native-frame-holder hidden=""></cs-native-frame-holder><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RC0ce190fe397b47bb87c26fc8f995d8ef-source.min.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RCa1b1a4e19efa49e0a6ad5d1ef140dc8b-source.min.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RCf352b72b8f604a728e8b24691a0ff739-source.min.js" async=""></script><script src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/bfdbc3740a3f/RCd3e97c49206e4b9a8478f49340ee1f0e-source.min.js" async=""></script></head>
+
+<body style="margin-bottom: 295px;">
+  
+
+
+
+  <con-app endpoint="en_TH" theme="bmw" timestamp="1789569499784" release="release_4.14.2_0" disable-focus="" class="" style="--header-height: 76px;"></con-app>
+
+
+  <!-- Load settings and locale from separate cacheable JSON files -->
+  <script>
+    window.__conDataReady = Promise.all([
+      fetch(`${window.__conGlobal.basePath}/en_TH/settings.53a0c009.json`, { credentials: 'same-origin' }).then(r => r.json()),
+      fetch(`${window.__conGlobal.basePath}/en_TH/locale.4b70a4d7.json`, { credentials: 'same-origin' }).then(r => r.json())
+    ]);
+  </script>
+
+  <!-- Suppress error caused by defining a custom element multiple times, to a mere warning -->
+  <script>
+    const _customElementsDefine = window.customElements.define;
+    window.customElements.define = (name, cl, conf) => {
+      if (!customElements.get(name)) {
+        _customElementsDefine.call(window.customElements, name, cl, conf);
+      }
+      else {
+        console.warn(`${name} has been defined twice`);
+      }
+    };
+  </script>
+
+  <!-- Register service worker -->
+  <!-- TODO get service worker working - will be done with separate US: check CONX-42719 -->
+  <!--<script>-->
+  <!--  if ('serviceWorker' in navigator) {-->
+  <!--    window.addEventListener('load', function() {-->
+  <!--      'use strict';-->
+  <!--      const originalLocation = window.location.href;-->
+  <!--      const startTime = new Date();-->
+  <!--      navigator.serviceWorker.register(window.__conGlobal.basePath + '/service-worker.js')-->
+  <!--      .then(function (registration) {-->
+  <!--        // Track updates to the Service Worker.-->
+  <!--        if (!navigator.serviceWorker.controller) {-->
+  <!--          // The window client isn't currently controlled so it's a new service-->
+  <!--          // worker that will activate immediately-->
+  <!--          return;-->
+  <!--        }-->
+
+  <!--        /*-->
+  <!--         * When the new version of the service worker skips waiting to take control, the page is refreshed so that the entire page is updated-->
+  <!--         * to the latest version (code inconsistencies due to mixed versions are fixed).-->
+  <!--         */-->
+  <!--        let preventDevToolsReloadLoop;-->
+  <!--        navigator.serviceWorker.addEventListener('controllerchange', function(event) {-->
+  <!--          // Ensure refresh is only called once.-->
+  <!--          // This works around a bug in "force update on reload".-->
+  <!--          const currentTime = new Date();-->
+  <!--          if (preventDevToolsReloadLoop) return;-->
+  <!--          preventDevToolsReloadLoop = true;-->
+  <!--          deleteObsoleteCache();-->
+  <!--          // redirect to original url if service worker update is within 5000ms-->
+  <!--          if(startTime/1000 + 5000 > currentTime/1000) {-->
+  <!--            window.location.replace(originalLocation);-->
+  <!--          } else {-->
+  <!--            window.location.reload();-->
+  <!--          }-->
+  <!--        });-->
+  <!--      });-->
+  <!--    });-->
+
+  <!--    function deleteObsoleteCache() {-->
+  <!--      try {-->
+  <!--        let precacheName = `sw-precache-v3&#45;&#45;${document.location.origin}/`;-->
+  <!--        caches.delete(precacheName);-->
+  <!--      } catch(err) {}-->
+  <!--      try {-->
+  <!--        let precacheName = `$$$toolbox-cache$$$${document.location.origin}/$$$`;-->
+  <!--        caches.delete(precacheName);-->
+  <!--      } catch(err) {}-->
+  <!--      try {-->
+  <!--        let precacheName = `workbox-precache-v2-${document.location.origin}/`;-->
+  <!--        caches.delete(precacheName);-->
+  <!--      } catch(err) {}-->
+  <!--    }-->
+  <!--  }-->
+  <!--</script>-->
+
+  <!-- Tracking related TODO: SEE if it is still required -->
+  <script>
+    if (window._satellite && typeof _satellite.pageBottom === 'function') {
+      _satellite.pageBottom();
+    }
+  </script>
+
+  <script type="module" crossorigin="use-credentials">
+    const [settings, locale] = await window.__conDataReady;
+    const conApp = document.getElementsByTagName('con-app')[0];
+    conApp.inputSettings = settings;
+    conApp.inputLocalization = locale;
+    import(`${/* @vite-ignore */window.__conGlobal.basePath}/js/index.1789569420.js`)
+      .catch(function () {
+        // Workaround for iOS
+        import(/* @vite-ignore */window.__conGlobal.basePath + '/' + '/js/index.1789569420.js');
+      });
+  </script>
+
+
+
+
+<epaas-consent-drawer-shell data-js-focus-visible="" class="focus-visible" data-focus-visible-added="" style="display: block; position: fixed; z-index: 2147483647;"></epaas-consent-drawer-shell><script>_satellite["_runScript1"](function(event, target, Promise) {
+try{function TikTokPagePixel(){processingWrapper.register("TikTokPixel",(function(e,t){processingWrapper.getConfig(e,t);!function(e,t,o){e.TiktokAnalyticsObject=o;var n=e[o]=e[o]||[];n.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],n.setAndDefer=function(e,t){e[t]=function(){e.push([t].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<n.methods.length;i++)n.setAndDefer(n,n.methods[i]);n.instance=function(e){for(var t=n._i[e]||[],o=0;o<n.methods.length;o++)n.setAndDefer(t,n.methods[o]);return t},n.load=function(e,t){var i="https://analytics.tiktok.com/i18n/pixel/events.js";n._i=n._i||{},n._i[e]=[],n._i[e]._u=i,n._t=n._t||{},n._t[e]=+new Date,n._o=n._o||{},n._o[e]=t||{},(t=document.createElement("script")).type="text/javascript",t.async=!0,t.src=i+"?sdkid="+e+"&lib="+o,(e=document.getElementsByTagName("script")[0]).parentNode.insertBefore(t,e)},n.load("CG04KEJC77U16GMR7G20"),n.page(),n.instance("CG04KEJC77U16GMR7G20"),n.track("clickbutton",{content_ids:"testdrivebutton"})}(window,document,"ttq")})),processingWrapper.execute("TikTokPixel")}document.querySelector("body > con-app").shadowRoot.querySelector("#conConfigurePageWrapper > con-configure").shadowRoot.querySelector("con-sales-footer").shadowRoot.querySelector("#salesFooterWrapper > div > div.sales-footer-sections > div.sales-footer-sections-top > div.sales-footer-actions-section > div.sales-footer-buttons > con-rfx-layout-buttons").shadowRoot.querySelector("div > div > div > button").addEventListener("click",TikTokPagePixel,!1)}catch(e){_satellite.logger.error(event.$rule.name,e)}
+});</script><script>_satellite["_runScript2"](function(event, target, Promise) {
+try{function fbPagePixel(){(window.p15r=window.p15r||[]).push({action:"execute",processingId:"GoogleAdvertising",params:{accountId:"AW-11048092914",args:["event","conversion",{send_to:"AW-11048092914/fmYfCP7rtI4YEPKJkpQp"}]}})}document.querySelector("body > con-app").shadowRoot.querySelector("#conConfigurePageWrapper > con-configure").shadowRoot.querySelector("con-sales-footer").shadowRoot.querySelector("#salesFooterWrapper > div > div.sales-footer-sections > div.sales-footer-sections-top > div.sales-footer-actions-section > div.sales-footer-buttons > con-rfx-layout-buttons").shadowRoot.querySelector("div > div > div > button").addEventListener("click",fbPagePixel,!1)}catch(e){_satellite.logger.error(event.$rule.name,e)}
+});</script><script>_satellite["_runScript3"](function(event, target, Promise) {
+try{function fbPagePixel(){(window.p15r=window.p15r||[]).push({action:"execute",processingId:"GoogleAdvertising",params:{accountId:"DC-14076570",args:["event","conversion",{allow_custom_scripts:!0,send_to:"DC-14076570/bmw_ipg/ipg_b008+standard"}]}})}document.querySelector("body > con-app").shadowRoot.querySelector("#conConfigurePageWrapper > con-configure").shadowRoot.querySelector("con-sales-footer").shadowRoot.querySelector("#salesFooterWrapper > div > div.sales-footer-sections > div.sales-footer-sections-top > div.sales-footer-actions-section > div.sales-footer-buttons > con-rfx-layout-buttons").shadowRoot.querySelector("div > div > div > button").addEventListener("click",fbPagePixel,!1)}catch(o){_satellite.logger.error(event.$rule.name,o)}
+});</script><script>_satellite["_runScript4"](function(event, target, Promise) {
+try{function fbPagePixel(){(window.p15r=window.p15r||[]).push({action:"execute",processingId:"fbPagePixel",params:{accountId:"218896400526008",args:["trackSingleCustom","218896400526008","Contact",{content_name:"TestdriveClick"}]}})}document.querySelector("body > con-app").shadowRoot.querySelector("#conConfigurePageWrapper > con-configure").shadowRoot.querySelector("con-sales-footer").shadowRoot.querySelector("#salesFooterWrapper > div > div.sales-footer-sections > div.sales-footer-sections-top > div.sales-footer-actions-section > div.sales-footer-buttons > con-rfx-layout-buttons").shadowRoot.querySelector("div > div > div > button").addEventListener("click",fbPagePixel,!1)}catch(e){_satellite.logger.error(event.$rule.name,e)}
+});</script><script>_satellite["_runScript5"](function(event, target, Promise) {
+try{function linePagePixel(){processingWrapper.register("Line",(function(e,t){processingWrapper.getConfig(e,t);!function(e,t,o){e._ltq=e._ltq||[],e._lt=e._lt||function(){e._ltq.push(arguments)};var r="https:"===location.protocol?"https://d.line-scdn.net":"http://d.line-cdn.net",n=t.createElement("script");n.async=1,n.src=o||r+"/n/line_tag/public/release/v1/lt.js";var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(n,c)}(window,document),_lt("init",{customerType:"lap",tagId:"a4c0e5fc-a69e-47fc-88bc-7a1e8f8398d5"}),_lt("send","cv",{type:"TestdriveClick"},["a4c0e5fc-a69e-47fc-88bc-7a1e8f8398d5"])})),processingWrapper.execute("Line")}document.querySelector("body > con-app").shadowRoot.querySelector("#conConfigurePageWrapper > con-configure").shadowRoot.querySelector("con-sales-footer").shadowRoot.querySelector("#salesFooterWrapper > div > div.sales-footer-sections > div.sales-footer-sections-top > div.sales-footer-actions-section > div.sales-footer-buttons > con-rfx-layout-buttons").shadowRoot.querySelector("div > div > div > button").addEventListener("click",linePagePixel,!1)}catch(e){_satellite.logger.error(event.$rule.name,e)}
+});</script><script>_satellite["_runScript6"](function(event, target, Promise) {
+try{window.performance&&window.performance.mark("ACDL:TRON page view connector called");let e=adobeDataLayer.extEvntData.new([event.fullState,{eventInfo:event.message.eventInfo}]);const n=e.DL;n.assign("eventInfo.eventTrigger","pageview"),n.assign("eventInfo.extEvntID",e.ID),n.assign("eventInfo.origin.isFromTron",!0),n.assign("page.origin.isFromTron",!0),adobeDataLayer.extEvntData.cache.assign("page.extra.origin.isFromTron",!0);n.get("eventInfo.reference.linkedComponent");let a=!0;n.assign("page.origin.isFromTron",a),_satellite.track("DLP",n)}catch(e){console.error("ACDL error : ",e,event.$rule.name)}
+});</script><script>_satellite["_runScript7"](function(event, target, Promise) {
+const dl=event.detail,fixes={"page.pageInfo.pageID":({rawAEMdatalayer:e})=>e.pages[0].pageInstanceId},contextData={rawAEMdatalayer:window.dataLayer,som:dl};event.$rule.appliedFixes=adobeDataLayer.extEvntData.doFixes(fixes,contextData),dl.push("eventInfo.state",event.$rule);
+});</script><script>_satellite["_runScript8"](function(event, target, Promise) {
+try{const t=event.detail;let n=s.marketingCloudVisitorID;const e="erpAVj*ED9aTVMs%";var CryptoJS=CryptoJS||function(t,n){var e={},i=e.lib={},r=function(){},s=i.Base={extend:function(t){r.prototype=this;var n=new r;return t&&n.mixIn(t),n.hasOwnProperty("init")||(n.init=function(){n.$super.init.apply(this,arguments)}),n.init.prototype=n,n.$super=this,n},create:function(){var t=this.extend();return t.init.apply(t,arguments),t},init:function(){},mixIn:function(t){for(var n in t)t.hasOwnProperty(n)&&(this[n]=t[n]);t.hasOwnProperty("toString")&&(this.toString=t.toString)},clone:function(){return this.init.prototype.extend(this)}},o=i.WordArray=s.extend({init:function(t,e){t=this.words=t||[],this.sigBytes=e!=n?e:4*t.length},toString:function(t){return(t||c).stringify(this)},concat:function(t){var n=this.words,e=t.words,i=this.sigBytes;if(t=t.sigBytes,this.clamp(),i%4)for(var r=0;r<t;r++)n[i+r>>>2]|=(e[r>>>2]>>>24-r%4*8&255)<<24-(i+r)%4*8;else if(65535<e.length)for(r=0;r<t;r+=4)n[i+r>>>2]=e[r>>>2];else n.push.apply(n,e);return this.sigBytes+=t,this},clamp:function(){var n=this.words,e=this.sigBytes;n[e>>>2]&=4294967295<<32-e%4*8,n.length=t.ceil(e/4)},clone:function(){var t=s.clone.call(this);return t.words=this.words.slice(0),t},random:function(n){for(var e=[],i=0;i<n;i+=4)e.push(4294967296*t.random()|0);return new o.init(e,n)}}),a=e.enc={},c=a.Hex={stringify:function(t){var n=t.words;t=t.sigBytes;for(var e=[],i=0;i<t;i++){var r=n[i>>>2]>>>24-i%4*8&255;e.push((r>>>4).toString(16)),e.push((15&r).toString(16))}return e.join("")},parse:function(t){for(var n=t.length,e=[],i=0;i<n;i+=2)e[i>>>3]|=parseInt(t.substr(i,2),16)<<24-i%8*4;return new o.init(e,n/2)}},h=a.Latin1={stringify:function(t){var n=t.words;t=t.sigBytes;for(var e=[],i=0;i<t;i++)e.push(String.fromCharCode(n[i>>>2]>>>24-i%4*8&255));return e.join("")},parse:function(t){for(var n=t.length,e=[],i=0;i<n;i++)e[i>>>2]|=(255&t.charCodeAt(i))<<24-i%4*8;return new o.init(e,n)}},f=a.Utf8={stringify:function(t){try{return decodeURIComponent(escape(h.stringify(t)))}catch(t){throw Error("Malformed UTF-8 data")}},parse:function(t){return h.parse(unescape(encodeURIComponent(t)))}},u=i.BufferedBlockAlgorithm=s.extend({reset:function(){this._data=new o.init,this._nDataBytes=0},_append:function(t){"string"==typeof t&&(t=f.parse(t)),this._data.concat(t),this._nDataBytes+=t.sigBytes},_process:function(n){var e=this._data,i=e.words,r=e.sigBytes,s=this.blockSize,a=r/(4*s);if(n=(a=n?t.ceil(a):t.max((0|a)-this._minBufferSize,0))*s,r=t.min(4*n,r),n){for(var c=0;c<n;c+=s)this._doProcessBlock(i,c);c=i.splice(0,n),e.sigBytes-=r}return new o.init(c,r)},clone:function(){var t=s.clone.call(this);return t._data=this._data.clone(),t},_minBufferSize:0});i.Hasher=u.extend({cfg:s.extend(),init:function(t){this.cfg=this.cfg.extend(t),this.reset()},reset:function(){u.reset.call(this),this._doReset()},update:function(t){return this._append(t),this._process(),this},finalize:function(t){return t&&this._append(t),this._doFinalize()},blockSize:16,_createHelper:function(t){return function(n,e){return new t.init(e).finalize(n)}},_createHmacHelper:function(t){return function(n,e){return new l.HMAC.init(t,e).finalize(n)}}});var l=e.algo={};return e}(Math);!function(t){for(var n=CryptoJS,e=(r=n.lib).WordArray,i=r.Hasher,r=n.algo,s=[],o=[],a=function(t){return 4294967296*(t-(0|t))|0},c=2,h=0;64>h;){var f;t:{f=c;for(var u=t.sqrt(f),l=2;l<=u;l++)if(!(f%l)){f=!1;break t}f=!0}f&&(8>h&&(s[h]=a(t.pow(c,.5))),o[h]=a(t.pow(c,1/3)),h++),c++}var p=[];r=r.SHA256=i.extend({_doReset:function(){this._hash=new e.init(s.slice(0))},_doProcessBlock:function(t,n){for(var e=this._hash.words,i=e[0],r=e[1],s=e[2],a=e[3],c=e[4],h=e[5],f=e[6],u=e[7],l=0;64>l;l++){if(16>l)p[l]=0|t[n+l];else{var d=p[l-15],g=p[l-2];p[l]=((d<<25|d>>>7)^(d<<14|d>>>18)^d>>>3)+p[l-7]+((g<<15|g>>>17)^(g<<13|g>>>19)^g>>>10)+p[l-16]}d=u+((c<<26|c>>>6)^(c<<21|c>>>11)^(c<<7|c>>>25))+(c&h^~c&f)+o[l]+p[l],g=((i<<30|i>>>2)^(i<<19|i>>>13)^(i<<10|i>>>22))+(i&r^i&s^r&s),u=f,f=h,h=c,c=a+d|0,a=s,s=r,r=i,i=d+g|0}e[0]=e[0]+i|0,e[1]=e[1]+r|0,e[2]=e[2]+s|0,e[3]=e[3]+a|0,e[4]=e[4]+c|0,e[5]=e[5]+h|0,e[6]=e[6]+f|0,e[7]=e[7]+u|0},_doFinalize:function(){var n=this._data,e=n.words,i=8*this._nDataBytes,r=8*n.sigBytes;return e[r>>>5]|=128<<24-r%32,e[14+(r+64>>>9<<4)]=t.floor(i/4294967296),e[15+(r+64>>>9<<4)]=i,n.sigBytes=4*e.length,this._process(),this._hash},clone:function(){var t=i.clone.call(this);return t._hash=this._hash.clone(),t}});n.SHA256=i._createHelper(r),n.HmacSHA256=i._createHmacHelper(r)}(Math);var algo=e+n,hash=CryptoJS.SHA256(algo),base=btoa(hash);t.assign("page.pageInfo.visitorInfo.hashedID",base),t.push("eventInfo.state",event.$rule)}catch(t){_satellite.logger.error(event.$rule.name,t)}
+});</script><script>_satellite["_runScript9"](function(event, target, Promise) {
+try{window.performance&&window.performance.mark("ACDL:TRON connector called");try{if("w001"===event.message.eventInfo.category.subCategory1)return}catch(e){}let e=adobeDataLayer.extEvntData.new([event.fullState,{eventInfo:event.message.eventInfo}]);const n=e.DL;n.assign("eventInfo.eventTrigger",event.message.event),n.assign("eventInfo.extEvntID",e.ID),n.assign("eventInfo.origin.isFromTron",!0);let t=n.get("page.pageInfo.geoRegion");if(!t){switch(t=document.location.hostname.split(".").pop().toUpperCase(),t){case"UK":t="GB";break;case"COM":t="global"}n.assign("page.pageInfo.geoRegion",t)}_satellite.track("DLP",n)}catch(e){console.error("ACDL error : ",e,event.$rule.name)}
+});</script><script>_satellite["_runScript10"](function(event, target, Promise) {
+try{(window.p15r=window.p15r||[]).push({processingId:"Line",action:"register",callback:function(){!function(e,t,n){e._ltq=e._ltq||[],e._lt=e._lt||function(){e._ltq.push(arguments)};var c="https:"===location.protocol?"https://d.line-scdn.net":"http://d.line-cdn.net",a=t.createElement("script");a.async=1,a.src=n||c+"/n/line_tag/public/release/v1/lt.js";var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(a,i)}(window,document),_lt("init",{customerType:"lap",tagId:"a4c0e5fc-a69e-47fc-88bc-7a1e8f8398d5"}),_lt("send","pv",["a4c0e5fc-a69e-47fc-88bc-7a1e8f8398d5"])},config:{defCat:"advertising"}},{processingId:"Line",action:"execute"})}catch(e){_satellite.logger.error("event.$rule.name",e)}
+});</script><script>_satellite["_runScript11"](function(event, target, Promise) {
+try{(window.p15r=window.p15r||[]).push({action:"execute",processingId:"GoogleAdvertising",params:{accountId:"AW-11048092914",args:["event","conversion",{send_to:"AW-11048092914/sUrXCI7ttI4YEPKJkpQp"}]}})}catch(e){_satellite.logger.error(event.$rule.name,e)}
+});</script><script>_satellite["_runScript12"](function(event, target, Promise) {
+try{var url=window.location.href;(window.p15r=window.p15r||[]).push({action:"execute",processingId:"GoogleAdvertising",params:{accountId:"DC-14076570",args:["event","conversion",{allow_custom_scripts:!0,u1:url,send_to:"DC-14076570/bmw_ipg/ipg_b0+standard"}]}})}catch(e){_satellite.logger.error(event.$rule.name+e)}
+});</script><script>_satellite["_runScript13"](function(event, target, Promise) {
+(window.p15r=window.p15r||[]).push({action:"execute",processingId:"fbPagePixel",params:{accountId:"218896400526008",args:["track","PageView"]}});
+});</script></body></html>

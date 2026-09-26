@@ -1,0 +1,95 @@
+{
+  "brand": "subaru",
+  "prices": [
+    {
+      "brand": "subaru",
+      "model": "Subaru",
+      "variant": "__MODEL_RANGE__",
+      "amount": 2350000,
+      "source_url": "https://www.headlightmag.com/2026-04-20-picture-specs-all-new-subaru-crosstrek-i-s-eyesight-awd-cvt/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_official_price",
+      "content_hash": "288c9d987be77039",
+      "article_title": "ภาพคันจริง All NEW Subaru CROSSTREK 2.0 i-S EyeSight AWD CVT | 2,350,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศญี่ปุ่น - HeadLight Magazine",
+      "evidence_excerpt": " Subaru CROSSTREK 2.0 i-S EyeSight AWD CVT &nbsp; ราคาอย่างเป็นทางการ Subaru CROSSTREK 2.0 i-S EyeSight AWD CVT : 2,350,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศญี่ปุ่น มาพร้อมการรั"
+    },
+    {
+      "brand": "subaru",
+      "model": "Subaru",
+      "variant": "CVT",
+      "amount": 2350000,
+      "source_url": "https://www.headlightmag.com/2026-04-20-picture-specs-all-new-subaru-crosstrek-i-s-eyesight-awd-cvt/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_table_row",
+      "content_hash": "558647dd00ddcb10",
+      "article_title": "ภาพคันจริง All NEW Subaru CROSSTREK 2.0 i-S EyeSight AWD CVT | 2,350,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศญี่ปุ่น - HeadLight Magazine",
+      "evidence_excerpt": "ภาพคันจริง All NEW Subaru CROSSTREK 2.0 i-S EyeSight AWD CVT | 2,350,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศญี่ปุ่น - HeadLight Magazine window._wpemojiSe"
+    },
+    {
+      "brand": "subaru",
+      "model": "Subaru",
+      "variant": "__GENERIC__",
+      "amount": 2350000,
+      "source_url": "https://www.headlightmag.com/2026-04-20-picture-specs-all-new-subaru-crosstrek-i-s-eyesight-awd-cvt/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_generic_price",
+      "content_hash": "a870a20c36cdab40",
+      "article_title": "ภาพคันจริง All NEW Subaru CROSSTREK 2.0 i-S EyeSight AWD CVT | 2,350,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศญี่ปุ่น - HeadLight Magazine",
+      "evidence_excerpt": "ภาพคันจริง All NEW Subaru CROSSTREK 2.0 i-S EyeSight AWD CVT | 2,350,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศญี่ปุ่น - HeadLight "
+    }
+  ],
+  "specs": [
+    {
+      "brand": "subaru",
+      "model": "Subaru",
+      "variant": "__MODEL__",
+      "field": "power_hp",
+      "value": "156.0",
+      "unit": "hp",
+      "source_url": "https://www.headlightmag.com/2026-04-20-picture-specs-all-new-subaru-crosstrek-i-s-eyesight-awd-cvt/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "7b21d371c93b1227",
+      "article_title": "ภาพคันจริง All NEW Subaru CROSSTREK 2.0 i-S EyeSight AWD CVT | 2,350,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศญี่ปุ่น - HeadLight Magazine",
+      "evidence_excerpt": "ion พร้อมระบบแปรผันวาล์ว Dual AVCS พละกำลังสูงสุด 156 แรงม้า (PS) ที่ 6,000 รอบ/นาที แรงบิดสูงสุด 196 นิวตันเม"
+    },
+    {
+      "brand": "subaru",
+      "model": "Subaru",
+      "variant": "__MODEL__",
+      "field": "power_hp",
+      "value": "156.0",
+      "unit": "hp",
+      "source_url": "https://www.headlightmag.com/2026-04-20-picture-specs-all-new-subaru-crosstrek-i-s-eyesight-awd-cvt/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "7b21d371c93b1227",
+      "article_title": "ภาพคันจริง All NEW Subaru CROSSTREK 2.0 i-S EyeSight AWD CVT | 2,350,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศญี่ปุ่น - HeadLight Magazine",
+      "evidence_excerpt": "EW Subaru CROSSTREK : 2,350,000 บาท | เบนซิน 2.0L 156 แรงม้า AWD All NEW Subaru CROSSTREK All NEW Subaru CROSS"
+    },
+    {
+      "brand": "subaru",
+      "model": "Subaru",
+      "variant": "__MODEL__",
+      "field": "torque_nm",
+      "value": "196.0",
+      "unit": "Nm",
+      "source_url": "https://www.headlightmag.com/2026-04-20-picture-specs-all-new-subaru-crosstrek-i-s-eyesight-awd-cvt/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "headlightmag_article_spec_regex",
+      "content_hash": "30c84b8dbbbf51a6",
+      "article_title": "ภาพคันจริง All NEW Subaru CROSSTREK 2.0 i-S EyeSight AWD CVT | 2,350,000 บาท นำเข้าทั้งคัน (CBU) จากประเทศญี่ปุ่น - HeadLight Magazine",
+      "evidence_excerpt": "ด 156 แรงม้า (PS) ที่ 6,000 รอบ/นาที แรงบิดสูงสุด 196 นิวตันเมตร ที่ 4,000 รอบ/นาที จับคู่กับเกียร์อัตโนมัติ Linea"
+    }
+  ],
+  "sources": [
+    "https://www.headlightmag.com/2026-04-20-picture-specs-all-new-subaru-crosstrek-i-s-eyesight-awd-cvt/"
+  ],
+  "failures": []
+}

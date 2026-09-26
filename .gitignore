@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+__pycache__/
+*.pyc
+scripts/quarantine-v2.sql
+
+# raw acquisition artifacts: never commit directly (fixtures go through
+# tests/fixtures/oem-artifacts/ with sidecar + credential guard)
+audit/data-staging/raw-artifacts/

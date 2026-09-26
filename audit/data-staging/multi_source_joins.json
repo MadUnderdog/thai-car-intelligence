@@ -1,0 +1,1525 @@
+{
+  "generated_at": "2026-09-26T14:39:12.042492+00:00",
+  "staged_rows": 503,
+  "join_rule": "same (brand_normalized, model_normalized, price_thb) supported by >=2 DISTINCT captured artifacts, each ACQUISITION_VERIFIED; no inferred joins",
+  "source_classes_present_in_staging": [
+    "OEM_OFFICIAL"
+  ],
+  "source_class_caveat": "all staged rows are class OEM_OFFICIAL — there is currently NO second source class in staging, so >=2 independent source classes is not achievable yet; these joins are cross-ARTIFACT (independent official pages) rather than cross-class",
+  "distinct_source_urls": 44,
+  "join_count": 23,
+  "target_was": ">=10 examples only when evidence genuinely supports them",
+  "joins": [
+    {
+      "join_key": {
+        "brand": "changan",
+        "model": "nevo-q05",
+        "price_thb": 629900
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (MSRP, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "55e1f7a02ffa7f82",
+          "source_name": "Changan Thailand Official",
+          "source_url": "https://www.changan.co.th/th/nevo-q05/",
+          "artifact_path": "tests/fixtures/oem-artifacts/changan_nevo_q05_page.html",
+          "artifact_sha256": "b7cb2be2088c07caf194991b686c2ad174ab5f696741e7b096259936aabd313c",
+          "captured_at": "2026-09-24T17:47:32.887361+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "NEVO Q05",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 629900,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/changan_nevo_q05_page.html",
+            "selector": "div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(1) > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > article:nth-child(1) > div:nth-child(2)",
+            "method": "playwright_dom"
+          },
+          "evidence_excerpt": "NEVO Q05 | ราคาเริ่มต้น 629,900 THB"
+        },
+        {
+          "observation_id": "bd781559166df133",
+          "source_name": "Changan Thailand Official",
+          "source_url": "https://www.changan.co.th/th/promotion/",
+          "artifact_path": "tests/fixtures/oem-artifacts/changan_promotion_page.html",
+          "artifact_sha256": "d1f57ae37d4d1a69aabb17ea1909c35414ce52c7c8ff1aa1a8ce6d4ea037d237",
+          "captured_at": "2026-09-24T17:47:37.094363+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "NEVO Q05",
+          "variant_raw": "NEVO Q05 MAX",
+          "price_type": "MSRP",
+          "price_thb": 629900,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/changan_promotion_page.html",
+            "selector": "รุ่น NEVO Q05 MAX ราคาพิเศษ 619,900 บาท  (จากราคา 629,900 บาท)",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "รุ่น NEVO Q05 MAX ราคาพิเศษ 619,900 บาท  (จากราคา 629,900 บาท)"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "honda",
+        "model": "city",
+        "price_thb": 569000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "3b119ce20181c56f",
+          "source_name": "Honda Models Page",
+          "source_url": "https://www.honda.co.th/models",
+          "artifact_path": "tests/fixtures/oem-artifacts/honda_models_page.html",
+          "artifact_sha256": "6eb120085da19d8751db8687849019c499077170c96e9501b2dc80b3e572deef",
+          "captured_at": "2026-09-24T11:39:25.386866+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "City",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 569000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/honda_models_page.html",
+            "selector": "div # City",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "ใหม่Cityเริ่มต้น 569,000 บาทe:HEVTurbo"
+        },
+        {
+          "observation_id": "e47956095a6e9a04",
+          "source_name": "Honda Thailand Official",
+          "source_url": "https://www.honda.co.th/en/city",
+          "artifact_path": "tests/fixtures/oem-artifacts/honda_city_recapture.html",
+          "artifact_sha256": "1953984e5b3b48e0a7bfc374fd67b5bf0dd8f9ab2305fec014f2cf51a03990df",
+          "captured_at": "2026-09-25T04:07:07.005816+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "City",
+          "variant_raw": "S",
+          "price_type": "MSRP_STARTING",
+          "price_thb": 569000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/honda_city_recapture.html",
+            "selector": "[data-active='0']:nth-of-type(1)",
+            "method": "dom_card"
+          },
+          "evidence_excerpt": "S569,000 บาท"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "kia",
+        "model": "the-kia-ev5",
+        "price_thb": 1080000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "b03ff18b7d3aa89f",
+          "source_name": "Kia Thailand Campaign Pages",
+          "source_url": "https://www.kia.com/th/th/util/promotion/thekiacarnival-diesel-2026.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/kia_promo_carnival_diesel.html",
+          "artifact_sha256": "037b6a63056077c2ba58caa4bdef0fa27f81c591c36bc015078508795365ff23",
+          "captured_at": "2026-09-26T13:46:06.265703+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "The Kia EV5",
+          "variant_raw": "The Kia EV5 Air",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 1080000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/kia_promo_carnival_diesel.html",
+            "selector": "The Kia EV5 Air ราคาพิเศษ 1,080,000",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "The Kia EV5 Air ราคาพิเศษ 1,080,000"
+        },
+        {
+          "observation_id": "d5292118ff296d30",
+          "source_name": "Kia Thailand Official",
+          "source_url": "https://www.kia.com/th/th",
+          "artifact_path": "tests/fixtures/oem-artifacts/kia_cars_page.html",
+          "artifact_sha256": "d068ec29fcbefa7b3f2b571845e25f847c17e71658540c6bf772326e4d5581b0",
+          "captured_at": "2026-09-24T14:39:48.569427+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "The Kia EV5",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 1080000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/kia_cars_page.html",
+            "selector": "div:nth-child(15) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "The Kia EV5 — ราคาพิเศษเริ่มต้น 1.080 ล้านบาท*1 - 30 ก.ย. 2026"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "lexus",
+        "model": "lbx",
+        "price_thb": 2430000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "3817dc6f4f296d51",
+          "source_name": "Lexus Thailand Official",
+          "source_url": "https://www.lexus.co.th/th.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+          "artifact_sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+          "captured_at": "2026-09-24T11:08:47.206830+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "LBX",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 2430000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+            "selector": "ul.tab__item_models > li.model_sort_item:nth-of-type(1)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "LBX Subcompact Crossover  เริ่มต้น 2,430,000 บาท  รุ่นรุ่นรุ่นLBX PremiumLBX LuxuryLBX Bespoke"
+        },
+        {
+          "observation_id": "81f2e4ebb82ad76f",
+          "source_name": "Lexus Thailand Price List",
+          "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+          "artifact_sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+          "captured_at": "2026-09-26T07:44:21.388806+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "LBX",
+          "variant_raw": "LBX Luxury",
+          "price_type": "MSRP_STARTING",
+          "price_thb": 2430000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+            "selector": "\"modelname\":\"LBX Luxury\",\"gradeCode\":\"\",\"startingprice\":\"2,430,000 บาท\",\"priceSuffix\":\"\",\"price\":2430000.0",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "LBX > LBX Luxury = 2430000 THB (เริ่มต้น 2,430,000 บาท)"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "lexus",
+        "model": "lx",
+        "price_thb": 15000000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "5868fa7eeb23a269",
+          "source_name": "Lexus Thailand Official",
+          "source_url": "https://www.lexus.co.th/th.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+          "artifact_sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+          "captured_at": "2026-09-24T11:08:47.206830+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "LX",
+          "variant_raw": null,
+          "price_type": "MSRP",
+          "price_thb": 15000000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+            "selector": "ul.tab__item_models > li.model_sort_item:nth-of-type(5)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "LX Luxury SUV  ราคา 15,000,000 บาท  รุ่นรุ่นรุ่นLX 500d PremiumLX 500d F SPORT"
+        },
+        {
+          "observation_id": "fd647cd2c62ab153",
+          "source_name": "Lexus Thailand Price List",
+          "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+          "artifact_sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+          "captured_at": "2026-09-26T07:44:21.388806+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "LX",
+          "variant_raw": "LX 500d Premium",
+          "price_type": "MSRP",
+          "price_thb": 15000000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+            "selector": "\"modelname\":\"LX 500d Premium\",\"gradeCode\":\"\",\"startingprice\":\"15,000,000 บาท\",\"priceSuffix\":\"\",\"price\":1.5E7",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "LX > LX 500d Premium = 15000000 THB (ราคา 15,000,000 บาท)"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "lexus",
+        "model": "nx",
+        "price_thb": 3310000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "43d39e977a538457",
+          "source_name": "Lexus Thailand Official",
+          "source_url": "https://www.lexus.co.th/th.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+          "artifact_sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+          "captured_at": "2026-09-24T11:08:47.206830+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "NX",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 3310000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+            "selector": "ul.tab__item_models > li.model_sort_item:nth-of-type(3)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "NX Compact Luxury SUV  เริ่มต้น 3,310,000 บาท  รุ่นรุ่นรุ่นNX 350h LuxuryNX 350h Grand LuxuryNX 350h PremiumNX 450h+ Grand Luxury PlusNX 450h+ F SPORT"
+        },
+        {
+          "observation_id": "92e62a361abcd896",
+          "source_name": "Lexus Thailand Price List",
+          "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+          "artifact_sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+          "captured_at": "2026-09-26T07:44:21.388806+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "NX",
+          "variant_raw": "NX 350h Luxury",
+          "price_type": "MSRP_STARTING",
+          "price_thb": 3310000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+            "selector": "\"modelname\":\"NX 350h Luxury\",\"gradeCode\":\"\",\"startingprice\":\"3,310,000 บาท\",\"priceSuffix\":\"\",\"price\":3310000.0",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "NX > NX 350h Luxury = 3310000 THB (เริ่มต้น 3,310,000 บาท)"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "lexus",
+        "model": "rx",
+        "price_thb": 4520000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "8d8f15dcc9a84c02",
+          "source_name": "Lexus Thailand Official",
+          "source_url": "https://www.lexus.co.th/th.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+          "artifact_sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+          "captured_at": "2026-09-24T11:08:47.206830+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "RX",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 4520000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+            "selector": "ul.tab__item_models > li.model_sort_item:nth-of-type(6)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "RX Mid-size Luxury SUV  เริ่มต้น  4,520,000 บาท  รุ่นรุ่นรุ่นRX 450h+RX 350h LuxuryRX 350h PremiumRX 500h F SPORT Performance"
+        },
+        {
+          "observation_id": "efc7889ef1a5a0a7",
+          "source_name": "Lexus Thailand Price List",
+          "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+          "artifact_sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+          "captured_at": "2026-09-26T07:44:21.388806+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "RX",
+          "variant_raw": "RX 350h Luxury",
+          "price_type": "MSRP_STARTING",
+          "price_thb": 4520000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+            "selector": "\"modelname\":\"RX 350h Luxury\",\"gradeCode\":\"\",\"startingprice\":\"4,520,000 บาท\",\"priceSuffix\":\"\",\"price\":4520000.0",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "RX > RX 350h Luxury = 4520000 THB (เริ่มต้น  4,520,000 บาท)"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "lexus",
+        "model": "rz",
+        "price_thb": 2990000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "270b4a4258dcd188",
+          "source_name": "Lexus Thailand Price List",
+          "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+          "artifact_sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+          "captured_at": "2026-09-26T07:44:21.388806+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "RZ",
+          "variant_raw": "RZ 350e Grand Luxury",
+          "price_type": "MSRP",
+          "price_thb": 2990000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+            "selector": "\"modelname\":\"RZ 350e Grand Luxury\",\"gradeCode\":\"\",\"startingprice\":\"2,990,000 บาท\",\"priceSuffix\":\"\",\"price\":2990000.0",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "RZ > RZ 350e Grand Luxury = 2990000 THB (ราคา 2,990,000 บาท)"
+        },
+        {
+          "observation_id": "54e639e101e87fb0",
+          "source_name": "Lexus Thailand Official",
+          "source_url": "https://www.lexus.co.th/th.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+          "artifact_sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+          "captured_at": "2026-09-24T11:08:47.206830+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "RZ",
+          "variant_raw": null,
+          "price_type": "MSRP",
+          "price_thb": 2990000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+            "selector": "ul.tab__item_models > li.model_sort_item:nth-of-type(4)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "RZ All-electric SUV  ราคา 2,990,000 บาท  รุ่นรุ่นรุ่นRZ 350e Grand LuxuryRZ 500e Premium AWDRZ 500e Premium AWD Steer-by-wire"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "lexus",
+        "model": "ux",
+        "price_thb": 2780000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "4c5502ed5733fca0",
+          "source_name": "Lexus Thailand Price List",
+          "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+          "artifact_sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+          "captured_at": "2026-09-26T07:44:21.388806+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "UX",
+          "variant_raw": "UX 300h Grand Luxury",
+          "price_type": "MSRP_STARTING",
+          "price_thb": 2780000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_price_list.html",
+            "selector": "\"modelname\":\"UX 300h Grand Luxury\",\"gradeCode\":\"\",\"startingprice\":\"2,780,000 บาท\",\"priceSuffix\":\"\",\"price\":2780000.0",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "UX > UX 300h Grand Luxury = 2780000 THB (เริ่มต้น 2,780,000 บาท)"
+        },
+        {
+          "observation_id": "bae113e5d8ba5f53",
+          "source_name": "Lexus Thailand Official",
+          "source_url": "https://www.lexus.co.th/th.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+          "artifact_sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+          "captured_at": "2026-09-24T11:08:47.206830+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "UX",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 2780000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/lexus_models_page.html",
+            "selector": "ul.tab__item_models > li.model_sort_item:nth-of-type(2)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "UX Compact Luxury SUV  เริ่มต้น 2,780,000 บาท  รุ่นรุ่นรุ่นUX 300h Grand Luxury"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "mitsubishi",
+        "model": "ปาเจโร-สปอร์ต",
+        "price_thb": 1139000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (MSRP, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "6438286a6aa96fb3",
+          "source_name": "Mitsubishi Thailand Price Tables",
+          "source_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+          "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_all_models_price.html",
+          "artifact_sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+          "captured_at": "2026-09-26T07:44:16.432014+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "ปาเจโร สปอร์ต",
+          "variant_raw": "2.4 GT",
+          "price_type": "MSRP",
+          "price_thb": 1139000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_all_models_price.html",
+            "selector": "<tr><td width=\"471\" height=\"45\">2.4 GT</td>\n<td>1,139,000 บาท</td>\n</tr>",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "ปาเจโร สปอร์ต | 2.4 GT | 1,139,000 บาท"
+        },
+        {
+          "observation_id": "ee868a7f16a346cb",
+          "source_name": "Mitsubishi Thailand Official",
+          "source_url": "https://www.mitsubishi-motors.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_home_page.html",
+          "artifact_sha256": "eaa2b0f9e01fcbc45532782f931eeee7c00801cda5c480294c8c1a4f8ffee498",
+          "captured_at": "2026-09-24T13:48:27.092513+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "ปาเจโร สปอร์ต",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 1139000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_home_page.html",
+            "selector": null,
+            "method": "dom_card"
+          },
+          "evidence_excerpt": "ปาเจโร สปอร์ตราคาเริ่มต้น ฿1,139,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "mitsubishi",
+        "model": "มิราจ",
+        "price_thb": 509000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (MSRP, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "4f94dd3f503e32b5",
+          "source_name": "Mitsubishi Thailand Official",
+          "source_url": "https://www.mitsubishi-motors.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_home_page.html",
+          "artifact_sha256": "eaa2b0f9e01fcbc45532782f931eeee7c00801cda5c480294c8c1a4f8ffee498",
+          "captured_at": "2026-09-24T13:48:27.092513+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "มิราจ",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 509000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_home_page.html",
+            "selector": null,
+            "method": "dom_card"
+          },
+          "evidence_excerpt": "มิราจราคาเริ่มต้น ฿509,000"
+        },
+        {
+          "observation_id": "a290d74b270f71df",
+          "source_name": "Mitsubishi Thailand Price Tables",
+          "source_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+          "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_all_models_price.html",
+          "artifact_sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+          "captured_at": "2026-09-26T07:44:16.432014+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "มิราจ",
+          "variant_raw": "ACTIVE",
+          "price_type": "MSRP",
+          "price_thb": 509000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_all_models_price.html",
+            "selector": "<tr><td height=\"45\">ACTIVE</td>\n<td>509,000&nbsp;บาท</td>\n</tr>",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "มิราจ | ACTIVE | 509,000 บาท"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "mitsubishi",
+        "model": "เอ็กซ์ฟอร์ส-เอชอีวี",
+        "price_thb": 899000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (MSRP, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "190ce607bb268d52",
+          "source_name": "Mitsubishi Thailand Price Tables",
+          "source_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+          "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_all_models_price.html",
+          "artifact_sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+          "captured_at": "2026-09-26T07:44:16.432014+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "เอ็กซ์ฟอร์ส เอชอีวี",
+          "variant_raw": "IGNITE",
+          "price_type": "MSRP",
+          "price_thb": 899000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_all_models_price.html",
+            "selector": "<tr><td height=\"45\">มิตซูบิชิ เอ็กซ์ฟอร์ส เอชอีวี IGNITE</td>\n<td>899,000&nbsp;บาท</td>\n</tr>",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "เอ็กซ์ฟอร์ส เอชอีวี | มิตซูบิชิ เอ็กซ์ฟอร์ส เอชอีวี IGNITE | 899,000 บาท"
+        },
+        {
+          "observation_id": "2ecc07b9fdfd7a38",
+          "source_name": "Mitsubishi Thailand Official",
+          "source_url": "https://www.mitsubishi-motors.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_home_page.html",
+          "artifact_sha256": "eaa2b0f9e01fcbc45532782f931eeee7c00801cda5c480294c8c1a4f8ffee498",
+          "captured_at": "2026-09-24T13:48:27.092513+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "เอ็กซ์ฟอร์ส เอชอีวี",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 899000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/mitsubishi_home_page.html",
+            "selector": null,
+            "method": "dom_card"
+          },
+          "evidence_excerpt": "เอ็กซ์ฟอร์ส เอชอีวีราคาเริ่มต้น ฿899,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "nissan",
+        "model": "นิสสัน-คิกส์-อี-พาวเวอร์-ใหม่",
+        "price_thb": 789900
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "5ed571a3063869b1",
+          "source_name": "Nissan Thailand Grade Price Table",
+          "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "artifact_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "captured_at": "2026-09-26T07:44:05.915769+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+          "variant_raw": "e-POWER V *",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 789900,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+            "selector": "<div class=\"block-inner version\">\n                                <div class=\"block-name\">\n                                    <span class=\"version-name\">e-POWER V *</span>\n                                      \n                                          <img aria-label=\"\" class=\"msrp-tooltip-icon info-icon\" src=\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='none' viewBox='0 0 16 17'%3e %3cg stroke='%23000A0D' clip-path='url(%23clip0)'%3e %3ccircle cx='8' cy='8.295' r='7.25' stroke-width='1.5'/%3e %3cpath stroke-width='2' d='M8 7.295v5M8 4.295v2'/%3e %3c/g%3e %3cdefs%3e %3cclipPath id='clip0'%3e %3cpath fill='%23fff' d='M0 0H16V16H0z' transform='translate(0 .295)'/%3e %3c/clipPath%3e %3c/defs%3e %3c/svg%3e\" tabindex=\"0\" role=\"button\" aria-expanded=\"false\">\n                                          <div class=\"tooltip\">\n                                            <ul class=\"features-list\">\n                                              <li>ระบบเตือนเมื่อรถคันหน้าเคลื่อนที่ (LCDN)</li><li>ระบบควบคุมความเร็วอัตโนมัติอัจฉริยะ (ICC) </li><li>ระบบช่วยเตือนก่อนการชนด้านหน้าอัจฉริยะ (IFCW) และ ระบบช่วยเบรกฉุกเฉินอัจฉริยะสำหรับบุคคลและรถยนต์ด้านหน้า (IEB)</li><li>ระบบเตือนและป้องกันการชนในจุดอับสายตา (BSW &amp; BSI)</li><li>ระบบเตือนและควบคุมเมื่อรถออกนอกช่องทาง (LDW &amp; LDP)</li><li>ระบบล็อกประตูอัตโนมัติเมื่อรถเริ่มออกตัว พร้อมระบบล็อกและปลดล็อกรถอัตโนมัติเมื่อกุญแจรีโมทเข้า และออกห่างจากตัวรถ</li>\n                                            </ul>\n                                          </div>\n                                      \n                                </div>\n                                <p class=\"block-price\">฿789,900",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่ > e-POWER V * = ฿789,900"
+        },
+        {
+          "observation_id": "7e9a09d0f110a8ec",
+          "source_name": "Nissan Thailand Official",
+          "source_url": "https://www.nissan.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+          "artifact_sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+          "captured_at": "2026-09-24T13:48:19.963226+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 789900,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+            "selector": ".vehicle-in-category-wrapper:has(.price-figure)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่ ราคาเริ่มต้น ฿789,900"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "nissan",
+        "model": "นิสสัน-นาวารา-pro-4x-/-pro-2x-ใหม่",
+        "price_thb": 1045000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "89e4ee18f622f683",
+          "source_name": "Nissan Thailand Grade Price Table",
+          "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "artifact_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "captured_at": "2026-09-26T07:44:05.915769+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+          "variant_raw": "DC PRO-2X 7AT",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 1045000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+            "selector": "<div class=\"block-inner version\">\n                                <div class=\"block-name\">\n                                    <span class=\"version-name\">DC PRO-2X 7AT</span>\n                                      \n                                          <img aria-label=\"\" class=\"msrp-tooltip-icon info-icon\" src=\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='none' viewBox='0 0 16 17'%3e %3cg stroke='%23000A0D' clip-path='url(%23clip0)'%3e %3ccircle cx='8' cy='8.295' r='7.25' stroke-width='1.5'/%3e %3cpath stroke-width='2' d='M8 7.295v5M8 4.295v2'/%3e %3c/g%3e %3cdefs%3e %3cclipPath id='clip0'%3e %3cpath fill='%23fff' d='M0 0H16V16H0z' transform='translate(0 .295)'/%3e %3c/clipPath%3e %3c/defs%3e %3c/svg%3e\" tabindex=\"0\" role=\"button\" aria-expanded=\"false\">\n                                          <div class=\"tooltip\">\n                                            <ul class=\"features-list\">\n                                              <li>กระจังหน้าแบบ Interlock สีดำดุพร้อม Nissan Logo สีส้มแดง พร้อมไฟหน้าแบบ Quad-Eye LED และไฟ Daytime</li><li>ล้ออัลลอยสีดำ และคิ้วโป่งล้อ</li><li>ภายในสีดำดีไซน์สปอร์ต พร้อมเบาะหนัง Synthetic Leather เดินด้ายสีแดง และเบาะฝั่งผู้ขับขี่ปรับไฟฟ้า 8 ทิศทาง</li><li>เครื่องยนต์ดีเซล 2.3 ลิตร เทอร์โบคู่ 190 แรงม้าพร้อมเกียร์ 7 สปีด ที่แรง เงียบ และประหยัด</li><li>เทคโนโลยีกล้องอัจฉริยะมองภาพรอบทิศทาง (IAVM), ป้องกันการชนจากจุดอับสายตาอัจฉริยะ (IBSI), ควบคุมรถเมื่อรถออกนอกช่องทาง (ILI), เปิด-ปิดไฟสูงอัตโนมัติ (HBA), เตือนเมื่อเสี่ยงต่อการชน (IFCW), เบรกฉุกเฉินอัจฉริยะ (IEB), เตือนเมื่อเหนื่อยล้าขณะขับขี่ (IDA) และถุงลมนิรภัย 7 ตำแหน่ง</li>\n                                            </ul>\n                                          </div>\n                                      \n                                </div>\n                                <p class=\"block-price\">฿1,045,000",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่ > DC PRO-2X 7AT = ฿1,045,000"
+        },
+        {
+          "observation_id": "d7079ceb0486804b",
+          "source_name": "Nissan Thailand Official",
+          "source_url": "https://www.nissan.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+          "artifact_sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+          "captured_at": "2026-09-24T13:48:19.963226+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 1045000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+            "selector": ".vehicle-in-category-wrapper:has(.price-figure)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่ ราคาเริ่มต้น ฿1,045,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "nissan",
+        "model": "นิสสัน-นาวารา-คาลิเบอร์-ใหม่",
+        "price_thb": 758000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "fe05b38e271539fe",
+          "source_name": "Nissan Thailand Grade Price Table",
+          "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "artifact_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "captured_at": "2026-09-26T07:44:05.915769+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+          "variant_raw": "KC Calibre SL 7AT",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 758000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+            "selector": "<div class=\"block-inner version\">\n                                <div class=\"block-name\">\n                                    <span class=\"version-name\">KC Calibre SL 7AT</span>\n                                      \n                                          <img aria-label=\"\" class=\"msrp-tooltip-icon info-icon\" src=\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='none' viewBox='0 0 16 17'%3e %3cg stroke='%23000A0D' clip-path='url(%23clip0)'%3e %3ccircle cx='8' cy='8.295' r='7.25' stroke-width='1.5'/%3e %3cpath stroke-width='2' d='M8 7.295v5M8 4.295v2'/%3e %3c/g%3e %3cdefs%3e %3cclipPath id='clip0'%3e %3cpath fill='%23fff' d='M0 0H16V16H0z' transform='translate(0 .295)'/%3e %3c/clipPath%3e %3c/defs%3e %3c/svg%3e\" tabindex=\"0\" role=\"button\" aria-expanded=\"false\">\n                                          <div class=\"tooltip\">\n                                            <ul class=\"features-list\">\n                                              <li>กระจังหน้าแบบ Interlock สีดำ พร้อมสปอยเลอร์หลังที่ฝาท้าย ให้ความสปอร์ต</li><li>กุญแจรีโมทและระบบล็อกประตูอัตโนมัติตามความเร็วรถ</li><li>เครื่องยนต์ดีเซล 2.3 ลิตร เทอร์โบคู่ 190 แรงม้าพร้อมเกียร์ 7 สปีด ที่แรง เงียบ และประหยัด</li><li>ระบบควบคุมการทรงตัวอัตโนมัติ (VDC) ระบบป้องกันล้อหมุนฟรีขณะออกตัว (TCS ) และระบบช่วยในการขับบนทางลาดชัน (HSA)</li>\n                                            </ul>\n                                          </div>\n                                      \n                                </div>\n                                <p class=\"block-price\">฿758,000",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "นิสสัน นาวารา คาลิเบอร์ ใหม่ > KC Calibre SL 7AT = ฿758,000"
+        },
+        {
+          "observation_id": "ff6607819a50bd4f",
+          "source_name": "Nissan Thailand Official",
+          "source_url": "https://www.nissan.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+          "artifact_sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+          "captured_at": "2026-09-24T13:48:19.963226+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 758000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+            "selector": ".vehicle-in-category-wrapper:has(.price-figure)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "นิสสัน นาวารา คาลิเบอร์ ใหม่ ราคาเริ่มต้น ฿758,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "nissan",
+        "model": "นิสสัน-นาวารา-คิงแค็บ-ใหม่",
+        "price_thb": 667000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "0958d490ada05571",
+          "source_name": "Nissan Thailand Official",
+          "source_url": "https://www.nissan.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+          "artifact_sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+          "captured_at": "2026-09-24T13:48:19.963226+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "นิสสัน นาวารา คิงแค็บ ใหม่",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 667000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+            "selector": ".vehicle-in-category-wrapper:has(.price-figure)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "นิสสัน นาวารา คิงแค็บ ใหม่ ราคาเริ่มต้น ฿667,000"
+        },
+        {
+          "observation_id": "d0fcc170808eea23",
+          "source_name": "Nissan Thailand Grade Price Table",
+          "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "artifact_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "captured_at": "2026-09-26T07:44:05.915769+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "นิสสัน นาวารา คิงแค็บ ใหม่",
+          "variant_raw": "KC SL 6MT",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 667000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+            "selector": "<div class=\"block-inner version\">\n                                <div class=\"block-name\">\n                                    <span class=\"version-name\">KC SL 6MT</span>\n                                      \n                                          <img aria-label=\"\" class=\"msrp-tooltip-icon info-icon\" src=\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='none' viewBox='0 0 16 17'%3e %3cg stroke='%23000A0D' clip-path='url(%23clip0)'%3e %3ccircle cx='8' cy='8.295' r='7.25' stroke-width='1.5'/%3e %3cpath stroke-width='2' d='M8 7.295v5M8 4.295v2'/%3e %3c/g%3e %3cdefs%3e %3cclipPath id='clip0'%3e %3cpath fill='%23fff' d='M0 0H16V16H0z' transform='translate(0 .295)'/%3e %3c/clipPath%3e %3c/defs%3e %3c/svg%3e\" tabindex=\"0\" role=\"button\" aria-expanded=\"false\">\n                                          <div class=\"tooltip\">\n                                            <ul class=\"features-list\">\n                                              <li>กระจังหน้าแบบ Interlock สีดำ พร้อมสปอยเลอร์หลังที่ฝาท้าย ให้ความสปอร์ต</li><li>ความสูงใต้ท้องรถ 205 มม. พร้อมโป่งล้อเหมือนรุ่นยกสูง</li><li>ภายในดีไซน์ใหม่พร้อมพวงมาลัยแบบสปอร์ต และแอร์สำหรับที่นั่งตอนหลัง</li><li>กุญแจรีโมท และระบบล็อกประตูอัตโนมัติตามความเร็วรถ</li><li>เครื่องยนต์ดีเซล 2.3 ลิตร เทอร์โบแปรผัน แรงม้า 160 แรงบิด 403 นิวตัน-เมตร</li><li>ระบบเบรก ABS พร้อม EBD และ BA รวมถึงอุปกรณ์ความปลอดภัยเต็มระบบ</li>\n                                            </ul>\n                                          </div>\n                                      \n                                </div>\n                                <p class=\"block-price\">฿667,000",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "นิสสัน นาวารา คิงแค็บ ใหม่ > KC SL 6MT = ฿667,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "nissan",
+        "model": "นิสสัน-นาวารา-ซิงเกิ้ลแค็บ-ใหม่",
+        "price_thb": 606000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "9421558b2ac4a41d",
+          "source_name": "Nissan Thailand Official",
+          "source_url": "https://www.nissan.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+          "artifact_sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+          "captured_at": "2026-09-24T13:48:19.963226+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 606000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+            "selector": ".vehicle-in-category-wrapper:has(.price-figure)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่ ราคาเริ่มต้น ฿606,000"
+        },
+        {
+          "observation_id": "9e3affea8b74dbdb",
+          "source_name": "Nissan Thailand Grade Price Table",
+          "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "artifact_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "captured_at": "2026-09-26T07:44:05.915769+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+          "variant_raw": "SC SL 6MT",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 606000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+            "selector": "<div class=\"block-inner version\">\n                                <div class=\"block-name\">\n                                    <span class=\"version-name\">SC SL 6MT</span>\n                                      \n                                          <img aria-label=\"\" class=\"msrp-tooltip-icon info-icon\" src=\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='none' viewBox='0 0 16 17'%3e %3cg stroke='%23000A0D' clip-path='url(%23clip0)'%3e %3ccircle cx='8' cy='8.295' r='7.25' stroke-width='1.5'/%3e %3cpath stroke-width='2' d='M8 7.295v5M8 4.295v2'/%3e %3c/g%3e %3cdefs%3e %3cclipPath id='clip0'%3e %3cpath fill='%23fff' d='M0 0H16V16H0z' transform='translate(0 .295)'/%3e %3c/clipPath%3e %3c/defs%3e %3c/svg%3e\" tabindex=\"0\" role=\"button\" aria-expanded=\"false\">\n                                          <div class=\"tooltip\">\n                                            <ul class=\"features-list\">\n                                              <li>เครื่องยนต์ดีเซล 2.3 ลิตร เทอร์โบแปรผัน แรงม้า 160 แรงบิด 403 นิวตัน-เมตร</li><li>ช่วงล่างแชสซีส์เหล็กกล้า</li><li>หนักแค่ไหนก็เอาอยู่ด้วยพื้นที่ใช้สอยกว้าง บรรทุกลังกระดาษได้ถึง 14 ลังหรือตะกร้า 14 ชั้น เมื่อซ้อนตระกร้า 3 ชั้นจะขนได้สูงสุด 40 ชิ้น น้ำหนักรวม 1,090 กก.</li><li>ที่เหยียบขึ้นกระบะด้านข้าง ผสานดีไซน์ที่แข็งแกร่งและลงตัว ช่วยให้คุณขนของได้สบายยิ่งขึ้น</li><li>ระบบล็อกประตูอัตโนมัติตามความเร็วรถ</li><li>ระบบเบรก ABS พร้อม EBD และ BA รวมถึงอุปกรณ์ความปลอดภัยเต็มระบบ</li>\n                                            </ul>\n                                          </div>\n                                      \n                                </div>\n                                <p class=\"block-price\">฿606,000",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่ > SC SL 6MT = ฿606,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "nissan",
+        "model": "นิสสัน-อัลเมร่า",
+        "price_thb": 573000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "21652247b93ea22a",
+          "source_name": "Nissan Thailand Official",
+          "source_url": "https://www.nissan.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+          "artifact_sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+          "captured_at": "2026-09-24T13:48:19.963226+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "นิสสัน อัลเมร่า",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 573000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+            "selector": ".vehicle-in-category-wrapper:has(.price-figure)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "นิสสัน อัลเมร่า ราคาเริ่มต้น ฿573,000"
+        },
+        {
+          "observation_id": "d2a7b5ee12234d71",
+          "source_name": "Nissan Thailand Grade Price Table",
+          "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "artifact_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "captured_at": "2026-09-26T07:44:05.915769+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "นิสสัน อัลเมร่า",
+          "variant_raw": "1.0L TURBO E CVT",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 573000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+            "selector": "<div class=\"block-inner version\">\n                                <div class=\"block-name\">\n                                    <span class=\"version-name\">1.0L TURBO E CVT</span>\n                                      \n                                          <img aria-label=\"\" class=\"msrp-tooltip-icon info-icon\" src=\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='none' viewBox='0 0 16 17'%3e %3cg stroke='%23000A0D' clip-path='url(%23clip0)'%3e %3ccircle cx='8' cy='8.295' r='7.25' stroke-width='1.5'/%3e %3cpath stroke-width='2' d='M8 7.295v5M8 4.295v2'/%3e %3c/g%3e %3cdefs%3e %3cclipPath id='clip0'%3e %3cpath fill='%23fff' d='M0 0H16V16H0z' transform='translate(0 .295)'/%3e %3c/clipPath%3e %3c/defs%3e %3c/svg%3e\" tabindex=\"0\" role=\"button\" aria-expanded=\"false\">\n                                          <div class=\"tooltip\">\n                                            <ul class=\"features-list\">\n                                              <li>กระจกมองข้างสีเดียวกับตัวรถ ปรับด้วยไฟฟ้า</li><li>ภายในโทนสีดำ ตกแต่งด้วยวัสดุสีเงินและสีดำ เบาะผ้าสีดำ ตกแต่งด้วยสีน้ำเงินเข้ม</li><li>กุญแจรีโมทอัจฉริยะ (I-Key)</li><li>ปุ่มสตาร์ทเครื่องยนต์ (Push Start Button)</li><li>ระบบความปลอดภัย ถุงลมนิรภัย SRS คู่หน้า, ถุงลมนิรภัยด้านข้าง และม่านถุงลมนิรภัยด้านข้าง พร้อมระบบความปลอดภัยพื้นฐานเต็มระบบ</li><li>เทคโนโลยีช่วยเตือนก่อนการชนด้านหน้าอัจฉริยะ (IFCW), ช่วยเบรกฉุกเฉินอัจฉริยะ (IEB), เทคโนโลยีควบคุมเสถียรภาพการทรงตัวอัตโนมัติ (VDC) และช่วยออกตัวขณะอยู่บนทางลาดชัน (HSA)</li>\n                                            </ul>\n                                          </div>\n                                      \n                                </div>\n                                <p class=\"block-price\">฿573,000",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "นิสสัน อัลเมร่า > 1.0L TURBO E CVT = ฿573,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "nissan",
+        "model": "นิสสัน-เซเรน่า-อี-พาวเวอร์-ใหม่",
+        "price_thb": 1690000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "4c257581921af0ba",
+          "source_name": "Nissan Thailand Grade Price Table",
+          "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "artifact_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "captured_at": "2026-09-26T07:44:05.915769+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+          "variant_raw": "Highway Star",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 1690000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+            "selector": "<div class=\"block-inner version\">\n                                <div class=\"block-name\">\n                                    <span class=\"version-name\">Highway Star</span>\n                                      \n                                          <img aria-label=\"\" class=\"msrp-tooltip-icon info-icon\" src=\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='none' viewBox='0 0 16 17'%3e %3cg stroke='%23000A0D' clip-path='url(%23clip0)'%3e %3ccircle cx='8' cy='8.295' r='7.25' stroke-width='1.5'/%3e %3cpath stroke-width='2' d='M8 7.295v5M8 4.295v2'/%3e %3c/g%3e %3cdefs%3e %3cclipPath id='clip0'%3e %3cpath fill='%23fff' d='M0 0H16V16H0z' transform='translate(0 .295)'/%3e %3c/clipPath%3e %3c/defs%3e %3c/svg%3e\" tabindex=\"0\" role=\"button\" aria-expanded=\"false\">\n                                          <div class=\"tooltip\">\n                                            <ul class=\"features-list\">\n                                              <li>ระบบขับเคลื่อน e-POWER มอเตอร์ไฟฟ้า 100% เปลี่ยนน้ำมันเป็นไฟฟ้า คล่องตัว เร่งแรงมั่นใจ พร้อม e-Pedal Step เร่งและชะลอในคันเร่งเดียว</li><li>ประตูสไลด์ไฟฟ้าทั้งสองฝั่ง เปิด-ปิดอัตโนมัติ และประตูท้าย Smart Access แยกเปิดได้แบบ Dual Back Door</li><li>กระจังหน้าสีดำเงา ผสานเข้ากับแถบโครเมียม ไฟหน้า LED แบบ Projector Lens 3 คู่ พร้อมไฟตัดหมอกหน้าและไฟส่องสว่างเวลากลางวัน (Daytime Running Light)</li><li>ห้องโดยสาร 7 ที่นั่ง ขนาดกว้างพิเศษ พร้อมเพดานสูงถึง 1.4 ม. และปรับที่นั่งได้ถึง 13 รูปแบบ </li><li>หน้าจอสัมผัส 12.3 นิ้ว รองรับ Wireless Apple CarPlay / Wireless Android Auto พร้อม USB ทุกแถวที่นั่ง และที่ชาร์จไร้สายสำหรับผู้ขับ, ที่วางแก้ว 17 จุด, ถาดพร้อมที่วางแก้วน้ำพับได้หลังเบาะแถว 2 และ 3, ที่แขวนกระเป๋า 12 จุด, ช่องเก็บของด้านหน้า และจุดยึดเบาะนั่ง ISOFIX แถว 2</li><li>กระจก Acoustic Glass ช่วยลดเสียงรบกวนจากภายนอก และม่านบังแดดแถวสอง เป็นส่วนตัวตลอดการเดินทาง</li><li>เทคโนโลยีควบคุมความเร็วอัตโนมัติอัจฉริยะ (ICC), กระจกมองหลังอัจฉริยะ (IRVM), เตือนและป้องกันการชนในจุดอับสายตา (BSW &amp; IBSI), เตือนและควบคุมรถเมื่อออกนอกช่องทาง (LDW &amp; ILI), และเปิด-ปิดไฟสูงอัตโนมัติ (HBA)</li>\n                                            </ul>\n                                          </div>\n                                      \n                                </div>\n                                <p class=\"block-price\">฿1,690,000",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่ > Highway Star = ฿1,690,000"
+        },
+        {
+          "observation_id": "60c74ba5445b99e9",
+          "source_name": "Nissan Thailand Official",
+          "source_url": "https://www.nissan.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+          "artifact_sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+          "captured_at": "2026-09-24T13:48:19.963226+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 1690000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+            "selector": ".vehicle-in-category-wrapper:has(.price-figure)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่ ราคาเริ่มต้น ฿1,690,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "nissan",
+        "model": "นิสสัน-เซเรน่า-ใหม่",
+        "price_thb": 1469000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "43bd466264791abd",
+          "source_name": "Nissan Thailand Official",
+          "source_url": "https://www.nissan.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+          "artifact_sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+          "captured_at": "2026-09-24T13:48:19.963226+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "นิสสัน เซเรน่า ใหม่",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 1469000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+            "selector": ".vehicle-in-category-wrapper:has(.price-figure)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "นิสสัน เซเรน่า ใหม่ ราคาเริ่มต้น ฿1,469,000"
+        },
+        {
+          "observation_id": "67378a8862ae6203",
+          "source_name": "Nissan Thailand Grade Price Table",
+          "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "artifact_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "captured_at": "2026-09-26T07:44:05.915769+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "นิสสัน เซเรน่า ใหม่",
+          "variant_raw": "Highway Star",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 1469000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+            "selector": "<div class=\"block-inner version\">\n                                <div class=\"block-name\">\n                                    <span class=\"version-name\">Highway Star</span>\n                                      \n                                          <img aria-label=\"\" class=\"msrp-tooltip-icon info-icon\" src=\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='none' viewBox='0 0 16 17'%3e %3cg stroke='%23000A0D' clip-path='url(%23clip0)'%3e %3ccircle cx='8' cy='8.295' r='7.25' stroke-width='1.5'/%3e %3cpath stroke-width='2' d='M8 7.295v5M8 4.295v2'/%3e %3c/g%3e %3cdefs%3e %3cclipPath id='clip0'%3e %3cpath fill='%23fff' d='M0 0H16V16H0z' transform='translate(0 .295)'/%3e %3c/clipPath%3e %3c/defs%3e %3c/svg%3e\" tabindex=\"0\" role=\"button\" aria-expanded=\"false\">\n                                          <div class=\"tooltip\">\n                                            <ul class=\"features-list\">\n                                              <li>ประตูสไลด์ไฟฟ้าทั้งสองข้าง เปิด-ปิดอัตโนมัติ และประตูท้าย Smart Access แยกเปิดได้แบบ Dual Back Door</li><li>ไฟหน้า LED แบบ Projector เปิด-ปิดและปรับระดับอัตโนมัติ พร้อมไฟตัดหมอกหน้าและไฟส่องสว่างเวลากลางวัน (Daytime Running Light)</li><li>ห้องโดยสาร 7 ที่นั่ง ขนาดกว้างพิเศษ พร้อมเพดานสูงถึง 1.4 ม. และปรับที่นั่งได้ถึง 13 รูปแบบ</li><li>USB 6 ตำแหน่ง, ที่วางแก้ว 14 จุด, ถาดวางแบบพับเก็บได้แถว 2, ที่แขวนกระเป๋า 8 จุด, จุดยึดเบาะนั่ง ISOFIX แถว 2 และม่านบังแดดแถว 2 ให้คุณพักผ่อนได้อย่างเต็มที่</li><li>ระบบความปลอดภัย ถุงลมนิรภัย SRS คู่หน้า, ถุงลมนิรภัยด้านข้าง และม่านถุงลมนิรภัยด้านข้าง พร้อมระบบความปลอดภัยพื้นฐานเต็มระบบ</li><li>เทคโนโลยีกล้องอัจฉริยะมองภาพรอบทิศทาง  (IAVM) ทำงานร่วมกับเทคโนโลยีเตือนวัตถุเคลื่อนไหวรอบคัน (MOD)</li><li>เทคโนโลยีช่วยเตือนก่อนการชนด้านหน้าอัจฉริยะ (IFWC), ช่วยเบรกฉุกเฉินอัจฉริยะ (IEB), เตือนจุดอับสายตา (BSW), เตือนขณะถอยรถ (RCTA), เตือนเมื่อรถออกนอกช่องทาง (LDW) และช่วยเตือนเมื่อเหนื่อยล้าขณะขับขี่ (IDA)</li>\n                                            </ul>\n                                          </div>\n                                      \n                                </div>\n                                <p class=\"block-price\">฿1,469,000",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "นิสสัน เซเรน่า ใหม่ > Highway Star = ฿1,469,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "nissan",
+        "model": "นิสสัน-เอ็กซ์เทรล-อี-พาวเวอร์-ใหม่",
+        "price_thb": 1699000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "EXACT_VARIANT",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (EXACT_VARIANT, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "29aaef1ca1958314",
+          "source_name": "Nissan Thailand Official",
+          "source_url": "https://www.nissan.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+          "artifact_sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+          "captured_at": "2026-09-24T13:48:19.963226+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 1699000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_new_home_page.html",
+            "selector": ".vehicle-in-category-wrapper:has(.price-figure)",
+            "method": "dom_query"
+          },
+          "evidence_excerpt": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่ ราคาเริ่มต้น ฿1,699,000"
+        },
+        {
+          "observation_id": "c562592ddeca3771",
+          "source_name": "Nissan Thailand Grade Price Table",
+          "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+          "artifact_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "captured_at": "2026-09-26T07:44:05.915769+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่",
+          "variant_raw": "e-POWER *",
+          "price_type": "EXACT_VARIANT",
+          "price_thb": 1699000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/nissan_all_grade_price.html",
+            "selector": "<div class=\"block-inner version\">\n                                <div class=\"block-name\">\n                                    <span class=\"version-name\">e-POWER *</span>\n                                      \n                                          <img aria-label=\"\" class=\"msrp-tooltip-icon info-icon\" src=\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' fill='none' viewBox='0 0 16 17'%3e %3cg stroke='%23000A0D' clip-path='url(%23clip0)'%3e %3ccircle cx='8' cy='8.295' r='7.25' stroke-width='1.5'/%3e %3cpath stroke-width='2' d='M8 7.295v5M8 4.295v2'/%3e %3c/g%3e %3cdefs%3e %3cclipPath id='clip0'%3e %3cpath fill='%23fff' d='M0 0H16V16H0z' transform='translate(0 .295)'/%3e %3c/clipPath%3e %3c/defs%3e %3c/svg%3e\" tabindex=\"0\" role=\"button\" aria-expanded=\"false\">\n                                          <div class=\"tooltip\">\n                                            <ul class=\"features-list\">\n                                              <li>หลังคากระจกพาโนรามิกเปิด-ปิดไฟฟ้า พร้อมม่านบังแดดไฟฟ้า ประตูท้ายไฟฟ้าพร้อมเซนเซอร์เปิด-ปิดอัตโนมัติ เทคโนโลยีตัดเสียงรบกวน (Active Noise Cancellation) และระบบปรับอากาศแบบแยกอิสระ 3 โซน</li><li>ระบบเครื่องเสียง BOSE® Premium Audio System</li><li>NissanConnect รองรับ Wireless Apple CarPlay / Android Autoหน้าจอสัมผัส 12.3 นิ้ว</li><li>หน้าจอแสดงผลข้อมูลการขับขี่แบบ TFT จอสี ขนาด 12.3 นิ้ว พร้อมระบบแสดงการขับขี่ Head-up Display</li><li>เบรกมือไฟฟ้า และ Auto Brake Hold</li><li>ระบบควบคุมความเร็วอัตโนมัติอัจฉริยะ (ICC),ระบบควบคุมความเร็วขณะลงทางลาดชัน (DCS), ระบบเตือนจุดอับสายตา (BSW), ระบบตรวจสอบแรงดันลมยางอัตโนมัติ (TPMS) และระบบความปลอดภัยขั้นสูงอื่น ๆ</li>\n                                            </ul>\n                                          </div>\n                                      \n                                </div>\n                                <p class=\"block-price\">฿1,699,000",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่ > e-POWER * = ฿1,699,000"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "suzuki",
+        "model": "all-new-suzuki-fronx",
+        "price_thb": 689000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (MSRP, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "3249cddc03a4f0b7",
+          "source_name": "Suzuki Thailand Spec & Price Tables",
+          "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+          "artifact_path": "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html",
+          "artifact_sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+          "captured_at": "2026-09-26T13:48:21.789804+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "ALL NEW SUZUKI FRONX",
+          "variant_raw": "GL",
+          "price_type": "MSRP",
+          "price_thb": 689000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html",
+            "selector": "class=\"model-celerio\">GL\n                  <br><h3 id=\"iwp6d\">689,000\n                  </h3>",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "ALL NEW SUZUKI FRONX > GL = 689000 THB (GRADE & PRICE table)"
+        },
+        {
+          "observation_id": "7e7d6746fe09bc67",
+          "source_name": "Suzuki Thailand Official",
+          "source_url": "https://www.suzuki.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/suzuki_home_page.html",
+          "artifact_sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+          "captured_at": "2026-09-24T13:48:31.621323+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "ALL NEW SUZUKI FRONX",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 689000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/suzuki_home_page.html",
+            "selector": null,
+            "method": "dom_card"
+          },
+          "evidence_excerpt": "ALL NEW SUZUKI FRONX เริ่มต้นที่ 689,000 บาท นิยามใหม่ของการขับขี่สไตล์สปอร์ต SUV ที่สะท้อน“ความเป็นตัวคุณ” ได้อย่างแท้จริง ดูเพิ่มเติม"
+        }
+      ]
+    },
+    {
+      "join_key": {
+        "brand": "suzuki",
+        "model": "jimny",
+        "price_thb": 1590000
+      },
+      "field_agreement": {
+        "price_thb": "AGREE",
+        "price_types": [
+          "MSRP",
+          "MSRP_STARTING"
+        ],
+        "identity_levels": [
+          "MODEL",
+          "VARIANT"
+        ],
+        "note": "levels differ: one source prices the model, the other prices a named variant at the same figure — consistent, not conflicting; publication framing differs (MSRP, MSRP_STARTING) while the figure itself is identical"
+      },
+      "support_count": 2,
+      "distinct_artifacts": 2,
+      "distinct_urls": 2,
+      "supporting_records": [
+        {
+          "observation_id": "029e80fe76213db9",
+          "source_name": "Suzuki Thailand Official",
+          "source_url": "https://www.suzuki.co.th/",
+          "artifact_path": "tests/fixtures/oem-artifacts/suzuki_home_page.html",
+          "artifact_sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+          "captured_at": "2026-09-24T13:48:31.621323+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "MODEL",
+          "model_raw": "JIMNY",
+          "variant_raw": null,
+          "price_type": "MSRP_STARTING",
+          "price_thb": 1590000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/suzuki_home_page.html",
+            "selector": null,
+            "method": "dom_card"
+          },
+          "evidence_excerpt": "JIMNY เริ่มต้นที่ 1,590,000 บาท ปลดล็อกอิสระแห่งการเดินทางกับรถยนต์ออฟโรด พร้อมระบบความปลอดภัยสุดครบครัน Suzuki Safety Support ให้คุณมั่นใจทุกเส้นทาง ​ ดูเพิ่มเติม"
+        },
+        {
+          "observation_id": "7036345a3b46d383",
+          "source_name": "Suzuki Thailand Spec & Price Tables",
+          "source_url": "https://www.suzuki.co.th/model/jimny/equipment",
+          "artifact_path": "tests/fixtures/oem-artifacts/suzuki_jimny_equipment.html",
+          "artifact_sha256": "a452cae65124f01c9c5a320149f989960afb9d1294e310966af8ac7c8271a1d1",
+          "captured_at": "2026-09-26T13:48:26.476137+00:00",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "source_class": "OEM_OFFICIAL",
+          "identity_level": "VARIANT",
+          "model_raw": "JIMNY",
+          "variant_raw": "AT (SINGLE-TONE)",
+          "price_type": "MSRP",
+          "price_thb": 1590000,
+          "locator": {
+            "artifact_path": "tests/fixtures/oem-artifacts/suzuki_jimny_equipment.html",
+            "selector": "class=\"model-jimmy\">AT (SINGLE-TONE)\n                    <br><h3>1,590,000\n                    </h3>",
+            "method": "regex_text"
+          },
+          "evidence_excerpt": "JIMNY > AT (SINGLE-TONE) = 1590000 THB (GRADE & PRICE table)"
+        }
+      ]
+    }
+  ]
+}

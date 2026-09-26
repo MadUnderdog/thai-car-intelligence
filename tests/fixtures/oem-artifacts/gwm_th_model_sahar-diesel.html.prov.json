@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/sahar-diesel",
+  "captured_at": "2026-09-25T07:46:33.975714+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "662b719e379fda7e7d3fb8fed9176077ab97c9fc13b712c405911c3ff4336d70",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_sahar-diesel.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

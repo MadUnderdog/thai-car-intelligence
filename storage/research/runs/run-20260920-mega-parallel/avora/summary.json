@@ -1,0 +1,19 @@
+{
+  "brand": "avora",
+  "brand_name": "Avatr",
+  "status": "PARTIAL",
+  "prices": [],
+  "specs": [],
+  "sources": [
+    {
+      "url": "https://www.avatr.com",
+      "status": "ok",
+      "method": "html_regex"
+    }
+  ],
+  "failures": [],
+  "models_found": 0,
+  "variants_found": 0,
+  "started_at": "2026-09-20T02:35:37.115874",
+  "finished_at": "2026-09-20T02:35:41.912380"
+}

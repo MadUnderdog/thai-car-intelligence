@@ -1,0 +1,1939 @@
+{
+  "source": "headlightmag_wordpress_api",
+  "url": "https://www.headlightmag.com/wp-json/wp/v2",
+  "observed_at": "2026-09-22T14:20:20.053745",
+  "acquisition_method": "api",
+  "payload_hash": "caf49fc1d2d9ba59",
+  "total_posts": 100,
+  "posts": [
+    {
+      "id": 356513,
+      "link": "https://www.headlightmag.com/hyundai-ioniq-v-open-pre-sale-in-china/",
+      "title": {
+        "rendered": "Hyundai IONIQ V เปิดรับจองในจีน ขุมพลังไฟฟ้า 800V 228 แรงม้า FWD แบตฯ 53-68 kWh วิ่งไกลสุด 650 กม. (CLTC)"
+      },
+      "excerpt": {
+        "rendered": "<p>Beijing Hyundai เปิดรับจองล่วงหน้าสำหรับ Hyundai IONIQ  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        19355,
+        19356
+      ]
+    },
+    {
+      "id": 356431,
+      "link": "https://www.headlightmag.com/geely-galaxy-battleship-700-phev-start-pre-sale-in-china/",
+      "title": {
+        "rendered": "Geely Galaxy Battleship 700 Off-road ทรงกล่อง ขุมพลัง PHEV 3 มอเตอร์ 1,129 แรงม้า วิ่งไฟฟ้า + น้ำมัน 1,770 กม. (CLTC)"
+      },
+      "excerpt": {
+        "rendered": "<p>Geely Galaxy เปิดรับจองล่วงหน้าสำหรับ Galaxy Battleship [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        19771,
+        19770,
+        19447
+      ]
+    },
+    {
+      "id": 356416,
+      "link": "https://www.headlightmag.com/2026-09-21-new-cars-worldwide-2027-hyundai-tucson-xrt/",
+      "title": {
+        "rendered": "2027 Hyundai Tucson XRT เสริมชุดแต่งรอบคัน พร้อมระบบขับเคลื่อน 4 ล้อ HTRAC เป็นอุปกรณ์มาตรฐาน"
+      },
+      "excerpt": {
+        "rendered": "<p>Hyundai เผยโฉม Tucson XRT รุ่นปี 2027 เจเนอเรชั่นที่ 5  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84
+      ],
+      "tags": [
+        168,
+        19768,
+        19769
+      ]
+    },
+    {
+      "id": 356376,
+      "link": "https://www.headlightmag.com/2026-09-21-new-cars-worldwide-geely-ex5-minorchange/",
+      "title": {
+        "rendered": "Geely EX5 Minorchange เผยโฉมแล้วที่จีน แพลตฟอร์ม 800V ขับหลัง 329 แรงม้า วิ่งไกล 635 กม. (CLTC)"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 21 กันยายน 2026 Geely Galaxy ได้เปิดเผยรายล [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        17027,
+        19040,
+        19772,
+        16227
+      ]
+    },
+    {
+      "id": 356187,
+      "link": "https://www.headlightmag.com/2026-09-21-world-news-mclaren-invest-500m-gbp-factory-extension-for-new-hybrid-suv/",
+      "title": {
+        "rendered": "McLaren SUV ขุมพลัง Hybrid เตรียมเปิดตัวก่อนปี 2030 ทุ่ม 500 ล้านปอนด์ ขยายโรงงานอังกฤษ"
+      },
+      "excerpt": {
+        "rendered": "<p>McLaren Automotive ประกาศแผนลงทุนมูลค่า 500 ล้านปอนด์ ป [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": [
+        818,
+        19773
+      ]
+    },
+    {
+      "id": 356277,
+      "link": "https://www.headlightmag.com/news-subaru-crosstrek-jdm-updated/",
+      "title": {
+        "rendered": "Subaru Crosstrek รุ่นปรับอุปกรณ์ จากญี่ปุ่น ใช้ขุมพลังเบนซิน S:HEV เบนซิน 2.5 ลิตร Full-hybrid ทั้งหมด และเพิ่มสีแดงใหม่"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Subaru Crosstrek มีรุ่นปรับอุปกรณ์ตามมาอีกครั้ง  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        13822,
+        16815,
+        410,
+        6710,
+        16816
+      ]
+    },
+    {
+      "id": 356183,
+      "link": "https://www.headlightmag.com/2026-09-21-new-cars-worldwide-opel-astra-gse-line-bev/",
+      "title": {
+        "rendered": "Opel Astra GSE Line ขุมพลังไฟฟ้า 276 แรงม้า แรงเท่า Astra OPC พร้อมทางเลือกทั้ง ICE, Hybrid และ PHEV"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 17 กันยายน 2026 Opel เปิดตัว Astra GSE Line [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84
+      ],
+      "tags": [
+        13790,
+        253,
+        1253,
+        19762
+      ]
+    },
+    {
+      "id": 356185,
+      "link": "https://www.headlightmag.com/2026-09-20-new-cars-worldwide-land-rover-defender-wolf-series-ii/",
+      "title": {
+        "rendered": "Land Rover Defender Wolf Series II รถดัดแปลงทางทหาร ลุ้นรับสัญญา MoD อังกฤษ พร้อม 9 รุ่นสำหรับ NATO"
+      },
+      "excerpt": {
+        "rendered": "<p>หลังจากที่ Jaguar Land Rover หรือ JLR ได้เข้าไปร่วมประม [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        19763,
+        1021,
+        1194,
+        19732
+      ]
+    },
+    {
+      "id": 356234,
+      "link": "https://www.headlightmag.com/all-new-honda-cr-v-g7-production-2027-debut-late-2026/",
+      "title": {
+        "rendered": "Nikkei เผย All NEW Honda CR-V (G7) เตรียมเริ่มสายการผลิตปี 2027 ลุ้นเปิดตัวปลายปีนี้ !"
+      },
+      "excerpt": {
+        "rendered": "<p>ช่วงต้นปีที่ผ่านมา Honda ได้ปรับลดแผนการพัฒนารถยนต์ไฟฟ้ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        4721,
+        19765,
+        1123,
+        19766,
+        19764
+      ]
+    },
+    {
+      "id": 356179,
+      "link": "https://www.headlightmag.com/2026-09-20-world-news-nissan-uk-factory-in-sunderland-will-produce-nissan-kicks-e-power-for-europe/",
+      "title": {
+        "rendered": "Nissan Kicks P16 เตรียมผลิตอังกฤษ ลงทุน 170 ล้านปอนด์ รับตลาดยุโรป ลุ้นรัฐบาลลดเป้า EV ปี 2030 เหลือ 50%"
+      },
+      "excerpt": {
+        "rendered": "<p>Nissan สหราชอาณาจักรประกาศเตรียมนำ Kicks เวอร์ชั่นญี่ปุ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": [
+        9561,
+        207,
+        2265
+      ]
+    },
+    {
+      "id": 356177,
+      "link": "https://www.headlightmag.com/2026-09-20-world-news-nio-recalls-firefly-ev-steering-issue/",
+      "title": {
+        "rendered": "NIO เรียกคืน Firefly EV จำนวน 686 คันในจีน เหตุระบบพวงมาลัยเสี่ยงขัดข้อง"
+      },
+      "excerpt": {
+        "rendered": "<p>NIO ประกาศเรียกคืนรถยนต์ไฟฟ้า Firefly จำนวน 686 คันในปร [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        4143,
+        18604
+      ]
+    },
+    {
+      "id": 356166,
+      "link": "https://www.headlightmag.com/2026-09-19-world-news-audi-a4-e-tron-postponed-2029/",
+      "title": {
+        "rendered": "Audi A4 e-tron เลื่อนเปิดตัวเป็นปี 2029 หลังแพลตฟอร์ม SSP ล่าช้า เตรียมทำทั้ง Sedan และ Avant"
+      },
+      "excerpt": {
+        "rendered": "<p>Audi เลื่อนกำหนดการเริ่มเดินสายพานการผลิตรถยนต์ไฟฟ้าของ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        5792,
+        317,
+        19761
+      ]
+    },
+    {
+      "id": 356155,
+      "link": "https://www.headlightmag.com/news-lexus-is-f-sport-mode-black-vi-my-2026-launched/",
+      "title": {
+        "rendered": "Lexus IS F SPORT Mode Black VI รุ่นปี 2026 จากญี่ปุ่น แต่งเพิ่ม ขุมพลังเดิม"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Lexus IS F SPORT Mode Black VI รุ่นปี 2026 เปิดต [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        1864,
+        19767
+      ]
+    },
+    {
+      "id": 356128,
+      "link": "https://www.headlightmag.com/2026-09-19-new-cars-worldwide-mitsuoka-la1/",
+      "title": {
+        "rendered": "Mitsuoka LA1 โรดสเตอร์ร่างจำแลงของ Corvette C1 บนพื้นฐาน Mazda MX-5 ND"
+      },
+      "excerpt": {
+        "rendered": "<p>Mitsuoka ผู้ผลิตรถยนต์ดัดแปลง Coachbuilding เน้นความแตก [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        2145,
+        19760
+      ]
+    },
+    {
+      "id": 356126,
+      "link": "https://www.headlightmag.com/2026-09-19-new-cars-worldwide-gwm-tank-300-hooke-trail-edition-live-axle/",
+      "title": {
+        "rendered": "GWM Tank 300 Hooke Trail Edition เพิ่มเพลาหน้า Live Axle ลุยโหดเทียบชั้น Jeep Wrangler"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 17 กันยายน 2026 Great Wall Motor เปิดตัว Ta [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        10842,
+        15264,
+        15297,
+        19758,
+        11145,
+        19759
+      ]
+    },
+    {
+      "id": 356116,
+      "link": "https://www.headlightmag.com/2026-09-18-new-cars-worldwide-byd-atto-2-my-2027-chinese-version/",
+      "title": {
+        "rendered": "BYD Atto 2 MY2027 สเป็คจีน เพิ่มรุ่นวิ่งไกล 501 กม. มอเตอร์ 95 แรงม้าทุกรุ่น ราคาเริ่ม 3.8 แสนบาท"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 17 กันยายน 2026 BYD เปิดตัว Yuan UP Feichi  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        3329,
+        17083,
+        15664,
+        15666
+      ]
+    },
+    {
+      "id": 356114,
+      "link": "https://www.headlightmag.com/2026-09-18-world-news-volvo-to-unveil-13-new-models/",
+      "title": {
+        "rendered": "Volvo เตรียมเปิดตัวรถใหม่ 13 รุ่นภายในปี 2030 ครบทั้ง EV และ Hybrid ลุ้นคืนชีพ Sedan-Wagon"
+      },
+      "excerpt": {
+        "rendered": "<p>Volvo เดินหน้าแผนเปิดตัวรถยนต์ใหม่ครั้งใหญ่ที่สุดครั้งห [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        13832,
+        16660,
+        13389,
+        4612,
+        5102,
+        6203,
+        2490,
+        179,
+        5139,
+        4545,
+        5284
+      ]
+    },
+    {
+      "id": 356100,
+      "link": "https://www.headlightmag.com/news-mercedes-benz-c-300-4matic-electric-unveiled/",
+      "title": {
+        "rendered": "Mercedes-Benz C 300 4MATIC Electric รุ่นเริ่มต้น มอเตอร์คู่ 408 แรงม้า แบตฯ 85 kWh วิ่งไกล 690 กิโลเมตร (WLTP)"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Mercedes-Benz C 300 4MATIC Electric เปิดตัวแล้วท [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 356061,
+      "link": "https://www.headlightmag.com/acceleration-fuel-consumption-toyota-vellfire-hev-premium-e-four/",
+      "title": {
+        "rendered": "ผลทดสอบ อัตราเร่ง อัตราสิ้นเปลือง Toyota Vellfire HEV Premium E-Four Eclipse Edition : 4,420,000 บาท"
+      },
+      "excerpt": {
+        "rendered": "<p>ผลทดสอบ อัตราเร่ง อัตราสิ้นเปลือง Toyota Vellfire HEV P [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        108,
+        54,
+        13708
+      ],
+      "tags": [
+        277,
+        19754,
+        19753,
+        397,
+        19755,
+        19756
+      ]
+    },
+    {
+      "id": 356041,
+      "link": "https://www.headlightmag.com/news-toyota-land-cruiser-300-series-updated-in-jp/",
+      "title": {
+        "rendered": "Toyota Land Cruiser 300 Series รุ่นปรับอุปกรณ์ จากญี่ปุ่น เพิ่มข้าวของและขุมพลัง Hybrid"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Toyota Land Cruiser 300 Series รุ่นปรับอุปกรณ์ เ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 356029,
+      "link": "https://www.headlightmag.com/news-porsche-cayenne-electric-my-2027-launched/",
+      "title": {
+        "rendered": "Porsche Cayenne Electric รุ่นปี 2027 เพิ่มอุปกรณ์ รองรับชาร์จไฟแบบไร้สายและประตูไฟฟ้ารอบคัน"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Porsche Cayenne Electric รุ่นปี 2027 เปิดตัวแล้ว [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 356014,
+      "link": "https://www.headlightmag.com/news-mclaren-will-finally-launch-performance-suv/",
+      "title": {
+        "rendered": "McLaren เตรียมเปิดตัว SUV รุ่นใหม่ พร้อมขยายโรงงานและผลิตเครื่องเกียร์เอง หลังได้รับเงินทุนเพิ่ม"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; McLaren ประสบปัญหาทางการเงินมาโดยตลอด นับตั้งแต่ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 349120,
+      "link": "https://www.headlightmag.com/official-price-denza-z9gt/",
+      "title": {
+        "rendered": "ราคาอย่างเป็นทางการ DENZA Z9GT Performance AWD : 2,899,900 บาท"
+      },
+      "excerpt": {
+        "rendered": "<p>ราคาอย่างเป็นทางการ DENZA Z9GT Z9GT Performance AWD : 2 [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        85,
+        109
+      ],
+      "tags": [
+        16149,
+        18864,
+        19441,
+        16152,
+        19752
+      ]
+    },
+    {
+      "id": 355789,
+      "link": "https://www.headlightmag.com/2026-09-16-new-cars-worldwide-hyundai-staria-electric-europe-2027/",
+      "title": {
+        "rendered": "Hyundai Staria Electric รถตู้ขุมพลังไฟฟ้าล้วน 9 ที่นั่ง เปิดรับจองในยุโรป ราคาเริ่ม 2.17 ล้านบาท"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 11 กันยายน 2026 Hyundai เปิดรับจอง Staria E [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84
+      ],
+      "tags": [
+        168,
+        17112,
+        17111
+      ]
+    },
+    {
+      "id": 355888,
+      "link": "https://www.headlightmag.com/volvo-xc60-minorchange-long-range-phev-2026/",
+      "title": {
+        "rendered": "Volvo XC60 Minorchange 2026 ปรับดีไซน์ใหม่ ขุมพลัง Long Range PHEV แบตฯ 41.kWh ระยะวิ่งรวม 1,240 กม. (WLTP)"
+      },
+      "excerpt": {
+        "rendered": "<p>Volvo XC60 รุ่นปัจจุบัน เจเนอเรชั่นที่ 2 เปิดตัวครั้งแร [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        3086,
+        19750,
+        19751,
+        4545
+      ]
+    },
+    {
+      "id": 355769,
+      "link": "https://www.headlightmag.com/2026-09-15-world-news-freelander-8-guinness-world-record/",
+      "title": {
+        "rendered": "Freelander 8 ทำสถิติ Guinness World Record ไต่ระดับความสูง 6,002 เมตรในทิเบต"
+      },
+      "excerpt": {
+        "rendered": "<p>Chery Jaguar Land Rover ประกาศความสำเร็จของ Freelander  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        17899,
+        19156,
+        6631
+      ]
+    },
+    {
+      "id": 355852,
+      "link": "https://www.headlightmag.com/spyshot-toyota-bz3x-spyshot-in-thailand-2027-launch/",
+      "title": {
+        "rendered": "Spyshot : Toyota bZ3X ทดสอบในไทย เตรียมเปิดตัวช่วงต้นปีหน้า 2027"
+      },
+      "excerpt": {
+        "rendered": "<p>หนึ่งในกลยุทธ์ที่เริ่มเห็นชัดขึ้นในตลาดรถยนต์ไทยช่วงหลั [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        48
+      ],
+      "tags": [
+        12740,
+        16195
+      ]
+    },
+    {
+      "id": 355726,
+      "link": "https://www.headlightmag.com/2026-09-15-new-cars-worldwide-renault-niagara/",
+      "title": {
+        "rendered": "Renault Niagara กระบะพื้นฐานเก๋ง ขุมพลังเบนซิน 1.3 TURBO 160 แรงม้า สำหรับตลาดอเมริกาใต้"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 11 กันยายน 2026 Renault ได้เปิดตัว Renault  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        19748,
+        353,
+        19747
+      ]
+    },
+    {
+      "id": 355758,
+      "link": "https://www.headlightmag.com/bovensiepen-spider-bring-back-bmw-z4/",
+      "title": {
+        "rendered": "Bovensiepen Spider คืนชีพ BMW Z4 หลัง BMW ยุติการผลิต เพิ่มกำลังเป็น 429 แรงม้า ผลิตเพียง 99 คัน"
+      },
+      "excerpt": {
+        "rendered": "<p>หลังจาก BMW Z4 คันสุดท้ายออกจากสายการผลิตที่เมือง Graz  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        262,
+        17671,
+        19749,
+        10189
+      ]
+    },
+    {
+      "id": 355667,
+      "link": "https://www.headlightmag.com/2026-09-15-new-cars-worldwide-ford-bronco-basecamp-aus-nz-2027/",
+      "title": {
+        "rendered": "Ford Bronco Basecamp ขุมพลัง REEV วิ่งไกล 900 กม. เตรียมบุกออสเตรเลียปี 2027"
+      },
+      "excerpt": {
+        "rendered": "<p>Ford ประกาศแผนรุกตลาดออสเตรเลียและนิวซีแลนด์ครั้งใหญ่ โ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        19746,
+        278,
+        19745
+      ]
+    },
+    {
+      "id": 355600,
+      "link": "https://www.headlightmag.com/2026-09-14-new-cars-worldwide-lexus-ls-jdm-2027lexus-ls-my2026-jdm/",
+      "title": {
+        "rendered": "Lexus LS MY2026 เวอร์ชั่นญี่ปุ่น เพิ่มความแข็งแรงตัวถัง และอัพเกรดช่วงล่างระบบ REDS"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 11 กันยายน 2026 Lexus ประเทศญี่ปุ่นได้เปิดต [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        268,
+        1173,
+        5635
+      ]
+    },
+    {
+      "id": 355626,
+      "link": "https://www.headlightmag.com/2026-09-14-new-cars-worldwide-toyota-gr-kart-jdm/",
+      "title": {
+        "rendered": "Toyota GR KART รถคาร์ทพร้อมลงสนามเปิดขายในญี่ปุ่น เริ่ม 8.2 หมื่นบาท รองรับทั้งเด็กและผู้ใหญ่"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 11 กันยายน 2026 Gazoo Racing (GR) เปิดตัว G [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84
+      ],
+      "tags": []
+    },
+    {
+      "id": 355581,
+      "link": "https://www.headlightmag.com/2026-09-13-new-cars-worldwide-tesla-model-y-performance-tesla-model-y-performance-2027-china/",
+      "title": {
+        "rendered": "Tesla Model Y Performance เปิดตัวในจีน มอเตอร์คู่ 460 แรงม้า 0-100 km/h 3.5 วินาที ราคาเริ่ม 1.8 ล้านบาท"
+      },
+      "excerpt": {
+        "rendered": "<p>Tesla Model Y Performance รุ่นปรับโฉม เปิดตัวอย่างเป็นท [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        6034,
+        18215,
+        255,
+        4890,
+        18214
+      ]
+    },
+    {
+      "id": 355554,
+      "link": "https://www.headlightmag.com/mercedes-amg-cle-646-spezialanfertigung-world-premiere/",
+      "title": {
+        "rendered": "Mercedes-AMG CLE 646 Spezialanfertigung ขุมพลัง V8 4.0 Bi-Turbo 646 แรงม้า ผลิตเพียง 30 คันทั่วโลก !"
+      },
+      "excerpt": {
+        "rendered": "<p>Mercedes-AMG เปิดตัว CLE 646 Spezialanfertigung (อ่านว่ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        4131,
+        19742,
+        19744,
+        1018,
+        19743
+      ]
+    },
+    {
+      "id": 355524,
+      "link": "https://www.headlightmag.com/ford-ranger-6x6-military-british-army/",
+      "title": {
+        "rendered": "Ford Ranger 6&#215;6 เวอร์ชั่น 6 ล้อ ลงสนามประมูลรถใช้งานกองทัพอังกฤษ ร่วมมือกับ General Dynamics และ Ricardo"
+      },
+      "excerpt": {
+        "rendered": "<p>Ford ร่วมมือกับ General Dynamics Land Systems UK (GDLS  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        278,
+        645,
+        19740,
+        19741,
+        16926,
+        855
+      ]
+    },
+    {
+      "id": 355519,
+      "link": "https://www.headlightmag.com/news-jaguar-land-rover-may-reduce-9-pc-of-its-global-workforce/",
+      "title": {
+        "rendered": "Jaguar Land Rover อาจปลดคน 4,000 ตำแหน่ง หรือ 9 % ของทั้งบริษัท ภายในสองปีข้างหน้านี้"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Jaguar Land Rover ปิดปีงบประมาณที่ผ่านมาอย่างสะบ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 355435,
+      "link": "https://www.headlightmag.com/2026-09-11-new-cars-worldwide-avatr-t09-flagship-suv-phev/",
+      "title": {
+        "rendered": "Avatr T09 Flagship SUV 6 ที่นั่ง ขุมพลังเบนซิน 1.5 TURBO PHEV 3 มอเตอร์ เปิดตัวที่จีนปลายปี 2026"
+      },
+      "excerpt": {
+        "rendered": "<p>Avatr Technology เตรียมขยายไลน์อัพสำหรับตลาด SUV ขนาดให [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        14943,
+        19738,
+        19739
+      ]
+    },
+    {
+      "id": 355505,
+      "link": "https://www.headlightmag.com/news-all-new-bmw-m350-xdrive-launched-02/",
+      "title": {
+        "rendered": "All NEW BMW M350 xDrive เครื่องยนต์สันดาปล้วน ออกทดสอบขั้นสุดท้าย พร้อมสเปคเบื้องต้น"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; BMW 3-Series รุ่นถัดไป ในรหัสตัวถัง G50 จะยังมีร [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        19757
+      ]
+    },
+    {
+      "id": 355490,
+      "link": "https://www.headlightmag.com/news-suzuki-baleno-minorchange-launched-in-india/",
+      "title": {
+        "rendered": "Suzuki Baleno Minorchange ปรับหน้าอีกครั้งที่อินเดีย ขุมพลัง 1.2 ลิตร เบนซิน / CNG"
+      },
+      "excerpt": {
+        "rendered": "<p>Suzuki Baleno ผ่านการ Minorchange อีกครั้งกับตัวถังปัจจ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 355301,
+      "link": "https://www.headlightmag.com/volvo-xc40-ex40-ec40-minorchange-world-launch/",
+      "title": {
+        "rendered": "Volvo XC40 / EX40 / EC40 รุ่นปรับโฉม Minorchange ดีไซน์ใหม่ เพิ่มเทคฯ ขายเครื่องยนต์สันดาปล้วนต่อ"
+      },
+      "excerpt": {
+        "rendered": "<p>Volvo XC40 เปิดตัวครั้งแรกในปี 2017 ในฐานะ Compact SUV  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        179,
+        16409,
+        16418,
+        1969
+      ]
+    },
+    {
+      "id": 355404,
+      "link": "https://www.headlightmag.com/2026-09-11-new-cars-worldwide-audi-a2-e-tron/",
+      "title": {
+        "rendered": "Audi A2 e-tron คืนชีพรถเล็กสุดล้ำ ขุมพลังไฟฟ้า แรงสุด 326 แรงม้า RWD แบตฯ 81 kWh วิ่งไกล 646 กม. (WLTP)"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 7 กันยายน 2026 Audi ได้เปิดตัว A2 e-tron รถ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        19737,
+        19607,
+        164,
+        19608,
+        19606
+      ]
+    },
+    {
+      "id": 355388,
+      "link": "https://www.headlightmag.com/honda-super-one-ev-acceleration-consumption-test/",
+      "title": {
+        "rendered": "ผลทดสอบ อัตราเร่ง อัตราสิ้นเปลือง Honda Super-ONE EV : 990,000 บาท"
+      },
+      "excerpt": {
+        "rendered": "<p>ผลทดสอบ อัตราเร่ง อัตราสิ้นเปลือง Honda Super-ONE ราคา  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        108,
+        54,
+        13708
+      ],
+      "tags": [
+        18501,
+        18478
+      ]
+    },
+    {
+      "id": 355392,
+      "link": "https://www.headlightmag.com/news-hyundai-custo-minorchange-previewed-2/",
+      "title": {
+        "rendered": "Hyundai Custo Minorchange จากจีน MPV 7 ที่นั่ง พร้อมขุมพลังเบนซินเทอร์โบ 1.5 / 2.0 ลิตร"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; ชาวจีนมี MPV 7 ที่นั่งจากผู้ผลิตสัญชาติเกาหลีอย่ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 355380,
+      "link": "https://www.headlightmag.com/news-tank-700-lwb-previewed/",
+      "title": {
+        "rendered": "Tank 700 รุ่นฐานล้อยาว เตรียมเปิดตัวที่จีน โตขึ้นทุกมิติ 6 ที่นั่ง พร้อมขุมพลัง PHEV สองแบบ"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Tank 700 รุ่นฐานล้อยาว เตรียมเปิดตัวแล้วที่ประเท [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 355310,
+      "link": "https://www.headlightmag.com/2026-09-10-new-cars-worldwide-dacia-spring-ev-2nd-generation/",
+      "title": {
+        "rendered": "Dacia Spring EV ใหม่ ย้ายฐานผลิตจากจีนสู่ยุโรป ยืนยันราคาเริ่มต่ำกว่า 20,000 ยูโร (7.4 แสนบาท)"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 8 กันยายน 2026 Dacia เปิดตัว Spring เจเนอเร [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84
+      ],
+      "tags": [
+        5328,
+        13382,
+        19735,
+        19736
+      ]
+    },
+    {
+      "id": 355232,
+      "link": "https://www.headlightmag.com/official-price-hyundai-staria-hybrid-minorchange-2026/",
+      "title": {
+        "rendered": "ราคาอย่างเป็นทางการ + เทียบสเป็ค Hyundai STARIA Hybrid (Minorchange) : 2,099,000 &#8211; 2,399,000 บาท"
+      },
+      "excerpt": {
+        "rendered": "<p>ราคาอย่างเป็นทางการ Hyundai STARIA Hybrid (Minorchange) [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        85,
+        109
+      ],
+      "tags": [
+        10995,
+        19500,
+        19498,
+        10998,
+        19733,
+        19734,
+        11365
+      ]
+    },
+    {
+      "id": 355210,
+      "link": "https://www.headlightmag.com/2026-09-09-new-cars-worldwide-land-rover-defender-wolf-series-ii-uk-military-2/",
+      "title": {
+        "rendered": "Land Rover Defender Wolf Series II เวอร์ชั่นดัดแปลงสำหรับใช้ในกองทัพสหราชอาณาจักร"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 4 กันยายน 2026 Land Rover Defender Wolf Ser [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        8424,
+        1021,
+        1194,
+        19732
+      ]
+    },
+    {
+      "id": 354931,
+      "link": "https://www.headlightmag.com/2026-09-08-picture-specs-geely-starray-em-r-max/",
+      "title": {
+        "rendered": "ภาพคันจริง Geely Starray EM-R Max | ชาร์จได้ เติมน้ำมันได้ หมดห่วง ช่วงเทศกาล"
+      },
+      "excerpt": {
+        "rendered": "<p>ภาพคันจริง Geely Starray EM-R Max &nbsp; ราคาอย่างเป็นท [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        85,
+        109
+      ],
+      "tags": [
+        19652,
+        19653,
+        19729,
+        19655,
+        19654,
+        19730
+      ]
+    },
+    {
+      "id": 354952,
+      "link": "https://www.headlightmag.com/gwm-ora-5-sedan-registered-miit-china/",
+      "title": {
+        "rendered": "เผยข้อมูล ORA 5 Sedan ขุมพลังไฟฟ้า ทำตลาดควบคู่กับตัวถัง Crossover และ Wagon"
+      },
+      "excerpt": {
+        "rendered": "<p>ORA แบรนด์รถยนต์ในเครือ Great Wall Motor เตรียมขยายไลน์ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        18285,
+        19731
+      ]
+    },
+    {
+      "id": 354916,
+      "link": "https://www.headlightmag.com/2026-09-07-new-cars-worldwide-zeekr-7x-standard-range-85-kwh/",
+      "title": {
+        "rendered": "Zeekr 7X Standard Range MY2027 แบตเตอรี่ใหม่ 85 kWh วิ่งไกลกว่า 700 กม. เปิดตัวที่จีนปลายปีนี้"
+      },
+      "excerpt": {
+        "rendered": "<p>Zeekr เตรียมอัพเดต 7X รถ SUV ไฟฟ้าขนาดกลางสำหรับตลาดจีน [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        16670,
+        11077,
+        16669
+      ]
+    },
+    {
+      "id": 354909,
+      "link": "https://www.headlightmag.com/news-mazda-patented-mx-6e-and-mx-7e-trademark-2/",
+      "title": {
+        "rendered": "Mazda จดทะเบียนเครื่องหมายการค้า MX-6e และ MX-7e ในหลายตลาด"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; (ภาพ: รถยนต์ต้นแบบ Mazda Iconic SP) นับตั้งแต่ M [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 354851,
+      "link": "https://www.headlightmag.com/official-price-toyota-land-cruiser-fj-2/",
+      "title": {
+        "rendered": "ราคาอย่างเป็นทางการ Toyota Land Cruiser FJ : 1,289,000 บาท"
+      },
+      "excerpt": {
+        "rendered": "<p>ราคาอย่างเป็นทางการ Toyota Land Cruiser FJ Land Cruiser [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        85,
+        109
+      ],
+      "tags": [
+        18962,
+        5417,
+        17610,
+        161,
+        17700,
+        19728
+      ]
+    },
+    {
+      "id": 354844,
+      "link": "https://www.headlightmag.com/official-price-hyundai-ioniq-5-n-line-ckd-thailand-2nd-lot/",
+      "title": {
+        "rendered": "ราคาอย่างเป็นทางการ Hyundai IONIQ 5 N Line (ประกอบไทย / MY2026) : 1,449,000 บาท"
+      },
+      "excerpt": {
+        "rendered": "<p>ราคาอย่างเป็นทางการ Hyundai IONIQ 5 N Line (ประกอบไทย M [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        85,
+        109
+      ],
+      "tags": [
+        17254,
+        12220
+      ]
+    },
+    {
+      "id": 354825,
+      "link": "https://www.headlightmag.com/news-scout-traveler-mountainside-and-trail-ready-concept-launched/",
+      "title": {
+        "rendered": "Scout Traveler ต้นแบบสองสไตล์ Mountainside และ Trail-Ready Concept"
+      },
+      "excerpt": {
+        "rendered": "<p>Scout Motors เปิดตัวรถยนต์ต้นแบบ Traveler SUV สองรุ่นสอ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 354752,
+      "link": "https://www.headlightmag.com/news-flooded-1991-honda-nsx-na1-sold-for-8-million-yen/",
+      "title": {
+        "rendered": "1991 Honda NSX (NA1) ปิดประมูลที่ญี่ปุ่น 8 ล้านเยน (ราว 1.6 ล้านบาท) แม้น้ำท่วมมิดล้อ"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; เชื่อว่าหลายคนน่าจะเคยเห็นภาพ Honda NSX สีแดงจมน [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 354747,
+      "link": "https://www.headlightmag.com/news-lamborghini-temerario-polizia-unveiled/",
+      "title": {
+        "rendered": "Lamborghini Temerario Polizia ประจำการกับตำรวจอิตาลี เพื่อภารกิจขนส่งอวัยวะเพื่อช่วยชีวิตผู้ป่วย"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Automobili Lamborghini ได้ร่วมมือครั้งแรกกับตำรว [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 354733,
+      "link": "https://www.headlightmag.com/news-honda-may-ask-its-suppliers-to-lower-cost/",
+      "title": {
+        "rendered": "เอกสารภายในหลุด Honda เล็งลดค่าใช้จ่ายมหาศาล พร้อมแจ้ง supplier ให้ช่วยควบคุมต้นทุน"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; ในปีที่ผ่านมานับเป็นปีที่ Honda ปิดปีงบประมาณขาด [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 354730,
+      "link": "https://www.headlightmag.com/2026-09-05-world-news-volkswagen-cuts-50k-jobs-and-half-of-lineups/",
+      "title": {
+        "rendered": "Volkswagen เตรียมลดพนักงาน 50,000 คน พร้อมหั่นไลน์อัพรถยนต์ครึ่งหนึ่งภายในปี 2035"
+      },
+      "excerpt": {
+        "rendered": "<p>Volkswagen เดินเกมวางแผนปรับโครงสร้างครั้งใหญ่ภายใต้ Fu [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        284,
+        481
+      ]
+    },
+    {
+      "id": 354724,
+      "link": "https://www.headlightmag.com/news-gac-australia-might-rename-m8-as-e9/",
+      "title": {
+        "rendered": "GAC M8 อาจเปลี่ยนชื่อเป็น E9 เพื่อเลี่ยงปัญหาเครื่องหมายการค้ากับ BMW ในออสเตรเลีย"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; เมื่อพูดถึง M8 หลายคนอาจนึกถึงตัวแรงของ 8-Series [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 354690,
+      "link": "https://www.headlightmag.com/2026-09-04-world-news-geely-ex2-and-aion-ut-earn-5-stars-euro-ncap/",
+      "title": {
+        "rendered": "GEELY E2 และ AION UT คว้า 5 ดาว Euro NCAP ความปลอดภัยเด่นทั้งระบบป้องกันและโครงสร้างตัวถัง"
+      },
+      "excerpt": {
+        "rendered": "<p>Euro NCAP ประกาศผลการทดสอบความปลอดภัยของรถยนต์รุ่นใหม่ท [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        11700,
+        16930,
+        7320,
+        18641,
+        2032,
+        18555,
+        19727
+      ]
+    },
+    {
+      "id": 354713,
+      "link": "https://www.headlightmag.com/2026-09-04-new-cars-worldwide-toyota-c-hr-gr-sport-my2027/",
+      "title": {
+        "rendered": "Toyota C-HR GR Sport รุ่นพิเศษฉลองครบรอบ 10 ปี เพิ่มสีเทาด้าน ล้อ 20 นิ้ว สำหรับตลาดยุโรป"
+      },
+      "excerpt": {
+        "rendered": "<p>Toyota ยุโรปปรับโฉม C-HR รถ Crossover รุ่นบุกเบิกขวัญใจ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        1466,
+        9232,
+        161,
+        1465,
+        10604
+      ]
+    },
+    {
+      "id": 354596,
+      "link": "https://www.headlightmag.com/2026-09-03-new-cars-worldwide-land-rover-range-rover-electric/",
+      "title": {
+        "rendered": "Land Rover Range Rover ELECTRIC ขุมพลังไฟฟ้า มอเตอร์คู่ 550 แรงม้า แบตฯ 118.5 kWh วิ่งไกลสุด 600 กม."
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 2 กันยายน 2026 Land Rover เปิดตัว Range Rov [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        340,
+        19726
+      ]
+    },
+    {
+      "id": 354681,
+      "link": "https://www.headlightmag.com/2026-09-03-world-news-volkswagen-might-remove-seat-brand/",
+      "title": {
+        "rendered": "Volkswagen จ่อเลิกแบรนด์ SEAT ภายในปี 2029 หลังยอดขายร่วง 17% ดัน CUPRA ขึ้นแทน"
+      },
+      "excerpt": {
+        "rendered": "<p>Volkswagen Group กำลังพิจารณายุติ Seat แบรนด์รถยนต์สัญช [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        5606,
+        1137,
+        284,
+        481
+      ]
+    },
+    {
+      "id": 354674,
+      "link": "https://www.headlightmag.com/news-ford-fathom-teased/",
+      "title": {
+        "rendered": "Ford Fathom กระบะพิกัด mid-sized ขุมพลัง EV ก่อนออกขายสหรัฐฯ ในปี 2027"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Ford เตรียมที่จะประเดิมงานวิศวกรรม Universal Ele [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 354667,
+      "link": "https://www.headlightmag.com/news-salted-caramel-chip-wheels-by-toyota-usa/",
+      "title": {
+        "rendered": "Salted Caramel Chip Wheels คุ้กกี้ไอติมจาก Toyota ในสหรัฐฯ เพื่อใช้โปรโมทตู้เย็นใน Toyota Sienna"
+      },
+      "excerpt": {
+        "rendered": "<p>หลายคนอาจจะนึกว่าเป็นมุขตลกวันโกหกหรือเปล่าที่ Toyota ท [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 354631,
+      "link": "https://www.headlightmag.com/specs-mitsubishi-pajero-australia-version/",
+      "title": {
+        "rendered": "เผยสเป็ค All NEW Mitsubishi PAJERO เวอร์ชั่นออสเตรเลีย 4 รุ่นย่อย ราคา  1,622,000 &#8211; 2,013,000 บาท"
+      },
+      "excerpt": {
+        "rendered": "<p>สเป็ค All NEW Mitsubishi PAJERO เวอร์ชั่นออสเตรเลีย &#038;nb [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        4558,
+        6222,
+        19716,
+        656
+      ]
+    },
+    {
+      "id": 354568,
+      "link": "https://www.headlightmag.com/2026-09-03-new-cars-worldwide-polestar-4-suv/",
+      "title": {
+        "rendered": "Polestar 4 SUV เพิ่มพื้นที่และกระจกประตูหลัง มอเตอร์คู่ 544 แรงม้า วิ่งไกล 630 กม."
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 2 กันยายน 2026 Polestar เปิดตัว Polestar 4  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        1183,
+        12782,
+        19490
+      ]
+    },
+    {
+      "id": 354556,
+      "link": "https://www.headlightmag.com/2026-09-03-new-cars-worldwide-lexus-is-350-special-appearance-package/",
+      "title": {
+        "rendered": "Lexus IS 350 Special Appearance Package รุ่นพิเศษฉลอง 25 ปี IS ผลิตเพียง 350 คัน พร้อมสีเขียว Envious และล้อ BBS"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 31 สิงหาคม 2026 Lexus เปิดตัว IS 350 Specia [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        19725,
+        1864,
+        10079,
+        19724
+      ]
+    },
+    {
+      "id": 354532,
+      "link": "https://www.headlightmag.com/2026-09-03-new-cars-worldwide-porsche-911-gt3-bergsport/",
+      "title": {
+        "rendered": "Porsche 911 GT3 Bergsport เอาใจคนรักเกียร์ธรรมดา ผลิตแค่ 100 คัน สำหรับตลาดยุโรปเท่านั้น"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 1 กันยายน 2026 Porsche เปิดตัว 911 GT3 Berg [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84
+      ],
+      "tags": [
+        19723,
+        478,
+        4565,
+        19722
+      ]
+    },
+    {
+      "id": 354514,
+      "link": "https://www.headlightmag.com/2026-09-03-world-news-nissan-and-honda-co-develope-sdv/",
+      "title": {
+        "rendered": "Nissan และ Honda จับมือพัฒนา SDV ร่วมกัน เตรียมใช้ ECU และซอฟต์แวร์มาตรฐานเดียวกันตั้งแต่ปี 2029"
+      },
+      "excerpt": {
+        "rendered": "<p>Nissan Motor และ Honda Motor ประกาศลงนามข้อตกลงความร่วม [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        200,
+        207
+      ]
+    },
+    {
+      "id": 354516,
+      "link": "https://www.headlightmag.com/news-renault-scenic-e-tech-electric-updated/",
+      "title": {
+        "rendered": "Renault Scenic E-Tech electric รุ่นปรับอุปกรณ์ แบตชาร์จไวขึ้น ปรับ Safety พร้อมเพิ่มสี"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Renault Scenic E-Tech electric เปิดตัวแล้วที่ฝรั [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 354154,
+      "link": "https://www.headlightmag.com/2026-09-02-world-news-byd-profit-drops-1st-half-2026/",
+      "title": {
+        "rendered": "ผลประกอบการครึ่งแรกปี 2026 ของ BYD ลดลง 20.5% ยอดรถยนต์พลังงานใหม่ชะลอตัวและความผันผวนของค่าเงิน"
+      },
+      "excerpt": {
+        "rendered": "<p>BYD รายงานผลประกอบการครึ่งแรกของปี 2026 โดยมีรายได้และก [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        3329
+      ]
+    },
+    {
+      "id": 354507,
+      "link": "https://www.headlightmag.com/news-byd-may-utilize-techs-from-racco-in-other-models/",
+      "title": {
+        "rendered": "BYD มีแผนนำงานวิศวกรรม Racco EV K-Car ไปต่อยอดเป็นรุ่นเริ่มต้นรุ่นใหม่ สำหรับตลาดยุโรป"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; BYD Racco หรือ K-Car ขุมพลัง EV ที่ BYD พัฒนาขึ้ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 354177,
+      "link": "https://www.headlightmag.com/2026-mitsubishi-pajero-world-premiere-launch/",
+      "title": {
+        "rendered": "ข้อมูลทั้งหมดของ All NEW Mitsubishi PAJERO สานต่อตำนาน Flagship SUV สาย Off-road"
+      },
+      "excerpt": {
+        "rendered": "<p>Mitsubishi Pajero กลับมาอีกครั้งในรอบหลายปี กับการเปิดต [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        140,
+        84,
+        85,
+        109,
+        54
+      ],
+      "tags": [
+        4558,
+        19718,
+        6222,
+        19717,
+        19716,
+        656
+      ]
+    },
+    {
+      "id": 354443,
+      "link": "https://www.headlightmag.com/2026-09-02-new-cars-worldwide-lexus-nx-minorchange-2027/",
+      "title": {
+        "rendered": "Lexus NX Minorchange มาพร้อมระบบ Hybrid เจเนอเรชั่นใหม่ ยกเครื่องงานออกแบบภายใน เพิ่มความแข็งแรงตัวถัง"
+      },
+      "excerpt": {
+        "rendered": "<p>Lexus เปิดตัว NX รุ่น Minorchange อย่างเป็นทางการเมื่อว [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84
+      ],
+      "tags": [
+        3253,
+        19719,
+        19720,
+        11752,
+        5687,
+        19721,
+        11675
+      ]
+    },
+    {
+      "id": 354151,
+      "link": "https://www.headlightmag.com/2026-09-02-world-news-gen-z-looking-for-normal-car-instead-fof-sport-ones/",
+      "title": {
+        "rendered": "ผลสำรวจชี้ Gen Z มะกันเมินสะสม Corvette แต่หันมาเก็บ Corolla และ Cavalier ยุค 2000"
+      },
+      "excerpt": {
+        "rendered": "<p>กระแสรถคลาสสิกสำหรับชาวอเมริกากำลังเปลี่ยนไปจากเดิมอย่า [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 354189,
+      "link": "https://www.headlightmag.com/news-italy-plans-to-control-elderly-drivers/",
+      "title": {
+        "rendered": "อิตาลีจะควบคุมผู้ขับขี่สูงวัย ด้วยเกณฑ์ตรวจสุขภาพที่เข้มงวดขึ้น แต่ยังไม่จำกัดการเดินทางตามแผนเดิม"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; ผู้ขับขี่สูงวัยในอิตาลีน่าจะหายใจหายคอได้โล่งขึ้ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 354179,
+      "link": "https://www.headlightmag.com/news-suzuki-alto-every-will-be-sold-in-brunei/",
+      "title": {
+        "rendered": "Suzuki Alto / Every จะออกขายที่บรูไน ครั้งแรกที่ K-Car ผลิตนอกญี่ปุ่นและส่งออกไปอีกต่อ"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; โดยปกติแล้ว K-Car เป็นรถยนต์ที่ผลิตและจำหน่ายในป [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        109,
+        47
+      ],
+      "tags": []
+    },
+    {
+      "id": 354156,
+      "link": "https://www.headlightmag.com/news-toyota-roomy-launched/",
+      "title": {
+        "rendered": "Toyota Roomy รุ่นปรับอุปกรณ์ เพิ่มสีใหม่และปรับอุปกรณ์ เบนซิน 3 สูบ NA / Turbo"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Toyota Roomy รุ่นปรับอุปกรณ์ เปิดตัวแล้วที่ประเท [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 354149,
+      "link": "https://www.headlightmag.com/2026-09-01-world-news-volvo-new-safety-technology/",
+      "title": {
+        "rendered": "Volvo เพิ่มเทคโนโลยีความปลอดภัย เตือนรถคันอื่นล่วงหน้าหากพบอุบัติเหตุ รวมถึงสัตว์และคนเดินถนน"
+      },
+      "excerpt": {
+        "rendered": "<p>Volvo ยังคงเดินหน้าพัฒนาเทคโนโลยีด้านความปลอดภัยอย่างต่ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        179
+      ]
+    },
+    {
+      "id": 354142,
+      "link": "https://www.headlightmag.com/special-price-suzuki-fronx-september-2026/",
+      "title": {
+        "rendered": "ราคาพิเศษ Suzuki Fronx : 599,000 &#8211; 699,000 บาท | ลดเพิ่ม 1 แสนบาท ! สำหรับรุ่น GLX และ GLX Plus"
+      },
+      "excerpt": {
+        "rendered": "<p>ราคาพิเศษ Suzuki Fronx  Fronx 1.5 ​GL 4AT : 689,000 บาท [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        85,
+        109
+      ],
+      "tags": [
+        14001,
+        19714,
+        19715
+      ]
+    },
+    {
+      "id": 354109,
+      "link": "https://www.headlightmag.com/2026-09-01-new-cars-worldwide-nio-firefly-club-spiaggia-limited-edition/",
+      "title": {
+        "rendered": "Nio Firefly Club Spiaggia เวอร์ชั่นพิเศษจำนวนจำกัดเพียง 666 คัน สำหรับตลาดจีน"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 28 สิงหาคม 2026 Nio ได้เปิดตัว Firefly Club [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84
+      ],
+      "tags": [
+        19712,
+        19711
+      ]
+    },
+    {
+      "id": 354104,
+      "link": "https://www.headlightmag.com/2026-08-31-world-news-geely-ex2-byd-qin-l-dm-i-false-information/",
+      "title": {
+        "rendered": "ตรวจพบ Geely EX2 และ BYD Qin L DM-i มีข้อมูลไม่ตรงตามข้อมูลที่แจ้งต่อภาครัฐ"
+      },
+      "excerpt": {
+        "rendered": "<p>กระทรวงอุตสาหกรรมและเทคโนโลยีสารสนเทศของจีน (MIIT) เปิด [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        3329,
+        19709,
+        18641,
+        2032,
+        18555,
+        16522,
+        19710
+      ]
+    },
+    {
+      "id": 354097,
+      "link": "https://www.headlightmag.com/2026-08-31-world-news-uk-customers-open-for-chinese-cars/",
+      "title": {
+        "rendered": "คนอังกฤษเกือบครึ่งเปิดใจซื้อรถจีน สื่อท้องถิ่นชี้กระแสรถจีนแรงขึ้นต่อเนื่อง"
+      },
+      "excerpt": {
+        "rendered": "<p>ผลสำรวจใหม่จากสื่อยานยนต์ระดับหัวแถวของอังกฤษและแพลตฟอร [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        19364,
+        19708
+      ]
+    },
+    {
+      "id": 354087,
+      "link": "https://www.headlightmag.com/2026-08-31-new-cars-worldwide-xpeng-l05-leaked/",
+      "title": {
+        "rendered": "Xpeng L05 โผล่ทดสอบในจีน ก่อนเปิดตัวปลายปี 2026 เตรียมทำตลาดทั่วโลกควบคู่ L03"
+      },
+      "excerpt": {
+        "rendered": "<p>ภาพถ่ายรถคันจริงของ Xpeng Mona L05 รถยนต์ไฟฟ้า SUV รุ่น [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84
+      ],
+      "tags": [
+        19707,
+        12883,
+        19705,
+        19001,
+        19706
+      ]
+    },
+    {
+      "id": 354053,
+      "link": "https://www.headlightmag.com/2026-08-31-world-news-toyota-sales-drop-july-2026/",
+      "title": {
+        "rendered": "ยอดขาย Toyota ทั่วโลกเดือนกรกฎาคม 2026 ลดลง 5.2% แม้ตลาดญี่ปุ่นและอเมริกาเหนือยังเติบโต"
+      },
+      "excerpt": {
+        "rendered": "<p>Toyota Motor Corporation รายงานยอดขายรถยนต์ทั่วโลกประจำ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        414,
+        161
+      ]
+    },
+    {
+      "id": 347947,
+      "link": "https://www.headlightmag.com/history-mitsubishi-pajero-3_generation_1999_2006/",
+      "title": {
+        "rendered": "MITSUBISHI PAJERO : The History : 3rd Generation (1999 &#8211; 2006) สวนกระแส Up Size เน้นนุ่มสบาย สไตล์ Off-road หรู"
+      },
+      "excerpt": {
+        "rendered": "<p>21 ตุลาคม 1999 Makuhari Messe Japan ผมยังจำได้ดี ถึงครั [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        98,
+        107,
+        56,
+        108,
+        140,
+        102
+      ],
+      "tags": [
+        19509,
+        4558,
+        19586,
+        19510,
+        19511,
+        19513
+      ]
+    },
+    {
+      "id": 354051,
+      "link": "https://www.headlightmag.com/2026-08-30-world-news-hyundai-n-rear-wheel-drive/",
+      "title": {
+        "rendered": "Hyundai N เตรียมพัฒนารถสมรรถนะสูงขับเคลื่อนล้อหลัง หวังเพิ่มยอดขาย 5 เท่าภายในปี 2030"
+      },
+      "excerpt": {
+        "rendered": "<p>Hyundai N เตรียมขยายไลน์อัปรถสมรรถนะสูงครั้งใหญ่ โดยตั้ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        13124,
+        12921,
+        7028
+      ]
+    },
+    {
+      "id": 354035,
+      "link": "https://www.headlightmag.com/2026-08-30-new-cars-worldwide-volkswagen-id-california-cruise/",
+      "title": {
+        "rendered": "Volkswagen เปิดตัว ID. California Cruise รถแคมเปอร์ขุมพลังไฟฟ้าล้วนรุ่นแรก"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 28 สิงหาคม 2026 Volkswagen Commercial Vehic [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        19702,
+        284,
+        19704,
+        19703,
+        19701
+      ]
+    },
+    {
+      "id": 354031,
+      "link": "https://www.headlightmag.com/2026-08-30-world-news-nissan-sales-report-july-see-growth-in-japan-and-us/",
+      "title": {
+        "rendered": "ยอดขาย Nissan ในญี่ปุ่นและสหรัฐฯ โตต่อเนื่อง สวนทางยอดขายทั่วโลกเดือนกรกฎาคมลดลง 16.5%"
+      },
+      "excerpt": {
+        "rendered": "<p>Nissan Motor รายงานตัวเลขยอดขายและการส่งออกรถยนต์ประจำเ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        47
+      ],
+      "tags": [
+        207,
+        1217,
+        414
+      ]
+    },
+    {
+      "id": 353918,
+      "link": "https://www.headlightmag.com/2026-08-30-new-cars-worldwide-mg-hector-tomahawk-ev-suv/",
+      "title": {
+        "rendered": "MG Hector Tomahawk EV 3 แถว สำหรับตลาดอินเดีย ราคาเริ่ม 4.8 แสนบาท ไม่รวมแบตเตอรี่"
+      },
+      "excerpt": {
+        "rendered": "<p>MG เปิดตัว Hector Tomahawk EV รถยนต์ SUV ขนาดใหญ่แบบ 3  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84
+      ],
+      "tags": [
+        19700,
+        232,
+        8804
+      ]
+    },
+    {
+      "id": 354001,
+      "link": "https://www.headlightmag.com/news-porsche-911-challenge-launched/",
+      "title": {
+        "rendered": "Porsche 911 Challenge ตัวแข่งรุ่นเริ่มต้น ขุมพลังเดียวกับ GT3 6 สูบนอน 4.0 NA 515 แรงม้า"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Porsche 911 Challenge เปิดตัวเมื่อวันที่ 26 สิงห [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 353979,
+      "link": "https://www.headlightmag.com/news-mitsubishi-triton-savana-sertoes-unveiled-brazil/",
+      "title": {
+        "rendered": "Mitsubishi Triton Savana Sertões แต่งพิเศษ ผลิตจำกัด สูตรสำเร็จจากบราซิล"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Mitsubishi Triton Savana Sertões เปิดตัวที่บราซิ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 353961,
+      "link": "https://www.headlightmag.com/news-daihatsu-mira-es-my-2026-launched/",
+      "title": {
+        "rendered": "Daihatsu Mira e:S รุ่นปรับอุปกรณ์ เพิ่มสีใหม่ ปรับ safety และประหยัดเชื้อเพลิงขึ้น"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Daihatsu Mira e:S มีรุ่นปรับอุปกรณ์ตามมาแล้ว โดย [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 353946,
+      "link": "https://www.headlightmag.com/news-all-new-volkswagen-tukan-previewed/",
+      "title": {
+        "rendered": "All NEW Volkswagen Tukan กระบะจากบราซิล พื้นฐานรถยนต์นั่ง แต่ช่วงล่างหลังแหนบ"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; Volkswagen Tukan รถกระบะที่มีพื้นฐานมาจากรถยนต์น [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 353924,
+      "link": "https://www.headlightmag.com/news-ora-5-sport-launched/",
+      "title": {
+        "rendered": "ORA 5 Sport สปอร์ตรองจาก GT พร้อมขุมพลังสามแบบ เบนซินเทอร์โบ – Hybrid &#8211; EV"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; นอกจากจะมีการเปิดตัว ORA 5 GT ที่ประเทศจีนไปเมื่ [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        18285,
+        19713
+      ]
+    },
+    {
+      "id": 353479,
+      "link": "https://www.headlightmag.com/2026-08-28-new-cars-worldwide-chery-fulwin-t7-lapas-l6/",
+      "title": {
+        "rendered": "Chery Fulwin T7 (Lepas L6 ในไทย) เตรียมเปิดขายที่จีนเร็วๆ นี้ คาดราคาเริ่ม 4.8 แสนบาท"
+      },
+      "excerpt": {
+        "rendered": "<p>เมื่อวันที่ 27 สิงหาคม 2026 Chery เปิดตัว Fulwin T7 รถ  [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        5237,
+        19698,
+        19697,
+        19549,
+        11290
+      ]
+    },
+    {
+      "id": 353887,
+      "link": "https://www.headlightmag.com/gwm-ora-5-gt-official-launch-in-china/",
+      "title": {
+        "rendered": "ORA 5 GT ตกแต่งแบบสปอร์ต พร้อมปรับจูนช่วงล่าง มีให้เลือกทั้ง เบนซิน 1.5 TURBO / HEV และ BEV"
+      },
+      "excerpt": {
+        "rendered": "<p>28 สิงหาคม 2026 Great Wall Motor เปิดตัว ORA 5 GT อย่าง [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": [
+        18285,
+        19699
+      ]
+    },
+    {
+      "id": 353874,
+      "link": "https://www.headlightmag.com/news-byd-mako-previewed/",
+      "title": {
+        "rendered": "BYD Mako กระบะพื้นฐานรถยนต์นั่ง ขุมพลัง PHEV รองรับเอทานอล เตรียมเปิดตัวที่บราซิล"
+      },
+      "excerpt": {
+        "rendered": "<p>&nbsp; BYD เตรียมที่จะเสริมทัพกระบะ Shark ด้วยการเพิ่มร [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        84,
+        109
+      ],
+      "tags": []
+    },
+    {
+      "id": 353527,
+      "link": "https://www.headlightmag.com/2026-09-28-picture-specs-mazda-6e-exclusive/",
+      "title": {
+        "rendered": "ภาพคันจริง Mazda 6e Exclusive | สีน้ำตาล / ทองแดง &#8211; Melting Copper นี้ ไม่มีขายแล้วนะ"
+      },
+      "excerpt": {
+        "rendered": "<p>ภาพคันจริง Mazda 6e Exclusive &nbsp; ราคาอย่างเป็นทางกา [&hellip;]</p>\n",
+        "protected": false
+      },
+      "categories": [
+        85,
+        109
+      ],
+      "tags": [
+        549,
+        17133,
+        18968,
+        8064,
+        18926,
+        567,
+        17197
+      ]
+    }
+  ]
+}

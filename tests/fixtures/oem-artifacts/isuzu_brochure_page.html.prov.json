@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu-tis.com/download-brochure",
+  "captured_at": "2026-09-26T07:45:04.831341+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "64cf78e986eef66d854116a95e135481dd1bc862216713647fc8974b682c2eeb",
+  "session_id": "catalog_layers_20260926_074454",
+  "artifact_filename": "isuzu_brochure_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

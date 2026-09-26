@@ -65,8 +65,10 @@ const SPEC_GROUPS = [
   },
 ];
 
+const NO_DATA = "ยังไม่มีข้อมูลยืนยัน";
+
 function formatValue(field: any, value: any) {
-  if (value === null || value === undefined) return "—";
+  if (value === null || value === undefined) return NO_DATA;
   if (field.format) return field.format(value);
   return `${value} ${field.unit || ""}`.trim();
 }
@@ -231,6 +233,10 @@ export default function ComparePage() {
           </Card>
         )}
       </div>
+      {/* Provenance note */}
+      <p className="text-xs text-[var(--color-gray-400)] mt-4">
+        ℹ️ ข้อมูลที่แสดงเป็นข้อมูลที่ผ่านการตรวจสอบจากแหล่งข้อมูลทางการเท่านั้น — ช่องที่ระบุ &quot;{NO_DATA}&quot; ยังไม่มีแหล่งข้อมูลที่ยืนยันได้
+      </p>
     </div>
   );
 }

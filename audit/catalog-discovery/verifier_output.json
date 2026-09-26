@@ -1,0 +1,394 @@
+{
+  "artifact_dir": "audit/catalog-discovery",
+  "total_checks": 36,
+  "passed": 27,
+  "failed": 0,
+  "partial": 4,
+  "blocked": 0,
+  "not_applicable": 5,
+  "checks": [
+    {
+      "section": "artifacts",
+      "check": "exists_fipe_models",
+      "status": "PASS",
+      "path": "datasets/fipe_api_capture.json",
+      "local_artifact_sha256": "a3cdd7fa22e734d7"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_fipe_year",
+      "status": "PASS",
+      "path": "fipe_year_hierarchy.json",
+      "local_artifact_sha256": "65d22c31cd7549dd"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_open_ev",
+      "status": "PASS",
+      "path": "second_taxonomy_capture.json",
+      "local_artifact_sha256": "96562b389920a4e6"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_toyota",
+      "status": "PASS",
+      "path": "datasets/toyota_official_capture.json",
+      "local_artifact_sha256": "1033fb51df9f3589"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_mazda",
+      "status": "PASS",
+      "path": "datasets/mazda_official_capture.json",
+      "local_artifact_sha256": "7e41607281caeef5"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_hlm",
+      "status": "PASS",
+      "path": "media_discovery_headlightmag.json",
+      "local_artifact_sha256": "85c05634325008f6"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_thai_ref",
+      "status": "PASS",
+      "path": "thai_market_reference.json",
+      "local_artifact_sha256": "bc0167fa9b39f630"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_raw_universe",
+      "status": "PASS",
+      "path": "raw_taxonomy_universe.json",
+      "local_artifact_sha256": "822738835ae30f19"
+    },
+    {
+      "section": "artifacts",
+      "check": "exists_source_matrix",
+      "status": "PASS",
+      "path": "source_matrix.json",
+      "local_artifact_sha256": "97ae7035477f09f4"
+    },
+    {
+      "section": "hash_integrity",
+      "check": "payload_hash_fipe_models",
+      "status": "PASS",
+      "upstream_payload_sha256": "d66ab979ec2ad265",
+      "local_artifact_sha256": "a3cdd7fa22e734d7",
+      "note": "Hash recorded from upstream capture, not compared to local file"
+    },
+    {
+      "section": "hash_integrity",
+      "check": "payload_hash_open_ev",
+      "status": "PASS",
+      "upstream_payload_sha256": "a83e075de3944517",
+      "local_artifact_sha256": "96562b389920a4e6",
+      "note": "Hash recorded from upstream capture, not compared to local file"
+    },
+    {
+      "section": "hash_integrity",
+      "check": "payload_hash_toyota",
+      "status": "PASS",
+      "upstream_payload_sha256": "89b2273ec79dbd09",
+      "local_artifact_sha256": "1033fb51df9f3589",
+      "note": "Hash recorded from upstream capture, not compared to local file"
+    },
+    {
+      "section": "hash_integrity",
+      "check": "payload_hash_mazda",
+      "status": "PASS",
+      "upstream_payload_sha256": "22be446f19b73d41",
+      "local_artifact_sha256": "7e41607281caeef5",
+      "note": "Hash recorded from upstream capture, not compared to local file"
+    },
+    {
+      "section": "hash_integrity",
+      "check": "payload_hash_fipe_year",
+      "status": "NOT_APPLICABLE",
+      "local_artifact_sha256": "65d22c31cd7549dd",
+      "note": "Derived artifact \u2014 no upstream payload hash"
+    },
+    {
+      "section": "hash_integrity",
+      "check": "payload_hash_hlm",
+      "status": "NOT_APPLICABLE",
+      "local_artifact_sha256": "85c05634325008f6",
+      "note": "Derived artifact \u2014 no upstream payload hash"
+    },
+    {
+      "section": "hash_integrity",
+      "check": "payload_hash_thai_ref",
+      "status": "NOT_APPLICABLE",
+      "local_artifact_sha256": "bc0167fa9b39f630",
+      "note": "Derived artifact \u2014 no upstream payload hash"
+    },
+    {
+      "section": "hash_integrity",
+      "check": "payload_hash_raw_universe",
+      "status": "NOT_APPLICABLE",
+      "local_artifact_sha256": "822738835ae30f19",
+      "note": "Derived artifact \u2014 no upstream payload hash"
+    },
+    {
+      "section": "hash_integrity",
+      "check": "payload_hash_source_matrix",
+      "status": "NOT_APPLICABLE",
+      "local_artifact_sha256": "97ae7035477f09f4",
+      "note": "Derived artifact \u2014 no upstream payload hash"
+    },
+    {
+      "section": "roles",
+      "check": "media_reference_drift",
+      "status": "PASS"
+    },
+    {
+      "section": "roles",
+      "check": "valid_role_enum",
+      "status": "PASS"
+    },
+    {
+      "section": "contamination",
+      "check": "media_in_taxonomy",
+      "status": "PASS"
+    },
+    {
+      "section": "integrity",
+      "check": "canonical_id_in_raw",
+      "status": "PASS"
+    },
+    {
+      "section": "openev",
+      "check": "field_integrity",
+      "status": "PASS",
+      "rows": 26
+    },
+    {
+      "section": "openev",
+      "check": "no_duplicates",
+      "status": "PASS"
+    },
+    {
+      "section": "openev",
+      "check": "hash_format",
+      "status": "PASS"
+    },
+    {
+      "section": "openev",
+      "check": "content_anchor",
+      "status": "PASS",
+      "rows": 26
+    },
+    {
+      "section": "openev",
+      "check": "row_anchoring",
+      "status": "PASS",
+      "rows": 26,
+      "pinned_commit": "8edb266da3b2"
+    },
+    {
+      "section": "openev",
+      "check": "object_existence",
+      "status": "PARTIAL",
+      "verified": 0,
+      "errors": [
+        {
+          "row": 0,
+          "file_locator": "src/byd/tang/2024/tang.json",
+          "error": "HTTP Error 403: rate limit exceeded"
+        },
+        {
+          "row": 1,
+          "file_locator": "src/byd/han/2024/han.json",
+          "error": "HTTP Error 403: rate limit exceeded"
+        },
+        {
+          "row": 2,
+          "file_locator": "src/byd/seal/2024/seal.json",
+          "error": "HTTP Error 403: rate limit exceeded"
+        },
+        {
+          "row": 3,
+          "file_locator": "src/byd/dolphin/2024/dolphin.json",
+          "error": "HTTP Error 403: rate limit exceeded"
+        },
+        {
+          "row": 4,
+          "file_locator": "src/toyota/bz4x/2024/bz4x.json",
+          "error": "HTTP Error 403: rate limit exceeded"
+        }
+      ],
+      "note": "GitHub API verification attempted"
+    },
+    {
+      "section": "openev",
+      "check": "object_hash_verify",
+      "status": "PASS",
+      "verified": 26
+    },
+    {
+      "section": "hlm",
+      "check": "evidence_accounting",
+      "status": "PARTIAL",
+      "total": 64,
+      "model_mentions": 49,
+      "variant_mentions": 2,
+      "non_vehicle": 11,
+      "unresolved": 2,
+      "with_article": 45,
+      "without_article": 19,
+      "model_with_article": 34,
+      "model_without_article": 15,
+      "evidence_status": "INSUFFICIENT_EVIDENCE",
+      "classifications": {
+        "model-mention": 49,
+        "non-vehicle": 11,
+        "unresolved": 2,
+        "variant-mention": 2
+      }
+    },
+    {
+      "section": "hlm",
+      "check": "duplicate_post_audit",
+      "status": "PASS",
+      "unique_posts": 60,
+      "duplicate_posts": 10,
+      "note": "Duplicate post IDs = multi-mention articles (expected)"
+    },
+    {
+      "section": "hlm",
+      "check": "field_integrity",
+      "status": "PASS"
+    },
+    {
+      "section": "hlm",
+      "check": "semantic_mapping",
+      "status": "PARTIAL",
+      "semantic_issues": [
+        {
+          "post_id": 150581,
+          "issue": "same_brand_multi_model",
+          "models": [
+            "CX-30",
+            "CX-30:",
+            "CX-3"
+          ]
+        },
+        {
+          "post_id": 132743,
+          "issue": "same_brand_multi_model",
+          "models": [
+            "CX-30",
+            "CX-30:",
+            "CX-3"
+          ]
+        },
+        {
+          "post_id": 130849,
+          "issue": "same_brand_multi_model",
+          "models": [
+            "CX-30",
+            "CX-30:",
+            "CX-3"
+          ]
+        },
+        {
+          "post_id": 149496,
+          "issue": "same_brand_multi_model",
+          "models": [
+            "New",
+            "BT-50"
+          ]
+        },
+        {
+          "post_id": 118510,
+          "issue": "same_brand_multi_model",
+          "models": [
+            "3-\u0e23\u0e35\u0e23\u0e31\u0e19",
+            "New"
+          ]
+        }
+      ],
+      "model_without_evidence": [
+        {
+          "entry_idx": 13,
+          "model": "CX-8"
+        },
+        {
+          "entry_idx": 14,
+          "model": "CX-5"
+        },
+        {
+          "entry_idx": 17,
+          "model": "CX-9"
+        },
+        {
+          "entry_idx": 18,
+          "model": "MX-5"
+        },
+        {
+          "entry_idx": 26,
+          "model": "Accord"
+        }
+      ],
+      "total_post_ids": 60,
+      "inconsistent_post_ids": 10
+    },
+    {
+      "section": "thai_ref",
+      "check": "all_unverified",
+      "status": "PASS",
+      "count": 22
+    },
+    {
+      "section": "fipe",
+      "check": "parent_resolution",
+      "status": "PASS",
+      "resolved": 133
+    },
+    {
+      "section": "accounting",
+      "check": "source_state_equations",
+      "status": "PARTIAL",
+      "source_accounting": {
+        "openev": {
+          "raw": 26,
+          "filtered": "NOT_APPLICABLE",
+          "accepted": "NOT_APPLICABLE",
+          "rejected": "NOT_APPLICABLE",
+          "unresolved": "NOT_APPLICABLE",
+          "note": "No acquisition state artifacts preserved; cannot independently reconstruct pipeline",
+          "status": "PARTIAL"
+        },
+        "hlm": {
+          "raw": 64,
+          "model_mentions": 49,
+          "variant_mentions": 2,
+          "non_vehicle": 11,
+          "unresolved": 2,
+          "sum": 64,
+          "equation_balanced": true,
+          "equation": "64 = 49 + 2 + 11 + 2"
+        },
+        "fipe_models": {
+          "raw": 1483,
+          "filtered": "NOT_APPLICABLE",
+          "accepted": "NOT_APPLICABLE",
+          "rejected": "NOT_APPLICABLE",
+          "unresolved": "NOT_APPLICABLE",
+          "note": "No acquisition state artifacts preserved; cannot independently reconstruct pipeline",
+          "status": "PARTIAL"
+        },
+        "fipe_year": {
+          "raw": 133,
+          "filtered": "NOT_APPLICABLE",
+          "accepted": "NOT_APPLICABLE",
+          "rejected": "NOT_APPLICABLE",
+          "unresolved": "NOT_APPLICABLE",
+          "note": "Reconstructed from cached API responses; no pipeline state preserved",
+          "status": "PARTIAL"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2056 @@
+{
+  "schema": "oem-coverage-registry/1 — Blueprint.md §93",
+  "generated_at": "2026-09-26T14:39:11.990704+00:00",
+  "probe_evidence": "audit/coverage/probe_20260924.json",
+  "coverage_rule": "coverage_% = brands with provenance_status=ACQUISITION_VERIFIED AND adapter_status=PARSED_TESTED ÷ in_scope brands (§93). Attempt/captured/blocked counts are operational telemetry, never coverage.",
+  "scope_candidates_unresolved": [
+    {
+      "candidate": "Hyundai",
+      "reason": "hyundai.co.th DNS not resolved in probe; official Thai sales presence not confirmed",
+      "checked_at": "2026-09-24T13:41:35.059595+00:00",
+      "evidence": "BLOCKED_DNS"
+    },
+    {
+      "candidate": "Daihatsu",
+      "reason": "daihatsu.co.th DNS not resolved in probe; passenger-vehicle sales presence unconfirmed",
+      "checked_at": "2026-09-24T13:41:34.798627+00:00",
+      "evidence": "BLOCKED_DNS"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Toyota",
+      "in_scope": true,
+      "official_name": "Toyota",
+      "source_urls": [
+        "https://www.toyota.co.th/model-list",
+        "https://www.toyota.co.th/en/pricelist"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-24T18:57:17.345495+00:00",
+      "last_success_sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:31.558735+00:00",
+        "http_status": 200,
+        "url": "https://www.toyota.co.th/model-list",
+        "bytes": 19651,
+        "title": "รถโตโยต้าทุกรุ่น | Model Line Up | โตโยต้า มอเตอร์ ประเทศไทย"
+      },
+      "next_retry_at": "2026-09-25T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.toyota.co.th/model-list",
+          "artifact": "toyota_model_page.html",
+          "sha256": "258b3015796ffcd43208090bac768c3093171bdc0e501bbf96f6a484e4e9468c",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "captured; page carries no prices"
+        },
+        {
+          "url": "https://www.toyota.co.th/pricelist",
+          "artifact": "toyota_page.html",
+          "sha256": "c25bf262437aec7b61992000a9de5f85c6fbaca9144dde1f3cca017313c54632",
+          "provenance_state": "LEGACY_UNVERIFIED",
+          "parsed": true,
+          "note": "legacy fixture — 99 VARIANT rows (JSON-LD); superseded by toyota_pricelist_page.html recapture"
+        },
+        {
+          "url": "https://www.toyota.co.th/en/pricelist",
+          "artifact": "toyota_pricelist_page.html",
+          "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "sidecar-verified recapture of the same manifest URL — content verified identical to legacy capture (same 99 VARIANT rows); collect_toyota switched to this artifact"
+        },
+        {
+          "url": "https://www.toyota.co.th/news",
+          "artifact": "toyota_press_news.html",
+          "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in toyota_pricelist_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Honda",
+      "in_scope": true,
+      "official_name": "Honda (Honda Automobile (Thailand) Co., Ltd.)",
+      "source_urls": [
+        "https://www.honda.co.th/models",
+        "https://www.honda.co.th/en/city"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-25T04:07:07.005816+00:00",
+      "last_success_sha256": "1953984e5b3b48e0a7bfc374fd67b5bf0dd8f9ab2305fec014f2cf51a03990df",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:31.559136+00:00",
+        "http_status": 200,
+        "url": "https://www.honda.co.th/models",
+        "bytes": 337742,
+        "title": "Honda Thailand - บริษัท ฮอนด้า ออโตโมบิล (ประเทศไทย) จำกัด"
+      },
+      "next_retry_at": "2026-09-25T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.honda.co.th/models",
+          "artifact": "honda_models_page.html",
+          "sha256": "6eb120085da19d8751db8687849019c499077170c96e9501b2dc80b3e572deef",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "6 MODEL rows"
+        },
+        {
+          "url": "https://www.honda.co.th/en/city",
+          "artifact": "honda_city_page.html",
+          "sha256": "8d11ebd4f720e679b209ba8ced3e9d20dcfa5fe671c1f3dd86206e5aa3b8df64",
+          "provenance_state": "LEGACY_UNVERIFIED",
+          "parsed": false,
+          "note": "legacy capture (no sidecar) — 4 VARIANT rows; superseded by honda_city_recapture.html (row-equivalent, sidecar-verified)"
+        },
+        {
+          "url": "https://www.honda.co.th/en/city",
+          "artifact": "honda_city_recapture.html",
+          "sha256": "1953984e5b3b48e0a7bfc374fd67b5bf0dd8f9ab2305fec014f2cf51a03990df",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "sidecar-verified recapture of the same official URL; proven row-equivalent to the legacy capture (identical 4 variant/price pairs); price marker renders as 'บาท' (th locale) — extractor accepts both THB/บาท; replaces honda_city_page.html as the staged source"
+        },
+        {
+          "url": "https://www.honda.co.th/news",
+          "artifact": "honda_press_news.html",
+          "sha256": "d1c3f480d96472d2ce556419c3c2002e0d559129f126f619a1bf351c73fa5e69",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in honda_models_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.honda.co.th/www-assets/model/2026/06/26/i6hZNelHYNX0LptCvSY8sw1hN3honOd6.pdf?response-content-disposition=attachment%3B%20filename%3DNew Honda City - Catalog.pdf",
+          "artifact": "honda_brochure_1.pdf",
+          "sha256": "c2aca38d49ca1716db6680b620e32a32563845ab14346588d6fc1bf05890b344",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in honda_models_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.honda.co.th/www-assets/model/2026/06/26/bc5ZpbNVUtvUdaYcQMT8N6WdinDUVwDx.pdf?response-content-disposition=attachment%3B%20filename%3DNew Honda City Hatchback - Catalog.pdf",
+          "artifact": "honda_brochure_2.pdf",
+          "sha256": "8b026a671233995bd13f51d3b89a26f83c9387ef74c096577a3c2ba683d53028",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in honda_models_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Nissan",
+      "in_scope": true,
+      "official_name": "Nissan (Nissan Thailand)",
+      "source_urls": [
+        "https://www.nissan.co.th/",
+        "https://www.nissan-thailand.com/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-26T07:44:05.915769+00:00",
+      "last_success_sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:42:57.240914+00:00",
+        "http_status": 200,
+        "url": "https://www.nissan.co.th/",
+        "bytes": 1393004,
+        "title": ""
+      },
+      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "fallback_ladder": [
+        {
+          "url": "https://www.nissan-thailand.com/",
+          "checked_at": "2026-09-24T13:41:31.559683+00:00",
+          "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.nissan-thailand.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.nissan",
+          "result": "BLOCKED_DNS",
+          "cycle": "2026-09-24"
+        },
+        {
+          "url": "https://www.nissan-thailand.com/",
+          "checked_at": "2026-09-24T14:16:16.748942+00:00",
+          "http_status_or_error": "BLOCKED_DNS (official domain moved)",
+          "result": "BLOCKED_DNS",
+          "cycle": "2026-09-24-2"
+        }
+      ],
+      "captured_endpoints": [
+        {
+          "url": "https://www.nissan-thailand.com",
+          "artifact": "nissan_page.html",
+          "sha256": "861be1b787856911b62438fcc9e21056a3543187bc6088a718dd087f9af76d69",
+          "provenance_state": "LEGACY_UNVERIFIED",
+          "parsed": true,
+          "note": "10 MODEL rows; legacy domain now DNS-dead — official site moved to nissan.co.th"
+        },
+        {
+          "url": "https://www.nissan.co.th/",
+          "artifact": "nissan_new_home_page.html",
+          "sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "new official domain homepage — NISSAN_JS re-extracted, 10 MODEL rows"
+        },
+        {
+          "url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "artifact": "nissan_all_grade_price.html",
+          "sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): official all-grade price table (link from nissan.co.th nav)"
+        },
+        {
+          "url": "https://www.nissan.co.th/vehicles/all-models.html",
+          "artifact": "nissan_all_models.html",
+          "sha256": "24d6526c31c8f72be7e9d2a2253bac1698005d34db355bd252188806b3203a8a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official all-models index (link from nissan.co.th nav) — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.nissan.co.th/vehicles/brochure-hub.html",
+          "artifact": "nissan_brochure_hub.html",
+          "sha256": "3ed40e03eeff0bfdf367f3e5d980449a4fd200236fe8241ef43d482906599c7a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in nissan_new_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.nissan.co.th/news.html",
+          "artifact": "nissan_press_news.html",
+          "sha256": "977bbc7868fc00530cd82ec41ebe93ffd828821b52657b69f615f4953fbebd5e",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in nissan_new_home_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Mazda",
+      "in_scope": true,
+      "official_name": "Mazda Sales (Thailand) Co., Ltd.",
+      "source_urls": [
+        "https://www.mazda.co.th/en/vehicles",
+        "https://www.mazda.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-24T13:48:24.077293+00:00",
+      "last_success_sha256": "3e49287146ee978fbe8a1919a21df334ae7ce75414be7b161b53650a2f38ed49",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:42:54.952076+00:00",
+        "http_status": 200,
+        "url": "https://www.mazda.co.th/th",
+        "bytes": 167486,
+        "title": "Mazda Sales (Thailand) Co., Ltd. | บริษัท มาสด้า เซลส์ (ประเทศไทย) จำกัด"
+      },
+      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "fallback_ladder": [
+        {
+          "url": "https://www.mazda.co.th/en/vehicles",
+          "checked_at": "2026-09-24T13:41:31.559941+00:00",
+          "http_status_or_error": 404,
+          "result": "BLOCKED_HTTP_404",
+          "cycle": "2026-09-24"
+        }
+      ],
+      "captured_endpoints": [
+        {
+          "url": "https://www.mazda.co.th/en/vehicles",
+          "artifact": "mazda_page.html",
+          "sha256": "cd8ca9667ce505a921252a80ee9647c39791866f549bf1005962b113a8f02968",
+          "provenance_state": "LEGACY_UNVERIFIED",
+          "parsed": false,
+          "note": "legacy /en/vehicles (now 404): superseded by root capture — no longer staged"
+        },
+        {
+          "url": "https://www.mazda.co.th/th",
+          "artifact": "mazda_home_page.html",
+          "sha256": "3e49287146ee978fbe8a1919a21df334ae7ce75414be7b161b53650a2f38ed49",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "root capture — collect_mazda, 10 MODEL MSRP_STARTING; h2 model split at published \"|\" (tagline kept in evidence)"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda-cx5",
+          "artifact": "mazda_car_mazda-cx5.html",
+          "sha256": "ca9e7c60533c34b8d04dbeab2d1925a22190e56c17416dbc51752c6d3db65e02",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+          "artifact": "mazda_car_mazda2-essential.html",
+          "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda3-sedan",
+          "artifact": "mazda_car_mazda3-sedan.html",
+          "sha256": "1df796474960d5b42246781aca8e969b0ca56b3d8cdfb027bcbf5b973d228c04",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+          "artifact": "mazda_car_new-mazda-bt50.html",
+          "sha256": "01df606fe74c1ce1702dc7907be3f0719b8a223d7a14c21c0586dde2376a4876",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+          "artifact": "mazda_car_mazda-cx30-essential.html",
+          "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Mazda model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/news-update",
+          "artifact": "mazda_press_news.html",
+          "sha256": "cebebcf6d790a5d145671310e00753d74d22bec171da5e3a8acca3e10bc3b8ed",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in mazda_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+          "artifact": "mazda_spec_mazda-cx30-essential.html",
+          "sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in mazda_car_mazda-cx30-essential.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda-cx5/spec",
+          "artifact": "mazda_spec_mazda-cx5.html",
+          "sha256": "0d4b4a5bf103f1bbf68fd49de00b77187a6d86650f685c641d5a42e396fc94ca",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in mazda_car_mazda-cx5.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda2-essential/spec",
+          "artifact": "mazda_spec_mazda2-essential.html",
+          "sha256": "9f36c21a525da4a6e5cc312109aafa44ed9159c15b9f5cc6975716e1d0c1c595",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in mazda_car_mazda2-essential.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/mazda3-sedan/spec",
+          "artifact": "mazda_spec_mazda3-sedan.html",
+          "sha256": "11d0e43e5400fe8e8a74638c212984106a56a1520614a036c0e68599c2bb76df",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in mazda_car_mazda3-sedan.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/th/cars/new-mazda-bt50/spec",
+          "artifact": "mazda_spec_new-mazda-bt50.html",
+          "sha256": "4c185ae70c282f0877ab8feaa37c6a2bfdf426698e60f1679d27fe6c78b6a8be",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in mazda_car_new-mazda-bt50.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/s3fs-public/2024-12/v2_brochure-new-mazda-bt50.pdf?VersionId=Whzmuz5YnnWl0XkLVQTrsrvp8eokHNRB",
+          "artifact": "mazda_brochure_bt50.pdf",
+          "sha256": "4418a29b8745df59b67edc6b3e2d89c5d1ffc529afebcd436c2228ad1f0bece8",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in mazda_car_new-mazda-bt50.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/s3fs-public/2025-03/brochure-mazda-cx5.pdf?VersionId=VA_c9P6y6nt7uww1DHVXHSXN3dZoA88V",
+          "artifact": "mazda_brochure_cx5.pdf",
+          "sha256": "c3dc4b64ab6311f046564e57f7661cb5d8d8015021417be144ce3a7feb25ae86",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in mazda_car_mazda-cx5.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mazda.co.th/s3fs-public/2025-03/brochure_mazda2_essential_26032025.pdf?VersionId=AfXNz7AmQsbwFurYSIj4Rc0LOJo9UwWw",
+          "artifact": "mazda_brochure_mazda2.pdf",
+          "sha256": "c1b43c938ef247d3f20d5dbab26ebe25207d57b7922032fcf156b31aa191d087",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in mazda_car_mazda2-essential.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Mitsubishi",
+      "in_scope": true,
+      "official_name": "Mitsubishi Motors (Thailand) Co., Ltd.",
+      "source_urls": [
+        "https://www.mitsubishi-motors.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-26T07:44:16.432014+00:00",
+      "last_success_sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:31.560336+00:00",
+        "http_status": 200,
+        "url": "https://www.mitsubishi-motors.co.th/th?rd=true",
+        "bytes": 1123398,
+        "title": "มิตซูบิชิ มอเตอร์ส (ประเทศไทย)"
+      },
+      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.mitsubishi-motors.co.th/th?rd=true",
+          "artifact": "mitsubishi_home_page.html",
+          "sha256": "eaa2b0f9e01fcbc45532782f931eeee7c00801cda5c480294c8c1a4f8ffee498",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "nav-header model links — collect_mitsubishi, 6 MODEL MSRP_STARTING"
+        },
+        {
+          "url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+          "artifact": "mitsubishi_all_models_price.html",
+          "sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): official all-models price page (link from mitsubishi home)"
+        },
+        {
+          "url": "https://www.mitsubishi-motors.co.th/th/download-a-brochure",
+          "artifact": "mitsubishi_brochures.html",
+          "sha256": "fca08965d87e16b335bb4584cc95e795086b22a31caf11ac7cf696cbb3a69d39",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in mitsubishi_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mitsubishi-motors.co.th/th/news-activity/news",
+          "artifact": "mitsubishi_press_news.html",
+          "sha256": "638f32e42b3691387285d7c49122faa8e0698ab6bc3918dd450b2b3bc5abe861",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in mitsubishi_all_models_price.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Isuzu",
+      "in_scope": true,
+      "official_name": "Isuzu (Isuzu Group Thailand)",
+      "source_urls": [
+        "https://www.isuzu.co.th/",
+        "https://www.isuzu.com/",
+        "https://www.isuzu-tis.com/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-24T18:55:02.764941+00:00",
+      "last_success_sha256": "313163cf3f44b691a8a22eacf8710a26cfb487fe557ee7f61d916bdff045c083",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:31.560775+00:00",
+        "http_status": 200,
+        "url": "https://www.isuzu.co.th/",
+        "bytes": 15873,
+        "title": "ISUZU Group Thailand"
+      },
+      "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.isuzu.com",
+          "artifact": "isuzu_page.html",
+          "sha256": "e9d00350296d15205cbb1558b94a9d6a219161c81130c9e83afbcc3aa49703f6",
+          "provenance_state": "LEGACY_UNVERIFIED",
+          "parsed": true,
+          "note": "6 MODEL rows (global site) — superseded by isuzu-tis.com recapture (labels were body styles)"
+        },
+        {
+          "url": "https://www.isuzu.co.th/",
+          "artifact": "isuzu_th_home_page.html",
+          "sha256": "5d27fa1ffd767a3eefe7b4d94f5ef29ae2e86cac94839a4c5e906265dbf29d39",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "isuzu.co.th root (16KB shell) — needs JS-rendered recapture follow-up"
+        },
+        {
+          "url": "https://www.isuzu.co.th/",
+          "artifact": "isuzu_th_rendered_page.html",
+          "sha256": "7f7956308b83ffc60da13e47efb95ad37839bc5de4141126c2916c50199e90f1",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "range/model page capture: official page publishes NO prices → no adapter (parseable-structure rule); stored as evidence"
+        },
+        {
+          "url": "https://www.isuzu-tis.com/",
+          "artifact": "isuzu_tis_page.html",
+          "sha256": "313163cf3f44b691a8a22eacf8710a26cfb487fe557ee7f61d916bdff045c083",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "lineup figures (data-test=lineup-item-*): img-alt model binding + data-test=pricing — 6 MODEL MSRP_STARTING; fixes legacy body-style-as-model labels ('4 DOORS'/'2 DOORS')"
+        },
+        {
+          "url": "https://www.isuzu-tis.com/download-brochure",
+          "artifact": "isuzu_brochure_page.html",
+          "sha256": "64cf78e986eef66d854116a95e135481dd1bc862216713647fc8974b682c2eeb",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Isuzu brochure download page (link from isuzu-tis.com) — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.isuzu.co.th/news",
+          "artifact": "isuzu_press_news.html",
+          "sha256": "82c0dedad1de6131d41b4ab7c211f1b358e1927d4e1631c6a6f97cf0e944a3db",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in isuzu_th_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/2_door_brochure_2026_4aed74da60.pdf",
+          "artifact": "isuzu_brochure_2door.pdf",
+          "sha256": "6f17343094265c3ebb8c74c440529a3d89583dbb88e25336ba1cb2b2be1b7ba1",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/4_door_brochure_2026_be4df560bb.pdf",
+          "artifact": "isuzu_brochure_4door.pdf",
+          "sha256": "bc56c415bc8da8d71745230da3a6d440c384360aa72e50483683ce38d63a9449",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/mu_x_brochure_2026_5d17d1513d.pdf",
+          "artifact": "isuzu_brochure_mux.pdf",
+          "sha256": "918be06f322878515a374377b03e8e29f6f80c5a19cda0607faeb2b30e6c2561",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/spark_brochure_2026_ed212091cf.pdf",
+          "artifact": "isuzu_brochure_spark.pdf",
+          "sha256": "f632b102ef33d4a9b96dd7d6a9f275d7ace990659d8e1dac79bfb3f0af42f929",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/v_cross_brochure_2026_23a52b3f0d.pdf",
+          "artifact": "isuzu_brochure_vcross.pdf",
+          "sha256": "84a1fa3940f71b601e99f60fe9bfd1c7253db0855923b6bd0e836ea41fb3e75f",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://assets.isuzu-tis.com/x_series_brochure_2026_6f67fd7b71.pdf",
+          "artifact": "isuzu_brochure_xseries.pdf",
+          "sha256": "e279beec73ff6cda74417279c8cbd9b7a47dcd657511e6d8f7b1a281a6f1ca0d",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in isuzu_brochure_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Suzuki",
+      "in_scope": true,
+      "official_name": "Suzuki Motor (Thailand) Co., Ltd.",
+      "source_urls": [
+        "https://www.suzuki.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-26T13:48:37.393584+00:00",
+      "last_success_sha256": "85af513324ad48ebf82f51eff1703b220f686902e15c61eaec39b2a46ba3dd9b",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:31.564646+00:00",
+        "http_status": 200,
+        "url": "https://www.suzuki.co.th/",
+        "bytes": 106314,
+        "title": "ซูซูกิ มอเตอร์ (ประเทศไทย) | Suzuki Motor (Thailand) Co., Ltd."
+      },
+      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "fallback_ladder": [
+        {
+          "url": "https://www.suzuki.co.th/error",
+          "checked_at": "2026-09-24T11:36:12.002225+00:00",
+          "http_status_or_error": "captured ERROR_PAGE (prior cycle)",
+          "result": "ERROR_PAGE",
+          "cycle": "2026-09-24-1"
+        }
+      ],
+      "captured_endpoints": [
+        {
+          "url": "https://www.suzuki.co.th/error",
+          "artifact": "suzuki_models_page.html",
+          "sha256": "c22e9bcffbecbf52572ad7f4d2cce81e83a37ea4d4680c01e545a2aa0cdec890",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "ERROR_PAGE capture — extractor must yield NO business rows"
+        },
+        {
+          "url": "https://www.suzuki.co.th/",
+          "artifact": "suzuki_home_page.html",
+          "sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "product cards — collect_suzuki, 5 MODEL (mixed MSRP_STARTING/MSRP per source phrasing)"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/fronx",
+          "artifact": "suzuki_model_fronx.html",
+          "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Suzuki model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/xl7",
+          "artifact": "suzuki_model_xl7.html",
+          "sha256": "29c2c89334c904b7c2b71ee1f3cd8d8c463323486f07f04d6ad5dfd13a9c95ae",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Suzuki model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/jimny",
+          "artifact": "suzuki_model_jimny.html",
+          "sha256": "09f1319028977a1c13b4f3b8795d76a36ba81b70f8e90435d56c36fba16a00f9",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Suzuki model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/upload/file/Catalog/Suzuki_Collection_E-Catalog_2024.pdf",
+          "artifact": "Suzuki_Collection_E-Catalog_2024.pdf.b64",
+          "sha256": "cc7d52408d2aacdd3fe3cda079a01fa34df47e9e9920947c9d19a68f712ca26f",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official Suzuki e-catalog PDF (link from suzuki.co.th) — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/fronx/equipment",
+          "artifact": "suzuki_fronx_equipment.html",
+          "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in suzuki_model_fronx.html"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/jimny/equipment",
+          "artifact": "suzuki_jimny_equipment.html",
+          "sha256": "a452cae65124f01c9c5a320149f989960afb9d1294e310966af8ac7c8271a1d1",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in suzuki_model_jimny.html"
+        },
+        {
+          "url": "https://www.suzuki.co.th/news",
+          "artifact": "suzuki_press_news.html",
+          "sha256": "c091cb3879304abd1af5302575e4302b9b8a3e3e046c21d7831e52352c9b01c7",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in suzuki_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/model/xl7/equipment",
+          "artifact": "suzuki_xl7_equipment.html",
+          "sha256": "85af513324ad48ebf82f51eff1703b220f686902e15c61eaec39b2a46ba3dd9b",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (spec_or_equipment): P101 catalog completeness: discovered in suzuki_model_xl7.html"
+        },
+        {
+          "url": "https://www.suzuki.co.th/upload/file/Brochure/ALL_NEW_SUZUKI_FRONX_BROCHURE.pdf",
+          "artifact": "suzuki_fronx_brochure.pdf",
+          "sha256": "2df5786395493aa391df5f554ec5d24a76e7924f49c648ed8efad82dfc91eb36",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in suzuki_model_fronx.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.suzuki.co.th/upload/file/Brochure/SUZUKI_JIMNY_BROCHURE.pdf",
+          "artifact": "suzuki_jimny_brochure.pdf",
+          "sha256": "70af18b3651fc0d56baa7ac54b955a8e26d81e151d81f146e814ffe0164eddbc",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in suzuki_model_jimny.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "MG",
+      "in_scope": true,
+      "official_name": "MG Sales (Thailand)",
+      "source_urls": [
+        "https://www.mgcars.com/th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-24T13:48:36.580895+00:00",
+      "last_success_sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:31.623010+00:00",
+        "http_status": 200,
+        "url": "https://www.mgcars.com/th",
+        "bytes": 1913302,
+        "title": "MG Cars | MG SALES (THAILAND)"
+      },
+      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "fallback_ladder": [
+        {
+          "url": "https://www.jnt.co.th/",
+          "checked_at": "2026-09-24T11:36:42.908247+00:00",
+          "http_status_or_error": "captured DEALER_REDIRECT (prior cycle)",
+          "result": "DEALER_REDIRECT",
+          "cycle": "2026-09-24-1"
+        }
+      ],
+      "captured_endpoints": [
+        {
+          "url": "https://www.jnt.co.th/",
+          "artifact": "mg_models_page.html",
+          "sha256": "b502e443cf6578c5158b778599fb1efd58fb2cfee372ed737309761ab268993f",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "DEALER_REDIRECT capture — extractor must yield NO business rows"
+        },
+        {
+          "url": "https://www.mgcars.com/th",
+          "artifact": "mg_home_page.html",
+          "sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "promo cards — collect_mg, 7 MODEL rows MSRP_STARTING"
+        },
+        {
+          "url": "https://www.mgcars.com/th/cars/mg-zs",
+          "artifact": "mg_car_mg-zs.html",
+          "sha256": "01f41293474e78e363c30b6ea59e34bf6a94eaab4f1d6506ae1af64cdda111ab",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official MG model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mgcars.com/th/cars/mg-hs",
+          "artifact": "mg_car_mg-hs.html",
+          "sha256": "85cb146b64179d3bacf3328f5284ba3839c29dae743d275dea1bdca26537deab",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official MG model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mgcars.com/th/cars/mg-im6",
+          "artifact": "mg_car_mg-im6.html",
+          "sha256": "92731131cc6ec4229899f209da231379260793628775a806d8e09733037eb8e6",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official MG model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mgcars.com/th/cars/mg-urban",
+          "artifact": "mg_car_mg-urban.html",
+          "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official MG model page — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.mgcars.com/th/news",
+          "artifact": "mg_press_news.html",
+          "sha256": "25a5b75280482f0d52d7b3c0176c19740774a49ef2c9e2ca95cefc218675353a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in mg_car_mg-hs.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "BYD",
+      "in_scope": true,
+      "official_name": "BYD (Build Your Dreams) Thailand",
+      "source_urls": [
+        "https://www.byd.com/th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_HTTP_404",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:31.848172+00:00",
+        "http_status_or_error": "HTTP_404",
+        "url": "https://www.byd.com/th/"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-08T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Tesla",
+      "in_scope": true,
+      "official_name": "Tesla",
+      "source_urls": [
+        "https://www.tesla.com/th_th"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_HTTP_403",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:32.086082+00:00",
+        "http_status_or_error": "HTTP_403",
+        "url": "https://www.tesla.com/th_th"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Ford",
+      "in_scope": true,
+      "official_name": "Ford Thailand",
+      "source_urls": [
+        "https://www.ford.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_HTTP_403",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:32.087860+00:00",
+        "http_status_or_error": "HTTP_403",
+        "url": "https://www.ford.co.th/"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Chevrolet",
+      "in_scope": true,
+      "official_name": "Chevrolet (GM Thailand)",
+      "source_urls": [
+        "https://www.chevrolet.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_HTTP_403",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T14:16:16.748942+00:00",
+        "http_status_or_error": "HTTP_403 via Playwright (requests GET earlier returned 200 — browser-level block)",
+        "url": "https://www.chevrolet.co.th/"
+      },
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:32.178064+00:00",
+        "http_status": 200,
+        "url": "https://www.chevrolet.co.th/",
+        "bytes": 125550,
+        "title": "index"
+      },
+      "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+      "fallback_ladder": [
+        {
+          "url": "https://www.chevrolet.co.th/",
+          "checked_at": "2026-09-24T14:16:16.748942+00:00",
+          "http_status_or_error": "probe=REACHABLE; acquisition attempt → HTTP_403 via Playwright (requests GET earlier returned 200 — browser-level block)",
+          "result": "BLOCKED_HTTP_403",
+          "cycle": "2026-09-24-2"
+        }
+      ],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "in_scope": true,
+      "official_name": "Mercedes-Benz (Thailand) Ltd.",
+      "source_urls": [
+        "https://www.mercedes-benz.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_HTTP_403",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T14:16:16.748942+00:00",
+        "http_status_or_error": "HTTP_403 via Playwright (probe was BLOCKED_TIMEOUT — browser-level block)",
+        "url": "https://www.mercedes-benz.co.th/"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+      "fallback_ladder": [
+        {
+          "url": "https://www.mercedes-benz.co.th/",
+          "checked_at": "2026-09-24T14:16:16.748942+00:00",
+          "http_status_or_error": "probe=BLOCKED_TIMEOUT; acquisition attempt → HTTP_403 via Playwright (probe was BLOCKED_TIMEOUT — browser-level block)",
+          "result": "BLOCKED_HTTP_403",
+          "cycle": "2026-09-24-2"
+        }
+      ],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Audi",
+      "in_scope": true,
+      "official_name": "Audi Thailand",
+      "source_urls": [
+        "https://www.audi.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_HTTP_403",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:32.369118+00:00",
+        "http_status_or_error": "HTTP_403",
+        "url": "https://www.audi.co.th/"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "BMW",
+      "in_scope": true,
+      "official_name": "BMW Thailand",
+      "source_urls": [
+        "https://www.bmw.co.th/en/all-models.html"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-26T07:44:28.929592+00:00",
+      "last_success_sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:32.390590+00:00",
+        "http_status_or_error": "Timeout after 15s",
+        "url": "https://www.bmw.co.th/en/all-models.html"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.bmw.co.th/en/all-models.html",
+          "artifact": "bmw_models_page.html",
+          "sha256": "14df123658148a014f40c52f343ae7d23da088595cb3939e03c965ed3c3c5c45",
+          "provenance_state": "LEGACY_UNVERIFIED",
+          "parsed": true,
+          "note": "35 MODEL rows"
+        },
+        {
+          "url": "https://www.bmw.co.th/en/all-models.html",
+          "artifact": "bmw_all_models_verified.html",
+          "sha256": "6b88cd605511852757b288d27015c0a740b2319ca0530cabb5394f38093b1e28",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "genuine recapture of all-models — BMW_JS dual-format, 35 MODEL rows"
+        },
+        {
+          "url": "https://www.bmw.co.th/en/topics/price-list.html",
+          "artifact": "bmw_price_list.html",
+          "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): official BMW price list topic page (link from bmw all-models)"
+        },
+        {
+          "url": "https://www.bmw.co.th/en/topics/brochure.html",
+          "artifact": "bmw_brochure_page.html",
+          "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in bmw_all_models_verified.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://configure.bmw.co.th/en_TH/configure/G20/24FWZ7U/FMAH7,P0C31,S0161,S01AG,S01HY,S0258,S02TB,S02VB,S02VL,S0316,S0322,S0337,S0423,S0428,S0430,S0431,S043W,S0459,S0465,S0481,S0488,S0491,S0493,S04NW,S04UR,S0534,S0548,S0552,S05AC,S05AS,S05DC,S05DF,S05DM,S0676,S06AC,S06AE,S06AK,S06C4,S06NX,S06PA,S06U3,S06VB,S0704,S0710,S0715,S0760,S0775,S07NM,S0825,S0853,S088A,S08KM,S08LL,S08S3,S08SX,S08TD,S08WD,S08WM,S0992,S09C6",
+          "artifact": "bmw_configurator_3series.html",
+          "sha256": "1c7dad413e27f036671cf77dc531ae43aef3b67d3cf133ab0719aa08a1d851bb",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (configurator): P101 catalog completeness: discovered in bmw_all_models_verified.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Volvo",
+      "in_scope": true,
+      "official_name": "Volvo Cars (Thailand)",
+      "source_urls": [
+        "https://www.volvo.co.th/en/models.html",
+        "https://www.volvocars.com/th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_TLS",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:32.815537+00:00",
+        "http_status_or_error": "SSLError: HTTPSConnectionPool(host='www.volvo.co.th', port=443): Max retries exceeded with url: /en/models.html (Caused by SSLErro",
+        "url": "https://www.volvo.co.th/en/models.html"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-24T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Subaru",
+      "in_scope": true,
+      "official_name": "Subaru Thailand",
+      "source_urls": [
+        "https://www.subaru.asia/th/th/",
+        "https://www.subaru.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "http_get",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-25T13:22:55.814644+00:00",
+      "last_success_sha256": "7626c14f97a7cc97a2bb4102290d5aa5256df0de8f714d4f270bcd235be36141",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-25T13:22:55.814644+00:00",
+        "http_status": 200,
+        "url": "https://www.subaru.asia/th/th/",
+        "bytes": 71052,
+        "title": "Subaru Thailand | Vehicles for Any Lifestyle"
+      },
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "fallback_ladder": [
+        {
+          "url": "https://www.subaru.co.th/",
+          "checked_at": "2026-09-24T13:41:33.132436+00:00",
+          "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.subaru.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.subaru.co.th'",
+          "result": "BLOCKED_DNS",
+          "cycle": "2026-09-24"
+        },
+        {
+          "url": "https://www.subaru.asia/th/th/",
+          "checked_at": "2026-09-25T13:22:55.814644+00:00",
+          "http_status_or_error": "HTTP_200 (host resolves; official TC Subaru (Thailand) lineup page, page lang=th, prices published in THB)",
+          "result": "REACHABLE",
+          "cycle": "2026-09-25-2",
+          "note": "alternate official route — parsed, see captured_endpoints"
+        }
+      ],
+      "captured_endpoints": [
+        {
+          "url": "https://www.subaru.asia/th/th/",
+          "artifact": "subaru_th_home_page.html",
+          "sha256": "7626c14f97a7cc97a2bb4102290d5aa5256df0de8f714d4f270bcd235be36141",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official TC Subaru (Thailand) lineup page on subaru.asia (registry primary www.subaru.co.th is NXDOMAIN): 5 MODEL rows, ราคาเริ่มต้น -> MSRP_STARTING, same-card locator via collect_subaru"
+        },
+        {
+          "url": "https://www.subaru.asia/th/th/contact-us/brochure.php",
+          "artifact": "subaru_brochure_page.html",
+          "sha256": "7d137d6a49ee3c3b75f6e9d9ce9dc37ab7ebfcd234d2a0fe82bfa0df5ec2ffb6",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in subaru_th_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.subaru.asia/th/th/about-us/news.php",
+          "artifact": "subaru_press_news.html",
+          "sha256": "f4f77556ee843fdc73281c98306854481f6e11c0b73b860f478e9f51edb919ec",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in subaru_th_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.subaru.asia/th/th/promotions/",
+          "artifact": "subaru_promo_forester.html",
+          "sha256": "c2cfa60bd49a27bd7e0cb74a517a8989e6fcdfa35f1f0e5f0af60e0b59037647",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (promotion): P101 catalog completeness: discovered in subaru_th_home_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Porsche",
+      "in_scope": true,
+      "official_name": "Porsche Thailand",
+      "source_urls": [
+        "https://www.porsche.com/pap/_thailand_/",
+        "https://www.porsche.com/pap/_thailand_/models/macan/#modelRangeId=macan"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-24T18:55:11.625114+00:00",
+      "last_success_sha256": "7e0630709119b244bb69f100d3e591afd410158bf7be0f9560598793db1fd727",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:33.183384+00:00",
+        "http_status": 200,
+        "url": "https://www.porsche.com/pap/_thailand_/",
+        "bytes": 117538,
+        "title": "Porsche Thailand | Official Website"
+      },
+      "next_retry_at": "2026-09-25T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.porsche.com/pap/_thailand_/",
+          "artifact": "porsche_home_page.html",
+          "sha256": "e7a53c39351f7f3f77a34ca850fe24e0763a519cb7791503bda7a80f9471bb57",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "home page; no model prices"
+        },
+        {
+          "url": "https://www.porsche.com/pap/_thailand_/models/macan/#modelRangeId=macan",
+          "artifact": "porsche_macan_model_page.html",
+          "sha256": "7e0630709119b244bb69f100d3e591afd410158bf7be0f9560598793db1fd727",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "RSC flight data — 72 nodes (74 name/price pairs minus 2 ambiguous 'Macan GTS' dropped fail-closed): modelRange family + modelYear + price.value from ONE node; derivative=EXACT_VARIANT, name==family=MSRP"
+        },
+        {
+          "url": "https://www.porsche.com/stories/design/porsche-paint-to-sample-colours-and-configurator-guide/",
+          "artifact": "porsche_press_story.html",
+          "sha256": "d1b87f9f5d86fa8a7fbdf356931e2a7b850e61905aa58cd49d00a6f4be852bd9",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in porsche_home_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Lexus",
+      "in_scope": true,
+      "official_name": "Lexus Thailand",
+      "source_urls": [
+        "https://www.lexus.co.th/th.html"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-26T07:44:21.388806+00:00",
+      "last_success_sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:33.209510+00:00",
+        "http_status": 200,
+        "url": "https://www.lexus.co.th/th.html",
+        "bytes": 548202,
+        "title": ""
+      },
+      "next_retry_at": "2026-09-25T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.lexus.co.th/th.html",
+          "artifact": "lexus_models_page.html",
+          "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "6 MODEL rows"
+        },
+        {
+          "url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+          "artifact": "lexus_price_list.html",
+          "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): official Lexus price list tool (link from lexus.co.th models page)"
+        },
+        {
+          "url": "https://www.lexus.co.th/th/price-and-model-tools/model-brochures.html",
+          "artifact": "lexus_brochures.html",
+          "sha256": "18d9308ccafa4f122369d7f8127f43b409b0193e998b76d0fb3abbc692d64121",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in lexus_models_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.lexus.co.th/th/discover-lexus/news-and-events.html",
+          "artifact": "lexus_press_news.html",
+          "sha256": "2bc6b11151aaf6a11796f5c1f383cbdaa6fa0fce8796aa305ecffb06c0f80697",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in lexus_models_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "NETA",
+      "in_scope": true,
+      "official_name": "NETA (Thailand)",
+      "source_urls": [
+        "https://www.neta.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_DNS",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:33.300875+00:00",
+        "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.neta.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.neta.co.th', po",
+        "url": "https://www.neta.co.th/"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Deepal",
+      "in_scope": true,
+      "official_name": "Deepal Thailand",
+      "source_urls": [
+        "https://www.changan.co.th/",
+        "https://www.deepal.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": null,
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-26T13:45:38.611101+00:00",
+      "last_success_sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "fallback_ladder": [
+        {
+          "url": "https://www.deepal.co.th/",
+          "checked_at": "2026-09-24T13:41:33.550677+00:00",
+          "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.deepal.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.deepal.co.th'",
+          "result": "BLOCKED_DNS",
+          "cycle": "2026-09-24"
+        },
+        {
+          "url": "https://www.changan.co.th/",
+          "checked_at": "2026-09-24T15:11:34.814997+00:00",
+          "http_status_or_error": "REACHABLE — Deepal products published on operator site (changan.co.th cards link /thdeepal/<model>-th/)",
+          "result": "CAPTURED_PARSED",
+          "cycle": "2026-09-24-3"
+        }
+      ],
+      "captured_endpoints": [
+        {
+          "url": "https://www.changan.co.th/th/",
+          "artifact": "changan_home_page.html",
+          "sha256": "28c9f50b86238b6d69b2cd3737068795367ab06875243cc4193d5c98ae770ecd",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "sibling official source: Changan (same operator) cards carry Deepal product links — collect_deepal, 5 MODEL MSRP_STARTING; brand_raw=thdeepal (published segment), never merged into Changan"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+          "artifact": "deepal_e07_awd.html",
+          "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+          "artifact": "deepal_e07_plus.html",
+          "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+          "artifact": "deepal_hunter_k50.html",
+          "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/s05-th/",
+          "artifact": "deepal_s05.html",
+          "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+          "artifact": "deepal_s05_reev.html",
+          "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        },
+        {
+          "url": "https://www.changan.co.th/th/deepal/s07-th/",
+          "artifact": "deepal_s07.html",
+          "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (model_page_or_price_index): P101 catalog completeness: discovered in changan_home_page.html"
+        }
+      ]
+    },
+    {
+      "brand": "Avance",
+      "in_scope": true,
+      "official_name": "Avance Motors",
+      "source_urls": [
+        "https://www.avancemotors.com/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_DNS",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:33.586368+00:00",
+        "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.avancemotors.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.avancemot",
+        "url": "https://www.avancemotors.com/"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Changan",
+      "in_scope": true,
+      "official_name": "Changan Automobile (Thailand)",
+      "source_urls": [
+        "https://www.changan.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-24T17:47:37.094363+00:00",
+      "last_success_sha256": "d1f57ae37d4d1a69aabb17ea1909c35414ce52c7c8ff1aa1a8ce6d4ea037d237",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:33.600672+00:00",
+        "http_status": 200,
+        "url": "https://www.changan.co.th/th/",
+        "bytes": 5490044,
+        "title": "CHANGAN Thailand"
+      },
+      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.changan.co.th/th/",
+          "artifact": "changan_home_page.html",
+          "sha256": "28c9f50b86238b6d69b2cd3737068795367ab06875243cc4193d5c98ae770ecd",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "home cards are DEEPAL-brand products (rows brand=deepal, source relationship preserved) — own Changan rows come from the three endpoints below"
+        },
+        {
+          "url": "https://www.changan.co.th/th/nevo-q05/",
+          "artifact": "changan_nevo_q05_page.html",
+          "sha256": "b7cb2be2088c07caf194991b686c2ad174ab5f696741e7b096259936aabd313c",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "OWN Changan product page — 1 MODEL NEVO Q05 629,900 MSRP_STARTING (visible DOM card)"
+        },
+        {
+          "url": "https://www.changan.co.th/th/lumin/luminl-dc-th/",
+          "artifact": "changan_lumin_page.html",
+          "sha256": "8d84d5f80f5eb06a858a033d6fef454233929cd88b5453b4f9f20970821accba",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "OWN Changan product page — 1 MODEL Lumin L DC 499,000 MSRP (calc reference, same-sentence model+price)"
+        },
+        {
+          "url": "https://www.changan.co.th/th/promotion/",
+          "artifact": "changan_promotion_page.html",
+          "sha256": "d1f57ae37d4d1a69aabb17ea1909c35414ce52c7c8ff1aa1a8ce6d4ea037d237",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "promotion offers — 2 VARIANT rows NEVO Q05 MAX/ULTRA (list 629,900/709,900; ราคาพิเศษ 619,900/679,900 kept in raw_labels)"
+        },
+        {
+          "url": "https://www.changan.co.th/images/nevo/q05/pdf/Q05-Specs-sheet-th.pdf",
+          "artifact": "Changan_NEVOQ05_SpecSheet_th.pdf.b64",
+          "sha256": "44e2bebaeed9b269fa9e22d39488228c74ddec4d30fc91c85ec751d3391d02c4",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official Changan NEVO Q05 spec sheet PDF (link from changan.co.th) — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.changan.co.th/th/news/",
+          "artifact": "changan_press_news.html",
+          "sha256": "c1ef82169bdc0699687ca21eb3a35db8f4d970b284bd4fb285e2a2effca3ec6d",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in changan_home_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "GWM",
+      "in_scope": true,
+      "official_name": "GWM (Great Wall Motor) Thailand",
+      "source_urls": [
+        "https://www.gwm.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "http_get",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-25T07:46:42.819370+00:00",
+      "last_success_sha256": "23c92f204509784ee4058f48161233c1d9bb980cfe463e8bf801d27ec7b76558",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:33.631169+00:00",
+        "http_status": 200,
+        "url": "https://www.gwm.co.th/en",
+        "bytes": 154968,
+        "title": "GWM Thailand - Home"
+      },
+      "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.gwm.co.th/en",
+          "artifact": "gwm_home_page.html",
+          "sha256": "c311d963f280270552a673091f4b1e0b549fdb1e9936bbe6c79b758814d95ebe",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "captured (/en); no price elements — adapter follow-up"
+        },
+        {
+          "url": "https://www.gwm.co.th/en/models",
+          "artifact": "gwm_models_page.html",
+          "sha256": "e7a9070ab8c8d78cc09be23870fec1c6f27e7475eb03aae4d803f34d2e10e487",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "official models page: 0 price markers (ราคา/THB/฿) across home + /en/models — no adapter; follow-up = JSON-LD/price API/PDF endpoints if published"
+        },
+        {
+          "url": "https://www.gwm.co.th/en/gwm-data-car-models",
+          "artifact": "gwm_data_models_page.html",
+          "sha256": "d09dec4fa516ac816794d35d0b0b82f31a77d7efea1552ff4938ca980e85fa66",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "alternate 1 — redirects to GWM Home, no data payload, 0 price markers"
+        },
+        {
+          "url": "https://mall.gwm.co.th/",
+          "artifact": "gwm_mall_home.html",
+          "sha256": "1fcace8cd75949fb222c18076ff9991768f1caf7e360626bc7899d1d77cf9874",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "alternate 2 — official mall is a client-rendered SPA shell (textlen=18), 0 SSR prices; both alternates exhausted this cycle, no adapter"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/haval-h6",
+          "artifact": "gwm_th_model_haval-h6.html",
+          "sha256": "236ada0f0db7e723f3e5d9ad2a6a5a5d930770792331e1c652d1ad90be37f4b5",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/ora-5-ev",
+          "artifact": "gwm_th_model_ora-5-ev.html",
+          "sha256": "6ca2b21a3d8475b9838c471a5bd19a77f79e0d4a5a1432c663b54d17448128f2",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/ora-5-hev",
+          "artifact": "gwm_th_model_ora-5-hev.html",
+          "sha256": "8182d7d5c3e1f12312b2d48c3546d47b957135029a5a0c664727c9a64dc1a89a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/poer",
+          "artifact": "gwm_th_model_poer.html",
+          "sha256": "f83c07e4ff58143e064e492a9689bfed16987587823fdf87f395c736c9884b62",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/sahar-diesel",
+          "artifact": "gwm_th_model_sahar-diesel.html",
+          "sha256": "662b719e379fda7e7d3fb8fed9176077ab97c9fc13b712c405911c3ff4336d70",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/sahar",
+          "artifact": "gwm_th_model_sahar.html",
+          "sha256": "b1bdea00126fcec2d5327402b5ba12e265d4730d18dfd0cb5d494f0b4a27425c",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-300-diesel",
+          "artifact": "gwm_th_model_tank-300-diesel.html",
+          "sha256": "a54714afc4fd6d966d47b563d6c534152628882c472fa4495019410eb3ff47f0",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-300-limited-lb",
+          "artifact": "gwm_th_model_tank-300-limited-lb.html",
+          "sha256": "3e458640a5c104ba8981c7fa721574f6bb36d26c422a2eab3d40ef6790a0b3c5",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-300",
+          "artifact": "gwm_th_model_tank-300.html",
+          "sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-500-3t-diesel",
+          "artifact": "gwm_th_model_tank-500-3t-diesel.html",
+          "sha256": "a47b4c5ddac3751b35bd8a3b5a3c6b2a7e7215511827acfe595594192b62f7cf",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-500-diesel",
+          "artifact": "gwm_th_model_tank-500-diesel.html",
+          "sha256": "434bb47d85368cba8c1700a67fb4df3de95002d0d5db64be885dfdfd9da32a48",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/tank-500",
+          "artifact": "gwm_th_model_tank-500.html",
+          "sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/th/models/wey-g9",
+          "artifact": "gwm_th_model_wey-g9.html",
+          "sha256": "23c92f204509784ee4058f48161233c1d9bb980cfe463e8bf801d27ec7b76558",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official /th/models/<slug> price page (discovered via gwm.co.th sitemap index): hero ราคาเริ่มต้น/MSRP block + configurator cards -> parsed; campaign-derived hero figures rejected, see gwm_price_candidates log"
+        },
+        {
+          "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/haval-h6-hev/0901_th_h6.pdf",
+          "artifact": "GWM_HavalH6_Brochure.pdf.b64",
+          "sha256": "1357854fcb52dd6b8a4277832cab71734f76a21a447f60d02289627648e15443",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official GWM Haval H6 brochure PDF — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/th/model/ora-5/tc_ora5_bev_catalog_th_220326.pdf",
+          "artifact": "GWM_ORA5BEV_Catalog.pdf.b64",
+          "sha256": "7a6356d20d7ccd6a2f1a78011cf0615f901e16efea9f6a7de827ff0f6f01067f",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official GWM ORA 5 BEV catalog PDF — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Haval",
+      "in_scope": true,
+      "official_name": "Haval Thailand",
+      "source_urls": [
+        "https://www.haval.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_DNS",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:33.654558+00:00",
+        "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.haval.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.haval.co.th', ",
+        "url": "https://www.haval.co.th/"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Chery",
+      "in_scope": true,
+      "official_name": "Chery (Thailand)",
+      "source_urls": [
+        "https://www.chery.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_DNS",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:33.757563+00:00",
+        "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.chery.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.chery.co.th', ",
+        "url": "https://www.chery.co.th/"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "fallback_ladder": [
+        {
+          "url": "https://www.chery-thailand.com/",
+          "checked_at": "2026-09-25T13:49:52.256002+00:00",
+          "http_status_or_error": "HTTP_200 (host resolves; page footer '© Copyright 2025 Chery(Thailand).All Right Reserved.'; 0 published price figures on / , /models/tiggo8 and /models/chery-q — raw and Chromium-rendered)",
+          "result": "NO_PRICE_EVIDENCE",
+          "cycle": "2026-09-25-2",
+          "note": "alternate official host discovered (primary www.chery.co.th still NXDOMAIN); probe-only, no artifact staged, no adapter — §93 ladder <=2 alternates/cycle reached"
+        }
+      ],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Jaguar",
+      "in_scope": true,
+      "official_name": "Jaguar Thailand",
+      "source_urls": [
+        "https://www.jaguar.co.th/",
+        "https://cdn-jaguarlandrover.com/system/apio/th/TH_Jaguar_PriceSheet.pdf"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-24T17:47:27.974887+00:00",
+      "last_success_sha256": "9806c8ba7068655ecfcfade272c0e102b3579e519bef43f6076c54913642a8ed",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:33.827405+00:00",
+        "http_status": 200,
+        "url": "https://www.jaguar.co.th/",
+        "bytes": 414900,
+        "title": "Jaguar | Inspire Like No Other | Challenge Convention | Jaguar Thailand"
+      },
+      "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.jaguar.co.th/",
+          "artifact": "jaguar_home_page.html",
+          "sha256": "05d97f701cf4222bfd14729dfbc911a52d517143bad66231506330bdfa5fd02a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "captured; no price elements — needs model-list URL follow-up"
+        },
+        {
+          "url": "https://www.jaguar.co.th/jaguar-range/overview",
+          "artifact": "jaguar_range_page.html",
+          "sha256": "12ad7deb8700dbc94a3f448a91d054ad9bfb571b18664aeaee7fe074fc894151",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "range/model page capture: official page publishes NO prices → no adapter (parseable-structure rule); stored as evidence"
+        },
+        {
+          "url": "https://cdn-jaguarlandrover.com/system/apio/th/TH_Jaguar_PriceSheet.pdf",
+          "artifact": "TH_Jaguar_PriceSheet.pdf.b64",
+          "sha256": "9806c8ba7068655ecfcfade272c0e102b3579e519bef43f6076c54913642a8ed",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official JLR distributor price sheet (linked from jaguar.co.th) — base64 PDF artifact, pdftotext, 1 VARIANT row(s), effective 1 Aug 2026 (recorded, currentness UNKNOWN)"
+        },
+        {
+          "url": "https://www.jaguar.co.th/about-jaguar/news",
+          "artifact": "jaguar_press_news.html",
+          "sha256": "010eab2d4da15d35b8c04d79efe9713c62988abd9dc9b9bd3dbbb9e9c1e61a0a",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in jaguar_home_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Land Rover",
+      "in_scope": true,
+      "official_name": "Land Rover Thailand",
+      "source_urls": [
+        "https://www.landrover.co.th/",
+        "https://cdn-jaguarlandrover.com/system/apio/th/TH_LandRover_PriceSheet.pdf"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-24T17:47:28.318708+00:00",
+      "last_success_sha256": "38497d2d73774ba9ea52b875d463c404317389abf23e95bb384af2900da0ab11",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:34.188934+00:00",
+        "http_status": 200,
+        "url": "https://www.landrover.co.th/",
+        "bytes": 394441,
+        "title": "Land Rover | สำรวจรถ SUV และรถ 4x4 สุดหรู | Land Rover Thailand"
+      },
+      "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.landrover.co.th/",
+          "artifact": "landrover_home_page.html",
+          "sha256": "e82a21773190cb8bfe6cd0d0cfabc4361aedc6cc8375629eef9918555de35abe",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "captured; no price elements — needs model-list URL follow-up"
+        },
+        {
+          "url": "https://www.landrover.co.th/discovery/overview",
+          "artifact": "landrover_discovery_page.html",
+          "sha256": "660b8fa629d46378a53922ecfad55b702ff923dee28654d7f86a9f09c3d51ce2",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "range/model page capture: official page publishes NO prices → no adapter (parseable-structure rule); stored as evidence"
+        },
+        {
+          "url": "https://www.landrover.co.th/range-rover/overview",
+          "artifact": "landrover_range_rover_page.html",
+          "sha256": "aa02b1b04953577fa44ccd302b403f07fc266853c7f64e6c48393fcfdb6f9c29",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "range/model page capture: official page publishes NO prices → no adapter (parseable-structure rule); stored as evidence"
+        },
+        {
+          "url": "https://cdn-jaguarlandrover.com/system/apio/th/TH_LandRover_PriceSheet.pdf",
+          "artifact": "TH_LandRover_PriceSheet.pdf.b64",
+          "sha256": "38497d2d73774ba9ea52b875d463c404317389abf23e95bb384af2900da0ab11",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "official JLR distributor price sheet (linked from land rover.co.th) — base64 PDF artifact, pdftotext, 11 VARIANT row(s), effective 1 Aug 2026 (recorded, currentness UNKNOWN)"
+        },
+        {
+          "url": "https://www.landrover.co.th/explore-land-rover/articles",
+          "artifact": "landrover_press_articles.html",
+          "sha256": "0b1d90f8e1fea61a689bfb8a25265e221d3d82cf423e861c18f6b5d7c707eb1b",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in landrover_home_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "MINI",
+      "in_scope": true,
+      "official_name": "MINI Thailand",
+      "source_urls": [
+        "https://www.mini.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-26T07:44:33.271754+00:00",
+      "last_success_sha256": "f65a020f704f88e00c025a5dbcf735e25666d6fcb060324aad4b5b9b7b41be55",
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:34.397258+00:00",
+        "http_status_or_error": "Timeout after 15s",
+        "url": "https://www.mini.co.th/"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.mini.co.th/en_TH/home.html",
+          "artifact": "mini_home_page.html",
+          "sha256": "b662bd5b0cca816295643f72ac8b880a2ee82d017d25a40edd5ddca363783273",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "product items — collect_mini, 5 MODEL MSRP_STARTING (\"From X ฿\"), finance values excluded"
+        },
+        {
+          "url": "https://www.mini.co.th/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2026/MINI-Price-Sheet-Revised-27-Mar-2026.pdf.asset.1774933915613.pdf",
+          "artifact": "MINI_PriceSheet_20260327.pdf.b64",
+          "sha256": "f65a020f704f88e00c025a5dbcf735e25666d6fcb060324aad4b5b9b7b41be55",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (brochure_or_price_sheet_pdf): official MINI Thailand price sheet PDF (link from mini.co.th home)"
+        },
+        {
+          "url": "https://configure.mini.co.th/en_TH/model-ranges",
+          "artifact": "MINI_configurator_model_ranges.html",
+          "sha256": "6510083d83376e721ac0e64902edc27e383c4041fe0f4f9aeeb74ff3f4723b61",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (configurator): P101 catalog completeness: discovered in mini_home_page.html (legacy fixture, no sidecar) — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Smart",
+      "in_scope": true,
+      "official_name": "smart Thailand",
+      "source_urls": [
+        "https://www.smart.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "DEALER_REDIRECT",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-25T14:16:39.761675+00:00",
+        "http_status_or_error": "REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (HTTP 200) — unchanged since 2026-09-24; body sha256 e99e6e9a09a9f52c…; URL-decision evidence in audit/coverage/smart-url-decision-20260925/",
+        "url": "https://www.smart.co.th/"
+      },
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:34.725285+00:00",
+        "http_status": 200,
+        "url": "https://www.smartsecurity.in.th/",
+        "bytes": 953384,
+        "title": ""
+      },
+      "next_retry_at": "2026-09-26T14:16:39.761675+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.smartsecurity.in.th/",
+          "artifact": "smart_home_page.html",
+          "sha256": "503b08966576be442cf3b0c0facb8030c4400498cec4bbbe7cf3acb10f4d3412",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "WRONG-TARGET capture — must yield NO business rows; smart.co.th does not belong to the car brand"
+        }
+      ]
+    },
+    {
+      "brand": "Kia",
+      "in_scope": true,
+      "official_name": "Kia (Thailand) Co., Ltd.",
+      "source_urls": [
+        "https://www.kia.com/th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "REACHABLE",
+      "acquisition_method": "playwright",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "last_success_at": "2026-09-26T13:46:11.649389+00:00",
+      "last_success_sha256": "eb77846aa83f459d51d4a85238a6914fada44a57e3f29f1f004e77411cd3c2a4",
+      "blocker_evidence": null,
+      "probe_reachable_evidence": {
+        "checked_at": "2026-09-24T13:41:34.847383+00:00",
+        "http_status": 200,
+        "url": "https://www.kia.com/th/th",
+        "bytes": 94379,
+        "title": "เกีย ประเทศไทย | Kia Thailand"
+      },
+      "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": [
+        {
+          "url": "https://www.kia.com/th/th",
+          "artifact": "kia_home_page.html",
+          "sha256": "53e94ea876b441b4563e125b8f9de8ddba5c628f3d7593c1c73d31310e016d89",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "captured (/th/th); no price elements — follow-up if a full price list appears"
+        },
+        {
+          "url": "https://www.kia.com/th/th",
+          "artifact": "kia_cars_page.html",
+          "sha256": "d068ec29fcbefa7b3f2b571845e25f847c17e71658540c6bf772326e4d5581b0",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "promo kv cards — collect_kia_promos, 3 MODEL rows (EV5 1,080,000 MSRP_STARTING; Carnival Diesel SXL 1,999,000; Sorento PHEV 1,549,000 MSRP), campaign 1-30 Sep 2026 in evidence; cars list itself price-free"
+        },
+        {
+          "url": "https://www.kia.com/th/th/shopping-tools/download-a-brochure.html",
+          "artifact": "kia_brochure_hub.html",
+          "sha256": "9fac60a97de9550ce94a015c0700c68249645e103fd869d3edf094e08fc65f43",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (model_page_or_price_index): official Kia brochure hub (link from kia.com/th/th) — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.kia.com/th/th/discover-kia/article/review-the-new-kia-carnival-hev-7-seater-3.html",
+          "artifact": "kia_press_article_carnival.html",
+          "sha256": "2176decfe080560f1c55a58d68efd0c09ebf9e178466eeb3486cf57aa9078a06",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (press_release): P101 catalog completeness: discovered in kia_home_page.html — captured as evidence, not parsed"
+        },
+        {
+          "url": "https://www.kia.com/th/th/util/promotion/thekiacarnival-diesel-2026.html",
+          "artifact": "kia_promo_carnival_diesel.html",
+          "sha256": "037b6a63056077c2ba58caa4bdef0fa27f81c591c36bc015078508795365ff23",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (promotion): P101 catalog completeness: discovered in kia_home_page.html"
+        },
+        {
+          "url": "https://www.kia.com/th/th/util/promotion/thekiacarnival-hev-2026.html",
+          "artifact": "kia_promo_carnival_hev.html",
+          "sha256": "eb77846aa83f459d51d4a85238a6914fada44a57e3f29f1f004e77411cd3c2a4",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": true,
+          "note": "P100 catalog layer (promotion): P101 catalog completeness: discovered in kia_home_page.html"
+        },
+        {
+          "url": "https://www.kia.com/content/dam/kwcms/th/th/pdf/TheKiaPV5_Cargo_th.pdf",
+          "artifact": "kia_pv5_brochure.pdf",
+          "sha256": "2a2f0737e327d805138cf5542a24206f3f2f6af2ed7c27582ea4e69c0dfa9d88",
+          "provenance_state": "ACQUISITION_VERIFIED",
+          "parsed": false,
+          "note": "P100 catalog layer (brochure_pdf): P101 catalog completeness: discovered in kia_cars_page.html — captured as evidence, not parsed"
+        }
+      ]
+    },
+    {
+      "brand": "Peugeot",
+      "in_scope": true,
+      "official_name": "PEUGEOT Thailand",
+      "source_urls": [
+        "https://www.peugeot.co.th/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "BLOCKED_HTTP_403",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": {
+        "checked_at": "2026-09-24T13:41:35.062412+00:00",
+        "http_status_or_error": "HTTP_403",
+        "url": "https://www.peugeot.co.th/"
+      },
+      "probe_reachable_evidence": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "fallback_ladder": [],
+      "captured_endpoints": []
+    },
+    {
+      "brand": "Perodua",
+      "in_scope": false,
+      "scope_note": "Malaysian marque — not officially sold in Thailand; recorded for explicit exclusion.",
+      "source_urls": [
+        "https://www.perodua.com.my/"
+      ],
+      "source_type": "OFFICIAL_SITE",
+      "access_status": "UNKNOWN",
+      "acquisition_method": null,
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "last_success_at": null,
+      "last_success_sha256": null,
+      "blocker_evidence": null,
+      "next_retry_at": null,
+      "fallback_ladder": []
+    }
+  ],
+  "cycle": "2026-09-25-2"
+}

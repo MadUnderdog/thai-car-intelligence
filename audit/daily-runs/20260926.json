@@ -1,0 +1,136 @@
+{
+  "report": "P101 catalog completeness wave (first-party variant/grade layers)",
+  "generated_at": "2026-09-26T14:51:53.484411+00:00",
+  "commit": "933b1df86d8ce23171ef52aa9d93980a917491b2",
+  "branch": "fix/p1-provenance-gate",
+  "parent_commit": "41f2733e45bd3d5fa99598c752214b974d2760c4",
+  "objective": "MODEL + VARIANT catalog completeness (catalog-first; no price pass)",
+  "totals": {
+    "before": {
+      "rows": 479,
+      "models": 188,
+      "variants": 349,
+      "oems_with_rows": 19
+    },
+    "after": {
+      "rows": 503,
+      "models": 194,
+      "variants": 372,
+      "oems_with_rows": 19
+    },
+    "oems_in_scope": 32
+  },
+  "zero_variant_oems": {
+    "before": [
+      "deepal",
+      "isuzu",
+      "kia",
+      "mazda",
+      "mg",
+      "mini",
+      "subaru",
+      "suzuki"
+    ],
+    "after": [
+      "mazda",
+      "mg",
+      "subaru"
+    ]
+  },
+  "per_oem_delta": {
+    "Suzuki": "rows 5->11, variants 0->6 (FRONX GL/GLX/GLX PLUS, XL7 HYBRID GLX, JIMNY AT single/two-tone) from official SPEC&PRICE tables",
+    "MINI": "rows 5->18, models 5->9, variants 0->13 from official price-sheet PDF sections",
+    "Kia": "rows 3->6, variants 0->3 (EV5 Air / Earth Long Range / Earth Exclusive AWD) from official campaign pages",
+    "Deepal": "rows 5->7, models 5->7, variants 0->1 (S07 L) from official campaign copy",
+    "BMW": "+brochure_pdf, +configurator layers (captured, parsed=false)",
+    "Honda/Lexus/Mazda/Mitsubishi/Nissan/Subaru/Isuzu/MG/Toyota/Changan/Jaguar/Land Rover/Porsche/Kia/Suzuki": "+press_release layer where a first-party newsroom/press URL existed in held artifacts"
+  },
+  "layers_newly_checked": {
+    "press_release": [
+      "Changan",
+      "Honda",
+      "Isuzu",
+      "Jaguar",
+      "Kia",
+      "Land Rover",
+      "Lexus",
+      "Mazda",
+      "MG",
+      "Mitsubishi",
+      "Nissan",
+      "Porsche",
+      "Subaru",
+      "Suzuki",
+      "Toyota"
+    ],
+    "configurator": [
+      "BMW",
+      "MINI",
+      "Porsche"
+    ],
+    "price_or_grade_table": [
+      "Kia",
+      "MINI",
+      "Suzuki",
+      "Deepal"
+    ],
+    "brochure_pdf": [
+      "BMW",
+      "Honda",
+      "Lexus",
+      "Mazda",
+      "Mitsubishi",
+      "Nissan",
+      "Subaru"
+    ]
+  },
+  "capture": {
+    "batch": "C",
+    "targets": 54,
+    "captured": 53,
+    "blocked": [
+      "mg_price_calculator.html -> HTTP_500 (official endpoint; recorded, not bypassed)"
+    ],
+    "discovery": "Pass C: every URL derived from an artifact already held (per-target discovered_from in the capture log)",
+    "capture_log": "audit/coverage/catalog_layers_C_20260926.json",
+    "new_artifacts": 107,
+    "politeness_s_per_host": 5.5
+  },
+  "deliberate_exclusions": [
+    "Isuzu brochure trim labels (6) and 2 Deepal discount-prose trims were NOT staged: the locator contract requires every staged record to resolve to exactly one record carrying the row's own figure, and these sources publish no price for the trim",
+    "No cross-source model aliasing: MINI price-sheet sections and lineup labels remain distinct identities (join rule: no inferred joins)"
+  ],
+  "tests": {
+    "pytest": "398 passed (python3 -m pytest tests -q --ignore=tests/test_generation_config_boundary.py)",
+    "pre_existing_collection_error": "tests/test_generation_config_boundary.py imports _OPENROUTER_ALLOWED_MODEL, absent from lib/thai_factory/extract/ai_extractor.py at HEAD 41f2733 and in worktree — pre-existing, not introduced by this wave (module untouched by this diff)",
+    "vitest": "488 passed, 2 skipped (npx vitest run)",
+    "tsc": "npx tsc --noEmit rc=0",
+    "prisma_validate": "rc=0 (pre-existing schema warning about SetNull)",
+    "credential_scan": "120 changed/new files scanned -> 0 real hits (2 AKIA-pattern matches were base64 coincidences; absent from decoded PDF and visible text)",
+    "reproduce": [
+      "python3 -m pytest tests -q --ignore=tests/test_generation_config_boundary.py",
+      "npx vitest run",
+      "npx tsc --noEmit",
+      "python3 scripts/collect_multi_oem.py && python3 scripts/record_catalog_layers.py && python3 scripts/build_multi_source_joins.py && python3 scripts/generate_spec_coverage_plan.py && python3 scripts/generate_catalog_matrix.py"
+    ]
+  },
+  "control_layer": {
+    "skill_reference_memory_config_writes": 0,
+    "note": "No skill_manage, no memory operation, no config change in this session; only project files under scripts/, audit/, tests/fixtures/"
+  },
+  "catalog_is_incomplete": {
+    "statement": "P101 did NOT finish the catalog-first objective; staged counts rising is not completeness",
+    "remaining_gaps": [
+      "variants still 0: Mazda (10 models), MG (7), Subaru (5)",
+      "BMW: 25 lineup models still carry no published variant rows (price-list bucket labels differ from lineup labels; no inferred joins allowed)",
+      "Toyota 34 models/99 variants, Honda 17/32 remain partially variant-covered",
+      "Isuzu trims exist in brochures but publish no price -> not stageable under the locator contract",
+      "configurator and press_release remain unchecked where no first-party URL exists in held artifacts (e.g. BMW press, GWM press, MINI press)",
+      "structured_payload largely unchecked across reachable OEMs",
+      "13 OEMs have no staged catalog (403/DNS/TLS/dealer-redirect blockers; no bypass attempted)",
+      "mg price calculator blocked HTTP_500; MG variant/grade layer still open"
+    ],
+    "completion_rule": "complete only when the evidence-backed discovery process exhausts each documented reachable catalog layer or records a defensible blocker/gap per remaining case"
+  },
+  "next_work": "continue catalog completeness on remaining gaps (Mazda/MG/Subaru variants, BMW variant attachment); no price pass until authorized"
+}

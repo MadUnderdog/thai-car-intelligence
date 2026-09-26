@@ -1,0 +1,69 @@
+{
+  "run_id": "run-20260920-020658",
+  "brand": "nissan",
+  "brand_region": "thailand",
+  "generated_at": "2026-09-20T13:30:00+07:00",
+  "fixture_source": "tests/fixtures/nissan-navigation-prices.json",
+  "parser_source": "lib/discovery/nissan-parser.ts",
+  "parser_run_summary": {
+    "total_entries": 42,
+    "valid_count": 34,
+    "rejected_count": 8,
+    "rejected_breakdown": {
+      "UNKNOWN_MODEL": ["navara-sc", "np300-navara-king-cab-", "np300-navara-double-cab-", "x-trail"],
+      "REJECT_LIST": ["test-gt-r", "kicks-e-power-sky-edition", "navara-n-trek-warrior-"],
+      "NO_PRICE": ["gt-r"]
+    }
+  },
+  "valid_models": [
+    { "key": "march", "model_code": "B02A", "starting_price_thb": 420000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.16" },
+    { "key": "almera", "model_code": "L02B", "starting_price_thb": 445000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.26" },
+    { "key": "new-almera-22my", "model_code": "29545", "starting_price_thb": 515000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.44.09" },
+    { "key": "new-almera", "model_code": "29851", "starting_price_thb": 573000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.43.53" },
+    { "key": "almera-with-stylish-package", "model_code": "29851", "starting_price_thb": 573000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.43.48" },
+    { "key": "note", "model_code": "J02C", "starting_price_thb": 530000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.16" },
+    { "key": "livina", "model_code": "N11Q", "starting_price_thb": 672000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.28" },
+    { "key": "kicks-epower", "model_code": "70053", "starting_price_thb": 789900, "price_type": "MODEL_RANGE", "tier": "Retail with VAT", "updated": "2026.06.29.12.04.45" },
+    { "key": "new-kicks", "model_code": "29843", "starting_price_thb": 779900, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.43.52" },
+    { "key": "kicks-e-power-with-stylish-package", "model_code": "29843", "starting_price_thb": 779900, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.43.48" },
+    { "key": "pulsar", "model_code": "B12D", "starting_price_thb": 781000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.27" },
+    { "key": "juke", "model_code": "P12C", "starting_price_thb": 837000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.10" },
+    { "key": "sylphy", "model_code": "L12F", "starting_price_thb": 833000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.20" },
+    { "key": "new-navara-single-cab", "model_code": "29637", "starting_price_thb": 595000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.44.06" },
+    { "key": "navara-single-cab", "model_code": "70002", "starting_price_thb": 606000, "price_type": "MODEL_RANGE", "tier": "Retail with VAT", "updated": "2026.03.23.19.44.02" },
+    { "key": "new-navara-king-cab", "model_code": "29624", "starting_price_thb": 649000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.44.01" },
+    { "key": "navara-king-cab", "model_code": "70003", "starting_price_thb": 667000, "price_type": "MODEL_RANGE", "tier": "Retail with VAT", "updated": "2026.03.23.19.44.00" },
+    { "key": "navara-calibre", "model_code": "70004", "starting_price_thb": 758000, "price_type": "MODEL_RANGE", "tier": "Retail with VAT", "updated": "2026.03.23.19.43.58" },
+    { "key": "new-navara-calibre", "model_code": "29621", "starting_price_thb": 765000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.43.59" },
+    { "key": "navara-calibre-my21", "model_code": "NACALI", "starting_price_thb": 765000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.11" },
+    { "key": "new-navara-pro-4x-and-pro-2x", "model_code": "29643", "starting_price_thb": 1030000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.43.57" },
+    { "key": "navara", "model_code": "70005", "starting_price_thb": 1045000, "price_type": "MODEL_RANGE", "tier": "Retail with VAT", "updated": "2026.03.23.19.43.54" },
+    { "key": "navara-pro-4x-and-pro-2x", "model_code": "70005", "starting_price_thb": 1045000, "price_type": "MODEL_RANGE", "tier": "Retail with VAT", "updated": "2026.03.23.19.43.56" },
+    { "key": "new-terra", "model_code": "29838", "starting_price_thb": 1199000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.44.03" },
+    { "key": "nissan-terra-mc", "model_code": "29464", "starting_price_thb": 1199000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.44.14" },
+    { "key": "urvan", "model_code": "X81C", "starting_price_thb": 1216500, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.07" },
+    { "key": "nv350-urvan", "model_code": "X81C", "starting_price_thb": 1216500, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.17" },
+    { "key": "terra", "model_code": "P60A", "starting_price_thb": 1299000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.22" },
+    { "key": "teana", "model_code": "L42L", "starting_price_thb": 1339000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.21" },
+    { "key": "serena", "model_code": "30177", "starting_price_thb": 1469000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.08.25.14.01.51" },
+    { "key": "new-leaf", "model_code": "29785", "starting_price_thb": 1590000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.44.04" },
+    { "key": "serena-epower", "model_code": "30176", "starting_price_thb": 1690000, "price_type": "MODEL_RANGE", "tier": "Retail", "updated": "2026.03.23.19.43.51" },
+    { "key": "xtrail-epower", "model_code": "70006", "starting_price_thb": 1699000, "price_type": "MODEL_RANGE", "tier": "Retail with VAT", "updated": "2026.08.25.14.01.52" },
+    { "key": "leaf", "model_code": "B12P", "starting_price_thb": 1990000, "price_type": "MODEL_RANGE", "tier": "default", "updated": "2026.03.23.19.44.15" }
+  ],
+  "kicks_epower_web_fetch": {
+    "url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html",
+    "status": "FAILED",
+    "error": "Web extract and browser tools unavailable in this environment. Used fixture data instead.",
+    "fallback_price_thb": 789900,
+    "fallback_source": "fixture (kicks-epower key, Retail with VAT tier, updated 2026.06.29)"
+  },
+  "dedup_note": "Some models appear as duplicate keys (e.g. urvan/nv350-urvan, navara/navara-pro-4x-and-pro-2x). Deduped by model_key + price + content_hash is possible but these are intentionally separate navigation entries pointing to the same price.",
+  "parser_confidence": "HIGH — all 34 valid entries passed modelCode verification against KNOWN_NISSAN_CODES registry",
+  "issues": [
+    "Web fetch to nissan.co.th was unavailable; Kicks e-Power current price from live site could not be verified independently",
+    "x-trail (model code P32R, price 1,350,000) rejected as UNKNOWN_MODEL — parser registry has 'xtrail' key but not 'x-trail' slug",
+    "navara-sc (559,500) and np300 variants rejected — legacy model codes not in known registry",
+    "gt-r has empty price (price_on_request) — correctly flagged as NO_PRICE"
+  ]
+}

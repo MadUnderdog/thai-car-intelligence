@@ -1,0 +1,413 @@
+{
+  "probed_at": "2026-09-24T13:41:49.738574+00:00",
+  "method": "requests GET, Chrome UA, verify=True, timeout=15s, 1 req/host",
+  "results": [
+    {
+      "brand": "Toyota",
+      "role": "primary",
+      "url": "https://www.toyota.co.th/model-list",
+      "checked_at": "2026-09-24T13:41:31.558735+00:00",
+      "http_status": 200,
+      "final_url": "https://www.toyota.co.th/model-list",
+      "elapsed_ms": 288,
+      "bytes": 19651,
+      "title": "\u0e23\u0e16\u0e42\u0e15\u0e42\u0e22\u0e15\u0e49\u0e32\u0e17\u0e38\u0e01\u0e23\u0e38\u0e48\u0e19 | Model Line Up | \u0e42\u0e15\u0e42\u0e22\u0e15\u0e49\u0e32 \u0e21\u0e2d\u0e40\u0e15\u0e2d\u0e23\u0e4c \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Honda",
+      "role": "primary",
+      "url": "https://www.honda.co.th/models",
+      "checked_at": "2026-09-24T13:41:31.559136+00:00",
+      "http_status": 200,
+      "final_url": "https://www.honda.co.th/models",
+      "elapsed_ms": 707,
+      "bytes": 337742,
+      "title": "Honda Thailand - \u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e2e\u0e2d\u0e19\u0e14\u0e49\u0e32 \u0e2d\u0e2d\u0e42\u0e15\u0e42\u0e21\u0e1a\u0e34\u0e25 (\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22) \u0e08\u0e33\u0e01\u0e31\u0e14",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Nissan",
+      "role": "primary",
+      "url": "https://www.nissan-thailand.com/",
+      "checked_at": "2026-09-24T13:41:31.559683+00:00",
+      "access_status": "BLOCKED_DNS",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.nissan-thailand.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.nissan"
+    },
+    {
+      "brand": "Mazda",
+      "role": "primary",
+      "url": "https://www.mazda.co.th/en/vehicles",
+      "checked_at": "2026-09-24T13:41:31.559941+00:00",
+      "http_status": 404,
+      "final_url": "https://www.mazda.co.th/en/vehicles",
+      "elapsed_ms": 525,
+      "bytes": 71418,
+      "title": "",
+      "access_status": "BLOCKED_HTTP_404"
+    },
+    {
+      "brand": "Mitsubishi",
+      "role": "primary",
+      "url": "https://www.mitsubishi-motors.co.th/",
+      "checked_at": "2026-09-24T13:41:31.560336+00:00",
+      "http_status": 200,
+      "final_url": "https://www.mitsubishi-motors.co.th/th?rd=true",
+      "elapsed_ms": 1620,
+      "bytes": 1123398,
+      "title": "\u0e21\u0e34\u0e15\u0e0b\u0e39\u0e1a\u0e34\u0e0a\u0e34 \u0e21\u0e2d\u0e40\u0e15\u0e2d\u0e23\u0e4c\u0e2a (\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22)",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Isuzu",
+      "role": "primary",
+      "url": "https://www.isuzu.co.th/",
+      "checked_at": "2026-09-24T13:41:31.560775+00:00",
+      "http_status": 200,
+      "final_url": "https://www.isuzu.co.th/",
+      "elapsed_ms": 523,
+      "bytes": 15873,
+      "title": "ISUZU Group Thailand",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Isuzu",
+      "role": "alternate",
+      "url": "https://www.isuzu.com/",
+      "checked_at": "2026-09-24T13:41:31.562521+00:00",
+      "http_status": 200,
+      "final_url": "https://www.isuzu.com/",
+      "elapsed_ms": 1569,
+      "bytes": 30630,
+      "title": "Landing Page",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Suzuki",
+      "role": "primary",
+      "url": "https://www.suzuki.co.th/",
+      "checked_at": "2026-09-24T13:41:31.564646+00:00",
+      "http_status": 200,
+      "final_url": "https://www.suzuki.co.th/",
+      "elapsed_ms": 612,
+      "bytes": 106314,
+      "title": "\u0e0b\u0e39\u0e0b\u0e39\u0e01\u0e34 \u0e21\u0e2d\u0e40\u0e15\u0e2d\u0e23\u0e4c (\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22) | Suzuki Motor (Thailand) Co., Ltd.",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "MG",
+      "role": "primary",
+      "url": "https://www.mgcars.com/th/",
+      "checked_at": "2026-09-24T13:41:31.623010+00:00",
+      "http_status": 200,
+      "final_url": "https://www.mgcars.com/th",
+      "elapsed_ms": 1968,
+      "bytes": 1913302,
+      "title": "MG Cars | MG SALES (THAILAND)",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "BYD",
+      "role": "primary",
+      "url": "https://www.byd.com/th/",
+      "checked_at": "2026-09-24T13:41:31.848172+00:00",
+      "http_status": 404,
+      "final_url": "https://www.byd.com/th/",
+      "elapsed_ms": 1451,
+      "bytes": 43908,
+      "title": "Error | BYD EU",
+      "access_status": "BLOCKED_HTTP_404"
+    },
+    {
+      "brand": "Tesla",
+      "role": "primary",
+      "url": "https://www.tesla.com/th_th",
+      "checked_at": "2026-09-24T13:41:32.086082+00:00",
+      "http_status": 403,
+      "final_url": "https://www.tesla.com/th_th",
+      "elapsed_ms": 282,
+      "bytes": 374,
+      "title": "Access Denied",
+      "access_status": "BLOCKED_HTTP_403"
+    },
+    {
+      "brand": "Ford",
+      "role": "primary",
+      "url": "https://www.ford.co.th/",
+      "checked_at": "2026-09-24T13:41:32.087860+00:00",
+      "http_status": 403,
+      "final_url": "https://www.ford.co.th/",
+      "elapsed_ms": 301,
+      "bytes": 372,
+      "title": "Access Denied",
+      "access_status": "BLOCKED_HTTP_403"
+    },
+    {
+      "brand": "Chevrolet",
+      "role": "primary",
+      "url": "https://www.chevrolet.co.th/",
+      "checked_at": "2026-09-24T13:41:32.178064+00:00",
+      "http_status": 200,
+      "final_url": "https://www.chevrolet.co.th/",
+      "elapsed_ms": 2009,
+      "bytes": 125550,
+      "title": "index",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "role": "primary",
+      "url": "https://www.mercedes-benz.co.th/",
+      "checked_at": "2026-09-24T13:41:32.268076+00:00",
+      "access_status": "BLOCKED_TIMEOUT",
+      "error": "Timeout after 15s"
+    },
+    {
+      "brand": "Audi",
+      "role": "primary",
+      "url": "https://www.audi.co.th/",
+      "checked_at": "2026-09-24T13:41:32.369118+00:00",
+      "http_status": 403,
+      "final_url": "https://www.audi.co.th/",
+      "elapsed_ms": 445,
+      "bytes": 372,
+      "title": "Access Denied",
+      "access_status": "BLOCKED_HTTP_403"
+    },
+    {
+      "brand": "BMW",
+      "role": "primary",
+      "url": "https://www.bmw.co.th/en/all-models.html",
+      "checked_at": "2026-09-24T13:41:32.390590+00:00",
+      "access_status": "BLOCKED_TIMEOUT",
+      "error": "Timeout after 15s"
+    },
+    {
+      "brand": "Volvo",
+      "role": "primary",
+      "url": "https://www.volvo.co.th/en/models.html",
+      "checked_at": "2026-09-24T13:41:32.815537+00:00",
+      "access_status": "BLOCKED_TLS",
+      "error": "SSLError: HTTPSConnectionPool(host='www.volvo.co.th', port=443): Max retries exceeded with url: /en/models.html (Caused by SSLErro"
+    },
+    {
+      "brand": "Subaru",
+      "role": "primary",
+      "url": "https://www.subaru.co.th/",
+      "checked_at": "2026-09-24T13:41:33.132436+00:00",
+      "access_status": "BLOCKED_DNS",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.subaru.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.subaru.co.th'"
+    },
+    {
+      "brand": "Porsche",
+      "role": "primary",
+      "url": "https://www.porsche.com/pap/_thailand_/",
+      "checked_at": "2026-09-24T13:41:33.183384+00:00",
+      "http_status": 200,
+      "final_url": "https://www.porsche.com/pap/_thailand_/",
+      "elapsed_ms": 366,
+      "bytes": 117538,
+      "title": "Porsche Thailand | Official Website",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Lexus",
+      "role": "primary",
+      "url": "https://www.lexus.co.th/th.html",
+      "checked_at": "2026-09-24T13:41:33.209510+00:00",
+      "http_status": 200,
+      "final_url": "https://www.lexus.co.th/th.html",
+      "elapsed_ms": 374,
+      "bytes": 548202,
+      "title": "",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Neta",
+      "role": "primary",
+      "url": "https://www.neta.co.th/",
+      "checked_at": "2026-09-24T13:41:33.300875+00:00",
+      "access_status": "BLOCKED_DNS",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.neta.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.neta.co.th', po"
+    },
+    {
+      "brand": "Deepal",
+      "role": "primary",
+      "url": "https://www.deepal.co.th/",
+      "checked_at": "2026-09-24T13:41:33.550677+00:00",
+      "access_status": "BLOCKED_DNS",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.deepal.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.deepal.co.th'"
+    },
+    {
+      "brand": "Avance",
+      "role": "primary",
+      "url": "https://www.avancemotors.com/",
+      "checked_at": "2026-09-24T13:41:33.586368+00:00",
+      "access_status": "BLOCKED_DNS",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.avancemotors.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.avancemot"
+    },
+    {
+      "brand": "Changan",
+      "role": "primary",
+      "url": "https://www.changan.co.th/",
+      "checked_at": "2026-09-24T13:41:33.600672+00:00",
+      "http_status": 200,
+      "final_url": "https://www.changan.co.th/th/",
+      "elapsed_ms": 1187,
+      "bytes": 5490044,
+      "title": "CHANGAN Thailand",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "GWM",
+      "role": "primary",
+      "url": "https://www.gwm.co.th/",
+      "checked_at": "2026-09-24T13:41:33.631169+00:00",
+      "http_status": 200,
+      "final_url": "https://www.gwm.co.th/en",
+      "elapsed_ms": 765,
+      "bytes": 154968,
+      "title": "GWM Thailand - Home",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Haval",
+      "role": "primary",
+      "url": "https://www.haval.co.th/",
+      "checked_at": "2026-09-24T13:41:33.654558+00:00",
+      "access_status": "BLOCKED_DNS",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.haval.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.haval.co.th', "
+    },
+    {
+      "brand": "Chery",
+      "role": "primary",
+      "url": "https://www.chery.co.th/",
+      "checked_at": "2026-09-24T13:41:33.757563+00:00",
+      "access_status": "BLOCKED_DNS",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.chery.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.chery.co.th', "
+    },
+    {
+      "brand": "Jaguar",
+      "role": "primary",
+      "url": "https://www.jaguar.co.th/",
+      "checked_at": "2026-09-24T13:41:33.827405+00:00",
+      "http_status": 200,
+      "final_url": "https://www.jaguar.co.th/",
+      "elapsed_ms": 1231,
+      "bytes": 414900,
+      "title": "Jaguar | Inspire Like No Other | Challenge Convention | Jaguar Thailand",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Land Rover",
+      "role": "primary",
+      "url": "https://www.landrover.co.th/",
+      "checked_at": "2026-09-24T13:41:34.188934+00:00",
+      "http_status": 200,
+      "final_url": "https://www.landrover.co.th/",
+      "elapsed_ms": 871,
+      "bytes": 394441,
+      "title": "Land Rover | \u0e2a\u0e33\u0e23\u0e27\u0e08\u0e23\u0e16 SUV \u0e41\u0e25\u0e30\u0e23\u0e16 4x4 \u0e2a\u0e38\u0e14\u0e2b\u0e23\u0e39 | Land Rover Thailand",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "MINI",
+      "role": "primary",
+      "url": "https://www.mini.co.th/",
+      "checked_at": "2026-09-24T13:41:34.397258+00:00",
+      "access_status": "BLOCKED_TIMEOUT",
+      "error": "Timeout after 15s"
+    },
+    {
+      "brand": "Smart",
+      "role": "primary",
+      "url": "https://www.smart.co.th/",
+      "checked_at": "2026-09-24T13:41:34.725285+00:00",
+      "http_status": 200,
+      "final_url": "https://www.smartsecurity.in.th/",
+      "elapsed_ms": 4901,
+      "bytes": 953384,
+      "title": "",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Daihatsu",
+      "role": "primary",
+      "url": "https://www.daihatsu.co.th/",
+      "checked_at": "2026-09-24T13:41:34.798627+00:00",
+      "access_status": "BLOCKED_DNS",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.daihatsu.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.daihatsu.co"
+    },
+    {
+      "brand": "Kia",
+      "role": "primary",
+      "url": "https://www.kia.com/th/",
+      "checked_at": "2026-09-24T13:41:34.847383+00:00",
+      "http_status": 200,
+      "final_url": "https://www.kia.com/th/th",
+      "elapsed_ms": 856,
+      "bytes": 94379,
+      "title": "\u0e40\u0e01\u0e35\u0e22 \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 | Kia Thailand",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Hyundai",
+      "role": "primary",
+      "url": "https://www.hyundai.co.th/",
+      "checked_at": "2026-09-24T13:41:35.059595+00:00",
+      "access_status": "BLOCKED_DNS",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.hyundai.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.hyundai.co.t"
+    },
+    {
+      "brand": "Peugeot",
+      "role": "primary",
+      "url": "https://www.peugeot.co.th/",
+      "checked_at": "2026-09-24T13:41:35.062412+00:00",
+      "http_status": 403,
+      "final_url": "https://www.peugeot.co.th/",
+      "elapsed_ms": 562,
+      "bytes": 375,
+      "title": "Access Denied",
+      "access_status": "BLOCKED_HTTP_403"
+    }
+  ],
+  "ladder_alternates": [
+    {
+      "brand": "Mazda",
+      "role": "alternate",
+      "url": "https://www.mazda.co.th/",
+      "checked_at": "2026-09-24T13:42:54.952076+00:00",
+      "http_status": 200,
+      "final_url": "https://www.mazda.co.th/th",
+      "elapsed_ms": 2288,
+      "bytes": 167486,
+      "title": "Mazda Sales (Thailand) Co., Ltd. | \u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e21\u0e32\u0e2a\u0e14\u0e49\u0e32 \u0e40\u0e0b\u0e25\u0e2a\u0e4c (\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22) \u0e08\u0e33\u0e01\u0e31\u0e14",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Nissan",
+      "role": "alternate",
+      "url": "https://www.nissan.co.th/",
+      "checked_at": "2026-09-24T13:42:57.240914+00:00",
+      "http_status": 200,
+      "final_url": "https://www.nissan.co.th/",
+      "elapsed_ms": 410,
+      "bytes": 1393004,
+      "title": "",
+      "access_status": "REACHABLE"
+    },
+    {
+      "brand": "Volvo",
+      "role": "alternate",
+      "url": "https://www.volvocars.com/th/",
+      "checked_at": "2026-09-24T13:42:57.651289+00:00",
+      "http_status": 403,
+      "final_url": "https://www.volvocars.com/th/",
+      "elapsed_ms": 268,
+      "bytes": 378,
+      "title": "Access Denied",
+      "access_status": "BLOCKED_HTTP_403",
+      "note": "HTTP_403"
+    }
+  ]
+}

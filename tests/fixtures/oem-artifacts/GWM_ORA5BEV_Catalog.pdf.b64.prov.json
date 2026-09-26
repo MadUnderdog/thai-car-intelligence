@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/th/model/ora-5/tc_ora5_bev_catalog_th_220326.pdf",
+  "captured_at": "2026-09-26T07:46:41.086847+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "7a6356d20d7ccd6a2f1a78011cf0615f901e16efea9f6a7de827ff0f6f01067f",
+  "session_id": "catalog_layers_20260926_074454",
+  "artifact_filename": "GWM_ORA5BEV_Catalog.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

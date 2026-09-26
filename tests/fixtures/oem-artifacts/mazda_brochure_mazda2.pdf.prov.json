@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/s3fs-public/2025-03/brochure_mazda2_essential_26032025.pdf?VersionId=AfXNz7AmQsbwFurYSIj4Rc0LOJo9UwWw",
+  "captured_at": "2026-09-26T13:49:35.071899+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "c1b43c938ef247d3f20d5dbab26ebe25207d57b7922032fcf156b31aa191d087",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "mazda_brochure_mazda2.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

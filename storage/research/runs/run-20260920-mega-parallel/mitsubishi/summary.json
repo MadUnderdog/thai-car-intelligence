@@ -1,0 +1,142 @@
+{
+  "brand": "mitsubishi",
+  "status": "DATA_EXTRACTED",
+  "prices": [
+    {
+      "brand": "mitsubishi",
+      "model": "xpander",
+      "variant": "__MODEL_RANGE__",
+      "price_thb": 939000,
+      "price_type": "STARTING_PRICE",
+      "source_url": "https://www.mitsubishi-motors.co.th/th",
+      "source_class": "OFFICIAL_WEB",
+      "trust_state": "QUALIFIED",
+      "extraction_method": "html_regex",
+      "evidence_excerpt": "item-parent-name=\"รุ่นรถยนต์  \"><a href=\"/th/cars/xpanderhev\" data-section=\"รุ่นรถยนต์  \" data-linkindex=\"1\" title=\"เอ็กซ์แพนเดอร์ เอชอีวี\" target=\"\" rel=\"noreferrer\"><div class=\"navigation-header__na",
+      "content_hash": "babec290e13aea91",
+      "timestamp": "2026-09-20T02:44:06.530886"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "xpander",
+      "variant": "__MODEL_RANGE__",
+      "price_thb": 969000,
+      "price_type": "STARTING_PRICE",
+      "source_url": "https://www.mitsubishi-motors.co.th/th",
+      "source_class": "OFFICIAL_WEB",
+      "trust_state": "QUALIFIED",
+      "extraction_method": "html_regex",
+      "evidence_excerpt": "item-parent-name=\"รุ่นรถยนต์  \"><a href=\"/th/cars/xpandercrosshev\" data-section=\"รุ่นรถยนต์  \" data-linkindex=\"2\" title=\"เอ็กซ์แพนเดอร์ ครอส เอชอีวี\" target=\"\" rel=\"noreferrer\"><div class=\"navigation-",
+      "content_hash": "2ab6ed59816b3d2a",
+      "timestamp": "2026-09-20T02:44:06.530940"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "triton",
+      "variant": "__MODEL_RANGE__",
+      "price_thb": 614000,
+      "price_type": "STARTING_PRICE",
+      "source_url": "https://www.mitsubishi-motors.co.th/th",
+      "source_class": "OFFICIAL_WEB",
+      "trust_state": "QUALIFIED",
+      "extraction_method": "html_regex",
+      "evidence_excerpt": "rent-name=\"รุ่นรถยนต์  \"><a href=\"/th/cars/all-newtriton\" data-section=\"รุ่นรถยนต์  \" data-linkindex=\"4\" title=\"ไทรทัน\" target=\"\" rel=\"noreferrer\"><div class=\"navigation-header__navLinkImage___2P-db\">",
+      "content_hash": "8ddd14ced94458b7",
+      "timestamp": "2026-09-20T02:44:06.531034"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mirage",
+      "variant": "__MODEL_RANGE__",
+      "price_thb": 509000,
+      "price_type": "STARTING_PRICE",
+      "source_url": "https://www.mitsubishi-motors.co.th/th",
+      "source_class": "OFFICIAL_WEB",
+      "trust_state": "QUALIFIED",
+      "extraction_method": "html_regex",
+      "evidence_excerpt": "item-parent-name=\"รุ่นรถยนต์  \"><a href=\"/th/cars/mirage\" data-section=\"รุ่นรถยนต์  \" data-linkindex=\"6\" title=\"มิราจ\" target=\"\" rel=\"noreferrer\"><div class=\"navigation-header__navLinkImage___2P-db\"><",
+      "content_hash": "ca5da905509e3a1f",
+      "timestamp": "2026-09-20T02:44:06.531127"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "xpander",
+      "variant": "__MODEL_RANGE__",
+      "price_thb": 939000,
+      "price_type": "STARTING_PRICE",
+      "source_url": "https://www.mitsubishi-motors.co.th/th",
+      "source_class": "OFFICIAL_WEB",
+      "trust_state": "QUALIFIED",
+      "extraction_method": "html_regex",
+      "evidence_excerpt": "eader__dropDownLinkAnchor___1ubq1\" href=\"/th/cars/xpanderhev/emotion\" data-section=\"MITSUBISHI e:MOTION\" target=\"\"><span class=\"navigation-header__navLinkLabel___1igVx theme__introCopy___3D-SN\">เอ็กซ์",
+      "content_hash": "babec290e13aea91",
+      "timestamp": "2026-09-20T02:44:06.532555"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "xpander",
+      "variant": "__MODEL_RANGE__",
+      "price_thb": 969000,
+      "price_type": "STARTING_PRICE",
+      "source_url": "https://www.mitsubishi-motors.co.th/th",
+      "source_class": "OFFICIAL_WEB",
+      "trust_state": "QUALIFIED",
+      "extraction_method": "html_regex",
+      "evidence_excerpt": "ryCardContainer___1NjEn  false\"><a href=\"/th/cars/xpandercrosshev\" class=\"homepage-car-selector__vlpLink___3OVqX\" data-year=\"2026\" data-code=\"RNE-SUV\" data-name=\"เอ็กซ์แพนเดอร์ ครอส เอชอีวี\" tabindex=",
+      "content_hash": "2ab6ed59816b3d2a",
+      "timestamp": "2026-09-20T02:44:06.532612"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "mirage",
+      "variant": "__MODEL_RANGE__",
+      "price_thb": 509000,
+      "price_type": "STARTING_PRICE",
+      "source_url": "https://www.mitsubishi-motors.co.th/th",
+      "source_class": "OFFICIAL_WEB",
+      "trust_state": "QUALIFIED",
+      "extraction_method": "html_regex",
+      "evidence_excerpt": "ryCardContainer___1NjEn  false\"><a href=\"/th/cars/mirage\" class=\"homepage-car-selector__vlpLink___3OVqX\" data-year=\"2020\" data-code=\"EL\" data-name=\"มิราจ\" tabindex=\"-1\"><div class=\"homepage-car-select",
+      "content_hash": "ca5da905509e3a1f",
+      "timestamp": "2026-09-20T02:44:06.532664"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "triton",
+      "variant": "__MODEL_RANGE__",
+      "price_thb": 614000,
+      "price_type": "STARTING_PRICE",
+      "source_url": "https://www.mitsubishi-motors.co.th/th",
+      "source_class": "OFFICIAL_WEB",
+      "trust_state": "QUALIFIED",
+      "extraction_method": "html_regex",
+      "evidence_excerpt": "ontainer___1NjEn  false\"><a href=\"/th/cars/all-newtriton\" class=\"homepage-car-selector__vlpLink___3OVqX\" data-year=\"2026\" data-code=\"UT\" data-name=\"ไทรทัน\" tabindex=\"-1\"><div class=\"homepage-car-selec",
+      "content_hash": "8ddd14ced94458b7",
+      "timestamp": "2026-09-20T02:44:06.532844"
+    },
+    {
+      "brand": "mitsubishi",
+      "model": "PAJERO SPORT",
+      "variant": "__MODEL_RANGE__",
+      "price_thb": 1139000,
+      "price_type": "STARTING_PRICE",
+      "source_url": "https://www.mitsubishi-motors.co.th/th",
+      "source_class": "OFFICIAL_WEB",
+      "trust_state": "QUALIFIED",
+      "extraction_method": "html_regex",
+      "evidence_excerpt": "1024px) 25vw, (min-width: 768px) 33vw, 50vw\" alt=\"PAJERO SPORT\"/><h3 class=\"homepage-car-selector__name___1CsX_ theme__headingFive___3LGp-\">ปาเจโร สปอร์ต</h3><p class=\"homepage-car-selector__price___2",
+      "content_hash": "ba7fdbdc195bf237",
+      "timestamp": "2026-09-20T02:44:06.532975"
+    }
+  ],
+  "specs": [],
+  "sources": [
+    {
+      "url": "https://www.mitsubishi-motors.co.th/th",
+      "status": "ok",
+      "method": "html_regex"
+    }
+  ],
+  "failures": [],
+  "timestamp": "2026-09-20T02:44:20.738873"
+}

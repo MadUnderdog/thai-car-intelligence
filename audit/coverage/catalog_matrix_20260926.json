@@ -1,0 +1,1831 @@
+{
+  "generated_at": "2026-09-26T14:39:20.373668+00:00",
+  "blueprint_sections": [
+    "§5.2 models",
+    "§5.3 variants/trims",
+    "§59 Pass A/B/C",
+    "§60/§61 brochure+verification",
+    "§89 verified vehicle",
+    "§93 coverage registry",
+    "§94 acquisition contract",
+    "§95 quality rules",
+    "§96 source classes",
+    "§98 test categories",
+    "§101 Phase 1"
+  ],
+  "totals": {
+    "oems_in_scope": 32,
+    "oems_with_staged_rows": 19,
+    "models": 194,
+    "variants": 372,
+    "rows": 503
+  },
+  "oems": [
+    {
+      "brand": "Audi",
+      "in_scope": true,
+      "access_status": "BLOCKED_HTTP_403",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_HTTP_403; blocker={\"checked_at\": \"2026-09-24T13:41:32.369118+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.audi.co.th/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Avance",
+      "in_scope": true,
+      "access_status": "BLOCKED_DNS",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_DNS; blocker={\"checked_at\": \"2026-09-24T13:41:33.586368+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.avancemotors.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.avancemot\", \"url\": \"https://www.avancemotors.com/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "BMW",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 34,
+        "variants": 49,
+        "rows": 84,
+        "identity_levels": {
+          "MODEL": 35,
+          "VARIANT": 49
+        }
+      },
+      "sources": [
+        {
+          "source": "BMW Thailand Official",
+          "rows": 35,
+          "artifacts": [
+            "bmw_all_models_verified.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        },
+        {
+          "source": "BMW Thailand Price List",
+          "rows": 49,
+          "artifacts": [
+            "bmw_price_list.html"
+          ],
+          "methods": [
+            "html_table_parse"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "configurator",
+        "lineup_index",
+        "price_or_grade_table"
+      ],
+      "layers_not_checked": [
+        "model_page",
+        "structured_payload",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 25,
+          "models": [
+            "Convertible 4 series",
+            "Coupé 2 series",
+            "Coupé 4 series",
+            "Coupé M2",
+            "Coupé M4",
+            "Roadster Z4",
+            "SAC X4",
+            "SAC X6",
+            "SAC iX2",
+            "SAV New iX",
+            "SAV New iX3",
+            "SAV X1",
+            "SAV X3",
+            "SAV X5",
+            "SAV X7",
+            "SAV XM",
+            "SAV iX1 L",
+            "Sedan 3 series",
+            "Sedan 5 series",
+            "Sedan 7 series",
+            "Sedan M3",
+            "Sedan M5",
+            "Sedan New i5",
+            "Touring M3",
+            "Touring M5"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, configurator, lineup_index, price_or_grade_table"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "model_page",
+            "structured_payload",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "BYD",
+      "in_scope": true,
+      "access_status": "BLOCKED_HTTP_404",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_HTTP_404; blocker={\"checked_at\": \"2026-09-24T13:41:31.848172+00:00\", \"http_status_or_error\": \"HTTP_404\", \"url\": \"https://www.byd.com/th/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Changan",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 2,
+        "variants": 2,
+        "rows": 4,
+        "identity_levels": {
+          "MODEL": 2,
+          "VARIANT": 2
+        }
+      },
+      "sources": [
+        {
+          "source": "Changan Thailand Official",
+          "rows": 4,
+          "artifacts": [
+            "changan_lumin_page.html",
+            "changan_nevo_q05_page.html",
+            "changan_promotion_page.html"
+          ],
+          "methods": [
+            "playwright_dom",
+            "regex_text"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "model_page",
+        "press_release",
+        "price_or_grade_table"
+      ],
+      "layers_not_checked": [
+        "structured_payload",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 1,
+          "models": [
+            "Lumin L DC"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page, press_release, price_or_grade_table"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "structured_payload",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Chery",
+      "in_scope": true,
+      "access_status": "BLOCKED_DNS",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_DNS; blocker={\"checked_at\": \"2026-09-24T13:41:33.757563+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.chery.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.chery.co.th', \", \"url\": \"https://www.chery.co.th/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Chevrolet",
+      "in_scope": true,
+      "access_status": "BLOCKED_HTTP_403",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_HTTP_403; blocker={\"checked_at\": \"2026-09-24T14:16:16.748942+00:00\", \"http_status_or_error\": \"HTTP_403 via Playwright (requests GET earlier returned 200 — browser-level block)\", \"url\": \"https://www.chevrolet.co.th/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Deepal",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 7,
+        "variants": 1,
+        "rows": 7,
+        "identity_levels": {
+          "MODEL": 6,
+          "VARIANT": 1
+        }
+      },
+      "sources": [
+        {
+          "source": "Changan Thailand Official",
+          "rows": 5,
+          "artifacts": [
+            "changan_home_page.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        },
+        {
+          "source": "Changan Thailand Campaign Pages",
+          "rows": 2,
+          "artifacts": [
+            "deepal_s05.html"
+          ],
+          "methods": [
+            "regex_text"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table"
+      ],
+      "layers_not_checked": [
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 6,
+          "models": [
+            "L07",
+            "e07-plus",
+            "hunter-k50",
+            "s05",
+            "s05-reev",
+            "s07"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, model_page, price_or_grade_table"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Ford",
+      "in_scope": true,
+      "access_status": "BLOCKED_HTTP_403",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_HTTP_403; blocker={\"checked_at\": \"2026-09-24T13:41:32.087860+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.ford.co.th/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "GWM",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 13,
+        "variants": 17,
+        "rows": 29,
+        "identity_levels": {
+          "MODEL": 12,
+          "VARIANT": 17
+        }
+      },
+      "sources": [
+        {
+          "source": "GWM Thailand Official",
+          "rows": 29,
+          "artifacts": [
+            "gwm_th_model_haval-h6.html",
+            "gwm_th_model_ora-5-ev.html",
+            "gwm_th_model_ora-5-hev.html",
+            "gwm_th_model_poer.html",
+            "gwm_th_model_sahar-diesel.html",
+            "gwm_th_model_sahar.html",
+            "gwm_th_model_tank-300-diesel.html",
+            "gwm_th_model_tank-300-limited-lb.html",
+            "gwm_th_model_tank-300.html",
+            "gwm_th_model_tank-500-3t-diesel.html",
+            "gwm_th_model_tank-500-diesel.html",
+            "gwm_th_model_tank-500.html",
+            "gwm_th_model_wey-g9.html"
+          ],
+          "methods": [
+            "html_dom",
+            "regex_text"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "model_page"
+      ],
+      "layers_not_checked": [
+        "price_or_grade_table",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 7,
+          "models": [
+            "GWM POER SAHAR DIESEL",
+            "ORA 5 EV",
+            "ORA 5 HEV",
+            "POER 2.4T PRO",
+            "TANK 300 LIMITED",
+            "TANK 500 3.0T DIESEL",
+            "WEY G9"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "price_or_grade_table",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Haval",
+      "in_scope": true,
+      "access_status": "BLOCKED_DNS",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_DNS; blocker={\"checked_at\": \"2026-09-24T13:41:33.654558+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.haval.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.haval.co.th', \", \"url\": \"https://www.haval.co.th/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Honda",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 17,
+        "variants": 32,
+        "rows": 42,
+        "identity_levels": {
+          "MODEL": 10,
+          "VARIANT": 32
+        }
+      },
+      "sources": [
+        {
+          "source": "Honda Thailand Official",
+          "rows": 4,
+          "artifacts": [
+            "honda_city_recapture.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        },
+        {
+          "source": "Honda Models Page",
+          "rows": 6,
+          "artifacts": [
+            "honda_models_page.html"
+          ],
+          "methods": [
+            "dom_query"
+          ]
+        },
+        {
+          "source": "Honda Thailand Grade List",
+          "rows": 32,
+          "artifacts": [
+            "honda_models_page.html"
+          ],
+          "methods": [
+            "rsc_grade_payload"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "model_page",
+        "press_release",
+        "price_or_grade_table",
+        "structured_payload"
+      ],
+      "layers_not_checked": [
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 8,
+          "models": [
+            "Civic Type R",
+            "HEV",
+            "N1",
+            "N2",
+            "ONE",
+            "Super-ONE",
+            "e:N1",
+            "e:N2"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page, press_release, price_or_grade_table, structured_payload"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Isuzu",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 6,
+        "variants": 0,
+        "rows": 6,
+        "identity_levels": {
+          "MODEL": 6,
+          "VARIANT": 0
+        }
+      },
+      "sources": [
+        {
+          "source": "Isuzu Thailand Official",
+          "rows": 6,
+          "artifacts": [
+            "isuzu_tis_page.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "press_release"
+      ],
+      "layers_not_checked": [
+        "model_page",
+        "price_or_grade_table",
+        "structured_payload",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 6,
+          "models": [
+            "MU-X",
+            "NEW ISUZU D-MAX HI-LANDER",
+            "NEW ISUZU D-MAX SPACECAB",
+            "NEW ISUZU D-MAX SPARK",
+            "NEW ISUZU V-CROSS 4x4",
+            "X-SERIES"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, press_release"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "model_page",
+            "price_or_grade_table",
+            "structured_payload",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Jaguar",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 1,
+        "variants": 1,
+        "rows": 1,
+        "identity_levels": {
+          "MODEL": 0,
+          "VARIANT": 1
+        }
+      },
+      "sources": [
+        {
+          "source": "Jaguar Thailand Official",
+          "rows": 1,
+          "artifacts": [
+            "TH_Jaguar_PriceSheet.pdf.b64"
+          ],
+          "methods": [
+            "pdftotext_line"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "press_release",
+        "price_or_grade_table",
+        "structured_payload"
+      ],
+      "layers_not_checked": [
+        "model_page",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "model_page",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Kia",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 3,
+        "variants": 3,
+        "rows": 6,
+        "identity_levels": {
+          "MODEL": 3,
+          "VARIANT": 3
+        }
+      },
+      "sources": [
+        {
+          "source": "Kia Thailand Official",
+          "rows": 3,
+          "artifacts": [
+            "kia_cars_page.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        },
+        {
+          "source": "Kia Thailand Campaign Pages",
+          "rows": 3,
+          "artifacts": [
+            "kia_promo_carnival_diesel.html"
+          ],
+          "methods": [
+            "regex_text"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "press_release",
+        "price_or_grade_table"
+      ],
+      "layers_not_checked": [
+        "model_page",
+        "structured_payload",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 2,
+          "models": [
+            "The Kia Carnival Diesel SXL",
+            "The Kia Sorento PHEV"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, press_release, price_or_grade_table"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "model_page",
+            "structured_payload",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Land Rover",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 4,
+        "variants": 11,
+        "rows": 11,
+        "identity_levels": {
+          "MODEL": 0,
+          "VARIANT": 11
+        }
+      },
+      "sources": [
+        {
+          "source": "Land Rover Thailand Official",
+          "rows": 11,
+          "artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ],
+          "methods": [
+            "pdftotext_line"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "press_release",
+        "price_or_grade_table",
+        "structured_payload"
+      ],
+      "layers_not_checked": [
+        "model_page",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "model_page",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Lexus",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 10,
+        "variants": 27,
+        "rows": 33,
+        "identity_levels": {
+          "MODEL": 6,
+          "VARIANT": 27
+        }
+      },
+      "sources": [
+        {
+          "source": "Lexus Thailand Official",
+          "rows": 6,
+          "artifacts": [
+            "lexus_models_page.html"
+          ],
+          "methods": [
+            "dom_query"
+          ]
+        },
+        {
+          "source": "Lexus Thailand Price List",
+          "rows": 27,
+          "artifacts": [
+            "lexus_price_list.html"
+          ],
+          "methods": [
+            "published_json_payload"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "model_page",
+        "press_release",
+        "price_or_grade_table",
+        "structured_payload"
+      ],
+      "layers_not_checked": [
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "MG",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 7,
+        "variants": 0,
+        "rows": 7,
+        "identity_levels": {
+          "MODEL": 7,
+          "VARIANT": 0
+        }
+      },
+      "sources": [
+        {
+          "source": "MG Thailand Official",
+          "rows": 7,
+          "artifacts": [
+            "mg_home_page.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "lineup_index",
+        "model_page",
+        "press_release"
+      ],
+      "layers_not_checked": [
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 7,
+          "models": [
+            "MG HS PHEV",
+            "MG MAXUS 7",
+            "MG MAXUS 9",
+            "MG Urban",
+            "MG ZS",
+            "MG4",
+            "MGS5 EV PLUS"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: lineup_index, model_page, press_release"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "MINI",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 9,
+        "variants": 13,
+        "rows": 18,
+        "identity_levels": {
+          "MODEL": 5,
+          "VARIANT": 13
+        }
+      },
+      "sources": [
+        {
+          "source": "MINI Thailand Official",
+          "rows": 5,
+          "artifacts": [
+            "mini_home_page.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        },
+        {
+          "source": "MINI Thailand Price Sheet",
+          "rows": 13,
+          "artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ],
+          "methods": [
+            "pdftotext_line"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "configurator",
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "structured_payload"
+      ],
+      "layers_not_checked": [
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 4,
+          "models": [
+            "ALL-ELECTRIC MINI ACEMAN",
+            "ALL-ELECTRIC MINI COOPER",
+            "JOHN COOPER WORKS",
+            "MINI Cooper Convertible"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, configurator, lineup_index, model_page, price_or_grade_table, structured_payload"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Mazda",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 10,
+        "variants": 0,
+        "rows": 10,
+        "identity_levels": {
+          "MODEL": 10,
+          "VARIANT": 0
+        }
+      },
+      "sources": [
+        {
+          "source": "Mazda Thailand Official",
+          "rows": 10,
+          "artifacts": [
+            "mazda_home_page.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "model_page",
+        "press_release"
+      ],
+      "layers_not_checked": [
+        "price_or_grade_table",
+        "structured_payload",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 10,
+          "models": [
+            "MAZDA CX-8",
+            "MAZDA3 FASTBACK",
+            "MAZDA3 SEDAN",
+            "MAZDA6 20TH ANNIVERSARY EDITION",
+            "NEW MAZDA BT-50",
+            "NEW MAZDA CX-3 ESSENTIAL",
+            "NEW MAZDA CX-30 ESSENTIAL",
+            "NEW MAZDA CX-5",
+            "NEW MAZDA2 ESSENTIAL",
+            "THE ALL-ELECTRIC MAZDA6e"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page, press_release"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "price_or_grade_table",
+            "structured_payload",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "in_scope": true,
+      "access_status": "BLOCKED_HTTP_403",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_HTTP_403; blocker={\"checked_at\": \"2026-09-24T14:16:16.748942+00:00\", \"http_status_or_error\": \"HTTP_403 via Playwright (probe was BLOCKED_TIMEOUT — browser-level block)\", \"url\": \"https://www.mercedes-benz.co.th/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Mitsubishi",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 11,
+        "variants": 19,
+        "rows": 25,
+        "identity_levels": {
+          "MODEL": 6,
+          "VARIANT": 19
+        }
+      },
+      "sources": [
+        {
+          "source": "Mitsubishi Thailand Official",
+          "rows": 6,
+          "artifacts": [
+            "mitsubishi_home_page.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        },
+        {
+          "source": "Mitsubishi Thailand Price Tables",
+          "rows": 19,
+          "artifacts": [
+            "mitsubishi_all_models_price.html"
+          ],
+          "methods": [
+            "html_table_parse"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "press_release",
+        "price_or_grade_table"
+      ],
+      "layers_not_checked": [
+        "model_page",
+        "structured_payload",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 3,
+          "models": [
+            "เอ็กซ์แพนเดอร์ ครอส เอชอีวี",
+            "เอ็กซ์แพนเดอร์ เอชอีวี",
+            "ไทรทัน"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, press_release, price_or_grade_table"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "model_page",
+            "structured_payload",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "NETA",
+      "in_scope": true,
+      "access_status": "BLOCKED_DNS",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_DNS; blocker={\"checked_at\": \"2026-09-24T13:41:33.300875+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.neta.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.neta.co.th', po\", \"url\": \"https://www.neta.co.th/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Nissan",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 10,
+        "variants": 23,
+        "rows": 33,
+        "identity_levels": {
+          "MODEL": 10,
+          "VARIANT": 23
+        }
+      },
+      "sources": [
+        {
+          "source": "Nissan Thailand Official",
+          "rows": 10,
+          "artifacts": [
+            "nissan_new_home_page.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        },
+        {
+          "source": "Nissan Thailand Grade Price Table",
+          "rows": 23,
+          "artifacts": [
+            "nissan_all_grade_price.html"
+          ],
+          "methods": [
+            "html_card_parse"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "press_release",
+        "price_or_grade_table"
+      ],
+      "layers_not_checked": [
+        "model_page",
+        "structured_payload",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 1,
+          "models": [
+            "นิสสัน เทอร์ร่า"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, press_release, price_or_grade_table"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "model_page",
+            "structured_payload",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Peugeot",
+      "in_scope": true,
+      "access_status": "BLOCKED_HTTP_403",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_HTTP_403; blocker={\"checked_at\": \"2026-09-24T13:41:35.062412+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.peugeot.co.th/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Porsche",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 6,
+        "variants": 69,
+        "rows": 72,
+        "identity_levels": {
+          "MODEL": 3,
+          "VARIANT": 69
+        }
+      },
+      "sources": [
+        {
+          "source": "Porsche Thailand Official",
+          "rows": 72,
+          "artifacts": [
+            "porsche_macan_model_page.html"
+          ],
+          "methods": [
+            "rsc_flight_parse"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "configurator",
+        "lineup_index",
+        "model_page",
+        "press_release"
+      ],
+      "layers_not_checked": [
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload"
+      ],
+      "gaps": [
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Smart",
+      "in_scope": true,
+      "access_status": "DEALER_REDIRECT",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [
+        "lineup_index"
+      ],
+      "layers_not_checked": [
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=DEALER_REDIRECT; blocker={\"checked_at\": \"2026-09-25T14:16:39.761675+00:00\", \"http_status_or_error\": \"REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (HTTP 200) — unchanged since 2026-09-24; body sha256 e99e6e9a09a9f52c…; URL-decision evidence in audit/coverage/smart-url-decision-20260925/\", \"url\": \"https://www.smart.co.th/\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Subaru",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 5,
+        "variants": 0,
+        "rows": 5,
+        "identity_levels": {
+          "MODEL": 5,
+          "VARIANT": 0
+        }
+      },
+      "sources": [
+        {
+          "source": "Subaru Thailand Official",
+          "rows": 5,
+          "artifacts": [
+            "subaru_th_home_page.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "press_release"
+      ],
+      "layers_not_checked": [
+        "model_page",
+        "price_or_grade_table",
+        "structured_payload",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 5,
+          "models": [
+            "ALL NEW FORESTER",
+            "BRZ",
+            "CROSSTREK",
+            "WRX",
+            "WRX WAGON"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, press_release"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "model_page",
+            "price_or_grade_table",
+            "structured_payload",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Suzuki",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 5,
+        "variants": 6,
+        "rows": 11,
+        "identity_levels": {
+          "MODEL": 5,
+          "VARIANT": 6
+        }
+      },
+      "sources": [
+        {
+          "source": "Suzuki Thailand Official",
+          "rows": 5,
+          "artifacts": [
+            "suzuki_home_page.html"
+          ],
+          "methods": [
+            "playwright_dom"
+          ]
+        },
+        {
+          "source": "Suzuki Thailand Spec & Price Tables",
+          "rows": 6,
+          "artifacts": [
+            "suzuki_fronx_equipment.html",
+            "suzuki_jimny_equipment.html",
+            "suzuki_xl7_equipment.html"
+          ],
+          "methods": [
+            "regex_text"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "brochure_pdf",
+        "lineup_index",
+        "model_page",
+        "press_release",
+        "price_or_grade_table"
+      ],
+      "layers_not_checked": [
+        "structured_payload",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "models_without_published_variant_rows",
+          "count": 2,
+          "models": [
+            "ALL NEW SUZUKI e VITARA",
+            "CARRY"
+          ],
+          "reason": "no first-party grade/trim layer captured for these models in this cycle — checked layers: brochure_pdf, lineup_index, model_page, press_release, price_or_grade_table"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "structured_payload",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Tesla",
+      "in_scope": true,
+      "access_status": "BLOCKED_HTTP_403",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_HTTP_403; blocker={\"checked_at\": \"2026-09-24T13:41:32.086082+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.tesla.com/th_th\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Toyota",
+      "in_scope": true,
+      "access_status": "REACHABLE",
+      "adapter_status": "PARSED_TESTED",
+      "provenance_status": "ACQUISITION_VERIFIED",
+      "catalog": {
+        "models": 34,
+        "variants": 99,
+        "rows": 99,
+        "identity_levels": {
+          "MODEL": 0,
+          "VARIANT": 99
+        }
+      },
+      "sources": [
+        {
+          "source": "Toyota Thailand Official",
+          "rows": 99,
+          "artifacts": [
+            "toyota_pricelist_page.html"
+          ],
+          "methods": [
+            "playwright_jsonld_parse"
+          ]
+        }
+      ],
+      "layers_checked": [
+        "lineup_index",
+        "model_page",
+        "press_release",
+        "price_or_grade_table",
+        "structured_payload"
+      ],
+      "layers_not_checked": [
+        "brochure_pdf",
+        "configurator"
+      ],
+      "gaps": [
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "brochure_pdf",
+            "configurator"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    },
+    {
+      "brand": "Volvo",
+      "in_scope": true,
+      "access_status": "BLOCKED_TLS",
+      "adapter_status": "NONE",
+      "provenance_status": "NONE",
+      "catalog": {
+        "models": 0,
+        "variants": 0,
+        "rows": 0,
+        "identity_levels": null
+      },
+      "sources": [],
+      "layers_checked": [],
+      "layers_not_checked": [
+        "lineup_index",
+        "model_page",
+        "price_or_grade_table",
+        "brochure_pdf",
+        "structured_payload",
+        "configurator",
+        "press_release"
+      ],
+      "gaps": [
+        {
+          "type": "no_staged_catalog",
+          "reason": "access_status=BLOCKED_TLS; blocker={\"checked_at\": \"2026-09-24T13:41:32.815537+00:00\", \"http_status_or_error\": \"SSLError: HTTPSConnectionPool(host='www.volvo.co.th', port=443): Max retries exceeded with url: /en/models.html (Caused by SSLErro\", \"url\": \"https://www.volvo.co.th/en/models.html\"}"
+        },
+        {
+          "type": "layers_not_checked",
+          "layers": [
+            "lineup_index",
+            "model_page",
+            "price_or_grade_table",
+            "brochure_pdf",
+            "structured_payload",
+            "configurator",
+            "press_release"
+          ],
+          "reason": "not present in captured official artifacts / not discovered by Pass C traversal this cycle"
+        }
+      ]
+    }
+  ]
+}

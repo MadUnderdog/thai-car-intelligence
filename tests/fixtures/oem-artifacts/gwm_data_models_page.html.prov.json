@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/en",
+  "captured_at": "2026-09-24T18:55:06.398289+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "d09dec4fa516ac816794d35d0b0b82f31a77d7efea1552ff4938ca980e85fa66",
+  "session_id": "acquisition_20260924_185458",
+  "artifact_filename": "gwm_data_models_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

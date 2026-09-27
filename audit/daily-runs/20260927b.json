@@ -1,7 +1,7 @@
 {
   "report_id": "daily-run-2026-09-27b",
-  "generated_at": "2026-09-27T04:51:52.548750+00:00",
-  "commit": "124d557fbb136e24b457d251d413ad2e1c346c2b",
+  "generated_at": "2026-09-27T05:35:35.295057+00:00",
+  "commit": "0aaf2eb4713c31a786f2f2c26159876f6d4e1f3e",
   "branch": "fix/p1-provenance-gate",
   "locator_integrity": {
     "before": {
@@ -160,13 +160,13 @@
     "candidates_log": null
   },
   "tests": {
-    "tests_note": "tests/test_generation_config_boundary.py collected with --continue-on-collection-errors, not ignored: its ImportError (cannot import name '_OPENROUTER_ALLOWED_MODEL' from thai_factory.extract.ai_extractor) is pre-existing — the last commit touching that test module or lib/thai_factory/extract/ai_extractor.py is eef8c49 (P49), and neither file is in this wave's diff. All other tests ran: 433 passed.",
-    "pytest": "433 passed, 1 errors",
-    "log": "audit/daily-runs/20260927-p102-repair-pytest.log",
+    "tests_note": "tests/test_generation_config_boundary.py is collected with --continue-on-collection-errors, not ignored: its ImportError (cannot import name '_OPENROUTER_ALLOWED_MODEL' from thai_factory.extract.ai_extractor) is pre-existing — the last commit touching that test module or lib/thai_factory/extract/ai_extractor.py is eef8c49 (P49), and neither file is in this wave's diff. All other tests ran: 434 passed.",
+    "pytest": "434 passed, 1 errors",
+    "log": "audit/daily-runs/20260927-p102-repair2-pytest.log",
     "prisma_validate": "rc=0",
     "tsc_noemit": "rc=0",
     "credential_scan_changed_or_new_files": 0,
-    "credential_scan_files_checked": 9,
+    "credential_scan_files_checked": 7,
     "collection_error_modules": [
       "tests/test_generation_config_boundary.py"
     ],

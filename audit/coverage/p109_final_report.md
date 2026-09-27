@@ -43,10 +43,10 @@ explicit status.  No repair loop, no follow-up implied.
 
 | artifact currentness | n |
 |---|---|
-| CURRENT (live official page/document) | **279** |
+| CURRENT (live official page/document) | **284** |
 | HISTORICAL (stale/discontinued marker or press year ≤2024) | 7 |
 | UNDETERMINED (press item with no parseable date) | 10 |
-| not a currentness source (utility/promo/third-party) | 43 |
+| not a currentness source (utility/promo/third-party) | 38 |
 | **total** | **339** |
 
 **New captures this wave: 0.**  Workflow step C said to use external discovery

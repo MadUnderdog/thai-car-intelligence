@@ -1,0 +1,21 @@
+........................................................................ [ 16%]
+........................................................................ [ 33%]
+........................................................................ [ 49%]
+........................................................................ [ 66%]
+........................................................................ [ 82%]
+........................................................................ [ 99%]
+....                                                                     [100%]
+==================================== ERRORS ====================================
+__________ ERROR collecting tests/test_generation_config_boundary.py ___________
+ImportError while importing test module '/home/ubuntu/Projects/thai-car-intelligence/tests/test_generation_config_boundary.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_generation_config_boundary.py:6: in <module>
+    from thai_factory.extract.ai_extractor import (
+E   ImportError: cannot import name '_OPENROUTER_ALLOWED_MODEL' from 'thai_factory.extract.ai_extractor' (/home/ubuntu/Projects/thai-car-intelligence/tests/../lib/thai_factory/extract/ai_extractor.py)
+=========================== short test summary info ============================
+ERROR tests/test_generation_config_boundary.py
+436 passed, 1 error in 387.73s (0:06:27)

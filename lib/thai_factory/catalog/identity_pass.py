@@ -732,6 +732,13 @@ class IdentityReconciliation:
     records: List[ReconciledIdentity] = field(default_factory=list)
     rejected: List[Dict] = field(default_factory=list)
     sources_used: List[Dict] = field(default_factory=list)
+    # publications that declare no identity_level — excluded from level-clash
+    # detection (fail closed), never guessed into evidence
+    unlevelled_publications: List[Dict] = field(default_factory=list)
+    # every identity key where two distinct publications disagree on level,
+    # whether or not the record ends up CONFLICT (a MARKET_TRUTH confirmation
+    # outranks a conflict downgrade)
+    level_clash_evidence: List[Dict] = field(default_factory=list)
 
     def add_source(self, name: str, role: str, url: str, note: str = "") -> None:
         self.sources_used.append({"source_name": name, "source_role": role,
@@ -756,6 +763,33 @@ class IdentityReconciliation:
             return r
         return None
 
+    @staticmethod
+    def declared_level(source: Dict, variant: str) -> str:
+        """Identity level a publication actually supports.
+
+        First-party rows carry it from the staging loader
+        (`identity.identity_level`); enumerator evidence derives it from what
+        was enumerated — a model candidate publishes MODEL, a variant
+        candidate publishes VARIANT.  Never inferred from what else happens to
+        be attached to the same reconciled record.
+        """
+        lvl = str(source.get("identity_level") or "").strip().upper()
+        if lvl in ("MODEL", "VARIANT"):
+            return lvl
+        return "VARIANT" if variant else "MODEL"
+
+    @classmethod
+    def _attach(cls, rec: "ReconciledIdentity", source: Dict,
+                variant: str) -> None:
+        """Append a publication entry carrying its own identity_level."""
+        entry = dict(source)
+        entry["identity_level"] = cls.declared_level(entry, variant)
+        key = (entry.get("source_name"), entry.get("source_url"),
+               entry["identity_level"])
+        if not any((s.get("source_name"), s.get("source_url"),
+                    s.get("identity_level")) == key for s in rec.sources):
+            rec.sources.append(entry)
+
     def add_enumerator(self, manufacturer: str, model: str, variant: str,
                        source: Dict, published_price: Optional[int] = None,
                        price_role: str = "", generation: str = "") -> ReconciledIdentity:
@@ -771,8 +805,7 @@ class IdentityReconciliation:
             rec = ReconciledIdentity(manufacturer=manufacturer, model=model,
                                      variant=variant, generation=generation)
             self.records.append(rec)
-        if not any(s["source_name"] == source["source_name"] for s in rec.sources):
-            rec.sources.append(dict(source))
+        self._attach(rec, source, variant)
         if published_price and not rec.published_price_thb:
             rec.published_price_thb = int(published_price)
             rec.published_price_role = price_role
@@ -785,8 +818,7 @@ class IdentityReconciliation:
             rec = ReconciledIdentity(manufacturer=manufacturer, model=model,
                                      variant=variant)
             self.records.append(rec)
-        if not any(s["source_name"] == source["source_name"] for s in rec.sources):
-            rec.sources.append(dict(source))
+        self._attach(rec, source, variant)
         rec.first_party.append(dict(source))
         return rec
 
@@ -809,7 +841,13 @@ class IdentityReconciliation:
             IDENTITY_ONLY and gets an explicit note instead.
           * LEVEL CLASH — only when distinct publications publish the same
             identity (within one OEM) at conflicting levels, one as a MODEL and
-            one as a VARIANT.  A single publication that appears at both levels
+            one as a VARIANT.  Every source entry carries its own
+            `identity_level`, and a level set is built exclusively from the
+            levels each publication declares: a publication that declares
+            VARIANT is never treated as MODEL evidence merely because it is
+            attached to a record that also has a model.  Publications with no
+            declared level are collected in `unlevelled_publications` and
+            excluded from level-clash detection (fail closed).  A single publication that appears at both levels
             is internally ambiguous, not source-level disagreement: it is kept
             unresolved with an explicit reason and is *not* marked CONFLICT.
 
@@ -831,21 +869,50 @@ class IdentityReconciliation:
         # identity pair -> records (for the cross-manufacturer check)
         by_identity: Dict[Tuple[str, str], List[ReconciledIdentity]] = {}
 
+        self.unlevelled_publications = []
+        self.level_clash_evidence = []
         for rec in self.records:
             pubs = {(s.get("source_name", ""), s.get("source_url", ""))
                     for s in rec.sources} or {("", "")}
             mkey = match_key(rec.manufacturer, rec.model)
             vkey = match_key(rec.manufacturer, rec.variant) if rec.variant else ""
-            if mkey:
-                b = levels.setdefault((rec.manufacturer, mkey),
-                                      {"MODEL": set(), "VARIANT": set()})
-                b["MODEL"] |= pubs
-                members.setdefault((rec.manufacturer, mkey), []).append(rec)
-            if vkey:
-                b = levels.setdefault((rec.manufacturer, vkey),
-                                      {"MODEL": set(), "VARIANT": set()})
-                b["VARIANT"] |= pubs
-                members.setdefault((rec.manufacturer, vkey), []).append(rec)
+
+            # ── LEVEL evidence: built strictly from each publication's own
+            # declared identity_level.  A publication that declares VARIANT is
+            # never counted as MODEL evidence just because it is attached to a
+            # record that also has a model, and vice versa.  A publication with
+            # no declared level contributes to neither side. ──
+            for entry in rec.sources:
+                pub = (entry.get("source_name", ""), entry.get("source_url", ""))
+                lvl = str(entry.get("identity_level") or "").strip().upper()
+                if lvl == "MODEL" and mkey:
+                    bucket = levels.setdefault(
+                        (rec.manufacturer, mkey),
+                        {"MODEL": set(), "VARIANT": set()})
+                    bucket["MODEL"].add(pub)
+                    members.setdefault((rec.manufacturer, mkey), set()).add(rec)
+                elif lvl == "VARIANT" and vkey:
+                    bucket = levels.setdefault(
+                        (rec.manufacturer, vkey),
+                        {"MODEL": set(), "VARIANT": set()})
+                    bucket["VARIANT"].add(pub)
+                    members.setdefault((rec.manufacturer, vkey), set()).add(rec)
+                elif lvl not in ("MODEL", "VARIANT"):
+                    self.unlevelled_publications.append({
+                        "manufacturer": rec.manufacturer, "model": rec.model,
+                        "variant": rec.variant, "source_name": pub[0],
+                        "source_url": pub[1],
+                    })
+
+            # membership for marking: only records that actually published
+            # this identity at some declared level
+            if mkey and any(True for e in rec.sources
+                            if str(e.get("identity_level") or "").upper() == "MODEL"):
+                members.setdefault((rec.manufacturer, mkey), set()).add(rec)
+            if vkey and any(True for e in rec.sources
+                            if str(e.get("identity_level") or "").upper() == "VARIANT"):
+                members.setdefault((rec.manufacturer, vkey), set()).add(rec)
+
             if mkey:
                 pair = (mkey, vkey)
                 ownership.setdefault(pair, {}).setdefault(
@@ -914,7 +981,16 @@ class IdentityReconciliation:
                 continue
             m_src = sorted({p[0] for p in model_pubs if p[0]})
             v_src = sorted({p[0] for p in variant_pubs if p[0]})
-            for rec in members.get((mfr, key), []):
+            affected = members.get((mfr, key), set())
+            self.level_clash_evidence.append({
+                "manufacturer": mfr, "identity_key": key,
+                "model_evidence": sorted(f"{n} <{u}>" for n, u in model_pubs),
+                "variant_evidence": sorted(f"{n} <{u}>" for n, u in variant_pubs),
+                "records": len(affected),
+                "records_first_party_confirmed_not_downgraded": sum(
+                    1 for r in affected if r.first_party),
+            })
+            for rec in affected:
                 _mark_conflict(
                     rec, "label published as a MODEL by one source and as a "
                          "VARIANT by another: MODEL evidence ["
@@ -1002,6 +1078,13 @@ class IdentityReconciliation:
                                  if r.status == FirstPartyStatus.IDENTITY_ONLY.value),
             "conflicts": sum(1 for r in self.records
                              if r.status == FirstPartyStatus.CONFLICT.value),
+            "unlevelled_publications": len(self.unlevelled_publications),
+            "level_clash_keys": len(self.level_clash_evidence),
+            "level_clash_records": sum(e["records"]
+                                       for e in self.level_clash_evidence),
+            "level_clash_records_confirmed_not_downgraded": sum(
+                e["records_first_party_confirmed_not_downgraded"]
+                for e in self.level_clash_evidence),
             "rejected": len(self.rejected),
             "confidence": self.confidence,
             "by_manufacturer": {
@@ -1041,6 +1124,11 @@ class IdentityReconciliation:
                     "status": r.status,
                     "sources": r.sources,
                     "first_party": r.first_party,
+                    "sources_with_levels": [
+                        {"source_name": s.get("source_name"),
+                         "source_url": s.get("source_url"),
+                         "identity_level": s.get("identity_level")}
+                        for s in r.sources],
                     "match_method": r.match_method,
                     "rejection_reasons": r.rejection_reasons,
                     "notes": r.notes,
@@ -1052,6 +1140,8 @@ class IdentityReconciliation:
                 for r in self.records
             ],
             "rejected": self.rejected,
+            "unlevelled_publications": self.unlevelled_publications,
+            "level_clash_evidence": self.level_clash_evidence,
         }
 
 

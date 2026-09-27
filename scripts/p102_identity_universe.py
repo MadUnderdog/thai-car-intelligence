@@ -543,6 +543,29 @@ def _final_result(summary, universe_json, rec, matrix, capture_log):
                 "labels from different sources, and one publication seen at "
                 "both levels, are NOT conflicts — they stay identity-only "
                 "with an explicit note."),
+            "publication_level_evidence": {
+                "rule": "each source entry declares identity_level "
+                        "(MODEL|VARIANT); level sets are built only from the "
+                        "declared level; publications without a level are "
+                        "excluded from level-clash detection",
+                "publications_without_identity_level": universe_json[
+                    "summary"].get("unlevelled_publications", 0),
+                "every_source_entry_declared": all(
+                    s.get("identity_level") in ("MODEL", "VARIANT")
+                    for r in universe_json["records"] for s in r["sources"]),
+            },
+            "level_clash_evidence": {
+                "identity_keys": universe_json["summary"].get(
+                    "level_clash_keys", 0),
+                "records_at_those_keys": universe_json["summary"].get(
+                    "level_clash_records", 0),
+                "records_first_party_confirmed_not_downgraded": universe_json[
+                    "summary"].get("level_clash_records_confirmed_not_downgraded", 0),
+                "note": "conflict_records only counts records downgraded from "
+                        "IDENTITY_ONLY; a record carrying MARKET_TRUTH "
+                        "confirmation stays CONFIRMED_* and is counted here "
+                        "instead, never silently dropped",
+            },
             "identity_only_with_notes": sum(
                 1 for x in universe_json["records"]
                 if x["status"] == FirstPartyStatus.IDENTITY_ONLY.value

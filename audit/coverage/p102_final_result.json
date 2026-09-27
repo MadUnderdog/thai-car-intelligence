@@ -1,6 +1,6 @@
 {
  "schema": "p102-final-result/1",
- "generated_at": "2026-09-27T05:27:18.330138+00:00",
+ "generated_at": "2026-09-27T05:55:05.552112+00:00",
  "session_id": "p102-identity-20260927",
  "acceptance_boundary": "Phase-1 identity/catalog artifact only. It is NOT staging, NOT the accepted set and NOT the production DB: identity-only candidates have no price/locator and therefore cannot satisfy §95 mandatory fields, so they are never promoted.",
  "enumerator_candidates": {
@@ -12,16 +12,16 @@
  "first_party_confirmed_models": 192,
  "first_party_confirmed_variants": 370,
  "identity_only_candidates": {
-  "records_with_identity_only_status": 824,
+  "records_with_identity_only_status": 842,
   "model_identities_not_first_party_confirmed": 380,
   "variant_identities_not_first_party_confirmed": 463,
   "note": "candidates with no MARKET_TRUTH row carrying the same identity. Kept in this Phase-1 artifact only; never written to staging or the accepted/production DB"
  },
  "record_reconciliation": {
   "records_total": 1360,
-  "identity_only_records": 824,
+  "identity_only_records": 842,
   "first_party_confirmed_records": 491,
-  "conflict_records": 45,
+  "conflict_records": 27,
   "checks_out": true,
   "identity_measurements": {
    "distinct_model_identities": 572,
@@ -31,13 +31,24 @@
   }
  },
  "conflicts": {
-  "records": 45,
+  "records": 27,
   "by_reason": {
    "same model+variant label attributed to multiple manufacturers across sources": 0,
-   "label published as a MODEL by one source": 45
+   "label published as a MODEL by one source": 27
   },
   "definition": "conflict = distinct source evidence disagrees about one identity: either one shared source attributes the same label to two OEMs, or two publications put the same identity at conflicting MODEL/VARIANT levels within one OEM. Equal labels from different sources, and one publication seen at both levels, are NOT conflicts — they stay identity-only with an explicit note.",
-  "identity_only_with_notes": 5
+  "publication_level_evidence": {
+   "rule": "each source entry declares identity_level (MODEL|VARIANT); level sets are built only from the declared level; publications without a level are excluded from level-clash detection",
+   "publications_without_identity_level": 0,
+   "every_source_entry_declared": true
+  },
+  "level_clash_evidence": {
+   "identity_keys": 26,
+   "records_at_those_keys": 52,
+   "records_first_party_confirmed_not_downgraded": 25,
+   "note": "conflict_records only counts records downgraded from IDENTITY_ONLY; a record carrying MARKET_TRUTH confirmation stays CONFIRMED_* and is counted here instead, never silently dropped"
+  },
+  "identity_only_with_notes": 6
  },
  "rejected_candidates": {
   "total": 1927,
@@ -166,7 +177,7 @@
    "first_party_confirmation": "PARTIAL",
    "identity_only_models": 55,
    "identity_only_variants": 37,
-   "conflicts": 30,
+   "conflicts": 20,
    "rejected": 331,
    "missing_catalog_layers": [
     "model_page",
@@ -1055,7 +1066,7 @@
    "first_party_confirmation": "PARTIAL",
    "identity_only_models": 5,
    "identity_only_variants": 21,
-   "conflicts": 10,
+   "conflicts": 2,
    "rejected": 12,
    "missing_catalog_layers": [
     "price_or_grade_table",
@@ -1321,7 +1332,7 @@
  "per_source_coverage": {
   "9carthai price index": {
    "role": "MEDIA_DISCOVERY",
-   "records": 880,
+   "records": 882,
    "confirmed_records": 76
   },
   "BMW Thailand Official": {

@@ -1,6 +1,6 @@
 {
  "schema": "p102-identity-matrix/1",
- "generated_at": "2026-09-27T05:27:18.327266+00:00",
+ "generated_at": "2026-09-27T05:55:05.549085+00:00",
  "totals": {
   "oems_in_scope": 32,
   "oems_with_identity_candidates": 30,
@@ -13,8 +13,12 @@
   "variants": 833,
   "confirmed_models": 192,
   "confirmed_variants": 370,
-  "identity_only": 824,
-  "conflicts": 45,
+  "identity_only": 842,
+  "conflicts": 27,
+  "unlevelled_publications": 0,
+  "level_clash_keys": 26,
+  "level_clash_records": 52,
+  "level_clash_records_confirmed_not_downgraded": 25,
   "rejected": 1927,
   "confidence": {
    "UNRESOLVED": 0,
@@ -385,7 +389,7 @@
    "staged_first_party_models": 34,
    "staged_first_party_variants": 49,
    "unresolved_conflicting_identities": {
-    "conflicts": 30,
+    "conflicts": 20,
     "noted_unresolved": 1,
     "rejected": 331,
     "rejected_examples": [
@@ -2960,8 +2964,8 @@
    "staged_first_party_models": 6,
    "staged_first_party_variants": 69,
    "unresolved_conflicting_identities": {
-    "conflicts": 10,
-    "noted_unresolved": 1,
+    "conflicts": 2,
+    "noted_unresolved": 2,
     "rejected": 12,
     "rejected_examples": [
      {

@@ -490,6 +490,54 @@ def test_same_label_under_two_oems_from_different_sources_is_not_a_conflict():
     assert len(rec.records) == 2
 
 
+def test_variant_only_publication_is_never_model_evidence():
+    """A publication may only support the level it actually declares.
+
+    Source `src-b` here appears on a record whose MODEL context is `Alpha`, but
+    src-b itself only ever published a VARIANT.  Counting it as MODEL evidence
+    manufactures a level clash out of thin air.
+    """
+    rec = IdentityReconciliation(target_date="unit")
+    # src-b publishes VARIANT of Alpha (never Alpha as a model)
+    rec.add_enumerator("Mazda", "Alpha", "Grade One", {
+        "source_name": "src-b", "source_role": SourceRole.MEDIA_DISCOVERY.value,
+        "source_url": "https://unit.test/b", "label": "Alpha Grade One"})
+    # src-a publishes Alpha as a VARIANT of Beta
+    rec.add_enumerator("Mazda", "Beta", "Alpha", {
+        "source_name": "src-a", "source_role": SourceRole.MEDIA_DISCOVERY.value,
+        "source_url": "https://unit.test/a", "label": "Beta Alpha"})
+    rec.resolve_statuses()
+    assert {r.status for r in rec.records} == {
+        FirstPartyStatus.IDENTITY_ONLY.value}, [
+        (r.model, r.variant, r.rejection_reasons) for r in rec.records]
+    # neither publication is allowed to masquerade as MODEL evidence
+    for r in rec.records:
+        assert not any("published as a MODEL by one source" in y
+                       for y in r.rejection_reasons), r.rejection_reasons
+        assert all(s.get("identity_level") in ("MODEL", "VARIANT")
+                   for s in r.sources), r.sources
+
+
+def test_model_only_and_variant_only_publications_are_a_genuine_clash():
+    """Source A declared MODEL only + Source B declared VARIANT only, both on
+    the same identity key, must still produce a level clash."""
+    rec = IdentityReconciliation(target_date="unit")
+    rec.add_enumerator("Mazda", "CX-5", "", {
+        "source_name": "src-a", "source_role": SourceRole.MEDIA_DISCOVERY.value,
+        "source_url": "https://unit.test/a", "label": "MAZDA CX-5"})
+    rec.add_enumerator("Mazda", "CX-3", "CX-5", {
+        "source_name": "src-b", "source_role": SourceRole.MEDIA_DISCOVERY.value,
+        "source_url": "https://unit.test/b", "label": "CX-3 CX-5"})
+    rec.resolve_statuses()
+    assert {r.status for r in rec.records} == {
+        FirstPartyStatus.CONFLICT.value}
+    reason = next(y for r in rec.records
+                  for y in r.rejection_reasons if "MODEL evidence" in y)
+    assert "src-a" in reason and "src-b" in reason
+    assert rec.records[0].sources[0].get("identity_level") == "MODEL"
+    assert rec.records[1].sources[0].get("identity_level") == "VARIANT"
+
+
 def test_single_publication_at_both_levels_stays_unresolved_not_conflict():
     """One source publishing an identity at both levels is ambiguous, not a
     source-level disagreement, so it is not labelled a conflict."""

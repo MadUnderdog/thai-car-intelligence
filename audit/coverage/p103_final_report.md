@@ -58,11 +58,9 @@ reason — this wave has none.
 ## Evidence rules enforced
 
 * `identity_level` is declared at extraction, never inferred from label shape
-  (all 26 harvests are grade layers → `VARIANT`).
+  (all 31 harvests are grade layers → `VARIANT`).
 * Every harvested identity must appear in the artifact bytes it cites; each
   row stores artifact path + sha256 + extraction method + exact source URL.
-* Model attribution is per-page (Mazda `ModelID` uniqueness asserted;
-  MG titles must be model-prefixed; Subar</think>
 * Model attribution is per-page (Mazda `ModelID` uniqueness asserted;
   MG titles must be model-prefixed; Subaru grade comes from the model's own
   official page; Isuzu grade sits in the same published sentence as the model).
@@ -89,7 +87,7 @@ in the registry and was **not** retried - this wave only recorded that status.
 
 ```
 audit/coverage/p103_target_plan.json                 (plan, written before harvest)
-audit/coverage/p103_official_identities.json         (26 identities + provenance)
+audit/coverage/p103_official_identities.json         (31 identities + provenance)
 audit/coverage/catalog_reconciliation_p103.json      (reconciliation result)
 audit/coverage/identity_universe_p103.json           (baseline + P103 evidence)
 audit/coverage/identity_matrix_p103.json / .md       (per-OEM matrix + deltas)

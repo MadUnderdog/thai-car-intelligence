@@ -19,6 +19,7 @@ Everything here is asserted from committed artifacts and committed fixtures
 import hashlib
 import json
 import os
+import re
 import sys
 
 import pytest
@@ -331,3 +332,58 @@ def test_per_oem_matrix_carries_a_delta_block():
     assert deltas["Isuzu"]["first_party_confirmed_variants"] > 0
     # an OEM with no new evidence must show an explicit zero delta
     assert deltas["Lexus"]["first_party_confirmed_variants"] == 0
+
+
+# ── 8. audit-report integrity: the prose must follow the JSON ──────────────
+REPORT = os.path.join(REPO, "audit", "coverage", "p103_final_report.md")
+
+
+def report_text():
+    with open(REPORT, encoding="utf-8") as fh:
+        return fh.read()
+
+
+def test_reconciliation_harvested_equals_the_identity_artifact():
+    recon = _load(RECON)
+    ids = identities()
+    assert recon["harvested"] == len(ids)
+    outcomes = recon["outcomes"]
+    assert sum(outcomes.get(k, 0) for k in ("new", "existing", "ambiguous")) \
+        == recon["harvested"], outcomes
+    assert len(recon["new_first_party_identities"]) == outcomes.get("new", 0)
+
+
+def test_final_result_harvested_equals_the_reconciliation():
+    final, recon = _load(FINAL), _load(RECON)
+    assert final["harvested_identities"] == recon["harvested"] == len(identities())
+    assert sum(final["outcomes"].get(k, 0)
+               for k in ("new", "existing", "ambiguous")) \
+        == final["harvested_identities"], final["outcomes"]
+    assert final["outcomes"] == recon["outcomes"]
+    # +new records must equal the universe growth
+    assert final["before_after"]["first_party_confirmed_models"][0] <= \
+        final["first_party_confirmed_models"]
+    assert final["before_after"]["first_party_confirmed_variants"][1] == \
+        final["first_party_confirmed_variants"]
+
+
+def test_final_report_has_no_transport_corruption_and_one_attribution_paragraph():
+    text = report_text()
+    assert "<think" not in text and "</think" not in text
+    assert text.count("Model attribution is per-page") == 1
+    # a truncated/merged bullet would leave a dangling half word
+    assert "Subar\n" not in text and "Subar<" not in text
+
+
+def test_final_report_states_counts_derived_from_the_json():
+    text = report_text()
+    n = len(identities())
+    # counts are read from the artifacts, never retyped: exactly one statement
+    # per count and it must be the machine-readable number
+    assert re.findall(r"all (\d+) harvests", text) == [str(n)]
+    assert re.findall(r"\((\d+) identities \+ provenance\)", text) == [str(n)]
+    final, recon = _load(FINAL), _load(RECON)
+    for key, value in recon["outcomes"].items():
+        assert f"`{key} = {value}`" in text, (key, value)
+    assert f"`new = {recon['outcomes']['new']}`" in text
+    assert final["harvested_identities"] == n

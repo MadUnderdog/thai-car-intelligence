@@ -1,6 +1,6 @@
 # P105 identity matrix — VARIANT depth
 
-Generated 2026-09-27T13:46:26.906046+00:00 · baseline `identity_matrix_p104.json`
+Generated 2026-09-27T14:29:29.195908+00:00 · baseline `identity_matrix_p104.json`
 
 | OEM | access | candidate V | confirmed V (before) | confirmed V (after) | delta | P105 rows |
 |---|---|---|---|---|---|---|
@@ -13,7 +13,7 @@ Generated 2026-09-27T13:46:26.906046+00:00 · baseline `identity_matrix_p104.jso
 | Chevrolet | BLOCKED_HTTP_403 | 16 | 0 | 0 | +0 | 0 |
 | Deepal | REACHABLE | 11 | 1 | 4 | +3 | 17 |
 | Ford | BLOCKED_HTTP_403 | 15 | 0 | 0 | +0 | 0 |
-| GWM | REACHABLE | 30 | 18 | 19 | +1 | 1 |
+| GWM | REACHABLE | 30 | 18 | 21 | +3 | 3 |
 | Haval | BLOCKED_DNS | 5 | 0 | 0 | +0 | 0 |
 | Honda | REACHABLE | 50 | 31 | 32 | +1 | 1 |
 | Isuzu | REACHABLE | 10 | 2 | 7 | +5 | 5 |

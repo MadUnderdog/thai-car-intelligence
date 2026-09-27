@@ -1,8 +1,8 @@
 {
   "schema": "p105-identity-universe/1",
-  "generated_at": "2026-09-27T13:46:26.906046+00:00",
+  "generated_at": "2026-09-27T14:29:29.195908+00:00",
   "baseline_artifact": "audit/coverage/identity_universe_p104.json",
-  "p105_harvested_rows": 141,
+  "p105_harvested_rows": 143,
   "acceptance_boundary": "Phase-1 audit evidence only",
   "universe": {
     "schema": "p102-identity-universe/1",
@@ -19,8 +19,8 @@
       "models": 572,
       "variants": 865,
       "confirmed_models": 255,
-      "confirmed_variants": 460,
-      "identity_only": 718,
+      "confirmed_variants": 462,
+      "identity_only": 716,
       "conflicts": 25,
       "unlevelled_publications": 0,
       "level_clash_keys": 26,
@@ -29,9 +29,9 @@
       "rejected": 1927,
       "confidence": {
         "UNRESOLVED": 0,
-        "SINGLE_SOURCE": 704,
+        "SINGLE_SOURCE": 702,
         "MULTI_SOURCE": 39,
-        "OFFICIAL_VERIFIED": 681
+        "OFFICIAL_VERIFIED": 683
       },
       "by_manufacturer": {
         "Audi": {
@@ -146,9 +146,9 @@
           "models": 19,
           "variants": 30,
           "first_party_confirmed_models": 15,
-          "first_party_confirmed_variants": 19,
+          "first_party_confirmed_variants": 21,
           "identity_only_models": 4,
-          "identity_only_variants": 11,
+          "identity_only_variants": 9,
           "conflicts": 0,
           "sources": [
             "9carthai price index",
@@ -36992,7 +36992,7 @@
         "variant": "PRO",
         "generation": "",
         "identity_level": "VARIANT",
-        "status": "IDENTITY_ONLY",
+        "status": "CONFIRMED_VARIANT",
         "sources": [
           {
             "source_name": "9carthai price index",
@@ -37002,19 +37002,62 @@
             "origin": "clause",
             "artifact": "9carthai_gwm-price.html",
             "identity_level": "VARIANT"
+          },
+          {
+            "source_name": "GWM Thailand Official",
+            "manufacturer": "GWM",
+            "source_role": "MARKET_TRUTH",
+            "source_url": "https://www.gwm.co.th/th/models/tank-300",
+            "label": "Gwm Tank 300 PRO",
+            "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-300.html",
+            "artifact_sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1",
+            "extraction_method": "official_page_bound_grade_list",
+            "identity_level": "VARIANT",
+            "market_scope": "TH",
+            "evidence": {
+              "composite_line": "PRO",
+              "line": 42,
+              "model_prefix": "Gwm Tank 300",
+              "structure": "page URL names Gwm Tank 300 and lists 2 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
+            }
           }
         ],
-        "first_party": [],
+        "first_party": [
+          {
+            "source_name": "GWM Thailand Official",
+            "manufacturer": "GWM",
+            "source_role": "MARKET_TRUTH",
+            "source_url": "https://www.gwm.co.th/th/models/tank-300",
+            "label": "Gwm Tank 300 PRO",
+            "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-300.html",
+            "artifact_sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1",
+            "extraction_method": "official_page_bound_grade_list",
+            "identity_level": "VARIANT",
+            "market_scope": "TH",
+            "evidence": {
+              "composite_line": "PRO",
+              "line": 42,
+              "model_prefix": "Gwm Tank 300",
+              "structure": "page URL names Gwm Tank 300 and lists 2 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
+            }
+          }
+        ],
         "sources_with_levels": [
           {
             "source_name": "9carthai price index",
             "source_url": "https://www.9carthai.com/gwm-price/",
             "identity_level": "VARIANT"
+          },
+          {
+            "source_name": "GWM Thailand Official",
+            "source_url": "https://www.gwm.co.th/th/models/tank-300",
+            "identity_level": "VARIANT"
           }
         ],
-        "match_method": "",
+        "match_method": "first_party_plus_enumerator",
         "rejection_reasons": [
-          "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set"
@@ -37265,7 +37308,7 @@
         "variant": "PRO",
         "generation": "",
         "identity_level": "VARIANT",
-        "status": "IDENTITY_ONLY",
+        "status": "CONFIRMED_VARIANT",
         "sources": [
           {
             "source_name": "9carthai price index",
@@ -37275,19 +37318,62 @@
             "origin": "clause",
             "artifact": "9carthai_gwm-price.html",
             "identity_level": "VARIANT"
+          },
+          {
+            "source_name": "GWM Thailand Official",
+            "manufacturer": "GWM",
+            "source_role": "MARKET_TRUTH",
+            "source_url": "https://www.gwm.co.th/th/models/tank-500",
+            "label": "Gwm Tank 500 PRO",
+            "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500.html",
+            "artifact_sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134",
+            "extraction_method": "official_page_bound_grade_list",
+            "identity_level": "VARIANT",
+            "market_scope": "TH",
+            "evidence": {
+              "composite_line": "PRO",
+              "line": 43,
+              "model_prefix": "Gwm Tank 500",
+              "structure": "page URL names Gwm Tank 500 and lists 2 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
+            }
           }
         ],
-        "first_party": [],
+        "first_party": [
+          {
+            "source_name": "GWM Thailand Official",
+            "manufacturer": "GWM",
+            "source_role": "MARKET_TRUTH",
+            "source_url": "https://www.gwm.co.th/th/models/tank-500",
+            "label": "Gwm Tank 500 PRO",
+            "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500.html",
+            "artifact_sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134",
+            "extraction_method": "official_page_bound_grade_list",
+            "identity_level": "VARIANT",
+            "market_scope": "TH",
+            "evidence": {
+              "composite_line": "PRO",
+              "line": 43,
+              "model_prefix": "Gwm Tank 500",
+              "structure": "page URL names Gwm Tank 500 and lists 2 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
+            }
+          }
+        ],
         "sources_with_levels": [
           {
             "source_name": "9carthai price index",
             "source_url": "https://www.9carthai.com/gwm-price/",
             "identity_level": "VARIANT"
+          },
+          {
+            "source_name": "GWM Thailand Official",
+            "source_url": "https://www.gwm.co.th/th/models/tank-500",
+            "identity_level": "VARIANT"
           }
         ],
-        "match_method": "",
+        "match_method": "first_party_plus_enumerator",
         "rejection_reasons": [
-          "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set"
@@ -56839,15 +56925,15 @@
             "label": "Suzuki Fronx GL",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GL",
               "line": 81,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],
@@ -56879,15 +56965,15 @@
             "label": "Suzuki Fronx GL",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GL",
               "line": 81,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],
@@ -56964,15 +57050,15 @@
             "label": "Suzuki Fronx GLX",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX",
               "line": 83,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],
@@ -57004,15 +57090,15 @@
             "label": "Suzuki Fronx GLX",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX",
               "line": 83,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],
@@ -57089,15 +57175,15 @@
             "label": "Suzuki Fronx GLX PLUS",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX PLUS",
               "line": 85,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],
@@ -57129,15 +57215,15 @@
             "label": "Suzuki Fronx GLX PLUS",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX PLUS",
               "line": 85,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],

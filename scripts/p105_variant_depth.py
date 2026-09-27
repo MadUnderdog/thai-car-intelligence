@@ -94,14 +94,30 @@ PROMO_TOKEN = re.compile(
     r"\binterest\b|down\s*payment|ฟรี", re.I)
 NUMERIC_LABEL = re.compile(r"^[0-9.]+$")
 
-# path words that mark an aggregate page (price list, model index, news, …)
-AGGREGATE_WORDS = {
-    "price", "prices", "pricelist", "price list", "brochure", "brochures",
-    "news", "press", "promotion", "promotions", "promo", "articles", "article",
-    "discover", "download", "downloads", "catalog", "catalogue", "lineup",
-    "models", "model", "all", "home", "index", "util", "events",
+# The *terminal* path segment decides an index/price/article route: `/news`,
+# `/price-list`, `/brochure`, `/all-models-price`, `/models`.  A bare container
+# word in the PARENT (`/model/<slug>`, `/models/<slug>`) is structure, never an
+# aggregate verdict — that is what made dedicated GWM/Suzuki model pages
+# unbound (P105 REPAIR-2).
+TERMINAL_AGGREGATE_WORDS = {
+    "price", "prices", "pricelist", "list", "lists", "all", "home", "index",
+    "lineup", "catalog", "catalogue", "download", "downloads", "models",
+    "model", "news", "press", "stories", "story", "article", "articles",
+    "discover", "events", "promotion", "promotions", "promo", "brochure",
+    "brochures", "util", "tools",
 }
-PAGE_KIND_WORDS = {"spec", "equipment", "features", "gallery", "detail", "details"}
+# A parent that is an article/index container proves the page is not a model
+# page (`/news/<slug>`, `/util/promotion/<slug>`), so it stays aggregate.
+ARTICLE_CONTAINER_WORDS = {
+    "news", "press", "stories", "article", "articles", "discover", "events",
+    "promotion", "promotions", "promo", "util", "topics", "archive",
+    "archives", "blog", "media", "download", "downloads", "tools",
+}
+# Structural containers that merely hold a model slug — stripped, never
+# classified as aggregate.
+MODEL_CONTAINER_WORDS = {"model", "models", "car", "cars", "vehicle", "vehicles"}
+PAGE_KIND_WORDS = {"spec", "equipment", "features", "gallery", "detail",
+                   "details", "overview"}
 LOCALE_WORDS = {"th", "en", "thai", "english", "html", "htm", "php", "aspx", "the"}
 
 
@@ -134,14 +150,20 @@ def page_model_set(brand: str, url: str, models):
 
     Returns ("dedicated", {models})  — the URL names exactly these universe
             models, so only their rows may be confirmed on this page;
-            ("aggregate", set())     — price list / model index / news / home …
-                                        multi-model pages: no page restriction
+            ("aggregate", set())     — a terminal index/price/article route or
+                                        an article container: multi-model page,
+                                        no page restriction;
             ("unbound", set())       — the URL names no universe model: rows
                                         keep the plain structural binding.
 
     Handles brand-prefix omission, hyphenation, alpha/digit boundaries and
     trailing locale / child path segments.  Never a proximity guess: the model's
     tokens must *start* the slug at a token boundary.
+
+    Classification order (P105 REPAIR-2): terminal route → article container →
+    locale/page-kind strip → model match.  A `model`/`models` PARENT next to a
+    model-specific terminal slug is a container, not an index, so
+    `/models/tank-500` and `/model/fronx` are *dedicated*.
     """
     if not url:
         return ("unbound", set())
@@ -151,16 +173,27 @@ def page_model_set(brand: str, url: str, models):
         segs = segs[1:]
     if not segs:
         return ("unbound", set())
-    last, parent = slug_tokens(segs[-1]), slug_tokens(segs[-2] if len(segs) > 1 else "")
-    # an aggregate page (and any article beneath it) is never dedicated
-    if any(w in AGGREGATE_WORDS for w in last + parent):
+    raw_last = slug_tokens(segs[-1])
+    parent = slug_tokens(segs[-2]) if len(segs) > 1 else []
+    # 1) the terminal segment IS an index / price / article route
+    if any(w in TERMINAL_AGGREGATE_WORDS for w in raw_last):
         return ("aggregate", set())
-    # a child page (/spec, /equipment) binds through its parent model slug
+    # 2) an article/index container parent proves a multi-model page
+    if any(w in ARTICLE_CONTAINER_WORDS for w in parent):
+        return ("aggregate", set())
+    # 3) trailing locale, then a page-kind child (/spec, /equipment, /overview)
+    last = list(raw_last)
     while last and last[-1] in LOCALE_WORDS:
-        last = last[:-1]
+        last.pop()
     while last and last[-1] in PAGE_KIND_WORDS:
-        last = last[:-1]
-    slug = last or [w for w in parent if w not in LOCALE_WORDS]
+        last.pop()
+    # 4) a child route binds through its parent model slug; container words are
+    #    structure, not model names
+    if last:
+        slug = last
+    else:
+        slug = [w for w in parent
+                if w not in LOCALE_WORDS and w not in MODEL_CONTAINER_WORDS]
     if not slug:
         return ("unbound", set())
     brand_tokens = slug_tokens(brand)
@@ -176,6 +209,26 @@ def page_model_set(brand: str, url: str, models):
         if slug[:len(mt)] == mt:
             hits.add(model)
     return ("dedicated", hits) if hits else ("unbound", set())
+
+
+def accept_row(out, rejected, row, kind, models, url):
+    """Fail closed: a dedicated model page may confirm only its own models.
+
+    A row for another model is recorded in the `rejected_rows` ledger with the
+    binding that refused it — never dropped silently, never kept because the
+    text merely occurs on the page.
+    """
+    if kind == "dedicated" and row["model"] not in models:
+        rejected.append({
+            "model": row["model"], "variant": row["variant"],
+            "artifact": row["artifact"], "line": row["evidence"]["line"],
+            "text": row["evidence"]["composite_line"],
+            "reason": (f"cross-page binding: page URL {url} names "
+                       f"{', '.join(sorted(models))} but the row claims "
+                       f"{row['model']} — not model evidence")})
+        return False
+    out.append(row)
+    return True
 
 
 def grade_label_blocker(line: str, label: str):
@@ -256,18 +309,7 @@ def extract_variant_rows(rec) -> list:
                 brand, page_url, universe_models.get(brand, set()))
 
             def emit(row, _kind=page_kind, _models=page_models, _url=page_url):
-                """Fail closed: a dedicated model page may confirm only its own
-                models — a row for another model is recorded and dropped."""
-                if _kind == "dedicated" and row["model"] not in _models:
-                    rejected.append({
-                        "model": row["model"], "variant": row["variant"],
-                        "artifact": row["artifact"], "line": row["evidence"]["line"],
-                        "text": row["evidence"]["composite_line"],
-                        "reason": (f"cross-page binding: page URL {_url} names "
-                                   f"{', '.join(sorted(_models))} but the row claims "
-                                   f"{row['model']} — not model evidence")})
-                    return
-                out.append(row)
+                return accept_row(out, rejected, row, _kind, _models, _url)
 
             lines = flattened(fname)
             body = body_text(fname)

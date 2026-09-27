@@ -1,6 +1,6 @@
 {
   "schema": "p105_target_plan/1",
-  "generated_at": "2026-09-27T13:46:00.132039+00:00",
+  "generated_at": "2026-09-27T14:29:02.417371+00:00",
   "baseline_artifact": "audit/coverage/p104_final_result.json",
   "objective": "first-party VARIANT / grade depth",
   "rules": [

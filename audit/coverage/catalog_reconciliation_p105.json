@@ -1,23 +1,23 @@
 {
   "artifact": "p105-catalog-reconciliation/1",
-  "generated_at": "2026-09-27T13:46:26.906046+00:00",
+  "generated_at": "2026-09-27T14:29:29.195908+00:00",
   "before": {
     "confirmed_variants": 404,
     "confirmed_models": 243
   },
   "after": {
-    "confirmed_variants": 460,
+    "confirmed_variants": 462,
     "confirmed_models": 255
   },
-  "harvested": 141,
+  "harvested": 143,
   "outcomes": {
-    "existing": 141
+    "existing": 143
   },
   "by_method": {
+    "official_page_bound_grade_list": 20,
     "official_name_price_row": 33,
-    "official_page_bound_grade_list": 15,
-    "official_grade_list_bare_row": 8,
     "official_grade_list_row": 80,
+    "official_grade_list_bare_row": 5,
     "official_grade_table_row": 5
   },
   "per_oem_before_after": {
@@ -104,11 +104,11 @@
     "GWM": {
       "confirmed_variants": [
         18,
-        19
+        21
       ],
       "identity_only_variants": [
         12,
-        11
+        9
       ]
     },
     "Haval": {
@@ -321,6 +321,22 @@
       "artifact": "gwm_th_model_tank-300.html",
       "line": 32,
       "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Gwm Tank 300",
+      "variant": "ULTRA",
+      "artifact": "gwm_th_model_tank-300.html",
+      "line": 41,
+      "text": "ULTRA",
+      "reason": "occurs only in navigation / footer / meta / style regions"
+    },
+    {
+      "model": "Gwm Tank 500",
+      "variant": "ULTRA",
+      "artifact": "gwm_th_model_tank-500.html",
+      "line": 42,
+      "text": "ULTRA",
+      "reason": "occurs only in navigation / footer / meta / style regions"
     },
     {
       "model": "Deepal E07",

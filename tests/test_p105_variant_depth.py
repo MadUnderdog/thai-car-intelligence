@@ -276,7 +276,7 @@ def test_confirmed_variant_totals_move_by_exactly_the_status_changes():
                not next(x for x in before_u if (x["manufacturer"], x["model"],
                                                 x["variant"]) ==
                         (r["manufacturer"], r["model"], r["variant"]))["first_party"]]
-    assert len(changed) == after - before == 56
+    assert len(changed) == after - before == 58
     assert all(c[2] for c in changed)          # every change carries a variant
 
 
@@ -291,7 +291,7 @@ def test_identity_only_falls_by_the_same_amount_models_do_not_move():
                                 if not r["variant"] and r["status"] == "IDENTITY_ONLY"])
     assert io["models"] == 316                    # models untouched
     was = len([r for r in before_u if r["variant"] and r["status"] == "IDENTITY_ONLY"])
-    assert was - io["variants"] == 55
+    assert was - io["variants"] == 57
     assert sum(1 for r in before_u if not r["variant"] and r["first_party"]) == \
         sum(1 for r in after_u if not r["variant"] and r["first_party"]) == 221
 
@@ -318,7 +318,7 @@ def test_per_oem_deltas_sum_to_the_total():
     result = _load(RESULT)
     total = sum(v["confirmed_variants"] for v in result["per_oem_delta"].values())
     assert total == (result["before_after"]["first_party_confirmed_variants"][1]
-                     - result["before_after"]["first_party_confirmed_variants"][0]) == 56
+                     - result["before_after"]["first_party_confirmed_variants"][0]) == 58
     assert set(result["per_oem_delta"]) == {"BMW", "Deepal", "GWM", "Honda", "Isuzu",
                                             "Lexus", "MG", "Mitsubishi", "Suzuki",
                                             "Toyota"}
@@ -329,7 +329,7 @@ def test_matrix_p105_matches_the_result():
     matrix = _load(MATRIX)
     result = _load(RESULT)
     total = sum(e["p105_delta"]["confirmed_variants"] for e in matrix["oems"])
-    assert total == 56
+    assert total == 58
     rows = sum(e["p105_delta"]["rows"] for e in matrix["oems"])
     assert rows == result["harvested_rows"]
     for entry in matrix["oems"]:
@@ -519,3 +519,116 @@ def test_cross_page_rejection_is_recorded_with_the_binding():
         assert r["artifact"] and r["model"]
         assert "page URL" in r["reason"] or "binds" in r["reason"], r["reason"]
         assert r["reason"].endswith("not model evidence"), r["reason"]
+
+
+# ── 8. P105 REPAIR-2: /model(s)/<slug> container must not be aggregate ─────
+GWM_TANK500_FAMILY = {"Gwm Tank 500", "TANK 500 DIESEL", "TANK 500 HEV",
+                      "TANK 500 3.0T DIESEL", "Gwm Tank 300"}
+GWM_TANK300_FAMILY = {"Gwm Tank 300", "TANK 300 DIESEL", "TANK 300 HEV",
+                      "TANK 300 LIMITED", "Gwm Tank 500"}
+SUZUKI_FAMILY = {"Suzuki Fronx", "ALL NEW SUZUKI FRONX", "Suzuki Xl7", "XL-7"}
+
+
+def test_models_tank500_url_is_dedicated_and_binds_only_tank500():
+    assert p105.page_model_set(
+        "GWM", "https://www.gwm.co.th/th/models/tank-500",
+        GWM_TANK500_FAMILY) == ("dedicated", {"Gwm Tank 500"})
+
+
+def test_models_tank300_url_is_dedicated_and_binds_only_tank300():
+    assert p105.page_model_set(
+        "GWM", "https://www.gwm.co.th/th/models/tank-300",
+        GWM_TANK300_FAMILY) == ("dedicated", {"Gwm Tank 300"})
+
+
+def test_models_tank500_diesel_url_binds_only_tank500_records():
+    kind, models = p105.page_model_set(
+        "GWM", "https://www.gwm.co.th/th/models/tank-500-diesel",
+        GWM_TANK500_FAMILY)
+    assert kind == "dedicated"
+    assert models == {"Gwm Tank 500", "TANK 500 DIESEL"}
+    assert "Gwm Tank 300" not in models
+
+
+def test_model_fronx_url_is_dedicated_and_binds_only_fronx():
+    assert p105.page_model_set(
+        "Suzuki", "https://www.suzuki.co.th/model/fronx",
+        SUZUKI_FAMILY) == ("dedicated", {"Suzuki Fronx"})
+
+
+def test_model_xl7_url_is_dedicated_and_binds_only_xl7():
+    kind, models = p105.page_model_set(
+        "Suzuki", "https://www.suzuki.co.th/model/xl7", SUZUKI_FAMILY)
+    assert kind == "dedicated"
+    assert models == {"Suzuki Xl7", "XL-7"}
+    assert "Suzuki Fronx" not in models
+
+
+def test_model_xl7_equipment_inherits_the_xl7_binding():
+    assert p105.page_model_set(
+        "Suzuki", "https://www.suzuki.co.th/model/xl7/equipment",
+        SUZUKI_FAMILY) == p105.page_model_set(
+        "Suzuki", "https://www.suzuki.co.th/model/xl7",
+        SUZUKI_FAMILY) == ("dedicated", {"Suzuki Xl7", "XL-7"})
+
+
+def test_index_and_article_routes_remain_aggregate():
+    for brand, url in (("Toyota", "https://www.toyota.co.th/news"),
+                       ("Toyota", "https://www.toyota.co.th/en/pricelist"),
+                       ("Honda", "https://www.honda.co.th/models"),
+                       ("Mitsubishi",
+                        "https://www.mitsubishi-motors.co.th/th/buy/all-models-price"),
+                       ("BMW", "https://www.bmw.co.th/en/topics/brochure.html"),
+                       ("BMW", "https://www.bmw.co.th/en/topics/price-list.html"),
+                       ("Kia", "https://www.kia.com/th/th/util/promotion/"
+                               "thekiacarnival-hev-2026.html")):
+        kind, _ = p105.page_model_set(brand, url, {"Toyota Yaris", "Suzuki Fronx"})
+        assert kind == "aggregate", (brand, url, kind)
+
+
+def test_root_and_unknown_urls_stay_unbound():
+    for brand, url in (("Isuzu", "https://www.isuzu-tis.com/"),
+                       ("Mazda", "https://www.mazda.co.th/th"),
+                       ("Suzuki", "https://www.suzuki.co.th/error"),
+                       ("Lexus", "https://www.lexus.co.th/th.html"),
+                       ("", "")):
+        kind, models = p105.page_model_set(brand, url, {"Mazda Cx-3", "Suzuki Fronx"})
+        assert (kind, models) == ("unbound", set()), (brand, url, kind)
+
+
+def test_wrong_model_row_on_a_container_url_is_rejected():
+    """`/models/<slug>` evidence may only confirm the model the slug names."""
+    row = {
+        "manufacturer": "GWM", "model": "TANK 500 HEV", "variant": "Ultra",
+        "identity_level": "VARIANT", "artifact": "gwm_th_model_tank-500.html",
+        "sha256": "x", "source_url": "https://www.gwm.co.th/th/models/tank-500",
+        "evidence": {"composite_line": "TANK 500 HEV Ultra", "line": 10},
+    }
+    out, rejected = [], []
+    p105.accept_row(out, rejected, row, "dedicated", {"Gwm Tank 500"},
+                    "https://www.gwm.co.th/th/models/tank-500")
+    assert out == []
+    assert len(rejected) == 1 and "cross-page" in rejected[0]["reason"]
+    # the page's own model still passes
+    own = dict(row, model="Gwm Tank 500")
+    p105.accept_row(out, rejected, own, "dedicated", {"Gwm Tank 500"},
+                    "https://www.gwm.co.th/th/models/tank-500")
+    assert len(out) == 1
+
+
+def test_every_container_url_evidence_row_is_bound_to_that_url_model():
+    import p105_variant_depth as mod
+    import json as _json
+    universe = _json.load(open(U105, encoding="utf-8"))["universe"]["records"]
+    by_brand = collections.defaultdict(set)
+    for r in universe:
+        by_brand[r["manufacturer"]].add(r["model"])
+    family = [r for r in evidence()
+              if re.search(r"/(models?)/[^/?#]+",
+                           r["source_url"].split("?")[0])]
+    assert family, "the /model(s)/<slug> family must carry evidence"
+    for row in family:
+        kind, models = mod.page_model_set(
+            row["manufacturer"], row["source_url"], by_brand[row["manufacturer"]])
+        assert kind == "dedicated", (row["artifact"], row["source_url"], kind)
+        assert row["model"] in models, (row["artifact"], row["model"], sorted(models))

@@ -1,6 +1,6 @@
 {
   "schema": "p105-identity-matrix/1",
-  "generated_at": "2026-09-27T13:46:26.906046+00:00",
+  "generated_at": "2026-09-27T14:29:29.195908+00:00",
   "baseline_artifact": "audit/coverage/identity_matrix_p104.json",
   "oems": [
     {
@@ -393,10 +393,10 @@
         "model_candidates_discovered": 19,
         "variant_candidates_discovered": 30,
         "first_party_confirmed_models": 15,
-        "first_party_confirmed_variants": 19,
+        "first_party_confirmed_variants": 21,
         "identity_only_models": 4,
-        "identity_only_variants": 11,
-        "first_party_confirmed_records": 33,
+        "identity_only_variants": 9,
+        "first_party_confirmed_records": 35,
         "candidate_sources": [
           "9carthai price index",
           "GWM Thailand Official",
@@ -408,8 +408,8 @@
         "conflicts": 0
       },
       "p105_delta": {
-        "confirmed_variants": 1,
-        "rows": 1
+        "confirmed_variants": 3,
+        "rows": 3
       }
     },
     {

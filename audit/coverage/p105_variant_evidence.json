@@ -1,6 +1,6 @@
 {
   "artifact": "p105-variant-evidence/1",
-  "generated_at": "2026-09-27T13:46:26.906046+00:00",
+  "generated_at": "2026-09-27T14:29:29.195908+00:00",
   "plan": "p105_target_plan.json",
   "rules": [
     "model-bound composite label",
@@ -8,6 +8,36 @@
     "provenance verified before use"
   ],
   "evidence": [
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 300",
+      "variant": "PRO",
+      "identity_level": "VARIANT",
+      "published_label": "Gwm Tank 300 PRO",
+      "artifact": "gwm_th_model_tank-300.html",
+      "sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1",
+      "source_url": "https://www.gwm.co.th/th/models/tank-300",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "PRO",
+        "line": 42,
+        "model_prefix": "Gwm Tank 300",
+        "structure": "page URL names Gwm Tank 300 and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Gwm Tank 300",
+          "variant": "PRO"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
     {
       "manufacturer": "GWM",
       "model": "Gwm Tank 500",
@@ -34,6 +64,36 @@
         "matched_record": {
           "model": "Gwm Tank 500",
           "variant": "Diesel"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 500",
+      "variant": "PRO",
+      "identity_level": "VARIANT",
+      "published_label": "Gwm Tank 500 PRO",
+      "artifact": "gwm_th_model_tank-500.html",
+      "sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134",
+      "source_url": "https://www.gwm.co.th/th/models/tank-500",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "PRO",
+        "line": 43,
+        "model_prefix": "Gwm Tank 500",
+        "structure": "page URL names Gwm Tank 500 and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Gwm Tank 500",
+          "variant": "PRO"
         },
         "prior_status": "IDENTITY_ONLY"
       }
@@ -408,13 +468,13 @@
       "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
       "source_url": "https://www.suzuki.co.th/model/fronx",
       "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
+      "extraction_method": "official_page_bound_grade_list",
       "evidence": {
         "composite_line": "GL",
         "line": 81,
         "model_prefix": "Suzuki Fronx",
-        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
       },
       "reconciliation_note": "",
       "reconciliation": {
@@ -438,13 +498,13 @@
       "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
       "source_url": "https://www.suzuki.co.th/model/fronx",
       "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
+      "extraction_method": "official_page_bound_grade_list",
       "evidence": {
         "composite_line": "GLX",
         "line": 83,
         "model_prefix": "Suzuki Fronx",
-        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
       },
       "reconciliation_note": "",
       "reconciliation": {
@@ -468,13 +528,13 @@
       "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
       "source_url": "https://www.suzuki.co.th/model/fronx",
       "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
+      "extraction_method": "official_page_bound_grade_list",
       "evidence": {
         "composite_line": "GLX PLUS",
         "line": 85,
         "model_prefix": "Suzuki Fronx",
-        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
       },
       "reconciliation_note": "",
       "reconciliation": {

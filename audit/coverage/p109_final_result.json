@@ -1,0 +1,49 @@
+{
+  "schema": "p109_final_result/1",
+  "generated_at": "2026-09-27T20:23:03.575826+00:00",
+  "frozen_baseline": "audit/coverage/p108_final_result.json",
+  "accepted_ledger": {
+    "confirmed_variants": 488,
+    "changed_by_p109": false
+  },
+  "current_market": {
+    "current_models_published_first_party": 267,
+    "current_grades_published_first_party": 475,
+    "first_party_confirmed_current_rows": 671,
+    "confirmed_current_by_tier": {
+      "MARKET_TRUTH_ROW": 645,
+      "CURRENT_SEMANTIC_GRADE": 0,
+      "CURRENT_SEMANTIC_MODEL": 26
+    }
+  },
+  "candidate_classification": {
+    "CURRENT_CONFIRMED": 671,
+    "CURRENT_UNVERIFIED": 64,
+    "UNRESOLVED_IDENTITY_ONLY": 664,
+    "CONFLICT": 25
+  },
+  "oems": {
+    "total": 32,
+    "closed": 32,
+    "blocked": 13,
+    "by_status": {
+      "CLOSED_BLOCKED_NO_BYPASS": 13,
+      "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED": 19
+    }
+  },
+  "identity_only_records_frozen": 690,
+  "universe_records": 1424,
+  "new_captures_this_wave": 0,
+  "evidence_rows": 26,
+  "evidence_digest_sha256": "07e77a6ee2f423ba4711a553a06e1f6dea7e613c39cb0c5fff4caea8d1104a27",
+  "gates": {
+    "staging_written": false,
+    "price_pass": false,
+    "prisma_touched": false,
+    "production_db_unchanged": true,
+    "p104_p103_p102_logic_changed": false,
+    "verifier_touched": false,
+    "accepted_ledger_frozen": true
+  },
+  "no_loop_rule": "one bounded pass; no follow-up wave is implied by remaining UNRESOLVED/IDENTITY_ONLY records"
+}

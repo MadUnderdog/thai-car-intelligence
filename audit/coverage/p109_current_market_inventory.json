@@ -1,0 +1,3505 @@
+{
+  "schema": "p109_current_market_inventory/1",
+  "generated_at": "2026-09-27T20:23:03.575826+00:00",
+  "frozen_baseline": "audit/coverage/p108_final_result.json",
+  "method": "currentness classification of every already-captured first-party artifact (current model/lineup page, configurator/grade selector, current price/grade document, current brochure/spec/press) with explicit stale/discontinued and press-date signals; no bulk re-fetching",
+  "oems": [
+    {
+      "brand": "BMW",
+      "sources": [
+        {
+          "artifact": "bmw_configurator_3series.html",
+          "brand": "BMW",
+          "source_url": "https://configure.bmw.co.th/en_TH/configure/G20/24FWZ7U/FMAH7,P0C31,S0161,S01AG,S01HY,S0258,S02TB,S02VB,S02VL,S0316,S0322,S0337,S0423,S0428,S0430,S0431,S043W,S0459,S0465,S0481,S0488,S0491,S0493,S04NW,S04UR,S0534,S0548,S0552,S05AC,S05AS,S05DC,S05DF,S05DM,S0676,S06AC,S06AE,S06AK,S06C4,S06NX,S06PA,S06U3,S06VB,S0704,S0710,S0715,S0760,S0775,S07NM,S0825,S0853,S088A,S08KM,S08LL,S08S3,S08SX,S08TD,S08WD,S08WM,S0992,S09C6",
+          "family": "configurator",
+          "currentness": "CURRENT",
+          "currentness_reason": "configurator source (live official page/document)",
+          "captured_at": "2026-09-26T13:45:00.110307+00:00",
+          "sha256": "1c7dad413e27f036671cf77dc531ae43aef3b67d3cf133ab0719aa08a1d851bb"
+        },
+        {
+          "artifact": "bmw_all_models_verified.html",
+          "brand": "BMW",
+          "source_url": "https://www.bmw.co.th/en/all-models.html",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T13:49:02.210559+00:00",
+          "sha256": "6b88cd605511852757b288d27015c0a740b2319ca0530cabb5394f38093b1e28"
+        },
+        {
+          "artifact": "bmw_brochure_page.html",
+          "brand": "BMW",
+          "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:44:53.701671+00:00",
+          "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce"
+        },
+        {
+          "artifact": "bmw_price_list.html",
+          "brand": "BMW",
+          "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-26T07:44:28.929592+00:00",
+          "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e"
+        }
+      ]
+    },
+    {
+      "brand": "Changan",
+      "sources": [
+        {
+          "artifact": "changan_p107_Brochure_Lumin_TH_new_b7dead1107.pdf.b64",
+          "brand": "Changan",
+          "source_url": "https://api.www.changan.co.th/uploads/Brochure_Lumin_TH_new_b7dead1107.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:57.292451+00:00",
+          "sha256": "088fe395f23a6580f7eae1b96aa4bc6a9d7fc7efeaa49d90baae9771053d8e75"
+        },
+        {
+          "artifact": "changan_p107_Q05_Specs_sheet_en_99kw_for_export_model_2ecb16b06b.pdf.b64",
+          "brand": "Changan",
+          "source_url": "https://api.www.changan.co.th/uploads/Q05_Specs_sheet_en_99kw_for_export_model_2ecb16b06b.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:58.864982+00:00",
+          "sha256": "316a26832121b0da2844b2c2d84caf28d32e3b1c08e2f19ca952d1536183662a"
+        },
+        {
+          "artifact": "Changan_NEVOQ05_SpecSheet_th.pdf.b64",
+          "brand": "Changan",
+          "source_url": "https://www.changan.co.th/images/nevo/q05/pdf/Q05-Specs-sheet-th.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T07:46:30.468767+00:00",
+          "sha256": "44e2bebaeed9b269fa9e22d39488228c74ddec4d30fc91c85ec751d3391d02c4"
+        },
+        {
+          "artifact": "changan_home_page.html",
+          "brand": "Changan",
+          "source_url": "https://www.changan.co.th/th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T13:48:42.529465+00:00",
+          "sha256": "28c9f50b86238b6d69b2cd3737068795367ab06875243cc4193d5c98ae770ecd"
+        },
+        {
+          "artifact": "changan_p107_compare-cars.html",
+          "brand": "Changan",
+          "source_url": "https://www.changan.co.th/th/compare-cars/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T16:07:00.013712+00:00",
+          "sha256": "263e90d018075c611471944b63ce8587da20da8ee0288c779031b7cba6b9cb5a"
+        },
+        {
+          "artifact": "changan_p107_compare-cars_dup.html",
+          "brand": "Changan",
+          "source_url": "https://www.changan.co.th/th/compare-cars/?compare1=17",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T16:07:00.770806+00:00",
+          "sha256": "7f5839ee28f59190a46d81bcca7ffbb52e0ab185f7f8f894e2e8d4d79b16e824"
+        },
+        {
+          "artifact": "changan_lumin_page.html",
+          "brand": "Changan",
+          "source_url": "https://www.changan.co.th/th/lumin/luminl-dc-th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T17:47:31.001437+00:00",
+          "sha256": "8d84d5f80f5eb06a858a033d6fef454233929cd88b5453b4f9f20970821accba"
+        },
+        {
+          "artifact": "changan_nevo_q05_page.html",
+          "brand": "Changan",
+          "source_url": "https://www.changan.co.th/th/nevo-q05/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T17:47:32.887361+00:00",
+          "sha256": "b7cb2be2088c07caf194991b686c2ad174ab5f696741e7b096259936aabd313c"
+        },
+        {
+          "artifact": "changan_press_news.html",
+          "brand": "Changan",
+          "source_url": "https://www.changan.co.th/th/news/",
+          "family": "press",
+          "currentness": "UNDETERMINED",
+          "currentness_reason": "press item without a parseable publication date",
+          "captured_at": "2026-09-26T13:45:05.279399+00:00",
+          "sha256": "c1ef82169bdc0699687ca21eb3a35db8f4d970b284bd4fb285e2a2effca3ec6d"
+        },
+        {
+          "artifact": "changan_promotion_page.html",
+          "brand": "Changan",
+          "source_url": "https://www.changan.co.th/th/promotion/",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-24T17:47:37.094363+00:00",
+          "sha256": "d1f57ae37d4d1a69aabb17ea1909c35414ce52c7c8ff1aa1a8ce6d4ea037d237"
+        }
+      ]
+    },
+    {
+      "brand": "Deepal",
+      "sources": [
+        {
+          "artifact": "deepal_p107_AW_Leaflet_DEEPAL_S05_Eng_Version_changewww_90800aa83c.pdf.b64",
+          "brand": "Deepal",
+          "source_url": "https://api.www.changan.co.th/uploads/AW_Leaflet_DEEPAL_S05_Eng_Version_changewww_90800aa83c.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:00.157414+00:00",
+          "sha256": "e8aa67cf4f2901ea1991a612bd66ef677fd1063b87b2b8baafc5489da18e41ef"
+        },
+        {
+          "artifact": "deepal_p107_DEEPAL_S05_Max_LR_Leaflet_Eng99_KW_1bbb962068.pdf.b64",
+          "brand": "Deepal",
+          "source_url": "https://api.www.changan.co.th/uploads/DEEPAL_S05_Max_LR_Leaflet_Eng99_KW_1bbb962068.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:02.496932+00:00",
+          "sha256": "9da8143ef490d370944bcf7357027f07e88422ccd9a5fb537851e18ae0f962bc"
+        },
+        {
+          "artifact": "deepal_p107_E07_AWD_Brochure_TH_f674b65f9b.pdf.b64",
+          "brand": "Deepal",
+          "source_url": "https://api.www.changan.co.th/uploads/E07_AWD_Brochure_TH_f674b65f9b.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:03.774591+00:00",
+          "sha256": "6e8ddbbe7e8bb84bb477802b69ec05daf44f1816780f62bef857d7dd084d3598"
+        },
+        {
+          "artifact": "deepal_p107_E07_Plus_Brochure_TH_99136e13fb.pdf.b64",
+          "brand": "Deepal",
+          "source_url": "https://api.www.changan.co.th/uploads/E07_Plus_Brochure_TH_99136e13fb.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:04.931249+00:00",
+          "sha256": "6e8ddbbe7e8bb84bb477802b69ec05daf44f1816780f62bef857d7dd084d3598"
+        },
+        {
+          "artifact": "deepal_p107_K50_Brochure_TH_3bbe40a5d3.pdf.b64",
+          "brand": "Deepal",
+          "source_url": "https://api.www.changan.co.th/uploads/K50_Brochure_TH_3bbe40a5d3.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:05.948508+00:00",
+          "sha256": "2c7344c47eac096b370fe72dad46fced8064fc62d9602944fd657dc718ba5afc"
+        },
+        {
+          "artifact": "deepal_p107_S05_Brochure_TH_b92d1a256f.pdf.b64",
+          "brand": "Deepal",
+          "source_url": "https://api.www.changan.co.th/uploads/S05_Brochure_TH_b92d1a256f.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:14.187302+00:00",
+          "sha256": "fb5f8704563ddde0a7c7050ae7aad388cb38d69b787a8c2eca9b93308629b98b"
+        },
+        {
+          "artifact": "deepal_e07_plus.html",
+          "brand": "Deepal",
+          "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-26T13:45:17.484245+00:00",
+          "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a"
+        },
+        {
+          "artifact": "deepal_hunter_k50.html",
+          "brand": "Deepal",
+          "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-26T13:45:22.192900+00:00",
+          "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077"
+        },
+        {
+          "artifact": "deepal_s05_reev.html",
+          "brand": "Deepal",
+          "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-26T13:45:33.425270+00:00",
+          "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3"
+        },
+        {
+          "artifact": "deepal_s05.html",
+          "brand": "Deepal",
+          "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-26T13:45:27.905407+00:00",
+          "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a"
+        },
+        {
+          "artifact": "deepal_s07.html",
+          "brand": "Deepal",
+          "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-26T13:45:38.611101+00:00",
+          "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c"
+        },
+        {
+          "artifact": "deepal_e07_awd.html",
+          "brand": "Deepal",
+          "source_url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-26T13:45:11.743780+00:00",
+          "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88"
+        }
+      ]
+    },
+    {
+      "brand": "GWM",
+      "sources": [
+        {
+          "artifact": "gwm_mall_home.html",
+          "brand": "GWM",
+          "source_url": "https://mall.gwm.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T18:57:21.003203+00:00",
+          "sha256": "1fcace8cd75949fb222c18076ff9991768f1caf7e360626bc7899d1d77cf9874"
+        },
+        {
+          "artifact": "GWM_HavalH6_Brochure.pdf.b64",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/haval-h6-hev/0901_th_h6.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:46:31.779872+00:00",
+          "sha256": "1357854fcb52dd6b8a4277832cab71734f76a21a447f60d02289627648e15443"
+        },
+        {
+          "artifact": "gwm_p107_GWM_NEW_Haval_H6_Brochure.pdf.b64",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/haval-h6-hev/GWM%20NEW%20Haval%20H6%20Brochure.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:04:33.442883+00:00",
+          "sha256": "91540b9105bbc4a9aa84cdfc20e1432e751092776deb50a0ce0b119387c838cb"
+        },
+        {
+          "artifact": "gwm_p107_ORA_5-TH.pdf.b64",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/ora-5/ORA%205-TH.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:05:47.568128+00:00",
+          "sha256": "5adb926452d70308a57bb0155765627f883c1f22371843ca397f65fed52ecfee"
+        },
+        {
+          "artifact": "gwm_p107_gwm_poer_sahar_diesel_brochure.pdf.txt",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/poer-sahar-diesel-new/gwm_poer_sahar_diesel_brochure.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:16:28.105598+00:00",
+          "sha256": "c738799c6c31a080f7fac752a171c6d60a878e0d1c9fbc3da984ea8b536adfb3"
+        },
+        {
+          "artifact": "gwm_p107_GWM_POER_SAHAR_DIESEL_TH.pdf.b64",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/poer-sahar-diesel/GWM%20POER%20SAHAR%20DIESEL_TH.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:05:48.102616+00:00",
+          "sha256": "d4fa3ac8b8cda1420f0020ef91337c7cfb84dd75ada604b8d18ec762b4e8b77e"
+        },
+        {
+          "artifact": "gwm_p107_26_Thai_Catalogue_TANK300_DIESEL_.pdf.txt",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/tank-300-diesel/26_Thai_Catalogue%20TANK300%20DIESEL%20.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:15:42.569991+00:00",
+          "sha256": "24e99bbe0597287963ffea4a5f28aa18b07f7818b764ecf6b0c5be8185edf3a8"
+        },
+        {
+          "artifact": "gwm_p107_220326_tc_brochure_ora5_hev_th.pdf.b64",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/th/model/ora-5/220326_tc_brochure_ora5_hev_th.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:05:46.697035+00:00",
+          "sha256": "3b3d3923ecaf83c08848f86ab5f584bcd3cfd3b132c69aefd48ed0a134ce21a0"
+        },
+        {
+          "artifact": "GWM_ORA5BEV_Catalog.pdf.b64",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/th/model/ora-5/tc_ora5_bev_catalog_th_220326.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:46:41.086847+00:00",
+          "sha256": "7a6356d20d7ccd6a2f1a78011cf0615f901e16efea9f6a7de827ff0f6f01067f"
+        },
+        {
+          "artifact": "gwm_data_models_page.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T18:55:06.398289+00:00",
+          "sha256": "d09dec4fa516ac816794d35d0b0b82f31a77d7efea1552ff4938ca980e85fa66"
+        },
+        {
+          "artifact": "gwm_home_page.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T13:48:47.019638+00:00",
+          "sha256": "c311d963f280270552a673091f4b1e0b549fdb1e9936bbe6c79b758814d95ebe"
+        },
+        {
+          "artifact": "gwm_p108_car-purchase-consultation.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/car-purchase-consultation",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:06:54.265150+00:00",
+          "sha256": "c56624f228e53156ac1d7146e9d92f38eaa97510737232e35643e3c3ff760304"
+        },
+        {
+          "artifact": "gwm_p108_coming_soon.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/coming_soon",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:06:55.456256+00:00",
+          "sha256": "37da06f54db79fcbb01469be839507e2044449f8e59d46d0f9cc0f3eb273df86"
+        },
+        {
+          "artifact": "gwm_models_page.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/models",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T14:39:17.452420+00:00",
+          "sha256": "e7a9070ab8c8d78cc09be23870fec1c6f27e7475eb03aae4d803f34d2e10e487"
+        },
+        {
+          "artifact": "gwm_th_model_haval-h6.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/haval-h6",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:27.673923+00:00",
+          "sha256": "236ada0f0db7e723f3e5d9ad2a6a5a5d930770792331e1c652d1ad90be37f4b5"
+        },
+        {
+          "artifact": "gwm_th_model_ora-5-ev.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/ora-5-ev",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:28.934867+00:00",
+          "sha256": "6ca2b21a3d8475b9838c471a5bd19a77f79e0d4a5a1432c663b54d17448128f2"
+        },
+        {
+          "artifact": "gwm_th_model_ora-5-hev.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/ora-5-hev",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:30.199080+00:00",
+          "sha256": "8182d7d5c3e1f12312b2d48c3546d47b957135029a5a0c664727c9a64dc1a89a"
+        },
+        {
+          "artifact": "gwm_th_model_poer.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/poer",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:31.451991+00:00",
+          "sha256": "f83c07e4ff58143e064e492a9689bfed16987587823fdf87f395c736c9884b62"
+        },
+        {
+          "artifact": "gwm_th_model_sahar.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/sahar",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:32.717230+00:00",
+          "sha256": "b1bdea00126fcec2d5327402b5ba12e265d4730d18dfd0cb5d494f0b4a27425c"
+        },
+        {
+          "artifact": "gwm_th_model_sahar-diesel.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/sahar-diesel",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:33.975714+00:00",
+          "sha256": "662b719e379fda7e7d3fb8fed9176077ab97c9fc13b712c405911c3ff4336d70"
+        },
+        {
+          "artifact": "gwm_th_model_tank-300.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/tank-300",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:35.236012+00:00",
+          "sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1"
+        },
+        {
+          "artifact": "gwm_th_model_tank-300-diesel.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/tank-300-diesel",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:36.521430+00:00",
+          "sha256": "a54714afc4fd6d966d47b563d6c534152628882c472fa4495019410eb3ff47f0"
+        },
+        {
+          "artifact": "gwm_th_model_tank-300-limited-lb.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/tank-300-limited-lb",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:37.783589+00:00",
+          "sha256": "3e458640a5c104ba8981c7fa721574f6bb36d26c422a2eab3d40ef6790a0b3c5"
+        },
+        {
+          "artifact": "gwm_th_model_tank-500.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/tank-500",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:39.041454+00:00",
+          "sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134"
+        },
+        {
+          "artifact": "gwm_th_model_tank-500-3t-diesel.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/tank-500-3t-diesel",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:40.298397+00:00",
+          "sha256": "a47b4c5ddac3751b35bd8a3b5a3c6b2a7e7215511827acfe595594192b62f7cf"
+        },
+        {
+          "artifact": "gwm_th_model_tank-500-diesel.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/tank-500-diesel",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:41.562168+00:00",
+          "sha256": "434bb47d85368cba8c1700a67fb4df3de95002d0d5db64be885dfdfd9da32a48"
+        },
+        {
+          "artifact": "gwm_th_model_wey-g9.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/th/models/wey-g9",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-25T07:46:42.819370+00:00",
+          "sha256": "23c92f204509784ee4058f48161233c1d9bb980cfe463e8bf801d27ec7b76558"
+        },
+        {
+          "artifact": "gwm_p108_app.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/app",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:06:52.922907+00:00",
+          "sha256": "99e6bc8098a02fb654f3eb949cbb3108cde2ac2b4c87c42fd7b6ebf73c282958"
+        },
+        {
+          "artifact": "gwm_p108_deal.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/deal",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-27T19:06:56.626729+00:00",
+          "sha256": "e7175516bfaa22f4134d3cfe6e7c0c7a1f3fafae7499e1d216a29e3d1a6dfc33"
+        },
+        {
+          "artifact": "gwm_p108_ora-5-ev.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/deal/ora-5-ev",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-27T19:06:57.949015+00:00",
+          "sha256": "784243e8ab137348070721aeaa60b63238309d18aed0b482f873d06c24b58782"
+        },
+        {
+          "artifact": "gwm_p108_ora-5-hev.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/deal/ora-5-hev",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-27T19:06:59.115949+00:00",
+          "sha256": "d4edff7826322c2c382d11f0359ab4cf2c0ddaf91fdc909318f3fb9b790cc40c"
+        },
+        {
+          "artifact": "gwm_p108_poer-sahar-diesel.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/deal/poer-sahar-diesel",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-27T19:06:59.929631+00:00",
+          "sha256": "5542c48c370b91e6f2002d1ab39cd64cad4cb1f66b0fd612816ae51edbd07d0b"
+        },
+        {
+          "artifact": "gwm_p108_poer-sahar-single-cab.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/deal/poer-sahar-single-cab",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-27T19:07:01.085578+00:00",
+          "sha256": "679ed10dfe5d4133fc4664b14ccc64a60b278c0fa398855fd8fbf0e4614370b2"
+        },
+        {
+          "artifact": "gwm_p108_sahar.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/deal/sahar",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-27T19:07:01.939854+00:00",
+          "sha256": "6a050fe290e835f54031848f8a08c1968f9e041fa1352e87bfb30280afe38a2a"
+        },
+        {
+          "artifact": "gwm_p108_tank-300.html",
+          "brand": "GWM",
+          "source_url": "https://www.gwm.co.th/en/deal/tank-300",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-27T19:07:02.746446+00:00",
+          "sha256": "c608dd91289cd07bfa94ea66c1233cfe1570a6be54550e4896496658d901041f"
+        }
+      ]
+    },
+    {
+      "brand": "Honda",
+      "sources": [
+        {
+          "artifact": "honda_p107_ekIhWl0KYYQfAtHGhzOMZWW2cXrJRzFy.pdf.b64",
+          "brand": "Honda",
+          "source_url": "https://assets.honda.co.th/www-assets/model/2025/05/28/ekIhWl0KYYQfAtHGhzOMZWW2cXrJRzFy.pdf?response-content-disposition=attachment%3B%20filename%3DBR-V%20Catalog.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:02:06.663060+00:00",
+          "sha256": "ae134be350cc91fb7f997cc53a30a4724f72d45f4bf9e4d11d150184c734ac63"
+        },
+        {
+          "artifact": "honda_p107_3r9nlBpVjXbHrlGvCChH0scFGfewYQGM.pdf.txt",
+          "brand": "Honda",
+          "source_url": "https://assets.honda.co.th/www-assets/model/2025/06/10/3r9nlBpVjXbHrlGvCChH0scFGfewYQGM.pdf?response-content-disposition=attachment%3B%20filename%3DHonda%20e:N1%20Catalogue.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:27:05.842751+00:00",
+          "sha256": "d6c3b4b2331e993193da1810bf30b183946909465c101f08ca355ed87825bafc"
+        },
+        {
+          "artifact": "honda_p107_oTybBo5YUrIYbwjL0ivmaCyinhFfEoUL.pdf.txt",
+          "brand": "Honda",
+          "source_url": "https://assets.honda.co.th/www-assets/model/2026/02/19/oTybBo5YUrIYbwjL0ivmaCyinhFfEoUL.pdf?response-content-disposition=attachment%3B%20filename%3DNew%20STEP%20WGN%20e:HEV%20Catalog.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:27:13.114572+00:00",
+          "sha256": "3641931c81ab488db8d47cbde517b7a39caa942d4da4c172b92e8a54ae7b4266"
+        },
+        {
+          "artifact": "honda_p107_6CdfhVQHROmk0raXdaXA8qd8lJiRGKi7.pdf.b64",
+          "brand": "Honda",
+          "source_url": "https://assets.honda.co.th/www-assets/model/2026/06/26/6CdfhVQHROmk0raXdaXA8qd8lJiRGKi7.pdf?response-content-disposition=attachment%3B%20filename%3DNew%20Honda%20City%20-%20Catalog.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:02:46.791771+00:00",
+          "sha256": "c2aca38d49ca1716db6680b620e32a32563845ab14346588d6fc1bf05890b344"
+        },
+        {
+          "artifact": "honda_brochure_2.pdf",
+          "brand": "Honda",
+          "source_url": "https://assets.honda.co.th/www-assets/model/2026/06/26/bc5ZpbNVUtvUdaYcQMT8N6WdinDUVwDx.pdf?response-content-disposition=attachment%3B%20filename%3DNew Honda City Hatchback - Catalog.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:48:50.585638+00:00",
+          "sha256": "8b026a671233995bd13f51d3b89a26f83c9387ef74c096577a3c2ba683d53028"
+        },
+        {
+          "artifact": "honda_brochure_1.pdf",
+          "brand": "Honda",
+          "source_url": "https://assets.honda.co.th/www-assets/model/2026/06/26/i6hZNelHYNX0LptCvSY8sw1hN3honOd6.pdf?response-content-disposition=attachment%3B%20filename%3DNew Honda City - Catalog.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:48:45.346162+00:00",
+          "sha256": "c2aca38d49ca1716db6680b620e32a32563845ab14346588d6fc1bf05890b344"
+        },
+        {
+          "artifact": "honda_p107_z7ogIL1mFkQvo11aYyDTf6YPmH4LES9c.pdf.txt",
+          "brand": "Honda",
+          "source_url": "https://assets.honda.co.th/www-assets/model/2026/07/22/z7ogIL1mFkQvo11aYyDTf6YPmH4LES9c.pdf?response-content-disposition=attachment%3B%20filename%3DNew%20Honda%20Civic%20e:HEV%20Catalog.pdf",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:15:19.055003+00:00",
+          "sha256": "860bcc1189e884f888548467c989bfb265583c007c11831ff1dc32764c5b6885"
+        },
+        {
+          "artifact": "honda_p108_search.php.html",
+          "brand": "Honda",
+          "source_url": "https://usedcar.honda.co.th/search.php",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:53.744484+00:00",
+          "sha256": "736e98b649b38f8c7769c89b4abcb8f5413fd4f7e897d6b7c5a3f3734fd59c8c"
+        },
+        {
+          "artifact": "honda_p108_index.html",
+          "brand": "Honda",
+          "source_url": "https://vinsearch.honda.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:54.668733+00:00",
+          "sha256": "b72995f30c3627a3b20bb8517b3e90b5b848ab69849999d77d1e52feaf39e9e3"
+        },
+        {
+          "artifact": "honda_p108_index_dup.html",
+          "brand": "Honda",
+          "source_url": "https://www.honda.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:55.592104+00:00",
+          "sha256": "cd942dcb55187d035b4e36b2b1c9f5d34620b7ef3e85ff26d0881a18e19c9921"
+        },
+        {
+          "artifact": "honda_p108_about-honda.html",
+          "brand": "Honda",
+          "source_url": "https://www.honda.co.th/en/about-honda",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:56.171637+00:00",
+          "sha256": "ae9e315776d74c8a8cab9dfd6f4497062442d108e54d65fbfbc2d01e46688f5b"
+        },
+        {
+          "artifact": "honda_p108_accordehev.html",
+          "brand": "Honda",
+          "source_url": "https://www.honda.co.th/en/accordehev",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:57.191891+00:00",
+          "sha256": "702fa72bcecfddc8a01369a3356129eb2c877340c2285fc777bac8e31102643e"
+        },
+        {
+          "artifact": "honda_city_recapture.html",
+          "brand": "Honda",
+          "source_url": "https://www.honda.co.th/en/city",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-25T04:07:07.005816+00:00",
+          "sha256": "1953984e5b3b48e0a7bfc374fd67b5bf0dd8f9ab2305fec014f2cf51a03990df"
+        },
+        {
+          "artifact": "honda_p108_civic.html",
+          "brand": "Honda",
+          "source_url": "https://www.honda.co.th/en/civic",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:57.844620+00:00",
+          "sha256": "46de1c37fb960bacfad7f76bd764ed7970b0a5b42e3b6d3cb307d3bae8b97d36"
+        },
+        {
+          "artifact": "honda_p108_super-one.html",
+          "brand": "Honda",
+          "source_url": "https://www.honda.co.th/en/super-one",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:59.073968+00:00",
+          "sha256": "86f3745ad54dd4bfc27728a635ce3366c9accda7b14940e11731a347f706fdb3"
+        },
+        {
+          "artifact": "honda_models_page.html",
+          "brand": "Honda",
+          "source_url": "https://www.honda.co.th/models",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T11:39:25.386866+00:00",
+          "sha256": "6eb120085da19d8751db8687849019c499077170c96e9501b2dc80b3e572deef"
+        },
+        {
+          "artifact": "honda_p108_contact.html",
+          "brand": "Honda",
+          "source_url": "https://www.honda.co.th/en/contact",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:05:58.354128+00:00",
+          "sha256": "eade7dc12d9e8e8a118a41b3f400a600d827091287313f0bfee849db124979c0"
+        },
+        {
+          "artifact": "honda_press_news.html",
+          "brand": "Honda",
+          "source_url": "https://www.honda.co.th/news",
+          "family": "press",
+          "currentness": "UNDETERMINED",
+          "currentness_reason": "press item without a parseable publication date",
+          "captured_at": "2026-09-26T13:45:43.249127+00:00",
+          "sha256": "d1c3f480d96472d2ce556419c3c2002e0d559129f126f619a1bf351c73fa5e69"
+        }
+      ]
+    },
+    {
+      "brand": "Isuzu",
+      "sources": [
+        {
+          "artifact": "isuzu_brochure_2door.pdf",
+          "brand": "Isuzu",
+          "source_url": "https://assets.isuzu-tis.com/2_door_brochure_2026_4aed74da60.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:48:53.768195+00:00",
+          "sha256": "6f17343094265c3ebb8c74c440529a3d89583dbb88e25336ba1cb2b2be1b7ba1"
+        },
+        {
+          "artifact": "isuzu_p107_2_door_fleet_brochure_d9eb0e9bd6.pdf.b64",
+          "brand": "Isuzu",
+          "source_url": "https://assets.isuzu-tis.com/2_door_fleet_brochure_d9eb0e9bd6.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:17.279836+00:00",
+          "sha256": "e7378575538b75bd7d318b16386ac6dd6e77f73a5a819b05f09c884934d6f88a"
+        },
+        {
+          "artifact": "isuzu_brochure_4door.pdf",
+          "brand": "Isuzu",
+          "source_url": "https://assets.isuzu-tis.com/4_door_brochure_2026_be4df560bb.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:48:58.858059+00:00",
+          "sha256": "bc56c415bc8da8d71745230da3a6d440c384360aa72e50483683ce38d63a9449"
+        },
+        {
+          "artifact": "isuzu_p107_4_door_fleet_brochure_7a7d04d3e6.pdf.b64",
+          "brand": "Isuzu",
+          "source_url": "https://assets.isuzu-tis.com/4_door_fleet_brochure_7a7d04d3e6.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:19.103093+00:00",
+          "sha256": "4fb35a288e1a9e8566f9c3b493e334065991a022f9e1b8eb7bb97200aeba19fc"
+        },
+        {
+          "artifact": "isuzu_brochure_mux.pdf",
+          "brand": "Isuzu",
+          "source_url": "https://assets.isuzu-tis.com/mu_x_brochure_2026_5d17d1513d.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:49:02.748539+00:00",
+          "sha256": "918be06f322878515a374377b03e8e29f6f80c5a19cda0607faeb2b30e6c2561"
+        },
+        {
+          "artifact": "isuzu_brochure_spark.pdf",
+          "brand": "Isuzu",
+          "source_url": "https://assets.isuzu-tis.com/spark_brochure_2026_ed212091cf.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:49:10.772618+00:00",
+          "sha256": "f632b102ef33d4a9b96dd7d6a9f275d7ace990659d8e1dac79bfb3f0af42f929"
+        },
+        {
+          "artifact": "isuzu_brochure_vcross.pdf",
+          "brand": "Isuzu",
+          "source_url": "https://assets.isuzu-tis.com/v_cross_brochure_2026_23a52b3f0d.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:49:14.825291+00:00",
+          "sha256": "84a1fa3940f71b601e99f60fe9bfd1c7253db0855923b6bd0e836ea41fb3e75f"
+        },
+        {
+          "artifact": "isuzu_p107_v_cross_fleet_brochure_5ae2ce4d38.pdf.b64",
+          "brand": "Isuzu",
+          "source_url": "https://assets.isuzu-tis.com/v_cross_fleet_brochure_5ae2ce4d38.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:21.062715+00:00",
+          "sha256": "cdccaa95e4865b5d1cddf45b3455090cf4999483a992518e5c7c786895adedec"
+        },
+        {
+          "artifact": "isuzu_brochure_xseries.pdf",
+          "brand": "Isuzu",
+          "source_url": "https://assets.isuzu-tis.com/x_series_brochure_2026_6f67fd7b71.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:49:21.148184+00:00",
+          "sha256": "e279beec73ff6cda74417279c8cbd9b7a47dcd657511e6d8f7b1a281a6f1ca0d"
+        },
+        {
+          "artifact": "isuzu_tis_page.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu-tis.com/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T18:55:02.764941+00:00",
+          "sha256": "313163cf3f44b691a8a22eacf8710a26cfb487fe557ee7f61d916bdff045c083"
+        },
+        {
+          "artifact": "isuzu_brochure_page.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu-tis.com/download-brochure",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T07:45:04.831341+00:00",
+          "sha256": "64cf78e986eef66d854116a95e135481dd1bc862216713647fc8974b682c2eeb"
+        },
+        {
+          "artifact": "isuzu_p107_specialoffer.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu-tis.com/specialoffer",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:21.815859+00:00",
+          "sha256": "cdb3f648c7c23bc3dea0f13c4c23b3aa98e98c256e72077dd98d31775b94b196"
+        },
+        {
+          "artifact": "isuzu_p107_ppv.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu-tis.com/specialoffer/ppv",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:22.387534+00:00",
+          "sha256": "de5786a2ece15d2e406300b781e40d9c8357c13284eb0f7337a02104a2796e81"
+        },
+        {
+          "artifact": "isuzu_p107_mu-x-financial.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu-tis.com/specialoffer/ppv/mu-x-financial",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:22.874446+00:00",
+          "sha256": "8c5e66c955bb4063799bfb14958a69baafca4fc125ec2ccc1af936258bd7dcec"
+        },
+        {
+          "artifact": "isuzu_p107_mu-x-financial-normalmodel.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu-tis.com/specialoffer/ppv/mu-x-financial-normalmodel",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:23.372745+00:00",
+          "sha256": "d79f3f89d1c9c942acbf87d0af4749eee7a76ea64870a4817dc63993e483e4f2"
+        },
+        {
+          "artifact": "isuzu_th_home_page.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T13:48:28.821578+00:00",
+          "sha256": "5d27fa1ffd767a3eefe7b4d94f5ef29ae2e86cac94839a4c5e906265dbf29d39"
+        },
+        {
+          "artifact": "isuzu_th_rendered_page.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T14:39:42.731902+00:00",
+          "sha256": "7f7956308b83ffc60da13e47efb95ad37839bc5de4141126c2916c50199e90f1"
+        },
+        {
+          "artifact": "isuzu_p108_isuzu_thailand.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu.co.th/isuzu_thailand",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:07:16.045198+00:00",
+          "sha256": "d25f5dd5664e304f4a3b9f2d1655fcabb3f25255955ebd5d66704398fdd6ac14"
+        },
+        {
+          "artifact": "isuzu_p108_index.html",
+          "brand": "Isuzu",
+          "source_url": "https://elearning.isuzu.co.th/",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:07:10.679386+00:00",
+          "sha256": "a889b5fad96ea34d9da9886c4ced17e37f613c588b22dd61ce01d5bfd964dfc0"
+        },
+        {
+          "artifact": "isuzu_p108_qrcode.html",
+          "brand": "Isuzu",
+          "source_url": "https://elearning.isuzu.co.th/viewdoc/PDF/7/qrcode",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:07:13.257926+00:00",
+          "sha256": "220133502498562a07fbcd75889021ae357176ad94f9c4995aeedf4fd32232b3"
+        },
+        {
+          "artifact": "isuzu_p108_IMCT.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu.co.th/contact/IMCT",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:07:15.069977+00:00",
+          "sha256": "b55b958ff15076ed7d372f793586f3e007a99345509ffa20d5175df3c93f15a3"
+        },
+        {
+          "artifact": "isuzu_p108_data_subject_request_form_en.pdf",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu.co.th/default/assets/pdf/data_subject_request_form_en.pdf",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:07:12.107165+00:00",
+          "sha256": "0ab350ede388c8470604e9930799323f32d4cc929bb8e1bacec4bb183a027437"
+        },
+        {
+          "artifact": "isuzu_p108_index.php.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu.co.th/index.php",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:07:15.570594+00:00",
+          "sha256": "33e667231f3341ba4437862c8e317fe0b28e9877e8d1bb7d4e6b6e3979a5819f"
+        },
+        {
+          "artifact": "isuzu_press_news.html",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu.co.th/news",
+          "family": "press",
+          "currentness": "UNDETERMINED",
+          "currentness_reason": "press item without a parseable publication date",
+          "captured_at": "2026-09-26T13:45:48.828047+00:00",
+          "sha256": "82c0dedad1de6131d41b4ab7c211f1b358e1927d4e1631c6a6f97cf0e944a3db"
+        },
+        {
+          "artifact": "isuzu_p108_1_privacy_notice_for_employees_th.pdf",
+          "brand": "Isuzu",
+          "source_url": "https://www.isuzu.co.th/th/default/assets/pdf/1_privacy_notice_for_employees_th.pdf",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:07:12.668484+00:00",
+          "sha256": "86049674e29c758ebdd24455b80b9cbc87438d10d991df15e5d7a3397e686e8b"
+        }
+      ]
+    },
+    {
+      "brand": "Jaguar",
+      "sources": [
+        {
+          "artifact": "jaguar_home_page.html",
+          "brand": "Jaguar",
+          "source_url": "https://www.jaguar.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T13:48:48.917711+00:00",
+          "sha256": "05d97f701cf4222bfd14729dfbc911a52d517143bad66231506330bdfa5fd02a"
+        },
+        {
+          "artifact": "jaguar_p107_f-pace-svr-575-edition.html",
+          "brand": "Jaguar",
+          "source_url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:07:31.011968+00:00",
+          "sha256": "c0c6dfee3d824e6b4376de1e70ae23dbf30692260595a1febce054194a86b210"
+        },
+        {
+          "artifact": "jaguar_p107_f-type-zp-edition.html",
+          "brand": "Jaguar",
+          "source_url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:07:32.170660+00:00",
+          "sha256": "4d90d3d3e255e630cf9251a853a7961ac95573b57882aef33e52a99c38985a37"
+        },
+        {
+          "artifact": "jaguar_p107_overview.html",
+          "brand": "Jaguar",
+          "source_url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:07:29.447464+00:00",
+          "sha256": "31b0c1206326b439a40e163d165762c62799b48f665412384744be9f21faf83d"
+        },
+        {
+          "artifact": "jaguar_p107_overview_dup.html",
+          "brand": "Jaguar",
+          "source_url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:07:32.751648+00:00",
+          "sha256": "31b0c1206326b439a40e163d165762c62799b48f665412384744be9f21faf83d"
+        },
+        {
+          "artifact": "jaguar_electric_overview.html",
+          "brand": "Jaguar",
+          "source_url": "https://www.jaguar.co.th/electric-cars/overview",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T15:07:21.900857+00:00",
+          "sha256": "304e8abb68b6f1ac6ae012747202915efbef63f3f50dfdf133a29c967285ae72"
+        },
+        {
+          "artifact": "jaguar_f_type_models.html",
+          "brand": "Jaguar",
+          "source_url": "https://www.jaguar.co.th/jaguar-range/f-type/models",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T15:07:20.237738+00:00",
+          "sha256": "1df3d779424191de018ff18031093659ca4d339fd894bfeaaa4dbff460abf033"
+        },
+        {
+          "artifact": "jaguar_range_page.html",
+          "brand": "Jaguar",
+          "source_url": "https://www.jaguar.co.th/jaguar-range/overview",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T14:39:22.172451+00:00",
+          "sha256": "12ad7deb8700dbc94a3f448a91d054ad9bfb571b18664aeaee7fe074fc894151"
+        },
+        {
+          "artifact": "jaguar_press_news.html",
+          "brand": "Jaguar",
+          "source_url": "https://www.jaguar.co.th/about-jaguar/news",
+          "family": "press",
+          "currentness": "UNDETERMINED",
+          "currentness_reason": "press item without a parseable publication date",
+          "captured_at": "2026-09-26T13:45:55.009580+00:00",
+          "sha256": "010eab2d4da15d35b8c04d79efe9713c62988abd9dc9b9bd3dbbb9e9c1e61a0a"
+        }
+      ]
+    },
+    {
+      "brand": "Kia",
+      "sources": [
+        {
+          "artifact": "kia_p108_202511_EV5.png.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/content/dam/kwcms/th/th/images/main/GNBTab2025-11/202511_EV5.png",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:06:21.080576+00:00",
+          "sha256": "9c4f6e8422a63a034cee2c78976c2cb74d68b4416baeafe9f9a41998193b607b"
+        },
+        {
+          "artifact": "kia_p108_kia-th-ka4-22my-dimensions-allview.png.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/content/dam/kwcms/th/th/images/showroom/carnival-21my/specification/kia-th-ka4-22my-dimensions-allview.png",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:18.641041+00:00",
+          "sha256": "d0dbd33a688b50270d388a22b09d5dcf7500a86c688f7813122c1e181840c17e"
+        },
+        {
+          "artifact": "kia_pv5_brochure.pdf",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/content/dam/kwcms/th/th/pdf/TheKiaPV5_Cargo_th.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:49:22.997003+00:00",
+          "sha256": "2a2f0737e327d805138cf5542a24206f3f2f6af2ed7c27582ea4e69c0dfa9d88"
+        },
+        {
+          "artifact": "kia_p108_features.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/en/cars/carnival-hev/features.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:20.432577+00:00",
+          "sha256": "0292b5df65ce6b9854c84e1b2424aa1a5e4a206c928c19e3259657bda9f2c555"
+        },
+        {
+          "artifact": "kia_p108_download-a-brochure.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/en/shopping-tools/download-a-brochure.html",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:17.783629+00:00",
+          "sha256": "a67c69249faa5a85adbe5a869a2d40ff85bf91bf78497130bef7a3290e5c9b7c"
+        },
+        {
+          "artifact": "kia_p108_carnival.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/en/shopping-tools/price-list/carnival.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:17.155166+00:00",
+          "sha256": "2b9f48d46bf058432c56af10bfe95d0df174d4c1bd48c36edf2ed0bdd8594472"
+        },
+        {
+          "artifact": "kia_p108_carnival_dup2.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/en/shopping-tools/price-list/carnival.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:08:44.339837+00:00",
+          "sha256": "2b9f48d46bf058432c56af10bfe95d0df174d4c1bd48c36edf2ed0bdd8594472"
+        },
+        {
+          "artifact": "kia_p108_carnival_dup3.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/en/shopping-tools/price-list/carnival.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:08:44.971704+00:00",
+          "sha256": "2b9f48d46bf058432c56af10bfe95d0df174d4c1bd48c36edf2ed0bdd8594472"
+        },
+        {
+          "artifact": "kia_p108_ev5.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/en/shopping-tools/price-list/ev5.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:23.434162+00:00",
+          "sha256": "bc995b5c8df779d9b86374b0664a6b29ff4429a22c7f0d58b1f754d89fe41d97"
+        },
+        {
+          "artifact": "kia_p108_ev9.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/en/shopping-tools/price-list/ev9.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:24.100232+00:00",
+          "sha256": "1f438fa868bdee48f3db2c1dfd948af9caea19715cffc40af6032b1808b4ebc2"
+        },
+        {
+          "artifact": "kia_p108_sorento-phev.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/en/shopping-tools/price-list/sorento-phev.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:24.743691+00:00",
+          "sha256": "c97f7c0107ee137f0c546d99f863b17e0604fcf34caa564b4a89e3fdbe3d2472"
+        },
+        {
+          "artifact": "kia_carnival_hev_features.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/th/cars/carnival-hev/features.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T15:07:15.283078+00:00",
+          "sha256": "f5be08a9f2de45cea1a2656ab02813e6f93f7c8b63264585edaba6a1fff41e4e"
+        },
+        {
+          "artifact": "kia_carnival_features.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/th/cars/carnival/features.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T15:07:13.458396+00:00",
+          "sha256": "2a7942780c3c8f31f5a4936e5f7b98e790bd67adb9982e7e02f8d1608f9b3538"
+        },
+        {
+          "artifact": "kia_ev5_features.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/th/cars/ev5/features.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T15:07:17.239454+00:00",
+          "sha256": "41cad9c59941d0bd5cef99f58d2101c698c99af7d51277519f19d2f0e7e36d89"
+        },
+        {
+          "artifact": "kia_brochure_hub.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/th/shopping-tools/download-a-brochure.html",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T07:45:00.416875+00:00",
+          "sha256": "9fac60a97de9550ce94a015c0700c68249645e103fd869d3edf094e08fc65f43"
+        },
+        {
+          "artifact": "kia_p108_carnival_dup.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/th/shopping-tools/price-list/carnival.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:25.965209+00:00",
+          "sha256": "d3b784a7c9bc7dcec0f32112f96c43c6ce27b8c5f83ee787131749fbc42226c1"
+        },
+        {
+          "artifact": "kia_cars_page.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/th",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-24T14:39:48.569427+00:00",
+          "sha256": "d068ec29fcbefa7b3f2b571845e25f847c17e71658540c6bf772326e4d5581b0"
+        },
+        {
+          "artifact": "kia_home_page.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/th",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-24T13:48:59.939645+00:00",
+          "sha256": "53e94ea876b441b4563e125b8f9de8ddba5c628f3d7593c1c73d31310e016d89"
+        },
+        {
+          "artifact": "kia_press_article_carnival.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/th/discover-kia/article/review-the-new-kia-carnival-hev-7-seater-3.html",
+          "family": "press",
+          "currentness": "HISTORICAL",
+          "currentness_reason": "press publication year 2018",
+          "captured_at": "2026-09-26T13:46:01.369464+00:00",
+          "sha256": "2176decfe080560f1c55a58d68efd0c09ebf9e178466eeb3486cf57aa9078a06"
+        },
+        {
+          "artifact": "kia_promo_carnival_diesel.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/th/util/promotion/thekiacarnival-diesel-2026.html",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-26T13:46:06.265703+00:00",
+          "sha256": "037b6a63056077c2ba58caa4bdef0fa27f81c591c36bc015078508795365ff23"
+        },
+        {
+          "artifact": "kia_promo_carnival_hev.html",
+          "brand": "Kia",
+          "source_url": "https://www.kia.com/th/th/util/promotion/thekiacarnival-hev-2026.html",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-26T13:46:11.649389+00:00",
+          "sha256": "eb77846aa83f459d51d4a85238a6914fada44a57e3f29f1f004e77411cd3c2a4"
+        }
+      ]
+    },
+    {
+      "brand": "Land Rover",
+      "sources": [
+        {
+          "artifact": "TH_Jaguar_PriceSheet.pdf.b64",
+          "brand": "Land Rover",
+          "source_url": "https://cdn-jaguarlandrover.com/system/apio/th/TH_Jaguar_PriceSheet.pdf",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-24T17:47:27.974887+00:00",
+          "sha256": "9806c8ba7068655ecfcfade272c0e102b3579e519bef43f6076c54913642a8ed"
+        },
+        {
+          "artifact": "TH_LandRover_PriceSheet.pdf.b64",
+          "brand": "Land Rover",
+          "source_url": "https://cdn-jaguarlandrover.com/system/apio/th/TH_LandRover_PriceSheet.pdf",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-24T17:47:28.318708+00:00",
+          "sha256": "38497d2d73774ba9ea52b875d463c404317389abf23e95bb384af2900da0ab11"
+        },
+        {
+          "artifact": "landrover_home_page.html",
+          "brand": "Land Rover",
+          "source_url": "https://www.landrover.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T13:48:50.679730+00:00",
+          "sha256": "e82a21773190cb8bfe6cd0d0cfabc4361aedc6cc8375629eef9918555de35abe"
+        },
+        {
+          "artifact": "landrover_discovery_page.html",
+          "brand": "Land Rover",
+          "source_url": "https://www.landrover.co.th/discovery/overview",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T14:39:23.877000+00:00",
+          "sha256": "660b8fa629d46378a53922ecfad55b702ff923dee28654d7f86a9f09c3d51ce2"
+        },
+        {
+          "artifact": "landrover_range_rover_page.html",
+          "brand": "Land Rover",
+          "source_url": "https://www.landrover.co.th/range-rover/overview",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-24T14:39:25.427969+00:00",
+          "sha256": "aa02b1b04953577fa44ccd302b403f07fc266853c7f64e6c48393fcfdb6f9c29"
+        },
+        {
+          "artifact": "landrover_press_articles.html",
+          "brand": "Land Rover",
+          "source_url": "https://www.landrover.co.th/explore-land-rover/articles",
+          "family": "press",
+          "currentness": "UNDETERMINED",
+          "currentness_reason": "press item without a parseable publication date",
+          "captured_at": "2026-09-26T13:46:17.086407+00:00",
+          "sha256": "0b1d90f8e1fea61a689bfb8a25265e221d3d82cf423e861c18f6b5d7c707eb1b"
+        }
+      ]
+    },
+    {
+      "brand": "Lexus",
+      "sources": [
+        {
+          "artifact": "lexus_p107_2024_LBX.pdf.b64",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2024/2024_LBX.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:51.034109+00:00",
+          "sha256": "3b6b60c2f923f17cb99ecbd614c64a9243e14c4adac184819918f0ce2d8d362d"
+        },
+        {
+          "artifact": "lexus_p107_AW_2024LEXUS_LBXBespoke.pdf.b64",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2024/AW_2024LEXUS_LBXBespoke.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:54.365531+00:00",
+          "sha256": "a437992a59922be1879e12008f07cf33f4003834de8d1c3a6c9869f19eae9482"
+        },
+        {
+          "artifact": "lexus_p107_AW_Lexus_Sep2025_Catalogue_LS.pdf.b64",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW%20Lexus_Sep2025_Catalogue%20LS.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:56.889782+00:00",
+          "sha256": "5f9e2b9c23b0c66623233a67a94294a4a2694e1ef1eb8867787af4710b00bcb5"
+        },
+        {
+          "artifact": "lexus_p107_AW_Lexus_Catalog_dec2025_LX.pdf.b64",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_Lexus_Catalog_dec2025_LX.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:04:01.691607+00:00",
+          "sha256": "b0f11ed634589d428901e04d9d19815c4ce8fc96a5b0ff12ff930cf26cf7079e"
+        },
+        {
+          "artifact": "lexus_p107_AW_catalog_nov2025_Lexus_NX.pdf.b64",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_NX.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:04:06.467948+00:00",
+          "sha256": "4c204fa6f8d6eeb276d7ef0a9eb0c7be172d7e8a90545983fb68f6f7c9468218"
+        },
+        {
+          "artifact": "lexus_p107_AW_catalog_nov2025_Lexus_RX.pdf.txt",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_RX.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:15:40.066756+00:00",
+          "sha256": "355e06613657b3bb33ce8a51e921d9e2c03d60a7d278ff08934b69fd97efe41a"
+        },
+        {
+          "artifact": "lexus_p107_AW_catalog_nov2025_Lexus_RZ.pdf.b64",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_RZ.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:04:29.994065+00:00",
+          "sha256": "32341381a8087bd31813c1cde79e456485dd013259093bd398eeee53cdcec305"
+        },
+        {
+          "artifact": "lexus_p108_en.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en.html",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:07:05.537990+00:00",
+          "sha256": "61d77917716b401b34a98e20edf85815a5d508650a389d4db4159e3bce0c1f57"
+        },
+        {
+          "artifact": "lexus_p108_configurator.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en/configurator.html",
+          "family": "configurator",
+          "currentness": "CURRENT",
+          "currentness_reason": "configurator source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:04.058016+00:00",
+          "sha256": "8a6fd4a905cdd29c7e5908252e57f6615761f0d5b0f9a8ed6929172a3f42b57a"
+        },
+        {
+          "artifact": "lexus_p108_culinary-perspectives.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en/discover-lexus/lexus-creates/family-activities/culinary-perspectives.html",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:07.539008+00:00",
+          "sha256": "0d317ef25a73b7684a07a5d6bac49203c11bfa6e5129b5b89d86facf30fb0939"
+        },
+        {
+          "artifact": "lexus_p108_model-configurator.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en/model-configurator.html",
+          "family": "configurator",
+          "currentness": "CURRENT",
+          "currentness_reason": "configurator source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:08.052705+00:00",
+          "sha256": "84d444bc5adc411758b2a819333d1d2b838ddbdd9d65d36600c3d894ac23c42e"
+        },
+        {
+          "artifact": "lexus_p108_es.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en/models/es.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:05.021856+00:00",
+          "sha256": "cf510672a71a5612d94d8a96e34b1b8fc7a64c34d4a61a080993b998b7887183"
+        },
+        {
+          "artifact": "lexus_p108_compare-models.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en/price-and-model-tools/compare-models.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:06.064656+00:00",
+          "sha256": "94a55660fd3572bba6241a8c86bf6fd77e3eebd763aa1928a728cf8e2b36175f"
+        },
+        {
+          "artifact": "lexus_p108_corporate-sales.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en/price-and-model-tools/corporate-sales.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:06.548203+00:00",
+          "sha256": "397ca4cc8f1d549980f2b91a7a5de98df3fa23c8e7720c91b634018fc67d54d5"
+        },
+        {
+          "artifact": "lexus_p108_payment-calculator.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en/price-and-model-tools/payment-calculator.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:07.033457+00:00",
+          "sha256": "0654c3a72bb3fa16d1cbde01394340d8956c19efb89bee7fab97e567d5602417"
+        },
+        {
+          "artifact": "lexus_p108_price-list.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en/price-and-model-tools/price-list.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:03.526560+00:00",
+          "sha256": "b38ae229c13060f36140e61c22007c76b85c79adf899005eb36fd74428d5de07"
+        },
+        {
+          "artifact": "lexus_models_page.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/th.html",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T11:08:47.206830+00:00",
+          "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff"
+        },
+        {
+          "artifact": "lexus_brochures.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/th/price-and-model-tools/model-brochures.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-26T13:46:22.285289+00:00",
+          "sha256": "18d9308ccafa4f122369d7f8127f43b409b0193e998b76d0fb3abbc692d64121"
+        },
+        {
+          "artifact": "lexus_price_list.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-26T07:44:21.388806+00:00",
+          "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6"
+        },
+        {
+          "artifact": "lexus_p108_2021-hsbc-womens-world-championship.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en/discover-lexus/news-and-events/2021-hsbc-womens-world-championship.html",
+          "family": "press",
+          "currentness": "HISTORICAL",
+          "currentness_reason": "press publication year 2021",
+          "captured_at": "2026-09-27T19:07:08.542439+00:00",
+          "sha256": "9e7cef8e4e4016466dac0bd472d9000d37f58910da8b6390e970b486b2d4f7a0"
+        },
+        {
+          "artifact": "lexus_p108_2024-miami-art-and-design-week-collaboration.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/en/discover-lexus/news-and-events/2024-miami-art-and-design-week-collaboration.html",
+          "family": "press",
+          "currentness": "HISTORICAL",
+          "currentness_reason": "press publication year 2024",
+          "captured_at": "2026-09-27T19:07:09.052602+00:00",
+          "sha256": "ac0f00f4d5b86c1bc18227c0b8c70e9dbd0f4d4eb9323c84e44f82515353f269"
+        },
+        {
+          "artifact": "lexus_press_news.html",
+          "brand": "Lexus",
+          "source_url": "https://www.lexus.co.th/th/discover-lexus/news-and-events.html",
+          "family": "press",
+          "currentness": "UNDETERMINED",
+          "currentness_reason": "press item without a parseable publication date",
+          "captured_at": "2026-09-26T13:46:30.154547+00:00",
+          "sha256": "2bc6b11151aaf6a11796f5c1f383cbdaa6fa0fce8796aa305ecffb06c0f80697"
+        }
+      ]
+    },
+    {
+      "brand": "MG",
+      "sources": [
+        {
+          "artifact": "mg_p108_index.html",
+          "brand": "MG",
+          "source_url": "https://all-new-mg5.mgcars.com/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:04:25.687653+00:00",
+          "sha256": "d6675e9d250b51e7be8e50c4d35eb946fca28b9e5e4083cab6bb81fe5859c0be"
+        },
+        {
+          "artifact": "mg_p108_NEW_MG6_Owner_Manual.pdf",
+          "brand": "MG",
+          "source_url": "https://ex-prod.mgcars.com/en/pdf/AfterSalesService/36/NEW%20MG6%20Owner%20Manual.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:04:23.319643+00:00",
+          "sha256": "71b1773c13d297bc6fb6955764e24bb7ccc974c7c91f44ec6363ca00fd6576af"
+        },
+        {
+          "artifact": "mg_p108_NEW_MG_VS_HEV_Owner_Manual.pdf",
+          "brand": "MG",
+          "source_url": "https://ex-prod.mgcars.com/en/pdf/AfterSalesService/37/NEW%20MG%20VS%20HEV%20Owner%20Manual.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:04:37.270374+00:00",
+          "sha256": "807223b765d91080462e654f0e8d8a9c5cf6e6686390636647be37bafd1cebcb"
+        },
+        {
+          "artifact": "mg_p108_all-new-mg3-hybrid-plus-owner-manual-2024.pdf",
+          "brand": "MG",
+          "source_url": "https://ex-prod.mgcars.com/th/pdf/AfterSalesService/61/all-new-mg3-hybrid-plus-owner-manual-2024.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:04:40.958810+00:00",
+          "sha256": "1f32e0e0f9b704b141a6aa1a2bdf81c7034ce6a12ee7a4206c87e2345d1d2662"
+        },
+        {
+          "artifact": "mg_p108_mg-im6-owner-manual-20250318.pdf",
+          "brand": "MG",
+          "source_url": "https://ex-prod.mgcars.com/th/pdf/AfterSalesService/62/mg-im6-owner-manual-20250318.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:04:42.038524+00:00",
+          "sha256": "60047cdcaa09b1473b68a406cfc44ee01817e9229e1fdffbcf0c6b9038945cf6"
+        },
+        {
+          "artifact": "mg_p107_03eda59ea41eef277888653394726ac6.pdf.txt",
+          "brand": "MG",
+          "source_url": "https://mg-upload.sgp1.cdn.digitaloceanspaces.com/03eda59ea41eef277888653394726ac6.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:26:44.944194+00:00",
+          "sha256": "9203768038ea6206368ccd08037df67990f3b3a1526dc022caf2166b3a3efb65"
+        },
+        {
+          "artifact": "mg_p107_5d70bf38364a1e7afdd1313fcb0f26f1.pdf.b64",
+          "brand": "MG",
+          "source_url": "https://mg-upload.sgp1.cdn.digitaloceanspaces.com/5d70bf38364a1e7afdd1313fcb0f26f1.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:25.588631+00:00",
+          "sha256": "7130399c7edbe2f6888d7c92faa22f5d94fc3490aa3b839e6db2b7ac6d12c7e5"
+        },
+        {
+          "artifact": "mg_p107_dc7cae36eb770cd7476ea64c230e7f7e.pdf.txt",
+          "brand": "MG",
+          "source_url": "https://mg-upload.sgp1.cdn.digitaloceanspaces.com/dc7cae36eb770cd7476ea64c230e7f7e.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:14:48.393153+00:00",
+          "sha256": "28166116c8a5c38b134fa8b6a8038e626868e713b430dfb28e826562884d34d5"
+        },
+        {
+          "artifact": "mg_p107_eca785d2394cfc7acbf851992a464cba.pdf.txt",
+          "brand": "MG",
+          "source_url": "https://mg-upload.sgp1.cdn.digitaloceanspaces.com/eca785d2394cfc7acbf851992a464cba.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:26:57.820614+00:00",
+          "sha256": "64fe70eec61d2370f1b36b9092a2932bd249d282d5465a1a89592a982f50dbb8"
+        },
+        {
+          "artifact": "mg_p108_all-new-mg3.html",
+          "brand": "MG",
+          "source_url": "https://www.mgcars.com/th/cars/all-new-mg3",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:04:25.083257+00:00",
+          "sha256": "65401f019c9083b3ff10497945af662f560807c566aafc6069236ee69e058a9e"
+        },
+        {
+          "artifact": "mg_p108_mg-cyberster.html",
+          "brand": "MG",
+          "source_url": "https://www.mgcars.com/th/cars/mg-cyberster",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:05:18.414510+00:00",
+          "sha256": "07ff819afac0a40e194b9cf54a28885992b531f134817945f0524322c07a6c03"
+        },
+        {
+          "artifact": "mg_p108_mg-ep-plus.html",
+          "brand": "MG",
+          "source_url": "https://www.mgcars.com/th/cars/mg-ep-plus",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:05:20.161927+00:00",
+          "sha256": "823786756b57b956fbee5de95901d96055b007899460b9c32153ac4db40cf909"
+        },
+        {
+          "artifact": "mg_p108_mg-es.html",
+          "brand": "MG",
+          "source_url": "https://www.mgcars.com/th/cars/mg-es",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:05:21.864585+00:00",
+          "sha256": "2578951389b12f898480d0587e91d4b702de356731c1774944d9f3f0e7884f8e"
+        },
+        {
+          "artifact": "mg_car_mg-hs.html",
+          "brand": "MG",
+          "source_url": "https://www.mgcars.com/th/cars/mg-hs",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:45:53.840799+00:00",
+          "sha256": "85cb146b64179d3bacf3328f5284ba3839c29dae743d275dea1bdca26537deab"
+        },
+        {
+          "artifact": "mg_car_mg-im6.html",
+          "brand": "MG",
+          "source_url": "https://www.mgcars.com/th/cars/mg-im6",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:46:00.113895+00:00",
+          "sha256": "92731131cc6ec4229899f209da231379260793628775a806d8e09733037eb8e6"
+        },
+        {
+          "artifact": "mg_car_mg-urban.html",
+          "brand": "MG",
+          "source_url": "https://www.mgcars.com/th/cars/mg-urban",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:46:06.134064+00:00",
+          "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27"
+        },
+        {
+          "artifact": "mg_car_mg-zs.html",
+          "brand": "MG",
+          "source_url": "https://www.mgcars.com/th/cars/mg-zs",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:45:46.653057+00:00",
+          "sha256": "01f41293474e78e363c30b6ea59e34bf6a94eaab4f1d6506ae1af64cdda111ab"
+        },
+        {
+          "artifact": "mg_models_page.html",
+          "brand": "MG",
+          "source_url": "https://www.jnt.co.th/",
+          "family": "third_party",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "host is not an official first-party domain for this OEM (dealer-redirect / third-party mirror)",
+          "captured_at": "2026-09-24T11:36:42.908247+00:00",
+          "sha256": "b502e443cf6578c5158b778599fb1efd58fb2cfee372ed737309761ab268993f"
+        },
+        {
+          "artifact": "mg_home_page.html",
+          "brand": "MG",
+          "source_url": "https://www.mgcars.com/th",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-24T13:48:36.580895+00:00",
+          "sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff"
+        },
+        {
+          "artifact": "mg_press_news.html",
+          "brand": "MG",
+          "source_url": "https://www.mgcars.com/th/news",
+          "family": "press",
+          "currentness": "UNDETERMINED",
+          "currentness_reason": "press item without a parseable publication date",
+          "captured_at": "2026-09-26T13:47:11.172703+00:00",
+          "sha256": "25a5b75280482f0d52d7b3c0176c19740774a49ef2c9e2ca95cefc218675353a"
+        }
+      ]
+    },
+    {
+      "brand": "MINI",
+      "sources": [
+        {
+          "artifact": "MINI_configurator_model_ranges.html",
+          "brand": "MINI",
+          "source_url": "https://configure.mini.co.th/en_TH/model-ranges",
+          "family": "configurator",
+          "currentness": "CURRENT",
+          "currentness_reason": "configurator source (live official page/document)",
+          "captured_at": "2026-09-26T13:44:48.562098+00:00",
+          "sha256": "6510083d83376e721ac0e64902edc27e383c4041fe0f4f9aeeb74ff3f4723b61"
+        },
+        {
+          "artifact": "MINI_PriceSheet_20260327.pdf.b64",
+          "brand": "MINI",
+          "source_url": "https://www.mini.co.th/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2026/MINI-Price-Sheet-Revised-27-Mar-2026.pdf.asset.1774933915613.pdf",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-26T07:44:33.271754+00:00",
+          "sha256": "f65a020f704f88e00c025a5dbcf735e25666d6fcb060324aad4b5b9b7b41be55"
+        },
+        {
+          "artifact": "mini_home_page.html",
+          "brand": "MINI",
+          "source_url": "https://www.mini.co.th/en_TH/home.html",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T13:49:07.774046+00:00",
+          "sha256": "b662bd5b0cca816295643f72ac8b880a2ee82d017d25a40edd5ddca363783273"
+        },
+        {
+          "artifact": "mini_p107_brochure.html",
+          "brand": "MINI",
+          "source_url": "https://www.mini.co.th/en_TH/home/brochure.html",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:05:50.046256+00:00",
+          "sha256": "450c87d56336065519d778f49db1bee6e1a77d5b78ce04bdbddcc330595c9ab8"
+        },
+        {
+          "artifact": "mini_p107_MINI-Service-Inclusive-new.html",
+          "brand": "MINI",
+          "source_url": "https://www.mini.co.th/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:05:51.040634+00:00",
+          "sha256": "2c3c6682167810cdd367e333f252fbd89e5961acd7ff0e1a94355ff07b9c6b0b"
+        },
+        {
+          "artifact": "mini_p107_Mini_Go-Kart_OnTheRoof.html",
+          "brand": "MINI",
+          "source_url": "https://www.mini.co.th/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:05:52.068364+00:00",
+          "sha256": "c9121652419f5639b657830a50aecc0fd3f65105695aed639f5d2d0031fde114"
+        },
+        {
+          "artifact": "mini_p107_convenience-no-matter-what-you-choose.html",
+          "brand": "MINI",
+          "source_url": "https://www.mini.co.th/en_TH/home/serv/special-offers/convenience-no-matter-what-you-choose.html",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:05:54.038015+00:00",
+          "sha256": "3e897959ddcc099ab62ef10846f7564f0dfff676f5d21e712104be33e84bebd1"
+        },
+        {
+          "artifact": "mini_p107_mini_connected.html",
+          "brand": "MINI",
+          "source_url": "https://www.mini.co.th/en_TH/home/serv/special-offers/mini_connected.html",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:05:55.752136+00:00",
+          "sha256": "c0ced5afbe378ba0659e59f680c27036985b3b9fc565990b4ae603d9ec7bcbbc"
+        },
+        {
+          "artifact": "mini_p107_mini_expo_2025_new.html",
+          "brand": "MINI",
+          "source_url": "https://www.mini.co.th/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:05:57.760981+00:00",
+          "sha256": "0bc44c01a719498b578c665cc651bf8a9cbbdacd3c25c018e1287820f024f1e4"
+        },
+        {
+          "artifact": "mini_p107_motor_expo_2025.html",
+          "brand": "MINI",
+          "source_url": "https://www.mini.co.th/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "family": "spec_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "spec_page source (live official page/document)",
+          "captured_at": "2026-09-27T16:05:59.253008+00:00",
+          "sha256": "e66c7a41292c56158f9d6da431657bde1102d1887e3364fa5a0df235e31cfd30"
+        }
+      ]
+    },
+    {
+      "brand": "Mazda",
+      "sources": [
+        {
+          "artifact": "mazda_brochure_bt50.pdf",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/s3fs-public/2024-12/v2_brochure-new-mazda-bt50.pdf?VersionId=Whzmuz5YnnWl0XkLVQTrsrvp8eokHNRB",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:49:24.030680+00:00",
+          "sha256": "4418a29b8745df59b67edc6b3e2d89c5d1ffc529afebcd436c2228ad1f0bece8"
+        },
+        {
+          "artifact": "mazda_brochure_cx5.pdf",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/s3fs-public/2025-03/brochure-mazda-cx5.pdf?VersionId=VA_c9P6y6nt7uww1DHVXHSXN3dZoA88V",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:49:33.784405+00:00",
+          "sha256": "c3dc4b64ab6311f046564e57f7661cb5d8d8015021417be144ce3a7feb25ae86"
+        },
+        {
+          "artifact": "mazda_brochure_mazda2.pdf",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/s3fs-public/2025-03/brochure_mazda2_essential_26032025.pdf?VersionId=AfXNz7AmQsbwFurYSIj4Rc0LOJo9UwWw",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:49:35.071899+00:00",
+          "sha256": "c1b43c938ef247d3f20d5dbab26ebe25207d57b7922032fcf156b31aa191d087"
+        },
+        {
+          "artifact": "mazda_p107_Mazda3_2025_0.pdf.b64",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/s3fs-public/2026-02/Mazda3_2025_0.pdf?VersionId=B_yVtJ0n7L_lwESBGTpOXzWeazBdPehN",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:00.481841+00:00",
+          "sha256": "2b9ca43482d22c2f7d5722efb0578667a476ecd28c23a755123740296768a98f"
+        },
+        {
+          "artifact": "mazda_p107_New_Mazda_CX-30_Essential_2025_Big.pdf.b64",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/s3fs-public/2026-04/New%20Mazda%20CX-30%20Essential_2025_Big.pdf?VersionId=C0PSWzUj5NTW.vWbsMFfJ2zsRHk_f3lu",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:02.571182+00:00",
+          "sha256": "f055d818e0878b39b8859df940f5d311960253b1ddc91e27452e0f7319c59961"
+        },
+        {
+          "artifact": "mazda_p108_accessories.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/accessories",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:03:44.210298+00:00",
+          "sha256": "b6fa15cffd86a8892ac1b0e03335b28ed8d42070652ac7f79250014a9295032e"
+        },
+        {
+          "artifact": "mazda_car_mazda-cx30-essential.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:45:37.829614+00:00",
+          "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c"
+        },
+        {
+          "artifact": "mazda_p107_spec.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:03.172394+00:00",
+          "sha256": "b83c761758ed0fcd055ab9571d32bfb2f1526224d995e7d6bcc8eabe2538acf5"
+        },
+        {
+          "artifact": "mazda_spec_mazda-cx30-essential.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:46:42.228826+00:00",
+          "sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3"
+        },
+        {
+          "artifact": "mazda_car_mazda-cx5.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/mazda-cx5",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:45:10.210062+00:00",
+          "sha256": "ca9e7c60533c34b8d04dbeab2d1925a22190e56c17416dbc51752c6d3db65e02"
+        },
+        {
+          "artifact": "mazda_spec_mazda-cx5.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/mazda-cx5/spec",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:46:47.208498+00:00",
+          "sha256": "0d4b4a5bf103f1bbf68fd49de00b77187a6d86650f685c641d5a42e396fc94ca"
+        },
+        {
+          "artifact": "mazda_car_mazda2-essential.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:45:16.473642+00:00",
+          "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb"
+        },
+        {
+          "artifact": "mazda_spec_mazda2-essential.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/mazda2-essential/spec",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:46:53.135028+00:00",
+          "sha256": "9f36c21a525da4a6e5cc312109aafa44ed9159c15b9f5cc6975716e1d0c1c595"
+        },
+        {
+          "artifact": "mazda_car_mazda3-sedan.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/mazda3-sedan",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:45:23.858324+00:00",
+          "sha256": "1df796474960d5b42246781aca8e969b0ca56b3d8cdfb027bcbf5b973d228c04"
+        },
+        {
+          "artifact": "mazda_p107_spec_dup.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/mazda3-sedan/spec",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:06.455693+00:00",
+          "sha256": "ad9e9c2484dac23809fb42f0c2851aefcde0dd35e4a24ecc8674040a71bfa4aa"
+        },
+        {
+          "artifact": "mazda_spec_mazda3-sedan.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/mazda3-sedan/spec",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:47:00.051491+00:00",
+          "sha256": "11d0e43e5400fe8e8a74638c212984106a56a1520614a036c0e68599c2bb76df"
+        },
+        {
+          "artifact": "mazda_car_new-mazda-bt50.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:45:29.682112+00:00",
+          "sha256": "01df606fe74c1ce1702dc7907be3f0719b8a223d7a14c21c0586dde2376a4876"
+        },
+        {
+          "artifact": "mazda_p108_new-mazda-bt50.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:03:42.808817+00:00",
+          "sha256": "a1110d4d4f529c54cd668ec7b8b7ca4a7bf4b6164acd475e4082478adc18125e"
+        },
+        {
+          "artifact": "mazda_spec_new-mazda-bt50.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/new-mazda-bt50/spec",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:47:05.670394+00:00",
+          "sha256": "4c185ae70c282f0877ab8feaa37c6a2bfdf426698e60f1679d27fe6c78b6a8be"
+        },
+        {
+          "artifact": "mazda_p108_spec.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/cars/spec",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:03:37.279809+00:00",
+          "sha256": "da058ce5f783b015b9a8ed30999ae59913e95a29737278676e785646af72a55d"
+        },
+        {
+          "artifact": "mazda_p108_mazda-cx30-lifestyle-upgrade_.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/life-with-mazda/detail/mazda-cx30-lifestyle-upgrade%E2%80%AF",
+          "family": "configurator",
+          "currentness": "CURRENT",
+          "currentness_reason": "configurator source (live official page/document)",
+          "captured_at": "2026-09-27T19:03:47.017908+00:00",
+          "sha256": "2b61b6855d24dca94eacb2205c8280f4ca196a3a5881eda66746525d2ada5048"
+        },
+        {
+          "artifact": "mazda_press_news.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/news-update",
+          "family": "press",
+          "currentness": "CURRENT",
+          "currentness_reason": "press publication year 2025",
+          "captured_at": "2026-09-26T13:46:35.523994+00:00",
+          "sha256": "cebebcf6d790a5d145671310e00753d74d22bec171da5e3a8acca3e10bc3b8ed"
+        },
+        {
+          "artifact": "mazda_p108_219262.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/news-update/detail/219262",
+          "family": "press",
+          "currentness": "CURRENT",
+          "currentness_reason": "press publication year 2025",
+          "captured_at": "2026-09-27T19:03:39.741329+00:00",
+          "sha256": "eda0404db601b060a62cb6c4bde63f6b154ef2d647cd27e8c6d7618a32f53048"
+        },
+        {
+          "artifact": "mazda_p108_219263.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/news-update/detail/219263",
+          "family": "press",
+          "currentness": "CURRENT",
+          "currentness_reason": "press publication year 2025",
+          "captured_at": "2026-09-27T19:03:51.552413+00:00",
+          "sha256": "faa22896cb6307f00ed5f60ac7acf51da5f912dc6f04d5ebe3e7c29b572b2845"
+        },
+        {
+          "artifact": "mazda_p108_219264.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/news-update/detail/219264",
+          "family": "press",
+          "currentness": "CURRENT",
+          "currentness_reason": "press publication year 2025",
+          "captured_at": "2026-09-27T19:03:54.301032+00:00",
+          "sha256": "82969d2ef416fe1e0ac09ae4bf917de1b52a9dec9b6b82ad25a312395c75966f"
+        },
+        {
+          "artifact": "mazda_p108_219265.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/news-update/detail/219265",
+          "family": "press",
+          "currentness": "CURRENT",
+          "currentness_reason": "press publication year 2025",
+          "captured_at": "2026-09-27T19:03:56.705809+00:00",
+          "sha256": "f6474b2a5bb57528e81979ac74e13f5e3d90f8b683f480c85ef7aef4aff3cd54"
+        },
+        {
+          "artifact": "mazda_p108_219266.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/news-update/detail/219266",
+          "family": "press",
+          "currentness": "CURRENT",
+          "currentness_reason": "press publication year 2025",
+          "captured_at": "2026-09-27T19:04:00.360605+00:00",
+          "sha256": "9883b62671e225690a04baf81e954827cab14e4d3066569a018e5f59e99709dc"
+        },
+        {
+          "artifact": "mazda_p108_219267.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/news-update/detail/219267",
+          "family": "press",
+          "currentness": "CURRENT",
+          "currentness_reason": "press publication year 2025",
+          "captured_at": "2026-09-27T19:04:03.699976+00:00",
+          "sha256": "560a89dcfc2e5c903081c64a3578d679b30a297553f32be42f4e0d6ce5485505"
+        },
+        {
+          "artifact": "mazda_p108_219268.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/news-update/detail/219268",
+          "family": "press",
+          "currentness": "CURRENT",
+          "currentness_reason": "press publication year 2025",
+          "captured_at": "2026-09-27T19:04:06.292625+00:00",
+          "sha256": "93bade488549c5c49a7749e3ac6394f1f651d035a414a9b96de816a7c898906e"
+        },
+        {
+          "artifact": "mazda_p108_grade.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th/used-car/cpo/grade",
+          "family": "configurator",
+          "currentness": "CURRENT",
+          "currentness_reason": "configurator source (live official page/document)",
+          "captured_at": "2026-09-27T19:03:48.880686+00:00",
+          "sha256": "1ac6b90369792333cad371fe19f05a24522edb38e3626bd312c778f7b7619e7f"
+        },
+        {
+          "artifact": "mazda_home_page.html",
+          "brand": "Mazda",
+          "source_url": "https://www.mazda.co.th/th",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-24T13:48:24.077293+00:00",
+          "sha256": "3e49287146ee978fbe8a1919a21df334ae7ce75414be7b161b53650a2f38ed49"
+        }
+      ]
+    },
+    {
+      "brand": "Mitsubishi",
+      "sources": [
+        {
+          "artifact": "mitsubishi_p107_All-New_XFORCE_HEV_-_CATALOG_1_.pdf.b64",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/June2025/city-car/All-New%20XFORCE%20HEV%20-%20CATALOG%20(1).pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:04.219873+00:00",
+          "sha256": "58c36e3c8da695a5ec3fb1f09748d05f0e3eb148cd4f26a256f8d2f9b6f5acba"
+        },
+        {
+          "artifact": "mitsubishi_p107_Mitsubishi_Mirage.pdf.b64",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/June2025/city-car/Mitsubishi%20Mirage.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:12.265498+00:00",
+          "sha256": "a5673fa148d63e9ea8bd6f031eb623fa8b111dcc3efb013061a3d1ef9f258d8c"
+        },
+        {
+          "artifact": "mitsubishi_p107_New_Pajero_Sport_Elite_Edition.pdf.b64",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/mar2025/New%20Pajero%20Sport%20Elite%20Edition.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:16.693537+00:00",
+          "sha256": "a1dc83b83c6512ffb81cade69146f780abd5b1987a6fd48dbd47543e566120a0"
+        },
+        {
+          "artifact": "mitsubishi_p107_New_Pajero_Sport_Prime.pdf.b64",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/mar2025/New%20Pajero%20Sport%20Prime.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:18.259420+00:00",
+          "sha256": "f6d623927aa53fd4f2548bd1a3b8ea885c7e7f66b5411bac5bcd6f142511952a"
+        },
+        {
+          "artifact": "mitsubishi_p107_New_Mitsubishi_Xpander_Cross_HEV.pdf.b64",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/nov2025/New%20Mitsubishi%20Xpander%20Cross%20HEV.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:22.529436+00:00",
+          "sha256": "8c06814389a89a19aab3d8172d26af0bb057883b45e488dd73de502c65398e47"
+        },
+        {
+          "artifact": "mitsubishi_p108_en.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/en",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:06:04.700109+00:00",
+          "sha256": "3eed01b57fef4eadb313de0908965f14c50c1d47cf3332c724db2d11ed1295f9"
+        },
+        {
+          "artifact": "mitsubishi_p108_configure.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/en/buy/configure",
+          "family": "configurator",
+          "currentness": "CURRENT",
+          "currentness_reason": "configurator source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:01.525447+00:00",
+          "sha256": "5bc3c77c31b60828066784455b3b9647c382fc59286635c316443fb89a042339"
+        },
+        {
+          "artifact": "mitsubishi_p108_configurator.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/en/buy/configure/configurator",
+          "family": "configurator",
+          "currentness": "CURRENT",
+          "currentness_reason": "configurator source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:08.916227+00:00",
+          "sha256": "1532ca469a5346f8e7f45d00410a8c705048c2d0b554d40aa8f5d69d14086ae0"
+        },
+        {
+          "artifact": "mitsubishi_p108_nextgen-configurator.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/en/buy/configure/nextgen-configurator",
+          "family": "configurator",
+          "currentness": "CURRENT",
+          "currentness_reason": "configurator source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:11.789048+00:00",
+          "sha256": "bca6ae3ee5c0e6214a356933d868a3ef8e406df5f65c4b28a5ce35c31ff9f376"
+        },
+        {
+          "artifact": "mitsubishi_p108_new-xpander-cross_special-price-extension.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/en/buy/news-activity/new-xpander-cross_special-price-extension",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:01.052702+00:00",
+          "sha256": "379d9e0a64ed8ce217ad3e6f086a2d91c15189408c2b54376bdfbd7ac999b618"
+        },
+        {
+          "artifact": "mitsubishi_p108_unveil-spec-prices-of-athlete-and-dc-4wd-ultra.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/en/news-activity/news/unveil-spec-prices-of-athlete-and-dc-4wd-ultra",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:08.391288+00:00",
+          "sha256": "151558ffafb95cedcb50befe1f621936217d871f294a015a5ad622f9069b5563"
+        },
+        {
+          "artifact": "mitsubishi_all_models_price.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-26T07:44:16.432014+00:00",
+          "sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb"
+        },
+        {
+          "artifact": "mitsubishi_brochures.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/th/download-a-brochure",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:47:18.672783+00:00",
+          "sha256": "fca08965d87e16b335bb4584cc95e795086b22a31caf11ac7cf696cbb3a69d39"
+        },
+        {
+          "artifact": "mitsubishi_home_page.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/th?rd=true",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T13:48:27.092513+00:00",
+          "sha256": "eaa2b0f9e01fcbc45532782f931eeee7c00801cda5c480294c8c1a4f8ffee498"
+        },
+        {
+          "artifact": "mitsubishi_p108_explore-model-a.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-model-a",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:06:04.227575+00:00",
+          "sha256": "a418f95e235ad258a6d108a57547822ade6e78e3d2d830d4ac8d65158e2ef899"
+        },
+        {
+          "artifact": "mitsubishi_p108_news-activity.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/en/buy/news-activity",
+          "family": "press",
+          "currentness": "UNDETERMINED",
+          "currentness_reason": "press item without a parseable publication date",
+          "captured_at": "2026-09-27T19:06:02.021729+00:00",
+          "sha256": "aa33f6c30809065f89979af4fafeaee67ce1f89d2ba36d118bafef7b488e14a5"
+        },
+        {
+          "artifact": "mitsubishi_press_news.html",
+          "brand": "Mitsubishi",
+          "source_url": "https://www.mitsubishi-motors.co.th/th/news-activity/news",
+          "family": "press",
+          "currentness": "UNDETERMINED",
+          "currentness_reason": "press item without a parseable publication date",
+          "captured_at": "2026-09-26T13:47:23.319987+00:00",
+          "sha256": "638f32e42b3691387285d7c49122faa8e0698ab6bc3918dd450b2b3bc5abe861"
+        }
+      ]
+    },
+    {
+      "brand": "Nissan",
+      "sources": [
+        {
+          "artifact": "nissan_p108_OM21E0HP15G1T.pdf",
+          "brand": "Nissan",
+          "source_url": "https://en.nissan.co.th/content/dam/Nissan/th/home/aftersale/owner-benefits/owner-manual/OM21E0HP15G1T.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:05:24.112173+00:00",
+          "sha256": "23c5eb3bf62430d6641971120a30a6792f1341eec64dfbcd5a11e4df8e16d50d"
+        },
+        {
+          "artifact": "nissan_p108_Note_Owner_Manual_EN.pdf",
+          "brand": "Nissan",
+          "source_url": "https://en.nissan.co.th/content/dam/Nissan/th/owners/OwnerManual-170612/Note%20Owner%20Manual%20EN.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:05:28.319248+00:00",
+          "sha256": "4221c9e7457e690488b699b86ea5f2d34ac746c196c57f9205e3454520d3ade5"
+        },
+        {
+          "artifact": "nissan_p108_Terra_Owner_Manual_EN.pdf",
+          "brand": "Nissan",
+          "source_url": "https://en.nissan.co.th/content/dam/Nissan/th/owners/OwnerManual-170612/Terra%20Owner%20Manual%20EN.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:05:30.256108+00:00",
+          "sha256": "309f9bdd81211fb9658a6bde1772a7974d9c11a48a797463df01cf158edbace4"
+        },
+        {
+          "artifact": "nissan_p107_brochure-hub.html",
+          "brand": "Nissan",
+          "source_url": "https://en.nissan.co.th/vehicles/brochure-hub.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:51.624402+00:00",
+          "sha256": "70f7016975d5ca550e661c6bbded82e3fe470b841000c68fb70d8975a2748463"
+        },
+        {
+          "artifact": "nissan_new_home_page.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T13:48:19.963226+00:00",
+          "sha256": "cec34588e44f0c5adaea47b0dcc4927e6919ba63cafd10d3ecf4854a1a607920"
+        },
+        {
+          "artifact": "nissan_p108_aftersales.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/aftersales.html",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:26.373841+00:00",
+          "sha256": "1ef9542640c3b3efa991a009286351f385c4ff275f8fdb8b6087cc7b13407c56"
+        },
+        {
+          "artifact": "nissan_p108_collections.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/aftersales/collections.html",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:30.717055+00:00",
+          "sha256": "4ec8f32b0c7b536fb33203c2c4edc82d790d9ee9494c235c59ec4709b33aec50"
+        },
+        {
+          "artifact": "nissan_p108_e-power.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/aftersales/collections/e-power.html",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:31.525726+00:00",
+          "sha256": "13afaf29a2fc7c7add910c6fb1ae2c194ffe6fcef14fd492ed1f63e0f5719138"
+        },
+        {
+          "artifact": "nissan_p108_nismo.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/aftersales/collections/nismo.html",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:31.983960+00:00",
+          "sha256": "a4a0aa11849eec1b0d6b3112aca1371af4e41dfd6157eba84a9563db0bec4df5"
+        },
+        {
+          "artifact": "nissan_p108_universal.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/aftersales/collections/universal.html",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:32.444021+00:00",
+          "sha256": "c68dfc6c77fe9fc0cefb7de3afb509b4ad53307d7c8867393c76a9bb86855e8c"
+        },
+        {
+          "artifact": "nissan_p108_Livina_EN_Owner_Manual.pdf",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/content/dam/Nissan/th/owners/Livina_EN_Owner_Manual.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:05:35.012823+00:00",
+          "sha256": "974d1549409203ec4dbe13a073b6d18bc5a8ea86d52331c98cbfdb5b700fab2a"
+        },
+        {
+          "artifact": "nissan_p108_different-vehicles-technology.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/experience-nissan/Nissan-EV/different-vehicles-technology.html",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:05:25.902373+00:00",
+          "sha256": "5b46a87f1bc44c34bb91bd9bb13b614cf16923c8b1276052ddd0c9889c5c63a4"
+        },
+        {
+          "artifact": "nissan_all_grade_price.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:44:05.915769+00:00",
+          "sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda"
+        },
+        {
+          "artifact": "nissan_all_models.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/vehicles/all-models.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:44:10.660652+00:00",
+          "sha256": "24d6526c31c8f72be7e9d2a2253bac1698005d34db355bd252188806b3203a8a"
+        },
+        {
+          "artifact": "nissan_brochure_hub.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/vehicles/brochure-hub.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:47:33.167318+00:00",
+          "sha256": "3ed40e03eeff0bfdf367f3e5d980449a4fd200236fe8241ef43d482906599c7a"
+        },
+        {
+          "artifact": "nissan_p107_download-request-brochure.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/download-request-brochure.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:52.288738+00:00",
+          "sha256": "d3198caf729bc438b1472325b688f2b7967fbc2e3807754f3d180bafc735eb86"
+        },
+        {
+          "artifact": "nissan_p107_download-request-brochure_dup.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/new-almera/download-request-brochure.html",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:54.601839+00:00",
+          "sha256": "035de909bec078b21565a2eabaeeabe186454639dc5004a80f72c53576393e32"
+        },
+        {
+          "artifact": "nissan_press_news.html",
+          "brand": "Nissan",
+          "source_url": "https://www.nissan.co.th/news.html",
+          "family": "press",
+          "currentness": "HISTORICAL",
+          "currentness_reason": "press publication year 2017",
+          "captured_at": "2026-09-26T13:47:38.030009+00:00",
+          "sha256": "977bbc7868fc00530cd82ec41ebe93ffd828821b52657b69f615f4953fbebd5e"
+        }
+      ]
+    },
+    {
+      "brand": "Porsche",
+      "sources": [
+        {
+          "artifact": "porsche_p107_95BAU1.html",
+          "brand": "Porsche",
+          "source_url": "https://configurator.porsche.com/en-TH/mode/model/95BAU1",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:58.692037+00:00",
+          "sha256": "4b3edfcfa5f939e2aab007f87878b4141f465475197b2246e121a50219b6c727"
+        },
+        {
+          "artifact": "porsche_p107_95BBV1.html",
+          "brand": "Porsche",
+          "source_url": "https://configurator.porsche.com/en-TH/mode/model/95BBV1",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:59.763500+00:00",
+          "sha256": "4c640e5a76dccad50fb90f34a8ab196a2e5c7458bcb02580d600a3f6dce7f8aa"
+        },
+        {
+          "artifact": "porsche_p107_95BBW1.html",
+          "brand": "Porsche",
+          "source_url": "https://configurator.porsche.com/en-TH/mode/model/95BBW1",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:02:01.211790+00:00",
+          "sha256": "c62db3ac636422da1bb1363fb881f57bf4da2b7844aef4cc57ec0008766acf75"
+        },
+        {
+          "artifact": "porsche_p107_XABAA1.html",
+          "brand": "Porsche",
+          "source_url": "https://configurator.porsche.com/en-TH/mode/model/XABAA1",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:02:01.737046+00:00",
+          "sha256": "6e0fd68ce93243d3a6ed2e77a5db86183b3bd437fc60379943ed324c3b9f86a1"
+        },
+        {
+          "artifact": "porsche_p107_XABBB1.html",
+          "brand": "Porsche",
+          "source_url": "https://configurator.porsche.com/en-TH/mode/model/XABBB1",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:02:03.004562+00:00",
+          "sha256": "4b6369cc2f99cc7aeaf0b464a18c76e9a6fe6c5ad6ff37e545177511c87f9637"
+        },
+        {
+          "artifact": "porsche_p107_XABDC1.html",
+          "brand": "Porsche",
+          "source_url": "https://configurator.porsche.com/en-TH/mode/model/XABDC1",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:02:04.739970+00:00",
+          "sha256": "e13df4ec41927bd3a8f4abe40e03164a8d01026d4210785b1646a751d3a11784"
+        },
+        {
+          "artifact": "porsche_home_page.html",
+          "brand": "Porsche",
+          "source_url": "https://www.porsche.com/pap/_thailand_/",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-24T11:38:54.313322+00:00",
+          "sha256": "e7a53c39351f7f3f77a34ca850fe24e0763a519cb7791503bda7a80f9471bb57"
+        },
+        {
+          "artifact": "porsche_p108_originalpartscatalogue.html",
+          "brand": "Porsche",
+          "source_url": "https://www.porsche.com/pap/_thailand_/accessoriesandservice/classic/originalpartscatalogue/",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:05:36.958437+00:00",
+          "sha256": "eec42df45b0c7a798b60605f6d0cc5b002e67e51e2a6ced9d50f7346b52b2885"
+        },
+        {
+          "artifact": "porsche_p107_vehicle-accessories.html",
+          "brand": "Porsche",
+          "source_url": "https://www.porsche.com/pap/_thailand_/accessoriesandservice/vehicle-accessories/",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:01:57.854920+00:00",
+          "sha256": "88538361c2b5699451790f635236ddc090de8f935aa89c9a6d2e63df8e353323"
+        },
+        {
+          "artifact": "porsche_p108_vehicle-accessories.html",
+          "brand": "Porsche",
+          "source_url": "https://www.porsche.com/pap/_thailand_/accessoriesandservice/vehicle-accessories/",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:05:39.400275+00:00",
+          "sha256": "88538361c2b5699451790f635236ddc090de8f935aa89c9a6d2e63df8e353323"
+        },
+        {
+          "artifact": "porsche_p108_vehicle-accessories_dup.html",
+          "brand": "Porsche",
+          "source_url": "https://www.porsche.com/pap/_thailand_/accessoriesandservice/vehicle-accessories/",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:05:52.951959+00:00",
+          "sha256": "88538361c2b5699451790f635236ddc090de8f935aa89c9a6d2e63df8e353323"
+        },
+        {
+          "artifact": "porsche_macan_model_page.html",
+          "brand": "Porsche",
+          "source_url": "https://www.porsche.com/pap/_thailand_/models/macan/#modelRangeId=macan",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-24T18:55:11.625114+00:00",
+          "sha256": "7e0630709119b244bb69f100d3e591afd410158bf7be0f9560598793db1fd727"
+        },
+        {
+          "artifact": "porsche_press_story.html",
+          "brand": "Porsche",
+          "source_url": "https://www.porsche.com/stories/design/porsche-paint-to-sample-colours-and-configurator-guide/",
+          "family": "configurator",
+          "currentness": "CURRENT",
+          "currentness_reason": "configurator source (live official page/document)",
+          "captured_at": "2026-09-26T13:47:43.638247+00:00",
+          "sha256": "d1b87f9f5d86fa8a7fbdf356931e2a7b850e61905aa58cd49d00a6f4be852bd9"
+        },
+        {
+          "artifact": "porsche_p108_sitemap.xml",
+          "brand": "Porsche",
+          "source_url": "https://newsroom.porsche.com/sitemap.xml",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:05:40.606285+00:00",
+          "sha256": "99d43cda6e6a273b700a3beca003bbce244b012093b3ec903a3cc19230b2b76a"
+        },
+        {
+          "artifact": "porsche_p108_e-performance.html",
+          "brand": "Porsche",
+          "source_url": "https://www.porsche.com/pap/_thailand_/aboutporsche/e-performance/",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:05:42.348934+00:00",
+          "sha256": "ffe82949c8214dd3ff6e28a313252083331e1c2c65ce3ba9bf684e962b03d8df"
+        },
+        {
+          "artifact": "porsche_p108_sitemap_dup.xml",
+          "brand": "Porsche",
+          "source_url": "https://www.porsche.com/sitemap.xml",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:05:42.818656+00:00",
+          "sha256": "20a7897edff3bdb04fd2aec11b3fc972fb4036265936f9df6030c0e4d34c6e39"
+        }
+      ]
+    },
+    {
+      "brand": "Smart",
+      "sources": [
+        {
+          "artifact": "smart_home_page.html",
+          "brand": "Smart",
+          "source_url": "https://www.smartsecurity.in.th/",
+          "family": "third_party",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "host is not an official first-party domain for this OEM (dealer-redirect / third-party mirror)",
+          "captured_at": "2026-09-24T13:48:55.080714+00:00",
+          "sha256": "503b08966576be442cf3b0c0facb8030c4400498cec4bbbe7cf3acb10f4d3412"
+        }
+      ]
+    },
+    {
+      "brand": "Subaru",
+      "sources": [
+        {
+          "artifact": "subaru_p107_brz_th.pdf.b64",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/brochures/brz_th.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:28.836303+00:00",
+          "sha256": "9eec2c79a72d691c9d8f05a8e031171560ec87bdf0175e01e2f377f43d919e2d"
+        },
+        {
+          "artifact": "subaru_p107_brz_th_dup.pdf.b64",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/brochures/brz_th.pdf?v=nv62r",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:34.779227+00:00",
+          "sha256": "9eec2c79a72d691c9d8f05a8e031171560ec87bdf0175e01e2f377f43d919e2d"
+        },
+        {
+          "artifact": "subaru_p107_crosstrek_th.pdf.b64",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/brochures/crosstrek_th.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:37.752197+00:00",
+          "sha256": "6c8ce42c1263695477b5cc4e794b92e834c917c79cb9e664d621a818f89d01d7"
+        },
+        {
+          "artifact": "subaru_p107_crosstrek_th_dup.pdf.b64",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/brochures/crosstrek_th.pdf?v=ei4xb",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:40.516433+00:00",
+          "sha256": "6c8ce42c1263695477b5cc4e794b92e834c917c79cb9e664d621a818f89d01d7"
+        },
+        {
+          "artifact": "subaru_p107_forester2025_th.pdf.b64",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/brochures/forester2025_th.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:43.282127+00:00",
+          "sha256": "12eb599c3d3983b93d5e8bbd06bfe2caa02cd2b3d3e99217b127ba78517ba477"
+        },
+        {
+          "artifact": "subaru_p107_forester2025_th_dup.pdf.b64",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/brochures/forester2025_th.pdf?v=d3p",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:45.894726+00:00",
+          "sha256": "12eb599c3d3983b93d5e8bbd06bfe2caa02cd2b3d3e99217b127ba78517ba477"
+        },
+        {
+          "artifact": "subaru_p107_forester_th.pdf.b64",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/brochures/forester_th.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:03:47.902822+00:00",
+          "sha256": "52f1a59010db0e0530ce2127b9c98f39b73182870c9bad007d088a030759d4c3"
+        },
+        {
+          "artifact": "subaru_p108_forestergtwild_th.pdf",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/brochures/forestergtwild_th.pdf?v=4vc4y",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:36.381080+00:00",
+          "sha256": "7363a52f4dd5eda2c19aed952ed41606498938e7a96841566ef385cbba8180e7"
+        },
+        {
+          "artifact": "subaru_p108_wrx_th.pdf",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/brochures/wrx_th.pdf?v=c1s7x",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:38.762924+00:00",
+          "sha256": "2daee5830fa9715542f4e3bdf5343fcd7663abb73a5e9b7ca69f4ae655d02e54"
+        },
+        {
+          "artifact": "subaru_p108_xv_tw.pdf",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/brochures/xv_tw.pdf?id=k64i",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:06:45.981687+00:00",
+          "sha256": "9313b3cefb8df2d275d397824b7c29ff612552808b5039ef867deefa1faaaeef"
+        },
+        {
+          "artifact": "subaru_th_home_page.html",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/th/th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-25T13:22:55.814644+00:00",
+          "sha256": "7626c14f97a7cc97a2bb4102290d5aa5256df0de8f714d4f270bcd235be36141"
+        },
+        {
+          "artifact": "subaru_th_model_brz.html",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/th/th/brz/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T08:29:34.576119+00:00",
+          "sha256": "9c286cf22708117a2b523d94071fbc094b46f3d910e83bb2b4c55fa311e26347"
+        },
+        {
+          "artifact": "subaru_th_model_crosstrek.html",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/th/th/crosstrek/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T08:29:32.842049+00:00",
+          "sha256": "1ee82168642271c3604248d7b922b485f753ec96e709accc99fb1693eec20c64"
+        },
+        {
+          "artifact": "subaru_th_model_forester.html",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/th/th/forester/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T08:29:31.118145+00:00",
+          "sha256": "6159d226e25f7b3eb2cfe8acdeab2282efe331e0c4da6faa35c4aea48abf4329"
+        },
+        {
+          "artifact": "subaru_th_lineup_forester.html",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/th/th/forester/lineup.php",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T15:07:11.357434+00:00",
+          "sha256": "248e59e0fe1ab84c3efbba41527b550242f9f225a0bf3d0830a15fb11f4b9087"
+        },
+        {
+          "artifact": "subaru_p108_html5.html",
+          "brand": "Subaru",
+          "source_url": "https://drive.subaru.asia/issue1801/html5/",
+          "family": "official_page",
+          "currentness": "HISTORICAL",
+          "currentness_reason": "stale/discontinued marker in page text",
+          "captured_at": "2026-09-27T19:06:30.400300+00:00",
+          "sha256": "2b6c7edd391e27d0d9c44f32676f974444dda7d70f12bbc0452dfd26d6b8bcfc"
+        },
+        {
+          "artifact": "subaru_press_news.html",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/th/th/about-us/news.php",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-26T13:48:05.019766+00:00",
+          "sha256": "f4f77556ee843fdc73281c98306854481f6e11c0b73b860f478e9f51edb919ec"
+        },
+        {
+          "artifact": "subaru_brochure_page.html",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/th/th/contact-us/brochure.php",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-26T13:47:48.832570+00:00",
+          "sha256": "7d137d6a49ee3c3b75f6e9d9ce9dc37ab7ebfcd234d2a0fe82bfa0df5ec2ffb6"
+        },
+        {
+          "artifact": "subaru_promo_forester.html",
+          "brand": "Subaru",
+          "source_url": "https://www.subaru.asia/th/th/promotions/",
+          "family": "promotion",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "promotional/campaign page — promotional residue, not catalog currentness",
+          "captured_at": "2026-09-26T13:48:14.260615+00:00",
+          "sha256": "c2cfa60bd49a27bd7e0cb74a517a8989e6fcdfa35f1f0e5f0af60e0b59037647"
+        }
+      ]
+    },
+    {
+      "brand": "Suzuki",
+      "sources": [
+        {
+          "artifact": "suzuki_home_page.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T13:48:31.621323+00:00",
+          "sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19"
+        },
+        {
+          "artifact": "suzuki_p108_CARRY.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/en/model/CARRY",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:19.383584+00:00",
+          "sha256": "187e7714cf544724d9f1b505838b529a9856734b0fb468a69f6963d72136e0f8"
+        },
+        {
+          "artifact": "suzuki_p108_equipment.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/en/model/carry/equipment",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:17.854831+00:00",
+          "sha256": "ce7d02e385e3d431eb37ec77deabd40e5af9bb9f5d55a05ad4fcc0d6493346b7"
+        },
+        {
+          "artifact": "suzuki_p107_equipment.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/en/model/fronx/equipment",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:54.683161+00:00",
+          "sha256": "26078dde6f5df2211ee114518beb558e70d15b283d6714ef6bb7c75bd70c880f"
+        },
+        {
+          "artifact": "suzuki_p107_equipment_dup.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/en/model/xl7/equipment",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:56.142302+00:00",
+          "sha256": "2810a9fd388797de25a91fc312fc77d0f7c2892aab47d08f0bbfe39830fb1b03"
+        },
+        {
+          "artifact": "suzuki_model_fronx.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/model/fronx",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:46:13.295317+00:00",
+          "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de"
+        },
+        {
+          "artifact": "suzuki_fronx_equipment.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:48:21.789804+00:00",
+          "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305"
+        },
+        {
+          "artifact": "suzuki_model_jimny.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/model/jimny",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:46:26.002155+00:00",
+          "sha256": "09f1319028977a1c13b4f3b8795d76a36ba81b70f8e90435d56c36fba16a00f9"
+        },
+        {
+          "artifact": "suzuki_jimny_equipment.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/model/jimny/equipment",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:48:26.476137+00:00",
+          "sha256": "a452cae65124f01c9c5a320149f989960afb9d1294e310966af8ac7c8271a1d1"
+        },
+        {
+          "artifact": "suzuki_model_xl7.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/model/xl7",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T07:46:20.417065+00:00",
+          "sha256": "29c2c89334c904b7c2b71ee1f3cd8d8c463323486f07f04d6ad5dfd13a9c95ae"
+        },
+        {
+          "artifact": "suzuki_xl7_equipment.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/model/xl7/equipment",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-26T13:48:37.393584+00:00",
+          "sha256": "85af513324ad48ebf82f51eff1703b220f686902e15c61eaec39b2a46ba3dd9b"
+        },
+        {
+          "artifact": "suzuki_p108_SMT-Green-Procurement-Guideline-E.pdf",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/upload/content/SMT-Green-Procurement-Guideline-E.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:16.996130+00:00",
+          "sha256": "e36a6a1b1e8d01168ba5408deb9dc601101d2ff5918adc4690a62c0fcbc4fc99"
+        },
+        {
+          "artifact": "suzuki_p108_SMT-Green-Procurement-Guideline-T.pdf",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/upload/content/SMT-Green-Procurement-Guideline-T.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:20.933486+00:00",
+          "sha256": "8156c2731d84aa687ec5b9f1e95ad0cb835671ac1b1a43adf61fc0c53522c43b"
+        },
+        {
+          "artifact": "suzuki_p108_SUZUKI-CSR-Guidelines-for-Suppliers.pdf",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/upload/content/SUZUKI-CSR-Guidelines-for-Suppliers.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T19:07:21.545128+00:00",
+          "sha256": "ad9157d0c7c8fafc46fcca7785f222a8eb6c3d698fa12ff6531a45d281e81f9c"
+        },
+        {
+          "artifact": "suzuki_fronx_brochure.pdf",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/upload/file/Brochure/ALL_NEW_SUZUKI_FRONX_BROCHURE.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:49:36.842309+00:00",
+          "sha256": "2df5786395493aa391df5f554ec5d24a76e7924f49c648ed8efad82dfc91eb36"
+        },
+        {
+          "artifact": "suzuki_p107_Fronx_Accessories.pdf.b64",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/upload/file/Brochure/Fronx_Accessories.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:32.547733+00:00",
+          "sha256": "bb4132fd940b5e07ec9f60a01cc1d26c6e66f25536c92b8b50f06f425e00caec"
+        },
+        {
+          "artifact": "suzuki_p107_Jimny_Accessories.pdf.b64",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/upload/file/Brochure/Jimny_Accessories.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:50.015923+00:00",
+          "sha256": "a9e303246c2b23b182d4a3fa3db638b087ef9e8679967d52b60b747951c56131"
+        },
+        {
+          "artifact": "suzuki_jimny_brochure.pdf",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/upload/file/Brochure/SUZUKI_JIMNY_BROCHURE.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T13:49:49.804497+00:00",
+          "sha256": "70af18b3651fc0d56baa7ac54b955a8e26d81e151d81f146e814ffe0164eddbc"
+        },
+        {
+          "artifact": "suzuki_p107_Suzuki_XL7_Hybrid_Accessories.pdf.b64",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/upload/file/Brochure/Suzuki_XL7_Hybrid_Accessories.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-27T16:06:53.803849+00:00",
+          "sha256": "6137eab81b035b97eda7312e960709d043c125cbb6bd252b0375a10e736d2a77"
+        },
+        {
+          "artifact": "Suzuki_Collection_E-Catalog_2024.pdf.b64",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/upload/file/Catalog/Suzuki_Collection_E-Catalog_2024.pdf",
+          "family": "brochure_spec",
+          "currentness": "CURRENT",
+          "currentness_reason": "brochure_spec source (live official page/document)",
+          "captured_at": "2026-09-26T07:46:29.154684+00:00",
+          "sha256": "cc7d52408d2aacdd3fe3cda079a01fa34df47e9e9920947c9d19a68f712ca26f"
+        },
+        {
+          "artifact": "suzuki_p108_about-us.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/about-us",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:07:20.064637+00:00",
+          "sha256": "3e35ee0063dd27c7724eb03ab54a8dc353f4acdd4378ef13fe84492c2358a3bb"
+        },
+        {
+          "artifact": "suzuki_p108_news-75.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/en/news/articles/news-75",
+          "family": "press",
+          "currentness": "HISTORICAL",
+          "currentness_reason": "press publication year 2021",
+          "captured_at": "2026-09-27T19:07:18.600637+00:00",
+          "sha256": "0b40ee9c6f19a98a4f990dfe612f1b0ff790194d858531e9e3fc833b6ec0e125"
+        },
+        {
+          "artifact": "suzuki_models_page.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/error",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-24T11:36:12.002225+00:00",
+          "sha256": "c22e9bcffbecbf52572ad7f4d2cce81e83a37ea4d4680c01e545a2aa0cdec890"
+        },
+        {
+          "artifact": "suzuki_press_news.html",
+          "brand": "Suzuki",
+          "source_url": "https://www.suzuki.co.th/news",
+          "family": "press",
+          "currentness": "UNDETERMINED",
+          "currentness_reason": "press item without a parseable publication date",
+          "captured_at": "2026-09-26T13:48:31.812058+00:00",
+          "sha256": "c091cb3879304abd1af5302575e4302b9b8a3e3e046c21d7831e52352c9b01c7"
+        }
+      ]
+    },
+    {
+      "brand": "Toyota",
+      "sources": [
+        {
+          "artifact": "toyota_p108_index.html",
+          "brand": "Toyota",
+          "source_url": "https://bi.toyota.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:03:32.958172+00:00",
+          "sha256": "3440523d20a90d6e97a8f37a5136397b44336b5e305a948d1377f058c57a2840"
+        },
+        {
+          "artifact": "toyota_p108_stores.toyota.co.th.html",
+          "brand": "Toyota",
+          "source_url": "https://stores.toyota.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:08:43.494071+00:00",
+          "sha256": "d33bc204b3673fabd3a6b5c3f061860365827947a85f05f18f771d5b857584e6"
+        },
+        {
+          "artifact": "toyota_p108_index_dup.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:03:35.187896+00:00",
+          "sha256": "8204a934508af85f2b7df06bc464bc7f6680ea6f0a0f6613bca3dd6e3e9ca7ef"
+        },
+        {
+          "artifact": "toyota_p108_.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/%E2%80%A6",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:03:35.680312+00:00",
+          "sha256": "3209e600060447ba76d667dc3d8871061b7198d0bfa0aad9882f9bb36b515397"
+        },
+        {
+          "artifact": "toyota_p108_cover.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/cover",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:03:36.136141+00:00",
+          "sha256": "02e82ca88ae8fb303f5aa48db9f9df9ae5d55c968adc27f8a3fe64ff7ff34560"
+        },
+        {
+          "artifact": "toyota_p107_model-list.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/model-list",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T16:00:51.892883+00:00",
+          "sha256": "58c5b641c344373637dc7ca3d42bac8284d79dd843b2b6837c6e4f06d12d1893"
+        },
+        {
+          "artifact": "toyota_p107_alphard.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/model/alphard",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:00:52.686298+00:00",
+          "sha256": "9e5784401f294a96422067bae050d4289c0b1b968977875b79a61004f5cca952"
+        },
+        {
+          "artifact": "toyota_p107_altis.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/model/altis",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:00:53.418722+00:00",
+          "sha256": "c4e2fd3e65ff84434c94d334a399a8bf1eb46e4344233ef100957a4b41278ed1"
+        },
+        {
+          "artifact": "toyota_p108_camry.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/model/camry",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T19:03:29.895038+00:00",
+          "sha256": "98a75b32e098ecba6fd33da5f7db8b1b48d74853b96006007d7c3e5c817ce04b"
+        },
+        {
+          "artifact": "toyota_p107_compare.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/model/compare",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:00:50.752409+00:00",
+          "sha256": "3220ab367360ad9b8429b124c441924d5046604882126605df43e9deeebac58e"
+        },
+        {
+          "artifact": "toyota_p108_models.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/models",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-27T19:03:31.378117+00:00",
+          "sha256": "bf90e6fd29d373fde5ddd3204c70156020c90d52fe0bf91b2c11dcb427145d35"
+        },
+        {
+          "artifact": "toyota_p108_price-list.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/price-list",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T19:03:29.073119+00:00",
+          "sha256": "879abe3ab37ee9162904c7a0449c1b89ee25d8510fdd1608f22e4ef49f866391"
+        },
+        {
+          "artifact": "toyota_pricelist_page.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/pricelist",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-24T18:57:17.345495+00:00",
+          "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041"
+        },
+        {
+          "artifact": "toyota_model_page.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/model-list",
+          "family": "official_page",
+          "currentness": "CURRENT",
+          "currentness_reason": "live official site page with no stale/discontinued marker",
+          "captured_at": "2026-09-24T11:39:08.901604+00:00",
+          "sha256": "258b3015796ffcd43208090bac768c3093171bdc0e501bbf96f6a484e4e9468c"
+        },
+        {
+          "artifact": "toyota_p107_compare_dup.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/model/compare",
+          "family": "model_lineup",
+          "currentness": "CURRENT",
+          "currentness_reason": "model_lineup source (live official page/document)",
+          "captured_at": "2026-09-27T16:00:51.427904+00:00",
+          "sha256": "66065dc1d7c86377722d6e5ef08fa0c6fa7d339754c12c878e1b8c6932a28b23"
+        },
+        {
+          "artifact": "toyota_p107_pricelist.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/pricelist",
+          "family": "price_document",
+          "currentness": "CURRENT",
+          "currentness_reason": "price_document source (live official page/document)",
+          "captured_at": "2026-09-27T16:00:50.071080+00:00",
+          "sha256": "6f2f7b989db009ab3fd39166c63009e03aa4059430517bbbc10673f12357bf8d"
+        },
+        {
+          "artifact": "toyota_p108_appointment.html",
+          "brand": "Toyota",
+          "source_url": "https://aftersales.toyota.co.th/appointment",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:03:30.916431+00:00",
+          "sha256": "eecf5364b88bd8e5005ea78e5d377225a45bbedc08e649b830823f4a457cf422"
+        },
+        {
+          "artifact": "toyota_p108_dealer.html",
+          "brand": "Toyota",
+          "source_url": "https://aftersales.toyota.co.th/dealer",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:03:32.147310+00:00",
+          "sha256": "75bc6d509b563f7ff08535f27e44f3e4cec15277697906873c79b09ae758d104"
+        },
+        {
+          "artifact": "toyota_p108_dealers.html",
+          "brand": "Toyota",
+          "source_url": "https://stores.toyota.co.th/dealers",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:03:34.709667+00:00",
+          "sha256": "366cf227b6245b273aa79e2123ef811330fe5058f3265050a88186e5d16260ac"
+        },
+        {
+          "artifact": "toyota_p108_dealer_dup.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/en/dealer",
+          "family": "utility",
+          "currentness": "NOT_A_CURRENTNESS_SOURCE",
+          "currentness_reason": "utility page",
+          "captured_at": "2026-09-27T19:03:36.596261+00:00",
+          "sha256": "47305a3a2b781c43b0a5a93a07376af1328e03c2171415e76cb2456dc8295775"
+        },
+        {
+          "artifact": "toyota_press_news.html",
+          "brand": "Toyota",
+          "source_url": "https://www.toyota.co.th/news",
+          "family": "press",
+          "currentness": "HISTORICAL",
+          "currentness_reason": "press publication year 2024",
+          "captured_at": "2026-09-26T13:48:42.300907+00:00",
+          "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "artifacts": 339,
+    "current": 284,
+    "historical": 7,
+    "undetermined": 10,
+    "not_a_currentness_source": 38
+  }
+}

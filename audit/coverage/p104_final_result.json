@@ -1,0 +1,280 @@
+{
+  "schema": "p104-final-result/1",
+  "generated_at": "2026-09-27T10:51:59.638348+00:00",
+  "acceptance_boundary": "Phase-1 identity/catalog artifact only. It is NOT staging, NOT the accepted set and NOT the production DB: identity-only candidates have no price/locator and therefore cannot satisfy §95 mandatory fields, so they are never promoted.",
+  "before_after": {
+    "first_party_confirmed_models": [
+      194,
+      233
+    ],
+    "first_party_confirmed_variants": [
+      401,
+      404
+    ],
+    "oems_with_first_party_confirmation": [
+      19,
+      19
+    ]
+  },
+  "first_party_confirmed_models": 233,
+  "first_party_confirmed_variants": 404,
+  "oems_with_first_party_confirmation": 19,
+  "identity_only": {
+    "records": 783,
+    "models": 326,
+    "variants": 457
+  },
+  "conflicts": {
+    "records": 26
+  },
+  "rejected": {
+    "records": 1927
+  },
+  "harvested_identities": 261,
+  "outcomes": {
+    "existing": 258,
+    "new": 3
+  },
+  "per_oem_deltas": {
+    "BMW": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -3,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "bmw_all_models_verified.html",
+        "bmw_price_list.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Changan": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 2,
+      "identity_only_models": 0,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "changan_home_page.html",
+        "changan_lumin_page.html",
+        "changan_nevo_q05_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Deepal": {
+      "first_party_confirmed_models": 1,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -1,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "deepal_e07_plus.html",
+        "deepal_s05.html",
+        "deepal_s07.html"
+      ],
+      "p104_unresolved": []
+    },
+    "GWM": {
+      "first_party_confirmed_models": 2,
+      "first_party_confirmed_variants": 1,
+      "identity_only_models": -2,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "gwm_data_models_page.html",
+        "gwm_home_page.html",
+        "gwm_th_model_haval-h6.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Honda": {
+      "first_party_confirmed_models": 2,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -4,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "honda_models_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Jaguar": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": 0,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "jaguar_home_page.html",
+        "jaguar_range_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Kia": {
+      "first_party_confirmed_models": 6,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -6,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "kia_cars_page.html",
+        "kia_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Land Rover": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": 0,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "landrover_discovery_page.html",
+        "landrover_home_page.html",
+        "landrover_range_rover_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Lexus": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": 0,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "lexus_models_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "MG": {
+      "first_party_confirmed_models": 9,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -10,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "mg_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "MINI": {
+      "first_party_confirmed_models": 2,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -4,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "mini_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Mazda": {
+      "first_party_confirmed_models": 8,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -8,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "mazda_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Mitsubishi": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": 0,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "mitsubishi_all_models_price.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Nissan": {
+      "first_party_confirmed_models": 6,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -6,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "nissan_all_grade_price.html",
+        "nissan_all_models.html",
+        "nissan_new_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Porsche": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -1,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "porsche_home_page.html",
+        "porsche_macan_model_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Subaru": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": 0,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "subaru_brochure_page.html",
+        "subaru_th_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Suzuki": {
+      "first_party_confirmed_models": 2,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -2,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "suzuki_home_page.html",
+        "suzuki_models_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Toyota": {
+      "first_party_confirmed_models": 1,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -10,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "toyota_pricelist_page.html"
+      ],
+      "p104_unresolved": []
+    }
+  },
+  "artifacts_written": [
+    "p104_target_plan.json",
+    "p104_official_identities.json",
+    "catalog_reconciliation_p104.json",
+    "identity_universe_p104.json",
+    "identity_matrix_p104.json",
+    "identity_matrix_p104.md",
+    "p104_final_result.json"
+  ],
+  "gates": {
+    "staging_written": false,
+    "prisma_touched": false,
+    "price_pass": false,
+    "p102_p103_logic_changed": false
+  },
+  "blocker_changes": {
+    "new_blockers": [],
+    "cleared_blockers": [],
+    "retried_blocked_hosts": [
+      "Smart"
+    ],
+    "smart_retry_check": {
+      "artifact": "p104-smart-retry-check/1",
+      "checked_at": "2026-09-27T10:51:22.609123+00:00",
+      "url": "https://www.smart.co.th",
+      "method": "requests.get (default TLS verification, no header spoofing beyond UA)",
+      "status": "HTTP_OK",
+      "final_url": "https://www.smartsecurity.in.th/",
+      "final_host": "www.smartsecurity.in.th",
+      "redirect_chain": [
+        {
+          "url": "https://www.smart.co.th/",
+          "status": 301
+        },
+        {
+          "url": "https://www.smartsecurity.in.th/",
+          "status": 200
+        }
+      ],
+      "body_sha256": "5351874dcd9c05eb8e9bb05d737e92dacd096a3d256448aab4a6e599e56065df",
+      "unrelated_domain": true
+    },
+    "smart_status": "DEALER_REDIRECT"
+  }
+}

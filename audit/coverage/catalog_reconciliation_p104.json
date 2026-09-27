@@ -1,0 +1,84 @@
+{
+  "artifact": "p104-catalog-reconciliation/1",
+  "generated_at": "2026-09-27T10:51:59.638348+00:00",
+  "before": {
+    "records": 1389,
+    "confirmed_models": 194,
+    "confirmed_variants": 401,
+    "oems_with_confirmation": 19
+  },
+  "after": {
+    "records": 1426,
+    "confirmed_models": 233,
+    "confirmed_variants": 404,
+    "oems_with_confirmation": 19
+  },
+  "deltas": {
+    "records": 37,
+    "confirmed_models": 39,
+    "confirmed_variants": 3,
+    "oems_with_confirmation": 0
+  },
+  "harvested": 261,
+  "outcomes": {
+    "existing": 258,
+    "new": 3
+  },
+  "by_method": {
+    "official_grade_table": 13,
+    "official_lineup_word_boundary": 245,
+    "official_sentence_grade": 3
+  },
+  "new_first_party_identities": [
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "Max",
+      "identity_level": "VARIANT",
+      "artifact": "changan_nevo_q05_page.html"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "Ultra",
+      "identity_level": "VARIANT",
+      "artifact": "changan_nevo_q05_page.html"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Haval H6",
+      "variant": "ULTRA",
+      "identity_level": "VARIANT",
+      "artifact": "gwm_th_model_haval-h6.html"
+    }
+  ],
+  "ambiguous": [],
+  "skipped_artifacts_without_provenance": [
+    {
+      "artifact": "toyota_page.html",
+      "reason": "no .prov.json source_url — not used as evidence"
+    },
+    {
+      "artifact": "bmw_models_page.html",
+      "reason": "no .prov.json source_url — not used as evidence"
+    },
+    {
+      "artifact": "honda_page.html",
+      "reason": "no .prov.json source_url — not used as evidence"
+    },
+    {
+      "artifact": "honda_city_page.html",
+      "reason": "no .prov.json source_url — not used as evidence"
+    },
+    {
+      "artifact": "mazda_page.html",
+      "reason": "no .prov.json source_url — not used as evidence"
+    },
+    {
+      "artifact": "isuzu_page.html",
+      "reason": "no .prov.json source_url — not used as evidence"
+    }
+  ],
+  "staging_written": false,
+  "price_pass": false
+}

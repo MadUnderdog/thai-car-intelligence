@@ -170,9 +170,14 @@ identity-only`), i.e. nothing was promoted from another status.
 ## 7. Gates (run once, after the batch)
 
 - combined: **P107 18 + P106 20 + P105 50 + P104 267 + P103 51 + P102 40 = 446 passed**
-- full pytest: `audit/daily-runs/20260927-p107-pytest.log` — the single separate
-  pre-existing `_OPENROUTER_ALLOWED_MODEL` collection error
-  (`tests/test_generation_config_boundary.py`, untouched since `eef8c49`)
+- full pytest **844 passed, 1 error in 638.37s** →
+  `audit/daily-runs/20260927-p107-pytest.log` — the single error is the separate
+  pre-existing `_OPENROUTER_ALLOWED_MODEL` collection failure
+  (`tests/test_generation_config_boundary.py`, untouched since `eef8c49`),
+  collected with `--continue-on-collection-errors` (a first full run after the
+  batch also flagged the two `test_spec_coverage_plan.py` cases while the plan
+  was being regenerated from the 94 new artifacts; the regenerated plan is
+  committed and the re-run is the 844-passed one above)
 - vitest **488 passed / 2 skipped** · `tsc --noEmit` **rc 0** ·
   `prisma validate` **valid** · credential scan **0 hits / 9 files**
 - `staging_written: false` · `price_pass: false` · `prisma_touched: false` ·

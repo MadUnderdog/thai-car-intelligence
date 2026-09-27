@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.9carthai.com/chevrolet-price/",
+  "captured_at": "2026-09-26T15:52:24.607857+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "0d64130c92b9a93fbd6745a1b6fa6f803dd25720c7f54bf4e90c7cd0e99a78df",
+  "session_id": "p102-identity-20260926",
+  "artifact_filename": "9carthai_chevrolet-price.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

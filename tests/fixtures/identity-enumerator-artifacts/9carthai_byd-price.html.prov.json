@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.9carthai.com/byd-price/",
+  "captured_at": "2026-09-26T15:52:06.964495+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "bc868529daf842eb0613a7746ec1e300a6e98a1fbb82ab9cbc09bac68b2bd49d",
+  "session_id": "p102-identity-20260926",
+  "artifact_filename": "9carthai_byd-price.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

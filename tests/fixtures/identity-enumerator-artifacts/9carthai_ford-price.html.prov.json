@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.9carthai.com/ford-price/",
+  "captured_at": "2026-09-26T15:52:36.262654+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "2f7a0d3f4574fb711ea1af6859ca1f89de6d8dead6abeb0004f1cf98e0cdda80",
+  "session_id": "p102-identity-20260926",
+  "artifact_filename": "9carthai_ford-price.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

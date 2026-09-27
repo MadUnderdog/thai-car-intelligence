@@ -14,8 +14,11 @@ from datetime import date
 
 
 class SourceRole(Enum):
+    # Blueprint §96 source classes — all four, never silently upgraded.
     IDENTITY_ENUMERATOR = "IDENTITY_ENUMERATOR"  # High-recall taxonomy (insurance, used-car)
     MARKET_TRUTH = "MARKET_TRUTH"  # Official OEM/distributor/price-list
+    MARKET_REFERENCE = "MARKET_REFERENCE"  # Reference datasets (FIPE / Thai DLT)
+    MEDIA_DISCOVERY = "MEDIA_DISCOVERY"  # Articles and media indexes — discovery only
 
 
 class CandidateConfidence(Enum):

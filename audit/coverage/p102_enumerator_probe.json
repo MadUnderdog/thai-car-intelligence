@@ -1,0 +1,1331 @@
+{
+  "schema": "p102-identity-enumerator-probe/1",
+  "role_note": "IDENTITY_ENUMERATOR candidates only (Blueprint §96) — enumeration evidence, never market truth.",
+  "generated_at": "2026-09-26T15:12:34.988727+00:00",
+  "candidates": [
+    {
+      "id": "one2car",
+      "url": "https://www.one2car.com/",
+      "checked_at": "2026-09-26T15:11:46.953126+00:00",
+      "status": "BLOCKED_HTTP_403",
+      "http_status": 403,
+      "title": "รอสักครู่...",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [],
+      "candidate_links": [],
+      "body_chars": 258,
+      "error": "",
+      "why": "used-car portal: brand/model/submodel taxonomy"
+    },
+    {
+      "id": "one2car_sell",
+      "url": "https://www.one2car.com/sell",
+      "checked_at": "2026-09-26T15:11:52.197679+00:00",
+      "status": "BLOCKED_HTTP_404",
+      "http_status": 404,
+      "title": "รถยนต์มือสอง - รถยนต์ใหม่ล่าสุด่ - ค้นหาใหม่และใช้รถยนต์สำหรับขาย | One2car.com - ไทยครั้งที่ 1 เว็บไซต์รถยนต์์",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [
+        {
+          "url": "https://www.one2car.com/ajax/fcm-config?register-device=true",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        },
+        {
+          "url": "https://accounts.google.com/gsi/fedcm.json",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://connect.facebook.net/app_config/json/789450037791115/",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://google.com/.well-known/web-identity",
+          "status": 200,
+          "content_type": "application/json"
+        },
+        {
+          "url": "https://accounts.google.com/gsi/fedcm/listaccounts",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://bcp.crwdcntrl.net/6/map?xcid=16589",
+          "status": 200,
+          "content_type": "application/json;charset=utf-8"
+        },
+        {
+          "url": "https://www.one2car.com/ajax/csrf?_=1790435513688",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        },
+        {
+          "url": "https://www.one2car.com/ajax/get-user-id",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        },
+        {
+          "url": "https://mug.criteo.com/sid?cpp=djEA5Xw4bVdxb2RkbmhrUmVwRjhNaU5paUMxbmRmM1hQdWFuVDZnNFJoSS95cXQyMWtMcUd1dXoxSmk4OFFWbS90WnJDczZLYjk5d3dxZVNhZDM4VHJLQnlDTmMvcWZkUmdRM2NtcHBpS00ramtIazRMZituY2hCRitkSjBMcDViMWRXYk1ORUVrVmlNVzJSZmxyT1JEVFU5V2cwWGVuamFTMDNwa0RmUXRaTnc3aDJoa2x2MFM3aHNVQlc3R1dQa201ZGJPUmdWNHBTWExvdUkvUHhzU1RTd3dmVDZuWXg3TDlpZmhMTURlK1B1ZDlpeStUdXRvWDlHczgyaFExR3hhVnhXNktEdkVDelVhU3JMNGxxdjdqSFVQcndmNzlTTFk5VFZwV1laUkZZV0ZNRT18&cppv=2",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        }
+      ],
+      "candidate_links": [
+        {
+          "href": "/รถ-สำหรับ-ขาย?hotdeal=true",
+          "text": "รถยนต์ราคาพิเศษ"
+        },
+        {
+          "href": "https://www.one2car.com",
+          "text": "หน้าแรก"
+        },
+        {
+          "href": "https://www.one2car.com/รถ-สำหรับ-ขาย",
+          "text": "ซื้อรถยนต์"
+        },
+        {
+          "href": "https://www.one2car.com/รถ-สำหรับ-ขาย",
+          "text": "รถสำหรับขาย"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย",
+          "text": "รถยนต์มือสอง"
+        },
+        {
+          "href": "https://www.one2car.com/รถใหม่-สำหรับ-ขาย",
+          "text": "รถใหม่"
+        },
+        {
+          "href": "https://www.one2car.com/รถ-สำหรับ-ขาย?type=certifiedpreowned",
+          "text": "รถมือสองที่ผ่านการรับรอง"
+        },
+        {
+          "href": "https://www.one2car.com/รถ-สำหรับ-ขาย?max_price=300000",
+          "text": "รถราคาประหยัด"
+        },
+        {
+          "href": "https://www.one2car.com/รถ-สำหรับ-ขาย?hotdeal=true",
+          "text": "Hot Deals"
+        },
+        {
+          "href": "https://www.one2car.com/auccertified",
+          "text": "รถมือสองตรวจสภาพแล้ว"
+        },
+        {
+          "href": "https://www.one2car.com/รถ-สำหรับ-ขาย?inspected=true",
+          "text": "one2inspect"
+        },
+        {
+          "href": "https://www.one2car.com/tools",
+          "text": "เครื่องมือ"
+        },
+        {
+          "href": "https://www.one2car.com/tools",
+          "text": "คำนวณยอดสินเชื่อ"
+        },
+        {
+          "href": "https://info.one2car.com/inspection/",
+          "text": "จองคิวตรวจรถ"
+        },
+        {
+          "href": "https://www.one2car.com/faq",
+          "text": "ขอความช่วยเหลือ"
+        },
+        {
+          "href": "https://dealer.one2car.com/",
+          "text": "ขาย"
+        },
+        {
+          "href": "https://www.one2car.com/faq#selling",
+          "text": "วิธีขายรถของคุณ"
+        },
+        {
+          "href": "https://newcar.one2car.com",
+          "text": "รถใหม่"
+        },
+        {
+          "href": "https://newcar.one2car.com",
+          "text": "โปรโมชั่น รถใหม่ใหม่"
+        },
+        {
+          "href": "https://newcar.one2car.com/price-list",
+          "text": "ตรวจสอบราคารถใหม่"
+        },
+        {
+          "href": "https://www.one2car.com/ข่าว",
+          "text": "บทความ"
+        },
+        {
+          "href": "https://www.one2car.com/ข่าว",
+          "text": "เรื่องเด่นวงการรถยนต์"
+        },
+        {
+          "href": "/ข่าว/ข่าววงการรถยนต์",
+          "text": "ข่าวรถยนต์"
+        },
+        {
+          "href": "/ข่าว/ลองขับ",
+          "text": "รีวิวรถยนต์"
+        },
+        {
+          "href": "https://www.one2car.com/ข่าว/แกลเลอรี",
+          "text": "รวมรูปรถยนต์"
+        },
+        {
+          "href": "https://www.one2car.com/ข่าว/วีดีโอ",
+          "text": "วีดีโอรถยนต์"
+        },
+        {
+          "href": "/ข่าว/รถยนต์ไฟฟ้า",
+          "text": "รถยนต์ไฟฟ้า"
+        },
+        {
+          "href": "https://www.one2car.com/รถยนต์ไฟฟ้า",
+          "text": "รถยนต์ไฟฟ้า"
+        },
+        {
+          "href": "//partners.igloo.co.th?utm_source=one2car&utm_medium=landingpage&utm_campaign=one2car?lang=th",
+          "text": "ประกันรถยนต์"
+        },
+        {
+          "href": "https://accounts.icarsuite.com/signin?lang=th&project=one2car",
+          "text": "เข้าสู่ระบบสมาชิกเต้นท์"
+        },
+        {
+          "href": "https://accounts.icarsuite.com/register?project=one2car&lang=th",
+          "text": "สมัครสมาชิกเต็นท์เพื่อลงประกาศขายรถ"
+        },
+        {
+          "href": "https://www.one2car.com/sell",
+          "text": "TH\n                                    \n                                    ภาษา"
+        },
+        {
+          "href": "https://www.one2car.com/en/sell",
+          "text": "EN\n                                    \n                                    Engl"
+        },
+        {
+          "href": "https://accounts.icarsuite.com/register?project=one2car&lang=th",
+          "text": "สมัครสมาชิกเต็นท์เพื่อลงประกาศขายรถ            สำหรับธุรกิจและตัวแทนจำหน่าย"
+        },
+        {
+          "href": "#collapse--menu-ซื้อรถยนต์",
+          "text": "ซื้อรถยนต์"
+        },
+        {
+          "href": "https://www.one2car.com/sell",
+          "text": "ภาษาไทย"
+        },
+        {
+          "href": "https://www.one2car.com/en/sell",
+          "text": "English"
+        },
+        {
+          "href": "https://www.one2car.com/",
+          "text": "หน้าแรก"
+        },
+        {
+          "href": "https://www.one2car.com/รถ-สำหรับ-ขาย",
+          "text": "ดูรถแนะนำทั้งหมด"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/volkswagen-caravelle-tdi-comfortline-กรุงเทพและปริมณฑล-ศรีนครินทร์-เทพารักษ์/19446179",
+          "text": "2018 Volkswagen CARAVELLE 2.0 TDi Comfortline Van"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/toyota-corolla-cross-hybrid-premium-safety-กรุงเทพและปริมณฑล-อำเภอเมืองสมุทรสาคร/19393604?auc=true",
+          "text": "รถราคาพิเศษ"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/toyota-corolla-cross-hybrid-premium-safety-กรุงเทพและปริมณฑล-อำเภอเมืองสมุทรสาคร/19393604?auc=true",
+          "text": "2022 Toyota Corolla Cross 1.8 Hybrid Premium Safety SUV"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/bmw-525d-luxury-กรุงเทพและปริมณฑล-อ่อนนุช/19432077?auc=true",
+          "text": "รถราคาพิเศษ"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/bmw-525d-luxury-กรุงเทพและปริมณฑล-อ่อนนุช/19432077?auc=true",
+          "text": "2015 BMW 525d 2.0 Luxury Sedan"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/honda-civic-e-hev-el-plus-กรุงเทพและปริมณฑล-ท่าพระ-วงเวียนใหญ่-พระราม2/19405204?auc=true",
+          "text": "รถราคาพิเศษ"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/honda-civic-e-hev-el-plus-กรุงเทพและปริมณฑล-ท่าพระ-วงเวียนใหญ่-พระราม2/19405204?auc=true",
+          "text": "2023 Honda CIVIC 2.0 e:HEV EL+ Sedan"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/bmw-i8-กรุงเทพและปริมณฑล-เลียบด่วนรามอินทรา-เกษตรนวมินทร์/19438892?auc=true",
+          "text": "รถราคาพิเศษ"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/bmw-i8-กรุงเทพและปริมณฑล-เลียบด่วนรามอินทรา-เกษตรนวมินทร์/19438892?auc=true",
+          "text": "2016 BMW I8 1.5 Coupe"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/mercedes-benz-gla250-amg-dynamic-กรุงเทพและปริมณฑล-อ่อนนุช/19432065?auc=true",
+          "text": "รถราคาพิเศษ"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/mercedes-benz-gla250-amg-dynamic-กรุงเทพและปริมณฑล-อ่อนนุช/19432065?auc=true",
+          "text": "2017 Mercedes-Benz GLA250 2.0 AMG Dynamic SUV"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/porsche-cayenne-e-hybrid-coupe-กรุงเทพและปริมณฑล-บางใหญ่-บางบัวทอง/19176676",
+          "text": "รถราคาพิเศษ"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/porsche-cayenne-e-hybrid-coupe-กรุงเทพและปริมณฑล-บางใหญ่-บางบัวทอง/19176676",
+          "text": "2021 Porsche CAYENNE 3.0 E-Hybrid Coupe SUV"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/mazda-2-high-plus-กรุงเทพและปริมณฑล-ศรีนครินทร์-เทพารักษ์/19212874",
+          "text": "รถราคาพิเศษ"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/mazda-2-high-plus-กรุงเทพและปริมณฑล-ศรีนครินทร์-เทพารักษ์/19212874",
+          "text": "2018 Mazda 2 1.3 High Plus Sedan"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/honda-city-rs-กรุงเทพและปริมณฑล-รามอินทรา-สุขาภิบาล5/19227555?auc=true",
+          "text": "รถราคาพิเศษ"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/honda-city-rs-กรุงเทพและปริมณฑล-รามอินทรา-สุขาภิบาล5/19227555?auc=true",
+          "text": "2022 Honda City 1.0 RS Hatchback"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/toyota-fortuner-leader-v-กรุงเทพและปริมณฑล-รามอินทรา-สุขาภิบาล5/19300668?auc=true",
+          "text": "รถราคาพิเศษ"
+        },
+        {
+          "href": "https://www.one2car.com/for-sale/toyota-fortuner-leader-v-กรุงเทพและปริมณฑล-รามอินทรา-สุขาภิบาล5/19300668?auc=true",
+          "text": "2023 Toyota FORTUNER 2.4 Leader V SUV"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/toyota",
+          "text": "Toyota"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/honda",
+          "text": "Honda"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/mercedes-benz",
+          "text": "Mercedes-Benz"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/isuzu",
+          "text": "Isuzu"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/bmw",
+          "text": "BMW"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/mitsubishi",
+          "text": "Mitsubishi"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/mazda",
+          "text": "Mazda"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/nissan",
+          "text": "Nissan"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/ford",
+          "text": "Ford"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/mg",
+          "text": "MG"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/suzuki",
+          "text": "Suzuki"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/hyundai",
+          "text": "Hyundai"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/porsche",
+          "text": "Porsche"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/volvo",
+          "text": "Volvo"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/mini",
+          "text": "Mini"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/audi",
+          "text": "Audi"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/subaru",
+          "text": "Subaru"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/chevrolet",
+          "text": "Chevrolet"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/volkswagen",
+          "text": "Volkswagen"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/kia",
+          "text": "Kia"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/byd",
+          "text": "BYD"
+        },
+        {
+          "href": "https://www.one2car.com/รถมือสอง-สำหรับ-ขาย/lexus",
+          "text": "Lexus"
+        }
+      ],
+      "body_chars": 3972,
+      "error": "",
+      "why": "used-car sell filter taxonomy"
+    },
+    {
+      "id": "viriyah",
+      "url": "https://www.viriyah.co.th/",
+      "checked_at": "2026-09-26T15:11:58.686916+00:00",
+      "status": "OK",
+      "http_status": 200,
+      "title": "วิริยะประกันภัย | The Viriyah Insurance Public Company limited",
+      "selects": [
+        {
+          "name": "",
+          "options": [
+            "TH",
+            "EN"
+          ]
+        },
+        {
+          "name": "",
+          "options": [
+            "TH",
+            "EN"
+          ]
+        }
+      ],
+      "select_option_total": 4,
+      "xhr_json": [
+        {
+          "url": "https://mug.criteo.com/sid?cpp=2YmvKnxNb3ROeWQzUDVsRTBhMG03NUM5bURFekk5N1YyUEVDWkh2ZmZybnYxSFFkalhiMmFSTWZpTUREbUUxam9qdUl5emx1T0F0RnpBNjExR1Yyd3JwMDkxWFQyU0Y3bTVZUFhZN25jMVJxWUxYZVZqZVA2Z2t1Zlo4TWoxTkVCblhWaWJjS3Y5d0JvMS9uNHExdCs4RVVUWEhPWjRROU5XRzZsL2tpMXFyQmdEZUxXcHhoMHY1UHNmV29VeFNnOUN4cjBLTTdLMTFTU0w4eldyV1IxbWY0YmRRNlVaamY4bkVQa2V1WkFOeTgreHUyM1RGdjNOd0s4aVNyaWdycjI0NGF4ZUIzc1poZVMxWHFaMHZBU0VLQUdrY3ppMDYzM1VJNHlKUFBJdnluM21ZUVI5akJEeGRNN0krYnRkSEZZc3d5Ynw&cppv=2",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://asia.creativecdn.com/tags/v2?type=json&tc=1",
+          "status": 200,
+          "content_type": "application/json;charset=utf-8"
+        }
+      ],
+      "candidate_links": [
+        {
+          "href": "http://www.viriyah.co.th/products/motor-insurance/",
+          "text": "ประกันภัยรถยนต์"
+        },
+        {
+          "href": "http://www.viriyah.co.th/products/motor-insurance/voluntary-motor-insurance/",
+          "text": "ประกันภัยรถยนต์ภาคสมัครใจ"
+        },
+        {
+          "href": "http://www.viriyah.co.th/products/motor-insurance/compulsory-motor-insurance/",
+          "text": "ประกันภัยรถยนต์ภาคบังคับ (พ.ร.บ.)"
+        },
+        {
+          "href": "http://www.viriyah.co.th/products/motor-insurance/motor-insurance-cross-border-vehicles-commercial-use/",
+          "text": "โครงการรถบรรทุกข้ามแดนระหว่างประเทศ"
+        },
+        {
+          "href": "http://www.viriyah.co.th/products/motor-insurance/car-insurance-special-customers/",
+          "text": "ประกันภัยรถยนต์สำหรับลูกค้าโครงการพิเศษ"
+        },
+        {
+          "href": "Vcare.viriyah.co.th",
+          "text": "ประกันภัยสุขภาพและอุบัติเหตุ"
+        },
+        {
+          "href": "http://www.viriyah.co.th/products/marine-insurance/marine-cargo-insurance-import/",
+          "text": "ประกันภัยทางทะเลและขนส่ง (Import)"
+        },
+        {
+          "href": "http://www.viriyah.co.th/products/marine-insurance/marine-cargo-insurance-export/",
+          "text": "ประกันภัยทางทะเลและขนส่ง (Export)"
+        },
+        {
+          "href": "http://www.viriyah.co.th/products/marine-insurance/carrier-liability-insurance/",
+          "text": "ประกันภัยความรับผิดของผู้ขนส่ง"
+        },
+        {
+          "href": "http://www.viriyah.co.th/services/car-repair-center/",
+          "text": "ศูนย์ซ่อมมาตรฐาน"
+        },
+        {
+          "href": "https://vinsure.viriyah.co.th/fyrp?utm_source=viriyah.co.th&utm_medium=referral&utm_campaign=productcard",
+          "text": "รายละเอียดเพิ่มเติม"
+        },
+        {
+          "href": "https://vinsure.viriyah.co.th/insurance/travel/v-travel-comprehensive?utm_source=viriyah.co.th&utm_medium=referral&utm_campaign=productcard",
+          "text": "รายละเอียดเพิ่มเติม"
+        },
+        {
+          "href": "http://www.viriyah.co.th/products/motor-insurance/",
+          "text": "ดูแลครบวงจร ด้วยผู้นำประกันภัยรถยนต์อันดับหนึ่ง"
+        },
+        {
+          "href": "https://vcare.viriyah.co.th/",
+          "text": "ใส่ใจเพื่อความสุขที่มากกว่า"
+        },
+        {
+          "href": "https://www.viriyah.com/",
+          "text": "ซื้อประกันภัยรถยนต์\n\t\t\t\t\t\n\t\t\t\t\twww.viriyah.com"
+        },
+        {
+          "href": "http://www.viriyah.co.th/news/pr/news2568-1/2568-2-81/",
+          "text": "วิริยะประกันภัย – กรมการขนส่งทางบก จัดอบรมใบขับขี่ รุ่นที่ 381  เปิดรับสมัครแล้ว"
+        },
+        {
+          "href": "http://www.viriyah.co.th/en/contact-us/career/",
+          "text": "สมัครงาน"
+        },
+        {
+          "href": "https://www.viriyah.co.th/services/car-repair-center/",
+          "text": "ศูนย์ซ่อมมาตรฐาน"
+        },
+        {
+          "href": "https://www.viriyah.co.th/contact-us/career/",
+          "text": "ร่วมงานกับเรา"
+        }
+      ],
+      "body_chars": 6841,
+      "error": "",
+      "why": "insurance/used-car taxonomy"
+    },
+    {
+      "id": "bangkok_insurance",
+      "url": "https://www.bangkokinsurance.com/",
+      "checked_at": "2026-09-26T15:12:06.390279+00:00",
+      "status": "OK",
+      "http_status": 200,
+      "title": "บริษัท กรุงเทพประกันภัย จำกัด (มหาชน) :",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [
+        {
+          "url": "https://www.googleadservices.com/pagead/conversion/17338642701/?random=1790435530053&cv=11&fst=1790435530053&fmt=7&bg=ffffff&guid=ON&async=1&en=conversion&gtm=45be69o0h2v9242550660z8831694805za20gzb831694805zd831694805xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153&u_w=1920&u_h=1080&url=https%3A%2F%2Fwww.bangkokinsurance.com%2F&rcb=13&label=6qiRCIfotvEbEI3i2stA&capi=1&frm=0&tiba=%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97%20%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A0%E0%B8%B1%E0%B8%A2%20%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94%20(&bttype=purchase&value=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1323465079.1790435529&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Linux&uapv=&uaw=0&_tu=CA&gcl_ctr=1~0~0~0&category=acrcp_v1_512&ept=5",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        },
+        {
+          "url": "https://www.googleadservices.com/pagead/conversion/1056014728/?random=1790435530182&cv=11&fst=1790435530182&fmt=7&bg=ffffff&guid=ON&async=1&en=conversion&gtm=45be69o0h2v9193568663z8831694805za20gzb831694805zd831694805xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153&u_w=1920&u_h=1080&url=https%3A%2F%2Fwww.bangkokinsurance.com%2F&rcb=8&label=U4v6CLL6k6waEIiDxvcD&capi=1&frm=0&tiba=%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97%20%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A0%E0%B8%B1%E0%B8%A2%20%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94%20(&bttype=purchase&value=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1323465079.1790435529&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Linux&uapv=&uaw=0&_tu=CA&gcl_ctr=2~0~0~0&category=acrcp_v1_512&ept=5",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        },
+        {
+          "url": "https://www.googleadservices.com/pagead/conversion/16461083338/?random=1790435531039&cv=11&fst=1790435531039&fmt=7&bg=ffffff&guid=ON&async=1&en=conversion&gtm=45be69o0h2v9196107702z8831694805za20gzb831694805zd831694805xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385422~120469145~120469153&u_w=1920&u_h=1080&url=https%3A%2F%2Fwww.bangkokinsurance.com%2F&rcb=6&label=xapYCNr0lNYZEMrloKk9&capi=1&frm=0&tiba=%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97%20%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A0%E0%B8%B1%E0%B8%A2%20%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94%20(&bttype=purchase&value=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1323465079.1790435529&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Linux&uapv=&uaw=0&ec_mode=a&oid=GG_869412324.1790435531&oidsrc=3&ecsid2=362459519.1790435531&_tu=CBA&gcl_ctr=3~0~0~0&category=acrcp_v1_512&em=tv.1&emd=tvd.1&ept=5",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        },
+        {
+          "url": "https://www.googleadservices.com/pagead/conversion/16583727899/?random=1790435531144&cv=11&fst=1790435531144&fmt=7&bg=ffffff&guid=ON&async=1&en=conversion&gtm=45be69o0h2v9206856431z8831694805za20gzb831694805zd831694805xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153&u_w=1920&u_h=1080&url=https%3A%2F%2Fwww.bangkokinsurance.com%2F&rcb=3&label=gSwSCJuizfobEJu23uM9&capi=1&frm=0&tiba=%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97%20%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A0%E0%B8%B1%E0%B8%A2%20%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94%20(&bttype=purchase&value=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1323465079.1790435529&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Linux&uapv=&uaw=0&ec_mode=a&oid=GG_1391561486.1790435531&oidsrc=3&ecsid2=362459519.1790435531&_tu=CBA&gcl_ctr=4~0~0~0&category=acrcp_v1_512&em=tv.1&emd=tvd.1&ept=5",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        },
+        {
+          "url": "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        }
+      ],
+      "candidate_links": [
+        {
+          "href": "https://www.bangkokinsurance.com/th/career",
+          "text": "ร่วมงานกับเรา"
+        },
+        {
+          "href": "product/motor/voluntary/register",
+          "text": "ประกันภัยรถยนต์ภาคสมัครใจ"
+        },
+        {
+          "href": "product/motor/compulsory",
+          "text": "ประกันภัยรถยนต์ภาคบังคับ (พ.ร.บ.)"
+        },
+        {
+          "href": "https://www.bangkokinsurance.com/media/bkinewsupload/202609/BKI เปิดบ้านต้อนรับบุคลากรรุ่นใหม่ของ AOT.pdf ",
+          "text": "อ่านเพิ่มเติม"
+        },
+        {
+          "href": "/product/motor",
+          "text": "ประกันภัยรถยนต์"
+        },
+        {
+          "href": "/product/marine-cargo",
+          "text": "ประกันภัยทางทะเลและขนส่ง"
+        },
+        {
+          "href": "/career/application-process",
+          "text": "ขั้นตอนการสมัครงาน"
+        },
+        {
+          "href": "/career/group",
+          "text": "ตำแหน่งงานว่าง"
+        },
+        {
+          "href": "/career/training",
+          "text": "ฝึกงาน"
+        },
+        {
+          "href": "/career/tricks",
+          "text": "เทคนิคการสมัครงาน"
+        },
+        {
+          "href": "/career/faq",
+          "text": "คำถามที่พบบ่อย"
+        }
+      ],
+      "body_chars": 6166,
+      "error": "",
+      "why": "insurance quote taxonomy"
+    },
+    {
+      "id": "ninecarthai",
+      "url": "https://www.9carthai.com/",
+      "checked_at": "2026-09-26T15:12:15.773247+00:00",
+      "status": "OK",
+      "http_status": 200,
+      "title": "9CARTHAI - ราคารถใหม่ 2026, ข่าวรถยนต์, ข่าวรถใหม่, อัพเดทข่าวรถ : 9CARTHAI",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [
+        {
+          "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gpt&tv=m202609180101&st=env&sjk=7593564832338396",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        }
+      ],
+      "candidate_links": [
+        {
+          "href": "https://www.9carthai.com",
+          "text": "Home"
+        },
+        {
+          "href": "https://www.9carthai.com/category/reviews-cars/",
+          "text": "รีวิวรถ"
+        },
+        {
+          "href": "https://www.9carthai.com/category/review-motorcycle-2/",
+          "text": "รีวิว มอเตอร์ไซค์ / บิ๊กไบค์"
+        },
+        {
+          "href": "https://www.9carthai.com/aion-price/",
+          "text": "AION"
+        },
+        {
+          "href": "https://www.9carthai.com/byd-price/",
+          "text": "BYD"
+        },
+        {
+          "href": "https://www.9carthai.com/deepal-price/",
+          "text": "DEEPAL"
+        },
+        {
+          "href": "https://www.9carthai.com/ford-price/",
+          "text": "FORD"
+        },
+        {
+          "href": "https://www.9carthai.com/honda-price/",
+          "text": "HONDA"
+        },
+        {
+          "href": "https://www.9carthai.com/isuzu-price/",
+          "text": "ISUZU"
+        },
+        {
+          "href": "https://www.9carthai.com/mazda-price/",
+          "text": "MAZDA"
+        },
+        {
+          "href": "https://www.9carthai.com/mercedes-benz-price/",
+          "text": "MERCEDES BENZ"
+        },
+        {
+          "href": "https://www.9carthai.com/toyota-price/",
+          "text": "TOYOTA"
+        },
+        {
+          "href": "https://www.9carthai.com/zeekr-price/",
+          "text": "ZEEKR"
+        },
+        {
+          "href": "https://www.9carthai.com/category/news-motorcycle/",
+          "text": "มอเตอร์ไซค์"
+        },
+        {
+          "href": "https://www.9carthai.com/honda-motorcycle-price/",
+          "text": "ราคารถ Honda"
+        },
+        {
+          "href": "https://www.9carthai.com/yamaha-price/",
+          "text": "ราคารถ YAMAHA"
+        },
+        {
+          "href": "https://www.9carthai.com/category/pr/",
+          "text": "ข่าวประชาสัมพันธ์"
+        },
+        {
+          "href": "https://www.9carthai.com/directory/",
+          "text": "Directory"
+        },
+        {
+          "href": "https://www.9carthai.com/advertising/",
+          "text": "ติดต่อโฆษณา"
+        },
+        {
+          "href": "https://www.9carthai.com/new-jaecoo-6t-reev-price/",
+          "text": "ใหม่ New JAECOO 6T REEV 2026-2027 ราคา เจคู่ 6T REEV\n JAECOO"
+        },
+        {
+          "href": "https://www.9carthai.com/new-honda-en2-price/",
+          "text": "New Honda e:N2 2026-2027 ราคา ฮอนด้า อี เอ็น ทู ตารางผ่อน-ดาวน์\n EV รถไฟฟ้า"
+        },
+        {
+          "href": "https://www.9carthai.com/new-honda-super-one-price/",
+          "text": "ใหม่ New Honda Super-ONE 2026-2027 ราคา ฮอนด้า ซูเปอร์วัน ตารางผ่อน-ดาวน์\n Honda"
+        },
+        {
+          "href": "https://www.9carthai.com/new-geely-starray-em-r-price/",
+          "text": "ใหม่ New GEELY STARRAY EM-R 2026-2027 ราคา จีลี่ สตาร์เรย์ อีเอ็ม-อาร์\n GEELY"
+        },
+        {
+          "href": "https://www.9carthai.com/new-honda-super-cub-tokyo-80s-limited-edition-price/",
+          "text": "ใหม่ New Honda Super Cub Tokyo 80s Limited Edition 2026\n มอเตอร์ไซค์"
+        },
+        {
+          "href": "https://www.9carthai.com/new-denza-z9gt-price/",
+          "text": "ใหม่ New DENZA Z9GT 2026-2027 ราคา เดนซ่า Z9GT ตารางผ่อน-ดาวน์\n DENZA"
+        },
+        {
+          "href": "https://www.9carthai.com/new-hyundai-staria-hybrid-price/",
+          "text": "ใหม่ New Hyundai Staria Hybrid 2026-2027 ราคา ฮุนได สตาเรีย ไฮบริด\n Hyundai Star"
+        },
+        {
+          "href": "https://www.9carthai.com/new-honda-cb1000gt-price/",
+          "text": "ใหม่ New Honda CB1000GT 2026-2027 ราคา ฮอนด้า CB1000GT ตารางผ่อน-ดาวน์\n มอเตอร์ไ"
+        },
+        {
+          "href": "https://www.9carthai.com/new-mitsubishi-xforce-hev-price/",
+          "text": "ใหม่ All-new Mitsubishi XFORCE HEV 2026-2027 ราคา มิตซูบิชิ เอ็กซ์ฟอร์ส เอชอีวี\n"
+        },
+        {
+          "href": "https://www.9carthai.com/all-new-mitsubishi-attrage-price/",
+          "text": "ใหม่ New Mitsubishi Attrage 2026-2027 ราคา มิตซูบิชิ แอททราจ ตารางผ่อน-ดาวน์\n HO"
+        },
+        {
+          "href": "https://www.9carthai.com/category/byd/",
+          "text": "CAR NEWS"
+        },
+        {
+          "href": "https://www.9carthai.com/ubolrat-khonkaen-police-station/",
+          "text": "สภ.อุบลรัตน์ ขอนแก่น\n            \n                 37 นาทีที่แล้ว 0"
+        },
+        {
+          "href": "https://www.9carthai.com/nongsonghong-khonkaen-police-station/",
+          "text": "สภ.หนองสองห้อง ขอนแก่น\n            \n                 1 ชั่วโมงที่แล้ว 0"
+        },
+        {
+          "href": "https://www.9carthai.com/nongrua-khonkaen-police-station/",
+          "text": "สภ.หนองเรือ ขอนแก่น\n            \n                 2 ชั่วโมงที่แล้ว 0"
+        },
+        {
+          "href": "https://www.9carthai.com/nongnakam-khonkaen-police-station/",
+          "text": "สภ.หนองนาคำ ขอนแก่น\n            \n                 3 ชั่วโมงที่แล้ว 0"
+        },
+        {
+          "href": "https://www.9carthai.com/sichompu-khonkaen-police-station/",
+          "text": "สภ.สีชมพู ขอนแก่น\n            \n                 3 ชั่วโมงที่แล้ว 0"
+        },
+        {
+          "href": "https://www.9carthai.com/waengyai-khonkaen-police-station/",
+          "text": "สภ.แวงใหญ่ ขอนแก่น\n            \n                 4 ชั่วโมงที่แล้ว 0"
+        },
+        {
+          "href": "https://www.9carthai.com/category/deepal/",
+          "text": "DEEPAL"
+        },
+        {
+          "href": "https://www.9carthai.com/category/deepal/",
+          "text": "ดูทั้งหมด"
+        },
+        {
+          "href": "https://www.9carthai.com/deepal-s05-bev-max/",
+          "text": "โทนี่ จา เปิดใจลองรถ EV ครั้งแรก! ประทับใจ DEEPAL S05 BEV MAX\n 2 July 2026 0"
+        },
+        {
+          "href": "https://www.9carthai.com/deepal-dealers-44/",
+          "text": "ดีพอล แสงชัย เชียงใหม่\n 20 May 2026 0"
+        },
+        {
+          "href": "https://www.9carthai.com/deepal-dealers-43/",
+          "text": "ดีพอล มิตรประสาน แพร่\n 20 May 2026 0"
+        },
+        {
+          "href": "https://www.9carthai.com/deepal-dealers-42/",
+          "text": "ดีพอล คาร์ ภูเก็ต\n 20 May 2026 0"
+        },
+        {
+          "href": "https://www.9carthai.com/changan-motor-show-2026/",
+          "text": "CHANGAN ยกทัพรถไฟฟ้าบุกไทย! เปิดตัว NEVO Q05 พร้อมโปรแรงใน Motor Show 2026\n 27 M"
+        },
+        {
+          "href": "https://www.9carthai.com/china-cars/",
+          "text": "ความขัดแย้งในตะวันออกกลางสะเทือนวงการรถยนต์จีน เส้นทางส่งออกเริ่มติดขัด\n 4 March"
+        },
+        {
+          "href": "https://www.9carthai.com/category/honda/",
+          "text": "HONDA"
+        },
+        {
+          "href": "https://www.9carthai.com/category/honda/",
+          "text": "ดูทั้งหมด"
+        },
+        {
+          "href": "https://www.9carthai.com/honda-pilot-xxl/",
+          "text": "ซุ่มพัฒนา Honda Pilot XXL รถ SUV ขนาดใหญ่ 3 แถว ยาว\n 6 ชั่วโมงที่แล้ว 0"
+        },
+        {
+          "href": "https://www.9carthai.com/honda-cr-v-hybrid/",
+          "text": "ประเดิมใน CR-V! Honda CR-V Hybrid ไฮบริดเจนใหม่ ประหยัดน้ำมันขึ้น 10%\n 23 Septem"
+        },
+        {
+          "href": "https://www.9carthai.com/honda-8/",
+          "text": "ยึดมั่นความปลอดภัย! คุณภาพรถ Honda เน้นมาตรฐานสูงสุด ไม่เร่งผลิต\n 16 September 2"
+        },
+        {
+          "href": "https://www.9carthai.com/honda-passport-trailsport-4/",
+          "text": "ลุยโหดกว่าเดิม! Honda Passport TrailSport เครื่อง V6 ช่วงล่างใหม่\n 14 September "
+        },
+        {
+          "href": "https://www.9carthai.com/honda-nissan-4/",
+          "text": "ผนึกกำลังยักษ์ใหญ่! Honda-Nissan ร่วมพัฒนาซอฟต์แวร์และกล่อง ECU ลดต้นทุน\n 1 Sept"
+        },
+        {
+          "href": "https://www.9carthai.com/honda-big-motor-sale-2026/",
+          "text": "Honda ยกทัพ e:HEV และ EV! จัดโปรใหญ่ พร้อมเปิดทดลองขับ Honda Super-ONE ที่งาน\n 2"
+        },
+        {
+          "href": "https://www.9carthai.com/page/2/",
+          "text": "2"
+        },
+        {
+          "href": "https://www.9carthai.com/page/3/",
+          "text": "3"
+        },
+        {
+          "href": "https://www.9carthai.com/page/4/",
+          "text": "4"
+        },
+        {
+          "href": "https://www.9carthai.com/page/1668/",
+          "text": "1,668"
+        },
+        {
+          "href": "https://www.9carthai.com/page/2/",
+          "text": "ถัดไป"
+        },
+        {
+          "href": "https://www.9carthai.com/ubolrat-khonkaen-police-station/",
+          "text": "สภ.อุบลรัตน์ ขอนแก่น"
+        },
+        {
+          "href": "https://www.9carthai.com/nongsonghong-khonkaen-police-station/",
+          "text": "สภ.หนองสองห้อง ขอนแก่น"
+        },
+        {
+          "href": "https://www.9carthai.com/nongrua-khonkaen-police-station/",
+          "text": "สภ.หนองเรือ ขอนแก่น"
+        },
+        {
+          "href": "https://www.9carthai.com/nongnakam-khonkaen-police-station/",
+          "text": "สภ.หนองนาคำ ขอนแก่น"
+        },
+        {
+          "href": "https://www.9carthai.com/sichompu-khonkaen-police-station/",
+          "text": "สภ.สีชมพู ขอนแก่น"
+        },
+        {
+          "href": "https://www.9carthai.com/waengyai-khonkaen-police-station/",
+          "text": "สภ.แวงใหญ่ ขอนแก่น"
+        },
+        {
+          "href": "https://www.9carthai.com/byd-ti-9/",
+          "text": "BYD Ti 9 เผยภายในหรูหรา จอ 30 นิ้ว จ่อขายจีน"
+        },
+        {
+          "href": "https://www.9carthai.com/honda-pilot-xxl/",
+          "text": "ซุ่มพัฒนา Honda Pilot XXL รถ SUV ขนาดใหญ่ 3 แถว ยาว 5,286 มม. ขุมพลัง Hybrid แชร"
+        },
+        {
+          "href": "https://www.9carthai.com/gac-yue-7-2/",
+          "text": "GAC Yue 7 รถ SUV สายลุยทรงกล่อง PHEV มอเตอร์คู่ 570 แรงม้า วิ่งไฟฟ้าไกล 261 กม."
+        },
+        {
+          "href": "https://www.9carthai.com/volkswagen-id-unyx-09-2/",
+          "text": "เปิดพรีเซลแล้ว! Volkswagen ID. Unyx 09 รถไฟฟ้าชาร์จไว 5C วิ่งไกลสุด 755 กม. ในจี"
+        },
+        {
+          "href": "https://www.9carthai.com/car-news-thailand/",
+          "text": "เปิดตัวรถใหม่ 2026"
+        },
+        {
+          "href": "https://www.9carthai.com/category/aion/",
+          "text": "Aion"
+        },
+        {
+          "href": "https://www.9carthai.com/aion-dealers-all/",
+          "text": "Dealers Aion"
+        },
+        {
+          "href": "https://www.9carthai.com/aion-price/",
+          "text": "Aion ราคารถ ไอออน"
+        },
+        {
+          "href": "https://www.9carthai.com/new-aion-ut-price/",
+          "text": "Aion UT ราคา"
+        },
+        {
+          "href": "https://www.9carthai.com/new-aion-y-plus-price/",
+          "text": "Aion Y Plus ราคา"
+        },
+        {
+          "href": "https://www.9carthai.com/category/aston-martin/",
+          "text": "ASTON MARTIN"
+        },
+        {
+          "href": "https://www.9carthai.com/aston-martin-price/",
+          "text": "ASTON MARTIN ราคารถ แอสตัน มาร์ติน"
+        },
+        {
+          "href": "https://www.9carthai.com/category/audi/",
+          "text": "Audi"
+        },
+        {
+          "href": "https://www.9carthai.com/audi-dealers-all/",
+          "text": "Dealers Audi"
+        },
+        {
+          "href": "https://www.9carthai.com/audi-price/",
+          "text": "Audi ราคารถ ออดี้"
+        },
+        {
+          "href": "https://www.9carthai.com/category/bentley/",
+          "text": "Bentley"
+        },
+        {
+          "href": "https://www.9carthai.com/bentley-price/",
+          "text": "Bentley ราคารถ เบนท์ลี่ย์"
+        }
+      ],
+      "body_chars": 9032,
+      "error": "",
+      "why": "Thai auto media model/price index"
+    },
+    {
+      "id": "headlightmag",
+      "url": "https://www.headlightmag.com/",
+      "checked_at": "2026-09-26T15:12:22.024669+00:00",
+      "status": "OK",
+      "http_status": 200,
+      "title": "HeadLight Magazine -",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [
+        {
+          "url": "https://connect.facebook.net/app_config/json/634489746585708/",
+          "status": 200,
+          "content_type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "https://discover.headlightmag.com/go/www/delivery/asyncspc.php?zones=1%7C23%7C2%7C3%7C4%7C5%7C24&prefix=revive-0-&loc=https%3A%2F%2Fwww.headlightmag.com%2F",
+          "status": 200,
+          "content_type": "application/json"
+        }
+      ],
+      "candidate_links": [
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/",
+          "text": "View by Brand"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/aston-martin/",
+          "text": "ASTON MARTIN"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/alfa-romeo/",
+          "text": "ALFA ROMEO"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/audi/",
+          "text": "AUDI"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/bentley/",
+          "text": "BENTLEY"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/ford/",
+          "text": "FORD"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/bmws/",
+          "text": "BMW"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/ferrari/",
+          "text": "FERRARI"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/chevrolet/",
+          "text": "CHEVROLET"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/chrysler/",
+          "text": "CHRYSLER"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/citroen/",
+          "text": "CITROEN"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/daihatsu/",
+          "text": "DAIHATSU"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/dodge/",
+          "text": "DODGE"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/gm-daewoo/",
+          "text": "GM DAEWOO"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/holden/",
+          "text": "HOLDEN"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/honda/",
+          "text": "HONDA"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/hummer/",
+          "text": "HUMMER"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/hyundai/",
+          "text": "HYUNDAI"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/isuzu/",
+          "text": "ISUZU"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/jaguar/",
+          "text": "JAGUAR"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/jeep/",
+          "text": "JEEP"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/kia/",
+          "text": "KIA"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/lamborghini/",
+          "text": "LAMBORGHINI"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/landrover/",
+          "text": "LANDROVER"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/lexus/",
+          "text": "LEXUS"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/lincoln/",
+          "text": "LINCOLN"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/maserati/",
+          "text": "MASERATI"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/mazda/",
+          "text": "MAZDA"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/mercedes-benz/",
+          "text": "MERCEDES-BENZ"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/mg/",
+          "text": "MG"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/mini/",
+          "text": "MINI"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/mitsubishi/",
+          "text": "MITSUBISHI"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/nissan/",
+          "text": "NISSAN"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/peugeot/",
+          "text": "PEUGEOT"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/porsche/",
+          "text": "PORSCHE"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/saab/",
+          "text": "SAAB"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/saturn/",
+          "text": "SATURN"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/seat/",
+          "text": "SEAT"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/skoda/",
+          "text": "SKODA"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/ssangyong/",
+          "text": "SSANGYONG"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/subaru/",
+          "text": "SUBARU"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/suzuki/",
+          "text": "SUZUKI"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/tata/",
+          "text": "TATA"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/toyota/",
+          "text": "TOYOTA"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/volkswagen/",
+          "text": "VOLKSWAGEN"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-brand/volvo/",
+          "text": "VOLVO"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-segment/k-car-660-cc/",
+          "text": "K-car 660 cc"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-segment/sub-b-segment-1000-1300-cc/",
+          "text": "sub B-segment 1000-1300 cc (Eco Car)"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/jimmy-review/view-by-segment/hybrid-ev-fuel-cell-vehicle/",
+          "text": "Hybrid/EV/Fuel Cell Vehicle"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/magazine/%e0%b9%80%e0%b8%88%e0%b8%b2%e0%b8%b0%e0%b8%ab%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b8%9a%e0%b9%89%e0%b8%b2%e0%b8%99-%e0%b8%9a%e0%b8%a3%e0%b8%b4%e0%b8%a9%e0%b8%b1%e0%b8%97%e0%b8%a3%e0%b8%96%e0%b8%a2%e0%b8%99/",
+          "text": "เจาะหลังบ้าน บริษัทรถยนต์"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/news/new-cars-worldwide/",
+          "text": "New Cars : Worldwide"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/news/new-cars-in-thailand/",
+          "text": "New Cars in Thailand"
+        },
+        {
+          "href": "https://www.headlightmag.com/news-2027-maxus-star-x-launched/",
+          "text": "Maxus Star X รุ่นปี 2027 มีทั้งตัวถังกระบะและต่อหลังคา ขุมพลังดีเซลเทอร์โบ 2.5 ล"
+        },
+        {
+          "href": "https://www.headlightmag.com/news-gmc-yukon-denali-signature-black-launched/",
+          "text": "GMC Yukon Denali Signature Black เพิ่มรุ่น 7 ที่นั่ง ในออสเตรเลีย ขุมพลังเบนซิน "
+        },
+        {
+          "href": "https://www.headlightmag.com/2026-09-25-new-cars-worldwide-changan-nevo-q06-bev-erev/",
+          "text": "Changan Nevo Q06 ถ้าชน BYD Song Ultra ด้วยราคาเริ่ม 6.9 แสนบาท ขุมพลัง EV และ ER"
+        },
+        {
+          "href": "https://www.headlightmag.com/2026-09-25-new-cars-worldwide-bentley-torcal-bev-suv/",
+          "text": "Bentley Torcal รถ SUV ขุมพลังไฟฟ้าล้วน แรงสุด 888 แรงม้า วิ่งไกล 600 กิโลเมตร"
+        },
+        {
+          "href": "https://www.headlightmag.com/2026-09-25-new-cars-worldwide-volkswagen-id-buzz-cargo/",
+          "text": "Volkswagen ID. Buzz Cargo รถตู้ไฟฟ้าล้วนรุ่นฐานล้อยาว ขยายพื้นที่บรรทุก พร้อมขับ"
+        },
+        {
+          "href": "https://www.headlightmag.com/2026-09-23-world-news-xpeng-want-to-sell-tech-to-other-brands/",
+          "text": "Xpeng พร้อมเป็นซัพพลายเออร์สถาปัตยกรรม E..."
+        },
+        {
+          "href": "https://www.headlightmag.com/category/news/new-cars-worldwide/",
+          "text": "read more"
+        },
+        {
+          "href": "https://www.headlightmag.com/category/news/new-cars-in-thailand/",
+          "text": "read more"
+        },
+        {
+          "href": "https://www.headlightmag.com/spyshot-honda-cr-v-7th-gen-from-us/",
+          "text": "SPYSHOT: รถยนต์ปริศนา ทดสอบใกล้โรงงาน Ho..."
+        },
+        {
+          "href": "http://www.headlightmag.com/category/jimmy-review/view-by-brand/",
+          "text": "Brand"
+        },
+        {
+          "href": "https://www.headlightmag.com/ford-acquires-former-suzuki-vehicle-assembly-plant-in-rayong/",
+          "text": "Ford ซื้อโรงงานประกอบรถยนต์เดิมของ Suzuk..."
+        }
+      ],
+      "body_chars": 1765,
+      "error": "",
+      "why": "Thai auto media model index"
+    },
+    {
+      "id": "autolife",
+      "url": "https://www.autolifethailand.tv/",
+      "checked_at": "2026-09-26T15:12:30.494226+00:00",
+      "status": "ERROR",
+      "http_status": 0,
+      "title": "",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [
+        {
+          "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20260923&st=env&sjk=7581843343645612",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        }
+      ],
+      "candidate_links": [],
+      "body_chars": 0,
+      "error": "Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://www.autolifethailand.tv/\nCall log:\n  - navigating to \"https://www.autolifethailand.tv/\", waiting until \"domcontentloaded\"\n",
+      "why": "Thai auto media model index"
+    },
+    {
+      "id": "autocar_th",
+      "url": "https://www.autocar.co.th/",
+      "checked_at": "2026-09-26T15:12:30.794716+00:00",
+      "status": "ERROR",
+      "http_status": 0,
+      "title": "",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [],
+      "candidate_links": [],
+      "body_chars": 0,
+      "error": "Page.goto: Navigation to \"https://www.autocar.co.th/\" is interrupted by another navigation to \"chrome-error://chromewebdata/\"\nCall log:\n  - navigating to \"https://www.autocar.co.th/\", waiting until \"domcontentloaded\"\n",
+      "why": "Thai auto media/price index"
+    },
+    {
+      "id": "ttb_bank",
+      "url": "https://www.ttbbank.com/",
+      "checked_at": "2026-09-26T15:12:31.332059+00:00",
+      "status": "ERROR",
+      "http_status": 0,
+      "title": "",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [],
+      "candidate_links": [],
+      "body_chars": 0,
+      "error": "Page.goto: Navigation to \"https://www.ttbbank.com/\" is interrupted by another navigation to \"https://www.autocar.co.th/\"\nCall log:\n  - navigating to \"https://www.ttbbank.com/\", waiting until \"domcontentloaded\"\n",
+      "why": "finance: car loan model taxonomy"
+    },
+    {
+      "id": "uob_th",
+      "url": "https://www.uob.co.th/",
+      "checked_at": "2026-09-26T15:12:31.865202+00:00",
+      "status": "ERROR",
+      "http_status": 0,
+      "title": "",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [
+        {
+          "url": "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true",
+          "status": 200,
+          "content_type": "application/json; charset=UTF-8"
+        }
+      ],
+      "candidate_links": [],
+      "body_chars": 0,
+      "error": "Page.goto: Navigation to \"https://www.uob.co.th/\" is interrupted by another navigation to \"https://www.ttbbank.com/th/\"\nCall log:\n  - navigating to \"https://www.uob.co.th/\", waiting until \"domcontentloaded\"\n",
+      "why": "finance: car loan model taxonomy"
+    },
+    {
+      "id": "dlt",
+      "url": "https://www.dlt.go.th/",
+      "checked_at": "2026-09-26T15:12:33.137865+00:00",
+      "status": "ERROR",
+      "http_status": 0,
+      "title": "",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [],
+      "candidate_links": [],
+      "body_chars": 0,
+      "error": "Page.goto: Navigation to \"https://www.dlt.go.th/\" is interrupted by another navigation to \"https://www.uob.co.th/\"\nCall log:\n  - navigating to \"https://www.dlt.go.th/\", waiting until \"domcontentloaded\"\n",
+      "why": "DLT (market reference / registration taxonomy)"
+    },
+    {
+      "id": "tisco",
+      "url": "https://www.tisco.co.th/",
+      "checked_at": "2026-09-26T15:12:33.780155+00:00",
+      "status": "ERROR",
+      "http_status": 0,
+      "title": "",
+      "selects": [],
+      "select_option_total": 0,
+      "xhr_json": [],
+      "candidate_links": [],
+      "body_chars": 0,
+      "error": "Page.goto: Navigation to \"https://www.tisco.co.th/\" is interrupted by another navigation to \"https://www.dlt.go.th/\"\nCall log:\n  - navigating to \"https://www.tisco.co.th/\", waiting until \"domcontentloaded\"\n",
+      "why": "finance: car loan model taxonomy"
+    }
+  ]
+}

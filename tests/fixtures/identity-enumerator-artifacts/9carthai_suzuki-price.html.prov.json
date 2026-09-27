@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.9carthai.com/suzuki-price/",
+  "captured_at": "2026-09-26T15:54:21.256567+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "bf522a969ba691994af0e1f4deb7fb5ace9d5dd324882d51ccf8c7e27f78cb37",
+  "session_id": "p102-identity-20260926",
+  "artifact_filename": "9carthai_suzuki-price.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.9carthai.com/porsche-price/",
+  "captured_at": "2026-09-26T15:54:09.531831+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "0ed2961b214282f6141df911ac4e22a8c055e0682a0c46d623382eff926112b0",
+  "session_id": "p102-identity-20260926",
+  "artifact_filename": "9carthai_porsche-price.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

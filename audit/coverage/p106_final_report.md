@@ -171,9 +171,10 @@ blocked set).
 ## 9. Gates
 
 - combined suite: **P106 20 + P105 50 + P104 267 + P103 51 + P102 40 = 428 passed**
-- full pytest: `audit/daily-runs/20260927-p106-pytest.log` — the separate
-  pre-existing `_OPENROUTER_ALLOWED_MODEL` collection error
-  (`tests/test_generation_config_boundary.py`, untouched since `eef8c49`) is
+- full pytest **826 passed, 1 error in 422.34s** →
+  `audit/daily-runs/20260927-p106-pytest.log` — the single error is the separate
+  pre-existing `_OPENROUTER_ALLOWED_MODEL` collection failure
+  (`tests/test_generation_config_boundary.py`, untouched since `eef8c49`),
   collected with `--continue-on-collection-errors` and reported on its own line
 - vitest **488 passed / 2 skipped (490)** · `tsc --noEmit` **rc 0** ·
   `prisma validate` **valid** · credential scan **0 hits**

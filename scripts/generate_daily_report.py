@@ -64,6 +64,9 @@ def main():
     ap.add_argument("--tests-log", default="")
     ap.add_argument("--commit", default="")
     ap.add_argument("--title", default="coverage + locator integrity + second-source layer")
+    ap.add_argument("--tests-note", default="",
+                    help="free-text note recorded in tests.tests_note, e.g. "
+                         "which test module was excluded and why")
     args = ap.parse_args()
 
     reg = load(REGISTRY)
@@ -159,6 +162,7 @@ def main():
 
     # ── tests ──
     tests = {}
+    tests["tests_note"] = args.tests_note or ""
     if args.tests_log and os.path.exists(args.tests_log):
         txt = open(args.tests_log, encoding="utf-8", errors="ignore").read()
         m = re.search(r"(\d+) passed", txt)
@@ -208,7 +212,12 @@ def main():
     if args.tests_log and os.path.exists(args.tests_log):
         log_txt = open(args.tests_log, encoding="utf-8", errors="ignore").read()
         mods = sorted(set(re.findall(r"ERROR collecting (\S+)", log_txt)))
-        if mods:
+        tests["collection_error_modules"] = mods
+        if not mods:
+            tests["collection_error_preexisting"] = True
+            tests["collection_error_evidence"] = (
+                "the tests log contains no collection error")
+        else:
             ref = args.commit or head()
             try:
                 wave = set(subprocess.run(
@@ -216,15 +225,28 @@ def main():
                     cwd=REPO, capture_output=True, text=True, timeout=60).stdout.split())
             except Exception:
                 wave = set()
-            touched = sorted(m for m in mods if m in wave) + \
-                sorted(f for f in wave if f.startswith("lib/"))
-            tests["collection_error_modules"] = mods
+            # A collection ImportError is a regression of this wave only when
+            # the wave wrote the failing test module itself or a module that
+            # test imports.  Touching some unrelated lib/ file is not evidence.
+            imported = set()
+            for m in mods:
+                tpath = os.path.join(REPO, m)
+                if not os.path.isfile(tpath):
+                    continue
+                try:
+                    tsrc = open(tpath, encoding="utf-8", errors="ignore").read()
+                except Exception:
+                    continue
+                for mod in re.findall(
+                        r"^\s*(?:from|import)\s+([A-Za-z_][\w.]*)", tsrc, re.M):
+                    imported.add(os.path.join("lib", *mod.split(".")) + ".py")
+            touched = sorted((set(mods) & wave) | (imported & wave))
             tests["collection_error_preexisting"] = not touched
             tests["collection_error_evidence"] = (
                 "this wave's diff touches neither the failing test module "
-                "nor any lib/ module"
+                f"({', '.join(mods)}) nor any module it imports"
                 if not touched else
-                "this wave's diff touches: " + ", ".join(sorted(set(touched))))
+                "this wave's diff touches: " + ", ".join(touched))
 
     # ── retry windows ──
     # mirror the `blocked` predicate above: access_status is BLOCKED_<reason>
@@ -420,7 +442,11 @@ def main():
         f"- pytest: {report['tests'].get('pytest', 'n/a')}",
         (f"- collection error ({', '.join(report['tests'].get('collection_error_modules', []))}): "
          f"{'pre-existing, NOT a regression — ' if report['tests'].get('collection_error_preexisting') else 'NEW in this wave — '}"
-         f"{report['tests'].get('collection_error_evidence', '')}"),
+         f"{report['tests'].get('collection_error_evidence', '')}"
+         if report['tests'].get('collection_error_modules')
+         else "- collection errors: none present in the tests log"),
+        (f"- tests note: {report['tests'].get('tests_note')}"
+         if report['tests'].get('tests_note') else "- tests note: none"),
         f"- prisma: {report['tests'].get('prisma_validate', 'n/a')} · "
         f"tsc: {report['tests'].get('tsc_noemit', 'n/a')}",
         f"- credential scan over {report['tests'].get('credential_scan_files_checked', 0)} "

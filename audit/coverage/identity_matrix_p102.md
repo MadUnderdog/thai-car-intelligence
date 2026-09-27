@@ -1,7 +1,7 @@
 # P102 identity universe matrix (20260927)
 
 - in-scope OEMs: **32** · with identity candidates: **30** · with first-party confirmed models: **19**
-- universe records: **1360** · models **572** · variants **833** · identity-only **819** · conflicts **50** · rejected **1927**
+- universe records: **1360** · models **572** · variants **833** · identity-only **822** · conflicts **47** · rejected **1927**
 
 > Roles: enumerator sources are enumeration evidence only. Nothing here is market truth unless a MARKET_TRUTH row carries the same identity, and nothing in this file is written to staging or the production DB.
 
@@ -23,8 +23,8 @@
 | Jaguar | REACHABLE | 15 | 3 | 1/1 | 14/2 | PARTIAL | 0 | 7 | model_page,configurator |
 | Kia | REACHABLE | 14 | 18 | 3/3 | 11/15 | PARTIAL | 0 | 9 | model_page,structured_payload,configurator |
 | Land Rover | REACHABLE | 4 | 11 | 4/11 | 0/0 | ALL_CANDIDATE_MODELS_CONFIRMED | 0 | 1 | model_page,configurator |
-| Lexus | REACHABLE | 33 | 45 | 10/27 | 23/18 | PARTIAL | 1 | 17 | configurator |
-| MG | REACHABLE | 33 | 34 | 7/0 | 26/34 | PARTIAL | 1 | 22 | price_or_grade_table,brochure_pdf,structured_payload,configurator |
+| Lexus | REACHABLE | 33 | 45 | 10/27 | 23/18 | PARTIAL | 0 | 17 | configurator |
+| MG | REACHABLE | 33 | 34 | 7/0 | 26/34 | PARTIAL | 0 | 22 | price_or_grade_table,brochure_pdf,structured_payload,configurator |
 | MINI | REACHABLE | 16 | 20 | 8/13 | 8/7 | PARTIAL | 1 | 7 | press_release |
 | Mazda | REACHABLE | 25 | 33 | 10/0 | 15/33 | PARTIAL | 0 | 41 | price_or_grade_table,structured_payload,configurator |
 | Mercedes-Benz | BLOCKED_HTTP_403 | 30 | 0 | 0/0 | 30/0 | NONE_FIRST_PARTY_MISSING | 0 | 574 | lineup_index,model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |
@@ -32,7 +32,7 @@
 | NETA | BLOCKED_DNS | 3 | 2 | 0/0 | 3/2 | NONE_FIRST_PARTY_MISSING | 0 | 5 | lineup_index,model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |
 | Nissan | REACHABLE | 24 | 47 | 10/23 | 14/24 | PARTIAL | 0 | 216 | model_page,structured_payload,configurator |
 | Peugeot | BLOCKED_HTTP_403 | 3 | 2 | 0/0 | 3/2 | NONE_FIRST_PARTY_MISSING | 0 | 2 | lineup_index,model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |
-| Porsche | REACHABLE | 11 | 90 | 6/69 | 5/21 | PARTIAL | 11 | 12 | price_or_grade_table,brochure_pdf,structured_payload |
+| Porsche | REACHABLE | 11 | 90 | 6/69 | 5/21 | PARTIAL | 10 | 12 | price_or_grade_table,brochure_pdf,structured_payload |
 | Smart | DEALER_REDIRECT | 0 | 0 | 0/0 | 0/0 | NO_ENUMERATOR_AND_NO_FIRST_PARTY | 0 | 1 | model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |
 | Subaru | REACHABLE | 7 | 9 | 5/0 | 2/9 | PARTIAL | 0 | 8 | model_page,price_or_grade_table,structured_payload,configurator |
 | Suzuki | REACHABLE | 13 | 14 | 5/6 | 8/8 | PARTIAL | 1 | 8 | structured_payload,configurator |

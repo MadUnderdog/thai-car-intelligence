@@ -533,9 +533,20 @@ def _final_result(summary, universe_json, rec, matrix, capture_log):
                        and any(r in y for y in x["rejection_reasons"]))
                 for r in ("same model+variant label attributed to multiple "
                           "manufacturers across sources",
-                          "label published as a MODEL by one source",
-                          "variant label also published as a sibling model")
+                          "label published as a MODEL by one source")
             },
+            "definition": (
+                "conflict = distinct source evidence disagrees about one "
+                "identity: either one shared source attributes the same label "
+                "to two OEMs, or two publications put the same identity at "
+                "conflicting MODEL/VARIANT levels within one OEM. Equal "
+                "labels from different sources, and one publication seen at "
+                "both levels, are NOT conflicts — they stay identity-only "
+                "with an explicit note."),
+            "identity_only_with_notes": sum(
+                1 for x in universe_json["records"]
+                if x["status"] == FirstPartyStatus.IDENTITY_ONLY.value
+                and x.get("notes")),
         },
         "rejected_candidates": {
             "total": len(rec.rejected),
@@ -782,6 +793,10 @@ def main():
         unresolved = [r for r in rec.records
                       if r.manufacturer == brand
                       and r.status == FirstPartyStatus.CONFLICT.value]
+        noted = [r for r in rec.records
+                 if r.manufacturer == brand
+                 and r.status == FirstPartyStatus.IDENTITY_ONLY.value
+                 and r.notes]
         rejected = [r for r in rec.rejected if r["manufacturer"] == brand]
 
         matrix.append({
@@ -810,6 +825,7 @@ def main():
                 for r in gp_rows if (r["identity"].get("variant_raw") or "").strip()}),
             "unresolved_conflicting_identities": {
                 "conflicts": len(unresolved),
+                "noted_unresolved": len(noted),
                 "rejected": len(rejected),
                 "rejected_examples": rejected[:12],
             },

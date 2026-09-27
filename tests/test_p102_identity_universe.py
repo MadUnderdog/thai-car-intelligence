@@ -274,14 +274,40 @@ def test_gap_oems_have_identity_candidates(matrix):
         assert by_brand[brand]["identity"]["variant_candidates_discovered"] > 0, brand
 
 
-def test_blocked_oem_identity_comes_only_from_enumerators(matrix):
+def test_blocked_oem_identity_comes_only_from_enumerators(matrix, records):
+    """A blocked OEM's identity candidates may come from non-truth sources
+    only: no record for it may carry MARKET_TRUTH, and none may be confirmed."""
+    truth = SourceRole.MARKET_TRUTH.value
+    blocked = {e["brand"] for e in matrix["oems"]
+               if e["official_access_status"] != "REACHABLE"}
+    assert blocked, "no blocked OEM in the matrix — assertion would be vacuous"
+    seen = {}
+    for r in records:
+        if r["manufacturer"] in blocked:
+            for src in r["sources"]:
+                seen.setdefault(r["manufacturer"], set()).add(
+                    (src["source_name"], src["source_role"]))
+    # the role check must actually have something to look at
+    assert seen, "no blocked OEM carries any enumerator evidence — vacuous"
     for e in matrix["oems"]:
-        if e["official_access_status"] == "REACHABLE":
+        if e["brand"] not in blocked:
             continue
-        for src in e["identity"]["candidate_sources"]:
-            assert src not in NON_TRUTH_SOURCES or True  # role checked elsewhere
-        # none of its candidates may be first-party confirmed
+        pairs = seen.get(e["brand"], set())
+        if not pairs:
+            # zero candidates is only acceptable when the gap is explicit
+            assert any(b["layer"] == "identity_enumerator"
+                       for b in e["blockers"]), e["brand"]
+        else:
+            assert all(role != truth for _, role in pairs), (e["brand"], pairs)
+            assert all(name in NON_TRUTH_SOURCES for name, _ in pairs), \
+                (e["brand"], pairs)
+        assert e["identity"]["candidate_sources"] or \
+            e["identity"]["model_candidates_discovered"] == 0, e["brand"]
         assert e["identity"]["first_party_confirmed_models"] == 0, e["brand"]
+        assert e["identity"]["first_party_confirmed_variants"] == 0, e["brand"]
+        assert e["identity"]["first_party_confirmation"] in (
+            "NONE_FIRST_PARTY_MISSING", "NO_ENUMERATOR_AND_NO_FIRST_PARTY"), \
+            e["brand"]
 
 
 # ── 7. provenance of the enumerator evidence ────────────────────────────────
@@ -404,7 +430,28 @@ def test_reconciliation_never_confirms_without_market_truth():
     assert rec.confidence["OFFICIAL_VERIFIED"] == 1
 
 
-def test_same_label_under_two_manufacturers_is_a_conflict():
+def test_one_shared_source_attributing_a_label_to_two_oems_is_a_conflict():
+    """Cross-manufacturer conflict requires provenance disagreement: the SAME
+    source must attribute the same identity to two different OEMs."""
+    rec = IdentityReconciliation(target_date="unit")
+    rec.add_enumerator("Changan", "Lumin", "L DC", {
+        "source_name": "shared-source", "source_role": SourceRole.MEDIA_DISCOVERY.value,
+        "source_url": "https://unit.test/a", "label": "ChangAn Lumin L DC"})
+    rec.add_enumerator("Deepal", "Lumin", "L DC", {
+        "source_name": "shared-source", "source_role": SourceRole.MEDIA_DISCOVERY.value,
+        "source_url": "https://unit.test/b", "label": "Lumin L DC"})
+    rec.resolve_statuses()
+    statuses = {r.manufacturer: r.status for r in rec.records}
+    assert statuses["Changan"] == FirstPartyStatus.CONFLICT.value
+    assert statuses["Deepal"] == FirstPartyStatus.CONFLICT.value
+    assert all("shared source: shared-source" in r.rejection_reasons[-1]
+               for r in rec.records)
+
+
+def test_same_label_under_two_oems_from_different_sources_is_not_a_conflict():
+    """Two internally-consistent sources naming the same label for their own
+    OEM is a legitimate same-name identity — recorded, never merged, never
+    accused of disagreement."""
     rec = IdentityReconciliation(target_date="unit")
     rec.add_enumerator("Changan", "Lumin", "L DC", {
         "source_name": "unit-a", "source_role": SourceRole.MEDIA_DISCOVERY.value,
@@ -413,9 +460,28 @@ def test_same_label_under_two_manufacturers_is_a_conflict():
         "source_name": "unit-b", "source_role": SourceRole.MEDIA_DISCOVERY.value,
         "source_url": "https://unit.test/b", "label": "Lumin L DC"})
     rec.resolve_statuses()
-    statuses = {r.manufacturer: r.status for r in rec.records}
-    assert statuses["Changan"] == FirstPartyStatus.CONFLICT.value
-    assert statuses["Deepal"] == FirstPartyStatus.CONFLICT.value
+    assert {r.status for r in rec.records} == {
+        FirstPartyStatus.IDENTITY_ONLY.value}
+    # still explicit: both records name the other OEM instead of being merged
+    assert all(any("legitimate same-name identity" in n for n in r.notes)
+               for r in rec.records)
+    assert len(rec.records) == 2
+
+
+def test_single_publication_at_both_levels_stays_unresolved_not_conflict():
+    """One source publishing an identity at both levels is ambiguous, not a
+    source-level disagreement, so it is not labelled a conflict."""
+    rec = IdentityReconciliation(target_date="unit")
+    src = {"source_name": "unit-a",
+           "source_role": SourceRole.MEDIA_DISCOVERY.value,
+           "source_url": "https://unit.test/a"}
+    rec.add_enumerator("Mazda", "CX-5", "", dict(src, label="MAZDA CX-5"))
+    rec.add_enumerator("Mazda", "MAZDA3", "CX-5", dict(src, label="MAZDA3 CX-5"))
+    rec.resolve_statuses()
+    assert {r.status for r in rec.records} == {
+        FirstPartyStatus.IDENTITY_ONLY.value}
+    assert all(any("kept unresolved rather than called a conflict" in n
+                   for n in r.notes) for r in rec.records)
 
 
 def test_model_published_as_variant_by_another_source_is_a_conflict():

@@ -1,6 +1,6 @@
 {
  "schema": "p102-identity-matrix/1",
- "generated_at": "2026-09-27T03:49:25.677586+00:00",
+ "generated_at": "2026-09-27T04:43:25.599342+00:00",
  "totals": {
   "oems_in_scope": 32,
   "oems_with_identity_candidates": 30,
@@ -13,8 +13,8 @@
   "variants": 833,
   "confirmed_models": 192,
   "confirmed_variants": 370,
-  "identity_only": 819,
-  "conflicts": 50,
+  "identity_only": 822,
+  "conflicts": 47,
   "rejected": 1927,
   "confidence": {
    "UNRESOLVED": 0,
@@ -182,6 +182,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 12,
     "rejected_examples": [
      {
@@ -309,6 +310,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 1,
     "rejected_examples": [
      {
@@ -384,6 +386,7 @@
    "staged_first_party_variants": 49,
    "unresolved_conflicting_identities": {
     "conflicts": 31,
+    "noted_unresolved": 0,
     "rejected": 331,
     "rejected_examples": [
      {
@@ -512,6 +515,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 39,
     "rejected_examples": [
      {
@@ -645,6 +649,7 @@
    "staged_first_party_variants": 2,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 72,
     "rejected_examples": [
      {
@@ -771,6 +776,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 2,
     "rejected_examples": [
      {
@@ -844,6 +850,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 10,
     "rejected_examples": [
      {
@@ -966,6 +973,7 @@
    "staged_first_party_variants": 1,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 0,
     "rejected_examples": []
    },
@@ -1020,6 +1028,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 2,
+    "noted_unresolved": 0,
     "rejected": 24,
     "rejected_examples": [
      {
@@ -1154,6 +1163,7 @@
    "staged_first_party_variants": 17,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 8,
     "rejected_examples": [
      {
@@ -1257,6 +1267,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 8,
     "rejected_examples": [
      {
@@ -1370,6 +1381,7 @@
    "staged_first_party_variants": 32,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 131,
     "rejected_examples": [
      {
@@ -1498,6 +1510,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 1,
+    "noted_unresolved": 0,
     "rejected": 46,
     "rejected_examples": [
      {
@@ -1625,6 +1638,7 @@
    "staged_first_party_variants": 1,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 7,
     "rejected_examples": [
      {
@@ -1724,6 +1738,7 @@
    "staged_first_party_variants": 3,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 9,
     "rejected_examples": [
      {
@@ -1831,6 +1846,7 @@
    "staged_first_party_variants": 11,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 1,
     "rejected_examples": [
      {
@@ -1898,7 +1914,8 @@
    "staged_first_party_models": 10,
    "staged_first_party_variants": 27,
    "unresolved_conflicting_identities": {
-    "conflicts": 1,
+    "conflicts": 0,
+    "noted_unresolved": 1,
     "rejected": 17,
     "rejected_examples": [
      {
@@ -2028,7 +2045,8 @@
    "staged_first_party_models": 7,
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
-    "conflicts": 1,
+    "conflicts": 0,
+    "noted_unresolved": 1,
     "rejected": 22,
     "rejected_examples": [
      {
@@ -2157,6 +2175,7 @@
    "staged_first_party_variants": 13,
    "unresolved_conflicting_identities": {
     "conflicts": 1,
+    "noted_unresolved": 0,
     "rejected": 7,
     "rejected_examples": [
      {
@@ -2256,6 +2275,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 41,
     "rejected_examples": [
      {
@@ -2382,6 +2402,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 574,
     "rejected_examples": [
      {
@@ -2517,6 +2538,7 @@
    "staged_first_party_variants": 19,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 16,
     "rejected_examples": [
      {
@@ -2643,6 +2665,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 5,
     "rejected_examples": [
      {
@@ -2737,6 +2760,7 @@
    "staged_first_party_variants": 23,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 216,
     "rejected_examples": [
      {
@@ -2863,6 +2887,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 2,
     "rejected_examples": [
      {
@@ -2935,7 +2960,8 @@
    "staged_first_party_models": 6,
    "staged_first_party_variants": 69,
    "unresolved_conflicting_identities": {
-    "conflicts": 11,
+    "conflicts": 10,
+    "noted_unresolved": 1,
     "rejected": 12,
     "rejected_examples": [
      {
@@ -3057,6 +3083,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 1,
     "rejected_examples": [
      {
@@ -3131,6 +3158,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 8,
     "rejected_examples": [
      {
@@ -3236,6 +3264,7 @@
    "staged_first_party_variants": 6,
    "unresolved_conflicting_identities": {
     "conflicts": 1,
+    "noted_unresolved": 0,
     "rejected": 8,
     "rejected_examples": [
      {
@@ -3339,6 +3368,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 6,
     "rejected_examples": [
      {
@@ -3438,6 +3468,7 @@
    "staged_first_party_variants": 99,
    "unresolved_conflicting_identities": {
     "conflicts": 1,
+    "noted_unresolved": 0,
     "rejected": 252,
     "rejected_examples": [
      {
@@ -3565,6 +3596,7 @@
    "staged_first_party_variants": 0,
    "unresolved_conflicting_identities": {
     "conflicts": 0,
+    "noted_unresolved": 0,
     "rejected": 28,
     "rejected_examples": [
      {

@@ -31,7 +31,7 @@ import re
 import unicodedata
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, Iterable, List, Optional, Sequence, Tuple
+from typing import Dict, Iterable, List, Optional, Sequence, Set, Tuple
 
 from .universe import (
     CandidateConfidence,
@@ -703,6 +703,9 @@ class ReconciledIdentity:
     status: str = FirstPartyStatus.IDENTITY_ONLY.value
     match_method: str = ""
     rejection_reasons: List[str] = field(default_factory=list)
+    # non-blocking observations that keep an identity explicit without
+    # accusing any source of disagreeing with itself
+    notes: List[str] = field(default_factory=list)
     published_price_thb: Optional[int] = None
     published_price_role: str = ""
     scope: str = "TH"
@@ -791,31 +794,60 @@ class IdentityReconciliation:
         """Set first_party_status once every source has been added.
 
         A record is only CONFIRMED_* when a MARKET_TRUTH record carries the very
-        same identity; enumerator agreement can never do it on its own.  Three
-        conflict classes are computed explicitly rather than silently merged:
-          * same label attributed to two different manufacturers (sibling leak)
-          * one source publishes a label as a MODEL while another publishes the
-            same label as a VARIANT of that model
-          * one source publishes the label as a VARIANT while another publishes
-            it as a sibling MODEL
-        """
-        # index manufacturers by (model, variant) match keys for cross-brand checks
-        by_key: Dict[Tuple[str, str], List[ReconciledIdentity]] = {}
-        for rec in self.records:
-            for k in {(match_key(rec.manufacturer, rec.model),
-                       match_key(rec.manufacturer, rec.variant))}:
-                by_key.setdefault(k, []).append(rec)
+        same identity; enumerator agreement can never do it on its own.
 
-        model_keys: Dict[Tuple[str, str], List[ReconciledIdentity]] = {}
-        variant_keys: Dict[Tuple[str, str], List[ReconciledIdentity]] = {}
+        Conflicts are *evidence-based*, fail-closed but never speculative.  The
+        unit of evidence is a publication: one `(source_name, source_url)` pair
+        that published one identity at one level.
+
+          * CROSS-MANUFACTURER — only when a single shared source attributes
+            the same identity label to two different OEMs.  Two different
+            sources each naming the same label for their own OEM is a
+            legitimate same-name identity, not a disagreement, so it stays
+            IDENTITY_ONLY and gets an explicit note instead.
+          * LEVEL CLASH — only when distinct publications publish the same
+            identity (within one OEM) at conflicting levels, one as a MODEL and
+            one as a VARIANT.  A single publication that appears at both levels
+            is internally ambiguous, not source-level disagreement: it is kept
+            unresolved with an explicit reason and is *not* marked CONFLICT.
+
+        Nothing is ever merged; conflicts and unresolved identities stay as
+        separate records with their reasons.
+        """
+        # (manufacturer, identity key) -> level -> set of publications
+        levels: Dict[Tuple[str, str], Dict[str, Set[Tuple[str, str]]]] = {}
+        # FULL identity pair (model key, variant key) -> manufacturer ->
+        # set of source names.  The cross-manufacturer check deliberately uses
+        # the whole identity, not a bare grade token: "Double Cab" or "Premium"
+        # legitimately recurs across OEMs and must never be treated as one
+        # shared identity.
+        ownership: Dict[Tuple[str, str], Dict[str, Set[str]]] = {}
+        # (manufacturer, identity key) -> records publishing it
+        members: Dict[Tuple[str, str], List[ReconciledIdentity]] = {}
+        # identity pair -> records (for the cross-manufacturer check)
+        by_identity: Dict[Tuple[str, str], List[ReconciledIdentity]] = {}
+
         for rec in self.records:
-            model_keys.setdefault(
-                (rec.manufacturer, match_key(rec.manufacturer, rec.model)), []
-            ).append(rec)
-            if rec.variant:
-                variant_keys.setdefault(
-                    (rec.manufacturer, match_key(rec.manufacturer, rec.variant)), []
-                ).append(rec)
+            pubs = {(s.get("source_name", ""), s.get("source_url", ""))
+                    for s in rec.sources} or {("", "")}
+            mkey = match_key(rec.manufacturer, rec.model)
+            vkey = match_key(rec.manufacturer, rec.variant) if rec.variant else ""
+            if mkey:
+                b = levels.setdefault((rec.manufacturer, mkey),
+                                      {"MODEL": set(), "VARIANT": set()})
+                b["MODEL"] |= pubs
+                members.setdefault((rec.manufacturer, mkey), []).append(rec)
+            if vkey:
+                b = levels.setdefault((rec.manufacturer, vkey),
+                                      {"MODEL": set(), "VARIANT": set()})
+                b["VARIANT"] |= pubs
+                members.setdefault((rec.manufacturer, vkey), []).append(rec)
+            if mkey:
+                pair = (mkey, vkey)
+                ownership.setdefault(pair, {}).setdefault(
+                    rec.manufacturer, set()).update(
+                    s.get("source_name", "") for s in rec.sources)
+                by_identity.setdefault(pair, []).append(rec)
 
         for rec in self.records:
             roles = {s.get("source_role") for s in rec.sources}
@@ -832,32 +864,54 @@ class IdentityReconciliation:
                     roles - {SourceRole.MARKET_TRUTH.value}:
                 rec.match_method = "first_party_plus_enumerator"
 
-        # conflict: the same model+variant attributed to two manufacturers
-        for group in by_key.values():
-            manufacturers = {r.manufacturer for r in group}
-            if len(manufacturers) > 1:
-                for rec in group:
-                    _mark_conflict(rec, "same model+variant label attributed to "
-                                        "multiple manufacturers across sources: "
-                                        + ", ".join(sorted(manufacturers)))
-
-        # conflict: model label == another record's variant label (level clash)
-        for (mfr, vkey), recs in variant_keys.items():
-            siblings = model_keys.get((mfr, vkey), [])
-            if not siblings:
-                continue   # no model carries this label — not a level clash
-            for rec in set(recs) | set(siblings):
-                _mark_conflict(rec, "label published as a MODEL by one source and "
-                                    "as a VARIANT by another")
-
-        # conflict: variant label published as a sibling model by another source
-        for rec in self.records:
-            if not rec.variant:
+        # ── conflict A: one shared source attributes a label to two OEMs ──
+        for key, per_mfr in ownership.items():
+            if len(per_mfr) < 2:
                 continue
-            vkey = (rec.manufacturer, match_key(rec.manufacturer, rec.variant))
-            if vkey in model_keys and rec not in model_keys[vkey]:
-                _mark_conflict(rec, "variant label also published as a sibling "
-                                    "model by another source")
+            names = sorted(per_mfr)
+            shared = {x for x in set.intersection(*[per_mfr[m] for m in names])
+                      if x}
+            recs = by_identity.get(key, [])
+            if shared:
+                for rec in recs:
+                    _mark_conflict(
+                        rec, "same model+variant label attributed to multiple "
+                             "manufacturers across sources: "
+                             + ", ".join(names)
+                             + " (shared source: "
+                             + ", ".join(sorted(shared)) + ")")
+            else:
+                # distinct sources, each internally consistent — a legitimate
+                # same-name identity.  Recorded, never merged, never accused.
+                for rec in recs:
+                    _note(rec, "same identity label is also published for "
+                               + ", ".join(m for m in names
+                                           if m != rec.manufacturer)
+                               + " by different sources — treated as a "
+                                 "legitimate same-name identity, not merged")
+
+        # ── conflict B: distinct publications put one OEM's identity at two
+        #    different levels (MODEL on one, VARIANT on the other) ──
+        for (mfr, key), lv in levels.items():
+            model_pubs, variant_pubs = lv["MODEL"], lv["VARIANT"]
+            if not model_pubs or not variant_pubs:
+                continue
+            if model_pubs == variant_pubs:
+                # a single publication at both levels: ambiguous, not a
+                # source-level disagreement — kept unresolved and explicit
+                for rec in members.get((mfr, key), []):
+                    _note(rec, "one source publishes this identity at both the "
+                               "MODEL and the VARIANT level — ambiguous, kept "
+                               "unresolved rather than called a conflict")
+                continue
+            m_src = sorted({p[0] for p in model_pubs if p[0]})
+            v_src = sorted({p[0] for p in variant_pubs if p[0]})
+            for rec in members.get((mfr, key), []):
+                _mark_conflict(
+                    rec, "label published as a MODEL by one source and as a "
+                         "VARIANT by another: MODEL evidence ["
+                         + ", ".join(m_src) + "] vs VARIANT evidence ["
+                         + ", ".join(v_src) + "]")
 
 
     @property
@@ -981,6 +1035,7 @@ class IdentityReconciliation:
                     "first_party": r.first_party,
                     "match_method": r.match_method,
                     "rejection_reasons": r.rejection_reasons,
+                    "notes": r.notes,
                     "published_price_thb": r.published_price_thb,
                     "published_price_role": r.published_price_role,
                     "scope": r.scope,
@@ -990,6 +1045,12 @@ class IdentityReconciliation:
             ],
             "rejected": self.rejected,
         }
+
+
+def _note(rec: ReconciledIdentity, text: str) -> None:
+    """Record a non-blocking observation without accusing a source."""
+    if text not in rec.notes:
+        rec.notes.append(text)
 
 
 def _mark_conflict(rec: ReconciledIdentity, reason: str) -> None:

@@ -1,6 +1,6 @@
 {
  "schema": "p102-final-result/1",
- "generated_at": "2026-09-27T03:49:25.680488+00:00",
+ "generated_at": "2026-09-27T04:43:25.602248+00:00",
  "session_id": "p102-identity-20260927",
  "acceptance_boundary": "Phase-1 identity/catalog artifact only. It is NOT staging, NOT the accepted set and NOT the production DB: identity-only candidates have no price/locator and therefore cannot satisfy §95 mandatory fields, so they are never promoted.",
  "enumerator_candidates": {
@@ -12,16 +12,16 @@
  "first_party_confirmed_models": 192,
  "first_party_confirmed_variants": 370,
  "identity_only_candidates": {
-  "records_with_identity_only_status": 819,
+  "records_with_identity_only_status": 822,
   "model_identities_not_first_party_confirmed": 380,
   "variant_identities_not_first_party_confirmed": 463,
   "note": "candidates with no MARKET_TRUTH row carrying the same identity. Kept in this Phase-1 artifact only; never written to staging or the accepted/production DB"
  },
  "record_reconciliation": {
   "records_total": 1360,
-  "identity_only_records": 819,
+  "identity_only_records": 822,
   "first_party_confirmed_records": 491,
-  "conflict_records": 50,
+  "conflict_records": 47,
   "checks_out": true,
   "identity_measurements": {
    "distinct_model_identities": 572,
@@ -31,12 +31,13 @@
   }
  },
  "conflicts": {
-  "records": 50,
+  "records": 47,
   "by_reason": {
-   "same model+variant label attributed to multiple manufacturers across sources": 4,
-   "label published as a MODEL by one source": 46,
-   "variant label also published as a sibling model": 3
-  }
+   "same model+variant label attributed to multiple manufacturers across sources": 2,
+   "label published as a MODEL by one source": 45
+  },
+  "definition": "conflict = distinct source evidence disagrees about one identity: either one shared source attributes the same label to two OEMs, or two publications put the same identity at conflicting MODEL/VARIANT levels within one OEM. Equal labels from different sources, and one publication seen at both levels, are NOT conflicts — they stay identity-only with an explicit note.",
+  "identity_only_with_notes": 3
  },
  "rejected_candidates": {
   "total": 1927,
@@ -709,7 +710,7 @@
    "first_party_confirmation": "PARTIAL",
    "identity_only_models": 23,
    "identity_only_variants": 18,
-   "conflicts": 1,
+   "conflicts": 0,
    "rejected": 17,
    "missing_catalog_layers": [
     "configurator"
@@ -744,7 +745,7 @@
    "first_party_confirmation": "PARTIAL",
    "identity_only_models": 26,
    "identity_only_variants": 34,
-   "conflicts": 1,
+   "conflicts": 0,
    "rejected": 22,
    "missing_catalog_layers": [
     "price_or_grade_table",
@@ -1054,7 +1055,7 @@
    "first_party_confirmation": "PARTIAL",
    "identity_only_models": 5,
    "identity_only_variants": 21,
-   "conflicts": 11,
+   "conflicts": 10,
    "rejected": 12,
    "missing_catalog_layers": [
     "price_or_grade_table",

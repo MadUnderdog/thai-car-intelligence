@@ -1,0 +1,235 @@
+{
+  "artifact": "p103-catalog-reconciliation/1",
+  "generated_at": "2026-09-27T08:46:38.249187+00:00",
+  "before": {
+    "records": 1360,
+    "confirmed_models": 192,
+    "confirmed_variants": 370,
+    "oems_with_confirmation": 19
+  },
+  "after": {
+    "records": 1389,
+    "confirmed_models": 194,
+    "confirmed_variants": 401,
+    "oems_with_confirmation": 19
+  },
+  "deltas": {
+    "records": 29,
+    "confirmed_models": 2,
+    "confirmed_variants": 31,
+    "oems_with_confirmation": 0
+  },
+  "harvested": 31,
+  "outcomes": {
+    "new": 29,
+    "existing": 2
+  },
+  "new_first_party_identities": [
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-5",
+      "variant": "2.0 S",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda-cx5.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-5",
+      "variant": "2.0 SP",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda-cx5.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-5",
+      "variant": "XDL",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda-cx5.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 PRIME",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda2-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 ULTRA",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda2-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 SIGNATURE",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda2-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "XDL SIGNATURE",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda2-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 PRIME SPORTS",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda2-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 ULTRA SPORTS",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda2-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 SIGNATURE SPORTS",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda2-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "XDL SIGNATURE SPORTS",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda2-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 C",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda3-sedan.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 S",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda3-sedan.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 SP",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda3-sedan.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "CARBON EDITION",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda3-sedan.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "variant": "2.0 PRIME",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda-cx30-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "variant": "2.0 ULTRA",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda-cx30-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "variant": "2.0 SIGNATURE",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_mazda-cx30-essential.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "FSC 2.2 XS HI-RACER 6MT",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_new-mazda-bt50.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 2.2 XT HI-RACER 8AT",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_new-mazda-bt50.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 3.0 XTR HI-RACER 6AT",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_new-mazda-bt50.html"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 3.0 XTR 4x4 6AT",
+      "identity_level": "VARIANT",
+      "artifact": "mazda_car_new-mazda-bt50.html"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "D+",
+      "identity_level": "VARIANT",
+      "artifact": "mg_home_page.html"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "X+",
+      "identity_level": "VARIANT",
+      "artifact": "mg_home_page.html"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "V+",
+      "identity_level": "VARIANT",
+      "artifact": "mg_home_page.html"
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "BRZ",
+      "variant": "BRZ AT",
+      "identity_level": "VARIANT",
+      "artifact": "subaru_th_model_brz.html"
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "CROSSTREK",
+      "variant": "2.0i-S EyeSight",
+      "identity_level": "VARIANT",
+      "artifact": "subaru_th_model_crosstrek.html"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "MU-X",
+      "variant": "Active",
+      "identity_level": "VARIANT",
+      "artifact": "isuzu_page.html"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "L",
+      "identity_level": "VARIANT",
+      "artifact": "isuzu_page.html"
+    }
+  ],
+  "ambiguous": [],
+  "no_price_pass": true,
+  "staging_written": false
+}

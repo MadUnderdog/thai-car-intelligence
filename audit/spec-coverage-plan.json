@@ -704,6 +704,38 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/subaru_th_model_brz.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/subaru_th_model_crosstrek.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/suzuki_model_jimny.html",
           "marker_counts": {
             "thai_ps": 0,

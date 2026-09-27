@@ -825,7 +825,15 @@ class IdentityReconciliation:
                                      variant=variant)
             self.records.append(rec)
         self._attach(rec, source, variant)
-        rec.first_party.append(dict(source))
+        # same publication + same identity may only be recorded once: the
+        # first_party list is the evidence that promoted the record, so a
+        # double attach would double-count one publication.
+        entry = dict(source)
+        key = (entry.get("source_name"), entry.get("source_url"),
+               entry.get("label"))
+        if not any((s.get("source_name"), s.get("source_url"),
+                    s.get("label")) == key for s in rec.first_party):
+            rec.first_party.append(entry)
         return rec
 
     def resolve_statuses(self) -> None:

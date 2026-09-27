@@ -1,0 +1,33 @@
+{
+  "artifact": "p103_capture_log/1",
+  "session_id": "p103_official_model_pages",
+  "results": [
+    {
+      "brand": "Subaru",
+      "url": "https://www.subaru.asia/th/th/forester/",
+      "filename": "subaru_th_model_forester.html",
+      "ok": true,
+      "bytes": 81781,
+      "sha256": "6159d226e25f7b3eb2cfe8acdeab2282efe331e0c4da6faa35c4aea48abf4329",
+      "captured_at": "2026-09-27T08:29:31.118145+00:00"
+    },
+    {
+      "brand": "Subaru",
+      "url": "https://www.subaru.asia/th/th/crosstrek/",
+      "filename": "subaru_th_model_crosstrek.html",
+      "ok": true,
+      "bytes": 80883,
+      "sha256": "1ee82168642271c3604248d7b922b485f753ec96e709accc99fb1693eec20c64",
+      "captured_at": "2026-09-27T08:29:32.842049+00:00"
+    },
+    {
+      "brand": "Subaru",
+      "url": "https://www.subaru.asia/th/th/brz/",
+      "filename": "subaru_th_model_brz.html",
+      "ok": true,
+      "bytes": 71203,
+      "sha256": "9c286cf22708117a2b523d94071fbc094b46f3d910e83bb2b4c55fa311e26347",
+      "captured_at": "2026-09-27T08:29:34.576119+00:00"
+    }
+  ]
+}

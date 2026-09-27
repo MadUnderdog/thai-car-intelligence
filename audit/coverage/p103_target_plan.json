@@ -1,0 +1,1003 @@
+{
+  "artifact": "p103_target_plan/1",
+  "generated_at": "2026-09-27T08:28:23.228734+00:00",
+  "baseline_artifact": "audit/coverage/p102_final_result.json",
+  "baseline_sha": null,
+  "baseline": {
+    "in_scope_oems": 32,
+    "oems_with_first_party_confirmation": 19,
+    "first_party_confirmed_models": 192,
+    "first_party_confirmed_variants": 370,
+    "candidate_models": 572,
+    "candidate_variants": 833,
+    "identity_only_records": 842
+  },
+  "rules": [
+    "first-party identity coverage is the objective; price collection is not",
+    "a MODEL-only official source may only produce MODEL evidence",
+    "a grade/variant official source may only produce VARIANT evidence",
+    "blocked hosts are never requested before next_retry_at",
+    "identity-only candidates are never promoted into staging or the accepted/production set",
+    "reuse captured bytes (AcquisitionWriter artifacts + .prov.json) before fetching anything new"
+  ],
+  "acquisition_ladder": [
+    "lineup_index",
+    "model_pages",
+    "grade_variant_pages",
+    "brochure_pdf",
+    "structured_payload",
+    "press_release"
+  ],
+  "attack_order": [
+    "Mazda",
+    "MG",
+    "Subaru",
+    "Isuzu",
+    "BMW",
+    "Toyota",
+    "Honda",
+    "GWM",
+    "Mitsubishi",
+    "Nissan",
+    "Changan",
+    "Lexus",
+    "MINI",
+    "Porsche",
+    "Suzuki",
+    "Kia",
+    "Deepal",
+    "Jaguar"
+  ],
+  "targets": [
+    {
+      "brand": "BMW",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 89,
+      "candidate_variants": 86,
+      "first_party_confirmed_models": 34,
+      "first_party_confirmed_variants": 49,
+      "model_deficit_vs_candidates": 55,
+      "variant_deficit_vs_candidates": 37,
+      "reusable_official_artifacts": [
+        "bmw_price_list.html",
+        "bmw_configurator_3series.html",
+        "bmw_all_models_verified.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Changan",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 3,
+      "candidate_variants": 4,
+      "first_party_confirmed_models": 2,
+      "first_party_confirmed_variants": 2,
+      "model_deficit_vs_candidates": 1,
+      "variant_deficit_vs_candidates": 2,
+      "reusable_official_artifacts": [
+        "changan_lumin_page.html",
+        "changan_nevo_q05_page.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Deepal",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 7,
+      "candidate_variants": 11,
+      "first_party_confirmed_models": 6,
+      "first_party_confirmed_variants": 1,
+      "model_deficit_vs_candidates": 1,
+      "variant_deficit_vs_candidates": 10,
+      "reusable_official_artifacts": [],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "GWM",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 19,
+      "candidate_variants": 29,
+      "first_party_confirmed_models": 13,
+      "first_party_confirmed_variants": 17,
+      "model_deficit_vs_candidates": 6,
+      "variant_deficit_vs_candidates": 12,
+      "reusable_official_artifacts": [
+        "gwm_th_model_tank-300.html",
+        "gwm_th_model_ora-5-ev.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Honda",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 31,
+      "candidate_variants": 50,
+      "first_party_confirmed_models": 17,
+      "first_party_confirmed_variants": 31,
+      "model_deficit_vs_candidates": 14,
+      "variant_deficit_vs_candidates": 19,
+      "reusable_official_artifacts": [
+        "honda_models_page.html",
+        "honda_city_recapture.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Isuzu",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 19,
+      "candidate_variants": 8,
+      "first_party_confirmed_models": 6,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 13,
+      "variant_deficit_vs_candidates": 8,
+      "reusable_official_artifacts": [
+        "isuzu_page.html",
+        "isuzu_th_home_page.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Jaguar",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 15,
+      "candidate_variants": 3,
+      "first_party_confirmed_models": 1,
+      "first_party_confirmed_variants": 1,
+      "model_deficit_vs_candidates": 14,
+      "variant_deficit_vs_candidates": 2,
+      "reusable_official_artifacts": [],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Kia",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 14,
+      "candidate_variants": 18,
+      "first_party_confirmed_models": 3,
+      "first_party_confirmed_variants": 3,
+      "model_deficit_vs_candidates": 11,
+      "variant_deficit_vs_candidates": 15,
+      "reusable_official_artifacts": [],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Lexus",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 33,
+      "candidate_variants": 45,
+      "first_party_confirmed_models": 10,
+      "first_party_confirmed_variants": 27,
+      "model_deficit_vs_candidates": 23,
+      "variant_deficit_vs_candidates": 18,
+      "reusable_official_artifacts": [
+        "lexus_price_list.html",
+        "lexus_models_page.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "MG",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 33,
+      "candidate_variants": 34,
+      "first_party_confirmed_models": 7,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 26,
+      "variant_deficit_vs_candidates": 34,
+      "reusable_official_artifacts": [
+        "mg_home_page.html",
+        "mg_models_page.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "MINI",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 16,
+      "candidate_variants": 20,
+      "first_party_confirmed_models": 8,
+      "first_party_confirmed_variants": 13,
+      "model_deficit_vs_candidates": 8,
+      "variant_deficit_vs_candidates": 7,
+      "reusable_official_artifacts": [
+        "MINI_PriceSheet_20260327.pdf.b64",
+        "MINI_configurator_model_ranges.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Mazda",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 25,
+      "candidate_variants": 33,
+      "first_party_confirmed_models": 10,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 15,
+      "variant_deficit_vs_candidates": 33,
+      "reusable_official_artifacts": [
+        "mazda_car_mazda-cx5.html",
+        "mazda_car_mazda2-essential.html",
+        "mazda_car_mazda3-sedan.html",
+        "mazda_car_mazda-cx30-essential.html",
+        "mazda_car_new-mazda-bt50.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Mitsubishi",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 24,
+      "candidate_variants": 41,
+      "first_party_confirmed_models": 11,
+      "first_party_confirmed_variants": 19,
+      "model_deficit_vs_candidates": 13,
+      "variant_deficit_vs_candidates": 22,
+      "reusable_official_artifacts": [
+        "mitsubishi_all_models_price.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Nissan",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 24,
+      "candidate_variants": 47,
+      "first_party_confirmed_models": 10,
+      "first_party_confirmed_variants": 23,
+      "model_deficit_vs_candidates": 14,
+      "variant_deficit_vs_candidates": 24,
+      "reusable_official_artifacts": [
+        "nissan_all_grade_price.html",
+        "nissan_all_models.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Porsche",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 11,
+      "candidate_variants": 90,
+      "first_party_confirmed_models": 6,
+      "first_party_confirmed_variants": 69,
+      "model_deficit_vs_candidates": 5,
+      "variant_deficit_vs_candidates": 21,
+      "reusable_official_artifacts": [
+        "porsche_home_page.html",
+        "porsche_macan_model_page.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Subaru",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 7,
+      "candidate_variants": 9,
+      "first_party_confirmed_models": 5,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 2,
+      "variant_deficit_vs_candidates": 9,
+      "reusable_official_artifacts": [
+        "subaru_th_home_page.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Suzuki",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 13,
+      "candidate_variants": 14,
+      "first_party_confirmed_models": 5,
+      "first_party_confirmed_variants": 6,
+      "model_deficit_vs_candidates": 8,
+      "variant_deficit_vs_candidates": 8,
+      "reusable_official_artifacts": [
+        "suzuki_models_page.html",
+        "suzuki_fronx_equipment.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    },
+    {
+      "brand": "Toyota",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 66,
+      "candidate_variants": 179,
+      "first_party_confirmed_models": 34,
+      "first_party_confirmed_variants": 98,
+      "model_deficit_vs_candidates": 32,
+      "variant_deficit_vs_candidates": 81,
+      "reusable_official_artifacts": [
+        "toyota_pricelist_page.html",
+        "toyota_model_page.html"
+      ],
+      "identity_levels_targeted": [
+        "VARIANT",
+        "MODEL"
+      ],
+      "targeted_this_wave": true,
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    }
+  ],
+  "not_targeted": [
+    {
+      "brand": "Land Rover",
+      "official_access_status": "REACHABLE",
+      "candidate_models": 4,
+      "candidate_variants": 11,
+      "first_party_confirmed_models": 4,
+      "first_party_confirmed_variants": 11,
+      "model_deficit_vs_candidates": 0,
+      "variant_deficit_vs_candidates": 0,
+      "reusable_official_artifacts": [
+        "TH_LandRover_PriceSheet.pdf.b64",
+        "landrover_range_rover_page.html"
+      ],
+      "identity_levels_targeted": [],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "every candidate identity already first-party confirmed",
+      "acquisition_ladder": [
+        "lineup_index",
+        "model_pages",
+        "grade_variant_pages",
+        "brochure_pdf",
+        "structured_payload",
+        "press_release"
+      ]
+    }
+  ],
+  "blocked_oems": [
+    {
+      "brand": "Audi",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "candidate_models": 31,
+      "candidate_variants": 21,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 31,
+      "variant_deficit_vs_candidates": 21,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:32.369118+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.audi.co.th/\"}",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "Avance",
+      "official_access_status": "BLOCKED_DNS",
+      "candidate_models": 0,
+      "candidate_variants": 0,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 0,
+      "variant_deficit_vs_candidates": 0,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:33.586368+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.avancemotors.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.avancemot\", \"url\": \"https://www.avancemotors.com/\"}",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "ENUMERATOR_PAGE_NOT_PUBLISHED",
+          "detail": "no published index page for this manufacturer on the enumerator",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "BYD",
+      "official_access_status": "BLOCKED_HTTP_404",
+      "candidate_models": 11,
+      "candidate_variants": 24,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 11,
+      "variant_deficit_vs_candidates": 24,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_404",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:31.848172+00:00\", \"http_status_or_error\": \"HTTP_404\", \"url\": \"https://www.byd.com/th/\"}",
+          "next_retry_at": "2026-10-08T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "Chery",
+      "official_access_status": "BLOCKED_DNS",
+      "candidate_models": 2,
+      "candidate_variants": 6,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 2,
+      "variant_deficit_vs_candidates": 6,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:33.757563+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.chery.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.chery.co.th', \", \"url\": \"https://www.chery.co.th/\"}",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "Chevrolet",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "candidate_models": 8,
+      "candidate_variants": 16,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 8,
+      "variant_deficit_vs_candidates": 16,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T14:16:16.748942+00:00\", \"http_status_or_error\": \"HTTP_403 via Playwright (requests GET earlier returned 200 — browser-level block)\", \"url\": \"https://www.chevrolet.co.th/\"}",
+          "next_retry_at": "2026-10-01T14:16:16.748942+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "Ford",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "candidate_models": 10,
+      "candidate_variants": 15,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 10,
+      "variant_deficit_vs_candidates": 15,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:32.087860+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.ford.co.th/\"}",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "Haval",
+      "official_access_status": "BLOCKED_DNS",
+      "candidate_models": 3,
+      "candidate_variants": 5,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 3,
+      "variant_deficit_vs_candidates": 5,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:33.654558+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.haval.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.haval.co.th', \", \"url\": \"https://www.haval.co.th/\"}",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "candidate_models": 30,
+      "candidate_variants": 0,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 30,
+      "variant_deficit_vs_candidates": 0,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T14:16:16.748942+00:00\", \"http_status_or_error\": \"HTTP_403 via Playwright (probe was BLOCKED_TIMEOUT — browser-level block)\", \"url\": \"https://www.mercedes-benz.co.th/\"}",
+          "next_retry_at": "2026-10-01T14:16:16.748942+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "NETA",
+      "official_access_status": "BLOCKED_DNS",
+      "candidate_models": 3,
+      "candidate_variants": 2,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 3,
+      "variant_deficit_vs_candidates": 2,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:33.300875+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.neta.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.neta.co.th', po\", \"url\": \"https://www.neta.co.th/\"}",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "Peugeot",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "candidate_models": 3,
+      "candidate_variants": 2,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 3,
+      "variant_deficit_vs_candidates": 2,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:35.062412+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.peugeot.co.th/\"}",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "Smart",
+      "official_access_status": "DEALER_REDIRECT",
+      "candidate_models": 0,
+      "candidate_variants": 0,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 0,
+      "variant_deficit_vs_candidates": 0,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "DEALER_REDIRECT",
+          "detail": "{\"checked_at\": \"2026-09-25T14:16:39.761675+00:00\", \"http_status_or_error\": \"REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (HTTP 200) — unchanged since 2026-09-24; body sha256 e99e6e9a09a9f52c…; URL-decision evidence in audit/coverage/smart-url-decision-20260925/\", \"url\": \"https://www.smart.co.th/\"}",
+          "next_retry_at": "2026-09-26T14:16:39.761675+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "ENUMERATOR_PAGE_NOT_PUBLISHED",
+          "detail": "no published index page for this manufacturer on the enumerator",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "Tesla",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "candidate_models": 4,
+      "candidate_variants": 9,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 4,
+      "variant_deficit_vs_candidates": 9,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:32.086082+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.tesla.com/th_th\"}",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    },
+    {
+      "brand": "Volvo",
+      "official_access_status": "BLOCKED_TLS",
+      "candidate_models": 14,
+      "candidate_variants": 1,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "model_deficit_vs_candidates": 14,
+      "variant_deficit_vs_candidates": 1,
+      "reusable_official_artifacts": [],
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_TLS",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:32.815537+00:00\", \"http_status_or_error\": \"SSLError: HTTPSConnectionPool(host='www.volvo.co.th', port=443): Max retries exceeded with url: /en/models.html (Caused by SSLErro\", \"url\": \"https://www.volvo.co.th/en/models.html\"}",
+          "next_retry_at": "2026-10-24T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path",
+          "next_retry_at": null
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed",
+          "next_retry_at": null
+        }
+      ],
+      "targeted_this_wave": false,
+      "reason_not_targeted": "official host is not reachable; no request before next_retry_at, and secondary enumerators stay discovery-only"
+    }
+  ],
+  "registry_retry_windows": {}
+}

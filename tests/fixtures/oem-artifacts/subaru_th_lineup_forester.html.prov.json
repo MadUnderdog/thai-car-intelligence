@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.subaru.asia/th/th/forester/lineup.php",
+  "captured_at": "2026-09-27T15:07:11.357434+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "248e59e0fe1ab84c3efbba41527b550242f9f225a0bf3d0830a15fb11f4b9087",
+  "session_id": "p106_official_grade_pages",
+  "artifact_filename": "subaru_th_lineup_forester.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

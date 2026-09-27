@@ -1,0 +1,312 @@
+{
+  "artifact": "p106-variant-evidence/1",
+  "generated_at": "2026-09-27T15:47:31.789733+00:00",
+  "plan": "p106_target_plan.json",
+  "rules": [
+    "model-bound composite label",
+    "name|price row or grade list",
+    "provenance verified before use"
+  ],
+  "evidence": [
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M340I",
+      "variant": "xDrive",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw M340I xDrive",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "M340i xDrive",
+        "line": 191,
+        "model_prefix": "M340I",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw M340I",
+          "variant": "xDrive"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw X4",
+      "variant": "xDrive20d M Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw X4 xDrive20d M Sport",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "X4 xDrive20d M Sport",
+        "line": 315,
+        "model_prefix": "X4",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw X4",
+          "variant": "xDrive20d M Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw X7",
+      "variant": "xDrive40d M Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw X7 xDrive40d M Sport",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "X7 xDrive40d M Sport",
+        "line": 331,
+        "model_prefix": "X7",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw X7",
+          "variant": "xDrive40d M Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw I5",
+      "variant": "Edrive40 M Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw I5 Edrive40 M Sport",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "i5 eDrive40 M Sport",
+        "line": 372,
+        "model_prefix": "I5",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw I5",
+          "variant": "Edrive40 M Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Ix",
+      "variant": "Xdrive45 M Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw Ix Xdrive45 M Sport",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "iX xDrive45 M Sport",
+        "line": 376,
+        "model_prefix": "Ix",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw Ix",
+          "variant": "Xdrive45 M Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Ix1",
+      "variant": "eDrive20L M Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw Ix1 eDrive20L M Sport",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "iX1 eDrive20L M Sport",
+        "line": 380,
+        "model_prefix": "Ix1",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw Ix1",
+          "variant": "eDrive20L M Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Ix2",
+      "variant": "xDrive30 M Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw Ix2 xDrive30 M Sport",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "iX2 xDrive30 M Sport",
+        "line": 384,
+        "model_prefix": "Ix2",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw Ix2",
+          "variant": "xDrive30 M Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "Kia Ev5",
+      "variant": "AIR",
+      "identity_level": "VARIANT",
+      "published_label": "Kia Ev5 AIR",
+      "artifact": "kia_ev5_features.html",
+      "sha256": "41cad9c59941d0bd5cef99f58d2101c698c99af7d51277519f19d2f0e7e36d89",
+      "source_url": "https://www.kia.com/th/th/cars/ev5/features.html",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "Air",
+        "line": 196,
+        "model_prefix": "Kia Ev5",
+        "structure": "page URL names Kia Ev5 and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Kia Ev5",
+          "variant": "AIR"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "Kia Ev5",
+      "variant": "EARTH Long Range",
+      "identity_level": "VARIANT",
+      "published_label": "Kia Ev5 EARTH Long Range",
+      "artifact": "kia_ev5_features.html",
+      "sha256": "41cad9c59941d0bd5cef99f58d2101c698c99af7d51277519f19d2f0e7e36d89",
+      "source_url": "https://www.kia.com/th/th/cars/ev5/features.html",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "Earth Long Range",
+        "line": 218,
+        "model_prefix": "Kia Ev5",
+        "structure": "page URL names Kia Ev5 and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Kia Ev5",
+          "variant": "EARTH Long Range"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "Kia Ev5",
+      "variant": "EARTH Exclusive AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Kia Ev5 EARTH Exclusive AWD",
+      "artifact": "kia_ev5_features.html",
+      "sha256": "41cad9c59941d0bd5cef99f58d2101c698c99af7d51277519f19d2f0e7e36d89",
+      "source_url": "https://www.kia.com/th/th/cars/ev5/features.html",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "Earth Exclusive AWD",
+        "line": 242,
+        "model_prefix": "Kia Ev5",
+        "structure": "page URL names Kia Ev5 and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Kia Ev5",
+          "variant": "EARTH Exclusive AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    }
+  ]
+}

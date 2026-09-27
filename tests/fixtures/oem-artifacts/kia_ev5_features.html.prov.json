@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.kia.com/th/th/cars/ev5/features.html",
+  "captured_at": "2026-09-27T15:07:17.239454+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "41cad9c59941d0bd5cef99f58d2101c698c99af7d51277519f19d2f0e7e36d89",
+  "session_id": "p106_official_grade_pages",
+  "artifact_filename": "kia_ev5_features.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

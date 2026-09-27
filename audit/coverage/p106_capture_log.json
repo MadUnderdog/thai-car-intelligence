@@ -1,0 +1,108 @@
+{
+  "artifact": "p106_capture_log/1",
+  "session_id": "p106_official_grade_pages",
+  "results": [
+    {
+      "brand": "Subaru",
+      "url": "https://www.subaru.asia/th/th/brz/lineup.php",
+      "filename": "subaru_th_lineup_brz.html",
+      "ok": false,
+      "error": "HTTP_404"
+    },
+    {
+      "brand": "Subaru",
+      "url": "https://www.subaru.asia/th/th/crosstrek/lineup.php",
+      "filename": "subaru_th_lineup_crosstrek.html",
+      "ok": false,
+      "error": "HTTP_404"
+    },
+    {
+      "brand": "Subaru",
+      "url": "https://www.subaru.asia/th/th/forester/lineup.php",
+      "filename": "subaru_th_lineup_forester.html",
+      "ok": true,
+      "final_url": "https://www.subaru.asia/th/th/forester/lineup.php",
+      "bytes": 71497,
+      "sha256": "248e59e0fe1ab84c3efbba41527b550242f9f225a0bf3d0830a15fb11f4b9087",
+      "captured_at": "2026-09-27T15:07:11.357434+00:00"
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/th/cars/carnival/features.html",
+      "filename": "kia_carnival_features.html",
+      "ok": true,
+      "final_url": "https://www.kia.com/th/th/cars/carnival/features.html",
+      "bytes": 144027,
+      "sha256": "2a7942780c3c8f31f5a4936e5f7b98e790bd67adb9982e7e02f8d1608f9b3538",
+      "captured_at": "2026-09-27T15:07:13.458396+00:00"
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/th/cars/carnival-hev/features.html",
+      "filename": "kia_carnival_hev_features.html",
+      "ok": true,
+      "final_url": "https://www.kia.com/th/th/cars/carnival-hev/features.html",
+      "bytes": 213082,
+      "sha256": "f5be08a9f2de45cea1a2656ab02813e6f93f7c8b63264585edaba6a1fff41e4e",
+      "captured_at": "2026-09-27T15:07:15.283078+00:00"
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/th/cars/ev5/features.html",
+      "filename": "kia_ev5_features.html",
+      "ok": true,
+      "final_url": "https://www.kia.com/th/th/cars/ev5/features.html",
+      "bytes": 144301,
+      "sha256": "41cad9c59941d0bd5cef99f58d2101c698c99af7d51277519f19d2f0e7e36d89",
+      "captured_at": "2026-09-27T15:07:17.239454+00:00"
+    },
+    {
+      "brand": "Jaguar",
+      "url": "https://www.jaguar.co.th/jaguar-range/f-type/models",
+      "filename": "jaguar_f_type_models.html",
+      "ok": true,
+      "final_url": "https://www.jaguar.co.th/jaguar-range/f-type/models",
+      "bytes": 537640,
+      "sha256": "1df3d779424191de018ff18031093659ca4d339fd894bfeaaa4dbff460abf033",
+      "captured_at": "2026-09-27T15:07:20.237738+00:00"
+    },
+    {
+      "brand": "Jaguar",
+      "url": "https://www.jaguar.co.th/electric-cars/overview",
+      "filename": "jaguar_electric_overview.html",
+      "ok": true,
+      "final_url": "https://www.jaguar.co.th/electric-cars/overview",
+      "bytes": 532187,
+      "sha256": "304e8abb68b6f1ac6ae012747202915efbef63f3f50dfdf133a29c967285ae72",
+      "captured_at": "2026-09-27T15:07:21.900857+00:00"
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/thailand/models/cayenne/",
+      "filename": "porsche_th_cayenne.html",
+      "ok": false,
+      "error": "HTTP_404"
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/thailand/models/911/",
+      "filename": "porsche_th_911.html",
+      "ok": false,
+      "error": "HTTP_404"
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/thailand/models/718/",
+      "filename": "porsche_th_718.html",
+      "ok": false,
+      "error": "HTTP_404"
+    },
+    {
+      "brand": "Mazda",
+      "url": "https://www.mazda.co.th/th/cars",
+      "filename": "mazda_all_cars.html",
+      "ok": false,
+      "error": "HTTP_404"
+    }
+  ]
+}

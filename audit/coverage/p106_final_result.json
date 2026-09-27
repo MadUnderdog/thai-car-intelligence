@@ -1,0 +1,79 @@
+{
+  "schema": "p106-final-result/1",
+  "generated_at": "2026-09-27T15:47:31.789733+00:00",
+  "before_after": {
+    "first_party_confirmed_variants": [
+      462,
+      472
+    ],
+    "first_party_confirmed_models": [
+      255,
+      262
+    ],
+    "oems_with_variant_confirmation": [
+      19,
+      19
+    ],
+    "universe_records": [
+      1424,
+      1424
+    ]
+  },
+  "harvested_rows": 10,
+  "outcomes": {
+    "existing": 10
+  },
+  "by_method": {
+    "official_name_price_row": 7,
+    "official_page_bound_grade_list": 3
+  },
+  "identity_only": {
+    "records": 706,
+    "models": 316,
+    "variants": 390
+  },
+  "conflicts": {
+    "records": 25
+  },
+  "rejected": {
+    "records": 1927
+  },
+  "per_oem_delta": {
+    "BMW": {
+      "confirmed_variants": 7,
+      "rows": 7
+    },
+    "Kia": {
+      "confirmed_variants": 3,
+      "rows": 3
+    }
+  },
+  "blocked_oems": [
+    "BYD",
+    "Audi",
+    "Chevrolet",
+    "Ford",
+    "Tesla",
+    "Chery",
+    "Haval",
+    "NETA",
+    "Peugeot",
+    "Volvo",
+    "Avance",
+    "Mercedes-Benz",
+    "Smart"
+  ],
+  "gates": {
+    "staging_written": false,
+    "price_pass": false,
+    "prisma_touched": false,
+    "p104_p103_p102_logic_changed": false,
+    "production_db_unchanged": true
+  },
+  "p105_baseline_result": {
+    "first_party_confirmed_variants": [
+      404,
+      462
+    ]
+  }
+}

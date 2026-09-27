@@ -368,6 +368,22 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/kia_carnival_features.html",
+          "marker_counts": {
+            "thai_ps": 2,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 6
+          },
+          "marker_total": 8,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_ora-5-ev.html",
           "marker_counts": {
             "thai_ps": 2,
@@ -375,6 +391,22 @@
             "kw": 3,
             "kwh": 0,
             "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 7,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/kia_ev5_features.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 7,
+            "kwh": 0,
+            "displacement": 0,
             "fuel_consumption": 0
           },
           "marker_total": 7,
@@ -430,6 +462,22 @@
           "structured_fields": 0,
           "spec_blocks": 0,
           "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/subaru_th_lineup_forester.html",
+          "marker_counts": {
+            "thai_ps": 2,
+            "torque_nm": 1,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 3
+          },
+          "marker_total": 6,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500-diesel.html",
@@ -884,6 +932,18 @@
           "/specialoffer/pup/spark-4x4-financial",
           "/specialoffer/pup/x-series-financial-2doors"
         ],
+        "tests/fixtures/oem-artifacts/jaguar_electric_overview.html": [
+          "/about-jaguar-special-vehicle-operations",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview"
+        ],
+        "tests/fixtures/oem-artifacts/jaguar_f_type_models.html": [
+          "/about-jaguar-special-vehicle-operations",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview"
+        ],
         "tests/fixtures/oem-artifacts/jaguar_home_page.html": [
           "/about-jaguar-special-vehicle-operations",
           "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
@@ -902,6 +962,15 @@
           "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
           "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
           "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview"
+        ],
+        "tests/fixtures/oem-artifacts/kia_carnival_features.html": [
+          "/th/th/cars/carnival/specification.html"
+        ],
+        "tests/fixtures/oem-artifacts/kia_carnival_hev_features.html": [
+          "/th/th/cars/carnival-hev/specification.html"
+        ],
+        "tests/fixtures/oem-artifacts/kia_ev5_features.html": [
+          "/th/th/cars/ev5/specification.html"
         ],
         "tests/fixtures/oem-artifacts/landrover_discovery_page.html": [
           "/fleet-business/specialist-vehicles"
@@ -1142,7 +1211,7 @@
         "next_retry_at": null
       },
       "www.jaguar.co.th": {
-        "targets": 10,
+        "targets": 16,
         "registry_state": "not_in_registry",
         "blocked_or_wrong_target": false,
         "next_retry_at": null

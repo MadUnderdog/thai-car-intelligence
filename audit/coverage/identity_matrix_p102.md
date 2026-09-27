@@ -1,7 +1,7 @@
 # P102 identity universe matrix (20260927)
 
 - in-scope OEMs: **32** · with identity candidates: **30** · with first-party confirmed models: **19**
-- universe records: **1360** · models **572** · variants **833** · identity-only **822** · conflicts **47** · rejected **1927**
+- universe records: **1360** · models **572** · variants **833** · identity-only **824** · conflicts **45** · rejected **1927**
 
 > Roles: enumerator sources are enumeration evidence only. Nothing here is market truth unless a MARKET_TRUTH row carries the same identity, and nothing in this file is written to staging or the production DB.
 
@@ -9,7 +9,7 @@
 |---|---|---:|---:|---:|---:|---|---:|---:|---|
 | Audi | BLOCKED_HTTP_403 | 31 | 21 | 0/0 | 31/21 | NONE_FIRST_PARTY_MISSING | 0 | 12 | lineup_index,model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |
 | Avance | BLOCKED_DNS | 0 | 0 | 0/0 | 0/0 | NO_ENUMERATOR_AND_NO_FIRST_PARTY | 0 | 1 | lineup_index,model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |
-| BMW | REACHABLE | 89 | 86 | 34/49 | 55/37 | PARTIAL | 31 | 331 | model_page,structured_payload,press_release |
+| BMW | REACHABLE | 89 | 86 | 34/49 | 55/37 | PARTIAL | 30 | 331 | model_page,structured_payload,press_release |
 | BYD | BLOCKED_HTTP_404 | 11 | 24 | 0/0 | 11/24 | NONE_FIRST_PARTY_MISSING | 0 | 39 | lineup_index,model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |
 | Changan | REACHABLE | 3 | 4 | 2/2 | 1/2 | PARTIAL | 0 | 72 | structured_payload,configurator |
 | Chery | BLOCKED_DNS | 2 | 6 | 0/0 | 2/6 | NONE_FIRST_PARTY_MISSING | 0 | 2 | lineup_index,model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |
@@ -35,7 +35,7 @@
 | Porsche | REACHABLE | 11 | 90 | 6/69 | 5/21 | PARTIAL | 10 | 12 | price_or_grade_table,brochure_pdf,structured_payload |
 | Smart | DEALER_REDIRECT | 0 | 0 | 0/0 | 0/0 | NO_ENUMERATOR_AND_NO_FIRST_PARTY | 0 | 1 | model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |
 | Subaru | REACHABLE | 7 | 9 | 5/0 | 2/9 | PARTIAL | 0 | 8 | model_page,price_or_grade_table,structured_payload,configurator |
-| Suzuki | REACHABLE | 13 | 14 | 5/6 | 8/8 | PARTIAL | 1 | 8 | structured_payload,configurator |
+| Suzuki | REACHABLE | 13 | 14 | 5/6 | 8/8 | PARTIAL | 0 | 8 | structured_payload,configurator |
 | Tesla | BLOCKED_HTTP_403 | 4 | 9 | 0/0 | 4/9 | NONE_FIRST_PARTY_MISSING | 0 | 6 | lineup_index,model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |
 | Toyota | REACHABLE | 66 | 179 | 34/98 | 32/81 | PARTIAL | 1 | 252 | brochure_pdf,configurator |
 | Volvo | BLOCKED_TLS | 14 | 1 | 0/0 | 14/1 | NONE_FIRST_PARTY_MISSING | 0 | 28 | lineup_index,model_page,price_or_grade_table,brochure_pdf,structured_payload,configurator,press_release |

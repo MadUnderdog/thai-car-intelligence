@@ -800,8 +800,10 @@ class IdentityReconciliation:
         unit of evidence is a publication: one `(source_name, source_url)` pair
         that published one identity at one level.
 
-          * CROSS-MANUFACTURER — only when a single shared source attributes
-            the same identity label to two different OEMs.  Two different
+          * CROSS-MANUFACTURER — only when a single shared *publication*
+            (`source_name` + `source_url`) attributes the same identity to two
+            different OEMs.  Equal `source_name` on different URLs is two
+            publications, not one.  Two different
             sources each naming the same label for their own OEM is a
             legitimate same-name identity, not a disagreement, so it stays
             IDENTITY_ONLY and gets an explicit note instead.
@@ -817,11 +819,13 @@ class IdentityReconciliation:
         # (manufacturer, identity key) -> level -> set of publications
         levels: Dict[Tuple[str, str], Dict[str, Set[Tuple[str, str]]]] = {}
         # FULL identity pair (model key, variant key) -> manufacturer ->
-        # set of source names.  The cross-manufacturer check deliberately uses
+        # set of PUBLICATION tuples (source_name, source_url).  The
+        # cross-manufacturer check deliberately uses
         # the whole identity, not a bare grade token: "Double Cab" or "Premium"
         # legitimately recurs across OEMs and must never be treated as one
         # shared identity.
-        ownership: Dict[Tuple[str, str], Dict[str, Set[str]]] = {}
+        ownership: Dict[Tuple[str, str],
+                        Dict[str, Set[Tuple[str, str]]]] = {}
         # (manufacturer, identity key) -> records publishing it
         members: Dict[Tuple[str, str], List[ReconciledIdentity]] = {}
         # identity pair -> records (for the cross-manufacturer check)
@@ -846,7 +850,8 @@ class IdentityReconciliation:
                 pair = (mkey, vkey)
                 ownership.setdefault(pair, {}).setdefault(
                     rec.manufacturer, set()).update(
-                    s.get("source_name", "") for s in rec.sources)
+                    (s.get("source_name", ""), s.get("source_url", ""))
+                    for s in rec.sources)
                 by_identity.setdefault(pair, []).append(rec)
 
         for rec in self.records:
@@ -869,17 +874,20 @@ class IdentityReconciliation:
             if len(per_mfr) < 2:
                 continue
             names = sorted(per_mfr)
-            shared = {x for x in set.intersection(*[per_mfr[m] for m in names])
-                      if x}
+            # a shared PUBLICATION, not merely a shared source_name: one
+            # enumerator serving brand-specific pages must not be mistaken for
+            # one page claiming the identity for two OEMs
+            shared = {p for p in set.intersection(*[per_mfr[m] for m in names])
+                      if p[0] or p[1]}
             recs = by_identity.get(key, [])
             if shared:
+                cited = ", ".join(f"{n} <{u}>" for n, u in sorted(shared))
                 for rec in recs:
                     _mark_conflict(
                         rec, "same model+variant label attributed to multiple "
                              "manufacturers across sources: "
                              + ", ".join(names)
-                             + " (shared source: "
-                             + ", ".join(sorted(shared)) + ")")
+                             + " (shared publication: " + cited + ")")
             else:
                 # distinct sources, each internally consistent — a legitimate
                 # same-name identity.  Recorded, never merged, never accused.

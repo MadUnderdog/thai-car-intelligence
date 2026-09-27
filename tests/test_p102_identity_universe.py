@@ -436,15 +436,37 @@ def test_one_shared_source_attributing_a_label_to_two_oems_is_a_conflict():
     rec = IdentityReconciliation(target_date="unit")
     rec.add_enumerator("Changan", "Lumin", "L DC", {
         "source_name": "shared-source", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/a", "label": "ChangAn Lumin L DC"})
+        "source_url": "https://unit.test/same-page", "label": "ChangAn Lumin L DC"})
     rec.add_enumerator("Deepal", "Lumin", "L DC", {
         "source_name": "shared-source", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/b", "label": "Lumin L DC"})
+        "source_url": "https://unit.test/same-page", "label": "Lumin L DC"})
     rec.resolve_statuses()
     statuses = {r.manufacturer: r.status for r in rec.records}
     assert statuses["Changan"] == FirstPartyStatus.CONFLICT.value
     assert statuses["Deepal"] == FirstPartyStatus.CONFLICT.value
-    assert all("shared source: shared-source" in r.rejection_reasons[-1]
+    assert all(
+        any("shared publication: shared-source "
+            "<https://unit.test/same-page>" in y
+            for y in r.rejection_reasons) for r in rec.records)
+
+
+def test_same_source_name_on_different_urls_is_not_a_shared_publication():
+    """Publication identity is (source_name, source_url). One enumerator with
+    brand-specific pages (e.g. a BMW page and a Suzuki page) must never become
+    a cross-manufacturer conflict just because source_name matches."""
+    rec = IdentityReconciliation(target_date="unit")
+    rec.add_enumerator("Changan", "Lumin", "L DC", {
+        "source_name": "one enumerator", "source_role": SourceRole.MEDIA_DISCOVERY.value,
+        "source_url": "https://unit.test/brand-a", "label": "ChangAn Lumin L DC"})
+    rec.add_enumerator("Deepal", "Lumin", "L DC", {
+        "source_name": "one enumerator", "source_role": SourceRole.MEDIA_DISCOVERY.value,
+        "source_url": "https://unit.test/brand-b", "label": "Lumin L DC"})
+    rec.resolve_statuses()
+    assert {r.status for r in rec.records} == {
+        FirstPartyStatus.IDENTITY_ONLY.value}
+    assert all(any("legitimate same-name identity" in n for n in r.notes)
+               for r in rec.records)
+    assert all(not any("shared publication" in y for y in r.rejection_reasons)
                for r in rec.records)
 
 

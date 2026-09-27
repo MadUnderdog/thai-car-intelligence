@@ -1,6 +1,6 @@
 {
  "schema": "p102-identity-universe/1",
- "generated_at": "2026-09-27T04:43:25.599327+00:00",
+ "generated_at": "2026-09-27T05:27:18.327251+00:00",
  "session_id": "p102-identity-20260927",
  "blueprint_sections": [
   "§93 coverage registry",
@@ -339,8 +339,8 @@
    "variants": 833,
    "confirmed_models": 192,
    "confirmed_variants": 370,
-   "identity_only": 822,
-   "conflicts": 47,
+   "identity_only": 824,
+   "conflicts": 45,
    "rejected": 1927,
    "confidence": {
     "UNRESOLVED": 0,
@@ -366,9 +366,9 @@
      "variants": 86,
      "first_party_confirmed_models": 34,
      "first_party_confirmed_variants": 49,
-     "identity_only_models": 37,
+     "identity_only_models": 38,
      "identity_only_variants": 27,
-     "conflicts": 31,
+     "conflicts": 30,
      "sources": [
       "9carthai price index",
       "BMW Thailand Official",
@@ -714,9 +714,9 @@
      "variants": 14,
      "first_party_confirmed_models": 5,
      "first_party_confirmed_variants": 6,
-     "identity_only_models": 7,
+     "identity_only_models": 8,
      "identity_only_variants": 8,
-     "conflicts": 1,
+     "conflicts": 0,
      "sources": [
       "9carthai price index",
       "Suzuki Thailand Official",
@@ -22629,7 +22629,7 @@
     "variant": "",
     "generation": "",
     "identity_level": "MODEL",
-    "status": "CONFLICT",
+    "status": "IDENTITY_ONLY",
     "sources": [
      {
       "source_name": "9carthai price index",
@@ -22643,10 +22643,11 @@
     "first_party": [],
     "match_method": "",
     "rejection_reasons": [
-     "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
-     "same model+variant label attributed to multiple manufacturers across sources: BMW, Suzuki (shared source: 9carthai price index)"
+     "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set"
     ],
-    "notes": [],
+    "notes": [
+     "same identity label is also published for Suzuki by different sources — treated as a legitimate same-name identity, not merged"
+    ],
     "published_price_thb": null,
     "published_price_role": "",
     "scope": "TH",
@@ -38695,7 +38696,7 @@
     "variant": "",
     "generation": "",
     "identity_level": "MODEL",
-    "status": "CONFLICT",
+    "status": "IDENTITY_ONLY",
     "sources": [
      {
       "source_name": "9carthai price index",
@@ -38709,10 +38710,11 @@
     "first_party": [],
     "match_method": "",
     "rejection_reasons": [
-     "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
-     "same model+variant label attributed to multiple manufacturers across sources: BMW, Suzuki (shared source: 9carthai price index)"
+     "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set"
     ],
-    "notes": [],
+    "notes": [
+     "same identity label is also published for BMW by different sources — treated as a legitimate same-name identity, not merged"
+    ],
     "published_price_thb": null,
     "published_price_role": "",
     "scope": "TH",

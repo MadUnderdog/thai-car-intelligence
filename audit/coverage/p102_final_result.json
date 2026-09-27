@@ -1,6 +1,6 @@
 {
  "schema": "p102-final-result/1",
- "generated_at": "2026-09-27T04:43:25.602248+00:00",
+ "generated_at": "2026-09-27T05:27:18.330138+00:00",
  "session_id": "p102-identity-20260927",
  "acceptance_boundary": "Phase-1 identity/catalog artifact only. It is NOT staging, NOT the accepted set and NOT the production DB: identity-only candidates have no price/locator and therefore cannot satisfy §95 mandatory fields, so they are never promoted.",
  "enumerator_candidates": {
@@ -12,16 +12,16 @@
  "first_party_confirmed_models": 192,
  "first_party_confirmed_variants": 370,
  "identity_only_candidates": {
-  "records_with_identity_only_status": 822,
+  "records_with_identity_only_status": 824,
   "model_identities_not_first_party_confirmed": 380,
   "variant_identities_not_first_party_confirmed": 463,
   "note": "candidates with no MARKET_TRUTH row carrying the same identity. Kept in this Phase-1 artifact only; never written to staging or the accepted/production DB"
  },
  "record_reconciliation": {
   "records_total": 1360,
-  "identity_only_records": 822,
+  "identity_only_records": 824,
   "first_party_confirmed_records": 491,
-  "conflict_records": 47,
+  "conflict_records": 45,
   "checks_out": true,
   "identity_measurements": {
    "distinct_model_identities": 572,
@@ -31,13 +31,13 @@
   }
  },
  "conflicts": {
-  "records": 47,
+  "records": 45,
   "by_reason": {
-   "same model+variant label attributed to multiple manufacturers across sources": 2,
+   "same model+variant label attributed to multiple manufacturers across sources": 0,
    "label published as a MODEL by one source": 45
   },
   "definition": "conflict = distinct source evidence disagrees about one identity: either one shared source attributes the same label to two OEMs, or two publications put the same identity at conflicting MODEL/VARIANT levels within one OEM. Equal labels from different sources, and one publication seen at both levels, are NOT conflicts — they stay identity-only with an explicit note.",
-  "identity_only_with_notes": 3
+  "identity_only_with_notes": 5
  },
  "rejected_candidates": {
   "total": 1927,
@@ -166,7 +166,7 @@
    "first_party_confirmation": "PARTIAL",
    "identity_only_models": 55,
    "identity_only_variants": 37,
-   "conflicts": 31,
+   "conflicts": 30,
    "rejected": 331,
    "missing_catalog_layers": [
     "model_page",
@@ -1173,7 +1173,7 @@
    "first_party_confirmation": "PARTIAL",
    "identity_only_models": 8,
    "identity_only_variants": 8,
-   "conflicts": 1,
+   "conflicts": 0,
    "rejected": 8,
    "missing_catalog_layers": [
     "structured_payload",

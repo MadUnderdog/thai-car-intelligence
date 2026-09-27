@@ -172,10 +172,23 @@ def test_every_row_cites_verified_provenance():
 
 def test_rejected_rows_are_recorded_with_a_reason():
     rows = _load(RECON)["rejected_rows"]
-    assert rows, "navigation/generic rejections must be visible"
+    assert rows, "navigation/generic/cross-page/promotion rejections must be visible"
+    classes = {"navigation": 0, "generic": 0, "cross-page": 0, "promotion": 0, "other": 0}
     for row in rows:
-        assert row["reason"]
-        assert "navigation" in row["reason"] or "generic" in row["reason"]
+        assert row["reason"] and row["artifact"]
+        if "navigation" in row["reason"]:
+            classes["navigation"] += 1
+        elif "generic" in row["reason"]:
+            classes["generic"] += 1
+        elif "cross-page" in row["reason"]:
+            classes["cross-page"] += 1
+        elif "promotion" in row["reason"]:
+            classes["promotion"] += 1
+        else:
+            classes["other"] += 1
+    assert classes["other"] == 0, classes
+    assert classes["cross-page"] >= 24 and classes["promotion"] >= 1, classes
+    assert sum(classes.values()) == len(rows)
 
 
 # ── 3. reconciliation boundaries ───────────────────────────────────────────
@@ -256,8 +269,15 @@ def test_confirmed_variant_totals_move_by_exactly_the_status_changes():
     after_u = _load(U105)["universe"]["records"]
     cb = sum(1 for r in before_u if r["variant"] and r["first_party"])
     ca = sum(1 for r in after_u if r["variant"] and r["first_party"])
-    assert (before, after) == (cb, ca) == (404, 466)
-    assert after - before == 62
+    assert before == 404                       # accepted P104 baseline
+    assert (before, after) == (cb, ca)
+    changed = [(r["manufacturer"], r["model"], r["variant"])
+               for r in after_u if r["variant"] and r["first_party"] and
+               not next(x for x in before_u if (x["manufacturer"], x["model"],
+                                                x["variant"]) ==
+                        (r["manufacturer"], r["model"], r["variant"]))["first_party"]]
+    assert len(changed) == after - before == 56
+    assert all(c[2] for c in changed)          # every change carries a variant
 
 
 def test_identity_only_falls_by_the_same_amount_models_do_not_move():
@@ -270,7 +290,8 @@ def test_identity_only_falls_by_the_same_amount_models_do_not_move():
     assert io["models"] == len([r for r in after_u
                                 if not r["variant"] and r["status"] == "IDENTITY_ONLY"])
     assert io["models"] == 316                    # models untouched
-    assert 457 - io["variants"] == 61
+    was = len([r for r in before_u if r["variant"] and r["status"] == "IDENTITY_ONLY"])
+    assert was - io["variants"] == 55
     assert sum(1 for r in before_u if not r["variant"] and r["first_party"]) == \
         sum(1 for r in after_u if not r["variant"] and r["first_party"]) == 221
 
@@ -296,18 +317,19 @@ def test_conflicts_and_rejects_are_reconciled_not_hidden():
 def test_per_oem_deltas_sum_to_the_total():
     result = _load(RESULT)
     total = sum(v["confirmed_variants"] for v in result["per_oem_delta"].values())
-    assert total == 62 == (result["before_after"]["first_party_confirmed_variants"][1]
-                           - result["before_after"]["first_party_confirmed_variants"][0])
-    assert set(result["per_oem_delta"]) <= {"BMW", "Deepal", "GWM", "Honda", "Isuzu",
-                                            "Lexus", "MG", "Mazda", "Mitsubishi",
-                                            "Suzuki", "Toyota"}
+    assert total == (result["before_after"]["first_party_confirmed_variants"][1]
+                     - result["before_after"]["first_party_confirmed_variants"][0]) == 56
+    assert set(result["per_oem_delta"]) == {"BMW", "Deepal", "GWM", "Honda", "Isuzu",
+                                            "Lexus", "MG", "Mitsubishi", "Suzuki",
+                                            "Toyota"}
+    assert "Mazda" not in result["per_oem_delta"]   # cross-page rows were withdrawn
 
 
 def test_matrix_p105_matches_the_result():
     matrix = _load(MATRIX)
     result = _load(RESULT)
     total = sum(e["p105_delta"]["confirmed_variants"] for e in matrix["oems"])
-    assert total == 62
+    assert total == 56
     rows = sum(e["p105_delta"]["rows"] for e in matrix["oems"])
     assert rows == result["harvested_rows"]
     for entry in matrix["oems"]:
@@ -331,7 +353,8 @@ def test_report_exists_and_states_the_json_numbers():
 def test_report_lists_every_zero_gain_priority_oem():
     result = _load(RESULT)
     text = open(REPORT, encoding="utf-8").read()
-    for brand in ("Nissan", "Porsche", "Kia", "Subaru", "MINI", "Changan", "Jaguar"):
+    for brand in ("Mazda", "Nissan", "Porsche", "Kia", "Subaru", "MINI",
+                  "Changan", "Jaguar"):
         assert brand in text, brand
         assert result["per_oem_delta"].get(brand) is None or \
             result["per_oem_delta"][brand]["confirmed_variants"] == 0
@@ -364,3 +387,135 @@ def test_p104_p103_p102_artifacts_and_code_are_untouched_by_the_result():
     baseline = _load(os.path.join(OUT, "p104_final_result.json"))
     assert baseline["before_after"]["first_party_confirmed_variants"] == [401, 404]
     assert baseline["before_after"]["first_party_confirmed_models"] == [194, 243]
+
+
+# ── 7. P105 REPAIR-1: page-model binding / cross-page contamination ────────
+def _rows_for(artifact=None, brand=None, model=None):
+    out = []
+    for r in evidence():
+        if artifact and r["artifact"] != artifact:
+            continue
+        if brand and r["manufacturer"] != brand:
+            continue
+        if model and r["model"] != model:
+            continue
+        out.append(r)
+    return out
+
+
+def _rejected_reasons(artifact):
+    return [r["reason"] for r in _load(RECON)["rejected_rows"] if r.get("artifact") == artifact]
+
+
+def test_s05_page_must_not_confirm_e07():
+    rows = _rows_for(artifact="deepal_s05.html", model="Deepal E07")
+    assert rows == [], [(r["model"], r["variant"]) for r in rows]
+    assert any("cross-page" in r for r in _rejected_reasons("deepal_s05.html"))
+
+
+def test_s05_reev_page_must_not_confirm_e07():
+    rows = _rows_for(artifact="deepal_s05_reev.html", model="Deepal E07")
+    assert rows == [], [(r["model"], r["variant"]) for r in rows]
+    assert any("cross-page" in r for r in _rejected_reasons("deepal_s05_reev.html"))
+
+
+def test_hunter_k50_page_must_not_confirm_e07():
+    rows = _rows_for(artifact="deepal_hunter_k50.html", model="Deepal E07")
+    assert rows == [], [(r["model"], r["variant"]) for r in rows]
+    assert any("cross-page" in r for r in _rejected_reasons("deepal_hunter_k50.html"))
+
+
+def test_s07_page_must_not_confirm_e07():
+    rows = _rows_for(artifact="deepal_s07.html", model="Deepal E07")
+    assert rows == [], [(r["model"], r["variant"]) for r in rows]
+    assert any("cross-page" in r for r in _rejected_reasons("deepal_s07.html"))
+
+
+def test_cx30_essential_page_must_not_confirm_cx3():
+    for artifact in ("mazda_car_mazda-cx30-essential.html",
+                     "mazda_spec_mazda-cx30-essential.html"):
+        rows = _rows_for(artifact=artifact, model="Mazda Cx-3")
+        assert rows == [], (artifact, [(r["model"], r["variant"]) for r in rows])
+        assert any("cross-page" in r or "promotion" in r
+                   for r in _rejected_reasons(artifact)), artifact
+
+
+def test_percent_promotion_token_never_becomes_a_variant():
+    """0% is a promotion fragment: normalization must not mint variant '0'."""
+    assert _rows_for(brand="Mazda", model="Mazda Cx-3") == []
+    # class rule, not a whitelist of the literal '0'
+    for bad in ("0%", "5.99%", "1.99 % p.a.", "ผ่อน 0%", "ดอกเบี้ย 2.5%",
+                "0 % APR", "THB 0 down"):
+        reason = p105.grade_label_blocker(bad, "0" if bad.startswith("0") else "5.99")
+        assert reason, bad
+        assert "promotion" in reason or "percent" in reason, (bad, reason)
+    # a real grade label still passes
+    assert p105.grade_label_blocker("CX-30 2.0 Prime", "2.0 Prime") is None
+
+
+def test_numeric_only_label_is_never_a_grade():
+    assert p105.grade_label_blocker("0", "0")
+    assert p105.grade_label_blocker("0%", "0")
+    # letters in the label are fine (grade names carry them)
+    assert p105.grade_label_blocker("2.0 Prime", "2.0 Prime") is None
+
+
+def test_dedicated_model_page_still_confirms_its_own_grades():
+    own = _rows_for(artifact="deepal_e07_awd.html") + _rows_for(artifact="deepal_e07_plus.html")
+    assert own, "the E07 pages must still confirm E07"
+    assert {r["model"] for r in own} == {"Deepal E07"}
+    reev = _rows_for(artifact="deepal_s05_reev.html")
+    assert any(r["model"] == "Deepal S05" and r["variant"] == "Reev" for r in reev), reev
+
+
+def test_multi_model_price_index_still_confirms():
+    index_rows = (_rows_for(artifact="lexus_price_list.html") +
+                  _rows_for(artifact="bmw_price_list.html") +
+                  _rows_for(artifact="toyota_pricelist_page.html") +
+                  _rows_for(artifact="isuzu_tis_page.html"))
+    assert len(index_rows) >= 40, len(index_rows)
+    brands = {r["manufacturer"] for r in index_rows}
+    assert brands == {"Lexus", "BMW", "Toyota", "Isuzu"}, brands
+
+
+def test_page_binding_accepts_brand_omission_hyphenation_and_locale():
+    # brand prefix omitted from the URL, hyphenated slug, trailing locale
+    assert p105.page_model_set("Deepal",
+        "https://www.changan.co.th/th/deepal/s05-th/",
+        {"Deepal S05", "Deepal E07", "s05"}) == ("dedicated", {"Deepal S05", "s05"})
+    # model name itself carries the brand (hyphenation differences)
+    assert p105.page_model_set("Mazda",
+        "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+        {"Mazda Cx-3", "CX-30", "Mazda Cx-5"}) == ("dedicated", {"CX-30"})
+    # page-kind child segment (/spec) resolves to its parent model page
+    assert p105.page_model_set("Mazda",
+        "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+        {"Mazda Cx-3", "CX-30"}) == ("dedicated", {"CX-30"})
+    # alpha/digit boundary: CX-3 must never match the slug 'cx30'
+    assert "Mazda Cx-3" not in p105.page_model_set(
+        "Mazda", "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+        {"Mazda Cx-3", "CX-30"})[1]
+
+
+def test_aggregate_and_unbound_pages_are_not_dedicated():
+    # price list / model index / news / home stay multi-model (no strict binding)
+    assert p105.page_model_set("BMW", "https://www.bmw.co.th/en/topics/price-list.html",
+                               {"BMW X5", "BMW X6"})[0] == "aggregate"
+    assert p105.page_model_set("Toyota", "https://www.toyota.co.th/en/pricelist",
+                               {"Toyota Yaris"})[0] == "aggregate"
+    assert p105.page_model_set("Toyota", "https://www.toyota.co.th/news",
+                               {"Toyota Yaris"})[0] == "aggregate"
+    assert p105.page_model_set("Mazda", "https://www.mazda.co.th/th",
+                               {"Mazda Cx-3"})[0] == "unbound"
+    assert p105.page_model_set("Isuzu", "https://www.isuzu-tis.com/",
+                               {"Isuzu D Max"})[0] == "unbound"
+
+
+def test_cross_page_rejection_is_recorded_with_the_binding():
+    recon = _load(RECON)["rejected_rows"]
+    cross = [r for r in recon if "cross-page" in r["reason"]]
+    assert cross, "cross-page rejections must be recorded, never silent"
+    for r in cross:
+        assert r["artifact"] and r["model"]
+        assert "page URL" in r["reason"] or "binds" in r["reason"], r["reason"]
+        assert r["reason"].endswith("not model evidence"), r["reason"]

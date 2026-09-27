@@ -89,23 +89,109 @@ def artifact_files() -> dict:
     return out
 
 
-def url_model(brand: str, fname: str, wanted: dict):
-    """Model the official URL slug names — page-level model binding."""
+PROMO_TOKEN = re.compile(
+    r"%|฿|\bTHB\b|บาท|ผ่อน|ดาวน์|โปรโมชั่น|ดอกเบี้ย|\bAPR\b|"
+    r"\binterest\b|down\s*payment|ฟรี", re.I)
+NUMERIC_LABEL = re.compile(r"^[0-9.]+$")
+
+# path words that mark an aggregate page (price list, model index, news, …)
+AGGREGATE_WORDS = {
+    "price", "prices", "pricelist", "price list", "brochure", "brochures",
+    "news", "press", "promotion", "promotions", "promo", "articles", "article",
+    "discover", "download", "downloads", "catalog", "catalogue", "lineup",
+    "models", "model", "all", "home", "index", "util", "events",
+}
+PAGE_KIND_WORDS = {"spec", "equipment", "features", "gallery", "detail", "details"}
+LOCALE_WORDS = {"th", "en", "thai", "english", "html", "htm", "php", "aspx", "the"}
+
+
+def slug_tokens(text: str) -> list:
+    """URL/model text → tokens with alpha/digit boundaries split.
+
+    'mazda-cx30-essential' → ['mazda', 'cx', '30', 'essential'] so that a slug
+    can never match a *shorter* model through a shared prefix ('cx3' vs 'cx30').
+    """
+    text = re.sub(r"\.(html?|php|aspx|pdf)$", "", (text or "").strip(), flags=re.I)
+    text = re.sub(r"[^0-9A-Za-zก-๙]+", " ", text).strip().casefold()
+    out = []
+    for token in text.split():
+        out.extend(re.findall(r"\d+|[a-zก-๙]+", token))
+    return out
+
+
+def sidecar_url(fname: str) -> str:
     sidecar = artifact_path(fname) + ".prov.json"
     if not os.path.exists(sidecar):
-        return None
+        return ""
     try:
-        url = json.load(open(sidecar, encoding="utf-8")).get("source_url", "")
+        return json.load(open(sidecar, encoding="utf-8")).get("source_url", "")
     except Exception:
-        return None
-    segs = [s for s in url.split("?")[0].split("/") if s]
+        return ""
+
+
+def page_model_set(brand: str, url: str, models):
+    """Model(s) the official page URL names.
+
+    Returns ("dedicated", {models})  — the URL names exactly these universe
+            models, so only their rows may be confirmed on this page;
+            ("aggregate", set())     — price list / model index / news / home …
+                                        multi-model pages: no page restriction
+            ("unbound", set())       — the URL names no universe model: rows
+                                        keep the plain structural binding.
+
+    Handles brand-prefix omission, hyphenation, alpha/digit boundaries and
+    trailing locale / child path segments.  Never a proximity guess: the model's
+    tokens must *start* the slug at a token boundary.
+    """
+    if not url:
+        return ("unbound", set())
+    path = re.sub(r"^https?://", "", url.split("?")[0].split("#")[0])
+    segs = [s for s in path.split("/") if s]
+    if segs and ("." in segs[0] or ":" in segs[0]):     # host segment
+        segs = segs[1:]
     if not segs:
-        return None
-    tail = re.sub(r"\.(html?|pdf)$", "", segs[-1], flags=re.I)
-    from thai_factory.catalog.identity_pass import match_key
-    for model in wanted:
-        if match_key(brand, model) == match_key(brand, tail):
-            return model
+        return ("unbound", set())
+    last, parent = slug_tokens(segs[-1]), slug_tokens(segs[-2] if len(segs) > 1 else "")
+    # an aggregate page (and any article beneath it) is never dedicated
+    if any(w in AGGREGATE_WORDS for w in last + parent):
+        return ("aggregate", set())
+    # a child page (/spec, /equipment) binds through its parent model slug
+    while last and last[-1] in LOCALE_WORDS:
+        last = last[:-1]
+    while last and last[-1] in PAGE_KIND_WORDS:
+        last = last[:-1]
+    slug = last or [w for w in parent if w not in LOCALE_WORDS]
+    if not slug:
+        return ("unbound", set())
+    brand_tokens = slug_tokens(brand)
+    if brand_tokens and slug[:len(brand_tokens)] == brand_tokens:
+        slug = slug[len(brand_tokens):]
+    hits = set()
+    for model in sorted(models):
+        mt = slug_tokens(model)
+        if brand_tokens and mt[:len(brand_tokens)] == brand_tokens:
+            mt = mt[len(brand_tokens):]
+        if not mt:
+            continue
+        if slug[:len(mt)] == mt:
+            hits.add(model)
+    return ("dedicated", hits) if hits else ("unbound", set())
+
+
+def grade_label_blocker(line: str, label: str):
+    """Class rule: promotional / percent / numeric tokens are never grades.
+
+    Normalization strips '%', so '0%' would otherwise silently become the
+    variant '0'; the same class (interest, APR, ผ่อน, down payment, …) is
+    blocked, plus any label that carries no letter at all.
+    """
+    text = (line or "").strip()
+    match = PROMO_TOKEN.search(text)
+    if match:
+        return ("promotion / percent token in the published line "
+                f"({match.group(0)!r}) — never a grade label")
+    if NUMERIC_LABEL.match((label or "").strip()):
+        return f"numeric-only label {(label or '').strip()!r} is not a grade name"
     return None
 
 
@@ -165,6 +251,24 @@ def extract_variant_rows(rec) -> list:
             prov, reason = verify_artifact(artifact_path(fname))
             if prov is None:
                 continue
+            page_url = sidecar_url(fname)
+            page_kind, page_models = page_model_set(
+                brand, page_url, universe_models.get(brand, set()))
+
+            def emit(row, _kind=page_kind, _models=page_models, _url=page_url):
+                """Fail closed: a dedicated model page may confirm only its own
+                models — a row for another model is recorded and dropped."""
+                if _kind == "dedicated" and row["model"] not in _models:
+                    rejected.append({
+                        "model": row["model"], "variant": row["variant"],
+                        "artifact": row["artifact"], "line": row["evidence"]["line"],
+                        "text": row["evidence"]["composite_line"],
+                        "reason": (f"cross-page binding: page URL {_url} names "
+                                   f"{', '.join(sorted(_models))} but the row claims "
+                                   f"{row['model']} — not model evidence")})
+                    return
+                out.append(row)
+
             lines = flattened(fname)
             body = body_text(fname)
             # grade-list support: distinct suffixes published per (prefix, model)
@@ -198,6 +302,12 @@ def extract_variant_rows(rec) -> list:
                                          "artifact": fname, "line": i + 1,
                                          "reason": "generic label — never a variant"})
                         break
+                    block = grade_label_blocker(line, published)
+                    if block:
+                        rejected.append({"model": model, "variant": published,
+                                         "artifact": fname, "line": i + 1,
+                                         "text": line[:120], "reason": block})
+                        break
                     if norm(line) not in norm(body):
                         rejected.append({"model": model, "variant": published,
                                          "artifact": fname, "line": i + 1,
@@ -208,7 +318,7 @@ def extract_variant_rows(rec) -> list:
                     if (model, published, fname, i) in seen_rows:
                         break
                     seen_rows.add((model, published, fname, i))
-                    out.append({
+                    emit({
                         "manufacturer": brand, "model": model, "variant": published,
                         "identity_level": "VARIANT",
                         "published_label": f"{model} {published}",
@@ -230,54 +340,61 @@ def extract_variant_rows(rec) -> list:
                         "reconciliation_note": "",
                     })
                     break
-            # rule C — the official URL names the model, and the page lists ≥2
-            # distinct candidate grades of that model (a grade list on its own page)
-            page_model = url_model(brand, fname, wanted)
-            if page_model:
+            # rule C — a *dedicated* model page (its official URL names the
+            # model) that lists ≥2 of that model's own candidate grades as bare
+            # rows.  Only the models the URL binds may be confirmed here.
+            for page_model in (sorted(page_models) if page_kind == "dedicated" else []):
                 wanted_here = sorted(wanted.get(page_model, set()))
                 hits = [(i, l) for i, l in enumerate(lines)
                         if norm(l) in {norm(v) for v in wanted_here}]
-                if len({norm(l) for _, l in hits}) >= 2:
-                    for i, line in hits:
-                        if norm(line) in {norm(x) for x in GENERIC_LABELS}:
-                            rejected.append({"model": page_model, "variant": line,
-                                             "artifact": fname, "line": i + 1,
-                                             "reason": "generic label — never a variant"})
-                            continue
-                        if norm(line) not in norm(body):
-                            rejected.append({"model": page_model, "variant": line,
-                                             "artifact": fname, "line": i + 1,
-                                             "text": line[:120],
-                                             "reason": "occurs only in navigation / footer / "
-                                                       "meta / style regions"})
-                            continue
-                        cands = sorted(v for v in wanted_here if norm(v) == norm(line))
-                        if not cands:
-                            continue
-                        published = cands[0]
-                        if (page_model, published, fname, i) in seen_rows:
-                            continue
-                        seen_rows.add((page_model, published, fname, i))
-                        prov2, _r = verify_artifact(artifact_path(fname))
-                        out.append({
-                            "manufacturer": brand, "model": page_model,
-                            "variant": published, "identity_level": "VARIANT",
-                            "published_label": f"{page_model} {published}",
-                            "artifact": fname, "sha256": artifact_sha(fname),
-                            "source_url": prov2.get("source_url", ""),
-                            "source_generation_context": "",
-                            "extraction_method": "official_page_bound_grade_list",
-                            "evidence": {
-                                "composite_line": line[:160], "line": i + 1,
-                                "model_prefix": page_model,
-                                "structure": (f"page URL names {page_model} and lists "
-                                              f"{len({norm(l) for _, l in hits})} distinct "
-                                              f"grades of it"),
-                                "selector": "official model page body (navigation/footer/"
-                                            "meta/style regions removed)",
-                            },
-                            "reconciliation_note": "",
-                        })
+                if len({norm(l) for _, l in hits}) < 2:
+                    continue                       # not a grade list of this model
+                for i, line in hits:
+                    cands = sorted(v for v in wanted_here if norm(v) == norm(line))
+                    if not cands:
+                        continue
+                    published = cands[0]
+                    if norm(published) in {norm(x) for x in GENERIC_LABELS}:
+                        rejected.append({"model": page_model, "variant": published,
+                                         "artifact": fname, "line": i + 1,
+                                         "reason": "generic label — never a variant"})
+                        continue
+                    block = grade_label_blocker(line, published)
+                    if block:
+                        rejected.append({"model": page_model, "variant": published,
+                                         "artifact": fname, "line": i + 1,
+                                         "text": line[:120], "reason": block})
+                        continue
+                    if norm(line) not in norm(body):
+                        rejected.append({"model": page_model, "variant": published,
+                                         "artifact": fname, "line": i + 1,
+                                         "text": line[:120],
+                                         "reason": "occurs only in navigation / footer / "
+                                                   "meta / style regions"})
+                        continue
+                    if (page_model, published, fname, i) in seen_rows:
+                        continue
+                    seen_rows.add((page_model, published, fname, i))
+                    prov2, _r = verify_artifact(artifact_path(fname))
+                    emit({
+                        "manufacturer": brand, "model": page_model,
+                        "variant": published, "identity_level": "VARIANT",
+                        "published_label": f"{page_model} {published}",
+                        "artifact": fname, "sha256": artifact_sha(fname),
+                        "source_url": prov2.get("source_url", ""),
+                        "source_generation_context": "",
+                        "extraction_method": "official_page_bound_grade_list",
+                        "evidence": {
+                            "composite_line": line[:160], "line": i + 1,
+                            "model_prefix": page_model,
+                            "structure": (f"page URL names {page_model} and lists "
+                                          f"{len({norm(l) for _, l in hits})} distinct "
+                                          f"grades of it"),
+                            "selector": "official model page body (navigation/footer/"
+                                        "meta/style regions removed)",
+                        },
+                        "reconciliation_note": "",
+                    })
             # rule D — the page lists grades as bare rows (Mitsubishi / Isuzu /
             # Mazda / Nissan price tables): accept only labels owned by exactly one
             # model, when that model has ≥2 of its labels on this page
@@ -302,6 +419,12 @@ def extract_variant_rows(rec) -> list:
                                          "artifact": fname, "line": i + 1,
                                          "reason": "generic label — never a variant"})
                         continue
+                    block = grade_label_blocker(line, published)
+                    if block:
+                        rejected.append({"model": model, "variant": published,
+                                         "artifact": fname, "line": i + 1,
+                                         "text": line[:120], "reason": block})
+                        continue
                     if norm(line) not in norm(body):
                         rejected.append({"model": model, "variant": published,
                                          "artifact": fname, "line": i + 1,
@@ -314,7 +437,7 @@ def extract_variant_rows(rec) -> list:
                         continue
                     seen_rows.add((model, published, fname, i))
                     prov3, _r = verify_artifact(artifact_path(fname))
-                    out.append({
+                    emit({
                         "manufacturer": brand, "model": model, "variant": published,
                         "identity_level": "VARIANT",
                         "published_label": f"{model} {published}",

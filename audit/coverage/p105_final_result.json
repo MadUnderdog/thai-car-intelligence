@@ -1,10 +1,10 @@
 {
   "schema": "p105-final-result/1",
-  "generated_at": "2026-09-27T12:44:26.308411+00:00",
+  "generated_at": "2026-09-27T13:46:26.906046+00:00",
   "before_after": {
     "first_party_confirmed_variants": [
       404,
-      466
+      460
     ],
     "first_party_confirmed_models": [
       243,
@@ -19,21 +19,21 @@
       1424
     ]
   },
-  "harvested_rows": 168,
+  "harvested_rows": 141,
   "outcomes": {
-    "existing": 168
+    "existing": 141
   },
   "by_method": {
-    "official_page_bound_grade_list": 11,
     "official_name_price_row": 33,
-    "official_grade_list_bare_row": 15,
-    "official_grade_list_row": 104,
+    "official_page_bound_grade_list": 15,
+    "official_grade_list_bare_row": 8,
+    "official_grade_list_row": 80,
     "official_grade_table_row": 5
   },
   "identity_only": {
-    "records": 712,
+    "records": 718,
     "models": 316,
-    "variants": 396
+    "variants": 402
   },
   "conflicts": {
     "records": 25
@@ -48,11 +48,11 @@
     },
     "Deepal": {
       "confirmed_variants": 3,
-      "rows": 41
+      "rows": 17
     },
     "GWM": {
-      "confirmed_variants": 3,
-      "rows": 3
+      "confirmed_variants": 1,
+      "rows": 1
     },
     "Honda": {
       "confirmed_variants": 1,
@@ -70,17 +70,13 @@
       "confirmed_variants": 3,
       "rows": 7
     },
-    "Mazda": {
-      "confirmed_variants": 4,
-      "rows": 7
-    },
     "Mitsubishi": {
       "confirmed_variants": 5,
       "rows": 5
     },
     "Suzuki": {
       "confirmed_variants": 5,
-      "rows": 15
+      "rows": 21
     },
     "Toyota": {
       "confirmed_variants": 7,

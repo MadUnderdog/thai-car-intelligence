@@ -1,6 +1,6 @@
 {
   "artifact": "p105-variant-evidence/1",
-  "generated_at": "2026-09-27T12:44:26.308411+00:00",
+  "generated_at": "2026-09-27T13:46:26.906046+00:00",
   "plan": "p105_target_plan.json",
   "rules": [
     "model-bound composite label",
@@ -8,36 +8,6 @@
     "provenance verified before use"
   ],
   "evidence": [
-    {
-      "manufacturer": "GWM",
-      "model": "Gwm Tank 300",
-      "variant": "PRO",
-      "identity_level": "VARIANT",
-      "published_label": "Gwm Tank 300 PRO",
-      "artifact": "gwm_th_model_tank-300.html",
-      "sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1",
-      "source_url": "https://www.gwm.co.th/th/models/tank-300",
-      "source_generation_context": "",
-      "extraction_method": "official_page_bound_grade_list",
-      "evidence": {
-        "composite_line": "PRO",
-        "line": 42,
-        "model_prefix": "Gwm Tank 300",
-        "structure": "page URL names Gwm Tank 300 and lists 2 distinct grades of it",
-        "selector": "official model page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Gwm Tank 300",
-          "variant": "PRO"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
     {
       "manufacturer": "GWM",
       "model": "Gwm Tank 500",
@@ -69,36 +39,6 @@
       }
     },
     {
-      "manufacturer": "GWM",
-      "model": "Gwm Tank 500",
-      "variant": "PRO",
-      "identity_level": "VARIANT",
-      "published_label": "Gwm Tank 500 PRO",
-      "artifact": "gwm_th_model_tank-500.html",
-      "sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134",
-      "source_url": "https://www.gwm.co.th/th/models/tank-500",
-      "source_generation_context": "",
-      "extraction_method": "official_page_bound_grade_list",
-      "evidence": {
-        "composite_line": "PRO",
-        "line": 43,
-        "model_prefix": "Gwm Tank 500",
-        "structure": "page URL names Gwm Tank 500 and lists 2 distinct grades of it",
-        "selector": "official model page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Gwm Tank 500",
-          "variant": "PRO"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
       "manufacturer": "Suzuki",
       "model": "Suzuki Fronx",
       "variant": "GL",
@@ -108,13 +48,13 @@
       "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
       "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
       "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
+      "extraction_method": "official_page_bound_grade_list",
       "evidence": {
         "composite_line": "GL",
-        "line": 90,
+        "line": 74,
         "model_prefix": "Suzuki Fronx",
-        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
       },
       "reconciliation_note": "",
       "reconciliation": {
@@ -138,13 +78,13 @@
       "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
       "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
       "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
+      "extraction_method": "official_page_bound_grade_list",
       "evidence": {
         "composite_line": "GLX",
-        "line": 91,
+        "line": 76,
         "model_prefix": "Suzuki Fronx",
-        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
       },
       "reconciliation_note": "",
       "reconciliation": {
@@ -168,13 +108,193 @@
       "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
       "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
       "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "GLX PLUS",
+        "line": 78,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GLX PLUS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GL",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GL",
+      "artifact": "suzuki_fronx_equipment.html",
+      "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+      "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "GL",
+        "line": 81,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GL"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GLX",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GLX",
+      "artifact": "suzuki_fronx_equipment.html",
+      "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+      "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "GLX",
+        "line": 83,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GLX"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GLX PLUS",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GLX PLUS",
+      "artifact": "suzuki_fronx_equipment.html",
+      "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+      "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "GLX PLUS",
+        "line": 85,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GLX PLUS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GL",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GL",
+      "artifact": "suzuki_fronx_equipment.html",
+      "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+      "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "GL",
+        "line": 90,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GL"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GLX",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GLX",
+      "artifact": "suzuki_fronx_equipment.html",
+      "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+      "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "GLX",
+        "line": 91,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GLX"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GLX PLUS",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GLX PLUS",
+      "artifact": "suzuki_fronx_equipment.html",
+      "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+      "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
       "evidence": {
         "composite_line": "GLX PLUS",
         "line": 92,
         "model_prefix": "Suzuki Fronx",
-        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
       },
       "reconciliation_note": "",
       "reconciliation": {
@@ -288,13 +408,13 @@
       "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
       "source_url": "https://www.suzuki.co.th/model/fronx",
       "source_generation_context": "",
-      "extraction_method": "official_page_bound_grade_list",
+      "extraction_method": "official_grade_list_bare_row",
       "evidence": {
         "composite_line": "GL",
         "line": 81,
         "model_prefix": "Suzuki Fronx",
-        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
-        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
       },
       "reconciliation_note": "",
       "reconciliation": {
@@ -318,13 +438,13 @@
       "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
       "source_url": "https://www.suzuki.co.th/model/fronx",
       "source_generation_context": "",
-      "extraction_method": "official_page_bound_grade_list",
+      "extraction_method": "official_grade_list_bare_row",
       "evidence": {
         "composite_line": "GLX",
         "line": 83,
         "model_prefix": "Suzuki Fronx",
-        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
-        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
       },
       "reconciliation_note": "",
       "reconciliation": {
@@ -348,13 +468,13 @@
       "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
       "source_url": "https://www.suzuki.co.th/model/fronx",
       "source_generation_context": "",
-      "extraction_method": "official_page_bound_grade_list",
+      "extraction_method": "official_grade_list_bare_row",
       "evidence": {
         "composite_line": "GLX PLUS",
         "line": 85,
         "model_prefix": "Suzuki Fronx",
-        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
-        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
       },
       "reconciliation_note": "",
       "reconciliation": {
@@ -1780,486 +1900,6 @@
     },
     {
       "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_hunter_k50.html",
-      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
-      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 9,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_hunter_k50.html",
-      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
-      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 10,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_hunter_k50.html",
-      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
-      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 46,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_hunter_k50.html",
-      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
-      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 47,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_hunter_k50.html",
-      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
-      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 277,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_hunter_k50.html",
-      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
-      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 278,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_s05.html",
-      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 9,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_s05.html",
-      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 10,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_s05.html",
-      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 46,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_s05.html",
-      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 47,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_s05.html",
-      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 273,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_s05.html",
-      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 274,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_s05_reev.html",
-      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 9,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_s05_reev.html",
-      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 10,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_s05_reev.html",
-      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 46,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_s05_reev.html",
-      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 47,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
       "model": "Deepal S05",
       "variant": "Reev",
       "identity_level": "VARIANT",
@@ -2284,246 +1924,6 @@
         "matched_record": {
           "model": "Deepal S05",
           "variant": "Reev"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_s05_reev.html",
-      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 268,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_s05_reev.html",
-      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
-      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 269,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_s07.html",
-      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
-      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 9,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_s07.html",
-      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
-      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 10,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_s07.html",
-      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
-      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 46,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_s07.html",
-      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
-      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 47,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Performance AWD",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Performance AWD",
-      "artifact": "deepal_s07.html",
-      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
-      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Performance AWD",
-        "line": 288,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Performance AWD"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Deepal",
-      "model": "Deepal E07",
-      "variant": "Plus",
-      "identity_level": "VARIANT",
-      "published_label": "Deepal E07 Plus",
-      "artifact": "deepal_s07.html",
-      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
-      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_row",
-      "evidence": {
-        "composite_line": "E07 Plus",
-        "line": 289,
-        "model_prefix": "E07",
-        "structure": "grade list of Deepal E07 (2 grades on this page)",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Deepal E07",
-          "variant": "Plus"
         },
         "prior_status": "IDENTITY_ONLY"
       }
@@ -3964,216 +3364,6 @@
         "matched_record": {
           "model": "Lexus Lx 500D",
           "variant": "F-Sport"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Mazda",
-      "model": "Mazda Cx-3",
-      "variant": "2.0 Prime",
-      "identity_level": "VARIANT",
-      "published_label": "Mazda Cx-3 2.0 Prime",
-      "artifact": "mazda_car_mazda-cx30-essential.html",
-      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
-      "evidence": {
-        "composite_line": "2.0 Prime",
-        "line": 375,
-        "model_prefix": "Mazda Cx-3",
-        "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Mazda Cx-3",
-          "variant": "2.0 Prime"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Mazda",
-      "model": "Mazda Cx-3",
-      "variant": "2.0 Ultra",
-      "identity_level": "VARIANT",
-      "published_label": "Mazda Cx-3 2.0 Ultra",
-      "artifact": "mazda_car_mazda-cx30-essential.html",
-      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
-      "evidence": {
-        "composite_line": "2.0 Ultra",
-        "line": 376,
-        "model_prefix": "Mazda Cx-3",
-        "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Mazda Cx-3",
-          "variant": "2.0 Ultra"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Mazda",
-      "model": "Mazda Cx-3",
-      "variant": "2.0 Signature",
-      "identity_level": "VARIANT",
-      "published_label": "Mazda Cx-3 2.0 Signature",
-      "artifact": "mazda_car_mazda-cx30-essential.html",
-      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
-      "evidence": {
-        "composite_line": "2.0 Signature",
-        "line": 377,
-        "model_prefix": "Mazda Cx-3",
-        "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Mazda Cx-3",
-          "variant": "2.0 Signature"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Mazda",
-      "model": "Mazda Cx-3",
-      "variant": "0",
-      "identity_level": "VARIANT",
-      "published_label": "Mazda Cx-3 0",
-      "artifact": "mazda_car_mazda-cx30-essential.html",
-      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
-      "evidence": {
-        "composite_line": "0%",
-        "line": 354,
-        "model_prefix": "Mazda Cx-3",
-        "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Mazda Cx-3",
-          "variant": "0"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Mazda",
-      "model": "Mazda Cx-3",
-      "variant": "2.0 Prime",
-      "identity_level": "VARIANT",
-      "published_label": "Mazda Cx-3 2.0 Prime",
-      "artifact": "mazda_spec_mazda-cx30-essential.html",
-      "sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
-      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
-      "evidence": {
-        "composite_line": "2.0 PRIME",
-        "line": 291,
-        "model_prefix": "Mazda Cx-3",
-        "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Mazda Cx-3",
-          "variant": "2.0 Prime"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Mazda",
-      "model": "Mazda Cx-3",
-      "variant": "2.0 Ultra",
-      "identity_level": "VARIANT",
-      "published_label": "Mazda Cx-3 2.0 Ultra",
-      "artifact": "mazda_spec_mazda-cx30-essential.html",
-      "sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
-      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
-      "evidence": {
-        "composite_line": "2.0 ULTRA",
-        "line": 292,
-        "model_prefix": "Mazda Cx-3",
-        "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Mazda Cx-3",
-          "variant": "2.0 Ultra"
-        },
-        "prior_status": "IDENTITY_ONLY"
-      }
-    },
-    {
-      "manufacturer": "Mazda",
-      "model": "Mazda Cx-3",
-      "variant": "2.0 Signature",
-      "identity_level": "VARIANT",
-      "published_label": "Mazda Cx-3 2.0 Signature",
-      "artifact": "mazda_spec_mazda-cx30-essential.html",
-      "sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
-      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-      "source_generation_context": "",
-      "extraction_method": "official_grade_list_bare_row",
-      "evidence": {
-        "composite_line": "2.0 SIGNATURE",
-        "line": 293,
-        "model_prefix": "Mazda Cx-3",
-        "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
-        "selector": "official page body (navigation/footer/meta/style regions removed)"
-      },
-      "reconciliation_note": "",
-      "reconciliation": {
-        "outcome": "existing",
-        "match_method": "exact_match_key",
-        "reason": "",
-        "matched_record": {
-          "model": "Mazda Cx-3",
-          "variant": "2.0 Signature"
         },
         "prior_status": "IDENTITY_ONLY"
       }

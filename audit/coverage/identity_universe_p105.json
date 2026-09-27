@@ -1,8 +1,8 @@
 {
   "schema": "p105-identity-universe/1",
-  "generated_at": "2026-09-27T12:44:26.308411+00:00",
+  "generated_at": "2026-09-27T13:46:26.906046+00:00",
   "baseline_artifact": "audit/coverage/identity_universe_p104.json",
-  "p105_harvested_rows": 168,
+  "p105_harvested_rows": 141,
   "acceptance_boundary": "Phase-1 audit evidence only",
   "universe": {
     "schema": "p102-identity-universe/1",
@@ -19,8 +19,8 @@
       "models": 572,
       "variants": 865,
       "confirmed_models": 255,
-      "confirmed_variants": 466,
-      "identity_only": 712,
+      "confirmed_variants": 460,
+      "identity_only": 718,
       "conflicts": 25,
       "unlevelled_publications": 0,
       "level_clash_keys": 26,
@@ -29,9 +29,9 @@
       "rejected": 1927,
       "confidence": {
         "UNRESOLVED": 0,
-        "SINGLE_SOURCE": 698,
+        "SINGLE_SOURCE": 704,
         "MULTI_SOURCE": 39,
-        "OFFICIAL_VERIFIED": 687
+        "OFFICIAL_VERIFIED": 681
       },
       "by_manufacturer": {
         "Audi": {
@@ -146,9 +146,9 @@
           "models": 19,
           "variants": 30,
           "first_party_confirmed_models": 15,
-          "first_party_confirmed_variants": 21,
+          "first_party_confirmed_variants": 19,
           "identity_only_models": 4,
-          "identity_only_variants": 9,
+          "identity_only_variants": 11,
           "conflicts": 0,
           "sources": [
             "9carthai price index",
@@ -289,9 +289,9 @@
           "models": 25,
           "variants": 55,
           "first_party_confirmed_models": 18,
-          "first_party_confirmed_variants": 26,
+          "first_party_confirmed_variants": 22,
           "identity_only_models": 7,
-          "identity_only_variants": 29,
+          "identity_only_variants": 33,
           "conflicts": 0,
           "sources": [
             "9carthai price index",
@@ -35444,82 +35444,6 @@
               "structure": "grade list of Deepal E07 (2 grades on this page)",
               "selector": "official page body (navigation/footer/meta/style regions removed)"
             }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-            "label": "Deepal E07 Plus",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_hunter_k50.html",
-            "artifact_sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Plus",
-              "line": 10,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-            "label": "Deepal E07 Plus",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s05.html",
-            "artifact_sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Plus",
-              "line": 10,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-            "label": "Deepal E07 Plus",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s05_reev.html",
-            "artifact_sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Plus",
-              "line": 10,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
-            "label": "Deepal E07 Plus",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s07.html",
-            "artifact_sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Plus",
-              "line": 10,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
           }
         ],
         "first_party": [
@@ -35560,82 +35484,6 @@
               "structure": "grade list of Deepal E07 (2 grades on this page)",
               "selector": "official page body (navigation/footer/meta/style regions removed)"
             }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-            "label": "Deepal E07 Plus",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_hunter_k50.html",
-            "artifact_sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Plus",
-              "line": 10,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-            "label": "Deepal E07 Plus",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s05.html",
-            "artifact_sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Plus",
-              "line": 10,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-            "label": "Deepal E07 Plus",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s05_reev.html",
-            "artifact_sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Plus",
-              "line": 10,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
-            "label": "Deepal E07 Plus",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s07.html",
-            "artifact_sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Plus",
-              "line": 10,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
           }
         ],
         "sources_with_levels": [
@@ -35652,26 +35500,6 @@
           {
             "source_name": "Deepal Thailand Official",
             "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
             "identity_level": "VARIANT"
           }
         ],
@@ -35741,82 +35569,6 @@
               "structure": "grade list of Deepal E07 (2 grades on this page)",
               "selector": "official page body (navigation/footer/meta/style regions removed)"
             }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-            "label": "Deepal E07 Performance AWD",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_hunter_k50.html",
-            "artifact_sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Performance AWD",
-              "line": 9,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-            "label": "Deepal E07 Performance AWD",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s05.html",
-            "artifact_sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Performance AWD",
-              "line": 9,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-            "label": "Deepal E07 Performance AWD",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s05_reev.html",
-            "artifact_sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Performance AWD",
-              "line": 9,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
-            "label": "Deepal E07 Performance AWD",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s07.html",
-            "artifact_sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Performance AWD",
-              "line": 9,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
           }
         ],
         "first_party": [
@@ -35857,82 +35609,6 @@
               "structure": "grade list of Deepal E07 (2 grades on this page)",
               "selector": "official page body (navigation/footer/meta/style regions removed)"
             }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-            "label": "Deepal E07 Performance AWD",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_hunter_k50.html",
-            "artifact_sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Performance AWD",
-              "line": 9,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-            "label": "Deepal E07 Performance AWD",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s05.html",
-            "artifact_sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Performance AWD",
-              "line": 9,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-            "label": "Deepal E07 Performance AWD",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s05_reev.html",
-            "artifact_sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Performance AWD",
-              "line": 9,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "manufacturer": "Deepal",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
-            "label": "Deepal E07 Performance AWD",
-            "artifact": "tests/fixtures/oem-artifacts/deepal_s07.html",
-            "artifact_sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
-            "extraction_method": "official_grade_list_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "E07 Performance AWD",
-              "line": 9,
-              "model_prefix": "E07",
-              "structure": "grade list of Deepal E07 (2 grades on this page)",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
           }
         ],
         "sources_with_levels": [
@@ -35949,26 +35625,6 @@
           {
             "source_name": "Deepal Thailand Official",
             "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Deepal Thailand Official",
-            "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
             "identity_level": "VARIANT"
           }
         ],
@@ -37336,7 +36992,7 @@
         "variant": "PRO",
         "generation": "",
         "identity_level": "VARIANT",
-        "status": "CONFIRMED_VARIANT",
+        "status": "IDENTITY_ONLY",
         "sources": [
           {
             "source_name": "9carthai price index",
@@ -37346,62 +37002,19 @@
             "origin": "clause",
             "artifact": "9carthai_gwm-price.html",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "GWM Thailand Official",
-            "manufacturer": "GWM",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.gwm.co.th/th/models/tank-300",
-            "label": "Gwm Tank 300 PRO",
-            "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-300.html",
-            "artifact_sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1",
-            "extraction_method": "official_page_bound_grade_list",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "PRO",
-              "line": 42,
-              "model_prefix": "Gwm Tank 300",
-              "structure": "page URL names Gwm Tank 300 and lists 2 distinct grades of it",
-              "selector": "official model page body (navigation/footer/meta/style regions removed)"
-            }
           }
         ],
-        "first_party": [
-          {
-            "source_name": "GWM Thailand Official",
-            "manufacturer": "GWM",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.gwm.co.th/th/models/tank-300",
-            "label": "Gwm Tank 300 PRO",
-            "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-300.html",
-            "artifact_sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1",
-            "extraction_method": "official_page_bound_grade_list",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "PRO",
-              "line": 42,
-              "model_prefix": "Gwm Tank 300",
-              "structure": "page URL names Gwm Tank 300 and lists 2 distinct grades of it",
-              "selector": "official model page body (navigation/footer/meta/style regions removed)"
-            }
-          }
-        ],
+        "first_party": [],
         "sources_with_levels": [
           {
             "source_name": "9carthai price index",
             "source_url": "https://www.9carthai.com/gwm-price/",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "GWM Thailand Official",
-            "source_url": "https://www.gwm.co.th/th/models/tank-300",
-            "identity_level": "VARIANT"
           }
         ],
-        "match_method": "first_party_plus_enumerator",
+        "match_method": "",
         "rejection_reasons": [
+          "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set"
@@ -37652,7 +37265,7 @@
         "variant": "PRO",
         "generation": "",
         "identity_level": "VARIANT",
-        "status": "CONFIRMED_VARIANT",
+        "status": "IDENTITY_ONLY",
         "sources": [
           {
             "source_name": "9carthai price index",
@@ -37662,62 +37275,19 @@
             "origin": "clause",
             "artifact": "9carthai_gwm-price.html",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "GWM Thailand Official",
-            "manufacturer": "GWM",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.gwm.co.th/th/models/tank-500",
-            "label": "Gwm Tank 500 PRO",
-            "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500.html",
-            "artifact_sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134",
-            "extraction_method": "official_page_bound_grade_list",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "PRO",
-              "line": 43,
-              "model_prefix": "Gwm Tank 500",
-              "structure": "page URL names Gwm Tank 500 and lists 2 distinct grades of it",
-              "selector": "official model page body (navigation/footer/meta/style regions removed)"
-            }
           }
         ],
-        "first_party": [
-          {
-            "source_name": "GWM Thailand Official",
-            "manufacturer": "GWM",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.gwm.co.th/th/models/tank-500",
-            "label": "Gwm Tank 500 PRO",
-            "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500.html",
-            "artifact_sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134",
-            "extraction_method": "official_page_bound_grade_list",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "PRO",
-              "line": 43,
-              "model_prefix": "Gwm Tank 500",
-              "structure": "page URL names Gwm Tank 500 and lists 2 distinct grades of it",
-              "selector": "official model page body (navigation/footer/meta/style regions removed)"
-            }
-          }
-        ],
+        "first_party": [],
         "sources_with_levels": [
           {
             "source_name": "9carthai price index",
             "source_url": "https://www.9carthai.com/gwm-price/",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "GWM Thailand Official",
-            "source_url": "https://www.gwm.co.th/th/models/tank-500",
-            "identity_level": "VARIANT"
           }
         ],
-        "match_method": "first_party_plus_enumerator",
+        "match_method": "",
         "rejection_reasons": [
+          "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set"
@@ -48733,7 +48303,7 @@
         "variant": "0",
         "generation": "",
         "identity_level": "VARIANT",
-        "status": "CONFIRMED_VARIANT",
+        "status": "IDENTITY_ONLY",
         "sources": [
           {
             "source_name": "9carthai price index",
@@ -48743,62 +48313,19 @@
             "origin": "model_link",
             "artifact": "9carthai_mazda-price.html",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "label": "Mazda Cx-3 0",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html",
-            "artifact_sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "0%",
-              "line": 354,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
           }
         ],
-        "first_party": [
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "label": "Mazda Cx-3 0",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html",
-            "artifact_sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "0%",
-              "line": 354,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          }
-        ],
+        "first_party": [],
         "sources_with_levels": [
           {
             "source_name": "9carthai price index",
             "source_url": "https://www.9carthai.com/mazda-price/",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "identity_level": "VARIANT"
           }
         ],
-        "match_method": "first_party_plus_enumerator",
+        "match_method": "",
         "rejection_reasons": [
+          "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set"
@@ -49556,7 +49083,7 @@
         "variant": "2.0 Prime",
         "generation": "",
         "identity_level": "VARIANT",
-        "status": "CONFIRMED_VARIANT",
+        "status": "IDENTITY_ONLY",
         "sources": [
           {
             "source_name": "9carthai price index",
@@ -49566,105 +49093,19 @@
             "origin": "clause",
             "artifact": "9carthai_mazda-price.html",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "label": "Mazda Cx-3 2.0 Prime",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html",
-            "artifact_sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 Prime",
-              "line": 375,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-            "label": "Mazda Cx-3 2.0 Prime",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html",
-            "artifact_sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 PRIME",
-              "line": 291,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
           }
         ],
-        "first_party": [
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "label": "Mazda Cx-3 2.0 Prime",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html",
-            "artifact_sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 Prime",
-              "line": 375,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-            "label": "Mazda Cx-3 2.0 Prime",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html",
-            "artifact_sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 PRIME",
-              "line": 291,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          }
-        ],
+        "first_party": [],
         "sources_with_levels": [
           {
             "source_name": "9carthai price index",
             "source_url": "https://www.9carthai.com/mazda-price/",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-            "identity_level": "VARIANT"
           }
         ],
-        "match_method": "first_party_plus_enumerator",
+        "match_method": "",
         "rejection_reasons": [
+          "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set"
@@ -49681,7 +49122,7 @@
         "variant": "2.0 Ultra",
         "generation": "",
         "identity_level": "VARIANT",
-        "status": "CONFIRMED_VARIANT",
+        "status": "IDENTITY_ONLY",
         "sources": [
           {
             "source_name": "9carthai price index",
@@ -49691,105 +49132,19 @@
             "origin": "clause",
             "artifact": "9carthai_mazda-price.html",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "label": "Mazda Cx-3 2.0 Ultra",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html",
-            "artifact_sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 Ultra",
-              "line": 376,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-            "label": "Mazda Cx-3 2.0 Ultra",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html",
-            "artifact_sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 ULTRA",
-              "line": 292,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
           }
         ],
-        "first_party": [
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "label": "Mazda Cx-3 2.0 Ultra",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html",
-            "artifact_sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 Ultra",
-              "line": 376,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-            "label": "Mazda Cx-3 2.0 Ultra",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html",
-            "artifact_sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 ULTRA",
-              "line": 292,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          }
-        ],
+        "first_party": [],
         "sources_with_levels": [
           {
             "source_name": "9carthai price index",
             "source_url": "https://www.9carthai.com/mazda-price/",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-            "identity_level": "VARIANT"
           }
         ],
-        "match_method": "first_party_plus_enumerator",
+        "match_method": "",
         "rejection_reasons": [
+          "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set"
@@ -49806,7 +49161,7 @@
         "variant": "2.0 Signature",
         "generation": "",
         "identity_level": "VARIANT",
-        "status": "CONFIRMED_VARIANT",
+        "status": "IDENTITY_ONLY",
         "sources": [
           {
             "source_name": "9carthai price index",
@@ -49816,105 +49171,19 @@
             "origin": "clause",
             "artifact": "9carthai_mazda-price.html",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "label": "Mazda Cx-3 2.0 Signature",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html",
-            "artifact_sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 Signature",
-              "line": 377,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-            "label": "Mazda Cx-3 2.0 Signature",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html",
-            "artifact_sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 SIGNATURE",
-              "line": 293,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
           }
         ],
-        "first_party": [
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "label": "Mazda Cx-3 2.0 Signature",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html",
-            "artifact_sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 Signature",
-              "line": 377,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "manufacturer": "Mazda",
-            "source_role": "MARKET_TRUTH",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-            "label": "Mazda Cx-3 2.0 Signature",
-            "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html",
-            "artifact_sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
-            "extraction_method": "official_grade_list_bare_row",
-            "identity_level": "VARIANT",
-            "market_scope": "TH",
-            "evidence": {
-              "composite_line": "2.0 SIGNATURE",
-              "line": 293,
-              "model_prefix": "Mazda Cx-3",
-              "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
-            }
-          }
-        ],
+        "first_party": [],
         "sources_with_levels": [
           {
             "source_name": "9carthai price index",
             "source_url": "https://www.9carthai.com/mazda-price/",
             "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
-            "identity_level": "VARIANT"
-          },
-          {
-            "source_name": "Mazda Thailand Official",
-            "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
-            "identity_level": "VARIANT"
           }
         ],
-        "match_method": "first_party_plus_enumerator",
+        "match_method": "",
         "rejection_reasons": [
+          "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set",
           "no MARKET_TRUTH record carries this identity — identity-only, never promotable to the accepted set"
@@ -57551,15 +56820,15 @@
             "label": "Suzuki Fronx GL",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html",
             "artifact_sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GL",
-              "line": 90,
+              "line": 74,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           },
           {
@@ -57570,15 +56839,15 @@
             "label": "Suzuki Fronx GL",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_page_bound_grade_list",
+            "extraction_method": "official_grade_list_bare_row",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GL",
               "line": 81,
               "model_prefix": "Suzuki Fronx",
-              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
-              "selector": "official model page body (navigation/footer/meta/style regions removed)"
+              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+              "selector": "official page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],
@@ -57591,15 +56860,15 @@
             "label": "Suzuki Fronx GL",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html",
             "artifact_sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GL",
-              "line": 90,
+              "line": 74,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           },
           {
@@ -57610,15 +56879,15 @@
             "label": "Suzuki Fronx GL",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_page_bound_grade_list",
+            "extraction_method": "official_grade_list_bare_row",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GL",
               "line": 81,
               "model_prefix": "Suzuki Fronx",
-              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
-              "selector": "official model page body (navigation/footer/meta/style regions removed)"
+              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+              "selector": "official page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],
@@ -57676,15 +56945,15 @@
             "label": "Suzuki Fronx GLX",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html",
             "artifact_sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX",
-              "line": 91,
+              "line": 76,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           },
           {
@@ -57695,15 +56964,15 @@
             "label": "Suzuki Fronx GLX",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_page_bound_grade_list",
+            "extraction_method": "official_grade_list_bare_row",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX",
               "line": 83,
               "model_prefix": "Suzuki Fronx",
-              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
-              "selector": "official model page body (navigation/footer/meta/style regions removed)"
+              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+              "selector": "official page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],
@@ -57716,15 +56985,15 @@
             "label": "Suzuki Fronx GLX",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html",
             "artifact_sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX",
-              "line": 91,
+              "line": 76,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           },
           {
@@ -57735,15 +57004,15 @@
             "label": "Suzuki Fronx GLX",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_page_bound_grade_list",
+            "extraction_method": "official_grade_list_bare_row",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX",
               "line": 83,
               "model_prefix": "Suzuki Fronx",
-              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
-              "selector": "official model page body (navigation/footer/meta/style regions removed)"
+              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+              "selector": "official page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],
@@ -57801,15 +57070,15 @@
             "label": "Suzuki Fronx GLX PLUS",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html",
             "artifact_sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX PLUS",
-              "line": 92,
+              "line": 78,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           },
           {
@@ -57820,15 +57089,15 @@
             "label": "Suzuki Fronx GLX PLUS",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_page_bound_grade_list",
+            "extraction_method": "official_grade_list_bare_row",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX PLUS",
               "line": 85,
               "model_prefix": "Suzuki Fronx",
-              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
-              "selector": "official model page body (navigation/footer/meta/style regions removed)"
+              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+              "selector": "official page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],
@@ -57841,15 +57110,15 @@
             "label": "Suzuki Fronx GLX PLUS",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_fronx_equipment.html",
             "artifact_sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
-            "extraction_method": "official_grade_list_bare_row",
+            "extraction_method": "official_page_bound_grade_list",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX PLUS",
-              "line": 92,
+              "line": 78,
               "model_prefix": "Suzuki Fronx",
-              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
-              "selector": "official page body (navigation/footer/meta/style regions removed)"
+              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+              "selector": "official model page body (navigation/footer/meta/style regions removed)"
             }
           },
           {
@@ -57860,15 +57129,15 @@
             "label": "Suzuki Fronx GLX PLUS",
             "artifact": "tests/fixtures/oem-artifacts/suzuki_model_fronx.html",
             "artifact_sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
-            "extraction_method": "official_page_bound_grade_list",
+            "extraction_method": "official_grade_list_bare_row",
             "identity_level": "VARIANT",
             "market_scope": "TH",
             "evidence": {
               "composite_line": "GLX PLUS",
               "line": 85,
               "model_prefix": "Suzuki Fronx",
-              "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
-              "selector": "official model page body (navigation/footer/meta/style regions removed)"
+              "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+              "selector": "official page body (navigation/footer/meta/style regions removed)"
             }
           }
         ],

@@ -1,23 +1,23 @@
 {
   "artifact": "p105-catalog-reconciliation/1",
-  "generated_at": "2026-09-27T12:44:26.308411+00:00",
+  "generated_at": "2026-09-27T13:46:26.906046+00:00",
   "before": {
     "confirmed_variants": 404,
     "confirmed_models": 243
   },
   "after": {
-    "confirmed_variants": 466,
+    "confirmed_variants": 460,
     "confirmed_models": 255
   },
-  "harvested": 168,
+  "harvested": 141,
   "outcomes": {
-    "existing": 168
+    "existing": 141
   },
   "by_method": {
-    "official_page_bound_grade_list": 11,
     "official_name_price_row": 33,
-    "official_grade_list_bare_row": 15,
-    "official_grade_list_row": 104,
+    "official_page_bound_grade_list": 15,
+    "official_grade_list_bare_row": 8,
+    "official_grade_list_row": 80,
     "official_grade_table_row": 5
   },
   "per_oem_before_after": {
@@ -104,11 +104,11 @@
     "GWM": {
       "confirmed_variants": [
         18,
-        21
+        19
       ],
       "identity_only_variants": [
         12,
-        9
+        11
       ]
     },
     "Haval": {
@@ -204,11 +204,11 @@
     "Mazda": {
       "confirmed_variants": [
         22,
-        26
+        22
       ],
       "identity_only_variants": [
         33,
-        29
+        33
       ]
     },
     "Mitsubishi": {
@@ -323,20 +323,196 @@
       "reason": "generic label — never a variant"
     },
     {
-      "model": "Gwm Tank 300",
-      "variant": "ULTRA",
-      "artifact": "gwm_th_model_tank-300.html",
-      "line": 41,
-      "text": "ULTRA",
-      "reason": "occurs only in navigation / footer / meta / style regions"
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 9,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
     },
     {
-      "model": "Gwm Tank 500",
-      "variant": "ULTRA",
-      "artifact": "gwm_th_model_tank-500.html",
-      "line": 42,
-      "text": "ULTRA",
-      "reason": "occurs only in navigation / footer / meta / style regions"
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 10,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 46,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 47,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 277,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 278,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05.html",
+      "line": 9,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05.html",
+      "line": 10,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05.html",
+      "line": 46,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05.html",
+      "line": 47,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05.html",
+      "line": 273,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05.html",
+      "line": 274,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05_reev.html",
+      "line": 9,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05_reev.html",
+      "line": 10,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05_reev.html",
+      "line": 46,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05_reev.html",
+      "line": 47,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05_reev.html",
+      "line": 268,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05_reev.html",
+      "line": 269,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s07.html",
+      "line": 9,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s07.html",
+      "line": 10,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s07.html",
+      "line": 46,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s07.html",
+      "line": 47,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s07.html",
+      "line": 288,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s07.html",
+      "line": 289,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
     },
     {
       "model": "Lexus Nx",
@@ -585,6 +761,62 @@
       "line": 334,
       "text": "NX 350h Grand Luxury",
       "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Prime",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 375,
+      "text": "2.0 Prime",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Ultra",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 376,
+      "text": "2.0 Ultra",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Signature",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 377,
+      "text": "2.0 Signature",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "0",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 354,
+      "text": "0%",
+      "reason": "promotion / percent token in the published line ('%') — never a grade label"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Prime",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 291,
+      "text": "2.0 PRIME",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Ultra",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 292,
+      "text": "2.0 ULTRA",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Signature",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 293,
+      "text": "2.0 SIGNATURE",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
     },
     {
       "model": "Toyota Corolla",

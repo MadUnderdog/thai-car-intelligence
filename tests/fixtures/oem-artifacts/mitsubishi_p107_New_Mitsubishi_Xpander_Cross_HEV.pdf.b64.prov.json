@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/nov2025/New%20Mitsubishi%20Xpander%20Cross%20HEV.pdf",
+  "captured_at": "2026-09-27T16:03:22.529436+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "8c06814389a89a19aab3d8172d26af0bb057883b45e488dd73de502c65398e47",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "mitsubishi_p107_New_Mitsubishi_Xpander_Cross_HEV.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

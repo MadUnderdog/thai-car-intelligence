@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/en/model/xl7/equipment",
+  "captured_at": "2026-09-27T16:06:56.142302+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "2810a9fd388797de25a91fc312fc77d0f7c2892aab47d08f0bbfe39830fb1b03",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "suzuki_p107_equipment_dup.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/pricelist",
+  "captured_at": "2026-09-27T16:00:50.071080+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "6f2f7b989db009ab3fd39166c63009e03aa4059430517bbbc10673f12357bf8d",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "toyota_p107_pricelist.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

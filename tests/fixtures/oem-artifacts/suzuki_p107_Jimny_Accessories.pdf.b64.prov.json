@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/upload/file/Brochure/Jimny_Accessories.pdf",
+  "captured_at": "2026-09-27T16:06:50.015923+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "a9e303246c2b23b182d4a3fa3db638b087ef9e8679967d52b60b747951c56131",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "suzuki_p107_Jimny_Accessories.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

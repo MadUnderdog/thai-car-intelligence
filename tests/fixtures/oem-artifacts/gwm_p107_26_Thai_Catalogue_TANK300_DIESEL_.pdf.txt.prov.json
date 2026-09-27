@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/tank-300-diesel/26_Thai_Catalogue%20TANK300%20DIESEL%20.pdf",
+  "captured_at": "2026-09-27T16:15:42.569991+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "24e99bbe0597287963ffea4a5f28aa18b07f7818b764ecf6b0c5be8185edf3a8",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "gwm_p107_26_Thai_Catalogue_TANK300_DIESEL_.pdf.txt",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

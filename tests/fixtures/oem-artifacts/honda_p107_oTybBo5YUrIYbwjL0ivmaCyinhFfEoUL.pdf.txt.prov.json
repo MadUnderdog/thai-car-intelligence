@@ -1,0 +1,9 @@
+{
+  "source_url": "https://assets.honda.co.th/www-assets/model/2026/02/19/oTybBo5YUrIYbwjL0ivmaCyinhFfEoUL.pdf?response-content-disposition=attachment%3B%20filename%3DNew%20STEP%20WGN%20e:HEV%20Catalog.pdf",
+  "captured_at": "2026-09-27T16:27:13.114572+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "3641931c81ab488db8d47cbde517b7a39caa942d4da4c172b92e8a54ae7b4266",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "honda_p107_oTybBo5YUrIYbwjL0ivmaCyinhFfEoUL.pdf.txt",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/poer-sahar-diesel/GWM%20POER%20SAHAR%20DIESEL_TH.pdf",
+  "captured_at": "2026-09-27T16:05:48.102616+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "d4fa3ac8b8cda1420f0020ef91337c7cfb84dd75ada604b8d18ec762b4e8b77e",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "gwm_p107_GWM_POER_SAHAR_DIESEL_TH.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

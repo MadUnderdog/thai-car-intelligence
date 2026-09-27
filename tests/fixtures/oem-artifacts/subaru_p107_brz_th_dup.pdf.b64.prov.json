@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.subaru.asia/brochures/brz_th.pdf?v=nv62r",
+  "captured_at": "2026-09-27T16:03:34.779227+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "9eec2c79a72d691c9d8f05a8e031171560ec87bdf0175e01e2f377f43d919e2d",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "subaru_p107_brz_th_dup.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

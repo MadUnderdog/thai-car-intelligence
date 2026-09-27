@@ -1,0 +1,9 @@
+{
+  "source_url": "https://api.www.changan.co.th/uploads/DEEPAL_S05_Max_LR_Leaflet_Eng99_KW_1bbb962068.pdf",
+  "captured_at": "2026-09-27T16:06:02.496932+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "9da8143ef490d370944bcf7357027f07e88422ccd9a5fb537851e18ae0f962bc",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "deepal_p107_DEEPAL_S05_Max_LR_Leaflet_Eng99_KW_1bbb962068.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

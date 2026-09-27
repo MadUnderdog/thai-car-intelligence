@@ -1,6 +1,6 @@
 {
   "brand": "GWM",
-  "generated_at": "2026-09-27T03:54:04.896331+00:00",
+  "generated_at": "2026-09-27T16:55:43.920262+00:00",
   "rule": "a hero price is staged only when the identical figure is published as a configurator card price on the same artifact; campaign-derived figures are rejected rather than typed",
   "staged_rows": 29,
   "rejected_candidates": [

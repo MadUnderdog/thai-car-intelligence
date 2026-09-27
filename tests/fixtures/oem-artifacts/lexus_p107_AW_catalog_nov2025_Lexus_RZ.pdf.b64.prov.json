@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_RZ.pdf",
+  "captured_at": "2026-09-27T16:04:29.994065+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "32341381a8087bd31813c1cde79e456485dd013259093bd398eeee53cdcec305",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "lexus_p107_AW_catalog_nov2025_Lexus_RZ.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

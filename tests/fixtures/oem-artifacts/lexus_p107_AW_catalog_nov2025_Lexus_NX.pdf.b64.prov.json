@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_NX.pdf",
+  "captured_at": "2026-09-27T16:04:06.467948+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "4c204fa6f8d6eeb276d7ef0a9eb0c7be172d7e8a90545983fb68f6f7c9468218",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "lexus_p107_AW_catalog_nov2025_Lexus_NX.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

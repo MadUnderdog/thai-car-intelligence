@@ -1,0 +1,9 @@
+{
+  "source_url": "https://api.www.changan.co.th/uploads/Q05_Specs_sheet_en_99kw_for_export_model_2ecb16b06b.pdf",
+  "captured_at": "2026-09-27T16:06:58.864982+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "316a26832121b0da2844b2c2d84caf28d32e3b1c08e2f19ca952d1536183662a",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "changan_p107_Q05_Specs_sheet_en_99kw_for_export_model_2ecb16b06b.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

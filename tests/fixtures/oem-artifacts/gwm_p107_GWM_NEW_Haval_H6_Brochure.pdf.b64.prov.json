@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/haval-h6-hev/GWM%20NEW%20Haval%20H6%20Brochure.pdf",
+  "captured_at": "2026-09-27T16:04:33.442883+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "91540b9105bbc4a9aa84cdfc20e1432e751092776deb50a0ce0b119387c838cb",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "gwm_p107_GWM_NEW_Haval_H6_Brochure.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model-list",
+  "captured_at": "2026-09-27T16:00:51.892883+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "58c5b641c344373637dc7ca3d42bac8284d79dd843b2b6837c6e4f06d12d1893",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "toyota_p107_model-list.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

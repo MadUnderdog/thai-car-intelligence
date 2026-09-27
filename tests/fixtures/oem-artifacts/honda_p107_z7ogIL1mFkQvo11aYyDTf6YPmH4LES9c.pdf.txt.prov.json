@@ -1,0 +1,9 @@
+{
+  "source_url": "https://assets.honda.co.th/www-assets/model/2026/07/22/z7ogIL1mFkQvo11aYyDTf6YPmH4LES9c.pdf?response-content-disposition=attachment%3B%20filename%3DNew%20Honda%20Civic%20e:HEV%20Catalog.pdf",
+  "captured_at": "2026-09-27T16:15:19.055003+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "860bcc1189e884f888548467c989bfb265583c007c11831ff1dc32764c5b6885",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "honda_p107_z7ogIL1mFkQvo11aYyDTf6YPmH4LES9c.pdf.txt",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

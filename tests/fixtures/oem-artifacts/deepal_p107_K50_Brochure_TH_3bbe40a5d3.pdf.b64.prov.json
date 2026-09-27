@@ -1,0 +1,9 @@
+{
+  "source_url": "https://api.www.changan.co.th/uploads/K50_Brochure_TH_3bbe40a5d3.pdf",
+  "captured_at": "2026-09-27T16:06:05.948508+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "2c7344c47eac096b370fe72dad46fced8064fc62d9602944fd657dc718ba5afc",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "deepal_p107_K50_Brochure_TH_3bbe40a5d3.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

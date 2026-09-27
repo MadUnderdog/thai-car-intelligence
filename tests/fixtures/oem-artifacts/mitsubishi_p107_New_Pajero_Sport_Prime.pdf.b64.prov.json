@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/mar2025/New%20Pajero%20Sport%20Prime.pdf",
+  "captured_at": "2026-09-27T16:03:18.259420+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "f6d623927aa53fd4f2548bd1a3b8ea885c7e7f66b5411bac5bcd6f142511952a",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "mitsubishi_p107_New_Pajero_Sport_Prime.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

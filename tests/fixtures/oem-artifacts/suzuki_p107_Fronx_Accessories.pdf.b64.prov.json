@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/upload/file/Brochure/Fronx_Accessories.pdf",
+  "captured_at": "2026-09-27T16:06:32.547733+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "bb4132fd940b5e07ec9f60a01cc1d26c6e66f25536c92b8b50f06f425e00caec",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "suzuki_p107_Fronx_Accessories.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

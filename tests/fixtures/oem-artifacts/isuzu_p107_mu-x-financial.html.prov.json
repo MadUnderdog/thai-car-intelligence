@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu-tis.com/specialoffer/ppv/mu-x-financial",
+  "captured_at": "2026-09-27T16:06:22.874446+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "8c5e66c955bb4063799bfb14958a69baafca4fc125ec2ccc1af936258bd7dcec",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "isuzu_p107_mu-x-financial.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

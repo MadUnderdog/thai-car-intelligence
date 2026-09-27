@@ -1,0 +1,9 @@
+{
+  "source_url": "https://configurator.porsche.com/en-TH/mode/model/XABDC1",
+  "captured_at": "2026-09-27T16:02:04.739970+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "e13df4ec41927bd3a8f4abe40e03164a8d01026d4210785b1646a751d3a11784",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "porsche_p107_XABDC1.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://mg-upload.sgp1.cdn.digitaloceanspaces.com/03eda59ea41eef277888653394726ac6.pdf",
+  "captured_at": "2026-09-27T16:26:44.944194+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "9203768038ea6206368ccd08037df67990f3b3a1526dc022caf2166b3a3efb65",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "mg_p107_03eda59ea41eef277888653394726ac6.pdf.txt",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+  "captured_at": "2026-09-27T16:07:32.170660+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "4d90d3d3e255e630cf9251a853a7961ac95573b57882aef33e52a99c38985a37",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "jaguar_p107_f-type-zp-edition.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

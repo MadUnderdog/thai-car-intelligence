@@ -1,0 +1,9 @@
+{
+  "source_url": "https://configurator.porsche.com/en-TH/mode/model/XABAA1",
+  "captured_at": "2026-09-27T16:02:01.737046+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "6e0fd68ce93243d3a6ed2e77a5db86183b3bd437fc60379943ed324c3b9f86a1",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "porsche_p107_XABAA1.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

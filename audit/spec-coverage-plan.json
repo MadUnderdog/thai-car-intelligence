@@ -304,6 +304,22 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_p107_spec_dup.html",
+          "marker_counts": {
+            "thai_ps": 8,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 8,
+            "fuel_consumption": 2
+          },
+          "marker_total": 18,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 7,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html",
           "marker_counts": {
             "thai_ps": 4,
@@ -317,6 +333,22 @@
           "structure": "spec_block_dom",
           "structured_fields": 0,
           "spec_blocks": 35,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_p107_spec.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 9,
+            "fuel_consumption": 4
+          },
+          "marker_total": 16,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 7,
           "confidence": "high"
         },
         {
@@ -352,6 +384,22 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/toyota_p107_alphard.html",
+          "marker_counts": {
+            "thai_ps": 4,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 5,
+            "fuel_consumption": 2
+          },
+          "marker_total": 11,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_sahar.html",
           "marker_counts": {
             "thai_ps": 5,
@@ -382,6 +430,54 @@
           "structured_fields": 0,
           "spec_blocks": 0,
           "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p107_XABAA1.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 8,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 8,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 193,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p107_XABBB1.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 8,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 8,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 193,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p107_XABDC1.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 8,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 8,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 192,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_ora-5-ev.html",
@@ -429,6 +525,22 @@
           "structure": "spec_block_dom",
           "structured_fields": 0,
           "spec_blocks": 35,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/toyota_p107_altis.html",
+          "marker_counts": {
+            "thai_ps": 2,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 5,
+            "fuel_consumption": 0
+          },
+          "marker_total": 7,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
           "confidence": "high"
         },
         {
@@ -496,6 +608,22 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/jaguar_p107_f-pace-svr-575-edition.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 4,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 4,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/deepal_e07_awd.html",
           "marker_counts": {
             "thai_ps": 0,
@@ -535,6 +663,22 @@
             "kw": 0,
             "kwh": 0,
             "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 3,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/jaguar_p107_f-type-zp-edition.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 3,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
             "fuel_consumption": 0
           },
           "marker_total": 3,
@@ -686,6 +830,22 @@
           "structured_fields": 0,
           "spec_blocks": 5,
           "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/changan_p107_compare-cars_dup.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 1,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/mg_press_news.html",
@@ -906,6 +1066,39 @@
         "tests/fixtures/oem-artifacts/isuzu_brochure_page.html": [
           "/specialoffer"
         ],
+        "tests/fixtures/oem-artifacts/isuzu_p107_mu-x-financial-normalmodel.html": [
+          "/specialoffer",
+          "/specialoffer/ppv",
+          "/specialoffer/ppv/mu-x-financial",
+          "/specialoffer/ppv/mu-x-isuzutrustedcare",
+          "https://www.isuzu-tis.com/specialoffer/ppv/mu-x-financial-normalmodel"
+        ],
+        "tests/fixtures/oem-artifacts/isuzu_p107_mu-x-financial.html": [
+          "/specialoffer",
+          "/specialoffer/ppv",
+          "/specialoffer/ppv/mu-x-financial-normalmodel",
+          "/specialoffer/ppv/mu-x-isuzutrustedcare",
+          "https://www.isuzu-tis.com/specialoffer/ppv/mu-x-financial"
+        ],
+        "tests/fixtures/oem-artifacts/isuzu_p107_ppv.html": [
+          "/specialoffer",
+          "/specialoffer/ppv/mu-x-financial",
+          "/specialoffer/ppv/mu-x-financial-normalmodel",
+          "/specialoffer/ppv/mu-x-isuzutrustedcare"
+        ],
+        "tests/fixtures/oem-artifacts/isuzu_p107_specialoffer.html": [
+          "/specialoffer",
+          "/specialoffer/ppv",
+          "/specialoffer/ppv/mu-x-isuzutrustedcare",
+          "/specialoffer/pup",
+          "/specialoffer/pup/isuzutrustedcare",
+          "/specialoffer/service-campaign",
+          "/specialoffer/service-campaign/2026-crmcampaign-2",
+          "/specialoffer/service-campaign/csi-nationwide_2026_q3",
+          "/specialoffer/service-campaign/flood-campaign-2026",
+          "/specialoffer/service-campaign/freecheck-30-item",
+          "https://www.isuzu-tis.com/specialoffer"
+        ],
         "tests/fixtures/oem-artifacts/isuzu_page.html": [
           "/specialoffer",
           "/specialoffer/ppv",
@@ -949,6 +1142,47 @@
           "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
           "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
           "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview"
+        ],
+        "tests/fixtures/oem-artifacts/jaguar_p107_f-pace-svr-575-edition.html": [
+          "/about-jaguar-special-vehicle-operations",
+          "/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition#",
+          "/about-jaguar/special-vehicle-operations/overview",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/vision-gt-sv"
+        ],
+        "tests/fixtures/oem-artifacts/jaguar_p107_f-type-zp-edition.html": [
+          "/about-jaguar-special-vehicle-operations",
+          "/about-jaguar/special-vehicle-operations/overview",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/vision-gt-sv"
+        ],
+        "tests/fixtures/oem-artifacts/jaguar_p107_overview.html": [
+          "/about-jaguar-special-vehicle-operations",
+          "/about-jaguar/special-vehicle-operations/f-pace-svr",
+          "/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "/about-jaguar/special-vehicle-operations/vision-gt-sv",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/vision-gt-sv"
+        ],
+        "tests/fixtures/oem-artifacts/jaguar_p107_overview_dup.html": [
+          "/about-jaguar-special-vehicle-operations",
+          "/about-jaguar/special-vehicle-operations/f-pace-svr",
+          "/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "/about-jaguar/special-vehicle-operations/vision-gt-sv",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview",
+          "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/vision-gt-sv"
         ],
         "tests/fixtures/oem-artifacts/jaguar_press_news.html": [
           "/about-jaguar-special-vehicle-operations",
@@ -1003,6 +1237,18 @@
         "tests/fixtures/oem-artifacts/mazda_car_new-mazda-bt50.html": [
           "/th/cars/new-mazda-bt50/spec"
         ],
+        "tests/fixtures/oem-artifacts/mazda_p107_spec.html": [
+          "/cars/mazda-cx30-essential/spec",
+          "/en/cars/mazda-cx30-essential/spec",
+          "/th/cars/[slug]/spec",
+          "/th/cars/mazda-cx30-essential/spec#"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_p107_spec_dup.html": [
+          "/cars/mazda3-sedan/spec",
+          "/en/cars/mazda3-sedan/spec",
+          "/th/cars/[slug]/spec",
+          "/th/cars/mazda3-sedan/spec#"
+        ],
         "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html": [
           "/cars/mazda-cx30-essential/spec",
           "/en/cars/mazda-cx30-essential/spec",
@@ -1040,6 +1286,104 @@
           "/en_TH/home/serv/special-offers/motor_expo_2025.html",
           "/en_TH/home/serv/special-offers/the_new_mini_family.html"
         ],
+        "tests/fixtures/oem-artifacts/mini_p107_MINI-Service-Inclusive-new.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html",
+          "https://www.mini.co.th/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p107_Mini_Go-Kart_OnTheRoof.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html",
+          "https://www.mini.co.th/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p107_brochure.html": [
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/ALL-ELECTRIC-MINI-JOHN-COOPER-WORKS-ACEMAN-updated.pdf.asset.1745985261685.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/ALL-ELECTRIC-MINI-JOHN-COOPER-WORKS.pdf.asset.1742365732500.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/AW_MINI_Aceman_SE-JCW_Collection_Specsheet.pdf.asset.1786619083444.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/AW_MINI_Aceman_SE-Multitone_Collection_Specsheet.pdf.asset.1786619083344.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/F67-ZN2_MINI-Cooper-Convertible-S_2.pdf.asset.1750744459246.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/F67-ZN3_MINI-John-Cooper-Works-Convertible_2.pdf.asset.1750744459356.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/J01-ZN7_All-Electric-MINI-Cooper-SE-Hightrim_V2.pdf.asset.1750658710467.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/J01-ZN8_All-Electric-MINI-Cooper-SE-Classic.pdf.asset.1763030118613.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/J05-ZN0_All-Electric-MINI-Aceman-SE-Classic.pdf.asset.1763030118526.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/J05-ZN9_All-Electric-MINI-Aceman-SE-Hightrim.pdf.asset.1750394159685.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/MINI-COUNTRYMAN-S-ALL4-HIGHTRIM.pdf.asset.1731997210658.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/MINI-JOHN-COOPER-WORKS.pdf.asset.1742365732697.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2024/mini-specsheet/MINI_Aceman_SE-Shadow_Collection_Specsheet.pdf.asset.1786619083391.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2026/AW_MINI_SpecSheet_Jan2026_J01Paul.pdf.asset.1783421269234.pdf",
+          "/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2026/AW_MINI_SpecSheet_MINI_1965_Victory_Edition.pdf.asset.1783421422025.pdf",
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p107_convenience-no-matter-what-you-choose.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html",
+          "https://www.mini.co.th/en_TH/home/serv/special-offers/convenience-no-matter-what-you-choose.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p107_mini_connected.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html",
+          "https://www.mini.co.th/en_TH/home/serv/special-offers/mini_connected.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p107_mini_expo_2025_new.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html",
+          "https://www.mini.co.th/en_TH/home/serv/special-offers/mini_expo_2025_new.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p107_motor_expo_2025.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html",
+          "https://www.mini.co.th/en_TH/home/serv/special-offers/motor_expo_2025.html"
+        ],
         "tests/fixtures/oem-artifacts/mitsubishi_home_page.html": [
           "/th/news-activity/news/MMTh-Kong-Thabbok-Upatham-Sustainable-Technical-Skills-Development"
         ],
@@ -1073,6 +1417,33 @@
           "#technical-data-XABDE1",
           "#technical-data-XABFD1"
         ],
+        "tests/fixtures/oem-artifacts/porsche_p107_95BAU1.html": [
+          "/en-TH/mode/model/95BAU1/specifications?tab=technical-data",
+          "/public/specifications.route-D73kOO9V.js"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p107_95BBV1.html": [
+          "/en-TH/mode/model/95BBV1/specifications?tab=technical-data",
+          "/public/specifications.route-D73kOO9V.js"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p107_95BBW1.html": [
+          "/en-TH/mode/model/95BBW1/specifications?tab=technical-data",
+          "/public/specifications.route-D73kOO9V.js"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p107_XABAA1.html": [
+          "/en-TH/mode/model/XABAA1/specifications?tab=technical-data",
+          "/public/specifications.route-D73kOO9V.js"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p107_XABBB1.html": [
+          "/en-TH/mode/model/XABBB1/specifications?tab=technical-data",
+          "/public/specifications.route-D73kOO9V.js"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p107_XABDC1.html": [
+          "/en-TH/mode/model/XABDC1/specifications?tab=technical-data",
+          "/public/specifications.route-D73kOO9V.js"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p107_vehicle-accessories.html": [
+          "#campaigns-and-specials"
+        ],
         "tests/fixtures/oem-artifacts/subaru_th_home_page.html": [
           "/th/th/promotions/sales/217/forester-special-deals/"
         ],
@@ -1082,8 +1453,20 @@
         "tests/fixtures/oem-artifacts/suzuki_jimny_equipment.html": [
           "/model/jimny/specification"
         ],
+        "tests/fixtures/oem-artifacts/suzuki_p107_equipment.html": [
+          "/en/model/fronx/specification"
+        ],
+        "tests/fixtures/oem-artifacts/suzuki_p107_equipment_dup.html": [
+          "/en/model/xl7/specification"
+        ],
         "tests/fixtures/oem-artifacts/suzuki_xl7_equipment.html": [
           "/model/xl7/specification"
+        ],
+        "tests/fixtures/oem-artifacts/toyota_p107_alphard.html": [
+          "/en/model/alphard/specification"
+        ],
+        "tests/fixtures/oem-artifacts/toyota_p107_altis.html": [
+          "/en/model/altis/specification"
         ]
       },
       "why_second": "the link targets are published by the OEM pages we already fetched, so the structure is known to exist before any request is made"
@@ -1210,8 +1593,20 @@
         "blocked_or_wrong_target": false,
         "next_retry_at": null
       },
+      "www.isuzu-tis.com": {
+        "targets": 3,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
       "www.jaguar.co.th": {
-        "targets": 16,
+        "targets": 36,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
+      "www.mini.co.th": {
+        "targets": 6,
         "registry_state": "not_in_registry",
         "blocked_or_wrong_target": false,
         "next_retry_at": null

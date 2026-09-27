@@ -1,0 +1,9 @@
+{
+  "source_url": "https://api.www.changan.co.th/uploads/S05_Brochure_TH_b92d1a256f.pdf",
+  "captured_at": "2026-09-27T16:06:14.187302+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "fb5f8704563ddde0a7c7050ae7aad388cb38d69b787a8c2eca9b93308629b98b",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "deepal_p107_S05_Brochure_TH_b92d1a256f.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

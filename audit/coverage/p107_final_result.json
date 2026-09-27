@@ -1,0 +1,89 @@
+{
+  "schema": "p107-final-result/1",
+  "generated_at": "2026-09-27T16:32:11.375302+00:00",
+  "before_after": {
+    "first_party_confirmed_variants": [
+      472,
+      482
+    ],
+    "first_party_confirmed_models": [
+      262,
+      264
+    ],
+    "oems_with_variant_confirmation": [
+      19,
+      19
+    ],
+    "universe_records": [
+      1424,
+      1424
+    ]
+  },
+  "harvested_rows": 13,
+  "outcomes": {
+    "existing": 13
+  },
+  "by_method": {
+    "official_grade_list_row": 5,
+    "official_name_price_row": 4,
+    "official_grade_list_bare_row": 2,
+    "official_page_bound_grade_list": 2
+  },
+  "identity_only": {
+    "records": 696,
+    "models": 316,
+    "variants": 380
+  },
+  "conflicts": {
+    "records": 25
+  },
+  "rejected": {
+    "records": 1927
+  },
+  "per_oem_delta": {
+    "Changan": {
+      "confirmed_variants": 1,
+      "rows": 4
+    },
+    "Lexus": {
+      "confirmed_variants": 2,
+      "rows": 2
+    },
+    "MINI": {
+      "confirmed_variants": 2,
+      "rows": 2
+    },
+    "Toyota": {
+      "confirmed_variants": 5,
+      "rows": 5
+    }
+  },
+  "blocked_oems": [
+    "BYD",
+    "Audi",
+    "Chevrolet",
+    "Ford",
+    "Tesla",
+    "Chery",
+    "Haval",
+    "NETA",
+    "Peugeot",
+    "Volvo",
+    "Avance",
+    "Mercedes-Benz",
+    "Smart"
+  ],
+  "gates": {
+    "staging_written": false,
+    "price_pass": false,
+    "prisma_touched": false,
+    "p104_p103_p102_logic_changed": false,
+    "production_db_unchanged": true
+  },
+  "p107_baseline_result": {
+    "first_party_confirmed_variants": [
+      462,
+      472
+    ]
+  }
+}

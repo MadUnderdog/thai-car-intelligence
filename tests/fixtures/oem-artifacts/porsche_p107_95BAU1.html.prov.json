@@ -1,0 +1,9 @@
+{
+  "source_url": "https://configurator.porsche.com/en-TH/mode/model/95BAU1",
+  "captured_at": "2026-09-27T16:01:58.692037+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "4b3edfcfa5f939e2aab007f87878b4141f465475197b2246e121a50219b6c727",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "porsche_p107_95BAU1.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

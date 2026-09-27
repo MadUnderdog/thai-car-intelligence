@@ -1,0 +1,9 @@
+{
+  "source_url": "https://api.www.changan.co.th/uploads/AW_Leaflet_DEEPAL_S05_Eng_Version_changewww_90800aa83c.pdf",
+  "captured_at": "2026-09-27T16:06:00.157414+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "e8aa67cf4f2901ea1991a612bd66ef677fd1063b87b2b8baafc5489da18e41ef",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "deepal_p107_AW_Leaflet_DEEPAL_S05_Eng_Version_changewww_90800aa83c.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

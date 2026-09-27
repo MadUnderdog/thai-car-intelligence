@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW%20Lexus_Sep2025_Catalogue%20LS.pdf",
+  "captured_at": "2026-09-27T16:03:56.889782+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "5f9e2b9c23b0c66623233a67a94294a4a2694e1ef1eb8867787af4710b00bcb5",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "lexus_p107_AW_Lexus_Sep2025_Catalogue_LS.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

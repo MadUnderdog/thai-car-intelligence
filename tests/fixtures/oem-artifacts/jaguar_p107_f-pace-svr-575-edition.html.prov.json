@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+  "captured_at": "2026-09-27T16:07:31.011968+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "c0c6dfee3d824e6b4376de1e70ae23dbf30692260595a1febce054194a86b210",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "jaguar_p107_f-pace-svr-575-edition.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

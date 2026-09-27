@@ -10,6 +10,7 @@ Red-before requirements (written before the P106 rule changes):
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import subprocess
@@ -216,19 +217,35 @@ def test_every_evidence_row_is_bound_by_its_url_or_by_the_published_line():
 
 
 def test_rerun_is_deterministic():
-    path = os.path.join(OUT, "p106_variant_evidence.json")
+    """Deterministic in the CURRENT tree: two consecutive runs of the driver must
+    produce byte-identical evidence.  The committed artifacts are snapshotted and
+    restored afterwards, because a wave's snapshot belongs to its own capture set
+    and later fixtures must not rewrite an accepted baseline."""
+    import glob as _glob
+    patterns = ["p106_*", "catalog_reconciliation_p106*", "identity_*_p106*"]
+    files = sorted({f for pat in patterns for f in _glob.glob(os.path.join(OUT, pat))})
+    assert files, patterns
+    saved = dict((f, open(f, "rb").read()) for f in files)
 
-    def digest() -> str:
-        import hashlib
-        rows = json.load(open(path, encoding="utf-8"))["evidence"]
-        canon = json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
-        return hashlib.sha256(canon.encode("utf-8")).hexdigest()
+    def run_once():
+        proc = subprocess.run([sys.executable, "scripts/p106_variant_recovery.py"],
+                              cwd=REPO, capture_output=True, text=True, timeout=900)
+        assert proc.returncode == 0, proc.stderr[-2000:]
+        rows = json.load(open(os.path.join(OUT, "p106_variant_evidence.json"),
+                              encoding="utf-8"))["evidence"]
+        canon = json.dumps(rows, sort_keys=True, ensure_ascii=False,
+                           separators=(",", ":"))
+        return hashlib.sha256(canon.encode()).hexdigest(), len(rows)
 
-    before = digest()
-    run = subprocess.run([sys.executable, "scripts/p106_variant_recovery.py"],
-                         cwd=REPO, capture_output=True, text=True, timeout=540)
-    assert run.returncode == 0, run.stderr[-2000:]
-    assert digest() == before, "P106 output is not deterministic"
+    try:
+        first = run_once()
+        second = run_once()
+    finally:
+        for f, data in saved.items():
+            with open(f, "wb") as fh:
+                fh.write(data)
+    assert first == second, (first, second)
+    assert first[1] > 0
 
 
 def test_this_suite_contains_no_vacuous_assertions():

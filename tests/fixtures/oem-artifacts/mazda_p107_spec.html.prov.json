@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+  "captured_at": "2026-09-27T16:01:03.172394+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "b83c761758ed0fcd055ab9571d32bfb2f1526224d995e7d6bcc8eabe2538acf5",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "mazda_p107_spec.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

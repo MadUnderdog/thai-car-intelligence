@@ -1,0 +1,9 @@
+{
+  "source_url": "https://api.www.changan.co.th/uploads/Brochure_Lumin_TH_new_b7dead1107.pdf",
+  "captured_at": "2026-09-27T16:06:57.292451+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "088fe395f23a6580f7eae1b96aa4bc6a9d7fc7efeaa49d90baae9771053d8e75",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "changan_p107_Brochure_Lumin_TH_new_b7dead1107.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

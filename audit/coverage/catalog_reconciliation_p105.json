@@ -1,0 +1,606 @@
+{
+  "artifact": "p105-catalog-reconciliation/1",
+  "generated_at": "2026-09-27T12:44:26.308411+00:00",
+  "before": {
+    "confirmed_variants": 404,
+    "confirmed_models": 243
+  },
+  "after": {
+    "confirmed_variants": 466,
+    "confirmed_models": 255
+  },
+  "harvested": 168,
+  "outcomes": {
+    "existing": 168
+  },
+  "by_method": {
+    "official_page_bound_grade_list": 11,
+    "official_name_price_row": 33,
+    "official_grade_list_bare_row": 15,
+    "official_grade_list_row": 104,
+    "official_grade_table_row": 5
+  },
+  "per_oem_before_after": {
+    "Audi": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        21,
+        21
+      ]
+    },
+    "BMW": {
+      "confirmed_variants": [
+        49,
+        66
+      ],
+      "identity_only_variants": [
+        37,
+        20
+      ]
+    },
+    "BYD": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        24,
+        24
+      ]
+    },
+    "Changan": {
+      "confirmed_variants": [
+        4,
+        4
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Chery": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        6,
+        6
+      ]
+    },
+    "Chevrolet": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        16,
+        16
+      ]
+    },
+    "Deepal": {
+      "confirmed_variants": [
+        1,
+        4
+      ],
+      "identity_only_variants": [
+        10,
+        7
+      ]
+    },
+    "Ford": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        15,
+        15
+      ]
+    },
+    "GWM": {
+      "confirmed_variants": [
+        18,
+        21
+      ],
+      "identity_only_variants": [
+        12,
+        9
+      ]
+    },
+    "Haval": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        5,
+        5
+      ]
+    },
+    "Honda": {
+      "confirmed_variants": [
+        31,
+        32
+      ],
+      "identity_only_variants": [
+        19,
+        18
+      ]
+    },
+    "Isuzu": {
+      "confirmed_variants": [
+        2,
+        7
+      ],
+      "identity_only_variants": [
+        8,
+        3
+      ]
+    },
+    "Jaguar": {
+      "confirmed_variants": [
+        1,
+        1
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Kia": {
+      "confirmed_variants": [
+        3,
+        3
+      ],
+      "identity_only_variants": [
+        15,
+        15
+      ]
+    },
+    "Land Rover": {
+      "confirmed_variants": [
+        11,
+        11
+      ],
+      "identity_only_variants": [
+        0,
+        0
+      ]
+    },
+    "Lexus": {
+      "confirmed_variants": [
+        27,
+        36
+      ],
+      "identity_only_variants": [
+        18,
+        9
+      ]
+    },
+    "MG": {
+      "confirmed_variants": [
+        5,
+        8
+      ],
+      "identity_only_variants": [
+        32,
+        29
+      ]
+    },
+    "MINI": {
+      "confirmed_variants": [
+        13,
+        13
+      ],
+      "identity_only_variants": [
+        7,
+        7
+      ]
+    },
+    "Mazda": {
+      "confirmed_variants": [
+        22,
+        26
+      ],
+      "identity_only_variants": [
+        33,
+        29
+      ]
+    },
+    "Mitsubishi": {
+      "confirmed_variants": [
+        19,
+        24
+      ],
+      "identity_only_variants": [
+        22,
+        17
+      ]
+    },
+    "NETA": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Nissan": {
+      "confirmed_variants": [
+        23,
+        23
+      ],
+      "identity_only_variants": [
+        24,
+        24
+      ]
+    },
+    "Peugeot": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Porsche": {
+      "confirmed_variants": [
+        69,
+        69
+      ],
+      "identity_only_variants": [
+        21,
+        21
+      ]
+    },
+    "Subaru": {
+      "confirmed_variants": [
+        2,
+        2
+      ],
+      "identity_only_variants": [
+        9,
+        9
+      ]
+    },
+    "Suzuki": {
+      "confirmed_variants": [
+        6,
+        11
+      ],
+      "identity_only_variants": [
+        8,
+        3
+      ]
+    },
+    "Tesla": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        9,
+        9
+      ]
+    },
+    "Toyota": {
+      "confirmed_variants": [
+        98,
+        105
+      ],
+      "identity_only_variants": [
+        81,
+        74
+      ]
+    },
+    "Volvo": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        1,
+        1
+      ]
+    }
+  },
+  "new_identities": [],
+  "ambiguous": [],
+  "rejected_rows": [
+    {
+      "model": "Gwm Tank 300",
+      "variant": "HEV",
+      "artifact": "gwm_th_model_tank-300.html",
+      "line": 32,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Gwm Tank 300",
+      "variant": "ULTRA",
+      "artifact": "gwm_th_model_tank-300.html",
+      "line": 41,
+      "text": "ULTRA",
+      "reason": "occurs only in navigation / footer / meta / style regions"
+    },
+    {
+      "model": "Gwm Tank 500",
+      "variant": "ULTRA",
+      "artifact": "gwm_th_model_tank-500.html",
+      "line": 42,
+      "text": "ULTRA",
+      "reason": "occurs only in navigation / footer / meta / style regions"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 54,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 55,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 58,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "Premium",
+      "artifact": "lexus_brochures.html",
+      "line": 74,
+      "text": "LX 500d Premium",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 75,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 86,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 89,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 130,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 138,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 142,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 278,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 281,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 322,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 330,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 334,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "Premium",
+      "artifact": "lexus_models_page.html",
+      "line": 74,
+      "text": "LX 500d Premium",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 54,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 55,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 58,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "Premium",
+      "artifact": "lexus_press_news.html",
+      "line": 74,
+      "text": "LX 500d Premium",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 75,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 86,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 89,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 130,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 138,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 142,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 278,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 281,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 322,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 330,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 334,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Toyota Corolla",
+      "variant": "Cross",
+      "artifact": "toyota_press_news.html",
+      "line": 119,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Toyota Corolla",
+      "variant": "Cross",
+      "artifact": "toyota_pricelist_page.html",
+      "line": 120,
+      "reason": "generic label — never a variant"
+    }
+  ],
+  "staging_written": false,
+  "price_pass": false
+}

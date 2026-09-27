@@ -1,0 +1,5052 @@
+{
+  "artifact": "p105-variant-evidence/1",
+  "generated_at": "2026-09-27T12:44:26.308411+00:00",
+  "plan": "p105_target_plan.json",
+  "rules": [
+    "model-bound composite label",
+    "name|price row or grade list",
+    "provenance verified before use"
+  ],
+  "evidence": [
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 300",
+      "variant": "PRO",
+      "identity_level": "VARIANT",
+      "published_label": "Gwm Tank 300 PRO",
+      "artifact": "gwm_th_model_tank-300.html",
+      "sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1",
+      "source_url": "https://www.gwm.co.th/th/models/tank-300",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "PRO",
+        "line": 42,
+        "model_prefix": "Gwm Tank 300",
+        "structure": "page URL names Gwm Tank 300 and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Gwm Tank 300",
+          "variant": "PRO"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 500",
+      "variant": "Diesel",
+      "identity_level": "VARIANT",
+      "published_label": "Gwm Tank 500 Diesel",
+      "artifact": "gwm_th_model_tank-500-diesel.html",
+      "sha256": "434bb47d85368cba8c1700a67fb4df3de95002d0d5db64be885dfdfd9da32a48",
+      "source_url": "https://www.gwm.co.th/th/models/tank-500-diesel",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "TANK 500 DIESEL",
+        "line": 32,
+        "model_prefix": "Tank 500",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Gwm Tank 500",
+          "variant": "Diesel"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 500",
+      "variant": "PRO",
+      "identity_level": "VARIANT",
+      "published_label": "Gwm Tank 500 PRO",
+      "artifact": "gwm_th_model_tank-500.html",
+      "sha256": "409b6ea365111f6444b08e812b5cfc2618df2a472790b9c051ffa06df175f134",
+      "source_url": "https://www.gwm.co.th/th/models/tank-500",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "PRO",
+        "line": 43,
+        "model_prefix": "Gwm Tank 500",
+        "structure": "page URL names Gwm Tank 500 and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Gwm Tank 500",
+          "variant": "PRO"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GL",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GL",
+      "artifact": "suzuki_fronx_equipment.html",
+      "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+      "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "GL",
+        "line": 90,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GL"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GLX",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GLX",
+      "artifact": "suzuki_fronx_equipment.html",
+      "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+      "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "GLX",
+        "line": 91,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GLX"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GLX PLUS",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GLX PLUS",
+      "artifact": "suzuki_fronx_equipment.html",
+      "sha256": "e988678bd65fe363b983b42307e1a83a211669ae751dc704ab56528adc9fa305",
+      "source_url": "https://www.suzuki.co.th/model/fronx/equipment",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "GLX PLUS",
+        "line": 92,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "bare grade row of Suzuki Fronx; the page lists 3 grades that only Suzuki Fronx owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GLX PLUS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "HYBRID",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Xl7 HYBRID",
+      "artifact": "suzuki_home_page.html",
+      "sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+      "source_url": "https://www.suzuki.co.th/",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "XL7 HYBRID",
+        "line": 74,
+        "model_prefix": "Xl7",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Xl7",
+          "variant": "HYBRID"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "HYBRID",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Xl7 HYBRID",
+      "artifact": "suzuki_home_page.html",
+      "sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+      "source_url": "https://www.suzuki.co.th/",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "XL7 HYBRID",
+        "line": 116,
+        "model_prefix": "Xl7",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Xl7",
+          "variant": "HYBRID"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "HYBRID",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Xl7 HYBRID",
+      "artifact": "suzuki_home_page.html",
+      "sha256": "2b9c4cc94730bfaa3614805607ff374189cb61a6da4897e2045eb33efea3ed19",
+      "source_url": "https://www.suzuki.co.th/",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "XL7 HYBRID",
+        "line": 158,
+        "model_prefix": "Xl7",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Xl7",
+          "variant": "HYBRID"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GL",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GL",
+      "artifact": "suzuki_model_fronx.html",
+      "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
+      "source_url": "https://www.suzuki.co.th/model/fronx",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "GL",
+        "line": 81,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GL"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GLX",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GLX",
+      "artifact": "suzuki_model_fronx.html",
+      "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
+      "source_url": "https://www.suzuki.co.th/model/fronx",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "GLX",
+        "line": 83,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GLX"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GLX PLUS",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Fronx GLX PLUS",
+      "artifact": "suzuki_model_fronx.html",
+      "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
+      "source_url": "https://www.suzuki.co.th/model/fronx",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "GLX PLUS",
+        "line": 85,
+        "model_prefix": "Suzuki Fronx",
+        "structure": "page URL names Suzuki Fronx and lists 3 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Fronx",
+          "variant": "GLX PLUS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "HYBRID",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Xl7 HYBRID",
+      "artifact": "suzuki_model_xl7.html",
+      "sha256": "29c2c89334c904b7c2b71ee1f3cd8d8c463323486f07f04d6ad5dfd13a9c95ae",
+      "source_url": "https://www.suzuki.co.th/model/xl7",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "XL7 HYBRID",
+        "line": 19,
+        "model_prefix": "Xl7",
+        "structure": "grade list of Suzuki Xl7 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Xl7",
+          "variant": "HYBRID"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "HYBRID",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Xl7 HYBRID",
+      "artifact": "suzuki_model_xl7.html",
+      "sha256": "29c2c89334c904b7c2b71ee1f3cd8d8c463323486f07f04d6ad5dfd13a9c95ae",
+      "source_url": "https://www.suzuki.co.th/model/xl7",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "XL7 HYBRID",
+        "line": 35,
+        "model_prefix": "Xl7",
+        "structure": "grade list of Suzuki Xl7 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Xl7",
+          "variant": "HYBRID"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "BLACK EDITION",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Xl7 BLACK EDITION",
+      "artifact": "suzuki_model_xl7.html",
+      "sha256": "29c2c89334c904b7c2b71ee1f3cd8d8c463323486f07f04d6ad5dfd13a9c95ae",
+      "source_url": "https://www.suzuki.co.th/model/xl7",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "XL7 BLACK EDITION",
+        "line": 81,
+        "model_prefix": "Xl7",
+        "structure": "grade list of Suzuki Xl7 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Xl7",
+          "variant": "BLACK EDITION"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "HYBRID",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Xl7 HYBRID",
+      "artifact": "suzuki_model_xl7.html",
+      "sha256": "29c2c89334c904b7c2b71ee1f3cd8d8c463323486f07f04d6ad5dfd13a9c95ae",
+      "source_url": "https://www.suzuki.co.th/model/xl7",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "XL7 HYBRID",
+        "line": 113,
+        "model_prefix": "Xl7",
+        "structure": "grade list of Suzuki Xl7 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Xl7",
+          "variant": "HYBRID"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "HYBRID",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Xl7 HYBRID",
+      "artifact": "suzuki_model_xl7.html",
+      "sha256": "29c2c89334c904b7c2b71ee1f3cd8d8c463323486f07f04d6ad5dfd13a9c95ae",
+      "source_url": "https://www.suzuki.co.th/model/xl7",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "XL7 HYBRID",
+        "line": 118,
+        "model_prefix": "Xl7",
+        "structure": "grade list of Suzuki Xl7 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Xl7",
+          "variant": "HYBRID"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "HYBRID",
+      "identity_level": "VARIANT",
+      "published_label": "Suzuki Xl7 HYBRID",
+      "artifact": "suzuki_xl7_equipment.html",
+      "sha256": "85af513324ad48ebf82f51eff1703b220f686902e15c61eaec39b2a46ba3dd9b",
+      "source_url": "https://www.suzuki.co.th/model/xl7/equipment",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "XL7 HYBRID",
+        "line": 558,
+        "model_prefix": "Xl7",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Suzuki Xl7",
+          "variant": "HYBRID"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "CS",
+      "identity_level": "VARIANT",
+      "published_label": "BMW M3 CS",
+      "artifact": "bmw_brochure_page.html",
+      "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+      "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "BMW M3 CS",
+        "line": 256,
+        "model_prefix": "BMW M3",
+        "structure": "grade list of BMW M3 (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "BMW M3",
+          "variant": "CS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "Competition M xDrive Touring",
+      "identity_level": "VARIANT",
+      "published_label": "BMW M3 Competition M xDrive Touring",
+      "artifact": "bmw_brochure_page.html",
+      "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+      "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "BMW M3 Competition M xDrive Touring",
+        "line": 257,
+        "model_prefix": "BMW M3",
+        "structure": "grade list of BMW M3 (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "BMW M3",
+          "variant": "Competition M xDrive Touring"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M4",
+      "variant": "CS",
+      "identity_level": "VARIANT",
+      "published_label": "BMW M4 CS",
+      "artifact": "bmw_brochure_page.html",
+      "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+      "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "BMW M4 CS",
+        "line": 258,
+        "model_prefix": "BMW M4",
+        "structure": "grade list of BMW M4 (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "BMW M4",
+          "variant": "CS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Xm",
+      "variant": "Label Red",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw Xm Label Red",
+      "artifact": "bmw_brochure_page.html",
+      "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+      "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "BMW XM Label Red",
+        "line": 261,
+        "model_prefix": "Bmw Xm",
+        "structure": "grade list of Bmw Xm (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw Xm",
+          "variant": "Label Red"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "CS",
+      "identity_level": "VARIANT",
+      "published_label": "BMW M3 CS",
+      "artifact": "bmw_brochure_page.html",
+      "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+      "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "BMW M3 CS.",
+        "line": 269,
+        "model_prefix": "BMW M3",
+        "structure": "grade list of BMW M3 (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "BMW M3",
+          "variant": "CS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "CS Touring",
+      "identity_level": "VARIANT",
+      "published_label": "BMW M3 CS Touring",
+      "artifact": "bmw_brochure_page.html",
+      "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+      "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "BMW M3 CS Touring.",
+        "line": 271,
+        "model_prefix": "BMW M3",
+        "structure": "grade list of BMW M3 (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "BMW M3",
+          "variant": "CS Touring"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "Competition M xDrive Touring",
+      "identity_level": "VARIANT",
+      "published_label": "BMW M3 Competition M xDrive Touring",
+      "artifact": "bmw_brochure_page.html",
+      "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+      "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "BMW M3 Competition M xDrive Touring.",
+        "line": 274,
+        "model_prefix": "BMW M3",
+        "structure": "grade list of BMW M3 (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "BMW M3",
+          "variant": "Competition M xDrive Touring"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M4",
+      "variant": "CS",
+      "identity_level": "VARIANT",
+      "published_label": "BMW M4 CS",
+      "artifact": "bmw_brochure_page.html",
+      "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+      "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "BMW M4 CS.",
+        "line": 277,
+        "model_prefix": "BMW M4",
+        "structure": "grade list of BMW M4 (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "BMW M4",
+          "variant": "CS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Xm",
+      "variant": "Label Red",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw Xm Label Red",
+      "artifact": "bmw_brochure_page.html",
+      "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+      "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "BMW XM Label Red.",
+        "line": 288,
+        "model_prefix": "Bmw Xm",
+        "structure": "grade list of Bmw Xm (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw Xm",
+          "variant": "Label Red"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw X3",
+      "variant": "M50 Xdrive",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw X3 M50 Xdrive",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "X3 M50 xDrive",
+        "line": 311,
+        "model_prefix": "X3",
+        "structure": "grade list of Bmw X3 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw X3",
+          "variant": "M50 Xdrive"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw X5",
+      "variant": "xDrive30d M Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw X5 xDrive30d M Sport",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "X5 xDrive30d M Sport",
+        "line": 319,
+        "model_prefix": "X5",
+        "structure": "grade list of Bmw X5 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw X5",
+          "variant": "xDrive30d M Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw X5",
+      "variant": "xDrive50e M Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw X5 xDrive50e M Sport",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "X5 xDrive50e M Sport",
+        "line": 323,
+        "model_prefix": "X5",
+        "structure": "grade list of Bmw X5 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw X5",
+          "variant": "xDrive50e M Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Z4",
+      "variant": "sDrive30i M Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw Z4 sDrive30i M Sport",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "Z4 sDrive30i M Sport",
+        "line": 350,
+        "model_prefix": "Z4",
+        "structure": "grade list of Bmw Z4 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw Z4",
+          "variant": "sDrive30i M Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Z4",
+      "variant": "M40i",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw Z4 M40i",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "Z4 M40i",
+        "line": 354,
+        "model_prefix": "Z4",
+        "structure": "grade list of Bmw Z4 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw Z4",
+          "variant": "M40i"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M2",
+      "variant": "M Race Track Package",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw M2 M Race Track Package",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "M2 (M Racetrack Package)",
+        "line": 415,
+        "model_prefix": "M2",
+        "structure": "grade list of Bmw M2 (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw M2",
+          "variant": "M Race Track Package"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M2",
+      "variant": "CS",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw M2 CS",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "M2 CS",
+        "line": 419,
+        "model_prefix": "M2",
+        "structure": "grade list of Bmw M2 (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw M2",
+          "variant": "CS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M2",
+      "variant": "CS (Ceramic Brake",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw M2 CS (Ceramic Brake",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "M2 CS (Ceramic Brake)",
+        "line": 423,
+        "model_prefix": "M2",
+        "structure": "grade list of Bmw M2 (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw M2",
+          "variant": "CS (Ceramic Brake"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "CS",
+      "identity_level": "VARIANT",
+      "published_label": "BMW M3 CS",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "M3 CS",
+        "line": 431,
+        "model_prefix": "M3",
+        "structure": "grade list of BMW M3 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "BMW M3",
+          "variant": "CS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "Competition M xDrive Touring",
+      "identity_level": "VARIANT",
+      "published_label": "BMW M3 Competition M xDrive Touring",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "M3 Competition M xDrive Touring",
+        "line": 435,
+        "model_prefix": "M3",
+        "structure": "grade list of BMW M3 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "BMW M3",
+          "variant": "Competition M xDrive Touring"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M4",
+      "variant": "CS",
+      "identity_level": "VARIANT",
+      "published_label": "BMW M4 CS",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "M4 CS",
+        "line": 439,
+        "model_prefix": "M4",
+        "structure": "grade list of BMW M4 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "BMW M4",
+          "variant": "CS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M5",
+      "variant": "Ceramic Break",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw M5 Ceramic Break",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "M5 (Ceramic Break)",
+        "line": 451,
+        "model_prefix": "M5",
+        "structure": "grade list of Bmw M5 (3 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw M5",
+          "variant": "Ceramic Break"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M5",
+      "variant": "Touring",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw M5 Touring",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "M5 Touring",
+        "line": 455,
+        "model_prefix": "M5",
+        "structure": "grade list of Bmw M5 (3 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw M5",
+          "variant": "Touring"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M5",
+      "variant": "Touring (Ceramic Break",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw M5 Touring (Ceramic Break",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "M5 Touring (Ceramic Break)",
+        "line": 459,
+        "model_prefix": "M5",
+        "structure": "grade list of Bmw M5 (3 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw M5",
+          "variant": "Touring (Ceramic Break"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Xm",
+      "variant": "Label Red",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw Xm Label Red",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "XM Label Red",
+        "line": 463,
+        "model_prefix": "Xm",
+        "structure": "grade list of Bmw Xm (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw Xm",
+          "variant": "Label Red"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Xm",
+      "variant": "50e Shadow Line",
+      "identity_level": "VARIANT",
+      "published_label": "Bmw Xm 50e Shadow Line",
+      "artifact": "bmw_price_list.html",
+      "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+      "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "XM 50e (Shadow Line)",
+        "line": 471,
+        "model_prefix": "Xm",
+        "structure": "grade list of Bmw Xm (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Bmw Xm",
+          "variant": "50e Shadow Line"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_e07_awd.html",
+      "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 9,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_e07_awd.html",
+      "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 10,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_e07_awd.html",
+      "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 27,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_e07_awd.html",
+      "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 46,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_e07_awd.html",
+      "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 47,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_e07_awd.html",
+      "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 203,
+        "model_prefix": "E07",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_e07_awd.html",
+      "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 292,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_e07_awd.html",
+      "sha256": "2b3f97d6c4ec17ca0f9381e741adfb1cbf048882aa4524a3ca19df4acb9a8c88",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 293,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_e07_plus.html",
+      "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 9,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_e07_plus.html",
+      "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 10,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_e07_plus.html",
+      "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 27,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_e07_plus.html",
+      "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 46,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_e07_plus.html",
+      "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 47,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_e07_plus.html",
+      "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 203,
+        "model_prefix": "E07",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_e07_plus.html",
+      "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 290,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_e07_plus.html",
+      "sha256": "dee66ff09a7882b1ec33af00405e216663bf2fbe4244be435af5c7f37f02e53a",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 291,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_hunter_k50.html",
+      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
+      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 9,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_hunter_k50.html",
+      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
+      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 10,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_hunter_k50.html",
+      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
+      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 46,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_hunter_k50.html",
+      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
+      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 47,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_hunter_k50.html",
+      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
+      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 277,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_hunter_k50.html",
+      "sha256": "2c3a940c546c99f00a3b8c3abef5e3f509b304b38954245b7bf2d0d92b218077",
+      "source_url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 278,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_s05.html",
+      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 9,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_s05.html",
+      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 10,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_s05.html",
+      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 46,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_s05.html",
+      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 47,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_s05.html",
+      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 273,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_s05.html",
+      "sha256": "005891e17a3be74fd414eae32f8db8ba89813b33e541033ad7eb6a101bfdbe2a",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 274,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_s05_reev.html",
+      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 9,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_s05_reev.html",
+      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 10,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_s05_reev.html",
+      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 46,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_s05_reev.html",
+      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 47,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal S05",
+      "variant": "Reev",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal S05 Reev",
+      "artifact": "deepal_s05_reev.html",
+      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "S05 REEV",
+        "line": 203,
+        "model_prefix": "S05",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal S05",
+          "variant": "Reev"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_s05_reev.html",
+      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 268,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_s05_reev.html",
+      "sha256": "982a0e675826e4ee03e8cfc8328e393834824d39db1decdb08cc0852e85e0df3",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 269,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_s07.html",
+      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
+      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 9,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_s07.html",
+      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
+      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 10,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_s07.html",
+      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
+      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 46,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_s07.html",
+      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
+      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 47,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Performance AWD",
+      "artifact": "deepal_s07.html",
+      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
+      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Performance AWD",
+        "line": 288,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Performance AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "identity_level": "VARIANT",
+      "published_label": "Deepal E07 Plus",
+      "artifact": "deepal_s07.html",
+      "sha256": "709943f52c3f4daa5db5c87e77f24731210e99cba12790d11d4652760bcaf16c",
+      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "E07 Plus",
+        "line": 289,
+        "model_prefix": "E07",
+        "structure": "grade list of Deepal E07 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Deepal E07",
+          "variant": "Plus"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Honda Accord",
+      "variant": "e:HEV",
+      "identity_level": "VARIANT",
+      "published_label": "Honda Accord e:HEV",
+      "artifact": "honda_models_page.html",
+      "sha256": "6eb120085da19d8751db8687849019c499077170c96e9501b2dc80b3e572deef",
+      "source_url": "https://www.honda.co.th/models",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Accord e:HEV",
+        "line": 165,
+        "model_prefix": "Accord",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Honda Accord",
+          "variant": "e:HEV"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "V Cross",
+      "identity_level": "VARIANT",
+      "published_label": "Isuzu D Max V Cross",
+      "artifact": "isuzu_tis_page.html",
+      "sha256": "313163cf3f44b691a8a22eacf8710a26cfb487fe557ee7f61d916bdff045c083",
+      "source_url": "https://www.isuzu-tis.com/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "V-CROSS",
+        "line": 84,
+        "model_prefix": "Isuzu D Max",
+        "structure": "bare grade row of Isuzu D Max; the page lists 5 grades that only Isuzu D Max owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Isuzu D Max",
+          "variant": "V Cross"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "4 Doors",
+      "identity_level": "VARIANT",
+      "published_label": "Isuzu D Max 4 Doors",
+      "artifact": "isuzu_tis_page.html",
+      "sha256": "313163cf3f44b691a8a22eacf8710a26cfb487fe557ee7f61d916bdff045c083",
+      "source_url": "https://www.isuzu-tis.com/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "4 DOORS",
+        "line": 85,
+        "model_prefix": "Isuzu D Max",
+        "structure": "bare grade row of Isuzu D Max; the page lists 5 grades that only Isuzu D Max owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Isuzu D Max",
+          "variant": "4 Doors"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "2 Doors",
+      "identity_level": "VARIANT",
+      "published_label": "Isuzu D Max 2 Doors",
+      "artifact": "isuzu_tis_page.html",
+      "sha256": "313163cf3f44b691a8a22eacf8710a26cfb487fe557ee7f61d916bdff045c083",
+      "source_url": "https://www.isuzu-tis.com/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "2 DOORS",
+        "line": 86,
+        "model_prefix": "Isuzu D Max",
+        "structure": "bare grade row of Isuzu D Max; the page lists 5 grades that only Isuzu D Max owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Isuzu D Max",
+          "variant": "2 Doors"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "Spark",
+      "identity_level": "VARIANT",
+      "published_label": "Isuzu D Max Spark",
+      "artifact": "isuzu_tis_page.html",
+      "sha256": "313163cf3f44b691a8a22eacf8710a26cfb487fe557ee7f61d916bdff045c083",
+      "source_url": "https://www.isuzu-tis.com/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "SPARK",
+        "line": 87,
+        "model_prefix": "Isuzu D Max",
+        "structure": "bare grade row of Isuzu D Max; the page lists 5 grades that only Isuzu D Max owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Isuzu D Max",
+          "variant": "Spark"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "X Series",
+      "identity_level": "VARIANT",
+      "published_label": "Isuzu D Max X Series",
+      "artifact": "isuzu_tis_page.html",
+      "sha256": "313163cf3f44b691a8a22eacf8710a26cfb487fe557ee7f61d916bdff045c083",
+      "source_url": "https://www.isuzu-tis.com/",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "X-SERIES",
+        "line": 88,
+        "model_prefix": "Isuzu D Max",
+        "structure": "bare grade row of Isuzu D Max; the page lists 5 grades that only Isuzu D Max owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Isuzu D Max",
+          "variant": "X Series"
+        },
+        "prior_status": "CONFLICT"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Luxury",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Luxury",
+        "line": 54,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Grand Luxury",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Grand Luxury",
+        "line": 55,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Grand Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 58,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lx 500D F-Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "LX 500d F SPORT",
+        "line": 75,
+        "model_prefix": "Lx 500D",
+        "structure": "grade list of Lexus Lx 500D (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lx 500D",
+          "variant": "F-Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 86,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lx 500D F-Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "LX 500d F SPORT",
+        "line": 89,
+        "model_prefix": "Lx 500D",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lx 500D",
+          "variant": "F-Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 130,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Luxury",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Luxury",
+        "line": 138,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Grand Luxury",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Grand Luxury",
+        "line": 142,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Grand Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 278,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lx 500D F-Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "LX 500d F SPORT",
+        "line": 281,
+        "model_prefix": "Lx 500D",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lx 500D",
+          "variant": "F-Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 322,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Luxury",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Luxury",
+        "line": 330,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Grand Luxury",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Grand Luxury",
+        "line": 334,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Grand Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 621,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lx 500D F-Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "LX 500d F SPORT",
+        "line": 624,
+        "model_prefix": "Lx 500D",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lx 500D",
+          "variant": "F-Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 665,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Luxury",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Luxury",
+        "line": 673,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Grand Luxury",
+      "artifact": "lexus_models_page.html",
+      "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Grand Luxury",
+        "line": 677,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (5 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Grand Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Luxury",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Luxury",
+        "line": 54,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Grand Luxury",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Grand Luxury",
+        "line": 55,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Grand Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 58,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "Premium",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lx 500D Premium",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "LX 500d Premium",
+        "line": 74,
+        "model_prefix": "Lx 500D",
+        "structure": "grade list of Lexus Lx 500D (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lx 500D",
+          "variant": "Premium"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lx 500D F-Sport",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "LX 500d F SPORT",
+        "line": 75,
+        "model_prefix": "Lx 500D",
+        "structure": "grade list of Lexus Lx 500D (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lx 500D",
+          "variant": "F-Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 86,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lx 500D F-Sport",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "LX 500d F SPORT",
+        "line": 89,
+        "model_prefix": "Lx 500D",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lx 500D",
+          "variant": "F-Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 130,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Luxury",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Luxury",
+        "line": 138,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Grand Luxury",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Grand Luxury",
+        "line": 142,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Grand Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 278,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lx 500D F-Sport",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "LX 500d F SPORT",
+        "line": 281,
+        "model_prefix": "Lx 500D",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lx 500D",
+          "variant": "F-Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H F Sport",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT",
+        "line": 322,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Luxury",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Luxury",
+        "line": 330,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Grand Luxury",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Grand Luxury",
+        "line": 334,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Grand Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lbx",
+      "variant": "Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lbx Luxury",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "LBX Luxury",
+        "line": 450,
+        "model_prefix": "Lbx",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lbx",
+          "variant": "Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lbx",
+      "variant": "Premium",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lbx Premium",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "LBX Premium",
+        "line": 452,
+        "model_prefix": "Lbx",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lbx",
+          "variant": "Premium"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lbx",
+      "variant": "Bespoke",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lbx Bespoke",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "LBX Bespoke",
+        "line": 454,
+        "model_prefix": "Lbx",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lbx",
+          "variant": "Bespoke"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Luxury",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Luxury",
+        "line": 467,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350h Grand Luxury",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 350h Grand Luxury",
+        "line": 470,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350h Grand Luxury"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450h+ F Sport AWD",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450h+ F Sport AWD",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "NX 450h+ F SPORT AWD",
+        "line": 479,
+        "model_prefix": "Nx",
+        "structure": "grade list of Lexus Nx (7 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450h+ F Sport AWD"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "Premium",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lx 500D Premium",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "LX 500d Premium",
+        "line": 515,
+        "model_prefix": "Lx 500D",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lx 500D",
+          "variant": "Premium"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Lx 500D F-Sport",
+      "artifact": "lexus_price_list.html",
+      "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+      "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "LX 500d F SPORT",
+        "line": 517,
+        "model_prefix": "Lx 500D",
+        "structure": "grade list of Lexus Lx 500D (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Lx 500D",
+          "variant": "F-Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Prime",
+      "identity_level": "VARIANT",
+      "published_label": "Mazda Cx-3 2.0 Prime",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "2.0 Prime",
+        "line": 375,
+        "model_prefix": "Mazda Cx-3",
+        "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mazda Cx-3",
+          "variant": "2.0 Prime"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Ultra",
+      "identity_level": "VARIANT",
+      "published_label": "Mazda Cx-3 2.0 Ultra",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "2.0 Ultra",
+        "line": 376,
+        "model_prefix": "Mazda Cx-3",
+        "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mazda Cx-3",
+          "variant": "2.0 Ultra"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Signature",
+      "identity_level": "VARIANT",
+      "published_label": "Mazda Cx-3 2.0 Signature",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "2.0 Signature",
+        "line": 377,
+        "model_prefix": "Mazda Cx-3",
+        "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mazda Cx-3",
+          "variant": "2.0 Signature"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "Mazda Cx-3",
+      "variant": "0",
+      "identity_level": "VARIANT",
+      "published_label": "Mazda Cx-3 0",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "0%",
+        "line": 354,
+        "model_prefix": "Mazda Cx-3",
+        "structure": "bare grade row of Mazda Cx-3; the page lists 4 grades that only Mazda Cx-3 owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mazda Cx-3",
+          "variant": "0"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Prime",
+      "identity_level": "VARIANT",
+      "published_label": "Mazda Cx-3 2.0 Prime",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "2.0 PRIME",
+        "line": 291,
+        "model_prefix": "Mazda Cx-3",
+        "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mazda Cx-3",
+          "variant": "2.0 Prime"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Ultra",
+      "identity_level": "VARIANT",
+      "published_label": "Mazda Cx-3 2.0 Ultra",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "2.0 ULTRA",
+        "line": 292,
+        "model_prefix": "Mazda Cx-3",
+        "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mazda Cx-3",
+          "variant": "2.0 Ultra"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Signature",
+      "identity_level": "VARIANT",
+      "published_label": "Mazda Cx-3 2.0 Signature",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "sha256": "0421fa5f102fe6ed8fb3505bd4cd0bf1164cf700c878783d35197d848a3cb9a3",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "2.0 SIGNATURE",
+        "line": 293,
+        "model_prefix": "Mazda Cx-3",
+        "structure": "bare grade row of Mazda Cx-3; the page lists 3 grades that only Mazda Cx-3 owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mazda Cx-3",
+          "variant": "2.0 Signature"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Urban",
+      "variant": "MAX",
+      "identity_level": "VARIANT",
+      "published_label": "Mg Urban MAX",
+      "artifact": "mg_car_mg-urban.html",
+      "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27",
+      "source_url": "https://www.mgcars.com/th/cars/mg-urban",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "MAX",
+        "line": 151,
+        "model_prefix": "Mg Urban",
+        "structure": "page URL names Mg Urban and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mg Urban",
+          "variant": "MAX"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Urban",
+      "variant": "ULTRA",
+      "identity_level": "VARIANT",
+      "published_label": "Mg Urban ULTRA",
+      "artifact": "mg_car_mg-urban.html",
+      "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27",
+      "source_url": "https://www.mgcars.com/th/cars/mg-urban",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "ULTRA",
+        "line": 152,
+        "model_prefix": "Mg Urban",
+        "structure": "page URL names Mg Urban and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mg Urban",
+          "variant": "ULTRA"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Urban",
+      "variant": "MAX",
+      "identity_level": "VARIANT",
+      "published_label": "Mg Urban MAX",
+      "artifact": "mg_car_mg-urban.html",
+      "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27",
+      "source_url": "https://www.mgcars.com/th/cars/mg-urban",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "MAX",
+        "line": 278,
+        "model_prefix": "Mg Urban",
+        "structure": "page URL names Mg Urban and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mg Urban",
+          "variant": "MAX"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Urban",
+      "variant": "ULTRA",
+      "identity_level": "VARIANT",
+      "published_label": "Mg Urban ULTRA",
+      "artifact": "mg_car_mg-urban.html",
+      "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27",
+      "source_url": "https://www.mgcars.com/th/cars/mg-urban",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "ULTRA",
+        "line": 279,
+        "model_prefix": "Mg Urban",
+        "structure": "page URL names Mg Urban and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mg Urban",
+          "variant": "ULTRA"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Urban",
+      "variant": "MAX",
+      "identity_level": "VARIANT",
+      "published_label": "Mg Urban MAX",
+      "artifact": "mg_car_mg-urban.html",
+      "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27",
+      "source_url": "https://www.mgcars.com/th/cars/mg-urban",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "MAX",
+        "line": 321,
+        "model_prefix": "Mg Urban",
+        "structure": "page URL names Mg Urban and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mg Urban",
+          "variant": "MAX"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Urban",
+      "variant": "ULTRA",
+      "identity_level": "VARIANT",
+      "published_label": "Mg Urban ULTRA",
+      "artifact": "mg_car_mg-urban.html",
+      "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27",
+      "source_url": "https://www.mgcars.com/th/cars/mg-urban",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "ULTRA",
+        "line": 322,
+        "model_prefix": "Mg Urban",
+        "structure": "page URL names Mg Urban and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mg Urban",
+          "variant": "ULTRA"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Ep",
+      "variant": "PLUS",
+      "identity_level": "VARIANT",
+      "published_label": "Mg Ep PLUS",
+      "artifact": "mg_home_page.html",
+      "sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff",
+      "source_url": "https://www.mgcars.com/th",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "EP Plus",
+        "line": 135,
+        "model_prefix": "Ep",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mg Ep",
+          "variant": "PLUS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+      "identity_level": "VARIANT",
+      "published_label": "ALL NEW MITSUBISHI TRITON ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+      "artifact": "mitsubishi_all_models_price.html",
+      "sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+      "source_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_table_row",
+      "evidence": {
+        "composite_line": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+        "line": 123,
+        "model_prefix": "ALL NEW MITSUBISHI TRITON",
+        "structure": "bare grade row of ALL NEW MITSUBISHI TRITON; the page lists 5 grades that only ALL NEW MITSUBISHI TRITON owns and the next line is a published price",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "ALL NEW MITSUBISHI TRITON",
+          "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+      "identity_level": "VARIANT",
+      "published_label": "ALL NEW MITSUBISHI TRITON ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+      "artifact": "mitsubishi_all_models_price.html",
+      "sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+      "source_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_table_row",
+      "evidence": {
+        "composite_line": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+        "line": 125,
+        "model_prefix": "ALL NEW MITSUBISHI TRITON",
+        "structure": "bare grade row of ALL NEW MITSUBISHI TRITON; the page lists 5 grades that only ALL NEW MITSUBISHI TRITON owns and the next line is a published price",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "ALL NEW MITSUBISHI TRITON",
+          "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+      "identity_level": "VARIANT",
+      "published_label": "ALL NEW MITSUBISHI TRITON ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+      "artifact": "mitsubishi_all_models_price.html",
+      "sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+      "source_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_table_row",
+      "evidence": {
+        "composite_line": "ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+        "line": 127,
+        "model_prefix": "ALL NEW MITSUBISHI TRITON",
+        "structure": "bare grade row of ALL NEW MITSUBISHI TRITON; the page lists 5 grades that only ALL NEW MITSUBISHI TRITON owns and the next line is a published price",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "ALL NEW MITSUBISHI TRITON",
+          "variant": "ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ซิงเกิ้ล แค็บ 2.4 PRO",
+      "identity_level": "VARIANT",
+      "published_label": "ALL NEW MITSUBISHI TRITON ซิงเกิ้ล แค็บ 2.4 PRO",
+      "artifact": "mitsubishi_all_models_price.html",
+      "sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+      "source_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_table_row",
+      "evidence": {
+        "composite_line": "ซิงเกิ้ล แค็บ 2.4 PRO",
+        "line": 135,
+        "model_prefix": "ALL NEW MITSUBISHI TRITON",
+        "structure": "bare grade row of ALL NEW MITSUBISHI TRITON; the page lists 5 grades that only ALL NEW MITSUBISHI TRITON owns and the next line is a published price",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "ALL NEW MITSUBISHI TRITON",
+          "variant": "ซิงเกิ้ล แค็บ 2.4 PRO"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ดับเบิ้ล แค็บ 2.4 PRO",
+      "identity_level": "VARIANT",
+      "published_label": "ALL NEW MITSUBISHI TRITON ดับเบิ้ล แค็บ 2.4 PRO",
+      "artifact": "mitsubishi_all_models_price.html",
+      "sha256": "a892728bc93b5f3f63e0037967065a143d3e76fe75cc954f34d971a63bdc1afb",
+      "source_url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_table_row",
+      "evidence": {
+        "composite_line": "ดับเบิ้ล แค็บ 2.4 PRO",
+        "line": 137,
+        "model_prefix": "ALL NEW MITSUBISHI TRITON",
+        "structure": "bare grade row of ALL NEW MITSUBISHI TRITON; the page lists 5 grades that only ALL NEW MITSUBISHI TRITON owns and the next line is a published price",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "ALL NEW MITSUBISHI TRITON",
+          "variant": "ดับเบิ้ล แค็บ 2.4 PRO"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Yaris",
+      "variant": "Ativ",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Yaris Ativ",
+      "artifact": "toyota_press_news.html",
+      "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4",
+      "source_url": "https://www.toyota.co.th/news",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Yaris ATIV",
+        "line": 69,
+        "model_prefix": "Yaris",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Yaris",
+          "variant": "Ativ"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Yaris",
+      "variant": "Cross Nightshade",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Yaris Cross Nightshade",
+      "artifact": "toyota_press_news.html",
+      "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4",
+      "source_url": "https://www.toyota.co.th/news",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Yaris Cross Nightshade",
+        "line": 89,
+        "model_prefix": "Yaris",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Yaris",
+          "variant": "Cross Nightshade"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Corolla",
+      "variant": "Altis Gr Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Corolla Altis Gr Sport",
+      "artifact": "toyota_press_news.html",
+      "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4",
+      "source_url": "https://www.toyota.co.th/news",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Corolla Altis GR Sport",
+        "line": 97,
+        "model_prefix": "Corolla",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Corolla",
+          "variant": "Altis Gr Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Fortuner",
+      "variant": "Leader",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Fortuner Leader",
+      "artifact": "toyota_press_news.html",
+      "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4",
+      "source_url": "https://www.toyota.co.th/news",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Fortuner Leader",
+        "line": 135,
+        "model_prefix": "Fortuner",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Fortuner",
+          "variant": "Leader"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Fortuner",
+      "variant": "Legender",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Fortuner Legender",
+      "artifact": "toyota_press_news.html",
+      "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4",
+      "source_url": "https://www.toyota.co.th/news",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Fortuner Legender",
+        "line": 139,
+        "model_prefix": "Fortuner",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Fortuner",
+          "variant": "Legender"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Fortuner",
+      "variant": "Gr Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Fortuner Gr Sport",
+      "artifact": "toyota_press_news.html",
+      "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4",
+      "source_url": "https://www.toyota.co.th/news",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Fortuner GR Sport",
+        "line": 143,
+        "model_prefix": "Fortuner",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Fortuner",
+          "variant": "Gr Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Innova",
+      "variant": "ZENIX",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Innova ZENIX",
+      "artifact": "toyota_press_news.html",
+      "sha256": "ddda351b909fa9a102479bab1dd42dc89de4d17fbd59ed52c4e0fcb1342c7bd4",
+      "source_url": "https://www.toyota.co.th/news",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Innova Zenix",
+        "line": 151,
+        "model_prefix": "Innova",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Innova",
+          "variant": "ZENIX"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Yaris",
+      "variant": "Ativ",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Yaris Ativ",
+      "artifact": "toyota_pricelist_page.html",
+      "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "source_url": "https://www.toyota.co.th/en/pricelist",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Yaris ATIV",
+        "line": 70,
+        "model_prefix": "Yaris",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Yaris",
+          "variant": "Ativ"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Yaris",
+      "variant": "Cross Nightshade",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Yaris Cross Nightshade",
+      "artifact": "toyota_pricelist_page.html",
+      "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "source_url": "https://www.toyota.co.th/en/pricelist",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Yaris Cross Nightshade",
+        "line": 90,
+        "model_prefix": "Yaris",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Yaris",
+          "variant": "Cross Nightshade"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Corolla",
+      "variant": "Altis Gr Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Corolla Altis Gr Sport",
+      "artifact": "toyota_pricelist_page.html",
+      "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "source_url": "https://www.toyota.co.th/en/pricelist",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Corolla Altis GR Sport",
+        "line": 98,
+        "model_prefix": "Corolla",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Corolla",
+          "variant": "Altis Gr Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Fortuner",
+      "variant": "Leader",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Fortuner Leader",
+      "artifact": "toyota_pricelist_page.html",
+      "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "source_url": "https://www.toyota.co.th/en/pricelist",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Fortuner Leader",
+        "line": 136,
+        "model_prefix": "Fortuner",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Fortuner",
+          "variant": "Leader"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Fortuner",
+      "variant": "Legender",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Fortuner Legender",
+      "artifact": "toyota_pricelist_page.html",
+      "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "source_url": "https://www.toyota.co.th/en/pricelist",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Fortuner Legender",
+        "line": 140,
+        "model_prefix": "Fortuner",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Fortuner",
+          "variant": "Legender"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Fortuner",
+      "variant": "Gr Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Fortuner Gr Sport",
+      "artifact": "toyota_pricelist_page.html",
+      "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "source_url": "https://www.toyota.co.th/en/pricelist",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Fortuner GR Sport",
+        "line": 144,
+        "model_prefix": "Fortuner",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Fortuner",
+          "variant": "Gr Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Innova",
+      "variant": "ZENIX",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Innova ZENIX",
+      "artifact": "toyota_pricelist_page.html",
+      "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "source_url": "https://www.toyota.co.th/en/pricelist",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Innova Zenix",
+        "line": 152,
+        "model_prefix": "Innova",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Innova",
+          "variant": "ZENIX"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Fortuner",
+      "variant": "Leader",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Fortuner Leader",
+      "artifact": "toyota_pricelist_page.html",
+      "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "source_url": "https://www.toyota.co.th/en/pricelist",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "Fortuner Leader",
+        "line": 375,
+        "model_prefix": "Fortuner",
+        "structure": "grade list of Toyota Fortuner (3 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Fortuner",
+          "variant": "Leader"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Fortuner",
+      "variant": "Legender",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Fortuner Legender",
+      "artifact": "toyota_pricelist_page.html",
+      "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "source_url": "https://www.toyota.co.th/en/pricelist",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "Fortuner Legender",
+        "line": 376,
+        "model_prefix": "Fortuner",
+        "structure": "grade list of Toyota Fortuner (3 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Fortuner",
+          "variant": "Legender"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Fortuner",
+      "variant": "Gr Sport",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Fortuner Gr Sport",
+      "artifact": "toyota_pricelist_page.html",
+      "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+      "source_url": "https://www.toyota.co.th/en/pricelist",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "Fortuner GR Sport",
+        "line": 377,
+        "model_prefix": "Fortuner",
+        "structure": "grade list of Toyota Fortuner (3 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Fortuner",
+          "variant": "Gr Sport"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    }
+  ]
+}

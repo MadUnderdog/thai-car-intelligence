@@ -764,24 +764,30 @@ class IdentityReconciliation:
         return None
 
     @staticmethod
-    def declared_level(source: Dict, variant: str) -> str:
-        """Identity level a publication actually supports.
+    def declared_level(source: Dict, variant: str = "") -> str:
+        """Identity level a publication actually DECLARES — read, never guessed.
 
-        First-party rows carry it from the staging loader
-        (`identity.identity_level`); enumerator evidence derives it from what
-        was enumerated — a model candidate publishes MODEL, a variant
-        candidate publishes VARIANT.  Never inferred from what else happens to
-        be attached to the same reconciled record.
+        Only `source["identity_level"]` is consulted.  `variant` is accepted for
+        call-site compatibility and is deliberately never used: falling back to
+        the reconciled record's shape would manufacture level evidence from a
+        guess, which §95 does not allow.  First-party rows already carry the
+        value from the staging loader (`identity.identity_level`); enumerator
+        loaders must pass `identity_level` explicitly when they enqueue a
+        candidate.
+
+        Returns `"MODEL"`/`"VARIANT"` when declared, `""` otherwise.
         """
         lvl = str(source.get("identity_level") or "").strip().upper()
-        if lvl in ("MODEL", "VARIANT"):
-            return lvl
-        return "VARIANT" if variant else "MODEL"
+        return lvl if lvl in ("MODEL", "VARIANT") else ""
 
     @classmethod
     def _attach(cls, rec: "ReconciledIdentity", source: Dict,
                 variant: str) -> None:
-        """Append a publication entry carrying its own identity_level."""
+        """Append a publication entry carrying its own declared identity_level.
+
+        An entry with no declared level is stored with `identity_level=""` and
+        is later excluded from level-clash detection (fail closed).
+        """
         entry = dict(source)
         entry["identity_level"] = cls.declared_level(entry, variant)
         key = (entry.get("source_name"), entry.get("source_url"),
@@ -842,12 +848,14 @@ class IdentityReconciliation:
           * LEVEL CLASH — only when distinct publications publish the same
             identity (within one OEM) at conflicting levels, one as a MODEL and
             one as a VARIANT.  Every source entry carries its own
-            `identity_level`, and a level set is built exclusively from the
+            `identity_level` declared at ingestion (never derived from the
+            record's shape), and a level set is built exclusively from the
             levels each publication declares: a publication that declares
             VARIANT is never treated as MODEL evidence merely because it is
             attached to a record that also has a model.  Publications with no
-            declared level are collected in `unlevelled_publications` and
-            excluded from level-clash detection (fail closed).  A single publication that appears at both levels
+            declared level keep `identity_level=""`, are collected in
+            `unlevelled_publications` and are excluded from level-clash
+            detection (fail closed).  A single publication that appears at both levels
             is internally ambiguous, not source-level disagreement: it is kept
             unresolved with an explicit reason and is *not* marked CONFLICT.
 

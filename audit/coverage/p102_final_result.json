@@ -1,6 +1,6 @@
 {
  "schema": "p102-final-result/1",
- "generated_at": "2026-09-27T05:55:05.552112+00:00",
+ "generated_at": "2026-09-27T06:29:01.028152+00:00",
  "session_id": "p102-identity-20260927",
  "acceptance_boundary": "Phase-1 identity/catalog artifact only. It is NOT staging, NOT the accepted set and NOT the production DB: identity-only candidates have no price/locator and therefore cannot satisfy §95 mandatory fields, so they are never promoted.",
  "enumerator_candidates": {

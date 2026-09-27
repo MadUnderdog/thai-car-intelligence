@@ -1,6 +1,6 @@
 {
  "schema": "p102-identity-universe/1",
- "generated_at": "2026-09-27T05:55:05.549070+00:00",
+ "generated_at": "2026-09-27T06:29:01.025169+00:00",
  "session_id": "p102-identity-20260927",
  "blueprint_sections": [
   "§93 coverage registry",
@@ -8641,7 +8641,7 @@
       "source_role": "IDENTITY_ENUMERATOR",
       "source_url": "audit/catalog-discovery/second_taxonomy_capture.json",
       "label": "mg4 Standard",
-      "identity_level": "MODEL"
+      "identity_level": "VARIANT"
      }
     ],
     "first_party": [
@@ -8674,7 +8674,7 @@
      {
       "source_name": "open_ev_data",
       "source_url": "audit/catalog-discovery/second_taxonomy_capture.json",
-      "identity_level": "MODEL"
+      "identity_level": "VARIANT"
      }
     ],
     "match_method": "first_party_plus_enumerator",
@@ -29067,7 +29067,7 @@
       "source_role": "IDENTITY_ENUMERATOR",
       "source_url": "audit/catalog-discovery/second_taxonomy_capture.json",
       "label": "dolphin Standard",
-      "identity_level": "MODEL"
+      "identity_level": "VARIANT"
      }
     ],
     "first_party": [],
@@ -29085,7 +29085,7 @@
      {
       "source_name": "open_ev_data",
       "source_url": "audit/catalog-discovery/second_taxonomy_capture.json",
-      "identity_level": "MODEL"
+      "identity_level": "VARIANT"
      }
     ],
     "match_method": "",
@@ -29475,7 +29475,7 @@
       "source_role": "IDENTITY_ENUMERATOR",
       "source_url": "audit/catalog-discovery/second_taxonomy_capture.json",
       "label": "seal Standard",
-      "identity_level": "MODEL"
+      "identity_level": "VARIANT"
      }
     ],
     "first_party": [],
@@ -29493,7 +29493,7 @@
      {
       "source_name": "open_ev_data",
       "source_url": "audit/catalog-discovery/second_taxonomy_capture.json",
-      "identity_level": "MODEL"
+      "identity_level": "VARIANT"
      }
     ],
     "match_method": "",

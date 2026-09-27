@@ -184,6 +184,11 @@ def test_identity_level_matches_the_record(records):
         expected = "VARIANT" if r["variant"] else "MODEL"
         assert r["identity_level"] == expected
         assert r["variant"] == "" or r["model"] != ""
+        # publication-level: every source entry must have declared its own
+        # level at ingestion (the generated P102 artifact ships 0 undeclared)
+        assert r["sources"], r
+        for s in r["sources"]:
+            assert s.get("identity_level") in ("MODEL", "VARIANT"), (r, s)
 
 
 # ── 5. sibling-brand separation ─────────────────────────────────────────────
@@ -414,7 +419,8 @@ def test_reconciliation_never_confirms_without_market_truth():
     rec = IdentityReconciliation(target_date="unit")
     rec.add_enumerator("Mazda", "CX-5", "2.0 S", {
         "source_name": "unit", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/", "label": "MAZDA CX-5 2.0 S ราคา"})
+        "source_url": "https://unit.test/", "label": "MAZDA CX-5 2.0 S ราคา",
+        "identity_level": "VARIANT"})
     rec.resolve_statuses()
     assert rec.records[0].status == FirstPartyStatus.IDENTITY_ONLY.value
     assert rec.confidence["SINGLE_SOURCE"] == 1
@@ -424,7 +430,7 @@ def test_reconciliation_never_confirms_without_market_truth():
         "source_name": "Mazda Thailand Official",
         "source_role": SourceRole.MARKET_TRUTH.value,
         "source_url": "https://www.mazda.co.th/", "label": "CX-5 2.0 S",
-        "model": "CX-5"})
+        "model": "CX-5", "identity_level": "VARIANT"})
     rec.resolve_statuses()
     assert rec.records[0].status == FirstPartyStatus.CONFIRMED_VARIANT.value
     assert rec.confidence["OFFICIAL_VERIFIED"] == 1
@@ -436,10 +442,12 @@ def test_one_shared_source_attributing_a_label_to_two_oems_is_a_conflict():
     rec = IdentityReconciliation(target_date="unit")
     rec.add_enumerator("Changan", "Lumin", "L DC", {
         "source_name": "shared-source", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/same-page", "label": "ChangAn Lumin L DC"})
+        "source_url": "https://unit.test/same-page", "label": "ChangAn Lumin L DC",
+        "identity_level": "VARIANT"})
     rec.add_enumerator("Deepal", "Lumin", "L DC", {
         "source_name": "shared-source", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/same-page", "label": "Lumin L DC"})
+        "source_url": "https://unit.test/same-page", "label": "Lumin L DC",
+        "identity_level": "VARIANT"})
     rec.resolve_statuses()
     statuses = {r.manufacturer: r.status for r in rec.records}
     assert statuses["Changan"] == FirstPartyStatus.CONFLICT.value
@@ -457,10 +465,12 @@ def test_same_source_name_on_different_urls_is_not_a_shared_publication():
     rec = IdentityReconciliation(target_date="unit")
     rec.add_enumerator("Changan", "Lumin", "L DC", {
         "source_name": "one enumerator", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/brand-a", "label": "ChangAn Lumin L DC"})
+        "source_url": "https://unit.test/brand-a", "label": "ChangAn Lumin L DC",
+        "identity_level": "VARIANT"})
     rec.add_enumerator("Deepal", "Lumin", "L DC", {
         "source_name": "one enumerator", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/brand-b", "label": "Lumin L DC"})
+        "source_url": "https://unit.test/brand-b", "label": "Lumin L DC",
+        "identity_level": "VARIANT"})
     rec.resolve_statuses()
     assert {r.status for r in rec.records} == {
         FirstPartyStatus.IDENTITY_ONLY.value}
@@ -477,10 +487,12 @@ def test_same_label_under_two_oems_from_different_sources_is_not_a_conflict():
     rec = IdentityReconciliation(target_date="unit")
     rec.add_enumerator("Changan", "Lumin", "L DC", {
         "source_name": "unit-a", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/a", "label": "ChangAn Lumin L DC"})
+        "source_url": "https://unit.test/a", "label": "ChangAn Lumin L DC",
+        "identity_level": "VARIANT"})
     rec.add_enumerator("Deepal", "Lumin", "L DC", {
         "source_name": "unit-b", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/b", "label": "Lumin L DC"})
+        "source_url": "https://unit.test/b", "label": "Lumin L DC",
+        "identity_level": "VARIANT"})
     rec.resolve_statuses()
     assert {r.status for r in rec.records} == {
         FirstPartyStatus.IDENTITY_ONLY.value}
@@ -488,6 +500,49 @@ def test_same_label_under_two_oems_from_different_sources_is_not_a_conflict():
     assert all(any("legitimate same-name identity" in n for n in r.notes)
                for r in rec.records)
     assert len(rec.records) == 2
+
+
+def test_declared_level_never_falls_back_to_record_shape():
+    """identity_level must be READ, never manufactured from the reconciled
+    record's shape (a fallback derived from `variant` is a guess)."""
+    dl = IdentityReconciliation.declared_level
+    assert dl({"identity_level": "MODEL"}, "") == "MODEL"
+    assert dl({"identity_level": "MODEL"}, "Grade One") == "MODEL"
+    assert dl({"identity_level": "VARIANT"}, "") == "VARIANT"
+    assert dl({"identity_level": "variant"}, "") == "VARIANT"
+    # missing / unusable → empty, never MODEL or VARIANT
+    assert dl({}, "") == ""
+    assert dl({}, "Grade One") == ""
+    assert dl({"identity_level": None}, "Grade One") == ""
+    assert dl({"identity_level": ""}, "") == ""
+    assert dl({"identity_level": "SOMETHING_ELSE"}, "x") == ""
+    assert dl({}, "x") not in ("MODEL", "VARIANT")
+
+
+def test_source_without_identity_level_becomes_no_level_evidence():
+    """A publication that declares no level is kept verbatim, listed as
+    unlevelled, and must never be counted as MODEL or VARIANT evidence."""
+    rec = IdentityReconciliation(target_date="unit")
+    rec.add_enumerator("Mazda", "CX-5", "", {
+        "source_name": "src-a", "source_role": SourceRole.MEDIA_DISCOVERY.value,
+        "source_url": "https://unit.test/a", "label": "MAZDA CX-5"})
+    rec.add_enumerator("Mazda", "CX-3", "CX-5", {
+        "source_name": "src-b", "source_role": SourceRole.MEDIA_DISCOVERY.value,
+        "source_url": "https://unit.test/b", "label": "CX-3 CX-5"})
+    rec.resolve_statuses()
+    # entry stays undeclared — the level is NOT guessed from the record shape
+    for r in rec.records:
+        for entry in r.sources:
+            assert entry.get("identity_level") == "", entry
+    # and neither publication may manufacture a level clash
+    assert {r.status for r in rec.records} == {
+        FirstPartyStatus.IDENTITY_ONLY.value}, [
+        (r.model, r.variant, r.rejection_reasons) for r in rec.records]
+    assert len(rec.unlevelled_publications) == 2, rec.unlevelled_publications
+    assert {u["source_name"] for u in rec.unlevelled_publications} == {
+        "src-a", "src-b"}
+    assert rec.summary()["unlevelled_publications"] == 2
+    assert rec.level_clash_evidence == []
 
 
 def test_variant_only_publication_is_never_model_evidence():
@@ -501,11 +556,13 @@ def test_variant_only_publication_is_never_model_evidence():
     # src-b publishes VARIANT of Alpha (never Alpha as a model)
     rec.add_enumerator("Mazda", "Alpha", "Grade One", {
         "source_name": "src-b", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/b", "label": "Alpha Grade One"})
+        "source_url": "https://unit.test/b", "label": "Alpha Grade One",
+        "identity_level": "VARIANT"})
     # src-a publishes Alpha as a VARIANT of Beta
     rec.add_enumerator("Mazda", "Beta", "Alpha", {
         "source_name": "src-a", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/a", "label": "Beta Alpha"})
+        "source_url": "https://unit.test/a", "label": "Beta Alpha",
+        "identity_level": "VARIANT"})
     rec.resolve_statuses()
     assert {r.status for r in rec.records} == {
         FirstPartyStatus.IDENTITY_ONLY.value}, [
@@ -524,10 +581,12 @@ def test_model_only_and_variant_only_publications_are_a_genuine_clash():
     rec = IdentityReconciliation(target_date="unit")
     rec.add_enumerator("Mazda", "CX-5", "", {
         "source_name": "src-a", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/a", "label": "MAZDA CX-5"})
+        "source_url": "https://unit.test/a", "label": "MAZDA CX-5",
+        "identity_level": "MODEL"})
     rec.add_enumerator("Mazda", "CX-3", "CX-5", {
         "source_name": "src-b", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/b", "label": "CX-3 CX-5"})
+        "source_url": "https://unit.test/b", "label": "CX-3 CX-5",
+        "identity_level": "VARIANT"})
     rec.resolve_statuses()
     assert {r.status for r in rec.records} == {
         FirstPartyStatus.CONFLICT.value}
@@ -545,8 +604,10 @@ def test_single_publication_at_both_levels_stays_unresolved_not_conflict():
     src = {"source_name": "unit-a",
            "source_role": SourceRole.MEDIA_DISCOVERY.value,
            "source_url": "https://unit.test/a"}
-    rec.add_enumerator("Mazda", "CX-5", "", dict(src, label="MAZDA CX-5"))
-    rec.add_enumerator("Mazda", "MAZDA3", "CX-5", dict(src, label="MAZDA3 CX-5"))
+    rec.add_enumerator("Mazda", "CX-5", "",
+                       dict(src, label="MAZDA CX-5", identity_level="MODEL"))
+    rec.add_enumerator("Mazda", "MAZDA3", "CX-5",
+                       dict(src, label="MAZDA3 CX-5", identity_level="VARIANT"))
     rec.resolve_statuses()
     assert {r.status for r in rec.records} == {
         FirstPartyStatus.IDENTITY_ONLY.value}
@@ -558,9 +619,11 @@ def test_model_published_as_variant_by_another_source_is_a_conflict():
     rec = IdentityReconciliation(target_date="unit")
     rec.add_enumerator("Mazda", "CX-5", "", {
         "source_name": "unit-a", "source_role": SourceRole.MEDIA_DISCOVERY.value,
-        "source_url": "https://unit.test/a", "label": "MAZDA CX-5"})
+        "source_url": "https://unit.test/a", "label": "MAZDA CX-5",
+        "identity_level": "MODEL"})
     rec.add_enumerator("Mazda", "MAZDA3", "CX-5", {
         "source_name": "unit-b", "source_role": SourceRole.IDENTITY_ENUMERATOR.value,
-        "source_url": "https://unit.test/b", "label": "MAZDA3 CX-5"})
+        "source_url": "https://unit.test/b", "label": "MAZDA3 CX-5",
+        "identity_level": "VARIANT"})
     rec.resolve_statuses()
     assert all(r.status == FirstPartyStatus.CONFLICT.value for r in rec.records)

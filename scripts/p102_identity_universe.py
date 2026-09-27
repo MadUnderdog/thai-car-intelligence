@@ -192,7 +192,8 @@ def load_thai_reference(rec: IdentityReconciliation, in_scope):
                                {"source_name": "thai_market_reference",
                                 "source_role": SourceRole.MARKET_REFERENCE.value,
                                 "source_url": "audit/catalog-discovery/thai_market_reference.json",
-                                "label": model})
+                                "label": model,
+                                "identity_level": "MODEL"})
 
 
 def load_headlightmag(rec: IdentityReconciliation, in_scope):
@@ -221,7 +222,8 @@ def load_headlightmag(rec: IdentityReconciliation, in_scope):
                             "source_role": SourceRole.MEDIA_DISCOVERY.value,
                             "source_url": "audit/catalog-discovery/"
                                           "media_discovery_headlightmag.json",
-                            "label": model})
+                            "label": model,
+                            "identity_level": "MODEL"})
 
 
 def load_open_ev(rec: IdentityReconciliation, in_scope):
@@ -258,7 +260,10 @@ def load_open_ev(rec: IdentityReconciliation, in_scope):
                             "source_role": SourceRole.IDENTITY_ENUMERATOR.value,
                             "source_url": "audit/catalog-discovery/"
                                           "second_taxonomy_capture.json",
-                            "label": f"{model} {trim}".strip()})
+                            "label": f"{model} {trim}".strip(),
+                            # declared here, at the candidate being enqueued —
+                            # never inferred downstream from the record shape
+                            "identity_level": "VARIANT" if trim else "MODEL"})
 
 
 def load_fipe_scope_rejects(rec: IdentityReconciliation):
@@ -667,13 +672,15 @@ def main():
                     "source_role": SourceRole.MEDIA_DISCOVERY.value,
                     "source_url": url, "label": m["label"],
                     "origin": m["origin"],
-                    "artifact": res["filename"]})
+                    "artifact": res["filename"],
+                    "identity_level": "MODEL"})
             for v in parsed.variants:
                 rec.add_enumerator(brand, v["model"], v["variant"], {
                     "source_name": "9carthai price index",
                     "source_role": SourceRole.MEDIA_DISCOVERY.value,
                     "source_url": url, "label": v["label"],
-                    "origin": v["origin"], "artifact": res["filename"]},
+                    "origin": v["origin"], "artifact": res["filename"],
+                    "identity_level": "VARIANT"},
                     published_price=v["published_price_thb"],
                     price_role=v["published_price_role"])
             for u in parsed.unresolved:
@@ -712,7 +719,8 @@ def main():
                         "source_role": SourceRole.IDENTITY_ENUMERATOR.value,
                         "source_url": url, "label": opt["label"],
                         "origin": "insurance_brand_dropdown",
-                        "artifact": filename})
+                        "artifact": filename,
+                        "identity_level": "MODEL"})
                 else:
                     rec.reject(opt["value"], opt["label"],
                                "brand option is not an in-scope OEM",

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/en/model/carry/equipment",
+  "captured_at": "2026-09-27T19:07:17.854831+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "ce7d02e385e3d431eb37ec77deabd40e5af9bb9f5d55a05ad4fcc0d6493346b7",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "suzuki_p108_equipment.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

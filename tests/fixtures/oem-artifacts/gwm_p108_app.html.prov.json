@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/en/app",
+  "captured_at": "2026-09-27T19:06:52.922907+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "99e6bc8098a02fb654f3eb949cbb3108cde2ac2b4c87c42fd7b6ebf73c282958",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "gwm_p108_app.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

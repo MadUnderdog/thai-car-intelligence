@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/buy/news-activity",
+  "captured_at": "2026-09-27T19:06:02.021729+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "aa33f6c30809065f89979af4fafeaee67ce1f89d2ba36d118bafef7b488e14a5",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mitsubishi_p108_news-activity.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

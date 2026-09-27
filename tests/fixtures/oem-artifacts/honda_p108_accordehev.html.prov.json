@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/accordehev",
+  "captured_at": "2026-09-27T19:05:57.191891+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "702fa72bcecfddc8a01369a3356129eb2c877340c2285fc777bac8e31102643e",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "honda_p108_accordehev.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

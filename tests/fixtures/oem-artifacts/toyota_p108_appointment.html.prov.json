@@ -1,0 +1,16 @@
+{
+  "source_url": "https://aftersales.toyota.co.th/appointment",
+  "captured_at": "2026-09-27T19:03:30.916431+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "eecf5364b88bd8e5005ea78e5d377225a45bbedc08e649b830823f4a457cf422",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "toyota_p108_appointment.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

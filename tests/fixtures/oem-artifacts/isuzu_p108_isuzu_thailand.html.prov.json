@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu.co.th/isuzu_thailand",
+  "captured_at": "2026-09-27T19:07:16.045198+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "d25f5dd5664e304f4a3b9f2d1655fcabb3f25255955ebd5d66704398fdd6ac14",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "isuzu_p108_isuzu_thailand.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

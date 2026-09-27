@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.kia.com/th/th/shopping-tools/price-list/carnival.html",
+  "captured_at": "2026-09-27T19:06:25.965209+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "d3b784a7c9bc7dcec0f32112f96c43c6ce27b8c5f83ee787131749fbc42226c1",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "kia_p108_carnival_dup.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

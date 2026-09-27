@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.kia.com/th/en/shopping-tools/price-list/ev5.html",
+  "captured_at": "2026-09-27T19:06:23.434162+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "bc995b5c8df779d9b86374b0664a6b29ff4429a22c7f0d58b1f754d89fe41d97",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "kia_p108_ev5.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

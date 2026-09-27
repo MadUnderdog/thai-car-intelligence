@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/",
+  "captured_at": "2026-09-27T19:05:55.592104+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "cd942dcb55187d035b4e36b2b1c9f5d34620b7ef3e85ff26d0881a18e19c9921",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "honda_p108_index_dup.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

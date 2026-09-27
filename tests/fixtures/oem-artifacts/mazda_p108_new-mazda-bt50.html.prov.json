@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+  "captured_at": "2026-09-27T19:03:42.808817+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "a1110d4d4f529c54cd668ec7b8b7ca4a7bf4b6164acd475e4082478adc18125e",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mazda_p108_new-mazda-bt50.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

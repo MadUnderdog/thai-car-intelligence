@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/news-activity/news/mmth-announces-prices-of-work-play-line-up-of-all-new-triton",
+  "captured_at": "2026-09-27T19:06:06.419142+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "59964545fc02b2b7dadadf2e6931f675d43d9e2d75bfbdb73b1bd9ad9ae7809b",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mitsubishi_p108_mmth-announces-prices-of-work-play-line-up-of-all-new-triton",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

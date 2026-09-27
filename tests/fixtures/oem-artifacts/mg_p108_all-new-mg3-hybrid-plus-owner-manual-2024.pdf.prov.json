@@ -1,0 +1,9 @@
+{
+  "source_url": "https://ex-prod.mgcars.com/th/pdf/AfterSalesService/61/all-new-mg3-hybrid-plus-owner-manual-2024.pdf",
+  "captured_at": "2026-09-27T19:04:40.958810+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "1f32e0e0f9b704b141a6aa1a2bdf81c7034ce6a12ee7a4206c87e2345d1d2662",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mg_p108_all-new-mg3-hybrid-plus-owner-manual-2024.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

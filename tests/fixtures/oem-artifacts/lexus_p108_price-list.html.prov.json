@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/price-and-model-tools/price-list.html",
+  "captured_at": "2026-09-27T19:07:03.526560+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "b38ae229c13060f36140e61c22007c76b85c79adf899005eb36fd74428d5de07",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "lexus_p108_price-list.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

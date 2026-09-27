@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/configurator.html",
+  "captured_at": "2026-09-27T19:07:04.058016+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "8a6fd4a905cdd29c7e5908252e57f6615761f0d5b0f9a8ed6929172a3f42b57a",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "lexus_p108_configurator.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

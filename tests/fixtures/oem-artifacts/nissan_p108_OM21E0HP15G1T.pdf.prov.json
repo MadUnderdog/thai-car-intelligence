@@ -1,0 +1,9 @@
+{
+  "source_url": "https://en.nissan.co.th/content/dam/Nissan/th/home/aftersale/owner-benefits/owner-manual/OM21E0HP15G1T.pdf",
+  "captured_at": "2026-09-27T19:05:24.112173+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "23c5eb3bf62430d6641971120a30a6792f1341eec64dfbcd5a11e4df8e16d50d",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "nissan_p108_OM21E0HP15G1T.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

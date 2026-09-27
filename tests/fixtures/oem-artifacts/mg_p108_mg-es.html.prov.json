@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mgcars.com/th/cars/mg-es",
+  "captured_at": "2026-09-27T19:05:21.864585+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "2578951389b12f898480d0587e91d4b702de356731c1774944d9f3f0e7884f8e",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mg_p108_mg-es.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

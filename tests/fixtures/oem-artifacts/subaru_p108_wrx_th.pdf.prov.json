@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.subaru.asia/brochures/wrx_th.pdf?v=c1s7x",
+  "captured_at": "2026-09-27T19:06:38.762924+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "2daee5830fa9715542f4e3bdf5343fcd7663abb73a5e9b7ca69f4ae655d02e54",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "subaru_p108_wrx_th.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

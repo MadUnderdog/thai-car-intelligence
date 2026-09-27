@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en.html",
+  "captured_at": "2026-09-27T19:07:05.537990+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "61d77917716b401b34a98e20edf85815a5d508650a389d4db4159e3bce0c1f57",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "lexus_p108_en.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

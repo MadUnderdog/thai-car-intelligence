@@ -1,0 +1,9 @@
+{
+  "source_url": "https://stores.toyota.co.th/",
+  "captured_at": "2026-09-27T19:08:43.494071+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "d33bc204b3673fabd3a6b5c3f061860365827947a85f05f18f771d5b857584e6",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "toyota_p108_stores.toyota.co.th.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

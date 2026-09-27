@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/en/coming_soon",
+  "captured_at": "2026-09-27T19:06:55.456256+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "37da06f54db79fcbb01469be839507e2044449f8e59d46d0f9cc0f3eb273df86",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "gwm_p108_coming_soon.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

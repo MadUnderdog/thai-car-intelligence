@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/about-honda",
+  "captured_at": "2026-09-27T19:05:56.171637+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "ae9e315776d74c8a8cab9dfd6f4497062442d108e54d65fbfbc2d01e46688f5b",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "honda_p108_about-honda.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

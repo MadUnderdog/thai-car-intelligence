@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/super-one",
+  "captured_at": "2026-09-27T19:05:59.073968+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "86f3745ad54dd4bfc27728a635ce3366c9accda7b14940e11731a347f706fdb3",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "honda_p108_super-one.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/models",
+  "captured_at": "2026-09-27T19:03:31.378117+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "bf90e6fd29d373fde5ddd3204c70156020c90d52fe0bf91b2c11dcb427145d35",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "toyota_p108_models.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

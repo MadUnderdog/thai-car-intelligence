@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th/accessories",
+  "captured_at": "2026-09-27T19:03:44.210298+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "b6fa15cffd86a8892ac1b0e03335b28ed8d42070652ac7f79250014a9295032e",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mazda_p108_accessories.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

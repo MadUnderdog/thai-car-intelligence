@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/price-and-model-tools/payment-calculator.html",
+  "captured_at": "2026-09-27T19:07:07.033457+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "0654c3a72bb3fa16d1cbde01394340d8956c19efb89bee7fab97e567d5602417",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "lexus_p108_payment-calculator.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

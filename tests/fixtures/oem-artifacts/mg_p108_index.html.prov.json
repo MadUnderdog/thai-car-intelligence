@@ -1,0 +1,9 @@
+{
+  "source_url": "https://all-new-mg5.mgcars.com/",
+  "captured_at": "2026-09-27T19:04:25.687653+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "d6675e9d250b51e7be8e50c4d35eb946fca28b9e5e4083cab6bb81fe5859c0be",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mg_p108_index.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/upload/content/SMT-Green-Procurement-Guideline-T.pdf",
+  "captured_at": "2026-09-27T19:07:20.933486+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "8156c2731d84aa687ec5b9f1e95ad0cb835671ac1b1a43adf61fc0c53522c43b",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "suzuki_p108_SMT-Green-Procurement-Guideline-T.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

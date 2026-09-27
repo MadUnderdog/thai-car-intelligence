@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/dealer",
+  "captured_at": "2026-09-27T19:03:36.596261+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "47305a3a2b781c43b0a5a93a07376af1328e03c2171415e76cb2456dc8295775",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "toyota_p108_dealer_dup.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

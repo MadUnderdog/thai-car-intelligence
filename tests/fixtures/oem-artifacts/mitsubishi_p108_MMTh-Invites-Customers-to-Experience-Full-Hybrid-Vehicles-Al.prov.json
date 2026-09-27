@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/news-activity/news/MMTh-Invites-Customers-to-Experience-Full-Hybrid-Vehicles-All-New-Mitsubishi-XFORCE-HEV-And-HEV-PLAY-Special-Campaigns-46th-Bangkok-International-Moto-Show-2025",
+  "captured_at": "2026-09-27T19:06:14.207437+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "110e6456caefe9ca724dc042b0ffda5f96a6adc163a0fc17320ba1a6a5c29042",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mitsubishi_p108_MMTh-Invites-Customers-to-Experience-Full-Hybrid-Vehicles-Al",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/models/es.html",
+  "captured_at": "2026-09-27T19:07:05.021856+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "cf510672a71a5612d94d8a96e34b1b8fc7a64c34d4a61a080993b998b7887183",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "lexus_p108_es.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

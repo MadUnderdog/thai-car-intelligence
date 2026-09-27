@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/accessoriesandservice/classic/originalpartscatalogue/",
+  "captured_at": "2026-09-27T19:05:36.958437+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "eec42df45b0c7a798b60605f6d0cc5b002e67e51e2a6ced9d50f7346b52b2885",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "porsche_p108_originalpartscatalogue.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

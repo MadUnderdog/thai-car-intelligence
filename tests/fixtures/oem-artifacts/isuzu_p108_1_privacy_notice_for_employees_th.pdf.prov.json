@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu.co.th/th/default/assets/pdf/1_privacy_notice_for_employees_th.pdf",
+  "captured_at": "2026-09-27T19:07:12.668484+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "86049674e29c758ebdd24455b80b9cbc87438d10d991df15e5d7a3397e686e8b",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "isuzu_p108_1_privacy_notice_for_employees_th.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

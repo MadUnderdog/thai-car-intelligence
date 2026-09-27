@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.kia.com/th/en/shopping-tools/download-a-brochure.html",
+  "captured_at": "2026-09-27T19:06:17.783629+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "a67c69249faa5a85adbe5a869a2d40ff85bf91bf78497130bef7a3290e5c9b7c",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "kia_p108_download-a-brochure.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

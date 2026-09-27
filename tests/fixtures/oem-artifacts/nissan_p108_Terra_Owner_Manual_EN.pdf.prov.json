@@ -1,0 +1,9 @@
+{
+  "source_url": "https://en.nissan.co.th/content/dam/Nissan/th/owners/OwnerManual-170612/Terra%20Owner%20Manual%20EN.pdf",
+  "captured_at": "2026-09-27T19:05:30.256108+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "309f9bdd81211fb9658a6bde1772a7974d9c11a48a797463df01cf158edbace4",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "nissan_p108_Terra_Owner_Manual_EN.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

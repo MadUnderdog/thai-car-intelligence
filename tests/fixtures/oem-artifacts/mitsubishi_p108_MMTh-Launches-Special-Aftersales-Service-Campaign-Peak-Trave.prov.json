@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/news-activity/news/MMTh-Launches-Special-Aftersales-Service-Campaign-Peak-Travel-Season",
+  "captured_at": "2026-09-27T19:06:16.005089+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "a198884c059d19a063c6ce7ceb34c53fffb1a3b35cec1788b82fc61cdc457691",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mitsubishi_p108_MMTh-Launches-Special-Aftersales-Service-Campaign-Peak-Trave",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

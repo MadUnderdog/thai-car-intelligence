@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/buy/configure/configurator",
+  "captured_at": "2026-09-27T19:06:08.916227+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "1532ca469a5346f8e7f45d00410a8c705048c2d0b554d40aa8f5d69d14086ae0",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mitsubishi_p108_configurator.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/experience-nissan/Nissan-EV/different-vehicles-technology.html",
+  "captured_at": "2026-09-27T19:05:25.902373+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "5b46a87f1bc44c34bb91bd9bb13b614cf16923c8b1276052ddd0c9889c5c63a4",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "nissan_p108_different-vehicles-technology.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

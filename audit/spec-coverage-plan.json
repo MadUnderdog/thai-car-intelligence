@@ -80,6 +80,182 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_compare-models.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 110,
+            "kw": 81,
+            "kwh": 2,
+            "displacement": 22,
+            "fuel_consumption": 11
+          },
+          "marker_total": 229,
+          "structure": "structured_field",
+          "structured_fields": 864,
+          "spec_blocks": 6,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_configurator.html",
+          "marker_counts": {
+            "thai_ps": 4,
+            "torque_nm": 71,
+            "kw": 48,
+            "kwh": 4,
+            "displacement": 16,
+            "fuel_consumption": 7
+          },
+          "marker_total": 150,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 5,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_es.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 8
+          },
+          "marker_total": 138,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 4,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_2021-hsbc-womens-world-championship.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 0,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_2024-miami-art-and-design-week-collaboration.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 0,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_corporate-sales.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 3,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_culinary-perspectives.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 9,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_en.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 0,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_model-configurator.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 0,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_payment-calculator.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 0,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p108_price-list.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mazda_home_page.html",
           "marker_counts": {
             "thai_ps": 20,
@@ -122,6 +298,22 @@
             "fuel_consumption": 0
           },
           "marker_total": 82,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_p108_all-new-mg3.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 10,
+            "displacement": 0,
+            "fuel_consumption": 26
+          },
+          "marker_total": 42,
           "structure": "prose_only",
           "structured_fields": 0,
           "spec_blocks": 0,
@@ -176,6 +368,22 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_p108_new-mazda-bt50.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 16,
+            "fuel_consumption": 11
+          },
+          "marker_total": 28,
+          "structure": "structured_field",
+          "structured_fields": 4,
+          "spec_blocks": 0,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx5.html",
           "marker_counts": {
             "thai_ps": 8,
@@ -222,6 +430,22 @@
           "structured_fields": 4,
           "spec_blocks": 1,
           "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_p108_mg-cyberster.html",
+          "marker_counts": {
+            "thai_ps": 13,
+            "torque_nm": 9,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 22,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx5.html",
@@ -302,6 +526,22 @@
           "structured_fields": 1,
           "spec_blocks": 39,
           "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_p108_mg-es.html",
+          "marker_counts": {
+            "thai_ps": 11,
+            "torque_nm": 0,
+            "kw": 2,
+            "kwh": 6,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 19,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/mazda_p107_spec_dup.html",
@@ -424,6 +664,22 @@
             "kwh": 0,
             "displacement": 0,
             "fuel_consumption": 6
+          },
+          "marker_total": 8,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_p108_mg-ep-plus.html",
+          "marker_counts": {
+            "thai_ps": 5,
+            "torque_nm": 0,
+            "kw": 3,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
           },
           "marker_total": 8,
           "structure": "prose_only",
@@ -592,6 +848,22 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/toyota_p108_camry.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 2,
+            "fuel_consumption": 1
+          },
+          "marker_total": 6,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_tank-500-diesel.html",
           "marker_counts": {
             "thai_ps": 3,
@@ -613,6 +885,38 @@
             "thai_ps": 0,
             "torque_nm": 0,
             "kw": 4,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 4,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_p108_219263.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 2
+          },
+          "marker_total": 4,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mitsubishi_p108_unveil-spec-prices-of-athlete-and-dc-4wd-ultra.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 4,
+            "kw": 0,
             "kwh": 0,
             "displacement": 0,
             "fuel_consumption": 0
@@ -848,6 +1152,54 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/honda_p108_index_dup.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_p108_219267.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_p108_mazda-cx30-lifestyle-upgrade_.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mg_press_news.html",
           "marker_counts": {
             "thai_ps": 0,
@@ -974,6 +1326,22 @@
           "structured_fields": 0,
           "spec_blocks": 0,
           "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/suzuki_p108_about-us.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 1,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
         }
       ],
       "why_highest_value": "the figures exist in artifacts we already hold, so cost is extraction + tests only, and provenance is already sidecar-backed"
@@ -1056,6 +1424,28 @@
         ],
         "tests/fixtures/oem-artifacts/honda_models_page.html": [
           "/service/special-service"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p108_about-honda.html": [
+          "/service/special-service"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p108_accordehev.html": [
+          "/accordehev/specification",
+          "/service/special-service",
+          "https://www.honda.co.th/en/accordehev/specification"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p108_civic.html": [
+          "/civic/specification",
+          "/service/special-service"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p108_contact.html": [
+          "/service/special-service"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p108_index_dup.html": [
+          "/service/special-service"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p108_super-one.html": [
+          "/service/special-service",
+          "/super-one/specification"
         ],
         "tests/fixtures/oem-artifacts/honda_page.html": [
           "/en/service/special-service"
@@ -1206,6 +1596,9 @@
         "tests/fixtures/oem-artifacts/kia_ev5_features.html": [
           "/th/th/cars/ev5/specification.html"
         ],
+        "tests/fixtures/oem-artifacts/kia_p108_features.html": [
+          "/th/en/cars/carnival-hev/specification.html"
+        ],
         "tests/fixtures/oem-artifacts/landrover_discovery_page.html": [
           "/fleet-business/specialist-vehicles"
         ],
@@ -1217,6 +1610,10 @@
         ],
         "tests/fixtures/oem-artifacts/landrover_range_rover_page.html": [
           "/fleet-business/specialist-vehicles"
+        ],
+        "tests/fixtures/oem-artifacts/lexus_p108_culinary-perspectives.html": [
+          "https://www.lexus.co.th/en/discover-lexus/lexus-creates/family-activities/culinary-perspectives.html",
+          "https://www.lexus.co.th/th/discover-lexus/lexus-creates/family-activities/culinary-perspectives.html"
         ],
         "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html": [
           "/_next/static/chunks/pages/cars/%5Bslug%5D/spec-21232b9731bd7d75.js",
@@ -1248,6 +1645,14 @@
           "/en/cars/mazda3-sedan/spec",
           "/th/cars/[slug]/spec",
           "/th/cars/mazda3-sedan/spec#"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_p108_new-mazda-bt50.html": [
+          "/th/cars/new-mazda-bt50/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_p108_spec.html": [
+          "/cars/spec",
+          "/en/cars/spec",
+          "/th/cars/spec#"
         ],
         "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html": [
           "/cars/mazda-cx30-essential/spec",
@@ -1387,6 +1792,15 @@
         "tests/fixtures/oem-artifacts/mitsubishi_home_page.html": [
           "/th/news-activity/news/MMTh-Kong-Thabbok-Upatham-Sustainable-Technical-Skills-Development"
         ],
+        "tests/fixtures/oem-artifacts/mitsubishi_p108_en.html": [
+          "/en/news-activity/news/MMTh-Kong-Thabbok-Upatham-Sustainable-Technical-Skills-Development"
+        ],
+        "tests/fixtures/oem-artifacts/mitsubishi_p108_new-xpander-cross_special-price-extension.html": [
+          "https://www.mitsubishi-motors.co.th/en/buy/news-activity/new-xpander-cross_special-price-extension"
+        ],
+        "tests/fixtures/oem-artifacts/mitsubishi_p108_unveil-spec-prices-of-athlete-and-dc-4wd-ultra.html": [
+          "https://www.mitsubishi-motors.co.th/en/news-activity/news/unveil-spec-prices-of-athlete-and-dc-4wd-ultra"
+        ],
         "tests/fixtures/oem-artifacts/mitsubishi_press_news.html": [
           "/th/news-activity/news/MMTh-Donates-Engines-and-Powertrain-Set-to-Lopburi-Technical-College10",
           "/th/news-activity/news/MMTh-Donates-New-4N16-Engines-Chiangrai-Industrial-Community-Education-College-Enhance-Technical-Skills-Development",
@@ -1444,6 +1858,12 @@
         "tests/fixtures/oem-artifacts/porsche_p107_vehicle-accessories.html": [
           "#campaigns-and-specials"
         ],
+        "tests/fixtures/oem-artifacts/porsche_p108_vehicle-accessories.html": [
+          "#campaigns-and-specials"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p108_vehicle-accessories_dup.html": [
+          "#campaigns-and-specials"
+        ],
         "tests/fixtures/oem-artifacts/subaru_th_home_page.html": [
           "/th/th/promotions/sales/217/forester-special-deals/"
         ],
@@ -1459,6 +1879,9 @@
         "tests/fixtures/oem-artifacts/suzuki_p107_equipment_dup.html": [
           "/en/model/xl7/specification"
         ],
+        "tests/fixtures/oem-artifacts/suzuki_p108_equipment.html": [
+          "/en/model/carry/specification"
+        ],
         "tests/fixtures/oem-artifacts/suzuki_xl7_equipment.html": [
           "/model/xl7/specification"
         ],
@@ -1467,6 +1890,15 @@
         ],
         "tests/fixtures/oem-artifacts/toyota_p107_altis.html": [
           "/en/model/altis/specification"
+        ],
+        "tests/fixtures/oem-artifacts/toyota_p108_camry.html": [
+          "/en/model/camry/specification"
+        ],
+        "tests/fixtures/oem-artifacts/toyota_p108_index_dup.html": [
+          "/custom/css/special.css"
+        ],
+        "tests/fixtures/oem-artifacts/toyota_p108_stores.toyota.co.th.html": [
+          "https://stores.toyota.co.th/themes/shop/default/custom/css/special.css?v=1.0.6"
         ]
       },
       "why_second": "the link targets are published by the OEM pages we already fetched, so the structure is known to exist before any request is made"
@@ -1588,7 +2020,7 @@
         "next_retry_at": null
       },
       "www.honda.co.th": {
-        "targets": 2,
+        "targets": 3,
         "registry_state": "not_in_registry",
         "blocked_or_wrong_target": false,
         "next_retry_at": null
@@ -1605,8 +2037,26 @@
         "blocked_or_wrong_target": false,
         "next_retry_at": null
       },
+      "www.lexus.co.th": {
+        "targets": 2,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
       "www.mini.co.th": {
         "targets": 6,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
+      "www.mitsubishi-motors.co.th": {
+        "targets": 2,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
+      "stores.toyota.co.th": {
+        "targets": 1,
         "registry_state": "not_in_registry",
         "blocked_or_wrong_target": false,
         "next_retry_at": null

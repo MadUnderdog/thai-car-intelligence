@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th/cars/spec",
+  "captured_at": "2026-09-27T19:03:37.279809+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "da058ce5f783b015b9a8ed30999ae59913e95a29737278676e785646af72a55d",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mazda_p108_spec.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

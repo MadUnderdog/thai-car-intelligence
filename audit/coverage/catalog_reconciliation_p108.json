@@ -1,0 +1,609 @@
+{
+  "artifact": "p108-catalog-reconciliation/1",
+  "generated_at": "2026-09-27T19:10:37.613036+00:00",
+  "before": {
+    "confirmed_variants": 482,
+    "confirmed_models": 264
+  },
+  "after": {
+    "confirmed_variants": 488,
+    "confirmed_models": 264
+  },
+  "harvested": 6,
+  "outcomes": {
+    "existing": 6
+  },
+  "by_method": {
+    "official_grade_list_row": 1,
+    "official_grade_list_bare_row": 3,
+    "official_grade_table_row": 2
+  },
+  "per_oem_before_after": {
+    "Audi": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        21,
+        21
+      ]
+    },
+    "BMW": {
+      "confirmed_variants": [
+        73,
+        73
+      ],
+      "identity_only_variants": [
+        13,
+        13
+      ]
+    },
+    "BYD": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        24,
+        24
+      ]
+    },
+    "Changan": {
+      "confirmed_variants": [
+        5,
+        5
+      ],
+      "identity_only_variants": [
+        1,
+        1
+      ]
+    },
+    "Chery": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        6,
+        6
+      ]
+    },
+    "Chevrolet": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        16,
+        16
+      ]
+    },
+    "Deepal": {
+      "confirmed_variants": [
+        4,
+        4
+      ],
+      "identity_only_variants": [
+        7,
+        7
+      ]
+    },
+    "Ford": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        15,
+        15
+      ]
+    },
+    "GWM": {
+      "confirmed_variants": [
+        21,
+        22
+      ],
+      "identity_only_variants": [
+        9,
+        8
+      ]
+    },
+    "Haval": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        5,
+        5
+      ]
+    },
+    "Honda": {
+      "confirmed_variants": [
+        32,
+        35
+      ],
+      "identity_only_variants": [
+        18,
+        15
+      ]
+    },
+    "Isuzu": {
+      "confirmed_variants": [
+        7,
+        7
+      ],
+      "identity_only_variants": [
+        3,
+        3
+      ]
+    },
+    "Jaguar": {
+      "confirmed_variants": [
+        1,
+        1
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Kia": {
+      "confirmed_variants": [
+        6,
+        6
+      ],
+      "identity_only_variants": [
+        12,
+        12
+      ]
+    },
+    "Land Rover": {
+      "confirmed_variants": [
+        11,
+        11
+      ],
+      "identity_only_variants": [
+        0,
+        0
+      ]
+    },
+    "Lexus": {
+      "confirmed_variants": [
+        38,
+        38
+      ],
+      "identity_only_variants": [
+        7,
+        7
+      ]
+    },
+    "MG": {
+      "confirmed_variants": [
+        8,
+        8
+      ],
+      "identity_only_variants": [
+        29,
+        29
+      ]
+    },
+    "MINI": {
+      "confirmed_variants": [
+        15,
+        15
+      ],
+      "identity_only_variants": [
+        5,
+        5
+      ]
+    },
+    "Mazda": {
+      "confirmed_variants": [
+        22,
+        22
+      ],
+      "identity_only_variants": [
+        33,
+        33
+      ]
+    },
+    "Mitsubishi": {
+      "confirmed_variants": [
+        24,
+        24
+      ],
+      "identity_only_variants": [
+        17,
+        17
+      ]
+    },
+    "NETA": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Nissan": {
+      "confirmed_variants": [
+        23,
+        25
+      ],
+      "identity_only_variants": [
+        24,
+        22
+      ]
+    },
+    "Peugeot": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Porsche": {
+      "confirmed_variants": [
+        69,
+        69
+      ],
+      "identity_only_variants": [
+        21,
+        21
+      ]
+    },
+    "Subaru": {
+      "confirmed_variants": [
+        2,
+        2
+      ],
+      "identity_only_variants": [
+        9,
+        9
+      ]
+    },
+    "Suzuki": {
+      "confirmed_variants": [
+        11,
+        11
+      ],
+      "identity_only_variants": [
+        3,
+        3
+      ]
+    },
+    "Tesla": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        9,
+        9
+      ]
+    },
+    "Toyota": {
+      "confirmed_variants": [
+        110,
+        110
+      ],
+      "identity_only_variants": [
+        69,
+        69
+      ]
+    },
+    "Volvo": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        1,
+        1
+      ]
+    }
+  },
+  "new_identities": [],
+  "ambiguous": [],
+  "rejected_rows": [
+    {
+      "model": "Gwm Tank 300",
+      "variant": "HEV",
+      "artifact": "gwm_p108_car-purchase-consultation.html",
+      "line": 65,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Gwm Tank 300",
+      "variant": "HEV",
+      "artifact": "gwm_th_model_tank-300.html",
+      "line": 32,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Honda Accord",
+      "variant": "e:HEV EL",
+      "artifact": "honda_p108_civic.html",
+      "line": 111,
+      "text": "e:HEV EL+",
+      "reason": "cross-page binding: page URL https://www.honda.co.th/en/civic names Civic but the row claims Honda Accord — not model evidence"
+    },
+    {
+      "model": "Honda Accord",
+      "variant": "e:HEV RS",
+      "artifact": "honda_p108_civic.html",
+      "line": 112,
+      "text": "e:HEV RS",
+      "reason": "cross-page binding: page URL https://www.honda.co.th/en/civic names Civic but the row claims Honda Accord — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Prime",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 375,
+      "text": "2.0 Prime",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Ultra",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 376,
+      "text": "2.0 Ultra",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Signature",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 377,
+      "text": "2.0 Signature",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "0",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 354,
+      "text": "0%",
+      "reason": "promotion / percent token in the published line ('%') — never a grade label"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Prime",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 291,
+      "text": "2.0 PRIME",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Ultra",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 292,
+      "text": "2.0 ULTRA",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Signature",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 293,
+      "text": "2.0 SIGNATURE",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_MMTh-Invites-Customers-to-Experience-Full-Hybrid-Vehicles-Al",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_MMTh-Invites-Customers-to-Experience-Full-Hybrid-Vehicles-Al",
+      "line": 224,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_MMTh-Launches-Special-Aftersales-Service-Campaign-Peak-Trave",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_MMTh-Launches-Special-Aftersales-Service-Campaign-Peak-Trave",
+      "line": 158,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_configurator.html",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_configurator.html",
+      "line": 96,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_configure.html",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_configure.html",
+      "line": 96,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_configure.html",
+      "line": 109,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_en.html",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_en.html",
+      "line": 81,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_en.html",
+      "line": 137,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_explore-model-a.html",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_explore-model-a.html",
+      "line": 84,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_mitsubishi-special-edition-and-passion-red-edition-up-to-fiv",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_mitsubishi-special-edition-and-passion-red-edition-up-to-fiv",
+      "line": 84,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_mmth-announces-prices-of-work-play-line-up-of-all-new-triton",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_mmth-announces-prices-of-work-play-line-up-of-all-new-triton",
+      "line": 107,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_new-xpander-cross_special-price-extension.html",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_new-xpander-cross_special-price-extension.html",
+      "line": 142,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_news-activity.html",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_news-activity.html",
+      "line": 90,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_nextgen-configurator.html",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_nextgen-configurator.html",
+      "line": 78,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_unveil-spec-prices-of-athlete-and-dc-4wd-ultra.html",
+      "line": 17,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mitsubishi Pajero",
+      "variant": "Sport",
+      "artifact": "mitsubishi_p108_unveil-spec-prices-of-athlete-and-dc-4wd-ultra.html",
+      "line": 116,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Toyota Vellfire",
+      "variant": "HEV PREMIUM",
+      "artifact": "toyota_p107_alphard.html",
+      "line": 34,
+      "text": "Vellfire HEV Premium",
+      "reason": "cross-page binding: page URL https://www.toyota.co.th/en/model/alphard names Alphard, Toyota Alphard but the row claims Toyota Vellfire — not model evidence"
+    },
+    {
+      "model": "Toyota Corolla",
+      "variant": "Cross",
+      "artifact": "toyota_press_news.html",
+      "line": 119,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Toyota Corolla",
+      "variant": "Cross",
+      "artifact": "toyota_pricelist_page.html",
+      "line": 120,
+      "reason": "generic label — never a variant"
+    }
+  ],
+  "staging_written": false,
+  "price_pass": false
+}

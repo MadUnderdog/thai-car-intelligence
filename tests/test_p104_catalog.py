@@ -28,7 +28,8 @@ sys.path.insert(0, os.path.join(REPO, "lib"))
 sys.path.insert(0, os.path.join(REPO, "scripts"))
 
 import p104_first_party_breadth as p104  # noqa: E402
-from thai_factory.catalog.identity_pass import match_key  # noqa: E402
+from thai_factory.catalog.identity_pass import (  # noqa: E402
+    ReconciledIdentity, match_key)
 
 PLAN = os.path.join(REPO, "audit", "coverage", "p104_target_plan.json")
 IDENTITIES = os.path.join(REPO, "audit", "coverage", "p104_official_identities.json")
@@ -153,7 +154,7 @@ def test_artifacts_without_provenance_are_skipped_and_never_used():
     used = {i["artifact"] for i in identities()}
     assert not (skipped & used), skipped & used
     for x in recon["skipped_artifacts_without_provenance"]:
-        assert "no .prov.json source_url" in x["reason"]
+        assert "provenance not verified" in x["reason"], x
 
 
 def test_generic_labels_are_never_model_evidence():
@@ -304,3 +305,167 @@ def test_sentence_rules_name_the_model_in_the_sentence():
             text = fh.read()
         assert row["evidence"]["sentence"] in text
         assert f"รุ่น {row['variant']}" in text or f"รุ่น {row['variant']} " in text
+
+
+# ── 5. generation/body binding + evidence context (REPAIR-2) ──────────────
+def _record(mfr, model, variant="", generation=""):
+    r = ReconciledIdentity(manufacturer=mfr, model=model, variant=variant)
+    r.generation = generation
+    return r
+
+
+def test_same_model_in_two_generations_is_ambiguous_without_context():
+    matcher = p104.BoundMatcher([
+        _record("Toyota", "Corolla Altis", "", "E170"),
+        _record("Toyota", "Corolla Altis", "", "E210"),
+    ])
+    kind, target, method, reason = matcher.resolve("Toyota", "Corolla Altis", "")
+    assert kind == "ambiguous", (kind, reason)
+    assert target is None
+    assert "generation" in reason and "context" in reason
+
+
+def test_source_generation_context_resolves_exactly_one_generation():
+    matcher = p104.BoundMatcher([
+        _record("Toyota", "Corolla Altis", "", "E170"),
+        _record("Toyota", "Corolla Altis", "", "E210"),
+    ])
+    kind, target, method, reason = matcher.resolve(
+        "Toyota", "Corolla Altis", "", context="E210")
+    assert kind == "existing", (kind, reason)
+    assert target.generation == "E210"
+
+
+def test_generation_context_that_no_candidate_carries_is_ambiguous():
+    matcher = p104.BoundMatcher([_record("Toyota", "Corolla Altis", "", "E210")])
+    kind, target, method, reason = matcher.resolve(
+        "Toyota", "Corolla Altis", "", context="E170")
+    assert kind == "ambiguous"
+    assert "E170" in reason
+
+
+def test_unique_generation_still_confirms():
+    matcher = p104.BoundMatcher([_record("Toyota", "Corolla Altis", "", "E210")])
+    kind, target, method, reason = matcher.resolve("Toyota", "Corolla Altis", "")
+    assert kind == "existing"
+    assert target.generation == "E210"
+
+
+def test_variant_resolution_never_crosses_generations():
+    matcher = p104.BoundMatcher([
+        _record("Toyota", "Corolla Altis", "1.8 G", "E170"),
+        _record("Toyota", "Corolla Altis", "1.8 G", "E210"),
+    ])
+    kind, target, method, reason = matcher.resolve("Toyota", "Corolla Altis", "1.8 G")
+    assert kind == "ambiguous", (kind, reason)
+    # with the context it resolves to one record only
+    kind2, target2, _, _ = matcher.resolve(
+        "Toyota", "Corolla Altis", "1.8 G", context="E210")
+    assert kind2 == "existing" and target2.generation == "E210"
+
+
+def test_mere_visible_text_occurrence_is_not_model_evidence():
+    html = ('<html><body><p>Toyota Camry is a great car, ask about Toyota Camry today.'
+            '</p></body></html>')
+    contexts = p104.model_contexts(html)
+    joined = " | ".join(t for t, _ in contexts)
+    assert "Toyota Camry" not in joined, joined
+    assert contexts == [] or all(t != "Toyota Camry" for t, _ in contexts)
+
+
+def test_label_only_in_nav_footer_menu_or_quotation_is_not_model_evidence():
+    html = ('<html><body>'
+            '<nav><a class="menu-item">Toyota Camry</a></nav>'
+            '<div class="quotations"><span>Toyota Camry</span></div>'
+            '<footer>Toyota Camry quotation</footer>'
+            '<main><h2>Toyota Corolla Altis</h2></main>'
+            '</body></html>')
+    contexts = p104.model_contexts(html)
+    joined = " | ".join(t for t, _ in contexts)
+    assert "Toyota Camry" not in joined, joined
+    assert "Toyota Corolla Altis" in joined, joined
+
+
+def test_structured_heading_and_card_are_model_evidence():
+    html = ('<html><body><main>'
+            '<h2>Toyota Yaris Ativa</h2>'
+            '<p class="name">Toyota Veloz</p>'
+            '<a href="/en/model/car/camry">Toyota Camry</a>'
+            '</main></body></html>')
+    contexts = dict((t, k) for t, k in p104.model_contexts(html))
+    assert "Toyota Yaris Ativa" in contexts and contexts["Toyota Yaris Ativa"] == "heading"
+    assert "Toyota Veloz" in contexts and contexts["Toyota Veloz"] == "card_title"
+    assert "Toyota Camry" in contexts and contexts["Toyota Camry"] == "lineup_entry"
+
+
+def test_json_model_field_is_model_evidence():
+    html = '<html><body><script>self.__next_f.push("\\\"modelName\\\":\\\"Toyota Crown\\\"")</script></body></html>'
+    html = '<script>{"modelName": "Toyota Crown", "model": "Toyota Aura"}</script>'
+    contexts = dict(p104.model_contexts(html))
+    assert "Toyota Crown" in contexts
+    assert contexts["Toyota Crown"] == "json_model_field"
+
+
+def test_sidecar_hash_mismatch_is_skipped(tmp_path):
+    art = tmp_path / "fake_page.html"
+    art.write_text("<html>Toyota Camry</html>", encoding="utf-8")
+    (tmp_path / "fake_page.html.prov.json").write_text(json.dumps({
+        "source_url": "https://example.com/camry", "captured_at": "2026-09-27T00:00:00+00:00",
+        "acquisition_method": "http_get", "session_id": "s", "sha256": "0" * 64,
+        "provenance_state": "ACQUISITION_VERIFIED"}), encoding="utf-8")
+    prov, reason = p104.verify_artifact(str(art))
+    assert prov is None and "SHA-256" in reason
+
+
+def test_sidecar_state_other_than_acquisition_verified_is_skipped(tmp_path):
+    art = tmp_path / "fake_page2.html"
+    content = "<html>Toyota Camry</html>"
+    art.write_text(content, encoding="utf-8")
+    import hashlib
+    (tmp_path / "fake_page2.html.prov.json").write_text(json.dumps({
+        "source_url": "https://example.com/camry", "captured_at": "2026-09-27T00:00:00+00:00",
+        "acquisition_method": "http_get", "session_id": "s",
+        "sha256": hashlib.sha256(content.encode("utf-8")).hexdigest(),
+        "provenance_state": "LEGACY_UNVERIFIED"}), encoding="utf-8")
+    prov, reason = p104.verify_artifact(str(art))
+    assert prov is None and "ACQUISITION_VERIFIED" in reason
+
+
+def test_verified_sidecar_passes(tmp_path):
+    art = tmp_path / "fake_page3.html"
+    content = "<html>Toyota Camry</html>"
+    art.write_text(content, encoding="utf-8")
+    import hashlib
+    (tmp_path / "fake_page3.html.prov.json").write_text(json.dumps({
+        "source_url": "https://example.com/camry", "captured_at": "2026-09-27T00:00:00+00:00",
+        "acquisition_method": "http_get", "session_id": "s",
+        "sha256": hashlib.sha256(content.encode("utf-8")).hexdigest(),
+        "provenance_state": "ACQUISITION_VERIFIED"}), encoding="utf-8")
+    prov, reason = p104.verify_artifact(str(art))
+    assert reason is None and prov["source_url"].startswith("https://")
+
+
+def test_hardened_evidence_carries_a_structural_locator():
+    for item in identities():
+        if item["extraction_method"] == "official_lineup_word_boundary":
+            ev = item["evidence"]
+            assert ev["context_type"] in ("heading", "card_title", "lineup_entry",
+                                          "json_model_field", "iframe_payload",
+                                          "island_payload"), ev
+            assert ev["matched_text"]
+            assert ev["context_text"]
+
+
+def test_hardening_rejections_are_recorded_not_silent():
+    recon = _load(RECON)
+    assert "skipped_artifacts_without_provenance" in recon
+    for row in recon["skipped_artifacts_without_provenance"]:
+        assert row["reason"]
+
+
+def test_model_evidence_is_never_produced_from_variant_methods():
+    for item in identities():
+        if item["extraction_method"] in VARIANT_METHODS:
+            assert item["identity_level"] == "VARIANT"
+        if item["extraction_method"] in MODEL_METHODS:
+            assert item["identity_level"] == "MODEL" and not item["variant"]

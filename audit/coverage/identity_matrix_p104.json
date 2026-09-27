@@ -1,6 +1,6 @@
 {
   "schema": "p102-identity-matrix/1",
-  "generated_at": "2026-09-27T10:51:59.638348+00:00",
+  "generated_at": "2026-09-27T11:35:28.311758+00:00",
   "totals": {
     "oems_in_scope": 32,
     "oems_with_identity_candidates": 30,
@@ -2288,7 +2288,7 @@
         "first_party_confirmed_variants": 1,
         "identity_only_models": 14,
         "identity_only_variants": 2,
-        "first_party_confirmed_records": 2,
+        "first_party_confirmed_records": 1,
         "candidate_sources": [
           "9carthai price index",
           "Jaguar Thailand Official"
@@ -2420,10 +2420,7 @@
         "first_party_confirmed_variants": 0,
         "identity_only_models": 0,
         "identity_only_variants": 0,
-        "p104_artifacts": [
-          "jaguar_home_page.html",
-          "jaguar_range_page.html"
-        ],
+        "p104_artifacts": [],
         "p104_unresolved": []
       }
     },
@@ -2610,7 +2607,7 @@
         "first_party_confirmed_variants": 11,
         "identity_only_models": 0,
         "identity_only_variants": 0,
-        "first_party_confirmed_records": 15,
+        "first_party_confirmed_records": 14,
         "candidate_sources": [
           "Land Rover Thailand Official"
         ],
@@ -2708,8 +2705,6 @@
         "identity_only_models": 0,
         "identity_only_variants": 0,
         "p104_artifacts": [
-          "landrover_discovery_page.html",
-          "landrover_home_page.html",
           "landrover_range_rover_page.html"
         ],
         "p104_unresolved": []
@@ -2911,11 +2906,11 @@
       "identity": {
         "model_candidates_discovered": 33,
         "variant_candidates_discovered": 37,
-        "first_party_confirmed_models": 17,
+        "first_party_confirmed_models": 16,
         "first_party_confirmed_variants": 5,
-        "identity_only_models": 16,
+        "identity_only_models": 17,
         "identity_only_variants": 32,
-        "first_party_confirmed_records": 22,
+        "first_party_confirmed_records": 21,
         "candidate_sources": [
           "9carthai price index",
           "MG Thailand Official",
@@ -3084,9 +3079,9 @@
         "conflicts": 0
       },
       "p104_delta": {
-        "first_party_confirmed_models": 9,
+        "first_party_confirmed_models": 8,
         "first_party_confirmed_variants": 0,
-        "identity_only_models": -10,
+        "identity_only_models": -9,
         "identity_only_variants": 0,
         "p104_artifacts": [
           "mg_home_page.html"
@@ -3102,11 +3097,11 @@
       "identity": {
         "model_candidates_discovered": 16,
         "variant_candidates_discovered": 20,
-        "first_party_confirmed_models": 10,
+        "first_party_confirmed_models": 8,
         "first_party_confirmed_variants": 13,
-        "identity_only_models": 5,
+        "identity_only_models": 8,
         "identity_only_variants": 7,
-        "first_party_confirmed_records": 23,
+        "first_party_confirmed_records": 20,
         "candidate_sources": [
           "9carthai price index",
           "MINI Thailand Official",
@@ -3239,9 +3234,9 @@
         "conflicts": 1
       },
       "p104_delta": {
-        "first_party_confirmed_models": 2,
+        "first_party_confirmed_models": 0,
         "first_party_confirmed_variants": 0,
-        "identity_only_models": -4,
+        "identity_only_models": -1,
         "identity_only_variants": 0,
         "p104_artifacts": [
           "mini_home_page.html"
@@ -3628,11 +3623,11 @@
       "identity": {
         "model_candidates_discovered": 24,
         "variant_candidates_discovered": 41,
-        "first_party_confirmed_models": 11,
+        "first_party_confirmed_models": 20,
         "first_party_confirmed_variants": 19,
-        "identity_only_models": 13,
+        "identity_only_models": 4,
         "identity_only_variants": 22,
-        "first_party_confirmed_records": 25,
+        "first_party_confirmed_records": 34,
         "candidate_sources": [
           "9carthai price index",
           "Mitsubishi Thailand Official",
@@ -3798,12 +3793,13 @@
         "conflicts": 0
       },
       "p104_delta": {
-        "first_party_confirmed_models": 0,
+        "first_party_confirmed_models": 9,
         "first_party_confirmed_variants": 0,
-        "identity_only_models": 0,
+        "identity_only_models": -9,
         "identity_only_variants": 0,
         "p104_artifacts": [
-          "mitsubishi_all_models_price.html"
+          "mitsubishi_all_models_price.html",
+          "mitsubishi_home_page.html"
         ],
         "p104_unresolved": []
       }
@@ -4428,7 +4424,6 @@
         "identity_only_models": -1,
         "identity_only_variants": 0,
         "p104_artifacts": [
-          "porsche_home_page.html",
           "porsche_macan_model_page.html"
         ],
         "p104_unresolved": []
@@ -4697,7 +4692,6 @@
         "identity_only_models": 0,
         "identity_only_variants": 0,
         "p104_artifacts": [
-          "subaru_brochure_page.html",
           "subaru_th_home_page.html"
         ],
         "p104_unresolved": []
@@ -5020,11 +5014,11 @@
       "identity": {
         "model_candidates_discovered": 66,
         "variant_candidates_discovered": 179,
-        "first_party_confirmed_models": 35,
+        "first_party_confirmed_models": 39,
         "first_party_confirmed_variants": 98,
-        "identity_only_models": 32,
+        "identity_only_models": 27,
         "identity_only_variants": 81,
-        "first_party_confirmed_records": 131,
+        "first_party_confirmed_records": 136,
         "candidate_sources": [
           "9carthai price index",
           "Toyota Thailand Official",
@@ -5188,9 +5182,9 @@
         "conflicts": 1
       },
       "p104_delta": {
-        "first_party_confirmed_models": 1,
+        "first_party_confirmed_models": 5,
         "first_party_confirmed_variants": 0,
-        "identity_only_models": -10,
+        "identity_only_models": -15,
         "identity_only_variants": 0,
         "p104_artifacts": [
           "toyota_pricelist_page.html"

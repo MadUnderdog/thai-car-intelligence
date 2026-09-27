@@ -37,8 +37,10 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "lib"))
 import p103_first_party_catalog as p103  # noqa: E402
+from thai_factory.acquisition.provenance import (  # noqa: E402
+    AcquisitionReader, ProvenanceError)
 from thai_factory.catalog.identity_pass import (  # noqa: E402
-    IdentityReconciliation, ReconciledIdentity)
+    IdentityReconciliation, ReconciledIdentity, match_key)
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIXTURE_DIR = os.path.join(REPO, "tests/fixtures/oem-artifacts")
@@ -121,16 +123,39 @@ def provenance(name: str) -> dict:
 SKIPPED_NO_PROVENANCE: list = []
 
 
-def usable(name: str) -> dict:
-    """Sidecar with a real source URL, else None — fail closed.
+def verify_artifact(path: str):
+    """(provenance, None) or (None, reason) — provenance verified, never assumed.
 
-    An artifact that never went through AcquisitionWriter has no publication
-    URL, and a first-party identity without a source URL is not evidence.
+    The reader recomputes SHA-256 over the bytes on disk and compares it with
+    the capture-time sidecar, so a modified artifact cannot be used as
+    evidence.  Only an `ACQUISITION_VERIFIED` sidecar whose `source_url` is a
+    real https URL counts as a publication.
     """
-    prov = provenance(name)
-    if not prov.get("source_url"):
+    try:
+        _content, prov = AcquisitionReader.read(path)
+    except ProvenanceError as exc:
+        return None, str(exc)
+    except Exception as exc:                     # unreadable bytes, bad JSON …
+        return None, f"{type(exc).__name__}: {exc}"
+    if prov.get("provenance_state") != "ACQUISITION_VERIFIED":
+        return None, (f"provenance_state={prov.get('provenance_state')!r} — "
+                      f"not ACQUISITION_VERIFIED")
+    if not str(provenance_url(prov)).startswith("https://"):
+        return None, "sidecar source_url missing or not https"
+    return prov, None
+
+
+def provenance_url(prov: dict) -> str:
+    return str(prov.get("source_url") or "")
+
+
+def usable(name: str):
+    """Verified provenance for a committed artifact, else (None, reason)."""
+    path = artifact_path(name)
+    prov, reason = verify_artifact(path)
+    if prov is None:
         SKIPPED_NO_PROVENANCE.append(
-            {"artifact": name, "reason": "no .prov.json source_url — not used as evidence"})
+            {"artifact": name, "reason": f"provenance not verified — {reason}"})
         return None
     return prov
 
@@ -171,6 +196,112 @@ def label_pattern(label: str):
             r"(?![A-Za-z0-9])")
 
 
+NOISE_REGIONS = [
+    re.compile(r'<nav\b.*?</nav>', re.S | re.I),
+    re.compile(r'<header\b.*?</header>', re.S | re.I),
+    re.compile(r'<footer\b.*?</footer>', re.S | re.I),
+    re.compile(r'<aside\b.*?</aside>', re.S | re.I),
+    re.compile(r'<[a-z][a-z0-9]*\b[^>]*(?:class|id)="[^"]*\b(?:menu|navbar|breadcrumb|'
+               r'cookie|consent|quotation|quote|related|recommend|banner)\b[^"]*"'
+               r'[^>]*>.*?</[a-z][a-z0-9]*>', re.S | re.I),
+]
+NOISE_CLASS = re.compile(r"\b(?:menu|navbar|breadcrumb|cookie|consent|quotation|quote|"
+                         r"related|recommend|banner|footer|nav)\b", re.I)
+
+
+def _clean(fragment: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", fragment)
+    return re.sub(r"\s+", " ", html.unescape(text)).strip()
+
+
+JSON_NAME_KEY = r'(?:modelName|model_name|seriesName|series|model|name)'
+JSON_NAME_RE = re.compile(
+    r'\\?"' + JSON_NAME_KEY + r'\\?"\s*:\s*(?:\[\s*-?\d+\s*,\s*)?\\?"([^"\\\\]{2,60})\\?"')
+JSON_KEY_RE = re.compile(r'[{,]\s*"([^"\\\\]{2,40})"\s*:')
+NON_MODEL_HREF = re.compile(
+    r'/(?:about|contact|contact-us|news|promo|promotions|service|services|financing|'
+    r'finance|offers|test-drive|testdrive|dealer|dealers|location|locations|careers|'
+    r'privacy|terms|cookie|gallery|media|press|ownership|accessories|parts|search|'
+    r'login|register|faq|blog|sitemap)(?:/|$)', re.I)
+
+
+def _json_names(payload: str, context_type: str, out: list) -> None:
+    for m in JSON_NAME_RE.finditer(payload):
+        value = html.unescape(m.group(1)).strip()
+        if value:
+            out.append((value, context_type))
+
+
+def model_contexts(html_text: str) -> list:
+    """Structural places where an OEM publishes a MODEL identity.
+
+    Returns ``[(text, context_type), …]``.  Four families count:
+
+      heading / card_title    rendered model headings and model cards
+      lineup_entry            links to a model page (nav/footer already removed)
+      json_model_field        official structured payload (embedded JSON,
+                              iframe listing JSON, island SSR props)
+
+    A bare occurrence of a model name in prose, a menu, a footer, a meta
+    description, a stylesheet or a quotation block is deliberately NOT a
+    context: string presence alone never proves the page publishes that model
+    as an identity.
+    """
+    out = []
+    # 1. official structured payloads — embedded JSON (incl. escaped flight data)
+    for script in re.findall(r"<script\b[^>]*>(.*?)</script>", html_text, re.S | re.I):
+        _json_names(script, "json_model_field", out)
+    # 1b. official listing JSON carried in an iframe (e.g. "All Vehicles Model
+    #     Price"): a model listing, not prose
+    for frame in re.findall(r"<iframe\b[^>]*>(.*?)</iframe>", html_text, re.S | re.I):
+        _json_names(frame, "iframe_payload", out)
+        # official price/inventory payloads are keyed by model slug
+        # ("nissan-terra-mc"): the key is the locator, not prose
+        for key in JSON_KEY_RE.findall(frame):
+            out.append((html.unescape(key).strip(), "iframe_payload"))
+    # 1c. island SSR props — the page's own rendered data, not navigation
+    for props in re.findall(r"<astro-island\b[^>]*\bprops=\"([^\"]*)\"", html_text, re.I):
+        _json_names(html.unescape(props), "island_payload", out)
+    # 2. visible structure, with navigation/footer/noise regions removed
+    body = html_text
+    for noise in NOISE_REGIONS:
+        body = noise.sub(" ", body)
+    body = re.sub(r"<script\b.*?</script>", " ", body, flags=re.S | re.I)
+    body = re.sub(r"<style\b.*?</style>", " ", body, flags=re.S | re.I)
+    for m in re.finditer(r"<h[1-4]\b([^>]*)>(.*?)</h[1-4]>", body, re.S | re.I):
+        if NOISE_CLASS.search(m.group(1) or ""):
+            continue
+        value = _clean(m.group(2))
+        if value:
+            out.append((value, "heading"))
+    for m in re.finditer(
+            r"<([a-z][a-z0-9]*)\b([^>]*(?:class|id)=[^>]*)>(.*?)</\1>", body, re.S | re.I):
+        attrs = m.group(2)
+        if not re.search(r'(?:class|id)="[^"]*\b(?:name|title|model|series|card|headline)\b',
+                         attrs, re.I):
+            continue
+        if NOISE_CLASS.search(attrs):
+            continue
+        value = _clean(m.group(3))
+        if value:
+            out.append((value, "card_title"))
+    # 3. model links in the page body (nav/header/footer already removed)
+    for m in re.finditer(r'<a\b([^>]*)href="([^"]+)"([^>]*)>(.*?)</a>', body, re.S | re.I):
+        href = html.unescape(m.group(2))
+        path = href.split("?", 1)[0].split("#", 1)[0]
+        if path.startswith("http"):
+            path = "/" + "/".join(path.split("/")[3:])
+        looks_like_model_path = (
+            bool(re.fullmatch(r"/[a-z0-9\-]{2,30}/?", path, re.I))
+            or bool(re.search(r"/(?:model|models|car|cars|vehicle|vehicles)/", path, re.I)))
+        if not looks_like_model_path or NON_MODEL_HREF.search(path):
+            continue
+        value = _clean(m.group(4))
+        if value:
+            out.append((value, "lineup_entry"))
+    return [(t, k) for t, k in out if t]
+
+
 def looks_like_grade(line: str) -> bool:
     if not line or len(line) > 24 or UI_NOISE.search(line):
         return False
@@ -184,7 +315,19 @@ def looks_like_grade(line: str) -> bool:
 
 
 # ── extraction A: official model identity ──────────────────────────────────
+CONTEXT_REJECTED: list = []
+
+
 def extract_model_identity(rec) -> list[dict]:
+    """MODEL evidence only from a structural model context.
+
+    A model name occurring somewhere in the bytes of an official page is not
+    proof that the page publishes that model: menus, footers, breadcrumbs,
+    related-model blocks, quotations and prose repeat names without ever
+    presenting an identity.  Every hit must therefore come from a heading, a
+    model card/lineup entry or an official structured payload, and the
+    context is stored with the evidence so it can be re-read from GitHub.
+    """
     out = []
     universe = {}
     for r in rec.records:
@@ -198,18 +341,37 @@ def extract_model_identity(rec) -> list[dict]:
             prov = usable(fname)
             if prov is None:
                 continue
-            text = visible_text(fname)
+            text = visible_text(fname)          # old rule, kept to report rejections
+            contexts = model_contexts(artifact_text(fname))
             for rec_ in candidates:
                 pat = label_pattern(rec_.model)
                 if not pat:
                     continue
-                m = re.search(pat, text, re.I)
-                if not m:
+                hit = None
+                for ctx, ctype in contexts:
+                    m = re.search(pat, ctx, re.I)
+                    if m:
+                        hit = (m, ctype, ctx)
+                        break
+                if hit is None:
+                    m_old = re.search(pat, text, re.I)
+                    if m_old and (rec_.model, fname) not in seen:
+                        CONTEXT_REJECTED.append({
+                            "manufacturer": brand, "model": rec_.model,
+                            "artifact": fname, "source_url": prov.get("source_url", ""),
+                            "matched_text": m_old.group(0),
+                            "snippet": snippet(text, m_old.start() + len(m_old.group(0)) // 2),
+                            "reason": "label occurs in the visible text but in no "
+                                      "structural model context (heading / model card / "
+                                      "lineup entry / official payload) — menu, footer, "
+                                      "quotation and prose are not MODEL evidence",
+                        })
                     continue
                 key = (rec_.model, fname)
                 if key in seen:
                     continue
                 seen.add(key)
+                m, ctype, ctx = hit
                 out.append({
                     "manufacturer": brand, "model": rec_.model, "variant": "",
                     "identity_level": "MODEL",
@@ -217,12 +379,16 @@ def extract_model_identity(rec) -> list[dict]:
                     "prior_status": rec_.status,
                     "artifact": fname, "sha256": artifact_sha(fname),
                     "source_url": prov.get("source_url", ""),
+                    "source_generation_context": "",
                     "extraction_method": "official_lineup_word_boundary",
                     "evidence": {"matched_text": m.group(0),
-                                 "snippet": snippet(text, m.start() + len(m.group(0)) // 2),
-                                 "selector": "official index page visible text"},
+                                 "context_type": ctype,
+                                 "context_text": ctx[:240],
+                                 "snippet": ctx[max(0, m.start() - 60): m.end() + 60],
+                                 "selector": f"structural model context ({ctype})"},
                 })
     return out
+
 
 
 # ── extraction B: official grade/variant identity ──────────────────────────
@@ -320,6 +486,61 @@ def load_baseline():
     return rec
 
 
+class BoundMatcher(p103.Matcher):
+    """Generation/body-aware reconciliation — fail closed, never guess.
+
+    P102 keeps one record per (manufacturer, model, variant) key today, but a
+    publication must not be bound to an identity that shares only its name:
+    when the candidate set spans several generations/body styles and the
+    source carries no generation/body context, the outcome is AMBIGUOUS
+    instead of attaching MARKET_TRUTH to an arbitrary record.
+    """
+
+    def resolve(self, mfr, model_label, variant_label="", context=""):
+        models, method = self.model_candidates(mfr, model_label)
+        if not models:
+            return ("new", None, "absent",
+                    "official publication is not present in the P102 candidate "
+                    "universe under any normalization tier")
+        keys = {match_key(mfr, r.model) for r in models}
+        if len(keys) > 1:
+            return ("ambiguous", None, method,
+                    "model matches several distinct P102 identity keys "
+                    f"({sorted(keys)}) — not guessed")
+        gens = {(getattr(r, "generation", "") or "") for r in models}
+        if context:
+            matched = [r for r in models
+                       if (getattr(r, "generation", "") or "") == context]
+            if not matched:
+                return ("ambiguous", None, method,
+                        f"source declares generation/body {context!r} but no candidate "
+                        f"record carries it ({sorted(gens)}) — fail closed")
+            models, gens, method = matched, {context}, method + "+generation_context"
+        elif len(gens) > 1:
+            return ("ambiguous", None, method,
+                    f"same normalized model label maps to {len(gens)} generation/body "
+                    f"records {sorted(gens)} and the source carries no generation/body "
+                    f"context — ambiguous, never guessed")
+        if not variant_label:
+            model_only = [r for r in models if not (getattr(r, "variant", "") or "")]
+            target = model_only[0] if model_only else models[0]
+            return ("existing", target, method, "")
+        target_key = match_key(mfr, variant_label)
+        variants = [r for r in models if (getattr(r, "variant", "") or "")]
+        for r in variants:
+            if match_key(mfr, r.variant) == target_key:
+                return ("existing", r, method, "")
+        for r in variants:
+            if p103.loose(r.variant) == p103.loose(variant_label):
+                return ("existing", r, "alnum_fold_match", "")
+        for r in variants:
+            if p103.loose(p103.strip_plus(r.variant)) == p103.loose(p103.strip_plus(variant_label)):
+                return ("existing", r, "alnum_fold_match+leading_plus_strip", "")
+        return ("new", models[0], method,
+                "official VARIANT publication is not present in the P102 candidate "
+                "universe under any normalization tier")
+
+
 def main() -> int:
     rec = load_baseline()
     before = {
@@ -402,11 +623,12 @@ def main() -> int:
     harvested += extract_grade_table(rec)
     harvested += extract_sentence_rules()
 
-    matcher = p103.Matcher(rec.records)
+    matcher = BoundMatcher(rec.records)
     results = []
     for item in harvested:
         kind, target, method, reason = matcher.resolve(
-            item["manufacturer"], item["model"], item["variant"])
+            item["manufacturer"], item["model"], item["variant"],
+            context=item.get("source_generation_context", ""))
         entry = dict(item)
         entry["reconciliation"] = {"outcome": kind, "match_method": method,
                                    "reason": reason}
@@ -481,6 +703,8 @@ def main() -> int:
             "skipped_artifacts_without_provenance": [
                 dict(t) for t in {(x["artifact"], x["reason"]): x
                                   for x in SKIPPED_NO_PROVENANCE}.values()],
+            "rejected_model_context_evidence": CONTEXT_REJECTED,
+            "rejected_model_context_evidence_count": len(CONTEXT_REJECTED),
             "staging_written": False, "price_pass": False,
         }, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
@@ -584,6 +808,29 @@ def main() -> int:
                               "p104_final_result.json"],
         "gates": {"staging_written": False, "prisma_touched": False,
                   "price_pass": False, "p102_p103_logic_changed": False},
+        "hardening": {
+            "model_evidence_requires_structural_context": True,
+            "structural_context_types": ["heading", "card_title", "lineup_entry",
+                                         "json_model_field", "iframe_payload",
+                                         "island_payload"],
+            "visible_text_only_occurrences_rejected": len(CONTEXT_REJECTED),
+            "rejected_occurrences": [
+                {"manufacturer": x["manufacturer"], "model": x["model"],
+                 "artifact": x["artifact"], "matched_text": x["matched_text"]}
+                for x in CONTEXT_REJECTED],
+            "provenance_verification": {
+                "method": "AcquisitionReader.read — SHA-256 recomputed against the "
+                          "capture sidecar before any evidence is used",
+                "required_state": "ACQUISITION_VERIFIED",
+                "required_source_url_scheme": "https://",
+                "artifacts_rejected": len({
+                    x["artifact"] for x in SKIPPED_NO_PROVENANCE})},
+            "generation_body_binding": {
+                "matcher": "BoundMatcher",
+                "context_carried_by_sources": False,
+                "policy": "candidate set spanning several generation/body records "
+                          "without source context resolves to AMBIGUOUS"},
+        },
         "blocker_changes": {"new_blockers": [], "cleared_blockers": [],
                             "retried_blocked_hosts": retry_hosts,
                             "smart_retry_check": smart_check,

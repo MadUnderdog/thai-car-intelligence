@@ -1,6 +1,6 @@
 {
   "schema": "p104_target_plan/1",
-  "generated_at": "2026-09-27T10:51:57.152487+00:00",
+  "generated_at": "2026-09-27T11:35:23.901334+00:00",
   "baseline_artifact": "audit/coverage/p103_final_result.json",
   "baseline": {
     "first_party_confirmed_models": [
@@ -48,8 +48,8 @@
     "Suzuki",
     "Isuzu",
     "MINI",
-    "Changan",
-    "Jaguar"
+    "Jaguar",
+    "Changan"
   ],
   "reachable": 19,
   "blocked": 13,

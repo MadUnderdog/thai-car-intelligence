@@ -1,6 +1,6 @@
 # P104 per-OEM catalog coverage matrix
 
-Generated 2026-09-27T10:51:59.638348+00:00 · baseline `identity_matrix_p103.json`
+Generated 2026-09-27T11:35:28.311758+00:00 · baseline `identity_matrix_p103.json`
 
 | OEM | access | confirmed models before | after | confirmed variants before | after | Δmodels | Δvariants |
 |---|---|---|---|---|---|---|---|
@@ -21,11 +21,11 @@ Generated 2026-09-27T10:51:59.638348+00:00 · baseline `identity_matrix_p103.jso
 | Kia | REACHABLE | 3 | 9 | 3 | 3 | 6 | 0 |
 | Land Rover | REACHABLE | 4 | 4 | 11 | 11 | 0 | 0 |
 | Lexus | REACHABLE | 10 | 10 | 27 | 27 | 0 | 0 |
-| MG | REACHABLE | 8 | 17 | 5 | 5 | 9 | 0 |
-| MINI | REACHABLE | 8 | 10 | 13 | 13 | 2 | 0 |
+| MG | REACHABLE | 8 | 16 | 5 | 5 | 8 | 0 |
+| MINI | REACHABLE | 8 | 8 | 13 | 13 | 0 | 0 |
 | Mazda | REACHABLE | 10 | 18 | 22 | 22 | 8 | 0 |
 | Mercedes-Benz | BLOCKED_HTTP_403 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Mitsubishi | REACHABLE | 11 | 11 | 19 | 19 | 0 | 0 |
+| Mitsubishi | REACHABLE | 11 | 20 | 19 | 19 | 9 | 0 |
 | NETA | BLOCKED_DNS | 0 | 0 | 0 | 0 | 0 | 0 |
 | Nissan | REACHABLE | 10 | 16 | 23 | 23 | 6 | 0 |
 | Peugeot | BLOCKED_HTTP_403 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -34,5 +34,5 @@ Generated 2026-09-27T10:51:59.638348+00:00 · baseline `identity_matrix_p103.jso
 | Subaru | REACHABLE | 5 | 5 | 2 | 2 | 0 | 0 |
 | Suzuki | REACHABLE | 5 | 7 | 6 | 6 | 2 | 0 |
 | Tesla | BLOCKED_HTTP_403 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Toyota | REACHABLE | 34 | 35 | 98 | 98 | 1 | 0 |
+| Toyota | REACHABLE | 34 | 39 | 98 | 98 | 5 | 0 |
 | Volvo | BLOCKED_TLS | 0 | 0 | 0 | 0 | 0 | 0 |

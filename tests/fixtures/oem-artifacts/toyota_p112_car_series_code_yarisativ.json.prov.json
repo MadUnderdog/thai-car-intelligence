@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ",
+  "captured_at": "2026-09-28T09:35:36.205014+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "8aafe54b85949bbc1bcf7c02376eb58f6e53cf7b4179452b2f4e25e755540735",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_yarisativ.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

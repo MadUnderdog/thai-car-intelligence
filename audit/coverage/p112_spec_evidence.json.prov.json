@@ -1,0 +1,8 @@
+{
+  "schema": "provenance_sidecar/v1",
+  "artifact": "p112_spec_evidence.json",
+  "provenance_state": "DERIVED_PHASE1_AUDIT",
+  "sha256": "873f6a364c57c7d70c84764dd971124ce9de50ea02f8beb8c78ff054c2800b05",
+  "source_artifacts": 66,
+  "created_at": "2026-09-28T11:37:58.835243+00:00"
+}

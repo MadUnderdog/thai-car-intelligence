@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=altis",
+  "captured_at": "2026-09-28T09:35:23.419192+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "475694af381c1dac36bbd34c1c787002471108869f497414b43761106145fbc0",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_altis.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "final_result_p112/v1",
+  "baseline_variants_with_spec_evidence": 0,
+  "variants_with_spec_evidence": 126,
+  "delta_variants": 126,
+  "spec_evidence_rows": 1389,
+  "variants_without_spec_evidence": 362,
+  "field_coverage": {
+    "displacement_cc": 91,
+    "drivetrain": 65,
+    "ground_clearance_mm": 58,
+    "height_mm": 194,
+    "length_mm": 273,
+    "power_ps": 104,
+    "range_km": 6,
+    "seats": 159,
+    "torque_nm": 126,
+    "warranty": 1,
+    "wheelbase_mm": 134,
+    "width_mm": 178
+  },
+  "attribution": {
+    "from_committed_fixtures": 30,
+    "from_new_captures": 100,
+    "rows_from_new_captures": 1128,
+    "rows_from_committed_fixtures": 261
+  },
+  "identity_ledger_unchanged": {
+    "confirmed_variants": 488,
+    "changed_by_p112": false
+  },
+  "gates": {
+    "staging_written": false,
+    "prisma_touched": false,
+    "verifier_touched": false,
+    "production_db_unchanged": true,
+    "price_pass_artifacts_unchanged": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_revo_zedition",
+  "captured_at": "2026-09-28T09:35:31.582442+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "f5d127d9e4d0fb8bbb6fdf02f7e625bef8b526ff1e4df4ebcd07b8a281f25dc2",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_hilux_revo_zedition.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

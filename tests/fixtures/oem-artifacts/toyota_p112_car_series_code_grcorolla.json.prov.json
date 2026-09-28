@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=grcorolla",
+  "captured_at": "2026-09-28T09:35:28.579462+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "2f4232ab0a3649e95282a92e089b733f3bc3dfc993a0c64feb0acead4392df28",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_grcorolla.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yaris",
+  "captured_at": "2026-09-28T09:35:35.691352+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "9a788237e431b0185a7c71cb1d856243491ca711954727c5e14fdd48e9e0d502",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_yaris.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_grsport",
+  "captured_at": "2026-09-28T09:35:27.027265+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "550dc4f55d96c4efe9f1d0f488ed2544fa170c18624e9aff5dae02476411f2b0",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_fortuner_grsport.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

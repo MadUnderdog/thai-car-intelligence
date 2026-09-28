@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=majesty",
+  "captured_at": "2026-09-28T09:35:34.632390+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "d12d9e9a60987d9db71868776ee89bc27db743af3d1da12e1e7d329c5e2e9e37",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_majesty.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

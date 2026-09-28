@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_travo_prerunner_4trex",
+  "captured_at": "2026-09-28T09:35:33.118708+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "8ef8523e5cc5be6890827d376026daebc722b5dc4f0503afdac0bb2f1aa52d68",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_hilux_travo_prerunner_4trex.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

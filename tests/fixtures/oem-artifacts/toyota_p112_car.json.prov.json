@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=alphard",
+  "captured_at": "2026-09-28T09:33:38.232029+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "fa7837b0e3d2c886b5c8aaefb561db5bd2f9051380fd78c60866728f845e2568",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

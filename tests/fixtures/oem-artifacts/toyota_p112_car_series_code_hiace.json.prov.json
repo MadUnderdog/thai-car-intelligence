@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hiace",
+  "captured_at": "2026-09-28T09:35:30.078430+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "2c78615a7ec64b92a0741a9e3ea5896edc8c28e22a3136d5e2ff09c5aec6eb91",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_hiace.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

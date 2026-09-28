@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=veloz",
+  "captured_at": "2026-09-28T09:35:35.187690+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "b5f7d65b267b5250334e29de00be646d6a899c898a3ffb03f22b9ef537571ebb",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_veloz.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

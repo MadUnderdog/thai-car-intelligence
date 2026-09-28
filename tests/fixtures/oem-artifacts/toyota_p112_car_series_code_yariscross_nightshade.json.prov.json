@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yariscross_nightshade",
+  "captured_at": "2026-09-28T09:35:38.219826+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "ae43be31b0ee458b4e4d5433583120f3553fff8435b875ee2bca7f85f69c92d8",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_yariscross_nightshade.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

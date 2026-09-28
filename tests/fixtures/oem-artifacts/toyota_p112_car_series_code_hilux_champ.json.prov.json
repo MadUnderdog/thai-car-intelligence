@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_champ",
+  "captured_at": "2026-09-28T09:35:30.578373+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "50bfce5c0d7f43375c3f0bc16ad17e16714182aa19a114ff8a6c4fd689c14e4a",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_hilux_champ.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

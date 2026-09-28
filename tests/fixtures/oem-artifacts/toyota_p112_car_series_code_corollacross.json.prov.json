@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=corollacross",
+  "captured_at": "2026-09-28T09:35:26.019489+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "28e651cdc2cbc07a62bd85413e9bf3a3d59227d0a380caba937a97963e6b55c9",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_corollacross.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_legender",
+  "captured_at": "2026-09-28T09:35:28.079647+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "303d028536329608752f4e2f2e8bd668c1520a8d55f5edc99d21ffa90d297710",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_fortuner_legender.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

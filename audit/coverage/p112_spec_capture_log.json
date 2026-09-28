@@ -1,0 +1,346 @@
+{
+  "schema": "p112_spec_capture_log/1",
+  "generated_at": "2026-09-28T09:35:23.094569+00:00",
+  "session_id": "p112_spec_sources_20260928",
+  "new_captures": 30,
+  "reused_captures": 2,
+  "results": [
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car-series/",
+      "final_url": "https://www.toyota.co.th/en/model/api/car-series/",
+      "filename": "toyota_p112_car-series.json",
+      "ok": true,
+      "new_capture": false,
+      "sha256": "461e12dce0066c30ec2f8bf1719b62d416604e836578a14119760fc8c3103a20",
+      "bytes": 0
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=alphard",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=alphard",
+      "filename": "toyota_p112_car.json",
+      "ok": true,
+      "new_capture": false,
+      "sha256": "fa7837b0e3d2c886b5c8aaefb561db5bd2f9051380fd78c60866728f845e2568",
+      "bytes": 0
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=altis",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=altis",
+      "filename": "toyota_p112_car_series_code_altis.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "475694af381c1dac36bbd34c1c787002471108869f497414b43761106145fbc0",
+      "bytes": 77672
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=altis_grsport",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=altis_grsport",
+      "filename": "toyota_p112_car_series_code_altis_grsport.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "5f718695097d78a54657038ff7ab4b84a20a51a22f9a9cdefbde93c5b60cad26",
+      "bytes": 35706
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=camry",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=camry",
+      "filename": "toyota_p112_car_series_code_camry.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "bce2cd57725059f71dc48679556ed45f375a433f20f6d7318e235b041c0b368e",
+      "bytes": 46227
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=coaster",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=coaster",
+      "filename": "toyota_p112_car_series_code_coaster.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "d0a694f3688b4b98b07f47521c6294ca22d64189e0fc1aaee87c9178158b46a7",
+      "bytes": 17713
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=commuter",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=commuter",
+      "filename": "toyota_p112_car_series_code_commuter.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "3de6c4642a0be53b85344714dcc6353da13487ae8bcda55554ed1873504601db",
+      "bytes": 49421
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=corollacross",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=corollacross",
+      "filename": "toyota_p112_car_series_code_corollacross.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "28e651cdc2cbc07a62bd85413e9bf3a3d59227d0a380caba937a97963e6b55c9",
+      "bytes": 83100
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=corollacross_grsport",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=corollacross_grsport",
+      "filename": "toyota_p112_car_series_code_corollacross_grsport.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "680f4204a66100f1777f329f1586bbb60a176b6671b7eacc4a7e10c90f0f3faf",
+      "bytes": 39688
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_grsport",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_grsport",
+      "filename": "toyota_p112_car_series_code_fortuner_grsport.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "550dc4f55d96c4efe9f1d0f488ed2544fa170c18624e9aff5dae02476411f2b0",
+      "bytes": 28038
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_leader",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_leader",
+      "filename": "toyota_p112_car_series_code_fortuner_leader.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "758d1de7985f4e1b8170531c531291e589130e3dfa2c998c49b799b1a8acffac",
+      "bytes": 60389
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_legender",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_legender",
+      "filename": "toyota_p112_car_series_code_fortuner_legender.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "303d028536329608752f4e2f2e8bd668c1520a8d55f5edc99d21ffa90d297710",
+      "bytes": 55523
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=grcorolla",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=grcorolla",
+      "filename": "toyota_p112_car_series_code_grcorolla.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "2f4232ab0a3649e95282a92e089b733f3bc3dfc993a0c64feb0acead4392df28",
+      "bytes": 22112
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=grsupra",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=grsupra",
+      "filename": "toyota_p112_car_series_code_grsupra.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "f41f99457e440a8808348b525f372e0469349e0d5b6c4f88647734784ab2f56d",
+      "bytes": 46778
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=gryaris",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=gryaris",
+      "filename": "toyota_p112_car_series_code_gryaris.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "a18aba791ee3a2fc44e966454e1c6b39e722b4b23b39bda05fe9a896717d98a7",
+      "bytes": 21792
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=hiace",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hiace",
+      "filename": "toyota_p112_car_series_code_hiace.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "2c78615a7ec64b92a0741a9e3ea5896edc8c28e22a3136d5e2ff09c5aec6eb91",
+      "bytes": 59980
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_champ",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_champ",
+      "filename": "toyota_p112_car_series_code_hilux_champ.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "50bfce5c0d7f43375c3f0bc16ad17e16714182aa19a114ff8a6c4fd689c14e4a",
+      "bytes": 97204
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_revo_standard",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_revo_standard",
+      "filename": "toyota_p112_car_series_code_hilux_revo_standard.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "d8b5611a1a17a536f9bbbb18caf72c7d12ccba6112d7a57a707e9135d9791d6c",
+      "bytes": 54807
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_revo_zedition",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_revo_zedition",
+      "filename": "toyota_p112_car_series_code_hilux_revo_zedition.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "f5d127d9e4d0fb8bbb6fdf02f7e625bef8b526ff1e4df4ebcd07b8a281f25dc2",
+      "bytes": 90248
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_travo_e",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_travo_e",
+      "filename": "toyota_p112_car_series_code_hilux_travo_e.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "b1d626e70aeeaa3b2339a04672607fc5df21b0a5afe70e6d8f384a1dbebb69af",
+      "bytes": 39084
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_travo_overland",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_travo_overland",
+      "filename": "toyota_p112_car_series_code_hilux_travo_overland.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "393894b7ddda801ce388c01093137524b7dab72ceb025e67229afe6fd2e43204",
+      "bytes": 109256
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_travo_prerunner_4trex",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_travo_prerunner_4trex",
+      "filename": "toyota_p112_car_series_code_hilux_travo_prerunner_4trex.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "8ef8523e5cc5be6890827d376026daebc722b5dc4f0503afdac0bb2f1aa52d68",
+      "bytes": 267665
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=innovazenix",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=innovazenix",
+      "filename": "toyota_p112_car_series_code_innovazenix.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "1f5658dcea1b7c1b05a36a4eac22a7f79a39cd2abd05f2e87aef2d184a57a134",
+      "bytes": 58619
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=landcruiser_fj",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=landcruiser_fj",
+      "filename": "toyota_p112_car_series_code_landcruiser_fj.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "ac615af74bfdbce7e3ecc8f2438f151203b77d56d97b56f32347f32c8e79a44b",
+      "bytes": 29161
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=majesty",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=majesty",
+      "filename": "toyota_p112_car_series_code_majesty.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "d12d9e9a60987d9db71868776ee89bc27db743af3d1da12e1e7d329c5e2e9e37",
+      "bytes": 56447
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=veloz",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=veloz",
+      "filename": "toyota_p112_car_series_code_veloz.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "b5f7d65b267b5250334e29de00be646d6a899c898a3ffb03f22b9ef537571ebb",
+      "bytes": 32493
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yaris",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yaris",
+      "filename": "toyota_p112_car_series_code_yaris.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "9a788237e431b0185a7c71cb1d856243491ca711954727c5e14fdd48e9e0d502",
+      "bytes": 68904
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ",
+      "filename": "toyota_p112_car_series_code_yarisativ.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "8aafe54b85949bbc1bcf7c02376eb58f6e53cf7b4179452b2f4e25e755540735",
+      "bytes": 143167
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ_grsport",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ_grsport",
+      "filename": "toyota_p112_car_series_code_yarisativ_grsport.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "b1a0ea96e5bc5f42039d1265b2236cb139b6f287f64c03d3341f4467eca89ea6",
+      "bytes": 35307
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ_nightshade",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ_nightshade",
+      "filename": "toyota_p112_car_series_code_yarisativ_nightshade.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "139c1f0bd2be43e334db1e1f49d5e4beacecfae7adb1430264109298bc15c942",
+      "bytes": 37176
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yariscross",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yariscross",
+      "filename": "toyota_p112_car_series_code_yariscross.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "ef3fbac2a866451ce60b487195fa4723aa9a844ae7b0981e6a947682b34bb315",
+      "bytes": 107656
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car/?series_code=yariscross_nightshade",
+      "final_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yariscross_nightshade",
+      "filename": "toyota_p112_car_series_code_yariscross_nightshade.json",
+      "ok": true,
+      "new_capture": true,
+      "sha256": "ae43be31b0ee458b4e4d5433583120f3553fff8435b875ee2bca7f85f69c92d8",
+      "bytes": 30529
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/component/api/tcoth/web-init",
+      "ok": false,
+      "error": "HTTP_405 after redirects"
+    }
+  ],
+  "failures": [
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/component/api/tcoth/web-init",
+      "source_family": "structured_payload",
+      "http_status": 405,
+      "status": "HTTP_ERROR",
+      "ok": false,
+      "blocker": "HTTP_405 after redirects"
+    }
+  ]
+}

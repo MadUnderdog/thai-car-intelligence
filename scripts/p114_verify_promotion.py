@@ -80,7 +80,6 @@ def main() -> int:
         "Variant": res["identity_variants_inserted"],
         "Price": res["price_rows_inserted"],
         "VariantSpec": res["spec_rows_inserted"],
-        "DataChangeLog": res["data_change_log_rows"],
     }
     for table, claimed in deltas.items():
         actual = after[table] - base[table]
@@ -89,6 +88,41 @@ def main() -> int:
         check(f"delta_{table}", actual == claimed == live - base[table],
               f"baseline={base[table]} after={after[table]} "
               f"claimed={claimed} live={live}")
+
+    # 1b. DataChangeLog = promotion entries (== result) + explicitly
+    #     justified P114 slug repairs (== p114_slug_repairs.json), nothing else
+    repair_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "..",
+        "audit/coverage/p114_slug_repairs.json")
+    repairs = (json.load(open(repair_path, encoding="utf-8"))
+               if os.path.exists(repair_path) else {"count": 0})
+    promo_dcl = int(sql(
+        'select count(*) from "DataChangeLog" where reason like '
+        "'P114 controlled promotion%'")[0])
+    repair_dcl = int(sql(
+        'select count(*) from "DataChangeLog" where reason like '
+        "'P114 slug repair%'")[0])
+    other_dcl = int(sql(
+        'select count(*) from "DataChangeLog" where reason like '
+        "'P114%' and reason not like 'P114 controlled promotion%' "
+        "and reason not like 'P114 slug repair%'")[0])
+    live_dcl = int(sql('select count(*) from "DataChangeLog"')[0])
+    check("delta_DataChangeLog",
+          promo_dcl == res["data_change_log_rows"]
+          and repair_dcl == repairs.get("count", 0)
+          and other_dcl == 0
+          and live_dcl - base["DataChangeLog"] == promo_dcl + repair_dcl,
+          f"promotion={promo_dcl} claimed={res['data_change_log_rows']} "
+          f"slug_repairs={repair_dcl} artifact={repairs.get('count')} "
+          f"unjustified={other_dcl} live_delta="
+          f"{live_dcl - base['DataChangeLog']}")
+    unjustified_repair = int(sql(
+        'select count(*) from "DataChangeLog" where reason like '
+        "'P114 slug repair%' and ("
+        '"beforeValue" is null or "afterValue" is null or '
+        "evidence->>'packet_id' is null or \"changeType\" <> 'UPDATED')")[0])
+    check("slug_repairs_justified", unjustified_repair == 0,
+          f"repairs_without_before_after_packet={unjustified_repair}")
 
     # 2. every registered SourceDocument hash is a cited artifact hash
     cited = set()
@@ -104,11 +138,12 @@ def main() -> int:
     check("source_documents_registered", set(docs) == cited,
           f"registered={len(set(docs))} cited={len(cited)}")
     # no promotion doc outside the cited set was created by this wave
-    extra = sql("select count(*) from \"SourceDocument\" where "
-                "\"localPath\" like 'tests/fixtures/oem-artifacts/%' and "
-                "\"contentHash\" not in (%s) and \"createdAt\" >= "
-                "timestamp '%s'" % (in_list,
-                                    pf["generated_at"][:19].replace("T", " ")))
+    extra = sql(
+        "select count(*) from \"SourceDocument\" where "
+        "\"localPath\" like 'tests/fixtures/oem-artifacts/%%' and "
+        "\"contentHash\" not in (%s) and \"createdAt\" >= "
+        "timestamp '%s'" % (in_list,
+                            pf["generated_at"][:19].replace("T", " ")))
     check("no_uncited_documents", int(extra[0]) == 0, f"extra={extra[0]}")
 
     # 3. zero invented values: re-derive promoted rows from P111/P112
@@ -159,7 +194,7 @@ def main() -> int:
 
     # 5. price semantics in the DB
     price_rows = sql(
-        "select price_type::text, \"isCurrent\", count(*) from \"Price\" "
+        "select \"priceType\"::text, \"isCurrent\", count(*) from \"Price\" "
         "where \"sourceDocumentId\" in (select id from \"SourceDocument\" "
         "where \"contentHash\" in (%s)) group by 1,2" % in_list)
     got = {}
@@ -176,7 +211,7 @@ def main() -> int:
     mg = sql(
         "select count(*) from \"Price\" where \"sourceDocumentId\" in "
         "(select id from \"SourceDocument\" where \"contentHash\" in (%s)) "
-        "and price_type::text = 'MSRP' and \"isCurrent\" = false" % in_list)
+        "and \"priceType\"::text = 'MSRP' and \"isCurrent\" = false" % in_list)
     check("mg_not_current_in_db",
           int(mg[0]) == res["price_inserted_by_status"].get(
               "EXACT_BINDING_NOT_VERIFIED_CURRENT", 0), f"rows={mg[0]}")

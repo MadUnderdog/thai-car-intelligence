@@ -179,22 +179,40 @@ def test_unverified_rows_keep_their_reasons_and_the_no_loop_rule():
         assert u["status"] == "UNVERIFIED_PRICE" and len(u["reason"]) > 40
 
 
+GENERATED = ("p111_price_evidence.json", "p111_price_evidence.json.prov.json",
+             "p111_price_reconciliation.json", "p111_final_result.json",
+             "p111_price_capture_log.json", "p111_price_source_inventory.json")
+
+
 def test_deterministic_rerun_and_frozen_inputs():
     watched = [os.path.join(OUT, n) for n in
                ("p108_final_result.json", "p110_final_result.json",
                 "identity_universe_p108.json")]
     before = {p: hashlib.sha256(open(p, "rb").read()).hexdigest() for p in watched}
-    snap = {}
-    for n in ("p111_price_evidence.json", "p111_price_reconciliation.json",
-              "p111_final_result.json"):
-        snap[n] = json.loads(open(os.path.join(OUT, n), encoding="utf-8").read())
-    r = subprocess.run(["python3", "scripts/p111_price_pass.py"], cwd=REPO,
-                       capture_output=True, text=True, timeout=900)
-    assert r.returncode == 0, r.stderr[-2000:]
-    after = {p: hashlib.sha256(open(p, "rb").read()).hexdigest() for p in watched}
-    assert before == after, "P108/P110 accepted artifacts must not be rewritten"
-    for n, old in snap.items():
-        new = json.loads(open(os.path.join(OUT, n), encoding="utf-8").read())
-        old.pop("generated_at", None)
-        new.pop("generated_at", None)
-        assert new == old, f"{n} differs between runs"
+    snap_bytes = {n: open(os.path.join(OUT, n), "rb").read()
+                  for n in GENERATED}
+    snap = {n: json.loads(b.decode("utf-8")) for n, b in snap_bytes.items()}
+    try:
+        r = subprocess.run(["python3", "scripts/p111_price_pass.py"], cwd=REPO,
+                           capture_output=True, text=True, timeout=900)
+        assert r.returncode == 0, r.stderr[-2000:]
+        after = {p: hashlib.sha256(open(p, "rb").read()).hexdigest()
+                 for p in watched}
+        assert before == after, "P108/P110 accepted artifacts must not be rewritten"
+        for n in ("p111_price_evidence.json", "p111_price_reconciliation.json",
+                  "p111_final_result.json"):
+            new = json.loads(open(os.path.join(OUT, n), encoding="utf-8").read())
+            old = snap[n]
+            old.pop("generated_at", None)
+            new.pop("generated_at", None)
+            assert new == old, f"{n} differs between runs"
+    finally:
+        # the rerun rewrites committed artifacts (run stamps); restore the
+        # exact byte snapshot so no later test sees a dirty tree.
+        for n, b in snap_bytes.items():
+            with open(os.path.join(OUT, n), "wb") as fh:
+                fh.write(b)
+    # regression: after the test, every generated file is byte-identical
+    for n, b in snap_bytes.items():
+        assert open(os.path.join(OUT, n), "rb").read() == b, \
+            f"{n} was not byte-restored after the rerun"

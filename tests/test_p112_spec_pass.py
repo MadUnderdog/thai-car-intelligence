@@ -196,35 +196,44 @@ def test_kpi_deltas_and_baseline_are_reported_from_artifacts():
     assert res["gates"]["production_db_unchanged"] is True
 
 
+GENERATED_P112 = ("p112_spec_evidence.json", "p112_spec_evidence.json.prov.json",
+                  "p112_spec_reconciliation.json", "p112_final_result.json",
+                  "p112_spec_target_plan.json")
+
+
 def test_deterministic_rerun_and_frozen_price_artifacts():
     watched = [os.path.join(OUT, n) for n in
                ("p110_final_result.json", "p111_final_result.json",
                 "p111_price_evidence.json", "p108_final_result.json")]
     before = {p: hashlib.sha256(open(p, "rb").read()).hexdigest()
               for p in watched}
-    snap = {}
-    for n in ("p112_spec_evidence.json", "p112_spec_reconciliation.json",
-              "p112_final_result.json"):
-        snap[n] = json.loads(open(os.path.join(OUT, n),
-                                  encoding="utf-8").read())
+    snap_bytes = {n: open(os.path.join(OUT, n), "rb").read()
+                  for n in GENERATED_P112}
+    snap = {n: json.loads(b.decode("utf-8")) for n, b in snap_bytes.items()}
     try:
-        r = subprocess.run(["python3", "scripts/p112_spec_pass.py"], cwd=REPO,
-                           capture_output=True, text=True, timeout=900)
+        r = subprocess.run(["python3", "scripts/p112_spec_pass.py"],
+                           cwd=REPO, capture_output=True, text=True, timeout=900)
         assert r.returncode == 0, r.stderr[-2000:]
         after = {p: hashlib.sha256(open(p, "rb").read()).hexdigest()
                  for p in watched}
         assert before == after, "price/identity artifacts must not be rewritten"
-        for n, old in snap.items():
+        for n in ("p112_spec_evidence.json", "p112_spec_reconciliation.json",
+                  "p112_final_result.json"):
             new = json.loads(open(os.path.join(OUT, n), encoding="utf-8").read())
+            old = snap[n]
             old.pop("generated_at", None)
             new.pop("generated_at", None)
             assert new == old, f"{n} differs between runs"
     finally:
-        # restore the wave's own outputs (snapshot belongs to this wave)
-        for n, old in snap.items():
-            with open(os.path.join(OUT, n), "w", encoding="utf-8") as fh:
-                json.dump(old, fh, ensure_ascii=False, indent=2)
-                fh.write("\n")
+        # the previous finally re-dumped a popped snapshot (losing
+        # generated_at) — restore the exact committed bytes instead.
+        for n, b in snap_bytes.items():
+            with open(os.path.join(OUT, n), "wb") as fh:
+                fh.write(b)
+    # regression: after the test, every generated file is byte-identical
+    for n, b in snap_bytes.items():
+        assert open(os.path.join(OUT, n), "rb").read() == b, \
+            f"{n} was not byte-restored after the rerun"
 
 
 def test_pass_runs_without_network():

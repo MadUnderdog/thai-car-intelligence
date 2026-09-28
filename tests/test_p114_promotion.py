@@ -267,7 +267,7 @@ def test_db_rows_match_ledger_and_semantics():
                 '"contentHash" in (%s)' % in_list)
     assert set(rows) == cited_shas, "every cited artifact must be registered"
     # price semantics straight from the DB
-    rows = _sql("select price_type::text, \"isCurrent\", count(*) from "
+    rows = _sql("select \"priceType\"::text, \"isCurrent\", count(*) from "
                 "\"Price\" where \"sourceDocumentId\" in "
                 "(select id from \"SourceDocument\" where \"contentHash\" "
                 "in (%s)) group by 1,2" % in_list)
@@ -278,7 +278,8 @@ def test_db_rows_match_ledger_and_semantics():
     led_price = {}
     for e in [x for x in led["entries"] if x.get("fact") == "price"]:
         k = (e["db_value"]["price_type"],
-             str(e["db_value"]["is_current"]).lower())
+             {"true": "t", "false": "f"}[
+                 str(e["db_value"]["is_current"]).lower()])
         led_price[k] = led_price.get(k, 0) + 1
     assert got == led_price, (got, led_price)
     # no variant WE touched keeps two current prices (pre-existing
@@ -328,3 +329,59 @@ def test_g6_sample_results_are_committed_and_passing():
     fields = {r["field"] for r in g6["rows"]}
     assert len(oems) >= 6, oems
     assert fields == {"identity", "price", "spec"}
+
+
+def _import_slugify():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "p114_promote_under_test",
+        os.path.join(REPO, "scripts/p114_promote.py"))
+    assert spec is not None and spec.loader is not None
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.slugify
+
+
+def test_slugify_preserves_thai_identity_labels():
+    """Thai-script ledger labels must not collapse to degenerate slugs."""
+    slugify = _import_slugify()
+    thai = "เอ็กซ์ฟอร์ส เอชอีวี"
+    s = slugify(thai)
+    assert s, "Thai model labels must not produce an empty slug"
+    assert re.search(r"[ก-๙]", s), (
+        "Thai characters must be preserved in the slug — the repo carries no "
+        "transliteration source, so Unicode is the only non-invented option")
+    assert s == slugify(thai), "slugify must be deterministic"
+    assert not s.startswith("-") and not s.endswith("-"), s
+    # Latin path must be byte-identical to the accepted behaviour
+    assert slugify("All-New Hilux Revo") == "all-new-hilux-revo"
+    assert slugify("Triton") == "triton"
+
+
+def test_p114_created_rows_have_no_degenerate_slugs():
+    """Rows created by the P114 promotion carry a letter-bearing slug."""
+    def cnt(base: str) -> int:
+        return int(_sql(base)[0])
+
+    models_total = cnt(
+        "select count(*) from \"CarModel\" c join \"DataChangeLog\" d "
+        "on d.\"entityId\" = c.id and d.\"entityType\" = \'CarModel\' "
+        "and d.\"changeType\" = \'CREATED\' and d.reason like \'P114%\'")
+    variants_total = cnt(
+        "select count(*) from \"Variant\" v join \"DataChangeLog\" d "
+        "on d.\"entityId\" = v.id and d.\"entityType\" = \'Variant\' "
+        "and d.\"changeType\" = \'CREATED\' and d.reason like \'P114%\'")
+    assert models_total >= 127, models_total
+    assert variants_total >= 404, variants_total
+    bad_models = cnt(
+        "select count(*) from \"CarModel\" c join \"DataChangeLog\" d "
+        "on d.\"entityId\" = c.id and d.\"entityType\" = \'CarModel\' "
+        "and d.\"changeType\" = \'CREATED\' and d.reason like \'P114%\' "
+        "where c.slug !~ \'[ก-๙a-zA-Z]\'")
+    bad_variants = cnt(
+        "select count(*) from \"Variant\" v join \"DataChangeLog\" d "
+        "on d.\"entityId\" = v.id and d.\"entityType\" = \'Variant\' "
+        "and d.\"changeType\" = \'CREATED\' and d.reason like \'P114%\' "
+        "where v.slug !~ \'[ก-๙a-zA-Z]\'")
+    assert bad_models == 0, f"degenerate P114 model slugs: {bad_models}"
+    assert bad_variants == 0, f"degenerate P114 variant slugs: {bad_variants}"

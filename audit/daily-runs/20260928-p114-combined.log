@@ -1,0 +1,46 @@
+........................F............................................... [ 12%]
+........................................................................ [ 24%]
+........................................................................ [ 37%]
+........................................................................ [ 49%]
+........................................................................ [ 61%]
+........................................................................ [ 74%]
+........................................................................ [ 86%]
+........................................................................ [ 98%]
+......                                                                   [100%]
+=================================== FAILURES ===================================
+___________ test_deterministic_rerun_and_watched_artifacts_untouched ___________
+
+    def test_deterministic_rerun_and_watched_artifacts_untouched():
+        watched = {n: _sha(os.path.join(OUT, n)) for n in WATCHED}
+        snap = {}
+        for n in ("p113_evidence_packets.json", "p113_acceptance_result.json",
+                  "p113_rejection_report.json", "p113_final_result.json"):
+            snap[n] = json.loads(open(os.path.join(OUT, n),
+                                      encoding="utf-8").read())
+        try:
+            r = subprocess.run(
+                ["python3", "scripts/p113_evidence_packets.py", "run"],
+                cwd=REPO, capture_output=True, text=True, timeout=900)
+            assert r.returncode == 0, r.stderr[-2000:]
+            after = {n: _sha(os.path.join(OUT, n)) for n in WATCHED}
+            assert watched == after, "p111/p112/identity bytes must not move"
+            for n, old in snap.items():
+                new = json.loads(open(os.path.join(OUT, n),
+                                      encoding="utf-8").read())
+                old.pop("generated_at", None)
+                new.pop("generated_at", None)
+                old.pop("run_id", None)
+                new.pop("run_id", None)
+>               assert new == old, f"{n} differs between runs"
+E               AssertionError: p113_final_result.json differs between runs
+E               assert {'schema': 'f...ed': 417, ...} == {'schema': 'f...ed': 417, ...}
+E                 
+E                 Omitting 11 identical items, use -vv to show
+E                 Differing items:
+E                 {'head': '82bf4f2c6e0c3e3ada528457525e216d370ae7b0'} != {'head': '99c01d53103c3b06d515261dbce4e06515d961ab'}
+E                 Use -v to get more diff
+
+tests/test_p113_packet_acceptance.py:360: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_p113_packet_acceptance.py::test_deterministic_rerun_and_watched_artifacts_untouched
+1 failed, 581 passed in 996.64s (0:16:36)

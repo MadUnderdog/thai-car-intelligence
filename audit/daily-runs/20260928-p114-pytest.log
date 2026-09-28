@@ -1,0 +1,188 @@
+........................................................................ [  7%]
+........................................................................ [ 14%]
+........................................................................ [ 22%]
+........................................................................ [ 29%]
+........................................................................ [ 37%]
+........................................................................ [ 44%]
+........................................................................ [ 52%]
+........................................................................ [ 59%]
+........................................................................ [ 67%]
+........................................................................ [ 74%]
+........................................................................ [ 82%]
+...............................F..F....FF.F............................. [ 89%]
+....................................................F.........F......... [ 97%]
+..........F..F............                                               [100%]
+==================================== ERRORS ====================================
+__________ ERROR collecting tests/test_generation_config_boundary.py ___________
+ImportError while importing test module '/home/ubuntu/Projects/thai-car-intelligence/tests/test_generation_config_boundary.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_generation_config_boundary.py:6: in <module>
+    from thai_factory.extract.ai_extractor import (
+E   ImportError: cannot import name '_OPENROUTER_ALLOWED_MODEL' from 'thai_factory.extract.ai_extractor' (/home/ubuntu/Projects/thai-car-intelligence/tests/../lib/thai_factory/extract/ai_extractor.py)
+=================================== FAILURES ===================================
+___________ test_deterministic_rerun_and_watched_artifacts_untouched ___________
+
+>   ???
+E   AssertionError: p113_final_result.json differs between runs
+E   assert {'schema': 'f...ed': 417, ...} == {'schema': 'f...ed': 417, ...}
+E     
+E     Omitting 11 identical items, use -vv to show
+E     Differing items:
+E     {'head': '82bf4f2c6e0c3e3ada528457525e216d370ae7b0'} != {'head': '99c01d53103c3b06d515261dbce4e06515d961ab'}
+E     Use -v to get more diff
+
+tests/test_p113_packet_acceptance.py:360: AssertionError
+____________ test_preflight_planned_delta_matches_source_artifacts _____________
+
+    def test_preflight_planned_delta_matches_source_artifacts():
+        pf = _load("p114_promotion_preflight.json")
+        p111 = _load("p111_price_evidence.json")
+        p112 = _load("p112_spec_evidence.json")
+        p113 = _load("p113_evidence_packets.json")
+        acc = [x for x in p113["packets"] if x["status"] == "ACCEPTED"]
+        price = {}
+        spec = 0
+        for pk in acc:
+            for o in pk["observations"]["price"]:
+                price[o["msrp_status"]] = price.get(o["msrp_status"], 0) + 1
+            spec += len(pk["observations"]["spec"])
+        planned = pf["planned_delta"]
+        assert planned["price_inserts_by_status"] == price
+        assert planned["spec_inserts_total"] == spec
+        assert sum(planned["price_inserts_by_status"].values()) <= \
+            len(p111["rows"])
+        assert spec <= len(p112["rows"])
+        # upstream artifact bytes recorded at preflight still hold now
+        for name, sha in pf["inputs"]["upstream_artifact_shas"].items():
+>           assert _sha(os.path.join(OUT, name)) == sha, name
+E           AssertionError: p111_price_evidence.json
+E           assert '3e2d9c9792e5...f4cf5adadae56' == 'ffeef64a0c0d...abbdd3cfaae55'
+E             
+E             - ffeef64a0c0d0f258e2e022b90525a787158647286c4601c69eabbdd3cfaae55
+E             + 3e2d9c9792e55a5242b00509dd1ff3f6533784ca6f9f4d25b68f4cf5adadae56
+
+tests/test_p114_promotion.py:113: AssertionError
+_____________ test_verifier_passes_and_is_independent_of_producer ______________
+
+    def test_verifier_passes_and_is_independent_of_producer():
+        prod = open(os.path.join(REPO, "scripts/p114_promote.py"),
+                    encoding="utf-8").read()
+        ver = open(os.path.join(REPO, "scripts/p114_verify_promotion.py"),
+                   encoding="utf-8").read()
+        assert "p114_verify_promotion" not in prod.replace(
+            '"scripts/p114_verify_promotion.py"', "")
+        assert "p114_promote" not in ver
+        assert "class AcceptanceRunner" not in prod
+        r = subprocess.run(
+            ["python3", "scripts/p114_verify_promotion.py"],
+            cwd=REPO, capture_output=True, text=True, timeout=600)
+>       assert r.returncode == 0, (r.stdout[-1500:], r.stderr[-1500:])
+E       AssertionError: ("VERIFY_FAIL checks=18 failures=['upstream_artifacts_byte_identical']
+E         ", '')
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python3', 'scripts/p114_verify_promotion.py'], returncode=1, stdout="VERIFY_FAIL checks=18 failures=['upstream_artifacts_byte_identical']\n", stderr='').returncode
+
+tests/test_p114_promotion.py:206: AssertionError
+_________________ test_promotion_rerun_is_idempotent_and_noop __________________
+
+    def test_promotion_rerun_is_idempotent_and_noop():
+        committed_ledger = _sha(os.path.join(OUT, "p114_promotion_ledger.json"))
+        committed_result = _sha(os.path.join(OUT, "p114_promotion_result.json"))
+        before = _counts()
+        r = subprocess.run(
+            ["python3", "scripts/p114_promote.py",
+             "--ledger", "/tmp/p114_ledger_rerun.json",
+             "--result", "/tmp/p114_result_rerun.json"],
+            cwd=REPO, capture_output=True, text=True, timeout=900)
+>       assert r.returncode == 0, (r.stdout[-2000:], r.stderr[-2000:])
+E       AssertionError: ('', 'Traceback (most recent call last):
+E           File "/home/ubuntu/Projects/thai-car-intelligence/scripts/p114_promote.py"...stream artifacts changed"
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         AssertionError: upstream artifacts changed
+E         ')
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python3', 'scripts/p114_promote.py', '--ledger', '/tmp/p114_ledger_rerun.json', '--result', '/...stream artifacts changed"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: upstream artifacts changed\n').returncode
+
+tests/test_p114_promotion.py:223: AssertionError
+_____________ test_upstream_evidence_and_identity_ledger_untouched _____________
+
+    def test_upstream_evidence_and_identity_ledger_untouched():
+        pf = _load("p114_promotion_preflight.json")
+        for name, sha in pf["inputs"]["upstream_artifact_shas"].items():
+>           assert _sha(os.path.join(OUT, name)) == sha, name
+E           AssertionError: p111_price_evidence.json
+E           assert '3e2d9c9792e5...f4cf5adadae56' == 'ffeef64a0c0d...abbdd3cfaae55'
+E             
+E             - ffeef64a0c0d0f258e2e022b90525a787158647286c4601c69eabbdd3cfaae55
+E             + 3e2d9c9792e55a5242b00509dd1ff3f6533784ca6f9f4d25b68f4cf5adadae56
+
+tests/test_p114_promotion.py:304: AssertionError
+_____________ TestBrandCoverage.test_all_34_manufacturers_covered ______________
+
+self = <test_thai_aliases.TestBrandCoverage object at 0x784dfac9bc10>
+catalog = {'version': '1.0', 'generated_by': 'thai-alias-catalog.py', 'stats': {'brands_covered': 37, 'models_covered': 278, 'to..., 'บีเอ็มดับเบิลยู']}, 'byd': {'nameEn': 'BYD', 'nameTh': 'บีวายดี', 'slug': 'byd', 'aliases': ['บีวายดี']}, ...}, ...}
+
+    def test_all_34_manufacturers_covered(self, catalog):
+>       assert catalog["stats"]["brands_covered"] == 34
+E       assert 37 == 34
+
+tests/test_thai_aliases.py:106: AssertionError
+________________ TestModelCoverage.test_all_157_models_covered _________________
+
+self = <test_thai_aliases.TestModelCoverage object at 0x784dfa106dd0>
+catalog = {'version': '1.0', 'generated_by': 'thai-alias-catalog.py', 'stats': {'brands_covered': 37, 'models_covered': 278, 'to..., 'บีเอ็มดับเบิลยู']}, 'byd': {'nameEn': 'BYD', 'nameTh': 'บีวายดี', 'slug': 'byd', 'aliases': ['บีวายดี']}, ...}, ...}
+
+    def test_all_157_models_covered(self, catalog):
+>       assert catalog["stats"]["models_covered"] == 157
+E       assert 278 == 157
+
+tests/test_thai_aliases.py:168: AssertionError
+_________________ TestExport.test_exported_file_is_valid_json __________________
+
+self = <test_thai_aliases.TestExport object at 0x784dfa118e10>
+catalog = {'version': '1.0', 'generated_by': 'thai-alias-catalog.py', 'stats': {'brands_covered': 37, 'models_covered': 278, 'to..., 'บีเอ็มดับเบิลยู']}, 'byd': {'nameEn': 'BYD', 'nameTh': 'บีวายดี', 'slug': 'byd', 'aliases': ['บีวายดี']}, ...}, ...}
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-97/test_exported_file_is_valid_js0')
+
+    def test_exported_file_is_valid_json(self, catalog, tmp_path):
+        output = tmp_path / "test-catalog.json"
+        export_catalog(catalog, output)
+        with open(output, "r", encoding="utf-8") as f:
+            loaded = json.load(f)
+>       assert loaded["stats"]["brands_covered"] == 34
+E       assert 37 == 34
+
+tests/test_thai_aliases.py:301: AssertionError
+----------------------------- Captured stdout call -----------------------------
+✅ Catalog exported to /home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-97/test_exported_file_is_valid_js0/test-catalog.json
+   Brands: 37
+   Models: 278
+   Total aliases: 750
+   Total search queries: 2087
+___________________ TestEdgeCases.test_no_empty_model_slugs ____________________
+
+self = <test_thai_aliases.TestEdgeCases object at 0x784dfa11a0d0>
+catalog = {'version': '1.0', 'generated_by': 'thai-alias-catalog.py', 'stats': {'brands_covered': 37, 'models_covered': 278, 'to..., 'บีเอ็มดับเบิลยู']}, 'byd': {'nameEn': 'BYD', 'nameTh': 'บีวายดี', 'slug': 'byd', 'aliases': ['บีวายดี']}, ...}, ...}
+
+    def test_no_empty_model_slugs(self, catalog):
+        for slug in catalog["models"]:
+>           assert slug, "Empty model slug found"
+E           AssertionError: Empty model slug found
+E           assert ''
+
+tests/test_thai_aliases.py:325: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_p113_packet_acceptance.py::test_deterministic_rerun_and_watched_artifacts_untouched
+FAILED tests/test_p114_promotion.py::test_preflight_planned_delta_matches_source_artifacts
+FAILED tests/test_p114_promotion.py::test_verifier_passes_and_is_independent_of_producer
+FAILED tests/test_p114_promotion.py::test_promotion_rerun_is_idempotent_and_noop
+FAILED tests/test_p114_promotion.py::test_upstream_evidence_and_identity_ledger_untouched
+FAILED tests/test_thai_aliases.py::TestBrandCoverage::test_all_34_manufacturers_covered
+FAILED tests/test_thai_aliases.py::TestModelCoverage::test_all_157_models_covered
+FAILED tests/test_thai_aliases.py::TestExport::test_exported_file_is_valid_json
+FAILED tests/test_thai_aliases.py::TestEdgeCases::test_no_empty_model_slugs
+ERROR tests/test_generation_config_boundary.py
+9 failed, 953 passed, 1 error in 1380.81s (0:23:00)

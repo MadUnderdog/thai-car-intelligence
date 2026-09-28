@@ -102,8 +102,24 @@ class TestCatalogStructure:
 class TestBrandCoverage:
     """Test brand alias coverage."""
 
-    def test_all_34_manufacturers_covered(self, catalog):
-        assert catalog["stats"]["brands_covered"] == 34
+    def test_all_manufacturers_covered(self, catalog):
+        # seed-hardcoded == 34 asserted a historical baseline, not an
+        # invariant: the promoted dataset legitimately holds more brands.
+        # Invariant now: catalog keys == the live Manufacturer slugs
+        # (independent second query path) and stats are structurally sound.
+        assert catalog["stats"]["brands_covered"] == len(catalog["brands"])
+        conn = get_connection()
+        try:
+            with conn.cursor() as cur:
+                cur.execute('SELECT slug FROM "Manufacturer"')
+                db_slugs = {r[0] for r in cur.fetchall()}
+        finally:
+            conn.close()
+        assert set(catalog["brands"]) == db_slugs, (
+            set(catalog["brands"]) ^ db_slugs)
+        for entry in catalog["brands"].values():
+            assert entry["slug"] in db_slugs
+            assert entry["aliases"]
 
     def test_toyota_brand_exists(self, catalog):
         assert "toyota" in catalog["brands"]
@@ -164,8 +180,29 @@ class TestBrandCoverage:
 class TestModelCoverage:
     """Test model alias coverage."""
 
-    def test_all_157_models_covered(self, catalog):
-        assert catalog["stats"]["models_covered"] == 157
+    def test_all_models_covered(self, catalog):
+        # seed-hardcoded == 157 asserted a historical baseline. Invariants:
+        # stats are structurally sound, every live CarModel slug is
+        # represented, and no catalog entry is phantom (maps back to a real
+        # (brand, model) row via an independent query path).
+        assert catalog["stats"]["models_covered"] == len(catalog["models"])
+        conn = get_connection()
+        try:
+            with conn.cursor() as cur:
+                cur.execute(
+                    'SELECT cm.slug, cm."nameEn", m.slug '
+                    'FROM "CarModel" cm '
+                    'JOIN "Manufacturer" m ON cm."manufacturerId" = m.id')
+                db_rows = cur.fetchall()
+        finally:
+            conn.close()
+        db_slugs = {r[0] for r in db_rows}
+        db_pairs = {(r[2], r[1]) for r in db_rows}
+        assert set(catalog["models"]) == db_slugs, (
+            set(catalog["models"]) ^ db_slugs)
+        for entry in catalog["models"].values():
+            assert (entry["brandSlug"], entry["nameEn"]) in db_pairs, entry
+            assert entry["aliases"]
 
     def test_hilux_model_exists(self, catalog):
         assert "toyota-hilux" in catalog["models"]
@@ -298,8 +335,11 @@ class TestExport:
         export_catalog(catalog, output)
         with open(output, "r", encoding="utf-8") as f:
             loaded = json.load(f)
-        assert loaded["stats"]["brands_covered"] == 34
-        assert loaded["stats"]["models_covered"] == 157
+        # round-trip invariant: the exported file is exactly the generated
+        # catalog (the hardcoded 34/157 seed counts were historical).
+        assert loaded["stats"] == catalog["stats"]
+        assert set(loaded["brands"]) == set(catalog["brands"])
+        assert set(loaded["models"]) == set(catalog["models"])
 
     def test_export_preserves_thai_characters(self, catalog, tmp_path):
         output = tmp_path / "test-catalog.json"

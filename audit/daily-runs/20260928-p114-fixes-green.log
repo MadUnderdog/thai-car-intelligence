@@ -1,0 +1,16 @@
+=== FIX1 green: p111/p112 deterministic rerun (byte-restore) ===
+..                                                                       [100%]
+2 passed in 253.49s (0:04:13)
+rc=0  tree_after:
+=== FIX2 green: thai-aliases invariants ===
+.............................................                            [100%]
+45 passed in 0.12s
+rc=0
+=== FIX3 green: p114 slug/verifier/upstream/rerun + full focused ===
+..............                                                           [100%]
+14 passed in 10.20s
+rc=0
+=== verifier standalone ===
+VERIFY_PASS checks=19 failures=[]
+rc=0
+GREEN_BATCH_DONE

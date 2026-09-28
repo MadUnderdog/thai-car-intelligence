@@ -73,7 +73,14 @@ def norm(s) -> str:
 
 
 def slugify(s) -> str:
-    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-",
+    """Deterministic, URL-safe slug.
+
+    Thai-script identity labels (the frozen ledger keeps publisher-exact
+    Thai model names) must NOT be dropped: the repo carries no
+    transliteration source, so Thai letters/smarks are preserved as
+    Unicode and only punctuation/whitespace folds to '-'.
+    """
+    return re.sub(r"-+", "-", re.sub(r"[^0-9a-zก-๙]+", "-",
                                      (s or "").lower())).strip("-")
 
 
@@ -108,7 +115,7 @@ class Ctx:
         self.changelog_created = 0
 
 
-def ensure_source(cur, host_map, url, manufacturer):
+def ensure_source(cur, host_map, url, manufacturer, ctx=None):
     from urllib.parse import urlparse
     p = urlparse(url)
     origin = f"{p.scheme}://{p.netloc}"
@@ -120,6 +127,7 @@ def ensure_source(cur, host_map, url, manufacturer):
     if row:
         host_map[p.netloc] = row[0]
         return row[0]
+    created_here = True
     sid = str(uuid.uuid4())
     path = p.path.lower()
     if any(t in path for t in ("price", "pricelist")):
@@ -137,6 +145,8 @@ def ensure_source(cur, host_map, url, manufacturer):
         (sid, name, name, stype, origin, p.netloc))
     cur.execute('select id from "Source" where "baseUrl" = %s', (origin,))
     host_map[p.netloc] = cur.fetchone()[0]
+    if ctx is not None and created_here:
+        ctx.sources_created += 1
     return host_map[p.netloc]
 
 
@@ -270,7 +280,7 @@ def main(argv=None) -> int:
                     if key in doc_cache:
                         continue
                     src = ensure_source(cur, host_map, o["source_url"],
-                                        p["manufacturer"])
+                                        p["manufacturer"], ctx)
                     cap = None
                     side = os.path.join(FIXTURE_DIR,
                                         o["artifact"] + ".prov.json")
@@ -287,10 +297,6 @@ def main(argv=None) -> int:
                     doc_cache[key] = did
                     if created:
                         ctx.sources_created += 0  # counted below if new
-        cur.execute('select count(*) from "Source"')
-        # track created sources: compare against preflight baseline
-        sources_now = int(cur.fetchone()[0])
-        ctx.sources_created = sources_now - pf["db_baseline"]["Source"]
 
         # ── pass 2: identity (frozen ledger packets only) ─────────────────
         cur.execute('select id, "nameEn", slug from "Manufacturer"')
@@ -459,6 +465,22 @@ def main(argv=None) -> int:
                 sem = PRICE_MAP[o["msrp_status"]]
                 did = doc_cache[(o["source_url"], o["sha256"])]
                 conf = CONFIDENCE_MAP[o["trust_tier"]]
+                # validFrom is timestamp(3) without time zone; captured_at is
+                # a full-precision UTC string. Normalize to millisecond
+                # precision BEFORE insert/select so the unique index, the
+                # conflict check and the rerun lookup all see the same value
+                # (an offset-suffixed literal compares as timestamptz and
+                # silently misses the rounded stored value).
+                from datetime import datetime as _dt, timezone as _tz, \
+                    timedelta as _td
+                _d = _dt.fromisoformat(prow["captured_at"])
+                assert _d.utcoffset() == _td(0), prow["captured_at"]
+                _d = _d.astimezone(_tz.utc).replace(tzinfo=None)
+                _ms = (_d.microsecond + 500) // 1000
+                if _ms == 1000:
+                    _d += _td(seconds=1)
+                    _ms = 0
+                valid_from = _d.strftime("%Y-%m-%dT%H:%M:%S") + f".{_ms:03d}"
                 our_id = None
                 if sem["is_current"]:
                     cur.execute(
@@ -466,7 +488,7 @@ def main(argv=None) -> int:
                         '"sourceDocumentId" = %s and "priceType" = %s and '
                         'amount = %s and "validFrom" = %s',
                         (vid, did, sem["price_type"], str(o["value"]),
-                         prow["captured_at"]))
+                         valid_from))
                     got = cur.fetchone()
                     our_id = got[0] if got else None
                     # Price_current_interval_exclusion (gist, WHERE
@@ -517,7 +539,7 @@ def main(argv=None) -> int:
                     '"priceType",amount,"validFrom") do nothing '
                     'returning id',
                     (str(uuid.uuid4()), vid, did, sem["price_type"],
-                     str(o["value"]), prow["captured_at"], conf,
+                     str(o["value"]), valid_from, conf,
                      sem["is_current"]))
                 row = cur.fetchone()
                 if row:
@@ -542,7 +564,7 @@ def main(argv=None) -> int:
                         '"sourceDocumentId" = %s and "priceType" = %s and '
                         'amount = %s and "validFrom" = %s',
                         (vid, did, sem["price_type"], str(o["value"]),
-                         prow["captured_at"]))
+                         valid_from))
                     action, rid = "NO_ACTION", cur.fetchone()[0]
                     if sem["is_current"]:
                         current_row_by_variant[vid].append(rid)

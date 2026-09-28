@@ -357,12 +357,19 @@ def test_deterministic_rerun_and_watched_artifacts_untouched():
             new.pop("generated_at", None)
             old.pop("run_id", None)
             new.pop("run_id", None)
+            # `head` is run provenance stamped at execution time; it must
+            # change when HEAD moves and is not a determinism input.
+            old.pop("head", None)
+            new.pop("head", None)
             assert new == old, f"{n} differs between runs"
     finally:
-        for n, old in snap.items():
-            with open(os.path.join(OUT, n), "w", encoding="utf-8") as fh:
-                json.dump(old, fh, ensure_ascii=False, indent=2)
-                fh.write("\n")
+        # the rerun rewrites the committed outputs (stamps differ by run);
+        # restore the exact committed bytes instead of re-dumping the popped
+        # snapshot, so the tree never loses generated_at/run_id/head.
+        subprocess.run(
+            ["git", "checkout", "--"] +
+            [f"audit/coverage/{n}" for n in snap],
+            cwd=REPO, capture_output=True, text=True)
 
 
 def test_pass_has_no_network_and_no_promotion_code():

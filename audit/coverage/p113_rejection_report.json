@@ -1,0 +1,1077 @@
+{
+  "schema": "rejection_report_p113/v1",
+  "not_accepted_count": 71,
+  "not_accepted": [
+    {
+      "packet_id": "PKT-0117",
+      "candidate_key": "porsche|718||718 cayman",
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Cayman",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0118",
+      "candidate_key": "porsche|718||718 cayman style edition",
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Cayman Style Edition",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0119",
+      "candidate_key": "porsche|718||718 cayman gts 4.0",
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Cayman GTS 4.0",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0120",
+      "candidate_key": "porsche|718||718 boxster",
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Boxster",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0121",
+      "candidate_key": "porsche|718||718 boxster style edition",
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Boxster Style Edition",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0122",
+      "candidate_key": "porsche|718||718 boxster gts 4.0",
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Boxster GTS 4.0",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0123",
+      "candidate_key": "porsche|718||718 spyder rs",
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Spyder RS",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0124",
+      "candidate_key": "porsche|718||718 cayman gt4 rs",
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Cayman GT4 RS",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0125",
+      "candidate_key": "porsche|911||911 carrera",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0126",
+      "candidate_key": "porsche|911||911 carrera t",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera T",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0127",
+      "candidate_key": "porsche|911||911 carrera s",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera S",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0128",
+      "candidate_key": "porsche|911||911 carrera 4s",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4S",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0129",
+      "candidate_key": "porsche|911||911 carrera gts",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera GTS",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0130",
+      "candidate_key": "porsche|911||911 carrera 4 gts",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4 GTS",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0131",
+      "candidate_key": "porsche|911||911 carrera cabriolet",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera Cabriolet",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0132",
+      "candidate_key": "porsche|911||911 carrera t cabriolet",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera T Cabriolet",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0133",
+      "candidate_key": "porsche|911||911 carrera s cabriolet",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera S Cabriolet",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0134",
+      "candidate_key": "porsche|911||911 carrera 4s cabriolet",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4S Cabriolet",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0135",
+      "candidate_key": "porsche|911||911 carrera gts cabriolet",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera GTS Cabriolet",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0136",
+      "candidate_key": "porsche|911||911 carrera 4 gts cabriolet",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4 GTS Cabriolet",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0137",
+      "candidate_key": "porsche|911||911 targa 4s",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Targa 4S",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0138",
+      "candidate_key": "porsche|911||911 targa 4 gts",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Targa 4 GTS",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0139",
+      "candidate_key": "porsche|911||911 spirit 70",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Spirit 70",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0140",
+      "candidate_key": "porsche|911||911 gt3",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 GT3",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0141",
+      "candidate_key": "porsche|911||911 gt3 with touring package",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 GT3 with Touring Package",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0142",
+      "candidate_key": "porsche|911||911 turbo s",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Turbo S",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0143",
+      "candidate_key": "porsche|911||911 turbo s cabriolet",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Turbo S Cabriolet",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0144",
+      "candidate_key": "porsche|911||911 gt3 s/c",
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 GT3 S/C",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0145",
+      "candidate_key": "porsche|taycan||taycan 4",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0146",
+      "candidate_key": "porsche|taycan||taycan black edition",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Black Edition",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0147",
+      "candidate_key": "porsche|taycan||taycan 4s",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4S",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0148",
+      "candidate_key": "porsche|taycan||taycan 4 black edition",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4 Black Edition",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0149",
+      "candidate_key": "porsche|taycan||taycan 4s black edition",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4S Black Edition",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0150",
+      "candidate_key": "porsche|taycan||taycan gts",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan GTS",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0151",
+      "candidate_key": "porsche|taycan||taycan turbo",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0152",
+      "candidate_key": "porsche|taycan||taycan turbo s",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo S",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0153",
+      "candidate_key": "porsche|taycan||taycan turbo gt",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo GT",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0154",
+      "candidate_key": "porsche|taycan||taycan turbo gt with weissach package",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo GT with Weissach Package",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0155",
+      "candidate_key": "porsche|taycan||taycan 4 cross turismo",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4 Cross Turismo",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0156",
+      "candidate_key": "porsche|taycan||taycan 4s cross turismo",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4S Cross Turismo",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0157",
+      "candidate_key": "porsche|taycan||taycan turbo cross turismo",
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo Cross Turismo",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0158",
+      "candidate_key": "porsche|panamera||panamera 4 e-hybrid",
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera 4 E-Hybrid",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0159",
+      "candidate_key": "porsche|panamera||panamera 4s e-hybrid",
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera 4S E-Hybrid",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0160",
+      "candidate_key": "porsche|panamera||panamera turbo e-hybrid",
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera Turbo E-Hybrid",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0161",
+      "candidate_key": "porsche|panamera||panamera turbo s e-hybrid",
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera Turbo S E-Hybrid",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0162",
+      "candidate_key": "porsche|panamera||panamera gts",
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera GTS",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0163",
+      "candidate_key": "porsche|panamera||panamera 4 e-hybrid executive",
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera 4 E-Hybrid Executive",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0169",
+      "candidate_key": "porsche|cayenne||cayenne e-hybrid",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne E-Hybrid",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0170",
+      "candidate_key": "porsche|cayenne||cayenne turbo e-hybrid",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo E-Hybrid",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0171",
+      "candidate_key": "porsche|cayenne||cayenne s",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0172",
+      "candidate_key": "porsche|cayenne||cayenne gts",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne GTS",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0173",
+      "candidate_key": "porsche|cayenne||cayenne s e-hybrid coupé",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S E-Hybrid Coupé",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0174",
+      "candidate_key": "porsche|cayenne||cayenne e-hybrid coupé",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne E-Hybrid Coupé",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0175",
+      "candidate_key": "porsche|cayenne||cayenne coupé",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Coupé",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0176",
+      "candidate_key": "porsche|cayenne||cayenne turbo e-hybrid coupé",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo E-Hybrid Coupé",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0177",
+      "candidate_key": "porsche|cayenne||cayenne s coupé",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S Coupé",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0178",
+      "candidate_key": "porsche|cayenne||cayenne gts coupé",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne GTS Coupé",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0179",
+      "candidate_key": "porsche|cayenne||cayenne turbo gt",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo GT",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0180",
+      "candidate_key": "porsche|cayenne||cayenne electric",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Electric",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0181",
+      "candidate_key": "porsche|cayenne||cayenne s electric",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S Electric",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0182",
+      "candidate_key": "porsche|cayenne||cayenne turbo electric",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo Electric",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0183",
+      "candidate_key": "porsche|cayenne||cayenne coupé electric",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Coupé Electric",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0184",
+      "candidate_key": "porsche|cayenne||cayenne s coupé electric",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S Coupé Electric",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0185",
+      "candidate_key": "porsche|cayenne||cayenne turbo coupé electric",
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo Coupé Electric",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "porsche_macan_model_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0191",
+      "candidate_key": "gwm|tank 300 diesel||2-4t-pro",
+      "manufacturer": "GWM",
+      "model": "TANK 300 DIESEL",
+      "variant": "2-4t-pro",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "gwm_th_model_tank-300-diesel.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0196",
+      "candidate_key": "gwm|tank 500 diesel||2wd-high",
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "2wd-high",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "gwm_th_model_tank-500-diesel.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0197",
+      "candidate_key": "gwm|tank 500 diesel||2wd-medium",
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "2wd-medium",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "gwm_th_model_tank-500-diesel.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0198",
+      "candidate_key": "gwm|tank 500 diesel||4wd-high",
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "4wd-high",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "gwm_th_model_tank-500-diesel.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0385",
+      "candidate_key": "bmw|bmw m2||m race track package",
+      "manufacturer": "BMW",
+      "model": "Bmw M2",
+      "variant": "M Race Track Package",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "locator_unresolvable",
+          "artifact": "bmw_price_list.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0484",
+      "candidate_key": "isuzu|mu-x||active",
+      "manufacturer": "Isuzu",
+      "model": "MU-X",
+      "variant": "Active",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "sidecar_missing",
+          "artifact": "isuzu_page.html"
+        }
+      ]
+    },
+    {
+      "packet_id": "PKT-0485",
+      "candidate_key": "isuzu|isuzu d max||l",
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "L",
+      "status": "QUARANTINED",
+      "reasons": [
+        {
+          "scope": "identity",
+          "reason": "sidecar_missing",
+          "artifact": "isuzu_page.html"
+        }
+      ]
+    }
+  ],
+  "quarantined_observations_total": 71,
+  "quarantined_observations_by_reason": {
+    "identity:locator_unresolvable": 69,
+    "identity:sidecar_missing": 2
+  },
+  "note": "quarantine never overwrites: a failed observation is listed here with its reason and simply not cited; missing evidence stays a field gap, never a value"
+}

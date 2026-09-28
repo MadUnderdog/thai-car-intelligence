@@ -1,0 +1,40 @@
+{
+  "schema": "final_result_p113/v1",
+  "head": "99c01d53103c3b06d515261dbce4e06515d961ab",
+  "packets_built": 488,
+  "packets_accepted": 417,
+  "packets_quarantined": 71,
+  "packets_rejected": 0,
+  "usable_packet_percent": 85.5,
+  "field_coverage": {
+    "identity_sources_cited": 454,
+    "price_fields_cited": 299,
+    "spec_fields_cited": 1389,
+    "variants_with_exact_current_msrp": 269,
+    "variants_with_any_bound_price": 299,
+    "variants_with_spec_evidence": 126
+  },
+  "price_status_distribution": {
+    "EXACT_BINDING_NOT_VERIFIED_CURRENT": 1,
+    "EXACT_CURRENT_MSRP_VERIFIED": 269,
+    "MSRP_STARTING_NOT_EXACT": 29,
+    "NO_P111_PRICE_EVIDENCE": 189,
+    "PRICE_OBSERVATION_QUARANTINED": 0
+  },
+  "promotion_eligible_count": 0,
+  "identity_ledger_unchanged": {
+    "confirmed_variants": 488,
+    "changed_by_p113": false
+  },
+  "gates": {
+    "staging_write": false,
+    "prisma_touched": false,
+    "verifier_touched": false,
+    "production_db_unchanged": true,
+    "price_artifacts_byte_identical": true,
+    "p112_artifacts_byte_identical": true,
+    "identity_artifact_byte_identical": true,
+    "new_acquisition": 0,
+    "ai_reconciliation": false
+  }
+}

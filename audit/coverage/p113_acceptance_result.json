@@ -1,0 +1,152 @@
+{
+  "schema": "acceptance_result_p113/v1",
+  "packets_built": 488,
+  "packets_accepted": 417,
+  "packets_quarantined": 71,
+  "packets_rejected": 0,
+  "usable_packet_percent": 85.5,
+  "field_coverage": {
+    "identity_sources_cited": 454,
+    "price_fields_cited": 299,
+    "spec_fields_cited": 1389,
+    "variants_with_exact_current_msrp": 269,
+    "variants_with_any_bound_price": 299,
+    "variants_with_spec_evidence": 126
+  },
+  "price_status_distribution": {
+    "EXACT_BINDING_NOT_VERIFIED_CURRENT": 1,
+    "EXACT_CURRENT_MSRP_VERIFIED": 269,
+    "MSRP_STARTING_NOT_EXACT": 29,
+    "NO_P111_PRICE_EVIDENCE": 189,
+    "PRICE_OBSERVATION_QUARANTINED": 0
+  },
+  "per_oem": {
+    "BMW": {
+      "packets": 73,
+      "accepted": 72,
+      "quarantined": 1,
+      "rejected": 0
+    },
+    "Changan": {
+      "packets": 5,
+      "accepted": 5,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Deepal": {
+      "packets": 4,
+      "accepted": 4,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "GWM": {
+      "packets": 22,
+      "accepted": 18,
+      "quarantined": 4,
+      "rejected": 0
+    },
+    "Honda": {
+      "packets": 35,
+      "accepted": 35,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Isuzu": {
+      "packets": 7,
+      "accepted": 5,
+      "quarantined": 2,
+      "rejected": 0
+    },
+    "Jaguar": {
+      "packets": 1,
+      "accepted": 1,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Kia": {
+      "packets": 6,
+      "accepted": 6,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Land Rover": {
+      "packets": 11,
+      "accepted": 11,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Lexus": {
+      "packets": 38,
+      "accepted": 38,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "MG": {
+      "packets": 8,
+      "accepted": 8,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "MINI": {
+      "packets": 15,
+      "accepted": 15,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Mazda": {
+      "packets": 22,
+      "accepted": 22,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Mitsubishi": {
+      "packets": 24,
+      "accepted": 24,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Nissan": {
+      "packets": 25,
+      "accepted": 25,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Porsche": {
+      "packets": 69,
+      "accepted": 5,
+      "quarantined": 64,
+      "rejected": 0
+    },
+    "Subaru": {
+      "packets": 2,
+      "accepted": 2,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Suzuki": {
+      "packets": 11,
+      "accepted": 11,
+      "quarantined": 0,
+      "rejected": 0
+    },
+    "Toyota": {
+      "packets": 110,
+      "accepted": 110,
+      "quarantined": 0,
+      "rejected": 0
+    }
+  },
+  "runner": {
+    "module": "thai_factory.acceptance",
+    "evaluated": 2142,
+    "counts": {
+      "ACCEPTED": 2142,
+      "CONFLICT": 0,
+      "QUARANTINED": 0,
+      "REJECTED": 0,
+      "UNRESOLVED": 0
+    },
+    "min_confidence_rule": "OEM_OFFICIAL requires HIGH"
+  },
+  "promotion_eligible_count": 0
+}

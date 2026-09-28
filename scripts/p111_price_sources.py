@@ -490,14 +490,19 @@ def main() -> int:
         fh.write("\n")
     ok = sum(1 for r in log if r.get("ok"))
     print(f"acquire: attempted={len(selected)} captured={ok} failed={len(results) - ok}")
-    fam = {}
+    fam: dict = {}
     for r in log:
-        fam.setdefault(r.get("source_family"), [0, 0])
-        fam[r["source_family"]][0 if r.get("ok") else 1] += 1
+        # failure rows carry no source_family/filename (they never captured) —
+        # the summary must read them defensively or the run crashes AFTER both
+        # artifacts are already written (observed as a post-write KeyError).
+        key = r.get("source_family") or "unknown"
+        fam.setdefault(key, [0, 0])
+        fam[key][0 if r.get("ok") else 1] += 1
     print("families ok/fail:", json.dumps(fam))
     for r in log:
-        print(f"  ok   {r['brand']:11s} {r.get('source_family', ''):18s} "
-              f"{r['filename'][:46]:46s} {r['url'][:70]}")
+        print(f"  {'ok  ' if r.get('ok') else 'fail'} {r['brand']:11s} "
+              f"{(r.get('source_family') or '-'):18s} "
+              f"{(r.get('filename') or '-')[:46]:46s} {r['url'][:70]}")
     return 0
 
 

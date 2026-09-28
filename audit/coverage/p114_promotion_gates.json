@@ -1,0 +1,215 @@
+{
+  "schema": "promotion_gates_p114/v1",
+  "generated_at": "2026-09-28T14:19:37.751567+00:00",
+  "head": "4da86e63e12f23b04d1f7b1ff61a13dae099b173",
+  "all_gates_pass": true,
+  "gates": {
+    "G1_sidecar_sha": {
+      "status": "PASS",
+      "checked": 2136,
+      "failures": [],
+      "fail_count": 0
+    },
+    "G2_locator_re_resolution": {
+      "status": "PASS",
+      "checked": 2136,
+      "fail_count": 0,
+      "failures": [],
+      "mutation_tests": "tests/test_p113_packet_acceptance.py::test_fail_closed_on_corrupt_evidence_synthetic (red-before recorded) + historical suites"
+    },
+    "G3_semantics": {
+      "status": "PASS",
+      "price_map": {
+        "EXACT_CURRENT_MSRP_VERIFIED": {
+          "price_type": "MSRP",
+          "is_current": true
+        },
+        "MSRP_STARTING_NOT_EXACT": {
+          "price_type": "LIST_PRICE",
+          "is_current": false
+        },
+        "EXACT_BINDING_NOT_VERIFIED_CURRENT": {
+          "price_type": "MSRP",
+          "is_current": false
+        }
+      },
+      "price_status_counts": {
+        "EXACT_CURRENT_MSRP_VERIFIED": 264,
+        "MSRP_STARTING_NOT_EXACT": 29,
+        "EXACT_BINDING_NOT_VERIFIED_CURRENT": 1
+      },
+      "spec_key_map": {
+        "length_mm": "dimension.lengthMm",
+        "width_mm": "dimension.widthMm",
+        "height_mm": "dimension.heightMm",
+        "wheelbase_mm": "dimension.wheelbase_mm",
+        "ground_clearance_mm": "dimension.groundClearanceMm",
+        "curb_weight_kg": "dimension.curbWeightKg",
+        "seats": "dimension.seating_capacity",
+        "displacement_cc": "engine.capacity_cc",
+        "power_ps": "performance.powerKw",
+        "torque_nm": "performance.torqueNm",
+        "drivetrain": "transmission_and_suspension.drivetrain",
+        "range_km": "performance.rangeKm",
+        "battery_capacity_kwh": "battery.capacityKwh",
+        "charging_dc_kw": "charging.dcPowerKw",
+        "warranty": "warranty.vehicleYears"
+      },
+      "spec_unmapped_keys": [],
+      "confidence_map": {
+        "official_verified": "0.9000",
+        "reference": "0.7500"
+      },
+      "mg_not_current_asserted": true
+    },
+    "G4_idempotent_rerun": {
+      "status": "PASS",
+      "plan": "SELECT-first existence for identity rows (modelYear NULL makes the composite unique non-enforcing); ON CONFLICT DO NOTHING for Source(origin unique), SourceDocument(sourceId+contentHash), Price(variantId+sourceDoc+type+amount+validFrom), VariantSpec(variantId+key+sourceDoc); second run must report NO_ACTION for every fact and change no counts",
+      "unique_indexes_relied_on": [
+        "Source.baseUrl",
+        "SourceDocument(sourceId, contentHash)",
+        "Price(variantId, sourceDocumentId, priceType, amount, validFrom)",
+        "VariantSpec(variantId, key, sourceDocumentId)"
+      ]
+    },
+    "G5_contamination": {
+      "status": "PASS",
+      "tuple_failures": 0,
+      "quarantined_packets_excluded": 71,
+      "cross_model_suites": "combined historical gate run (P104/P111 contamination tests)"
+    },
+    "G6_sample_reopen": {
+      "status": "PASS",
+      "sample_size": 11,
+      "pass": 11,
+      "red_before": "first collection pass 6/11 (under-hydrated SPA innerText) -> method fixed -> 11/11",
+      "rows": [
+        {
+          "packet": "PKT-0001",
+          "oem": "Toyota",
+          "field": "identity",
+          "method": "playwright-chromium+curl",
+          "verdict": "PASS",
+          "live_check": "model&variant_present=True",
+          "artifact_check": "model&variant_present=True",
+          "url": "https://www.toyota.co.th/en/pricelist"
+        },
+        {
+          "packet": "PKT-0099",
+          "oem": "Honda",
+          "field": "identity",
+          "method": "playwright-chromium+curl",
+          "verdict": "PASS",
+          "live_check": "model&variant_present=True",
+          "artifact_check": "model&variant_present=True",
+          "url": "https://www.honda.co.th/en/city"
+        },
+        {
+          "packet": "PKT-0103",
+          "oem": "Changan",
+          "field": "identity",
+          "method": "playwright-chromium+curl",
+          "verdict": "PASS",
+          "live_check": "model&variant_present=True",
+          "artifact_check": "model&variant_present=True",
+          "url": "https://www.changan.co.th/th/promotion/"
+        },
+        {
+          "packet": "PKT-0001",
+          "oem": "Toyota",
+          "field": "price",
+          "method": "playwright-chromium+curl",
+          "verdict": "PASS",
+          "live_check": "digits(2999000)_present=True",
+          "artifact_check": "digits(2999000)_present=True",
+          "url": "https://www.toyota.co.th/en/pricelist"
+        },
+        {
+          "packet": "PKT-0099",
+          "oem": "Honda",
+          "field": "price",
+          "method": "playwright-chromium+curl",
+          "verdict": "PASS",
+          "live_check": "digits(569000)_present=True",
+          "artifact_check": "digits(569000)_present=True",
+          "url": "https://www.honda.co.th/en/city"
+        },
+        {
+          "packet": "PKT-0105",
+          "oem": "Jaguar",
+          "field": "price",
+          "method": "curl+pdftotext",
+          "verdict": "PASS",
+          "live_check": "digits(1997)_present=True",
+          "artifact_check": "digits(1997)_present=True",
+          "url": "https://cdn-jaguarlandrover.com/system/apio/th/TH_Jaguar_PriceSheet.pdf"
+        },
+        {
+          "packet": "PKT-0106",
+          "oem": "Land Rover",
+          "field": "price",
+          "method": "curl+pdftotext",
+          "verdict": "PASS",
+          "live_check": "digits(2997)_present=True",
+          "artifact_check": "digits(2997)_present=True",
+          "url": "https://cdn-jaguarlandrover.com/system/apio/th/TH_LandRover_PriceSheet.pdf"
+        },
+        {
+          "packet": "PKT-0001",
+          "oem": "Toyota",
+          "field": "spec",
+          "method": "playwright-chromium+curl",
+          "verdict": "PASS",
+          "live_check": "label&value_present=True",
+          "artifact_check": "label&value_present=True",
+          "url": "https://www.toyota.co.th/en/model/api/car-series/"
+        },
+        {
+          "packet": "PKT-0168",
+          "oem": "Porsche",
+          "field": "spec",
+          "method": "playwright-chromium+curl",
+          "verdict": "PASS",
+          "live_check": "label&value_present=True",
+          "artifact_check": "label&value_present=True",
+          "url": "https://configurator.porsche.com/en-TH/mode/model/95BBV1"
+        },
+        {
+          "packet": "PKT-0230",
+          "oem": "Lexus",
+          "field": "spec",
+          "method": "playwright-chromium+curl",
+          "verdict": "PASS",
+          "live_check": "label&value_present=True",
+          "artifact_check": "label&value_present=True",
+          "url": "https://www.lexus.co.th/th/price-and-model-tools/model-brochures.html"
+        },
+        {
+          "packet": "PKT-0334",
+          "oem": "BMW",
+          "field": "spec",
+          "method": "playwright-chromium",
+          "verdict": "PASS",
+          "live_check": "label&value_present=True",
+          "artifact_check": "label&value_present=True",
+          "url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html"
+        }
+      ]
+    },
+    "G7_producer_ne_verifier": {
+      "status": "PASS",
+      "producer": "scripts/p114_promote.py",
+      "verifier": "scripts/p114_verify_promotion.py",
+      "assertion": "tests/test_p114_promotion.py::test_producer_and_verifier_are_independent"
+    },
+    "G8_gate_report_committed_before_write": {
+      "status": "PASS",
+      "artifacts": [
+        "audit/coverage/p114_promotion_preflight.json",
+        "audit/coverage/p114_promotion_gates.json",
+        "audit/coverage/p114_promotion_gates.md"
+      ],
+      "note": "committed before scripts/p114_promote.py runs"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu-tis.com/isuzu-d-max-ev",
+  "captured_at": "2026-09-28T07:13:08.389204+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "318782683ce71a2338e4851248d7c2495ee16ac9b044d7dba4cc5ae04b9760ce",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "isuzu_p111_isuzu-d-max-ev.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

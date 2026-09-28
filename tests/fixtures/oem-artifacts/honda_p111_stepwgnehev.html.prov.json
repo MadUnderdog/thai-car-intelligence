@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/stepwgnehev",
+  "captured_at": "2026-09-28T07:13:07.064459+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "90ebbd6c877c9656d9168e413c1ce1b1871b614a1ba5a1cbcb4d94940cc860ef",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "honda_p111_stepwgnehev.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/th/buy/configure4",
+  "captured_at": "2026-09-28T07:14:10.019681+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "0d5eca8a57508210c771ba4919de6ede83c4ffca908276118270ddbcdfa1d3d6",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mitsubishi_p111_configure4.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

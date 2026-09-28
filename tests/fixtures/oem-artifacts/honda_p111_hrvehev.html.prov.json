@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/hrvehev",
+  "captured_at": "2026-09-28T07:13:06.376145+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "6d560011db787c7fd9e1be74ab9ec767158f0ecf97a8ee1f1b0fc7bbd69c7975",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "honda_p111_hrvehev.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

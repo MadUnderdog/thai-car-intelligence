@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/en/model/XL7",
+  "captured_at": "2026-09-28T07:14:56.629623+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "a55681713479cadc5dda4686fc0619d07d3b796a2a8d609a75050fdaaddc6839",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "suzuki_p111_XL7.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/crv",
+  "captured_at": "2026-09-28T07:13:05.792323+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "cab5b81b2e73d4ba232cfa5eff24207b615c1b6ea62c2a762c49f002ed386497",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "honda_p111_crv.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

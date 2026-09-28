@@ -112,6 +112,54 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_lm-350h-4-seater.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 3,
+            "displacement": 14,
+            "fuel_consumption": 8
+          },
+          "marker_total": 139,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 8,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_lm-350h-7-seater.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 3,
+            "displacement": 14,
+            "fuel_consumption": 8
+          },
+          "marker_total": 139,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 8,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_lx.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 68,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 139,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 4,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/lexus_p108_es.html",
           "marker_counts": {
             "thai_ps": 3,
@@ -125,6 +173,54 @@
           "structure": "structured_field",
           "structured_fields": 630,
           "spec_blocks": 4,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_lm-500h-4-seater.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 8
+          },
+          "marker_total": 138,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 8,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_lm-500h-6-seater.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 8
+          },
+          "marker_total": 138,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 8,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_lx-500d-fsport.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 67,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 138,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 8,
           "confidence": "high"
         },
         {
@@ -256,6 +352,134 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_lexus-unveils-the-new-nx-in-a-world-premiere.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 2,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_lm.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 4,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_lx-500d-premier.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 8,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_nx-350h-grand-luxury.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 8,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_nx.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 4,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_we-are-lexus-rx.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 4,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_world-premiere-of-the-all-new-lexus-lm.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 2,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/lexus_p111_world-premiere-of-the-all-new-lexus-rx.html",
+          "marker_counts": {
+            "thai_ps": 3,
+            "torque_nm": 66,
+            "kw": 45,
+            "kwh": 2,
+            "displacement": 14,
+            "fuel_consumption": 7
+          },
+          "marker_total": 137,
+          "structure": "structured_field",
+          "structured_fields": 630,
+          "spec_blocks": 2,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mazda_home_page.html",
           "marker_counts": {
             "thai_ps": 20,
@@ -304,6 +528,22 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_718.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 75,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 75,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mg_p108_all-new-mg3.html",
           "marker_counts": {
             "thai_ps": 6,
@@ -318,6 +558,38 @@
           "structured_fields": 0,
           "spec_blocks": 0,
           "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_configure_dup2.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 42,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 42,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 85,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_configure_dup3.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 36,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 36,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 83,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/kia_press_article_carnival.html",
@@ -336,6 +608,22 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_718-boxster-gts-4.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 4,
+            "kw": 30,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 34,
+          "structure": "structured_field",
+          "structured_fields": 1,
+          "spec_blocks": 63,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mg_car_mg-zs.html",
           "marker_counts": {
             "thai_ps": 15,
@@ -352,6 +640,38 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_p111_navara-calibre.html",
+          "marker_counts": {
+            "thai_ps": 18,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 14,
+            "fuel_consumption": 0
+          },
+          "marker_total": 32,
+          "structure": "structured_field",
+          "structured_fields": 4,
+          "spec_blocks": 55,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_718-cayman-gts-4.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 4,
+            "kw": 28,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 32,
+          "structure": "structured_field",
+          "structured_fields": 1,
+          "spec_blocks": 63,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mazda_car_new-mazda-bt50.html",
           "marker_counts": {
             "thai_ps": 1,
@@ -365,6 +685,38 @@
           "structure": "structured_field",
           "structured_fields": 4,
           "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_718-boxster-style-edition.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 2,
+            "kw": 27,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 29,
+          "structure": "structured_field",
+          "structured_fields": 1,
+          "spec_blocks": 63,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_718-boxster.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 2,
+            "kw": 27,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 29,
+          "structure": "structured_field",
+          "structured_fields": 1,
+          "spec_blocks": 63,
           "confidence": "high"
         },
         {
@@ -384,6 +736,22 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_configure_dup6.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 28,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 28,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 71,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda-cx5.html",
           "marker_counts": {
             "thai_ps": 8,
@@ -397,6 +765,22 @@
           "structure": "structured_field",
           "structured_fields": 3,
           "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_718-cayman-gt4-rs.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 4,
+            "kw": 22,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 26,
+          "structure": "structured_field",
+          "structured_fields": 1,
+          "spec_blocks": 47,
           "confidence": "high"
         },
         {
@@ -576,6 +960,22 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_p111_specifications_dup2.html",
+          "marker_counts": {
+            "thai_ps": 12,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 6,
+            "fuel_consumption": 0
+          },
+          "marker_total": 18,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 309,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mazda_p107_spec.html",
           "marker_counts": {
             "thai_ps": 3,
@@ -592,6 +992,38 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_configure.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 16,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 16,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 33,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_configure_dup4.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 16,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 16,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 38,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mazda_car_mazda2-essential.html",
           "marker_counts": {
             "thai_ps": 1,
@@ -605,6 +1037,102 @@
           "structure": "structured_field",
           "structured_fields": 8,
           "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/toyota_p111_yarisativ.html",
+          "marker_counts": {
+            "thai_ps": 5,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 4,
+            "fuel_consumption": 6
+          },
+          "marker_total": 15,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_p111_mazda3-fastback.html",
+          "marker_counts": {
+            "thai_ps": 2,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 9,
+            "fuel_consumption": 3
+          },
+          "marker_total": 14,
+          "structure": "structured_field",
+          "structured_fields": 4,
+          "spec_blocks": 0,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mg_p111_mg5.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 6,
+            "fuel_consumption": 0
+          },
+          "marker_total": 12,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_p111_performance_dup2.html",
+          "marker_counts": {
+            "thai_ps": 5,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 7,
+            "fuel_consumption": 0
+          },
+          "marker_total": 12,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_p111_performance_dup3.html",
+          "marker_counts": {
+            "thai_ps": 5,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 7,
+            "fuel_consumption": 0
+          },
+          "marker_total": 12,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/porsche_p111_configure_dup5.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 12,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 12,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 30,
           "confidence": "high"
         },
         {
@@ -640,6 +1168,230 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/bmw_p111_configurator.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 10,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 10,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/honda_p111_wrv.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 10,
+            "fuel_consumption": 0
+          },
+          "marker_total": 10,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/isuzu_p111_isuzu-mu-x.html",
+          "marker_counts": {
+            "thai_ps": 9,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 10,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 57,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/isuzu_p111_ultimate.html",
+          "marker_counts": {
+            "thai_ps": 9,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 10,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 56,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/mitsubishi_p111_mirage.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 10,
+            "fuel_consumption": 0
+          },
+          "marker_total": 10,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 8,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 1,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 9,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 21,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup2.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 1,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 9,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 21,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup3.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 1,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 9,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 21,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup4.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 1,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 9,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 21,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup5.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 1,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 9,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 21,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup6.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 1,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 9,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 21,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup7.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 1,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 9,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 21,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup8.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 1,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 9,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 21,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup9.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 1,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 9,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 21,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/gwm_th_model_sahar.html",
           "marker_counts": {
             "thai_ps": 5,
@@ -647,6 +1399,22 @@
             "kw": 0,
             "kwh": 0,
             "displacement": 1,
+            "fuel_consumption": 0
+          },
+          "marker_total": 8,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/honda_p111_brv.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 8,
             "fuel_consumption": 0
           },
           "marker_total": 8,
@@ -784,6 +1552,22 @@
           "confidence": "high"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_p111_navara-king-cab.html",
+          "marker_counts": {
+            "thai_ps": 5,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 2,
+            "fuel_consumption": 0
+          },
+          "marker_total": 7,
+          "structure": "structured_field",
+          "structured_fields": 2,
+          "spec_blocks": 13,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/toyota_p107_altis.html",
           "marker_counts": {
             "thai_ps": 2,
@@ -830,6 +1614,22 @@
           "structured_fields": 0,
           "spec_blocks": 0,
           "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_p111_specifications.html",
+          "marker_counts": {
+            "thai_ps": 6,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 6,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 167,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/subaru_th_lineup_forester.html",
@@ -880,6 +1680,38 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/mazda_p111_mazda-bt50-tcg.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 2,
+            "fuel_consumption": 2
+          },
+          "marker_total": 5,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/isuzu_p111_isuzu-d-max-ev.html",
+          "marker_counts": {
+            "thai_ps": 1,
+            "torque_nm": 0,
+            "kw": 3,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 4,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 15,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/jaguar_p107_f-pace-svr-575-edition.html",
           "marker_counts": {
             "thai_ps": 0,
@@ -928,6 +1760,22 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_p111_kicks-epower.html",
+          "marker_counts": {
+            "thai_ps": 2,
+            "torque_nm": 2,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 4,
+          "structure": "structured_field",
+          "structured_fields": 2,
+          "spec_blocks": 41,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/deepal_e07_awd.html",
           "marker_counts": {
             "thai_ps": 0,
@@ -945,6 +1793,22 @@
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/deepal_e07_plus.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 3,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 3,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/deepal_p111_e07-peformance-awd-en.html",
           "marker_counts": {
             "thai_ps": 0,
             "torque_nm": 0,
@@ -1008,6 +1872,22 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/mitsubishi_p111_highlight.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 3,
+            "fuel_consumption": 0
+          },
+          "marker_total": 3,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 5,
+          "confidence": "high"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/changan_home_page.html",
           "marker_counts": {
             "thai_ps": 0,
@@ -1038,6 +1918,86 @@
           "structured_fields": 0,
           "spec_blocks": 0,
           "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/deepal_p111_specification.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/deepal_p111_specification_dup2.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/deepal_p111_specification_dup6.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/deepal_p111_specification_dup7.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/deepal_p111_specification_dup8.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 2,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 2,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/gwm_data_models_page.html",
@@ -1120,6 +2080,22 @@
           "confidence": "medium"
         },
         {
+          "artifact": "tests/fixtures/oem-artifacts/honda_p111_hrvehev.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 2
+          },
+          "marker_total": 2,
+          "structure": "prose_only",
+          "structured_fields": 0,
+          "spec_blocks": 0,
+          "confidence": "medium"
+        },
+        {
           "artifact": "tests/fixtures/oem-artifacts/mitsubishi_home_page.html",
           "marker_counts": {
             "thai_ps": 0,
@@ -1150,6 +2126,22 @@
           "structured_fields": 0,
           "spec_blocks": 0,
           "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/deepal_p111_specification_dup3.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 1,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 0
+          },
+          "marker_total": 1,
+          "structure": "spec_block_dom",
+          "structured_fields": 0,
+          "spec_blocks": 1,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/honda_p108_index_dup.html",
@@ -1246,6 +2238,22 @@
           "structured_fields": 0,
           "spec_blocks": 0,
           "confidence": "medium"
+        },
+        {
+          "artifact": "tests/fixtures/oem-artifacts/nissan_p111_kicks-e-power-stylish-package.html",
+          "marker_counts": {
+            "thai_ps": 0,
+            "torque_nm": 0,
+            "kw": 0,
+            "kwh": 0,
+            "displacement": 0,
+            "fuel_consumption": 1
+          },
+          "marker_total": 1,
+          "structure": "structured_field",
+          "structured_fields": 2,
+          "spec_blocks": 2,
+          "confidence": "high"
         },
         {
           "artifact": "tests/fixtures/oem-artifacts/subaru_press_news.html",
@@ -1390,6 +2398,84 @@
           "/th/topics/offers-and-services/personal-services/technical-campaign.html",
           "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
         ],
+        "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe.html": [
+          "#technical-data",
+          "/th/all-models.html?specialCategory=c",
+          "/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe-technical-data.html",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup2.html": [
+          "#technical-data",
+          "/th/all-models.html?specialCategory=c",
+          "/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe-technical-data.html",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup3.html": [
+          "#technical-data",
+          "/th/all-models.html?specialCategory=c",
+          "/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe-technical-data.html",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup4.html": [
+          "#technical-data",
+          "/th/all-models.html?specialCategory=c",
+          "/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe-technical-data.html",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup5.html": [
+          "#technical-data",
+          "/th/all-models.html?specialCategory=c",
+          "/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe-technical-data.html",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup6.html": [
+          "#technical-data",
+          "/th/all-models.html?specialCategory=c",
+          "/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe-technical-data.html",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup7.html": [
+          "#technical-data",
+          "/th/all-models.html?specialCategory=c",
+          "/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe-technical-data.html",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup8.html": [
+          "#technical-data",
+          "/th/all-models.html?specialCategory=c",
+          "/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe-technical-data.html",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_p111_bmw-m2-coupe_dup9.html": [
+          "#technical-data",
+          "/th/all-models.html?specialCategory=c",
+          "/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe-technical-data.html",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
+        "tests/fixtures/oem-artifacts/bmw_p111_configurator.html": [
+          "/th/all-models.html?specialCategory=c",
+          "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
+          "/th/topics/offers-and-services/personal-services/technical-campaign.html",
+          "/th/topics/offers-and-services/special-offers/si-package-for-non-bsi-vehicles.html"
+        ],
         "tests/fixtures/oem-artifacts/bmw_page.html": [
           "/th/all-models.html?specialCategory=c",
           "/th/more-bmw/bmw-special-sales/bmw-diplomatic-sales.html",
@@ -1411,6 +2497,57 @@
         ],
         "tests/fixtures/oem-artifacts/deepal_e07_plus.html": [
           "https://www.changan.co.th/en/deepal/e07-plus-en/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_p111_e07-peformance-awd-en.html": [
+          "https://www.changan.co.th/en/deepal/e07-peformance-awd-en/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_p111_specification.html": [
+          "/th/deepal/e07-peformance-awd-en/specification/",
+          "https://www.changan.co.th/deepal/e07%20performance%20awd-en/specification/",
+          "https://www.changan.co.th/en/deepal/e07%20performance%20awd-en/specification/",
+          "https://www.changan.co.th/th/deepal/e07%20performance%20awd-th/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_p111_specification_dup2.html": [
+          "/th/deepal/e07-plus-en/specification/",
+          "https://www.changan.co.th/deepal/e07%20plus-en/specification/",
+          "https://www.changan.co.th/en/deepal/e07%20plus-en/specification/",
+          "https://www.changan.co.th/th/deepal/e07%20plus-th/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_p111_specification_dup3.html": [
+          "/th/deepal/hunter-k50-en/specification/",
+          "https://www.changan.co.th/deepal/hunter%20k50%20-en/specification/",
+          "https://www.changan.co.th/en/deepal/hunter%20k50%20-en/specification/",
+          "https://www.changan.co.th/th/deepal/hunter%20k50%20-th/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_p111_specification_dup4.html": [
+          "/th/deepal/s05-en/specification/",
+          "https://www.changan.co.th/deepal/s05-en/specification/",
+          "https://www.changan.co.th/en/deepal/s05-en/specification/",
+          "https://www.changan.co.th/th/deepal/s05-th/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_p111_specification_dup5.html": [
+          "/th/deepal/s05-reev-en/specification/",
+          "https://www.changan.co.th/deepal/s05%20reev-en/specification/",
+          "https://www.changan.co.th/en/deepal/s05%20reev-en/specification/",
+          "https://www.changan.co.th/th/deepal/s05%20reev-th/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_p111_specification_dup6.html": [
+          "/th/deepal/s07-en/specification/",
+          "https://www.changan.co.th/deepal/new%20s07-en/specification/",
+          "https://www.changan.co.th/en/deepal/new%20s07-en/specification/",
+          "https://www.changan.co.th/th/deepal/new%20s07-th/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_p111_specification_dup7.html": [
+          "/en/deepal/e07-performance-awd/specification/",
+          "https://www.changan.co.th/deepal/e07%20performance%20awd-th/specification/",
+          "https://www.changan.co.th/en/deepal/e07%20performance%20awd-en/specification/",
+          "https://www.changan.co.th/th/deepal/e07%20performance%20awd-th/specification/"
+        ],
+        "tests/fixtures/oem-artifacts/deepal_p111_specification_dup8.html": [
+          "/en/deepal/e07-plus-th/specification/",
+          "https://www.changan.co.th/deepal/e07%20plus-th/specification/",
+          "https://www.changan.co.th/en/deepal/e07%20plus-en/specification/",
+          "https://www.changan.co.th/th/deepal/e07%20plus-th/specification/"
         ],
         "tests/fixtures/oem-artifacts/honda_city_page.html": [
           "/en/city/specification",
@@ -1446,6 +2583,31 @@
         "tests/fixtures/oem-artifacts/honda_p108_super-one.html": [
           "/service/special-service",
           "/super-one/specification"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p111_cityhatchback.html": [
+          "/cityhatchback/specification",
+          "/service/special-service",
+          "https://www.honda.co.th/cityhatchback /specification"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p111_crv.html": [
+          "/crv/specification",
+          "/service/special-service",
+          "https://www.honda.co.th/en/crv/specification"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p111_hrvehev.html": [
+          "/hrvehev/specification",
+          "/service/special-service",
+          "https://www.honda.co.th/en/hrvehev/specification"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p111_stepwgnehev.html": [
+          "/service/special-service",
+          "/stepwgnehev/specification",
+          "https://www.honda.co.th/en/stepwgnehev/specification"
+        ],
+        "tests/fixtures/oem-artifacts/honda_p111_wrv.html": [
+          "/service/special-service",
+          "/wrv/specification",
+          "https://www.honda.co.th/en/wrv/specification"
         ],
         "tests/fixtures/oem-artifacts/honda_page.html": [
           "/en/service/special-service"
@@ -1488,6 +2650,17 @@
           "/specialoffer/service-campaign/flood-campaign-2026",
           "/specialoffer/service-campaign/freecheck-30-item",
           "https://www.isuzu-tis.com/specialoffer"
+        ],
+        "tests/fixtures/oem-artifacts/isuzu_p111_isuzu-d-max-ev.html": [
+          "/specialoffer"
+        ],
+        "tests/fixtures/oem-artifacts/isuzu_p111_isuzu-mu-x.html": [
+          "/specialoffer",
+          "/specialoffer/ppv/mu-x-financial"
+        ],
+        "tests/fixtures/oem-artifacts/isuzu_p111_ultimate.html": [
+          "/specialoffer",
+          "/specialoffer/ppv/mu-x-financial"
         ],
         "tests/fixtures/oem-artifacts/isuzu_page.html": [
           "/specialoffer",
@@ -1615,6 +2788,27 @@
           "https://www.lexus.co.th/en/discover-lexus/lexus-creates/family-activities/culinary-perspectives.html",
           "https://www.lexus.co.th/th/discover-lexus/lexus-creates/family-activities/culinary-perspectives.html"
         ],
+        "tests/fixtures/oem-artifacts/lexus_p111_lm-350h-4-seater.html": [
+          "#specifications"
+        ],
+        "tests/fixtures/oem-artifacts/lexus_p111_lm-350h-7-seater.html": [
+          "#specifications"
+        ],
+        "tests/fixtures/oem-artifacts/lexus_p111_lm-500h-4-seater.html": [
+          "#specifications"
+        ],
+        "tests/fixtures/oem-artifacts/lexus_p111_lm-500h-6-seater.html": [
+          "#specifications"
+        ],
+        "tests/fixtures/oem-artifacts/lexus_p111_lx-500d-fsport.html": [
+          "#specifications"
+        ],
+        "tests/fixtures/oem-artifacts/lexus_p111_lx-500d-premier.html": [
+          "#specifications"
+        ],
+        "tests/fixtures/oem-artifacts/lexus_p111_nx-350h-grand-luxury.html": [
+          "#specifications"
+        ],
         "tests/fixtures/oem-artifacts/mazda_car_mazda-cx30-essential.html": [
           "/_next/static/chunks/pages/cars/%5Bslug%5D/spec-21232b9731bd7d75.js",
           "/th/cars/mazda-cx30-essential/spec"
@@ -1653,6 +2847,12 @@
           "/cars/spec",
           "/en/cars/spec",
           "/th/cars/spec#"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_p111_mazda-bt50-tcg.html": [
+          "/th/cars/mazda-bt50-tcg/spec"
+        ],
+        "tests/fixtures/oem-artifacts/mazda_p111_mazda3-fastback.html": [
+          "/th/cars/mazda3-fastback/spec"
         ],
         "tests/fixtures/oem-artifacts/mazda_spec_mazda-cx30-essential.html": [
           "/cars/mazda-cx30-essential/spec",
@@ -1789,6 +2989,164 @@
           "/en_TH/home/serv/special-offers/the_new_mini_family.html",
           "https://www.mini.co.th/en_TH/home/serv/special-offers/motor_expo_2025.html"
         ],
+        "tests/fixtures/oem-artifacts/mini_p111_MINI-JCW-GP-Inspired.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_Mini-Countryman-Y2022.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini-Countryman-Y2022.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_SEP-MINI-Countryman.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/pre-lci-models.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_The-New-Countryman-Teaser.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/The-New-Countryman-Teaser.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_aceman-concept.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_aceman-concept_dup2.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_configure.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_configure_dup2.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_configure_dup3.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_configure_dup4.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_mini-countryman.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_mini-countryman_new.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini-Countryman-Y2022.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_mini-jcw-gp-new-2019_20.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
+        "tests/fixtures/oem-artifacts/mini_p111_mini-john-cooper-works-concept.html": [
+          "/en_TH/home/range/all-electric-mini-aceman/technical-data.html",
+          "/en_TH/home/range/all-electric-mini-cooper/technical-data.html",
+          "/en_TH/home/range/mini-cooper-convertible/technical-data.html",
+          "/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+          "/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+          "/en_TH/home/serv/special-offers/mini_connected.html",
+          "/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+          "/en_TH/home/serv/special-offers/motor_expo_2025.html",
+          "/en_TH/home/serv/special-offers/the_new_mini_family.html"
+        ],
         "tests/fixtures/oem-artifacts/mitsubishi_home_page.html": [
           "/th/news-activity/news/MMTh-Kong-Thabbok-Upatham-Sustainable-Technical-Skills-Development"
         ],
@@ -1816,6 +3174,62 @@
           "/th/news-activity/news/mitsubishi-motors-thailand-launches-mitsubishi-pajero-sport-special-edition",
           "/th/news-activity/news/mitsubishi-motors-thailand-unveils-mitsubishi-xpander-special-edition-making-you-the-coolest-daddy",
           "/th/news-activity/news/unveil-spec-prices-of-athlete-and-dc-4wd-ultra"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_durability.html": [
+          "/vehicles/new-vehicles/navara-calibre/specifications.html"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_durability_dup2.html": [
+          "/vehicles/new-vehicles/navara-king-cab/specifications.html"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_kicks-epower.html": [
+          "#spec",
+          "/vehicles/new-vehicles/kicks-epower/specifications.html",
+          "/vehicles/new-vehicles/kicks-epower/specifications.html#grade-70053-0",
+          "/vehicles/new-vehicles/kicks-epower/specifications.html#grade-70053-1",
+          "/vehicles/new-vehicles/kicks-epower/specifications.html#grade-70053-2"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_navara-calibre.html": [
+          "#spec",
+          "/vehicles/new-vehicles/navara-calibre/specifications.html",
+          "/vehicles/new-vehicles/navara-calibre/specifications.html#grade-70004-0",
+          "/vehicles/new-vehicles/navara-calibre/specifications.html#grade-70004-1",
+          "/vehicles/new-vehicles/navara-calibre/specifications.html#grade-70004-2",
+          "/vehicles/new-vehicles/navara-calibre/specifications.html#grade-70004-3",
+          "/vehicles/new-vehicles/navara-calibre/specifications.html#grade-70004-4",
+          "/vehicles/new-vehicles/navara-calibre/specifications.html#grade-70004-5"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_navara-king-cab.html": [
+          "#specs",
+          "/finance-calculator.html/navara-king-cab.html?cid=vlpspec",
+          "/vehicles/new-vehicles/navara-king-cab/specifications.html"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_nissan-intelligent-mobility.html": [
+          "/vehicles/new-vehicles/kicks-epower/specifications.html"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_nissan-intelligent-mobility_dup2.html": [
+          "/vehicles/new-vehicles/navara-calibre/specifications.html"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_nissan-intelligent-mobility_dup3.html": [
+          "/vehicles/new-vehicles/navara-king-cab/specifications.html"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_performance.html": [
+          "/vehicles/new-vehicles/kicks-epower/specifications.html"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_performance_dup2.html": [
+          "/vehicles/new-vehicles/navara-calibre/specifications.html"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_performance_dup3.html": [
+          "/vehicles/new-vehicles/navara-king-cab/specifications.html"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_specifications.html": [
+          "/vehicles/new-vehicles/kicks-epower/specifications.html",
+          "https://en.nissan.co.th/vehicles/new-vehicles/kicks-epower/specifications.html",
+          "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/specifications.html"
+        ],
+        "tests/fixtures/oem-artifacts/nissan_p111_specifications_dup2.html": [
+          "/vehicles/new-vehicles/navara-calibre/specifications.html",
+          "https://en.nissan.co.th/vehicles/new-vehicles/navara-calibre/specifications.html",
+          "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/specifications.html"
         ],
         "tests/fixtures/oem-artifacts/nissan_press_news.html": [
           "/news/nissan-bangkok-motorshow47-core-models-and-special-deals.html",
@@ -1864,6 +3278,120 @@
         "tests/fixtures/oem-artifacts/porsche_p108_vehicle-accessories_dup.html": [
           "#campaigns-and-specials"
         ],
+        "tests/fixtures/oem-artifacts/porsche_p111_718-boxster-gts-4.html": [
+          "#technical-data-982311",
+          "#technical-data-982321",
+          "#technical-data-982361",
+          "#technical-data-982891"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p111_718-boxster-style-edition.html": [
+          "#technical-data-982311",
+          "#technical-data-982321",
+          "#technical-data-982361",
+          "#technical-data-982891"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p111_718-boxster.html": [
+          "#technical-data-982311",
+          "#technical-data-982321",
+          "#technical-data-982361",
+          "#technical-data-982891"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p111_718-cayman-gt4-rs.html": [
+          "#technical-data-982851"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p111_718-cayman-gts-4.html": [
+          "#technical-data-982111",
+          "#technical-data-982121",
+          "#technical-data-982161",
+          "#technical-data-982851"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p111_configure.html": [
+          "#technical-data-982111",
+          "#technical-data-982121",
+          "#technical-data-982161",
+          "#technical-data-982311",
+          "#technical-data-982321",
+          "#technical-data-982361",
+          "#technical-data-982851",
+          "#technical-data-982891"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p111_configure_dup2.html": [
+          "#technical-data-992142",
+          "#technical-data-992182",
+          "#technical-data-9921B2",
+          "#technical-data-9921S2",
+          "#technical-data-992342",
+          "#technical-data-992352",
+          "#technical-data-992382",
+          "#technical-data-9923B2",
+          "#technical-data-9923S2",
+          "#technical-data-992442",
+          "#technical-data-992452",
+          "#technical-data-9924S2",
+          "#technical-data-992542",
+          "#technical-data-9925S2",
+          "#technical-data-992642",
+          "#technical-data-992652",
+          "#technical-data-9926S2",
+          "#technical-data-992812",
+          "#technical-data-992822",
+          "#technical-data-992892",
+          "#technical-data-992902"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p111_configure_dup3.html": [
+          "#technical-data-9YAAI1",
+          "#technical-data-9YAAV1",
+          "#technical-data-9YABJ1",
+          "#technical-data-9YABS1",
+          "#technical-data-9YACT1",
+          "#technical-data-9YBAI1",
+          "#technical-data-9YBAV1",
+          "#technical-data-9YBBJ1",
+          "#technical-data-9YBBS1",
+          "#technical-data-9YBCP1",
+          "#technical-data-9YBCT1",
+          "#technical-data-9YBNN1",
+          "#technical-data-X1AAA1",
+          "#technical-data-X1ABB1",
+          "#technical-data-X1ACD1",
+          "#technical-data-X1BAA1",
+          "#technical-data-X1BBB1",
+          "#technical-data-X1BCD1"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p111_configure_dup4.html": [
+          "#technical-data-95BAU1",
+          "#technical-data-95BBV1",
+          "#technical-data-95BBW1",
+          "#technical-data-XABAA1",
+          "#technical-data-XABBB1",
+          "#technical-data-XABDC1",
+          "#technical-data-XABDE1",
+          "#technical-data-XABFD1"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p111_configure_dup5.html": [
+          "#technical-data-YAABE1",
+          "#technical-data-YAADG1",
+          "#technical-data-YAADZ1",
+          "#technical-data-YAAFF1",
+          "#technical-data-YAAFH1",
+          "#technical-data-YABBE1"
+        ],
+        "tests/fixtures/oem-artifacts/porsche_p111_configure_dup6.html": [
+          "#technical-data-Y1AAI1",
+          "#technical-data-Y1ABN1",
+          "#technical-data-Y1ADJ1",
+          "#technical-data-Y1ADK1",
+          "#technical-data-Y1AFL1",
+          "#technical-data-Y1AFM1",
+          "#technical-data-Y1AFP1",
+          "#technical-data-Y1AFT1",
+          "#technical-data-Y1AGI1",
+          "#technical-data-Y1AHN1",
+          "#technical-data-Y1AJJ1",
+          "#technical-data-Y1BBN1",
+          "#technical-data-Y1BDJ1",
+          "#technical-data-Y1BFL1"
+        ],
         "tests/fixtures/oem-artifacts/subaru_th_home_page.html": [
           "/th/th/promotions/sales/217/forester-special-deals/"
         ],
@@ -1882,6 +3410,9 @@
         "tests/fixtures/oem-artifacts/suzuki_p108_equipment.html": [
           "/en/model/carry/specification"
         ],
+        "tests/fixtures/oem-artifacts/suzuki_p111_specification.html": [
+          "/en/model/xl7/specification"
+        ],
         "tests/fixtures/oem-artifacts/suzuki_xl7_equipment.html": [
           "/model/xl7/specification"
         ],
@@ -1899,6 +3430,9 @@
         ],
         "tests/fixtures/oem-artifacts/toyota_p108_stores.toyota.co.th.html": [
           "https://stores.toyota.co.th/themes/shop/default/custom/css/special.css?v=1.0.6"
+        ],
+        "tests/fixtures/oem-artifacts/toyota_p111_yarisativ.html": [
+          "/model/yarisativ/specification"
         ]
       },
       "why_second": "the link targets are published by the OEM pages we already fetched, so the structure is known to exist before any request is made"
@@ -2014,13 +3548,13 @@
         "next_retry_at": null
       },
       "www.changan.co.th": {
-        "targets": 2,
+        "targets": 27,
         "registry_state": "not_in_registry",
         "blocked_or_wrong_target": false,
         "next_retry_at": null
       },
       "www.honda.co.th": {
-        "targets": 3,
+        "targets": 8,
         "registry_state": "not_in_registry",
         "blocked_or_wrong_target": false,
         "next_retry_at": null
@@ -2050,6 +3584,18 @@
         "next_retry_at": null
       },
       "www.mitsubishi-motors.co.th": {
+        "targets": 2,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
+      "en.nissan.co.th": {
+        "targets": 2,
+        "registry_state": "not_in_registry",
+        "blocked_or_wrong_target": false,
+        "next_retry_at": null
+      },
+      "www.nissan.co.th": {
         "targets": 2,
         "registry_state": "not_in_registry",
         "blocked_or_wrong_target": false,

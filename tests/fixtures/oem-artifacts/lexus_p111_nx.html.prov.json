@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/models/nx.html",
+  "captured_at": "2026-09-28T07:13:29.174250+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "7eed2caf8980e1c1e71318c97ceb2dc82961520a930450f22a1b2f146dba3895",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "lexus_p111_nx.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

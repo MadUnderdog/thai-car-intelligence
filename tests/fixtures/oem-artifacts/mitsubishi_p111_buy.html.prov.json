@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/buy",
+  "captured_at": "2026-09-28T07:14:05.537730+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "cae7b1853e1719eb30ea2d14768eb0093eece5beac4ebbe33410a1da2c189a66",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mitsubishi_p111_buy.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

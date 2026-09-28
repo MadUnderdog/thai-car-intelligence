@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/en/deal/tank-500",
+  "captured_at": "2026-09-28T07:12:59.990955+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "817ca347928092569ce16bf4b29e45c256a2fac6b227d795e7a2f0dcd66df7e1",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "gwm_p111_tank-500.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+  "captured_at": "2026-09-28T07:12:34.125960+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "5883f148ec3229f480a6e1eaba00b1c21508906e79fe1b2c6ae31c5d2554f5b3",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "bmw_p111_bmw-m2-coupe.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

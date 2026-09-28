@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/models/911/configure/",
+  "captured_at": "2026-09-28T07:14:48.678661+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "c56a28dd1059d408078d5178211c865e9ff89baa511144b80dab6b4c2967ba6a",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "porsche_p111_configure_dup2.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

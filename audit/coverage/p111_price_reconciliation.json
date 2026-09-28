@@ -1,0 +1,1994 @@
+{
+  "schema": "p111_price_reconciliation/1",
+  "generated_at": "2026-09-28T08:24:21.672346+00:00",
+  "baseline_artifact": "audit/coverage/p108_final_result.json",
+  "accepted_variants_targeted": 488,
+  "price_bound": 299,
+  "exact_msrp_verified": 269,
+  "exact_binding_not_verified_current": 1,
+  "msrp_starting_not_exact": 29,
+  "non_msrp_type_rows": 0,
+  "msrp_status_distribution": {
+    "EXACT_CURRENT_MSRP_VERIFIED": 269,
+    "EXACT_BINDING_NOT_VERIFIED_CURRENT": 1,
+    "MSRP_STARTING_NOT_EXACT": 29,
+    "NON_MSRP_TYPE": 0
+  },
+  "exact_non_msrp_only": 30,
+  "unverified_price": 189,
+  "before": {
+    "price_bound": 274,
+    "exact_msrp_verified": 246,
+    "exact_non_msrp_only": 28,
+    "unverified_price": 214,
+    "artifact": "audit/coverage/p110_price_reconciliation.json"
+  },
+  "delta_price_bound": 25,
+  "delta_exact_msrp_verified": 23,
+  "delta_unverified_price": -25,
+  "blocked_oems": [
+    "Audi",
+    "Avance",
+    "BYD",
+    "Chery",
+    "Chevrolet",
+    "Ford",
+    "Haval",
+    "Mercedes-Benz",
+    "NETA",
+    "Peugeot",
+    "Smart",
+    "Tesla",
+    "Volvo"
+  ],
+  "blocked_oem_accepted_variants": 0,
+  "blocked_or_source_gap": 189,
+  "price_type_distribution": {
+    "EXACT_VARIANT": 270,
+    "MSRP_STARTING": 29
+  },
+  "prices_invented": 0,
+  "third_party_promoted_to_msrp": 0,
+  "mg_reference_row": {
+    "status": "EXACT_BINDING_NOT_VERIFIED_CURRENT",
+    "reason": "exact price bound and preserved, but NOT a verified current MSRP: trust_tier=reference, currentness=NOT_A_CURRENTNESS_SOURCE (utility page); excluded from exact_msrp_verified and reported separately",
+    "price_thb": 771000,
+    "artifact": "mg_home_page.html",
+    "trust_tier": "reference",
+    "currentness": "NOT_A_CURRENTNESS_SOURCE",
+    "price_preserved": true
+  },
+  "identity_ledger_unchanged": {
+    "confirmed_variants": 488,
+    "artifact": "audit/coverage/p108_final_result.json"
+  },
+  "per_oem": {
+    "BMW": {
+      "accepted_variants": 73,
+      "price_bound": 67,
+      "exact_msrp_verified": 67,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 6,
+      "coverage_pct": 91.8,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 67
+      }
+    },
+    "Changan": {
+      "accepted_variants": 5,
+      "price_bound": 1,
+      "exact_msrp_verified": 1,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 4,
+      "coverage_pct": 20.0,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 1
+      }
+    },
+    "Deepal": {
+      "accepted_variants": 4,
+      "price_bound": 0,
+      "exact_msrp_verified": 0,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 4,
+      "coverage_pct": 0.0,
+      "price_type_distribution": {}
+    },
+    "GWM": {
+      "accepted_variants": 22,
+      "price_bound": 0,
+      "exact_msrp_verified": 0,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 22,
+      "coverage_pct": 0.0,
+      "price_type_distribution": {}
+    },
+    "Honda": {
+      "accepted_variants": 35,
+      "price_bound": 26,
+      "exact_msrp_verified": 25,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 1,
+      "unverified_price": 9,
+      "coverage_pct": 74.3,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 25,
+        "MSRP_STARTING": 1
+      }
+    },
+    "Isuzu": {
+      "accepted_variants": 7,
+      "price_bound": 0,
+      "exact_msrp_verified": 0,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 7,
+      "coverage_pct": 0.0,
+      "price_type_distribution": {}
+    },
+    "Jaguar": {
+      "accepted_variants": 1,
+      "price_bound": 1,
+      "exact_msrp_verified": 1,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 0,
+      "coverage_pct": 100.0,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 1
+      }
+    },
+    "Kia": {
+      "accepted_variants": 6,
+      "price_bound": 3,
+      "exact_msrp_verified": 3,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 3,
+      "coverage_pct": 50.0,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 3
+      }
+    },
+    "Land Rover": {
+      "accepted_variants": 11,
+      "price_bound": 11,
+      "exact_msrp_verified": 10,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 1,
+      "unverified_price": 0,
+      "coverage_pct": 100.0,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 10,
+        "MSRP_STARTING": 1
+      }
+    },
+    "Lexus": {
+      "accepted_variants": 38,
+      "price_bound": 27,
+      "exact_msrp_verified": 6,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 21,
+      "unverified_price": 11,
+      "coverage_pct": 71.1,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 6,
+        "MSRP_STARTING": 21
+      }
+    },
+    "MG": {
+      "accepted_variants": 8,
+      "price_bound": 1,
+      "exact_msrp_verified": 0,
+      "exact_binding_not_verified_current": 1,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 7,
+      "coverage_pct": 12.5,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 1
+      }
+    },
+    "MINI": {
+      "accepted_variants": 15,
+      "price_bound": 0,
+      "exact_msrp_verified": 0,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 15,
+      "coverage_pct": 0.0,
+      "price_type_distribution": {}
+    },
+    "Mazda": {
+      "accepted_variants": 22,
+      "price_bound": 14,
+      "exact_msrp_verified": 14,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 8,
+      "coverage_pct": 63.6,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 14
+      }
+    },
+    "Mitsubishi": {
+      "accepted_variants": 24,
+      "price_bound": 20,
+      "exact_msrp_verified": 20,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 4,
+      "coverage_pct": 83.3,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 20
+      }
+    },
+    "Nissan": {
+      "accepted_variants": 25,
+      "price_bound": 2,
+      "exact_msrp_verified": 2,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 23,
+      "coverage_pct": 8.0,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 2
+      }
+    },
+    "Porsche": {
+      "accepted_variants": 69,
+      "price_bound": 5,
+      "exact_msrp_verified": 5,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 64,
+      "coverage_pct": 7.2,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 5
+      }
+    },
+    "Subaru": {
+      "accepted_variants": 2,
+      "price_bound": 1,
+      "exact_msrp_verified": 1,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 1,
+      "coverage_pct": 50.0,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 1
+      }
+    },
+    "Suzuki": {
+      "accepted_variants": 11,
+      "price_bound": 10,
+      "exact_msrp_verified": 10,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 0,
+      "unverified_price": 1,
+      "coverage_pct": 90.9,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 10
+      }
+    },
+    "Toyota": {
+      "accepted_variants": 110,
+      "price_bound": 110,
+      "exact_msrp_verified": 104,
+      "exact_binding_not_verified_current": 0,
+      "msrp_starting_not_exact": 6,
+      "unverified_price": 0,
+      "coverage_pct": 100.0,
+      "price_type_distribution": {
+        "EXACT_VARIANT": 104,
+        "MSRP_STARTING": 6
+      }
+    }
+  },
+  "unverified": [
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "CS Touring",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M2",
+      "variant": "CS (Ceramic Brake",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M2",
+      "variant": "M Race Track Package",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M5",
+      "variant": "Ceramic Break",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M5",
+      "variant": "Touring (Ceramic Break",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Xm",
+      "variant": "50e Shadow Line",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "Max",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "NEVO Q05 MAX",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "NEVO Q05 ULTRA",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "Ultra",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal S05",
+      "variant": "Reev",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "S07",
+      "variant": "S07 L",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "GWM HAVAL H6",
+      "variant": "hev-pro",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "GWM HAVAL H6",
+      "variant": "phev-pro",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "GWM HAVAL H6",
+      "variant": "phev-ultra",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "GWM POER SAHAR HEV",
+      "variant": "pro",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "GWM POER SAHAR HEV",
+      "variant": "ultra-4wd",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 300",
+      "variant": "Diesel",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 300",
+      "variant": "PRO",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 500",
+      "variant": "Diesel",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 500",
+      "variant": "PRO",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Haval H6",
+      "variant": "ULTRA",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 300 DIESEL",
+      "variant": "2-4t-pro",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 300 DIESEL",
+      "variant": "2-4t-ultra",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 300 DIESEL",
+      "variant": "2-4t-ultra-4wd",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 300 HEV",
+      "variant": "pro",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 300 HEV",
+      "variant": "ultra",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "2wd-high",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "2wd-medium",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "4wd-high",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "black-warrior-2wd",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "black-warrior-4wd",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 HEV",
+      "variant": "pro",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 HEV",
+      "variant": "ultra",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Accord e:HEV",
+      "variant": "e:HEV E",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Accord e:HEV",
+      "variant": "e:HEV EL",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Accord e:HEV",
+      "variant": "e:HEV RS",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CR-V e:HEV",
+      "variant": "e:HEV HuNT - Crystal Black Pearl",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CR-V e:HEV",
+      "variant": "e:HEV HuNT - Meteoroid Gray Metallic",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Civic e:HEV",
+      "variant": "e:HEV EL",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Civic e:HEV",
+      "variant": "e:HEV RS",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "HR-V e:HEV",
+      "variant": "e:HEV HuNT-Black",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "HR-V e:HEV",
+      "variant": "e:HEV HuNT-White",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "2 Doors",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "4 Doors",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "L",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "captured file has no readable text layer (image-only pdf or unreadable encoding)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "Spark",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "V Cross",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "X Series",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "MU-X",
+      "variant": "Active",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "captured file has no readable text layer (image-only pdf or unreadable encoding)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "The Kia EV5",
+      "variant": "The Kia EV5 Air",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "The Kia EV5",
+      "variant": "The Kia EV5 Earth Exclusive AWD",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "The Kia EV5",
+      "variant": "The Kia EV5 Earth Long Range",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "LM",
+      "variant": "LM 350h 4-Seater",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "LM",
+      "variant": "LM 350h 7-Seater",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "LM",
+      "variant": "LM 500h 4-Seater",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "LM",
+      "variant": "LM 500h 6-Seater",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350H",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450h+ F Sport AWD",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "NX",
+      "variant": "NX 450h+ F SPORT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "RX",
+      "variant": "RX 500h F SPORT Performance",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Urban",
+      "variant": "MAX",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Urban",
+      "variant": "ULTRA",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg3 Hybrid",
+      "variant": "+ D",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg3 Hybrid",
+      "variant": "+ X",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "D+",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "V+",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "X+",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI ACEMAN",
+      "variant": "ALL-ELECTRIC MINI ACEMAN SE",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI ACEMAN",
+      "variant": "ALL-ELECTRIC MINI ACEMAN SE - CLASSIC",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI ACEMAN",
+      "variant": "ALL-ELECTRIC MINI ACEMAN SE - HIGHTRIM",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI CONVERTIBLE",
+      "variant": "MINI COOPER CONVERTIBLE S",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI COOPER",
+      "variant": "ALL-ELECTRIC MINI COOPER PAUL SMITH EDITION",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI COOPER",
+      "variant": "ALL-ELECTRIC MINI COOPER SE - CLASSIC",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI COOPER",
+      "variant": "ALL-ELECTRIC MINI COOPER SE - HIGHTRIM",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI COUNTRYMAN",
+      "variant": "MINI COUNTRYMAN S ALL4 - HIGHTRIM",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI JOHN COOPER WORKS",
+      "variant": "ALL-ELECTRIC MINI JCW",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI JOHN COOPER WORKS",
+      "variant": "ALL-ELECTRIC MINI JCW - 1965 VICTORY EDITION",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI JOHN COOPER WORKS",
+      "variant": "ALL-ELECTRIC MINI JCW ACEMAN",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI JOHN COOPER WORKS",
+      "variant": "MINI JCW",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI JOHN COOPER WORKS",
+      "variant": "MINI JCW CONVERTIBLE",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "Mini John Cooper Works",
+      "variant": "ALL-ELECTRIC MINI JOHN COOPER WORKS",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "Mini John Cooper Works",
+      "variant": "ALL-ELECTRIC MINI JOHN COOPER WORKS ACEMAN",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 C",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 S",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 SP",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "CARBON EDITION",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 2.2 XT HI-RACER 8AT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 3.0 XTR 4x4 6AT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 3.0 XTR HI-RACER 6AT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "FSC 2.2 XS HI-RACER 6MT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "มิราจ",
+      "variant": "ACTIVE",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "มิราจ",
+      "variant": "SMART",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Nissan Almera",
+      "variant": "E",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the cited artifact is not in the fixture set (dropped during an earlier acquisition wave)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Nissan Almera",
+      "variant": "EL",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the cited artifact is not in the fixture set (dropped during an earlier acquisition wave)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+      "variant": "e-POWER SV *** / ****",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+      "variant": "e-POWER V *",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+      "variant": "e-POWER VL **",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+      "variant": "DC PRO-2X 7AT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+      "variant": "DC PRO-4X 7AT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "DC Calibre E 7AT Black Edition",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "DC Calibre SL 6MT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "DC Calibre SL 7AT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "KC Calibre E 6MT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "KC Calibre E 7AT Black Edition",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "KC Calibre SL 7AT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คิงแค็บ ใหม่",
+      "variant": "KC SL 6MT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+      "variant": "SC SL 6MT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+      "variant": "SC SL 6MT 4WD",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน อัลเมร่า",
+      "variant": "1.0L TURBO E CVT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน อัลเมร่า",
+      "variant": "1.0L TURBO EL CVT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน อัลเมร่า",
+      "variant": "1.0L TURBO V CVT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน อัลเมร่า",
+      "variant": "1.0L TURBO VL CVT * / **",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+      "variant": "Highway Star",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน เซเรน่า ใหม่",
+      "variant": "Highway Star",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่",
+      "variant": "e-POWER *",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Cayman",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Cayman Style Edition",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Spyder RS",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4 GTS",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4 GTS Cabriolet",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4S",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4S Cabriolet",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera Cabriolet",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera GTS",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera GTS Cabriolet",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera S",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera S Cabriolet",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera T",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera T Cabriolet",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 GT3",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 GT3 S/C",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 GT3 with Touring Package",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Spirit 70",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Targa 4 GTS",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Targa 4S",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Turbo S",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Turbo S Cabriolet",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Coupé",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Coupé Electric",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne E-Hybrid",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne E-Hybrid Coupé",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Electric",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne GTS",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne GTS Coupé",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S Coupé",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S Coupé Electric",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S E-Hybrid Coupé",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S Electric",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo Coupé Electric",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo E-Hybrid",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo E-Hybrid Coupé",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo Electric",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo GT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Macan",
+      "variant": "Macan 4 Electric",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Macan",
+      "variant": "Macan 4S Electric",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Macan",
+      "variant": "Macan Electric",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Macan",
+      "variant": "Macan S",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Macan",
+      "variant": "Macan Turbo Electric",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera 4 E-Hybrid",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera 4 E-Hybrid Executive",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera 4S E-Hybrid",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera GTS",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera Turbo E-Hybrid",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera Turbo S E-Hybrid",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4 Black Edition",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4 Cross Turismo",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4S",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4S Black Edition",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4S Cross Turismo",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Black Edition",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan GTS",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo Cross Turismo",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo GT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo GT with Weissach Package",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo S",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "no captured first-party record publishes this exact grade label next to a price (label wording differs, or the grade is not priced on any captured page)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "BRZ",
+      "variant": "BRZ AT",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "XL7 HYBRID",
+      "variant": "GLX",
+      "scope": "TH",
+      "status": "UNVERIFIED_PRICE",
+      "category": "the exact grade is published on a captured first-party page but that record does not carry a price (model-level or range price only, never promoted to a grade price)",
+      "reason": "no price is bound to the same record as this exact grade in any captured first-party artifact (model-level, range or third-party prices are never promoted to a grade MSRP)"
+    }
+  ]
+}

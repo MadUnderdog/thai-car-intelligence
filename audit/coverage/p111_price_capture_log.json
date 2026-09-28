@@ -1,0 +1,1477 @@
+{
+  "artifact": "p111_price_capture_log/1",
+  "generated_at": "2026-09-28T07:12:33.177475+00:00",
+  "session_id": "p111_price_sources_20260928",
+  "new_captures": 127,
+  "results": [
+    {
+      "brand": "BMW",
+      "url": "http://www.bmw.co.th/th/all-models/m-series/m2-coupe.html",
+      "final_url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "other",
+      "filename": "bmw_p111_bmw-m2-coupe.html",
+      "ok": true,
+      "sha256": "5883f148ec3229f480a6e1eaba00b1c21508906e79fe1b2c6ae31c5d2554f5b3",
+      "bytes": 666798
+    },
+    {
+      "brand": "BMW",
+      "url": "http://www.bmw.co.th/th/all-models/m-series/m2-coupe/2015.html",
+      "final_url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "other",
+      "filename": "bmw_p111_bmw-m2-coupe_dup2.html",
+      "ok": true,
+      "sha256": "552cc3a8076fdf6a5c6a9f9b70d51d7a3b2d8f0e50ad28bcf480fc545cc12c23",
+      "bytes": 666798
+    },
+    {
+      "brand": "BMW",
+      "url": "http://www.bmw.co.th/th/all-models/m-series/m2-coupe/2015/at-a-glance.html",
+      "final_url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "other",
+      "filename": "bmw_p111_bmw-m2-coupe_dup3.html",
+      "ok": true,
+      "sha256": "21f59080e41cd9e66ecf401499f5c61f6627c4d329d9fba0e20fc6b9051a1836",
+      "bytes": 666798
+    },
+    {
+      "brand": "BMW",
+      "url": "http://www.bmw.co.th/th/all-models/m-series/m2-coupe/2015/driver-assistance.html",
+      "final_url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "other",
+      "filename": "bmw_p111_bmw-m2-coupe_dup4.html",
+      "ok": true,
+      "sha256": "4d4be1cfdbd97cb4b63f7ea9557675eb3c5124d8541b769a549c583e065ab3af",
+      "bytes": 666798
+    },
+    {
+      "brand": "BMW",
+      "url": "http://www.bmw.co.th/th/all-models/m-series/m2-coupe/2015/driving-dynamics-efficiency.html",
+      "final_url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "other",
+      "filename": "bmw_p111_bmw-m2-coupe_dup5.html",
+      "ok": true,
+      "sha256": "a65863e7cd8c0f8b6d90004fbaf0fe736804e9c0d3b1007fcf3444042232c567",
+      "bytes": 666798
+    },
+    {
+      "brand": "BMW",
+      "url": "http://www.bmw.co.th/th/all-models/m-series/m2-coupe/2015/engines.html",
+      "final_url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "other",
+      "filename": "bmw_p111_bmw-m2-coupe_dup6.html",
+      "ok": true,
+      "sha256": "9bdbd2c58afddb8889086a7d3cb0f99c8562d4046105f1e4992c8e39a6818169",
+      "bytes": 666798
+    },
+    {
+      "brand": "BMW",
+      "url": "http://www.bmw.co.th/th/all-models/m-series/m2-coupe/2015/m-power-world.html",
+      "final_url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "other",
+      "filename": "bmw_p111_bmw-m2-coupe_dup7.html",
+      "ok": true,
+      "sha256": "5df0927738fb465e33a09bb29d0bdbab53d5ff689aee08ec7d5d078a0de1c1c1",
+      "bytes": 666798
+    },
+    {
+      "brand": "BMW",
+      "url": "http://www.bmw.co.th/th/all-models/m-series/m2-coupe/2015/safety-comfort.html",
+      "final_url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "other",
+      "filename": "bmw_p111_bmw-m2-coupe_dup8.html",
+      "ok": true,
+      "sha256": "1d2ac7d5bddab3af44b077bbe480d8b1074e8aa662114c65bcde0e6df2ff8b16",
+      "bytes": 666799
+    },
+    {
+      "brand": "BMW",
+      "url": "http://www.bmw.co.th/th/all-models/m-series/m2-coupe/2015/technical-data.html",
+      "final_url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "other",
+      "filename": "bmw_p111_bmw-m2-coupe_dup9.html",
+      "ok": true,
+      "sha256": "e1cf38365b1932eb7a6a35354efb64219f38373b88fcd2cfceeb0458bd4f9ee7",
+      "bytes": 666798
+    },
+    {
+      "brand": "BMW",
+      "url": "http://www.bmw.co.th/th/ssl/configurator.html",
+      "final_url": "https://www.bmw.co.th/th/configurator.html",
+      "source_family": "configurator",
+      "filename": "bmw_p111_configurator.html",
+      "ok": true,
+      "sha256": "8e9dc7526e25d9c05a3a045e930cffc1705478970240909aad29dfa1c68c9d3c",
+      "bytes": 649801
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/deepal/e07-peformance-awd-en",
+      "final_url": "https://www.changan.co.th/en/deepal/e07-peformance-awd-en/",
+      "source_family": "other",
+      "filename": "deepal_p111_e07-peformance-awd-en.html",
+      "ok": true,
+      "sha256": "c28038c60ab9c3127493eadc47fd4b87c71ffc71302854e95cfdf1a8c5ad1b09",
+      "bytes": 5371827
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/deepal/e07-peformance-awd-en/specification/",
+      "final_url": "https://www.changan.co.th/en/deepal/e07-peformance-awd-en/specification/",
+      "source_family": "model_page",
+      "filename": "deepal_p111_specification.html",
+      "ok": true,
+      "sha256": "e4d09aedef5340bdc3c78f8bdc7721dc0856523c8a502f414bfab0edd683db18",
+      "bytes": 5301084
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/deepal/e07-plus-en/specification/",
+      "final_url": "https://www.changan.co.th/en/deepal/e07-plus-en/specification/",
+      "source_family": "model_page",
+      "filename": "deepal_p111_specification_dup2.html",
+      "ok": true,
+      "sha256": "79b3092c129b27a6b30a68992b79f2860aa1fd492fdf03c315533de378472789",
+      "bytes": 5289160
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/deepal/hunter-k50-en/specification/",
+      "final_url": "https://www.changan.co.th/en/deepal/hunter-k50-en/specification/",
+      "source_family": "model_page",
+      "filename": "deepal_p111_specification_dup3.html",
+      "ok": true,
+      "sha256": "ba709a26f16458d9a950c44a0d2313d8bf4b3232a903423fad43532409edba66",
+      "bytes": 527009
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/deepal/s05-en/specification/",
+      "final_url": "https://www.changan.co.th/en/deepal/s05-en/specification/",
+      "source_family": "model_page",
+      "filename": "deepal_p111_specification_dup4.html",
+      "ok": true,
+      "sha256": "641674c753657ef24ed08666bf5370e3eea2b4c8d41b4251ca43875842436ae0",
+      "bytes": 1586029
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/deepal/s05-reev-en/specification/",
+      "final_url": "https://www.changan.co.th/en/deepal/s05-reev-en/specification/",
+      "source_family": "model_page",
+      "filename": "deepal_p111_specification_dup5.html",
+      "ok": true,
+      "sha256": "2bfd14aafda83c1d2c2a7cc93b861b118bc730b81aacd245b506840796db3653",
+      "bytes": 1449900
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/deepal/s07-en/specification/",
+      "final_url": "https://www.changan.co.th/en/deepal/s07-en/specification/",
+      "source_family": "model_page",
+      "filename": "deepal_p111_specification_dup6.html",
+      "ok": true,
+      "sha256": "e740382b751ffabe5977d2effe455bf0987c2bfa02d229543bf7430d33e4a65d",
+      "bytes": 470851
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/page/deepal-e07-new-car-model",
+      "final_url": "https://www.changan.co.th/en/page/deepal-e07-new-car-model/",
+      "source_family": "other",
+      "filename": "deepal_p111_deepal-e07-new-car-model.html",
+      "ok": true,
+      "sha256": "bf2b82a7ecd02fb8c6c46a050c24af1ce6ac8885ef273e6f59cd464550fc0b34",
+      "bytes": 151909
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/page/motor-expo-2024-deepal",
+      "final_url": "https://www.changan.co.th/en/page/motor-expo-2024-deepal/",
+      "source_family": "other",
+      "filename": "deepal_p111_motor-expo-2024-deepal.html",
+      "ok": true,
+      "sha256": "39c7936f9915990ad18a241880e95a5420f9d43f00d6dc02026edbebd480cd6b",
+      "bytes": 231502
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/page/s07-MTS-025",
+      "final_url": "https://www.changan.co.th/en/page/s07-MTS-025/",
+      "source_family": "other",
+      "filename": "deepal_p111_s07-MTS-025.html",
+      "ok": true,
+      "sha256": "b8714c0e2f7c4f5f2aa048bfc22be15696e0d0aa9ef440264794e8c1223b25d1",
+      "bytes": 229203
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/en/page/unlocked-your-lifestyle-suv-deepal-S07-deepal-L07",
+      "final_url": "https://www.changan.co.th/en/page/unlocked-your-lifestyle-suv-deepal-S07-deepal-L07/",
+      "source_family": "other",
+      "filename": "deepal_p111_unlocked-your-lifestyle-suv-deepal-S07-deepal-L07.html",
+      "ok": true,
+      "sha256": "4d2ccc55b39af29a322ca018c8fce9e905b536896d88b5f51fe0db2fcc2e5488",
+      "bytes": 133489
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/th/deepal-green-planet",
+      "final_url": "https://www.changan.co.th/th/deepal-green-planet/",
+      "source_family": "other",
+      "filename": "deepal_p111_deepal-green-planet.html",
+      "ok": true,
+      "sha256": "397f3e8a5477da3896b889f94fc12a074e4830b2006ff2b22b48ae7040c88d9d",
+      "bytes": 143513
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/th/deepal/e07-performance-awd/specification/",
+      "final_url": "https://www.changan.co.th/th/deepal/e07-performance-awd/specification/",
+      "source_family": "model_page",
+      "filename": "deepal_p111_specification_dup7.html",
+      "ok": true,
+      "sha256": "df58f7c9aa38640892ffb2dca4b4d121f9cae374eefd950128185c5a1fc6644c",
+      "bytes": 5245143
+    },
+    {
+      "brand": "Deepal",
+      "url": "https://www.changan.co.th/th/deepal/e07-plus-th/specification/",
+      "final_url": "https://www.changan.co.th/th/deepal/e07-plus-th/specification/",
+      "source_family": "model_page",
+      "filename": "deepal_p111_specification_dup8.html",
+      "ok": true,
+      "sha256": "9997c08cf4ef22c96b0663a31e74c603d5e18401d6e897a3715e55cdf279b511",
+      "bytes": 5228425
+    },
+    {
+      "brand": "GWM",
+      "url": "https://www.gwm.co.th/en/deal/tank-300-diesel",
+      "final_url": "https://www.gwm.co.th/en/deal/tank-300-diesel",
+      "source_family": "grade_table",
+      "filename": "gwm_p111_tank-300-diesel.html",
+      "ok": true,
+      "sha256": "42e77e8f48af08555bd9e8e0f5df048a1e464e4348574815b2a39f24f1e8af8c",
+      "bytes": 130791
+    },
+    {
+      "brand": "GWM",
+      "url": "https://www.gwm.co.th/en/deal/tank-300-limited-lb",
+      "final_url": "https://www.gwm.co.th/en/deal/tank-300-limited-lb",
+      "source_family": "grade_table",
+      "filename": "gwm_p111_tank-300-limited-lb.html",
+      "ok": true,
+      "sha256": "fbc45e8b7a10089f453685ae9f31f195b9111b0d589ef04762a07b3f8306f6bd",
+      "bytes": 131582
+    },
+    {
+      "brand": "GWM",
+      "url": "https://www.gwm.co.th/en/deal/tank-500",
+      "final_url": "https://www.gwm.co.th/en/deal/tank-500",
+      "source_family": "grade_table",
+      "filename": "gwm_p111_tank-500.html",
+      "ok": true,
+      "sha256": "817ca347928092569ce16bf4b29e45c256a2fac6b227d795e7a2f0dcd66df7e1",
+      "bytes": 126111
+    },
+    {
+      "brand": "GWM",
+      "url": "https://www.gwm.co.th/en/deal/tank-500-3t-diesel",
+      "final_url": "https://www.gwm.co.th/en/deal/tank-500-3t-diesel",
+      "source_family": "grade_table",
+      "filename": "gwm_p111_tank-500-3t-diesel.html",
+      "ok": true,
+      "sha256": "353a0e8030abdda4de8ff49d1682b404bab0104dec65abd901488f69c07ca58c",
+      "bytes": 124613
+    },
+    {
+      "brand": "GWM",
+      "url": "https://www.gwm.co.th/en/deal/tank-500-diesel",
+      "final_url": "https://www.gwm.co.th/en/deal/tank-500-diesel",
+      "source_family": "grade_table",
+      "filename": "gwm_p111_tank-500-diesel.html",
+      "ok": true,
+      "sha256": "09f3d792aff999051206120d08bff2543eae6ad56d25d6f9a86c2ecc52e240c3",
+      "bytes": 130520
+    },
+    {
+      "brand": "GWM",
+      "url": "https://www.gwm.co.th/en/deal/wey-g9",
+      "final_url": "https://www.gwm.co.th/en/deal/wey-g9",
+      "source_family": "grade_table",
+      "filename": "gwm_p111_wey-g9.html",
+      "ok": true,
+      "sha256": "ccfd81689592604804b2848f61f356031371ff6a41a28ef4a1ebc5dbfce2bc19",
+      "bytes": 128061
+    },
+    {
+      "brand": "Honda",
+      "url": "https://www.honda.co.th/en/brv",
+      "final_url": "https://www.honda.co.th/en/brv",
+      "source_family": "other",
+      "filename": "honda_p111_brv.html",
+      "ok": true,
+      "sha256": "5eeda3d584df95294be2068b15b964a37e6905854d2da3a1309a6e3f867e9e9d",
+      "bytes": 211309
+    },
+    {
+      "brand": "Honda",
+      "url": "https://www.honda.co.th/en/cityhatchback",
+      "final_url": "https://www.honda.co.th/en/cityhatchback",
+      "source_family": "other",
+      "filename": "honda_p111_cityhatchback.html",
+      "ok": true,
+      "sha256": "1a8d6a6a7fbeb9f289a4230a6c434fe8070a39a0843a55e5dfb01dcb3629f7df",
+      "bytes": 229823
+    },
+    {
+      "brand": "Honda",
+      "url": "https://www.honda.co.th/en/crv",
+      "final_url": "https://www.honda.co.th/en/crv",
+      "source_family": "other",
+      "filename": "honda_p111_crv.html",
+      "ok": true,
+      "sha256": "cab5b81b2e73d4ba232cfa5eff24207b615c1b6ea62c2a762c49f002ed386497",
+      "bytes": 278167
+    },
+    {
+      "brand": "Honda",
+      "url": "https://www.honda.co.th/en/hrvehev",
+      "final_url": "https://www.honda.co.th/en/hrvehev",
+      "source_family": "other",
+      "filename": "honda_p111_hrvehev.html",
+      "ok": true,
+      "sha256": "6d560011db787c7fd9e1be74ab9ec767158f0ecf97a8ee1f1b0fc7bbd69c7975",
+      "bytes": 272464
+    },
+    {
+      "brand": "Honda",
+      "url": "https://www.honda.co.th/en/stepwgnehev",
+      "final_url": "https://www.honda.co.th/en/stepwgnehev",
+      "source_family": "other",
+      "filename": "honda_p111_stepwgnehev.html",
+      "ok": true,
+      "sha256": "90ebbd6c877c9656d9168e413c1ce1b1871b614a1ba5a1cbcb4d94940cc860ef",
+      "bytes": 217762
+    },
+    {
+      "brand": "Honda",
+      "url": "https://www.honda.co.th/en/wrv",
+      "final_url": "https://www.honda.co.th/en/wrv",
+      "source_family": "other",
+      "filename": "honda_p111_wrv.html",
+      "ok": true,
+      "sha256": "d089f2790d348540b4fd9a002f7644ea0bb446bd2843a30f51aec32194545333",
+      "bytes": 227260
+    },
+    {
+      "brand": "Isuzu",
+      "url": "https://www.isuzu-tis.com/isuzu-d-max-ev",
+      "final_url": "https://www.isuzu-tis.com/isuzu-d-max-ev",
+      "source_family": "other",
+      "filename": "isuzu_p111_isuzu-d-max-ev.html",
+      "ok": true,
+      "sha256": "318782683ce71a2338e4851248d7c2495ee16ac9b044d7dba4cc5ae04b9760ce",
+      "bytes": 207086
+    },
+    {
+      "brand": "Isuzu",
+      "url": "https://www.isuzu-tis.com/isuzu-mu-x",
+      "final_url": "https://www.isuzu-tis.com/isuzu-mu-x",
+      "source_family": "other",
+      "filename": "isuzu_p111_isuzu-mu-x.html",
+      "ok": true,
+      "sha256": "e029e74faa50c330c0f830cee2b0ca9807afcb95588cd742bf6a58e156df2e68",
+      "bytes": 749048
+    },
+    {
+      "brand": "Isuzu",
+      "url": "https://www.isuzu-tis.com/isuzu-mu-x/ultimate",
+      "final_url": "https://www.isuzu-tis.com/isuzu-mu-x/ultimate",
+      "source_family": "other",
+      "filename": "isuzu_p111_ultimate.html",
+      "ok": true,
+      "sha256": "0cfc7c399e1041f5abdba87a5da4a9e3c24592efc0f9346b2d11cfb31eae502b",
+      "bytes": 745642
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/content/dam/kwcms/th/th/images/discover-kia/Article/2025-Article/092925-ev5-technology-for-every-generation/SEP_Article_EV5_940x600_2.jpg",
+      "final_url": "https://www.kia.com/content/dam/kwcms/th/th/images/discover-kia/Article/2025-Article/092925-ev5-technology-for-every-generation/SEP_Article_EV5_940x600_2.jpg",
+      "source_family": "other",
+      "filename": "kia_p111_SEP_Article_EV5_940x600_2.jpg.html",
+      "ok": true,
+      "sha256": "3420a9d2a3daf8c1b419090dcc98e0e979a961cb395d854f8fe0db65e21aca79",
+      "bytes": 64123
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/content/dam/kwcms/th/th/images/discover-kia/Article/EV5/202508_EV5_NEWUPDATEPIP_940x720.jpg",
+      "final_url": "https://www.kia.com/content/dam/kwcms/th/th/images/discover-kia/Article/EV5/202508_EV5_NEWUPDATEPIP_940x720.jpg",
+      "source_family": "other",
+      "filename": "kia_p111_202508_EV5_NEWUPDATEPIP_940x720.jpg.html",
+      "ok": true,
+      "sha256": "b7fbd97d78454c63f3e03ee5254eabd11c53a08eb6bb48a2e06305efd6e7258a",
+      "bytes": 53401
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/content/dam/kwcms/th/th/images/showroom/PIPUPDATE/EV5/EV5_ANCAP_900x600.jpg",
+      "final_url": "https://www.kia.com/content/dam/kwcms/th/th/images/showroom/PIPUPDATE/EV5/EV5_ANCAP_900x600.jpg",
+      "source_family": "model_page",
+      "filename": "kia_p111_EV5_ANCAP_900x600.jpg.html",
+      "ok": true,
+      "sha256": "8ad0a3274ebdcff1f2556caa0a93b8cbfd7ff49c6ea37c62deea1488a476e234",
+      "bytes": 101902
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/content/dam/kwcms/th/th/images/showroom/ev5/Jeff-psd-1000x1000.jpg",
+      "final_url": "https://www.kia.com/content/dam/kwcms/th/th/images/showroom/ev5/Jeff-psd-1000x1000.jpg",
+      "source_family": "model_page",
+      "filename": "kia_p111_Jeff-psd-1000x1000.jpg.html",
+      "ok": true,
+      "sha256": "7f4a3b6ae13645e7898031a8a2b4b861315190428da34edc0d12c2d1b044759a",
+      "bytes": 82212
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/en/buy.html",
+      "final_url": "https://buyonline.kia.com/th?lang=en",
+      "source_family": "other",
+      "filename": "kia_p111_th.html",
+      "ok": true,
+      "sha256": "5352317840f944def408c904d4f4228dabf5e049aa4ed6192712603c74e9dc52",
+      "bytes": 85638
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/en/shopping-tools/request-a-brochure.html",
+      "final_url": "https://www.kia.com/th/en/shopping-tools/request-a-brochure.html",
+      "source_family": "grade_table",
+      "filename": "kia_p111_request-a-brochure.html",
+      "ok": true,
+      "sha256": "2bf61b64ba6332ab55b2674f14d3b14b54d8d3f46ebe7f1407e71d6b7e4ab715",
+      "bytes": 104085
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/th/buy.html",
+      "final_url": "https://buyonline.kia.com/th?lang=th",
+      "source_family": "other",
+      "filename": "kia_p111_th_dup2.html",
+      "ok": true,
+      "sha256": "c356e062f09e38c0ea8f1e3ee8b041ce07747e72e40d75ce3c65249cbfcb9f46",
+      "bytes": 85638
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/th/shopping-tools/price-list/carnival-hev.html",
+      "final_url": "https://www.kia.com/th/th/shopping-tools/price-list/carnival.html",
+      "source_family": "price_document",
+      "filename": "kia_p111_carnival.html",
+      "ok": true,
+      "sha256": "fa29b0c21ddd538f298310e3b6bf0c8d61a7525bf26e5e50a0bb69304494465a",
+      "bytes": 52190
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/th/shopping-tools/price-list/ev5.html",
+      "final_url": "https://www.kia.com/th/th/shopping-tools/price-list/ev5.html",
+      "source_family": "price_document",
+      "filename": "kia_p111_ev5.html",
+      "ok": true,
+      "sha256": "572338b14f99524ce66e0a12b9a24e44a699abc677160e4d99bfc459c65165f2",
+      "bytes": 52109
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/th/shopping-tools/price-list/ev9.html",
+      "final_url": "https://www.kia.com/th/th/shopping-tools/price-list/ev9.html",
+      "source_family": "price_document",
+      "filename": "kia_p111_ev9.html",
+      "ok": true,
+      "sha256": "19f4903cbe1c46b35712231ed3d84c9e077d985debaa4c3f01fd3028f24f279e",
+      "bytes": 46074
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/th/shopping-tools/price-list/sorento-phev.html",
+      "final_url": "https://www.kia.com/th/th/shopping-tools/price-list/sorento-phev.html",
+      "source_family": "price_document",
+      "filename": "kia_p111_sorento-phev.html",
+      "ok": true,
+      "sha256": "08ab658e5627400c14e0ff10201f1a21066a99623dbf28af528173211f9261c6",
+      "bytes": 46228
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/th/th/shopping-tools/request-a-brochure.html",
+      "final_url": "https://www.kia.com/th/th/shopping-tools/request-a-brochure.html",
+      "source_family": "grade_table",
+      "filename": "kia_p111_request-a-brochure_dup2.html",
+      "ok": true,
+      "sha256": "154212afd1e9534eb3f9c74b115e0f7e5a872078b0a115b0a49c6c14eb9b46d8",
+      "bytes": 103891
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/discover-lexus/press-room/lexus-unveils-the-new-nx-in-a-world-premiere.html",
+      "final_url": "https://www.lexus.co.th/en/discover-lexus/press-room/lexus-unveils-the-new-nx-in-a-world-premiere.html",
+      "source_family": "other",
+      "filename": "lexus_p111_lexus-unveils-the-new-nx-in-a-world-premiere.html",
+      "ok": true,
+      "sha256": "7e0bcad2f1297091ad2fb05b247cfdd0707f284f5cffab6c25f41ff3bd9dc11f",
+      "bytes": 409580
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/discover-lexus/press-room/world-premiere-of-the-all-new-lexus-lm.html",
+      "final_url": "https://www.lexus.co.th/en/discover-lexus/press-room/world-premiere-of-the-all-new-lexus-lm.html",
+      "source_family": "other",
+      "filename": "lexus_p111_world-premiere-of-the-all-new-lexus-lm.html",
+      "ok": true,
+      "sha256": "18cdd96facbfeeaac7d2e5935de22dc1bee68b93af6410dee104dbf475a52c0c",
+      "bytes": 410238
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/discover-lexus/press-room/world-premiere-of-the-all-new-lexus-rx.html",
+      "final_url": "https://www.lexus.co.th/en/discover-lexus/press-room/world-premiere-of-the-all-new-lexus-rx.html",
+      "source_family": "other",
+      "filename": "lexus_p111_world-premiere-of-the-all-new-lexus-rx.html",
+      "ok": true,
+      "sha256": "dfb78656d830db41ba4fd43e06bf42ac7715dc046effabc89f98c9cc1c62340a",
+      "bytes": 410143
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/discover-lexus/we-are-lexus-rx.html",
+      "final_url": "https://www.lexus.co.th/en/discover-lexus/we-are-lexus-rx.html",
+      "source_family": "other",
+      "filename": "lexus_p111_we-are-lexus-rx.html",
+      "ok": true,
+      "sha256": "348fbdd4016bb7d7b371330da70ebf6d194accb1eedd9f8b2b594eba4cdb9f8c",
+      "bytes": 399105
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/models/lm.html",
+      "final_url": "https://www.lexus.co.th/en/models/lm.html",
+      "source_family": "model_page",
+      "filename": "lexus_p111_lm.html",
+      "ok": true,
+      "sha256": "1b50b2857e5bfe9f15697995989d9e94109c96e5dc4b5b32f2ee0e095e9d0ac2",
+      "bytes": 405490
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/models/lm/lm-350h-4-seater.html",
+      "final_url": "https://www.lexus.co.th/en/models/lm/lm-350h-4-seater.html",
+      "source_family": "model_page",
+      "filename": "lexus_p111_lm-350h-4-seater.html",
+      "ok": true,
+      "sha256": "413c809ff721bbc0e46ec816b30c92e53b4263c3f151941862e734181b9ed6c6",
+      "bytes": 480982
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/models/lm/lm-350h-7-seater.html",
+      "final_url": "https://www.lexus.co.th/en/models/lm/lm-350h-7-seater.html",
+      "source_family": "model_page",
+      "filename": "lexus_p111_lm-350h-7-seater.html",
+      "ok": true,
+      "sha256": "0abf8df1d185d0adcdbe5ead8a508609b4d9b286a8231e5acc2c4a576e75f85e",
+      "bytes": 480357
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/models/lm/lm-500h-4-seater.html",
+      "final_url": "https://www.lexus.co.th/en/models/lm/lm-500h-4-seater.html",
+      "source_family": "model_page",
+      "filename": "lexus_p111_lm-500h-4-seater.html",
+      "ok": true,
+      "sha256": "f13b9904b12e75a02e161e0e3480dd800d9a5b59e316d89f21d3e261c4e4e0a9",
+      "bytes": 485509
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/models/lm/lm-500h-6-seater.html",
+      "final_url": "https://www.lexus.co.th/en/models/lm/lm-500h-6-seater.html",
+      "source_family": "model_page",
+      "filename": "lexus_p111_lm-500h-6-seater.html",
+      "ok": true,
+      "sha256": "f405866c049d7793773229c33946792919c9e544ff41c7035aa39a11207506c5",
+      "bytes": 484826
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/models/lx.html",
+      "final_url": "https://www.lexus.co.th/en/models/lx.html",
+      "source_family": "model_page",
+      "filename": "lexus_p111_lx.html",
+      "ok": true,
+      "sha256": "e4e7161a790a75fc9f1aaf1a6de41abd794da89c9050233238c3d0900a04705d",
+      "bytes": 405993
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/models/lx/lx-500d-fsport.html",
+      "final_url": "https://www.lexus.co.th/en/models/lx/lx-500d-fsport.html",
+      "source_family": "model_page",
+      "filename": "lexus_p111_lx-500d-fsport.html",
+      "ok": true,
+      "sha256": "52139ec4b51d6a4a2fcf54a0b9afacda42f742a2d08149ff901466e59e0cce37",
+      "bytes": 490840
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/models/lx/lx-500d-premier.html",
+      "final_url": "https://www.lexus.co.th/en/models/lx/lx-500d-premier.html",
+      "source_family": "model_page",
+      "filename": "lexus_p111_lx-500d-premier.html",
+      "ok": true,
+      "sha256": "6a682b901fb23d5bbd804d90c19a3358f9a4b6eeb0199e530b11e23dde362eee",
+      "bytes": 472359
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/models/nx.html",
+      "final_url": "https://www.lexus.co.th/en/models/nx.html",
+      "source_family": "model_page",
+      "filename": "lexus_p111_nx.html",
+      "ok": true,
+      "sha256": "7eed2caf8980e1c1e71318c97ceb2dc82961520a930450f22a1b2f146dba3895",
+      "bytes": 408814
+    },
+    {
+      "brand": "Lexus",
+      "url": "https://www.lexus.co.th/en/models/nx/nx-350h-grand-luxury.html",
+      "final_url": "https://www.lexus.co.th/en/models/nx/nx-350h-grand-luxury.html",
+      "source_family": "model_page",
+      "filename": "lexus_p111_nx-350h-grand-luxury.html",
+      "ok": true,
+      "sha256": "0697121ab8c6a3f99ed636c77ca54e5d0adeeb49d684608ede0b28bd86441a2f",
+      "bytes": 468868
+    },
+    {
+      "brand": "MG",
+      "url": "https://www.mgcars.com/th/cars/mg5",
+      "final_url": "https://www.mgcars.com/th/cars/mg5",
+      "source_family": "model_page",
+      "filename": "mg_p111_mg5.html",
+      "ok": true,
+      "sha256": "aa937a1b4052be254011d97b232add4beb4c0fde7f097bbac74136628849249b",
+      "bytes": 1444249
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/explore/concept-cars/aceman-concept.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/explore/concept-cars/aceman-concept.html",
+      "source_family": "other",
+      "filename": "mini_p111_aceman-concept.html",
+      "ok": true,
+      "sha256": "7b0f2de81e365b7b0be20d13233898de99adade020f547d7cbdd1da723bd52c8",
+      "bytes": 280742
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/explore/concept-cars/mini-john-cooper-works-concept.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/explore/concept-cars/mini-john-cooper-works-concept.html",
+      "source_family": "other",
+      "filename": "mini_p111_mini-john-cooper-works-concept.html",
+      "ok": true,
+      "sha256": "78caf21f0dc27cd12f583aff7f3e5a8d80975339d7fa578b350bd033b17f2e6a",
+      "bytes": 185689
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/home-stageteaser/MINI-JCW-GP-Inspired.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/home-stageteaser/MINI-JCW-GP-Inspired.html",
+      "source_family": "other",
+      "filename": "mini_p111_MINI-JCW-GP-Inspired.html",
+      "ok": true,
+      "sha256": "d7459412d406da6b7262b5596939793ad40aae3d4733d21ec7b1690d2fce0533",
+      "bytes": 158533
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/home-stageteaser/Mini-Countryman-Y2022.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/home-stageteaser/Mini-Countryman-Y2022.html",
+      "source_family": "other",
+      "filename": "mini_p111_Mini-Countryman-Y2022.html",
+      "ok": true,
+      "sha256": "562ed1816741aa2b100ff6fef1ad28a832d379394367245cf0146514e45998ee",
+      "bytes": 158589
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/home-stageteaser/SEP-MINI-Countryman.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/home-stageteaser/SEP-MINI-Countryman.html",
+      "source_family": "other",
+      "filename": "mini_p111_SEP-MINI-Countryman.html",
+      "ok": true,
+      "sha256": "314499becf33ec7bea76673210bd109e552ee62ee13db8bd36ff0a2e9cbd7d2e",
+      "bytes": 158428
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/home-stageteaser/The-New-Countryman-Teaser.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/home-stageteaser/The-New-Countryman-Teaser.html",
+      "source_family": "other",
+      "filename": "mini_p111_The-New-Countryman-Teaser.html",
+      "ok": true,
+      "sha256": "6e3b3dcb711ac32b6e40f85ce6341747cb9edf1161f9365231abdaf140a44318",
+      "bytes": 158623
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/home-stageteaser/aceman-concept.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/home-stageteaser/aceman-concept.html",
+      "source_family": "other",
+      "filename": "mini_p111_aceman-concept_dup2.html",
+      "ok": true,
+      "sha256": "2c088204a0b0374cfbc2685cb6bc3287addcdb7fd4cc94aed52eebcba8f61e9e",
+      "bytes": 157924
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/home-stageteaser/mini-countryman.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/home-stageteaser/mini-countryman.html",
+      "source_family": "other",
+      "filename": "mini_p111_mini-countryman.html",
+      "ok": true,
+      "sha256": "19531d262d1dc41b61f18b0a6451aad45a9c61372cd6ffa8948771ab56a22c3b",
+      "bytes": 158386
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/home-stageteaser/mini-countryman_new.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/home-stageteaser/mini-countryman_new.html",
+      "source_family": "other",
+      "filename": "mini_p111_mini-countryman_new.html",
+      "ok": true,
+      "sha256": "c58bda6aa5d8a91d4308d0865ecac66a871c75862047ccd2b23623d05599f534",
+      "bytes": 158421
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/home-stageteaser/mini-jcw-gp-new-2019_20.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/home-stageteaser/mini-jcw-gp-new-2019_20.html",
+      "source_family": "other",
+      "filename": "mini_p111_mini-jcw-gp-new-2019_20.html",
+      "ok": true,
+      "sha256": "9834c1cd92d9a33b843401f9cbe95e40a583f620031c9e44ea24cfda88273522",
+      "bytes": 158219
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/range/john-cooper-works/configure.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/range/john-cooper-works/configure.html",
+      "source_family": "configurator",
+      "filename": "mini_p111_configure.html",
+      "ok": true,
+      "sha256": "1ae9d0409ad9f1f0d4ca8230a2787aeae929448ab85f22a8a8d3f5dd4e5461f9",
+      "bytes": 188001
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/range/mini-3-door-hatch/configure.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/range/mini-3-door-hatch/configure.html",
+      "source_family": "configurator",
+      "filename": "mini_p111_configure_dup2.html",
+      "ok": true,
+      "sha256": "5a23b2f485018872fc5bad1e84678e2bae1d1ce9edf1f04385468398b25e0eea",
+      "bytes": 181954
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/range/mini-clubman/configure.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/range/mini-clubman/configure.html",
+      "source_family": "configurator",
+      "filename": "mini_p111_configure_dup3.html",
+      "ok": true,
+      "sha256": "51803cc1a8b90cad50df685b8bdc89ddfa5f7e51b43641aa381196082aa7453f",
+      "bytes": 188591
+    },
+    {
+      "brand": "MINI",
+      "url": "https://www.mini.co.th/en_TH/home/range/mini-convertible/configure.html",
+      "final_url": "https://www.mini.co.th/en_TH/home/range/mini-convertible/configure.html",
+      "source_family": "configurator",
+      "filename": "mini_p111_configure_dup4.html",
+      "ok": true,
+      "sha256": "3c30d6d7453f10d3da0653e33b10b4b8c39704231d298e38fc02e5f78b2bb1fc",
+      "bytes": 187807
+    },
+    {
+      "brand": "Mazda",
+      "url": "https://www.mazda.co.th/th/cars/mazda-bt50-tcg",
+      "final_url": "https://www.mazda.co.th/th/cars/mazda-bt50-tcg",
+      "source_family": "model_page",
+      "filename": "mazda_p111_mazda-bt50-tcg.html",
+      "ok": true,
+      "sha256": "51ef830f2c5983196332465023928a6be74c4ab242a8aac800357838913d7f21",
+      "bytes": 170212
+    },
+    {
+      "brand": "Mazda",
+      "url": "https://www.mazda.co.th/th/cars/mazda3-fastback",
+      "final_url": "https://www.mazda.co.th/th/cars/mazda3-fastback",
+      "source_family": "model_page",
+      "filename": "mazda_p111_mazda3-fastback.html",
+      "ok": true,
+      "sha256": "7a6cced4afac410cf0707e9bcfda29863f08df0c14b4e792b4a553a154549714",
+      "bytes": 257046
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-mirage",
+      "final_url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-mirage",
+      "source_family": "other",
+      "filename": "mitsubishi_p111_explore-mirage.html",
+      "ok": true,
+      "sha256": "c004526df4d3d1b80291888a22d6b9d3fb9eda4fc80238a2bc2339ff2cbfb19f",
+      "bytes": 1030425
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-mirage-colt",
+      "final_url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-mirage-colt",
+      "source_family": "other",
+      "filename": "mitsubishi_p111_explore-mirage-colt.html",
+      "ok": true,
+      "sha256": "0216492dcf576d4d0ef6452eeb48dde7b4681049ad531dc81773e6c47efce6ed",
+      "bytes": 1031755
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-triton-l200",
+      "final_url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-triton-l200",
+      "source_family": "other",
+      "filename": "mitsubishi_p111_explore-triton-l200.html",
+      "ok": true,
+      "sha256": "bcb81b01ee9f3c40dc20083287346f12d9fa68b8966ad44689bcc6787b249f0b",
+      "bytes": 1029688
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/en/buy",
+      "final_url": "https://www.mitsubishi-motors.co.th/en/buy",
+      "source_family": "other",
+      "filename": "mitsubishi_p111_buy.html",
+      "ok": true,
+      "sha256": "cae7b1853e1719eb30ea2d14768eb0093eece5beac4ebbe33410a1da2c189a66",
+      "bytes": 1068789
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/en/cars/mirage",
+      "final_url": "https://www.mitsubishi-motors.co.th/en/cars/mirage",
+      "source_family": "model_page",
+      "filename": "mitsubishi_p111_mirage.html",
+      "ok": true,
+      "sha256": "ed50de9288fe9ed52ab1dbadfc7a6fbe91ade618f176daa51bc05f4dfee93a49",
+      "bytes": 1247537
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/en/cars/mirage/highlight",
+      "final_url": "https://www.mitsubishi-motors.co.th/en/cars/mirage/highlight",
+      "source_family": "model_page",
+      "filename": "mitsubishi_p111_highlight.html",
+      "ok": true,
+      "sha256": "1ea3c9bd7ae0d8cb143461a238e18f0613cf1ba0b28acf293df3934c08c1f53f",
+      "bytes": 1062070
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/en/cars/mirage/safety",
+      "final_url": "https://www.mitsubishi-motors.co.th/en/cars/mirage/safety",
+      "source_family": "model_page",
+      "filename": "mitsubishi_p111_safety.html",
+      "ok": true,
+      "sha256": "9874b28623151ba698e89e030b182b029981abca21763f742c7c79bef7ea12f3",
+      "bytes": 1091854
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/buy/configure4",
+      "final_url": "https://www.mitsubishi-motors.co.th/th/buy/configure4",
+      "source_family": "configurator",
+      "filename": "mitsubishi_p111_configure4.html",
+      "ok": true,
+      "sha256": "0d5eca8a57508210c771ba4919de6ede83c4ffca908276118270ddbcdfa1d3d6",
+      "bytes": 1048781
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/cars/triton",
+      "ok": false,
+      "error": "HTTP_302 after redirects"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/cars/triton/highlight",
+      "ok": false,
+      "error": "HTTP_302 after redirects"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/cars/triton/mitsubishiconnect",
+      "ok": false,
+      "error": "HTTP_302 after redirects"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/cars/triton/models",
+      "ok": false,
+      "error": "HTTP_302 after redirects"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/cars/triton/models/2wd",
+      "ok": false,
+      "error": "HTTP_302 after redirects"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/configure",
+      "final_url": "https://www.mitsubishi-motors.co.th/th/configure",
+      "source_family": "configurator",
+      "filename": "mitsubishi_p111_configure.html",
+      "ok": true,
+      "sha256": "b56a4163014a6c06166d663ec6225ac3b234dff5532f9ba1a06d97b041fb2e17",
+      "bytes": 1050487
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-e-power-stylish-package.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-e-power-stylish-package.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_kicks-e-power-stylish-package.html",
+      "ok": true,
+      "sha256": "945fb2972e7aa5f258b67f03895347e6346a5da3a55dae66e4f2f9fa41e70123",
+      "bytes": 2018025
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_kicks-epower.html",
+      "ok": true,
+      "sha256": "830dbd088e1ccd5fbdd0ec4089ba9ad2b873e0a1f76a1ebfdb59a4e60e096acf",
+      "bytes": 490141
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/nissan-intelligent-mobility.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/nissan-intelligent-mobility.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_nissan-intelligent-mobility.html",
+      "ok": true,
+      "sha256": "f8a729f8363bcf73b151c1b89eb372868a770c7133d4588725810fba6831dc00",
+      "bytes": 363372
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/performance.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/performance.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_performance.html",
+      "ok": true,
+      "sha256": "a3079527edd1503bd9111c119cf9855dba861f392de9416eeb442a8ce40f7cbe",
+      "bytes": 249241
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/specifications.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/specifications.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_specifications.html",
+      "ok": true,
+      "sha256": "9831aa167f282ab48cb00cc170703030864a525a66d907176962fe951778f5be",
+      "bytes": 787279
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_navara-calibre.html",
+      "ok": true,
+      "sha256": "0fc23cc2a0e77b9b10f8c41fc3280428c58ea3094fafce1cd0c4045f8d7a7a89",
+      "bytes": 461121
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/durability.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/durability.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_durability.html",
+      "ok": true,
+      "sha256": "4bbe4eecc5cf2f192c6eb5672529ffa20f79900f7003982fd4aaf75d555349a9",
+      "bytes": 228723
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/nissan-intelligent-mobility.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/nissan-intelligent-mobility.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_nissan-intelligent-mobility_dup2.html",
+      "ok": true,
+      "sha256": "3caf9abf316d6d12290a3dc143cd69e69c7294b84f63e28ae8cd21d1266500b5",
+      "bytes": 238767
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/performance.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/performance.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_performance_dup2.html",
+      "ok": true,
+      "sha256": "bfc9ae91d6a9be3f4e6e1dca78c13cb0290193f98ec551b4f5989ad759c635f8",
+      "bytes": 223922
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/specifications.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/specifications.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_specifications_dup2.html",
+      "ok": true,
+      "sha256": "e0d850beb7aeef3eb4c9784767b8f8c00586bdfde298ef82ff7ef9b4050079be",
+      "bytes": 1114381
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_navara-king-cab.html",
+      "ok": true,
+      "sha256": "0edd961add4fcb277d6d9ad32ecbdc7cc65e091d53347aad7ea069b90ec4ecdb",
+      "bytes": 395374
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/durability.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/durability.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_durability_dup2.html",
+      "ok": true,
+      "sha256": "6fbd46c5298c8a5e45b6551088a52663d9b25d9c518d82671c3803689567b499",
+      "bytes": 226351
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/nissan-intelligent-mobility.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/nissan-intelligent-mobility.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_nissan-intelligent-mobility_dup3.html",
+      "ok": true,
+      "sha256": "49124ed985e53a7aae81055a09d29aadcc803cac08c0e611f5c0e787934e2ae4",
+      "bytes": 223298
+    },
+    {
+      "brand": "Nissan",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/performance.html",
+      "final_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/performance.html",
+      "source_family": "model_page",
+      "filename": "nissan_p111_performance_dup3.html",
+      "ok": true,
+      "sha256": "978cc36dbdbbd3e961cc5cf5e64ff3f992eb0a6a26f1bdf40190f9385dadb750",
+      "bytes": 219652
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/cayenne-sustainability/",
+      "ok": false,
+      "error": "HTTP_404 after redirects"
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/macan-sustainability/",
+      "ok": false,
+      "error": "HTTP_404 after redirects"
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/718/",
+      "source_family": "model_page",
+      "filename": "porsche_p111_718.html",
+      "ok": true,
+      "sha256": "98115f502867255ea63db56db585865f66eafa9516b9f9afab93bc22e7b24aeb",
+      "bytes": 711178
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/718-cayman-gt4-rs/718-cayman-gt4-rs/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/718/718-cayman-gt4-rs/718-cayman-gt4-rs/",
+      "source_family": "model_page",
+      "filename": "porsche_p111_718-cayman-gt4-rs.html",
+      "ok": true,
+      "sha256": "0018a55770562bd8478d8242be7b0255286722ff7a17e27c816182d2e49a1abf",
+      "bytes": 481290
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster-gts-4/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster-gts-4/",
+      "source_family": "model_page",
+      "filename": "porsche_p111_718-boxster-gts-4.html",
+      "ok": true,
+      "sha256": "1022e2a707552d3b4803d2fff55704ef6eb6727f2558d744d507417b83d4a797",
+      "bytes": 472922
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster-style-edition/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster-style-edition/",
+      "source_family": "model_page",
+      "filename": "porsche_p111_718-boxster-style-edition.html",
+      "ok": true,
+      "sha256": "529b2fd897bdd62eee23189dc7b2beb9d6d94a314392c6fa6100bea91113592f",
+      "bytes": 477651
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster/",
+      "source_family": "model_page",
+      "filename": "porsche_p111_718-boxster.html",
+      "ok": true,
+      "sha256": "66b11e0879b19a719d3615f3c45aab789da5a588b6139e019a3b2723c79728ce",
+      "bytes": 449817
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-cayman-gts-4/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-cayman-gts-4/",
+      "source_family": "model_page",
+      "filename": "porsche_p111_718-cayman-gts-4.html",
+      "ok": true,
+      "sha256": "aa4e7255d9bcf6cf0f782bbfa59d4a0008f4c3a6ffa15183ad7001ac6bf80cad",
+      "bytes": 475809
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/configure/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/718/configure/",
+      "source_family": "configurator",
+      "filename": "porsche_p111_configure.html",
+      "ok": true,
+      "sha256": "cb9f5d6b7b93a29b9066b6e5a7d195f0ac631d44dfcba843cfc6713e128e92af",
+      "bytes": 275416
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/911/configure/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/911/configure/",
+      "source_family": "configurator",
+      "filename": "porsche_p111_configure_dup2.html",
+      "ok": true,
+      "sha256": "c56a28dd1059d408078d5178211c865e9ff89baa511144b80dab6b4c2967ba6a",
+      "bytes": 465794
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/cayenne/configure/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/cayenne/configure/",
+      "source_family": "configurator",
+      "filename": "porsche_p111_configure_dup3.html",
+      "ok": true,
+      "sha256": "c621daa88ac090bacca555640a97ea70e33a0fbb5e02a98a40f78136522e5258",
+      "bytes": 423421
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/macan/configure/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/macan/configure/",
+      "source_family": "configurator",
+      "filename": "porsche_p111_configure_dup4.html",
+      "ok": true,
+      "sha256": "a95504782178f9e9b7cc8bb15fda3180c9ea06422f249c82ca79d53782b3ad8b",
+      "bytes": 278708
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/panamera/configure/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/panamera/configure/",
+      "source_family": "configurator",
+      "filename": "porsche_p111_configure_dup5.html",
+      "ok": true,
+      "sha256": "12170cfa59e708c6447131b028fb668e5f1582089fbe0484577e8ce960384ef4",
+      "bytes": 251205
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/models/taycan/configure/",
+      "final_url": "https://www.porsche.com/pap/_thailand_/models/taycan/configure/",
+      "source_family": "configurator",
+      "filename": "porsche_p111_configure_dup6.html",
+      "ok": true,
+      "sha256": "9113e82193550461d1493dcab81d8cfcc9265f4a49b2428f3fb07ab36602895f",
+      "bytes": 369738
+    },
+    {
+      "brand": "Subaru",
+      "url": "https://www.subaru.asia/th/en/vehicles/brz/",
+      "ok": false,
+      "error": "HTTP_404 after redirects"
+    },
+    {
+      "brand": "Subaru",
+      "url": "https://www.subaru.asia/th/th/vehicles/brz/",
+      "ok": false,
+      "error": "HTTP_404 after redirects"
+    },
+    {
+      "brand": "Suzuki",
+      "url": "https://www.suzuki.co.th/en/model/XL7",
+      "final_url": "https://www.suzuki.co.th/en/model/XL7",
+      "source_family": "model_page",
+      "filename": "suzuki_p111_XL7.html",
+      "ok": true,
+      "sha256": "a55681713479cadc5dda4686fc0619d07d3b796a2a8d609a75050fdaaddc6839",
+      "bytes": 167694
+    },
+    {
+      "brand": "Suzuki",
+      "url": "https://www.suzuki.co.th/en/model/xl7/exterior",
+      "final_url": "https://www.suzuki.co.th/en/model/xl7/exterior",
+      "source_family": "model_page",
+      "filename": "suzuki_p111_exterior.html",
+      "ok": true,
+      "sha256": "d04f36b3801fc667e47b3e6652eb5681ca0a527e9f8e6a76cab2aac719cf8542",
+      "bytes": 219019
+    },
+    {
+      "brand": "Suzuki",
+      "url": "https://www.suzuki.co.th/en/model/xl7/interior",
+      "final_url": "https://www.suzuki.co.th/en/model/xl7/interior",
+      "source_family": "model_page",
+      "filename": "suzuki_p111_interior.html",
+      "ok": true,
+      "sha256": "2639b886ccff7b985bd24f0941dcb3d5c9a92fef331671258668c6fe8a1c23f3",
+      "bytes": 180515
+    },
+    {
+      "brand": "Suzuki",
+      "url": "https://www.suzuki.co.th/en/model/xl7/overview",
+      "final_url": "https://www.suzuki.co.th/en/model/xl7/overview",
+      "source_family": "model_page",
+      "filename": "suzuki_p111_overview.html",
+      "ok": true,
+      "sha256": "853113126723e9f3cc3d8ca58cac66a1600d62d4479183bff816f28f7ac16402",
+      "bytes": 168473
+    },
+    {
+      "brand": "Suzuki",
+      "url": "https://www.suzuki.co.th/en/model/xl7/performance",
+      "final_url": "https://www.suzuki.co.th/en/model/xl7/performance",
+      "source_family": "model_page",
+      "filename": "suzuki_p111_performance.html",
+      "ok": true,
+      "sha256": "53d673cd21ae54d2728b85d4eb410218c1791b09d92e9875032231084a134b3b",
+      "bytes": 169830
+    },
+    {
+      "brand": "Suzuki",
+      "url": "https://www.suzuki.co.th/en/model/xl7/safety",
+      "final_url": "https://www.suzuki.co.th/en/model/xl7/safety",
+      "source_family": "model_page",
+      "filename": "suzuki_p111_safety.html",
+      "ok": true,
+      "sha256": "800ef5343bd833372355407c227751c501173236484b5dcf11cf4d3f90f87a26",
+      "bytes": 168190
+    },
+    {
+      "brand": "Suzuki",
+      "url": "https://www.suzuki.co.th/en/model/xl7/specification",
+      "final_url": "https://www.suzuki.co.th/en/model/xl7/specification",
+      "source_family": "model_page",
+      "filename": "suzuki_p111_specification.html",
+      "ok": true,
+      "sha256": "13ea5d4bf8179ac1dc0331cf1a7e69c671f59a31c426209b1fbeccad983b7870",
+      "bytes": 187230
+    },
+    {
+      "brand": "Suzuki",
+      "url": "https://www.suzuki.co.th/experience/xl7",
+      "final_url": "https://www.suzuki.co.th/experience/xl7",
+      "source_family": "other",
+      "filename": "suzuki_p111_xl7.html",
+      "ok": true,
+      "sha256": "061bc0a22e83554179edd4112ceb2986cbf695c92e4dd49b20e375c5bf816ce6",
+      "bytes": 69079
+    },
+    {
+      "brand": "Suzuki",
+      "url": "https://www.suzuki.co.th/upload/file/Brochure/XL7_Brochure.pdf",
+      "final_url": "https://www.suzuki.co.th/error",
+      "source_family": "downloadable_pdf",
+      "filename": "suzuki_p111_error.html",
+      "ok": true,
+      "sha256": "4386e61f7544bf3dca079a6c0950238f2c0832c4c4c886f5d85a62a4c881c27b",
+      "bytes": 47829
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/model/yarisativ",
+      "final_url": "https://www.toyota.co.th/model/yarisativ",
+      "source_family": "model_page",
+      "filename": "toyota_p111_yarisativ.html",
+      "ok": true,
+      "sha256": "87fb7535a7317ca95360327ffed440e9709dfb84de8d8804ed87788c050eba7c",
+      "bytes": 449227
+    }
+  ],
+  "failures": [
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/content/dam/kwcms/th/th/images/discover-kia/Article/2025-Article/092025-ev5-smart-safety-adas/Kia-Article-940x940_5.jpg",
+      "source_family": "other",
+      "discovery_channel": "stored_pool_p108",
+      "match": "model_page",
+      "unverified_at_baseline": 3,
+      "selected": true,
+      "status": "BLOCKED_HOST",
+      "ok": false,
+      "blocker": "blocked OEM token in URL; never requested"
+    },
+    {
+      "brand": "Kia",
+      "url": "https://www.kia.com/content/dam/kwcms/th/th/images/discover-kia/Article/2025-Article/092025-ev5-smart-safety-adas/Kia-Article-EV5-300x250.jpg",
+      "source_family": "other",
+      "discovery_channel": "stored_pool_p108",
+      "match": "model_page",
+      "unverified_at_baseline": 3,
+      "selected": true,
+      "status": "BLOCKED_HOST",
+      "ok": false,
+      "blocker": "blocked OEM token in URL; never requested"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/cars/triton",
+      "source_family": "model_page",
+      "discovery_channel": "stored_pool_p108",
+      "match": "model_page",
+      "unverified_at_baseline": 4,
+      "selected": true,
+      "http_status": 302,
+      "status": "HTTP_ERROR",
+      "ok": false,
+      "blocker": "HTTP_302 after redirects"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/cars/triton/highlight",
+      "source_family": "model_page",
+      "discovery_channel": "stored_pool_p108",
+      "match": "model_page",
+      "unverified_at_baseline": 4,
+      "selected": true,
+      "http_status": 302,
+      "status": "HTTP_ERROR",
+      "ok": false,
+      "blocker": "HTTP_302 after redirects"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/cars/triton/mitsubishiconnect",
+      "source_family": "model_page",
+      "discovery_channel": "stored_pool_p108",
+      "match": "model_page",
+      "unverified_at_baseline": 4,
+      "selected": true,
+      "http_status": 302,
+      "status": "HTTP_ERROR",
+      "ok": false,
+      "blocker": "HTTP_302 after redirects"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/cars/triton/models",
+      "source_family": "model_page",
+      "discovery_channel": "stored_pool_p108",
+      "match": "model_page",
+      "unverified_at_baseline": 4,
+      "selected": true,
+      "http_status": 302,
+      "status": "HTTP_ERROR",
+      "ok": false,
+      "blocker": "HTTP_302 after redirects"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "https://www.mitsubishi-motors.co.th/th/cars/triton/models/2wd",
+      "source_family": "model_page",
+      "discovery_channel": "stored_pool_p108",
+      "match": "model_page",
+      "unverified_at_baseline": 4,
+      "selected": true,
+      "http_status": 302,
+      "status": "HTTP_ERROR",
+      "ok": false,
+      "blocker": "HTTP_302 after redirects"
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/cayenne-sustainability/",
+      "source_family": "other",
+      "discovery_channel": "fresh_sitemap_index",
+      "channel_root": "porsche.com",
+      "match": "model_page",
+      "unverified_at_baseline": 69,
+      "selected": true,
+      "http_status": 404,
+      "status": "HTTP_ERROR",
+      "ok": false,
+      "blocker": "HTTP_404 after redirects"
+    },
+    {
+      "brand": "Porsche",
+      "url": "https://www.porsche.com/pap/_thailand_/macan-sustainability/",
+      "source_family": "other",
+      "discovery_channel": "fresh_sitemap_index",
+      "channel_root": "porsche.com",
+      "match": "model_page",
+      "unverified_at_baseline": 69,
+      "selected": true,
+      "http_status": 404,
+      "status": "HTTP_ERROR",
+      "ok": false,
+      "blocker": "HTTP_404 after redirects"
+    },
+    {
+      "brand": "Subaru",
+      "url": "https://www.subaru.asia/th/en/vehicles/brz/",
+      "source_family": "model_page",
+      "discovery_channel": "stored_pool_p108",
+      "match": "model_page",
+      "unverified_at_baseline": 1,
+      "selected": true,
+      "http_status": 404,
+      "status": "HTTP_ERROR",
+      "ok": false,
+      "blocker": "HTTP_404 after redirects"
+    },
+    {
+      "brand": "Subaru",
+      "url": "https://www.subaru.asia/th/th/vehicles/brz/",
+      "source_family": "model_page",
+      "discovery_channel": "stored_pool_p108",
+      "match": "model_page",
+      "unverified_at_baseline": 1,
+      "selected": true,
+      "http_status": 404,
+      "status": "HTTP_ERROR",
+      "ok": false,
+      "blocker": "HTTP_404 after redirects"
+    }
+  ]
+}

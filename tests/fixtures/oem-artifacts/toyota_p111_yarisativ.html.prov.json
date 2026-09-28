@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/model/yarisativ",
+  "captured_at": "2026-09-28T07:15:04.061450+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "87fb7535a7317ca95360327ffed440e9709dfb84de8d8804ed87788c050eba7c",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "toyota_p111_yarisativ.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

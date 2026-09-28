@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/en/deal/tank-300-diesel",
+  "captured_at": "2026-09-28T07:12:57.825409+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "42e77e8f48af08555bd9e8e0f5df048a1e464e4348574815b2a39f24f1e8af8c",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "gwm_p111_tank-300-diesel.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

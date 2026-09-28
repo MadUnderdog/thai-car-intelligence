@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/cars/mirage/safety",
+  "captured_at": "2026-09-28T07:14:08.151891+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "9874b28623151ba698e89e030b182b029981abca21763f742c7c79bef7ea12f3",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mitsubishi_p111_safety.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

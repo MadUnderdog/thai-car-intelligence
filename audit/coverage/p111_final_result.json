@@ -1,0 +1,97 @@
+{
+  "schema": "p111_final_result/1",
+  "generated_at": "2026-09-28T08:24:21.672346+00:00",
+  "baseline_artifact": "audit/coverage/p108_final_result.json",
+  "accepted_variants_targeted": 488,
+  "price_bound": 299,
+  "exact_msrp_verified": 269,
+  "exact_binding_not_verified_current": 1,
+  "msrp_starting_not_exact": 29,
+  "non_msrp_type_rows": 0,
+  "msrp_status_distribution": {
+    "EXACT_CURRENT_MSRP_VERIFIED": 269,
+    "EXACT_BINDING_NOT_VERIFIED_CURRENT": 1,
+    "MSRP_STARTING_NOT_EXACT": 29,
+    "NON_MSRP_TYPE": 0
+  },
+  "exact_non_msrp_only": 30,
+  "unverified_price": 189,
+  "blocked_or_source_gap": 189,
+  "blocked_oems": [
+    "Audi",
+    "Avance",
+    "BYD",
+    "Chery",
+    "Chevrolet",
+    "Ford",
+    "Haval",
+    "Mercedes-Benz",
+    "NETA",
+    "Peugeot",
+    "Smart",
+    "Tesla",
+    "Volvo"
+  ],
+  "blocked_oem_accepted_variants": 0,
+  "price_type_distribution": {
+    "EXACT_VARIANT": 270,
+    "MSRP_STARTING": 29
+  },
+  "prices_invented": 0,
+  "third_party_promoted_to_msrp": 0,
+  "delta_vs_p110": {
+    "price_bound": 25,
+    "exact_msrp_verified": 23,
+    "unverified_price": -25,
+    "baseline": "audit/coverage/p110_price_reconciliation.json"
+  },
+  "mg_reference_row": {
+    "status": "EXACT_BINDING_NOT_VERIFIED_CURRENT",
+    "reason": "exact price bound and preserved, but NOT a verified current MSRP: trust_tier=reference, currentness=NOT_A_CURRENTNESS_SOURCE (utility page); excluded from exact_msrp_verified and reported separately",
+    "price_thb": 771000,
+    "artifact": "mg_home_page.html",
+    "trust_tier": "reference",
+    "currentness": "NOT_A_CURRENTNESS_SOURCE",
+    "price_preserved": true
+  },
+  "new_captures": 127,
+  "new_capture_classification": {
+    "count": 127,
+    "by_currentness": {
+      "CURRENT": 106,
+      "HISTORICAL": 1,
+      "NOT_A_CURRENTNESS_SOURCE": 17,
+      "UNDETERMINED": 3
+    },
+    "by_family": {
+      "brochure_spec": 2,
+      "configurator": 3,
+      "model_lineup": 50,
+      "official_page": 40,
+      "press": 5,
+      "price_document": 4,
+      "promotion": 6,
+      "spec_page": 6,
+      "utility": 11
+    },
+    "classifier": "scripts/p109_current_market.py family_of/currentness (the p109 inventory artifact itself is untouched)"
+  },
+  "source_expansion": {
+    "inventory": "audit/coverage/p111_price_source_inventory.json",
+    "capture_log": "audit/coverage/p111_price_capture_log.json",
+    "candidates": 342
+  },
+  "identity_ledger_unchanged": {
+    "confirmed_variants": 488,
+    "changed_by_p111": false
+  },
+  "gates": {
+    "staging_written": false,
+    "price_pass_staging": false,
+    "prisma_touched": false,
+    "production_db_unchanged": true,
+    "verifier_touched": false,
+    "identity_counts_changed": false
+  },
+  "no_loop_rule": "one bounded pass: exact-MSRP delta and the remaining source ceiling are reported as they are; no repair loop chases the number, no model-level price is spread to a grade"
+}

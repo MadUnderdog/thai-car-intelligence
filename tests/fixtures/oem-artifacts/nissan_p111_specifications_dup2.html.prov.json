@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/specifications.html",
+  "captured_at": "2026-09-28T07:14:30.160147+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "e0d850beb7aeef3eb4c9784767b8f8c00586bdfde298ef82ff7ef9b4050079be",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "nissan_p111_specifications_dup2.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

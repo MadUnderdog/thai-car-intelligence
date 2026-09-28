@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-mirage-colt",
+  "captured_at": "2026-09-28T07:14:01.842962+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "0216492dcf576d4d0ef6452eeb48dde7b4681049ad531dc81773e6c47efce6ed",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mitsubishi_p111_explore-mirage-colt.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

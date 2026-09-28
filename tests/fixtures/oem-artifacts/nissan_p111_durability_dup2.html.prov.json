@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/durability.html",
+  "captured_at": "2026-09-28T07:14:31.151365+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "6fbd46c5298c8a5e45b6551088a52663d9b25d9c518d82671c3803689567b499",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "nissan_p111_durability_dup2.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/nissan-intelligent-mobility.html",
+  "captured_at": "2026-09-28T07:14:29.079644+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "3caf9abf316d6d12290a3dc143cd69e69c7294b84f63e28ae8cd21d1266500b5",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "nissan_p111_nissan-intelligent-mobility_dup2.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

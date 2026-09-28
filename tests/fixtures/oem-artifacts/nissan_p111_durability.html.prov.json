@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/durability.html",
+  "captured_at": "2026-09-28T07:14:28.622756+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "4bbe4eecc5cf2f192c6eb5672529ffa20f79900f7003982fd4aaf75d555349a9",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "nissan_p111_durability.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

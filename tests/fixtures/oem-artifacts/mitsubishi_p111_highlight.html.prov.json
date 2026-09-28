@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/cars/mirage/highlight",
+  "captured_at": "2026-09-28T07:14:06.501845+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "1ea3c9bd7ae0d8cb143461a238e18f0613cf1ba0b28acf293df3934c08c1f53f",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mitsubishi_p111_highlight.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

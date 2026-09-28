@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-e-power-stylish-package.html",
+  "captured_at": "2026-09-28T07:14:25.809378+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "945fb2972e7aa5f258b67f03895347e6346a5da3a55dae66e4f2f9fa41e70123",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "nissan_p111_kicks-e-power-stylish-package.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

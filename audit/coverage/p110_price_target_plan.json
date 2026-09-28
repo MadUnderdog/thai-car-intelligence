@@ -1,0 +1,3727 @@
+{
+  "schema": "p110_price_target_plan/1",
+  "generated_at": "2026-09-28T06:39:00.462716+00:00",
+  "baseline_artifact": "audit/coverage/p108_final_result.json",
+  "accepted_variants_targeted": 488,
+  "method": "one horizontal pass over every accepted variant; price must be bound to the same published record (manufacturer + model + exact grade + TH scope) of a first-party artifact; price_type classified per Blueprint §95/§98",
+  "totals": {
+    "targeted": 488,
+    "oems": 19,
+    "blocked_oems": [
+      "Audi",
+      "Avance",
+      "BYD",
+      "Chery",
+      "Chevrolet",
+      "Ford",
+      "Haval",
+      "Mercedes-Benz",
+      "NETA",
+      "Peugeot",
+      "Smart",
+      "Tesla",
+      "Volvo"
+    ]
+  },
+  "oems": [
+    {
+      "brand": "Toyota",
+      "accepted_variants": 110,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "Alphard",
+          "variant": "Alphard HEV Premium",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Alphard",
+          "variant": "Alphard HEV Premium Luxury",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Alphard",
+          "variant": "Alphard HEV Smart",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Alphard",
+          "variant": "Vellfire HEV Premium",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "CAMRY",
+          "variant": "HEV Premium",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "CAMRY",
+          "variant": "HEV Premium Luxury",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "CAMRY",
+          "variant": "HEV Smart",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Coaster",
+          "variant": "Coaster",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Commuter",
+          "variant": "ดีเซล 2.8 AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Commuter",
+          "variant": "ดีเซล 2.8 MT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Corolla Altis",
+          "variant": "1.8G",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Corolla Altis",
+          "variant": "HEV Premium",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Corolla Altis",
+          "variant": "HEV Smart",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Corolla Altis GR Sport",
+          "variant": "HEV GR Sport",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Corolla Cross",
+          "variant": "HEV Premium",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Corolla Cross",
+          "variant": "HEV Premium Luxury",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Corolla Cross",
+          "variant": "HEV Smart",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Corolla Cross GR Sport",
+          "variant": "HEV GR Sport",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Fortuner GR Sport",
+          "variant": "2.8 GR Sport 4WD",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Fortuner Leader",
+          "variant": "2.4 Leader G+",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Fortuner Leader",
+          "variant": "2.4 Leader S",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Fortuner Leader",
+          "variant": "2.4 Leader V",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Fortuner Leader",
+          "variant": "2.4 Leader V 4WD",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Fortuner Legender",
+          "variant": "2.4 Legender",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Fortuner Legender",
+          "variant": "2.4 Legender 4WD",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Fortuner Legender",
+          "variant": "2.8 Legender",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Fortuner Legender",
+          "variant": "2.8 Legender 4WD",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "GR 86",
+          "variant": "GR86",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "GR Corolla",
+          "variant": "GR Corolla",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "GR Supra",
+          "variant": "GR Supra",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "GR Supra",
+          "variant": "GR Supra Track Edition",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "GR Yaris",
+          "variant": "GR Yaris",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hiace",
+          "variant": "Hiace Eco MT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hiace",
+          "variant": "Hiace GL AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hiace",
+          "variant": "Hiace GL MT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Champ",
+          "variant": "2.4 AT C&C SWB",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Champ",
+          "variant": "2.4 AT LWB",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Champ",
+          "variant": "2.4 AT SWB Attractive Package",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Champ",
+          "variant": "2.4 AT Super SWB Attractive Package",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Champ",
+          "variant": "2.4 MT C&C LWB",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Champ",
+          "variant": "2.4 MT LWB",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Standard Cab",
+          "variant": "2.4 Entry",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Standard Cab",
+          "variant": "2.4 Entry (ไม่มีกระบะ)",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Standard Cab",
+          "variant": "2.4 Entry AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Standard Cab",
+          "variant": "2.4 Entry AT (ไม่มีกระบะ)",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Standard Cab",
+          "variant": "2.8 Entry",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Z Edition",
+          "variant": "Double Cab 4x2 2.8 GR Sport AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Z Edition",
+          "variant": "Double Cab Z Edition 4x2 2.4 Entry",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Z Edition",
+          "variant": "Double Cab Z Edition 4x2 2.4 Entry AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Z Edition",
+          "variant": "Double Cab Z Edition 4x2 2.4 Mid",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Z Edition",
+          "variant": "Double Cab Z Edition 4x2 2.4 Mid AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Z Edition",
+          "variant": "Smart Cab Z Edition 4x2 2.4 Entry",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Z Edition",
+          "variant": "Smart Cab Z Edition 4x2 2.4 Entry AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Z Edition",
+          "variant": "Smart Cab Z Edition 4x2 2.4 Mid",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Revo Z Edition",
+          "variant": "Smart Cab Z Edition 4x2 2.4 Mid AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Overland",
+          "variant": "Hilux Travo Double Cab 4TREX 2.8 Overland AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Overland",
+          "variant": "Hilux Travo Double Cab 4TREX 2.8 Overland Plus AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Overland",
+          "variant": "Hilux Travo Double Cab Prerunner 2.8 Overland AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Overland",
+          "variant": "Hilux Travo Double Cab Prerunner 2.8 Overland Plus AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Double Cab 4TREX 2.8 Premium MT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Double Cab Prerunner 2.8 Premium AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Double Cab Prerunner 2.8 Premium MT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Double Cab Prerunner 2.8 Smart AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Double Cab Prerunner 2.8 Smart MT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Smart Cab 4TREX 2.8 Premium AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Smart Cab 4TREX 2.8 Premium MT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Smart Cab Prerunner 2.8 Premium AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Smart Cab Prerunner 2.8 Premium MT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Smart Cab Prerunner 2.8 Smart AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "variant": "Hilux Travo Smart Cab Prerunner 2.8 Smart MT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Standard Cab 4TREX",
+          "variant": "Hilux Travo Standard Cab 4TREX 2.8  AT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo Standard Cab 4TREX",
+          "variant": "Hilux Travo Standard Cab 4TREX 2.8  MT",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Hilux Travo-e",
+          "variant": "Hilux Travo-e Double Cab 4TREX",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Innova Zenix",
+          "variant": "HEV Premium",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Innova Zenix",
+          "variant": "HEV Smart",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Land Cruiser FJ",
+          "variant": "Land Cruiser FJ 4WD 2.7",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Majesty",
+          "variant": "Grande",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Majesty",
+          "variant": "Premium",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Toyota Alphard",
+          "variant": "HEV PREMIUM",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_p107_alphard.html"
+          ]
+        },
+        {
+          "model": "Toyota Alphard",
+          "variant": "HEV PREMIUM LUXURY",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_p107_alphard.html"
+          ]
+        },
+        {
+          "model": "Toyota Alphard",
+          "variant": "HEV SMART",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_p107_alphard.html"
+          ]
+        },
+        {
+          "model": "Toyota Altis",
+          "variant": "1.8G",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_p107_altis.html"
+          ]
+        },
+        {
+          "model": "Toyota Altis",
+          "variant": "HEV Smart",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_p107_altis.html"
+          ]
+        },
+        {
+          "model": "Toyota Corolla",
+          "variant": "Altis Gr Sport",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_press_news.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Toyota Fortuner",
+          "variant": "Gr Sport",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_press_news.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Toyota Fortuner",
+          "variant": "Leader",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_press_news.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Toyota Fortuner",
+          "variant": "Legender",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_press_news.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Toyota Innova",
+          "variant": "ZENIX",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_press_news.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Toyota Yaris",
+          "variant": "Ativ",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_press_news.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Toyota Yaris",
+          "variant": "Cross Nightshade",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_press_news.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Veloz",
+          "variant": "Premium",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Veloz",
+          "variant": "Smart",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris",
+          "variant": "Premium",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris",
+          "variant": "Smart",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris",
+          "variant": "Sport",
+          "source_artifacts": [
+            "9carthai_toyota-price.html",
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "HEV Premium",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "NIGHTSHADE",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "Premium",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "Premium Luxury",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "Smart",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris ATIV",
+          "variant": "Sport",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris ATIV GR Sport",
+          "variant": "HEV GR Sport",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris ATIV Nightshade",
+          "variant": "NIGHTSHADE",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris Cross",
+          "variant": "HEV Premium",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris Cross",
+          "variant": "HEV Premium Luxury",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris Cross",
+          "variant": "HEV Smart",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris Cross",
+          "variant": "NIGHTSHADE",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "Yaris Cross Nightshade",
+          "variant": "NIGHTSHADE",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "bZ4X",
+          "variant": "AWD",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        },
+        {
+          "model": "bZ4X",
+          "variant": "FWD",
+          "source_artifacts": [
+            "toyota_pricelist_page.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "BMW",
+      "accepted_variants": 73,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "BMW 2 SERIES",
+          "variant": "220 Gran Coupe M Sport Pro",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 3 SERIES",
+          "variant": "320Li M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 3 SERIES",
+          "variant": "320d M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 3 SERIES",
+          "variant": "330e M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 3 SERIES",
+          "variant": "M340i xDrive",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 4 SERIES",
+          "variant": "420i Coupé M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 4 SERIES",
+          "variant": "430i Convertible M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 4 SERIES",
+          "variant": "430i Coupé M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 4 SERIES",
+          "variant": "M440i xDrive",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 5 SERIES",
+          "variant": "520d M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 5 SERIES",
+          "variant": "520d M Sport Pro",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 5 SERIES",
+          "variant": "530e Inspiring",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 5 SERIES",
+          "variant": "530e M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 5 SERIES",
+          "variant": "530e M Sport Pro",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 7 SERIES",
+          "variant": "740d M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 7 SERIES",
+          "variant": "750e xDrive M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW 7 SERIES",
+          "variant": "M760e xDrive",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M2",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M2 (M Racetrack Package)",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M2 (Manual Transmission)",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M2 CS",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M2 CS (Ceramic Brake)",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M2 CS (Velvet Blue with Ceramic Brake)",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M3 CS",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M3 Competition M xDrive Touring",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M4 CS",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M4 Competition M xDrive Coupé",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M5",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M5 (Ceramic Break)",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M5 Touring",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "M5 Touring (Ceramic Break)",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "XM",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "XM 50e (Shadow Line)",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M",
+          "variant": "XM Label Red",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M3",
+          "variant": "CS",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_brochure_page.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M3",
+          "variant": "CS Touring",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_brochure_page.html"
+          ]
+        },
+        {
+          "model": "BMW M3",
+          "variant": "Competition M xDrive Touring",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_brochure_page.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW M4",
+          "variant": "CS",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_brochure_page.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW X SERIES",
+          "variant": "X1 sDrive20i M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW X SERIES",
+          "variant": "X3 20d xDrive M Sport Pro",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW X SERIES",
+          "variant": "X3 M50 xDrive",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW X SERIES",
+          "variant": "X4 xDrive20d M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW X SERIES",
+          "variant": "X5 xDrive30d M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW X SERIES",
+          "variant": "X5 xDrive50e M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW X SERIES",
+          "variant": "X6 xDrive40i M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW X SERIES",
+          "variant": "X7 xDrive40d M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW Z",
+          "variant": "Z4 M40i",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW Z",
+          "variant": "Z4 sDrive30i M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW i",
+          "variant": "i5 eDrive40 M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW i",
+          "variant": "iX xDrive45 M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW i",
+          "variant": "iX1 eDrive20L M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW i",
+          "variant": "iX2 xDrive30 M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "BMW i",
+          "variant": "iX3 50 xDrive M Sport",
+          "source_artifacts": [
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw I5",
+          "variant": "Edrive40 M Sport",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw Ix",
+          "variant": "Xdrive45 M Sport",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw Ix1",
+          "variant": "eDrive20L M Sport",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw Ix2",
+          "variant": "xDrive30 M Sport",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw M2",
+          "variant": "CS",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw M2",
+          "variant": "CS (Ceramic Brake",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw M2",
+          "variant": "M Race Track Package",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw M340I",
+          "variant": "xDrive",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw M5",
+          "variant": "Ceramic Break",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw M5",
+          "variant": "Touring",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw M5",
+          "variant": "Touring (Ceramic Break",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw X3",
+          "variant": "M50 Xdrive",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw X4",
+          "variant": "xDrive20d M Sport",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw X5",
+          "variant": "xDrive30d M Sport",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw X5",
+          "variant": "xDrive50e M Sport",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw X7",
+          "variant": "xDrive40d M Sport",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw Xm",
+          "variant": "50e Shadow Line",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw Xm",
+          "variant": "Label Red",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_brochure_page.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw Z4",
+          "variant": "M40i",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        },
+        {
+          "model": "Bmw Z4",
+          "variant": "sDrive30i M Sport",
+          "source_artifacts": [
+            "9carthai_bmw-price.html",
+            "bmw_price_list.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Porsche",
+      "accepted_variants": 69,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "718",
+          "variant": "718 Boxster",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "718",
+          "variant": "718 Boxster GTS 4.0",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "718",
+          "variant": "718 Boxster Style Edition",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "718",
+          "variant": "718 Cayman",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "718",
+          "variant": "718 Cayman GT4 RS",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "718",
+          "variant": "718 Cayman GTS 4.0",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "718",
+          "variant": "718 Cayman Style Edition",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "718",
+          "variant": "718 Spyder RS",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera 4 GTS",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera 4 GTS Cabriolet",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera 4S",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera 4S Cabriolet",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera Cabriolet",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera GTS",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera GTS Cabriolet",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera S",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera S Cabriolet",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera T",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Carrera T Cabriolet",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 GT3",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 GT3 S/C",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 GT3 with Touring Package",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Spirit 70",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Targa 4 GTS",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Targa 4S",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Turbo S",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "911",
+          "variant": "911 Turbo S Cabriolet",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne Coupé",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne Coupé Electric",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne E-Hybrid",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne E-Hybrid Coupé",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne Electric",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne GTS",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne GTS Coupé",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne S",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne S Coupé",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne S Coupé Electric",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne S E-Hybrid Coupé",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne S Electric",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne Turbo Coupé Electric",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne Turbo E-Hybrid",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne Turbo E-Hybrid Coupé",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne Turbo Electric",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Cayenne",
+          "variant": "Cayenne Turbo GT",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Macan",
+          "variant": "Macan 4 Electric",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Macan",
+          "variant": "Macan 4S Electric",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Macan",
+          "variant": "Macan Electric",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Macan",
+          "variant": "Macan S",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Macan",
+          "variant": "Macan Turbo Electric",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Panamera",
+          "variant": "Panamera 4 E-Hybrid",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Panamera",
+          "variant": "Panamera 4 E-Hybrid Executive",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Panamera",
+          "variant": "Panamera 4S E-Hybrid",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Panamera",
+          "variant": "Panamera GTS",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Panamera",
+          "variant": "Panamera Turbo E-Hybrid",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Panamera",
+          "variant": "Panamera Turbo S E-Hybrid",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan 4",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan 4 Black Edition",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan 4 Cross Turismo",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan 4S",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan 4S Black Edition",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan 4S Cross Turismo",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan Black Edition",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan GTS",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan Turbo",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan Turbo Cross Turismo",
+          "source_artifacts": [
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan Turbo GT",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan Turbo GT with Weissach Package",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        },
+        {
+          "model": "Taycan",
+          "variant": "Taycan Turbo S",
+          "source_artifacts": [
+            "9carthai_porsche-price.html",
+            "porsche_macan_model_page.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Lexus",
+      "accepted_variants": 38,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "ES",
+          "variant": "ES 350e Premium",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "ES",
+          "variant": "ES 350h Grand Luxury",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "IS",
+          "variant": "IS 300h F SPORT",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "IS",
+          "variant": "IS 300h Luxury",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "LBX",
+          "variant": "LBX Bespoke",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "LBX",
+          "variant": "LBX Luxury",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "LBX",
+          "variant": "LBX Premium",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "LM",
+          "variant": "LM 350h 4-Seater",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "LM",
+          "variant": "LM 350h 7-Seater",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "LM",
+          "variant": "LM 500h 4-Seater",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "LM",
+          "variant": "LM 500h 6-Seater",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "LS",
+          "variant": "LS 500h",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "LX",
+          "variant": "LX 500d F SPORT",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "LX",
+          "variant": "LX 500d Premium",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "Lexus Lbx",
+          "variant": "Bespoke",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "Lexus Lbx",
+          "variant": "Luxury",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "Lexus Lbx",
+          "variant": "Premium",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "Lexus Lx 500D",
+          "variant": "F-Sport",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_models_page.html",
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "Lexus Lx 500D",
+          "variant": "Premium",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "Lexus Nx",
+          "variant": "350H",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_p107_AW_catalog_nov2025_Lexus_NX.pdf.b64"
+          ]
+        },
+        {
+          "model": "Lexus Nx",
+          "variant": "350h Grand Luxury",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_models_page.html",
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "Lexus Nx",
+          "variant": "350h Luxury",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_models_page.html",
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "Lexus Nx",
+          "variant": "450H",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_p107_AW_catalog_nov2025_Lexus_NX.pdf.b64"
+          ]
+        },
+        {
+          "model": "Lexus Nx",
+          "variant": "450H F Sport",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_models_page.html",
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "Lexus Nx",
+          "variant": "450h+ F Sport AWD",
+          "source_artifacts": [
+            "9carthai_lexus-price.html",
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "NX",
+          "variant": "NX 350h Grand Luxury",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "NX",
+          "variant": "NX 350h Luxury",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "NX",
+          "variant": "NX 350h Premium",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "NX",
+          "variant": "NX 450h+ F SPORT",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "NX",
+          "variant": "NX 450h+ Grand Luxury Plus",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "RX",
+          "variant": "RX 350h Luxury",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "RX",
+          "variant": "RX 350h Premium",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "RX",
+          "variant": "RX 450h+",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "RX",
+          "variant": "RX 500h F SPORT Performance",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "RZ",
+          "variant": "RZ 350e Grand Luxury",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "RZ",
+          "variant": "RZ 500e Premium AWD",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "RZ",
+          "variant": "RZ 500e Premium AWD Steer-by-wire",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        },
+        {
+          "model": "UX",
+          "variant": "UX 300h Grand Luxury",
+          "source_artifacts": [
+            "lexus_price_list.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Honda",
+      "accepted_variants": 35,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "Accord e:HEV",
+          "variant": "e:HEV E",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "Accord e:HEV",
+          "variant": "e:HEV EL",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "Accord e:HEV",
+          "variant": "e:HEV RS",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "BR-V",
+          "variant": "E - Taffeta White",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "BR-V",
+          "variant": "E – Crystal Black",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "BR-V",
+          "variant": "EL - Crystal Black",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "BR-V",
+          "variant": "EL – Premium Sunlight",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "CR-V e:HEV",
+          "variant": "e:HEV E",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "CR-V e:HEV",
+          "variant": "e:HEV ES",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "CR-V e:HEV",
+          "variant": "e:HEV HuNT - Crystal Black Pearl",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "CR-V e:HEV",
+          "variant": "e:HEV HuNT - Meteoroid Gray Metallic",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "CR-V e:HEV",
+          "variant": "e:HEV RS",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "CR-V e:HEV",
+          "variant": "e:HEV RS 4WD",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "City",
+          "variant": "S",
+          "source_artifacts": [
+            "9carthai_honda-price.html",
+            "honda_city_recapture.html"
+          ]
+        },
+        {
+          "model": "City",
+          "variant": "e:HEV RS",
+          "source_artifacts": [
+            "honda_city_recapture.html"
+          ]
+        },
+        {
+          "model": "City",
+          "variant": "e:HEV SV",
+          "source_artifacts": [
+            "honda_city_recapture.html"
+          ]
+        },
+        {
+          "model": "City",
+          "variant": "e:HEV V",
+          "source_artifacts": [
+            "honda_city_recapture.html"
+          ]
+        },
+        {
+          "model": "City Hatchback",
+          "variant": "S",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "City Hatchback",
+          "variant": "e:HEV RS",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "City Hatchback",
+          "variant": "e:HEV SV",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "City Hatchback",
+          "variant": "e:HEV V",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "Civic e:HEV",
+          "variant": "e:HEV EL",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "Civic e:HEV",
+          "variant": "e:HEV RS",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "HR-V e:HEV",
+          "variant": "e:HEV E",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "HR-V e:HEV",
+          "variant": "e:HEV EL",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "HR-V e:HEV",
+          "variant": "e:HEV HuNT-Black",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "HR-V e:HEV",
+          "variant": "e:HEV HuNT-White",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "HR-V e:HEV",
+          "variant": "e:HEV RS",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "Honda Accord",
+          "variant": "e:HEV",
+          "source_artifacts": [
+            "9carthai_honda-price.html",
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "Honda Accord",
+          "variant": "e:HEV E",
+          "source_artifacts": [
+            "9carthai_honda-price.html",
+            "honda_p108_accordehev.html"
+          ]
+        },
+        {
+          "model": "Honda Accord",
+          "variant": "e:HEV EL",
+          "source_artifacts": [
+            "9carthai_honda-price.html",
+            "honda_p108_accordehev.html"
+          ]
+        },
+        {
+          "model": "Honda Accord",
+          "variant": "e:HEV RS",
+          "source_artifacts": [
+            "9carthai_honda-price.html",
+            "honda_p108_accordehev.html"
+          ]
+        },
+        {
+          "model": "STEP WGN e:HEV",
+          "variant": "e:HEV SPADA",
+          "source_artifacts": [
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "WR-V",
+          "variant": "RS",
+          "source_artifacts": [
+            "9carthai_honda-price.html",
+            "honda_models_page.html"
+          ]
+        },
+        {
+          "model": "WR-V",
+          "variant": "SV",
+          "source_artifacts": [
+            "9carthai_honda-price.html",
+            "honda_models_page.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Nissan",
+      "accepted_variants": 25,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "Nissan Almera",
+          "variant": "E",
+          "source_artifacts": [
+            "9carthai_nissan-price.html",
+            "nissan_p108_nissan-almera-model-year-24-enhances-customer-experience-wit"
+          ]
+        },
+        {
+          "model": "Nissan Almera",
+          "variant": "EL",
+          "source_artifacts": [
+            "9carthai_nissan-price.html",
+            "nissan_p108_nissan-almera-model-year-24-enhances-customer-experience-wit"
+          ]
+        },
+        {
+          "model": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+          "variant": "e-POWER SV *** / ****",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+          "variant": "e-POWER V *",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+          "variant": "e-POWER VL **",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+          "variant": "DC PRO-2X 7AT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+          "variant": "DC PRO-4X 7AT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+          "variant": "DC Calibre E 7AT Black Edition",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+          "variant": "DC Calibre SL 6MT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+          "variant": "DC Calibre SL 7AT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+          "variant": "KC Calibre E 6MT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+          "variant": "KC Calibre E 7AT Black Edition",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+          "variant": "KC Calibre SL 7AT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา คิงแค็บ ใหม่",
+          "variant": "KC SL 6MT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+          "variant": "SC SL 6MT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+          "variant": "SC SL 6MT 4WD",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน อัลเมร่า",
+          "variant": "1.0L TURBO E CVT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน อัลเมร่า",
+          "variant": "1.0L TURBO EL CVT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน อัลเมร่า",
+          "variant": "1.0L TURBO V CVT",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน อัลเมร่า",
+          "variant": "1.0L TURBO VL CVT * / **",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+          "variant": "Highway Star",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+          "variant": "Highway Star สีขาว ปริซึม ไวท์ *",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+          "variant": "Highway Star สีฟ้า เทอร์ควอยซ์บลู หลังคาสีดำ และ สีขาว ปริซึมไวท์ หลังคาสีดำ *",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน เซเรน่า ใหม่",
+          "variant": "Highway Star",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        },
+        {
+          "model": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่",
+          "variant": "e-POWER *",
+          "source_artifacts": [
+            "nissan_all_grade_price.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Mitsubishi",
+      "accepted_variants": 24,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "ALL NEW MITSUBISHI TRITON",
+          "variant": "ซิงเกิ้ล แค็บ 2.4 PRO",
+          "source_artifacts": [
+            "9carthai_mitsubishi-price.html",
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ALL NEW MITSUBISHI TRITON",
+          "variant": "ดับเบิ้ล แค็บ 2.4 PRO",
+          "source_artifacts": [
+            "9carthai_mitsubishi-price.html",
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ALL NEW MITSUBISHI TRITON",
+          "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+          "source_artifacts": [
+            "9carthai_mitsubishi-price.html",
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ALL NEW MITSUBISHI TRITON",
+          "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+          "source_artifacts": [
+            "9carthai_mitsubishi-price.html",
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ALL NEW MITSUBISHI TRITON",
+          "variant": "ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+          "source_artifacts": [
+            "9carthai_mitsubishi-price.html",
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ปาเจโร สปอร์ต",
+          "variant": "2.4 GT",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ปาเจโร สปอร์ต",
+          "variant": "2.4 PRIME",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ปาเจโร สปอร์ต อีลีท เอดิชัน ใหม่",
+          "variant": "2.4 ELITE EDITION 2WD",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ปาเจโร สปอร์ต อีลีท เอดิชัน ใหม่",
+          "variant": "2.4 ELITE EDITION 4WD",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "มิราจ",
+          "variant": "ACTIVE",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "มิราจ",
+          "variant": "SMART",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "เอ็กซ์ฟอร์ส เอชอีวี",
+          "variant": "IGNITE",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "เอ็กซ์ฟอร์ส เอชอีวี",
+          "variant": "ULTIMATE",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "เอ็กซ์ฟอร์ส เอชอีวี",
+          "variant": "ULTIMATE X",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ไทรทัน ขับเคลื่อน 2 ล้อ",
+          "variant": "ซิงเกิ้ล แค็บ 2.4 PRO",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ไทรทัน ขับเคลื่อน 2 ล้อ",
+          "variant": "ดับเบิ้ล แค็บ 2.4 PRO",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ",
+          "variant": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ",
+          "variant": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD AT",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ",
+          "variant": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD AT SWB",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+          "variant": "ดับเบิ้ล แค็บ 2.4 PRIME 4WD",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+          "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+          "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+          "variant": "ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        },
+        {
+          "model": "ไทรทัน แอทลีท",
+          "variant": "ดับเบิ้ล แค็บ แอทลีท 4WD AT",
+          "source_artifacts": [
+            "mitsubishi_all_models_price.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "GWM",
+      "accepted_variants": 22,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "GWM HAVAL H6",
+          "variant": "hev-pro",
+          "source_artifacts": [
+            "gwm_th_model_haval-h6.html"
+          ]
+        },
+        {
+          "model": "GWM HAVAL H6",
+          "variant": "phev-pro",
+          "source_artifacts": [
+            "gwm_th_model_haval-h6.html"
+          ]
+        },
+        {
+          "model": "GWM HAVAL H6",
+          "variant": "phev-ultra",
+          "source_artifacts": [
+            "gwm_th_model_haval-h6.html"
+          ]
+        },
+        {
+          "model": "GWM POER SAHAR HEV",
+          "variant": "pro",
+          "source_artifacts": [
+            "gwm_th_model_sahar.html"
+          ]
+        },
+        {
+          "model": "GWM POER SAHAR HEV",
+          "variant": "ultra-4wd",
+          "source_artifacts": [
+            "gwm_th_model_sahar.html"
+          ]
+        },
+        {
+          "model": "Gwm Tank 300",
+          "variant": "Diesel",
+          "source_artifacts": [
+            "9carthai_gwm-price.html",
+            "gwm_p108_car-purchase-consultation.html"
+          ]
+        },
+        {
+          "model": "Gwm Tank 300",
+          "variant": "PRO",
+          "source_artifacts": [
+            "9carthai_gwm-price.html",
+            "gwm_th_model_tank-300.html"
+          ]
+        },
+        {
+          "model": "Gwm Tank 500",
+          "variant": "Diesel",
+          "source_artifacts": [
+            "9carthai_gwm-price.html",
+            "gwm_th_model_tank-500-diesel.html"
+          ]
+        },
+        {
+          "model": "Gwm Tank 500",
+          "variant": "PRO",
+          "source_artifacts": [
+            "9carthai_gwm-price.html",
+            "gwm_th_model_tank-500.html"
+          ]
+        },
+        {
+          "model": "Haval H6",
+          "variant": "ULTRA",
+          "source_artifacts": [
+            "gwm_th_model_haval-h6.html"
+          ]
+        },
+        {
+          "model": "TANK 300 DIESEL",
+          "variant": "2-4t-pro",
+          "source_artifacts": [
+            "gwm_th_model_tank-300-diesel.html"
+          ]
+        },
+        {
+          "model": "TANK 300 DIESEL",
+          "variant": "2-4t-ultra",
+          "source_artifacts": [
+            "gwm_th_model_tank-300-diesel.html"
+          ]
+        },
+        {
+          "model": "TANK 300 DIESEL",
+          "variant": "2-4t-ultra-4wd",
+          "source_artifacts": [
+            "gwm_th_model_tank-300-diesel.html"
+          ]
+        },
+        {
+          "model": "TANK 300 HEV",
+          "variant": "pro",
+          "source_artifacts": [
+            "gwm_th_model_tank-300.html"
+          ]
+        },
+        {
+          "model": "TANK 300 HEV",
+          "variant": "ultra",
+          "source_artifacts": [
+            "gwm_th_model_tank-300.html"
+          ]
+        },
+        {
+          "model": "TANK 500 DIESEL",
+          "variant": "2wd-high",
+          "source_artifacts": [
+            "gwm_th_model_tank-500-diesel.html"
+          ]
+        },
+        {
+          "model": "TANK 500 DIESEL",
+          "variant": "2wd-medium",
+          "source_artifacts": [
+            "gwm_th_model_tank-500-diesel.html"
+          ]
+        },
+        {
+          "model": "TANK 500 DIESEL",
+          "variant": "4wd-high",
+          "source_artifacts": [
+            "gwm_th_model_tank-500-diesel.html"
+          ]
+        },
+        {
+          "model": "TANK 500 DIESEL",
+          "variant": "black-warrior-2wd",
+          "source_artifacts": [
+            "gwm_th_model_tank-500-diesel.html"
+          ]
+        },
+        {
+          "model": "TANK 500 DIESEL",
+          "variant": "black-warrior-4wd",
+          "source_artifacts": [
+            "gwm_th_model_tank-500-diesel.html"
+          ]
+        },
+        {
+          "model": "TANK 500 HEV",
+          "variant": "pro",
+          "source_artifacts": [
+            "gwm_th_model_tank-500.html"
+          ]
+        },
+        {
+          "model": "TANK 500 HEV",
+          "variant": "ultra",
+          "source_artifacts": [
+            "gwm_th_model_tank-500.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Mazda",
+      "accepted_variants": 22,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "MAZDA3 SEDAN",
+          "variant": "2.0 C",
+          "source_artifacts": [
+            "mazda_car_mazda3-sedan.html"
+          ]
+        },
+        {
+          "model": "MAZDA3 SEDAN",
+          "variant": "2.0 S",
+          "source_artifacts": [
+            "mazda_car_mazda3-sedan.html"
+          ]
+        },
+        {
+          "model": "MAZDA3 SEDAN",
+          "variant": "2.0 SP",
+          "source_artifacts": [
+            "mazda_car_mazda3-sedan.html"
+          ]
+        },
+        {
+          "model": "MAZDA3 SEDAN",
+          "variant": "CARBON EDITION",
+          "source_artifacts": [
+            "mazda_car_mazda3-sedan.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA BT-50",
+          "variant": "DBL 2.2 XT HI-RACER 8AT",
+          "source_artifacts": [
+            "mazda_car_new-mazda-bt50.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA BT-50",
+          "variant": "DBL 3.0 XTR 4x4 6AT",
+          "source_artifacts": [
+            "mazda_car_new-mazda-bt50.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA BT-50",
+          "variant": "DBL 3.0 XTR HI-RACER 6AT",
+          "source_artifacts": [
+            "mazda_car_new-mazda-bt50.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA BT-50",
+          "variant": "FSC 2.2 XS HI-RACER 6MT",
+          "source_artifacts": [
+            "mazda_car_new-mazda-bt50.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA CX-30 ESSENTIAL",
+          "variant": "2.0 PRIME",
+          "source_artifacts": [
+            "mazda_car_mazda-cx30-essential.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA CX-30 ESSENTIAL",
+          "variant": "2.0 SIGNATURE",
+          "source_artifacts": [
+            "mazda_car_mazda-cx30-essential.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA CX-30 ESSENTIAL",
+          "variant": "2.0 ULTRA",
+          "source_artifacts": [
+            "mazda_car_mazda-cx30-essential.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA CX-5",
+          "variant": "2.0 S",
+          "source_artifacts": [
+            "mazda_car_mazda-cx5.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA CX-5",
+          "variant": "2.0 SP",
+          "source_artifacts": [
+            "mazda_car_mazda-cx5.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA CX-5",
+          "variant": "XDL",
+          "source_artifacts": [
+            "mazda_car_mazda-cx5.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA2 ESSENTIAL",
+          "variant": "1.3 PRIME",
+          "source_artifacts": [
+            "mazda_car_mazda2-essential.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA2 ESSENTIAL",
+          "variant": "1.3 PRIME SPORTS",
+          "source_artifacts": [
+            "mazda_car_mazda2-essential.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA2 ESSENTIAL",
+          "variant": "1.3 SIGNATURE",
+          "source_artifacts": [
+            "mazda_car_mazda2-essential.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA2 ESSENTIAL",
+          "variant": "1.3 SIGNATURE SPORTS",
+          "source_artifacts": [
+            "mazda_car_mazda2-essential.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA2 ESSENTIAL",
+          "variant": "1.3 ULTRA",
+          "source_artifacts": [
+            "mazda_car_mazda2-essential.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA2 ESSENTIAL",
+          "variant": "1.3 ULTRA SPORTS",
+          "source_artifacts": [
+            "mazda_car_mazda2-essential.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA2 ESSENTIAL",
+          "variant": "XDL SIGNATURE",
+          "source_artifacts": [
+            "mazda_car_mazda2-essential.html"
+          ]
+        },
+        {
+          "model": "NEW MAZDA2 ESSENTIAL",
+          "variant": "XDL SIGNATURE SPORTS",
+          "source_artifacts": [
+            "mazda_car_mazda2-essential.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "MINI",
+      "accepted_variants": 15,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "MINI ACEMAN",
+          "variant": "ALL-ELECTRIC MINI ACEMAN SE",
+          "source_artifacts": [
+            "9carthai_mini-price.html",
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI ACEMAN",
+          "variant": "ALL-ELECTRIC MINI ACEMAN SE - CLASSIC",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI ACEMAN",
+          "variant": "ALL-ELECTRIC MINI ACEMAN SE - HIGHTRIM",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI CONVERTIBLE",
+          "variant": "MINI COOPER CONVERTIBLE S",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI COOPER",
+          "variant": "ALL-ELECTRIC MINI COOPER PAUL SMITH EDITION",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI COOPER",
+          "variant": "ALL-ELECTRIC MINI COOPER SE - CLASSIC",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI COOPER",
+          "variant": "ALL-ELECTRIC MINI COOPER SE - HIGHTRIM",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI COUNTRYMAN",
+          "variant": "MINI COUNTRYMAN S ALL4 - HIGHTRIM",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI JOHN COOPER WORKS",
+          "variant": "ALL-ELECTRIC MINI JCW",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI JOHN COOPER WORKS",
+          "variant": "ALL-ELECTRIC MINI JCW - 1965 VICTORY EDITION",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI JOHN COOPER WORKS",
+          "variant": "ALL-ELECTRIC MINI JCW ACEMAN",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI JOHN COOPER WORKS",
+          "variant": "MINI JCW",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "MINI JOHN COOPER WORKS",
+          "variant": "MINI JCW CONVERTIBLE",
+          "source_artifacts": [
+            "MINI_PriceSheet_20260327.pdf.b64"
+          ]
+        },
+        {
+          "model": "Mini John Cooper Works",
+          "variant": "ALL-ELECTRIC MINI JOHN COOPER WORKS",
+          "source_artifacts": [
+            "9carthai_mini-price.html",
+            "mini_p107_brochure.html"
+          ]
+        },
+        {
+          "model": "Mini John Cooper Works",
+          "variant": "ALL-ELECTRIC MINI JOHN COOPER WORKS ACEMAN",
+          "source_artifacts": [
+            "9carthai_mini-price.html",
+            "mini_p107_brochure.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Land Rover",
+      "accepted_variants": 11,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "DEFENDER",
+          "variant": "110 2.0 AWD Trophy Plus (5 Door)",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        },
+        {
+          "model": "DEFENDER",
+          "variant": "110 2.0 AWD X-Dynamic SE Plus (5 Door)",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        },
+        {
+          "model": "DEFENDER",
+          "variant": "110 3.0 AWD X-Dynamic SE Plus (5 Door)",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        },
+        {
+          "model": "DEFENDER",
+          "variant": "130 3.0 X-Dynamic SE Plus (5 Door LWB)",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        },
+        {
+          "model": "DEFENDER",
+          "variant": "90 3.0 AWD X-Dynamic SE Plus (3 Door)",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        },
+        {
+          "model": "RANGE ROVER",
+          "variant": "3.0 AWD Autobiography LWB Plus",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        },
+        {
+          "model": "RANGE ROVER",
+          "variant": "3.0 AWD SV LWB Plus",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        },
+        {
+          "model": "RANGE ROVER SPORT",
+          "variant": "3.0 AWD Battersea Plus",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        },
+        {
+          "model": "RANGE ROVER SPORT",
+          "variant": "3.0 AWD SE Plus",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        },
+        {
+          "model": "RANGE ROVER VELAR",
+          "variant": "2.0 AWD Belgravia Plus",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        },
+        {
+          "model": "RANGE ROVER VELAR",
+          "variant": "2.0 AWD Dynamic SE Plus",
+          "source_artifacts": [
+            "TH_LandRover_PriceSheet.pdf.b64"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Suzuki",
+      "accepted_variants": 11,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "ALL NEW SUZUKI FRONX",
+          "variant": "GL",
+          "source_artifacts": [
+            "suzuki_fronx_equipment.html"
+          ]
+        },
+        {
+          "model": "ALL NEW SUZUKI FRONX",
+          "variant": "GLX",
+          "source_artifacts": [
+            "suzuki_fronx_equipment.html"
+          ]
+        },
+        {
+          "model": "ALL NEW SUZUKI FRONX",
+          "variant": "GLX PLUS",
+          "source_artifacts": [
+            "suzuki_fronx_equipment.html"
+          ]
+        },
+        {
+          "model": "JIMNY",
+          "variant": "AT (SINGLE-TONE)",
+          "source_artifacts": [
+            "suzuki_jimny_equipment.html"
+          ]
+        },
+        {
+          "model": "JIMNY",
+          "variant": "AT (TWO-TONE)",
+          "source_artifacts": [
+            "suzuki_jimny_equipment.html"
+          ]
+        },
+        {
+          "model": "Suzuki Fronx",
+          "variant": "GL",
+          "source_artifacts": [
+            "9carthai_suzuki-price.html",
+            "suzuki_fronx_equipment.html",
+            "suzuki_model_fronx.html"
+          ]
+        },
+        {
+          "model": "Suzuki Fronx",
+          "variant": "GLX",
+          "source_artifacts": [
+            "9carthai_suzuki-price.html",
+            "suzuki_fronx_equipment.html",
+            "suzuki_model_fronx.html"
+          ]
+        },
+        {
+          "model": "Suzuki Fronx",
+          "variant": "GLX PLUS",
+          "source_artifacts": [
+            "9carthai_suzuki-price.html",
+            "suzuki_fronx_equipment.html",
+            "suzuki_model_fronx.html"
+          ]
+        },
+        {
+          "model": "Suzuki Xl7",
+          "variant": "BLACK EDITION",
+          "source_artifacts": [
+            "9carthai_suzuki-price.html",
+            "suzuki_model_xl7.html"
+          ]
+        },
+        {
+          "model": "Suzuki Xl7",
+          "variant": "HYBRID",
+          "source_artifacts": [
+            "9carthai_suzuki-price.html",
+            "suzuki_home_page.html",
+            "suzuki_model_xl7.html",
+            "suzuki_xl7_equipment.html"
+          ]
+        },
+        {
+          "model": "XL7 HYBRID",
+          "variant": "GLX",
+          "source_artifacts": [
+            "suzuki_xl7_equipment.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "MG",
+      "accepted_variants": 8,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "Mg Ep",
+          "variant": "PLUS",
+          "source_artifacts": [
+            "9carthai_mg-price.html",
+            "mg_home_page.html"
+          ]
+        },
+        {
+          "model": "Mg Urban",
+          "variant": "MAX",
+          "source_artifacts": [
+            "9carthai_mg-price.html",
+            "mg_car_mg-urban.html"
+          ]
+        },
+        {
+          "model": "Mg Urban",
+          "variant": "ULTRA",
+          "source_artifacts": [
+            "9carthai_mg-price.html",
+            "mg_car_mg-urban.html"
+          ]
+        },
+        {
+          "model": "Mg3 Hybrid",
+          "variant": "+ D",
+          "source_artifacts": [
+            "9carthai_mg-price.html",
+            "mg_home_page.html"
+          ]
+        },
+        {
+          "model": "Mg3 Hybrid",
+          "variant": "+ X",
+          "source_artifacts": [
+            "9carthai_mg-price.html",
+            "mg_home_page.html"
+          ]
+        },
+        {
+          "model": "NEW MGS5 EV PLUS",
+          "variant": "D+",
+          "source_artifacts": [
+            "mg_home_page.html"
+          ]
+        },
+        {
+          "model": "NEW MGS5 EV PLUS",
+          "variant": "V+",
+          "source_artifacts": [
+            "mg_home_page.html"
+          ]
+        },
+        {
+          "model": "NEW MGS5 EV PLUS",
+          "variant": "X+",
+          "source_artifacts": [
+            "mg_home_page.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Isuzu",
+      "accepted_variants": 7,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "Isuzu D Max",
+          "variant": "2 Doors",
+          "source_artifacts": [
+            "9carthai_isuzu-price.html",
+            "isuzu_tis_page.html"
+          ]
+        },
+        {
+          "model": "Isuzu D Max",
+          "variant": "4 Doors",
+          "source_artifacts": [
+            "9carthai_isuzu-price.html",
+            "isuzu_tis_page.html"
+          ]
+        },
+        {
+          "model": "Isuzu D Max",
+          "variant": "L",
+          "source_artifacts": [
+            "isuzu_page.html"
+          ]
+        },
+        {
+          "model": "Isuzu D Max",
+          "variant": "Spark",
+          "source_artifacts": [
+            "9carthai_isuzu-price.html",
+            "isuzu_tis_page.html"
+          ]
+        },
+        {
+          "model": "Isuzu D Max",
+          "variant": "V Cross",
+          "source_artifacts": [
+            "9carthai_isuzu-price.html",
+            "isuzu_tis_page.html"
+          ]
+        },
+        {
+          "model": "Isuzu D Max",
+          "variant": "X Series",
+          "source_artifacts": [
+            "9carthai_isuzu-price.html",
+            "isuzu_tis_page.html"
+          ]
+        },
+        {
+          "model": "MU-X",
+          "variant": "Active",
+          "source_artifacts": [
+            "isuzu_page.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Kia",
+      "accepted_variants": 6,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "Kia Ev5",
+          "variant": "AIR",
+          "source_artifacts": [
+            "9carthai_kia-price.html",
+            "kia_ev5_features.html"
+          ]
+        },
+        {
+          "model": "Kia Ev5",
+          "variant": "EARTH Exclusive AWD",
+          "source_artifacts": [
+            "9carthai_kia-price.html",
+            "kia_ev5_features.html"
+          ]
+        },
+        {
+          "model": "Kia Ev5",
+          "variant": "EARTH Long Range",
+          "source_artifacts": [
+            "9carthai_kia-price.html",
+            "kia_ev5_features.html"
+          ]
+        },
+        {
+          "model": "The Kia EV5",
+          "variant": "The Kia EV5 Air",
+          "source_artifacts": [
+            "kia_promo_carnival_diesel.html"
+          ]
+        },
+        {
+          "model": "The Kia EV5",
+          "variant": "The Kia EV5 Earth Exclusive AWD",
+          "source_artifacts": [
+            "kia_promo_carnival_diesel.html"
+          ]
+        },
+        {
+          "model": "The Kia EV5",
+          "variant": "The Kia EV5 Earth Long Range",
+          "source_artifacts": [
+            "kia_promo_carnival_diesel.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Changan",
+      "accepted_variants": 5,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "Changan Lumin",
+          "variant": "L DC",
+          "source_artifacts": [
+            "9carthai_new-changan-lumin-price.html",
+            "changan_p107_compare-cars_dup.html"
+          ]
+        },
+        {
+          "model": "NEVO Q05",
+          "variant": "Max",
+          "source_artifacts": [
+            "changan_nevo_q05_page.html"
+          ]
+        },
+        {
+          "model": "NEVO Q05",
+          "variant": "NEVO Q05 MAX",
+          "source_artifacts": [
+            "changan_promotion_page.html"
+          ]
+        },
+        {
+          "model": "NEVO Q05",
+          "variant": "NEVO Q05 ULTRA",
+          "source_artifacts": [
+            "changan_promotion_page.html"
+          ]
+        },
+        {
+          "model": "NEVO Q05",
+          "variant": "Ultra",
+          "source_artifacts": [
+            "changan_nevo_q05_page.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Deepal",
+      "accepted_variants": 4,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "Deepal E07",
+          "variant": "Performance AWD",
+          "source_artifacts": [
+            "9carthai_deepal-price.html",
+            "deepal_e07_awd.html",
+            "deepal_e07_plus.html"
+          ]
+        },
+        {
+          "model": "Deepal E07",
+          "variant": "Plus",
+          "source_artifacts": [
+            "9carthai_deepal-price.html",
+            "deepal_e07_awd.html",
+            "deepal_e07_plus.html"
+          ]
+        },
+        {
+          "model": "Deepal S05",
+          "variant": "Reev",
+          "source_artifacts": [
+            "9carthai_deepal-price.html",
+            "deepal_s05_reev.html"
+          ]
+        },
+        {
+          "model": "S07",
+          "variant": "S07 L",
+          "source_artifacts": [
+            "deepal_s05.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Subaru",
+      "accepted_variants": 2,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "BRZ",
+          "variant": "BRZ AT",
+          "source_artifacts": [
+            "subaru_th_model_brz.html"
+          ]
+        },
+        {
+          "model": "CROSSTREK",
+          "variant": "2.0i-S EyeSight",
+          "source_artifacts": [
+            "subaru_th_model_crosstrek.html"
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Jaguar",
+      "accepted_variants": 1,
+      "official_access_status": "REACHABLE",
+      "targets": [
+        {
+          "model": "F-TYPE",
+          "variant": "2.0 RWD Coupe R-Dynamic Plus",
+          "source_artifacts": [
+            "TH_Jaguar_PriceSheet.pdf.b64"
+          ]
+        }
+      ]
+    }
+  ]
+}

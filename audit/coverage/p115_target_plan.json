@@ -1,0 +1,135 @@
+{
+  "schema": "p115_target_plan/v1",
+  "created_at": "2026-09-29",
+  "base_commit": "7c2fc2b0b01498248d1cfa2b619a9d7892a6c3e1",
+  "pr": {"number": 3, "state": "OPEN", "merged": false},
+  "goal": "Search / retrieval / RAG over the promoted accepted set: structured catalog stays authoritative, vector evidence is strictly gated and supplemental, exact-model safety preserved, fail-closed fallbacks. Reuse existing primitives; no new RAG architecture, no acquisition/refresh.",
+  "read_only_preflight": {
+    "files_read": [
+      "lib/search/hybrid-search.ts (23) — searchHybrid(): searchCatalog first, vector only when filters.q non-empty, try/catch fallback to structured-fallback; returns CatalogPage + vectorAvailable + searchMode + evidence",
+      "lib/search/vector-search.ts (90) — SQL filters: dims guard, sd.status='VERIFIED', s.status='ACTIVE', BrochureVerification VERIFIED EXISTS, dim checks on client+vector, parameterized <=>, bounded LIMIT; throws LocalEmbeddingError dimension_mismatch",
+      "lib/search/thai-normalize.ts (98) — THAI_MODEL_MAP/THAI_BRAND_MAP substring resolution + parser; returns {original, resolvedBrands, resolvedModels, additionalTerms}; NO alias edits allowed beyond repo identity sources",
+      "lib/embeddings/local-service.ts (92) — getLocalEmbeddingClient null unless EMBEDDING_BASE_URL set; dims validation; fail-closed error codes",
+      "lib/catalog/queries.ts (212) — whereFor: ACTIVE variant+model+manufacturer + prices.some(currentOfficialPrice = isCurrent + VERIFIED doc + ACTIVE source + official sourceType + VERIFIED verification); searchableText = SINGLE whole-string contains per field; officialSourceTypes list; searchCatalog=listVariants",
+      "lib/catalog/types.ts (79) — CatalogFilters/CatalogPage contract",
+      "lib/discovery/exact-model-retrieval.ts (267) — exactModelRetrieval (slug→alias→variant slug; prices where isCurrent ONLY — no official/verified chain), parseBrandModelQuery (exports brand/model/tokens), smartCatalogSearch (brand+model→exact, brand verify on model-only, else none)",
+      "lib/ai/retrieval/catalog-search.ts (139) — searchQuestionCatalog: ranking fast-path; exact branch only when intent.entities.length>0 (fullQuery=entities.join(' ')); maps exact prices verbatim; fallback buildSearchTerms loop (keeps brand tokens)",
+      "lib/ai/retrieval/evidence-merge.ts (76) — getVectorEvidence = searchVectorEvidence + applyEvidenceThresholds (gated); mergeEvidence(structured, vector) trusts its VectorSearchResult input",
+      "lib/ai/retrieval/evidence-gate-policy.ts (458) — CANONICAL_MODELS identity + excludes, sourceTypeGuard fail-closed, brandConsistencyGuard, entity specificity, distance 0.30/0.45/0.60, body-type; applyEvidenceThresholds public",
+      "lib/ai/evidence-gate.ts (91) — evaluateEvidenceGate (variant/price/spec/official → verified|partial|insufficient)",
+      "lib/ai/trust-contract.ts (93) — gateStateToConfidence / FactualConfidence / ProvenanceMeta",
+      "src/app/api/search/route.ts (69) — calls searchCatalog() directly, hardcoded vectorAvailable:false (observation 1 CONFIRMED)",
+      "src/app/api/ai/ask/route.ts (182) — structured searchQuestionCatalog + getVectorEvidence (gated) + mergeEvidence + evaluateEvidenceGate + trust-contract; insufficient path returns 200 insufficient_evidence (observation 2 CONFIRMED)",
+      "lib/ai/retrieval/query-parser.ts (180) — parseAutomotiveQuery; extractEntities known-model list (word-boundary); extractBrand; MODEL_ALIASES Thai subset",
+      "tests: search.test.ts(54), catalog-search.test.ts(77), unit/vector-search.test.ts(68), unit/thai-normalize-consistency.test.ts(231), unit/evidence-gate-adversarial.test.ts(780 incl. 7a/7b MG EP vs EP Plus), evidence-gate-brand-consistency.test.ts(163), ai-comparison.test.ts(41 incl. insufficient-evidence route test), fabrication-guard.test.ts(76)",
+      "prisma: Embedding(vector 1024, dims col, unique doc+chunk+model), Alias(value,language,modelId...), Price(isCurrent, priceType, sourceDocumentId nullable), Source(status, sourceType), SourceDocument(status, canonicalUrl), BrochureVerification(status, unique per doc) — NO schema change",
+      "Blueprint.md sections 12 (semantic search), 13 (hybrid: do NOT rely on vector alone), 14 (AI flow), 36 (RAG prompt policy), 37 (exact specs prefer structured; vector = supporting evidence/discovery)"
+    ],
+    "concrete_observations_verified": {
+      "1_search_calls_searchCatalog_directly": "CONFIRMED — route.ts:61 searchCatalog, vectorAvailable hardcoded false:62; searchHybrid only referenced by tests/unit/vector-search.test.ts",
+      "2_ask_has_full_chain": "CONFIRMED — structured+vector+merge+gate+trust all wired; insufficient path exists",
+      "3_structured_only_active_current_verified_official": "CONFIRMED — queries.ts whereFor prices.some(currentOfficialPrice) chain exact match to assignment; BUT exactModelRetrieval prices filter isCurrent-only (boundary mismatch, see G4)",
+      "4_vector_guards": "CONFIRMED — SQL VERIFIED/ACTIVE/BrochureVerification/dims; deterministic gate policy in evidence-gate-policy (12 mandatory guards exist as primitives)",
+      "5_identity_aliases_short_token": "CONFIRMED — CANONICAL_MODELS + excludes + thai-normalize tests 7a/7b exist; NOT loosened in this wave"
+    },
+    "live_db_probes": {
+      "embeddings": "99 rows, all with vector, 1 dimension set (1024)",
+      "honda_models_priced_chain": "City=0, City Hatchback=1, Civic=1, Civic Type R=1, CR-V=1, Accord=1, others 0",
+      "yaris_cross": "toyota-yaris-cross priced=1 (other yaris*=0)",
+      "current_prices": "352 isCurrent total, 334 FAIL official+verified chain (7 city variants + city hatchback(6 fail,1 pass) + mg ep plus(1 fail) all fail chain)",
+      "slug_short_token": "model 'EP Plus' slug=mg-ep, model 'Mg Ep' slug=mg-ep-2 — slug 'mg-ep' resolves EP Plus"
+    }
+  },
+  "data_boundary": {
+    "read_only": true,
+    "db_writes": "NONE (queries are SELECT; query-time embedding embed() is the existing read path, no Embedding row writes)",
+    "reuse": "promoted accepted set only: ACTIVE records, current official verified price chain, VERIFIED SourceDocument + ACTIVE Source + VERIFIED BrochureVerification for vector evidence",
+    "no_new": ["embedding provider/model/config", "schema/migration", "acquisition/refresh", "price/spec harvesting", "admin/community/scheduled jobs", "RAG architecture rewrite", "P102-P106 identity semantics changes", "alias map additions not backed by repo identity sources"]
+  },
+  "concrete_gaps": [
+    {
+      "id": "G1",
+      "boundary": "src/app/api/search/route.ts parseSearchQuery",
+      "gap": "Explicit model query loses model scope: when parser resolves a brand but THAI_MODEL_MAP has no model (English queries), branch sets resolvedQ=undefined → brand-wide search. 'Honda City' → manufacturer=honda, q=undefined → returns Accord/Civic/CR-V (arbitrary same-brand). Violates A (exact-model-first).",
+      "mandatory_tests": ["1", "2"],
+      "fix": "modelPhrase = parser entities (word-boundary known models) else parseBrandModelQuery leftover (year/stopword-free); brand-only (no model term) keeps existing q=undefined behavior"
+    },
+    {
+      "id": "G2",
+      "boundary": "src/app/api/search/route.ts model resolution",
+      "gap": "Substring-colliding Thai model aliases are JOINED into one phrase that no field contains: 'ยาริส ครอส'→q='yaris yaris cross', 'เอพี พลัส'→q='ep ep plus' → 0 results while Yaris Cross has 1 official priced variant. Exact entity specificity erased. Violates E.",
+      "mandatory_tests": ["2", "11"],
+      "fix": "drop any resolvedModel that is a substring of another resolvedModel (keep maximal/most specific); single phrase otherwise; non-overlapping multi-model join unchanged (pre-existing fail-closed limitation, documented)"
+    },
+    {
+      "id": "G3",
+      "boundary": "src/app/api/search/route.ts + lib/search/hybrid-search.ts",
+      "gap": "/api/search never uses searchHybrid (observation 1); vectorAvailable hardcoded false (untruthful when EMBEDDING_BASE_URL set). AND searchHybrid returns RAW searchVectorEvidence output without applyEvidenceThresholds — wiring it as-is would expose ungated evidence (violates B/C).",
+      "mandatory_tests": ["4", "5", "7", "8", "9", "11", "12"],
+      "fix": "route calls searchHybrid(filters); hybrid applies applyEvidenceThresholds(filters.q, vector) and strips the internal 'qualified' flag from returned evidence rows (response shape VectorEvidence unchanged)"
+    },
+    {
+      "id": "G4",
+      "boundary": "lib/ai/retrieval/catalog-search.ts exact branch",
+      "gap": "Exact-match branch maps variant.prices verbatim from exactModelRetrieval (isCurrent ONLY): 334/352 current prices fail official+verified chain, yet ask route flags structured evidence official:true → non-official current price claimable as VERIFIED. Violates D/A (structured official catalog authoritative).",
+      "mandatory_tests": ["4", "10"],
+      "fix": "filter mapped prices to the same official chain as queries.ts (VERIFIED doc + ACTIVE official source + VERIFIED verification + isCurrent); drop variants with zero qualifying prices (same eligibility as searchCatalog)"
+    },
+    {
+      "id": "G5",
+      "boundary": "lib/ai/retrieval/catalog-search.ts fallback terms",
+      "gap": "Explicit-model queries fall back to buildSearchTerms which keeps brand tokens ('honda'/'mg') → searchCatalog(q:'honda') brand-wide results merge into answers → same-brand guessing (CR-V/Civic for 'honda city'). Violates D 'never same-brand guessing'.",
+      "mandatory_tests": ["1", "3"],
+      "fix": "when explicit model scope exists (entities or parseBrandModelQuery model), drop brand-only terms from fallback search terms"
+    },
+    {
+      "id": "G6",
+      "boundary": "lib/discovery/exact-model-retrieval.ts smartCatalogSearch",
+      "gap": "No canonical identity check on exact hits: slug 'mg-ep' resolves model 'EP Plus' for query 'MG EP' (DB slug collision) → short-token collision returns cross-model rows as exact match once price eligibility passes. Violates A/C.",
+      "mandatory_tests": ["3"],
+      "fix": "reuse evidence-gate-policy canonical identity: export a thin helper over canonicalIdentityMatch (same rules as gateVectorEvidence layer 2: reject isExcluded or differing non-null identities; accept when either side has no canonical identity) and apply to exactModelRetrieval hits in smartCatalogSearch using the ORIGINAL query"
+    },
+    {
+      "id": "G7",
+      "boundary": "lib/ai/retrieval/catalog-search.ts exact trigger",
+      "gap": "Exact-model-first never runs for short models unknown to parser entities ('MG EP': extractEntities=[] → exact branch skipped → falls straight to brand-term search). Violates A.",
+      "mandatory_tests": ["3"],
+      "fix": "trigger exact branch when intent.type==='search' AND (entities.length>0 OR parseBrandModelQuery(question).model) — fullQuery=question when model scope from parser, entities.join when from entities"
+    }
+  ],
+  "files_to_touch": [
+    "src/app/api/search/route.ts (G1, G2, G3)",
+    "lib/search/hybrid-search.ts (G3 gating)",
+    "lib/ai/retrieval/catalog-search.ts (G4, G5, G7)",
+    "lib/discovery/exact-model-retrieval.ts (G6 identity check)",
+    "lib/ai/retrieval/evidence-gate-policy.ts (export identity helper ONLY — no threshold/policy change)",
+    "lib/catalog/queries.ts (export officialSourceTypes ONLY — reuse, no predicate change)",
+    "tests/p115-retrieval-boundaries.test.ts (new; red-before→green-after)",
+    "audit/coverage/p115_target_plan.json, p115_final_result.json, p115_final_report.md, gate logs"
+  ],
+  "acceptance_tests": {
+    "1_exact_honda_city": "route parseSearchQuery('Honda City') → {q:'city', manufacturer:'honda'} (captured searchCatalog filters, non-vacuous exact values) + live-DB searchCatalog: non-empty, every result model slug startsWith('city'), no 'cr-v'/'civic'/'accord'. RED: today q=undefined (brand-wide). [G1,G5]",
+    "2_thai_alias_same": "route parseSearchQuery('ฮอนด้า ซิตี้') → same {q:'city', manufacturer:'honda'}; normalize contract untouched; 'ยาริส ครอส' → q='yaris cross' (RED: 'yaris yaris cross'). [G1,G2]",
+    "3_mg_ep_separation": "route 'MG EP' → {q:'ep', manufacturer:'mg'} not brand-wide (RED: q=undefined); smartCatalogSearch with fake prisma returning slug 'mg-ep'→EP Plus → results must NOT include EP Plus (RED: returned); hybrid vector row EP Plus content for query 'MG EP' → excluded by gate. [G5,G6,G3]",
+    "4_search_not_widened": "route GET with searchCatalog spy + vectorSearch rows → response.results deep-equal structured-only results; evidence may be non-empty while results unchanged; structured result contract fields (results,total,page,limit,hasMore) identical. [G3,G4]",
+    "5_vector_disabled_truthful": "EMBEDDING_BASE_URL='' → vectorAvailable:false, searchMode:'structured-fallback', evidence:[] with results intact; error path → structured-fallback not crash. [G3]",
+    "6_dimension_fail_closed": "embedding client dimensions 767 → LocalEmbeddingError dimension_mismatch (existing); embed returns wrong-length vector → dimension_mismatch before queryRaw (NEW). [no change expected]",
+    "7_unverified_source": "SQL contains sd.status='VERIFIED' AND s.status='ACTIVE' (captured parameterized query); gate rejects sourceType UNVERIFIED/RESEARCH row even if injected. [no change + G3 gate applied at hybrid]",
+    "8_missing_brochure_verification": "SQL contains BrochureVerification status='VERIFIED' EXISTS predicate (captured query text). [no change]",
+    "9_cross_model_rejected": "applyEvidenceThresholds('Honda City ราคา', CR-V evidence row) → excluded; hybrid evidence excludes it; canonical 7a/7b remain green. [G3]",
+    "10_insufficient_no_guessing": "ask: searchQuestionCatalog→[] + searchVectorEvidence raw rows that fail gate → 200 insufficient_evidence whyThisAnswer:[]; ask with explicit model + no exact + brand-term-only fallback never queries brand-wide (captured searcher q list contains no brand-only term when model scope exists). [G4,G5]",
+    "11_deterministic": "searchHybrid twice with same deps → deep-equal; applyEvidenceThresholds twice → deep-equal (idempotent, order preserved). [G3]",
+    "12_provenance_survives": "hybrid evidence[0].source.url preserved; mergeEvidence keeps metadata.sourceUrl + vector: id. [existing + G3]"
+  },
+  "non_goals": [
+    "No second retrieval architecture / no reranking / no new hybrid scoring (Blueprint §38 ranking NOT implemented here)",
+    "No embedding generation or Embedding writes",
+    "No changes to provider factory, models, config, env, prisma schema",
+    "No changes to gate thresholds/policy semantics — only export an existing internal identity helper",
+    "No alias/thai-normalize mapping additions",
+    "No UI/UX redesign; response keys added only additively (searchMode, evidence) — structured fields unchanged",
+    "No acquisition, refresh, admin, community, scheduled jobs",
+    "Fixing exactModelRetrieval's isCurrent-only predicate at its source is NOT done (P102-P113 untouched) — scoped filter applied at the reused call site (catalog-search mapping) instead"
+  ],
+  "anti_loop": "ONE read-only preflight → ONE target plan → ONE implementation pass → red-before/green-after per defect group → ONE combined/full gate chain → ONE push/report → STOP"
+}

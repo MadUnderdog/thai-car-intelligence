@@ -363,20 +363,10 @@ export function gateVectorEvidence(
     return { accepted: false, reason: srcGuard.reason };
   }
 
-  // ── Layer 2: Canonical model identity ────────────────────────────────
-  const identity = canonicalIdentityMatch(query, vec.content);
-  if (identity.isExcluded) {
-    return {
-      accepted: false,
-      reason: `canonical identity mismatch: query=${identity.queryModel}, evidence=${identity.evidenceModel}`,
-    };
-  }
-  // Both query and evidence reference canonical models but don't match → different models
-  if (identity.queryModel && identity.evidenceModel && identity.queryModel !== identity.evidenceModel && !identity.match) {
-    return {
-      accepted: false,
-      reason: `different canonical models: query=${identity.queryModel}, evidence=${identity.evidenceModel}`,
-    };
+  // ── Layer 2: Canonical model identity (shared with exact retrieval) ──
+  const identityGate = canonicalIdentityGate(query, vec.content);
+  if (!identityGate.accepted) {
+    return identityGate;
   }
 
   // ── Layer 3: Brand consistency guard ─────────────────────────────────
@@ -421,6 +411,31 @@ export function gateVectorEvidence(
 }
 
 // ── Public API ─────────────────────────────────────────────────────────────
+
+/**
+ * Deterministic canonical-identity decision for a (query, candidate-text)
+ * pair — the SAME two identity rules gateVectorEvidence applies (layer 2).
+ * Exported so exact-model retrieval can reuse the single identity source
+ * instead of inventing its own matching. Rejects only explicit conflicts:
+ * excluded pairs, or two DIFFERENT known canonical identities. Pairs where
+ * either side has no canonical identity are not disprovable → accepted.
+ */
+export function canonicalIdentityGate(query: string, candidateText: string): GateDecision {
+  const identity = canonicalIdentityMatch(query, candidateText);
+  if (identity.isExcluded) {
+    return {
+      accepted: false,
+      reason: `canonical identity mismatch: query=${identity.queryModel}, evidence=${identity.evidenceModel}`,
+    };
+  }
+  if (identity.queryModel && identity.evidenceModel && identity.queryModel !== identity.evidenceModel && !identity.match) {
+    return {
+      accepted: false,
+      reason: `different canonical models: query=${identity.queryModel}, evidence=${identity.evidenceModel}`,
+    };
+  }
+  return { accepted: true, reason: "no canonical identity conflict" };
+}
 
 export type GatedEvidence = VectorEvidence & { qualified: boolean };
 

@@ -12,12 +12,15 @@
  */
 
 import { PrismaClient, Prisma } from "@prisma/client";
+import { canonicalIdentityGate } from "../ai/retrieval/evidence-gate-policy";
 
 type ExactMatchResult = {
   found: boolean;
   matchType: "exact_model" | "exact_alias" | "exact_variant" | "brand_fallback" | "none";
   variants: any[];
   total: number;
+  /** Name of the matched model — lets callers re-check canonical identity. */
+  modelName?: string;
 };
 
 /**
@@ -66,6 +69,7 @@ export async function exactModelRetrieval(
       matchType: "exact_model",
       variants: exactModel.variants,
       total: exactModel.variants.length,
+      modelName: exactModel.nameEn,
     };
   }
 
@@ -101,6 +105,7 @@ export async function exactModelRetrieval(
       matchType: "exact_alias",
       variants: aliasMatch.model.variants,
       total: aliasMatch.model.variants.length,
+      modelName: aliasMatch.model.nameEn,
     };
   }
 
@@ -129,6 +134,7 @@ export async function exactModelRetrieval(
       matchType: "exact_variant",
       variants: [exactVariant],
       total: 1,
+      modelName: exactVariant.model?.nameEn,
     };
   }
 
@@ -198,6 +204,18 @@ export function parseBrandModelQuery(query: string): {
 }
 
 /**
+ * P115 (G6): an exact hit must still be the SAME canonical model identity
+ * as the query. DB slugs can collide with short tokens (slug "mg-ep"
+ * belongs to model "EP Plus" while the actual EP model is "mg-ep-2"), so
+ * slug/alias hits are re-checked against the single canonical identity
+ * source (evidence-gate-policy) before being returned as exact.
+ */
+function identityAccepts(query: string, modelName: string | undefined): boolean {
+  if (!modelName) return true;
+  return canonicalIdentityGate(query, modelName).accepted;
+}
+
+/**
  * Smart catalog search that uses exact model retrieval first,
  * then falls back to brand-level search ONLY when no exact match exists.
  *
@@ -217,7 +235,7 @@ export async function smartCatalogSearch(
   // If we have both brand and model, try exact model retrieval
   if (brand && model) {
     const exactResult = await exactModelRetrieval(prisma, `${brand} ${model}`, limit);
-    if (exactResult.found) {
+    if (exactResult.found && identityAccepts(query, exactResult.modelName)) {
       return {
         results: exactResult.variants,
         matchType: exactResult.matchType,
@@ -227,7 +245,7 @@ export async function smartCatalogSearch(
 
     // Try just the model name without brand
     const modelOnly = await exactModelRetrieval(prisma, model, limit);
-    if (modelOnly.found) {
+    if (modelOnly.found && identityAccepts(query, modelOnly.modelName)) {
       // Verify the model belongs to the specified brand
       const matchingVariants = modelOnly.variants.filter((v: any) => {
         const modelBrand = v.model?.manufacturer?.slug ?? "";
@@ -246,7 +264,7 @@ export async function smartCatalogSearch(
   // If we have just a model name without brand
   if (model && !brand) {
     const exactResult = await exactModelRetrieval(prisma, model, limit);
-    if (exactResult.found) {
+    if (exactResult.found && identityAccepts(query, exactResult.modelName)) {
       return {
         results: exactResult.variants,
         matchType: exactResult.matchType,

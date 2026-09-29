@@ -1,0 +1,46 @@
++       {
++         "amount": 646000,
++         "currency": "THB",
++         "observedAt": "2026-09-21T03:09:52.945Z",
++         "source": {
++           "documentStatus": "VERIFIED",
++           "id": "afde4e87-dafd-41a7-8700-19405c8c0323",
++           "source": {
++             "domain": "9carthai.com",
++             "id": "d4c42824-c5ea-43c2-8394-83642fad0c73",
++             "nameEn": "9CARTHAI",
++             "nameTh": "9CARTHAI",
++             "type": "AUTOMOTIVE_MEDIA",
++           },
++           "titleEn": null,
++           "titleTh": "honda price list",
++           "url": "https://www.9carthai.com/honda-price/",
++           "verificationStatus": null,
++           "verifiedAt": null,
++         },
++         "type": "MSRP",
++         "validFrom": "2026-09-21T03:09:52.945Z",
++         "validTo": null,
++       },
++     ],
++     "slug": "v",
++   },
++ ]
+
+ ❯ tests/p115-retrieval-boundaries.test.ts:422:17
+    420|     expect(surfaced.map((p) => p.amount)).not.toContain(1234567);
+    421|     // variant itself also fails catalog eligibility (no official pric…
+    422|     expect(out).toEqual([]);
+       |                 ^
+    423|     // non-vacuous: fallback structured search actually ran
+    424|     expect(searcher).toHaveBeenCalled();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/10]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  10 failed | 9 passed (19)
+   Start at  12:39:38
+   Duration  1.22s (transform 286ms, setup 0ms, import 594ms, tests 435ms, environment 0ms)
+
+rc=0

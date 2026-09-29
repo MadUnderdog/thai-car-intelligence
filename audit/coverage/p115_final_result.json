@@ -1,0 +1,133 @@
+{
+  "schema": "p115_final_result/v1",
+  "wave": "P115",
+  "title": "Search / retrieval / RAG over promoted accepted set",
+  "completed_at": "2026-09-29",
+  "base_commit": "7c2fc2b0b01498248d1cfa2b619a9d7892a6c3e1",
+  "pr": { "number": 3, "state_expected_at_close": "OPEN/UNMERGED" },
+  "preflight": {
+    "plan": "audit/coverage/p115_target_plan.json",
+    "files_read_on_base": 18,
+    "observations_verified": [
+      "O1: /api/search called searchCatalog() directly; searchHybrid() existed but was never used by any route (grep: only tests)",
+      "O2: /api/ask had structured catalog + vector evidence + merge + evaluateEvidenceGate + trust-contract already",
+      "O3: searchCatalog eligibility confirmed = ACTIVE + isCurrent + VERIFIED SourceDocument + ACTIVE official source + VERIFIED BrochureVerification (probe: Honda priced 5 models, City 0 priced variants)",
+      "O4: vector-search SQL gates confirmed = SourceDocument VERIFIED + Source ACTIVE + BrochureVerification VERIFIED + dimension guard; returned rows were NOT run through applyEvidenceThresholds before surfacing",
+      "O5: canonical identity/Thai alias rules existed (evidence-gate-policy, thai-normalize) and were reused, never loosened; alias maps untouched",
+      "probe: exactModelRetrieval prices filter only isCurrent — 334/352 current price rows fail the full official chain (db probe p115_probe2.sql)",
+      "probe: DB slug collision — model 'EP Plus' has slug 'mg-ep', actual EP model has slug 'mg-ep-2'"
+    ]
+  },
+  "gaps": [
+    { "id": "G1", "boundary": "/api/search parseSearchQuery", "before": "brand resolved + no Thai model alias → q=undefined → brand-wide (Honda City → Accord/Civic/CR-V...)", "after": "explicit model words scoped via parseBrandModelQuery (year tokens excluded); brand-only queries unchanged", "mandatory_tests": [1, 2] },
+    { "id": "G2", "boundary": "/api/search Thai alias join", "before": "substring-colliding aliases joined ('yaris yaris cross', 'ep ep plus') → matches nothing", "after": "dedupe + keep only maximal (most specific) model phrase", "mandatory_tests": [2] },
+    { "id": "G3", "boundary": "lib/search/hybrid-search.ts + route wiring", "before": "searchHybrid never used by route; vectorAvailable hardcoded false; hybrid returned UNGATED raw vector hits", "after": "/api/search → searchHybrid; every evidence row passes applyEvidenceThresholds (source/entity/distance/canonical-identity/short-token) before surfacing; structured results untouched", "mandatory_tests": [4, 5, 7, 8, 9] },
+    { "id": "G4", "boundary": "searchQuestionCatalog exact branch prices", "before": "any isCurrent price became official structured AI evidence (red-before proof: real 9carthai.com AUTOMOTIVE_MEDIA row, verificationStatus null, surfaced for 'honda city')", "after": "isOfficialCurrentPrice() chain filter = isCurrent + VERIFIED doc + ACTIVE official source + VERIFIED BrochureVerification (same predicate as lib/catalog/queries)", "mandatory_tests": [12] },
+    { "id": "G5", "boundary": "searchQuestionCatalog fallback terms", "before": "explicit model query fell back to brand-only term ('honda','mg') → arbitrary same-brand rows", "after": "brand term dropped when model scope exists; brand-browse queries keep brand terms", "mandatory_tests": [10] },
+    { "id": "G6", "boundary": "smartCatalogSearch exact hits", "before": "slug 'mg-ep' (model 'EP Plus') returned as exact for query 'MG EP'", "after": "identityAccepts() re-checks every exact hit via canonicalIdentityGate — same single identity source as vector gate (exported, layer-2 logic unchanged)", "mandatory_tests": [3] },
+    { "id": "G7", "boundary": "searchQuestionCatalog exact trigger", "before": "exact-first only when parser entities non-empty — 'MG EP' (short/unknown model) skipped exact entirely", "after": "model scope = entities OR parseBrandModelQuery(question).model; fullQuery = entities when present else raw question", "mandatory_tests": [3, 10] }
+  ],
+  "red_before": {
+    "run": "base 7c2fc2b, unmodified retrieval code",
+    "result": "10 failed | 9 passed (19)",
+    "failed_tests": [
+      "1 Honda City scope",
+      "2b Thai maximal model phrase",
+      "1b live DB city scope",
+      "3a MG EP model-scoped q",
+      "3b slug mg-ep → EP Plus identity leak",
+      "3c hybrid ungated EP Plus evidence",
+      "4a hybrid evidence ungated",
+      "4b route never calls searchHybrid",
+      "10b brand-wide fallback term 'mg'",
+      "12 non-official price surfaced as structured evidence"
+    ],
+    "logs": [
+      "audit/daily-runs/20260929-p115-redbefore.log",
+      "audit/daily-runs/20260929-p115-redbefore-assertions.log"
+    ]
+  },
+  "green_after": {
+    "first_green": "19 passed (19)",
+    "chain_rerun": "19 passed (19)",
+    "post_fix_final_code": "19 passed (19) + TSC=0",
+    "note": "chain's tsc first run failed on a type-only cast in the new test file (`as never`); fixed mid-chain; full vitest/combined ran pre-cast-fix (runtime-identical); post-fix re-validation = tsc 0 + p115 suite 19/19",
+    "logs": [
+      "audit/daily-runs/20260929-p115-green1.log",
+      "audit/daily-runs/20260929-p115-gates.log"
+    ]
+  },
+  "mandatory_tests": {
+    "total": 12,
+    "covered_by": {
+      "1_exact_honda_city": ["T1", "T1b (live DB)"],
+      "2_thai_alias_same": ["T2", "T2b"],
+      "3_mg_ep_vs_ep_plus": ["T3a", "T3b", "T3c"],
+      "4_structured_not_widened": ["T4a", "T4b"],
+      "5_vector_disabled_fallback": ["T5"],
+      "6_dimension_mismatch_fail_closed": ["T6"],
+      "7_unverified_source_rejected": ["T7 (SQL predicates + gate)", "T3c", "T4a"],
+      "8_missing_brochure_rejected": ["T7 (SQL EXISTS BrochureVerification)"],
+      "9_cross_model_rejected": ["T9", "T3c"],
+      "10_insufficient_no_guessing": ["T10a", "T10b"],
+      "11_deterministic_repeated": ["T11", "chain rerun gate"],
+      "12_provenance_survives": ["T12", "T4a (source.url)"]
+    },
+    "vacuous_checks": 0
+  },
+  "gates": {
+    "focused_p115_vitest": "19 passed",
+    "combined_retrieval_search_ai": "163 passed | 2 skipped (11 files) rc=0",
+    "full_vitest": "507 passed | 2 skipped (43 files) rc=0",
+    "deterministic_rerun": "p115 suite 2nd run 19 passed identical",
+    "full_pytest": "964 passed, 1 error rc=1 — sole error = known pre-existing test_generation_config_boundary ImportError (_OPENROUTER_ALLOWED_MODEL, P49), unchanged from P114 baseline; log audit/daily-runs/20260929-p115-pytest.log (1431.12s)",
+    "tsc": "0 (after type-only test fix)",
+    "prisma_validate": "0",
+    "credential_scan": "0 hits on P115 surface"
+  },
+  "scope_discipline": {
+    "prisma_schema_changes": 0,
+    "production_db_writes": 0,
+    "promotion_reruns": 0,
+    "new_acquisition": 0,
+    "provider_model_config_changes": 0,
+    "embedding_writes": 0,
+    "alias_map_additions": 0,
+    "p102_p106_semantics_changed": 0,
+    "leaked_artifacts_restored": [
+      "gwm_price_candidates_20260925.json",
+      "p110_final_result.json", "p110_price_capture_log.json", "p110_price_evidence.json",
+      "p110_price_evidence.json.prov.json", "p110_price_reconciliation.json", "p110_price_target_plan.json",
+      "p114_promotion_verification.json"
+    ],
+    "leak_note": "pytest rerun tests rewrote these with fresh timestamps (pre-existing leak class, same as P114 close-out); restored with git checkout before commit; disclosure only"
+  },
+  "files_changed": {
+    "source": [
+      "src/app/api/search/route.ts",
+      "lib/search/hybrid-search.ts",
+      "lib/ai/retrieval/catalog-search.ts",
+      "lib/ai/retrieval/evidence-gate-policy.ts",
+      "lib/discovery/exact-model-retrieval.ts",
+      "lib/catalog/queries.ts"
+    ],
+    "tests": ["tests/p115-retrieval-boundaries.test.ts"],
+    "artifacts": [
+      "audit/coverage/p115_target_plan.json",
+      "audit/coverage/p115_final_result.json",
+      "audit/coverage/p115_final_report.md",
+      "audit/daily-runs/20260929-p115-{redbefore,redbefore-assertions,green1,gates,pytest}.log"
+    ],
+    "ask_route_unchanged": true,
+    "vector_search_sql_gates_unchanged": true,
+    "thai_normalize_unchanged": true,
+    "trust_contract_unchanged": true
+  },
+  "honest_limits": [
+    "structured q is still a single ILIKE phrase — genuinely multi-model queries fail closed (0 rows), never wrong entities",
+    "mixed filler+English-model queries (e.g. 'ราคา honda city') fail closed to 0 rows rather than brand-wide; Thai-primary phrasing resolves via alias map",
+    "Mg Ep model (slug mg-ep-2) has no priced variants and no aliases — exact lookup falls through to contains-scope then insufficient; separation holds but no exact structured row exists",
+    "no catalog/price/spec completeness claim; search only spans promoted accepted set"
+  ],
+  "next_remaining_phase": "continue delivery on the accepted set (per P114 report section 7); no acquisition/refresh starts from this wave"
+}

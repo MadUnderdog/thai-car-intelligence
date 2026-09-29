@@ -1,0 +1,50 @@
+chain start 20260929_125045
+=== tsc ===
+tests/p115-retrieval-boundaries.test.ts(116,20): error TS2339: Property '$disconnect' does not exist on type 'never'.
+TSC=2
+=== combined retrieval/search/AI ===
+ Test Files  11 passed (11)
+      Tests  163 passed | 2 skipped (165)
+combined rc=0
+=== full vitest ===
+ Test Files  43 passed (43)
+      Tests  507 passed | 2 skipped (509)
+full vitest rc=0
+=== deterministic rerun (p115 suite, 2nd run) ===
+      Tests  19 passed (19)
+rerun rc=0
+=== full pytest (report-only; known P49 ImportError) ===
+pytest rc=1
+=========================== short test summary info ============================
+ERROR tests/test_generation_config_boundary.py
+964 passed, 1 error in 1431.12s (0:23:51)
+=== prisma validate ===
+PRISMA=0
+=== credential scan (P115 surface) ===
+CREDSCAN rc=0 (no files listed = 0 hits)
+=== git status after gates ===
+ M audit/coverage/gwm_price_candidates_20260925.json
+ M audit/coverage/p110_final_result.json
+ M audit/coverage/p110_price_capture_log.json
+ M audit/coverage/p110_price_evidence.json
+ M audit/coverage/p110_price_evidence.json.prov.json
+ M audit/coverage/p110_price_reconciliation.json
+ M audit/coverage/p110_price_target_plan.json
+ M audit/coverage/p114_promotion_verification.json
+ M lib/ai/retrieval/catalog-search.ts
+ M lib/ai/retrieval/evidence-gate-policy.ts
+ M lib/catalog/queries.ts
+ M lib/discovery/exact-model-retrieval.ts
+ M lib/search/hybrid-search.ts
+ M src/app/api/search/route.ts
+?? audit/coverage/p115_target_plan.json
+?? audit/daily-runs/20260929-p115-pytest.log
+?? scripts/_probes/
+?? scripts/dry-run-data-fingerprint.py
+?? scripts/dry-run-refresh-source-check.py
+?? storage/dry-run/
+P115_CHAIN_DONE
+
+=== post-fix re-validation (final code: cast-only test fix) ===
+TSC=0
+Tests 19 passed (19)

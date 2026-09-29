@@ -1,6 +1,6 @@
 import type { CatalogPage, CatalogVariant } from "../../catalog/types";
-import { searchCatalog, getCheapestVariant, getMostExpensiveVariant } from "../../catalog/queries";
-import { smartCatalogSearch } from "../../discovery/exact-model-retrieval";
+import { searchCatalog, getCheapestVariant, getMostExpensiveVariant, officialSourceTypes } from "../../catalog/queries";
+import { smartCatalogSearch, parseBrandModelQuery } from "../../discovery/exact-model-retrieval";
 import { QUESTION_SEARCH_LIMIT } from "./question-terms";
 import { parseAutomotiveQuery } from "./query-parser";
 import db from "../../db";
@@ -8,6 +8,36 @@ import db from "../../db";
 const MAX_CATALOG_QUERY_LENGTH = 120;
 
 type CatalogSearch = (filters: { q: string; limit: number; page: number; fuelType?: string; maxPrice?: number }) => Promise<CatalogPage>;
+
+type ExactSearchResult = { results: any[]; matchType: string; exactMatch: boolean };
+type ExactSearch = (query: string, limit: number) => Promise<ExactSearchResult>;
+type CatalogSearchDeps = { exactSearch?: ExactSearch };
+
+const OFFICIAL_SOURCE_TYPES = new Set<string>(officialSourceTypes);
+
+/**
+ * P115 (G4): the same price eligibility the structured catalog enforces
+ * (lib/catalog/queries currentOfficialPrice) — isCurrent + VERIFIED
+ * SourceDocument + ACTIVE official source + VERIFIED BrochureVerification.
+ * exactModelRetrieval only filters isCurrent, so its rows must be
+ * re-checked here before any price can enter structured AI evidence.
+ */
+function isOfficialCurrentPrice(price: unknown): boolean {
+  const p = price as {
+    isCurrent?: boolean;
+    sourceDocument?: {
+      status?: string;
+      source?: { status?: string; sourceType?: string };
+      verifications?: Array<{ status?: string }>;
+    } | null;
+  } | null;
+  if (!p || p.isCurrent !== true) return false;
+  const doc = p.sourceDocument;
+  if (!doc || doc.status !== "VERIFIED") return false;
+  const source = doc.source;
+  if (!source || source.status !== "ACTIVE" || !OFFICIAL_SOURCE_TYPES.has(source.sourceType ?? "")) return false;
+  return (doc.verifications ?? []).some((v) => v?.status === "VERIFIED");
+}
 
 function buildSearchTerms(question: string, entities: string[]): string[] {
   const terms: string[] = [];
@@ -44,7 +74,11 @@ async function handleRankingQuery(intent: { type: string }): Promise<CatalogVari
  * CRITICAL FIX: Explicit model queries (e.g., "Honda City") now return
  * ONLY matching models, not arbitrary same-brand models.
  */
-export async function searchQuestionCatalog(question: string, searchFn?: CatalogSearch): Promise<CatalogVariant[]> {
+export async function searchQuestionCatalog(
+  question: string,
+  searchFn?: CatalogSearch,
+  deps?: CatalogSearchDeps,
+): Promise<CatalogVariant[]> {
   const intent = parseAutomotiveQuery(question);
 
   // Fast path: ranking queries go directly to DB
@@ -58,17 +92,29 @@ export async function searchQuestionCatalog(question: string, searchFn?: Catalog
   };
 
   const searcher = searchFn ?? searchCatalog;
+  const exactSearch: ExactSearch = deps?.exactSearch ?? ((qq, ll) => smartCatalogSearch(db, qq, ll));
 
-  // NEW: Try exact model retrieval FIRST for entity-based queries
-  if (intent.type === "search" && intent.entities.length > 0) {
-    const fullQuery = intent.entities.join(" ");
-    const exactResult = await smartCatalogSearch(db, fullQuery, QUESTION_SEARCH_LIMIT);
+  // P115 (G7): explicit model scope = parser entities OR the repo's own
+  // brand/model parser — short models the entity list doesn't know
+  // ("MG EP") must still reach exact-model-first, not skip to fallback.
+  const modelScope = intent.type === "search" &&
+    (intent.entities.length > 0 || !!parseBrandModelQuery(question).model);
+
+  // NEW: Try exact model retrieval FIRST for explicit model queries
+  if (intent.type === "search" && modelScope) {
+    const fullQuery = intent.entities.length > 0 ? intent.entities.join(" ") : question;
+    const exactResult = await exactSearch(fullQuery, QUESTION_SEARCH_LIMIT);
 
     if (exactResult.exactMatch && exactResult.results.length > 0) {
       // Exact match found — use only these results
       // Map the Prisma variant results to CatalogVariant format
       for (const variant of exactResult.results) {
-        if (variant.prices && variant.prices.length > 0) {
+        // P115 (G4): only prices that satisfy the structured catalog's
+        // official+verified+current eligibility may become AI evidence.
+        const eligiblePrices = Array.isArray(variant.prices)
+          ? variant.prices.filter(isOfficialCurrentPrice)
+          : [];
+        if (eligiblePrices.length > 0) {
           const catalogVariant: CatalogVariant = {
             id: variant.id,
             nameTh: variant.nameTh,
@@ -79,7 +125,7 @@ export async function searchQuestionCatalog(question: string, searchFn?: Catalog
             model: variant.model,
             aliases: variant.aliases?.map((a: any) => a.value) ?? [],
             fuelType: variant.fuelType ?? null,
-            prices: variant.prices.map((p: any) => ({
+            prices: eligiblePrices.map((p: any) => ({
               amount: Number(p.amount),
               currency: p.currency,
               type: p.priceType,
@@ -128,7 +174,14 @@ export async function searchQuestionCatalog(question: string, searchFn?: Catalog
 
   // 2. Entity-based search (fallback — only if exact retrieval returned nothing)
   if (found.size === 0) {
-    const terms = buildSearchTerms(question, intent.type === "search" ? intent.entities : []);
+    let terms = buildSearchTerms(question, intent.type === "search" ? intent.entities : []);
+    // P115 (G5): an explicit model query must never fall back to a
+    // brand-only term — "honda"/"mg" alone would return arbitrary
+    // same-brand rows (CR-V, Civic, EXTENDER…) for "Honda City"/"MG EP".
+    // Brand browse WITHOUT a model scope keeps brand terms (legitimate).
+    if (modelScope && intent.type === "search" && intent.filters.brand) {
+      terms = terms.filter((term) => term !== intent.filters.brand);
+    }
     for (const term of terms.slice(0, 6)) {
       const page = await searcher({ q: term.slice(0, MAX_CATALOG_QUERY_LENGTH), limit: QUESTION_SEARCH_LIMIT, page: 1 });
       addResults(page.results);

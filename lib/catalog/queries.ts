@@ -7,12 +7,13 @@ export const MAX_PAGE_SIZE = 100;
 export const MAX_PAGE_NUMBER = 100_000;
 export const MAX_QUERY_LENGTH = 120;
 
-const officialSourceTypes = [
+export const officialSourceTypes = [
   "OFFICIAL_MANUFACTURER",
   "OFFICIAL_MANUFACTURER_BROCHURE",
   "OFFICIAL_MANUFACTURER_PRICE_LIST",
   "OFFICIAL_MANUFACTURER_PRESS_RELEASE",
 ] as const;
+export type OfficialSourceType = (typeof officialSourceTypes)[number];
 
 const verifiedDocument: Prisma.SourceDocumentWhereInput = {
   status: "VERIFIED",

@@ -1,0 +1,128 @@
+# P119 — Multi-source assembly report (§96–97)
+
+- commit: `dc0357b8a77aa1a748ff55589396668df09765ea`
+- packets in: **488** (accepted input: 417, quarantined input: 71)
+- assembled records: **417** · fields: **1323**
+- conflicts: **261** by status: `{"QUARANTINED": 261}`
+- quarantines (unresolved, value NOT emitted): **261**
+- join errors (display-string-only rejected): **0**
+- contamination/validation failures (fail closed): **0**
+- provenance coverage: `{"fields_with_provenance": 1323, "verified": 1323, "unverified_or_legacy": 0, "sha_present": 1323, "locator_present": 1323, "distinct_artifacts": 106}`
+- promotion: none — audit/quarantine outputs only; AcceptanceRunner/Ledger untouched
+
+## Per-source contribution (assembled fields)
+- https://cdn-jaguarlandrover.com/system/apio/th/TH_Jaguar_PriceSheet.pdf: 2
+- https://cdn-jaguarlandrover.com/system/apio/th/TH_LandRover_PriceSheet.pdf: 22
+- https://configurator.porsche.com/en-TH/mode/model/95BBV1: 1
+- https://www.bmw.co.th/en/topics/brochure.html: 1
+- https://www.bmw.co.th/en/topics/price-list.html: 138
+- https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html: 4
+- https://www.changan.co.th/en/deepal/s05-reev-en/specification/: 3
+- https://www.changan.co.th/th/compare-cars/?compare1=17: 2
+- https://www.changan.co.th/th/deepal/e07-plus-th/: 2
+- https://www.changan.co.th/th/deepal/e07-plus-th/specification/: 3
+- https://www.changan.co.th/th/deepal/s05-reev-th/: 1
+- https://www.changan.co.th/th/deepal/s05-th/: 1
+- https://www.changan.co.th/th/nevo-q05/: 2
+- https://www.changan.co.th/th/promotion/: 2
+- https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/haval-h6-hev/GWM%20NEW%20Haval%20H6%20Brochure.pdf: 1
+- https://www.gwm.co.th/en/car-purchase-consultation: 1
+- https://www.gwm.co.th/th/models/haval-h6: 4
+- https://www.gwm.co.th/th/models/sahar: 2
+- https://www.gwm.co.th/th/models/tank-300: 3
+- https://www.gwm.co.th/th/models/tank-300-diesel: 2
+- https://www.gwm.co.th/th/models/tank-500: 3
+- https://www.gwm.co.th/th/models/tank-500-3t-diesel: 3
+- https://www.gwm.co.th/th/models/tank-500-diesel: 3
+- https://www.honda.co.th/en/accordehev: 6
+- https://www.honda.co.th/en/brv: 4
+- https://www.honda.co.th/en/city: 8
+- https://www.honda.co.th/en/cityhatchback: 4
+- https://www.honda.co.th/en/crv: 4
+- https://www.honda.co.th/en/hrvehev: 3
+- https://www.honda.co.th/en/stepwgnehev: 1
+- https://www.honda.co.th/en/wrv: 2
+- https://www.honda.co.th/models: 28
+- https://www.isuzu-tis.com/: 5
+- https://www.kia.com/th/en/shopping-tools/price-list/carnival.html: 7
+- https://www.kia.com/th/en/shopping-tools/price-list/ev5.html: 3
+- https://www.kia.com/th/th/cars/ev5/features.html: 3
+- https://www.kia.com/th/th/util/promotion/thekiacarnival-diesel-2026.html: 3
+- https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_NX.pdf: 2
+- https://www.lexus.co.th/en/models/lm/lm-350h-4-seater.html: 3
+- https://www.lexus.co.th/en/models/lm/lm-350h-7-seater.html: 3
+- https://www.lexus.co.th/en/models/lm/lm-500h-4-seater.html: 3
+- https://www.lexus.co.th/en/models/lm/lm-500h-6-seater.html: 3
+- https://www.lexus.co.th/en/models/lx.html: 2
+- https://www.lexus.co.th/en/models/lx/lx-500d-fsport.html: 10
+- https://www.lexus.co.th/en/models/lx/lx-500d-premier.html: 3
+- https://www.lexus.co.th/en/models/nx/nx-350h-grand-luxury.html: 12
+- https://www.lexus.co.th/th/price-and-model-tools/model-brochures.html: 1
+- https://www.lexus.co.th/th/price-and-model-tools/price-list.html: 70
+- https://www.mazda.co.th/th/cars/mazda-cx30-essential: 6
+- https://www.mazda.co.th/th/cars/mazda-cx5: 6
+- https://www.mazda.co.th/th/cars/mazda2-essential: 16
+- https://www.mazda.co.th/th/cars/mazda3-sedan: 4
+- https://www.mazda.co.th/th/cars/new-mazda-bt50: 4
+- https://www.mgcars.com/th: 7
+- https://www.mgcars.com/th/cars/mg-ep-plus: 1
+- https://www.mgcars.com/th/cars/mg-urban: 2
+- https://www.mini.co.th/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2026/MINI-Price-Sheet-Revised-27-Mar-2026.pdf.asset.1774933915613.pdf: 13
+- https://www.mini.co.th/en_TH/home/brochure.html: 2
+- https://www.mitsubishi-motors.co.th/th/buy/all-models-price: 44
+- https://www.nissan.co.th/news/nissan-almera-model-year-24-enhances-customer-experience-with-upgraded-features.html: 2
+- https://www.nissan.co.th/vehicles/all-grade-price.html: 25
+- https://www.porsche.com/pap/_thailand_/models/macan/#modelRangeId=macan: 5
+- https://www.subaru.asia/th/th/brz/: 1
+- https://www.subaru.asia/th/th/crosstrek/: 2
+- https://www.suzuki.co.th/: 1
+- https://www.suzuki.co.th/model/fronx: 3
+- https://www.suzuki.co.th/model/fronx/equipment: 9
+- https://www.suzuki.co.th/model/jimny/equipment: 4
+- https://www.suzuki.co.th/model/xl7: 2
+- https://www.suzuki.co.th/model/xl7/equipment: 2
+- https://www.toyota.co.th/en/model/alphard: 5
+- https://www.toyota.co.th/en/model/altis: 4
+- https://www.toyota.co.th/en/model/api/car-series/: 8
+- https://www.toyota.co.th/en/model/api/car/?series_code=alphard: 20
+- https://www.toyota.co.th/en/model/api/car/?series_code=altis: 13
+- https://www.toyota.co.th/en/model/api/car/?series_code=altis_grsport: 6
+- https://www.toyota.co.th/en/model/api/car/?series_code=camry: 15
+- https://www.toyota.co.th/en/model/api/car/?series_code=coaster: 5
+- https://www.toyota.co.th/en/model/api/car/?series_code=commuter: 12
+- https://www.toyota.co.th/en/model/api/car/?series_code=corollacross: 21
+- https://www.toyota.co.th/en/model/api/car/?series_code=corollacross_grsport: 7
+- https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_grsport: 8
+- https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_leader: 28
+- https://www.toyota.co.th/en/model/api/car/?series_code=fortuner_legender: 28
+- https://www.toyota.co.th/en/model/api/car/?series_code=grcorolla: 7
+- https://www.toyota.co.th/en/model/api/car/?series_code=grsupra: 16
+- https://www.toyota.co.th/en/model/api/car/?series_code=gryaris: 7
+- https://www.toyota.co.th/en/model/api/car/?series_code=hiace: 21
+- https://www.toyota.co.th/en/model/api/car/?series_code=hilux_champ: 32
+- https://www.toyota.co.th/en/model/api/car/?series_code=hilux_revo_standard: 15
+- https://www.toyota.co.th/en/model/api/car/?series_code=hilux_revo_zedition: 36
+- https://www.toyota.co.th/en/model/api/car/?series_code=hilux_travo_e: 4
+- https://www.toyota.co.th/en/model/api/car/?series_code=hilux_travo_overland: 22
+- https://www.toyota.co.th/en/model/api/car/?series_code=hilux_travo_prerunner_4trex: 63
+- https://www.toyota.co.th/en/model/api/car/?series_code=innovazenix: 10
+- https://www.toyota.co.th/en/model/api/car/?series_code=landcruiser_fj: 5
+- https://www.toyota.co.th/en/model/api/car/?series_code=majesty: 12
+- https://www.toyota.co.th/en/model/api/car/?series_code=veloz: 14
+- https://www.toyota.co.th/en/model/api/car/?series_code=yaris: 19
+- https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ: 45
+- https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ_grsport: 11
+- https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ_nightshade: 8
+- https://www.toyota.co.th/en/model/api/car/?series_code=yariscross: 24
+- https://www.toyota.co.th/en/model/api/car/?series_code=yariscross_nightshade: 6
+- https://www.toyota.co.th/en/pricelist: 200
+- https://www.toyota.co.th/model/yarisativ: 6
+
+## Resolutions
+- QUARANTINED: 261
+
+## Blockers / ceilings
+- quarantined_fields_ceiling (261): fields whose observations could not be resolved by policy (same tier, no dated winner) — both sides recorded, value NOT emitted; assembly is NOT complete for these fields
+
+## Tests
+- `{"log": "audit/daily-runs/20260929-p119-focused.log", "passed": null, "failed": 0, "errors": 0}`

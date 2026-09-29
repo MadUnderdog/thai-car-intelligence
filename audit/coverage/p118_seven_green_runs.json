@@ -1,0 +1,106 @@
+{
+  "alert_runs": [
+    "DR-20260929-004",
+    "DR-20260929-005",
+    "DR-20260929-006"
+  ],
+  "commit": "a5849d00ce1b866c5e0cb6e19566a94b772c3523",
+  "digest_dir": "/home/ubuntu/Projects/thai-car-intelligence/audit/daily-runs",
+  "digests": [
+    "20260929o.json",
+    "20260929p.json",
+    "20260929q.json",
+    "20260929r.json",
+    "20260929s.json",
+    "20260929t.json",
+    "20260929u.json"
+  ],
+  "duplicate_candidate_ids": 0,
+  "exit_gate": "PASS",
+  "generated_at": "2026-09-29T15:29:27.825037+00:00",
+  "green_runs": 7,
+  "queue_dir": "/home/ubuntu/Projects/thai-car-intelligence/audit/change-queue/replay7",
+  "runs": [
+    {
+      "alerts": [],
+      "candidates": 0,
+      "classification": [
+        "FIRST_CAPTURE"
+      ],
+      "run_id": "DR-20260929-001",
+      "status": "RUN_GREEN"
+    },
+    {
+      "alerts": [],
+      "candidates": 0,
+      "classification": [
+        "UNCHANGED"
+      ],
+      "run_id": "DR-20260929-002",
+      "status": "RUN_GREEN"
+    },
+    {
+      "alerts": [],
+      "candidates": 0,
+      "classification": [
+        "CONTENT_CHANGED_OUTPUT_UNCHANGED"
+      ],
+      "run_id": "DR-20260929-003",
+      "status": "RUN_GREEN"
+    },
+    {
+      "alerts": [
+        "PRICE_CHANGE"
+      ],
+      "candidates": 1,
+      "classification": [
+        "CHANGED"
+      ],
+      "run_id": "DR-20260929-004",
+      "status": "RUN_GREEN"
+    },
+    {
+      "alerts": [
+        "MODEL_VARIANT_ADDED_REMOVED"
+      ],
+      "candidates": 2,
+      "classification": [
+        "CHANGED"
+      ],
+      "run_id": "DR-20260929-005",
+      "status": "RUN_GREEN"
+    },
+    {
+      "alerts": [
+        "SOURCE_STATE_TRANSITION"
+      ],
+      "candidates": 0,
+      "classification": [
+        "UNCHANGED",
+        "BLOCKED_HTTP_403"
+      ],
+      "run_id": "DR-20260929-006",
+      "status": "RUN_GREEN"
+    },
+    {
+      "alerts": [],
+      "candidates": 0,
+      "classification": [
+        "UNCHANGED",
+        "BLOCKED_HTTP_403"
+      ],
+      "run_id": "DR-20260929-007",
+      "status": "RUN_GREEN"
+    }
+  ],
+  "schema": "p118_seven_green_runs/v1",
+  "statuses": [
+    "RUN_GREEN",
+    "RUN_GREEN",
+    "RUN_GREEN",
+    "RUN_GREEN",
+    "RUN_GREEN",
+    "RUN_GREEN",
+    "RUN_GREEN"
+  ]
+}

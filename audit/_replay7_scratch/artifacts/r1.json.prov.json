@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/model",
+  "captured_at": "2026-09-29T06:00:00+00:00",
+  "acquisition_method": "offline_replay",
+  "sha256": "c2b8f397a3bf1657571aec362f16dcbddf29e0eaf23030efdcb7bf4d536bb206",
+  "session_id": "p118-replay7",
+  "artifact_filename": "r1.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

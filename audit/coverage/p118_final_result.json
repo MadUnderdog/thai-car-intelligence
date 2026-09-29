@@ -1,0 +1,109 @@
+{
+  "schema": "p118_final_result/v1",
+  "created_at": "2026-09-29",
+  "base_commit": "76a242a0b756c2e04c40769e0947779f6a85d755",
+  "plan_commit": "a5849d00ce1b866c5e0cb6e19566a94b772c3523",
+  "pr": {"number": 3, "state_expected_at_report": "OPEN/UNMERGED"},
+  "status": "COMPLETE_PENDING_PUSH_VERIFICATION",
+  "red_before": {
+    "log": "audit/daily-runs/20260929-p118-redbefore.log",
+    "result": "25 failed | 0 passed on base+plan (backoff module + refresh runner absent = reproduced gaps G-A..G-G); after first implementation pass 23/25 green with 2 real defects red: run_id not unique across digest dirs (J) and CLI test dir naming (P) — both fixed at their boundary",
+    "test_precision_fix_disclosed": "politeness assertion rewritten from 'wait ≥5000ms' to 'elapsed+wait ≥5000ms' (the §94 policy is a ≥5s GAP between requests; original assertion was stricter than the policy itself)"
+  },
+  "green_after": {
+    "focused": "25 passed (backoff 9 + daily_run 16) rc=0",
+    "deterministic_rerun": "25 passed rc=0",
+    "combined_python": "146 passed in 424s rc=0 (p118×2, acquisition_provenance 20, currentness, taxonomy, source_registry, p111, p112, p113, p114)",
+    "combined_vitest": "67 passed (6 files: provenance×3, refresh-pipeline, p116, p117) rc=0",
+    "full_vitest": "563 passed | 2 skipped (47 files) rc=0",
+    "full_pytest": "989 passed, 1 error (1450.86s) — ONLY error = known pre-existing test_generation_config_boundary ImportError (P49), disclosed only",
+    "tsc": 0,
+    "prisma_validate": 0,
+    "credential_scan": 0,
+    "seven_green_replay": "REPLAY7 rc=0 → exit_gate PASS, 7/7 RUN_GREEN, duplicate_candidate_ids 0, alerts ONLY on runs 4/5/6"
+  },
+  "seven_run_evidence": {
+    "artifact": "audit/coverage/p118_seven_green_runs.json",
+    "runs": [
+      {"run_id": "DR-20260929-001", "status": "RUN_GREEN", "classification": ["FIRST_CAPTURE"], "alerts": []},
+      {"run_id": "DR-20260929-002", "status": "RUN_GREEN", "classification": ["UNCHANGED"], "alerts": []},
+      {"run_id": "DR-20260929-003", "status": "RUN_GREEN", "classification": ["CONTENT_CHANGED_OUTPUT_UNCHANGED"], "alerts": []},
+      {"run_id": "DR-20260929-004", "status": "RUN_GREEN", "classification": ["CHANGED"], "alerts": ["PRICE_CHANGE"]},
+      {"run_id": "DR-20260929-005", "status": "RUN_GREEN", "classification": ["CHANGED"], "alerts": ["MODEL_VARIANT_ADDED_REMOVED"]},
+      {"run_id": "DR-20260929-006", "status": "RUN_GREEN", "classification": ["UNCHANGED", "BLOCKED_HTTP_403"], "alerts": ["SOURCE_STATE_TRANSITION"]},
+      {"run_id": "DR-20260929-007", "status": "RUN_GREEN", "classification": ["UNCHANGED", "BLOCKED_HTTP_403"], "alerts": []}
+    ],
+    "digests": "audit/daily-runs/20260929{o..u}.{md,json} (7 pairs; two earlier manual verification batches of the same deterministic scenario superseded and removed — reproducible via scripts/daily_run.py --replay7)",
+    "queue": "audit/change-queue/replay7/{change-candidates.jsonl, alerts.jsonl, run-state.json}",
+    "rerun_proof": "invoked --replay7 twice manually + once in chain; every invocation exit_gate PASS with 0 duplicate candidates"
+  },
+  "defects_fixed": [
+    {"id": "G-A", "boundary": "§94/§101", "before": "no entrypoint ran the pipeline; no cron/one-shot runner existed", "after": "scripts/daily_run.py (--once default, --cron SAME runner path, --replay7 evidence mode), documented cron line, fcntl lock", "proof": "P test: both entrypoints exit 0 and run-state.runner identical ('daily_run.run_daily'); K: lock held → RUN_SKIPPED_DOUBLE, writes 0"},
+    {"id": "G-B", "boundary": "§94 backoff", "before": "no backoff policy anywhere (grep empty; ladder = adapter fallback only)", "after": "lib/thai_factory/acquisition/backoff.py — full §94 table as pure functions with explicit action flags", "proof": "9 policy tests: 403 +7d→monthly rotate_ua/bypass=False; 404 14d/≤2 alternates; DNS weekly×4→monthly; TLS monthly disable_cert_verification=False; timeout 30/120→CYCLE_BLOCKED; 5xx 30/120→RETRY_NEXT_RUN; politeness gap ≥5s"},
+    {"id": "G-C", "boundary": "§94 idempotency", "before": "no diff classification, audit/change-queue/ did not exist", "after": "classify.py (FIRST_CAPTURE/UNCHANGED/CONTENT_CHANGED_OUTPUT_UNCHANGED/CHANGED + field/set diffs) + append-only change-candidates.jsonl deduped by candidate_id", "proof": "A/B/C/E tests + 7-run: dup_candidates 0"},
+    {"id": "G-D", "boundary": "§94 alerting", "before": "no alert store/rules/dedupe", "after": "alerts.py — §94 allowlist (6 types) + content-derived event_id dedupe", "proof": "D price alert once (repeat none), F transition once (repeat none), O deterministic id + append dedupe, I provenance alert once"},
+    {"id": "G-F", "boundary": "§94 digest", "before": "only the cycle report existed (no run metadata/candidates/alerts sections)", "after": "per-run MD+JSON digest (run_id/commit/status/artifacts count+bytes/identity_levels/hash_coverage/locator_coverage/blockers/tests/candidates/alerts/state_transitions/observations)", "proof": "N test asserts every required key + MD carries run_id; 7 pairs written"},
+    {"id": "G-G", "boundary": "concurrency", "before": "no lock anywhere", "after": "fcntl LOCK_EX|LOCK_NB on audit/change-queue/.daily-run.lock → RUN_SKIPPED_DOUBLE, exit 2, zero writes", "proof": "K test (lock held → skipped, released → green)"},
+    {"id": "G-H", "boundary": "§101 exit", "before": "no 7-run evidence", "after": "audit/coverage/p118_seven_green_runs.json exit_gate PASS", "proof": "chain REPLAY7=0 + pytest EXIT_7 test"}
+  ],
+  "gates": {
+    "focused": 25, "rerun": 25, "combined_python": 146, "combined_vitest": 67,
+    "full_vitest": "563 passed | 2 skipped", "pytest": "989 passed, 1 error (known P49 only)",
+    "tsc": 0, "prisma": 0, "credscan": 0, "replay7": "PASS 7/7, dup 0"
+  },
+  "mandatory_tests": {
+    "A": "test_p118_A_same_sha_twice…", "B": "…B_new_sha_identical_output…",
+    "C": "…C_one_field_change_exactly_one_quarantined", "D": "…D_price_alert_exactly_once",
+    "E": "…E_model_add_remove_no_invented_rows (staging bytes unchanged)", "F": "…F_reachable_to_blocked_once + next_retry +7d",
+    "G": "tests/test_p118_backoff_policy.py (9 tests incl. TLS/403 action flags)", "H": "…H_error_page_evidence_obs0",
+    "I": "…I_provenance_failure (catalog counts equal + alert deduped)", "J": "…J_identical_observation_sets (byte-equal, stable order)",
+    "K": "…K_double_invocation_skipped", "L": "…L_quarantine_catalog_unchanged (read-only counts)",
+    "M": "…M_failed_source_preserves_state", "N": "…N_digest_required_fields",
+    "O": "…O_alert_event_ids_deterministic_deduped", "P": "…P_one_shot_and_cron_share_runner (subprocess, exit 0)",
+    "Q": "chain: combined provenance/acquisition/acceptance 146 + full vitest 563 + full pytest 989 + tsc/prisma/credscan 0",
+    "EXIT_7": "…EXIT_7_seven_consecutive_green_runs (pytest) + CLI --replay7 evidence artifact"
+  },
+  "files_changed": {
+    "new": [
+      "lib/thai_factory/acquisition/backoff.py",
+      "lib/thai_factory/refresh/__init__.py", "lib/thai_factory/refresh/classify.py",
+      "lib/thai_factory/refresh/alerts.py", "lib/thai_factory/refresh/runner.py",
+      "scripts/daily_run.py",
+      "tests/test_p118_backoff_policy.py", "tests/test_p118_daily_run.py",
+      "audit/coverage/p118_target_plan.json (own commit a5849d0 BEFORE code)",
+      "audit/coverage/p118_final_result.json", "audit/coverage/p118_final_report.md",
+      "audit/coverage/p118_seven_green_runs.json",
+      "audit/change-queue/replay7/{change-candidates.jsonl,alerts.jsonl,run-state.json}",
+      "audit/daily-runs/20260929{o..u}.{md,json}", "audit/daily-runs/20260929-p118-*.log"
+    ],
+    "modified": [],
+    "not_touched": [
+      "prisma/schema.prisma (no schema change)",
+      "lib/research/*.ts (dead stub targeting never-migrated tables — disclosed follow-up)",
+      "scripts/generate_daily_report.py (cycle report unchanged; digest follows its file convention)",
+      "lib/thai_factory/acceptance/* (verifier v9 frozen; NO promotion in P118)",
+      "lib/thai_factory/acquisition/{provenance,contracts,adapters,ladder}.py (existing 20 tests green, no patch)",
+      "scripts/dry-run-*.py + storage/dry-run/ (untracked strays, not part of P118)"
+    ]
+  },
+  "boundaries_honored": {
+    "registry_single_source_of_truth": true,
+    "acquisition_contract": "every test artifact produced by AcquisitionWriter with real sidecars; Reader fail-closed provenance for all captures",
+    "legacy_untouched": "LEGACY_UNVERIFIED fixtures never semantically processed; no timestamp/hash retrofit",
+    "no_catalog_writes": "runner never opens catalog/price/spec tables; L/M assert Price/Variant/CarModel/DataChangeLog/CommunityComment counts identical before/after",
+    "gates_not_bypassed": "candidates QUARANTINED only; AcceptanceRunner/Ledger untouched; no promotion",
+    "no_ai_reconciliation": true, "no_new_source_class": true, "no_schema_provider_config_change": true,
+    "no_p114_rerun_no_bv_backfill_no_embeddings": true,
+    "failed_source_preserves_accepted": "M + §77 partial_success (RUN_PARTIAL exits 0)",
+    "network": "CI/offline replay only; live mode would be registry-URL-restricted (not exercised)"
+  },
+  "honest_limits": [
+    "offline replay uses deterministic fixture extractors (json/html_prices); wiring every PARSED_TESTED adapter's live capture→extract path into the runner is follow-up work outside this wave",
+    "lib/research TS refresh-pipeline writes RefreshRun/ChangeCandidate/SourceHealth tables that were never migrated (absent from DB+Prisma) — dead stub kept untouched, disclosed (reviving = schema change)",
+    "registry next_retry_at values from earlier probe cycles are preserved as-is; backoff computes forward from P118 runs (no retroactive timestamp invention)",
+    "in-memory politeness state is per-process (same pattern as existing fetch layer)",
+    "digests from two earlier manual verification batches of the same deterministic scenario were superseded by the chain batch and removed (reproducible via --replay7); disclosed",
+    "cron line documented, not installed (no managed scheduler required by the contract)",
+    "never declares refresh coverage complete; alerts fire only on the §94 allowlist"
+  ]
+}

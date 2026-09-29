@@ -1,0 +1,573 @@
+FFFFFFFFFFFFFFFFFFFFFFFFF                                                [100%]
+=================================== FAILURES ===================================
+_______________ test_outcome_classification_matches_policy_table _______________
+
+    def test_outcome_classification_matches_policy_table():
+>       m = _mod()
+            ^^^^^^
+
+tests/test_p118_backoff_policy.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _mod():
+        m = load_backoff()
+>       assert m is not None, "lib/thai_factory/acquisition/backoff.py must exist (§94 policy)"
+E       AssertionError: lib/thai_factory/acquisition/backoff.py must exist (§94 policy)
+E       assert None is not None
+
+tests/test_p118_backoff_policy.py:24: AssertionError
+____ test_tls_retry_is_monthly_and_never_disables_certificate_verification _____
+
+    def test_tls_retry_is_monthly_and_never_disables_certificate_verification():
+>       m = _mod()
+            ^^^^^^
+
+tests/test_p118_backoff_policy.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _mod():
+        m = load_backoff()
+>       assert m is not None, "lib/thai_factory/acquisition/backoff.py must exist (§94 policy)"
+E       AssertionError: lib/thai_factory/acquisition/backoff.py must exist (§94 policy)
+E       assert None is not None
+
+tests/test_p118_backoff_policy.py:24: AssertionError
+______ test_403_is_plus_7d_then_monthly_and_never_rotates_ua_or_bypasses _______
+
+    def test_403_is_plus_7d_then_monthly_and_never_rotates_ua_or_bypasses():
+>       m = _mod()
+            ^^^^^^
+
+tests/test_p118_backoff_policy.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _mod():
+        m = load_backoff()
+>       assert m is not None, "lib/thai_factory/acquisition/backoff.py must exist (§94 policy)"
+E       AssertionError: lib/thai_factory/acquisition/backoff.py must exist (§94 policy)
+E       assert None is not None
+
+tests/test_p118_backoff_policy.py:24: AssertionError
+_____________ test_404_is_14d_with_at_most_2_alternates_per_cycle ______________
+
+    def test_404_is_14d_with_at_most_2_alternates_per_cycle():
+>       m = _mod()
+            ^^^^^^
+
+tests/test_p118_backoff_policy.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _mod():
+        m = load_backoff()
+>       assert m is not None, "lib/thai_factory/acquisition/backoff.py must exist (§94 policy)"
+E       AssertionError: lib/thai_factory/acquisition/backoff.py must exist (§94 policy)
+E       assert None is not None
+
+tests/test_p118_backoff_policy.py:24: AssertionError
+______________________ test_dns_is_weekly_x4_then_monthly ______________________
+
+    def test_dns_is_weekly_x4_then_monthly():
+>       m = _mod()
+            ^^^^^^
+
+tests/test_p118_backoff_policy.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _mod():
+        m = load_backoff()
+>       assert m is not None, "lib/thai_factory/acquisition/backoff.py must exist (§94 policy)"
+E       AssertionError: lib/thai_factory/acquisition/backoff.py must exist (§94 policy)
+E       assert None is not None
+
+tests/test_p118_backoff_policy.py:24: AssertionError
+_______________ test_timeout_backoff_30s_120s_then_cycle_blocked _______________
+
+    def test_timeout_backoff_30s_120s_then_cycle_blocked():
+>       m = _mod()
+            ^^^^^^
+
+tests/test_p118_backoff_policy.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _mod():
+        m = load_backoff()
+>       assert m is not None, "lib/thai_factory/acquisition/backoff.py must exist (§94 policy)"
+E       AssertionError: lib/thai_factory/acquisition/backoff.py must exist (§94 policy)
+E       assert None is not None
+
+tests/test_p118_backoff_policy.py:24: AssertionError
+_____________ test_5xx_same_run_retry_30s_120s_then_retry_next_run _____________
+
+    def test_5xx_same_run_retry_30s_120s_then_retry_next_run():
+>       m = _mod()
+            ^^^^^^
+
+tests/test_p118_backoff_policy.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _mod():
+        m = load_backoff()
+>       assert m is not None, "lib/thai_factory/acquisition/backoff.py must exist (§94 policy)"
+E       AssertionError: lib/thai_factory/acquisition/backoff.py must exist (§94 policy)
+E       assert None is not None
+
+tests/test_p118_backoff_policy.py:24: AssertionError
+______ test_error_page_and_dealer_redirect_store_blocker_extract_nothing _______
+
+    def test_error_page_and_dealer_redirect_store_blocker_extract_nothing():
+>       m = _mod()
+            ^^^^^^
+
+tests/test_p118_backoff_policy.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _mod():
+        m = load_backoff()
+>       assert m is not None, "lib/thai_factory/acquisition/backoff.py must exist (§94 policy)"
+E       AssertionError: lib/thai_factory/acquisition/backoff.py must exist (§94 policy)
+E       assert None is not None
+
+tests/test_p118_backoff_policy.py:24: AssertionError
+________________ test_per_host_politeness_is_at_least_5_seconds ________________
+
+    def test_per_host_politeness_is_at_least_5_seconds():
+>       m = _mod()
+            ^^^^^^
+
+tests/test_p118_backoff_policy.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _mod():
+        m = load_backoff()
+>       assert m is not None, "lib/thai_factory/acquisition/backoff.py must exist (§94 policy)"
+E       AssertionError: lib/thai_factory/acquisition/backoff.py must exist (§94 policy)
+E       assert None is not None
+
+tests/test_p118_backoff_policy.py:24: AssertionError
+___________ test_p118_A_same_sha_twice_is_unchanged_with_no_new_rows ___________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_A_same_sha_twice_is_0')
+
+    def test_p118_A_same_sha_twice_is_unchanged_with_no_new_rows(tmp_path):
+>       R = runner()
+            ^^^^^^^^
+
+tests/test_p118_daily_run.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+____ test_p118_B_new_sha_identical_output_content_changed_output_unchanged _____
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_B_new_sha_identical_0')
+
+    def test_p118_B_new_sha_identical_output_content_changed_output_unchanged(tmp_path):
+        artifact1 = write_capture(tmp_path, BASELINE_PAYLOAD, name="c1.json", at=NOW)
+        # byte-different (trailing whitespace) → new sha; parsed output identical
+        artifact2 = write_capture(
+            tmp_path, BASELINE_PAYLOAD, name="c1.json", at=NOW + timedelta(minutes=5),
+            raw=json.dumps(BASELINE_PAYLOAD, ensure_ascii=False, sort_keys=True, indent=1) + "\n\n  ",
+        )
+>       run(make_cfg(tmp_path, [capture_event(artifact1)], NOW))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:156: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+____ test_p118_C_one_field_change_creates_exactly_one_quarantined_candidate ____
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_C_one_field_change_c0')
+
+    def test_p118_C_one_field_change_creates_exactly_one_quarantined_candidate(tmp_path):
+        baseline = write_capture(tmp_path, BASELINE_PAYLOAD, name="p.json", at=NOW)
+        changed_payload = json.loads(json.dumps(BASELINE_PAYLOAD))
+        changed_payload["prices"]["toyota-velo-cross-eco"] = 1019000
+        changed = write_capture(tmp_path, changed_payload, name="p.json", at=NOW + timedelta(minutes=5))
+>       run(make_cfg(tmp_path, [capture_event(baseline)], NOW))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:179: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+__________________ test_p118_D_price_alert_fires_exactly_once __________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_D_price_alert_fires_0')
+
+    def test_p118_D_price_alert_fires_exactly_once(tmp_path):
+        baseline = write_capture(tmp_path, BASELINE_PAYLOAD, name="p.json", at=NOW)
+        changed_payload = json.loads(json.dumps(BASELINE_PAYLOAD))
+        changed_payload["prices"]["toyota-velo-cross-eco"] = 1019000
+        changed = write_capture(tmp_path, changed_payload, name="p.json", at=NOW + timedelta(minutes=5))
+>       run(make_cfg(tmp_path, [capture_event(baseline)], NOW))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:203: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+___ test_p118_E_model_add_remove_candidate_and_alert_without_inventing_rows ____
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_E_model_add_remove_c0')
+
+    def test_p118_E_model_add_remove_candidate_and_alert_without_inventing_rows(tmp_path):
+        staging = REPO / "audit" / "data-staging" / "vehicle_observations.jsonl"
+        staging_before = staging.read_bytes()
+        baseline = write_capture(tmp_path, BASELINE_PAYLOAD, name="m.json", at=NOW)
+        mutated = json.loads(json.dumps(BASELINE_PAYLOAD))
+        mutated["models"] = ["toyota-velo-cross", "toyota-corolla-cross"]  # +corolla, -yaris
+        changed = write_capture(tmp_path, mutated, name="m.json", at=NOW + timedelta(minutes=5))
+>       run(make_cfg(tmp_path, [capture_event(baseline)], NOW))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:226: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+_______ test_p118_F_reachable_to_blocked_alerts_once_with_policy_backoff _______
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_F_reachable_to_block0')
+
+    def test_p118_F_reachable_to_blocked_alerts_once_with_policy_backoff(tmp_path):
+        _brand, domain = _reachable_brand_domain()
+>       r1 = run(make_cfg(tmp_path, [probe_event(domain, "HTTP_403")], NOW))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:255: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+___________ test_p118_H_error_page_stores_evidence_extracts_nothing ____________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_H_error_page_stores_0')
+
+    def test_p118_H_error_page_stores_evidence_extracts_nothing(tmp_path):
+        artifact = write_capture(
+            tmp_path, BASELINE_PAYLOAD, name="dealer.html",
+            url="https://www.some-brand-thailand.com/dealer", at=NOW,
+            raw="<html><body>ราคา 999,000 บาท รุ่น ECO</body></html>",
+        )
+>       r = run(make_cfg(tmp_path, [
+            {"kind": "capture", "source": "www.some-brand-thailand.com", "artifact": artifact,
+             "extractor": "html_prices", "outcome": "DEALER_REDIRECT"},
+        ], NOW))
+
+tests/test_p118_daily_run.py:282: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+_____ test_p118_I_provenance_failure_aborts_with_no_candidate_or_promotion _____
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_I_provenance_failure0')
+
+    def test_p118_I_provenance_failure_aborts_with_no_candidate_or_promotion(tmp_path):
+        counts_before = catalog_counts()
+        artifact = write_capture(tmp_path, BASELINE_PAYLOAD, name="t.json", at=NOW)
+        # tamper the artifact AFTER capture → Reader must fail closed
+        Path(artifact).write_text(Path(artifact).read_text(encoding="utf-8") + "\n tampered", encoding="utf-8")
+    
+>       r1 = run(make_cfg(tmp_path, [capture_event(artifact)], NOW))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:303: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+_________ test_p118_J_identical_runs_yield_identical_observation_sets __________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_J_identical_runs_yie0')
+
+    def test_p118_J_identical_runs_yield_identical_observation_sets(tmp_path):
+        artifact = write_capture(tmp_path, BASELINE_PAYLOAD, at=NOW)
+        d1 = tmp_path / "d1"
+        d2 = tmp_path / "d2"
+>       r1 = run(make_cfg(tmp_path, [capture_event(artifact)], NOW, digest=d1))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:325: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+___________ test_p118_K_double_invocation_is_skipped_without_writes ____________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_K_double_invocation_0')
+
+    def test_p118_K_double_invocation_is_skipped_without_writes(tmp_path):
+        import fcntl
+        artifact = write_capture(tmp_path, BASELINE_PAYLOAD, at=NOW)
+        queue = tmp_path / "queue"
+        queue.mkdir(parents=True, exist_ok=True)
+        lock_path = queue / ".daily-run.lock"
+        fd = os.open(lock_path, os.O_CREAT | os.O_RDWR)
+        try:
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+>           r = run(make_cfg(tmp_path, [capture_event(artifact)], NOW, queue=queue))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:347: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+________________ test_p118_L_quarantine_keeps_catalog_unchanged ________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_L_quarantine_keeps_c0')
+
+    def test_p118_L_quarantine_keeps_catalog_unchanged(tmp_path):
+        counts_before = catalog_counts()
+        baseline = write_capture(tmp_path, BASELINE_PAYLOAD, name="l.json", at=NOW)
+        changed_payload = json.loads(json.dumps(BASELINE_PAYLOAD))
+        changed_payload["prices"]["toyota-velo-cross-eco"] = 1299000
+        changed = write_capture(tmp_path, changed_payload, name="l.json", at=NOW + timedelta(minutes=5))
+>       run(make_cfg(tmp_path, [capture_event(baseline)], NOW))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:368: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+_________ test_p118_M_failed_source_preserves_previous_accepted_state __________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_M_failed_source_pres0')
+
+    def test_p118_M_failed_source_preserves_previous_accepted_state(tmp_path):
+        counts_before = catalog_counts()
+        artifact = write_capture(tmp_path, BASELINE_PAYLOAD, name="m1.json", at=NOW)
+>       run(make_cfg(tmp_path, [capture_event(artifact)], NOW))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:381: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+_____________ test_p118_N_digest_md_and_json_have_required_fields ______________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_N_digest_md_and_json0')
+
+    def test_p118_N_digest_md_and_json_have_required_fields(tmp_path):
+        artifact = write_capture(tmp_path, BASELINE_PAYLOAD, at=NOW)
+        digest = tmp_path / "digest"
+>       run(make_cfg(tmp_path, [capture_event(artifact)], NOW, digest=digest))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:403: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p118_daily_run.py:97: in make_cfg
+    R = runner()
+        ^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+__________ test_p118_O_alert_event_ids_are_deterministic_and_deduped ___________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_O_alert_event_ids_ar0')
+
+    def test_p118_O_alert_event_ids_are_deterministic_and_deduped(tmp_path):
+>       A = alerts_mod()
+            ^^^^^^^^^^^^
+
+tests/test_p118_daily_run.py:422: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def alerts_mod():
+        m = load_refresh("alerts")
+>       assert m is not None, "lib/thai_factory/refresh/alerts.py must exist"
+E       AssertionError: lib/thai_factory/refresh/alerts.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:55: AssertionError
+__________ test_p118_P_one_shot_and_cron_entrypoints_share_the_runner __________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_P_one_shot_and_cron_0')
+
+    def test_p118_P_one_shot_and_cron_entrypoints_share_the_runner(tmp_path):
+        artifact = write_capture(tmp_path, BASELINE_PAYLOAD, at=NOW)
+        events_file = tmp_path / "events.json"
+        events_file.write_text(json.dumps([capture_event(artifact)]), encoding="utf-8")
+    
+        def invoke(flag):
+            out_q = tmp_path / f"q{flag}"
+            out_d = tmp_path / f"d{flag}"
+            proc = subprocess.run(
+                [sys.executable, str(REPO / "scripts" / "daily_run.py"), flag,
+                 "--events", str(events_file),
+                 "--queue-dir", str(out_q), "--digest-dir", str(out_d),
+                 "--now", NOW.isoformat(), "--quiet"],
+                cwd=str(REPO), capture_output=True, text=True, timeout=120,
+            )
+            return proc
+    
+        p_once = invoke("--once")
+>       assert p_once.returncode == 0, p_once.stdout + p_once.stderr
+E       AssertionError: /home/ubuntu/.hermes/hermes-agent/venv/bin/python: can't open file '/home/ubuntu/Projects/thai-car-intelligence/scripts/daily_run.py': [Errno 2] No such file or directory
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/home/ubuntu/.hermes/hermes-agent/venv/bin/python', '/home/ubuntu/Projects/thai-car-intelligen...t open file '/home/ubuntu/Projects/thai-car-intelligence/scripts/daily_run.py': [Errno 2] No such file or directory\n").returncode
+
+tests/test_p118_daily_run.py:464: AssertionError
+________________ test_p118_EXIT_7_seven_consecutive_green_runs _________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-107/test_p118_EXIT_7_seven_consecu0')
+
+    def test_p118_EXIT_7_seven_consecutive_green_runs(tmp_path):
+>       R = runner()
+            ^^^^^^^^
+
+tests/test_p118_daily_run.py:475: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        m = load_refresh("runner")
+>       assert m is not None, "lib/thai_factory/refresh/runner.py must exist"
+E       AssertionError: lib/thai_factory/refresh/runner.py must exist
+E       assert None is not None
+
+tests/test_p118_daily_run.py:49: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_p118_backoff_policy.py::test_outcome_classification_matches_policy_table
+FAILED tests/test_p118_backoff_policy.py::test_tls_retry_is_monthly_and_never_disables_certificate_verification
+FAILED tests/test_p118_backoff_policy.py::test_403_is_plus_7d_then_monthly_and_never_rotates_ua_or_bypasses
+FAILED tests/test_p118_backoff_policy.py::test_404_is_14d_with_at_most_2_alternates_per_cycle
+FAILED tests/test_p118_backoff_policy.py::test_dns_is_weekly_x4_then_monthly
+FAILED tests/test_p118_backoff_policy.py::test_timeout_backoff_30s_120s_then_cycle_blocked
+FAILED tests/test_p118_backoff_policy.py::test_5xx_same_run_retry_30s_120s_then_retry_next_run
+FAILED tests/test_p118_backoff_policy.py::test_error_page_and_dealer_redirect_store_blocker_extract_nothing
+FAILED tests/test_p118_backoff_policy.py::test_per_host_politeness_is_at_least_5_seconds
+FAILED tests/test_p118_daily_run.py::test_p118_A_same_sha_twice_is_unchanged_with_no_new_rows
+FAILED tests/test_p118_daily_run.py::test_p118_B_new_sha_identical_output_content_changed_output_unchanged
+FAILED tests/test_p118_daily_run.py::test_p118_C_one_field_change_creates_exactly_one_quarantined_candidate
+FAILED tests/test_p118_daily_run.py::test_p118_D_price_alert_fires_exactly_once
+FAILED tests/test_p118_daily_run.py::test_p118_E_model_add_remove_candidate_and_alert_without_inventing_rows
+FAILED tests/test_p118_daily_run.py::test_p118_F_reachable_to_blocked_alerts_once_with_policy_backoff
+FAILED tests/test_p118_daily_run.py::test_p118_H_error_page_stores_evidence_extracts_nothing
+FAILED tests/test_p118_daily_run.py::test_p118_I_provenance_failure_aborts_with_no_candidate_or_promotion
+FAILED tests/test_p118_daily_run.py::test_p118_J_identical_runs_yield_identical_observation_sets
+FAILED tests/test_p118_daily_run.py::test_p118_K_double_invocation_is_skipped_without_writes
+FAILED tests/test_p118_daily_run.py::test_p118_L_quarantine_keeps_catalog_unchanged
+FAILED tests/test_p118_daily_run.py::test_p118_M_failed_source_preserves_previous_accepted_state
+FAILED tests/test_p118_daily_run.py::test_p118_N_digest_md_and_json_have_required_fields
+FAILED tests/test_p118_daily_run.py::test_p118_O_alert_event_ids_are_deterministic_and_deduped
+FAILED tests/test_p118_daily_run.py::test_p118_P_one_shot_and_cron_entrypoints_share_the_runner
+FAILED tests/test_p118_daily_run.py::test_p118_EXIT_7_seven_consecutive_green_runs
+25 failed in 0.55s

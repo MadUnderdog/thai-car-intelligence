@@ -1,0 +1,29 @@
+{
+  "entrypoint": "replay7",
+  "run_seq": 7,
+  "runner": "daily_run.run_daily",
+  "sources": {
+    "www.toyota.co.th": {
+      "access_state": "BLOCKED_HTTP_403",
+      "actions": {
+        "bypass": false,
+        "rotate_ua": false
+      },
+      "attempts": 1,
+      "blocker_evidence": null,
+      "last_output": {
+        "models": [
+          "toyota-velo-cross",
+          "toyota-corolla-cross"
+        ],
+        "prices": {
+          "toyota-velo-cross-eco": 1019000
+        }
+      },
+      "last_output_hash": "1942162d8510730d36c475a190096818a8a1eb2ff21d131c73251254eae12ae6",
+      "last_sha": "8231f7087dfb58d182fe5f4b92e1653a1231ecbdc52aa6b1d0ae0afb1f2e452f",
+      "next_retry_at": "2026-10-06T12:00:00+00:00",
+      "retry_state": "RETRY_7D"
+    }
+  }
+}

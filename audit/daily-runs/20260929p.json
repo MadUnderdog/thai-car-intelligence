@@ -1,0 +1,79 @@
+{
+  "alerts": {
+    "count": 0,
+    "entries": []
+  },
+  "artifacts": {
+    "bytes": 116,
+    "count": 1
+  },
+  "blockers": {
+    "registry": {
+      "BLOCKED_DNS": 4,
+      "BLOCKED_HTTP_403": 6,
+      "BLOCKED_HTTP_404": 1,
+      "BLOCKED_TLS": 1,
+      "DEALER_REDIRECT": 1,
+      "REACHABLE": 19,
+      "UNKNOWN": 1
+    },
+    "run": []
+  },
+  "candidates": {
+    "count": 0,
+    "entries": []
+  },
+  "commit": "a5849d00ce1b866c5e0cb6e19566a94b772c3523",
+  "entrypoint": "replay7",
+  "generated_at": "2026-09-29T07:00:00+00:00",
+  "hash_coverage": {
+    "in_scope": 32,
+    "with_last_success_sha256": 19
+  },
+  "identity_levels": {
+    "MODEL": 131,
+    "VARIANT": 372
+  },
+  "locator_coverage": {
+    "duplicate_dom_path": 0,
+    "duplicate_json_path": 0,
+    "rows": 503
+  },
+  "mode": "offline-replay7",
+  "observations": [
+    {
+      "observations": [
+        {
+          "key": "models",
+          "value": [
+            "toyota-velo-cross",
+            "toyota-yaris-cross"
+          ]
+        },
+        {
+          "key": "prices",
+          "value": {
+            "toyota-velo-cross-eco": 999000
+          }
+        }
+      ],
+      "source": "www.toyota.co.th"
+    }
+  ],
+  "run_id": "DR-20260929-002",
+  "runner": "daily_run.run_daily",
+  "sources": [
+    {
+      "classification": "UNCHANGED",
+      "kind": "capture",
+      "observations": 2,
+      "provenance": "VERIFIED",
+      "source": "www.toyota.co.th"
+    }
+  ],
+  "state_transitions": [],
+  "status": "RUN_GREEN",
+  "tests": {
+    "status": "not_run_in_this_invocation"
+  }
+}

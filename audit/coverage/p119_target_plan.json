@@ -1,0 +1,104 @@
+{
+  "schema": "p119_target_plan/v1",
+  "created_at": "2026-09-29",
+  "base_commit": "d8b3ef661e4ca5cbd609cc790fce55873d60ebf1",
+  "pr": {"number": 3, "state": "OPEN", "merged": false},
+  "objective": "Blueprint §96–97: field-level multi-source assembly + semantic-enrichment scaffolding at scale over ACCEPTED EvidencePackets — field provenance mandatory, conflicts explicit, contamination fail-closed, deterministic/idempotent, AI proposal-only.",
+  "entry_condition_phase5": {
+    "requirement": "§101 Phase 5 entry = sustained volume from Phase 4",
+    "evidence": [
+      "Phase 4 exit gate PASS: audit/coverage/p118_seven_green_runs.json (7/7 RUN_GREEN, duplicate_candidate_ids=0, alerts only on runs 4/5/6)",
+      "accepted packet volume: audit/coverage/p113_evidence_packets.json = 488 packets (417 accepted, P113), promoted 414 by P114 (verifier 19/19)",
+      "alias volume: storage/thai-alias-catalog.json = 34 brands / 157 models / 506 aliases (P110, generated from committed evidence)",
+      "identity ledger frozen at 488; Phase 4 daily-run machinery idempotent and audited"
+    ]
+  },
+  "current_architecture_present": {
+    "evidence_packet": "lib/thai_factory/acceptance/evidence_packet.py — EvidencePacket dataclass (packet_id, candidate_key, source_class, source_url, observed_at, currentness, extracted_value, evidence_locator {artifact_path,json_path,html_selector,quote,line}, artifact_hashes {upstream/local sha256}, acceptance_decision) + to_dict/from_dict",
+    "acceptance": "runner.py AcceptanceRunner.evaluate/evaluate_batch (gates incl. conflict check) + ledger.py AcceptanceLedger FILE-based append entries (no schema) — frozen v9 verifier path, untouched by P119",
+    "packet_artifacts": "audit/coverage/p113_evidence_packets.json: {schema, identity_ledger, price_source, spec_source, packets[488]}; each packet: candidate_key (e.g. 'toyota|gr 86||gr86'), status, policy, observations.{identity[],price[],spec[]} with per-obs {obs_id, field/field_key, value/value_numeric, sha256, locator, source_class, source_role, trust_tier, source_url, provenance_state, runner_decision, msrp_status/price_type/currentness as applicable}",
+    "assembly_staging_level": "scripts/build_multi_source_joins.py → audit/data-staging/multi_source_joins.json (same brand+model+price in ≥2 artifacts) and cross_class_joins.json — STAGING-level joins, NOT field-level packet assembly; left untouched, reused as reference only",
+    "alias": "storage/thai-alias-catalog.json (P110): models keyed by slug {nameEn,nameTh,slug,brandEn,brandSlug,aliases[],searchQueries[]} — canonical-key path for joins; scripts/thai-alias-catalog.py generator",
+    "conflicts_today": "identity-level conflicts recorded in the frozen identity ledger (25, P102 semantics) — never re-derived; PRICE/SPEC field-level conflicts across observations are NOT assembled anywhere (this is the P119 gap)",
+    "dead_stub": "lib/research/*.ts (RefreshRun/ChangeCandidate/SourceHealth never migrated) — explicitly separated: P119 touches neither those files nor those tables nor Prisma"
+  },
+  "gaps_and_reproductions": [
+    {"id": "G1", "boundary": "§96 field-level provenance", "repro": "no module assembles {field → {value, source_id, artifact_sha256, locator, observed_at, trust_tier}} — lib/thai_factory/assembly/ absent (red: missing-module tests)"},
+    {"id": "G2", "boundary": "contamination guard", "repro": "nothing fails closed when source B's locator/hash is attached to source A's value (red: mutation test cannot run)"},
+    {"id": "G3", "boundary": "conflict policy", "repro": "same-tier newest-wins / cross-tier higher-wins with BOTH sides retained / unresolved→QUARANTINED — no implementation anywhere (red: missing)"},
+    {"id": "G4", "boundary": "alias join keys", "repro": "no code resolves manufacturer_slug+model_slug+variant_slug+model_year through the evidence-backed alias catalog or rejects display-string-only collisions (red: missing)"},
+    {"id": "G5", "boundary": "candidate_id → canonical_id", "repro": "no reconciliation step exists; premature canonicalization impossible to test (red: missing)"},
+    {"id": "G6", "boundary": "AI proposal-only boundary", "repro": "no proposal payload validator enforcing packet-ID citation ⊆ packet set and values ⊆ packet observations (red: missing)"},
+    {"id": "G7", "boundary": "deterministic/idempotent output", "repro": "no assembly output exists to rerun (red: A/K tests cannot run)"}
+  ],
+  "files_to_touch": {
+    "new": [
+      "lib/thai_factory/assembly/__init__.py",
+      "lib/thai_factory/assembly/models.py — FieldProvenance, AssembledRecord, ConflictRecord, JoinError dataclasses (schema-free, JSON-serializable)",
+      "lib/thai_factory/assembly/join_keys.py — candidate_key + alias-catalog resolution → {manufacturer_slug, model_slug, variant_slug, model_year}; display-string-only → rejected; candidate_id kept, canonical_id only via reconcile()",
+      "lib/thai_factory/assembly/assemble.py — deterministic field assembly: filter ACCEPTED packets → per (join_key, field) observations → trust policy → selected value WITH full provenance + ConflictRecord both sides or QUARANTINED; contamination guard re-verifies obs sha/locator/source coherence and fails closed",
+      "lib/thai_factory/assembly/ai_proposals.py — proposal-only boundary + validator (packet_ids ⊆ packet set, proposed values ⊆ cited packets' observations, no facts absent from packets; zero provider/model imports)",
+      "lib/thai_factory/assembly/report.py — MD+JSON audit report",
+      "scripts/assemble_records.py — bounded offline CLI (real packets default; --out; deterministic)",
+      "tests/test_p119_assembly.py — boundaries A–H, J–M",
+      "tests/test_p119_proposals.py — boundary I",
+      "audit/assembly/assembled_records.jsonl + conflicts.jsonl + join_errors.jsonl (runtime outputs, committed as evidence)",
+      "audit/coverage/p119_assembly_report.{json,md} + red/green/gate logs"
+    ],
+    "modified": [],
+    "not_touched": [
+      "prisma/schema.prisma (NO schema change — assembly/conflicts/aliases all representable as audit artifacts; proven in this plan: field provenance is JSONL, conflicts JSONL, alias path reuses storage/thai-alias-catalog.json)",
+      "lib/thai_factory/acceptance/* + verifier v9 (frozen; NO promotion in P119 — audit/quarantine outputs only)",
+      "lib/research/*.ts dead stub + RefreshRun/ChangeCandidate/SourceHealth (never revived)",
+      "scripts/build_multi_source_joins.py + staging joins (existing, separate layer)",
+      "scripts/generate_daily_report.py, providers/models/config, P114–P118 artifacts"
+    ]
+  },
+  "conflict_state_machine": {
+    "OBSERVED": "≥1 observation reaches assembly for (join_key, field)",
+    "SELECTED_SAME_TIER_NEWEST": "same trust_tier + different observed_at → newest selected; ConflictRecord keeps ALL sides with full evidence; conflict.status=RECORDED (never erased)",
+    "SELECTED_HIGHER_TIER": "different trust_tier → higher tier selected (official_verified > secondary_verified > reference > inferred); lower-tier observation retained verbatim in ConflictRecord",
+    "QUARANTINED": "same tier + same/unparseable date + different values, or contamination-guard failure, or provenance gap → NO selected value emitted; conflict.status=QUARANTINED; assembled field absent from accepted output",
+    "REJECTED_JOIN": "display-string-only key not resolvable through packets + alias catalog → join_errors.jsonl entry, no assembled row",
+    "PROPOSED": "AI proposal (separate file) referencing packet_ids — NEVER auto-applied; human/acceptance path only",
+    "RESOLVED_CANONICAL": "reconcile() assigns deterministic canonical_id to a group of candidate_ids; candidate_id ALWAYS retained"
+  },
+  "trust_and_role_rules": {
+    "trust_tiers": "official_verified > secondary_verified > reference > inferred (non-increasing per §95)",
+    "source_roles": ["IDENTITY_ENUMERATOR", "MARKET_TRUTH", "MARKET_REFERENCE", "MEDIA_DISCOVERY"],
+    "role_never_upgrades": true,
+    "provenance_state": "ACQUISITION_VERIFIED vs LEGACY_UNVERIFIED preserved per observation; legacy/unverified never presented as verified (flag `verified: false` carried into output)",
+    "value_universe": "assembled values must be ⊆ union of packet observation values (no enrichment from canonical DB — J)"
+  },
+  "acceptance_tests": {
+    "A": "P119-A same packet set assembled twice → byte-identical outputs (sha256 of each file equal)",
+    "B": "P119-B every assembled field's provenance == its source observation {sha256, locator, source_id, observed_at, trust_tier, packet_id, obs_id}",
+    "C": "P119-C mutation attaching source B's locator/sha to source A's value → assembly fails closed (error + quarantined, no accepted output)",
+    "D": "P119-D same-tier conflict: newest dated selected, conflict record retains BOTH sides with evidence",
+    "E": "P119-E cross-tier conflict: higher tier selected, lower-tier evidence retained verbatim",
+    "F": "P119-F unresolvable conflict (same tier+same date, different values) → QUARANTINED, value not emitted",
+    "G": "P119-G join through alias catalog resolves to canonical key; display-string-only collision rejected into join_errors",
+    "H": "P119-H candidate_id present pre- and post-reconcile; canonical_id only after reconcile; deterministic",
+    "I": "P119-I proposal validator: unknown packet_id rejected; proposed value absent from cited packets rejected; module imports no provider/model code",
+    "J": "P119-J assembly module source contains no DB/provider imports; every emitted value ⊆ packet observation values",
+    "K": "P119-K rerun → no duplicate rows (unique candidate/field keys, stable file length)",
+    "L": "P119-L legacy/unverified observations carried with explicit unverified flag",
+    "M": "P119-M git diff base→HEAD touches no prisma/acceptance/verifier/provider files",
+    "N": "gate chain: focused + combined provenance/acceptance/assembly + full vitest + full pytest (only P49) + tsc + prisma + credential scan",
+    "O": "plan commit precedes implementation commits; machine-readable result + MD report + logs + final SHA + local==remote + clean tree + blob review"
+  },
+  "data_boundary": {
+    "inputs": "audit/coverage/p113_evidence_packets.json (real accepted packets) + storage/thai-alias-catalog.json (real alias artifact); mutation/conflict fixtures are IN-MEMORY/tmp transformations of real packets for tests only — never emitted as real output",
+    "outputs": "audit/assembly/*.jsonl, audit/coverage/p119_assembly_report.{json,md}, p119 logs — NO DB writes, NO staging rewrites, NO network",
+    "promotion": "none — conflicts/quarantines stay audit-side; AcceptanceRunner/Ledger untouched",
+    "ai": "validator + payload schema only; no LLM/provider call in P119"
+  },
+  "non_goals": ["no production promotion (default audit/quarantine only)", "no AI reconciliation applied automatically (proposal file only, never auto-merge)", "no new source class, no scope expansion", "no schema migration", "no reviving dead TS tables", "no enrichment from canonical DB values", "no rewriting identity-ledger conflicts (they stay as-is)", "no live web in CI"],
+  "honest_limits_planned": [
+    "the real 488-packet set carries ~1 packet per candidate_key, so real field-level cross-source conflicts may be 0 — conflict machinery is proven by mutation fixtures built FROM real packets; report states the real count honestly",
+    "alias evidence = P110 catalog generation provenance (committed artifacts), not per-alias re-resolution in P119",
+    "model_year often absent in packets (generation_context empty) → null year allowed in join key, disclosed",
+    "AI proposal boundary ships as validator+scaffolding with zero model invocation (per contract: no model/provider change)",
+    "never declares assembly complete — completeness reported as counts over the packet set only"
+  ]
+}

@@ -3,8 +3,13 @@ import { Prisma } from "@prisma/client";
 import db from "../../../../../../lib/db";
 import { requireAdmin } from "@/lib/community/admin-auth";
 import { checkRateLimit } from "../../../../../../lib/security/rate-limit";
+import { isValidUuid } from "../../../../../../lib/validation/api-params";
 
 export const dynamic = "force-dynamic";
+
+function serverError(): NextResponse {
+  return NextResponse.json({ error: "เกิดข้อผิดพลาด กรุณารอสักครู่" }, { status: 500 });
+}
 
 // POST /api/admin/community/research-lead
 // Body: { commentId, fieldName, proposedValue, evidence?, confidence? }
@@ -30,9 +35,13 @@ export async function POST(req: NextRequest) {
 
   const { commentId, fieldName, proposedValue, evidence } = payload ?? {};
   const confidence = payload?.confidence !== undefined ? Number(payload.confidence) : 0;
+  try {
 
   if (!commentId || !fieldName || typeof fieldName !== "string" || fieldName.trim().length === 0) {
     return NextResponse.json({ error: "กรุณาระบุ commentId และ fieldName" }, { status: 400 });
+  }
+  if (typeof commentId !== "string" || !isValidUuid(commentId)) {
+    return NextResponse.json({ error: "commentId ไม่ถูกต้อง" }, { status: 400 });
   }
   if (proposedValue === undefined || proposedValue === null || (typeof proposedValue === "object" && Object.keys(proposedValue).length === 0)) {
     return NextResponse.json({ error: "กรุณาระบุ proposedValue" }, { status: 400 });
@@ -97,4 +106,8 @@ export async function POST(req: NextRequest) {
   });
 
   return NextResponse.json({ ok: true, researchCandidate: result }, { status: 201 });
+  } catch (err) {
+    console.error("[admin/research-lead]", err);
+    return serverError();
+  }
 }

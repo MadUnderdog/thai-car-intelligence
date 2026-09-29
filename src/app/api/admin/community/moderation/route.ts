@@ -2,13 +2,19 @@ import { NextRequest, NextResponse } from "next/server";
 import db from "../../../../../../lib/db";
 import { checkRateLimit } from "../../../../../../lib/security/rate-limit";
 import { requireAdmin } from "@/lib/community/admin-auth";
+import { isValidUuid } from "../../../../../../lib/validation/api-params";
 
 export const dynamic = "force-dynamic";
+
+function serverError(): NextResponse {
+  return NextResponse.json({ error: "เกิดข้อผิดพลาด กรุณารอสักครู่" }, { status: 500 });
+}
 
 // GET /api/admin/community/moderation?status=FLAGGED — list reported / flagged comments (visible moderation queue)
 export async function GET(req: NextRequest) {
   const denied = requireAdmin(req);
   if (denied) return denied;
+  try {
 
   const url = new URL(req.url);
   const statusFilter = url.searchParams.get("status");
@@ -57,6 +63,10 @@ export async function GET(req: NextRequest) {
   }));
 
   return NextResponse.json({ comments: queue, total: queue.length });
+  } catch (err) {
+    console.error("[admin/moderation GET]", err);
+    return serverError();
+  }
 }
 
 // PATCH /api/admin/community/moderation — moderation action on a comment
@@ -81,6 +91,10 @@ export async function PATCH(req: NextRequest) {
       { status: 400 },
     );
   }
+  if (typeof commentId !== "string" || !isValidUuid(commentId)) {
+    return NextResponse.json({ error: "commentId ไม่ถูกต้อง" }, { status: 400 });
+  }
+  try {
 
   const target = await db.communityComment.findUnique({ where: { id: commentId }, select: { id: true } });
   if (!target) return NextResponse.json({ error: "ไม่พบความคิดเห็นนี้" }, { status: 404 });
@@ -105,4 +119,8 @@ export async function PATCH(req: NextRequest) {
   }
 
   return NextResponse.json({ ok: true, comment: updated });
+  } catch (err) {
+    console.error("[admin/moderation PATCH]", err);
+    return serverError();
+  }
 }

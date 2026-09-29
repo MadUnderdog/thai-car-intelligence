@@ -185,14 +185,14 @@ export function CommunitySection({ modelId }: { modelId: string }) {
           <div className="flex items-center gap-3 mt-2 text-sm">
             <button
               onClick={() => vote(c.id, 1)}
-              className={`flex items-center gap-1 hover:text-[var(--color-primary-600)] ${voted === 1 ? "text-[var(--color-primary-600)] font-semibold" : "text-[var(--color-gray-500)]"}`}
+              className={`flex items-center gap-1 px-2 py-1.5 rounded hover:text-[var(--color-primary-600)] ${voted === 1 ? "text-[var(--color-primary-600)] font-semibold" : "text-[var(--color-gray-500)]"}`}
               aria-label="โหวตขึ้น"
             >
               👍 {c.upvotes}
             </button>
             <button
               onClick={() => vote(c.id, -1)}
-              className={`flex items-center gap-1 hover:text-[var(--color-danger-500)] ${voted === -1 ? "text-[var(--color-danger-500)] font-semibold" : "text-[var(--color-gray-500)]"}`}
+              className={`flex items-center gap-1 px-2 py-1.5 rounded hover:text-[var(--color-danger-500)] ${voted === -1 ? "text-[var(--color-danger-500)] font-semibold" : "text-[var(--color-gray-500)]"}`}
               aria-label="โหวตลง"
             >
               👎 {c.downvotes}
@@ -200,14 +200,14 @@ export function CommunitySection({ modelId }: { modelId: string }) {
             {depth === 0 && (
               <button
                 onClick={() => setReplyTo({ id: c.id, name: c.authorName })}
-                className="text-[var(--color-gray-500)] hover:text-[var(--color-primary-600)]"
+                className="px-2 py-1.5 rounded text-[var(--color-gray-500)] hover:text-[var(--color-primary-600)]"
               >
                 ตอบกลับ
               </button>
             )}
             {!reported && (
               <details className="relative">
-                <summary className="text-[var(--color-gray-400)] text-xs cursor-pointer hover:text-[var(--color-danger-500)] list-none">
+                <summary className="text-[var(--color-gray-400)] text-xs cursor-pointer hover:text-[var(--color-danger-500)] list-none px-2 py-1.5">
                   รายงาน
                 </summary>
                 <div className="absolute z-10 mt-1 bg-white border border-[var(--color-gray-200)] rounded-[var(--radius-md)] shadow-sm p-2 flex flex-col gap-1">
@@ -215,7 +215,7 @@ export function CommunitySection({ modelId }: { modelId: string }) {
                     <button
                       key={r.value}
                       onClick={() => report(c.id, r.value)}
-                      className="text-left text-xs px-3 py-1.5 rounded hover:bg-[var(--color-gray-50)] text-[var(--color-gray-700)]"
+                      className="text-left text-xs px-3 py-2 min-h-[32px] rounded hover:bg-[var(--color-gray-50)] text-[var(--color-gray-700)]"
                     >
                       {r.label}
                     </button>
@@ -234,6 +234,7 @@ export function CommunitySection({ modelId }: { modelId: string }) {
   }
 
   return (
+    <div data-testid="community-section">
     <Card>
       <CardBody>
         <h2 className="text-lg font-semibold text-[var(--color-gray-900)] mb-4">
@@ -276,6 +277,7 @@ export function CommunitySection({ modelId }: { modelId: string }) {
           <Button
             size="sm"
             variant="primary"
+            className="min-h-[32px] px-4"
             disabled={submitting}
             isLoading={submitting}
             onClick={() => submit(replyTo?.id)}
@@ -300,5 +302,6 @@ export function CommunitySection({ modelId }: { modelId: string }) {
         )}
       </CardBody>
     </Card>
+    </div>
   );
 }

@@ -1,0 +1,29 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /home/ubuntu/Projects/thai-car-intelligence
+
+ ❯ tests/p117-community.test.ts (24 tests | 1 failed) 553ms
+     × P117-G1: one report per comment per IP even with rotated cookies (idempotent) 30ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/p117-community.test.ts > P117-G/K reports, auto-hide, queue > P117-G1: one report per comment per IP even with rotated cookies (idempotent)
+TypeError: .toMatch() expects to receive a string, but got undefined
+ ❯ tests/p117-community.test.ts:336:69
+    334|     );
+    335|     expect(second.status).toBe(200);
+    336|     expect(second.json.message, "second report must be idempotent").to…
+       |                                                                     ^
+    337|     const rows = await db.commentReport.count({ where: { commentId: c.…
+    338|     expect(rows, "same IP must not mint a second reporter identity").t…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 30 passed (31)
+   Start at  18:46:12
+   Duration  1.03s (transform 363ms, setup 0ms, import 672ms, tests 592ms, environment 0ms)
+

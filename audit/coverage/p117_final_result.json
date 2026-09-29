@@ -1,0 +1,87 @@
+{
+  "schema": "p117_final_result/v1",
+  "created_at": "2026-09-29",
+  "base_commit": "2a30e39e31832b25782339380841045a83eb8570",
+  "pr": {"number": 3, "state_expected_at_report": "OPEN/UNMERGED"},
+  "status": "COMPLETE_PENDING_PUSH_VERIFICATION",
+  "red_before": {
+    "log": "audit/daily-runs/20260929-p117-redbefore.log",
+    "result": "23 failed | 8 passed (31) on untouched base 2a30e39 (after one test-harness fix: dynamic-route handlers need the {params} context arg — disclosed, not a product defect)",
+    "smoke_red_log": "audit/daily-runs/20260929-p117-smoke-red.log",
+    "smoke_red": "14 checks: touch targets FAIL (submit button 28px, report reason buttons 28px)"
+  },
+  "green_after": {
+    "focused": "31 passed (2 files) rc=0",
+    "deterministic_rerun": "31 passed rc=0",
+    "combined": "78 passed (9 community/moderation/security/public-UX files) rc=0",
+    "full_vitest": "563 passed | 2 skipped (47 files) rc=0",
+    "full_pytest": "964 passed, 1 error (1392.23s) — ONLY error = known pre-existing tests/test_generation_config_boundary.py ImportError (_OPENROUTER_ALLOWED_MODEL, P49)",
+    "tsc": 0,
+    "prisma_validate": 0,
+    "credential_scan": 0,
+    "production_build": "rc=0",
+    "mobile_smoke": "RC=0, 14/14 checks (390x844, next start)"
+  },
+  "environment_note": "First pytest attempt in this session reported 64 failed because the chain shell's PATH python3 (hermes tools 3.14.7) has no playwright, and extract_from_html spawns `python3` for its JS-HTML extraction helper (ModuleNotFoundError: No module named 'playwright') — environment drift vs the P116 chain, NOT a code regression. Re-ran the pytest gate once with PATH prefixed to ~/.hermes/hermes-agent/venv (playwright+pytest): 964 passed, 1 known error. Disclosed per gates; no test or code was modified to achieve it.",
+  "defects_fixed": [
+    {"id": "D1", "boundary": "E/2", "before": "POST /api/community/comments persisted `isResearchLead: Boolean(isResearchLead)` — any client self-granted the research-lead badge", "after": "payload field never read; always false; only /api/admin/community/research-lead (Bearer gate, runs before any DB access) can set it", "proof": "E1 red (base true) → green persisted false; E2 admin sets true + anon 401"},
+    {"id": "D2", "boundary": "C/1", "before": "reply scope = `modelId ?? parent.modelId` — client payload could move a reply to another model/variant or inject a mismatched pair", "after": "replies inherit parent.modelId/parent.variantId verbatim; client scope fields ignored for replies; parent must be VISIBLE and not deleted", "proof": "C red (base returned modelB/variantB) → green parent scope; F reply without scope params now allowed (base 400'd)"},
+    {"id": "D3", "boundary": "D/1/6/8", "before": "modelId/variantId/parentId/page/limit never validated: malformed UUID → Prisma throw (no client response), nonexistent entity → orphan persisted 201, mismatched model+variant accepted, page=abc → NaN into Prisma", "after": "shared lib/community/scope.ts: UUID format → 400; existence + status='ACTIVE' → 404 (no orphans); model↔variant agreement → 400; finite page(≥1)/limit(1..50) → 400; GET same checks + single-scope param", "proof": "D1-D7 red → green (incl. spy proving where.status='ACTIVE'); orphans counted 0; I2 red → green"},
+    {"id": "D4", "boundary": "G/3", "before": "reporterToken = cookie || hashIp — rotating/clearing the tci_token cookie minted fresh identities, letting ONE actor reach the 3-report auto-hide threshold", "after": "reporterToken = hashIp(ip) always (same identity family as votes); @@unique(commentId, reporterToken) gives true per-IP idempotency; NAT tradeoff disclosed", "proof": "G1 red (base created 2 rows for one IP with rotated cookie) → green 1 row + idempotent message"},
+    {"id": "D5", "boundary": "J/10", "before": "blocked-words (Blueprint 23 minimum) did not exist anywhere", "after": "src/lib/community/blocked-words.ts (disclosed starter list, NFKC+lowercase, Thai substring / EN word-boundary) checked BEFORE persistence → 400, zero rows", "proof": "J red (base 201 persisted) → green 400, count 0, deterministic repeat, benign comment unaffected"},
+    {"id": "D6", "boundary": "I/6", "before": "GET/vote/report/admin routes had no try/catch: internal DB errors propagated as throws (no client response); error text could contain SQL", "after": "all 7 handlers wrap logic → generic JSON 500 (Thai message), console.error server-side only; auth/400 paths untouched", "proof": "file p117-db-error-safety.test.ts: mocked DB error containing `SELECT * FROM \"CommunityComment\"` → 500 JSON on all 7 routes with body asserted free of SELECT/CommunityComment/Prisma/stack; all red before fix"},
+    {"id": "D7", "boundary": "M", "before": "GET orderBy [upvotes desc, createdAt desc] — equal-score ties could order differently between runs", "after": "final {id: 'asc'} tiebreak", "proof": "M red (captured orderBy lacked tiebreak) → green; repeated GET ids+createdAt deep-equal"},
+    {"id": "N", "boundary": "N/10", "before": "vote/reply buttons ~20px, submit 28px, report reason buttons 28px — unusable touch targets on mobile", "after": "px-2 py-1.5 vote/reply/report-summary, min-h-[32px] submit + reason buttons; data-testid community wrapper for the smoke", "proof": "smoke-red (11 buttons <32px) → smoke green 14/14 with touch targets []"}
+  ],
+  "gates": {
+    "focused": 31, "rerun": 31, "combined": 78, "full_vitest": "563 passed | 2 skipped",
+    "pytest": "964 passed, 1 error (known P49 only)", "tsc": 0, "prisma": 0, "credscan": 0,
+    "build": 0, "smoke": "14/14"
+  },
+  "mandatory_tests": {
+    "A": "P117-A model scope persist+GET", "B": "P117-B variant scope + cross-model exclusion",
+    "C": "P117-C malicious reply payload inherits parent scope", "D": "P117-D1..D7 format/existence/consistency/ACTIVE fail-closed",
+    "E": "P117-E1/E2 badge not client-settable, admin-only setter + 401 anon",
+    "F": "P117-F HIDDEN parent hides parent+reply+count, DELETE reply, RESTORE",
+    "G": "P117-G1 per-IP idempotency, G2 3-distinct → FLAGGED + 3 report rows preserved",
+    "H": "P117-H vote idempotent/switch + counters == vote rows invariant",
+    "I": "P117-I1..I4 malformed uuid/enum/oversized/page + I6a..g safe 500s",
+    "J": "P117-J blocked word → 400 no row deterministic + benign passes",
+    "K": "P117-G2 queue lists FLAGGED w/ reports+briefByReason, HIDE→GET excludes, RESTORE→back, 401 anon",
+    "L": "P117-L1 zero community refs in catalog/evidence sources, L2 label+disclaimer present; smoke heading+disclaimer",
+    "M": "P117-M orderBy tiebreak + repeated GET identical",
+    "N": "P117 smoke 14/14 mobile (controls, touch ≥32px, no overflow, 0 console errors)"
+  },
+  "files_changed": {
+    "modified": [
+      "src/app/api/community/comments/route.ts",
+      "src/app/api/community/comments/[id]/vote/route.ts",
+      "src/app/api/community/comments/[id]/report/route.ts",
+      "src/app/api/admin/community/moderation/route.ts",
+      "src/app/api/admin/community/research-lead/route.ts",
+      "src/components/community/CommunitySection.tsx"
+    ],
+    "new": [
+      "src/lib/community/scope.ts", "src/lib/community/blocked-words.ts",
+      "tests/p117-community.test.ts", "tests/p117-db-error-safety.test.ts",
+      "scripts/p117_community_smoke.mjs", "audit/coverage/p117_target_plan.json",
+      "audit/coverage/p117_final_result.json", "audit/coverage/p117_final_report.md",
+      "audit/daily-runs/20260929-p117-*.log"
+    ]
+  },
+  "boundaries_honored": {
+    "no_schema_change": true, "no_catalog_price_spec_writes": true,
+    "community_writes": "fixtures only in community tables via public/admin routes, afterAll cleanup verified (comments 39 / reports 16 / votes 12 = exact baseline, 0 fixtures left)",
+    "no_provider_model_config": true, "no_verifier_rewrite": true, "no_p102_p116_semantics": true,
+    "no_acquisition_refresh": true, "ai_classification": "untouched (no AI calls added; Blueprint 24 metadata path unchanged)"
+  },
+  "honest_limits": [
+    "rate limiter is in-memory single-process (documented in helper)",
+    "report/vote identity is per-IP: NAT users share one identity (chosen deliberately over per-cookie identity, which enabled auto-hide spam)",
+    "blocked-words is a disclosed starter list (~10 Thai + 3 English spam terms), not a full profanity filter",
+    "edit history: no edit endpoint exists in the repo, so edit-history has nothing to log — disclosed rather than faked (Blueprint 23 item N/A)",
+    "existing pre-fix report rows keyed by cookie tokens remain as-is (no migration); only per-IP identity applies to new reports",
+    "no CommunityUser table by design (anonymous identity); moderation auth = ADMIN_API_TOKEN bearer",
+    "community text never enters catalog/price/spec/evidence paths (L1 static proof + no FK from catalog tables)"
+  ]
+}

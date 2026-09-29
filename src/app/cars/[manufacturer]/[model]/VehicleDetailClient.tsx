@@ -12,7 +12,8 @@ type Variant = {
   nameTh: string;
   slug: string;
   price: number | null;
-  fuelType: string;
+  priceSource: { url: string; sourceName: string | null; verifiedAt: string | null } | null;
+  fuelType: string | null;
   powerKw: number | null;
   torqueNm: number | null;
   rangeKm: number | null;
@@ -45,6 +46,9 @@ type ModelData = {
   nameTh: string;
   brand: string;
   brandTh: string;
+  officialUrl: string | null;
+  brochure: { title: string; href: string | null; sourceName: string | null; verifiedAt: string | null; verified: boolean };
+  heroFallback: { kind: "image" | "fallback" | "placeholder"; href: string | null };
   variants: Variant[];
   images: { url: string; role: string; caption: string | null }[];
 };

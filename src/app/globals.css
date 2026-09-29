@@ -1,4 +1,9 @@
-@import "tailwindcss";
+/* P116: scope Tailwind auto-detection to the app sources. The default scan
+   walks tests/ (831 MB of tracked OEM PDF/b64 fixtures) and stalls the
+   postcss worker forever — `next dev`/`next build` could never complete in
+   this repo. No class strings exist outside src/. */
+@import "tailwindcss" source(none);
+@source "../../src";
 
 /* ========================================
    DESIGN TOKENS — Thai Car Intelligence

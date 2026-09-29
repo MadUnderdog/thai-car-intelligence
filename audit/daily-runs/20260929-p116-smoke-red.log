@@ -1,0 +1,30 @@
+PASS  smoke: >=2 full-chain priced variants in DB — got 2
+PASS  smoke: active model for detail page
+PASS  smoke: production build exists (npx next build)
+PASS  smoke: next dev server up
+PASS  G/J: /cars renders model cards — 50 links
+PASS  J: /cars has no horizontal overflow (390px)
+PASS  A3/G: /api/models?q= returns 200 + payload — status 200
+PASS  G: wrong model slug → 404 — status 404
+PASS  G: wrong manufacturer slug → 404 — status 404
+PASS  G: detail page renders model name — GR 86
+PASS  E: /search renders result links — 1 links
+PASS  E: search rows show price or truthful no-price note
+PASS  E: no /cars/undefined links ever render — 0 found
+FAIL  C: compare renders 2 columns — ["🚗Car Intelligence"]
+FAIL  C: compare page not in error state
+FAIL  C: feature three-state legend rendered
+PASS  J: /compare has no horizontal overflow (390px)
+FAIL  J: touch targets ≥32px on /compare — {"small":4,"total":12}
+FAIL  J: zero console/runtime errors across flows — Failed to load resource: the server responded with a status of 404 (Not Found) | Failed to load resource: the server responded with a status of 404 (Not Found) | TypeError: Cannot read properties of undefined (reading 'power')
+    at http://127.0.0.1:3216/_next/static/chunks/0psh8qxbu3m6a.js:1:4461
+    at Array.map (<anonymous>)
+    at http://127.0.0.1:3216/_next/static/chunks/0psh8qxbu3m6a.js:1:4416
+    at Array.map (<anonymous>)
+    at http://127.0.0.1:3216/_next/static/chunks/0psh8qxbu3m6a.js:1:4193
+    at Array.map (<anonymous>)
+    at i (http://127.0.0.1:3216/_next/static/chunks/0psh8qxbu3m6a.js:1:3852)
+    at aS (http://127.0.0.1:3216/_next/static/chunks/02fh7_m5mrih8.js:1:79321)
+    at o1 (http://127.0.0.1:3216/_next/static/chunks/02fh7_m5mrih8.js:1:99614)
+    at id (http://127.0.0.1:3216/_next/static/chunks/02fh7_m5mrih8.js:1:111303)
+SMOKE_JSON={"total":19,"passed":14,"failures":5,"results":[{"name":"smoke: >=2 full-chain priced variants in DB","ok":true,"detail":"got 2"},{"name":"smoke: active model for detail page","ok":true,"detail":""},{"name":"smoke: production build exists (npx next build)","ok":true,"detail":""},{"name":"smoke: next dev server up","ok":true,"detail":""},{"name":"G/J: /cars renders model cards","ok":true,"detail":"50 links"},{"name":"J: /cars has no horizontal overflow (390px)","ok":true,"detail":""},{"name":"A3/G: /api/models?q= returns 200 + payload","ok":true,"detail":"status 200"},{"name":"G: wrong model slug → 404","ok":true,"detail":"status 404"},{"name":"G: wrong manufacturer slug → 404","ok":true,"detail":"status 404"},{"name":"G: detail page renders model name","ok":true,"detail":"GR 86"},{"name":"E: /search renders result links","ok":true,"detail":"1 links"},{"name":"E: search rows show price or truthful no-price note","ok":true,"detail":""},{"name":"E: no /cars/undefined links ever render","ok":true,"detail":"0 found"},{"name":"C: compare renders 2 columns","ok":false,"detail":"[\"🚗Car Intelligence\"]"},{"name":"C: compare page not in error state","ok":false,"detail":""},{"name":"C: feature three-state legend rendered","ok":false,"detail":""},{"name":"J: /compare has no horizontal overflow (390px)","ok":true,"detail":""},{"name":"J: touch targets ≥32px on /compare","ok":false,"detail":"{\"small\":4,\"total\":12}"},{"name":"J: zero console/runtime errors across flows","ok":false,"detail":"Failed to load resource: the server responded with a status of 404 (Not Found) | Failed to load resource: the server responded with a status of 404 (Not Found) | TypeError: Cannot read properties of undefined (reading 'power')\n    at http://127.0.0.1:3216/_next/static/chunks/0psh8qxbu3m6a.js:1:4461\n"}]}

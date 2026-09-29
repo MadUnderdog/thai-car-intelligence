@@ -1,0 +1,85 @@
+{
+  "schema": "p116_target_plan/v1",
+  "created_at": "2026-09-29",
+  "base_commit": "3590131cc827118107a2b2009ec0fd32d4a73f13",
+  "pr": {"number": 3, "state": "OPEN", "merged": false},
+  "goal": "Public /cars, /cars/[mfr]/[model], /compare, /search UX over the P114-promoted accepted set, contract-correct with P115 search response, without lowering any data-standard.",
+  "blueprint_sections_read": ["#20 Vehicle page", "#21 Comparison system", "#26 Search UX", "#41 Comparison philosophy", "#86 Image UI fallback", "#87 Brochure UI fallback", "#88 Research quality metrics", "#89 verified vehicle", "#90 acceptance tests v2"],
+  "files_read": [
+    "src/app/cars/page.tsx", "src/app/cars/[manufacturer]/[model]/page.tsx", "src/app/cars/[manufacturer]/[model]/VehicleDetailClient.tsx",
+    "src/app/compare/page.tsx", "src/app/compare/CompareClient.tsx", "src/app/compare/CompareSelector.tsx", "src/app/compare/DifferenceFilter.tsx",
+    "src/app/search/page.tsx", "src/app/search/SearchClient.tsx",
+    "src/app/api/cars/route.ts", "src/app/api/models/route.ts", "src/app/api/compare/route.ts", "src/app/api/search/route.ts",
+    "lib/catalog/queries.ts (post-P115)", "lib/compare/selector.ts", "prisma/schema.prisma (Variant/Price/Source/SourceDocument/Media/Feature/BrochureVerification/spec tables)",
+    "Blueprint.md §§20,21,26,41,86-90", "tests/compare-feature.test.ts", "tests/model-identity.test.ts", "tests/api-validation.test.ts", "tests/error-leakage.test.ts", "package.json scripts/deps"
+  ],
+  "current_behavior": {
+    "api_models": "raw SQL; price eligibility = isCurrent + SourceDocument.status=VERIFIED ONLY (no source.status, no sourceType official, no BrochureVerification) for minPrice/maxPrice/filters/main join; returns CarModel rows, no variant ids; bodyType filtered in JS after SQL",
+    "api_compare": "variant UUIDs only (FROM Variant WHERE id=ANY AND ACTIVE); price gate = sd VERIFIED + BrochureVerification VERIFIED but MISSING source.status=ACTIVE and official sourceType; NO ORDER BY (DB order, selected order not preserved); features = available=true only (unknown vs explicitly-false indistinguishable); price returns {amount,type} with no provenance URL",
+    "api_search_post_p115": "CatalogPage + CatalogVariant{id,nameTh,nameEn,slug,modelYear,manufacturer{...},model{...},aliases,fuelType,prices[{amount,currency,type,validFrom,validTo,observedAt,source{url,titleTh,titleEn,documentStatus,verificationStatus,verifiedAt,source{nameEn,sourceType,domain}}}]}; additive vectorAvailable, searchMode, evidence[]",
+    "cars_page": "fetches /api/models; compare selection stores CarModel.id and links /compare?ids=<model ids> — /api/compare queries Variant ids → guaranteed 404 (variant-vs-model mismatch)",
+    "search_client": "reads FLAT manufacturerName/manufacturerSlug/modelName/modelSlug/stats fields that are NOT in the response → blank labels + /cars/undefined/undefined links; ignores prices, evidence, searchMode; HTTP error collapses into empty state ('ไม่พบผลลัพธ์' shown for failures)",
+    "compare_client": "renders API order; missing spec = NO_DATA text (good); price without provenance link; need_at_least_2 maps to generic 'ไม่สามารถโหลดข้อมูลได้'; features binary ✓/— (unknown conflated with not-installed)",
+    "vehicle_detail": "slug match enforced on BOTH m.slug + cm.slug + ACTIVE → notFound() (cross-entity 404 already correct); price gate = sd VERIFIED + bv VERIFIED but MISSING source ACTIVE + official sourceType; research rows (VariantSpec from sd.status<>VERIFIED) rendered in clearly-labelled 'ข้อมูลจากงานวิจัย (ยังไม่ยืนยัน)' block (good); evidence dots = value presence only (PerformanceSpec rows include 19/36 secondary_automotive_media → dot claims official for media rows); no source URL anywhere (sd join unused); no brochure section (Blueprint 87); image fallback = emoji placeholder only, no official-site link (Blueprint 86); sidebar compare link passes ONE variant id → API 400",
+    "differences": "CompareSelector/DifferenceFilter exist but are NOT wired into any page (dead code); CompareSelector path (via /api/cars listVariants) is variant-id correct — left as-is",
+    "testing_infra": "vitest (node env, NO jsdom/@testing-library — component DOM tests infeasible without new deps); playwright 1.63 + chromium installed (usable for smoke); precedent = lib/mapping unit tests (compare-feature.test.ts) + live-DB tests (data-factory-gates) + fake-pool/fixture route tests"
+  },
+  "probes_evidence": {
+    "price_chain_counts_current": {
+      "loose_models_route_sd_verified_only": 351,
+      "compare_detail_chain_sd_plus_bv": 18,
+      "full_currentOfficialPrice_chain": 18,
+      "current_prices_missing_bv_by_official_sourceType": {"OFFICIAL_MANUFACTURER": 199, "OFFICIAL_MANUFACTURER_PRICE_LIST": 94, "AUTOMOTIVE_MEDIA": 40},
+      "p114_promoted_price_rows": {"total": 302, "isCurrent": 264, "sd_VERIFIED": 264, "bv_VERIFIED": 0, "full_chain": 0}
+    },
+    "models": {"active_models": 284, "with_ACTIVE_variant": 282, "with_full_chain_priced_variant": 18},
+    "spec_tiers": {"PerformanceSpec": {"primary_official": 17, "secondary_automotive_media": 19}, "BatterySpec": {"primary_official": 8, "secondary_automotive_media": 11}, "ChargingSpec": {"secondary_automotive_media": 3}, "DimensionsSpec": {"primary_official": 15, "secondary_automotive_media": 11}, "WarrantySpec": {"secondary_automotive_media": 9}},
+    "assets": {"verified_official_pdfs": 5, "active_official_sources_with_baseUrl": 24},
+    "probes": ["~/.hermes/cache/scratch/p116_probe.sql", "p116_probe2.sql", "p116_probe3.sql", "p116_probe4.sql"]
+  },
+  "gaps": [
+    {"id": "G1", "boundary": "/api/models price eligibility (mandatory A)", "before": "351 current prices surface as official incl. AUTOMOTIVE_MEDIA=40 and official-without-bv=293 vs true currentOfficialPrice=18", "after": "shared currentOfficialPriceSql() in all three SQL sites (main join, minPrice, maxPrice)", "tests": ["A1 fake-pool SQL chain assertions", "A2 live parity: route SQL rows == independently-written full-chain reference set"]},
+    {"id": "G2", "boundary": "/api/compare price gate (mandatory C)", "before": "sd+bv only — missing source.status=ACTIVE + official sourceType", "after": "shared predicate", "tests": ["C1 fake-pool SQL contains all 5 conditions", "C4 live no-inactive/nonofficial-price leak"]},
+    {"id": "G3", "boundary": "vehicle detail price gate (mandatory B)", "before": "sd+bv only (same missing clauses)", "after": "shared predicate via extracted detail query builders", "tests": ["B1 predicate conditions", "B2 research block fed only sd.status<>VERIFIED rows (query separation test)"]},
+    {"id": "G4", "boundary": "/api/compare order (mandatory C/K)", "before": "variants.rows DB order (WHERE id=ANY, no ORDER BY) → selected order not preserved", "after": "dedupe preserving request order, map rows back to idList order", "tests": ["C2 fake-pool: request [A,B], DB returns [B,A] → response [A,B] (red-before)", "K1 same fixture twice → deep-equal"]},
+    {"id": "G5", "boundary": "CarsPage compare IDs (mandatory D)", "before": "stores CarModel.id → /api/compare 404 variants_not_found", "after": "/api/models gains compareVariantId (representative ACTIVE variant: full-chain priced cheapest first, then nameEn/id — deterministic); CarsPage toggles that id; button hidden when null", "tests": ["D1 response contains compareVariantId", "D2 live: id is ACTIVE variant of that model", "D3 live: two compareVariantIds → /api/compare 200 ordered"]},
+    {"id": "G6", "boundary": "SearchClient contract (mandatory E)", "before": "flat fields absent → blank labels + /cars/undefined/undefined; price/evidence/searchMode ignored; stats fields do not exist", "after": "lib/ux/search-view.ts mapSearchResponse consumes REAL nested CatalogVariant + additive fields; renders price + source link + searchMode/evidence", "tests": ["E1 live /api/search response shape proves flat fields absent (red-before data evidence)", "E2 view-model: nested → correct slugs/labels/nameEn/price (exact model not lost)", "E3 module-missing red-before", "H3 price.source.url survives into view"]},
+    {"id": "G7", "boundary": "Search truthfulness + compare entry (mandatory F/4)", "before": "HTTP error → 'ไม่พบผลลัพธ์'; detail sidebar compare sends 1 id → generic error message", "after": "resolveSearchUiState: loading|ok-empty|ok|error distinct; CompareClient maps need_at_least_2 truthfully; sidebar links first TWO variant ids when ≥2", "tests": ["F1 503 → error state not empty", "F2 ok+[] → empty state", "F3 loading separate", "F4 need_at_least_2 message mapping"]},
+    {"id": "G8", "boundary": "image/brochure fallback (mandatory I, Blueprint 86/87)", "before": "emoji placeholder only, no official link; brochure section missing entirely", "after": "detail loads officialUrl (active official source baseUrl) + verified official PDF doc (title/url/verifiedAt/source) when exists; client: placeholder + [ดูภาพจากเว็บไซต์ผู้ผลิต] link; brochure card with title/source/date/verified, else 'โบรชัวร์จากผู้ผลิต' + official link, else plain text — never an invented asset/url", "tests": ["I1 no-image → placeholder + official link", "I2 no-brochure+no-official → plain fallback text, no link", "I3 brochure mapping keeps title/url/verifiedAt", "G-smoke: 404 wrong slug (playwright)"]},
+    {"id": "G9", "boundary": "provenance links (mandatory H, boundary 6)", "before": "detail sd join unused (no URL rendered); compare price no URL; SearchClient renders no price/source", "after": "detail price += {url,sourceName,verifiedAt} rendered as link; compare price += sourceUrl/sourceName rendered; search view renders price source link", "tests": ["H1 detail view mapping keeps url", "H2 live compare GET price.sourceUrl present for full-chain priced variant", "H3 search view keeps source url"]},
+    {"id": "G10", "boundary": "spec verified claims (mandatory B, boundary 5)", "before": "evidence dots = value presence → secondary_automotive_media rows (19/36 PerformanceSpec etc.) claimed 'ตรวจสอบจากแหล่งทางการแล้ว'", "after": "specEvidenceFlags(): section ok = row with sourceTier='primary_official' exists; secondary-tier values still display (promoted evidence) but never marked official; research block untouched", "tests": ["B3 flags: primary_official row → ok; secondary row alone → not ok; no row → not ok", "B4 live: PerformanceSpec secondary-only variants never flagged official"]},
+    {"id": "G11", "boundary": "cross-entity 404 (mandatory G, boundary 9)", "before": "already enforced (both slugs + ACTIVE)", "after": "unchanged — regression covered by smoke (wrong mfr → 404) + lookup-builder unit test", "tests": ["G1 lookup SQL enforces both slugs + ACTIVE on model and manufacturer", "G2 playwright: /cars/<mfr>/wrong → HTTP 404, correct → 200"]},
+    {"id": "G12", "boundary": "compare features honesty (mandatory C/4)", "before": "features query available=true only → unknown vs explicitly-not-installed conflated as —", "after": "return all rows with available flag; render ✓ installed / ✗ ไม่ติดตั้ง / 'ไม่มีข้อมูล' unknown", "tests": ["C5 features three-state mapping"]}
+  ],
+  "acceptance_tests": {
+    "A": ["A1", "A2"], "B": ["B1", "B2", "B3", "B4"], "C": ["C1", "C2", "C4", "C5", "C6(2-4 UUID counts)"],
+    "D": ["D1", "D2", "D3"], "E": ["E1", "E2", "E3"], "F": ["F1", "F2", "F3", "F4"],
+    "G": ["G1", "G2-smoke"], "H": ["H1", "H2", "H3"], "I": ["I1", "I2", "I3"],
+    "J": ["J1 playwright mobile-viewport smoke: /cars, /search, /compare, detail render with zero console errors", "J2 unit coverage for all extracted view-mapping helpers"],
+    "K": ["K1 deterministic repeated mapping (deep-equal)", "K2 live compare GET twice → identical id order"]
+  },
+  "files_to_touch": [
+    "lib/catalog/price-sql.ts (NEW: single currentOfficialPriceSql() — SQL twin of queries.ts currentOfficialPrice)",
+    "lib/catalog/detail-queries.ts (NEW: extracted lookup/variant/research SQL builders for the detail page)",
+    "lib/ux/search-view.ts (NEW: /api/search response → view model + ui-state resolution)",
+    "lib/ux/detail-view.ts (NEW: optional — image/brochure/evidence-flag mapping helpers if page-side too thick)",
+    "src/app/api/models/route.ts", "src/app/api/compare/route.ts",
+    "src/app/cars/page.tsx", "src/app/cars/[manufacturer]/[model]/page.tsx", "src/app/cars/[manufacturer]/[model]/VehicleDetailClient.tsx",
+    "src/app/search/SearchClient.tsx", "src/app/compare/CompareClient.tsx",
+    "tests/p116-public-ux.test.ts (NEW: fake-pool + helper tests)", "tests/p116-live-catalog.test.ts (NEW: live read-only parity/contract tests)",
+    "scripts/p116_ux_smoke.mjs (NEW: playwright smoke, self-hosted next dev, mobile viewport)",
+    "audit/coverage/p116_target_plan.json, p116_final_result.json, p116_final_report.md, red/green/gate logs"
+  ],
+  "non_goals": [
+    "no Prisma schema/migration, no DB writes of any kind (fixtures are faked in-memory or read live, never persisted)",
+    "no BrochureVerification backfill — the accepted currentOfficialPrice predicate requires bv VERIFIED, which only 18 price docs have; P114's 264 promoted current prices therefore stay hidden from public price surfaces. Disclosed as pre-existing coverage limitation, NOT patched here (data work forbidden)",
+    "no acquisition/refresh/harvesting, no embedding generation, no provider/model/config changes, no verifier rewrite, no community/admin/scheduled work",
+    "no P102–P106 identity-semantics changes; alias/canonical rules untouched",
+    "no visual redesign: keep existing layout/components; only contract-correct fields, honest states, provenance/fallback links",
+    "no new npm dependencies (no jsdom/testing-library); component behavior covered via extracted pure helpers + playwright smoke",
+    "DifferenceFilter/CompareSelector remain unwired (dead code) — wiring them is a UX feature beyond mandatory scope; disclosed",
+    "no /api/cars route changes (CompareSelector already consumes it correctly)"
+  ],
+  "data_boundary": "Read-only over the P114-promoted accepted set: all SQL SELECT-only; price surfaces exactly currentOfficialPrice (isCurrent + sd VERIFIED + source ACTIVE + official sourceType + BrochureVerification VERIFIED); spec display = promoted spec tables with tier-honest evidence flags; research = VariantSpec from sd.status<>VERIFIED kept visibly unverified; vector/search evidence never enters these surfaces (P115 rules intact)",
+  "anticloop": "ONE read-only preflight → ONE target plan → ONE implementation pass → ONE focused regression cycle per defect → ONE combined/full gate chain → ONE push/report → STOP"
+}

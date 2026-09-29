@@ -16,6 +16,9 @@ type Model = {
   variantCount: number;
   primaryFuelType: string;
   heroImage: string | null;
+  // P116: representative ACTIVE variant UUID — the SAME id kind /api/compare
+  // accepts (model UUIDs are NOT valid there).
+  compareVariantId: string | null;
 };
 
 export default function CarsPage() {
@@ -160,17 +163,29 @@ export default function CarsPage() {
                 </Card>
               </Link>
 
-              {/* Compare button */}
-              <button
-                onClick={(e) => { e.preventDefault(); toggleCompare(model.id); }}
-                className={`absolute top-3 right-3 w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm transition ${
-                  compareList.includes(model.id)
-                    ? "bg-[var(--color-primary-600)] border-[var(--color-primary-600)] text-white"
-                    : "bg-white border-[var(--color-gray-300)] text-[var(--color-gray-400)] hover:border-[var(--color-primary-400)]"
-                }`}
-              >
-                {compareList.includes(model.id) ? "✓" : "+"}
-              </button>
+              {/* Compare button — selects the model's compareVariantId
+                  (variant UUID for /api/compare, never the model UUID) */}
+              {model.compareVariantId ? (
+                <button
+                  onClick={(e) => { e.preventDefault(); toggleCompare(model.compareVariantId!); }}
+                  aria-pressed={compareList.includes(model.compareVariantId)}
+                  title="เพิ่มเข้าสู่การเปรียบเทียบ"
+                  className={`absolute top-3 right-3 w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm transition ${
+                    compareList.includes(model.compareVariantId)
+                      ? "bg-[var(--color-primary-600)] border-[var(--color-primary-600)] text-white"
+                      : "bg-white border-[var(--color-gray-300)] text-[var(--color-gray-400)] hover:border-[var(--color-primary-400)]"
+                  }`}
+                >
+                  {compareList.includes(model.compareVariantId) ? "✓" : "+"}
+                </button>
+              ) : (
+                <span
+                  title="ยังไม่มีข้อมูลรุ่นย่อยสำหรับเปรียบเทียบ"
+                  className="absolute top-3 right-3 w-8 h-8 rounded-full border-2 border-dashed border-[var(--color-gray-200)] flex items-center justify-center text-sm text-[var(--color-gray-300)]"
+                >
+                  —
+                </span>
+              )}
             </div>
           ))}
         </div>

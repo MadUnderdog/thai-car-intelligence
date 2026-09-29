@@ -1,0 +1,833 @@
+
+=== SMOKE FATAL 2026-09-29T08:09:12.693Z ===
+{
+  "fatal": "Error: browserType.launch: Executable doesn't exist at /home/ubuntu/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+  "total": 2,
+  "passed": 2,
+  "failures": 0,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}
+
+=== SMOKE FATAL 2026-09-29T08:15:00.427Z ===
+{
+  "fatal": "Error: server never became ready",
+  "total": 3,
+  "passed": 2,
+  "failures": 1,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: next dev server up",
+      "ok": false,
+      "detail": "▲ Next.js 16.3.2 (Turbopack)\n- Local:         http://localhost:3216\n- Network:       http://192.168.2.162:3216\n- Environments: .env\n✓ Ready in 471ms\n✓ Running next.config.ts took 39ms\n\n○ Compiling / ...\n\u001b[?25h\n"
+    }
+  ]
+}
+
+=== SMOKE FATAL 2026-09-29T08:20:23.656Z ===
+{
+  "fatal": "Error: server never became ready",
+  "total": 3,
+  "passed": 2,
+  "failures": 1,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: next dev server up",
+      "ok": false,
+      "detail": "▲ Next.js 16.3.2 (Turbopack)\n- Local:         http://localhost:3216\n- Network:       http://192.168.2.162:3216\n- Environments: .env\n✓ Ready in 1066ms\n✓ Running next.config.ts took 77ms\n\n○ Compiling / ...\n"
+    }
+  ]
+}
+
+=== SMOKE FATAL 2026-09-29T08:36:08.233Z ===
+{
+  "fatal": "Error: server never became ready",
+  "total": 3,
+  "passed": 2,
+  "failures": 1,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: next dev server up",
+      "ok": false,
+      "detail": "▲ Next.js 16.3.2 (Turbopack)\n- Local:         http://localhost:3216\n- Network:       http://192.168.2.162:3216\n- Environments: .env\n✓ Ready in 408ms\n✓ Running next.config.ts took 42ms\n\n○ Compiling / ...\n"
+    }
+  ]
+}
+
+=== SMOKE SUMMARY 2026-09-29T09:09:47.319Z ===
+{
+  "total": 19,
+  "passed": 14,
+  "failures": 5,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: production build exists (npx next build)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: next dev server up",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G/J: /cars renders model cards",
+      "ok": true,
+      "detail": "50 links"
+    },
+    {
+      "name": "J: /cars has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A3/G: /api/models?q= returns 200 + payload",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "name": "G: wrong model slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: wrong manufacturer slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: detail page renders model name",
+      "ok": true,
+      "detail": "GR 86"
+    },
+    {
+      "name": "E: /search renders result links",
+      "ok": true,
+      "detail": "1 links"
+    },
+    {
+      "name": "E: search rows show price or truthful no-price note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E: no /cars/undefined links ever render",
+      "ok": true,
+      "detail": "0 found"
+    },
+    {
+      "name": "C: compare renders 2 columns",
+      "ok": false,
+      "detail": "[\"🚗Car Intelligence\"]"
+    },
+    {
+      "name": "C: compare page not in error state",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "C: feature three-state legend rendered",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "J: /compare has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "J: touch targets ≥32px on /compare",
+      "ok": false,
+      "detail": "{\"small\":4,\"total\":12}"
+    },
+    {
+      "name": "J: zero console/runtime errors across flows",
+      "ok": false,
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found) | Failed to load resource: the server responded with a status of 404 (Not Found) | TypeError: Cannot read properties of undefined (reading 'power')\n    at http://127.0.0.1:3216/_next/static/chunks/0psh8qxbu3m6a.js:1:4461\n"
+    }
+  ]
+}
+
+=== SMOKE SUMMARY 2026-09-29T09:12:33.146Z ===
+{
+  "total": 19,
+  "passed": 14,
+  "failures": 5,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: production build exists (npx next build)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: next dev server up",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G/J: /cars renders model cards",
+      "ok": true,
+      "detail": "50 links"
+    },
+    {
+      "name": "J: /cars has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A3/G: /api/models?q= returns 200 + payload",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "name": "G: wrong model slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: wrong manufacturer slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: detail page renders model name",
+      "ok": true,
+      "detail": "GR 86"
+    },
+    {
+      "name": "E: /search renders result links",
+      "ok": true,
+      "detail": "1 links"
+    },
+    {
+      "name": "E: search rows show price or truthful no-price note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E: no /cars/undefined links ever render",
+      "ok": true,
+      "detail": "0 found"
+    },
+    {
+      "name": "C: compare renders 2 columns",
+      "ok": false,
+      "detail": "[\"🚗Car Intelligence\"]"
+    },
+    {
+      "name": "C: compare page not in error state",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "C: feature three-state legend rendered",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "J: /compare has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "J: touch targets on /compare (controls ≥32px, text links ≥24px)",
+      "ok": false,
+      "detail": "controls 2 (small: []), links 5 (small: [{\"tag\":\"A\",\"text\":\"รถยนต์ทั้งหมด\",\"w\":358,\"h\":20},{\"tag\":\"A\",\"text\":\"ค้นหา\",\"w\":358,\"h\":20},{\"tag\":\"A\",\"text\":\"เปรียบเทียบ\",\"w\":358,\"h\":20},{\"tag\":\"A\",\"text\":\"ถาม AI\",\"w\":358,\"h\":20}])"
+    },
+    {
+      "name": "J: zero console/runtime errors across flows",
+      "ok": false,
+      "detail": "console: Failed to load resource: the server responded with a status of 404 (Not Found) | Failed to load resource: the server responded with a status of 404 (Not Found) | TypeError: Cannot read properties of undefined (reading 'power')\n    at http://127.0.0.1:3216/_next/static/chunks/0psh8qxbu3m6a.j"
+    }
+  ]
+}
+
+=== SMOKE SUMMARY 2026-09-29T09:16:30.461Z ===
+{
+  "total": 19,
+  "passed": 14,
+  "failures": 5,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: production build exists (npx next build)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: next dev server up",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G/J: /cars renders model cards",
+      "ok": true,
+      "detail": "50 links"
+    },
+    {
+      "name": "J: /cars has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A3/G: /api/models?q= returns 200 + payload",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "name": "G: wrong model slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: wrong manufacturer slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: detail page renders model name",
+      "ok": true,
+      "detail": "GR 86"
+    },
+    {
+      "name": "E: /search renders result links",
+      "ok": true,
+      "detail": "1 links"
+    },
+    {
+      "name": "E: search rows show price or truthful no-price note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E: no /cars/undefined links ever render",
+      "ok": true,
+      "detail": "0 found"
+    },
+    {
+      "name": "C: compare renders 2 columns",
+      "ok": false,
+      "detail": "[\"RS\",\"V\",\"🚗Car Intelligence\"]"
+    },
+    {
+      "name": "C: compare page not in error state",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "C: feature three-state legend rendered",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "J: /compare has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "J: touch targets on /compare (controls ≥32px, text links ≥24px)",
+      "ok": false,
+      "detail": "controls 1 (small: []), links 6 (small: [{\"tag\":\"A\",\"text\":\"รถยนต์ทั้งหมด\",\"w\":358,\"h\":20},{\"tag\":\"A\",\"text\":\"ค้นหา\",\"w\":358,\"h\":20},{\"tag\":\"A\",\"text\":\"เปรียบเทียบ\",\"w\":358,\"h\":20},{\"tag\":\"A\",\"text\":\"ถาม AI\",\"w\":358,\"h\":20}])"
+    },
+    {
+      "name": "J: zero console/runtime errors across flows",
+      "ok": false,
+      "detail": "console: Failed to load resource: the server responded with a status of 404 (Not Found) | Failed to load resource: the server responded with a status of 404 (Not Found) ; http>=400: 404 http://127.0.0.1:3216/cars/toyota/definitely-not-a-model-xyz | 404 http://127.0.0.1:3216/cars/definitely-not-a-mfr"
+    }
+  ]
+}
+
+=== SMOKE SUMMARY 2026-09-29T09:18:24.489Z ===
+{
+  "total": 20,
+  "passed": 17,
+  "failures": 3,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: >=2 active variants with feature rows (three-state fixture)",
+      "ok": false,
+      "detail": "got 0"
+    },
+    {
+      "name": "smoke: production build exists (npx next build)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: next dev server up",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G/J: /cars renders model cards",
+      "ok": true,
+      "detail": "50 links"
+    },
+    {
+      "name": "J: /cars has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A3/G: /api/models?q= returns 200 + payload",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "name": "G: wrong model slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: wrong manufacturer slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: detail page renders model name",
+      "ok": true,
+      "detail": "GR 86"
+    },
+    {
+      "name": "E: /search renders result links",
+      "ok": true,
+      "detail": "1 links"
+    },
+    {
+      "name": "E: search rows show price or truthful no-price note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E: no /cars/undefined links ever render",
+      "ok": true,
+      "detail": "0 found"
+    },
+    {
+      "name": "C: compare renders 2 columns",
+      "ok": false,
+      "detail": "[\"RS\",\"฿949,000\",\"V\",\"฿579,000\"]"
+    },
+    {
+      "name": "C: compare page not in error state",
+      "ok": true,
+      "detail": "error blocks: 0"
+    },
+    {
+      "name": "C: feature three-state legend rendered",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "J: /compare has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "J: touch targets on /compare (controls ≥32px, text links ≥24px)",
+      "ok": true,
+      "detail": "controls 0 (small: []), links 2 (small: [])"
+    },
+    {
+      "name": "J: zero console/runtime errors across flows",
+      "ok": true,
+      "detail": "console: none ; http>=400: none"
+    }
+  ]
+}
+
+=== SMOKE SUMMARY 2026-09-29T09:19:10.633Z ===
+{
+  "total": 20,
+  "passed": 18,
+  "failures": 2,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: >=2 active variants with feature rows (three-state fixture)",
+      "ok": false,
+      "detail": "got 0"
+    },
+    {
+      "name": "smoke: production build exists (npx next build)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: next dev server up",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G/J: /cars renders model cards",
+      "ok": true,
+      "detail": "50 links"
+    },
+    {
+      "name": "J: /cars has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A3/G: /api/models?q= returns 200 + payload",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "name": "G: wrong model slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: wrong manufacturer slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: detail page renders model name",
+      "ok": true,
+      "detail": "GR 86"
+    },
+    {
+      "name": "E: /search renders result links",
+      "ok": true,
+      "detail": "1 links"
+    },
+    {
+      "name": "E: search rows show price or truthful no-price note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E: no /cars/undefined links ever render",
+      "ok": true,
+      "detail": "0 found"
+    },
+    {
+      "name": "C: compare renders 2 columns",
+      "ok": true,
+      "detail": "[\"RS\",\"V\"]"
+    },
+    {
+      "name": "C: compare page not in error state",
+      "ok": true,
+      "detail": "error blocks: 0"
+    },
+    {
+      "name": "C: feature three-state legend rendered",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "J: /compare has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "J: touch targets on /compare (controls ≥32px, text links ≥24px)",
+      "ok": true,
+      "detail": "controls 0 (small: []), links 2 (small: [])"
+    },
+    {
+      "name": "J: zero console/runtime errors across flows",
+      "ok": true,
+      "detail": "console: none ; http>=400: none"
+    }
+  ]
+}
+
+=== SMOKE SUMMARY 2026-09-29T09:20:22.216Z ===
+{
+  "total": 19,
+  "passed": 19,
+  "failures": 0,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: production build exists (npx next build)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: next dev server up",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G/J: /cars renders model cards",
+      "ok": true,
+      "detail": "50 links"
+    },
+    {
+      "name": "J: /cars has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A3/G: /api/models?q= returns 200 + payload",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "name": "G: wrong model slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: wrong manufacturer slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: detail page renders model name",
+      "ok": true,
+      "detail": "GR 86"
+    },
+    {
+      "name": "E: /search renders result links",
+      "ok": true,
+      "detail": "1 links"
+    },
+    {
+      "name": "E: search rows show price or truthful no-price note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E: no /cars/undefined links ever render",
+      "ok": true,
+      "detail": "0 found"
+    },
+    {
+      "name": "C: compare renders 2 columns",
+      "ok": true,
+      "detail": "[\"RS\",\"V\"]"
+    },
+    {
+      "name": "C: compare page not in error state",
+      "ok": true,
+      "detail": "error blocks: 0"
+    },
+    {
+      "name": "C: features section hidden when accepted set has no feature rows",
+      "ok": true,
+      "detail": "empty-table path"
+    },
+    {
+      "name": "J: /compare has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "J: touch targets on /compare (controls ≥32px, text links ≥24px)",
+      "ok": true,
+      "detail": "controls 0 (small: []), links 2 (small: [])"
+    },
+    {
+      "name": "J: zero console/runtime errors across flows",
+      "ok": true,
+      "detail": "console: none ; http>=400: none"
+    }
+  ]
+}
+
+=== SMOKE SUMMARY 2026-09-29T09:44:30.476Z ===
+{
+  "total": 19,
+  "passed": 19,
+  "failures": 0,
+  "results": [
+    {
+      "name": "smoke: >=2 full-chain priced variants in DB",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "smoke: active model for detail page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: production build exists (npx next build)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke: next dev server up",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G/J: /cars renders model cards",
+      "ok": true,
+      "detail": "50 links"
+    },
+    {
+      "name": "J: /cars has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A3/G: /api/models?q= returns 200 + payload",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "name": "G: wrong model slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: wrong manufacturer slug → 404",
+      "ok": true,
+      "detail": "status 404"
+    },
+    {
+      "name": "G: detail page renders model name",
+      "ok": true,
+      "detail": "GR 86"
+    },
+    {
+      "name": "E: /search renders result links",
+      "ok": true,
+      "detail": "1 links"
+    },
+    {
+      "name": "E: search rows show price or truthful no-price note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E: no /cars/undefined links ever render",
+      "ok": true,
+      "detail": "0 found"
+    },
+    {
+      "name": "C: compare renders 2 columns",
+      "ok": true,
+      "detail": "[\"RS\",\"V\"]"
+    },
+    {
+      "name": "C: compare page not in error state",
+      "ok": true,
+      "detail": "error blocks: 0"
+    },
+    {
+      "name": "C: features section hidden when accepted set has no feature rows",
+      "ok": true,
+      "detail": "empty-table path"
+    },
+    {
+      "name": "J: /compare has no horizontal overflow (390px)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "J: touch targets on /compare (controls ≥32px, text links ≥24px)",
+      "ok": true,
+      "detail": "controls 0 (small: []), links 2 (small: [])"
+    },
+    {
+      "name": "J: zero console/runtime errors across flows",
+      "ok": true,
+      "detail": "console: none ; http>=400: none"
+    }
+  ]
+}

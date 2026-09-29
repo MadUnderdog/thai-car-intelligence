@@ -1,0 +1,21 @@
+PASS  smoke: >=2 full-chain priced variants in DB — got 2
+PASS  smoke: active model for detail page
+INFO variant-feature rows available: 0
+PASS  smoke: production build exists (npx next build)
+PASS  smoke: next dev server up
+PASS  G/J: /cars renders model cards — 50 links
+PASS  J: /cars has no horizontal overflow (390px)
+PASS  A3/G: /api/models?q= returns 200 + payload — status 200
+PASS  G: wrong model slug → 404 — status 404
+PASS  G: wrong manufacturer slug → 404 — status 404
+PASS  G: detail page renders model name — GR 86
+PASS  E: /search renders result links — 1 links
+PASS  E: search rows show price or truthful no-price note
+PASS  E: no /cars/undefined links ever render — 0 found
+PASS  C: compare renders 2 columns — ["RS","V"]
+PASS  C: compare page not in error state — error blocks: 0
+PASS  C: features section hidden when accepted set has no feature rows — empty-table path
+PASS  J: /compare has no horizontal overflow (390px)
+PASS  J: touch targets on /compare (controls ≥32px, text links ≥24px) — controls 0 (small: []), links 2 (small: [])
+PASS  J: zero console/runtime errors across flows — console: none ; http>=400: none
+SMOKE_JSON={"total":19,"passed":19,"failures":0,"results":[{"name":"smoke: >=2 full-chain priced variants in DB","ok":true,"detail":"got 2"},{"name":"smoke: active model for detail page","ok":true,"detail":""},{"name":"smoke: production build exists (npx next build)","ok":true,"detail":""},{"name":"smoke: next dev server up","ok":true,"detail":""},{"name":"G/J: /cars renders model cards","ok":true,"detail":"50 links"},{"name":"J: /cars has no horizontal overflow (390px)","ok":true,"detail":""},{"name":"A3/G: /api/models?q= returns 200 + payload","ok":true,"detail":"status 200"},{"name":"G: wrong model slug → 404","ok":true,"detail":"status 404"},{"name":"G: wrong manufacturer slug → 404","ok":true,"detail":"status 404"},{"name":"G: detail page renders model name","ok":true,"detail":"GR 86"},{"name":"E: /search renders result links","ok":true,"detail":"1 links"},{"name":"E: search rows show price or truthful no-price note","ok":true,"detail":""},{"name":"E: no /cars/undefined links ever render","ok":true,"detail":"0 found"},{"name":"C: compare renders 2 columns","ok":true,"detail":"[\"RS\",\"V\"]"},{"name":"C: compare page not in error state","ok":true,"detail":"error blocks: 0"},{"name":"C: features section hidden when accepted set has no feature rows","ok":true,"detail":"empty-table path"},{"name":"J: /compare has no horizontal overflow (390px)","ok":true,"detail":""},{"name":"J: touch targets on /compare (controls ≥32px, text links ≥24px)","ok":true,"detail":"controls 0 (small: []), links 2 (small: [])"},{"name":"J: zero console/runtime errors across flows","ok":true,"detail":"console: none ; http>=400: none"}]}

@@ -19,7 +19,8 @@ type Model = {
 };
 
 type Stats = {
-  totalVariants: number;
+  // P121: stats come from the API's real ACTIVE-row counts (no zero fallbacks)
+  totalActiveVariants: number;
   totalManufacturers: number;
   evCount: number;
   hevCount: number;
@@ -80,7 +81,9 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/models?limit=12")
+    // P121: price-verified models first — cards render REAL official prices
+    // instead of twelve alphabetically-first mostly price-less models.
+    fetch("/api/models?limit=12&sortBy=price_asc")
       .then((r) => r.json())
       .then((data) => {
         setModels(data.results || []);
@@ -91,12 +94,9 @@ export default function HomePage() {
     fetch("/api/cars?limit=1")
       .then((r) => r.json())
       .then((data) => {
-        setStats({
-          totalVariants: data.total || 0,
-          totalManufacturers: data.totalManufacturers || 0,
-          evCount: data.evCount || 0,
-          hevCount: data.hevCount || 0,
-        });
+        // P121: only render stats the API actually returned — a missing
+        // field must hide the block, never paint a misleading 0.
+        if (data && data.stats) setStats(data.stats);
       })
       .catch(() => {});
   }, []);
@@ -135,10 +135,10 @@ export default function HomePage() {
 
       {/* Stats */}
       {stats && (
-        <section className="container-narrow -mt-8">
+        <section className="container-narrow -mt-8" data-testid="home-stats">
           <Card variant="elevated" className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[var(--color-gray-100)]">
             <div className="p-6 text-center">
-              <div className="text-3xl font-bold text-[var(--color-primary-600)]">{stats.totalVariants}</div>
+              <div className="text-3xl font-bold text-[var(--color-primary-600)]">{stats.totalActiveVariants}</div>
               <div className="text-sm text-[var(--color-gray-500)] mt-1">รถยนต์</div>
             </div>
             <div className="p-6 text-center">
@@ -162,7 +162,7 @@ export default function HomePage() {
         <section className="container-narrow py-12">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-[var(--color-gray-900)]">⚡ รถยนต์ไฟฟ้า EV</h2>
-            <Link href="/search?q=EV" className="text-sm text-[var(--color-primary-600)] hover:underline">
+            <Link href="/search?q=EV" className="text-sm text-[var(--color-primary-600)] hover:underline min-h-[32px] inline-flex items-center">
               ดูทั้งหมด →
             </Link>
           </div>
@@ -179,7 +179,7 @@ export default function HomePage() {
         <section className="container-narrow py-12">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-[var(--color-gray-900)]">🔋 รถยนต์ไฮบริด HEV</h2>
-            <Link href="/search?q=HEV" className="text-sm text-[var(--color-primary-600)] hover:underline">
+            <Link href="/search?q=HEV" className="text-sm text-[var(--color-primary-600)] hover:underline min-h-[32px] inline-flex items-center">
               ดูทั้งหมด →
             </Link>
           </div>
@@ -194,8 +194,8 @@ export default function HomePage() {
       {/* All Models */}
       <section className="container-narrow py-12">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-[var(--color-gray-900)]">รถยนต์ทั้งหมด</h2>
-          <Link href="/cars" className="text-sm text-[var(--color-primary-600)] hover:underline">
+          <h2 className="text-2xl font-bold text-[var(--color-gray-900)]">รถยนต์ที่มีราคาตรวจสอบแล้ว</h2>
+          <Link href="/cars" className="text-sm text-[var(--color-primary-600)] hover:underline min-h-[32px] inline-flex items-center">
             ดูทั้งหมด →
           </Link>
         </div>

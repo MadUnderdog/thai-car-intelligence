@@ -6,6 +6,7 @@ import { compareErrorMessage, featureCellText } from "../../../lib/ux/compare-vi
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import DifferenceFilter from "./DifferenceFilter";
 
 type ComparisonVehicle = {
   id: string;
@@ -184,16 +185,36 @@ export default function ComparePage() {
       </div>
 
       {/* Spec groups */}
-      <div className="space-y-6">
-        {SPEC_GROUPS.map((group) => (
+      <div className="mb-2 flex items-center justify-between">
+        <DifferenceFilter />
+      </div>
+      <div id="comparison-rows" className="space-y-6">
+        {SPEC_GROUPS.map((group) => {
+          // P121: never render a spec group where NO selected vehicle has ANY
+          // value (e.g. battery/charging blocks on gasoline-only pairs) —
+          // empty groups read as broken, not as truthful-unavailable.
+          const hasAnyValue = group.fields.some((field) =>
+            data.some((v: any) =>
+              (field.key === "price" ? v.price : v.specs?.[field.key]) != null
+            )
+          );
+          if (!hasAnyValue) return null;
+          return (
           <Card key={group.group}>
             <CardBody>
               <h3 className="text-sm font-semibold text-[var(--color-gray-500)] mb-4 uppercase tracking-wider">{group.group}</h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <tbody>
-                    {group.fields.map((field) => (
-                      <tr key={field.key} className="border-b border-[var(--color-gray-100)] last:border-0">
+                    {group.fields.map((field) => {
+                      // P121: difference-filter target — a row is "different"
+                      // when the rendered values are not all identical
+                      const rowValues = data.map((v: any) =>
+                        JSON.stringify((field.key === "price" ? v.price : v.specs[field.key]) ?? null)
+                      );
+                      const different = new Set(rowValues).size > 1;
+                      return (
+                      <tr key={field.key} data-different={different ? "true" : "false"} className="border-b border-[var(--color-gray-100)] last:border-0">
                         <td className="py-3 pr-4 text-[var(--color-gray-600)] font-medium whitespace-nowrap w-32">{field.label}</td>
                         {data.map((v: any) => {
                           const value = field.key === "price" ? v.price : v.specs[field.key];
@@ -204,13 +225,15 @@ export default function ComparePage() {
                           );
                         })}
                       </tr>
-                    ))}
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
             </CardBody>
           </Card>
-        ))}
+          );
+        })}
 
         {/* Features comparison */}
         {allFeatures.length > 0 && (
@@ -224,8 +247,10 @@ export default function ComparePage() {
                     {allFeatures.map((slug) => {
                       // label from ANY selected vehicle (not only the first)
                       const feature = data.flatMap((v) => v.features).find((f) => f.slug === slug);
+                      const cells = data.map((v) => featureCellText(v.features, slug));
+                      const different = new Set(cells).size > 1;
                       return (
-                        <tr key={slug} className="border-b border-[var(--color-gray-100)] last:border-0">
+                        <tr key={slug} data-different={different ? "true" : "false"} className="border-b border-[var(--color-gray-100)] last:border-0">
                           <td className="py-2 pr-4 text-[var(--color-gray-600)] font-medium whitespace-nowrap">
                             {feature?.nameTh || slug}
                           </td>

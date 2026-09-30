@@ -5,6 +5,7 @@ import { Card, CardBody } from "@/components/ui/Card";
 import { CommunitySection } from "@/components/community/CommunitySection";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { pickSpecVariant } from "@/lib/catalog/spec-variant";
 
 type Variant = {
   id: string;
@@ -102,12 +103,15 @@ function ResearchOnlyBlock({ researchSpecs, name }: { researchSpecs: { label: st
 export default function VehicleDetailClient({ model }: { model: ModelData }) {
   const heroImage = model.images.find((img) => img.role === "hero") || model.images[0];
   const primary = model.variants[0];
+  // P121: spec section binds to the variant that actually HAS typed spec
+  // data (ties → incoming price-first order) instead of blind variants[0].
+  const specPrimary = pickSpecVariant(model.variants) ?? model.variants[0];
 
   return (
     <div className="container-narrow py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-[var(--color-gray-500)] mb-6">
-        <Link href="/cars" className="hover:text-[var(--color-primary-600)]">รถยนต์</Link>
+        <Link href="/cars" className="min-h-[32px] inline-flex items-center hover:text-[var(--color-primary-600)]">รถยนต์</Link>
         <span>/</span>
         <span className="text-[var(--color-gray-900)]">{model.brand} {model.name}</span>
       </nav>
@@ -142,6 +146,19 @@ export default function VehicleDetailClient({ model }: { model: ModelData }) {
                     </span>
                   )}
                 </div>
+              )}
+              {/* P121: verified-price provenance must be REACHABLE — same
+                  pattern as /compare (source link, new tab, noopener). */}
+              {primary?.priceSource?.url && (
+                <a
+                  href={primary.priceSource.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="price-source-link"
+                  className="mt-1 inline-flex min-h-[32px] items-center gap-1 text-xs text-[var(--color-primary-600)] hover:underline"
+                >
+                  แหล่งข้อมูล{primary.priceSource.sourceName ? `: ${primary.priceSource.sourceName}` : ""} ↗
+                </a>
               )}
             </CardBody>
           </Card>
@@ -194,51 +211,51 @@ export default function VehicleDetailClient({ model }: { model: ModelData }) {
             </CardBody>
           </Card>
 
-          {/* Detailed verified specs for first variant with data */}
+          {/* Detailed verified specs — specPrimary = variant with real typed data */}
           {model.variants.length > 0 && (
             <Card>
               <CardBody>
                 <h2 className="text-lg font-semibold text-[var(--color-gray-900)] mb-4">
-                  สเปคหลัก — {model.variants[0].name}
+                  สเปคหลัก — {specPrimary.name}
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
                   <div>
                     <h3 className="font-medium text-[var(--color-gray-700)] mb-1 flex items-center justify-between gap-2">
                       ประสิทธิภาพ
-                      <span className="text-[10px] font-normal"><EvidenceDot ok={model.variants[0].evidence.performance} /></span>
+                      <span className="text-[10px] font-normal"><EvidenceDot ok={specPrimary.evidence.performance} /></span>
                     </h3>
-                    <SpecRow label="กำลังสูงสุด" value={model.variants[0].powerKw} unit="kW" />
-                    <SpecRow label="แรงบิด" value={model.variants[0].torqueNm} unit="Nm" />
-                    <SpecRow label="ระยะทาง" value={model.variants[0].rangeKm} unit="km" />
+                    <SpecRow label="กำลังสูงสุด" value={specPrimary.powerKw} unit="kW" />
+                    <SpecRow label="แรงบิด" value={specPrimary.torqueNm} unit="Nm" />
+                    <SpecRow label="ระยะทาง" value={specPrimary.rangeKm} unit="km" />
                   </div>
                   <div>
                     <h3 className="font-medium text-[var(--color-gray-700)] mb-3 flex items-center justify-between gap-2">
                       แบตเตอรี่และการชาร์จ
                       <span className="text-[10px] font-normal">
-                        <EvidenceDot ok={model.variants[0].evidence.battery || model.variants[0].evidence.charging} />
+                        <EvidenceDot ok={specPrimary.evidence.battery || specPrimary.evidence.charging} />
                       </span>
                     </h3>
-                    <SpecRow label="ความจุแบตเตอรี่" value={model.variants[0].batteryKwh} unit="kWh" />
-                    <SpecRow label="ประเภทแบตเตอรี่" value={model.variants[0].batteryChemistry} />
-                    <SpecRow label="ชาร์จ DC" value={model.variants[0].chargeDcKw} unit="kW" />
-                    <SpecRow label="ชาร์จ AC" value={model.variants[0].chargeAcKw} unit="kW" />
+                    <SpecRow label="ความจุแบตเตอรี่" value={specPrimary.batteryKwh} unit="kWh" />
+                    <SpecRow label="ประเภทแบตเตอรี่" value={specPrimary.batteryChemistry} />
+                    <SpecRow label="ชาร์จ DC" value={specPrimary.chargeDcKw} unit="kW" />
+                    <SpecRow label="ชาร์จ AC" value={specPrimary.chargeAcKw} unit="kW" />
                   </div>
                   <div>
                     <h3 className="font-medium text-[var(--color-gray-700)] mb-3 flex items-center justify-between gap-2">
                       ขนาด
-                      <span className="text-[10px] font-normal"><EvidenceDot ok={model.variants[0].evidence.dimensions} /></span>
+                      <span className="text-[10px] font-normal"><EvidenceDot ok={specPrimary.evidence.dimensions} /></span>
                     </h3>
-                    <SpecRow label="ยาวxกว้างxสูง" value={model.variants[0].dimensionsMm} unit="mm" />
-                    <SpecRow label="ฐานล้อ" value={model.variants[0].wheelbaseMm} unit="mm" />
-                    <SpecRow label="ระยะต่ำสุด" value={model.variants[0].groundClearanceMm} unit="mm" />
+                    <SpecRow label="ยาวxกว้างxสูง" value={specPrimary.dimensionsMm} unit="mm" />
+                    <SpecRow label="ฐานล้อ" value={specPrimary.wheelbaseMm} unit="mm" />
+                    <SpecRow label="ระยะต่ำสุด" value={specPrimary.groundClearanceMm} unit="mm" />
                   </div>
                   <div>
                     <h3 className="font-medium text-[var(--color-gray-700)] mb-3 flex items-center justify-between gap-2">
                       การรับประกัน
-                      <span className="text-[10px] font-normal"><EvidenceDot ok={model.variants[0].evidence.warranty} /></span>
+                      <span className="text-[10px] font-normal"><EvidenceDot ok={specPrimary.evidence.warranty} /></span>
                     </h3>
-                    <SpecRow label="ระยะเวลา" value={model.variants[0].warrantyYears} unit="ปี" />
-                    <SpecRow label="ระยะทาง" value={model.variants[0].warrantyKm} unit="km" />
+                    <SpecRow label="ระยะเวลา" value={specPrimary.warrantyYears} unit="ปี" />
+                    <SpecRow label="ระยะทาง" value={specPrimary.warrantyKm} unit="km" />
                   </div>
                 </div>
                 <p className="text-xs text-[var(--color-gray-400)] mt-3">
@@ -250,7 +267,7 @@ export default function VehicleDetailClient({ model }: { model: ModelData }) {
 
           {/* Research-only observations (clearly NOT verified) */}
           {model.variants.length > 0 && (
-            <ResearchOnlyBlock researchSpecs={model.variants[0].researchSpecs} name={model.variants[0].name} />
+            <ResearchOnlyBlock researchSpecs={specPrimary.researchSpecs} name={specPrimary.name} />
           )}
         </div>
 
@@ -258,15 +275,12 @@ export default function VehicleDetailClient({ model }: { model: ModelData }) {
         <div className="space-y-6">
           <Card>
             <CardBody className="space-y-3">
-              <Link href={`/compare?ids=${model.variants[0]?.id ?? ""}`}>
+              <Link href={`/compare?ids=${specPrimary?.id ?? ""}`} className="block min-h-[32px]">
                 <Button className="w-full" variant="primary">
                   ⚖️ เปรียบเทียบรุ่นนี้
                 </Button>
               </Link>
-              <Button className="w-full" variant="secondary">
-                🔖 บันทึก
-              </Button>
-              <Link href="/ai-ask">
+              <Link href="/ai-ask" className="block min-h-[32px]">
                 <Button className="w-full" variant="ghost">
                   💬 ถาม AI เกี่ยวกับรุ่นนี้
                 </Button>

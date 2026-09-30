@@ -144,14 +144,14 @@ export default function SearchClient() {
         {/* Filters */}
         <div className="bg-white rounded-xl border p-3 space-y-3">
           <div className="flex items-center justify-between">
-            <button onClick={() => setShowFilters(!showFilters)} className="flex items-center gap-1 text-sm font-medium text-slate-700">
+            <button onClick={() => setShowFilters(!showFilters)} className="flex items-center gap-1 min-h-[32px] text-sm font-medium text-slate-700">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
               </svg>
               ตัวกรอง {hasAnyFilter(filters) && <span className="text-blue-600">({filterLabel(filters)})</span>}
             </button>
             {hasAnyFilter(filters) && (
-              <button onClick={clearFilters} className="text-xs text-slate-500 hover:text-red-600">
+              <button onClick={clearFilters} className="min-h-[32px] px-1 text-xs text-slate-500 hover:text-red-600">
                 ล้างตัวกรอง
               </button>
             )}

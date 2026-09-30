@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import pool from "@/lib/db-pg";
 import { listVariants } from "../../../../lib/catalog/queries";
 import type { CatalogFilters } from "../../../../lib/catalog/types";
 import { validateFuelType, validateLimit, validatePage, validateMaxPrice } from "../../../../lib/validation/api-params";
@@ -32,8 +33,19 @@ export async function GET(request: Request) {
     if (filters === null) {
       return NextResponse.json({ error: "invalid_params", results: [], total: 0, page: 1, limit: 24, hasMore: false }, { status: 400 });
     }
+    // P121: real platform stats for the homepage stats block (ACTIVE-row
+    // counts over the whole database — no zeros from missing fields).
+    const statsRes = await pool.query(
+      `SELECT
+         (SELECT count(*) FROM "Variant" WHERE status = 'ACTIVE')::int AS "totalActiveVariants",
+         (SELECT count(*) FROM "Variant"
+           WHERE status = 'ACTIVE' AND "fuelType" IN ('BEV', 'EV'))::int AS "evCount",
+         (SELECT count(*) FROM "Variant"
+           WHERE status = 'ACTIVE' AND "fuelType" = 'HEV')::int AS "hevCount",
+         (SELECT count(*) FROM "Manufacturer" WHERE status = 'ACTIVE')::int AS "totalManufacturers"`
+    );
     const result = await listVariants(filters);
-    return NextResponse.json(result);
+    return NextResponse.json({ ...result, stats: statsRes.rows[0] });
   } catch (error) {
     console.error("API /api/cars error:", error);
     return NextResponse.json({ error: "catalog_unavailable", results: [], total: 0, page: 1, limit: 24, hasMore: false }, { status: 503 });

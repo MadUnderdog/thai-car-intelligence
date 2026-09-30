@@ -33,7 +33,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={`
-          inline-flex items-center justify-center font-medium rounded-[var(--radius-lg)]
+          inline-flex items-center justify-center font-medium rounded-[var(--radius-lg)] min-h-[32px]
           transition-all duration-[var(--transition-normal)]
           disabled:opacity-50 disabled:cursor-not-allowed
           ${variantStyles[variant]}

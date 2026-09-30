@@ -33,49 +33,117 @@ REFUSAL_REASONS = (
 )
 
 
-def _sidecar_sha_ok(artifact: str, obs_sha: str, fixtures_dir: str) -> Optional[bool]:
-    """True/False when the artifact file is resolvable, None when not present."""
+_HASH_CACHE: Dict[str, str] = {}
+
+
+def _resolve_artifact(artifact: str, fixtures_dir: str) -> Optional[Path]:
     if not artifact or not fixtures_dir:
         return None
     root = Path(fixtures_dir)
     for candidate in (root / "oem-artifacts" / artifact,
                       root / "media-artifacts" / artifact,
                       root / artifact):
-        if candidate.exists():
-            side = Path(str(candidate) + ".prov.json")
-            if side.exists():
-                try:
-                    side_sha = json.loads(side.read_text(encoding="utf-8")).get("sha256")
-                except json.JSONDecodeError:
-                    return False
-                return side_sha == obs_sha
-            return None
+        if candidate.is_file():
+            return candidate
     return None
 
 
-def check_observation(obs: Dict[str, Any], fixtures_dir: str) -> List[Dict[str, str]]:
-    """Per-fact evidence gate — fail closed."""
+def _sha256_file(path: Path) -> str:
+    """SHA-256 of the ACTUAL artifact bytes (cached per process)."""
+    key = str(path)
+    hit = _HASH_CACHE.get(key)
+    if hit is None:
+        import hashlib as _hashlib
+        h = _hashlib.sha256()
+        with Path(path).open("rb") as fh:
+            for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+                h.update(chunk)
+        hit = h.hexdigest()
+        _HASH_CACHE[key] = hit
+    return hit
+
+
+def _price_quote_resolves(locator: Optional[Dict[str, Any]], value: Any) -> bool:
+    """Deterministic quote re-resolution, normalisation consistent with the
+    P119 R5 guard (strip commas/spaces; integral floats as ints)."""
+    if locator is None or value is None:
+        return False
+    quote = str(locator.get("quote") or "")
+    if not quote:
+        return False
+    if isinstance(value, float) and value.is_integer():
+        value_str = str(int(value))
+    else:
+        value_str = str(value)
+    return value_str in quote.replace(",", "").replace(" ", "")
+
+
+def _tampered(detail: str) -> Dict[str, str]:
+    return {"reason": "EVIDENCE_TAMPERED", "detail": detail}
+
+
+def check_observation(obs: Dict[str, Any], fixtures_dir: str,
+                      category: str = "") -> List[Dict[str, str]]:
+    """
+    Per-fact evidence gate — fail closed (P120 contracts E/F).
+
+    Refuses with EVIDENCE_TAMPERED when: artifact missing/unresolvable,
+    sidecar missing or malformed, the ACTUAL artifact bytes do not hash to
+    obs.sha256, the sidecar sha does not equal obs.sha256, the locator is
+    absent, or a price locator quote does not re-resolve to the value.
+    """
     refusals: List[Dict[str, str]] = []
     if obs.get("provenance_state") != "ACQUISITION_VERIFIED":
         refusals.append({"reason": "LEGACY_UNVERIFIED",
                          "detail": f"provenance_state={obs.get('provenance_state')}"})
         return refusals          # an unverified observation never promotes, full stop
     if not obs.get("sha256"):
-        refusals.append({"reason": "EVIDENCE_TAMPERED", "detail": "missing sha256"})
+        refusals.append(_tampered("missing_sha256"))
+    if not obs.get("artifact"):
+        refusals.append(_tampered("missing_artifact"))
     if obs.get("locator") is None:
-        refusals.append({"reason": "EVIDENCE_TAMPERED", "detail": "missing locator"})
+        refusals.append(_tampered("missing_locator"))
     if not obs.get("source_url"):
-        refusals.append({"reason": "EVIDENCE_TAMPERED", "detail": "missing source_url"})
+        refusals.append(_tampered("missing_source_url"))
     rd = obs.get("runner_decision")
     if rd is not None and str(rd).upper() != "ACCEPTED":
         refusals.append({"reason": "RUNNER_REJECTED",
                          "detail": f"runner_decision={rd}"})
-    if obs.get("sha256"):
-        ok = _sidecar_sha_ok(obs.get("artifact"), obs["sha256"], fixtures_dir)
-        if ok is False:
-            refusals.append({"reason": "EVIDENCE_TAMPERED",
-                             "detail": f"sidecar sha mismatch for {obs.get('artifact')}"})
+
+    # artifact + sidecar + actual-byte verification (fail closed, all three)
+    artifact = obs.get("artifact")
+    obs_sha = obs.get("sha256")
+    if artifact and obs_sha:
+        artifact_file = _resolve_artifact(str(artifact), fixtures_dir)
+        if artifact_file is None:
+            refusals.append(_tampered(f"artifact_unresolvable:{artifact}"))
+        else:
+            sidecar_path = Path(str(artifact_file) + ".prov.json")
+            sidecar_sha = None
+            if not sidecar_path.exists():
+                refusals.append(_tampered(f"missing_sidecar:{artifact}"))
+            else:
+                try:
+                    sidecar = json.loads(sidecar_path.read_text(encoding="utf-8"))
+                    sidecar_sha = sidecar.get("sha256")
+                except (json.JSONDecodeError, UnicodeDecodeError):
+                    sidecar_sha = None
+                    refusals.append(_tampered(f"malformed_sidecar:{artifact}"))
+                if sidecar_sha is not None and sidecar_sha != obs_sha:
+                    refusals.append(_tampered(f"sidecar_sha_mismatch:{artifact}"))
+            if _sha256_file(artifact_file) != obs_sha:
+                refusals.append(_tampered(f"artifact_byte_hash_mismatch:{artifact}"))
+
+    # price locator quote must re-resolve to the observation value
+    if category == "price":
+        if not _price_quote_resolves(obs.get("locator"), obs_value_of(obs)):
+            refusals.append(_tampered("price_locator_quote_mismatch"))
     return refusals
+
+
+def obs_value_of(obs: Dict[str, Any]) -> Any:
+    return obs.get("value") if obs.get("value") is not None \
+        else obs.get("value_numeric")
 
 
 def evaluate_packets(packets: Iterable[Dict[str, Any]],
@@ -131,7 +199,8 @@ def evaluate_packets(packets: Iterable[Dict[str, Any]],
                 continue
             group_refusals: List[Dict[str, str]] = []
             for obs in obs_list:
-                group_refusals.extend(check_observation(obs, fixtures_dir))
+                group_refusals.extend(
+                    check_observation(obs, fixtures_dir, category=group))
             if (pid, group) in promoted_facts:
                 group_refusals.append({"reason": "ALREADY_PROMOTED",
                                        "detail": f"fact {group} present in promotion ledgers"})

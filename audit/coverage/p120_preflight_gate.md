@@ -1,7 +1,7 @@
 # P120 promotion preflight gate (BEFORE any write)
 
 - status: **PASS**
-- now: 2026-09-30T13:43:33.358729+00:00
+- now: 2026-09-30T18:01:55.434617+00:00
 - promotable packets: **0**
 - refusals: `{"ALREADY_PROMOTED": 836, "STATUS_NOT_ACCEPTED": 71}`
 - db counts before: `{"variant": 747, "price": 1061, "price_current": 352, "variantspec": 8036, "datachangelog": 1917, "source": 32, "sourcedocument": 2577}`

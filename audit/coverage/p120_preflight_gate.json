@@ -7244,7 +7244,7 @@
     "production_ledger": null,
     "universe": "bc9355e747a834d29e3f29ad7112852b7223ab11aa9e188aec8dcd7da10364fc"
   },
-  "now": "2026-09-30T13:43:33.358729+00:00",
+  "now": "2026-09-30T18:01:55.434617+00:00",
   "promotable_packets": [],
   "refusals": {
     "ALREADY_PROMOTED": 836,

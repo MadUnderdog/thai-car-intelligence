@@ -1,0 +1,705 @@
+{
+  "schema": "p121_ui_capture_manifest/v1",
+  "run_id": "p121-20260930-baseline",
+  "git_sha": "8fda850671ab5d6ad2d6e8b830e7c033b7c87e17",
+  "build_id": "J-J83AavTBNwEI6R88x9U",
+  "base": "http://127.0.0.1:3099",
+  "captured_at": "2026-09-30T18:52:00.261Z",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "name": "home",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/home-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/avatr/11?_rsc=5CB68i4pnAekjehf",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/baic/bj30?_rsc=5CB68i4pnAekjehf",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/bmw/1-series?_rsc=5CB68i4pnAekjehf",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/avatr/11?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/baic/bj30?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/bmw/1-series?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/baic/x55?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/bmw/3-series?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/bmw/5-series?_rsc=tXyZJ52UQVBCVsD3"
+      ],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": false,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 842,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      }
+    },
+    {
+      "route": "/cars",
+      "name": "cars",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/cars-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/honda/city-hatchback?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/march?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-hilux?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/almera?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/honda/city-hatchback?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/march?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-hilux?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/almera?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/mg/mg-extender?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/mg/mg-s5?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/nissan-kicks?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-yaris-cross?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-corolla-altis?_rsc=erkhVXfpnbpvhBOv"
+      ],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": false,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 3085,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 36,
+        "external_links": [],
+        "has_thai": true
+      }
+    },
+    {
+      "route": "/cars/toyota/gr-86",
+      "name": "detail-gr86",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/detail-gr86-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": false,
+        "provenance_link_present": false
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1502,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      }
+    },
+    {
+      "route": "/search?q=GR%2086",
+      "name": "search",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/search-desktop-full.jpg",
+        "audit/ui-captures/p121-20260930-baseline/screenshots/search-interaction-desktop.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": false
+      },
+      "interactions": [
+        {
+          "action": "type 'GR 86' + Enter",
+          "ok": true,
+          "detail": "results mention GR 86"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 487,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      }
+    },
+    {
+      "route": "/compare?ids=e236ee92-4cde-4704-a894-eeb2952833dc,e423164f-85b3-4c7b-bcc4-3fd1f57144e9",
+      "name": "compare",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/compare-desktop-full.jpg",
+        "audit/ui-captures/p121-20260930-baseline/screenshots/compare-viewport-desktop.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": false
+      },
+      "interactions": [
+        {
+          "action": "toggle compare filter",
+          "ok": true,
+          "detail": "no filter control present (recorded)"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1228,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      }
+    },
+    {
+      "route": "/ai-ask",
+      "name": "ai-ask",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/ai-ask-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "ai_reachable_state_recorded": true
+      },
+      "interactions": [
+        {
+          "action": "record ai-ask availability (no AI request sent)",
+          "ok": true,
+          "detail": "input_ready"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 658,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "ai_state": "input_ready"
+    },
+    {
+      "route": "/",
+      "name": "home",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/home-mobile-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/avatr/11?_rsc=5CB68i4pnAekjehf",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/avatr/11?_rsc=tXyZJ52UQVBCVsD3"
+      ],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": false,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": false
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 785,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [
+          "a\"ดูทั้งหมด →\" h=20",
+          "a\"รถยนต์ทั้งหมด\" h=20",
+          "a\"ค้นหา\" h=20",
+          "a\"เปรียบเทียบ\" h=20",
+          "a\"ถาม AI\" h=20"
+        ],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      }
+    },
+    {
+      "route": "/cars",
+      "name": "cars",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/cars-mobile-full.jpg",
+        "audit/ui-captures/p121-20260930-baseline/screenshots/cars-compare-selection-mobile.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/march?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-hilux?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/almera?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/march?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-hilux?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/almera?_rsc=erkhVXfpnbpvhBOv"
+      ],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": false,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": false,
+        "price_present": true
+      },
+      "interactions": [
+        {
+          "action": "select 0 compare checkboxes",
+          "ok": false,
+          "detail": "no compare link"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 3028,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [
+          "a\"รถยนต์ทั้งหมด\" h=20",
+          "a\"ค้นหา\" h=20",
+          "a\"เปรียบเทียบ\" h=20",
+          "a\"ถาม AI\" h=20"
+        ],
+        "price_matches": 36,
+        "external_links": [],
+        "has_thai": true
+      }
+    },
+    {
+      "route": "/cars/toyota/gr-86",
+      "name": "detail-gr86",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/detail-gr86-mobile-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": false,
+        "price_present": false,
+        "provenance_link_present": false
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1445,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [
+          "a\"รถยนต์\" h=20",
+          "a\"⚖️ เปรียบเทียบรุ่นนี้\" h=24",
+          "a\"💬 ถาม AI เกี่ยวกับรุ่นน\" h=24",
+          "a\"รถยนต์ทั้งหมด\" h=20",
+          "a\"ค้นหา\" h=20",
+          "a\"เปรียบเทียบ\" h=20",
+          "a\"ถาม AI\" h=20"
+        ],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      }
+    },
+    {
+      "route": "/search?q=GR%2086",
+      "name": "search",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/search-mobile-full.jpg",
+        "audit/ui-captures/p121-20260930-baseline/screenshots/search-interaction-mobile.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": false,
+        "price_present": false
+      },
+      "interactions": [
+        {
+          "action": "type 'GR 86' + Enter",
+          "ok": true,
+          "detail": "results mention GR 86"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 430,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [
+          "button\"ตัวกรอง\" h=20",
+          "a\"รถยนต์ทั้งหมด\" h=20",
+          "a\"ค้นหา\" h=20",
+          "a\"เปรียบเทียบ\" h=20",
+          "a\"ถาม AI\" h=20"
+        ],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      }
+    },
+    {
+      "route": "/compare?ids=e236ee92-4cde-4704-a894-eeb2952833dc,e423164f-85b3-4c7b-bcc4-3fd1f57144e9",
+      "name": "compare",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/compare-mobile-full.jpg",
+        "audit/ui-captures/p121-20260930-baseline/screenshots/compare-viewport-mobile.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": false,
+        "price_present": false
+      },
+      "interactions": [
+        {
+          "action": "toggle compare filter",
+          "ok": true,
+          "detail": "no filter control present (recorded)"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1171,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [
+          "a\"รถยนต์ทั้งหมด\" h=20",
+          "a\"ค้นหา\" h=20",
+          "a\"เปรียบเทียบ\" h=20",
+          "a\"ถาม AI\" h=20"
+        ],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      }
+    },
+    {
+      "route": "/ai-ask",
+      "name": "ai-ask",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-baseline/screenshots/ai-ask-mobile-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": false,
+        "ai_reachable_state_recorded": true
+      },
+      "interactions": [
+        {
+          "action": "record ai-ask availability (no AI request sent)",
+          "ok": true,
+          "detail": "input_ready"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 601,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [
+          "a\"รถยนต์ทั้งหมด\" h=20",
+          "a\"ค้นหา\" h=20",
+          "a\"เปรียบเทียบ\" h=20",
+          "a\"ถาม AI\" h=20"
+        ],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "ai_state": "input_ready"
+    }
+  ],
+  "interactions": [],
+  "summary": {
+    "pages": 12,
+    "pages_with_any_failed_check": 11,
+    "console_error_pages": 0,
+    "screenshots": 17,
+    "defects": 24,
+    "by_severity": {
+      "functional": 24
+    }
+  },
+  "defects": [
+    {
+      "severity": "functional",
+      "where": "/ @desktop",
+      "what": "check failed: no_bad_responses"
+    },
+    {
+      "severity": "functional",
+      "where": "/cars @desktop",
+      "what": "check failed: no_bad_responses"
+    },
+    {
+      "severity": "functional",
+      "where": "/cars/toyota/gr-86 @desktop",
+      "what": "check failed: price_present"
+    },
+    {
+      "severity": "functional",
+      "where": "/cars/toyota/gr-86 @desktop",
+      "what": "check failed: provenance_link_present"
+    },
+    {
+      "severity": "functional",
+      "where": "/search?q=GR%2086 @desktop",
+      "what": "check failed: price_present"
+    },
+    {
+      "severity": "functional",
+      "where": "/compare?ids=e236ee92-4cde-4704-a894-eeb2952833dc,e423164f-85b3-4c7b-bcc4-3fd1f57144e9 @desktop",
+      "what": "check failed: price_present"
+    },
+    {
+      "severity": "functional",
+      "where": "/ @mobile",
+      "what": "check failed: no_bad_responses"
+    },
+    {
+      "severity": "functional",
+      "where": "/ @mobile",
+      "what": "check failed: touch_targets_ok"
+    },
+    {
+      "severity": "functional",
+      "where": "/ @mobile",
+      "what": "touch targets <32px: a\"ดูทั้งหมด →\" h=20 | a\"รถยนต์ทั้งหมด\" h=20 | a\"ค้นหา\" h=20 | a\"เปรียบเทียบ\" h=20"
+    },
+    {
+      "severity": "functional",
+      "where": "/cars @mobile",
+      "what": "check failed: no_bad_responses"
+    },
+    {
+      "severity": "functional",
+      "where": "/cars @mobile",
+      "what": "check failed: touch_targets_ok"
+    },
+    {
+      "severity": "functional",
+      "where": "/cars @mobile",
+      "what": "touch targets <32px: a\"รถยนต์ทั้งหมด\" h=20 | a\"ค้นหา\" h=20 | a\"เปรียบเทียบ\" h=20 | a\"ถาม AI\" h=20"
+    },
+    {
+      "severity": "functional",
+      "where": "/cars/toyota/gr-86 @mobile",
+      "what": "check failed: touch_targets_ok"
+    },
+    {
+      "severity": "functional",
+      "where": "/cars/toyota/gr-86 @mobile",
+      "what": "check failed: price_present"
+    },
+    {
+      "severity": "functional",
+      "where": "/cars/toyota/gr-86 @mobile",
+      "what": "check failed: provenance_link_present"
+    },
+    {
+      "severity": "functional",
+      "where": "/cars/toyota/gr-86 @mobile",
+      "what": "touch targets <32px: a\"รถยนต์\" h=20 | a\"⚖️ เปรียบเทียบรุ่นนี้\" h=24 | a\"💬 ถาม AI เกี่ยวกับรุ่นน\" h=24 | a\"รถยนต์ทั้งหมด\" h=20"
+    },
+    {
+      "severity": "functional",
+      "where": "/search?q=GR%2086 @mobile",
+      "what": "check failed: touch_targets_ok"
+    },
+    {
+      "severity": "functional",
+      "where": "/search?q=GR%2086 @mobile",
+      "what": "check failed: price_present"
+    },
+    {
+      "severity": "functional",
+      "where": "/search?q=GR%2086 @mobile",
+      "what": "touch targets <32px: button\"ตัวกรอง\" h=20 | a\"รถยนต์ทั้งหมด\" h=20 | a\"ค้นหา\" h=20 | a\"เปรียบเทียบ\" h=20"
+    },
+    {
+      "severity": "functional",
+      "where": "/compare?ids=e236ee92-4cde-4704-a894-eeb2952833dc,e423164f-85b3-4c7b-bcc4-3fd1f57144e9 @mobile",
+      "what": "check failed: touch_targets_ok"
+    },
+    {
+      "severity": "functional",
+      "where": "/compare?ids=e236ee92-4cde-4704-a894-eeb2952833dc,e423164f-85b3-4c7b-bcc4-3fd1f57144e9 @mobile",
+      "what": "check failed: price_present"
+    },
+    {
+      "severity": "functional",
+      "where": "/compare?ids=e236ee92-4cde-4704-a894-eeb2952833dc,e423164f-85b3-4c7b-bcc4-3fd1f57144e9 @mobile",
+      "what": "touch targets <32px: a\"รถยนต์ทั้งหมด\" h=20 | a\"ค้นหา\" h=20 | a\"เปรียบเทียบ\" h=20 | a\"ถาม AI\" h=20"
+    },
+    {
+      "severity": "functional",
+      "where": "/ai-ask @mobile",
+      "what": "check failed: touch_targets_ok"
+    },
+    {
+      "severity": "functional",
+      "where": "/ai-ask @mobile",
+      "what": "touch targets <32px: a\"รถยนต์ทั้งหมด\" h=20 | a\"ค้นหา\" h=20 | a\"เปรียบเทียบ\" h=20 | a\"ถาม AI\" h=20"
+    }
+  ]
+}

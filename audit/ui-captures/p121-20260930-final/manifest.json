@@ -1,0 +1,909 @@
+{
+  "schema": "p121_ui_capture_manifest/v1",
+  "run_id": "p121-20260930-final",
+  "git_sha": "8fda850671ab5d6ad2d6e8b830e7c033b7c87e17",
+  "build_id": "GegDEy2mhSJyBweHFcDVh",
+  "base": "http://127.0.0.1:3099",
+  "captured_at": "2026-09-30T20:53:48.921Z",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "name": "home",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/home-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/honda/city-hatchback?_rsc=5CB68i4pnAekjehf",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/nissan-kicks?_rsc=5CB68i4pnAekjehf",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/honda/city-hatchback?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/nissan-kicks?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-corolla-altis?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-yaris-cross?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/march?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-hilux?_rsc=tXyZJ52UQVBCVsD3"
+      ],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true,
+        "stats_present_nonzero": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1173,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 20,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": [],
+      "stats_values": [
+        747,
+        36,
+        19,
+        37
+      ]
+    },
+    {
+      "route": "/cars",
+      "name": "cars",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/cars-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/march?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-hilux?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/almera?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/mg/mg-extender?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/march?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-hilux?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/honda/city-hatchback?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/almera?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/mg/mg-extender?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/mg/mg-s5?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/nissan-kicks?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-yaris-cross?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-corolla-altis?_rsc=erkhVXfpnbpvhBOv"
+      ],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 3078,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 36,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/cars/toyota/gr-86",
+      "name": "detail-gr86",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/detail-gr86-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1487,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/cars/mg/mg-s5",
+      "name": "detail-mg-s5",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/detail-mg-s5-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true,
+        "specs_rendered": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1883,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 2,
+        "external_links": [
+          "https://www.mgcars.com/th_th/cars/mg-s5-ev-plus"
+        ],
+        "has_thai": true
+      },
+      "real_failed_requests": [],
+      "spec_probe": {
+        "heading": true,
+        "labels": 4,
+        "placeholders": 9,
+        "values": 5
+      }
+    },
+    {
+      "route": "/cars/honda/city-hatchback",
+      "name": "detail-city",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/detail-city-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true,
+        "provenance_link_present": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 2044,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 2,
+        "external_links": [
+          "https://www.honda.co.th/cityhatchback"
+        ],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/search",
+      "name": "search",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/search-desktop-full.jpg",
+        "audit/ui-captures/p121-20260930-final/screenshots/search-interaction-desktop.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true
+      },
+      "interactions": [
+        {
+          "action": "type 'City' + Enter",
+          "ok": true,
+          "detail": "mentions=true price_matches=1"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 483,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/search?q=GR%2086",
+      "name": "search-empty-state",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/search-empty-state-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 480,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/compare?ids=40043ccc-7624-4d68-942a-79ba447bfa26,054138f7-37f7-45be-8089-8ff99e1c6c22",
+      "name": "compare-price",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-price-desktop-full.jpg",
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-price-desktop-viewport.png",
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-price-desktop-toggled.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true
+      },
+      "interactions": [
+        {
+          "action": "toggle difference-only filter",
+          "ok": true,
+          "detail": "rows 1 -> 1, different_rows=1, identical_visible_after=0, checked=true"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 768,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 4,
+        "external_links": [
+          "https://www.honda.co.th/cityhatchback",
+          "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+        ],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/compare?ids=cbe7ceca-7bfd-4bf9-aa08-d47c7cf6872b,d696cff5-937a-411e-96be-9598c92044e0",
+      "name": "compare-specs",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-specs-desktop-full.jpg",
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-specs-desktop-viewport.png",
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-specs-desktop-toggled.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true
+      },
+      "interactions": [
+        {
+          "action": "toggle difference-only filter",
+          "ok": true,
+          "detail": "rows 10 -> 7, different_rows=7, identical_visible_after=0, checked=true"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 967,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/ai-ask",
+      "name": "ai-ask",
+      "viewport": "desktop",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/ai-ask-desktop-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "ai_reachable_state_recorded": true
+      },
+      "interactions": [
+        {
+          "action": "record ai-ask availability (no AI request sent)",
+          "ok": true,
+          "detail": "input_ready"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 651,
+        "scroll_width": 1440,
+        "inner_width": 1440,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": [],
+      "ai_state": "input_ready"
+    },
+    {
+      "route": "/",
+      "name": "home",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/home-mobile-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/nissan-kicks?_rsc=5CB68i4pnAekjehf",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/honda/city-hatchback?_rsc=tXyZJ52UQVBCVsD3",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/nissan-kicks?_rsc=tXyZJ52UQVBCVsD3"
+      ],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true,
+        "stats_present_nonzero": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1116,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 20,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": [],
+      "stats_values": [
+        747,
+        36,
+        19,
+        37
+      ]
+    },
+    {
+      "route": "/cars",
+      "name": "cars",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/cars-mobile-full.jpg",
+        "audit/ui-captures/p121-20260930-final/screenshots/cars-compare-selection-mobile.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/march?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-hilux?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/almera?_rsc=wtCrrRvnHpfWmdBp",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/march?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/toyota/toyota-hilux?_rsc=erkhVXfpnbpvhBOv",
+        "net::ERR_ABORTED http://127.0.0.1:3099/cars/nissan/almera?_rsc=erkhVXfpnbpvhBOv"
+      ],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true
+      },
+      "interactions": [
+        {
+          "action": "toggle 2 compare buttons (aria-pressed)",
+          "ok": true,
+          "detail": "selection_bar=true href=/compare?ids=93b1c278-2d4c-4e8b-a63c-c09ca77f9316,96f2f1a7-70c8-43af-9c09-7bed91039672"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 3021,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 36,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/cars/toyota/gr-86",
+      "name": "detail-gr86",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/detail-gr86-mobile-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1430,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/cars/mg/mg-s5",
+      "name": "detail-mg-s5",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/detail-mg-s5-mobile-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true,
+        "specs_rendered": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1826,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 2,
+        "external_links": [
+          "https://www.mgcars.com/th_th/cars/mg-s5-ev-plus"
+        ],
+        "has_thai": true
+      },
+      "real_failed_requests": [],
+      "spec_probe": {
+        "heading": true,
+        "labels": 4,
+        "placeholders": 9,
+        "values": 5
+      }
+    },
+    {
+      "route": "/cars/honda/city-hatchback",
+      "name": "detail-city",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/detail-city-mobile-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true,
+        "provenance_link_present": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 1987,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 2,
+        "external_links": [
+          "https://www.honda.co.th/cityhatchback"
+        ],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/search",
+      "name": "search",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/search-mobile-full.jpg",
+        "audit/ui-captures/p121-20260930-final/screenshots/search-interaction-mobile.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true
+      },
+      "interactions": [
+        {
+          "action": "type 'City' + Enter",
+          "ok": true,
+          "detail": "mentions=true price_matches=1"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 426,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/search?q=GR%2086",
+      "name": "search-empty-state",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/search-empty-state-mobile-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true
+      },
+      "interactions": [],
+      "http_status": 200,
+      "probe": {
+        "text_length": 423,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/compare?ids=40043ccc-7624-4d68-942a-79ba447bfa26,054138f7-37f7-45be-8089-8ff99e1c6c22",
+      "name": "compare-price",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-price-mobile-full.jpg",
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-price-mobile-viewport.png",
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-price-mobile-toggled.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "price_present": true
+      },
+      "interactions": [
+        {
+          "action": "toggle difference-only filter",
+          "ok": true,
+          "detail": "rows 1 -> 1, different_rows=1, identical_visible_after=0, checked=true"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 711,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 4,
+        "external_links": [
+          "https://www.honda.co.th/cityhatchback",
+          "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+        ],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/compare?ids=cbe7ceca-7bfd-4bf9-aa08-d47c7cf6872b,d696cff5-937a-411e-96be-9598c92044e0",
+      "name": "compare-specs",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-specs-mobile-full.jpg",
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-specs-mobile-viewport.png",
+        "audit/ui-captures/p121-20260930-final/screenshots/compare-specs-mobile-toggled.png"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true
+      },
+      "interactions": [
+        {
+          "action": "toggle difference-only filter",
+          "ok": true,
+          "detail": "rows 10 -> 7, different_rows=7, identical_visible_after=0, checked=true"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 910,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": []
+    },
+    {
+      "route": "/ai-ask",
+      "name": "ai-ask",
+      "viewport": "mobile",
+      "screenshots": [
+        "audit/ui-captures/p121-20260930-final/screenshots/ai-ask-mobile-full.jpg"
+      ],
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "bad_responses": [],
+      "checks": {
+        "rendered": true,
+        "no_console_errors": true,
+        "no_hydration_errors": true,
+        "no_broken_images": true,
+        "no_bad_responses": true,
+        "http_ok": true,
+        "no_overflow_mobile": true,
+        "touch_targets_ok": true,
+        "ai_reachable_state_recorded": true
+      },
+      "interactions": [
+        {
+          "action": "record ai-ask availability (no AI request sent)",
+          "ok": true,
+          "detail": "input_ready"
+        }
+      ],
+      "http_status": 200,
+      "probe": {
+        "text_length": 594,
+        "scroll_width": 390,
+        "inner_width": 390,
+        "overflow_elements": [],
+        "broken_images": [],
+        "small_touch_targets": [],
+        "price_matches": 0,
+        "external_links": [],
+        "has_thai": true
+      },
+      "real_failed_requests": [],
+      "ai_state": "input_ready"
+    }
+  ],
+  "interactions": [],
+  "summary": {
+    "pages": 20,
+    "pages_with_any_failed_check": 0,
+    "console_error_pages": 0,
+    "screenshots": 31,
+    "defects": 0,
+    "by_severity": {}
+  },
+  "defects": []
+}

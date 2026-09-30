@@ -1,0 +1,29 @@
+{
+  "actions": [],
+  "after_counts": {
+    "datachangelog": 1917,
+    "price": 1061,
+    "price_current": 352,
+    "source": 32,
+    "sourcedocument": 2577,
+    "variant": 747,
+    "variantspec": 8036
+  },
+  "before_counts": {
+    "datachangelog": 1917,
+    "price": 1061,
+    "price_current": 352,
+    "source": 32,
+    "sourcedocument": 2577,
+    "variant": 747,
+    "variantspec": 8036
+  },
+  "now": "2026-09-30T13:43:33.358729+00:00",
+  "provenance": {
+    "rows_with_packet_sha": 0
+  },
+  "run_id": null,
+  "schema": "p120_postflight_audit/v1",
+  "status": "NO_ACTION",
+  "writes": 0
+}

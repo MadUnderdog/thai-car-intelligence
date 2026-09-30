@@ -1,0 +1,159 @@
+{
+  "audit_report": {
+    "accepted_packets": {
+      "accepted": 417,
+      "quarantined": 71,
+      "total": 488
+    },
+    "blocked_sources_count": 13,
+    "duplicates": {
+      "duplicate_current_price_groups": 0,
+      "duplicate_spec_groups": 0,
+      "p114_ledger_no_action": 358,
+      "production_ledger_no_action": 0
+    },
+    "locator_coverage": {
+      "changelog_rows_total": 1917,
+      "changelog_rows_with_locator_or_excerpt": 1871,
+      "coverage_pct": 97.6
+    },
+    "promotion_failures": {
+      "p114_like_entries": 0,
+      "production_like_entries": 0
+    },
+    "provenance_coverage": {
+      "coverage_pct": 99.91,
+      "price_rows_total": 1061,
+      "price_rows_with_document_content_hash": 1060,
+      "price_rows_with_source_document": 1060
+    },
+    "quarantines": {
+      "packets": 71,
+      "price_rows": 79,
+      "spec_rows": 410
+    },
+    "source_coverage": {
+      "manufacturers": 37,
+      "models": 284,
+      "source_documents": 2577,
+      "sources": 32
+    }
+  },
+  "base_commit": "6882756404edde32f9ebcce7f47e35971b57f0e3",
+  "created_at": "2026-09-30",
+  "disclosures": [
+    "Chain step-11 full pytest had 1 failure = Playwright set_content 30s timeout in test_extraction_fixtures (same known flake class as P119-R1); standalone rerun 2 passed; bounded full-pytest rerun 1040 passed. Both counts reported; no test or code changed to go green.",
+    "Registry parser field access_status (not status) fixed mid-chain before the p120 combined tests executed; blocked_sources then reports 13 real blocked OEMs with next_retry_at; audit CLI rerun after the fix; M-scenarios re-verified in full pytest + focused.",
+    "Identity resolution for promotion is resolve-existing-only: a future accepted packet whose identity does not exist in the canonical DB is refused IDENTITY_NOT_RESOLVABLE (identity creation remains P114 mechanics; smallest-safe boundary, delta=0 today).",
+    "Rollback covers rows created by THIS worker (DataChangeLog run-scoped); Source rows are shared infrastructure and are never deleted; P114 historical rows keep their own documented revert.",
+    "1014/2577 SourceDocuments undated -> UNDATED bucket, never counted current/stale; Price.observedAt and DataChangeLog.createdAt labeled by column in the freshness report.",
+    "production_promotion_ledger.json not created (NO_ACTION wrote no entries) — ledger is created on the first run that actually promotes.",
+    "Test DB thai_car_intelligence_p120_test = schema-only copy (pg_dump), fixtures self-clean; production tables received ZERO writes (before==after counts proven).",
+    "No schema/provider/model/config/verifier change; no AI in write path; no new source class; P114 never replayed wholesale (helpers imported read-only)."
+  ],
+  "freshness": {
+    "policy": "dated rows only; UNDATED never claimed current or stale; future-dated rows are violations, excluded from buckets",
+    "slo": {
+      "aging_max_days": 90,
+      "current_max_days": 30,
+      "rule_source": "Blueprint.md Coverage Gap States: STALE = last checked > 90 days",
+      "stale_after_days": 90
+    },
+    "sources": {
+      "DataChangeLog.createdAt": {
+        "AGING": 0,
+        "CURRENT": 1917,
+        "STALE": 0,
+        "UNDATED": 0
+      },
+      "Price.observedAt": {
+        "AGING": 0,
+        "CURRENT": 1061,
+        "STALE": 0,
+        "UNDATED": 0
+      },
+      "SourceDocument.fetchedAt": {
+        "AGING": 0,
+        "CURRENT": 1563,
+        "STALE": 0,
+        "UNDATED": 1014
+      }
+    }
+  },
+  "gates": {
+    "chain_log": "/home/ubuntu/.hermes/cache/scratch/p120_gate_chain.log",
+    "chain_overall": "ALL steps PASS except step-11 flake (superseded by standalone 2 passed + bounded rerun 1040)",
+    "combined": {
+      "log": "audit/daily-runs/20260930-p120-combined.log",
+      "passed": 147
+    },
+    "credential_scan": "0",
+    "focused": {
+      "log": "audit/daily-runs/20260930-p120-focused.log",
+      "passed": 21
+    },
+    "full_pytest": {
+      "bounded_full_rerun": {
+        "log": "audit/daily-runs/20260930-p120-full-pytest-rerun.log",
+        "passed": 1040
+      },
+      "chain_run": {
+        "failed": 1,
+        "failure": "tests/test_extraction_fixtures.py::test_suzuki_mutation_price_swap_detected — Playwright set_content 30s timeout (environment flake, unrelated to P120)",
+        "passed": 1039
+      },
+      "known_excluded": "tests/test_generation_config_boundary.py ImportError _OPENROUTER_ALLOWED_MODEL (P49, eef8c49) — reported separately",
+      "standalone_rerun": "2 passed (both suzuki tests)"
+    },
+    "full_vitest": {
+      "skipped": 2,
+      "tests": 563
+    },
+    "prisma": "validate OK",
+    "tsc": "0"
+  },
+  "phase6_promotion": {
+    "controlled_execute": {
+      "after_counts": {
+        "datachangelog": 1917,
+        "price": 1061,
+        "price_current": 352,
+        "source": 32,
+        "sourcedocument": 2577,
+        "variant": 747,
+        "variantspec": 8036
+      },
+      "before_counts": {
+        "datachangelog": 1917,
+        "price": 1061,
+        "price_current": 352,
+        "source": 32,
+        "sourcedocument": 2577,
+        "variant": 747,
+        "variantspec": 8036
+      },
+      "note": "exact gate-passed set = 0 promotable (all 417 accepted packets are ALREADY_PROMOTED per p114 ledger; 71 quarantined refused) — idempotent NO_ACTION with zero writes, not an assumed state",
+      "status": "NO_ACTION",
+      "writes": 0
+    },
+    "dry_run": {
+      "eligible": 0,
+      "preflight_status": "PASS",
+      "refusals": {
+        "ALREADY_PROMOTED": 836,
+        "STATUS_NOT_ACCEPTED": 71
+      },
+      "status": "DRY_RUN",
+      "writes": 0
+    },
+    "postflight_proves_counts_equal": true
+  },
+  "plan_commit": "018192530f5e8b108c2309eaa33fedfc878e8f9e",
+  "red_before": {
+    "failed": 20,
+    "log": "audit/daily-runs/20260930-p120-redbefore.log",
+    "note": "missing-capability red on 6882756+plan (production/* package absent = gaps G1-G6)",
+    "passed": 3
+  },
+  "schema": "p120_final_result/v1"
+}

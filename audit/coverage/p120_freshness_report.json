@@ -1,0 +1,52 @@
+{
+  "now": "2026-09-30T13:43:34.775605+00:00",
+  "policy": "dated rows only; UNDATED never claimed current or stale; future-dated rows are violations, excluded from buckets",
+  "schema": "p120_freshness_report/v1",
+  "slo": {
+    "aging_max_days": 90,
+    "current_max_days": 30,
+    "rule_source": "Blueprint.md Coverage Gap States: STALE = last checked > 90 days",
+    "stale_after_days": 90
+  },
+  "sources": {
+    "DataChangeLog.createdAt": {
+      "buckets": {
+        "AGING": 0,
+        "CURRENT": 1917,
+        "STALE": 0,
+        "UNDATED": 0
+      },
+      "date_column": "DataChangeLog.createdAt",
+      "future_dated": [],
+      "newest_dated": "2026-09-28T18:32:12.001000",
+      "oldest_dated": "2026-09-28T14:54:54.061000",
+      "total_rows": 1917
+    },
+    "Price.observedAt": {
+      "buckets": {
+        "AGING": 0,
+        "CURRENT": 1061,
+        "STALE": 0,
+        "UNDATED": 0
+      },
+      "date_column": "Price.observedAt",
+      "future_dated": [],
+      "newest_dated": "2026-09-28T14:54:54.061000",
+      "oldest_dated": "2026-09-19T13:03:24.084000",
+      "total_rows": 1061
+    },
+    "SourceDocument.fetchedAt": {
+      "buckets": {
+        "AGING": 0,
+        "CURRENT": 1563,
+        "STALE": 0,
+        "UNDATED": 1014
+      },
+      "date_column": "SourceDocument.fetchedAt",
+      "future_dated": [],
+      "newest_dated": "2026-09-28T09:35:38.220000",
+      "oldest_dated": "2026-09-17T11:08:42.459000",
+      "total_rows": 2577
+    }
+  }
+}

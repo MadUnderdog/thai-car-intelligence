@@ -1,0 +1,116 @@
+{
+  "schema": "p120_target_plan/v1",
+  "created_at": "2026-09-29",
+  "base_commit": "6882756404edde32f9ebcce7f47e35971b57f0e3",
+  "pr": {"number": 3, "state": "OPEN", "merged": false},
+  "objective": "Blueprint §101 Phase 6: production promotion worker + observability around the FROZEN AcceptanceRunner/AcceptanceLedger — acceptance gate stays the only write authority; preflight/postflight MD+JSON; read-only audit + freshness SLO reports; run-scoped auditable rollback; incident runbook.",
+  "phase6_entry_proof": {
+    "phase5_exit": "P119 (b3c9178): 417 accepted packets → 417 records / 1323 fields with exact packet/artifact/locator provenance, alias-backed joins, contamination fail-closed, 261 conflicts quarantined, deterministic byte-identical rerun; R1 (6882756) trust-tier role ceiling + cross-brand join isolation; gates focused 30 / combined 126 / full vitest 563|2 / full pytest 1019 / tsc 0 / prisma OK / credscan 0.",
+    "G1_G8_on_promoted_set": {
+      "G1": "P114 gate report committed (p114_promotion_preflight.json all_gates_pass=true) + sidecar/hash integrity tests green through P120 full suites",
+      "G2": "locator re-resolution + mutation tests green (P119 R4/R5 guards, test_extraction_fixtures)",
+      "G3": "price_type/currentness rule table enforced by P111 msrp_status + P114 semantics tests",
+      "G4": "idempotent rerun: P114 ledger 2107 entries (1741 INSERT / 358 NO_ACTION / 8 UPDATE) over 417 packets — rerun mechanics proven NO_ACTION",
+      "G5": "cross-source contamination suite green (P119 C/T7-T11, extraction fixtures)",
+      "G6": "P114 g6 sample audit script exists (browser re-open)",
+      "G7": "producer != verifier: AcceptanceRunner/verifier v9 frozen, separate from producer code",
+      "G8": "gate report MD+JSON committed BEFORE writes (p114 precedent; P120 preflight keeps this contract)"
+    },
+    "promoted_state_now": {
+      "ledger": "audit/coverage/p114_promotion_ledger.json — 2107 entries, 417 distinct packets, append-only",
+      "db": "Variant 747 ACTIVE · Price 1061 (352 current, 79 QUARANTINED) · VariantSpec 8036 (410 QUARANTINED) · SourceDocument 2577 · DataChangeLog 1917 (all 'P114 controlled promotion' reasons, created 2026-09-28)",
+      "delta_vs_accepted": "ACCEPTED packets (417) ⊆ ledger packets (417) → eligible-unpromoted delta expected 0; must be COMPUTED by dry-run, never assumed"
+    }
+  },
+  "current_promotion_path_reusable": {
+    "acceptance": "lib/thai_factory/acceptance/runner.py AcceptanceRunner.evaluate/evaluate_batch (frozen, authority) + ledger.py AcceptanceLedger file-append class (reused for the production ledger)",
+    "p114_mechanics": "scripts/p114_promote.py is a ONE-SHOT historical script (hard asserts len(accepted)==417 + committed preflight file) — NOT reusable as an ongoing worker and NOT to be re-run wholesale. Its import-safe helpers ARE reusable via importlib (the same pattern p114 uses for preflight maps): ensure_source, ensure_doc, insert_changelog, record, field_packet, slugify, norm, Ctx, db_url. Row semantics to mirror exactly: Price ON CONFLICT (variantId, sourceDocumentId, priceType, amount, validFrom) DO NOTHING + legacy-current supersede via UPDATE with ledger entry; VariantSpec ON CONFLICT (variantId, key, sourceDocumentId) DO NOTHING; DataChangeLog CREATED rows carry packet_id + artifact + sha256 + source_url + locator excerpt (provenance F).",
+    "rollback_concept": "scripts/p114_revert_attempt1.py = attempt-1-specific inverse (reason-pattern deletes) — concept reusable (bounded inverse driven by DataChangeLog CREATED rows of ONE run) but generalized, run-scoped, never deleting pre-existing rows",
+    "refusal_boundary": "contract 14: no ad-hoc direct DB writes — the worker's transaction is THE authorized mechanism (preflight PASS + lock + runner verdict required); everything else stays read-only"
+  },
+  "observability_surfaces_present_vs_gaps": {
+    "present": ["audit/daily-runs digests (P118) — run-level, not DB-level", "p119 assembly report — packet/assembly-level", "p114 promotion result/ledger — historical", "P118 run-state.json (last run, backoff states)", "oem-registry.json (blocked sources w/ next_retry_at)"],
+    "gaps_G": [
+      {"id": "G1", "gap": "no ongoing promotion worker with preflight/dry-run + explicit refusal reasons (p114 is one-shot historical)", "repro": "no scripts/lib module exposes preflight→refuse→promote lifecycle for current packets — missing-module test red"},
+      {"id": "G2", "gap": "no read-only audit query tool producing contract-9 categories (accepted/promoted, provenance+locator coverage, quarantines, freshness, source/OEM coverage, last refresh, blocked sources, promotion failures, duplicates)", "repro": "grep finds no tool emitting those categories — missing red"},
+      {"id": "G3", "gap": "no freshness/SLO computation from dated evidence (SourceDocument.fetchedAt 1563/2577 dated, Price.observedAt dated, DCL.createdAt; 1014 undated)", "repro": "missing red"},
+      {"id": "G4", "gap": "no incident/rollback runbook artifact", "repro": "missing red"},
+      {"id": "G5", "gap": "no lock/serialization against concurrent/double promotion invocation", "repro": "test: two invocations interleave without a lock primitive — missing red"},
+      {"id": "G6", "gap": "no run-scoped auditable rollback (only attempt-1-specific revert)", "repro": "missing red"}
+    ]
+  },
+  "freshness_representation_no_schema": {
+    "dated_evidence": ["SourceDocument.fetchedAt (sidecar capture date; 1563 dated / 1014 NULL)", "Price.observedAt (all dated 2026-09-19..28)", "DataChangeLog.createdAt (promotion dates)", "oem-registry next_retry_at (blocked-source windows)", "P118 run-state.json (last successful refresh)"],
+    "slo_rule": "STALE threshold = Blueprint's documented >90 days since last checked (Coverage Gap States §STALE); buckets: CURRENT (≤30d), AGING (31-90d), STALE (>90d), UNDATED (no dated evidence — NEVER claimed current or stale); all ages computed against an explicit --now parameter for determinism; never invent timestamps",
+    "no_schema": "all columns exist (verified via information_schema) — freshness is a report-time computation"
+  },
+  "promotion_safety_state_machine": {
+    "ELIGIBILITY": "packet.status==ACCEPTED ∧ runner ACCEPTED ∧ every cited observation evidence-intact (sha/locator) ∧ provenance_state==ACQUISITION_VERIFIED ∧ identity resolves ∧ not already promoted (p114 ledger ∪ production ledger) ∧ target DB row not QUARANTINED → ELIGIBLE; else REFUSED with explicit reason",
+    "refusal_reasons": ["STATUS_NOT_ACCEPTED", "RUNNER_REJECTED", "LEGACY_UNVERIFIED", "EVIDENCE_TAMPERED", "CROSS_BRAND_COLLISION", "CONFLICT_QUARANTINED", "IDENTITY_NOT_RESOLVABLE", "ALREADY_PROMOTED", "DB_ROW_QUARANTINED (needs review, never auto-promoted)"],
+    "PREFLIGHT": "MD+JSON gate report BEFORE any write (G8) — eligible set, refusals, DB snapshot counts, input artifact SHAs; execute REFUSES without a PASS preflight matching current inputs",
+    "EXECUTING": "flock-serialized (second invocation → PROMOTION_LOCKED, zero writes); ONE psycopg2 transaction; prior accepted/current state never downgraded by failures (rollback on error)",
+    "COMMITTED → POSTFLIGHT": "MD+JSON after writes: before/after counts, per-fact actions, provenance coverage, ledger entries; business-row counts reconciled",
+    "NO_ACTION": "eligible delta empty → no transaction at all; postflight proves DB counts unchanged",
+    "FAILED": "transaction rollback → pre-transaction state (test K); previous accepted production state preserved (test J)",
+    "ROLLED_BACK": "run-scoped inverse driven by that run's DataChangeLog CREATED rows only: delete rows THAT run created, restore superseded isCurrent flags, append ledger rollback entries; pre-existing rows untouched; every step logged (test L)"
+  },
+  "files_to_touch": {
+    "new": [
+      "lib/thai_factory/production/__init__.py",
+      "lib/thai_factory/production/eligibility.py — packet/runner/ledger/evidence eligibility with explicit refusal reasons",
+      "lib/thai_factory/production/worker.py — preflight (MD+JSON) → flock → one transaction → postflight; dry-run and execute modes; NO_ACTION path",
+      "lib/thai_factory/production/rollback.py — run-scoped bounded inverse via DataChangeLog CREATED rows of one run id",
+      "lib/thai_factory/production/audit.py — read-only SQL audit report (contract 9 categories) MD+JSON",
+      "lib/thai_factory/production/freshness.py — dated-evidence freshness/SLO report MD+JSON (--now param)",
+      "lib/thai_factory/production/runbook.md content → committed as audit/coverage/p120_incident_runbook.md",
+      "scripts/p120_production.py — CLI: preflight | promote | audit | freshness | rollback",
+      "tests/test_p120_promotion.py — contracts A–L, P, Q",
+      "tests/test_p120_observability.py — contracts M, N, O (+ runbook presence)",
+      "audit/coverage/p120_preflight_gate.{json,md}, p120_postflight_audit.{json,md}, p120_audit_report.{json,md}, p120_freshness_report.{json,md}, p120_incident_runbook.md, p120_final_result.json, p120_final_report.md",
+      "audit/coverage/production_promotion_ledger.json (AcceptanceLedger file, created by worker runs)",
+      "test logs audit/daily-runs/20260929-p120-*.log"
+    ],
+    "modified": [],
+    "not_touched": [
+      "prisma/schema.prisma — NO schema migration (proven sufficient above; Price/VariantSpec ON CONFLICT targets + fetchedAt/observedAt + DataChangeLog all exist)",
+      "lib/thai_factory/acceptance/* + verifier v9 (frozen; reused, never rewritten)",
+      "scripts/p114_promote.py + P114 historical artifacts (imported read-only; never re-run wholesale)",
+      "lib/research/*.ts dead stub + never-migrated tables",
+      "providers/models/config/embeddings; no new source class; Thailand official-market scope only"
+    ]
+  },
+  "tests_mapping": {
+    "A": "unaccepted packet → refused, zero rows",
+    "B": "accepted packet → exactly one promotion; second run NO_ACTION/idempotent",
+    "C": "replayed promotion → business-row counts identical (no duplicates)",
+    "D": "provenance_state LEGACY_UNVERIFIED → refused",
+    "E": "tampered artifact sha / broken locator → refused, fail closed",
+    "F": "DataChangeLog of promoted rows carries packet_id + sha256 + locator excerpt",
+    "G": "cross-brand packet (R1 guard) → refused CROSS_BRAND_COLLISION",
+    "H": "conflict-quarantined packet → refused, stays quarantined",
+    "I": "priceType/price_type semantics + isCurrent behaviour identical pre/post (mirrors p114 ON CONFLICT + supersede)",
+    "J": "forced eligibility/runner failure → DB snapshot unchanged (no delete/downgrade)",
+    "K": "forced exception mid-transaction → rollback to pre-transaction counts",
+    "L": "rollback run: inverse deletes only rows created by that run; pre-existing rows + superseded flags restored; rollback recorded in ledger + DataChangeLog",
+    "M": "audit module SQL contains only SELECT/WITH; two runs byte-identical",
+    "N": "freshness uses fetchedAt/observedAt/createdAt only; NULL → UNDATED (never current/stale); deterministic with --now; no future dates",
+    "O": "execute refuses without PASS preflight matching current input SHAs; postflight counts == DB counts",
+    "P": "lock held → PROMOTION_LOCKED, zero writes; second invocation serialized",
+    "Q": "git-scope: prisma/, acceptance/, p114 promote script, providers, config untouched vs base",
+    "R": "gates (chain)"
+  },
+  "data_network_boundary": {
+    "db_writes": "ONLY inside worker transaction (preflight PASS + flock + runner verdict) and rollback transaction; tests run against an ephemeral schema-only database (pg_dump --schema-only → CREATE DATABASE thai_car_intelligence_p120_test), never production tables",
+    "network": "none (no live web in CI; docker postgres is local)",
+    "promotion_this_wave": "dry-run computes the real eligible delta from current state; the controlled promotion runs ONLY what preflight proves eligible — expected delta 0 → NO_ACTION postflight proves no writes (never assumed, computed)",
+    "ai": "none in the write path (contract 6)"
+  },
+  "non_goals": ["no P114 wholesale replay", "no BrochureVerification backfill", "no enrichment from old/contaminated DB", "no resurrecting QUARANTINED rows (79 price / 410 spec stay quarantined)", "no catalog-scope expansion for dashboards", "no verifier/runner/schema/provider/model/config change", "no new source class", "no AI reconciliation in writes", "no production writes outside the worker transaction"],
+  "honest_limits_planned": [
+    "1014/2577 SourceDocuments undated → UNDATED bucket, never counted fresh or stale",
+    "Price.observedAt was written as promotion-time by P114 (not publisher date) — freshness report labels each date's source column explicitly",
+    "delta vs accepted set expected 0 → the write path is proven on the ephemeral test DB, production run expected NO_ACTION (computed, not assumed)",
+    "rollback covers rows created by runs executed by THIS worker; P114 historical rows revert only via their own documented procedure",
+    "no completeness claims — audit reports are counts with provenance, never 'catalog/price/spec complete'"
+  ]
+}

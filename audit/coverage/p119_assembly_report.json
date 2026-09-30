@@ -6,7 +6,7 @@
       "note": "fields whose observations could not be resolved by policy (same tier, no dated winner) — both sides recorded, value NOT emitted; assembly is NOT complete for these fields"
     }
   ],
-  "commit": "dc0357b8a77aa1a748ff55589396668df09765ea",
+  "commit": "b3c9178ccacb07f9a0367ad153450869120a92d4",
   "conflicts": {
     "by_status": {
       "QUARANTINED": 261
@@ -25037,10 +25037,7 @@
   },
   "schema": "p119_assembly_report/v1",
   "tests": {
-    "errors": 0,
-    "failed": 0,
-    "log": "audit/daily-runs/20260929-p119-focused.log",
-    "passed": null
+    "status": "not_run_in_this_invocation"
   },
   "validation_failures": []
 }

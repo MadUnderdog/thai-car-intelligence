@@ -94,6 +94,28 @@ def _catalog_lookup(model_display: str, catalog: Dict[str, Any]) -> Optional[tup
     return None
 
 
+def _brand_agrees(mfr: str, entry: Dict[str, Any], catalog: Dict[str, Any]) -> bool:
+    """Prove a catalog entry belongs to the packet's manufacturer (§96
+    manufacturer_slug join key / sibling-brand separation)."""
+    mfr_n = _norm(mfr)
+    entry_brand = str(entry.get("brandSlug") or "")
+    if _norm(entry_brand) == mfr_n or _slug_norm(entry_brand) == _slug_norm(mfr):
+        return True
+    for field in ("brandEn", "brandTh", "brandName"):
+        if entry.get(field) and _norm(str(entry[field])) == mfr_n:
+            return True
+    brands = catalog.get("brands")
+    brand_entry = brands.get(entry_brand) if isinstance(brands, dict) else None
+    if isinstance(brand_entry, dict):
+        for field in ("slug", "nameEn", "nameTh"):
+            if brand_entry.get(field) and _norm(str(brand_entry[field])) == mfr_n:
+                return True
+        for alias in brand_entry.get("aliases") or []:
+            if _norm(str(alias)) == mfr_n:
+                return True
+    return False
+
+
 def resolve_join_key(packet: Dict[str, Any], catalog: Dict[str, Any],
                      universe_path: Optional[str] = None) -> Dict[str, Any]:
     """
@@ -122,6 +144,19 @@ def resolve_join_key(packet: Dict[str, Any], catalog: Dict[str, Any],
             "reason": f"display_string_only: '{model_display}' absent from identity universe (CONFIRMED_*) and alias catalog",
             "candidate_id": packet_id,
         }
+
+    if universe_record is None and catalog_hit is not None:
+        entry_hit, _via_hit = catalog_hit
+        if not _brand_agrees(mfr, entry_hit, catalog):
+            # sibling-brand collision: same display/alias under another OEM
+            return {
+                "ok": False,
+                "reason": (
+                    f"cross_brand_collision: display '{model_display}' maps to catalog brand "
+                    f"'{entry_hit.get('brandSlug')}' but packet manufacturer is '{mfr}'"
+                ),
+                "candidate_id": packet_id,
+            }
 
     matched_via = "identity_universe" if universe_record else "alias_catalog"
     alias_evidence = None
@@ -152,12 +187,19 @@ def resolve_join_key(packet: Dict[str, Any], catalog: Dict[str, Any],
         variant_out = _slug_norm(variant_slug) or None
         matched_via = f"alias_catalog+{via}"
 
-    # alias catalog enrichment on top of the identity record (record how)
+    # alias catalog enrichment on top of the identity record — ONLY when the
+    # catalog entry provably belongs to the packet's manufacturer; a
+    # cross-brand hit is recorded as a rejected enrichment, never applied
     if universe_record is not None and catalog_hit is not None:
         entry, via = catalog_hit
-        if entry.get("slug"):
-            model_slug = entry.get("slug")
-        matched_via = f"identity_universe+{via}"
+        if _brand_agrees(mfr, entry, catalog):
+            if entry.get("slug"):
+                model_slug = entry.get("slug")
+            matched_via = f"identity_universe+{via}"
+        elif alias_evidence is not None:
+            alias_evidence["catalog_enrichment"] = (
+                f"rejected_cross_brand:{entry.get('brandSlug')}"
+            )
 
     join_key = {
         "manufacturer_slug": manufacturer_slug,

@@ -32,12 +32,23 @@ SOURCE_ROLES = (
 
 
 def trust_for_obs(obs: Dict[str, Any]) -> str:
-    """Obs-declared trust_tier wins; never derive a HIGHER tier than the role table."""
+    """
+    Role-ceiling trust resolution (§95 non-increasing / §96 no silent upgrade):
+
+    - the source role/class sets a CEILING (unknown/malformed role → inferred,
+      fail closed);
+    - a declared trust_tier is honoured only at or BELOW that ceiling;
+      anything higher is clamped to the ceiling — never assembled;
+    - a missing or malformed declared tier resolves to the role ceiling.
+    """
+    role = obs.get("source_role") or obs.get("source_class")
+    ceiling = TIER_BY_SOURCE_CLASS.get(role, "inferred") if role else "inferred"
     declared = obs.get("trust_tier")
-    if declared:
+    if isinstance(declared, str) and declared in TIER_RANK:
+        if TIER_RANK[declared] > TIER_RANK[ceiling]:
+            return ceiling
         return declared
-    role = obs.get("source_role") or obs.get("source_class") or "IDENTITY_ENUMERATOR"
-    return TIER_BY_SOURCE_CLASS.get(role, "inferred")
+    return ceiling
 
 
 def field_name(category: str, obs: Dict[str, Any]) -> str:

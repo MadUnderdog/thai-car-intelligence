@@ -1,6 +1,6 @@
 # P119 — Multi-source assembly report (§96–97)
 
-- commit: `dc0357b8a77aa1a748ff55589396668df09765ea`
+- commit: `b3c9178ccacb07f9a0367ad153450869120a92d4`
 - packets in: **488** (accepted input: 417, quarantined input: 71)
 - assembled records: **417** · fields: **1323**
 - conflicts: **261** by status: `{"QUARANTINED": 261}`
@@ -125,4 +125,4 @@
 - quarantined_fields_ceiling (261): fields whose observations could not be resolved by policy (same tier, no dated winner) — both sides recorded, value NOT emitted; assembly is NOT complete for these fields
 
 ## Tests
-- `{"log": "audit/daily-runs/20260929-p119-focused.log", "passed": null, "failed": 0, "errors": 0}`
+- `{"status": "not_run_in_this_invocation"}`

@@ -1,0 +1,136 @@
+........................................................................ [  7%]
+................................FF...................................... [ 14%]
+........................................................................ [ 21%]
+........................................................................ [ 28%]
+........................................................................ [ 35%]
+........................................................................ [ 42%]
+........................................................................ [ 49%]
+........................................................................ [ 56%]
+........................................................................ [ 63%]
+........................................................................ [ 70%]
+........................................................................ [ 77%]
+........................................................................ [ 84%]
+........................................................................ [ 91%]
+........................................................................ [ 98%]
+...........                                                              [100%]
+=================================== FAILURES ===================================
+_________________ test_suzuki_locator_resolves_to_same_record __________________
+
+    def test_suzuki_locator_resolves_to_same_record():
+        import asyncio
+        from playwright.async_api import async_playwright
+        from collect_multi_oem import collect_suzuki
+        obs = collect_suzuki()
+        html = open(obs[0]["evidence_locator"]["artifact_path"], encoding="utf-8").read()
+    
+        async def resolve():
+            results = []
+            async with async_playwright() as p:
+                browser = await p.chromium.launch()
+                page = await browser.new_page()
+                await page.set_content(html)
+                for o in obs:
+                    resolved = await page.evaluate(
+                        """(args) => {
+                            const els = document.querySelectorAll(args.path);
+                            if (!els.length) return {found: false};
+                            const el = els[0];
+                            return {found: true, hasModel: el.textContent.includes(args.model),
+                                    hasPrice: el.textContent.includes(args.price)};
+                        }""",
+                        {"path": o["evidence_locator"]["canonical_locator"],
+                         "model": o["identity"]["model_raw"],
+                         "price": f'{o["price"]["value_thb"]:,}'}
+                    )
+                    results.append(resolved)
+                await browser.close()
+            return results
+    
+>       results = asyncio.run(resolve())
+                  ^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_extraction_fixtures.py:1513: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/asyncio/runners.py:190: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/asyncio/runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py:654: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests/test_extraction_fixtures.py:1495: in resolve
+    await page.set_content(html)
+../../.hermes/hermes-agent/venv/lib/python3.11/site-packages/playwright/async_api/_generated.py:9803: in set_content
+    await self._impl_obj.set_content(
+../../.hermes/hermes-agent/venv/lib/python3.11/site-packages/playwright/_impl/_page.py:551: in set_content
+    return await self._main_frame.set_content(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.hermes/hermes-agent/venv/lib/python3.11/site-packages/playwright/_impl/_frame.py:508: in set_content
+    await self._channel.send(
+../../.hermes/hermes-agent/venv/lib/python3.11/site-packages/playwright/_impl/_connection.py:76: in send
+    return await self._connection.wrap_api_call(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <playwright._impl._connection.Connection object at 0x7fcf5abec110>
+cb = <function Channel.send.<locals>.<lambda> at 0x7fcf597c28e0>
+is_internal = False, title = None
+
+    async def wrap_api_call(
+        self, cb: Callable[[], Any], is_internal: bool = False, title: str = None
+    ) -> Any:
+        if self._api_zone.get():
+            return await cb()
+        task = asyncio.current_task(self._loop)
+        parsed_st = _attach_api_call_information(
+            getattr(task, "__pw_stack__", None) or _capture_stack_trace(),
+            is_internal,
+            title,
+        )
+        self._api_zone.set(parsed_st)
+        try:
+            return await cb()
+        except Exception as error:
+>           raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+E           playwright._impl._errors.TimeoutError: Page.set_content: Timeout 30000ms exceeded.
+E           Call log:
+E             - setting frame content, waiting until "load"
+
+../../.hermes/hermes-agent/venv/lib/python3.11/site-packages/playwright/_impl/_connection.py:632: TimeoutError
+----------------------------- Captured stdout call -----------------------------
+=== Suzuki Thailand Official (DOM) ===
+  Extracted: 5 models from fixture
+___________________ test_suzuki_mutation_price_swap_detected ___________________
+
+    def test_suzuki_mutation_price_swap_detected():
+        import subprocess as _subprocess
+        import json as _json
+        from collect_multi_oem import SUZUKI_JS
+        artifact = _fx("suzuki_home_page.html")
+        data = open(artifact, encoding="utf-8").read()
+        assert "689,000" in data and "1,590,000" in data
+        mutated = data.replace("689,000", "__TMP__").replace("1,590,000", "689,000").replace("__TMP__", "1,590,000")
+        open("/tmp/mits_mutation.py", "w").write(MUTATION_RUNNER)
+        open("/tmp/suz_mutated.html", "w").write(mutated)
+        out = _subprocess.run(["python3", "/tmp/mits_mutation.py", SUZUKI_JS, "/tmp/suz_mutated.html"],
+                              capture_output=True, text=True, timeout=120)
+>       assert out.returncode == 0, out.stderr[-500:]
+E       AssertionError: right/_impl/_connection.py", line 76, in send
+E             return await self._connection.wrap_api_call(
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           File "/home/ubuntu/.hermes/hermes-agent/venv/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+E             raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+E         playwright._impl._errors.TimeoutError: Page.set_content: Timeout 30000ms exceeded.
+E         Call log:
+E           - setting frame content, waiting until "load"
+E         
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python3', '/tmp/mits_mutation.py', "\n(() => {\n    const items = [];\n    const seen = new Se...outError: Page.set_content: Timeout 30000ms exceeded.\nCall log:\n  - setting frame content, waiting until "load"\n\n').returncode
+
+tests/test_extraction_fixtures.py:1532: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_extraction_fixtures.py::test_suzuki_locator_resolves_to_same_record
+FAILED tests/test_extraction_fixtures.py::test_suzuki_mutation_price_swap_detected
+2 failed, 1017 passed in 1614.64s (0:26:54)

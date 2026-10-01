@@ -1,0 +1,9 @@
+{
+  "source_url": "https://buyonline.kia.com/th?lang=en",
+  "captured_at": "2026-09-28T07:13:15.088942+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "5352317840f944def408c904d4f4228dabf5e049aa4ed6192712603c74e9dc52",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "kia_p111_th.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

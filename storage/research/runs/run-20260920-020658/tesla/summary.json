@@ -1,0 +1,126 @@
+{
+  "brand": "tesla",
+  "brand_name": "Tesla",
+  "country": "Thailand",
+  "currency": "THB",
+  "research_date": "2026-09-20",
+  "sources": [
+    "https://www.9carthai.com/tag/tesla/",
+    "https://www.9carthai.com/tag/tesla-model-3/",
+    "https://www.9carthai.com/tag/tesla-model-y/",
+    "https://www.9carthai.com/tesla-model-3-long-range-rwd/",
+    "https://www.9carthai.com/tesla-model-3-performance/",
+    "https://www.headlightmag.com/?s=Tesla"
+  ],
+  "models": {
+    "Model 3": {
+      "variants": [
+        {
+          "name": "Model 3 Standard RWD",
+          "price_thb": 1149000,
+          "price_display": "1,149,000 THB",
+          "drivetrain": "RWD",
+          "import_type": "CBU China",
+          "status": "Available",
+          "notes": "Entry-level model, launched 2026"
+        },
+        {
+          "name": "Model 3 RWD",
+          "price_thb": 1439000,
+          "price_display": "1,439,000 THB",
+          "drivetrain": "RWD",
+          "status": "Available",
+          "notes": "Discounted from 1,599,000 THB"
+        },
+        {
+          "name": "Model 3 Long Range RWD",
+          "price_thb": 1599000,
+          "price_display": "1,599,000 THB",
+          "drivetrain": "RWD",
+          "status": "Available",
+          "notes": "New variant added for Thailand market"
+        },
+        {
+          "name": "Model 3 Long Range AWD",
+          "price_thb": 1799000,
+          "price_display": "1,799,000 THB",
+          "drivetrain": "AWD",
+          "status": "Available",
+          "notes": "Discounted from 1,899,000 THB"
+        },
+        {
+          "name": "Model 3 Performance AWD",
+          "price_thb": 2099000,
+          "price_display": "2,099,000 THB",
+          "drivetrain": "AWD",
+          "status": "Available",
+          "notes": "Discounted from 2,199,000 THB"
+        },
+        {
+          "name": "Model 3 Performance",
+          "price_thb": 2149000,
+          "price_display": "2,149,000 THB",
+          "drivetrain": "AWD",
+          "power_hp": 510,
+          "acceleration_0_100": "3.1 seconds",
+          "status": "Available",
+          "notes": "Launched April 2024, 510 hp"
+        }
+      ]
+    },
+    "Model Y": {
+      "variants": [
+        {
+          "name": "Model Y Standard",
+          "price_thb": 1299000,
+          "price_display": "1,299,000 THB",
+          "drivetrain": "RWD",
+          "range_km": 516,
+          "status": "Available",
+          "notes": "Entry-level Model Y, launched October 2025"
+        },
+        {
+          "name": "Model Y",
+          "price_thb": 1749000,
+          "price_display": "1,749,000 THB",
+          "drivetrain": "RWD/AWD",
+          "status": "Available",
+          "notes": "Standard Model Y variant"
+        },
+        {
+          "name": "Model Y L Premium AWD",
+          "price_thb": 1999000,
+          "price_display": "1,999,000 THB",
+          "drivetrain": "AWD",
+          "seating": 6,
+          "wheelbase": "Long",
+          "status": "Available",
+          "notes": "Long wheelbase, 3 rows, 6 seats, launched 2026"
+        }
+      ]
+    }
+  },
+  "price_range": {
+    "lowest": 1149000,
+    "highest": 2149000,
+    "lowest_model": "Model 3 Standard RWD",
+    "highest_model": "Model 3 Performance"
+  },
+  "notes": [
+    "Prices are official Thai market prices in THB",
+    "Some models received discounts of 100,000 THB in 2024-2025",
+    "Model 3 Standard RWD is imported CBU from China",
+    "Model Y L Premium is a new 6-seat long wheelbase variant",
+    "Prices may vary; check official Tesla Thailand for latest pricing"
+  ],
+  "data_quality": {
+    "completeness": "partial",
+    "confidence": "medium",
+    "last_verified": "2026-09-20",
+    "issues": [
+      "Tesla official website blocked direct access (Akamai CDN)",
+      "Prices sourced from Thai automotive media (9carthai, headlightmag)",
+      "Some prices may be from promotional/discounted periods"
+    ]
+  }
+}

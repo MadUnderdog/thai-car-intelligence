@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th/cars/mazda-cx5",
+  "captured_at": "2026-09-26T07:45:10.210062+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "ca9e7c60533c34b8d04dbeab2d1925a22190e56c17416dbc51752c6d3db65e02",
+  "session_id": "catalog_layers_20260926_074454",
+  "artifact_filename": "mazda_car_mazda-cx5.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

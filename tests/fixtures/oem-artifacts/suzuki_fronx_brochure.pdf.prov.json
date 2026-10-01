@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/upload/file/Brochure/ALL_NEW_SUZUKI_FRONX_BROCHURE.pdf",
+  "captured_at": "2026-09-26T13:49:36.842309+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "2df5786395493aa391df5f554ec5d24a76e7924f49c648ed8efad82dfc91eb36",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "suzuki_fronx_brochure.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

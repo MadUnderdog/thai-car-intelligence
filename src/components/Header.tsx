@@ -32,7 +32,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-sm font-medium text-[var(--color-gray-600)] hover:text-[var(--color-gray-900)] hover:bg-[var(--color-gray-100)] rounded-[var(--radius-lg)] transition-all duration-[var(--transition-normal)]"
+                className="px-4 py-2 min-h-[32px] inline-flex items-center text-sm font-medium text-[var(--color-gray-600)] hover:text-[var(--color-gray-900)] hover:bg-[var(--color-gray-100)] rounded-[var(--radius-lg)] transition-all duration-[var(--transition-normal)]"
               >
                 {link.label}
               </Link>
@@ -66,7 +66,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="px-4 py-3 text-sm font-medium text-[var(--color-gray-700)] hover:bg-[var(--color-gray-100)] rounded-[var(--radius-lg)]"
+                  className="px-4 py-3 min-h-[32px] inline-flex items-center text-sm font-medium text-[var(--color-gray-700)] hover:bg-[var(--color-gray-100)] rounded-[var(--radius-lg)]"
                 >
                   {link.label}
                 </Link>

@@ -1,0 +1,91 @@
+{
+  "assembly_run": {
+    "accepted": 417,
+    "blockers": [
+      {
+        "count": 261,
+        "kind": "quarantined_fields_ceiling",
+        "note": "fields whose observations could not be resolved by policy (same tier, no dated winner) — both sides recorded, value NOT emitted; assembly is NOT complete for these fields"
+      }
+    ],
+    "conflicts_by_status": {
+      "QUARANTINED": 261
+    },
+    "fields_assembled": 1323,
+    "join_errors": 0,
+    "packets_in": 488,
+    "per_source_contribution_count": 106,
+    "provenance_coverage": {
+      "distinct_artifacts": 106,
+      "fields_with_provenance": 1323,
+      "locator_present": 1323,
+      "sha_present": 1323,
+      "unverified_or_legacy": 0,
+      "verified": 1323
+    },
+    "quarantines": 261,
+    "records": 417,
+    "validation_failures": 0
+  },
+  "base_commit": "d8b3ef661e4ca5cbd609cc790fce55873d60ebf1",
+  "created_at": "2026-09-29",
+  "disclosures": [
+    "combined chain v1 failed (113 passed|1 failed test_p111 frozen-input) because an orphaned full-pytest from the FIRST chain attempt (pkill missed the child process) ran CONCURRENTLY and rewrote timestamped artifacts mid-test; sequential proof (no concurrency) with the same pre-existing suite order = 51 passed (20260929-p119-combined-order-proof.log); final chain rerun sequential = 114 passed; no test/code changed to go green, chain order aligned to full-pytest alphabetical order",
+    "chain script first version had two script-only bugs (grep pattern, wrong suite filename test_p113_evidence_sla → test_p113_packet_acceptance) — fixed at script level, not product",
+    "R5 quote re-resolution initially false-positived 201 comma-formatted price quotes (฿3,499,000) — guard fixed at normalization (strip commas/spaces, integral float→int), mutation C still fails closed",
+    "261 real QUARANTINED conflicts = genuine cross-artifact spec disagreements (e.g. seats=1187 vs seats=2.0) with no dated winner — sides+evidence recorded, values NOT emitted; assembly NOT complete for these fields",
+    "model_year always None (packets carry no year); AI proposal boundary = validator only, zero model calls; no DB reads; no promotion"
+  ],
+  "gates": {
+    "chain_log": "/home/ubuntu/.hermes/cache/scratch/p119_gate_chain_fixed.log",
+    "chain_overall": "ALL_GATES_PASS",
+    "combined": {
+      "log": "audit/daily-runs/20260929-p119-combined.log",
+      "passed": 114
+    },
+    "credential_scan": "0",
+    "determinism": "two CLI runs byte-identical (audit/daily-runs/20260929-p119-determinism1/2.log)",
+    "focused": {
+      "log": "audit/daily-runs/20260929-p119-focused.log",
+      "passed": 18
+    },
+    "full_pytest": {
+      "known_excluded": "tests/test_generation_config_boundary.py ImportError _OPENROUTER_ALLOWED_MODEL (P49, eef8c49) — reported separately",
+      "log": "audit/daily-runs/20260929-p119-full-pytest.log",
+      "passed": 1007
+    },
+    "full_vitest": {
+      "files": 47,
+      "log": "audit/daily-runs/20260929-p119-full-vitest.log",
+      "skipped": 2,
+      "tests": 563
+    },
+    "prisma": "validate OK (20260929-p119-prisma.log)",
+    "tsc": "0 (audit/daily-runs/20260929-p119-tsc.log)"
+  },
+  "plan_commit": "dc0357b8a77aa1a748ff55589396668df09765ea",
+  "red_before": {
+    "failed": 17,
+    "log": "audit/daily-runs/20260929-p119-redbefore.log",
+    "note": "missing-module red on d8b3ef6+plan: assembly module absent (gaps G1-G7)",
+    "passed": 1
+  },
+  "schema": "p119_final_result/v1",
+  "tests": {
+    "A": "byte-identical rerun",
+    "B": "exact artifact sha+locator provenance",
+    "C": "contamination fail-closed (sha+quote mutations)",
+    "D": "same-tier newest + both sides",
+    "E": "cross-tier higher wins + lower kept",
+    "F": "quarantine unresolved",
+    "G": "identity-universe+alias join, display-string rejected",
+    "H": "candidate_id until reconcile",
+    "I": "proposal packet-citation validator",
+    "J": "no DB/provider imports + value universe",
+    "K": "no duplicates",
+    "L": "legacy flag",
+    "M": "no forbidden file changes",
+    "N": "gates",
+    "O": "audit surface"
+  }
+}

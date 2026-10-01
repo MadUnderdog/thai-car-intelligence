@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.bmw.co.th/th/configurator.html",
+  "captured_at": "2026-09-28T07:12:42.848955+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "8e9dc7526e25d9c05a3a045e930cffc1705478970240909aad29dfa1c68c9d3c",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "bmw_p111_configurator.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

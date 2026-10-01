@@ -1,0 +1,132 @@
+{
+  "source": "headlightmag_wordpress_categories",
+  "url": "https://www.headlightmag.com/wp-json/wp/v2",
+  "observed_at": "2026-09-22T14:22:32.146164",
+  "acquisition_method": "wordpress_api",
+  "payload_hash": "d5587c641ca2a00c",
+  "brands": {
+    "BMW": {
+      "category_id": 44,
+      "category_name": "Brand - BMW",
+      "total_posts": 10,
+      "models_found": [
+        "iX3",
+        "220i",
+        "M340i",
+        "330i",
+        "320d",
+        "ของวัยรุ่น",
+        "218i",
+        "Driving"
+      ]
+    },
+    "Mazda": {
+      "category_id": 116,
+      "category_name": "MAZDA",
+      "total_posts": 35,
+      "models_found": [
+        "PERSONA",
+        "CX-30",
+        "BT-50",
+        "CX-30:",
+        "3-รีรัน",
+        "CX-8",
+        "CX-5",
+        "CX-3",
+        "ROADPACER",
+        "CX-9",
+        "MX-5",
+        "New"
+      ]
+    },
+    "Honda": {
+      "category_id": 128,
+      "category_name": "HONDA",
+      "total_posts": 40,
+      "models_found": [
+        "CIVIC",
+        "Super-ONE",
+        "WR-V",
+        "e:N1",
+        "Civic",
+        "CR-V",
+        "BR-V",
+        "Accord",
+        "HR-V",
+        "City",
+        "CITY",
+        "Clarity-เรือนร่างแห่งปัจจุบัน..บนเทคโนโลยีแห่งอนาคต",
+        "R&#038;D,"
+      ]
+    },
+    "Mercedes": {
+      "category_id": 141,
+      "category_name": "MERCEDES-BENZ",
+      "total_posts": 40,
+      "models_found": [
+        "AMG"
+      ]
+    },
+    "MG": {
+      "category_id": 2599,
+      "category_name": "MG",
+      "total_posts": 21,
+      "models_found": [
+        "URBAN",
+        "Maxus",
+        "Extender",
+        "HS,",
+        "RX8"
+      ]
+    },
+    "Nissan": {
+      "category_id": 143,
+      "category_name": "NISSAN",
+      "total_posts": 40,
+      "models_found": [
+        "KICKS",
+        "QUEST",
+        "X-TRAIL",
+        "SERENA",
+        "SUNNY",
+        "AD-1",
+        "Navara",
+        "LEAF",
+        "TERRA",
+        "Terra",
+        "Almera",
+        "NAVARA",
+        "Kicks",
+        "ALMERA",
+        "Note",
+        "NOTE",
+        "GT-R",
+        "PRESEA",
+        "SYLPHY",
+        "Sylphy"
+      ]
+    },
+    "Toyota": {
+      "category_id": 153,
+      "category_name": "TOYOTA",
+      "total_posts": 40,
+      "models_found": [
+        "บ้านโพธิ์",
+        "WiLL",
+        "Hilux",
+        "YARIS",
+        "CYNOS",
+        "CELICA",
+        "Origin",
+        "Yaris",
+        "VELOZ",
+        "Corolla",
+        "C-HR",
+        "Camry",
+        "Fortuner",
+        "COROLLA",
+        "Majesty"
+      ]
+    }
+  }
+}

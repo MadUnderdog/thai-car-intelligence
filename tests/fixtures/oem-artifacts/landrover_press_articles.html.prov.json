@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.landrover.co.th/explore-land-rover/articles",
+  "captured_at": "2026-09-26T13:46:17.086407+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "0b1d90f8e1fea61a689bfb8a25265e221d3d82cf423e861c18f6b5d7c707eb1b",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "landrover_press_articles.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

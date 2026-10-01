@@ -1,0 +1,192 @@
+{
+  "artifact": "p108-variant-evidence/1",
+  "generated_at": "2026-09-27T19:10:37.613036+00:00",
+  "plan": "p108_target_plan.json",
+  "rules": [
+    "model-bound composite label",
+    "name|price row or grade list",
+    "provenance verified before use"
+  ],
+  "evidence": [
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 300",
+      "variant": "Diesel",
+      "identity_level": "VARIANT",
+      "published_label": "Gwm Tank 300 Diesel",
+      "artifact": "gwm_p108_car-purchase-consultation.html",
+      "sha256": "c56624f228e53156ac1d7146e9d92f38eaa97510737232e35643e3c3ff760304",
+      "source_url": "https://www.gwm.co.th/en/car-purchase-consultation",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "TANK 300 DIESEL",
+        "line": 67,
+        "model_prefix": "Tank 300",
+        "structure": "grade list of Gwm Tank 300 (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Gwm Tank 300",
+          "variant": "Diesel"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Honda Accord",
+      "variant": "e:HEV E",
+      "identity_level": "VARIANT",
+      "published_label": "Honda Accord e:HEV E",
+      "artifact": "honda_p108_accordehev.html",
+      "sha256": "702fa72bcecfddc8a01369a3356129eb2c877340c2285fc777bac8e31102643e",
+      "source_url": "https://www.honda.co.th/en/accordehev",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "e:HEV E",
+        "line": 101,
+        "model_prefix": "Honda Accord",
+        "structure": "bare grade row of Honda Accord; the page lists 3 grades that only Honda Accord owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Honda Accord",
+          "variant": "e:HEV E"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Honda Accord",
+      "variant": "e:HEV EL",
+      "identity_level": "VARIANT",
+      "published_label": "Honda Accord e:HEV EL",
+      "artifact": "honda_p108_accordehev.html",
+      "sha256": "702fa72bcecfddc8a01369a3356129eb2c877340c2285fc777bac8e31102643e",
+      "source_url": "https://www.honda.co.th/en/accordehev",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "e:HEV EL",
+        "line": 102,
+        "model_prefix": "Honda Accord",
+        "structure": "bare grade row of Honda Accord; the page lists 3 grades that only Honda Accord owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Honda Accord",
+          "variant": "e:HEV EL"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Honda Accord",
+      "variant": "e:HEV RS",
+      "identity_level": "VARIANT",
+      "published_label": "Honda Accord e:HEV RS",
+      "artifact": "honda_p108_accordehev.html",
+      "sha256": "702fa72bcecfddc8a01369a3356129eb2c877340c2285fc777bac8e31102643e",
+      "source_url": "https://www.honda.co.th/en/accordehev",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "e:HEV RS",
+        "line": 103,
+        "model_prefix": "Honda Accord",
+        "structure": "bare grade row of Honda Accord; the page lists 3 grades that only Honda Accord owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Honda Accord",
+          "variant": "e:HEV RS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Nissan Almera",
+      "variant": "E",
+      "identity_level": "VARIANT",
+      "published_label": "Nissan Almera E",
+      "artifact": "nissan_p108_nissan-almera-model-year-24-enhances-customer-experience-wit",
+      "sha256": "182e2bdf9578b6e0a9d20daccbbae340ccc6e5e4f017321a6788fefa01478c5a",
+      "source_url": "https://www.nissan.co.th/news/nissan-almera-model-year-24-enhances-customer-experience-with-upgraded-features.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_table_row",
+      "evidence": {
+        "composite_line": "E",
+        "line": 107,
+        "model_prefix": "Nissan Almera",
+        "structure": "bare grade row of Nissan Almera; the page lists 2 grades that only Nissan Almera owns and the next line is a published price",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Nissan Almera",
+          "variant": "E"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Nissan Almera",
+      "variant": "EL",
+      "identity_level": "VARIANT",
+      "published_label": "Nissan Almera EL",
+      "artifact": "nissan_p108_nissan-almera-model-year-24-enhances-customer-experience-wit",
+      "sha256": "182e2bdf9578b6e0a9d20daccbbae340ccc6e5e4f017321a6788fefa01478c5a",
+      "source_url": "https://www.nissan.co.th/news/nissan-almera-model-year-24-enhances-customer-experience-with-upgraded-features.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_table_row",
+      "evidence": {
+        "composite_line": "EL",
+        "line": 109,
+        "model_prefix": "Nissan Almera",
+        "structure": "bare grade row of Nissan Almera; the page lists 2 grades that only Nissan Almera owns and the next line is a published price",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Nissan Almera",
+          "variant": "EL"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    }
+  ]
+}

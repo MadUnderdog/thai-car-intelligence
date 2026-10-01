@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.bmw.co.th/en/all-models.html",
+  "captured_at": "2026-09-24T13:49:02.210559+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "6b88cd605511852757b288d27015c0a740b2319ca0530cabb5394f38093b1e28",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "bmw_all_models_verified.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

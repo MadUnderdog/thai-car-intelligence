@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mgcars.com/th/cars/mg-ep-plus",
+  "captured_at": "2026-09-27T19:05:20.161927+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "823786756b57b956fbee5de95901d96055b007899460b9c32153ac4db40cf909",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mg_p108_mg-ep-plus.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

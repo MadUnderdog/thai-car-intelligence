@@ -1,0 +1,268 @@
+{
+  "brand": "BYD",
+  "brand_slug": "byd",
+  "country": "Thailand",
+  "currency": "THB",
+  "source_urls": [
+    "https://www.byd.com/th",
+    "https://www.byd.com/th/car/atto-3",
+    "https://www.byd.com/th/car/dolphin",
+    "https://www.byd.com/th/car/seal"
+  ],
+  "data_freshness": "2026-09-20",
+  "model_count": 6,
+  "total_variants": 16,
+  "all_variant_prices_thb": [
+    429900,
+    459900,
+    569900,
+    699999,
+    709900,
+    799900,
+    829900,
+    859900,
+    859999,
+    929900,
+    959900,
+    999900,
+    1099000,
+    1325000,
+    1449000,
+    1599000
+  ],
+  "price_range_thb": {
+    "min": 429900,
+    "max": 1599000
+  },
+  "price_note": "ATTO 3: factory celebration prices (Mar 2024) w/ discounts 90k-340k THB. Sealion 6: +60k THB from Nov 2024.",
+  "models": [
+    {
+      "name": "BYD ATTO 1",
+      "type": "BEV",
+      "body_type": "Hatchback",
+      "segment": "A-Segment",
+      "variants": [
+        {
+          "name": "Dynamic",
+          "price_thb": 429900,
+          "battery_kwh": 38.0,
+          "range_km_nedc": 380,
+          "motor_power_kw": 70
+        },
+        {
+          "name": "Premium",
+          "price_thb": 459900,
+          "battery_kwh": 44.9,
+          "range_km_nedc": 420,
+          "motor_power_kw": 70
+        }
+      ],
+      "price_range": {
+        "min_thb": 429900,
+        "max_thb": 459900
+      },
+      "source": "headlightmag 2026-03-23"
+    },
+    {
+      "name": "BYD ATTO 3",
+      "type": "BEV",
+      "body_type": "SUV",
+      "segment": "C-SUV",
+      "variants": [
+        {
+          "name": "Standard Range",
+          "price_thb": 799900,
+          "original_price_thb": 899900,
+          "discount_thb": 100000,
+          "battery_kwh": 49.92,
+          "range_km_nedc": 410,
+          "motor_power_kw": 150,
+          "torque_nm": 310
+        },
+        {
+          "name": "Extended Range",
+          "price_thb": 859900,
+          "original_price_thb": 1199900,
+          "discount_thb": 340000,
+          "battery_kwh": 60.48,
+          "range_km_nedc": 480,
+          "motor_power_kw": 150,
+          "torque_nm": 310
+        },
+        {
+          "name": "Premium (MY2024)",
+          "price_thb": 959900,
+          "original_price_thb": 1049900,
+          "discount_thb": 90000,
+          "battery_kwh": 60.48,
+          "range_km_nedc": 480,
+          "motor_power_kw": 150,
+          "torque_nm": 310
+        }
+      ],
+      "price_range": {
+        "min_thb": 799900,
+        "max_thb": 959900
+      },
+      "note": "Factory celebration prices (March 2024), discounts 90k-340k baht",
+      "source": "headlightmag 2024-03-26"
+    },
+    {
+      "name": "BYD Dolphin",
+      "type": "BEV",
+      "body_type": "Hatchback",
+      "segment": "B-Segment",
+      "variants": [
+        {
+          "name": "Standard Range (CKD)",
+          "price_thb": 569900,
+          "battery_kwh": 50.25,
+          "range_km_nedc": 410,
+          "assembly": "CKD Thailand",
+          "motor_power_kw": 70
+        },
+        {
+          "name": "Extended Range (CKD)",
+          "price_thb": 709900,
+          "battery_kwh": 60.48,
+          "range_km_nedc": 490,
+          "assembly": "CKD Thailand",
+          "motor_power_kw": 150
+        },
+        {
+          "name": "Standard Range (CBU)",
+          "price_thb": 699999,
+          "battery_kwh": 44.9,
+          "range_km_nedc": 410,
+          "assembly": "CBU Import",
+          "motor_power_kw": 70
+        },
+        {
+          "name": "Extended Range (CBU)",
+          "price_thb": 859999,
+          "battery_kwh": 60.48,
+          "range_km_nedc": 490,
+          "assembly": "CBU Import",
+          "motor_power_kw": 150
+        }
+      ],
+      "price_range": {
+        "min_thb": 569900,
+        "max_thb": 859999
+      },
+      "note": "CKD models 130k-150k THB cheaper than CBU imports",
+      "source_ckd": "headlightmag 2024-07-26",
+      "source_cbu": "headlightmag 2023-06-28"
+    },
+    {
+      "name": "BYD Seal",
+      "type": "BEV",
+      "body_type": "Sedan",
+      "segment": "D-Segment",
+      "variants": [
+        {
+          "name": "Dynamic RWD",
+          "price_thb": 1325000,
+          "battery_kwh": 61.44,
+          "range_km_nedc": 510,
+          "motor_power_kw": 150,
+          "torque_nm": 310,
+          "drive": "RWD"
+        },
+        {
+          "name": "Premium RWD",
+          "price_thb": 1449000,
+          "battery_kwh": 82.56,
+          "range_km_nedc": 570,
+          "motor_power_kw": 168,
+          "torque_nm": 350,
+          "drive": "RWD"
+        },
+        {
+          "name": "AWD Performance",
+          "price_thb": 1599000,
+          "battery_kwh": 82.56,
+          "range_km_nedc": 650,
+          "motor_power_kw": 390,
+          "torque_nm": 670,
+          "drive": "AWD"
+        }
+      ],
+      "price_range": {
+        "min_thb": 1325000,
+        "max_thb": 1599000
+      },
+      "source": "headlightmag 2023-09-28"
+    },
+    {
+      "name": "BYD Sealion 6 DM-i",
+      "type": "PHEV",
+      "body_type": "SUV",
+      "segment": "C-SUV",
+      "engine": "1.5L Turbo + Electric Motor",
+      "total_power_ps": 218,
+      "battery_kwh": 18.3,
+      "variants": [
+        {
+          "name": "Dynamic",
+          "price_thb": 999900,
+          "source": "headlightmag 2024-08-08"
+        },
+        {
+          "name": "Premium",
+          "price_thb": 1099000,
+          "source": "headlightmag 2024-08-08"
+        }
+      ],
+      "price_range": {
+        "min_thb": 999900,
+        "max_thb": 1099000
+      },
+      "note": "Price increased 60k THB from Nov 1 2024. Original: 939,900-1,039,900"
+    },
+    {
+      "name": "BYD M6",
+      "type": "BEV",
+      "body_type": "MPV",
+      "segment": "C-MPV",
+      "seating": 6,
+      "variants": [
+        {
+          "name": "Dynamic (Standard Range)",
+          "price_thb": 829900,
+          "source": "headlightmag 2024-09-09"
+        },
+        {
+          "name": "Extended Range",
+          "price_thb": 929900,
+          "range_km_nedc": 530,
+          "source": "headlightmag 2024-09-09"
+        }
+      ],
+      "price_range": {
+        "min_thb": 829900,
+        "max_thb": 929900
+      }
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.byd.com/th",
+      "error": "IP geo-blocking redirects to EU site"
+    },
+    {
+      "url": "https://www.byd.com/th/car/atto-3",
+      "error": "404 Not Found"
+    },
+    {
+      "url": "https://www.byd.com/th/car/dolphin",
+      "error": "Empty response"
+    },
+    {
+      "url": "https://www.byd.com/th/car/seal",
+      "error": "Empty response"
+    }
+  ],
+  "web_search_status": "unavailable (Nous Tool Gateway not accessible)",
+  "browser_status": "unavailable (no CDP endpoint)"
+}

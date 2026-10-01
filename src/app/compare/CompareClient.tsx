@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { compareErrorMessage, featureCellText } from "../../../lib/ux/compare-view";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import DifferenceFilter from "./DifferenceFilter";
 
 type ComparisonVehicle = {
   id: string;
@@ -14,7 +16,7 @@ type ComparisonVehicle = {
   modelTh: string;
   brand: string;
   brandTh: string;
-  price: { amount: number; type: string } | null;
+  price: { amount: number; type: string; sourceUrl: string | null; sourceName: string | null } | null;
   specs: {
     power: number | null;
     torque: number | null;
@@ -28,7 +30,7 @@ type ComparisonVehicle = {
     acCharge: number | null;
     dcCharge: number | null;
   };
-  features: { slug: string; nameEn: string; nameTh: string; standard: boolean }[];
+  features: { slug: string; nameEn: string; nameTh: string; standard: boolean; available?: boolean }[];
 };
 
 const SPEC_GROUPS = [
@@ -65,8 +67,10 @@ const SPEC_GROUPS = [
   },
 ];
 
+const NO_DATA = "ยังไม่มีข้อมูลยืนยัน";
+
 function formatValue(field: any, value: any) {
-  if (value === null || value === undefined) return "—";
+  if (value === null || value === undefined) return NO_DATA;
   if (field.format) return field.format(value);
   return `${value} ${field.unit || ""}`.trim();
 }
@@ -89,7 +93,8 @@ export default function ComparePage() {
       .then((r) => r.json())
       .then((d) => {
         if (d.error) {
-          setError(d.error === "variants_not_found" ? "ไม่พบรถที่เลือก" : "ไม่สามารถโหลดข้อมูลได้");
+          // P116: truthful per-code messages (need_at_least_2 ≠ generic failure)
+          setError(compareErrorMessage(d.error));
         } else {
           setData(d.comparison || []);
         }
@@ -155,10 +160,24 @@ export default function ComparePage() {
               <div className="text-sm text-[var(--color-gray-500)] mb-1">{v.brand}</div>
               <div className="font-bold text-lg text-[var(--color-gray-900)] mb-1">{v.name}</div>
               <div className="text-sm text-[var(--color-gray-600)] mb-3">{v.model}</div>
-              {v.price && (
-                <div className="text-xl font-bold text-[var(--color-primary-600)]">
-                  ฿{v.price.amount.toLocaleString()}
+              {v.price ? (
+                <div className="space-y-0.5">
+                  <div className="text-xl font-bold text-[var(--color-primary-600)]">
+                    ฿{v.price.amount.toLocaleString()}
+                  </div>
+                  {v.price.sourceUrl && (
+                    <a
+                      href={v.price.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-[11px] text-[var(--color-gray-400)] hover:text-[var(--color-primary-600)]"
+                    >
+                      แหล่งข้อมูล{v.price.sourceName ? `: ${v.price.sourceName}` : ""}
+                    </a>
+                  )}
                 </div>
+              ) : (
+                <div className="text-sm text-[var(--color-gray-400)]">ยังไม่มีข้อมูลราคา</div>
               )}
             </CardBody>
           </Card>
@@ -166,16 +185,36 @@ export default function ComparePage() {
       </div>
 
       {/* Spec groups */}
-      <div className="space-y-6">
-        {SPEC_GROUPS.map((group) => (
+      <div className="mb-2 flex items-center justify-between">
+        <DifferenceFilter />
+      </div>
+      <div id="comparison-rows" className="space-y-6">
+        {SPEC_GROUPS.map((group) => {
+          // P121: never render a spec group where NO selected vehicle has ANY
+          // value (e.g. battery/charging blocks on gasoline-only pairs) —
+          // empty groups read as broken, not as truthful-unavailable.
+          const hasAnyValue = group.fields.some((field) =>
+            data.some((v: any) =>
+              (field.key === "price" ? v.price : v.specs?.[field.key]) != null
+            )
+          );
+          if (!hasAnyValue) return null;
+          return (
           <Card key={group.group}>
             <CardBody>
               <h3 className="text-sm font-semibold text-[var(--color-gray-500)] mb-4 uppercase tracking-wider">{group.group}</h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <tbody>
-                    {group.fields.map((field) => (
-                      <tr key={field.key} className="border-b border-[var(--color-gray-100)] last:border-0">
+                    {group.fields.map((field) => {
+                      // P121: difference-filter target — a row is "different"
+                      // when the rendered values are not all identical
+                      const rowValues = data.map((v: any) =>
+                        JSON.stringify((field.key === "price" ? v.price : v.specs[field.key]) ?? null)
+                      );
+                      const different = new Set(rowValues).size > 1;
+                      return (
+                      <tr key={field.key} data-different={different ? "true" : "false"} className="border-b border-[var(--color-gray-100)] last:border-0">
                         <td className="py-3 pr-4 text-[var(--color-gray-600)] font-medium whitespace-nowrap w-32">{field.label}</td>
                         {data.map((v: any) => {
                           const value = field.key === "price" ? v.price : v.specs[field.key];
@@ -186,38 +225,54 @@ export default function ComparePage() {
                           );
                         })}
                       </tr>
-                    ))}
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
             </CardBody>
           </Card>
-        ))}
+          );
+        })}
 
         {/* Features comparison */}
         {allFeatures.length > 0 && (
           <Card>
             <CardBody>
               <h3 className="text-sm font-semibold text-[var(--color-gray-500)] mb-4 uppercase tracking-wider">อุปกรณ์และระบบช่วยเหลือ</h3>
+              <p className="text-xs text-[var(--color-gray-400)] mb-3">✓ ติดตั้ง · ✗ ไม่ติดตั้ง (ยืนยันแล้ว) · ไม่มีข้อมูล = ยังไม่มีแหล่งข้อมูลยืนยัน</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <tbody>
                     {allFeatures.map((slug) => {
-                      const feature = data[0].features.find((f) => f.slug === slug);
+                      // label from ANY selected vehicle (not only the first)
+                      const feature = data.flatMap((v) => v.features).find((f) => f.slug === slug);
+                      const cells = data.map((v) => featureCellText(v.features, slug));
+                      const different = new Set(cells).size > 1;
                       return (
-                        <tr key={slug} className="border-b border-[var(--color-gray-100)] last:border-0">
+                        <tr key={slug} data-different={different ? "true" : "false"} className="border-b border-[var(--color-gray-100)] last:border-0">
                           <td className="py-2 pr-4 text-[var(--color-gray-600)] font-medium whitespace-nowrap">
                             {feature?.nameTh || slug}
                           </td>
                           {data.map((v) => {
-                            const hasFeature = v.features.some((f) => f.slug === slug);
+                            // P116 three-state: ✓ installed · ✗ explicitly not
+                            // installed · ไม่มีข้อมูล = no row (never guessed)
+                            const cell = featureCellText(v.features, slug);
+                            const isInstalled = cell === "✓";
+                            const isMissing = cell === "ไม่มีข้อมูล";
                             return (
                               <td key={v.id} className="py-2 px-2 text-center">
-                                {hasFeature ? (
-                                  <span className="text-[var(--color-success-600)]">✓</span>
-                                ) : (
-                                  <span className="text-[var(--color-gray-300)]">—</span>
-                                )}
+                                <span
+                                  className={
+                                    isInstalled
+                                      ? "text-[var(--color-success-600)]"
+                                      : isMissing
+                                        ? "text-[var(--color-gray-400)] text-xs"
+                                        : "text-[var(--color-gray-500)]"
+                                  }
+                                >
+                                  {cell}
+                                </span>
                               </td>
                             );
                           })}
@@ -231,6 +286,10 @@ export default function ComparePage() {
           </Card>
         )}
       </div>
+      {/* Provenance note */}
+      <p className="text-xs text-[var(--color-gray-400)] mt-4">
+        ℹ️ ข้อมูลที่แสดงเป็นข้อมูลที่ผ่านการตรวจสอบจากแหล่งข้อมูลทางการเท่านั้น — ช่องที่ระบุ &quot;{NO_DATA}&quot; ยังไม่มีแหล่งข้อมูลที่ยืนยันได้
+      </p>
     </div>
   );
 }

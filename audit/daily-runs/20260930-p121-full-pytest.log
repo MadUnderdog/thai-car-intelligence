@@ -1,0 +1,67 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0
+rootdir: /home/ubuntu/Projects/thai-car-intelligence
+plugins: anyio-4.14.2
+collected 1047 items / 1 error
+
+tests/test_acquisition_provenance.py ....................                [  1%]
+tests/test_extraction_fixtures.py ...................................... [  5%]
+........................................................................ [ 12%]
+................................                                         [ 15%]
+tests/test_gold_set.py ..........                                        [ 16%]
+tests/test_gwm_price_adapter.py .......................                  [ 18%]
+tests/test_locator_resolution.py .........                               [ 19%]
+tests/test_media_source_class.py .............                           [ 20%]
+tests/test_model_identity.py .......................................     [ 24%]
+tests/test_p100_catalog_layers.py .................                      [ 26%]
+tests/test_p102_identity_universe.py ................................... [ 29%]
+.....                                                                    [ 29%]
+tests/test_p103_catalog.py ............................................. [ 34%]
+......                                                                   [ 34%]
+tests/test_p104_catalog.py ............................................. [ 39%]
+........................................................................ [ 45%]
+........................................................................ [ 52%]
+........................................................................ [ 59%]
+......                                                                   [ 60%]
+tests/test_p105_variant_depth.py ....................................... [ 63%]
+...........                                                              [ 65%]
+tests/test_p106_variant_recovery.py ....................                 [ 66%]
+tests/test_p107_batch_sources.py ..................                      [ 68%]
+tests/test_p108_external_discovery.py .....................              [ 70%]
+tests/test_p109_current_market.py ......................                 [ 72%]
+tests/test_p110_price_pass.py ..........................                 [ 75%]
+tests/test_p111_price_fix.py ...........                                 [ 76%]
+tests/test_p112_spec_pass.py ............                                [ 77%]
+tests/test_p113_packet_acceptance.py ..............                      [ 78%]
+tests/test_p114_promotion.py ..............                              [ 80%]
+tests/test_p118_backoff_policy.py .........                              [ 80%]
+tests/test_p118_daily_run.py ................                            [ 82%]
+tests/test_p119_assembly.py .............                                [ 83%]
+tests/test_p119_proposals.py .....                                       [ 84%]
+tests/test_p119_r1_safety.py ............                                [ 85%]
+tests/test_p120_observability.py .......                                 [ 86%]
+tests/test_p120_promotion.py ..............                              [ 87%]
+tests/test_p120_r1_evidence_integrity.py .......                         [ 88%]
+tests/test_p98_semantic_audit.py ...............                         [ 89%]
+tests/test_registry_invariants.py .......                                [ 90%]
+tests/test_spec_coverage_plan.py ........                                [ 90%]
+tests/test_taxonomy_provenance.py ...................................... [ 94%]
+......                                                                   [ 95%]
+tests/test_thai_aliases.py ............................................. [ 99%]
+                                                                         [ 99%]
+tests/test_toyota_currentness_policy.py ......                           [100%]
+
+==================================== ERRORS ====================================
+__________ ERROR collecting tests/test_generation_config_boundary.py ___________
+ImportError while importing test module '/home/ubuntu/Projects/thai-car-intelligence/tests/test_generation_config_boundary.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_generation_config_boundary.py:6: in <module>
+    from thai_factory.extract.ai_extractor import (
+E   ImportError: cannot import name '_OPENROUTER_ALLOWED_MODEL' from 'thai_factory.extract.ai_extractor' (/home/ubuntu/Projects/thai-car-intelligence/tests/../lib/thai_factory/extract/ai_extractor.py)
+=========================== short test summary info ============================
+ERROR tests/test_generation_config_boundary.py
+================== 1047 passed, 1 error in 1370.50s (0:22:50) ==================

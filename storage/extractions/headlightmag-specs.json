@@ -1,0 +1,138 @@
+{
+  "Honda City": {
+    "brand": "honda",
+    "specs": {
+      "length_mm": 4675,
+      "width_mm": 1842,
+      "height_mm": 1480,
+      "wheelbase_mm": 2680,
+      "engine_displacement_l": 1.5,
+      "engine_cc": 1498,
+      "power_hp": 114,
+      "torque_nm": 150,
+      "transmission": "เกียร์อัตโนมัติ CVT ล็อคโปรแกรมอัตราทดเกียร์ 8 จั",
+      "drive": "FWD"
+    },
+    "source": "https://www.headlightmag.com/honda-city/spec",
+    "source_type": "SECONDARY_AUTOMOTIVE_MEDIA"
+  },
+  "Honda Civic": {
+    "brand": "honda",
+    "specs": {
+      "length_mm": 4675,
+      "width_mm": 1842,
+      "height_mm": 1480,
+      "wheelbase_mm": 2680,
+      "engine_displacement_l": 1.5,
+      "engine_cc": 1498,
+      "power_hp": 114,
+      "torque_nm": 150,
+      "transmission": "เกียร์อัตโนมัติ CVT ล็อคโปรแกรมอัตราทดเกียร์ 8 จั",
+      "drive": "FWD"
+    },
+    "source": "https://www.headlightmag.com/honda-civic/spec",
+    "source_type": "SECONDARY_AUTOMOTIVE_MEDIA"
+  },
+  "Honda CR-V": {
+    "brand": "honda",
+    "specs": {
+      "length_mm": 4675,
+      "width_mm": 1842,
+      "height_mm": 1480,
+      "wheelbase_mm": 2680,
+      "engine_displacement_l": 1.5,
+      "engine_cc": 1498,
+      "power_hp": 114,
+      "torque_nm": 150,
+      "transmission": "เกียร์อัตโนมัติ CVT ล็อคโปรแกรมอัตราทดเกียร์ 8 จั",
+      "drive": "FWD"
+    },
+    "source": "https://www.headlightmag.com/honda-cr-v/spec",
+    "source_type": "SECONDARY_AUTOMOTIVE_MEDIA"
+  },
+  "Toyota Yaris": {
+    "brand": "toyota",
+    "specs": {
+      "length_mm": 4675,
+      "width_mm": 1842,
+      "height_mm": 1480,
+      "wheelbase_mm": 2680,
+      "engine_displacement_l": 1.5,
+      "engine_cc": 1498,
+      "power_hp": 114,
+      "torque_nm": 150,
+      "transmission": "เกียร์อัตโนมัติ CVT ล็อคโปรแกรมอัตราทดเกียร์ 8 จั",
+      "drive": "FWD"
+    },
+    "source": "https://www.headlightmag.com/toyota-yaris/spec",
+    "source_type": "SECONDARY_AUTOMOTIVE_MEDIA"
+  },
+  "Toyota Corolla Altis": {
+    "brand": "toyota",
+    "specs": {
+      "length_mm": 4675,
+      "width_mm": 1842,
+      "height_mm": 1480,
+      "wheelbase_mm": 2680,
+      "engine_displacement_l": 1.5,
+      "engine_cc": 1498,
+      "power_hp": 114,
+      "torque_nm": 150,
+      "transmission": "เกียร์อัตโนมัติ CVT ล็อคโปรแกรมอัตราทดเกียร์ 8 จั",
+      "drive": "FWD"
+    },
+    "source": "https://www.headlightmag.com/toyota-corolla-altis/spec",
+    "source_type": "SECONDARY_AUTOMOTIVE_MEDIA"
+  },
+  "Nissan Almera": {
+    "brand": "nissan",
+    "specs": {
+      "length_mm": 4675,
+      "width_mm": 1842,
+      "height_mm": 1480,
+      "wheelbase_mm": 2680,
+      "engine_displacement_l": 1.5,
+      "engine_cc": 1498,
+      "power_hp": 114,
+      "torque_nm": 150,
+      "transmission": "เกียร์อัตโนมัติ CVT ล็อคโปรแกรมอัตราทดเกียร์ 8 จั",
+      "drive": "FWD"
+    },
+    "source": "https://www.headlightmag.com/nissan-almera/spec",
+    "source_type": "SECONDARY_AUTOMOTIVE_MEDIA"
+  },
+  "Mazda CX-5": {
+    "brand": "mazda",
+    "specs": {
+      "length_mm": 4675,
+      "width_mm": 1842,
+      "height_mm": 1480,
+      "wheelbase_mm": 2680,
+      "engine_displacement_l": 1.5,
+      "engine_cc": 1498,
+      "power_hp": 114,
+      "torque_nm": 150,
+      "transmission": "เกียร์อัตโนมัติ CVT ล็อคโปรแกรมอัตราทดเกียร์ 8 จั",
+      "drive": "FWD"
+    },
+    "source": "https://www.headlightmag.com/mazda-cx-5/spec",
+    "source_type": "SECONDARY_AUTOMOTIVE_MEDIA"
+  },
+  "MG ZS": {
+    "brand": "mg",
+    "specs": {
+      "length_mm": 4675,
+      "width_mm": 1842,
+      "height_mm": 1480,
+      "wheelbase_mm": 2680,
+      "engine_displacement_l": 1.5,
+      "engine_cc": 1498,
+      "power_hp": 114,
+      "torque_nm": 150,
+      "transmission": "เกียร์อัตโนมัติ CVT ล็อคโปรแกรมอัตราทดเกียร์ 8 จั",
+      "drive": "FWD"
+    },
+    "source": "https://www.headlightmag.com/mg-zs/spec",
+    "source_type": "SECONDARY_AUTOMOTIVE_MEDIA"
+  }
+}

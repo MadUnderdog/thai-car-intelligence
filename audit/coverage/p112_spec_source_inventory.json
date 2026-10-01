@@ -1,0 +1,3069 @@
+{
+  "schema": "p112_spec_source_inventory/1",
+  "generated_at": "2026-09-28T09:31:35.585115+00:00",
+  "session_id": "p112_spec_sources_20260928",
+  "method": "ONE inventory: reuse candidates pinned from committed fixtures first; new fetches limited to documented official spec endpoints for P3-gap OEMs; everything else is an explicit source-ceiling row",
+  "totals": {
+    "entries": 290,
+    "reuse_entries": 274,
+    "fetch_selected": 2,
+    "ceiling_rows": 14
+  },
+  "entries": [
+    {
+      "brand": "BMW",
+      "artifact": "bmw_p111_bmw-m2-coupe.html",
+      "url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "BMW",
+      "artifact": "bmw_p111_bmw-m2-coupe_dup2.html",
+      "url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "BMW",
+      "artifact": "bmw_p111_bmw-m2-coupe_dup3.html",
+      "url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "BMW",
+      "artifact": "bmw_p111_bmw-m2-coupe_dup4.html",
+      "url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "BMW",
+      "artifact": "bmw_p111_bmw-m2-coupe_dup5.html",
+      "url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "BMW",
+      "artifact": "bmw_p111_bmw-m2-coupe_dup6.html",
+      "url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "BMW",
+      "artifact": "bmw_p111_bmw-m2-coupe_dup7.html",
+      "url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "BMW",
+      "artifact": "bmw_p111_bmw-m2-coupe_dup8.html",
+      "url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "BMW",
+      "artifact": "bmw_p111_bmw-m2-coupe_dup9.html",
+      "url": "https://www.bmw.co.th/th/all-models/m-series/bmw-2-series-m-models/bmw-m2-coupe.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "BMW",
+      "artifact": "bmw_brochure_page.html",
+      "url": "https://www.bmw.co.th/en/topics/brochure.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Changan",
+      "artifact": "changan_home_page.html",
+      "url": "https://www.changan.co.th/th/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Changan",
+      "artifact": "changan_lumin_page.html",
+      "url": "https://www.changan.co.th/th/lumin/luminl-dc-th/",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Changan",
+      "artifact": "changan_nevo_q05_page.html",
+      "url": "https://www.changan.co.th/th/nevo-q05/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Changan",
+      "artifact": "changan_p107_compare-cars_dup.html",
+      "url": "https://www.changan.co.th/th/compare-cars/?compare1=17",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Changan",
+      "artifact": "changan_p107_Q05_Specs_sheet_en_99kw_for_export_model_2ecb16b06b.pdf.b64",
+      "url": "https://api.www.changan.co.th/uploads/Q05_Specs_sheet_en_99kw_for_export_model_2ecb16b06b.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Changan",
+      "artifact": "changan_p107_compare-cars.html",
+      "url": "https://www.changan.co.th/th/compare-cars/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Changan",
+      "artifact": "changan_press_news.html",
+      "url": "https://www.changan.co.th/th/news/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Changan",
+      "artifact": "changan_promotion_page.html",
+      "url": "https://www.changan.co.th/th/promotion/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Changan",
+      "artifact": "Changan_NEVOQ05_SpecSheet_th.pdf.b64",
+      "url": "https://www.changan.co.th/images/nevo/q05/pdf/Q05-Specs-sheet-th.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_specification_dup7.html",
+      "url": "https://www.changan.co.th/th/deepal/e07-performance-awd/specification/",
+      "source_family": "variant_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_e07_awd.html",
+      "url": "https://www.changan.co.th/th/deepal/e07-performance-awd/",
+      "source_family": "variant_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_s07.html",
+      "url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_specification_dup8.html",
+      "url": "https://www.changan.co.th/th/deepal/e07-plus-th/specification/",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_specification_dup3.html",
+      "url": "https://www.changan.co.th/en/deepal/hunter-k50-en/specification/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_specification_dup5.html",
+      "url": "https://www.changan.co.th/en/deepal/s05-reev-en/specification/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_e07_plus.html",
+      "url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_hunter_k50.html",
+      "url": "https://www.changan.co.th/th/deepal/hunter-k50-th/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_specification.html",
+      "url": "https://www.changan.co.th/en/deepal/e07-peformance-awd-en/specification/",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_specification_dup2.html",
+      "url": "https://www.changan.co.th/en/deepal/e07-plus-en/specification/",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_specification_dup4.html",
+      "url": "https://www.changan.co.th/en/deepal/s05-en/specification/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_specification_dup6.html",
+      "url": "https://www.changan.co.th/en/deepal/s07-en/specification/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_s05.html",
+      "url": "https://www.changan.co.th/th/deepal/s05-th/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_s05_reev.html",
+      "url": "https://www.changan.co.th/th/deepal/s05-reev-th/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p107_AW_Leaflet_DEEPAL_S05_Eng_Version_changewww_90800aa83c.pdf.b64",
+      "url": "https://api.www.changan.co.th/uploads/AW_Leaflet_DEEPAL_S05_Eng_Version_changewww_90800aa83c.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p107_K50_Brochure_TH_3bbe40a5d3.pdf.b64",
+      "url": "https://api.www.changan.co.th/uploads/K50_Brochure_TH_3bbe40a5d3.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_deepal-green-planet.html",
+      "url": "https://www.changan.co.th/th/deepal-green-planet/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_e07-peformance-awd-en.html",
+      "url": "https://www.changan.co.th/en/deepal/e07-peformance-awd-en/",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_deepal-e07-new-car-model.html",
+      "url": "https://www.changan.co.th/en/page/deepal-e07-new-car-model/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_motor-expo-2024-deepal.html",
+      "url": "https://www.changan.co.th/en/page/motor-expo-2024-deepal/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_s07-MTS-025.html",
+      "url": "https://www.changan.co.th/en/page/s07-MTS-025/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p111_unlocked-your-lifestyle-suv-deepal-S07-deepal-L07.html",
+      "url": "https://www.changan.co.th/en/page/unlocked-your-lifestyle-suv-deepal-S07-deepal-L07/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Deepal",
+      "artifact": "deepal_p107_S05_Brochure_TH_b92d1a256f.pdf.b64",
+      "url": "https://api.www.changan.co.th/uploads/S05_Brochure_TH_b92d1a256f.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "gwm_p107_220326_tc_brochure_ora5_hev_th.pdf.b64",
+      "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/th/model/ora-5/220326_tc_brochure_ora5_hev_th.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "gwm_p107_26_Thai_Catalogue_TANK300_DIESEL_.pdf.txt",
+      "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/tank-300-diesel/26_Thai_Catalogue%20TANK300%20DIESEL%20.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "GWM_ORA5BEV_Catalog.pdf.b64",
+      "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/th/model/ora-5/tc_ora5_bev_catalog_th_220326.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "gwm_p107_GWM_NEW_Haval_H6_Brochure.pdf.b64",
+      "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/haval-h6-hev/GWM%20NEW%20Haval%20H6%20Brochure.pdf",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "GWM_HavalH6_Brochure.pdf.b64",
+      "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/haval-h6-hev/0901_th_h6.pdf",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "gwm_p107_GWM_POER_SAHAR_DIESEL_TH.pdf.b64",
+      "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/poer-sahar-diesel/GWM%20POER%20SAHAR%20DIESEL_TH.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "gwm_th_model_ora-5-hev.html",
+      "url": "https://www.gwm.co.th/th/models/ora-5-hev",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "gwm_th_model_sahar-diesel.html",
+      "url": "https://www.gwm.co.th/th/models/sahar-diesel",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "gwm_th_model_wey-g9.html",
+      "url": "https://www.gwm.co.th/th/models/wey-g9",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "gwm_th_model_sahar.html",
+      "url": "https://www.gwm.co.th/th/models/sahar",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "gwm_th_model_tank-300.html",
+      "url": "https://www.gwm.co.th/th/models/tank-300",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "GWM",
+      "artifact": "gwm_p107_gwm_poer_sahar_diesel_brochure.pdf.txt",
+      "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/poer-sahar-diesel-new/gwm_poer_sahar_diesel_brochure.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Honda",
+      "artifact": "honda_p107_oTybBo5YUrIYbwjL0ivmaCyinhFfEoUL.pdf.txt",
+      "url": "https://assets.honda.co.th/www-assets/model/2026/02/19/oTybBo5YUrIYbwjL0ivmaCyinhFfEoUL.pdf?response-content-disposition=attachment%3B%20filename%3DNew%20STEP%20WGN%20e:HEV%20Catalog.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Honda",
+      "artifact": "honda_p107_z7ogIL1mFkQvo11aYyDTf6YPmH4LES9c.pdf.txt",
+      "url": "https://assets.honda.co.th/www-assets/model/2026/07/22/z7ogIL1mFkQvo11aYyDTf6YPmH4LES9c.pdf?response-content-disposition=attachment%3B%20filename%3DNew%20Honda%20Civic%20e:HEV%20Catalog.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Honda",
+      "artifact": "honda_p111_wrv.html",
+      "url": "https://www.honda.co.th/en/wrv",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Honda",
+      "artifact": "honda_brochure_1.pdf",
+      "url": "https://assets.honda.co.th/www-assets/model/2026/06/26/i6hZNelHYNX0LptCvSY8sw1hN3honOd6.pdf?response-content-disposition=attachment%3B%20filename%3DNew Honda City - Catalog.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Honda",
+      "artifact": "honda_p107_3r9nlBpVjXbHrlGvCChH0scFGfewYQGM.pdf.txt",
+      "url": "https://assets.honda.co.th/www-assets/model/2025/06/10/3r9nlBpVjXbHrlGvCChH0scFGfewYQGM.pdf?response-content-disposition=attachment%3B%20filename%3DHonda%20e:N1%20Catalogue.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Honda",
+      "artifact": "honda_p107_6CdfhVQHROmk0raXdaXA8qd8lJiRGKi7.pdf.b64",
+      "url": "https://assets.honda.co.th/www-assets/model/2026/06/26/6CdfhVQHROmk0raXdaXA8qd8lJiRGKi7.pdf?response-content-disposition=attachment%3B%20filename%3DNew%20Honda%20City%20-%20Catalog.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Honda",
+      "artifact": "honda_p111_stepwgnehev.html",
+      "url": "https://www.honda.co.th/en/stepwgnehev",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Honda",
+      "artifact": "honda_models_page.html",
+      "url": "https://www.honda.co.th/models",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_p111_isuzu-mu-x.html",
+      "url": "https://www.isuzu-tis.com/isuzu-mu-x",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_p111_ultimate.html",
+      "url": "https://www.isuzu-tis.com/isuzu-mu-x/ultimate",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_brochure_spark.pdf",
+      "url": "https://assets.isuzu-tis.com/spark_brochure_2026_ed212091cf.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_p107_v_cross_fleet_brochure_5ae2ce4d38.pdf.b64",
+      "url": "https://assets.isuzu-tis.com/v_cross_fleet_brochure_5ae2ce4d38.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_brochure_mux.pdf",
+      "url": "https://assets.isuzu-tis.com/mu_x_brochure_2026_5d17d1513d.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_brochure_vcross.pdf",
+      "url": "https://assets.isuzu-tis.com/v_cross_brochure_2026_23a52b3f0d.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_brochure_xseries.pdf",
+      "url": "https://assets.isuzu-tis.com/x_series_brochure_2026_6f67fd7b71.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_brochure_4door.pdf",
+      "url": "https://assets.isuzu-tis.com/4_door_brochure_2026_be4df560bb.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_p107_4_door_fleet_brochure_7a7d04d3e6.pdf.b64",
+      "url": "https://assets.isuzu-tis.com/4_door_fleet_brochure_7a7d04d3e6.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_p111_isuzu-d-max-ev.html",
+      "url": "https://www.isuzu-tis.com/isuzu-d-max-ev",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_p107_2_door_fleet_brochure_d9eb0e9bd6.pdf.b64",
+      "url": "https://assets.isuzu-tis.com/2_door_fleet_brochure_d9eb0e9bd6.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_brochure_page.html",
+      "url": "https://www.isuzu-tis.com/download-brochure",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_p107_mu-x-financial-normalmodel.html",
+      "url": "https://www.isuzu-tis.com/specialoffer/ppv/mu-x-financial-normalmodel",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_p107_mu-x-financial.html",
+      "url": "https://www.isuzu-tis.com/specialoffer/ppv/mu-x-financial",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_p107_ppv.html",
+      "url": "https://www.isuzu-tis.com/specialoffer/ppv",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Isuzu",
+      "artifact": "isuzu_p107_specialoffer.html",
+      "url": "https://www.isuzu-tis.com/specialoffer",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Jaguar",
+      "artifact": "jaguar_f_type_models.html",
+      "url": "https://www.jaguar.co.th/jaguar-range/f-type/models",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Jaguar",
+      "artifact": "jaguar_p107_f-pace-svr-575-edition.html",
+      "url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-pace-svr-575-edition",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Jaguar",
+      "artifact": "jaguar_p107_f-type-zp-edition.html",
+      "url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/f-type-zp-edition",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Jaguar",
+      "artifact": "jaguar_electric_overview.html",
+      "url": "https://www.jaguar.co.th/electric-cars/overview",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Jaguar",
+      "artifact": "jaguar_home_page.html",
+      "url": "https://www.jaguar.co.th/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Jaguar",
+      "artifact": "jaguar_p107_overview.html",
+      "url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Jaguar",
+      "artifact": "jaguar_p107_overview_dup.html",
+      "url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Jaguar",
+      "artifact": "jaguar_press_news.html",
+      "url": "https://www.jaguar.co.th/about-jaguar/news",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Jaguar",
+      "artifact": "jaguar_range_page.html",
+      "url": "https://www.jaguar.co.th/jaguar-range/overview",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_press_article_carnival.html",
+      "url": "https://www.kia.com/th/th/discover-kia/article/review-the-new-kia-carnival-hev-7-seater-3.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_carnival_features.html",
+      "url": "https://www.kia.com/th/th/cars/carnival/features.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_p111_th.html",
+      "url": "https://buyonline.kia.com/th?lang=en",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_p111_th_dup2.html",
+      "url": "https://buyonline.kia.com/th?lang=th",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_carnival_hev_features.html",
+      "url": "https://www.kia.com/th/th/cars/carnival-hev/features.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_promo_carnival_diesel.html",
+      "url": "https://www.kia.com/th/th/util/promotion/thekiacarnival-diesel-2026.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_promo_carnival_hev.html",
+      "url": "https://www.kia.com/th/th/util/promotion/thekiacarnival-hev-2026.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_p108_features.html",
+      "url": "https://www.kia.com/th/en/cars/carnival-hev/features.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_ev5_features.html",
+      "url": "https://www.kia.com/th/th/cars/ev5/features.html",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_p111_request-a-brochure.html",
+      "url": "https://www.kia.com/th/en/shopping-tools/request-a-brochure.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_brochure_hub.html",
+      "url": "https://www.kia.com/th/th/shopping-tools/download-a-brochure.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_p108_download-a-brochure.html",
+      "url": "https://www.kia.com/th/en/shopping-tools/download-a-brochure.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_p108_kia-th-ka4-22my-dimensions-allview.png.html",
+      "url": "https://www.kia.com/content/dam/kwcms/th/th/images/showroom/carnival-21my/specification/kia-th-ka4-22my-dimensions-allview.png",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Kia",
+      "artifact": "kia_p111_request-a-brochure_dup2.html",
+      "url": "https://www.kia.com/th/th/shopping-tools/request-a-brochure.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Land Rover",
+      "artifact": "landrover_discovery_page.html",
+      "url": "https://www.landrover.co.th/discovery/overview",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Land Rover",
+      "artifact": "landrover_home_page.html",
+      "url": "https://www.landrover.co.th/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Land Rover",
+      "artifact": "landrover_press_articles.html",
+      "url": "https://www.landrover.co.th/explore-land-rover/articles",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Land Rover",
+      "artifact": "landrover_range_rover_page.html",
+      "url": "https://www.landrover.co.th/range-rover/overview",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_compare-models.html",
+      "url": "https://www.lexus.co.th/en/price-and-model-tools/compare-models.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_press_news.html",
+      "url": "https://www.lexus.co.th/th/discover-lexus/news-and-events.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_models_page.html",
+      "url": "https://www.lexus.co.th/th.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_brochures.html",
+      "url": "https://www.lexus.co.th/th/price-and-model-tools/model-brochures.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_price_list.html",
+      "url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_lx-500d-fsport.html",
+      "url": "https://www.lexus.co.th/en/models/lx/lx-500d-fsport.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_lx-500d-premier.html",
+      "url": "https://www.lexus.co.th/en/models/lx/lx-500d-premier.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_nx-350h-grand-luxury.html",
+      "url": "https://www.lexus.co.th/en/models/nx/nx-350h-grand-luxury.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_lm-350h-4-seater.html",
+      "url": "https://www.lexus.co.th/en/models/lm/lm-350h-4-seater.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_lm-500h-4-seater.html",
+      "url": "https://www.lexus.co.th/en/models/lm/lm-500h-4-seater.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_lm-350h-7-seater.html",
+      "url": "https://www.lexus.co.th/en/models/lm/lm-350h-7-seater.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_lm-500h-6-seater.html",
+      "url": "https://www.lexus.co.th/en/models/lm/lm-500h-6-seater.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_es.html",
+      "url": "https://www.lexus.co.th/en/models/es.html",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_configurator.html",
+      "url": "https://www.lexus.co.th/en/configurator.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_lx.html",
+      "url": "https://www.lexus.co.th/en/models/lx.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_2021-hsbc-womens-world-championship.html",
+      "url": "https://www.lexus.co.th/en/discover-lexus/news-and-events/2021-hsbc-womens-world-championship.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_2024-miami-art-and-design-week-collaboration.html",
+      "url": "https://www.lexus.co.th/en/discover-lexus/news-and-events/2024-miami-art-and-design-week-collaboration.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_corporate-sales.html",
+      "url": "https://www.lexus.co.th/en/price-and-model-tools/corporate-sales.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_culinary-perspectives.html",
+      "url": "https://www.lexus.co.th/en/discover-lexus/lexus-creates/family-activities/culinary-perspectives.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_en.html",
+      "url": "https://www.lexus.co.th/en.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_model-configurator.html",
+      "url": "https://www.lexus.co.th/en/model-configurator.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_payment-calculator.html",
+      "url": "https://www.lexus.co.th/en/price-and-model-tools/payment-calculator.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p108_price-list.html",
+      "url": "https://www.lexus.co.th/en/price-and-model-tools/price-list.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_lexus-unveils-the-new-nx-in-a-world-premiere.html",
+      "url": "https://www.lexus.co.th/en/discover-lexus/press-room/lexus-unveils-the-new-nx-in-a-world-premiere.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_lm.html",
+      "url": "https://www.lexus.co.th/en/models/lm.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_nx.html",
+      "url": "https://www.lexus.co.th/en/models/nx.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_we-are-lexus-rx.html",
+      "url": "https://www.lexus.co.th/en/discover-lexus/we-are-lexus-rx.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_world-premiere-of-the-all-new-lexus-lm.html",
+      "url": "https://www.lexus.co.th/en/discover-lexus/press-room/world-premiere-of-the-all-new-lexus-lm.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p111_world-premiere-of-the-all-new-lexus-rx.html",
+      "url": "https://www.lexus.co.th/en/discover-lexus/press-room/world-premiere-of-the-all-new-lexus-rx.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p107_AW_catalog_nov2025_Lexus_RX.pdf.txt",
+      "url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_RX.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p107_AW_catalog_nov2025_Lexus_RZ.pdf.b64",
+      "url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_RZ.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p107_AW_catalog_nov2025_Lexus_NX.pdf.b64",
+      "url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_NX.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p107_2024_LBX.pdf.b64",
+      "url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2024/2024_LBX.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p107_AW_Lexus_Sep2025_Catalogue_LS.pdf.b64",
+      "url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW%20Lexus_Sep2025_Catalogue%20LS.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Lexus",
+      "artifact": "lexus_p107_AW_Lexus_Catalog_dec2025_LX.pdf.b64",
+      "url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_Lexus_Catalog_dec2025_LX.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_p108_mg-ep-plus.html",
+      "url": "https://www.mgcars.com/th/cars/mg-ep-plus",
+      "source_family": "variant_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_car_mg-hs.html",
+      "url": "https://www.mgcars.com/th/cars/mg-hs",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_p108_mg-cyberster.html",
+      "url": "https://www.mgcars.com/th/cars/mg-cyberster",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_car_mg-im6.html",
+      "url": "https://www.mgcars.com/th/cars/mg-im6",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_p111_mg5.html",
+      "url": "https://www.mgcars.com/th/cars/mg5",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_car_mg-urban.html",
+      "url": "https://www.mgcars.com/th/cars/mg-urban",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_p108_mg-es.html",
+      "url": "https://www.mgcars.com/th/cars/mg-es",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_car_mg-zs.html",
+      "url": "https://www.mgcars.com/th/cars/mg-zs",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_p108_all-new-mg3.html",
+      "url": "https://www.mgcars.com/th/cars/all-new-mg3",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_home_page.html",
+      "url": "https://www.mgcars.com/th",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_p107_03eda59ea41eef277888653394726ac6.pdf.txt",
+      "url": "https://mg-upload.sgp1.cdn.digitaloceanspaces.com/03eda59ea41eef277888653394726ac6.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_press_news.html",
+      "url": "https://www.mgcars.com/th/news",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MG",
+      "artifact": "mg_p107_dc7cae36eb770cd7476ea64c230e7f7e.pdf.txt",
+      "url": "https://mg-upload.sgp1.cdn.digitaloceanspaces.com/dc7cae36eb770cd7476ea64c230e7f7e.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MINI",
+      "artifact": "mini_home_page.html",
+      "url": "https://www.mini.co.th/en_TH/home.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MINI",
+      "artifact": "MINI_PriceSheet_20260327.pdf.b64",
+      "url": "https://www.mini.co.th/content/dam/MINI/marketTH/mini_co_th/brochure/brochure-2026/MINI-Price-Sheet-Revised-27-Mar-2026.pdf.asset.1774933915613.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MINI",
+      "artifact": "mini_p107_MINI-Service-Inclusive-new.html",
+      "url": "https://www.mini.co.th/en_TH/home/serv/special-offers/MINI-Service-Inclusive-new.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MINI",
+      "artifact": "mini_p107_Mini_Go-Kart_OnTheRoof.html",
+      "url": "https://www.mini.co.th/en_TH/home/serv/special-offers/Mini_Go-Kart_OnTheRoof.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MINI",
+      "artifact": "mini_p107_brochure.html",
+      "url": "https://www.mini.co.th/en_TH/home/brochure.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MINI",
+      "artifact": "mini_p107_convenience-no-matter-what-you-choose.html",
+      "url": "https://www.mini.co.th/en_TH/home/serv/special-offers/convenience-no-matter-what-you-choose.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MINI",
+      "artifact": "mini_p107_mini_connected.html",
+      "url": "https://www.mini.co.th/en_TH/home/serv/special-offers/mini_connected.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MINI",
+      "artifact": "mini_p107_mini_expo_2025_new.html",
+      "url": "https://www.mini.co.th/en_TH/home/serv/special-offers/mini_expo_2025_new.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "MINI",
+      "artifact": "mini_p107_motor_expo_2025.html",
+      "url": "https://www.mini.co.th/en_TH/home/serv/special-offers/motor_expo_2025.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_home_page.html",
+      "url": "https://www.mazda.co.th/th",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_brochure_mazda2.pdf",
+      "url": "https://www.mazda.co.th/s3fs-public/2025-03/brochure_mazda2_essential_26032025.pdf?VersionId=AfXNz7AmQsbwFurYSIj4Rc0LOJo9UwWw",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_spec_mazda-cx5.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda-cx5/spec",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_spec_mazda2-essential.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda2-essential/spec",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_car_mazda2-essential.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_p107_New_Mazda_CX-30_Essential_2025_Big.pdf.b64",
+      "url": "https://www.mazda.co.th/s3fs-public/2026-04/New%20Mazda%20CX-30%20Essential_2025_Big.pdf?VersionId=C0PSWzUj5NTW.vWbsMFfJ2zsRHk_f3lu",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_p111_mazda-bt50-tcg.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda-bt50-tcg",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_spec_mazda3-sedan.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda3-sedan/spec",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_spec_new-mazda-bt50.html",
+      "url": "https://www.mazda.co.th/th/cars/new-mazda-bt50/spec",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_p107_spec.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_car_mazda-cx5.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda-cx5",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_car_mazda3-sedan.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda3-sedan",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_p111_mazda3-fastback.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda3-fastback",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_car_new-mazda-bt50.html",
+      "url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_p107_spec_dup.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda3-sedan/spec",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_p108_new-mazda-bt50.html",
+      "url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mazda",
+      "artifact": "mazda_p108_spec.html",
+      "url": "https://www.mazda.co.th/th/cars/spec",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p111_mirage.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/cars/mirage",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p108_unveil-spec-prices-of-athlete-and-dc-4wd-ultra.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/news-activity/news/unveil-spec-prices-of-athlete-and-dc-4wd-ultra",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_brochures.html",
+      "url": "https://www.mitsubishi-motors.co.th/th/download-a-brochure",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_press_news.html",
+      "url": "https://www.mitsubishi-motors.co.th/th/news-activity/news",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p108_new-xpander-cross_special-price-extension.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/buy/news-activity/new-xpander-cross_special-price-extension",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p111_buy.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/buy",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p108_nextgen-configurator.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/buy/configure/nextgen-configurator",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_all_models_price.html",
+      "url": "https://www.mitsubishi-motors.co.th/th/buy/all-models-price",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_home_page.html",
+      "url": "https://www.mitsubishi-motors.co.th/th?rd=true",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p108_configurator.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/buy/configure/configurator",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p108_configure.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/buy/configure",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p108_en.html",
+      "url": "https://www.mitsubishi-motors.co.th/en",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p108_explore-model-a.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-model-a",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p108_news-activity.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/buy/news-activity",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p111_configure.html",
+      "url": "https://www.mitsubishi-motors.co.th/th/configure",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p111_configure4.html",
+      "url": "https://www.mitsubishi-motors.co.th/th/buy/configure4",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p111_explore-mirage-colt.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-mirage-colt",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p111_explore-mirage.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-mirage",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p111_explore-triton-l200.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-triton-l200",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p111_highlight.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/cars/mirage/highlight",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p111_safety.html",
+      "url": "https://www.mitsubishi-motors.co.th/en/cars/mirage/safety",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p107_New_Mitsubishi_Xpander_Cross_HEV.pdf.b64",
+      "url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/nov2025/New%20Mitsubishi%20Xpander%20Cross%20HEV.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Mitsubishi",
+      "artifact": "mitsubishi_p107_Mitsubishi_Mirage.pdf.b64",
+      "url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/June2025/city-car/Mitsubishi%20Mirage.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_specifications_dup2.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/specifications.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_specifications.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/specifications.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_all_grade_price.html",
+      "url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_navara-calibre.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_navara-king-cab.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_kicks-epower.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_performance_dup2.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/performance.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_performance_dup3.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/performance.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_nissan-intelligent-mobility.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/nissan-intelligent-mobility.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_performance.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/performance.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_durability.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/durability.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_durability_dup2.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/durability.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p111_kicks-e-power-stylish-package.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-e-power-stylish-package.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p107_brochure-hub.html",
+      "url": "https://en.nissan.co.th/vehicles/brochure-hub.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_brochure_hub.html",
+      "url": "https://www.nissan.co.th/vehicles/brochure-hub.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p107_download-request-brochure.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/download-request-brochure.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Nissan",
+      "artifact": "nissan_p107_download-request-brochure_dup.html",
+      "url": "https://www.nissan.co.th/vehicles/new-vehicles/new-almera/download-request-brochure.html",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_718-boxster-gts-4.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster-gts-4/",
+      "source_family": "variant_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_718-boxster-style-edition.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster-style-edition/",
+      "source_family": "variant_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_718-boxster.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster/",
+      "source_family": "variant_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_macan_model_page.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/macan/#modelRangeId=macan",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_718.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_configure_dup2.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/911/configure/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_718-cayman-gts-4.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-cayman-gts-4/",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_configure_dup3.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/cayenne/configure/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_718-cayman-gt4-rs.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/718-cayman-gt4-rs/718-cayman-gt4-rs/",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_configure_dup6.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/taycan/configure/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_configure_dup4.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/macan/configure/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_configure.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/718/configure/",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p111_configure_dup5.html",
+      "url": "https://www.porsche.com/pap/_thailand_/models/panamera/configure/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p107_XABAA1.html",
+      "url": "https://configurator.porsche.com/en-TH/mode/model/XABAA1",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p107_XABBB1.html",
+      "url": "https://configurator.porsche.com/en-TH/mode/model/XABBB1",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p107_XABDC1.html",
+      "url": "https://configurator.porsche.com/en-TH/mode/model/XABDC1",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p107_95BAU1.html",
+      "url": "https://configurator.porsche.com/en-TH/mode/model/95BAU1",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p107_95BBV1.html",
+      "url": "https://configurator.porsche.com/en-TH/mode/model/95BBV1",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p107_95BBW1.html",
+      "url": "https://configurator.porsche.com/en-TH/mode/model/95BBW1",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_home_page.html",
+      "url": "https://www.porsche.com/pap/_thailand_/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Porsche",
+      "artifact": "porsche_p108_originalpartscatalogue.html",
+      "url": "https://www.porsche.com/pap/_thailand_/accessoriesandservice/classic/originalpartscatalogue/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Subaru",
+      "artifact": "subaru_p107_forester2025_th.pdf.b64",
+      "url": "https://www.subaru.asia/brochures/forester2025_th.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Subaru",
+      "artifact": "subaru_p107_forester2025_th_dup.pdf.b64",
+      "url": "https://www.subaru.asia/brochures/forester2025_th.pdf?v=d3p",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Subaru",
+      "artifact": "subaru_th_lineup_forester.html",
+      "url": "https://www.subaru.asia/th/th/forester/lineup.php",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Subaru",
+      "artifact": "subaru_th_model_forester.html",
+      "url": "https://www.subaru.asia/th/th/forester/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Subaru",
+      "artifact": "subaru_p107_crosstrek_th.pdf.b64",
+      "url": "https://www.subaru.asia/brochures/crosstrek_th.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Subaru",
+      "artifact": "subaru_p107_crosstrek_th_dup.pdf.b64",
+      "url": "https://www.subaru.asia/brochures/crosstrek_th.pdf?v=ei4xb",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Subaru",
+      "artifact": "subaru_th_model_crosstrek.html",
+      "url": "https://www.subaru.asia/th/th/crosstrek/",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Subaru",
+      "artifact": "subaru_brochure_page.html",
+      "url": "https://www.subaru.asia/th/th/contact-us/brochure.php",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Subaru",
+      "artifact": "subaru_p107_forester_th.pdf.b64",
+      "url": "https://www.subaru.asia/brochures/forester_th.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_fronx_equipment.html",
+      "url": "https://www.suzuki.co.th/model/fronx/equipment",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_xl7_equipment.html",
+      "url": "https://www.suzuki.co.th/model/xl7/equipment",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_p111_specification.html",
+      "url": "https://www.suzuki.co.th/en/model/xl7/specification",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_jimny_equipment.html",
+      "url": "https://www.suzuki.co.th/model/jimny/equipment",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_model_jimny.html",
+      "url": "https://www.suzuki.co.th/model/jimny",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_model_fronx.html",
+      "url": "https://www.suzuki.co.th/model/fronx",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_model_xl7.html",
+      "url": "https://www.suzuki.co.th/model/xl7",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_p108_about-us.html",
+      "url": "https://www.suzuki.co.th/about-us",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_p111_interior.html",
+      "url": "https://www.suzuki.co.th/en/model/xl7/interior",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_p107_equipment.html",
+      "url": "https://www.suzuki.co.th/en/model/fronx/equipment",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_p107_equipment_dup.html",
+      "url": "https://www.suzuki.co.th/en/model/xl7/equipment",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_p108_equipment.html",
+      "url": "https://www.suzuki.co.th/en/model/carry/equipment",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "Suzuki_Collection_E-Catalog_2024.pdf.b64",
+      "url": "https://www.suzuki.co.th/upload/file/Catalog/Suzuki_Collection_E-Catalog_2024.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_p107_Fronx_Accessories.pdf.b64",
+      "url": "https://www.suzuki.co.th/upload/file/Brochure/Fronx_Accessories.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_p107_Jimny_Accessories.pdf.b64",
+      "url": "https://www.suzuki.co.th/upload/file/Brochure/Jimny_Accessories.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Suzuki",
+      "artifact": "suzuki_p107_Suzuki_XL7_Hybrid_Accessories.pdf.b64",
+      "url": "https://www.suzuki.co.th/upload/file/Brochure/Suzuki_XL7_Hybrid_Accessories.pdf",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Toyota",
+      "artifact": "toyota_p111_yarisativ.html",
+      "url": "https://www.toyota.co.th/model/yarisativ",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Toyota",
+      "artifact": "toyota_p107_alphard.html",
+      "url": "https://www.toyota.co.th/en/model/alphard",
+      "source_family": "model_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Toyota",
+      "artifact": "toyota_p107_altis.html",
+      "url": "https://www.toyota.co.th/en/model/altis",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Toyota",
+      "artifact": "toyota_p108_camry.html",
+      "url": "https://www.toyota.co.th/en/model/camry",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Toyota",
+      "artifact": "toyota_press_news.html",
+      "url": "https://www.toyota.co.th/news",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Toyota",
+      "artifact": "toyota_p107_compare.html",
+      "url": "https://www.toyota.co.th/en/model/compare",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Toyota",
+      "artifact": "toyota_p107_compare_dup.html",
+      "url": "https://www.toyota.co.th/model/compare",
+      "source_family": "aggregate_page",
+      "discovery_channel": "reuse_committed_fixture",
+      "selected": true,
+      "fetch": false,
+      "reason": "committed artifact already in the pool; listed for the extraction pass"
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/en/model/api/car-series/",
+      "source_family": "structured_payload",
+      "discovery_channel": "documented_official_endpoint",
+      "selected": true,
+      "fetch": true,
+      "reason": "grade-level spec payload documented for this OEM; brand has P3-gap variants with no committed scoped spec page"
+    },
+    {
+      "brand": "Toyota",
+      "url": "https://www.toyota.co.th/component/api/tcoth/web-init",
+      "source_family": "structured_payload",
+      "discovery_channel": "documented_official_endpoint",
+      "selected": true,
+      "fetch": true,
+      "reason": "grade-level spec payload documented for this OEM; brand has P3-gap variants with no committed scoped spec page"
+    },
+    {
+      "brand": "BMW",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "GWM",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "Honda",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "Isuzu",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "Kia",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "Land Rover",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "Lexus",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "MG",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "MINI",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "Mazda",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "Mitsubishi",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "Nissan",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "Subaru",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    },
+    {
+      "brand": "Suzuki",
+      "url": "",
+      "source_family": "gap",
+      "discovery_channel": "no_documented_endpoint",
+      "selected": false,
+      "fetch": false,
+      "reason": "P3 gap: no committed variant- or model-scoped spec page for at least one accepted variant and no documented official spec endpoint — recorded as source ceiling, never guessed or bypassed"
+    }
+  ],
+  "programmatic_expansion": [
+    {
+      "list_url": "https://www.toyota.co.th/en/model/api/car-series/",
+      "series_codes_seen": 34,
+      "matched_model_to_code": [
+        {
+          "model": "Alphard",
+          "code": "alphard"
+        },
+        {
+          "model": "CAMRY",
+          "code": "camry"
+        },
+        {
+          "model": "Coaster",
+          "code": "coaster"
+        },
+        {
+          "model": "Commuter",
+          "code": "commuter"
+        },
+        {
+          "model": "Corolla Altis",
+          "code": "altis"
+        },
+        {
+          "model": "Corolla Altis GR Sport",
+          "code": "altis_grsport"
+        },
+        {
+          "model": "Corolla Cross",
+          "code": "corollacross"
+        },
+        {
+          "model": "Corolla Cross",
+          "code": "corollacross_grsport"
+        },
+        {
+          "model": "Fortuner GR Sport",
+          "code": "fortuner_grsport"
+        },
+        {
+          "model": "Fortuner Leader",
+          "code": "fortuner_leader"
+        },
+        {
+          "model": "Fortuner Legender",
+          "code": "fortuner_legender"
+        },
+        {
+          "model": "GR Corolla",
+          "code": "grcorolla"
+        },
+        {
+          "model": "GR Supra",
+          "code": "grsupra"
+        },
+        {
+          "model": "GR Yaris",
+          "code": "gryaris"
+        },
+        {
+          "model": "GR Yaris",
+          "code": "yaris"
+        },
+        {
+          "model": "Hiace",
+          "code": "hiace"
+        },
+        {
+          "model": "Hilux Champ",
+          "code": "hilux_champ"
+        },
+        {
+          "model": "Hilux Revo Standard Cab",
+          "code": "hilux_revo_standard"
+        },
+        {
+          "model": "Hilux Revo Z Edition",
+          "code": "hilux_revo_zedition"
+        },
+        {
+          "model": "Hilux Travo Overland",
+          "code": "hilux_travo_overland"
+        },
+        {
+          "model": "Hilux Travo Prerunner & 4TREX",
+          "code": "hilux_travo_prerunner_4trex"
+        },
+        {
+          "model": "Hilux Travo-e",
+          "code": "hilux_travo_e"
+        },
+        {
+          "model": "Innova Zenix",
+          "code": "innovazenix"
+        },
+        {
+          "model": "Land Cruiser FJ",
+          "code": "landcruiser_fj"
+        },
+        {
+          "model": "Majesty",
+          "code": "majesty"
+        },
+        {
+          "model": "Veloz",
+          "code": "veloz"
+        },
+        {
+          "model": "Yaris",
+          "code": "yariscross"
+        },
+        {
+          "model": "Yaris",
+          "code": "yariscross_nightshade"
+        },
+        {
+          "model": "Yaris ATIV",
+          "code": "yarisativ"
+        },
+        {
+          "model": "Yaris ATIV",
+          "code": "yarisativ_grsport"
+        },
+        {
+          "model": "Yaris ATIV",
+          "code": "yarisativ_nightshade"
+        }
+      ],
+      "codes_fetched": [
+        "alphard",
+        "altis",
+        "altis_grsport",
+        "camry",
+        "coaster",
+        "commuter",
+        "corollacross",
+        "corollacross_grsport",
+        "fortuner_grsport",
+        "fortuner_leader",
+        "fortuner_legender",
+        "grcorolla",
+        "grsupra",
+        "gryaris",
+        "hiace",
+        "hilux_champ",
+        "hilux_revo_standard",
+        "hilux_revo_zedition",
+        "hilux_travo_e",
+        "hilux_travo_overland",
+        "hilux_travo_prerunner_4trex",
+        "innovazenix",
+        "landcruiser_fj",
+        "majesty",
+        "veloz",
+        "yaris",
+        "yarisativ",
+        "yarisativ_grsport",
+        "yarisativ_nightshade",
+        "yariscross",
+        "yariscross_nightshade"
+      ]
+    }
+  ],
+  "acquisition": {
+    "fetch_selected": 2,
+    "captured": 30,
+    "reused": 2,
+    "failed": 1
+  }
+}

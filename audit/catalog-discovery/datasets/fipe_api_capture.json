@@ -1,0 +1,6777 @@
+{
+  "source": "fipe_api",
+  "url": "https://parallelum.com.br/fipe/api/v1/carros",
+  "observed_at": "2026-09-22T14:43:38.382026",
+  "acquisition_method": "api",
+  "payload_hash": "d66ab979ec2ad265",
+  "brands": {
+    "Toyota": {
+      "brand_id": 56,
+      "total_models": 222,
+      "models": [
+        {
+          "id": 2204,
+          "name": "Avalon XLS 3.0"
+        },
+        {
+          "id": 2205,
+          "name": "Band. Jipe 4x4 Sport 3.7 Diesel"
+        },
+        {
+          "id": 2206,
+          "name": "Band.Jipe Cap.de Aço Chas. Curto Diesel"
+        },
+        {
+          "id": 2207,
+          "name": "Band.Jipe Cap.de Aço Chas. Longo Diesel"
+        },
+        {
+          "id": 2208,
+          "name": "Band.Jipe Capota de Lona Diesel"
+        },
+        {
+          "id": 2209,
+          "name": "Band.Picape CD 2p Chassi Longo Diesel"
+        },
+        {
+          "id": 2210,
+          "name": "Band.Picape CD 4p Chassi Longo Diesel"
+        },
+        {
+          "id": 2211,
+          "name": "Band.Picape Chassi Curto Diesel"
+        },
+        {
+          "id": 2212,
+          "name": "Band.Picape Chassi Longo Diesel"
+        },
+        {
+          "id": 12108,
+          "name": "bZ4X AWD"
+        },
+        {
+          "id": 2213,
+          "name": "Camry LE"
+        },
+        {
+          "id": 2214,
+          "name": "Camry SW LE 2.2 16V"
+        },
+        {
+          "id": 2215,
+          "name": "Camry SW XLE 3.0 24V"
+        },
+        {
+          "id": 9969,
+          "name": "Camry XLE  2.5 16V Aut. (Híbrido)"
+        },
+        {
+          "id": 2216,
+          "name": "Camry XLE 3.0 24V 186cv"
+        },
+        {
+          "id": 4091,
+          "name": "Camry XLE 3.5 24V Aut."
+        },
+        {
+          "id": 2217,
+          "name": "Celica GT 2.2 16V"
+        },
+        {
+          "id": 2218,
+          "name": "Celica ST 1.8"
+        },
+        {
+          "id": 9984,
+          "name": "Corolla Altis 1.8 16V Aut. (Híbrido)"
+        },
+        {
+          "id": 9985,
+          "name": "Corolla Altis Prem. 1.8 Aut. (Híbrido)"
+        },
+        {
+          "id": 9300,
+          "name": "Corolla ALTIS/A.Premiu. 2.0 Flex 16V Aut"
+        },
+        {
+          "id": 9787,
+          "name": "Corolla Cross GR-S 2.0 16V Flex Aut."
+        },
+        {
+          "id": 9324,
+          "name": "Corolla Cross SE 1.8 16V Aut. (Híbrido)"
+        },
+        {
+          "id": 9325,
+          "name": "Corolla Cross XR 2.0 16V Flex Aut."
+        },
+        {
+          "id": 9326,
+          "name": "Corolla Cross XRE 2.0 16V Flex Aut."
+        },
+        {
+          "id": 9986,
+          "name": "Corolla Cross XRV 1.8 16V Aut. (Híbrido)"
+        },
+        {
+          "id": 9987,
+          "name": "Corolla Cross XRX 1.8 16V Aut. (Híbrido)"
+        },
+        {
+          "id": 10909,
+          "name": "Corolla Cross XRX 2.0 16V Flex Aut."
+        },
+        {
+          "id": 2220,
+          "name": "Corolla DX/ SW DX 1.6 16V"
+        },
+        {
+          "id": 7746,
+          "name": "Corolla Dynamic 2.0 Flex 16V Aut."
+        },
+        {
+          "id": 2221,
+          "name": "Corolla Fielder SW 1.8/1.8 XEi Flex Aut."
+        },
+        {
+          "id": 2222,
+          "name": "Corolla Fielder SW 1.8/1.8 XEi Flex Mec"
+        },
+        {
+          "id": 4166,
+          "name": "Corolla Fielder SW S  1.8 16V 136cv Aut"
+        },
+        {
+          "id": 4167,
+          "name": "Corolla Fielder SW S 1.8 16V 136cv Mec"
+        },
+        {
+          "id": 4348,
+          "name": "Corolla Fielder SW SE-G 1.8 Flex 16V Aut"
+        },
+        {
+          "id": 2219,
+          "name": "Corolla GLi 1.6 16V"
+        },
+        {
+          "id": 11635,
+          "name": "Corolla GLi 1.8 16V Aut."
+        },
+        {
+          "id": 5041,
+          "name": "Corolla GLi 1.8 Flex 16V  Aut."
+        },
+        {
+          "id": 5042,
+          "name": "Corolla GLi 1.8 Flex 16V Mec."
+        },
+        {
+          "id": 8839,
+          "name": "Corolla GLi 2.0 16V Flex Aut."
+        },
+        {
+          "id": 7214,
+          "name": "Corolla GLi Upper 1.8 Flex 16V Aut."
+        },
+        {
+          "id": 7558,
+          "name": "Corolla GLi Upper Black P. 1.8 Flex Aut."
+        },
+        {
+          "id": 10751,
+          "name": "Corolla GR Circuit 1.6 Turbo 4x4 Mec"
+        },
+        {
+          "id": 10752,
+          "name": "Corolla GR Core 1.6 Turbo 4x4 Mec"
+        },
+        {
+          "id": 9301,
+          "name": "Corolla GR-Sport 2.0 Flex 16V Aut."
+        },
+        {
+          "id": 2223,
+          "name": "Corolla LE 1.8"
+        },
+        {
+          "id": 2224,
+          "name": "Corolla LE 2.2 16V"
+        },
+        {
+          "id": 4168,
+          "name": "Corolla S 1.8 16V 136cv Aut"
+        },
+        {
+          "id": 4169,
+          "name": "Corolla S 1.8 16V 136cv Mec"
+        },
+        {
+          "id": 2226,
+          "name": "Corolla SE-G 1.8 16V Mec."
+        },
+        {
+          "id": 2225,
+          "name": "Corolla SE-G 1.8/1.8 Flex 16V Aut."
+        },
+        {
+          "id": 2227,
+          "name": "Corolla SW LE 1.8/ XLi 1.6 16V"
+        },
+        {
+          "id": 2228,
+          "name": "Corolla WG"
+        },
+        {
+          "id": 2229,
+          "name": "Corolla XEi 1.8/1.8 Flex 16V Aut."
+        },
+        {
+          "id": 2230,
+          "name": "Corolla XEi 1.8/1.8 Flex 16V Mec."
+        },
+        {
+          "id": 5194,
+          "name": "Corolla XEi 2.0 Flex 16V Aut."
+        },
+        {
+          "id": 2231,
+          "name": "Corolla XLi 1.6 16V 110cv Aut."
+        },
+        {
+          "id": 2232,
+          "name": "Corolla XLi 1.6 16V 110cv Mec."
+        },
+        {
+          "id": 2233,
+          "name": "Corolla XLi 1.8/1.8 Flex 16V Aut."
+        },
+        {
+          "id": 2234,
+          "name": "Corolla XLi 1.8/1.8 Flex 16V Mec."
+        },
+        {
+          "id": 5939,
+          "name": "Corolla XRS 2.0 Flex 16V Aut."
+        },
+        {
+          "id": 2235,
+          "name": "Corona Aut."
+        },
+        {
+          "id": 2236,
+          "name": "Corona GLi Mec"
+        },
+        {
+          "id": 2237,
+          "name": "Corona Mec."
+        },
+        {
+          "id": 6245,
+          "name": "ETIOS 1.3 Flex 16V 5p Mec."
+        },
+        {
+          "id": 7559,
+          "name": "ETIOS CROSS 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 6651,
+          "name": "ETIOS CROSS 1.5 Flex 16V 5p Mec."
+        },
+        {
+          "id": 7711,
+          "name": "ETIOS PLATINUM 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 6872,
+          "name": "ETIOS PLATINUM 1.5 Flex 16V 5p Mec."
+        },
+        {
+          "id": 7712,
+          "name": "ETIOS PLATINUM Sed. 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 6873,
+          "name": "ETIOS PLATINUM Sed. 1.5 Flex 16V 4p Mec."
+        },
+        {
+          "id": 7747,
+          "name": "ETIOS READY! 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 7560,
+          "name": "ETIOS X 1.3 Flex 16V 5p Aut."
+        },
+        {
+          "id": 6246,
+          "name": "ETIOS X 1.3 Flex 16V 5p Mec."
+        },
+        {
+          "id": 8249,
+          "name": "ETIOS X Plus 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8250,
+          "name": "ETIOS X Plus 1.5 Flex 16V 5p Mec."
+        },
+        {
+          "id": 8251,
+          "name": "ETIOS X Plus Sedan 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 8252,
+          "name": "ETIOS X Plus Sedan 1.5 Flex 16V 4p Mec."
+        },
+        {
+          "id": 7561,
+          "name": "ETIOS X Sedan 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 6247,
+          "name": "ETIOS X Sedan 1.5 Flex 16V 4p Mec."
+        },
+        {
+          "id": 6248,
+          "name": "ETIOS XLS 1.5 Flex 16V 5p Mec."
+        },
+        {
+          "id": 7562,
+          "name": "ETIOS XLS 1.5 Flex 5p Aut."
+        },
+        {
+          "id": 7563,
+          "name": "ETIOS XLS Sedan 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 6249,
+          "name": "ETIOS XLS Sedan 1.5 Flex 16V 4p Mec."
+        },
+        {
+          "id": 6250,
+          "name": "ETIOS XS  1.3 Flex 16V 5p Mec."
+        },
+        {
+          "id": 7564,
+          "name": "ETIOS XS 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 6598,
+          "name": "ETIOS XS 1.5 Flex 16V 5p Mec."
+        },
+        {
+          "id": 7565,
+          "name": "ETIOS XS Sedan 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 6251,
+          "name": "ETIOS XS Sedan1.5 Flex 16V 4p Mec."
+        },
+        {
+          "id": 11849,
+          "name": "Hiace Furgão DX 2.8 TDI Aut."
+        },
+        {
+          "id": 11645,
+          "name": "Hiace Minibus DX 2.8 TDI 16L Aut."
+        },
+        {
+          "id": 2238,
+          "name": "Hilux 4x2 2.4 Diesel"
+        },
+        {
+          "id": 2239,
+          "name": "Hilux 4x2 2.8 Diesel"
+        },
+        {
+          "id": 2240,
+          "name": "Hilux CD 4x2 2.4 Diesel"
+        },
+        {
+          "id": 6310,
+          "name": "Hilux CD 4x4 2.7 16V Flex Mec."
+        },
+        {
+          "id": 11132,
+          "name": "Hilux CD 4x4 2.8  Diesel Aut."
+        },
+        {
+          "id": 2241,
+          "name": "Hilux CD 4x4 2.8 Diesel Mec."
+        },
+        {
+          "id": 10171,
+          "name": "Hilux CD Conquest 4x4 2.8  Die.Aut"
+        },
+        {
+          "id": 2242,
+          "name": "Hilux CD D4-D 4x2 2.5 16V 102cv TB Dies."
+        },
+        {
+          "id": 2243,
+          "name": "Hilux CD D4-D 4x4 2.5 16V 102cv TB Dies."
+        },
+        {
+          "id": 6076,
+          "name": "Hilux CD D4-D 4x4 3.0 TDI Dies. Mec."
+        },
+        {
+          "id": 2244,
+          "name": "Hilux CD DLX 4x2 2.8 Diesel"
+        },
+        {
+          "id": 2245,
+          "name": "Hilux CD DLX 4x4 2.8 Diesel"
+        },
+        {
+          "id": 2246,
+          "name": "Hilux CD DX 4x2 2.7 16V 142cv"
+        },
+        {
+          "id": 2247,
+          "name": "Hilux CD DX 4x2 3.0 8V 90cv Diesel"
+        },
+        {
+          "id": 2248,
+          "name": "Hilux CD DX 4x4 3.0 8V 90cv Diesel"
+        },
+        {
+          "id": 8554,
+          "name": "Hilux CD GR-S 4x4 2.8 TDI Dies. Aut."
+        },
+        {
+          "id": 9026,
+          "name": "Hilux CD GR-S 4x4 4.0 V6 234cv Aut."
+        },
+        {
+          "id": 7076,
+          "name": "Hilux CD Limited 4x4 3.0 TDI Diesel Aut."
+        },
+        {
+          "id": 5081,
+          "name": "Hilux CD SR 4x2 2.7 16V/2.7 Flex Aut."
+        },
+        {
+          "id": 4804,
+          "name": "Hilux CD SR 4x2 2.7 16V/2.7 Flex Mec."
+        },
+        {
+          "id": 7405,
+          "name": "Hilux CD SR 4x4 2.8 TDI Diesel Aut."
+        },
+        {
+          "id": 2249,
+          "name": "Hilux CD SR 4x4 3.0 8V 116cv TB Diesel"
+        },
+        {
+          "id": 2250,
+          "name": "Hilux CD SR 4x4 3.0 8V 90cv Diesel"
+        },
+        {
+          "id": 8110,
+          "name": "Hilux CD SR CHALL. 4x4 2.8 TDI Dies Aut."
+        },
+        {
+          "id": 2251,
+          "name": "Hilux CD SR D4-D 4x2 3.0 163cv TDI Dies."
+        },
+        {
+          "id": 2252,
+          "name": "Hilux CD SR D4-D 4x4 3.0  TDI Dies."
+        },
+        {
+          "id": 6036,
+          "name": "Hilux CD SR D4-D 4x4 3.0 TDI Dies Aut."
+        },
+        {
+          "id": 2253,
+          "name": "Hilux CD SR5 4x4 2.8 Diesel"
+        },
+        {
+          "id": 2254,
+          "name": "Hilux CD SRV 4x2 2.7 16V 142cv"
+        },
+        {
+          "id": 7046,
+          "name": "Hilux CD SRV 4x2 2.7 Flex 16V Aut."
+        },
+        {
+          "id": 2255,
+          "name": "Hilux CD SRV 4x2 3.0 8V 90cv Diesel"
+        },
+        {
+          "id": 5907,
+          "name": "Hilux CD SRV 4x4 2.7 Flex 16V Aut."
+        },
+        {
+          "id": 7406,
+          "name": "Hilux CD SRV 4x4 2.8 TDI Diesel Aut."
+        },
+        {
+          "id": 2256,
+          "name": "Hilux CD SRV 4x4 3.0 8V 116cv TB Diesel"
+        },
+        {
+          "id": 2257,
+          "name": "Hilux CD SRV D4-D 4x2 3.0 163cv TDI Dies"
+        },
+        {
+          "id": 2258,
+          "name": "Hilux CD SRV D4-D 4x4 3.0  TDI Dies"
+        },
+        {
+          "id": 2259,
+          "name": "Hilux CD SRV D4-D 4x4 3.0 TDI Diesel Aut"
+        },
+        {
+          "id": 7407,
+          "name": "Hilux CD SRX 4x4 2.8 TDI 16V Diesel Aut."
+        },
+        {
+          "id": 10172,
+          "name": "Hilux CD SRX Limited 4x4 2.8 TDI Die.Aut"
+        },
+        {
+          "id": 10926,
+          "name": "Hilux CD SRX Plus 4x4 2.8 TDI Die. Aut."
+        },
+        {
+          "id": 11265,
+          "name": "Hilux Chassi 4x4 2.8 TDI Diesel Aut."
+        },
+        {
+          "id": 7408,
+          "name": "Hilux Chassi 4x4 2.8 TDI Diesel Mec."
+        },
+        {
+          "id": 2260,
+          "name": "Hilux Chassi D4-D 4x4 2.5 102cv TB Dies."
+        },
+        {
+          "id": 6037,
+          "name": "Hilux Chassi D4-D 4x4 3.0 TDI Dies. Mec."
+        },
+        {
+          "id": 2261,
+          "name": "Hilux CS 4x4 2.4 Diesel"
+        },
+        {
+          "id": 11266,
+          "name": "Hilux CS 4x4 2.8 TDI Diesel Aut."
+        },
+        {
+          "id": 7409,
+          "name": "Hilux CS 4x4 2.8 TDI Diesel Mec."
+        },
+        {
+          "id": 2262,
+          "name": "Hilux CS D4-D 4x2 2.5 16V 102cv TB Dies."
+        },
+        {
+          "id": 2263,
+          "name": "Hilux CS D4-D 4x4 2.5 16V 102cv TB Dies."
+        },
+        {
+          "id": 6038,
+          "name": "Hilux CS D4-D 4x4 3.0 TDI Dies. Mec."
+        },
+        {
+          "id": 2264,
+          "name": "Hilux CS DLX 4x2 2.8 Diesel"
+        },
+        {
+          "id": 2265,
+          "name": "Hilux CS DLX 4x4 2.8 Diesel"
+        },
+        {
+          "id": 2266,
+          "name": "Hilux CS DX 4x2 2.7 16V 142cv"
+        },
+        {
+          "id": 2267,
+          "name": "Hilux CS DX 4x2 3.0 8V 90cv Diesel"
+        },
+        {
+          "id": 2268,
+          "name": "Hilux CS DX 4x4 3.0 8V 90cv Diesel"
+        },
+        {
+          "id": 2269,
+          "name": "Hilux CS SR5 4x4 2.8 Diesel"
+        },
+        {
+          "id": 2270,
+          "name": "Hilux CS SRV 4x2 2.7 16V 142cv"
+        },
+        {
+          "id": 2271,
+          "name": "Hilux SW4 2.7 16V"
+        },
+        {
+          "id": 2272,
+          "name": "Hilux SW4 3.4 V6"
+        },
+        {
+          "id": 2273,
+          "name": "Hilux SW4 4x4 2.4 8V"
+        },
+        {
+          "id": 2274,
+          "name": "Hilux SW4 4x4 2.8 Diesel"
+        },
+        {
+          "id": 2275,
+          "name": "Hilux SW4 4x4 3.0 12V V6"
+        },
+        {
+          "id": 2276,
+          "name": "Hilux SW4 4x4 3.0 24V V6"
+        },
+        {
+          "id": 2277,
+          "name": "Hilux SW4 4x4 3.0 8V TB Diesel"
+        },
+        {
+          "id": 9662,
+          "name": "Hilux SW4 Diamond 2.8 TB 4x4 Die. Aut."
+        },
+        {
+          "id": 9663,
+          "name": "Hilux SW4 GRS 2.8 TB 4x4 Diesel Aut."
+        },
+        {
+          "id": 4906,
+          "name": "Hilux SW4 SR 4x2 2.7/ 2.7 Flex 16V Aut."
+        },
+        {
+          "id": 4905,
+          "name": "Hilux SW4 SR 4x2 2.7/2.7 Flex 16V Mec."
+        },
+        {
+          "id": 6077,
+          "name": "Hilux SW4 SR D4-D 4x4 3.0 TDI Dies. Aut"
+        },
+        {
+          "id": 8111,
+          "name": "Hilux SW4 SRV 4x2 2.7 Flex 16V Aut."
+        },
+        {
+          "id": 4907,
+          "name": "Hilux SW4 SRV 4x4 4.0 V6 24V Aut."
+        },
+        {
+          "id": 3830,
+          "name": "Hilux SW4 SRV D4-D 4x4 3.0 TDI Dies. Aut"
+        },
+        {
+          "id": 3831,
+          "name": "Hilux SW4 SRV D4-D 4x4 3.0 TDI Dies. Mec"
+        },
+        {
+          "id": 7491,
+          "name": "Hilux SW4 SRX 4x4 2.8 TDI 16V Dies. Aut."
+        },
+        {
+          "id": 7492,
+          "name": "Hilux SW4 SRX 4x4 4.0 V6 24V Aut."
+        },
+        {
+          "id": 8299,
+          "name": "Hilux SW4 SRX Diamo. 4x4 2.8 TB Die Aut."
+        },
+        {
+          "id": 10927,
+          "name": "Hilux SW4 SRX Plat. 4x4 2.8 TB Die. Aut."
+        },
+        {
+          "id": 2278,
+          "name": "Land Cruiser 4WD 4.5 24V"
+        },
+        {
+          "id": 2279,
+          "name": "Land Cruiser Prado 3.0 4x4 TB Diesel Aut"
+        },
+        {
+          "id": 2280,
+          "name": "Land Cruiser Prado 3.0 4x4 TB Diesel Mec"
+        },
+        {
+          "id": 2281,
+          "name": "MR-2 Turbo 2.0"
+        },
+        {
+          "id": 2282,
+          "name": "Paseo"
+        },
+        {
+          "id": 2283,
+          "name": "Previa LE 2.4 16V"
+        },
+        {
+          "id": 2284,
+          "name": "Previa LX 2.5"
+        },
+        {
+          "id": 10044,
+          "name": "PRIUS 1.8 16V 5p Aut. (Híbrido)"
+        },
+        {
+          "id": 6470,
+          "name": "RAV4 2.0 4x2 16V Aut."
+        },
+        {
+          "id": 2285,
+          "name": "RAV4 2.0 4x4 16V Aut."
+        },
+        {
+          "id": 2286,
+          "name": "RAV4 2.0 4x4 16V Mec."
+        },
+        {
+          "id": 7124,
+          "name": "RAV4 2.0 HIGH 4x2 16V Aut."
+        },
+        {
+          "id": 7215,
+          "name": "RAV4 2.0 TOP 4x2 16V Aut."
+        },
+        {
+          "id": 5431,
+          "name": "RAV4 2.4 4x2 16V 170cv Aut."
+        },
+        {
+          "id": 3977,
+          "name": "RAV4 2.4 4x4 16V 170cv Aut."
+        },
+        {
+          "id": 6471,
+          "name": "RAV4 2.5 4x4 16V Aut."
+        },
+        {
+          "id": 11998,
+          "name": "RAV4 2.5 S 4x4  Aut. "
+        },
+        {
+          "id": 10057,
+          "name": "RAV4 2.5 S Connect 4x4  Aut. (Híbrido)"
+        },
+        {
+          "id": 11999,
+          "name": "RAV4 2.5 SX 4x4  Aut. "
+        },
+        {
+          "id": 10059,
+          "name": "RAV4 2.5 SX Connect 4x4  Aut. (Híbrido)"
+        },
+        {
+          "id": 11024,
+          "name": "RAV4 2.5 XSE 4x4 Aut. (Híbrido)"
+        },
+        {
+          "id": 2287,
+          "name": "Supra"
+        },
+        {
+          "id": 2288,
+          "name": "T-100 3.4 V6"
+        },
+        {
+          "id": 11888,
+          "name": "YARIS Cross XR 1.5 16V 5p Aut."
+        },
+        {
+          "id": 11855,
+          "name": "YARIS Cross XRE 1.5 16V 5p Aut."
+        },
+        {
+          "id": 11856,
+          "name": "YARIS Cross XRE 1.5 16V 5p Aut. (Híbrido)"
+        },
+        {
+          "id": 11857,
+          "name": "YARIS Cross XRX 1.5 16V 5p Aut."
+        },
+        {
+          "id": 11858,
+          "name": "YARIS Cross XRX 1.5 16V 5p Aut. (Híbrido)"
+        },
+        {
+          "id": 11933,
+          "name": "YARIS GR 1.6 Turbo 4x4 Aut."
+        },
+        {
+          "id": 11934,
+          "name": "YARIS GR 1.6 Turbo 4x4 Mec."
+        },
+        {
+          "id": 9216,
+          "name": "YARIS S 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8358,
+          "name": "YARIS XL 1.3 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8359,
+          "name": "YARIS XL 1.3 Flex 16V 5p Mec."
+        },
+        {
+          "id": 9726,
+          "name": "YARIS XL 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8932,
+          "name": "YARIS XL Live 1.3 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8933,
+          "name": "YARIS XL Live 1.3 Flex 16V 5p Mec."
+        },
+        {
+          "id": 8934,
+          "name": "YARIS XL Live Sedan 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 8935,
+          "name": "YARIS XL Live Sedan 1.5 Flex 16V 4p Mec."
+        },
+        {
+          "id": 8936,
+          "name": "YARIS XL Plus Con. 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8937,
+          "name": "YARIS XL Plus Con. Sed. 1.5 Flex 16V Aut"
+        },
+        {
+          "id": 8360,
+          "name": "YARIS XL Plus T. Sed. 1.5 Flex 16V Aut."
+        },
+        {
+          "id": 8361,
+          "name": "YARIS XL Plus Tech 1.3 Flex 16V Aut."
+        },
+        {
+          "id": 8362,
+          "name": "YARIS XL Sedan 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 8363,
+          "name": "YARIS XL Sedan 1.5 Flex 16V 4p Mec."
+        },
+        {
+          "id": 8364,
+          "name": "YARIS XLS 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8938,
+          "name": "YARIS XLS Connect 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8939,
+          "name": "YARIS XLS Connect Sed. 1.5 Flex 16V Aut."
+        },
+        {
+          "id": 8365,
+          "name": "YARIS XLS Sedan 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 8366,
+          "name": "YARIS XS 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8940,
+          "name": "YARIS XS Connect 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8941,
+          "name": "YARIS XS Connect Sedan 1.5 Flex 16V Aut."
+        },
+        {
+          "id": 8367,
+          "name": "YARIS XS Sedan 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 8638,
+          "name": "YARIS X-WAY 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 8942,
+          "name": "YARIS X-WAY Connect 1.5 Flex 16V 5p Aut."
+        }
+      ],
+      "sample_details": [
+        {
+          "model_id": 2204,
+          "model_name": "Avalon XLS 3.0",
+          "years": [
+            {
+              "year": "1995 Gasolina",
+              "code": "1995-1"
+            }
+          ]
+        },
+        {
+          "model_id": 2205,
+          "model_name": "Band. Jipe 4x4 Sport 3.7 Diesel",
+          "years": [
+            {
+              "year": "1999 Diesel",
+              "code": "1999-3"
+            }
+          ]
+        },
+        {
+          "model_id": 2206,
+          "model_name": "Band.Jipe Cap.de Aço Chas. Curto Diesel",
+          "years": [
+            {
+              "year": "2001 Diesel",
+              "code": "2001-3"
+            },
+            {
+              "year": "2000 Diesel",
+              "code": "2000-3"
+            },
+            {
+              "year": "1999 Diesel",
+              "code": "1999-3"
+            },
+            {
+              "year": "1998 Diesel",
+              "code": "1998-3"
+            },
+            {
+              "year": "1997 Diesel",
+              "code": "1997-3"
+            }
+          ]
+        },
+        {
+          "model_id": 2207,
+          "model_name": "Band.Jipe Cap.de Aço Chas. Longo Diesel",
+          "years": [
+            {
+              "year": "2001 Diesel",
+              "code": "2001-3"
+            },
+            {
+              "year": "2000 Diesel",
+              "code": "2000-3"
+            },
+            {
+              "year": "1999 Diesel",
+              "code": "1999-3"
+            },
+            {
+              "year": "1998 Diesel",
+              "code": "1998-3"
+            },
+            {
+              "year": "1997 Diesel",
+              "code": "1997-3"
+            }
+          ]
+        },
+        {
+          "model_id": 2208,
+          "model_name": "Band.Jipe Capota de Lona Diesel",
+          "years": [
+            {
+              "year": "2001 Diesel",
+              "code": "2001-3"
+            },
+            {
+              "year": "2000 Diesel",
+              "code": "2000-3"
+            },
+            {
+              "year": "1999 Diesel",
+              "code": "1999-3"
+            },
+            {
+              "year": "1998 Diesel",
+              "code": "1998-3"
+            },
+            {
+              "year": "1997 Diesel",
+              "code": "1997-3"
+            }
+          ]
+        }
+      ]
+    },
+    "Honda": {
+      "brand_id": 25,
+      "total_models": 117,
+      "models": [
+        {
+          "id": 1241,
+          "name": "Accord Coupe EX"
+        },
+        {
+          "id": 9600,
+          "name": "Accord Sedan 2.0 TB 16V Aut. (Híbrido)"
+        },
+        {
+          "id": 5211,
+          "name": "Accord Sedan EX 2.0 16V 156cv Aut."
+        },
+        {
+          "id": 1242,
+          "name": "Accord Sedan EX 2.4/2.3/ 2.2 16V"
+        },
+        {
+          "id": 1243,
+          "name": "Accord Sedan EX 2.7/3.0 24V"
+        },
+        {
+          "id": 4641,
+          "name": "Accord Sedan EX 3.5 V6 24V"
+        },
+        {
+          "id": 1244,
+          "name": "Accord Sedan EXR"
+        },
+        {
+          "id": 1245,
+          "name": "Accord Sedan LX  2.2/2.4 16V"
+        },
+        {
+          "id": 3889,
+          "name": "Accord Sedan LX 2.0 16V 150/156cv Aut."
+        },
+        {
+          "id": 8520,
+          "name": "Accord Sedan Touring 2.0 TB 16V Aut."
+        },
+        {
+          "id": 1246,
+          "name": "Accord SW EX"
+        },
+        {
+          "id": 1247,
+          "name": "Accord SW LX"
+        },
+        {
+          "id": 10964,
+          "name": "CITY Hatchback EX 1.5 Flex 16V Aut."
+        },
+        {
+          "id": 9732,
+          "name": "CITY Hatchback EXL 1.5 Flex 16V Aut."
+        },
+        {
+          "id": 10965,
+          "name": "CITY Hatchback LX 1.5 Flex 16V Aut."
+        },
+        {
+          "id": 9733,
+          "name": "CITY Hatchback Touring 1.5 Flex 16V Aut"
+        },
+        {
+          "id": 11634,
+          "name": "CITY Hatchback Touring Sport 1.5 16V Aut"
+        },
+        {
+          "id": 5372,
+          "name": "CITY Sedan DX 1.5 Flex 16V Aut."
+        },
+        {
+          "id": 5373,
+          "name": "CITY Sedan DX 1.5 Flex 16V Mec."
+        },
+        {
+          "id": 4971,
+          "name": "CITY Sedan EX 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 4972,
+          "name": "CITY Sedan EX 1.5 Flex 16V 4p Mec."
+        },
+        {
+          "id": 4973,
+          "name": "CITY Sedan EXL 1.5 Flex  16V 4p Aut."
+        },
+        {
+          "id": 4974,
+          "name": "CITY Sedan EXL 1.5 Flex 16V 4p Mec."
+        },
+        {
+          "id": 4975,
+          "name": "CITY Sedan LX 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 4976,
+          "name": "CITY Sedan LX 1.5 Flex 16V 4p Mec."
+        },
+        {
+          "id": 8212,
+          "name": "CITY Sedan Personal 1.5 Flex 16V Aut."
+        },
+        {
+          "id": 6534,
+          "name": "CITY Sedan SPORT 1.5 FLEX 16V 4p Mec."
+        },
+        {
+          "id": 9678,
+          "name": "CITY Sedan Touring 1.5 Flex 16V 4p Aut."
+        },
+        {
+          "id": 1248,
+          "name": "Civic Coupe EX/ EXS 1.6 16V 2p"
+        },
+        {
+          "id": 8281,
+          "name": "Civic Coupe Si 1.5 TB 16V 208cv Mec. 2p"
+        },
+        {
+          "id": 7036,
+          "name": "Civic Coupe Si 2.4 16V 206cv Mec. 2p"
+        },
+        {
+          "id": 1249,
+          "name": "Civic CRX/ Targa VTi"
+        },
+        {
+          "id": 1252,
+          "name": "Civic Hatch DX"
+        },
+        {
+          "id": 1253,
+          "name": "Civic Hatch LSi"
+        },
+        {
+          "id": 1254,
+          "name": "Civic Hatch LX Aut."
+        },
+        {
+          "id": 1255,
+          "name": "Civic Hatch Si"
+        },
+        {
+          "id": 1256,
+          "name": "Civic Hatch VTi"
+        },
+        {
+          "id": 4090,
+          "name": "Civic Sed LX 1.8 Aut 4p"
+        },
+        {
+          "id": 5149,
+          "name": "Civic Sed. LXL/ LXL SE 1.8 Flex 16V Aut."
+        },
+        {
+          "id": 5148,
+          "name": "Civic Sed. LXL/LXL SE 1.8 Flex 16V Mec."
+        },
+        {
+          "id": 10366,
+          "name": "Civic Sed.Touring 2.0 16V Aut. (Híbrido)"
+        },
+        {
+          "id": 1258,
+          "name": "Civic Sedan EX 1.6 16V Aut. 4p (nacion.)"
+        },
+        {
+          "id": 1259,
+          "name": "Civic Sedan EX 1.6 16V Mec. 4p (nacion.)"
+        },
+        {
+          "id": 1260,
+          "name": "Civic Sedan EX 1.7 16V 130cv Aut. 4p"
+        },
+        {
+          "id": 1261,
+          "name": "Civic Sedan EX 1.7 16v 130cv Mec. 4p"
+        },
+        {
+          "id": 7692,
+          "name": "Civic Sedan EX 2.0 Flex 16V Aut.4p"
+        },
+        {
+          "id": 1250,
+          "name": "Civic Sedan EX/ EXS 1.6 Mec. 4p"
+        },
+        {
+          "id": 1251,
+          "name": "Civic Sedan EX/ EXS Aut. 4p/ Del-Sol 2p"
+        },
+        {
+          "id": 7693,
+          "name": "Civic Sedan EXL 2.0 Flex 16V Aut.4p"
+        },
+        {
+          "id": 6325,
+          "name": "Civic Sedan EXR 2.0 Flexone 16V Aut. 4p"
+        },
+        {
+          "id": 4009,
+          "name": "Civic Sedan EXS 1.8/1.8 Flex 16V Aut. 4p"
+        },
+        {
+          "id": 1257,
+          "name": "Civic Sedan LX 1.5/1.6"
+        },
+        {
+          "id": 1262,
+          "name": "Civic Sedan LX 1.6 16V Aut. 4p"
+        },
+        {
+          "id": 1263,
+          "name": "Civic Sedan LX 1.6 16V Mec. 4p"
+        },
+        {
+          "id": 1264,
+          "name": "Civic Sedan LX 1.7 16V 115cv Mec. 4p"
+        },
+        {
+          "id": 8779,
+          "name": "Civic Sedan LX 2.0 Flex 16V Aut. 4p"
+        },
+        {
+          "id": 1265,
+          "name": "Civic Sedan LX/LXL 1.7 16V 115cv Aut. 4p"
+        },
+        {
+          "id": 1266,
+          "name": "Civic Sedan LXB 1.6 16V 4p"
+        },
+        {
+          "id": 1267,
+          "name": "Civic Sedan LXB 1.7 16V 115cv"
+        },
+        {
+          "id": 1268,
+          "name": "Civic Sedan LXL 1.7 16V 130cv Aut 4p"
+        },
+        {
+          "id": 1269,
+          "name": "Civic Sedan LXL 1.7 16V 130cv Mec 4p"
+        },
+        {
+          "id": 6326,
+          "name": "Civic Sedan LXR 2.0 Flexone 16V Aut. 4p"
+        },
+        {
+          "id": 4010,
+          "name": "Civic Sedan LXS 1.8/1.8 Flex 16V Aut. 4p"
+        },
+        {
+          "id": 4011,
+          "name": "Civic Sedan LXS 1.8/1.8 Flex 16V Mec. 4p"
+        },
+        {
+          "id": 4292,
+          "name": "Civic Sedan Si 2.0 16V  192cv 4p"
+        },
+        {
+          "id": 7694,
+          "name": "Civic Sedan SPORT 2.0 Flex 16V Aut.4p"
+        },
+        {
+          "id": 7695,
+          "name": "Civic Sedan SPORT 2.0 Flex 16V Mec.4p"
+        },
+        {
+          "id": 7696,
+          "name": "Civic Sedan TOURING 1.5 Turbo 16V Aut.4p"
+        },
+        {
+          "id": 10727,
+          "name": "Civic Type-R 2.0 Turbo 16V"
+        },
+        {
+          "id": 1270,
+          "name": "CR-V 2.0 16V Aut."
+        },
+        {
+          "id": 1271,
+          "name": "CR-V 2.0 16V Mec."
+        },
+        {
+          "id": 1272,
+          "name": "CR-V 2.4 16V 156cv Aut. 4p"
+        },
+        {
+          "id": 4629,
+          "name": "CR-V EXL 2.0 16V 4WD/2.0 Flexone Aut."
+        },
+        {
+          "id": 6535,
+          "name": "CR-V EXL 2.0 Flexone 16V 2WD Aut."
+        },
+        {
+          "id": 5929,
+          "name": "CR-V LX 2.0 16V 2WD Mec."
+        },
+        {
+          "id": 4630,
+          "name": "CR-V LX 2.0 16V 2WD/2.0 Flexone Aut."
+        },
+        {
+          "id": 8282,
+          "name": "CR-V Touring 1.5 16V 4WD 5p Aut."
+        },
+        {
+          "id": 10985,
+          "name": "CR-V Touring 2.0 16V AWD Aut.(Híbrido)"
+        },
+        {
+          "id": 6613,
+          "name": "Fit CX 1.4 Flex 16V 5p Aut."
+        },
+        {
+          "id": 6614,
+          "name": "Fit CX 1.4 Flex 16V 5p Mec."
+        },
+        {
+          "id": 5468,
+          "name": "Fit DX 1.4 Flex 16V 5p Aut."
+        },
+        {
+          "id": 5469,
+          "name": "Fit DX 1.4 Flex 16V 5p Mec."
+        },
+        {
+          "id": 6779,
+          "name": "Fit DX 1.5 Flexone 16V 5p Aut."
+        },
+        {
+          "id": 6780,
+          "name": "Fit DX 1.5 Flexone 16V 5p Mec."
+        },
+        {
+          "id": 1274,
+          "name": "Fit EX/ S 1.5/ EX 1.5 Flex 16V 5p Mec."
+        },
+        {
+          "id": 10815,
+          "name": "Fit EX/S 1.5 Flex/Flexone 16V 5p Aut."
+        },
+        {
+          "id": 4800,
+          "name": "Fit EXL 1.5 Flex 16V 5p Mec"
+        },
+        {
+          "id": 4799,
+          "name": "Fit EXL 1.5 Flex/Flexone 16V 5p Aut"
+        },
+        {
+          "id": 1275,
+          "name": "Fit LX 1.4/ 1.4 Flex 8V/16V 5p Aut."
+        },
+        {
+          "id": 1276,
+          "name": "Fit LX 1.4/ 1.4 Flex 8V/16V 5p Mec."
+        },
+        {
+          "id": 6781,
+          "name": "Fit LX 1.5 Flexone 16V 5p Aut."
+        },
+        {
+          "id": 6782,
+          "name": "Fit LX 1.5 Flexone 16V 5p Mec."
+        },
+        {
+          "id": 1277,
+          "name": "Fit LXL 1.4/ 1.4 Flex 8V/16V 5p Aut."
+        },
+        {
+          "id": 1278,
+          "name": "Fit LXL 1.4/ 1.4 Flex 8V/16V 5p Mec."
+        },
+        {
+          "id": 8050,
+          "name": "Fit Personal 1.5 Flexone 16V 5p Aut."
+        },
+        {
+          "id": 6270,
+          "name": "Fit Twist 1.5 Flex 16V 5p Aut."
+        },
+        {
+          "id": 6271,
+          "name": "Fit Twist 1.5 Flex 16V 5p Mec."
+        },
+        {
+          "id": 10216,
+          "name": "HR-V Advance 1.5  Flex TB 16V 5p Aut."
+        },
+        {
+          "id": 10217,
+          "name": "HR-V EX 1.5 Flex Sensing 16V 5p Aut."
+        },
+        {
+          "id": 7150,
+          "name": "HR-V EX 1.8 Flexone 16V 5p Aut."
+        },
+        {
+          "id": 11726,
+          "name": "HR-V EXL 1.5 Flex Sensing 16V 5p Aut."
+        },
+        {
+          "id": 7151,
+          "name": "HR-V EXL 1.8 Flexone 16V 5p Aut."
+        },
+        {
+          "id": 7152,
+          "name": "HR-V LX 1.8 Flexone 16V 5p Aut."
+        },
+        {
+          "id": 7153,
+          "name": "HR-V LX 1.8 Flexone 16V 5p Mec."
+        },
+        {
+          "id": 10218,
+          "name": "HR-V Touring 1.5 Flex TB 16V 5p Aut."
+        },
+        {
+          "id": 7898,
+          "name": "HR-V Touring 1.8 Flexone 16V 5p Aut."
+        },
+        {
+          "id": 1279,
+          "name": "Odyssey EX Van Aut (6 lug.)"
+        },
+        {
+          "id": 1280,
+          "name": "Odyssey Van LX Aut (6 lug.)"
+        },
+        {
+          "id": 1281,
+          "name": "Passport EX"
+        },
+        {
+          "id": 1282,
+          "name": "Passport LX"
+        },
+        {
+          "id": 1283,
+          "name": "Passport PIck-Up 4x2"
+        },
+        {
+          "id": 1284,
+          "name": "Prelude Coupê S 2.2"
+        },
+        {
+          "id": 1285,
+          "name": "Prelude Si"
+        },
+        {
+          "id": 7899,
+          "name": "WR-V EX 1.5 Flexone 16V 5p Aut."
+        },
+        {
+          "id": 7900,
+          "name": "WR-V EXL 1.5 Flexone 16V 5p Aut."
+        },
+        {
+          "id": 9195,
+          "name": "WR-V LX 1.5 Flexone 16V 5p Aut."
+        },
+        {
+          "id": 10894,
+          "name": "ZR-V Touring 2.0 16V 5p Aut."
+        }
+      ],
+      "sample_details": [
+        {
+          "model_id": 1241,
+          "model_name": "Accord Coupe EX",
+          "years": [
+            {
+              "year": "1998 Gasolina",
+              "code": "1998-1"
+            },
+            {
+              "year": "1997 Gasolina",
+              "code": "1997-1"
+            },
+            {
+              "year": "1996 Gasolina",
+              "code": "1996-1"
+            },
+            {
+              "year": "1995 Gasolina",
+              "code": "1995-1"
+            },
+            {
+              "year": "1994 Gasolina",
+              "code": "1994-1"
+            }
+          ]
+        },
+        {
+          "model_id": 9600,
+          "model_name": "Accord Sedan 2.0 TB 16V Aut. (Híbrido)",
+          "years": [
+            {
+              "year": "32000 Híbrido",
+              "code": "32000-6"
+            },
+            {
+              "year": "2025 Híbrido",
+              "code": "2025-6"
+            },
+            {
+              "year": "2024 Híbrido",
+              "code": "2024-6"
+            },
+            {
+              "year": "2023 Híbrido",
+              "code": "2023-6"
+            },
+            {
+              "year": "2021 Híbrido",
+              "code": "2021-6"
+            }
+          ]
+        },
+        {
+          "model_id": 5211,
+          "model_name": "Accord Sedan EX 2.0 16V 156cv Aut.",
+          "years": [
+            {
+              "year": "2012 Gasolina",
+              "code": "2012-1"
+            },
+            {
+              "year": "2011 Gasolina",
+              "code": "2011-1"
+            },
+            {
+              "year": "2010 Gasolina",
+              "code": "2010-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1242,
+          "model_name": "Accord Sedan EX 2.4/2.3/ 2.2 16V",
+          "years": [
+            {
+              "year": "2014 Gasolina",
+              "code": "2014-1"
+            },
+            {
+              "year": "2013 Gasolina",
+              "code": "2013-1"
+            },
+            {
+              "year": "2005 Gasolina",
+              "code": "2005-1"
+            },
+            {
+              "year": "2004 Gasolina",
+              "code": "2004-1"
+            },
+            {
+              "year": "2003 Gasolina",
+              "code": "2003-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1243,
+          "model_name": "Accord Sedan EX 2.7/3.0 24V",
+          "years": [
+            {
+              "year": "2007 Gasolina",
+              "code": "2007-1"
+            },
+            {
+              "year": "2006 Gasolina",
+              "code": "2006-1"
+            },
+            {
+              "year": "2005 Gasolina",
+              "code": "2005-1"
+            },
+            {
+              "year": "2004 Gasolina",
+              "code": "2004-1"
+            },
+            {
+              "year": "1996 Gasolina",
+              "code": "1996-1"
+            }
+          ]
+        }
+      ]
+    },
+    "Mazda": {
+      "brand_id": 38,
+      "total_models": 25,
+      "models": [
+        {
+          "id": 1502,
+          "name": "323 1.6 16V"
+        },
+        {
+          "id": 1503,
+          "name": "626 GLX"
+        },
+        {
+          "id": 1504,
+          "name": "626 GT"
+        },
+        {
+          "id": 1505,
+          "name": "626 Sedan Aut."
+        },
+        {
+          "id": 1506,
+          "name": "626 Sedan High"
+        },
+        {
+          "id": 1507,
+          "name": "626 Sedan Mec."
+        },
+        {
+          "id": 1508,
+          "name": "626 Sedan Top"
+        },
+        {
+          "id": 1509,
+          "name": "626 SW"
+        },
+        {
+          "id": 1510,
+          "name": "626 SW High"
+        },
+        {
+          "id": 1511,
+          "name": "929 V6 Aut"
+        },
+        {
+          "id": 1512,
+          "name": "B2200 Pick-Up 2.2 Diesel"
+        },
+        {
+          "id": 1513,
+          "name": "B2200 Pick-Up CD 2.2 Diesel"
+        },
+        {
+          "id": 1514,
+          "name": "B-2500 Pick-Up 2.5 Diesel"
+        },
+        {
+          "id": 1515,
+          "name": "B-2500 Pick-Up 4x4 2.5 Diesel"
+        },
+        {
+          "id": 1516,
+          "name": "B-2500 Pick-Up CD 4x4 2.5 Diesel"
+        },
+        {
+          "id": 1517,
+          "name": "Millenia 3.0 V6 24V"
+        },
+        {
+          "id": 1518,
+          "name": "MPV Minivan Aut"
+        },
+        {
+          "id": 1519,
+          "name": "MX-3 1.6 16V"
+        },
+        {
+          "id": 1520,
+          "name": "MX-3 GS 1.8 V6 24V"
+        },
+        {
+          "id": 1521,
+          "name": "MX-5 Mec"
+        },
+        {
+          "id": 1522,
+          "name": "Navajo LX 3.0 V6"
+        },
+        {
+          "id": 1523,
+          "name": "Protegé Aut."
+        },
+        {
+          "id": 1524,
+          "name": "Protegé High"
+        },
+        {
+          "id": 1525,
+          "name": "Protegé Mec."
+        },
+        {
+          "id": 1526,
+          "name": "RX 7 2.6 Turbo"
+        }
+      ],
+      "sample_details": [
+        {
+          "model_id": 1502,
+          "model_name": "323 1.6 16V",
+          "years": [
+            {
+              "year": "1995 Gasolina",
+              "code": "1995-1"
+            },
+            {
+              "year": "1994 Gasolina",
+              "code": "1994-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1503,
+          "model_name": "626 GLX",
+          "years": [
+            {
+              "year": "1999 Gasolina",
+              "code": "1999-1"
+            },
+            {
+              "year": "1998 Gasolina",
+              "code": "1998-1"
+            },
+            {
+              "year": "1997 Gasolina",
+              "code": "1997-1"
+            },
+            {
+              "year": "1996 Gasolina",
+              "code": "1996-1"
+            },
+            {
+              "year": "1995 Gasolina",
+              "code": "1995-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1504,
+          "model_name": "626 GT",
+          "years": [
+            {
+              "year": "1995 Gasolina",
+              "code": "1995-1"
+            },
+            {
+              "year": "1994 Gasolina",
+              "code": "1994-1"
+            },
+            {
+              "year": "1993 Gasolina",
+              "code": "1993-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1505,
+          "model_name": "626 Sedan Aut.",
+          "years": [
+            {
+              "year": "2000 Gasolina",
+              "code": "2000-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1506,
+          "model_name": "626 Sedan High",
+          "years": [
+            {
+              "year": "2000 Gasolina",
+              "code": "2000-1"
+            }
+          ]
+        }
+      ]
+    },
+    "BMW": {
+      "brand_id": 7,
+      "total_models": 323,
+      "models": [
+        {
+          "id": 6146,
+          "name": "116iA 1.6 TB 16V 136cv 5p"
+        },
+        {
+          "id": 9955,
+          "name": "118i M Sport 1.5 TB 12V Aut. 5p"
+        },
+        {
+          "id": 8946,
+          "name": "118i Sport 1.5 TB 12V Aut. 5p"
+        },
+        {
+          "id": 5576,
+          "name": "118iA 2.0 16V 136cv 3p"
+        },
+        {
+          "id": 4960,
+          "name": "118iA 2.0 16V 136cv 5p"
+        },
+        {
+          "id": 6147,
+          "name": "118iA Full 1.6 TB 16V 170cv 5p"
+        },
+        {
+          "id": 5923,
+          "name": "118iA/ Urban/Sport 1.6 TB 16V 170cv 5p"
+        },
+        {
+          "id": 152,
+          "name": "120i 2.0 16V 150cv/ 156cv 5p"
+        },
+        {
+          "id": 153,
+          "name": "120iA 2.0 16V 150cv/ 156cv 5p"
+        },
+        {
+          "id": 4700,
+          "name": "120iA 2.0 16V 156cv 3p"
+        },
+        {
+          "id": 4683,
+          "name": "120iA Cabrio 2.0 16V 156cv 2p"
+        },
+        {
+          "id": 7178,
+          "name": "120iA Sport 2.0/ActiveFlex 16V Aut."
+        },
+        {
+          "id": 6377,
+          "name": "125i M Sport/Active Flex 2.0 TB Aut. 5p"
+        },
+        {
+          "id": 3879,
+          "name": "130i 3.0 24V 265cv 5p"
+        },
+        {
+          "id": 4473,
+          "name": "130iA 3.0 24V 265cv 3p"
+        },
+        {
+          "id": 4199,
+          "name": "130iA 3.0 24V 265cv 5p"
+        },
+        {
+          "id": 4961,
+          "name": "135iA Coupé 3.0 24V 306cv"
+        },
+        {
+          "id": 11119,
+          "name": "218i Gran Coupe M Sport 1.5 Bi-Turbo"
+        },
+        {
+          "id": 9036,
+          "name": "218i Gran Coupe Sport GP 1.5 Bi-Turbo"
+        },
+        {
+          "id": 11529,
+          "name": "220i Gran Coupe M Sport 2.0 TB Aut."
+        },
+        {
+          "id": 7448,
+          "name": "220i Tourer Active Flex 2.0 TB Aut."
+        },
+        {
+          "id": 7129,
+          "name": "225i Active Tourer Sport 2.0 TB Aut."
+        },
+        {
+          "id": 154,
+          "name": "316 (todas)"
+        },
+        {
+          "id": 6660,
+          "name": "316i 1.6 TB 16V 136cv 4p"
+        },
+        {
+          "id": 155,
+          "name": "318i Cabrio 1.8 16V"
+        },
+        {
+          "id": 156,
+          "name": "318i/iA 1.8 16V"
+        },
+        {
+          "id": 157,
+          "name": "318i/iA Compact 1.8 16V"
+        },
+        {
+          "id": 5607,
+          "name": "318iA 2.0 16V 136cv 5p"
+        },
+        {
+          "id": 158,
+          "name": "318iS/ISA 1.9 16V"
+        },
+        {
+          "id": 159,
+          "name": "318Ti Compact Mec"
+        },
+        {
+          "id": 160,
+          "name": "318Ti/TiA Compact 1.9 16V"
+        },
+        {
+          "id": 161,
+          "name": "320i"
+        },
+        {
+          "id": 162,
+          "name": "320iA"
+        },
+        {
+          "id": 7256,
+          "name": "320iA 2.0 TB M Sport A.Flex/M.Sport 4p"
+        },
+        {
+          "id": 6090,
+          "name": "320iA 2.0 Turbo/ActiveFlex 16V/GP  4p"
+        },
+        {
+          "id": 6609,
+          "name": "320iA GT Sport 2.0 Turbo 16V 184cv 5p"
+        },
+        {
+          "id": 6091,
+          "name": "320iA Modern/Sport TB 2.0/A.Flex/GP 4p"
+        },
+        {
+          "id": 163,
+          "name": "323Ci Coupê"
+        },
+        {
+          "id": 164,
+          "name": "323CiA Coupê"
+        },
+        {
+          "id": 165,
+          "name": "323i 2.5 24V"
+        },
+        {
+          "id": 166,
+          "name": "323i Confort"
+        },
+        {
+          "id": 167,
+          "name": "323i Sport"
+        },
+        {
+          "id": 168,
+          "name": "323i Touring"
+        },
+        {
+          "id": 172,
+          "name": "323i/iA Exclusive"
+        },
+        {
+          "id": 169,
+          "name": "323iA 2.5 24V"
+        },
+        {
+          "id": 170,
+          "name": "323iA Confort"
+        },
+        {
+          "id": 171,
+          "name": "323iA Entry Sedan"
+        },
+        {
+          "id": 173,
+          "name": "323iA Sport"
+        },
+        {
+          "id": 174,
+          "name": "323iA Top Sedan"
+        },
+        {
+          "id": 175,
+          "name": "323iA Touring"
+        },
+        {
+          "id": 176,
+          "name": "323Ti Compact"
+        },
+        {
+          "id": 177,
+          "name": "323Ti Compact Sport"
+        },
+        {
+          "id": 178,
+          "name": "323TiA Compact Top"
+        },
+        {
+          "id": 179,
+          "name": "325i"
+        },
+        {
+          "id": 180,
+          "name": "325i/iA Cabrio"
+        },
+        {
+          "id": 181,
+          "name": "325iA"
+        },
+        {
+          "id": 182,
+          "name": "325iA 2.5 24V Protection"
+        },
+        {
+          "id": 183,
+          "name": "325iA Coupé 2.5 24V 2p"
+        },
+        {
+          "id": 3955,
+          "name": "325iA Touring"
+        },
+        {
+          "id": 184,
+          "name": "328i Exclusive 2.8 24V"
+        },
+        {
+          "id": 185,
+          "name": "328i Touring/Sport"
+        },
+        {
+          "id": 186,
+          "name": "328i/iA (modelo antigo)"
+        },
+        {
+          "id": 187,
+          "name": "328i/iA (novo modelo)"
+        },
+        {
+          "id": 188,
+          "name": "328i/iA Cabrio"
+        },
+        {
+          "id": 6046,
+          "name": "328iA 2.0 TB/2.0 TB Flex 16V 4p"
+        },
+        {
+          "id": 189,
+          "name": "328iA Exclusive 2.8 24V"
+        },
+        {
+          "id": 6633,
+          "name": "328iA GT M Sport 2.0 Turbo 16V 245cv 5p"
+        },
+        {
+          "id": 6047,
+          "name": "328iA Luxury/Modern 2.0 TB 16V 4p"
+        },
+        {
+          "id": 7303,
+          "name": "328iA M Sport 2.0 16V Flex 4p"
+        },
+        {
+          "id": 6048,
+          "name": "328iA Plus 2.0 TB 16V 245cv 4p"
+        },
+        {
+          "id": 6049,
+          "name": "328iA Sport 2.0 16V/2.0 16V Flex 4p"
+        },
+        {
+          "id": 190,
+          "name": "328iA Touring/Sport"
+        },
+        {
+          "id": 191,
+          "name": "330Ci Cabriolet"
+        },
+        {
+          "id": 192,
+          "name": "330CiA Cabriolet"
+        },
+        {
+          "id": 9956,
+          "name": "330e M Sport 2.0 Turbo Aut. (Híbrido)"
+        },
+        {
+          "id": 8630,
+          "name": "330i M Sport 2.0 TB 16V 4p"
+        },
+        {
+          "id": 193,
+          "name": "330i MotorSport 3.0 24V 4p"
+        },
+        {
+          "id": 8688,
+          "name": "330i Sport 2.0 TB 16V 4p"
+        },
+        {
+          "id": 3956,
+          "name": "330iA Exclusive 3.0 24V 4p"
+        },
+        {
+          "id": 194,
+          "name": "330iA MotorSport 4p"
+        },
+        {
+          "id": 195,
+          "name": "330iA Top 4p"
+        },
+        {
+          "id": 9957,
+          "name": "335i 3.0 Active 3 (Híbrido)"
+        },
+        {
+          "id": 4272,
+          "name": "335iA 3.0 24V 306cv"
+        },
+        {
+          "id": 4416,
+          "name": "335iA Cabriolet 3.0 24V 306cv"
+        },
+        {
+          "id": 6513,
+          "name": "335iA M Sport 3.0 24V 306cv 4p"
+        },
+        {
+          "id": 6148,
+          "name": "335iA Sport 3.0 24V 306cv 4p"
+        },
+        {
+          "id": 9785,
+          "name": "420i Cabriolet M Sport 2.0 TB 16V 2p."
+        },
+        {
+          "id": 7083,
+          "name": "420i Cabriolet Sport 2.0 TB 184cv 2p"
+        },
+        {
+          "id": 6952,
+          "name": "428i Cabriolet Sport 2.0 TB 245cv 2p"
+        },
+        {
+          "id": 7084,
+          "name": "428i Gran Coupe M Sport 2.0 TB 245cv"
+        },
+        {
+          "id": 7085,
+          "name": "428i Gran Coupe Sport 2.0 TB 245cv"
+        },
+        {
+          "id": 7728,
+          "name": "430i Cab. Sport Limited Ed.2.0 TB 2p"
+        },
+        {
+          "id": 9442,
+          "name": "430i Cabriolet M Sport 2.0 TB 258cv 2p"
+        },
+        {
+          "id": 7875,
+          "name": "430i Cabriolet Sport 2.0 TB 252cv 2p"
+        },
+        {
+          "id": 7729,
+          "name": "430i Gran Coupé M Sport TB 5p"
+        },
+        {
+          "id": 6691,
+          "name": "435iA M Sport Coupe 3.0 24V 306cv 2p"
+        },
+        {
+          "id": 196,
+          "name": "520i 2.0 16V"
+        },
+        {
+          "id": 197,
+          "name": "525i/iA"
+        },
+        {
+          "id": 198,
+          "name": "525i/iA Touring"
+        },
+        {
+          "id": 199,
+          "name": "528i/iA"
+        },
+        {
+          "id": 6149,
+          "name": "528iA 2.0 Turbo 16V 245cv 4p"
+        },
+        {
+          "id": 200,
+          "name": "528iA High"
+        },
+        {
+          "id": 6514,
+          "name": "528iA M Sport 2.0 Turbo 16V 245cv 4p"
+        },
+        {
+          "id": 201,
+          "name": "528iA Touring"
+        },
+        {
+          "id": 9959,
+          "name": "530e Luxury 2.0 Turbo (Híbrido)"
+        },
+        {
+          "id": 9960,
+          "name": "530e M Sport 2.0 Turbo Aut. (Híbrido)"
+        },
+        {
+          "id": 7918,
+          "name": "530i M Sport 2.0 Turbo 252cv Aut."
+        },
+        {
+          "id": 8816,
+          "name": "530i Security"
+        },
+        {
+          "id": 202,
+          "name": "530i/iA"
+        },
+        {
+          "id": 203,
+          "name": "530i/iA Touring"
+        },
+        {
+          "id": 204,
+          "name": "535i/iA 3.5 24V"
+        },
+        {
+          "id": 5267,
+          "name": "535iA 3.0 24V 306cv Bi-Turbo"
+        },
+        {
+          "id": 5292,
+          "name": "535iA GT 3.0 306cv Bi-Turbo"
+        },
+        {
+          "id": 6415,
+          "name": "535iA M Sport 3.0 24V 306cv Bi-Turbo"
+        },
+        {
+          "id": 205,
+          "name": "540i"
+        },
+        {
+          "id": 7919,
+          "name": "540i M Sport 3.0 Turbo 340cv Aut."
+        },
+        {
+          "id": 206,
+          "name": "540i/iA Touring"
+        },
+        {
+          "id": 207,
+          "name": "540iA"
+        },
+        {
+          "id": 208,
+          "name": "540iA MotorSport"
+        },
+        {
+          "id": 209,
+          "name": "540iA Protection"
+        },
+        {
+          "id": 210,
+          "name": "540iTA"
+        },
+        {
+          "id": 211,
+          "name": "545iA 4.4 32V V8 333cv"
+        },
+        {
+          "id": 5268,
+          "name": "550iA 4.4 32V 407cv Bi-Turbo"
+        },
+        {
+          "id": 3880,
+          "name": "550iA 4.8 32V"
+        },
+        {
+          "id": 4995,
+          "name": "550iA Limited Sport Edition 4.8 32V"
+        },
+        {
+          "id": 4432,
+          "name": "550iA Security 4.8 32V"
+        },
+        {
+          "id": 6378,
+          "name": "640i Gran Coupe 3.0 320cv 4p"
+        },
+        {
+          "id": 3929,
+          "name": "645Ci Cabriolet 4.4 V8 32V 333cv"
+        },
+        {
+          "id": 212,
+          "name": "645iA 4.4 V8 32V 333cv"
+        },
+        {
+          "id": 5718,
+          "name": "650Ci Cabriolet 4.4 407cv Bi-Turbo"
+        },
+        {
+          "id": 4126,
+          "name": "650Ci Cabriolet 4.8 V8 32V 360cv"
+        },
+        {
+          "id": 6634,
+          "name": "650i Gran Coupe 4.4 V8 450cv 4p"
+        },
+        {
+          "id": 6150,
+          "name": "650iA 4.4 407cv Bi-Turbo"
+        },
+        {
+          "id": 4125,
+          "name": "650iA 4.8 V8 32V 360cv"
+        },
+        {
+          "id": 5057,
+          "name": "650iA Limited Sport  Edition 4.8 32V"
+        },
+        {
+          "id": 213,
+          "name": "730i 3.0 32V"
+        },
+        {
+          "id": 214,
+          "name": "730iA 3.0 32V"
+        },
+        {
+          "id": 215,
+          "name": "735i/iA 3.5 32V"
+        },
+        {
+          "id": 216,
+          "name": "740i"
+        },
+        {
+          "id": 217,
+          "name": "740iA"
+        },
+        {
+          "id": 218,
+          "name": "740iL/iLA Highline 4.4 32V"
+        },
+        {
+          "id": 219,
+          "name": "740iLA Protection"
+        },
+        {
+          "id": 220,
+          "name": "745iA 4.4 V8 32V 333cv"
+        },
+        {
+          "id": 9961,
+          "name": "745Le M Sport Sedan 3.0 V6 Aut. (Híb.)"
+        },
+        {
+          "id": 221,
+          "name": "750i"
+        },
+        {
+          "id": 7147,
+          "name": "750i M Sport Sedan 4.4 V8 450cv Aut."
+        },
+        {
+          "id": 222,
+          "name": "750iA"
+        },
+        {
+          "id": 223,
+          "name": "750iL Highline 5.4 24V"
+        },
+        {
+          "id": 7657,
+          "name": "750iL M Sport Sedan 4.4 V8 450cv Aut."
+        },
+        {
+          "id": 8660,
+          "name": "750iL Pure Excellence Sedan 4.4 V8 Aut."
+        },
+        {
+          "id": 9962,
+          "name": "750iLA 4.4 Active 7 (Híbrido)"
+        },
+        {
+          "id": 224,
+          "name": "760iL 6.0 V12 445cv/544cv"
+        },
+        {
+          "id": 225,
+          "name": "840Ci"
+        },
+        {
+          "id": 226,
+          "name": "840CiA"
+        },
+        {
+          "id": 227,
+          "name": "850Ci/CiA 5.0 24V"
+        },
+        {
+          "id": 228,
+          "name": "850Ci/CiA 5.4 24V"
+        },
+        {
+          "id": 229,
+          "name": "850CSi 5.6 24V"
+        },
+        {
+          "id": 230,
+          "name": "850i 5.0 24V"
+        },
+        {
+          "id": 8817,
+          "name": "i3 Bev 170cv Aut. (Elétrico)"
+        },
+        {
+          "id": 8818,
+          "name": "i3 Bev Connected 170cv Aut. (Elétrico)"
+        },
+        {
+          "id": 8819,
+          "name": "i3 Bev Full 170cv Aut. (Elétrico)"
+        },
+        {
+          "id": 9861,
+          "name": "i3 Bev Un. Forever 170cv Aut. (Életrico)"
+        },
+        {
+          "id": 7023,
+          "name": "i3 Rex E Drive 170cv Aut.(Elétrico)"
+        },
+        {
+          "id": 8734,
+          "name": "i3 Rex E Drive Connected Aut. (Elétrico)"
+        },
+        {
+          "id": 7024,
+          "name": "i3 Rex E Drive Full 170cv Aut.(Elétrico)"
+        },
+        {
+          "id": 10668,
+          "name": "i4 e-Drive 35 M Sport (Elétrico)"
+        },
+        {
+          "id": 10669,
+          "name": "i4 e-Drive 40 M Sport (Elétrico)"
+        },
+        {
+          "id": 10371,
+          "name": "i4 M50 (Elétrico)"
+        },
+        {
+          "id": 10989,
+          "name": "i5 M60 (Elétrico)"
+        },
+        {
+          "id": 10824,
+          "name": "i7 XDrive 60 M Sport Aut. (Elétrico)"
+        },
+        {
+          "id": 10019,
+          "name": "i8 e-Drive 1.5 TB 12V  Aut. (Híbrido)"
+        },
+        {
+          "id": 10020,
+          "name": "i8 Road. e-Drive 1.5 TB 12V Aut. (Híb.)"
+        },
+        {
+          "id": 11103,
+          "name": "iX 1 eDrive20 X-Line Aut. (Elétrico)"
+        },
+        {
+          "id": 10755,
+          "name": "iX 1 xDrive 30 M Sport (Elétrico)"
+        },
+        {
+          "id": 11104,
+          "name": "iX 2 xDrive 30 M Sport (Elétrico)"
+        },
+        {
+          "id": 9910,
+          "name": "iX 3 M Sport Aut.(Elétrico)"
+        },
+        {
+          "id": 12171,
+          "name": "iX 3 XDrive 50 M Sport"
+        },
+        {
+          "id": 10782,
+          "name": "iX M60 (Elétrico)"
+        },
+        {
+          "id": 9863,
+          "name": "iX XDrive 40 Aut. (Elétrico)"
+        },
+        {
+          "id": 9864,
+          "name": "iX XDrive 50 Sport Aut. (Elétrico)"
+        },
+        {
+          "id": 10784,
+          "name": "M 135i 3.0 TB 24V 320cv"
+        },
+        {
+          "id": 11919,
+          "name": "M 135i XDRIVE 2.0 TB Aut."
+        },
+        {
+          "id": 6910,
+          "name": "M 235i Coupe 3.0 24V 326cv"
+        },
+        {
+          "id": 231,
+          "name": "M Roadster"
+        },
+        {
+          "id": 5719,
+          "name": "M1 Coupe 3.0 24V 340cv"
+        },
+        {
+          "id": 7823,
+          "name": "M140i 3.0  24V 340cv 5p"
+        },
+        {
+          "id": 8439,
+          "name": "M2 Competition 3.0 Bi-Turbo 410cv Aut."
+        },
+        {
+          "id": 9103,
+          "name": "M2 Competition Ed. Espe. 3.0 Bi-TB Mec."
+        },
+        {
+          "id": 10825,
+          "name": "M2 Coupe 3.0 Bi-Turbo 24V 3p"
+        },
+        {
+          "id": 10826,
+          "name": "M2 Coupe Track 3.0 Bi-Turbo 24V 460cv 3p"
+        },
+        {
+          "id": 9339,
+          "name": "M2 CS Coupe 3.0 Bi-Turbo 450cv"
+        },
+        {
+          "id": 9104,
+          "name": "M235i XDRIVE Gran Coupé 2.0 Aut."
+        },
+        {
+          "id": 7857,
+          "name": "M240i Coupe 3.0 24V 340cv 2p"
+        },
+        {
+          "id": 232,
+          "name": "M3 3.2 24V"
+        },
+        {
+          "id": 233,
+          "name": "M3 Cabrio 3.0 24V"
+        },
+        {
+          "id": 4919,
+          "name": "M3 Cabrio 4.0 32V"
+        },
+        {
+          "id": 9482,
+          "name": "M3 Competition M 3.0 Bi-TB 510cv"
+        },
+        {
+          "id": 9483,
+          "name": "M3 Competition M Track 3.0 Bi-TB"
+        },
+        {
+          "id": 234,
+          "name": "M3 Coupê 3.0 24V 255cv"
+        },
+        {
+          "id": 235,
+          "name": "M3 Coupê 3.0 V6 24V 282cv"
+        },
+        {
+          "id": 4527,
+          "name": "M3 Coupê 4.0 32V"
+        },
+        {
+          "id": 8661,
+          "name": "M3 CS Sedan 3.0 Bi-Turbo 460cv 4p"
+        },
+        {
+          "id": 7130,
+          "name": "M3 Sedan 3.0 Bi-Turbo 24V 4p"
+        },
+        {
+          "id": 4823,
+          "name": "M3 Sedan 4.0 32V"
+        },
+        {
+          "id": 9105,
+          "name": "M340i XDRIVE 3.0 Turbo Aut."
+        },
+        {
+          "id": 9094,
+          "name": "M340i XDRIVE First Ed. 3.0 Turbo Aut."
+        },
+        {
+          "id": 7148,
+          "name": "M4 Cabriolet 3.0 Bi-Turbo 24V 431cv 2p"
+        },
+        {
+          "id": 12022,
+          "name": "M4 Competition M 3.0 Bi-TB 510cv"
+        },
+        {
+          "id": 7116,
+          "name": "M4 Coupe 3.0 Bi-Turbo 24V 431cv 2p"
+        },
+        {
+          "id": 11268,
+          "name": "M4 CS Coupe 3.0 Bi-Turbo 2p"
+        },
+        {
+          "id": 9524,
+          "name": "M440i Coupe 3.0 TB Aut."
+        },
+        {
+          "id": 236,
+          "name": "M5 3.8/Touring 3.8 24V"
+        },
+        {
+          "id": 6260,
+          "name": "M5 4.4 560cv Bi-Turbo Aut."
+        },
+        {
+          "id": 237,
+          "name": "M5 5.0 32V/ 40V"
+        },
+        {
+          "id": 9484,
+          "name": "M5 Competition M XDRIVE 4.4 Bi-TB V8"
+        },
+        {
+          "id": 8388,
+          "name": "M5 M XDRIVE 4.4 Bi-TB V8"
+        },
+        {
+          "id": 8389,
+          "name": "M5 Perform. Pack M XDRIVE 4.4 Bi-TB V8"
+        },
+        {
+          "id": 238,
+          "name": "M6 5.0 V10 40V 507cv"
+        },
+        {
+          "id": 6460,
+          "name": "M6 Coupe 4.4 Bi-Turbo V8 32V"
+        },
+        {
+          "id": 6635,
+          "name": "M6 Gran Coupe 4.4 Bi-Turbo V8 32V 560cv"
+        },
+        {
+          "id": 8735,
+          "name": "M760Li xDrive 6.6 V12 585cv Aut."
+        },
+        {
+          "id": 9188,
+          "name": "M8 Gran Coupé Comp.First ED. 4.4 V8 32V"
+        },
+        {
+          "id": 9525,
+          "name": "M8 Gran Coupé Competition 4.4 V8 32V"
+        },
+        {
+          "id": 8736,
+          "name": "M850i XDrive Coupé 4.4 V8 530cv Aut."
+        },
+        {
+          "id": 5269,
+          "name": "X1 SDRIVE 18i 2.0 16V 4x2 Aut."
+        },
+        {
+          "id": 10414,
+          "name": "X1 SDRIVE 18i GP 1.5 TB Aut."
+        },
+        {
+          "id": 6230,
+          "name": "X1 SDRIVE 20i 2.0/2.0 TB Acti.Flex Aut."
+        },
+        {
+          "id": 11301,
+          "name": "X1 SDRIVE 20i GP 2.0 TB Aut."
+        },
+        {
+          "id": 9226,
+          "name": "X1 SDRIVE 20i M S. 2.0 25 Anos TB Flex"
+        },
+        {
+          "id": 10415,
+          "name": "X1 SDRIVE 20i M Sport 2.0 TB Aut."
+        },
+        {
+          "id": 9682,
+          "name": "X1 SDRIVE 20i M Sport 2.0 TB Flex Aut."
+        },
+        {
+          "id": 10115,
+          "name": "X1 SDRIVE 20i Outdoor 2.0.Flex Aut."
+        },
+        {
+          "id": 8570,
+          "name": "X1 SDRIVE 20i X-Line 2.0 TB Active Flex"
+        },
+        {
+          "id": 10416,
+          "name": "X1 SDRIVE 20i X-Line 2.0 TB Aut."
+        },
+        {
+          "id": 7449,
+          "name": "X1 XDRIVE 25i Sport 2.0/2.0 Flex Aut."
+        },
+        {
+          "id": 6151,
+          "name": "X1 XDRIVE 28i 2.0 Turbo 16V 4x4 Aut."
+        },
+        {
+          "id": 5158,
+          "name": "X1 XDRIVE 28i 3.0 24V 4x4 Aut."
+        },
+        {
+          "id": 7086,
+          "name": "X1 XDRIVE 28i Sport 2.0 ActiveFlex Aut."
+        },
+        {
+          "id": 8820,
+          "name": "X2 M35i 2.0 Turbo 306cv Aut."
+        },
+        {
+          "id": 11282,
+          "name": "X2 M35i xDrive 2.0 Turbo 317cv Aut."
+        },
+        {
+          "id": 8277,
+          "name": "X2 SDRIVE  20i M Sp/M Sp 2.0 TB Flex Aut"
+        },
+        {
+          "id": 8510,
+          "name": "X2 SDRIVE 18i 1.5 ActiveFlex 136cv Aut."
+        },
+        {
+          "id": 8338,
+          "name": "X2 SDRIVE 20i 2.0/2.0 TB A. Flex 16V Aut"
+        },
+        {
+          "id": 11112,
+          "name": "X2 XDrive20i M Sport"
+        },
+        {
+          "id": 239,
+          "name": "X3 Family 2.5 24V 192cv/ 218cv"
+        },
+        {
+          "id": 240,
+          "name": "X3 Family 3.0 24V 231cv"
+        },
+        {
+          "id": 8842,
+          "name": "X3 M Competition 3.0 Bi-TB 510cv Aut."
+        },
+        {
+          "id": 9881,
+          "name": "X3 M40i 3.0 M Sport Edit. V6 Turbo Aut."
+        },
+        {
+          "id": 9797,
+          "name": "X3 M40i 3.0 Turbo V6  Aut."
+        },
+        {
+          "id": 11382,
+          "name": "X3 M50 XDRIVE 3.0 V6 Aut. (Híbrido)"
+        },
+        {
+          "id": 4241,
+          "name": "X3 Sport 2.5 24V 192cv/ 218cv"
+        },
+        {
+          "id": 241,
+          "name": "X3 Sport 3.0 24V 231cv"
+        },
+        {
+          "id": 6417,
+          "name": "X3 XDRIVE 20i 2.0/X-Line Bi-TB Flex Aut."
+        },
+        {
+          "id": 6294,
+          "name": "X3 XDRIVE 28i 2.0 Turbo 245cv Aut."
+        },
+        {
+          "id": 5608,
+          "name": "X3 XDRIVE 28i 3.0 258cv"
+        },
+        {
+          "id": 11736,
+          "name": "X3 XDRIVE 30 M Sport 2.0 TB Aut."
+        },
+        {
+          "id": 10075,
+          "name": "X3 XDRIVE 30e M SP Launch Ed. TB (Híb.)"
+        },
+        {
+          "id": 10076,
+          "name": "X3 XDRIVE 30e M Sport Turbo Aut. (Híb.)"
+        },
+        {
+          "id": 10077,
+          "name": "X3 XDRIVE 30e Turbo Aut. (Híbrido)"
+        },
+        {
+          "id": 10078,
+          "name": "X3 XDRIVE 30e X-Line Turbo Aut. (Híb.)"
+        },
+        {
+          "id": 8233,
+          "name": "X3 XDRIVE 30i X-Line 2.0 Turbo 252cv Aut"
+        },
+        {
+          "id": 5497,
+          "name": "X3 XDRIVE 35i/M-Sport 3.0 306cv Bi-Turbo"
+        },
+        {
+          "id": 8985,
+          "name": "X4 M Competition 3.0 Bi-TB 510cv Aut."
+        },
+        {
+          "id": 10871,
+          "name": "X4 M40i 3.0 M Sport EditionTurbo Aut."
+        },
+        {
+          "id": 9927,
+          "name": "X4 M40i 3.0 Turbo 388cv Aut."
+        },
+        {
+          "id": 11302,
+          "name": "X4 XDRIVE 20i M-Sport 2.0 TB 184cv Aut"
+        },
+        {
+          "id": 7065,
+          "name": "X4 XDRIVE 28i X-Line 2.0 Turbo 245cv Aut"
+        },
+        {
+          "id": 10872,
+          "name": "X4 XDRIVE 30i M-Sport 2.0 TB 252cv Aut"
+        },
+        {
+          "id": 7066,
+          "name": "X4 XDRIVE 35i M-Sport 3.0 TB 306cv Aut."
+        },
+        {
+          "id": 242,
+          "name": "X5 3.0 4x4"
+        },
+        {
+          "id": 243,
+          "name": "X5 4.4 4x4"
+        },
+        {
+          "id": 244,
+          "name": "X5 4.8 4x4 V8 32V 360cv"
+        },
+        {
+          "id": 4585,
+          "name": "X5 Endurance 4.8is 4x4 V8 32V 355cv Aut."
+        },
+        {
+          "id": 5188,
+          "name": "X5 M 4.4 4x4 V8 32V Bi-Turbo Aut."
+        },
+        {
+          "id": 9535,
+          "name": "X5 M Competition 4.4 V8 Bi-TB Aut."
+        },
+        {
+          "id": 4242,
+          "name": "X5 Security 4.4 4x4 V8 32V"
+        },
+        {
+          "id": 5020,
+          "name": "X5 Security 4.8is 4x4 V8 32V 355cv Aut."
+        },
+        {
+          "id": 245,
+          "name": "X5 Sport 4.4 4x4 V8 32V"
+        },
+        {
+          "id": 4331,
+          "name": "X5 Sport 4.8 4x4 V8 32V 355cv"
+        },
+        {
+          "id": 7283,
+          "name": "X5 XDRIVE 30d 3.0 Diesel"
+        },
+        {
+          "id": 7087,
+          "name": "X5 XDRIVE 30d Full 3.0 258cv Diesel"
+        },
+        {
+          "id": 8662,
+          "name": "X5 XDRIVE 30d M Sport 3.0 265cv Dies Aut"
+        },
+        {
+          "id": 5356,
+          "name": "X5 XDRIVE 35i 3.0 306cv Bi-Turbo"
+        },
+        {
+          "id": 6911,
+          "name": "X5 XDRIVE 35i Full 3.0 306cv Bi-Turbo"
+        },
+        {
+          "id": 10079,
+          "name": "X5 XDRIVE 45e 3.0 M.Sport  Aut. (Híb.)"
+        },
+        {
+          "id": 10765,
+          "name": "X5 XDRIVE 50e 3.0 M Sport Aut. (Hibrido)"
+        },
+        {
+          "id": 10766,
+          "name": "X5 XDRIVE 50e 3.0 X-Line Aut. (Hibrido)"
+        },
+        {
+          "id": 5357,
+          "name": "X5 XDRIVE 50i 4.4  Bi-Turbo"
+        },
+        {
+          "id": 6710,
+          "name": "X5 XDRIVE 50i M Sport 4.4 Bi-Turbo"
+        },
+        {
+          "id": 5590,
+          "name": "X5 XDRIVE 50i Security 4.4 Bi-Turbo"
+        },
+        {
+          "id": 7117,
+          "name": "X5 XDRIVE M50d 3.0 Diesel"
+        },
+        {
+          "id": 9206,
+          "name": "X5 XDRIVE M50i 4.4 Bi-Turbo Aut."
+        },
+        {
+          "id": 5189,
+          "name": "X6 M 4.4 4x4 V8 32V Bi-Turbo Aut."
+        },
+        {
+          "id": 10788,
+          "name": "X6 M Competition 4.4 V8 BI-TB (Hib) Aut."
+        },
+        {
+          "id": 9565,
+          "name": "X6 M Competition 4.4 V8 BI-TB 625CV Aut."
+        },
+        {
+          "id": 4745,
+          "name": "X6 XDRIVE 35i 3.0 306cv Bi-Turbo"
+        },
+        {
+          "id": 9883,
+          "name": "X6 XDRIVE 40i Bl.Vermillion 3.0 Bi-Turbo"
+        },
+        {
+          "id": 10767,
+          "name": "X6 XDRIVE 40i M Sport 3.0 Bi-TB (Hib.)"
+        },
+        {
+          "id": 9037,
+          "name": "X6 XDRIVE 40i M Sport 3.0 Bi-Turbo"
+        },
+        {
+          "id": 4746,
+          "name": "X6 XDRIVE 50i 4.4 407cv Bi-Turbo"
+        },
+        {
+          "id": 7088,
+          "name": "X6 XDRIVE 50i M Sport 4.4 Bi-Turbo"
+        },
+        {
+          "id": 9038,
+          "name": "X7 M50i 4.4 V8 Bi-TB Aut."
+        },
+        {
+          "id": 9362,
+          "name": "X7 M50i Dark Shadow 4.4 V8 Bi-TB Aut."
+        },
+        {
+          "id": 10893,
+          "name": "X7 M60i 4.4 V8 Bi-TB Aut.(Híbrido)"
+        },
+        {
+          "id": 11737,
+          "name": "X7 XDRIVE 40i M Sport 3.0 V6 Turbo Aut."
+        },
+        {
+          "id": 8776,
+          "name": "X7 XDRIVE 50i M Sport 4.4 V8 Bi-TB Aut."
+        },
+        {
+          "id": 246,
+          "name": "Z3 2.8 Aut."
+        },
+        {
+          "id": 247,
+          "name": "Z3 2.8 Mec."
+        },
+        {
+          "id": 248,
+          "name": "Z3 3.0 24V Roadster 2p"
+        },
+        {
+          "id": 249,
+          "name": "Z3 Roadster 1.9 Mec."
+        },
+        {
+          "id": 4887,
+          "name": "Z3 Roadster 2.8"
+        },
+        {
+          "id": 250,
+          "name": "Z3 Roadster M 3.2"
+        },
+        {
+          "id": 4243,
+          "name": "Z4 Coupé M 3.2 V6 24V 343cv"
+        },
+        {
+          "id": 8777,
+          "name": "Z4 M40i 3.0 340cv Aut."
+        },
+        {
+          "id": 4185,
+          "name": "Z4 Roadster 2.0 150cv 2p"
+        },
+        {
+          "id": 251,
+          "name": "Z4 Roadster 3.0 V6 24V Aut."
+        },
+        {
+          "id": 4244,
+          "name": "Z4 Roadster M 3.2 V6 24V 343cv"
+        },
+        {
+          "id": 6261,
+          "name": "Z4 Roadster sDRIVE 20i 2.0 16V 2p Aut."
+        },
+        {
+          "id": 4996,
+          "name": "Z4 Roadster sDRIVE 23i 2.5 24V 204cv 2p"
+        },
+        {
+          "id": 8689,
+          "name": "Z4 Roadster sDRIVE 30i MSport 2.0 TB Aut"
+        },
+        {
+          "id": 4997,
+          "name": "Z4 Roadster sDRIVE 35i 3.0 24V 306cv 2p"
+        },
+        {
+          "id": 252,
+          "name": "Z4 Roadster Sport 3.0 24V 231cv Aut."
+        },
+        {
+          "id": 253,
+          "name": "Z8 5.0 V8"
+        }
+      ],
+      "sample_details": [
+        {
+          "model_id": 6146,
+          "model_name": "116iA 1.6 TB 16V 136cv 5p",
+          "years": [
+            {
+              "year": "2015 Gasolina",
+              "code": "2015-1"
+            },
+            {
+              "year": "2014 Gasolina",
+              "code": "2014-1"
+            },
+            {
+              "year": "2013 Gasolina",
+              "code": "2013-1"
+            },
+            {
+              "year": "2012 Gasolina",
+              "code": "2012-1"
+            }
+          ]
+        },
+        {
+          "model_id": 9955,
+          "model_name": "118i M Sport 1.5 TB 12V Aut. 5p",
+          "years": [
+            {
+              "year": "2024 Gasolina",
+              "code": "2024-1"
+            },
+            {
+              "year": "2023 Gasolina",
+              "code": "2023-1"
+            }
+          ]
+        },
+        {
+          "model_id": 8946,
+          "model_name": "118i Sport 1.5 TB 12V Aut. 5p",
+          "years": [
+            {
+              "year": "2024 Gasolina",
+              "code": "2024-1"
+            },
+            {
+              "year": "2023 Gasolina",
+              "code": "2023-1"
+            },
+            {
+              "year": "2022 Gasolina",
+              "code": "2022-1"
+            },
+            {
+              "year": "2021 Gasolina",
+              "code": "2021-1"
+            },
+            {
+              "year": "2020 Gasolina",
+              "code": "2020-1"
+            }
+          ]
+        },
+        {
+          "model_id": 5576,
+          "model_name": "118iA 2.0 16V 136cv 3p",
+          "years": [
+            {
+              "year": "2012 Gasolina",
+              "code": "2012-1"
+            },
+            {
+              "year": "2011 Gasolina",
+              "code": "2011-1"
+            }
+          ]
+        },
+        {
+          "model_id": 4960,
+          "model_name": "118iA 2.0 16V 136cv 5p",
+          "years": [
+            {
+              "year": "2012 Gasolina",
+              "code": "2012-1"
+            },
+            {
+              "year": "2011 Gasolina",
+              "code": "2011-1"
+            },
+            {
+              "year": "2010 Gasolina",
+              "code": "2010-1"
+            }
+          ]
+        }
+      ]
+    },
+    "Mercedes-Benz": {
+      "brand_id": 39,
+      "total_models": 563,
+      "models": [
+        {
+          "id": 1527,
+          "name": "180-D Pick-Up/Furgão 2.4 Diesel"
+        },
+        {
+          "id": 1528,
+          "name": "180-D Van 2.4 Diesel"
+        },
+        {
+          "id": 1529,
+          "name": "190-E 2.3"
+        },
+        {
+          "id": 1530,
+          "name": "230-E 2.3"
+        },
+        {
+          "id": 1531,
+          "name": "260-E 2.6"
+        },
+        {
+          "id": 1532,
+          "name": "300-D 3.0 Diesel"
+        },
+        {
+          "id": 1533,
+          "name": "300-E 3.0"
+        },
+        {
+          "id": 1534,
+          "name": "300-SE 3.0/3.2"
+        },
+        {
+          "id": 1535,
+          "name": "300-SL 3.0"
+        },
+        {
+          "id": 1536,
+          "name": "300-TE Wagon 3.0"
+        },
+        {
+          "id": 1537,
+          "name": "500-E 5.0"
+        },
+        {
+          "id": 1538,
+          "name": "500-SEC/ SL"
+        },
+        {
+          "id": 1539,
+          "name": "500-SEL 5.0/ 5.6"
+        },
+        {
+          "id": 1540,
+          "name": "560-SEL 5.6"
+        },
+        {
+          "id": 8752,
+          "name": "A 200 1.3 TB Advance Aut."
+        },
+        {
+          "id": 8905,
+          "name": "A 200 1.3 TB Hatch Aut."
+        },
+        {
+          "id": 8753,
+          "name": "A 200 1.3 TB Style Aut."
+        },
+        {
+          "id": 10775,
+          "name": "A 200 AMG Line 1.3 TB Aut."
+        },
+        {
+          "id": 10984,
+          "name": "A 200 AMG Line 1.3 TB Aut. (Híbrido)"
+        },
+        {
+          "id": 9318,
+          "name": "A 250 2.0 TB Hatch"
+        },
+        {
+          "id": 8579,
+          "name": "A 250 2.0 TB Hatch Vision"
+        },
+        {
+          "id": 8547,
+          "name": "A 250 2.0 TB Launch Edition"
+        },
+        {
+          "id": 9117,
+          "name": "A-35 AMG 4MATIC 2.0 TB Aut."
+        },
+        {
+          "id": 11836,
+          "name": "A-35 AMG Laun. Edition 4MATIC 2.0 TB Aut "
+        },
+        {
+          "id": 9118,
+          "name": "A-35 AMG Sedan 4MATIC 2.0 TB Aut."
+        },
+        {
+          "id": 9166,
+          "name": "A-45  S AMG 4MATIC CGI 2.0 TB Aut."
+        },
+        {
+          "id": 7308,
+          "name": "C-180 1.6 Turbo 16V/Flex 16V Aut."
+        },
+        {
+          "id": 6928,
+          "name": "C-180 CGI Avant. 1.6/1.6 FlexTB 16V Aut."
+        },
+        {
+          "id": 5399,
+          "name": "C-180 CGI Classic 1.8 16V 156cv Aut."
+        },
+        {
+          "id": 5625,
+          "name": "C-180 CGI Coupe 1.8 16V 156cv Aut."
+        },
+        {
+          "id": 7957,
+          "name": "C-180 CGI Coupe Avant. 1.6 TB 16V Aut."
+        },
+        {
+          "id": 8963,
+          "name": "C-180 CGI Coupe Sport 1.5 TB 16V Aut."
+        },
+        {
+          "id": 6329,
+          "name": "C-180 CGI Coupe Sport 1.6 TB 16V Aut."
+        },
+        {
+          "id": 7140,
+          "name": "C-180 CGI Estate Avant. 1.6 TB 16V Aut."
+        },
+        {
+          "id": 6929,
+          "name": "C-180 CGI Exc. 1.6/1.6 Flex TB 16V  Aut."
+        },
+        {
+          "id": 6300,
+          "name": "C-180 CGI Sport 1.6 TB 16V 156cv Aut."
+        },
+        {
+          "id": 5979,
+          "name": "C-180 CGI Touring 1.8 16V Aut."
+        },
+        {
+          "id": 6357,
+          "name": "C-180 CGI Touring Sport 1.6 TB Aut."
+        },
+        {
+          "id": 1541,
+          "name": "C-180 Classic/Classic Plus/Elegance"
+        },
+        {
+          "id": 5213,
+          "name": "C-180 Kompressor Classic 1.6 16V Aut."
+        },
+        {
+          "id": 1542,
+          "name": "C-180 Kompressor Classic 1.8 16V 143cv"
+        },
+        {
+          "id": 9966,
+          "name": "C-200 1.5 TB 16V 183cv Aut. (Híbrido)"
+        },
+        {
+          "id": 10134,
+          "name": "C-200 AMG Line EQ Boost 1.5 TB (Hib.)"
+        },
+        {
+          "id": 6963,
+          "name": "C-200 Avantgarde 2.0 TB 16V 184cv Aut."
+        },
+        {
+          "id": 5307,
+          "name": "C-200 CGI Avantgarde 1.8 16V 184cv Aut."
+        },
+        {
+          "id": 5308,
+          "name": "C-200 CGI Sport 1.8 TB 16V 184cv Aut."
+        },
+        {
+          "id": 5348,
+          "name": "C-200 CGI Touring Avantgarde 1.8 16V Aut"
+        },
+        {
+          "id": 1543,
+          "name": "C-200 Classic/Sport"
+        },
+        {
+          "id": 1544,
+          "name": "C-200 Kompressor 2.0 V6 16v 4p Aut."
+        },
+        {
+          "id": 3938,
+          "name": "C-200 Kompressor Avant.1.8 16V Aut"
+        },
+        {
+          "id": 4358,
+          "name": "C-200 Kompressor Classic 1.8 16V Aut."
+        },
+        {
+          "id": 1545,
+          "name": "C-200 Sportcoupé Komp. 2.0 16V 163cv Aut"
+        },
+        {
+          "id": 1546,
+          "name": "C-200 Touring Komp. 2.0 16V 163cv 5p Aut"
+        },
+        {
+          "id": 4662,
+          "name": "C-200 Touring Komp. Avant. 1.8 16V Aut."
+        },
+        {
+          "id": 1547,
+          "name": "C-220 Classic/Elegance/Sport"
+        },
+        {
+          "id": 3826,
+          "name": "C-230 Avantgarde 2.5 V6 24V 204cv Aut"
+        },
+        {
+          "id": 1548,
+          "name": "C-230 Komp. Sportcoupé 2.3 16V 197cv Aut"
+        },
+        {
+          "id": 1549,
+          "name": "C-230 Kompressor Avantgarde"
+        },
+        {
+          "id": 1550,
+          "name": "C-230 Sport/ Eleg./Touring Eleg.Plus 2.3"
+        },
+        {
+          "id": 3939,
+          "name": "C-230 Touring Avant. 2.5 24V 204cv Aut."
+        },
+        {
+          "id": 1551,
+          "name": "C-230 Touring Kompressor"
+        },
+        {
+          "id": 1552,
+          "name": "C-240 AvantGarde 2.4/ 2.6 4p"
+        },
+        {
+          "id": 1553,
+          "name": "C-240 Classic"
+        },
+        {
+          "id": 1554,
+          "name": "C-240 Elegance 2.4"
+        },
+        {
+          "id": 1555,
+          "name": "C-240 Elegance 2.4 V6 24v 4p Aut."
+        },
+        {
+          "id": 7975,
+          "name": "C-250 Avantgarde 2.0 TB 211cv Aut."
+        },
+        {
+          "id": 5500,
+          "name": "C-250 CGI Sport 1.8 16V Aut."
+        },
+        {
+          "id": 6358,
+          "name": "C-250 CGI Sport Coupe 1.8 16V TB Aut."
+        },
+        {
+          "id": 6964,
+          "name": "C-250 Sport 2.0 16V 211cv Aut."
+        },
+        {
+          "id": 7668,
+          "name": "C-250 Sport Coupe 2.0 16V 211cv Aut."
+        },
+        {
+          "id": 4386,
+          "name": "C-280 Avantgarde 3.0 V6 231cv Aut."
+        },
+        {
+          "id": 1556,
+          "name": "C-280 Classic/Sport"
+        },
+        {
+          "id": 1557,
+          "name": "C-280 Elegance"
+        },
+        {
+          "id": 1558,
+          "name": "C-280 Touring"
+        },
+        {
+          "id": 9967,
+          "name": "C-300 AMG Line 2.0 TB Aut. (Híbrido)"
+        },
+        {
+          "id": 7800,
+          "name": "C-300 Anniversary Lim. Edit. 2.0 Aut."
+        },
+        {
+          "id": 5002,
+          "name": "C-300 Avantgarde 3.0 V6 24V 231cv Aut."
+        },
+        {
+          "id": 7801,
+          "name": "C-300 Cabriolet 2.0 245/258cv Aut."
+        },
+        {
+          "id": 8780,
+          "name": "C-300 Coupé Sport 2.0 16V Aut."
+        },
+        {
+          "id": 7976,
+          "name": "C-300 Estate Avantgarde 2.0 245cv Aut."
+        },
+        {
+          "id": 7977,
+          "name": "C-300 Sport 2.0 16V Aut."
+        },
+        {
+          "id": 5349,
+          "name": "C-300 Sport 3.0 V6 231cv Aut."
+        },
+        {
+          "id": 1559,
+          "name": "C-320 AvantGarde 3.2 V6 24v 4p Aut."
+        },
+        {
+          "id": 1560,
+          "name": "C-320 Elegance 3.2 V6 24v 4p Aut."
+        },
+        {
+          "id": 1561,
+          "name": "C-320 Touring 3.2 V6 18v 4p Aut."
+        },
+        {
+          "id": 3802,
+          "name": "C-350 Avantgarde/ Elegance 3.5 V6 272cv"
+        },
+        {
+          "id": 5730,
+          "name": "C-350 CGI Sport 3.5 306cv Aut."
+        },
+        {
+          "id": 4717,
+          "name": "C-350 Sport 3.5 V6 272cv"
+        },
+        {
+          "id": 3893,
+          "name": "C-350 Sportcoupé 3.5 24V  272cv"
+        },
+        {
+          "id": 3894,
+          "name": "C-350 Touring AvantGarde 3.5 24V 272cv"
+        },
+        {
+          "id": 1562,
+          "name": "C-36 AMG"
+        },
+        {
+          "id": 1563,
+          "name": "C-43 AMG"
+        },
+        {
+          "id": 7765,
+          "name": "C-43 AMG 3.0 V6 Bi-Turbo 367cv Aut"
+        },
+        {
+          "id": 7738,
+          "name": "C-43 Coupe AMG 3.0 V6 Bi-Turbo Aut."
+        },
+        {
+          "id": 7376,
+          "name": "C-450 AMG Sport 3.0 TB 362cv Aut."
+        },
+        {
+          "id": 3827,
+          "name": "C-55 AMG 24V 367cv Aut."
+        },
+        {
+          "id": 3828,
+          "name": "C-55 Touring AMG 24V 367cv Aut."
+        },
+        {
+          "id": 7620,
+          "name": "C-63 AMG 4.0 V8 Bi-Turbo Aut."
+        },
+        {
+          "id": 4663,
+          "name": "C-63 AMG 6.2 V8 Aut."
+        },
+        {
+          "id": 11174,
+          "name": "C-63 AMG S E Perf. F1 Ed. Aut.(Híbrido)"
+        },
+        {
+          "id": 11175,
+          "name": "C-63 AMG S E Performance Aut.(Híbrido)"
+        },
+        {
+          "id": 5745,
+          "name": "C-63 Coupe AMG 6.2 V8 Aut."
+        },
+        {
+          "id": 6273,
+          "name": "C-63 Coupe AMG Black Series 6.3 V8 Aut."
+        },
+        {
+          "id": 7309,
+          "name": "C-63 S AMG 4.0 V8  Bi-Turbo Aut."
+        },
+        {
+          "id": 7837,
+          "name": "C-63 S Coupe AMG 4.0 V8  Bi-Turbo Aut."
+        },
+        {
+          "id": 5031,
+          "name": "C-63 Touring AMG 6.2 V8 Aut."
+        },
+        {
+          "id": 1564,
+          "name": "CL-500 5.0/ 5.5"
+        },
+        {
+          "id": 1565,
+          "name": "CL-600 6.0/ 5.5"
+        },
+        {
+          "id": 4516,
+          "name": "CL-63 AMG 6.2 V8 32V 525cv"
+        },
+        {
+          "id": 9679,
+          "name": "CL-65 AMG 6.0 V12 Aut."
+        },
+        {
+          "id": 8215,
+          "name": "CLA-180 1.6 16V 122cv Aut."
+        },
+        {
+          "id": 7958,
+          "name": "CLA-200 1.6 TB 16V Flex Aut."
+        },
+        {
+          "id": 11122,
+          "name": "CLA-200 AMG Line 1.3 TB 16V Aut. (Híb.)"
+        },
+        {
+          "id": 6699,
+          "name": "CLA-200 First Edition 1.6 TB 16V  Aut."
+        },
+        {
+          "id": 11177,
+          "name": "CLA-200 Progressive 1.3 TB 16V Aut.(Híb)"
+        },
+        {
+          "id": 6965,
+          "name": "CLA-200 Urban 1.6 TB 16V/Flex Aut."
+        },
+        {
+          "id": 7039,
+          "name": "CLA-200 Vision 1.6 TB 16V Flex Aut."
+        },
+        {
+          "id": 8866,
+          "name": "CLA-250 2.0 16V TB Aut."
+        },
+        {
+          "id": 6966,
+          "name": "CLA-250 Sport 4MATIC 2.0 16V 211cv Aut."
+        },
+        {
+          "id": 9139,
+          "name": "CLA-35 AMG 4MATIC 2.0 TB Aut."
+        },
+        {
+          "id": 11042,
+          "name": "CLA-35 AMG 4MATIC 2.0 TB Aut. (Híbrido)"
+        },
+        {
+          "id": 8994,
+          "name": "CLA-35 AMG Launch Edition 4MATIC 2.0 TB"
+        },
+        {
+          "id": 6867,
+          "name": "CLA-45 AMG 4MATIC CGI 2.0 TB Aut."
+        },
+        {
+          "id": 9167,
+          "name": "CLA-45 S AMG 4MATIC CGI 2.0 TB Aut."
+        },
+        {
+          "id": 1566,
+          "name": "Classe A 160 Classic Semi-Aut."
+        },
+        {
+          "id": 1567,
+          "name": "Classe A 160 Classic/ Spirit Mec."
+        },
+        {
+          "id": 1568,
+          "name": "Classe A 160 Elegance Mec."
+        },
+        {
+          "id": 1569,
+          "name": "Classe A 160 Elegance Semi-Aut."
+        },
+        {
+          "id": 1570,
+          "name": "Classe A 190 AvantGarde 1.9 8V 125cv Aut"
+        },
+        {
+          "id": 1571,
+          "name": "Classe A 190 AvantGarde 1.9 8V 125cv Mec"
+        },
+        {
+          "id": 1572,
+          "name": "Classe A 190 Classic 1.9 Semi-Aut."
+        },
+        {
+          "id": 1573,
+          "name": "Classe A 190 Classic/ Spirit 1.9 Mec."
+        },
+        {
+          "id": 1574,
+          "name": "Classe A 190 Elegance 1.9 Aut."
+        },
+        {
+          "id": 1575,
+          "name": "Classe A 190 Elegance 1.9 Mec."
+        },
+        {
+          "id": 1576,
+          "name": "Classe A 190 Elegance 1.9 Semi-Aut."
+        },
+        {
+          "id": 6443,
+          "name": "Classe A 200 1.6 TB 16V Style 156cv Aut."
+        },
+        {
+          "id": 6444,
+          "name": "Classe A 200 1.6 TB 16V Urban 156cv Aut."
+        },
+        {
+          "id": 7228,
+          "name": "Classe A 200 1.6 TB/Flex Aut."
+        },
+        {
+          "id": 3829,
+          "name": "Classe A 200 Elegance 2.0 136cv Aut."
+        },
+        {
+          "id": 6754,
+          "name": "Classe A 250 2.0 TB Sport Aut."
+        },
+        {
+          "id": 12168,
+          "name": "Classe A 45 AMG 4MATIC 2.0 Turbo Aut."
+        },
+        {
+          "id": 4831,
+          "name": "Classe B 170 1.7 116cv Aut."
+        },
+        {
+          "id": 5003,
+          "name": "Classe B 180 1.7 116cv Aut."
+        },
+        {
+          "id": 4012,
+          "name": "Classe B 200 2.0 136cv Aut."
+        },
+        {
+          "id": 4202,
+          "name": "Classe B 200 2.0 Turbo 193cv Aut."
+        },
+        {
+          "id": 6238,
+          "name": "Classe B 200 CGI 1.6 TB Sport 156cv Aut"
+        },
+        {
+          "id": 6237,
+          "name": "Classe B 200 CGI 1.6 TB/Flex Aut."
+        },
+        {
+          "id": 4064,
+          "name": "Classe R 500 5.0 V8 306cv Aut."
+        },
+        {
+          "id": 5033,
+          "name": "Classe R 500 L 5.5 V8 388cv Aut."
+        },
+        {
+          "id": 1577,
+          "name": "Classic 6.0"
+        },
+        {
+          "id": 4856,
+          "name": "CLC 200 Kompressor 1.8 184cv Aut."
+        },
+        {
+          "id": 1578,
+          "name": "CLK-230 Cabriolet Kompressor"
+        },
+        {
+          "id": 1579,
+          "name": "CLK-230 Kompressor"
+        },
+        {
+          "id": 1580,
+          "name": "CLK-320 AvantGarde"
+        },
+        {
+          "id": 1581,
+          "name": "CLK-320 AvantGarde Cabriolet"
+        },
+        {
+          "id": 1582,
+          "name": "CLK-320 Elegance"
+        },
+        {
+          "id": 1583,
+          "name": "CLK-320 Elegance Cabriolet"
+        },
+        {
+          "id": 1584,
+          "name": "CLK-320 Sport"
+        },
+        {
+          "id": 1585,
+          "name": "CLK-320 Sport Cabriolet"
+        },
+        {
+          "id": 3895,
+          "name": "CLK-350 Avant./ Elegance 3.5 24V 272cv"
+        },
+        {
+          "id": 3896,
+          "name": "CLK-350 Avant./Eleg. Cabriolet 3.5 272cv"
+        },
+        {
+          "id": 1586,
+          "name": "CLK-430 Avantgard Cabriolet 4.3 V8 24v"
+        },
+        {
+          "id": 1587,
+          "name": "CLK-430 AvantGarde 4.3"
+        },
+        {
+          "id": 1588,
+          "name": "CLK-430 Elegance"
+        },
+        {
+          "id": 1589,
+          "name": "CLK-430 Elegance Cabriolet 4.3 V8 24v"
+        },
+        {
+          "id": 1590,
+          "name": "CLK-430 Sport 4.3"
+        },
+        {
+          "id": 1591,
+          "name": "CLK-500 Cabriolet V8 24V 306cv"
+        },
+        {
+          "id": 1592,
+          "name": "CLK-500 Elegance/ Avant. 5.0 V8 24V Aut"
+        },
+        {
+          "id": 1593,
+          "name": "CLK-55 AMG Cabriolet V8 24v 367cv"
+        },
+        {
+          "id": 1594,
+          "name": "CLK-55 AMG V8 24V 367cv"
+        },
+        {
+          "id": 5746,
+          "name": "CLS-350 CGI 3.5 306cv Aut."
+        },
+        {
+          "id": 3897,
+          "name": "CLS-350 V6 24V 272cv"
+        },
+        {
+          "id": 7141,
+          "name": "CLS-400 3.5 V6 Bi-Turbo 333cv Aut."
+        },
+        {
+          "id": 9977,
+          "name": "CLS-450 3.0 TB 4MATIC  (Híb.)         "
+        },
+        {
+          "id": 9978,
+          "name": "CLS-450 3.0 TB 4MATIC SPORT (Híbrido)"
+        },
+        {
+          "id": 1595,
+          "name": "CLS-500 V8 24V"
+        },
+        {
+          "id": 9979,
+          "name": "CLS-53 AMG 3.0 TB 4MATIC+ (Híbrido)"
+        },
+        {
+          "id": 3803,
+          "name": "CLS-55 Kompressor AMG 5.5 V8 24V 476cv"
+        },
+        {
+          "id": 5593,
+          "name": "CLS-63 AMG 5.5 V8 557cv Aut."
+        },
+        {
+          "id": 4191,
+          "name": "CLS-63 AMG 6.2 V8 32V 514cv"
+        },
+        {
+          "id": 1596,
+          "name": "E-190"
+        },
+        {
+          "id": 1597,
+          "name": "E-190 Classic"
+        },
+        {
+          "id": 1598,
+          "name": "E-200 Classic 2.0"
+        },
+        {
+          "id": 1599,
+          "name": "E-220 Classic/Touring 2.2"
+        },
+        {
+          "id": 1600,
+          "name": "E-230 Elegance"
+        },
+        {
+          "id": 1601,
+          "name": "E-240 Elegance"
+        },
+        {
+          "id": 6840,
+          "name": "E-250 Cabriolet 2.0 TB 211CV Aut."
+        },
+        {
+          "id": 5538,
+          "name": "E-250 CGI Avantgarde 1.8 16V 204cv Aut."
+        },
+        {
+          "id": 6540,
+          "name": "E-250 CGI Avantgarde 2.0 TB 211cv Aut."
+        },
+        {
+          "id": 5594,
+          "name": "E-250 CGI Coupe 1.8 16V 204cv Aut."
+        },
+        {
+          "id": 7160,
+          "name": "E-250 CGI VR4 2.0 TB Aut."
+        },
+        {
+          "id": 6615,
+          "name": "E-250 Coupe 2.0 TB 211cv Aut."
+        },
+        {
+          "id": 7766,
+          "name": "E-250 Excl. Launch Ed. 2.0 TB 211cv Aut."
+        },
+        {
+          "id": 7895,
+          "name": "E-250 Exclusive 2.0 TB 211cv Aut."
+        },
+        {
+          "id": 1602,
+          "name": "E-280 Classic 2.8"
+        },
+        {
+          "id": 1603,
+          "name": "E-280 Touring 2.8"
+        },
+        {
+          "id": 9551,
+          "name": "E-300 AMG Line 2.0 TB 258cv Aut."
+        },
+        {
+          "id": 8781,
+          "name": "E-300 Avantgarde 2.0 TB 258cv Aut."
+        },
+        {
+          "id": 9289,
+          "name": "E-300 Avantgarde Sport 2.0 TB 258cv Aut."
+        },
+        {
+          "id": 8320,
+          "name": "E-300 Cabriolet 2.0 TB 245cv Aut."
+        },
+        {
+          "id": 8102,
+          "name": "E-300 Coupe 2.0 TB 245cv Aut."
+        },
+        {
+          "id": 8782,
+          "name": "E-300 Exclusive 2.0 TB 258cv Aut."
+        },
+        {
+          "id": 11071,
+          "name": "E-300 Exclusive 2.0 TB 258cv Aut. (Híb.)"
+        },
+        {
+          "id": 1604,
+          "name": "E-320"
+        },
+        {
+          "id": 1605,
+          "name": "E-320 3.2 Elegance"
+        },
+        {
+          "id": 1606,
+          "name": "E-320 Avantgarde"
+        },
+        {
+          "id": 1607,
+          "name": "E-320 C 3.2/ CA Classic 3.2"
+        },
+        {
+          "id": 1608,
+          "name": "E-320 Cabriolet"
+        },
+        {
+          "id": 1609,
+          "name": "E-320 Touring Avantgarde 24V V6 5p Aut."
+        },
+        {
+          "id": 1610,
+          "name": "E-320 Touring Eleg./Classic"
+        },
+        {
+          "id": 3898,
+          "name": "E-350  Touring Avant/Eleg. 3.5 24V 272cv"
+        },
+        {
+          "id": 5004,
+          "name": "E-350 Avant./Avant. Execut. 3.5 V6 272cv"
+        },
+        {
+          "id": 1611,
+          "name": "E-350 Avantgarde/ Elegance 3.5 V6 272cv"
+        },
+        {
+          "id": 5309,
+          "name": "E-350 Cabrio 3.5 V6 272cv 2p"
+        },
+        {
+          "id": 6210,
+          "name": "E-350 CGI Avant. Sport 3.5 306cv Aut."
+        },
+        {
+          "id": 6541,
+          "name": "E-350 CGI Cabriolet 3.5 306cv Aut."
+        },
+        {
+          "id": 6033,
+          "name": "E-350 CGI Executive 3.5 306cv Aut."
+        },
+        {
+          "id": 6542,
+          "name": "E-350 CGI Guard VR4 3.5 306cv Aut."
+        },
+        {
+          "id": 5034,
+          "name": "E-350 Coupe 3.5 V6 272cv 2p"
+        },
+        {
+          "id": 4627,
+          "name": "E-350 Sport 3.5 V6 272cv"
+        },
+        {
+          "id": 7103,
+          "name": "E-400 Avantgarde 3.5 V6 Bi-Turbo Aut."
+        },
+        {
+          "id": 7262,
+          "name": "E-400 Cabriolet 3.5 V6 Bi-Turbo Aut."
+        },
+        {
+          "id": 1612,
+          "name": "E-420 Classic/Elegance/Avantgarde"
+        },
+        {
+          "id": 1613,
+          "name": "E-420 Touring Avantgarde"
+        },
+        {
+          "id": 7978,
+          "name": "E-43 AMG 4MATIC 3.0 V6 401cv Aut."
+        },
+        {
+          "id": 1614,
+          "name": "E-430 Avantgarde"
+        },
+        {
+          "id": 1615,
+          "name": "E-430 Elegance"
+        },
+        {
+          "id": 1616,
+          "name": "E-430 Touring Avantgarde"
+        },
+        {
+          "id": 5423,
+          "name": "E-500 Avangarde Executive 5.5 V8 388cv"
+        },
+        {
+          "id": 4774,
+          "name": "E-500 Avant. 5.0 V8 4p Aut. (Blindada)"
+        },
+        {
+          "id": 6211,
+          "name": "E-500 CGI Guard VR4 4.7 V8 408cv 4p"
+        },
+        {
+          "id": 6116,
+          "name": "E-500 CGI Guard VR4 5.5 V8 4p"
+        },
+        {
+          "id": 6118,
+          "name": "E-500 Coupe Sport 4.7 V8 408cv Aut 2p"
+        },
+        {
+          "id": 5380,
+          "name": "E-500 Coupe Sport 5.5 V8 388cv 2p"
+        },
+        {
+          "id": 1617,
+          "name": "E-500 Elegance/ Avant. 5.0 V8 24V 4p Aut"
+        },
+        {
+          "id": 4685,
+          "name": "E-500 Sport Avantgarde 5.0 V8 24V 4p Aut"
+        },
+        {
+          "id": 1618,
+          "name": "E-500 Tour. Avant./ Eleg. 24V V8 5p Aut."
+        },
+        {
+          "id": 10001,
+          "name": "E-53 AMG 3.0 TB 24V 4MATIC+ Aut. (Híb.)"
+        },
+        {
+          "id": 1619,
+          "name": "E-55 AMG"
+        },
+        {
+          "id": 1620,
+          "name": "E-55 Touring AMG 24V V8 5p Aut."
+        },
+        {
+          "id": 6120,
+          "name": "E-63 AMG 5.5 V8 Bi-Turbo Aut."
+        },
+        {
+          "id": 4245,
+          "name": "E-63 AMG 6.2 V8 32V"
+        },
+        {
+          "id": 8018,
+          "name": "E-63 S AMG 4MATIC 4.0 V8 612cv"
+        },
+        {
+          "id": 9644,
+          "name": "E-63 S AMG 4MATIC Final Ed. 4.0 V8 612cv"
+        },
+        {
+          "id": 6122,
+          "name": "E-63 Touring AMG 5.5 V8 Bi-Turbo Aut."
+        },
+        {
+          "id": 5489,
+          "name": "E-63 Touring AMG 6.2 V8 Aut."
+        },
+        {
+          "id": 10163,
+          "name": "EQA 250 (Elétrico)"
+        },
+        {
+          "id": 11220,
+          "name": "EQA 250 AMG Line (Elétrico)"
+        },
+        {
+          "id": 10164,
+          "name": "EQB 250 (Elétrico)"
+        },
+        {
+          "id": 11643,
+          "name": "EQB 250+"
+        },
+        {
+          "id": 11074,
+          "name": "EQB 350 (Elétrico)"
+        },
+        {
+          "id": 11221,
+          "name": "EQB 350 4MATIC AMG Line (Elétrico)"
+        },
+        {
+          "id": 9196,
+          "name": "EQC 400 4MATIC 408CV (Elétrico)"
+        },
+        {
+          "id": 9830,
+          "name": "EQC 400 4MATIC AMG Line (Elétrico)"
+        },
+        {
+          "id": 11222,
+          "name": "EQE 300 AMG Line (Elétrico) "
+        },
+        {
+          "id": 10165,
+          "name": "EQE 300 Edition One (Elétrico) "
+        },
+        {
+          "id": 10879,
+          "name": "EQE 300 SUV AMG Line (Elétrico) "
+        },
+        {
+          "id": 11491,
+          "name": "EQE 350+ AMG Line (Elétrico) "
+        },
+        {
+          "id": 11185,
+          "name": "EQE 350+ SUV AMG Line (Elétrico) "
+        },
+        {
+          "id": 10987,
+          "name": "EQE 53 SUV AMG 4MATIC+ (Elétrico) "
+        },
+        {
+          "id": 11186,
+          "name": "EQS 450 SUV 4MATIC ( Elétrico)"
+        },
+        {
+          "id": 11187,
+          "name": "EQS 450+ SUV AMG Line ( Elétrico)"
+        },
+        {
+          "id": 10002,
+          "name": "EQS 53 AMG 4MATIC+ ( Elétrico) "
+        },
+        {
+          "id": 12127,
+          "name": "eSprinter 320 CHASSI S. Extra Longa"
+        },
+        {
+          "id": 12128,
+          "name": "eSprinter 320 CHASSI S. Longa"
+        },
+        {
+          "id": 11319,
+          "name": "eSprinter 320 FURGÃO S. E.L (Elétrico)"
+        },
+        {
+          "id": 11320,
+          "name": "eSprinter 320 FURGÃO S. Longa (Elétrico)"
+        },
+        {
+          "id": 11321,
+          "name": "eSprinter 420 Chassi Longo (Elétrico)"
+        },
+        {
+          "id": 11322,
+          "name": "eSprinter 420 FUR. Vid. Ex.Longa (Elét.)"
+        },
+        {
+          "id": 11406,
+          "name": "eSprinter 420 FURGÃO Ex.Longa (Elétrico)"
+        },
+        {
+          "id": 11323,
+          "name": "eSprinter 420 FURGÃO Longa (Elétrico)"
+        },
+        {
+          "id": 5151,
+          "name": "G-55 Kompressor AMG 5.5 V8 507cv Aut."
+        },
+        {
+          "id": 9471,
+          "name": "G-63 AMG 4M 4.0 Bi-TB Magno Edition Aut."
+        },
+        {
+          "id": 11342,
+          "name": "G-63 AMG 4M 4.0 V8 Bi-TB Aut. (Híb.)"
+        },
+        {
+          "id": 11538,
+          "name": "G-63 AMG 4M Man.4.0 V8 Bi-TB Aut. (Híb.)"
+        },
+        {
+          "id": 8499,
+          "name": "G-63 AMG 4MATIC 4.0 V8 Bi-TB 585cv Aut."
+        },
+        {
+          "id": 6491,
+          "name": "G-63 AMG 5.5 Bi-Turbo 32V 4x4 Aut."
+        },
+        {
+          "id": 8500,
+          "name": "G-63 AMG ED1 4MATIC 4.0 V8 Bi-TB Aut."
+        },
+        {
+          "id": 6642,
+          "name": "GL-350 Sport 3.0 V6 258cv 4x4 Diesel"
+        },
+        {
+          "id": 6445,
+          "name": "GL-500 4.7 Bi-Turbo V8 4x4 Aut."
+        },
+        {
+          "id": 4250,
+          "name": "GL-500 5.5 V8 32V 4x4 388cv Aut."
+        },
+        {
+          "id": 6468,
+          "name": "GL-63 AMG 5.5 Bi-Turbo 32V 4x4 Aut."
+        },
+        {
+          "id": 7040,
+          "name": "GLA 200 Advance 1.6/1.6 TB 16V Flex Aut."
+        },
+        {
+          "id": 9329,
+          "name": "GLA 200 AMG Line 1.3 16V TB Aut."
+        },
+        {
+          "id": 10882,
+          "name": "GLA 200 AMG Line 1.3 16V TB Aut.(Híb.)"
+        },
+        {
+          "id": 7397,
+          "name": "GLA 200 Enduro 1.6 TB 16V Flex Aut."
+        },
+        {
+          "id": 8501,
+          "name": "GLA 200 Night 1.6. TB 16V Flex Aut."
+        },
+        {
+          "id": 11996,
+          "name": "GLA 200 Night Edition 1.3 TB 16V Aut."
+        },
+        {
+          "id": 11129,
+          "name": "GLA 200 Progressive 1.3 TB 16V Aut.(Híb)"
+        },
+        {
+          "id": 7161,
+          "name": "GLA 200 Style 1.6 TB 16V/Flex Aut."
+        },
+        {
+          "id": 7041,
+          "name": "GLA 200 Vis. Black Ed. 1.6 TB 16V  Aut."
+        },
+        {
+          "id": 7042,
+          "name": "GLA 200 Vision 1.6/1.6 TB 16V Flex Aut."
+        },
+        {
+          "id": 7430,
+          "name": "GLA 250 Enduro 2.0 TB 16V 211cv Aut."
+        },
+        {
+          "id": 7195,
+          "name": "GLA 250 Sport 2.0 TB 16V 4x2  211cv Aut."
+        },
+        {
+          "id": 7767,
+          "name": "GLA 250 Sport 2.0 TB 16V 4x4 211cv Aut."
+        },
+        {
+          "id": 7196,
+          "name": "GLA 250 Vision 2.0 TB 16V 211cv Aut."
+        },
+        {
+          "id": 9762,
+          "name": "GLA 35 AMG 4MATIC 2.0 Turbo Aut."
+        },
+        {
+          "id": 10988,
+          "name": "GLA 35 AMG 4MATIC 2.0 Turbo Aut. (Híb.)"
+        },
+        {
+          "id": 7122,
+          "name": "GLA 45 AMG 4MATIC 2.0 Turbo Aut."
+        },
+        {
+          "id": 9350,
+          "name": "GLB 200 Advance 1.3 TB 16V Aut."
+        },
+        {
+          "id": 9214,
+          "name": "GLB 200 Launch Edition 1.3 TB 16V Aut."
+        },
+        {
+          "id": 9351,
+          "name": "GLB 200 Progressive 1.3 TB 16V Aut."
+        },
+        {
+          "id": 10971,
+          "name": "GLB 200 Progressive 1.3 TB 16V Aut.(Híb)"
+        },
+        {
+          "id": 11189,
+          "name": "GLB 220 4M AMG Line 2.0 TB Aut. (Híb.)"
+        },
+        {
+          "id": 12129,
+          "name": "GLB 220 4M Night Edition 2.0 TB Aut."
+        },
+        {
+          "id": 11190,
+          "name": "GLB 220 4M Progressive 2.0 TB Aut. (Híb)"
+        },
+        {
+          "id": 9793,
+          "name": "GLB 35 AMG 4MATIC 2.0 Turbo Aut."
+        },
+        {
+          "id": 10972,
+          "name": "GLB 35 AMG 4MATIC 2.0 Turbo Aut. (Híb.)"
+        },
+        {
+          "id": 9615,
+          "name": "GLC 220D 2.0 TB 4M Enduro Diesel"
+        },
+        {
+          "id": 9616,
+          "name": "GLC 220D 2.0 TB 4M Off-Road Diesel"
+        },
+        {
+          "id": 7508,
+          "name": "GLC 250 4MATIC 2.0 TB 16V Aut."
+        },
+        {
+          "id": 7886,
+          "name": "GLC 250 Coupe 4MATIC 2.0 TB 16V Aut."
+        },
+        {
+          "id": 7940,
+          "name": "GLC 250 Coupe Highway 4MATIC 2.0 TB Aut."
+        },
+        {
+          "id": 7941,
+          "name": "GLC 250 Highway 4MATIC 2.0 TB Aut."
+        },
+        {
+          "id": 7509,
+          "name": "GLC 250 Sport 4MATIC 2.0 TB 16V Aut."
+        },
+        {
+          "id": 10973,
+          "name": "GLC-300 4MATIC 2.0 TB Aut. (Híb)"
+        },
+        {
+          "id": 10952,
+          "name": "GLC-300 AMG L. Cou. 4M 2.0 TB Aut. (Híb)"
+        },
+        {
+          "id": 11224,
+          "name": "GLC-300 AMG Line 4MATIC 2.0 TB Aut (Híb)"
+        },
+        {
+          "id": 9721,
+          "name": "GLC-300 AMG Line Coupe 4M 2.0 TB Aut."
+        },
+        {
+          "id": 11841,
+          "name": "GLC-300 Coupe 4MATIC 2.0 TB 16V Aut."
+        },
+        {
+          "id": 11102,
+          "name": "GLC-43 AMG 4M Coupe 2.0 Turbo Aut.(Híb)."
+        },
+        {
+          "id": 11191,
+          "name": "GLC-43 AMG 4MATIC 2.0 Turbo Aut. (Híb)."
+        },
+        {
+          "id": 7802,
+          "name": "GLC-43 AMG 4MATIC 3.0 V6 Bi-Turbo Aut."
+        },
+        {
+          "id": 9660,
+          "name": "GLC-43 AMG Coupe 3.0 V6 Bi-TB Aut."
+        },
+        {
+          "id": 8633,
+          "name": "GLC-63 AMG 4MATIC 4.0 Bi-TB V8"
+        },
+        {
+          "id": 8483,
+          "name": "GLC-63 S AMG 4MATIC Coupe 4.0 Bi-TB V8"
+        },
+        {
+          "id": 11295,
+          "name": "GLC-63 S AMG E Perf. Coupe 2.0 Aut (Híb)"
+        },
+        {
+          "id": 7484,
+          "name": "GLE-350 3.0 V6 258cv 4x4 Diesel"
+        },
+        {
+          "id": 7485,
+          "name": "GLE-350 Family 3.0 V6 258cv 4x4 Diesel"
+        },
+        {
+          "id": 7927,
+          "name": "GLE-350 Highway 4MATIC 3.0 V6 Diesel"
+        },
+        {
+          "id": 7486,
+          "name": "GLE-350 Sport 4MATIC 3.0 V6 4x4 Diesel"
+        },
+        {
+          "id": 9251,
+          "name": "GLE-400 3.0 TB 4MATIC Coupe Diesel Aut."
+        },
+        {
+          "id": 9056,
+          "name": "GLE-400 3.0 TB 4MATIC Diesel Aut."
+        },
+        {
+          "id": 7510,
+          "name": "GLE-400 Coupe 3.0 V6 333cv Aut."
+        },
+        {
+          "id": 7803,
+          "name": "GLE-400 Coupe High. 4MATIC 3.0 V6  Aut."
+        },
+        {
+          "id": 7511,
+          "name": "GLE-400 Night Coupe 3.0 V6 333cv Aut."
+        },
+        {
+          "id": 8103,
+          "name": "GLE-43 AMG 4MATIC 3.0 V6 Bi-TB Aut."
+        },
+        {
+          "id": 7838,
+          "name": "GLE-43 AMG 4MATIC Coupe 3.0 V6 Bi-TB Aut"
+        },
+        {
+          "id": 12169,
+          "name": "GLE-450 4MATIC 3.0 AMG Line"
+        },
+        {
+          "id": 10923,
+          "name": "GLE-450 4MATIC 3.0 V6 Diesel (Híb)"
+        },
+        {
+          "id": 7739,
+          "name": "GLE-450 AMG 3.0 V6 367cv Aut."
+        },
+        {
+          "id": 11880,
+          "name": "GLE-450 Coupe 3.0 4MATIC AMG Line Diesel (Híb)"
+        },
+        {
+          "id": 11018,
+          "name": "GLE-450 Coupe 3.0 4MATIC Diesel (Híb)"
+        },
+        {
+          "id": 10009,
+          "name": "GLE-53 AMG 3.0 TB 4MATIC+ (Híbrido)"
+        },
+        {
+          "id": 7512,
+          "name": "GLE-63 AMG 4MATIC Coupe 5.5 V8 Aut."
+        },
+        {
+          "id": 7768,
+          "name": "GLE-63 AMG 5.5 V8 557cv Aut."
+        },
+        {
+          "id": 9330,
+          "name": "GLE-63 S AMG 4M+ Coupé 4.0 Aut"
+        },
+        {
+          "id": 11842,
+          "name": "GLK-220 CDI 2.2 TB 4X4 170cv Aut. Diesel"
+        },
+        {
+          "id": 11843,
+          "name": "GLK-220 Sport CDI 2.2 TB 4X4 Aut. Diesel"
+        },
+        {
+          "id": 11844,
+          "name": "GLK-280 3.0 V6 24V 4x4 231cv Aut."
+        },
+        {
+          "id": 11845,
+          "name": "GLK-300 3.0 V6 24V 4x4 231cv Aut."
+        },
+        {
+          "id": 11846,
+          "name": "GLK-300 3.5 CGI V6 4x4 252cv Aut."
+        },
+        {
+          "id": 7594,
+          "name": "GLS-350 V6 258cv 4x4 Diesel"
+        },
+        {
+          "id": 11847,
+          "name": "GLS-450 4M 3.0 Bi-TB Aut. (Híbrido)"
+        },
+        {
+          "id": 11848,
+          "name": "GLS-450 AMG Line 4M 3.0 Bi-TB Aut. (Híbrido)"
+        },
+        {
+          "id": 7896,
+          "name": "GLS-500 4MATIC 4.7 Bi-Turbo V8 455cv"
+        },
+        {
+          "id": 8130,
+          "name": "GLS-63 AMG 4MATIC 5.5 V8 Bi-TB Aut."
+        },
+        {
+          "id": 10011,
+          "name": "GT 43 AMG 3.0 Bi-Turbo Aut. (Híbrido)"
+        },
+        {
+          "id": 9332,
+          "name": "GT 63 S AMG 4.0 V8 Bi-Turbo"
+        },
+        {
+          "id": 11717,
+          "name": "GT 63 S AMG E Performance Aut. 2p"
+        },
+        {
+          "id": 11718,
+          "name": "GT 63 S AMG E Performance Aut. 4p"
+        },
+        {
+          "id": 7769,
+          "name": "GT AMG 4.0 V8 Bi-Turbo 462cv"
+        },
+        {
+          "id": 9740,
+          "name": "GT AMG BLACK SERIES 4.0 V8 Bi-Turbo"
+        },
+        {
+          "id": 9333,
+          "name": "GT C Roadster AMG 4.0 V8 Bi-Turbo "
+        },
+        {
+          "id": 8104,
+          "name": "GT R AMG 4.0 V8 Bi-Turbo 585cv"
+        },
+        {
+          "id": 7356,
+          "name": "GT S AMG 4.0 V8 Bi-Turbo 510cv"
+        },
+        {
+          "id": 1621,
+          "name": "ML-230 4x4"
+        },
+        {
+          "id": 4686,
+          "name": "ML-320 3.0 V6 224cv 4x4 diesel"
+        },
+        {
+          "id": 1622,
+          "name": "ML-320 4x4"
+        },
+        {
+          "id": 5035,
+          "name": "ML-350 3.0 V6  4x4 Diesel"
+        },
+        {
+          "id": 1623,
+          "name": "ML-350 3.5  4x4"
+        },
+        {
+          "id": 6591,
+          "name": "ML-350 Sport 3.0 V6 258cv 4X4 Diesel"
+        },
+        {
+          "id": 6124,
+          "name": "ML-350 Sport CGI 3.5 V6 306cv 4x4 Aut."
+        },
+        {
+          "id": 1624,
+          "name": "ML-430"
+        },
+        {
+          "id": 1625,
+          "name": "ML-500 V8 24V"
+        },
+        {
+          "id": 1626,
+          "name": "ML-55 AMG 5.5 24v"
+        },
+        {
+          "id": 6239,
+          "name": "ML-63 AMG 5.5 V8 Bi-Turbo Aut."
+        },
+        {
+          "id": 4318,
+          "name": "ML-63 AMG 6.2 V8 32V 510cv"
+        },
+        {
+          "id": 1627,
+          "name": "S-320 L Classic/Wagon Classic 3.2"
+        },
+        {
+          "id": 10062,
+          "name": "S-400 3.5 V6 279cv Aut. (Híbrido)"
+        },
+        {
+          "id": 1628,
+          "name": "S-420 Classic 4.0"
+        },
+        {
+          "id": 1629,
+          "name": "S-500 5.0"
+        },
+        {
+          "id": 1630,
+          "name": "S-500 C Classic 5.0"
+        },
+        {
+          "id": 1631,
+          "name": "S-500 L/ L Classic/ Wagon Classic 5.0"
+        },
+        {
+          "id": 8060,
+          "name": "S-500 Maybach 4.7 Bi-Turbo V8 455cv Aut."
+        },
+        {
+          "id": 6700,
+          "name": "S-500L 4.7 Bi-Turbo V8 455cv Aut."
+        },
+        {
+          "id": 1632,
+          "name": "S-500L 5.0"
+        },
+        {
+          "id": 1633,
+          "name": "S-55 AMG V8 24V 364cv/ 500cv"
+        },
+        {
+          "id": 8216,
+          "name": "S-560L 4.0 Bi-Turbo V8 469cv Aut."
+        },
+        {
+          "id": 1634,
+          "name": "S-600 L/ L Classic/ Wagon Classic 6.0"
+        },
+        {
+          "id": 1635,
+          "name": "S-600/ S-600 C Classic 6.0"
+        },
+        {
+          "id": 5747,
+          "name": "S-63 AMG 5.5 V8 BI-TURBO Aut."
+        },
+        {
+          "id": 4517,
+          "name": "S-63 AMG 6.2 V8 525cv Aut"
+        },
+        {
+          "id": 11237,
+          "name": "S-63 AMG S E Performance Aut. (Híbrido)"
+        },
+        {
+          "id": 7804,
+          "name": "S-63 Cabriolet AMG 5.5 V8 Bi-Turbo Aut."
+        },
+        {
+          "id": 8548,
+          "name": "S-63 Coupe AMG 4MATIC 4.0 V8 Bi-TB Aut."
+        },
+        {
+          "id": 7229,
+          "name": "S-63 Coupe AMG 5.5 V8 Bi-Turbo Aut."
+        },
+        {
+          "id": 4518,
+          "name": "S-63 L AMG 6.2 V8/5.5 V8 Bi-TB Aut"
+        },
+        {
+          "id": 4261,
+          "name": "S-65 AMG 6.0 V12 612cv Aut"
+        },
+        {
+          "id": 8502,
+          "name": "S-65 AMG Coupe 6.0 Bi-TB V12 630cv Aut."
+        },
+        {
+          "id": 7770,
+          "name": "S-65 L AMG 6.0 V12 630cv Aut."
+        },
+        {
+          "id": 1636,
+          "name": "SE-500"
+        },
+        {
+          "id": 1637,
+          "name": "SL-280 Classic 2.8"
+        },
+        {
+          "id": 1638,
+          "name": "SL-320 3.2/Classic 3.2"
+        },
+        {
+          "id": 3899,
+          "name": "SL-350 3.5 V6 2p"
+        },
+        {
+          "id": 5281,
+          "name": "SL-350 Sport 3.5 V6 316cv"
+        },
+        {
+          "id": 7197,
+          "name": "SL-400 3.0 Bi-Turbo V6 2p"
+        },
+        {
+          "id": 1639,
+          "name": "SL-500 5.0 e 5.5/ Classic 5.0"
+        },
+        {
+          "id": 1640,
+          "name": "SL-55 AMG V8 24V 500cv"
+        },
+        {
+          "id": 1641,
+          "name": "SL-600"
+        },
+        {
+          "id": 6359,
+          "name": "SL-63 AMG 5.5 Bi-Turbo V8 Aut."
+        },
+        {
+          "id": 4701,
+          "name": "SL-63 AMG 6.2 V8 525cv Aut"
+        },
+        {
+          "id": 11278,
+          "name": "SL-63 AMG S E Performance Aut. (Híbrido)"
+        },
+        {
+          "id": 4702,
+          "name": "SL-65 AMG 6.0 V12 612cv Aut"
+        },
+        {
+          "id": 7705,
+          "name": "SLC-300 2.0 Turbo 245cv Aut."
+        },
+        {
+          "id": 7719,
+          "name": "SLC-43 AMG 3.0 V6 Aut."
+        },
+        {
+          "id": 1642,
+          "name": "SLK-200 Kompressor 16V/ 200 CGI 16V"
+        },
+        {
+          "id": 1643,
+          "name": "SLK-230 Kompressor"
+        },
+        {
+          "id": 1644,
+          "name": "SLK-230 Plus"
+        },
+        {
+          "id": 5935,
+          "name": "SLK-250 CGI 1.8 16V 204cv Aut."
+        },
+        {
+          "id": 7398,
+          "name": "SLK-300 2.0 Turbo 245cv Aut."
+        },
+        {
+          "id": 1645,
+          "name": "SLK-320 3.2 218cv"
+        },
+        {
+          "id": 1646,
+          "name": "SLK-350 3.5 V6/SLK-350 CGI"
+        },
+        {
+          "id": 1647,
+          "name": "SLK-55 AMG V8 24V"
+        },
+        {
+          "id": 6755,
+          "name": "SLS-63 AMG 6.2 8V Black Series Aut."
+        },
+        {
+          "id": 5641,
+          "name": "SLS-63 AMG 6.2 V8 Aut."
+        },
+        {
+          "id": 5900,
+          "name": "SLS-63 AMG Roadster 6.3 V8 Aut."
+        },
+        {
+          "id": 11050,
+          "name": "Sprin. 417 F Vidr. Extra L.T.A. Die.(E6)"
+        },
+        {
+          "id": 10685,
+          "name": "Sprin. 517 VAN E.L.P.T.A. 20L Die. (E6)"
+        },
+        {
+          "id": 10686,
+          "name": "Sprin. 517 VAN E.L.P.T.A. 21L Die. (E6)"
+        },
+        {
+          "id": 1648,
+          "name": "Sprinter 310 Chassi Diesel"
+        },
+        {
+          "id": 1649,
+          "name": "Sprinter 310 Furgão 2.5 Diesel"
+        },
+        {
+          "id": 1650,
+          "name": "Sprinter 310 Pick-Up Diesel"
+        },
+        {
+          "id": 1651,
+          "name": "Sprinter 310 Van Exec. 9Lug. Diesel"
+        },
+        {
+          "id": 1652,
+          "name": "Sprinter 310 Van Luxo/Exec. 12/14L Dies."
+        },
+        {
+          "id": 1653,
+          "name": "Sprinter 310 Van Std 12e14L/Luxo 9L.Dies"
+        },
+        {
+          "id": 1654,
+          "name": "Sprinter 310 Van Std. 9Lug. 2.5 Diesel"
+        },
+        {
+          "id": 1655,
+          "name": "Sprinter 311 Chassi 2.2 Diesel"
+        },
+        {
+          "id": 7125,
+          "name": "Sprinter 311 Chassi E. Longa 2.2 Diesel"
+        },
+        {
+          "id": 1656,
+          "name": "Sprinter 311 Furgão Curto 2.2 Dies"
+        },
+        {
+          "id": 5642,
+          "name": "Sprinter 311 Furgão E.Longo T.Alto Dies."
+        },
+        {
+          "id": 1657,
+          "name": "Sprinter 311 Furgão Longo 2.2  Dies"
+        },
+        {
+          "id": 1658,
+          "name": "Sprinter 311 Furgão Longo Teto alto Dies"
+        },
+        {
+          "id": 1659,
+          "name": "Sprinter 311 Street Luxo 2.2 16Lug. Dies"
+        },
+        {
+          "id": 1660,
+          "name": "Sprinter 311 Street Std. 2.2 16Lug. Dies"
+        },
+        {
+          "id": 1661,
+          "name": "Sprinter 311 VAN Luxo 2.2 109cv 13L Dies"
+        },
+        {
+          "id": 1662,
+          "name": "Sprinter 311 VAN Luxo 2.2 109cv 16L Dies"
+        },
+        {
+          "id": 1663,
+          "name": "Sprinter 311 VAN Std. 2.2 109cv 13L Dies"
+        },
+        {
+          "id": 1664,
+          "name": "Sprinter 311 VAN Std. 2.2 109cv 16L Dies"
+        },
+        {
+          "id": 1665,
+          "name": "Sprinter 312 Furgão Curto Diesel"
+        },
+        {
+          "id": 1666,
+          "name": "Sprinter 312 Furgão Longo Diesel"
+        },
+        {
+          "id": 1667,
+          "name": "Sprinter 312 Furgão Longo T.Alto Diesel"
+        },
+        {
+          "id": 1668,
+          "name": "Sprinter 312 Van Exec. 10Lug. 2.5 Diesel"
+        },
+        {
+          "id": 1669,
+          "name": "Sprinter 312 Van Exec. 12Lug. Diesel"
+        },
+        {
+          "id": 1670,
+          "name": "Sprinter 312 Van Luxo 10lug.  Diesel"
+        },
+        {
+          "id": 1671,
+          "name": "Sprinter 312 Van Luxo 12lug. Diesel"
+        },
+        {
+          "id": 1672,
+          "name": "Sprinter 312 Van Luxo 15lug. Diesel"
+        },
+        {
+          "id": 1673,
+          "name": "Sprinter 312 Van Luxo 16lug. Diesel"
+        },
+        {
+          "id": 1674,
+          "name": "Sprinter 312 Van Luxo Lotação 16lug.Dies"
+        },
+        {
+          "id": 1675,
+          "name": "Sprinter 312 Van Std 12lug. Diesel"
+        },
+        {
+          "id": 1676,
+          "name": "Sprinter 312 Van Std 16lug. Diesel"
+        },
+        {
+          "id": 1677,
+          "name": "Sprinter 312 Van Std Lotação 16lug. Dies"
+        },
+        {
+          "id": 1678,
+          "name": "Sprinter 312 Van Street Luxo 15Lug.Dies."
+        },
+        {
+          "id": 1679,
+          "name": "Sprinter 312 Van Street Std. 15Lug.Dies."
+        },
+        {
+          "id": 1680,
+          "name": "Sprinter 312-D Chassi Diesel"
+        },
+        {
+          "id": 7706,
+          "name": "Sprinter 313  Chassi Ex. Longo 2.2 Dies."
+        },
+        {
+          "id": 1681,
+          "name": "Sprinter 313 Chassi 2.2 129cv Diesel"
+        },
+        {
+          "id": 7707,
+          "name": "Sprinter 313 Chassi Longo 2.2 Diesel"
+        },
+        {
+          "id": 1682,
+          "name": "Sprinter 313 Furgão Curto 2.2 129cv Dies"
+        },
+        {
+          "id": 7708,
+          "name": "Sprinter 313 Furgão Ex. Longo T. A. Die."
+        },
+        {
+          "id": 1683,
+          "name": "Sprinter 313 Furgão Longo 2.2 129cv Dies"
+        },
+        {
+          "id": 1684,
+          "name": "Sprinter 313 Furgão Longo T. Alto Diesel"
+        },
+        {
+          "id": 1685,
+          "name": "Sprinter 313 VAN Exec 2.2 Mec/S-Aut Dies"
+        },
+        {
+          "id": 1686,
+          "name": "Sprinter 313 VAN Luxo 2.2 129cv 13L.Dies"
+        },
+        {
+          "id": 1687,
+          "name": "Sprinter 313 VAN Luxo 2.2 129cv 16L Dies"
+        },
+        {
+          "id": 1688,
+          "name": "Sprinter 313 VAN Std. 2.2 129cv 13L.Dies"
+        },
+        {
+          "id": 1689,
+          "name": "Sprinter 313 VAN Std. 2.2 129cv 16L Dies"
+        },
+        {
+          "id": 1690,
+          "name": "Sprinter 313 VAN Street Luxo 16L. Dies."
+        },
+        {
+          "id": 1691,
+          "name": "Sprinter 313 VAN Street Std. 16L. Dies."
+        },
+        {
+          "id": 8964,
+          "name": "Sprinter 314 Chassi E.L T.B. 2.2 Dies."
+        },
+        {
+          "id": 8965,
+          "name": "Sprinter 314 Chassi Longo T.B. 2.2 Dies."
+        },
+        {
+          "id": 8910,
+          "name": "Sprinter 314 Furgão Curto T.B. 2.2 Dies."
+        },
+        {
+          "id": 8911,
+          "name": "Sprinter 314 Furgão E.L. T.A.  2.2 Dies."
+        },
+        {
+          "id": 8912,
+          "name": "Sprinter 314 Furgão Longo T.A. 2.2 Dies."
+        },
+        {
+          "id": 8913,
+          "name": "Sprinter 314 Furgão Longo T.B. 2.2 Dies."
+        },
+        {
+          "id": 9873,
+          "name": "Sprinter 314 Truck E.Longo T.B. 2.2 Dies"
+        },
+        {
+          "id": 9874,
+          "name": "Sprinter 314 Truck Longo T.B. 2.2 Dies."
+        },
+        {
+          "id": 10573,
+          "name": "Sprinter 315 Furg.Str. E.L.T.A. 2.0 Dies"
+        },
+        {
+          "id": 10574,
+          "name": "Sprinter 315 Furgão Str. L T.A 2.0 Dies."
+        },
+        {
+          "id": 10575,
+          "name": "Sprinter 315 Furgão Str. L T.B 2.0 Dies."
+        },
+        {
+          "id": 10576,
+          "name": "Sprinter 315 Furgão Str.Curto 2.0 Dies."
+        },
+        {
+          "id": 10577,
+          "name": "Sprinter 315 Truck E.Longo T.B 2.0 Dies."
+        },
+        {
+          "id": 10578,
+          "name": "Sprinter 315 Truck Longo T.B 2.0 Dies."
+        },
+        {
+          "id": 12003,
+          "name": "Sprinter 317 Chassi Extra Lon. T. B. 2.0 Diesel"
+        },
+        {
+          "id": 11514,
+          "name": "Sprinter 317 Chassi Longo 2.0 Diesel"
+        },
+        {
+          "id": 11429,
+          "name": "Sprinter 317 Furgão E.LT.A. 2.0 Dies."
+        },
+        {
+          "id": 11955,
+          "name": "Sprinter 317 Furgão Extra Lon. T. A. 2.0 Aut. (E6)"
+        },
+        {
+          "id": 11956,
+          "name": "Sprinter 317 Furgão Longo T.A. 2.0 Aut. (E6)"
+        },
+        {
+          "id": 11430,
+          "name": "Sprinter 317 Furgão Longo T.A. 2.0 Dies."
+        },
+        {
+          "id": 11431,
+          "name": "Sprinter 317 Furgão Longo T.B. 2.0 Dies."
+        },
+        {
+          "id": 1692,
+          "name": "Sprinter 412-D Chassi Diesel"
+        },
+        {
+          "id": 1693,
+          "name": "Sprinter 413 Furgão Longo T.Alto Diesel"
+        },
+        {
+          "id": 4534,
+          "name": "Sprinter 413 VAN Luxo 2.2 16 e 20L Dies"
+        },
+        {
+          "id": 1694,
+          "name": "Sprinter 413-D Chassi Curto/Longo Diesel"
+        },
+        {
+          "id": 6179,
+          "name": "Sprinter 415 Chassi L. 2.2 Diesel"
+        },
+        {
+          "id": 6180,
+          "name": "Sprinter 415 Furgão Curto T.B. 2.2 Dies."
+        },
+        {
+          "id": 6181,
+          "name": "Sprinter 415 Furgão E.L.T.Alt. 2.2 Dies."
+        },
+        {
+          "id": 6126,
+          "name": "Sprinter 415 Furgão Lon.T.Alto 2.2 Dies"
+        },
+        {
+          "id": 6128,
+          "name": "Sprinter 415 Furgão Lon.T.Bai. 2.2 Dies."
+        },
+        {
+          "id": 6182,
+          "name": "Sprinter 415 VAN Luxo T.A. 2.2 Diesel"
+        },
+        {
+          "id": 6183,
+          "name": "Sprinter 415 VAN Luxo T.B. 2.2 Diesel"
+        },
+        {
+          "id": 6184,
+          "name": "Sprinter 415 VAN Standard T.A. 2.2 Dies."
+        },
+        {
+          "id": 6185,
+          "name": "Sprinter 415 VAN Standard T.B. 2.2 Dies."
+        },
+        {
+          "id": 8914,
+          "name": "Sprinter 416 Chassi Longo T.B. 2.2 Dies."
+        },
+        {
+          "id": 9058,
+          "name": "Sprinter 416 F. Vidrado E.L T.A. 2.2 Die"
+        },
+        {
+          "id": 9083,
+          "name": "Sprinter 416 F. Vidrado L. T.A. 2.2 Die."
+        },
+        {
+          "id": 8915,
+          "name": "Sprinter 416 Furgão Curto T.B. 2.2 Dies."
+        },
+        {
+          "id": 8916,
+          "name": "Sprinter 416 Furgão E.L. T. A. 2.2 Dies."
+        },
+        {
+          "id": 8917,
+          "name": "Sprinter 416 Furgão Longo T.A. 2.2 Dies."
+        },
+        {
+          "id": 8918,
+          "name": "Sprinter 416 Furgão Longo T.B. 2.2 Dies."
+        },
+        {
+          "id": 8919,
+          "name": "Sprinter 416 VAN L. T.A. 10L 2.2 Diesel"
+        },
+        {
+          "id": 8920,
+          "name": "Sprinter 416 VAN L. T.A. 16L 2.2 Diesel"
+        },
+        {
+          "id": 8921,
+          "name": "Sprinter 416 VAN L. T.B. 10L 2.2 Diesel"
+        },
+        {
+          "id": 8922,
+          "name": "Sprinter 416 VAN L. T.B. 16L 2.2 Diesel"
+        },
+        {
+          "id": 10579,
+          "name": "Sprinter 417 Chassi L.T.B. Dies. (E6)"
+        },
+        {
+          "id": 11957,
+          "name": "Sprinter 417 Chassi Longo T. B.  2.0 Aut. (E6)"
+        },
+        {
+          "id": 10581,
+          "name": "Sprinter 417 F. Vidrado L.T.A. Die. (E6)"
+        },
+        {
+          "id": 10687,
+          "name": "Sprinter 417 Furgão Curto T.B. Die. (E6)"
+        },
+        {
+          "id": 10583,
+          "name": "Sprinter 417 Furgão Ext. L.T.A Die. (E6)"
+        },
+        {
+          "id": 11958,
+          "name": "Sprinter 417 Furgão Extra LongoTeto Alto Aut. (E6)"
+        },
+        {
+          "id": 10584,
+          "name": "Sprinter 417 Furgão L.T.A. Diesel (E6)"
+        },
+        {
+          "id": 11959,
+          "name": "Sprinter 417 Furgão Longo T. A. 2.0  Aut.(E6)"
+        },
+        {
+          "id": 10585,
+          "name": "Sprinter 417 Furgão Longo T.B Die. (E6)"
+        },
+        {
+          "id": 10586,
+          "name": "Sprinter 417 VAN L.T.A. 10L Diesel (E6)"
+        },
+        {
+          "id": 10587,
+          "name": "Sprinter 417 VAN L.T.A. 16L Diesel (E6)"
+        },
+        {
+          "id": 10588,
+          "name": "Sprinter 417 VAN L.T.B 10L Diesel (E6)"
+        },
+        {
+          "id": 10589,
+          "name": "Sprinter 417 VAN L.T.B 16L Diesel( E6)"
+        },
+        {
+          "id": 11960,
+          "name": "Sprinter 417 VAN Longo T. A. 2.0  16L Aut. (E6)"
+        },
+        {
+          "id": 11961,
+          "name": "Sprinter 417 VAN Longo T. B. 2.0 16L Aut. (E6)"
+        },
+        {
+          "id": 6186,
+          "name": "Sprinter 515 Chassi E. L. 2.2 Diesel"
+        },
+        {
+          "id": 6187,
+          "name": "Sprinter 515 Chassi L. 2.2  Diesel"
+        },
+        {
+          "id": 6129,
+          "name": "Sprinter 515 Furgão E.L.T. Alto 2.2 Die."
+        },
+        {
+          "id": 6361,
+          "name": "Sprinter 515 VAN 2.2 Diesel"
+        },
+        {
+          "id": 8923,
+          "name": "Sprinter 516 Chassi E.L. T.B. 2.2 Dies."
+        },
+        {
+          "id": 8924,
+          "name": "Sprinter 516 Chassi Longo T.B. 2.2 Dies."
+        },
+        {
+          "id": 9084,
+          "name": "Sprinter 516 F.Vidrado E.L. T.A. 2.2 Die"
+        },
+        {
+          "id": 8925,
+          "name": "Sprinter 516 Furgão E.L.T. Alto 2.2 Dies"
+        },
+        {
+          "id": 9197,
+          "name": "Sprinter 516 VAN E.L. T.A  20L 2.2 Dies."
+        },
+        {
+          "id": 8966,
+          "name": "Sprinter 516 VAN E.L. T.A. 18L 2.2 Dies."
+        },
+        {
+          "id": 8967,
+          "name": "Sprinter 516 VAN E.L. T.A. 21L 2.2 Dies."
+        },
+        {
+          "id": 10590,
+          "name": "Sprinter 517 Chassi E.Lon. T.B. Die.(E6)"
+        },
+        {
+          "id": 11962,
+          "name": "Sprinter 517 Chassi Extra Lon. T. B. 2.0 Aut. (E6)"
+        },
+        {
+          "id": 11963,
+          "name": "Sprinter 517 Chassi Longo T. B. 2.0  Aut. (E6)"
+        },
+        {
+          "id": 10591,
+          "name": "Sprinter 517 Chassi Longo T.B. Die. (E6)"
+        },
+        {
+          "id": 10592,
+          "name": "Sprinter 517 F. Ext. L. T.A. Die. (E6)"
+        },
+        {
+          "id": 10593,
+          "name": "Sprinter 517 F. Ext. L.P.T.A. Die. (E6)"
+        },
+        {
+          "id": 10594,
+          "name": "Sprinter 517 F.Vidr. E.L.P.T.A. Die (E6)"
+        },
+        {
+          "id": 11964,
+          "name": "Sprinter 517 Furgão Extra Lon. P.T.A. 2.0 Aut.(E6)"
+        },
+        {
+          "id": 11108,
+          "name": "Sprinter 517 VAN E.L.T.A. 18L Die (E6)"
+        },
+        {
+          "id": 11965,
+          "name": "Sprinter 517 VAN Extra Longo P.T.A. 21L Aut. (E6)"
+        },
+        {
+          "id": 7399,
+          "name": "VITO 111 CDI Furgão 1.6 TB Diesel 4p Mec"
+        },
+        {
+          "id": 7400,
+          "name": "VITO TOURER 119 Comf.2.0 Flex 9Lug. Mec."
+        },
+        {
+          "id": 7401,
+          "name": "VITO TOURER 119 Luxo 2.0 Flex 8Lug. Mec."
+        }
+      ],
+      "sample_details": [
+        {
+          "model_id": 1527,
+          "model_name": "180-D Pick-Up/Furgão 2.4 Diesel",
+          "years": [
+            {
+              "year": "1996 Diesel",
+              "code": "1996-3"
+            },
+            {
+              "year": "1995 Diesel",
+              "code": "1995-3"
+            },
+            {
+              "year": "1994 Diesel",
+              "code": "1994-3"
+            },
+            {
+              "year": "1993 Diesel",
+              "code": "1993-3"
+            }
+          ]
+        },
+        {
+          "model_id": 1528,
+          "model_name": "180-D Van 2.4 Diesel",
+          "years": [
+            {
+              "year": "1996 Diesel",
+              "code": "1996-3"
+            },
+            {
+              "year": "1995 Diesel",
+              "code": "1995-3"
+            },
+            {
+              "year": "1994 Diesel",
+              "code": "1994-3"
+            },
+            {
+              "year": "1993 Diesel",
+              "code": "1993-3"
+            }
+          ]
+        },
+        {
+          "model_id": 1529,
+          "model_name": "190-E 2.3",
+          "years": [
+            {
+              "year": "1993 Gasolina",
+              "code": "1993-1"
+            },
+            {
+              "year": "1992 Gasolina",
+              "code": "1992-1"
+            },
+            {
+              "year": "1991 Gasolina",
+              "code": "1991-1"
+            },
+            {
+              "year": "1990 Gasolina",
+              "code": "1990-1"
+            },
+            {
+              "year": "1989 Gasolina",
+              "code": "1989-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1530,
+          "model_name": "230-E 2.3",
+          "years": [
+            {
+              "year": "1993 Gasolina",
+              "code": "1993-1"
+            },
+            {
+              "year": "1992 Gasolina",
+              "code": "1992-1"
+            },
+            {
+              "year": "1991 Gasolina",
+              "code": "1991-1"
+            },
+            {
+              "year": "1990 Gasolina",
+              "code": "1990-1"
+            },
+            {
+              "year": "1988 Gasolina",
+              "code": "1988-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1531,
+          "model_name": "260-E 2.6",
+          "years": [
+            {
+              "year": "1993 Gasolina",
+              "code": "1993-1"
+            },
+            {
+              "year": "1992 Gasolina",
+              "code": "1992-1"
+            },
+            {
+              "year": "1991 Gasolina",
+              "code": "1991-1"
+            }
+          ]
+        }
+      ]
+    },
+    "Nissan": {
+      "brand_id": 43,
+      "total_models": 200,
+      "models": [
+        {
+          "id": 1781,
+          "name": "350Z 3.5 V6 280cv/ 312cv 2p"
+        },
+        {
+          "id": 1782,
+          "name": "Altima GXE 2.4 16V"
+        },
+        {
+          "id": 1783,
+          "name": "Altima SE 2.4 16V"
+        },
+        {
+          "id": 6644,
+          "name": "ALTIMA SL 2.5 16V 4p Aut."
+        },
+        {
+          "id": 1784,
+          "name": "AX 6.5D Turbo Diesel"
+        },
+        {
+          "id": 1785,
+          "name": "D-21 Pick-Up CD 4x2/4x4 2.7 Diesel"
+        },
+        {
+          "id": 1786,
+          "name": "D-21 Pick-Up CS 4x2/4x4 2.7 Diesel"
+        },
+        {
+          "id": 8551,
+          "name": "Frontier ATTAC.CD 4x4 2.3 Bi-TB Die. Aut"
+        },
+        {
+          "id": 1787,
+          "name": "Frontier AX 3.2 CD Diesel"
+        },
+        {
+          "id": 1788,
+          "name": "Frontier AX CD 4x4 2.5 TB Interc. Diesel"
+        },
+        {
+          "id": 1789,
+          "name": "Frontier DX 3.2 CD Diesel"
+        },
+        {
+          "id": 5626,
+          "name": "Frontier LE ATTACK CD 4x4 2.5 TB Die.Aut"
+        },
+        {
+          "id": 7887,
+          "name": "Frontier LE CD 4x4 2.3 Bi-TB Diesel Aut."
+        },
+        {
+          "id": 4262,
+          "name": "Frontier LE CD 4x4 2.5 TB dies.(Import.)"
+        },
+        {
+          "id": 4775,
+          "name": "Frontier LE CD 4x4 2.5 TB Diesel Aut."
+        },
+        {
+          "id": 4776,
+          "name": "Frontier LE CD 4x4 2.5 TB Diesel Mec."
+        },
+        {
+          "id": 9832,
+          "name": "Frontier PLATI. CD  2.3 Bi-TB Dies.Aut."
+        },
+        {
+          "id": 6756,
+          "name": "Frontier PLATINUM CD 4x4 2.5 TB Diesel"
+        },
+        {
+          "id": 9792,
+          "name": "Frontier PRO4X CD 4x4 2.3 Bi-TB Die. Aut"
+        },
+        {
+          "id": 6394,
+          "name": "Frontier S CD 4x2 2.5 TB Diesel"
+        },
+        {
+          "id": 8636,
+          "name": "Frontier S CD 4x4 2.3 TB Diesel Mec."
+        },
+        {
+          "id": 6395,
+          "name": "Frontier S CD 4x4 2.5 TB Diesel"
+        },
+        {
+          "id": 5627,
+          "name": "Frontier SE ATTACK CD 4x2 2.5 TB Diesel"
+        },
+        {
+          "id": 5628,
+          "name": "Frontier SE ATTACK CD 4x4 2.5 TB Diesel"
+        },
+        {
+          "id": 8132,
+          "name": "Frontier SE CD 4x4 2.3 Bi-TB Diesel Aut."
+        },
+        {
+          "id": 1790,
+          "name": "Frontier SE Serrana CD 4x4 2.8 TB Dies"
+        },
+        {
+          "id": 4408,
+          "name": "Frontier SE Vibe CD 2.8 TDI Dies."
+        },
+        {
+          "id": 1792,
+          "name": "Frontier SE/ SE ONE CD 4x2 2.8 TDI Dies"
+        },
+        {
+          "id": 4777,
+          "name": "Frontier SE/SE Strik CD 4x2 2.5 TB Dies."
+        },
+        {
+          "id": 4778,
+          "name": "Frontier SE/SE Strik CD 4x4 2.5 TB Dies."
+        },
+        {
+          "id": 1791,
+          "name": "Frontier SE/SE Strik/ONE CD 4x4 2.8 Dies"
+        },
+        {
+          "id": 4519,
+          "name": "Frontier SEL CD 4x4 2.5 TB Diesel"
+        },
+        {
+          "id": 4520,
+          "name": "Frontier SEL CD 4x4 2.5 TB Diesel Aut."
+        },
+        {
+          "id": 6241,
+          "name": "Frontier SL CD 4x4 2.5TB Diesel Aut"
+        },
+        {
+          "id": 6967,
+          "name": "Frontier SV AT. CD 4x4 2.5 TB Dies. Aut."
+        },
+        {
+          "id": 6243,
+          "name": "Frontier SV AT.CD 4x4 2.5 TB Diesel Mec."
+        },
+        {
+          "id": 6242,
+          "name": "Frontier SV ATTACK CD 4x2 2.5 TB Diesel"
+        },
+        {
+          "id": 5135,
+          "name": "Frontier XE  CD 4x4 2.5 TB Diesel"
+        },
+        {
+          "id": 1793,
+          "name": "Frontier XE ATTACK CD 2.8 TDI Diesel"
+        },
+        {
+          "id": 4779,
+          "name": "Frontier XE CD 4x2 2.5 TB Diesel"
+        },
+        {
+          "id": 8552,
+          "name": "Frontier XE CD 4x4 2.3 Bi-TB Diesel Aut."
+        },
+        {
+          "id": 1794,
+          "name": "Frontier XE CS 4x2 2.8 TB Interc. Dies."
+        },
+        {
+          "id": 1795,
+          "name": "Frontier XE/ XE TIT. CD 4x2 2.8 TDI Dies"
+        },
+        {
+          "id": 1796,
+          "name": "Frontier XE/ XE TIT. CD 4x4 2.8 TDI Dies"
+        },
+        {
+          "id": 9632,
+          "name": "Frontier X-GEAR CD 4x4 2.3 Bi-TB Die.Aut"
+        },
+        {
+          "id": 7805,
+          "name": "GT-R 3.8 V6 BiTurbo Aut."
+        },
+        {
+          "id": 1797,
+          "name": "Infinit 3.0"
+        },
+        {
+          "id": 11795,
+          "name": "Kait Active 1.6 16v Aut."
+        },
+        {
+          "id": 11917,
+          "name": "Kait Advance 1.6 16v Aut."
+        },
+        {
+          "id": 11796,
+          "name": "Kait Advance Plus 1.6 16v Aut."
+        },
+        {
+          "id": 11797,
+          "name": "Kait Exclusive 1.6 16v Aut."
+        },
+        {
+          "id": 11918,
+          "name": "Kait Sense 1.6 16v Aut."
+        },
+        {
+          "id": 11798,
+          "name": "Kait Sense Plus 1.6 16v Aut."
+        },
+        {
+          "id": 10139,
+          "name": "KICKS Active 1.6 16V Flex Aut."
+        },
+        {
+          "id": 9334,
+          "name": "KICKS Active S 1.6 16V Flex Aut."
+        },
+        {
+          "id": 11499,
+          "name": "KICKS Advance 1.0 Turbo Flex Aut."
+        },
+        {
+          "id": 9335,
+          "name": "KICKS Advance 1.6 16V Flex Aut."
+        },
+        {
+          "id": 11799,
+          "name": "KICKS Exclusive 1.0 Turbo Flex Aut."
+        },
+        {
+          "id": 9336,
+          "name": "KICKS Exclusive 1.6 16V Flex Aut."
+        },
+        {
+          "id": 11501,
+          "name": "KICKS Platinum 1.0 Turbo Flex Aut."
+        },
+        {
+          "id": 11343,
+          "name": "KICKS Play Active Plus 1.6 16V Flex Aut."
+        },
+        {
+          "id": 11344,
+          "name": "KICKS Play Advance Plus 1.6 16V Flex Aut"
+        },
+        {
+          "id": 11345,
+          "name": "KICKS Play Sense 1.6 16V Flex Aut."
+        },
+        {
+          "id": 7669,
+          "name": "KICKS Rio 2016 1.6 16V FlexStar 5p Aut."
+        },
+        {
+          "id": 8020,
+          "name": "KICKS S 1.6 16V Flex 5p Aut."
+        },
+        {
+          "id": 7982,
+          "name": "KICKS S 1.6 16V FlexStar 5p Mec."
+        },
+        {
+          "id": 9594,
+          "name": "KICKS S Direct 1.6 16V Flex 5p Aut."
+        },
+        {
+          "id": 11502,
+          "name": "KICKS Sense 1.0 Turbo Flex Aut."
+        },
+        {
+          "id": 9337,
+          "name": "KICKS Sense 1.6 16V Flex Aut."
+        },
+        {
+          "id": 9338,
+          "name": "KICKS Sense 1.6 16V Flex Mec."
+        },
+        {
+          "id": 7670,
+          "name": "KICKS SL 1.6 16V FlexStar 5p Aut."
+        },
+        {
+          "id": 8867,
+          "name": "KICKS Special Ed. 1.6 16V Flex 5p Aut."
+        },
+        {
+          "id": 8927,
+          "name": "KICKS Special Ed.1.6 16V Flex 5p Mec."
+        },
+        {
+          "id": 7983,
+          "name": "KICKS SV 1.6 16V FlexStar 5p Aut."
+        },
+        {
+          "id": 7839,
+          "name": "KICKS SV Limited 1.6 16V Flex 5p Aut."
+        },
+        {
+          "id": 8637,
+          "name": "KICKS UCL 1.6 16V Flex 5p Aut."
+        },
+        {
+          "id": 9633,
+          "name": "KICKS XPlay 1.6 16V Flex Aut."
+        },
+        {
+          "id": 1798,
+          "name": "King-Cab SE 4x4 3.0 V6"
+        },
+        {
+          "id": 8754,
+          "name": "LEAF Aut. (Elétrico)"
+        },
+        {
+          "id": 4864,
+          "name": "LIVINA 1.6 16V Flex Fuel 5p"
+        },
+        {
+          "id": 4866,
+          "name": "LIVINA 1.8 16V Flex Fuel Aut."
+        },
+        {
+          "id": 4982,
+          "name": "LIVINA GRAND 1.8 16V Flex Fuel Aut."
+        },
+        {
+          "id": 4983,
+          "name": "LIVINA GRAND 1.8 16V Flex Fuel Mec."
+        },
+        {
+          "id": 5253,
+          "name": "LIVINA GRAND S 1.8 16V Flex Fuel Aut."
+        },
+        {
+          "id": 5254,
+          "name": "LIVINA GRAND S 1.8 16V Flex Fuel Mec."
+        },
+        {
+          "id": 4984,
+          "name": "LIVINA GRAND SL 1.8 16V Flex Fuel Aut."
+        },
+        {
+          "id": 4985,
+          "name": "LIVINA GRAND SL 1.8 16V Flex Fuel Mec"
+        },
+        {
+          "id": 5474,
+          "name": "LIVINA NIGHT&DAY 1.6 16V Flex Fuel Mec."
+        },
+        {
+          "id": 5255,
+          "name": "LIVINA S 1.6 16V Flex Fuel Mec."
+        },
+        {
+          "id": 5256,
+          "name": "LIVINA S 1.8 16V Flex Fuel Aut."
+        },
+        {
+          "id": 4865,
+          "name": "LIVINA SL 1.6 16V Flex Fuel 5p"
+        },
+        {
+          "id": 4867,
+          "name": "LIVINA SL 1.8 16V Flex Fuel Aut."
+        },
+        {
+          "id": 5036,
+          "name": "LIVINA X-GEAR 1.6 16V Flex Fuel Mec."
+        },
+        {
+          "id": 5257,
+          "name": "LIVINA X-GEAR S 1.6 16V Flex Fuel"
+        },
+        {
+          "id": 5037,
+          "name": "LIVINA X-GEAR SL 1.6 16V Flex Fuel Mec."
+        },
+        {
+          "id": 5038,
+          "name": "LIVINA X-GEAR SL/X-GEAR 1.8 Flex F. Aut."
+        },
+        {
+          "id": 7266,
+          "name": "MARCH 1.0 12V Flex 5p"
+        },
+        {
+          "id": 7622,
+          "name": "MARCH 1.0 12V FlexStart 5p"
+        },
+        {
+          "id": 5643,
+          "name": "MARCH 1.0 16V Flex Fuel 5p"
+        },
+        {
+          "id": 6302,
+          "name": "MARCH Rio2016 1.0 Flex Fuel 5p"
+        },
+        {
+          "id": 6303,
+          "name": "MARCH Rio2016 1.6 Flex Fuel 5p"
+        },
+        {
+          "id": 7164,
+          "name": "MARCH S 1.0 12V Flex 5p"
+        },
+        {
+          "id": 5644,
+          "name": "MARCH S 1.0 16V Flex Fuel 5p"
+        },
+        {
+          "id": 5691,
+          "name": "MARCH S 1.6 16V Flex Fuel 5p"
+        },
+        {
+          "id": 7709,
+          "name": "MARCH S 1.6 16V FlexStart 5p"
+        },
+        {
+          "id": 6841,
+          "name": "MARCH SL 1.6 16V Flex Fuel 5p"
+        },
+        {
+          "id": 7623,
+          "name": "MARCH SL 1.6 16V FlexStart 5p Aut."
+        },
+        {
+          "id": 7624,
+          "name": "MARCH SL 1.6 16V FlexStart 5p Mec."
+        },
+        {
+          "id": 5693,
+          "name": "MARCH SR 1.6 16V Flex Fuel 5p"
+        },
+        {
+          "id": 7165,
+          "name": "MARCH SV 1.0 12V Flex 5p"
+        },
+        {
+          "id": 6842,
+          "name": "MARCH SV 1.0 16V Flex Fuel 5p"
+        },
+        {
+          "id": 5692,
+          "name": "MARCH SV 1.6 16V Flex Fuel"
+        },
+        {
+          "id": 7625,
+          "name": "MARCH SV 1.6 16V FlexStart 5p Aut."
+        },
+        {
+          "id": 7626,
+          "name": "MARCH SV 1.6 16V FlexStart 5p Mec."
+        },
+        {
+          "id": 1799,
+          "name": "Maxima 30G/ GLE 3.0 V6 24V"
+        },
+        {
+          "id": 1800,
+          "name": "Maxima 30GV  Limited 3.0 V6 24V"
+        },
+        {
+          "id": 1801,
+          "name": "Maxima 30GV/30GV Aero/ GV 3.0 V6 24V"
+        },
+        {
+          "id": 1802,
+          "name": "Maxima 30J"
+        },
+        {
+          "id": 1803,
+          "name": "Maxima GXE 3.0"
+        },
+        {
+          "id": 1804,
+          "name": "Maxima SE 3.0 V6"
+        },
+        {
+          "id": 1805,
+          "name": "Micra 1.0"
+        },
+        {
+          "id": 4193,
+          "name": "MURANO SE 3.5 V6 24V 231cv Aut"
+        },
+        {
+          "id": 1806,
+          "name": "NX 2000"
+        },
+        {
+          "id": 1807,
+          "name": "NX 2000 Targa 2.0"
+        },
+        {
+          "id": 1808,
+          "name": "Pathfinder LE 2.5 16V TDI Diesel Aut"
+        },
+        {
+          "id": 1809,
+          "name": "Pathfinder LE 4.0 V6 24V 266cv Aut"
+        },
+        {
+          "id": 4577,
+          "name": "Pathfinder SE 2.5 16V TDI Diesel Aut."
+        },
+        {
+          "id": 1810,
+          "name": "Pathfinder SE 3.3 V6 12V"
+        },
+        {
+          "id": 4578,
+          "name": "Pathfinder SE 4.0 V6 24V 266cv Aut."
+        },
+        {
+          "id": 1811,
+          "name": "Pathfinder SE 4x4 3.0 12V Aut./Mec."
+        },
+        {
+          "id": 1812,
+          "name": "Pathfinder SE Luxo 3.3 V6 12V"
+        },
+        {
+          "id": 1813,
+          "name": "Pathfinder SE Luxo 3.5 V6 24V 243cv"
+        },
+        {
+          "id": 1814,
+          "name": "Pathfinder SE Titanium 3.3 V6 12V"
+        },
+        {
+          "id": 1815,
+          "name": "Pathfinder XE 2.7 TB Diesel"
+        },
+        {
+          "id": 1816,
+          "name": "Pathfinder XE 4x4"
+        },
+        {
+          "id": 1817,
+          "name": "Pick-Up CD AX/ DX 4x4 Diesel"
+        },
+        {
+          "id": 1818,
+          "name": "Pick-Up CS DX 4x4 Diesel"
+        },
+        {
+          "id": 1819,
+          "name": "Pick-Up King Cab DX 2.7 4x2 Diesel"
+        },
+        {
+          "id": 1820,
+          "name": "Primera GXE 2.0 16V"
+        },
+        {
+          "id": 1821,
+          "name": "Quest GXE/ GLE/ SER"
+        },
+        {
+          "id": 1822,
+          "name": "Quest XE 3.0 V6"
+        },
+        {
+          "id": 4294,
+          "name": "Sentra 2.0/ 2.0 Flex Fuel 16V Aut."
+        },
+        {
+          "id": 4295,
+          "name": "Sentra 2.0/ 2.0 Flex Fuel 16V Mec."
+        },
+        {
+          "id": 10570,
+          "name": "Sentra Advance 2.0 16V Aut."
+        },
+        {
+          "id": 10571,
+          "name": "Sentra Exclu. Int. Premium 2.0 16V Aut."
+        },
+        {
+          "id": 10572,
+          "name": "Sentra Exclusive 2.0 16V Aut."
+        },
+        {
+          "id": 1823,
+          "name": "Sentra GLE"
+        },
+        {
+          "id": 1824,
+          "name": "Sentra GSX/ EX"
+        },
+        {
+          "id": 1825,
+          "name": "Sentra GXE/ SER"
+        },
+        {
+          "id": 7595,
+          "name": "Sentra S 2.0 FlexStart 16V Aut."
+        },
+        {
+          "id": 4296,
+          "name": "Sentra S 2.0/ 2.0 Flex Fuel 16V Aut."
+        },
+        {
+          "id": 4297,
+          "name": "Sentra S 2.0/ 2.0 Flex Fuel 16V Mec."
+        },
+        {
+          "id": 6212,
+          "name": "Sentra SE 2.0 Flex 16V Aut."
+        },
+        {
+          "id": 7596,
+          "name": "Sentra SL 2.0 FlexStart 16V Aut."
+        },
+        {
+          "id": 4298,
+          "name": "Sentra SL 2.0/ 2.0 Flex Fuel 16V Aut."
+        },
+        {
+          "id": 5645,
+          "name": "Sentra SR 2.0 Flex Fuel 16V Aut."
+        },
+        {
+          "id": 5646,
+          "name": "Sentra SR 2.0 Flex Fuel 16V Mec."
+        },
+        {
+          "id": 6616,
+          "name": "Sentra SV 2.0 FlexStart 16V Aut."
+        },
+        {
+          "id": 5647,
+          "name": "Sentra UNIQUE 2.0 Flex Fuel 16V Aut."
+        },
+        {
+          "id": 1826,
+          "name": "Stanza XE 2.4 12V"
+        },
+        {
+          "id": 1827,
+          "name": "SX 240 2.4"
+        },
+        {
+          "id": 1828,
+          "name": "Terrano II SE 2.7 Diesel"
+        },
+        {
+          "id": 1829,
+          "name": "Terrano II SLX 2.7 Diesel"
+        },
+        {
+          "id": 4404,
+          "name": "TIIDA S 1.8/1.8 Flex 16V  Mec."
+        },
+        {
+          "id": 4405,
+          "name": "TIIDA S 1.8/1.8 Flex 16V Aut."
+        },
+        {
+          "id": 5311,
+          "name": "TIIDA Sedan 1.8 16V Flex Fuel 4p"
+        },
+        {
+          "id": 6188,
+          "name": "TIIDA Sedan 1.8 16V Flex Fuel 4p Aut."
+        },
+        {
+          "id": 4406,
+          "name": "TIIDA SL 1.8/1.8 Flex 16V  Mec."
+        },
+        {
+          "id": 4407,
+          "name": "TIIDA SL 1.8/1.8 Flex 16V Aut."
+        },
+        {
+          "id": 7166,
+          "name": "VERSA 1.0 12V FlexStart 4p Mec."
+        },
+        {
+          "id": 9231,
+          "name": "VERSA Advance 1.6 16V Flex Aut."
+        },
+        {
+          "id": 9232,
+          "name": "VERSA Exclusive 1.6 16V Flex Aut."
+        },
+        {
+          "id": 7167,
+          "name": "VERSA S 1.0 12V FlexStart 4p Mec."
+        },
+        {
+          "id": 5708,
+          "name": "VERSA S 1.6 16V Flex Fuel 4p Mec."
+        },
+        {
+          "id": 7627,
+          "name": "VERSA S 1.6 16V FlexStart 4p Mec."
+        },
+        {
+          "id": 9233,
+          "name": "VERSA Sense 1.6 16V Flex Aut."
+        },
+        {
+          "id": 9234,
+          "name": "VERSA Sense 1.6 16V Flex Mec."
+        },
+        {
+          "id": 5709,
+          "name": "VERSA SL 1.6 16V Flex Fuel 4p Mec."
+        },
+        {
+          "id": 7628,
+          "name": "VERSA SL 1.6 16V FlexStart 4p Aut."
+        },
+        {
+          "id": 7629,
+          "name": "VERSA SL 1.6 16V FlexStart 4p Mec."
+        },
+        {
+          "id": 9598,
+          "name": "VERSA SL Direct 1.6 16V Flex  Aut. "
+        },
+        {
+          "id": 9060,
+          "name": "VERSA Special Ed. 1.6 16V FlexStart Aut."
+        },
+        {
+          "id": 11086,
+          "name": "VERSA SR 1.6 16V Flex Aut."
+        },
+        {
+          "id": 5710,
+          "name": "VERSA SV 1.6 16V Flex Fuel 4p Mec."
+        },
+        {
+          "id": 7630,
+          "name": "VERSA SV 1.6 16V FlexStart 4p Aut."
+        },
+        {
+          "id": 7631,
+          "name": "VERSA SV 1.6 16V FlexStart 4p Mec."
+        },
+        {
+          "id": 7168,
+          "name": "VERSA UNIQUE 1.6 16V Flex 4p Mec."
+        },
+        {
+          "id": 7632,
+          "name": "VERSA UNIQUE 1.6 16V FlexStart 4p Aut."
+        },
+        {
+          "id": 9168,
+          "name": "VERSA V-DRIVE 1.0  12V Flex Mec."
+        },
+        {
+          "id": 9169,
+          "name": "VERSA V-DRIVE 1.6 16V Flex Mec."
+        },
+        {
+          "id": 9170,
+          "name": "VERSA V-DRIVE Esp.Ed. 1.6 16v Flex Aut."
+        },
+        {
+          "id": 9171,
+          "name": "VERSA V-DRIVE PLUS 1.6 16V Flex Aut."
+        },
+        {
+          "id": 9172,
+          "name": "VERSA V-DRIVE Premium 1.6 16v Flex Aut."
+        },
+        {
+          "id": 4120,
+          "name": "XTerra ECOTRIP 4x4 140cv 2.8 TB Int.Dies"
+        },
+        {
+          "id": 1830,
+          "name": "XTerra SE 4x4 2.8 132/140cv TB Int.Dies."
+        },
+        {
+          "id": 1831,
+          "name": "XTerra XE 4x4 2.8 132cv TB Int. Diesel"
+        },
+        {
+          "id": 1832,
+          "name": "X-TRAIL GX 2.5 16V 180cv 5p"
+        },
+        {
+          "id": 4736,
+          "name": "X-TRAIL LE 2.0 16V 138cv Aut."
+        },
+        {
+          "id": 4737,
+          "name": "X-TRAIL SE 2.0 16V 138cv Aut."
+        },
+        {
+          "id": 1833,
+          "name": "ZX 300 3.0 BI-Turbo"
+        }
+      ],
+      "sample_details": [
+        {
+          "model_id": 1781,
+          "model_name": "350Z 3.5 V6 280cv/ 312cv 2p",
+          "years": [
+            {
+              "year": "2009 Gasolina",
+              "code": "2009-1"
+            },
+            {
+              "year": "2008 Gasolina",
+              "code": "2008-1"
+            },
+            {
+              "year": "2007 Gasolina",
+              "code": "2007-1"
+            },
+            {
+              "year": "2006 Gasolina",
+              "code": "2006-1"
+            },
+            {
+              "year": "2005 Gasolina",
+              "code": "2005-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1782,
+          "model_name": "Altima GXE 2.4 16V",
+          "years": [
+            {
+              "year": "1994 Gasolina",
+              "code": "1994-1"
+            },
+            {
+              "year": "1993 Gasolina",
+              "code": "1993-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1783,
+          "model_name": "Altima SE 2.4 16V",
+          "years": [
+            {
+              "year": "1995 Gasolina",
+              "code": "1995-1"
+            },
+            {
+              "year": "1994 Gasolina",
+              "code": "1994-1"
+            },
+            {
+              "year": "1993 Gasolina",
+              "code": "1993-1"
+            }
+          ]
+        },
+        {
+          "model_id": 6644,
+          "model_name": "ALTIMA SL 2.5 16V 4p Aut.",
+          "years": [
+            {
+              "year": "2014 Gasolina",
+              "code": "2014-1"
+            }
+          ]
+        },
+        {
+          "model_id": 1784,
+          "model_name": "AX 6.5D Turbo Diesel",
+          "years": [
+            {
+              "year": "1996 Diesel",
+              "code": "1996-3"
+            },
+            {
+              "year": "1995 Diesel",
+              "code": "1995-3"
+            },
+            {
+              "year": "1994 Diesel",
+              "code": "1994-3"
+            }
+          ]
+        }
+      ]
+    },
+    "MG": {
+      "brand_id": 167,
+      "total_models": 11,
+      "models": [
+        {
+          "id": 11781,
+          "name": "4 Comfort"
+        },
+        {
+          "id": 11782,
+          "name": "4 Luxury"
+        },
+        {
+          "id": 12101,
+          "name": "4 Urban Comfort 43"
+        },
+        {
+          "id": 12102,
+          "name": "4 Urban Luxury 43"
+        },
+        {
+          "id": 12103,
+          "name": "4 Urban Luxury 54"
+        },
+        {
+          "id": 11783,
+          "name": "4 Xpower AWD"
+        },
+        {
+          "id": 5310,
+          "name": "550 1.8 16V Turbo 170cv Aut."
+        },
+        {
+          "id": 11793,
+          "name": "Cyberster AWD"
+        },
+        {
+          "id": 5582,
+          "name": "MG6 1.8 16V Turbo 170cv Aut."
+        },
+        {
+          "id": 11801,
+          "name": "S5 Comfort"
+        },
+        {
+          "id": 11802,
+          "name": "S5 Luxury"
+        }
+      ],
+      "sample_details": [
+        {
+          "model_id": 11781,
+          "model_name": "4 Comfort",
+          "years": [
+            {
+              "year": "32000 Elétrico",
+              "code": "32000-4"
+            },
+            {
+              "year": "2027 Elétrico",
+              "code": "2027-4"
+            },
+            {
+              "year": "2026 Elétrico",
+              "code": "2026-4"
+            }
+          ]
+        },
+        {
+          "model_id": 11782,
+          "model_name": "4 Luxury",
+          "years": [
+            {
+              "year": "32000 Elétrico",
+              "code": "32000-4"
+            },
+            {
+              "year": "2027 Elétrico",
+              "code": "2027-4"
+            },
+            {
+              "year": "2026 Elétrico",
+              "code": "2026-4"
+            }
+          ]
+        },
+        {
+          "model_id": 12101,
+          "model_name": "4 Urban Comfort 43",
+          "years": [
+            {
+              "year": "32000 Elétrico",
+              "code": "32000-4"
+            },
+            {
+              "year": "2027 Elétrico",
+              "code": "2027-4"
+            }
+          ]
+        },
+        {
+          "model_id": 12102,
+          "model_name": "4 Urban Luxury 43",
+          "years": [
+            {
+              "year": "32000 Elétrico",
+              "code": "32000-4"
+            },
+            {
+              "year": "2027 Elétrico",
+              "code": "2027-4"
+            }
+          ]
+        },
+        {
+          "model_id": 12103,
+          "model_name": "4 Urban Luxury 54",
+          "years": [
+            {
+              "year": "32000 Elétrico",
+              "code": "32000-4"
+            },
+            {
+              "year": "2027 Elétrico",
+              "code": "2027-4"
+            }
+          ]
+        }
+      ]
+    },
+    "BYD": {
+      "brand_id": 238,
+      "total_models": 22,
+      "models": [
+        {
+          "id": 11920,
+          "name": "Atto 8 1.5 16V Aut."
+        },
+        {
+          "id": 9902,
+          "name": "D1 EV (Elétrico)"
+        },
+        {
+          "id": 12122,
+          "name": "Dolphin EV GS (Elétrico)"
+        },
+        {
+          "id": 12123,
+          "name": "Dolphin Mini GL"
+        },
+        {
+          "id": 12124,
+          "name": "Dolphin Mini GS (Elétrico)"
+        },
+        {
+          "id": 10878,
+          "name": "Dolphin Plus (Elétrico)"
+        },
+        {
+          "id": 11992,
+          "name": "Dolphin SE"
+        },
+        {
+          "id": 9831,
+          "name": "eT3  (Elétrico)"
+        },
+        {
+          "id": 9860,
+          "name": "Han EV  (Elétrico)"
+        },
+        {
+          "id": 11078,
+          "name": "King GL 1.5 16V Aut. (Hibrido)"
+        },
+        {
+          "id": 11079,
+          "name": "King GS 1.5 16V Aut. (Hibrido)"
+        },
+        {
+          "id": 10833,
+          "name": "Seal (Elétrico)"
+        },
+        {
+          "id": 12037,
+          "name": "Sealion 7 AWD (Elétrico)"
+        },
+        {
+          "id": 11277,
+          "name": "SHARK GS 1.5 16V 4x4 Aut. (Híbrido)"
+        },
+        {
+          "id": 11084,
+          "name": "Song Plus 1.5 16V Aut. (Hibrido)"
+        },
+        {
+          "id": 11299,
+          "name": "Song Plus Premium 1.5 16V Aut. (Hibrido)"
+        },
+        {
+          "id": 11106,
+          "name": "Song Pro GL 1.5 16V Aut. (Hibrido)"
+        },
+        {
+          "id": 11107,
+          "name": "Song Pro GS 1.5 16V Aut. (Hibrido)"
+        },
+        {
+          "id": 12134,
+          "name": "TAN EV AWD (Elétrico)"
+        },
+        {
+          "id": 10184,
+          "name": "Yuan Plus (Elétrico)"
+        },
+        {
+          "id": 12042,
+          "name": "Yuan Plus AWD"
+        },
+        {
+          "id": 11199,
+          "name": "Yuan Pro (Elétrico)"
+        }
+      ],
+      "sample_details": [
+        {
+          "model_id": 11920,
+          "model_name": "Atto 8 1.5 16V Aut.",
+          "years": [
+            {
+              "year": "32000 Híbrido",
+              "code": "32000-6"
+            },
+            {
+              "year": "2027 Híbrido",
+              "code": "2027-6"
+            }
+          ]
+        },
+        {
+          "model_id": 9902,
+          "model_name": "D1 EV (Elétrico)",
+          "years": [
+            {
+              "year": "2023 Elétrico",
+              "code": "2023-4"
+            },
+            {
+              "year": "2022 Elétrico",
+              "code": "2022-4"
+            }
+          ]
+        },
+        {
+          "model_id": 12122,
+          "model_name": "Dolphin EV GS (Elétrico)",
+          "years": [
+            {
+              "year": "32000 Elétrico",
+              "code": "32000-4"
+            },
+            {
+              "year": "2027 Elétrico",
+              "code": "2027-4"
+            },
+            {
+              "year": "2026 Elétrico",
+              "code": "2026-4"
+            },
+            {
+              "year": "2025 Elétrico",
+              "code": "2025-4"
+            },
+            {
+              "year": "2024 Elétrico",
+              "code": "2024-4"
+            }
+          ]
+        },
+        {
+          "model_id": 12123,
+          "model_name": "Dolphin Mini GL",
+          "years": [
+            {
+              "year": "32000 Elétrico",
+              "code": "32000-4"
+            },
+            {
+              "year": "2027 Elétrico",
+              "code": "2027-4"
+            },
+            {
+              "year": "2026 Elétrico",
+              "code": "2026-4"
+            },
+            {
+              "year": "2025 Elétrico",
+              "code": "2025-4"
+            }
+          ]
+        },
+        {
+          "model_id": 12124,
+          "model_name": "Dolphin Mini GS (Elétrico)",
+          "years": [
+            {
+              "year": "32000 Elétrico",
+              "code": "32000-4"
+            },
+            {
+              "year": "2027 Elétrico",
+              "code": "2027-4"
+            },
+            {
+              "year": "2026 Elétrico",
+              "code": "2026-4"
+            },
+            {
+              "year": "2025 Elétrico",
+              "code": "2025-4"
+            },
+            {
+              "year": "2024 Elétrico",
+              "code": "2024-4"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

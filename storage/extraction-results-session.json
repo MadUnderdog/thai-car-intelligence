@@ -1,0 +1,57 @@
+{
+  "headlightmag_bulk_20": {
+    "articles_processed": 20,
+    "articles_with_prices": 6,
+    "total_prices": 7,
+    "models": [
+      "Land Cruiser",
+      "Ioniq 5",
+      "Tank",
+      "Sealion 7",
+      "Mazda 6e"
+    ],
+    "brands": [
+      "mazda",
+      "hyundai",
+      "byd",
+      "gwm",
+      "toyota"
+    ]
+  },
+  "zero_price_brand_extraction": {
+    "articles_processed": 10,
+    "prices_found": 9,
+    "specs_found": 28,
+    "successful": {
+      "bmw": {
+        "X3": 3599000,
+        "i5": 3499000
+      },
+      "volvo": {
+        "Volvo": 2990000
+      },
+      "ford": {
+        "Ranger": [
+          1089000,
+          949000
+        ],
+        "Everest": [
+          2284000,
+          1299000
+        ]
+      },
+      "mazda": {
+        "Mazda 6e": [
+          1199000,
+          1169000
+        ]
+      }
+    },
+    "failed_model_identification": [
+      "Mercedes CLA (MODEL_ALIASES gap)",
+      "Subaru Crosstrek (MODEL_ALIASES gap)",
+      "Suzuki Fronx (MODEL_ALIASES gap)",
+      "Tesla Model Y (MODEL_ALIASES gap)"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-mirage",
+  "captured_at": "2026-09-28T07:13:59.923081+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "c004526df4d3d1b80291888a22d6b9d3fb9eda4fc80238a2bc2339ff2cbfb19f",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mitsubishi_p111_explore-mirage.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

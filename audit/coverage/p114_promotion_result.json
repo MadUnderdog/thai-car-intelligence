@@ -1,0 +1,184 @@
+{
+  "schema": "promotion_result_p114/v1",
+  "generated_at": "2026-09-28T14:55:02.547028+00:00",
+  "run_id": "p114_20260928T145454Z",
+  "head": "82bf4f2c6e0c3e3ada528457525e216d370ae7b0",
+  "targeted_packets": 417,
+  "packets_promoted": 414,
+  "packets_skipped": 3,
+  "packets_failed": 0,
+  "manufacturers_inserted": 3,
+  "models_inserted": 127,
+  "identity_variants_inserted": 404,
+  "identity_variants_present_no_action": 13,
+  "sources_inserted": 11,
+  "source_documents_inserted": 122,
+  "price_rows_inserted": 294,
+  "price_inserted_by_status": {
+    "EXACT_CURRENT_MSRP_VERIFIED": 264,
+    "MSRP_STARTING_NOT_EXACT": 29,
+    "EXACT_BINDING_NOT_VERIFIED_CURRENT": 1
+  },
+  "spec_rows_inserted": 1043,
+  "spec_inserted_by_field_key": {
+    "seats": 120,
+    "displacement_cc": 91,
+    "drivetrain": 65,
+    "height_mm": 156,
+    "length_mm": 158,
+    "torque_nm": 98,
+    "wheelbase_mm": 134,
+    "width_mm": 99,
+    "ground_clearance_mm": 58,
+    "power_ps": 58,
+    "range_km": 6
+  },
+  "legacy_current_price_demotions": 8,
+  "data_change_log_rows": 1879,
+  "ledger_entries": 2107,
+  "ledger_inserts": 1741,
+  "ledger_updates": 8,
+  "ledger_no_actions": 358,
+  "per_oem": {
+    "BMW": {
+      "packets": 72,
+      "identity_inserts": 72,
+      "price_inserts": 67,
+      "spec_inserts": 4
+    },
+    "Changan": {
+      "packets": 5,
+      "identity_inserts": 5,
+      "price_inserts": 1,
+      "spec_inserts": 0
+    },
+    "Deepal": {
+      "packets": 4,
+      "identity_inserts": 4,
+      "price_inserts": 0,
+      "spec_inserts": 12
+    },
+    "GWM": {
+      "packets": 18,
+      "identity_inserts": 18,
+      "price_inserts": 0,
+      "spec_inserts": 4
+    },
+    "Honda": {
+      "packets": 35,
+      "identity_inserts": 34,
+      "price_inserts": 26,
+      "spec_inserts": 0
+    },
+    "Isuzu": {
+      "packets": 5,
+      "identity_inserts": 5,
+      "price_inserts": 0,
+      "spec_inserts": 0
+    },
+    "Jaguar": {
+      "packets": 1,
+      "identity_inserts": 1,
+      "price_inserts": 1,
+      "spec_inserts": 0
+    },
+    "Kia": {
+      "packets": 6,
+      "identity_inserts": 6,
+      "price_inserts": 3,
+      "spec_inserts": 0
+    },
+    "Land Rover": {
+      "packets": 11,
+      "identity_inserts": 11,
+      "price_inserts": 11,
+      "spec_inserts": 0
+    },
+    "Lexus": {
+      "packets": 38,
+      "identity_inserts": 38,
+      "price_inserts": 27,
+      "spec_inserts": 208
+    },
+    "MG": {
+      "packets": 8,
+      "identity_inserts": 6,
+      "price_inserts": 1,
+      "spec_inserts": 1
+    },
+    "MINI": {
+      "packets": 15,
+      "identity_inserts": 15,
+      "price_inserts": 0,
+      "spec_inserts": 0
+    },
+    "Mazda": {
+      "packets": 22,
+      "identity_inserts": 22,
+      "price_inserts": 14,
+      "spec_inserts": 0
+    },
+    "Mitsubishi": {
+      "packets": 24,
+      "identity_inserts": 24,
+      "price_inserts": 20,
+      "spec_inserts": 0
+    },
+    "Nissan": {
+      "packets": 25,
+      "identity_inserts": 25,
+      "price_inserts": 2,
+      "spec_inserts": 0
+    },
+    "Porsche": {
+      "packets": 5,
+      "identity_inserts": 4,
+      "price_inserts": 0,
+      "spec_inserts": 1
+    },
+    "Subaru": {
+      "packets": 2,
+      "identity_inserts": 2,
+      "price_inserts": 1,
+      "spec_inserts": 0
+    },
+    "Suzuki": {
+      "packets": 11,
+      "identity_inserts": 11,
+      "price_inserts": 10,
+      "spec_inserts": 0
+    },
+    "Toyota": {
+      "packets": 110,
+      "identity_inserts": 101,
+      "price_inserts": 110,
+      "spec_inserts": 813
+    }
+  },
+  "quarantined_promoted": 0,
+  "values_invented": 0,
+  "identity_ledger_unchanged": {
+    "confirmed_variants": 488,
+    "changed_by_p114": false
+  },
+  "upstream_artifact_shas_unchanged": true,
+  "db_after": {
+    "Manufacturer": 37,
+    "CarModel": 284,
+    "Variant": 747,
+    "Price": 1061,
+    "VariantSpec": 8036,
+    "Source": 32,
+    "SourceDocument": 2577,
+    "DataChangeLog": 1879
+  },
+  "gates": {
+    "staging_write": false,
+    "prisma_touched": false,
+    "verifier_touched": false,
+    "api_config_touched": false,
+    "production_db": "canonical (thai_car_intelligence)",
+    "single_transaction": true,
+    "rolled_back_on_error": true
+  }
+}

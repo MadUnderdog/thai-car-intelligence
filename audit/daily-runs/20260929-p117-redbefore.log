@@ -1,0 +1,520 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /home/ubuntu/Projects/thai-car-intelligence
+
+ ❯ tests/p117-db-error-safety.test.ts (7 tests | 7 failed) 26ms
+     × P117-I6a: comments GET → safe 500 11ms
+     × P117-I6b: comments POST → safe 500 4ms
+     × P117-I6c: vote POST → safe 500 2ms
+     × P117-I6d: report POST → safe 500 2ms
+     × P117-I6e: moderation queue GET → safe 500 2ms
+     × P117-I6f: moderation PATCH → safe 500 1ms
+     × P117-I6g: research-lead POST → safe 500 (auth still checked first) 2ms
+ ❯ tests/p117-community.test.ts (24 tests | 16 failed) 608ms
+     × P117-C: malicious reply payload (foreign modelId/variantId) still inherits the parent scope 42ms
+     × P117-D1: malformed modelId on POST → 400 (no Prisma throw) 20ms
+     × P117-D2: nonexistent modelId → 404, no orphan row persisted 8ms
+     × P117-D3: nonexistent variantId → 404, no orphan row persisted 6ms
+     × P117-D4: modelId+variantId mismatch (different models) → 400, nothing persisted 8ms
+     × P117-D5: existence checks filter status='ACTIVE' (inactive entities are rejected by the same path) 7ms
+     × P117-D6: malformed modelId on GET → 400 safe JSON; nonexistent model on GET → 404 5ms
+     × P117-D7: malformed parentId → 400 (no Prisma throw) 16ms
+     × P117-E1: client-supplied isResearchLead=true is stripped → persisted false 14ms
+     × P117-F: HIDDEN parent hides parent+reply+count; DELETED reply disappears; RESTORE brings back 5ms
+     × P117-G1: one report per comment per IP even with rotated cookies (idempotent) 24ms
+     × P117-I1: malformed vote/report/comment ids → 400 safe JSON (no throw) 7ms
+     × P117-I2: page=abc → 400 (no NaN query into Prisma); limit out of range → 400 9ms
+     × P117-I4: admin PATCH with malformed commentId → 400 (no Prisma throw) 3ms
+     × P117-J: spam body → 400, NO row persisted, same input always rejected 9ms
+     × P117-M: orderBy carries a final id tiebreak; repeated GET returns identical order 14ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 23 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/p117-community.test.ts > P117-C reply cannot change scope > P117-C: malicious reply payload (foreign modelId/variantId) still inherits the parent scope
+AssertionError: expected '031a30a9-bf21-46b8-9d64-d8ca64fc0fc4' to be '01eb59ef-445f-4ed7-a599-eff08c2ae98a' // Object.is equality
+
+Expected: "01eb59ef-445f-4ed7-a599-eff08c2ae98a"
+Received: "031a30a9-bf21-46b8-9d64-d8ca64fc0fc4"
+
+ ❯ tests/p117-community.test.ts:142:40
+    140|     );
+    141|     expect(reply.status).toBe(201);
+    142|     expect(reply.json.comment.modelId).toBe(modelA); // parent scope, …
+       |                                        ^
+    143|     expect(reply.json.comment.variantId).toBeNull(); // parent scope, …
+    144|     expect(reply.json.comment.parentId).toBe(parent.json.comment.id);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-D entity scope validation fails closed > P117-D1: malformed modelId on POST → 400 (no Prisma throw)
+PrismaClientKnownRequestError: 
+Invalid `db.communityComment.create()` invocation in
+/home/ubuntu/Projects/thai-car-intelligence/src/app/api/community/comments/route.ts:145:45
+
+  142   return withCookie(NextResponse.json({ comment }, { status: 201 }), ensureToken(req).setCookie);
+  143 }
+  144 
+→ 145 const comment = await db.communityComment.create(
+Invalid input value: invalid input syntax for type uuid: "not-a-uuid"
+ ❯ Jr.handleRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:237:12
+ ❯ Jr.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:183:11
+ ❯ Jr.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:152:11
+ ❯ a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:1014:23
+ ❯ POST src/app/api/community/comments/route.ts:145:19
+    143|   }
+    144|
+    145|   const comment = await db.communityComment.create({
+       |                   ^
+    146|     data: {
+    147|       modelId: modelId ?? null,
+ ❯ createComment tests/p117-community.test.ts:50:15
+ ❯ tests/p117-community.test.ts:151:15
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-D entity scope validation fails closed > P117-D2: nonexistent modelId → 404, no orphan row persisted
+AssertionError: expected 201 to be 404 // Object.is equality
+
+- Expected
++ Received
+
+- 404
++ 201
+
+ ❯ tests/p117-community.test.ts:158:22
+    156|     const ghost = "00000000-0000-4000-8000-000000000000";
+    157|     const r = await createComment({ modelId: ghost, authorName: "t", b…
+    158|     expect(r.status).toBe(404);
+       |                      ^
+    159|     const rows = await db.communityComment.count({ where: { body: `${M…
+    160|     expect(rows, "nonexistent entity must not persist an orphan").toBe…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-D entity scope validation fails closed > P117-D3: nonexistent variantId → 404, no orphan row persisted
+AssertionError: expected 201 to be 404 // Object.is equality
+
+- Expected
++ Received
+
+- 404
++ 201
+
+ ❯ tests/p117-community.test.ts:166:22
+    164|     const ghost = "00000000-0000-4000-8000-000000000001";
+    165|     const r = await createComment({ variantId: ghost, authorName: "t",…
+    166|     expect(r.status).toBe(404);
+       |                      ^
+    167|     const rows = await db.communityComment.count({ where: { body: `${M…
+    168|     expect(rows).toBe(0);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-D entity scope validation fails closed > P117-D4: modelId+variantId mismatch (different models) → 400, nothing persisted
+AssertionError: expected 201 to be 400 // Object.is equality
+
+- Expected
++ Received
+
+- 400
++ 201
+
+ ❯ tests/p117-community.test.ts:176:22
+    174|       nextIp("d4"),
+    175|     );
+    176|     expect(r.status).toBe(400);
+       |                      ^
+    177|     const rows = await db.communityComment.count({ where: { body: `${M…
+    178|     expect(rows).toBe(0);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-D entity scope validation fails closed > P117-D5: existence checks filter status='ACTIVE' (inactive entities are rejected by the same path)
+AssertionError: model lookup must include status='ACTIVE': expected undefined to be truthy
+
+- Expected:
+true
+
++ Received:
+undefined
+
+ ❯ tests/p117-community.test.ts:185:68
+    183|     await createComment({ modelId: "00000000-0000-4000-8000-0000000000…
+    184|     const modelCall = spy.mock.calls.find((c: any) => c[0]?.where?.sta…
+    185|     expect(modelCall, "model lookup must include status='ACTIVE'").toB…
+       |                                                                    ^
+    186|     expect(modelCall![0].where.status).toBe("ACTIVE");
+    187|     spy.mockRestore();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-D entity scope validation fails closed > P117-D6: malformed modelId on GET → 400 safe JSON; nonexistent model on GET → 404
+PrismaClientKnownRequestError: 
+Invalid `db.communityComment.findMany()` invocation in
+/home/ubuntu/Projects/thai-car-intelligence/src/app/api/community/comments/route.ts:51:25
+
+  48 };
+  49 
+  50 const [comments, total] = await Promise.all([
+→ 51   db.communityComment.findMany(
+Invalid input value: invalid input syntax for type uuid: "zzz"
+ ❯ Jr.handleRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:237:12
+ ❯ Jr.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:183:11
+ ❯ Jr.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:152:11
+ ❯ a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:1014:23
+ ❯ GET src/app/api/community/comments/route.ts:50:29
+     48|   };
+     49|
+     50|   const [comments, total] = await Promise.all([
+       |                             ^
+     51|     db.communityComment.findMany({
+     52|     where,
+ ❯ tests/p117-community.test.ts:191:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-D entity scope validation fails closed > P117-D7: malformed parentId → 400 (no Prisma throw)
+PrismaClientKnownRequestError: 
+Invalid `db.communityComment.findUnique()` invocation in
+/home/ubuntu/Projects/thai-car-intelligence/src/app/api/community/comments/route.ts:122:46
+
+  119 }
+  120 
+  121 if (parentId) {
+→ 122   const parent = await db.communityComment.findUnique(
+Invalid input value: invalid input syntax for type uuid: "nope"
+ ❯ Jr.handleRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:237:12
+ ❯ Jr.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:183:11
+ ❯ Jr.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:152:11
+ ❯ a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:1014:23
+ ❯ POST src/app/api/community/comments/route.ts:122:20
+    120|
+    121|   if (parentId) {
+    122|     const parent = await db.communityComment.findUnique({
+       |                    ^
+    123|       where: { id: parentId },
+    124|       select: { status: true, deletedAt: true, modelId: true, variantI…
+ ❯ createComment tests/p117-community.test.ts:50:15
+ ❯ tests/p117-community.test.ts:200:15
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-E research-lead cannot be self-granted > P117-E1: client-supplied isResearchLead=true is stripped → persisted false
+AssertionError: client must not grant the badge: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/p117-community.test.ts:216:78
+    214|     );
+    215|     expect(r.status).toBe(201);
+    216|     expect(r.json.comment.isResearchLead, "client must not grant the b…
+       |                                                                              ^
+    217|     const row = await db.communityComment.findUnique({ where: { id: r.…
+    218|     expect(row!.isResearchLead).toBe(false);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-F hidden content never appears in public GET > P117-F: HIDDEN parent hides parent+reply+count; DELETED reply disappears; RESTORE brings back
+AssertionError: expected 400 to be 201 // Object.is equality
+
+- Expected
++ Received
+
+- 201
++ 400
+
+ ❯ tests/p117-community.test.ts:263:26
+    261|     );
+    262|     expect(parent.status).toBe(201);
+    263|     expect(reply.status).toBe(201);
+       |                          ^
+    264|
+    265|     const url = `http://localhost/api/community/comments?modelId=${mod…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-G/K reports, auto-hide, queue > P117-G1: one report per comment per IP even with rotated cookies (idempotent)
+TypeError: .toMatch() expects to receive a string, but got undefined
+ ❯ tests/p117-community.test.ts:336:69
+    334|     );
+    335|     expect(second.status).toBe(200);
+    336|     expect(second.json.message, "second report must be idempotent").to…
+       |                                                                     ^
+    337|     const rows = await db.commentReport.count({ where: { commentId: c.…
+    338|     expect(rows, "same IP must not mint a second reporter identity").t…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-I validation and safe client responses > P117-I1: malformed vote/report/comment ids → 400 safe JSON (no throw)
+PrismaClientKnownRequestError: 
+Invalid `db.communityComment.findUnique()` invocation in
+/home/ubuntu/Projects/thai-car-intelligence/src/app/api/community/comments/[id]/vote/route.ts:33:45
+
+  30   return NextResponse.json({ error: "ค่าโหวตต้องเป็น 1 หรือ -1" }, { status: 400 });
+  31 }
+  32 
+→ 33 const comment = await db.communityComment.findUnique(
+Invalid input value: invalid input syntax for type uuid: "not-a-uuid"
+ ❯ Jr.handleRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:237:12
+ ❯ Jr.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:183:11
+ ❯ Jr.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:152:11
+ ❯ a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:1014:23
+ ❯ POST src/app/api/community/comments/[id]/vote/route.ts:33:19
+     31|   }
+     32|
+     33|   const comment = await db.communityComment.findUnique({
+       |                   ^
+     34|     where: { id },
+     35|     select: { id: true, status: true, deletedAt: true },
+ ❯ tests/p117-community.test.ts:437:15
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-I validation and safe client responses > P117-I2: page=abc → 400 (no NaN query into Prisma); limit out of range → 400
+PrismaClientValidationError: 
+Invalid `db.communityComment.findMany()` invocation in
+/home/ubuntu/Projects/thai-car-intelligence/src/app/api/community/comments/route.ts:51:25
+
+  48 };
+  49 
+  50 const [comments, total] = await Promise.all([
+→ 51   db.communityComment.findMany({
+         where: {
+           status: "VISIBLE",
+           deletedAt: null,
+           parentId: null,
+           modelId: "01eb59ef-445f-4ed7-a599-eff08c2ae98a"
+         },
+         orderBy: [
+           {
+             upvotes: "desc"
+           },
+           {
+             createdAt: "desc"
+           }
+         ],
+         take: 20,
+         select: {
+           id: true,
+           authorName: true,
+           body: true,
+           upvotes: true,
+           downvotes: true,
+           isResearchLead: true,
+           createdAt: true,
+           replies: {
+             where: {
+               status: "VISIBLE",
+               deletedAt: null
+             },
+             orderBy: {
+               createdAt: "asc"
+             },
+             select: {
+               id: true,
+               authorName: true,
+               body: true,
+               upvotes: true,
+               downvotes: true,
+               isResearchLead: true,
+               createdAt: true,
+               parentId: true
+             }
+           }
+         },
+       + skip: Int
+       })
+
+Argument `skip` is missing.
+ ❯ ar node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:46:8
+ ❯ throwValidationException node_modules/@prisma/client/src/runtime/RequestHandler.ts:211:6
+ ❯ Jr.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:183:11
+ ❯ Jr.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:152:11
+ ❯ a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:1014:23
+ ❯ GET src/app/api/community/comments/route.ts:50:29
+     48|   };
+     49|
+     50|   const [comments, total] = await Promise.all([
+       |                             ^
+     51|     db.communityComment.findMany({
+     52|     where,
+ ❯ tests/p117-community.test.ts:454:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-I validation and safe client responses > P117-I4: admin PATCH with malformed commentId → 400 (no Prisma throw)
+PrismaClientKnownRequestError: 
+Invalid `db.communityComment.findUnique()` invocation in
+/home/ubuntu/Projects/thai-car-intelligence/src/app/api/admin/community/moderation/route.ts:85:44
+
+  82   );
+  83 }
+  84 
+→ 85 const target = await db.communityComment.findUnique(
+Invalid input value: invalid input syntax for type uuid: "garbage"
+ ❯ Jr.handleRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:237:12
+ ❯ Jr.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:183:11
+ ❯ Jr.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:152:11
+ ❯ a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:1014:23
+ ❯ PATCH src/app/api/admin/community/moderation/route.ts:85:18
+     83|   }
+     84|
+     85|   const target = await db.communityComment.findUnique({ where: { id: c…
+       |                  ^
+     86|   if (!target) return NextResponse.json({ error: "ไม่พบความคิดเห็นนี้"…
+     87|
+ ❯ tests/p117-community.test.ts:484:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-J blocked-word detection is deterministic and never persists > P117-J: spam body → 400, NO row persisted, same input always rejected
+AssertionError: expected 201 to be 400 // Object.is equality
+
+- Expected
++ Received
+
+- 400
++ 201
+
+ ❯ tests/p117-community.test.ts:499:26
+    497|     const spamBody = `${MARK} คลิกเลย คาสิโนออนไลน์ เครดิตฟรี ไม่ต้องฝ…
+    498|     const first = await createComment({ modelId: modelA, authorName: "…
+    499|     expect(first.status).toBe(400);
+       |                          ^
+    500|     const rows = await db.communityComment.count({ where: { body: spam…
+    501|     expect(rows, "blocked content must not persist as anything").toBe(…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/23]⎯
+
+ FAIL  tests/p117-community.test.ts > P117-M deterministic GET > P117-M: orderBy carries a final id tiebreak; repeated GET returns identical order
+AssertionError: orderBy must end with a deterministic tiebreak: expected { createdAt: 'desc' } to match object { id: 'asc' }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "id": "asc",
++   "createdAt": "desc",
+  }
+
+ ❯ tests/p117-community.test.ts:554:68
+    552|     expect(Array.isArray(orderBy)).toBe(true);
+    553|     const last = orderBy[orderBy.length - 1];
+    554|     expect(last, "orderBy must end with a deterministic tiebreak").toM…
+       |                                                                    ^
+    555|     spy.mockRestore();
+    556|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/23]⎯
+
+ FAIL  tests/p117-db-error-safety.test.ts > P117-I6: DB failures are client-safe on every community route > P117-I6a: comments GET → safe 500
+Error: simulated DB failure while running: SELECT * FROM "CommunityComment" WHERE "modelId" = $1
+ ❯ Proxy.boom tests/p117-db-error-safety.test.ts:15:11
+     13| vi.mock("../lib/db", () => {
+     14|   const boom = () => {
+     15|     throw new Error('simulated DB failure while running: SELECT * FROM…
+       |           ^
+     16|   };
+     17|   const exploding: any = new Proxy(
+ ❯ Module.GET src/app/api/community/comments/route.ts:51:25
+ ❯ tests/p117-db-error-safety.test.ts:81:23
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/23]⎯
+
+ FAIL  tests/p117-db-error-safety.test.ts > P117-I6: DB failures are client-safe on every community route > P117-I6b: comments POST → safe 500
+Error: simulated DB failure while running: SELECT * FROM "CommunityComment" WHERE "modelId" = $1
+ ❯ Proxy.boom tests/p117-db-error-safety.test.ts:15:11
+     13| vi.mock("../lib/db", () => {
+     14|   const boom = () => {
+     15|     throw new Error('simulated DB failure while running: SELECT * FROM…
+       |           ^
+     16|   };
+     17|   const exploding: any = new Proxy(
+ ❯ Module.POST src/app/api/community/comments/route.ts:113:41
+ ❯ tests/p117-db-error-safety.test.ts:86:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/23]⎯
+
+ FAIL  tests/p117-db-error-safety.test.ts > P117-I6: DB failures are client-safe on every community route > P117-I6c: vote POST → safe 500
+Error: simulated DB failure while running: SELECT * FROM "CommunityComment" WHERE "modelId" = $1
+ ❯ Proxy.boom tests/p117-db-error-safety.test.ts:15:11
+     13| vi.mock("../lib/db", () => {
+     14|   const boom = () => {
+     15|     throw new Error('simulated DB failure while running: SELECT * FROM…
+       |           ^
+     16|   };
+     17|   const exploding: any = new Proxy(
+ ❯ Module.POST src/app/api/community/comments/[id]/vote/route.ts:33:45
+ ❯ tests/p117-db-error-safety.test.ts:96:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/23]⎯
+
+ FAIL  tests/p117-db-error-safety.test.ts > P117-I6: DB failures are client-safe on every community route > P117-I6d: report POST → safe 500
+Error: simulated DB failure while running: SELECT * FROM "CommunityComment" WHERE "modelId" = $1
+ ❯ Proxy.boom tests/p117-db-error-safety.test.ts:15:11
+     13| vi.mock("../lib/db", () => {
+     14|   const boom = () => {
+     15|     throw new Error('simulated DB failure while running: SELECT * FROM…
+       |           ^
+     16|   };
+     17|   const exploding: any = new Proxy(
+ ❯ Module.POST src/app/api/community/comments/[id]/report/route.ts:38:45
+ ❯ tests/p117-db-error-safety.test.ts:104:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/23]⎯
+
+ FAIL  tests/p117-db-error-safety.test.ts > P117-I6: DB failures are client-safe on every community route > P117-I6e: moderation queue GET → safe 500
+Error: simulated DB failure while running: SELECT * FROM "CommunityComment" WHERE "modelId" = $1
+ ❯ Proxy.boom tests/p117-db-error-safety.test.ts:15:11
+     13| vi.mock("../lib/db", () => {
+     14|   const boom = () => {
+     15|     throw new Error('simulated DB failure while running: SELECT * FROM…
+       |           ^
+     16|   };
+     17|   const exploding: any = new Proxy(
+ ❯ Module.GET src/app/api/admin/community/moderation/route.ts:22:43
+ ❯ tests/p117-db-error-safety.test.ts:115:23
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/23]⎯
+
+ FAIL  tests/p117-db-error-safety.test.ts > P117-I6: DB failures are client-safe on every community route > P117-I6f: moderation PATCH → safe 500
+Error: simulated DB failure while running: SELECT * FROM "CommunityComment" WHERE "modelId" = $1
+ ❯ Proxy.boom tests/p117-db-error-safety.test.ts:15:11
+     13| vi.mock("../lib/db", () => {
+     14|   const boom = () => {
+     15|     throw new Error('simulated DB failure while running: SELECT * FROM…
+       |           ^
+     16|   };
+     17|   const exploding: any = new Proxy(
+ ❯ Module.PATCH src/app/api/admin/community/moderation/route.ts:85:44
+ ❯ tests/p117-db-error-safety.test.ts:124:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/23]⎯
+
+ FAIL  tests/p117-db-error-safety.test.ts > P117-I6: DB failures are client-safe on every community route > P117-I6g: research-lead POST → safe 500 (auth still checked first)
+Error: simulated DB failure while running: SELECT * FROM "CommunityComment" WHERE "modelId" = $1
+ ❯ Proxy.boom tests/p117-db-error-safety.test.ts:15:11
+     13| vi.mock("../lib/db", () => {
+     14|   const boom = () => {
+     15|     throw new Error('simulated DB failure while running: SELECT * FROM…
+       |           ^
+     16|   };
+     17|   const exploding: any = new Proxy(
+ ❯ Module.POST src/app/api/admin/community/research-lead/route.ts:44:45
+ ❯ tests/p117-db-error-safety.test.ts:135:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[23/23]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  23 failed | 8 passed (31)
+   Start at  18:43:04
+   Duration  1.21s (transform 264ms, setup 0ms, import 540ms, tests 633ms, environment 0ms)
+

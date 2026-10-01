@@ -1,0 +1,2692 @@
+{
+  "schema": "spec_reconciliation_p112/v1",
+  "accepted_variants_targeted": 488,
+  "spec_evidence_rows": 1389,
+  "variants_with_spec_evidence": 126,
+  "variants_without_spec_evidence": 362,
+  "field_coverage": {
+    "displacement_cc": 91,
+    "drivetrain": 65,
+    "ground_clearance_mm": 58,
+    "height_mm": 194,
+    "length_mm": 273,
+    "power_ps": 104,
+    "range_km": 6,
+    "seats": 159,
+    "torque_nm": 126,
+    "warranty": 1,
+    "wheelbase_mm": 134,
+    "width_mm": 178
+  },
+  "binding_distribution": {
+    "grade_named_row": 220,
+    "structured_grade_node": 1107,
+    "variant_page": 62
+  },
+  "per_oem": {
+    "BMW": {
+      "accepted_variants": 73,
+      "with_evidence": 2,
+      "rows": 4,
+      "without_evidence": 71
+    },
+    "Changan": {
+      "accepted_variants": 5,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 5
+    },
+    "Deepal": {
+      "accepted_variants": 4,
+      "with_evidence": 2,
+      "rows": 13,
+      "without_evidence": 2
+    },
+    "GWM": {
+      "accepted_variants": 22,
+      "with_evidence": 2,
+      "rows": 4,
+      "without_evidence": 20
+    },
+    "Honda": {
+      "accepted_variants": 35,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 35
+    },
+    "Isuzu": {
+      "accepted_variants": 7,
+      "with_evidence": 1,
+      "rows": 1,
+      "without_evidence": 6
+    },
+    "Jaguar": {
+      "accepted_variants": 1,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 1
+    },
+    "Kia": {
+      "accepted_variants": 6,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 6
+    },
+    "Land Rover": {
+      "accepted_variants": 11,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 11
+    },
+    "Lexus": {
+      "accepted_variants": 38,
+      "with_evidence": 17,
+      "rows": 230,
+      "without_evidence": 21
+    },
+    "MG": {
+      "accepted_variants": 8,
+      "with_evidence": 1,
+      "rows": 1,
+      "without_evidence": 7
+    },
+    "MINI": {
+      "accepted_variants": 15,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 15
+    },
+    "Mazda": {
+      "accepted_variants": 22,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 22
+    },
+    "Mitsubishi": {
+      "accepted_variants": 24,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 24
+    },
+    "Nissan": {
+      "accepted_variants": 25,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 25
+    },
+    "Porsche": {
+      "accepted_variants": 69,
+      "with_evidence": 1,
+      "rows": 1,
+      "without_evidence": 68
+    },
+    "Subaru": {
+      "accepted_variants": 2,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 2
+    },
+    "Suzuki": {
+      "accepted_variants": 11,
+      "with_evidence": 0,
+      "rows": 0,
+      "without_evidence": 11
+    },
+    "Toyota": {
+      "accepted_variants": 110,
+      "with_evidence": 100,
+      "rows": 1135,
+      "without_evidence": 10
+    }
+  },
+  "gaps": [
+    {
+      "manufacturer": "Toyota",
+      "model": "Corolla Altis",
+      "variant": "HEV Premium",
+      "reason_class": "model_level_context",
+      "reason": "42 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Corolla Altis",
+      "variant": "HEV Smart",
+      "reason_class": "model_level_context",
+      "reason": "42 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Corolla Altis",
+      "variant": "1.8G",
+      "reason_class": "model_level_context",
+      "reason": "42 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "bZ4X",
+      "variant": "AWD",
+      "reason_class": "model_level_context",
+      "reason": "42 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "bZ4X",
+      "variant": "FWD",
+      "reason_class": "model_level_context",
+      "reason": "42 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Hilux Travo Standard Cab 4TREX",
+      "variant": "Hilux Travo Standard Cab 4TREX 2.8  AT",
+      "reason_class": "model_level_context",
+      "reason": "42 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Hilux Travo Standard Cab 4TREX",
+      "variant": "Hilux Travo Standard Cab 4TREX 2.8  MT",
+      "reason_class": "model_level_context",
+      "reason": "42 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "City",
+      "variant": "S",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "City",
+      "variant": "e:HEV V",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "City",
+      "variant": "e:HEV SV",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "City",
+      "variant": "e:HEV RS",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "NEVO Q05 MAX",
+      "reason_class": "model_level_context",
+      "reason": "10 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "NEVO Q05 ULTRA",
+      "reason_class": "model_level_context",
+      "reason": "10 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Jaguar",
+      "model": "F-TYPE",
+      "variant": "2.0 RWD Coupe R-Dynamic Plus",
+      "reason_class": "model_level_context",
+      "reason": "9 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "variant": "90 3.0 AWD X-Dynamic SE Plus (3 Door)",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "variant": "110 2.0 AWD X-Dynamic SE Plus (5 Door)",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "variant": "110 2.0 AWD Trophy Plus (5 Door)",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "variant": "110 3.0 AWD X-Dynamic SE Plus (5 Door)",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "variant": "130 3.0 X-Dynamic SE Plus (5 Door LWB)",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER VELAR",
+      "variant": "2.0 AWD Dynamic SE Plus",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER VELAR",
+      "variant": "2.0 AWD Belgravia Plus",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER SPORT",
+      "variant": "3.0 AWD SE Plus",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER SPORT",
+      "variant": "3.0 AWD Battersea Plus",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER",
+      "variant": "3.0 AWD Autobiography LWB Plus",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER",
+      "variant": "3.0 AWD SV LWB Plus",
+      "reason_class": "model_level_context",
+      "reason": "6 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Cayman",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Cayman Style Edition",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Cayman GTS 4.0",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Boxster",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Boxster Style Edition",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Boxster GTS 4.0",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Spyder RS",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "718",
+      "variant": "718 Cayman GT4 RS",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera T",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera S",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4S",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera GTS",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4 GTS",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera Cabriolet",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera T Cabriolet",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera S Cabriolet",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4S Cabriolet",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera GTS Cabriolet",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Carrera 4 GTS Cabriolet",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Targa 4S",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Targa 4 GTS",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Spirit 70",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 GT3",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 GT3 with Touring Package",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Turbo S",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 Turbo S Cabriolet",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "911",
+      "variant": "911 GT3 S/C",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Black Edition",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4S",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4 Black Edition",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4S Black Edition",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan GTS",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo S",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo GT",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo GT with Weissach Package",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4 Cross Turismo",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan 4S Cross Turismo",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "variant": "Taycan Turbo Cross Turismo",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera 4 E-Hybrid",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera 4S E-Hybrid",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera Turbo E-Hybrid",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera Turbo S E-Hybrid",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera GTS",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Panamera",
+      "variant": "Panamera 4 E-Hybrid Executive",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Macan",
+      "variant": "Macan Electric",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Macan",
+      "variant": "Macan 4 Electric",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Macan",
+      "variant": "Macan 4S Electric",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Macan",
+      "variant": "Macan Turbo Electric",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne E-Hybrid",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo E-Hybrid",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne GTS",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S E-Hybrid Coupé",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne E-Hybrid Coupé",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Coupé",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo E-Hybrid Coupé",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S Coupé",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne GTS Coupé",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo GT",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Electric",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S Electric",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo Electric",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Coupé Electric",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne S Coupé Electric",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "variant": "Cayenne Turbo Coupé Electric",
+      "reason_class": "model_level_context",
+      "reason": "23 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "GWM HAVAL H6",
+      "variant": "hev-pro",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "GWM HAVAL H6",
+      "variant": "phev-pro",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "GWM HAVAL H6",
+      "variant": "phev-ultra",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "GWM POER SAHAR HEV",
+      "variant": "pro",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "GWM POER SAHAR HEV",
+      "variant": "ultra-4wd",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 300 DIESEL",
+      "variant": "2-4t-pro",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 300 DIESEL",
+      "variant": "2-4t-ultra",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 300 DIESEL",
+      "variant": "2-4t-ultra-4wd",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 300 HEV",
+      "variant": "pro",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 300 HEV",
+      "variant": "ultra",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "2wd-high",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "2wd-medium",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "4wd-high",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "black-warrior-2wd",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 DIESEL",
+      "variant": "black-warrior-4wd",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 HEV",
+      "variant": "pro",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 HEV",
+      "variant": "ultra",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "City Hatchback",
+      "variant": "S",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "City Hatchback",
+      "variant": "e:HEV V",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "City Hatchback",
+      "variant": "e:HEV SV",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "City Hatchback",
+      "variant": "e:HEV RS",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Civic e:HEV",
+      "variant": "e:HEV EL",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Civic e:HEV",
+      "variant": "e:HEV RS",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "STEP WGN e:HEV",
+      "variant": "e:HEV SPADA",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CR-V e:HEV",
+      "variant": "e:HEV E",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CR-V e:HEV",
+      "variant": "e:HEV ES",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CR-V e:HEV",
+      "variant": "e:HEV HuNT - Meteoroid Gray Metallic",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CR-V e:HEV",
+      "variant": "e:HEV HuNT - Crystal Black Pearl",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CR-V e:HEV",
+      "variant": "e:HEV RS",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "CR-V e:HEV",
+      "variant": "e:HEV RS 4WD",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "HR-V e:HEV",
+      "variant": "e:HEV E",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "HR-V e:HEV",
+      "variant": "e:HEV EL",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "HR-V e:HEV",
+      "variant": "e:HEV HuNT-Black",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "HR-V e:HEV",
+      "variant": "e:HEV HuNT-White",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "HR-V e:HEV",
+      "variant": "e:HEV RS",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "WR-V",
+      "variant": "SV",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "WR-V",
+      "variant": "RS",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "BR-V",
+      "variant": "E - Taffeta White",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "BR-V",
+      "variant": "E – Crystal Black",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "BR-V",
+      "variant": "EL - Crystal Black",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "BR-V",
+      "variant": "EL – Premium Sunlight",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Accord e:HEV",
+      "variant": "e:HEV E",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Accord e:HEV",
+      "variant": "e:HEV EL",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Accord e:HEV",
+      "variant": "e:HEV RS",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "UX",
+      "variant": "UX 300h Grand Luxury",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "NX",
+      "variant": "NX 350h Luxury",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "NX",
+      "variant": "NX 350h Premium",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "NX",
+      "variant": "NX 450h+ Grand Luxury Plus",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "NX",
+      "variant": "NX 450h+ F SPORT",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "RZ",
+      "variant": "RZ 350e Grand Luxury",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "RZ",
+      "variant": "RZ 500e Premium AWD",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "RZ",
+      "variant": "RZ 500e Premium AWD Steer-by-wire",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "RX",
+      "variant": "RX 450h+",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "RX",
+      "variant": "RX 350h Luxury",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "RX",
+      "variant": "RX 350h Premium",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "RX",
+      "variant": "RX 500h F SPORT Performance",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "IS",
+      "variant": "IS 300h Luxury",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "IS",
+      "variant": "IS 300h F SPORT",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "ES",
+      "variant": "ES 350e Premium",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "ES",
+      "variant": "ES 350h Grand Luxury",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "LS",
+      "variant": "LS 500h",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "เอ็กซ์ฟอร์ส เอชอีวี",
+      "variant": "IGNITE",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "เอ็กซ์ฟอร์ส เอชอีวี",
+      "variant": "ULTIMATE",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "เอ็กซ์ฟอร์ส เอชอีวี",
+      "variant": "ULTIMATE X",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน แอทลีท",
+      "variant": "ดับเบิ้ล แค็บ แอทลีท 4WD AT",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ",
+      "variant": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ",
+      "variant": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD AT",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ",
+      "variant": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD AT SWB",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+      "variant": "ดับเบิ้ล แค็บ 2.4 PRIME 4WD",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน ขับเคลื่อน 2 ล้อ",
+      "variant": "ซิงเกิ้ล แค็บ 2.4 PRO",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ไทรทัน ขับเคลื่อน 2 ล้อ",
+      "variant": "ดับเบิ้ล แค็บ 2.4 PRO",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ปาเจโร สปอร์ต อีลีท เอดิชัน ใหม่",
+      "variant": "2.4 ELITE EDITION 2WD",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ปาเจโร สปอร์ต อีลีท เอดิชัน ใหม่",
+      "variant": "2.4 ELITE EDITION 4WD",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ปาเจโร สปอร์ต",
+      "variant": "2.4 GT",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ปาเจโร สปอร์ต",
+      "variant": "2.4 PRIME",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "มิราจ",
+      "variant": "ACTIVE",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "มิราจ",
+      "variant": "SMART",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+      "variant": "e-POWER V *",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+      "variant": "e-POWER VL **",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+      "variant": "e-POWER SV *** / ****",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่",
+      "variant": "e-POWER *",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+      "variant": "Highway Star",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+      "variant": "Highway Star สีขาว ปริซึม ไวท์ *",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+      "variant": "Highway Star สีฟ้า เทอร์ควอยซ์บลู หลังคาสีดำ และ สีขาว ปริซึมไวท์ หลังคาสีดำ *",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน เซเรน่า ใหม่",
+      "variant": "Highway Star",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน อัลเมร่า",
+      "variant": "1.0L TURBO E CVT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน อัลเมร่า",
+      "variant": "1.0L TURBO EL CVT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน อัลเมร่า",
+      "variant": "1.0L TURBO V CVT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน อัลเมร่า",
+      "variant": "1.0L TURBO VL CVT * / **",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+      "variant": "DC PRO-2X 7AT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+      "variant": "DC PRO-4X 7AT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "KC Calibre SL 7AT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "KC Calibre E 6MT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "DC Calibre SL 6MT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "DC Calibre SL 7AT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "KC Calibre E 7AT Black Edition",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "variant": "DC Calibre E 7AT Black Edition",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา คิงแค็บ ใหม่",
+      "variant": "KC SL 6MT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+      "variant": "SC SL 6MT 4WD",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+      "variant": "SC SL 6MT",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 2 SERIES",
+      "variant": "220 Gran Coupe M Sport Pro",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 3 SERIES",
+      "variant": "320Li M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 3 SERIES",
+      "variant": "330e M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 3 SERIES",
+      "variant": "320d M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 3 SERIES",
+      "variant": "M340i xDrive",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 4 SERIES",
+      "variant": "420i Coupé M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 4 SERIES",
+      "variant": "430i Coupé M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 4 SERIES",
+      "variant": "430i Convertible M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 4 SERIES",
+      "variant": "M440i xDrive",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 5 SERIES",
+      "variant": "530e Inspiring",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 5 SERIES",
+      "variant": "520d M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 5 SERIES",
+      "variant": "530e M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 5 SERIES",
+      "variant": "520d M Sport Pro",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 5 SERIES",
+      "variant": "530e M Sport Pro",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 7 SERIES",
+      "variant": "740d M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 7 SERIES",
+      "variant": "750e xDrive M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 7 SERIES",
+      "variant": "M760e xDrive",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "variant": "X1 sDrive20i M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "variant": "X3 20d xDrive M Sport Pro",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "variant": "X3 M50 xDrive",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "variant": "X4 xDrive20d M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "variant": "X5 xDrive30d M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "variant": "X5 xDrive50e M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "variant": "X6 xDrive40i M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "variant": "X7 xDrive40d M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW Z",
+      "variant": "Z4 sDrive30i M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW Z",
+      "variant": "Z4 M40i",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW i",
+      "variant": "i5 eDrive40 M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW i",
+      "variant": "iX xDrive45 M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW i",
+      "variant": "iX1 eDrive20L M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW i",
+      "variant": "iX2 xDrive30 M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW i",
+      "variant": "iX3 50 xDrive M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M2",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M2 (Manual Transmission)",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M2 (M Racetrack Package)",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M2 CS (Ceramic Brake)",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M2 CS (Velvet Blue with Ceramic Brake)",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M3 CS",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M3 Competition M xDrive Touring",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M4 CS",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M4 Competition M xDrive Coupé",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M5",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M5 (Ceramic Break)",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M5 Touring",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "M5 Touring (Ceramic Break)",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "XM Label Red",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "XM",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M",
+      "variant": "XM 50e (Shadow Line)",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI COOPER",
+      "variant": "ALL-ELECTRIC MINI COOPER SE - CLASSIC",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI COOPER",
+      "variant": "ALL-ELECTRIC MINI COOPER SE - HIGHTRIM",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI COOPER",
+      "variant": "ALL-ELECTRIC MINI COOPER PAUL SMITH EDITION",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI JOHN COOPER WORKS",
+      "variant": "ALL-ELECTRIC MINI JCW",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI JOHN COOPER WORKS",
+      "variant": "ALL-ELECTRIC MINI JCW - 1965 VICTORY EDITION",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI JOHN COOPER WORKS",
+      "variant": "ALL-ELECTRIC MINI JCW ACEMAN",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI JOHN COOPER WORKS",
+      "variant": "MINI JCW",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI JOHN COOPER WORKS",
+      "variant": "MINI JCW CONVERTIBLE",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI ACEMAN",
+      "variant": "ALL-ELECTRIC MINI ACEMAN SE - CLASSIC",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI ACEMAN",
+      "variant": "ALL-ELECTRIC MINI ACEMAN SE",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI ACEMAN",
+      "variant": "ALL-ELECTRIC MINI ACEMAN SE - HIGHTRIM",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI COUNTRYMAN",
+      "variant": "MINI COUNTRYMAN S ALL4 - HIGHTRIM",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI CONVERTIBLE",
+      "variant": "MINI COOPER CONVERTIBLE S",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "ALL NEW SUZUKI FRONX",
+      "variant": "GL",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "ALL NEW SUZUKI FRONX",
+      "variant": "GLX",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "ALL NEW SUZUKI FRONX",
+      "variant": "GLX PLUS",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "XL7 HYBRID",
+      "variant": "GLX",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "JIMNY",
+      "variant": "AT (SINGLE-TONE)",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "JIMNY",
+      "variant": "AT (TWO-TONE)",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "The Kia EV5",
+      "variant": "The Kia EV5 Air",
+      "reason_class": "model_level_context",
+      "reason": "16 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "The Kia EV5",
+      "variant": "The Kia EV5 Earth Long Range",
+      "reason_class": "model_level_context",
+      "reason": "16 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "The Kia EV5",
+      "variant": "The Kia EV5 Earth Exclusive AWD",
+      "reason_class": "model_level_context",
+      "reason": "16 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "S07",
+      "variant": "S07 L",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw I5",
+      "variant": "Edrive40 M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Ix",
+      "variant": "Xdrive45 M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw X3",
+      "variant": "M50 Xdrive",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M5",
+      "variant": "Touring",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Xm",
+      "variant": "Label Red",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Ix1",
+      "variant": "eDrive20L M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Ix2",
+      "variant": "xDrive30 M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M340I",
+      "variant": "xDrive",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw X4",
+      "variant": "xDrive20d M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw X5",
+      "variant": "xDrive30d M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw X5",
+      "variant": "xDrive50e M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw X7",
+      "variant": "xDrive40d M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Z4",
+      "variant": "sDrive30i M Sport",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Z4",
+      "variant": "M40i",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M2",
+      "variant": "M Race Track Package",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M2",
+      "variant": "CS (Ceramic Brake",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "CS",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "CS Touring",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M3",
+      "variant": "Competition M xDrive Touring",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW M4",
+      "variant": "CS",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M5",
+      "variant": "Ceramic Break",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw M5",
+      "variant": "Touring (Ceramic Break",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Bmw Xm",
+      "variant": "50e Shadow Line",
+      "reason_class": "model_level_context",
+      "reason": "15 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "Changan Lumin",
+      "variant": "L DC",
+      "reason_class": "model_level_context",
+      "reason": "10 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 300",
+      "variant": "Diesel",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 300",
+      "variant": "PRO",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Gwm Tank 500",
+      "variant": "PRO",
+      "reason_class": "model_level_context",
+      "reason": "25 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Honda Accord",
+      "variant": "e:HEV",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Honda Accord",
+      "variant": "e:HEV E",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Honda Accord",
+      "variant": "e:HEV EL",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Honda",
+      "model": "Honda Accord",
+      "variant": "e:HEV RS",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "Spark",
+      "reason_class": "model_level_context",
+      "reason": "19 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "2 Doors",
+      "reason_class": "model_level_context",
+      "reason": "19 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "4 Doors",
+      "reason_class": "model_level_context",
+      "reason": "19 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "X Series",
+      "reason_class": "model_level_context",
+      "reason": "19 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "V Cross",
+      "reason_class": "model_level_context",
+      "reason": "19 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "Kia Ev5",
+      "variant": "AIR",
+      "reason_class": "model_level_context",
+      "reason": "16 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "Kia Ev5",
+      "variant": "EARTH Long Range",
+      "reason_class": "model_level_context",
+      "reason": "16 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Kia",
+      "model": "Kia Ev5",
+      "variant": "EARTH Exclusive AWD",
+      "reason_class": "model_level_context",
+      "reason": "16 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450h+ F Sport AWD",
+      "reason_class": "model_level_context",
+      "reason": "35 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg3 Hybrid",
+      "variant": "+ D",
+      "reason_class": "model_level_context",
+      "reason": "11 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg3 Hybrid",
+      "variant": "+ X",
+      "reason_class": "model_level_context",
+      "reason": "11 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Urban",
+      "variant": "MAX",
+      "reason_class": "model_level_context",
+      "reason": "11 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg Urban",
+      "variant": "ULTRA",
+      "reason_class": "model_level_context",
+      "reason": "11 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "Mini John Cooper Works",
+      "variant": "ALL-ELECTRIC MINI JOHN COOPER WORKS",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "Mini John Cooper Works",
+      "variant": "ALL-ELECTRIC MINI JOHN COOPER WORKS ACEMAN",
+      "reason_class": "model_level_context",
+      "reason": "13 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ซิงเกิ้ล แค็บ 2.4 PRO",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ดับเบิ้ล แค็บ 2.4 PRO",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mitsubishi",
+      "model": "ALL NEW MITSUBISHI TRITON",
+      "variant": "ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+      "reason_class": "model_level_context",
+      "reason": "26 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Nissan Almera",
+      "variant": "E",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Nissan",
+      "model": "Nissan Almera",
+      "variant": "EL",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GL",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GLX",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Fronx",
+      "variant": "GLX PLUS",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "HYBRID",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Suzuki",
+      "model": "Suzuki Xl7",
+      "variant": "BLACK EDITION",
+      "reason_class": "model_level_context",
+      "reason": "20 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Alphard",
+      "variant": "HEV SMART",
+      "reason_class": "model_level_context",
+      "reason": "42 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Alphard",
+      "variant": "HEV PREMIUM",
+      "reason_class": "model_level_context",
+      "reason": "42 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Alphard",
+      "variant": "HEV PREMIUM LUXURY",
+      "reason_class": "model_level_context",
+      "reason": "42 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-5",
+      "variant": "2.0 S",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-5",
+      "variant": "2.0 SP",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-5",
+      "variant": "XDL",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 PRIME",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 ULTRA",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 SIGNATURE",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "XDL SIGNATURE",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 PRIME SPORTS",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 ULTRA SPORTS",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 SIGNATURE SPORTS",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "XDL SIGNATURE SPORTS",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 C",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 S",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 SP",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "CARBON EDITION",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "variant": "2.0 PRIME",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "variant": "2.0 ULTRA",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "variant": "2.0 SIGNATURE",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "FSC 2.2 XS HI-RACER 6MT",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 2.2 XT HI-RACER 8AT",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 3.0 XTR HI-RACER 6AT",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 3.0 XTR 4x4 6AT",
+      "reason_class": "model_level_context",
+      "reason": "24 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "D+",
+      "reason_class": "model_level_context",
+      "reason": "11 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "X+",
+      "reason_class": "model_level_context",
+      "reason": "11 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "V+",
+      "reason_class": "model_level_context",
+      "reason": "11 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "BRZ",
+      "variant": "BRZ AT",
+      "reason_class": "model_level_context",
+      "reason": "14 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "CROSSTREK",
+      "variant": "2.0i-S EyeSight",
+      "reason_class": "model_level_context",
+      "reason": "14 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "L",
+      "reason_class": "model_level_context",
+      "reason": "19 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "Max",
+      "reason_class": "model_level_context",
+      "reason": "10 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "Ultra",
+      "reason_class": "model_level_context",
+      "reason": "10 spec-bearing artifact(s) carry field rows but none names this exact grade in the same record (model-level-only claims are never promoted to variant evidence)"
+    }
+  ],
+  "attribution": {
+    "from_committed_fixtures": 30,
+    "from_new_captures": 100,
+    "rows_from_new_captures": 1128,
+    "rows_from_committed_fixtures": 261
+  },
+  "price_metrics_modified": false,
+  "prices_invented": 0,
+  "identity_ledger_unchanged": {
+    "confirmed_variants": 488,
+    "changed_by_p112": false
+  },
+  "ai_reconciliation": false,
+  "no_inference_rule": "unit-or-text must be published in the same record; unknown stays unknown"
+}

@@ -1,0 +1,48 @@
+{
+  "changan_home_page.html": {
+    "h3 < div < div.absolute.bottom-12.left-0": 4,
+    "span < h4.text-2xl.font-bold.sm:w-[280px] < div.relative.grid.grid-cols-2": 5,
+    "script < body.font-changan.text-base.__variable_f5153a < html.scroll-smooth": 2
+  },
+  "mg_home_page.html": {
+    "span.font-bold.text-[18px].leading-[24px] < div.p-5.flex.flex-col < div.bg-white.my-8.rounded-[14px]": 8
+  },
+  "mitsubishi_home_page.html": {
+    "span.notranslate < p.navigation-header__navLinkPrice___3vvdJ.theme__bodyCopy___1Tqz4 < div.navigation-header__navLinkInfo___26EYj": 6,
+    "span.notranslate < p.homepage-car-selector__price___2GvCF.theme__bodyCopy___1Tqz4 < div.homepage-car-selector__cardContainer___1VV9w": 6,
+    "script < body < html": 2
+  },
+  "nissan_new_home_page.html": {
+    "span.price-figure < span.vehicle-in-category-price-inner < span.vehicle-in-category-price": 23
+  },
+  "mazda_home_page.html": {
+    "p < div.infoPrice < div.boxInfoInner": 30
+  },
+  "mini_home_page.html": {
+    "h5 < center < div.md-ppni-item-inner": 5,
+    "span < p.md-ppni-product-image__text-price.mt-xm < div.md-ppni-item-inner": 5,
+    "div.md-pricedetails-row_price.pb-xs < div.md-pricedetails-row < div.md-range-price-table.mb-sm": 5,
+    "div.md-pricedetails-list-style_tax-value < div.md-pricedetails-row.md-pricedetails-row-taxes < div.md-range-price-table.mb-sm": 5,
+    "strong < div.md-pricedetails-row_price.pt-sm < div.md-pricedetails-row.md-pricedetails-total": 5,
+    "span.sr-only < a.md-home-product-strip-item-wrapper < div": 5
+  },
+  "suzuki_home_page.html": {
+    "span < h4 < div.product-main-content": 15,
+    "p < div.item-news-content < a": 4,
+    "script < body < html.ng-scope": 1
+  },
+  "bmw_all_models_verified.html": {
+    "span.cmp-allmodelscarddetail__usp-text < li.cmp-allmodelscarddetail__usp-item.cmp-allmodelscarddetail__usp-item-first < ul.cmp-allmodelscarddetail__usp-list": 35
+  },
+  "kia_home_page.html": {
+    "script < head < html.stylish-select": 2,
+    "script < body < html.stylish-select": 1
+  },
+  "jaguar_home_page.html": {},
+  "landrover_home_page.html": {},
+  "smart_home_page.html": {
+    "script < body < html": 2,
+    "style < div < div": 1,
+    "span.color_38.wixui-rich-text__text < span.wixui-rich-text__text < span.wixui-rich-text__text": 1
+  }
+}

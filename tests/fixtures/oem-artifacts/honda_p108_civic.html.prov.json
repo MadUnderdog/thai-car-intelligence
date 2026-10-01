@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/civic",
+  "captured_at": "2026-09-27T19:05:57.844620+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "46de1c37fb960bacfad7f76bd764ed7970b0a5b42e3b6d3cb307d3bae8b97d36",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "honda_p108_civic.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

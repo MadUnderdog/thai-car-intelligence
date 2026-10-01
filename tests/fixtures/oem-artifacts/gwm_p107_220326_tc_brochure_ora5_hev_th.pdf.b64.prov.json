@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/th/model/ora-5/220326_tc_brochure_ora5_hev_th.pdf",
+  "captured_at": "2026-09-27T16:05:46.697035+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "3b3d3923ecaf83c08848f86ab5f584bcd3cfd3b132c69aefd48ed0a134ce21a0",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "gwm_p107_220326_tc_brochure_ora5_hev_th.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

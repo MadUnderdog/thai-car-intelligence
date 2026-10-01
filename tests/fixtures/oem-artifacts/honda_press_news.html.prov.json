@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/news",
+  "captured_at": "2026-09-26T13:45:43.249127+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "d1c3f480d96472d2ce556419c3c2002e0d559129f126f619a1bf351c73fa5e69",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "honda_press_news.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

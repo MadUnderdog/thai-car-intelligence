@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=commuter",
+  "captured_at": "2026-09-28T09:35:25.516610+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "3de6c4642a0be53b85344714dcc6353da13487ae8bcda55554ed1873504601db",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_commuter.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

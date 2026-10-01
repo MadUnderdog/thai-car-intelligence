@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=landcruiser_fj",
+  "captured_at": "2026-09-28T09:35:34.118092+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "ac615af74bfdbce7e3ecc8f2438f151203b77d56d97b56f32347f32c8e79a44b",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_landcruiser_fj.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

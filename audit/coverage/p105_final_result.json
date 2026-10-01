@@ -1,0 +1,114 @@
+{
+  "schema": "p105-final-result/1",
+  "generated_at": "2026-09-27T14:29:29.195908+00:00",
+  "before_after": {
+    "first_party_confirmed_variants": [
+      404,
+      462
+    ],
+    "first_party_confirmed_models": [
+      243,
+      255
+    ],
+    "oems_with_variant_confirmation": [
+      19,
+      19
+    ],
+    "universe_records": [
+      1424,
+      1424
+    ]
+  },
+  "harvested_rows": 143,
+  "outcomes": {
+    "existing": 143
+  },
+  "by_method": {
+    "official_page_bound_grade_list": 20,
+    "official_name_price_row": 33,
+    "official_grade_list_row": 80,
+    "official_grade_list_bare_row": 5,
+    "official_grade_table_row": 5
+  },
+  "identity_only": {
+    "records": 716,
+    "models": 316,
+    "variants": 400
+  },
+  "conflicts": {
+    "records": 25
+  },
+  "rejected": {
+    "records": 1927
+  },
+  "per_oem_delta": {
+    "BMW": {
+      "confirmed_variants": 17,
+      "rows": 25
+    },
+    "Deepal": {
+      "confirmed_variants": 3,
+      "rows": 17
+    },
+    "GWM": {
+      "confirmed_variants": 3,
+      "rows": 3
+    },
+    "Honda": {
+      "confirmed_variants": 1,
+      "rows": 1
+    },
+    "Isuzu": {
+      "confirmed_variants": 5,
+      "rows": 5
+    },
+    "Lexus": {
+      "confirmed_variants": 9,
+      "rows": 42
+    },
+    "MG": {
+      "confirmed_variants": 3,
+      "rows": 7
+    },
+    "Mitsubishi": {
+      "confirmed_variants": 5,
+      "rows": 5
+    },
+    "Suzuki": {
+      "confirmed_variants": 5,
+      "rows": 21
+    },
+    "Toyota": {
+      "confirmed_variants": 7,
+      "rows": 17
+    }
+  },
+  "blocked_oems": [
+    "BYD",
+    "Audi",
+    "Chevrolet",
+    "Ford",
+    "Tesla",
+    "Chery",
+    "Haval",
+    "NETA",
+    "Peugeot",
+    "Volvo",
+    "Avance",
+    "Mercedes-Benz",
+    "Smart"
+  ],
+  "gates": {
+    "staging_written": false,
+    "price_pass": false,
+    "prisma_touched": false,
+    "p104_p103_p102_logic_changed": false,
+    "production_db_unchanged": true
+  },
+  "p104_baseline_result": {
+    "first_party_confirmed_variants": [
+      401,
+      404
+    ]
+  }
+}

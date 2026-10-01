@@ -1,0 +1,198 @@
+{
+  "accepted_packets": {
+    "accepted": 417,
+    "quarantined": 71,
+    "total": 488
+  },
+  "blocked_sources": [
+    {
+      "brand": "Audi",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "status": "BLOCKED_HTTP_403"
+    },
+    {
+      "brand": "Avance",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "status": "BLOCKED_DNS"
+    },
+    {
+      "brand": "BYD",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-08T13:41:49.738574+00:00",
+      "status": "BLOCKED_HTTP_404"
+    },
+    {
+      "brand": "Chery",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "status": "BLOCKED_DNS"
+    },
+    {
+      "brand": "Chevrolet",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+      "status": "BLOCKED_HTTP_403"
+    },
+    {
+      "brand": "Ford",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "status": "BLOCKED_HTTP_403"
+    },
+    {
+      "brand": "Haval",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "status": "BLOCKED_DNS"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+      "status": "BLOCKED_HTTP_403"
+    },
+    {
+      "brand": "NETA",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "status": "BLOCKED_DNS"
+    },
+    {
+      "brand": "Peugeot",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "status": "BLOCKED_HTTP_403"
+    },
+    {
+      "brand": "Smart",
+      "cycle_state": null,
+      "next_retry_at": "2026-09-26T14:16:39.761675+00:00",
+      "status": "DEALER_REDIRECT"
+    },
+    {
+      "brand": "Tesla",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+      "status": "BLOCKED_HTTP_403"
+    },
+    {
+      "brand": "Volvo",
+      "cycle_state": null,
+      "next_retry_at": "2026-10-24T13:41:49.738574+00:00",
+      "status": "BLOCKED_TLS"
+    }
+  ],
+  "duplicates": {
+    "duplicate_current_price_groups": 0,
+    "duplicate_spec_groups": 0,
+    "p114_ledger_no_action": 358,
+    "production_ledger_no_action": 0
+  },
+  "freshness_summary": {
+    "now": "2026-09-30T14:21:22.884107+00:00",
+    "policy": "dated rows only; UNDATED never claimed current or stale; future-dated rows are violations, excluded from buckets",
+    "schema": "p120_freshness_report/v1",
+    "slo": {
+      "aging_max_days": 90,
+      "current_max_days": 30,
+      "rule_source": "Blueprint.md Coverage Gap States: STALE = last checked > 90 days",
+      "stale_after_days": 90
+    },
+    "sources": {
+      "DataChangeLog.createdAt": {
+        "buckets": {
+          "AGING": 0,
+          "CURRENT": 1917,
+          "STALE": 0,
+          "UNDATED": 0
+        },
+        "date_column": "DataChangeLog.createdAt",
+        "future_dated": [],
+        "newest_dated": "2026-09-28T18:32:12.001000",
+        "oldest_dated": "2026-09-28T14:54:54.061000",
+        "total_rows": 1917
+      },
+      "Price.observedAt": {
+        "buckets": {
+          "AGING": 0,
+          "CURRENT": 1061,
+          "STALE": 0,
+          "UNDATED": 0
+        },
+        "date_column": "Price.observedAt",
+        "future_dated": [],
+        "newest_dated": "2026-09-28T14:54:54.061000",
+        "oldest_dated": "2026-09-19T13:03:24.084000",
+        "total_rows": 1061
+      },
+      "SourceDocument.fetchedAt": {
+        "buckets": {
+          "AGING": 0,
+          "CURRENT": 1563,
+          "STALE": 0,
+          "UNDATED": 1014
+        },
+        "date_column": "SourceDocument.fetchedAt",
+        "future_dated": [],
+        "newest_dated": "2026-09-28T09:35:38.220000",
+        "oldest_dated": "2026-09-17T11:08:42.459000",
+        "total_rows": 2577
+      }
+    }
+  },
+  "last_successful_refresh": {
+    "detail": "no run-state artifact present",
+    "status": "unknown"
+  },
+  "locator_coverage": {
+    "changelog_rows_total": 1917,
+    "changelog_rows_with_locator_or_excerpt": 1871,
+    "coverage_pct": 97.6
+  },
+  "now": "2026-09-30T14:21:22.884107+00:00",
+  "promoted": {
+    "ledger_p114": {
+      "by_action": {
+        "INSERT": 1741,
+        "NO_ACTION": 358,
+        "UPDATE": 8
+      },
+      "entries": 2107,
+      "failure_like_entries": 0
+    },
+    "ledger_production": {
+      "by_action": {},
+      "entries": 0,
+      "failure_like_entries": 0
+    },
+    "price_current": 352,
+    "price_rows": 1061,
+    "spec_rows": 8036,
+    "variant_rows": 747
+  },
+  "promotion_failures": {
+    "p114_like_entries": 0,
+    "production_like_entries": 0
+  },
+  "provenance_coverage": {
+    "coverage_pct": 99.91,
+    "price_rows_total": 1061,
+    "price_rows_with_document_content_hash": 1060,
+    "price_rows_with_source_document": 1060
+  },
+  "quarantines": {
+    "packets": 71,
+    "price_rows": 79,
+    "spec_rows": 410
+  },
+  "read_only": true,
+  "schema": "p120_audit_report/v1",
+  "source_coverage": {
+    "manufacturers": 37,
+    "models": 284,
+    "source_documents": 2577,
+    "sources": 32
+  }
+}

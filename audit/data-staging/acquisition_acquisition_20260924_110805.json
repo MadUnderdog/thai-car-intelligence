@@ -1,0 +1,82 @@
+{
+  "session_id": "acquisition_20260924_110805",
+  "captured": [
+    {
+      "success": true,
+      "filename": "lexus_models_page.html",
+      "provenance": {
+        "source_url": "https://www.lexus.co.th/th.html",
+        "captured_at": "2026-09-24T11:08:47.206830+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+        "session_id": "acquisition_20260924_110805",
+        "artifact_filename": "lexus_models_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 641123,
+      "final_url": "https://www.lexus.co.th/th.html"
+    }
+  ],
+  "blocked": [
+    {
+      "success": false,
+      "blocker": "HTTP_403",
+      "url": "https://www.ford.co.th/models",
+      "filename": "ford_models_page.html"
+    },
+    {
+      "success": false,
+      "blocker": "HTTP_403",
+      "url": "https://www.chevrolet.co.th/completecar.html",
+      "filename": "chevrolet_models_page.html"
+    },
+    {
+      "success": false,
+      "blocker": "HTTP_404",
+      "url": "https://www.mitsubishi-motors.co.th/models",
+      "filename": "mitsubishi_models_page.html"
+    },
+    {
+      "success": false,
+      "blocker": "FETCH_ERROR: Page.goto: net::ERR_SSL_UNRECOGNIZED_NAME_ALERT at https://www.subaru-club.com/th/models\nCall log:\n ",
+      "url": "https://www.subaru-club.com/th/models",
+      "filename": "subaru_models_page.html"
+    },
+    {
+      "success": false,
+      "blocker": "FETCH_ERROR: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.volvo.co.th/en/models.html\nCall log:\n  -",
+      "url": "https://www.volvo.co.th/en/models.html",
+      "filename": "volvo_models_page.html"
+    },
+    {
+      "success": false,
+      "blocker": "HTTP_403",
+      "url": "https://www.mercedes-benz.co.th/passengercars.html",
+      "filename": "mercedes_models_page.html"
+    },
+    {
+      "success": false,
+      "blocker": "HTTP_403",
+      "url": "https://www.audi.co.th/th/models.html",
+      "filename": "audi_models_page.html"
+    },
+    {
+      "success": false,
+      "blocker": "FETCH_ERROR: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.neta.co.th/models\nCall log:\n  - navigating to \"",
+      "url": "https://www.neta.co.th/models",
+      "filename": "neta_models_page.html"
+    },
+    {
+      "success": false,
+      "blocker": "FETCH_ERROR: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.deepal.co.th/models\nCall log:\n  - navigating to",
+      "url": "https://www.deepal.co.th/models",
+      "filename": "deepal_models_page.html"
+    },
+    {
+      "success": false,
+      "blocker": "FETCH_ERROR: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.avancemotors.com/th/models\nCall log:\n  - naviga",
+      "url": "https://www.avancemotors.com/th/models",
+      "filename": "avance_models_page.html"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=camry",
+  "captured_at": "2026-09-28T09:35:24.491009+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "bce2cd57725059f71dc48679556ed45f375a433f20f6d7318e235b041c0b368e",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_camry.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

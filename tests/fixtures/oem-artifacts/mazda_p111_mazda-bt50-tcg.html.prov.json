@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th/cars/mazda-bt50-tcg",
+  "captured_at": "2026-09-28T07:13:57.204419+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "51ef830f2c5983196332465023928a6be74c4ab242a8aac800357838913d7f21",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mazda_p111_mazda-bt50-tcg.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

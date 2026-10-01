@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.9carthai.com/kia-price/",
+  "captured_at": "2026-09-26T15:53:11.214495+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "20d3e2850a7b7ecf818121c6995e7d608010f5d287578324627c029588e6ae0d",
+  "session_id": "p102-identity-20260926",
+  "artifact_filename": "9carthai_kia-price.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

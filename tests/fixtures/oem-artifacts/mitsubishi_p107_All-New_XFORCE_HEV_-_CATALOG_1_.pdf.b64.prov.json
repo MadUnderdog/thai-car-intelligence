@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/June2025/city-car/All-New%20XFORCE%20HEV%20-%20CATALOG%20(1).pdf",
+  "captured_at": "2026-09-27T16:03:04.219873+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "58c36e3c8da695a5ec3fb1f09748d05f0e3eb148cd4f26a256f8d2f9b6f5acba",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "mitsubishi_p107_All-New_XFORCE_HEV_-_CATALOG_1_.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

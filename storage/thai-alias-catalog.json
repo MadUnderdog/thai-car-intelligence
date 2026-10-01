@@ -1,0 +1,3890 @@
+{
+  "version": "1.0",
+  "generated_by": "thai-alias-catalog.py",
+  "stats": {
+    "brands_covered": 34,
+    "models_covered": 157,
+    "total_aliases": 506,
+    "total_search_queries": 1248
+  },
+  "brands": {
+    "avatr": {
+      "nameEn": "Avatr",
+      "nameTh": "อาวาทร์",
+      "slug": "avatr",
+      "aliases": [
+        "อาวาทร์"
+      ]
+    },
+    "baic": {
+      "nameEn": "BAIC",
+      "nameTh": "บีไอซี",
+      "slug": "baic",
+      "aliases": [
+        "บีไอซี"
+      ]
+    },
+    "bmw": {
+      "nameEn": "BMW",
+      "nameTh": "บีเอ็มดับบลิว",
+      "slug": "bmw",
+      "aliases": [
+        "BMW",
+        "บีเอ็ม",
+        "บีเอ็มดับบลิว",
+        "บีเอ็มดับเบิลยู"
+      ]
+    },
+    "byd": {
+      "nameEn": "BYD",
+      "nameTh": "บีวายดี",
+      "slug": "byd",
+      "aliases": [
+        "บีวายดี"
+      ]
+    },
+    "changan": {
+      "nameEn": "Changan",
+      "nameTh": "ฉางอัน",
+      "slug": "changan",
+      "aliases": [
+        "ฉางอัน"
+      ]
+    },
+    "chery": {
+      "nameEn": "Chery",
+      "nameTh": "เชอรี่",
+      "slug": "chery",
+      "aliases": [
+        "เชอรี",
+        "เชอรี่"
+      ]
+    },
+    "chevrolet": {
+      "nameEn": "Chevrolet",
+      "nameTh": "เชฟโรเลต",
+      "slug": "chevrolet",
+      "aliases": [
+        "เชฟโรเลต"
+      ]
+    },
+    "denza": {
+      "nameEn": "Denza",
+      "nameTh": "เดนซ่า",
+      "slug": "denza",
+      "aliases": [
+        "เดนซ่า"
+      ]
+    },
+    "ford": {
+      "nameEn": "Ford",
+      "nameTh": "ฟอร์ด",
+      "slug": "ford",
+      "aliases": [
+        "ฟอร์ด"
+      ]
+    },
+    "geely": {
+      "nameEn": "Geely",
+      "nameTh": "จีลี่",
+      "slug": "geely",
+      "aliases": [
+        "จีลี่"
+      ]
+    },
+    "gwm": {
+      "nameEn": "GWM",
+      "nameTh": "จีดับบลิวเอ็ม",
+      "slug": "gwm",
+      "aliases": [
+        "GWM",
+        "จีดับบลิวเอ็ม",
+        "เกรทวอลล์",
+        "เกรทวอลล์มอเตอร์"
+      ]
+    },
+    "honda": {
+      "nameEn": "Honda",
+      "nameTh": "ฮอนด้า",
+      "slug": "honda",
+      "aliases": [
+        "ฮอนด้า"
+      ]
+    },
+    "hyundai": {
+      "nameEn": "Hyundai",
+      "nameTh": "ฮุนได",
+      "slug": "hyundai",
+      "aliases": [
+        "ฮุนได"
+      ]
+    },
+    "isuzu": {
+      "nameEn": "Isuzu",
+      "nameTh": "อีซูซุ",
+      "slug": "isuzu",
+      "aliases": [
+        "อีซูซุ"
+      ]
+    },
+    "jetour": {
+      "nameEn": "Jetour",
+      "nameTh": "เจ็ททัวร์",
+      "slug": "jetour",
+      "aliases": [
+        "เจ็ททัวร์"
+      ]
+    },
+    "kg-mobility": {
+      "nameEn": "KG Mobility",
+      "nameTh": "เคจี โมบิลิตี้",
+      "slug": "kg-mobility",
+      "aliases": [
+        "เคจี โมบิลิตี้"
+      ]
+    },
+    "kia": {
+      "nameEn": "Kia",
+      "nameTh": "เกีย",
+      "slug": "kia",
+      "aliases": [
+        "เกีย"
+      ]
+    },
+    "ldv": {
+      "nameEn": "LDV",
+      "nameTh": "เอลดีวี",
+      "slug": "ldv",
+      "aliases": [
+        "เอลดีวี"
+      ]
+    },
+    "lexus": {
+      "nameEn": "Lexus",
+      "nameTh": "เล็กซัส",
+      "slug": "lexus",
+      "aliases": [
+        "เล็กซัส"
+      ]
+    },
+    "mazda": {
+      "nameEn": "Mazda",
+      "nameTh": "มาสด้า",
+      "slug": "mazda",
+      "aliases": [
+        "มาสด้า"
+      ]
+    },
+    "mercedes-benz": {
+      "nameEn": "Mercedes-Benz",
+      "nameTh": "เมอร์เซเดส-เบนซ์",
+      "slug": "mercedes-benz",
+      "aliases": [
+        "Mercedes",
+        "เบนซ์",
+        "เมอร์เซเดส-เบนซ์"
+      ]
+    },
+    "mg": {
+      "nameEn": "MG",
+      "nameTh": "เอ็มจี",
+      "slug": "mg",
+      "aliases": [
+        "MG",
+        "เอ็มจี"
+      ]
+    },
+    "mini": {
+      "nameEn": "MINI",
+      "nameTh": "มินิ",
+      "slug": "mini",
+      "aliases": [
+        "มินิ"
+      ]
+    },
+    "mitsubishi": {
+      "nameEn": "Mitsubishi",
+      "nameTh": "มิตซูบิชิ",
+      "slug": "mitsubishi",
+      "aliases": [
+        "มิตซูบิชิ"
+      ]
+    },
+    "nio": {
+      "nameEn": "NIO",
+      "nameTh": "นิโอ",
+      "slug": "nio",
+      "aliases": [
+        "นิโอ"
+      ]
+    },
+    "nissan": {
+      "nameEn": "Nissan",
+      "nameTh": "นิสสัน",
+      "slug": "nissan",
+      "aliases": [
+        "นิสสัน"
+      ]
+    },
+    "porsche": {
+      "nameEn": "Porsche",
+      "nameTh": "ปอร์เช่",
+      "slug": "porsche",
+      "aliases": [
+        "ปอร์เช่"
+      ]
+    },
+    "subaru": {
+      "nameEn": "Subaru",
+      "nameTh": "ซูบารุ",
+      "slug": "subaru",
+      "aliases": [
+        "ซูบารุ"
+      ]
+    },
+    "suzuki": {
+      "nameEn": "Suzuki",
+      "nameTh": "ซูซูกิ",
+      "slug": "suzuki",
+      "aliases": [
+        "ซูซูกิ"
+      ]
+    },
+    "tesla": {
+      "nameEn": "Tesla",
+      "nameTh": "เทสลา",
+      "slug": "tesla",
+      "aliases": [
+        "เทสลา"
+      ]
+    },
+    "toyota": {
+      "nameEn": "Toyota",
+      "nameTh": "โตโยต้า",
+      "slug": "toyota",
+      "aliases": [
+        "โตโยต้า"
+      ]
+    },
+    "volvo": {
+      "nameEn": "Volvo",
+      "nameTh": "วอลโว่",
+      "slug": "volvo",
+      "aliases": [
+        "วอลโว",
+        "วอลโว่"
+      ]
+    },
+    "xpeng": {
+      "nameEn": "Xpeng",
+      "nameTh": "เอ็กซ์เพ่ง",
+      "slug": "xpeng",
+      "aliases": [
+        "เอ็กซ์เพ่ง"
+      ]
+    },
+    "zeekr": {
+      "nameEn": "Zeekr",
+      "nameTh": "ซีเคอร์",
+      "slug": "zeekr",
+      "aliases": [
+        "ซีเคอร์"
+      ]
+    }
+  },
+  "models": {
+    "11": {
+      "nameEn": "11",
+      "nameTh": "11",
+      "slug": "11",
+      "brandEn": "Avatr",
+      "brandTh": "อาวาทร์",
+      "brandSlug": "avatr",
+      "aliases": [
+        "11"
+      ],
+      "searchQueries": [
+        "Avatr 11",
+        "อาวาทร์ 11",
+        "อาวาทร์ ราคา",
+        "11 เปิดตัว",
+        "11 สเปก",
+        "11 รุ่นย่อย",
+        "11 2026"
+      ]
+    },
+    "bj30": {
+      "nameEn": "BJ30",
+      "nameTh": "บีเจ30",
+      "slug": "bj30",
+      "brandEn": "BAIC",
+      "brandTh": "บีไอซี",
+      "brandSlug": "baic",
+      "aliases": [
+        "BJ30",
+        "bj30",
+        "บีเจ30"
+      ],
+      "searchQueries": [
+        "BAIC BJ30",
+        "บีไอซี BJ30",
+        "บีไอซี บีเจ30",
+        "บีไอซี ราคา",
+        "บีเจ30 เปิดตัว",
+        "บีเจ30 สเปก",
+        "บีเจ30 รุ่นย่อย",
+        "บีเจ30 2026"
+      ]
+    },
+    "x55": {
+      "nameEn": "X55",
+      "nameTh": "เอกซ์55",
+      "slug": "x55",
+      "brandEn": "BAIC",
+      "brandTh": "บีไอซี",
+      "brandSlug": "baic",
+      "aliases": [
+        "X55",
+        "x55",
+        "เอกซ์55"
+      ],
+      "searchQueries": [
+        "BAIC X55",
+        "บีไอซี X55",
+        "บีไอซี เอกซ์55",
+        "บีไอซี ราคา",
+        "เอกซ์55 เปิดตัว",
+        "เอกซ์55 สเปก",
+        "เอกซ์55 รุ่นย่อย",
+        "เอกซ์55 2026"
+      ]
+    },
+    "1-series": {
+      "nameEn": "1 Series",
+      "nameTh": "ซีรีส์ 1",
+      "slug": "1-series",
+      "brandEn": "BMW",
+      "brandTh": "บีเอ็มดับบลิว",
+      "brandSlug": "bmw",
+      "aliases": [
+        "1 Series",
+        "1-series",
+        "ซีรีส์ 1"
+      ],
+      "searchQueries": [
+        "BMW 1 Series",
+        "บีเอ็มดับบลิว 1 Series",
+        "บีเอ็มดับบลิว ซีรีส์ 1",
+        "บีเอ็มดับบลิว ราคา",
+        "ซีรีส์ 1 เปิดตัว",
+        "ซีรีส์ 1 สเปก",
+        "ซีรีส์ 1 รุ่นย่อย",
+        "ซีรีส์ 1 2026"
+      ]
+    },
+    "3-series": {
+      "nameEn": "3 Series",
+      "nameTh": "ซีรีส์ 3",
+      "slug": "3-series",
+      "brandEn": "BMW",
+      "brandTh": "บีเอ็มดับบลิว",
+      "brandSlug": "bmw",
+      "aliases": [
+        "3 Series",
+        "3-series",
+        "ซีรีส์ 3"
+      ],
+      "searchQueries": [
+        "BMW 3 Series",
+        "บีเอ็มดับบลิว 3 Series",
+        "บีเอ็มดับบลิว ซีรีส์ 3",
+        "บีเอ็มดับบลิว ราคา",
+        "ซีรีส์ 3 เปิดตัว",
+        "ซีรีส์ 3 สเปก",
+        "ซีรีส์ 3 รุ่นย่อย",
+        "ซีรีส์ 3 2026"
+      ]
+    },
+    "5-series": {
+      "nameEn": "5 Series",
+      "nameTh": "ซีรีส์ 5",
+      "slug": "5-series",
+      "brandEn": "BMW",
+      "brandTh": "บีเอ็มดับบลิว",
+      "brandSlug": "bmw",
+      "aliases": [
+        "5 Series",
+        "5-series",
+        "ซีรีส์ 5"
+      ],
+      "searchQueries": [
+        "BMW 5 Series",
+        "บีเอ็มดับบลิว 5 Series",
+        "บีเอ็มดับบลิว ซีรีส์ 5",
+        "บีเอ็มดับบลิว ราคา",
+        "ซีรีส์ 5 เปิดตัว",
+        "ซีรีส์ 5 สเปก",
+        "ซีรีส์ 5 รุ่นย่อย",
+        "ซีรีส์ 5 2026"
+      ]
+    },
+    "ix": {
+      "nameEn": "iX",
+      "nameTh": "ไอเอกซ์",
+      "slug": "ix",
+      "brandEn": "BMW",
+      "brandTh": "บีเอ็มดับบลิว",
+      "brandSlug": "bmw",
+      "aliases": [
+        "iX",
+        "ix",
+        "ไอเอกซ์"
+      ],
+      "searchQueries": [
+        "BMW iX",
+        "บีเอ็มดับบลิว iX",
+        "บีเอ็มดับบลิว ไอเอกซ์",
+        "บีเอ็มดับบลิว ราคา",
+        "ไอเอกซ์ เปิดตัว",
+        "ไอเอกซ์ สเปก",
+        "ไอเอกซ์ รุ่นย่อย",
+        "ไอเอกซ์ 2026"
+      ]
+    },
+    "x1": {
+      "nameEn": "X1",
+      "nameTh": "เอกซ์1",
+      "slug": "x1",
+      "brandEn": "BMW",
+      "brandTh": "บีเอ็มดับบลิว",
+      "brandSlug": "bmw",
+      "aliases": [
+        "X1",
+        "x1",
+        "เอกซ์1"
+      ],
+      "searchQueries": [
+        "BMW X1",
+        "บีเอ็มดับบลิว X1",
+        "บีเอ็มดับบลิว เอกซ์1",
+        "บีเอ็มดับบลิว ราคา",
+        "เอกซ์1 เปิดตัว",
+        "เอกซ์1 สเปก",
+        "เอกซ์1 รุ่นย่อย",
+        "เอกซ์1 2026"
+      ]
+    },
+    "x3": {
+      "nameEn": "X3",
+      "nameTh": "เอกซ์3",
+      "slug": "x3",
+      "brandEn": "BMW",
+      "brandTh": "บีเอ็มดับบลิว",
+      "brandSlug": "bmw",
+      "aliases": [
+        "X3",
+        "x3",
+        "เอกซ์3"
+      ],
+      "searchQueries": [
+        "BMW X3",
+        "บีเอ็มดับบลิว X3",
+        "บีเอ็มดับบลิว เอกซ์3",
+        "บีเอ็มดับบลิว ราคา",
+        "เอกซ์3 เปิดตัว",
+        "เอกซ์3 สเปก",
+        "เอกซ์3 รุ่นย่อย",
+        "เอกซ์3 2026"
+      ]
+    },
+    "x5": {
+      "nameEn": "X5",
+      "nameTh": "เอกซ์5",
+      "slug": "x5",
+      "brandEn": "BMW",
+      "brandTh": "บีเอ็มดับบลิว",
+      "brandSlug": "bmw",
+      "aliases": [
+        "X5",
+        "x5",
+        "เอกซ์5"
+      ],
+      "searchQueries": [
+        "BMW X5",
+        "บีเอ็มดับบลิว X5",
+        "บีเอ็มดับบลิว เอกซ์5",
+        "บีเอ็มดับบลิว ราคา",
+        "เอกซ์5 เปิดตัว",
+        "เอกซ์5 สเปก",
+        "เอกซ์5 รุ่นย่อย",
+        "เอกซ์5 2026"
+      ]
+    },
+    "atto-2": {
+      "nameEn": "ATTO 2",
+      "nameTh": "อัตโต 2",
+      "slug": "atto-2",
+      "brandEn": "BYD",
+      "brandTh": "บีวายดี",
+      "brandSlug": "byd",
+      "aliases": [
+        "ATTO 2",
+        "atto-2",
+        "อัตโต 2"
+      ],
+      "searchQueries": [
+        "BYD ATTO 2",
+        "บีวายดี ATTO 2",
+        "บีวายดี อัตโต 2",
+        "บีวายดี ราคา",
+        "อัตโต 2 เปิดตัว",
+        "อัตโต 2 สเปก",
+        "อัตโต 2 รุ่นย่อย",
+        "อัตโต 2 2026"
+      ]
+    },
+    "atto-3": {
+      "nameEn": "ATTO 3",
+      "nameTh": "อัตโต 3",
+      "slug": "atto-3",
+      "brandEn": "BYD",
+      "brandTh": "บีวายดี",
+      "brandSlug": "byd",
+      "aliases": [
+        "ATTO 3",
+        "atto-3",
+        "อัตโต 3"
+      ],
+      "searchQueries": [
+        "BYD ATTO 3",
+        "บีวายดี ATTO 3",
+        "บีวายดี อัตโต 3",
+        "บีวายดี ราคา",
+        "อัตโต 3 เปิดตัว",
+        "อัตโต 3 สเปก",
+        "อัตโต 3 รุ่นย่อย",
+        "อัตโต 3 2026"
+      ]
+    },
+    "dolphin": {
+      "nameEn": "Dolphin",
+      "nameTh": "ดอลฟิน",
+      "slug": "dolphin",
+      "brandEn": "BYD",
+      "brandTh": "บีวายดี",
+      "brandSlug": "byd",
+      "aliases": [
+        "Dolphin",
+        "dolphin",
+        "ดอลฟิน"
+      ],
+      "searchQueries": [
+        "BYD Dolphin",
+        "บีวายดี Dolphin",
+        "บีวายดี ดอลฟิน",
+        "บีวายดี ราคา",
+        "ดอลฟิน เปิดตัว",
+        "ดอลฟิน สเปก",
+        "ดอลฟิน รุ่นย่อย",
+        "ดอลฟิน 2026"
+      ]
+    },
+    "m6": {
+      "nameEn": "M6",
+      "nameTh": "เอ็ม 6",
+      "slug": "m6",
+      "brandEn": "BYD",
+      "brandTh": "บีวายดี",
+      "brandSlug": "byd",
+      "aliases": [
+        "M6",
+        "m6",
+        "เอ็ม 6"
+      ],
+      "searchQueries": [
+        "BYD M6",
+        "บีวายดี M6",
+        "บีวายดี เอ็ม 6",
+        "บีวายดี ราคา",
+        "เอ็ม 6 เปิดตัว",
+        "เอ็ม 6 สเปก",
+        "เอ็ม 6 รุ่นย่อย",
+        "เอ็ม 6 2026"
+      ]
+    },
+    "seal": {
+      "nameEn": "Seal",
+      "nameTh": "ซีล",
+      "slug": "seal",
+      "brandEn": "BYD",
+      "brandTh": "บีวายดี",
+      "brandSlug": "byd",
+      "aliases": [
+        "Seal",
+        "seal",
+        "ซีล"
+      ],
+      "searchQueries": [
+        "BYD Seal",
+        "บีวายดี Seal",
+        "บีวายดี ซีล",
+        "บีวายดี ราคา",
+        "ซีล เปิดตัว",
+        "ซีล สเปก",
+        "ซีล รุ่นย่อย",
+        "ซีล 2026"
+      ]
+    },
+    "seal-6": {
+      "nameEn": "Seal 6",
+      "nameTh": "ซีล 6",
+      "slug": "seal-6",
+      "brandEn": "BYD",
+      "brandTh": "บีวายดี",
+      "brandSlug": "byd",
+      "aliases": [
+        "Seal 6",
+        "seal-6",
+        "ซีล 6"
+      ],
+      "searchQueries": [
+        "BYD Seal 6",
+        "บีวายดี Seal 6",
+        "บีวายดี ซีล 6",
+        "บีวายดี ราคา",
+        "ซีล 6 เปิดตัว",
+        "ซีล 6 สเปก",
+        "ซีล 6 รุ่นย่อย",
+        "ซีล 6 2026"
+      ]
+    },
+    "sealion-5": {
+      "nameEn": "Sealion 5 DM-i",
+      "nameTh": "ซีไลออน 5",
+      "slug": "sealion-5",
+      "brandEn": "BYD",
+      "brandTh": "บีวายดี",
+      "brandSlug": "byd",
+      "aliases": [
+        "Sealion 5 DM-i",
+        "sealion-5",
+        "ซีไลออน 5"
+      ],
+      "searchQueries": [
+        "BYD Sealion 5 DM-i",
+        "บีวายดี Sealion 5 DM-i",
+        "บีวายดี ซีไลออน 5",
+        "บีวายดี ราคา",
+        "ซีไลออน 5 เปิดตัว",
+        "ซีไลออน 5 สเปก",
+        "ซีไลออน 5 รุ่นย่อย",
+        "ซีไลออน 5 2026"
+      ]
+    },
+    "sealion-6": {
+      "nameEn": "Sealion 6 DM-i",
+      "nameTh": "ซีไลออน 6",
+      "slug": "sealion-6",
+      "brandEn": "BYD",
+      "brandTh": "บีวายดี",
+      "brandSlug": "byd",
+      "aliases": [
+        "Sealion 6 DM-i",
+        "sealion-6",
+        "ซีไลออน 6"
+      ],
+      "searchQueries": [
+        "BYD Sealion 6 DM-i",
+        "บีวายดี Sealion 6 DM-i",
+        "บีวายดี ซีไลออน 6",
+        "บีวายดี ราคา",
+        "ซีไลออน 6 เปิดตัว",
+        "ซีไลออน 6 สเปก",
+        "ซีไลออน 6 รุ่นย่อย",
+        "ซีไลออน 6 2026"
+      ]
+    },
+    "sealion-7": {
+      "nameEn": "Sealion 7",
+      "nameTh": "ซีไลออน 7",
+      "slug": "sealion-7",
+      "brandEn": "BYD",
+      "brandTh": "บีวายดี",
+      "brandSlug": "byd",
+      "aliases": [
+        "Sealion 7",
+        "sealion-7",
+        "ซีไลออน 7"
+      ],
+      "searchQueries": [
+        "BYD Sealion 7",
+        "บีวายดี Sealion 7",
+        "บีวายดี ซีไลออน 7",
+        "บีวายดี ราคา",
+        "ซีไลออน 7 เปิดตัว",
+        "ซีไลออน 7 สเปก",
+        "ซีไลออน 7 รุ่นย่อย",
+        "ซีไลออน 7 2026"
+      ]
+    },
+    "cs55-plus": {
+      "nameEn": "CS55 Plus",
+      "nameTh": "ซีเอส55 พลัส",
+      "slug": "cs55-plus",
+      "brandEn": "Changan",
+      "brandTh": "ฉางอัน",
+      "brandSlug": "changan",
+      "aliases": [
+        "CS55 Plus",
+        "cs55-plus",
+        "ซีเอส55 พลัส"
+      ],
+      "searchQueries": [
+        "Changan CS55 Plus",
+        "ฉางอัน CS55 Plus",
+        "ฉางอัน ซีเอส55 พลัส",
+        "ฉางอัน ราคา",
+        "ซีเอส55 พลัส เปิดตัว",
+        "ซีเอส55 พลัส สเปก",
+        "ซีเอส55 พลัส รุ่นย่อย",
+        "ซีเอส55 พลัส 2026"
+      ]
+    },
+    "deepal-s07": {
+      "nameEn": "Deepal S07",
+      "nameTh": "ดีปัล เอส07",
+      "slug": "deepal-s07",
+      "brandEn": "Changan",
+      "brandTh": "ฉางอัน",
+      "brandSlug": "changan",
+      "aliases": [
+        "Deepal S07",
+        "deepal-s07",
+        "ดีปัล เอส07"
+      ],
+      "searchQueries": [
+        "Changan Deepal S07",
+        "ฉางอัน Deepal S07",
+        "ฉางอัน ดีปัล เอส07",
+        "ฉางอัน ราคา",
+        "ดีปัล เอส07 เปิดตัว",
+        "ดีปัล เอส07 สเปก",
+        "ดีปัล เอส07 รุ่นย่อย",
+        "ดีปัล เอส07 2026"
+      ]
+    },
+    "uni-k": {
+      "nameEn": "UNI-K",
+      "nameTh": "ยูนิ-เค",
+      "slug": "uni-k",
+      "brandEn": "Changan",
+      "brandTh": "ฉางอัน",
+      "brandSlug": "changan",
+      "aliases": [
+        "UNI-K",
+        "uni-k",
+        "ยูนิ-เค"
+      ],
+      "searchQueries": [
+        "Changan UNI-K",
+        "ฉางอัน UNI-K",
+        "ฉางอัน ยูนิ-เค",
+        "ฉางอัน ราคา",
+        "ยูนิ-เค เปิดตัว",
+        "ยูนิ-เค สเปก",
+        "ยูนิ-เค รุ่นย่อย",
+        "ยูนิ-เค 2026"
+      ]
+    },
+    "uni-v": {
+      "nameEn": "UNI-V",
+      "nameTh": "ยูนิ-วี",
+      "slug": "uni-v",
+      "brandEn": "Changan",
+      "brandTh": "ฉางอัน",
+      "brandSlug": "changan",
+      "aliases": [
+        "UNI-V",
+        "uni-v",
+        "ยูนิ-วี"
+      ],
+      "searchQueries": [
+        "Changan UNI-V",
+        "ฉางอัน UNI-V",
+        "ฉางอัน ยูนิ-วี",
+        "ฉางอัน ราคา",
+        "ยูนิ-วี เปิดตัว",
+        "ยูนิ-วี สเปก",
+        "ยูนิ-วี รุ่นย่อย",
+        "ยูนิ-วี 2026"
+      ]
+    },
+    "jaecoo-j7": {
+      "nameEn": "Jaecoo J7",
+      "nameTh": "แจคู จี7",
+      "slug": "jaecoo-j7",
+      "brandEn": "Chery",
+      "brandTh": "เชอรี่",
+      "brandSlug": "chery",
+      "aliases": [
+        "Jaecoo J7",
+        "jaecoo-j7",
+        "แจคู จี7"
+      ],
+      "searchQueries": [
+        "Chery Jaecoo J7",
+        "เชอรี่ Jaecoo J7",
+        "เชอรี่ แจคู จี7",
+        "เชอรี่ ราคา",
+        "แจคู จี7 เปิดตัว",
+        "แจคู จี7 สเปก",
+        "แจคู จี7 รุ่นย่อย",
+        "แจคู จี7 2026"
+      ]
+    },
+    "omoda-5": {
+      "nameEn": "Omoda 5",
+      "nameTh": "โอมода 5",
+      "slug": "omoda-5",
+      "brandEn": "Chery",
+      "brandTh": "เชอรี่",
+      "brandSlug": "chery",
+      "aliases": [
+        "Omoda 5",
+        "omoda-5",
+        "โอมода 5"
+      ],
+      "searchQueries": [
+        "Chery Omoda 5",
+        "เชอรี่ Omoda 5",
+        "เชอรี่ โอมода 5",
+        "เชอรี่ ราคา",
+        "โอมода 5 เปิดตัว",
+        "โอมода 5 สเปก",
+        "โอมода 5 รุ่นย่อย",
+        "โอมода 5 2026"
+      ]
+    },
+    "omoda-5-ev": {
+      "nameEn": "Omoda 5 EV",
+      "nameTh": "โอมода 5 อีวี",
+      "slug": "omoda-5-ev",
+      "brandEn": "Chery",
+      "brandTh": "เชอรี่",
+      "brandSlug": "chery",
+      "aliases": [
+        "Omoda 5 EV",
+        "omoda-5-ev",
+        "โอมода 5 อีวี"
+      ],
+      "searchQueries": [
+        "Chery Omoda 5 EV",
+        "เชอรี่ Omoda 5 EV",
+        "เชอรี่ โอมода 5 อีวี",
+        "เชอรี่ ราคา",
+        "โอมода 5 อีวี เปิดตัว",
+        "โอมода 5 อีวี สเปก",
+        "โอมода 5 อีวี รุ่นย่อย",
+        "โอมода 5 อีวี 2026"
+      ]
+    },
+    "tiggo-8-pro": {
+      "nameEn": "Tiggo 8 Pro",
+      "nameTh": "ทิกโก้ 8 โปร",
+      "slug": "tiggo-8-pro",
+      "brandEn": "Chery",
+      "brandTh": "เชอรี่",
+      "brandSlug": "chery",
+      "aliases": [
+        "Tiggo 8 Pro",
+        "tiggo-8-pro",
+        "ทิกโก้ 8 โปร"
+      ],
+      "searchQueries": [
+        "Chery Tiggo 8 Pro",
+        "เชอรี่ Tiggo 8 Pro",
+        "เชอรี่ ทิกโก้ 8 โปร",
+        "เชอรี่ ราคา",
+        "ทิกโก้ 8 โปร เปิดตัว",
+        "ทิกโก้ 8 โปร สเปก",
+        "ทิกโก้ 8 โปร รุ่นย่อย",
+        "ทิกโก้ 8 โปร 2026"
+      ]
+    },
+    "colorado": {
+      "nameEn": "Colorado",
+      "nameTh": "โคโลราโด",
+      "slug": "colorado",
+      "brandEn": "Chevrolet",
+      "brandTh": "เชฟโรเลต",
+      "brandSlug": "chevrolet",
+      "aliases": [
+        "Colorado",
+        "colorado",
+        "โคโลราโด"
+      ],
+      "searchQueries": [
+        "Chevrolet Colorado",
+        "เชฟโรเลต Colorado",
+        "เชฟโรเลต โคโลราโด",
+        "เชฟโรเลต ราคา",
+        "โคโลราโด เปิดตัว",
+        "โคโลราโด สเปก",
+        "โคโลราโด รุ่นย่อย",
+        "โคโลราโด 2026"
+      ]
+    },
+    "trailblazer": {
+      "nameEn": "Trailblazer",
+      "nameTh": "เทรลเบลเซอร์",
+      "slug": "trailblazer",
+      "brandEn": "Chevrolet",
+      "brandTh": "เชฟโรเลต",
+      "brandSlug": "chevrolet",
+      "aliases": [
+        "Trailblazer",
+        "trailblazer",
+        "เทรลเบลเซอร์"
+      ],
+      "searchQueries": [
+        "Chevrolet Trailblazer",
+        "เชฟโรเลต Trailblazer",
+        "เชฟโรเลต เทรลเบลเซอร์",
+        "เชฟโรเลต ราคา",
+        "เทรลเบลเซอร์ เปิดตัว",
+        "เทรลเบลเซอร์ สเปก",
+        "เทรลเบลเซอร์ รุ่นย่อย",
+        "เทรลเบลเซอร์ 2026"
+      ]
+    },
+    "z9gt": {
+      "nameEn": "Z9GT",
+      "nameTh": "แซด9จีที",
+      "slug": "z9gt",
+      "brandEn": "Denza",
+      "brandTh": "เดนซ่า",
+      "brandSlug": "denza",
+      "aliases": [
+        "Z9GT",
+        "z9gt",
+        "แซด9จีที"
+      ],
+      "searchQueries": [
+        "Denza Z9GT",
+        "เดนซ่า Z9GT",
+        "เดนซ่า แซด9จีที",
+        "เดนซ่า ราคา",
+        "แซด9จีที เปิดตัว",
+        "แซด9จีที สเปก",
+        "แซด9จีที รุ่นย่อย",
+        "แซด9จีที 2026"
+      ]
+    },
+    "everest": {
+      "nameEn": "Everest",
+      "nameTh": "เอเวอร์เรสต์",
+      "slug": "everest",
+      "brandEn": "Ford",
+      "brandTh": "ฟอร์ด",
+      "brandSlug": "ford",
+      "aliases": [
+        "Everest",
+        "everest",
+        "เอเวอร์เรสต์"
+      ],
+      "searchQueries": [
+        "Ford Everest",
+        "ฟอร์ด Everest",
+        "ฟอร์ด เอเวอร์เรสต์",
+        "ฟอร์ด ราคา",
+        "เอเวอร์เรสต์ เปิดตัว",
+        "เอเวอร์เรสต์ สเปก",
+        "เอเวอร์เรสต์ รุ่นย่อย",
+        "เอเวอร์เรสต์ 2026"
+      ]
+    },
+    "maverick": {
+      "nameEn": "Maverick",
+      "nameTh": "มาเวอริค",
+      "slug": "maverick",
+      "brandEn": "Ford",
+      "brandTh": "ฟอร์ด",
+      "brandSlug": "ford",
+      "aliases": [
+        "Maverick",
+        "maverick",
+        "มาเวอริค"
+      ],
+      "searchQueries": [
+        "Ford Maverick",
+        "ฟอร์ด Maverick",
+        "ฟอร์ด มาเวอริค",
+        "ฟอร์ด ราคา",
+        "มาเวอริค เปิดตัว",
+        "มาเวอริค สเปก",
+        "มาเวอริค รุ่นย่อย",
+        "มาเวอริค 2026"
+      ]
+    },
+    "ranger": {
+      "nameEn": "Ranger",
+      "nameTh": "เรนเจอร์",
+      "slug": "ranger",
+      "brandEn": "Ford",
+      "brandTh": "ฟอร์ด",
+      "brandSlug": "ford",
+      "aliases": [
+        "Ranger",
+        "ranger",
+        "เรนเจอร์"
+      ],
+      "searchQueries": [
+        "Ford Ranger",
+        "ฟอร์ด Ranger",
+        "ฟอร์ด เรนเจอร์",
+        "ฟอร์ด ราคา",
+        "เรนเจอร์ เปิดตัว",
+        "เรนเจอร์ สเปก",
+        "เรนเจอร์ รุ่นย่อย",
+        "เรนเจอร์ 2026"
+      ]
+    },
+    "territory": {
+      "nameEn": "Territory",
+      "nameTh": "เทร์ริทอรี่",
+      "slug": "territory",
+      "brandEn": "Ford",
+      "brandTh": "ฟอร์ด",
+      "brandSlug": "ford",
+      "aliases": [
+        "Territory",
+        "territory",
+        "เทร์ริทอรี่"
+      ],
+      "searchQueries": [
+        "Ford Territory",
+        "ฟอร์ด Territory",
+        "ฟอร์ด เทร์ริทอรี่",
+        "ฟอร์ด ราคา",
+        "เทร์ริทอรี่ เปิดตัว",
+        "เทร์ริทอรี่ สเปก",
+        "เทร์ริทอรี่ รุ่นย่อย",
+        "เทร์ริทอรี่ 2026"
+      ]
+    },
+    "ex5": {
+      "nameEn": "EX5",
+      "nameTh": "อีเอ็กซ์5",
+      "slug": "ex5",
+      "brandEn": "Geely",
+      "brandTh": "จีลี่",
+      "brandSlug": "geely",
+      "aliases": [
+        "EX5",
+        "ex5",
+        "อีเอ็กซ์5"
+      ],
+      "searchQueries": [
+        "Geely EX5",
+        "จีลี่ EX5",
+        "จีลี่ อีเอ็กซ์5",
+        "จีลี่ ราคา",
+        "อีเอ็กซ์5 เปิดตัว",
+        "อีเอ็กซ์5 สเปก",
+        "อีเอ็กซ์5 รุ่นย่อย",
+        "อีเอ็กซ์5 2026"
+      ]
+    },
+    "geely-ex5": {
+      "nameEn": "EX5",
+      "nameTh": "EX5",
+      "slug": "geely-ex5",
+      "brandEn": "Geely",
+      "brandTh": "จีลี่",
+      "brandSlug": "geely",
+      "aliases": [
+        "EX5",
+        "geely-ex5"
+      ],
+      "searchQueries": [
+        "Geely EX5",
+        "จีลี่ EX5",
+        "จีลี่ ราคา",
+        "EX5 เปิดตัว",
+        "EX5 สเปก",
+        "EX5 รุ่นย่อย",
+        "EX5 2026"
+      ]
+    },
+    "ex2": {
+      "nameEn": "Geely EX2",
+      "nameTh": "Geely EX2",
+      "slug": "ex2",
+      "brandEn": "Geely",
+      "brandTh": "จีลี่",
+      "brandSlug": "geely",
+      "aliases": [
+        "Geely EX2",
+        "ex2"
+      ],
+      "searchQueries": [
+        "Geely Geely EX2",
+        "จีลี่ Geely EX2",
+        "จีลี่ ราคา",
+        "Geely EX2 เปิดตัว",
+        "Geely EX2 สเปก",
+        "Geely EX2 รุ่นย่อย",
+        "Geely EX2 2026"
+      ]
+    },
+    "haval-h6": {
+      "nameEn": "Haval H6",
+      "nameTh": "ฮาลาล เอช6",
+      "slug": "haval-h6",
+      "brandEn": "GWM",
+      "brandTh": "จีดับบลิวเอ็ม",
+      "brandSlug": "gwm",
+      "aliases": [
+        "Haval H6",
+        "haval-h6",
+        "ฮาลาล เอช6"
+      ],
+      "searchQueries": [
+        "GWM Haval H6",
+        "จีดับบลิวเอ็ม Haval H6",
+        "จีดับบลิวเอ็ม ฮาลาล เอช6",
+        "จีดับบลิวเอ็ม ราคา",
+        "ฮาลาล เอช6 เปิดตัว",
+        "ฮาลาล เอช6 สเปก",
+        "ฮาลาล เอช6 รุ่นย่อย",
+        "ฮาลาล เอช6 2026"
+      ]
+    },
+    "haval-jolion": {
+      "nameEn": "Haval Jolion",
+      "nameTh": "ฮาลาล โจลión",
+      "slug": "haval-jolion",
+      "brandEn": "GWM",
+      "brandTh": "จีดับบลิวเอ็ม",
+      "brandSlug": "gwm",
+      "aliases": [
+        "Haval Jolion",
+        "haval-jolion",
+        "ฮาลาล โจลión"
+      ],
+      "searchQueries": [
+        "GWM Haval Jolion",
+        "จีดับบลิวเอ็ม Haval Jolion",
+        "จีดับบลิวเอ็ม ฮาลาล โจลión",
+        "จีดับบลิวเอ็ม ราคา",
+        "ฮาลาล โจลión เปิดตัว",
+        "ฮาลาล โจลión สเปก",
+        "ฮาลาล โจลión รุ่นย่อย",
+        "ฮาลาล โจลión 2026"
+      ]
+    },
+    "ora-07": {
+      "nameEn": "Ora 07",
+      "nameTh": "ออร่า 07",
+      "slug": "ora-07",
+      "brandEn": "GWM",
+      "brandTh": "จีดับบลิวเอ็ม",
+      "brandSlug": "gwm",
+      "aliases": [
+        "Ora 07",
+        "ora-07",
+        "ออร่า 07"
+      ],
+      "searchQueries": [
+        "GWM Ora 07",
+        "จีดับบลิวเอ็ม Ora 07",
+        "จีดับบลิวเอ็ม ออร่า 07",
+        "จีดับบลิวเอ็ม ราคา",
+        "ออร่า 07 เปิดตัว",
+        "ออร่า 07 สเปก",
+        "ออร่า 07 รุ่นย่อย",
+        "ออร่า 07 2026"
+      ]
+    },
+    "ora-good-cat": {
+      "nameEn": "Ora Good Cat",
+      "nameTh": "ออร่า กู๊ด แคท",
+      "slug": "ora-good-cat",
+      "brandEn": "GWM",
+      "brandTh": "จีดับบลิวเอ็ม",
+      "brandSlug": "gwm",
+      "aliases": [
+        "Ora Good Cat",
+        "ora-good-cat",
+        "ออร่า กู๊ด แคท"
+      ],
+      "searchQueries": [
+        "GWM Ora Good Cat",
+        "จีดับบลิวเอ็ม Ora Good Cat",
+        "จีดับบลิวเอ็ม ออร่า กู๊ด แคท",
+        "จีดับบลิวเอ็ม ราคา",
+        "ออร่า กู๊ด แคท เปิดตัว",
+        "ออร่า กู๊ด แคท สเปก",
+        "ออร่า กู๊ด แคท รุ่นย่อย",
+        "ออร่า กู๊ด แคท 2026"
+      ]
+    },
+    "tank-300": {
+      "nameEn": "Tank 300",
+      "nameTh": "แทงค์ 300",
+      "slug": "tank-300",
+      "brandEn": "GWM",
+      "brandTh": "จีดับบลิวเอ็ม",
+      "brandSlug": "gwm",
+      "aliases": [
+        "Tank 300",
+        "tank-300",
+        "แทงค์ 300"
+      ],
+      "searchQueries": [
+        "GWM Tank 300",
+        "จีดับบลิวเอ็ม Tank 300",
+        "จีดับบลิวเอ็ม แทงค์ 300",
+        "จีดับบลิวเอ็ม ราคา",
+        "แทงค์ 300 เปิดตัว",
+        "แทงค์ 300 สเปก",
+        "แทงค์ 300 รุ่นย่อย",
+        "แทงค์ 300 2026"
+      ]
+    },
+    "tank-500": {
+      "nameEn": "Tank 500",
+      "nameTh": "แทงค์ 500",
+      "slug": "tank-500",
+      "brandEn": "GWM",
+      "brandTh": "จีดับบลิวเอ็ม",
+      "brandSlug": "gwm",
+      "aliases": [
+        "Tank 500",
+        "tank-500",
+        "แทงค์ 500"
+      ],
+      "searchQueries": [
+        "GWM Tank 500",
+        "จีดับบลิวเอ็ม Tank 500",
+        "จีดับบลิวเอ็ม แทงค์ 500",
+        "จีดับบลิวเอ็ม ราคา",
+        "แทงค์ 500 เปิดตัว",
+        "แทงค์ 500 สเปก",
+        "แทงค์ 500 รุ่นย่อย",
+        "แทงค์ 500 2026"
+      ]
+    },
+    "honda-accord": {
+      "nameEn": "Accord",
+      "nameTh": "ออคคอร์ด",
+      "slug": "honda-accord",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "Accord",
+        "honda-accord",
+        "ออคคอร์ด"
+      ],
+      "searchQueries": [
+        "Honda Accord",
+        "ฮอนด้า Accord",
+        "ฮอนด้า ออคคอร์ด",
+        "ฮอนด้า ราคา",
+        "ออคคอร์ด เปิดตัว",
+        "ออคคอร์ด สเปก",
+        "ออคคอร์ด รุ่นย่อย",
+        "ออคคอร์ด 2026"
+      ]
+    },
+    "honda-br-v": {
+      "nameEn": "BR-V",
+      "nameTh": "บีอาร์-วี",
+      "slug": "honda-br-v",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "BR-V",
+        "honda-br-v",
+        "บีอาร์-วี"
+      ],
+      "searchQueries": [
+        "Honda BR-V",
+        "ฮอนด้า BR-V",
+        "ฮอนด้า บีอาร์-วี",
+        "ฮอนด้า ราคา",
+        "บีอาร์-วี เปิดตัว",
+        "บีอาร์-วี สเปก",
+        "บีอาร์-วี รุ่นย่อย",
+        "บีอาร์-วี 2026"
+      ]
+    },
+    "city": {
+      "nameEn": "City",
+      "nameTh": "ซิตี้",
+      "slug": "city",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "City",
+        "city",
+        "ซิตี้"
+      ],
+      "searchQueries": [
+        "Honda City",
+        "ฮอนด้า City",
+        "ฮอนด้า ซิตี้",
+        "ฮอนด้า ราคา",
+        "ซิตี้ เปิดตัว",
+        "ซิตี้ สเปก",
+        "ซิตี้ รุ่นย่อย",
+        "ซิตี้ 2026"
+      ]
+    },
+    "city-hatchback": {
+      "nameEn": "City Hatchback",
+      "nameTh": "ซิตี้ แฮทช์แบ็ก",
+      "slug": "city-hatchback",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "City Hatchback",
+        "city-hatchback",
+        "ซิตี้ แฮทช์แบ็ก"
+      ],
+      "searchQueries": [
+        "Honda City Hatchback",
+        "ฮอนด้า City Hatchback",
+        "ฮอนด้า ซิตี้ แฮทช์แบ็ก",
+        "ฮอนด้า ราคา",
+        "ซิตี้ แฮทช์แบ็ก เปิดตัว",
+        "ซิตี้ แฮทช์แบ็ก สเปก",
+        "ซิตี้ แฮทช์แบ็ก รุ่นย่อย",
+        "ซิตี้ แฮทช์แบ็ก 2026"
+      ]
+    },
+    "honda-civic": {
+      "nameEn": "Civic",
+      "nameTh": "ซิวิค",
+      "slug": "honda-civic",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "Civic",
+        "honda-civic",
+        "ซิวิค"
+      ],
+      "searchQueries": [
+        "Honda Civic",
+        "ฮอนด้า Civic",
+        "ฮอนด้า ซิวิค",
+        "ฮอนด้า ราคา",
+        "ซิวิค เปิดตัว",
+        "ซิวิค สเปก",
+        "ซิวิค รุ่นย่อย",
+        "ซิวิค 2026"
+      ]
+    },
+    "civic-type-r": {
+      "nameEn": "Civic Type R",
+      "nameTh": "ซีวิค ไทป์ อาร์",
+      "slug": "civic-type-r",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "Civic Type R",
+        "civic-type-r",
+        "ซีวิค ไทป์ อาร์"
+      ],
+      "searchQueries": [
+        "Honda Civic Type R",
+        "ฮอนด้า Civic Type R",
+        "ฮอนด้า ซีวิค ไทป์ อาร์",
+        "ฮอนด้า ราคา",
+        "ซีวิค ไทป์ อาร์ เปิดตัว",
+        "ซีวิค ไทป์ อาร์ สเปก",
+        "ซีวิค ไทป์ อาร์ รุ่นย่อย",
+        "ซีวิค ไทป์ อาร์ 2026"
+      ]
+    },
+    "honda-cr-v": {
+      "nameEn": "CR-V",
+      "nameTh": "ซีอาร์-วี",
+      "slug": "honda-cr-v",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "CR-V",
+        "honda-cr-v",
+        "ซีอาร์-วี"
+      ],
+      "searchQueries": [
+        "Honda CR-V",
+        "ฮอนด้า CR-V",
+        "ฮอนด้า ซีอาร์-วี",
+        "ฮอนด้า ราคา",
+        "ซีอาร์-วี เปิดตัว",
+        "ซีอาร์-วี สเปก",
+        "ซีอาร์-วี รุ่นย่อย",
+        "ซีอาร์-วี 2026"
+      ]
+    },
+    "honda-en2": {
+      "nameEn": "e:N2",
+      "nameTh": "อี:เอ็น 2",
+      "slug": "honda-en2",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "e:N2",
+        "honda-en2",
+        "อี:เอ็น 2"
+      ],
+      "searchQueries": [
+        "Honda e:N2",
+        "ฮอนด้า e:N2",
+        "ฮอนด้า อี:เอ็น 2",
+        "ฮอนด้า ราคา",
+        "อี:เอ็น 2 เปิดตัว",
+        "อี:เอ็น 2 สเปก",
+        "อี:เอ็น 2 รุ่นย่อย",
+        "อี:เอ็น 2 2026"
+      ]
+    },
+    "honda-hr-v": {
+      "nameEn": "HR-V",
+      "nameTh": "เอชอาร์-วี",
+      "slug": "honda-hr-v",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "HR-V",
+        "honda-hr-v",
+        "เอชอาร์-วี"
+      ],
+      "searchQueries": [
+        "Honda HR-V",
+        "ฮอนด้า HR-V",
+        "ฮอนด้า เอชอาร์-วี",
+        "ฮอนด้า ราคา",
+        "เอชอาร์-วี เปิดตัว",
+        "เอชอาร์-วี สเปก",
+        "เอชอาร์-วี รุ่นย่อย",
+        "เอชอาร์-วี 2026"
+      ]
+    },
+    "super-one": {
+      "nameEn": "Super-ONE",
+      "nameTh": "ซุปเปอร์-วัน",
+      "slug": "super-one",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "Super-ONE",
+        "super-one",
+        "ซุปเปอร์-วัน"
+      ],
+      "searchQueries": [
+        "Honda Super-ONE",
+        "ฮอนด้า Super-ONE",
+        "ฮอนด้า ซุปเปอร์-วัน",
+        "ฮอนด้า ราคา",
+        "ซุปเปอร์-วัน เปิดตัว",
+        "ซุปเปอร์-วัน สเปก",
+        "ซุปเปอร์-วัน รุ่นย่อย",
+        "ซุปเปอร์-วัน 2026"
+      ]
+    },
+    "honda-wr-v": {
+      "nameEn": "WR-V",
+      "nameTh": "ดับเบิลยูอาร์-วี",
+      "slug": "honda-wr-v",
+      "brandEn": "Honda",
+      "brandTh": "ฮอนด้า",
+      "brandSlug": "honda",
+      "aliases": [
+        "WR-V",
+        "honda-wr-v",
+        "ดับเบิลยูอาร์-วี"
+      ],
+      "searchQueries": [
+        "Honda WR-V",
+        "ฮอนด้า WR-V",
+        "ฮอนด้า ดับเบิลยูอาร์-วี",
+        "ฮอนด้า ราคา",
+        "ดับเบิลยูอาร์-วี เปิดตัว",
+        "ดับเบิลยูอาร์-วี สเปก",
+        "ดับเบิลยูอาร์-วี รุ่นย่อย",
+        "ดับเบิลยูอาร์-วี 2026"
+      ]
+    },
+    "palisade": {
+      "nameEn": "Hyundai Palisade",
+      "nameTh": "Hyundai Palisade",
+      "slug": "palisade",
+      "brandEn": "Hyundai",
+      "brandTh": "ฮุนได",
+      "brandSlug": "hyundai",
+      "aliases": [
+        "Hyundai Palisade",
+        "palisade"
+      ],
+      "searchQueries": [
+        "Hyundai Hyundai Palisade",
+        "ฮุนได Hyundai Palisade",
+        "ฮุนได ราคา",
+        "Hyundai Palisade เปิดตัว",
+        "Hyundai Palisade สเปก",
+        "Hyundai Palisade รุ่นย่อย",
+        "Hyundai Palisade 2026"
+      ]
+    },
+    "hyundai-ioniq-5": {
+      "nameEn": "Ioniq 5",
+      "nameTh": "ไอออนิก 5",
+      "slug": "hyundai-ioniq-5",
+      "brandEn": "Hyundai",
+      "brandTh": "ฮุนได",
+      "brandSlug": "hyundai",
+      "aliases": [
+        "Ioniq 5",
+        "hyundai-ioniq-5",
+        "ไอออนิก 5"
+      ],
+      "searchQueries": [
+        "Hyundai Ioniq 5",
+        "ฮุนได Ioniq 5",
+        "ฮุนได ไอออนิก 5",
+        "ฮุนได ราคา",
+        "ไอออนิก 5 เปิดตัว",
+        "ไอออนิก 5 สเปก",
+        "ไอออนิก 5 รุ่นย่อย",
+        "ไอออนิก 5 2026"
+      ]
+    },
+    "hyundai-santa-fe": {
+      "nameEn": "Santa Fe",
+      "nameTh": "ซานต้า ฟี",
+      "slug": "hyundai-santa-fe",
+      "brandEn": "Hyundai",
+      "brandTh": "ฮุนได",
+      "brandSlug": "hyundai",
+      "aliases": [
+        "Santa Fe",
+        "hyundai-santa-fe",
+        "ซานต้า ฟี"
+      ],
+      "searchQueries": [
+        "Hyundai Santa Fe",
+        "ฮุนได Santa Fe",
+        "ฮุนได ซานต้า ฟี",
+        "ฮุนได ราคา",
+        "ซานต้า ฟี เปิดตัว",
+        "ซานต้า ฟี สเปก",
+        "ซานต้า ฟี รุ่นย่อย",
+        "ซานต้า ฟี 2026"
+      ]
+    },
+    "stargazer": {
+      "nameEn": "Stargazer",
+      "nameTh": "สตาร์เกเซอร์",
+      "slug": "stargazer",
+      "brandEn": "Hyundai",
+      "brandTh": "ฮุนได",
+      "brandSlug": "hyundai",
+      "aliases": [
+        "Stargazer",
+        "stargazer",
+        "สตาร์เกเซอร์"
+      ],
+      "searchQueries": [
+        "Hyundai Stargazer",
+        "ฮุนได Stargazer",
+        "ฮุนได สตาร์เกเซอร์",
+        "ฮุนได ราคา",
+        "สตาร์เกเซอร์ เปิดตัว",
+        "สตาร์เกเซอร์ สเปก",
+        "สตาร์เกเซอร์ รุ่นย่อย",
+        "สตาร์เกเซอร์ 2026"
+      ]
+    },
+    "d-max": {
+      "nameEn": "D-Max",
+      "nameTh": "ดี-แม็กซ์",
+      "slug": "d-max",
+      "brandEn": "Isuzu",
+      "brandTh": "อีซูซุ",
+      "brandSlug": "isuzu",
+      "aliases": [
+        "D-Max",
+        "d-max",
+        "ดี-แม็กซ์"
+      ],
+      "searchQueries": [
+        "Isuzu D-Max",
+        "อีซูซุ D-Max",
+        "อีซูซุ ดี-แม็กซ์",
+        "อีซูซุ ราคา",
+        "ดี-แม็กซ์ เปิดตัว",
+        "ดี-แม็กซ์ สเปก",
+        "ดี-แม็กซ์ รุ่นย่อย",
+        "ดี-แม็กซ์ 2026"
+      ]
+    },
+    "mu-x": {
+      "nameEn": "MU-X",
+      "nameTh": "เอ็มยู-เอ็กซ์",
+      "slug": "mu-x",
+      "brandEn": "Isuzu",
+      "brandTh": "อีซูซุ",
+      "brandSlug": "isuzu",
+      "aliases": [
+        "MU-X",
+        "mu-x",
+        "เอ็มยู-เอ็กซ์"
+      ],
+      "searchQueries": [
+        "Isuzu MU-X",
+        "อีซูซุ MU-X",
+        "อีซูซุ เอ็มยู-เอ็กซ์",
+        "อีซูซุ ราคา",
+        "เอ็มยู-เอ็กซ์ เปิดตัว",
+        "เอ็มยู-เอ็กซ์ สเปก",
+        "เอ็มยู-เอ็กซ์ รุ่นย่อย",
+        "เอ็มยู-เอ็กซ์ 2026"
+      ]
+    },
+    "dashing": {
+      "nameEn": "Dashing",
+      "nameTh": "แดชชิง",
+      "slug": "dashing",
+      "brandEn": "Jetour",
+      "brandTh": "เจ็ททัวร์",
+      "brandSlug": "jetour",
+      "aliases": [
+        "Dashing",
+        "dashing",
+        "แดชชิง"
+      ],
+      "searchQueries": [
+        "Jetour Dashing",
+        "เจ็ททัวร์ Dashing",
+        "เจ็ททัวร์ แดชชิง",
+        "เจ็ททัวร์ ราคา",
+        "แดชชิง เปิดตัว",
+        "แดชชิง สเปก",
+        "แดชชิง รุ่นย่อย",
+        "แดชชิง 2026"
+      ]
+    },
+    "t2": {
+      "nameEn": "T2",
+      "nameTh": "ที2",
+      "slug": "t2",
+      "brandEn": "Jetour",
+      "brandTh": "เจ็ททัวร์",
+      "brandSlug": "jetour",
+      "aliases": [
+        "T2",
+        "t2",
+        "ที2"
+      ],
+      "searchQueries": [
+        "Jetour T2",
+        "เจ็ททัวร์ T2",
+        "เจ็ททัวร์ ที2",
+        "เจ็ททัวร์ ราคา",
+        "ที2 เปิดตัว",
+        "ที2 สเปก",
+        "ที2 รุ่นย่อย",
+        "ที2 2026"
+      ]
+    },
+    "korando": {
+      "nameEn": "Korando",
+      "nameTh": "โคแรนโด",
+      "slug": "korando",
+      "brandEn": "KG Mobility",
+      "brandTh": "เคจี โมบิลิตี้",
+      "brandSlug": "kg-mobility",
+      "aliases": [
+        "Korando",
+        "korando",
+        "โคแรนโด"
+      ],
+      "searchQueries": [
+        "KG Mobility Korando",
+        "เคจี โมบิลิตี้ Korando",
+        "เคจี โมบิลิตี้ โคแรนโด",
+        "เคจี โมบิลิตี้ ราคา",
+        "โคแรนโด เปิดตัว",
+        "โคแรนโด สเปก",
+        "โคแรนโด รุ่นย่อย",
+        "โคแรนโด 2026"
+      ]
+    },
+    "torres": {
+      "nameEn": "Torres",
+      "nameTh": "ทอร์เรส",
+      "slug": "torres",
+      "brandEn": "KG Mobility",
+      "brandTh": "เคจี โมบิลิตี้",
+      "brandSlug": "kg-mobility",
+      "aliases": [
+        "Torres",
+        "torres",
+        "ทอร์เรส"
+      ],
+      "searchQueries": [
+        "KG Mobility Torres",
+        "เคจี โมบิลิตี้ Torres",
+        "เคจี โมบิลิตี้ ทอร์เรส",
+        "เคจี โมบิลิตี้ ราคา",
+        "ทอร์เรส เปิดตัว",
+        "ทอร์เรส สเปก",
+        "ทอร์เรส รุ่นย่อย",
+        "ทอร์เรส 2026"
+      ]
+    },
+    "carnival": {
+      "nameEn": "Carnival",
+      "nameTh": "คาร์นิวัล",
+      "slug": "carnival",
+      "brandEn": "Kia",
+      "brandTh": "เกีย",
+      "brandSlug": "kia",
+      "aliases": [
+        "Carnival",
+        "carnival",
+        "คาร์นิวัล"
+      ],
+      "searchQueries": [
+        "Kia Carnival",
+        "เกีย Carnival",
+        "เกีย คาร์นิวัล",
+        "เกีย ราคา",
+        "คาร์นิวัล เปิดตัว",
+        "คาร์นิวัล สเปก",
+        "คาร์นิวัล รุ่นย่อย",
+        "คาร์นิวัล 2026"
+      ]
+    },
+    "ev6": {
+      "nameEn": "EV6",
+      "nameTh": "อีวี6",
+      "slug": "ev6",
+      "brandEn": "Kia",
+      "brandTh": "เกีย",
+      "brandSlug": "kia",
+      "aliases": [
+        "EV6",
+        "ev6",
+        "อีวี6"
+      ],
+      "searchQueries": [
+        "Kia EV6",
+        "เกีย EV6",
+        "เกีย อีวี6",
+        "เกีย ราคา",
+        "อีวี6 เปิดตัว",
+        "อีวี6 สเปก",
+        "อีวี6 รุ่นย่อย",
+        "อีวี6 2026"
+      ]
+    },
+    "ev9": {
+      "nameEn": "EV9",
+      "nameTh": "อีวี9",
+      "slug": "ev9",
+      "brandEn": "Kia",
+      "brandTh": "เกีย",
+      "brandSlug": "kia",
+      "aliases": [
+        "EV9",
+        "ev9",
+        "อีวี9"
+      ],
+      "searchQueries": [
+        "Kia EV9",
+        "เกีย EV9",
+        "เกีย อีวี9",
+        "เกีย ราคา",
+        "อีวี9 เปิดตัว",
+        "อีวี9 สเปก",
+        "อีวี9 รุ่นย่อย",
+        "อีวี9 2026"
+      ]
+    },
+    "sonet": {
+      "nameEn": "Sonet",
+      "nameTh": "โซเน็ต",
+      "slug": "sonet",
+      "brandEn": "Kia",
+      "brandTh": "เกีย",
+      "brandSlug": "kia",
+      "aliases": [
+        "Sonet",
+        "sonet",
+        "โซเน็ต"
+      ],
+      "searchQueries": [
+        "Kia Sonet",
+        "เกีย Sonet",
+        "เกีย โซเน็ต",
+        "เกีย ราคา",
+        "โซเน็ต เปิดตัว",
+        "โซเน็ต สเปก",
+        "โซเน็ต รุ่นย่อย",
+        "โซเน็ต 2026"
+      ]
+    },
+    "sportage": {
+      "nameEn": "Sportage",
+      "nameTh": "สปอร์เทจ",
+      "slug": "sportage",
+      "brandEn": "Kia",
+      "brandTh": "เกีย",
+      "brandSlug": "kia",
+      "aliases": [
+        "Sportage",
+        "sportage",
+        "สปอร์เทจ"
+      ],
+      "searchQueries": [
+        "Kia Sportage",
+        "เกีย Sportage",
+        "เกีย สปอร์เทจ",
+        "เกีย ราคา",
+        "สปอร์เทจ เปิดตัว",
+        "สปอร์เทจ สเปก",
+        "สปอร์เทจ รุ่นย่อย",
+        "สปอร์เทจ 2026"
+      ]
+    },
+    "d90": {
+      "nameEn": "D90",
+      "nameTh": "ดี90",
+      "slug": "d90",
+      "brandEn": "LDV",
+      "brandTh": "เอลดีวี",
+      "brandSlug": "ldv",
+      "aliases": [
+        "D90",
+        "d90",
+        "ดี90"
+      ],
+      "searchQueries": [
+        "LDV D90",
+        "เอลดีวี D90",
+        "เอลดีวี ดี90",
+        "เอลดีวี ราคา",
+        "ดี90 เปิดตัว",
+        "ดี90 สเปก",
+        "ดี90 รุ่นย่อย",
+        "ดี90 2026"
+      ]
+    },
+    "nx": {
+      "nameEn": "NX",
+      "nameTh": "เอ็นเอ็กซ์",
+      "slug": "nx",
+      "brandEn": "Lexus",
+      "brandTh": "เล็กซัส",
+      "brandSlug": "lexus",
+      "aliases": [
+        "NX",
+        "nx",
+        "เอ็นเอ็กซ์"
+      ],
+      "searchQueries": [
+        "Lexus NX",
+        "เล็กซัส NX",
+        "เล็กซัส เอ็นเอ็กซ์",
+        "เล็กซัส ราคา",
+        "เอ็นเอ็กซ์ เปิดตัว",
+        "เอ็นเอ็กซ์ สเปก",
+        "เอ็นเอ็กซ์ รุ่นย่อย",
+        "เอ็นเอ็กซ์ 2026"
+      ]
+    },
+    "rx": {
+      "nameEn": "RX",
+      "nameTh": "อาร์เอ็กซ์",
+      "slug": "rx",
+      "brandEn": "Lexus",
+      "brandTh": "เล็กซัส",
+      "brandSlug": "lexus",
+      "aliases": [
+        "RX",
+        "rx",
+        "อาร์เอ็กซ์"
+      ],
+      "searchQueries": [
+        "Lexus RX",
+        "เล็กซัส RX",
+        "เล็กซัส อาร์เอ็กซ์",
+        "เล็กซัส ราคา",
+        "อาร์เอ็กซ์ เปิดตัว",
+        "อาร์เอ็กซ์ สเปก",
+        "อาร์เอ็กซ์ รุ่นย่อย",
+        "อาร์เอ็กซ์ 2026"
+      ]
+    },
+    "rz": {
+      "nameEn": "RZ",
+      "nameTh": "อาร์แซด",
+      "slug": "rz",
+      "brandEn": "Lexus",
+      "brandTh": "เล็กซัส",
+      "brandSlug": "lexus",
+      "aliases": [
+        "RZ",
+        "rz",
+        "อาร์แซด"
+      ],
+      "searchQueries": [
+        "Lexus RZ",
+        "เล็กซัส RZ",
+        "เล็กซัส อาร์แซด",
+        "เล็กซัส ราคา",
+        "อาร์แซด เปิดตัว",
+        "อาร์แซด สเปก",
+        "อาร์แซด รุ่นย่อย",
+        "อาร์แซด 2026"
+      ]
+    },
+    "mazda-6e": {
+      "nameEn": "6e",
+      "nameTh": "6e",
+      "slug": "mazda-6e",
+      "brandEn": "Mazda",
+      "brandTh": "มาสด้า",
+      "brandSlug": "mazda",
+      "aliases": [
+        "6e",
+        "mazda-6e"
+      ],
+      "searchQueries": [
+        "Mazda 6e",
+        "มาสด้า 6e",
+        "มาสด้า ราคา",
+        "6e เปิดตัว",
+        "6e สเปก",
+        "6e รุ่นย่อย",
+        "6e 2026"
+      ]
+    },
+    "cx-3": {
+      "nameEn": "CX-3",
+      "nameTh": "ซีเอ็กซ์-3",
+      "slug": "cx-3",
+      "brandEn": "Mazda",
+      "brandTh": "มาสด้า",
+      "brandSlug": "mazda",
+      "aliases": [
+        "CX-3",
+        "cx-3",
+        "ซีเอ็กซ์-3"
+      ],
+      "searchQueries": [
+        "Mazda CX-3",
+        "มาสด้า CX-3",
+        "มาสด้า ซีเอ็กซ์-3",
+        "มาสด้า ราคา",
+        "ซีเอ็กซ์-3 เปิดตัว",
+        "ซีเอ็กซ์-3 สเปก",
+        "ซีเอ็กซ์-3 รุ่นย่อย",
+        "ซีเอ็กซ์-3 2026"
+      ]
+    },
+    "cx-30": {
+      "nameEn": "CX-30",
+      "nameTh": "ซีเอ็กซ์-30",
+      "slug": "cx-30",
+      "brandEn": "Mazda",
+      "brandTh": "มาสด้า",
+      "brandSlug": "mazda",
+      "aliases": [
+        "CX-30",
+        "cx-30",
+        "ซีเอ็กซ์-30"
+      ],
+      "searchQueries": [
+        "Mazda CX-30",
+        "มาสด้า CX-30",
+        "มาสด้า ซีเอ็กซ์-30",
+        "มาสด้า ราคา",
+        "ซีเอ็กซ์-30 เปิดตัว",
+        "ซีเอ็กซ์-30 สเปก",
+        "ซีเอ็กซ์-30 รุ่นย่อย",
+        "ซีเอ็กซ์-30 2026"
+      ]
+    },
+    "cx-5": {
+      "nameEn": "CX-5",
+      "nameTh": "ซีเอ็กซ์-5",
+      "slug": "cx-5",
+      "brandEn": "Mazda",
+      "brandTh": "มาสด้า",
+      "brandSlug": "mazda",
+      "aliases": [
+        "CX-5",
+        "cx-5",
+        "ซีเอ็กซ์-5"
+      ],
+      "searchQueries": [
+        "Mazda CX-5",
+        "มาสด้า CX-5",
+        "มาสด้า ซีเอ็กซ์-5",
+        "มาสด้า ราคา",
+        "ซีเอ็กซ์-5 เปิดตัว",
+        "ซีเอ็กซ์-5 สเปก",
+        "ซีเอ็กซ์-5 รุ่นย่อย",
+        "ซีเอ็กซ์-5 2026"
+      ]
+    },
+    "cx-80": {
+      "nameEn": "CX-80",
+      "nameTh": "ซีเอ็กซ์-80",
+      "slug": "cx-80",
+      "brandEn": "Mazda",
+      "brandTh": "มาสด้า",
+      "brandSlug": "mazda",
+      "aliases": [
+        "CX-80",
+        "cx-80",
+        "ซีเอ็กซ์-80"
+      ],
+      "searchQueries": [
+        "Mazda CX-80",
+        "มาสด้า CX-80",
+        "มาสด้า ซีเอ็กซ์-80",
+        "มาสด้า ราคา",
+        "ซีเอ็กซ์-80 เปิดตัว",
+        "ซีเอ็กซ์-80 สเปก",
+        "ซีเอ็กซ์-80 รุ่นย่อย",
+        "ซีเอ็กซ์-80 2026"
+      ]
+    },
+    "mazda2": {
+      "nameEn": "Mazda2",
+      "nameTh": "มาสด้า2",
+      "slug": "mazda2",
+      "brandEn": "Mazda",
+      "brandTh": "มาสด้า",
+      "brandSlug": "mazda",
+      "aliases": [
+        "Mazda2",
+        "mazda2",
+        "มาสด้า2"
+      ],
+      "searchQueries": [
+        "Mazda Mazda2",
+        "มาสด้า Mazda2",
+        "มาสด้า มาสด้า2",
+        "มาสด้า ราคา",
+        "มาสด้า2 เปิดตัว",
+        "มาสด้า2 สเปก",
+        "มาสด้า2 รุ่นย่อย",
+        "มาสด้า2 2026"
+      ]
+    },
+    "mazda3": {
+      "nameEn": "Mazda3",
+      "nameTh": "มาสด้า3",
+      "slug": "mazda3",
+      "brandEn": "Mazda",
+      "brandTh": "มาสด้า",
+      "brandSlug": "mazda",
+      "aliases": [
+        "Mazda3",
+        "mazda3",
+        "มาสด้า3"
+      ],
+      "searchQueries": [
+        "Mazda Mazda3",
+        "มาสด้า Mazda3",
+        "มาสด้า มาสด้า3",
+        "มาสด้า ราคา",
+        "มาสด้า3 เปิดตัว",
+        "มาสด้า3 สเปก",
+        "มาสด้า3 รุ่นย่อย",
+        "มาสด้า3 2026"
+      ]
+    },
+    "a-class": {
+      "nameEn": "A-Class",
+      "nameTh": "คลาส เอ",
+      "slug": "a-class",
+      "brandEn": "Mercedes-Benz",
+      "brandTh": "เมอร์เซเดส-เบนซ์",
+      "brandSlug": "mercedes-benz",
+      "aliases": [
+        "A-Class",
+        "a-class",
+        "คลาส เอ"
+      ],
+      "searchQueries": [
+        "Mercedes-Benz A-Class",
+        "เมอร์เซเดส-เบนซ์ A-Class",
+        "เมอร์เซเดส-เบนซ์ คลาส เอ",
+        "เมอร์เซเดส-เบนซ์ ราคา",
+        "คลาส เอ เปิดตัว",
+        "คลาส เอ สเปก",
+        "คลาส เอ รุ่นย่อย",
+        "คลาส เอ 2026"
+      ]
+    },
+    "c-class": {
+      "nameEn": "C-Class",
+      "nameTh": "คลาส ซี",
+      "slug": "c-class",
+      "brandEn": "Mercedes-Benz",
+      "brandTh": "เมอร์เซเดส-เบนซ์",
+      "brandSlug": "mercedes-benz",
+      "aliases": [
+        "C-Class",
+        "c-class",
+        "คลาส ซี"
+      ],
+      "searchQueries": [
+        "Mercedes-Benz C-Class",
+        "เมอร์เซเดส-เบนซ์ C-Class",
+        "เมอร์เซเดส-เบนซ์ คลาส ซี",
+        "เมอร์เซเดส-เบนซ์ ราคา",
+        "คลาส ซี เปิดตัว",
+        "คลาส ซี สเปก",
+        "คลาส ซี รุ่นย่อย",
+        "คลาส ซี 2026"
+      ]
+    },
+    "e-class": {
+      "nameEn": "E-Class",
+      "nameTh": "คลาส อี",
+      "slug": "e-class",
+      "brandEn": "Mercedes-Benz",
+      "brandTh": "เมอร์เซเดส-เบนซ์",
+      "brandSlug": "mercedes-benz",
+      "aliases": [
+        "E-Class",
+        "e-class",
+        "คลาส อี"
+      ],
+      "searchQueries": [
+        "Mercedes-Benz E-Class",
+        "เมอร์เซเดส-เบนซ์ E-Class",
+        "เมอร์เซเดส-เบนซ์ คลาส อี",
+        "เมอร์เซเดส-เบนซ์ ราคา",
+        "คลาส อี เปิดตัว",
+        "คลาส อี สเปก",
+        "คลาส อี รุ่นย่อย",
+        "คลาส อี 2026"
+      ]
+    },
+    "eqa": {
+      "nameEn": "EQA",
+      "nameTh": "อีคิวเอ",
+      "slug": "eqa",
+      "brandEn": "Mercedes-Benz",
+      "brandTh": "เมอร์เซเดส-เบนซ์",
+      "brandSlug": "mercedes-benz",
+      "aliases": [
+        "EQA",
+        "eqa",
+        "อีคิวเอ"
+      ],
+      "searchQueries": [
+        "Mercedes-Benz EQA",
+        "เมอร์เซเดส-เบนซ์ EQA",
+        "เมอร์เซเดส-เบนซ์ อีคิวเอ",
+        "เมอร์เซเดส-เบนซ์ ราคา",
+        "อีคิวเอ เปิดตัว",
+        "อีคิวเอ สเปก",
+        "อีคิวเอ รุ่นย่อย",
+        "อีคิวเอ 2026"
+      ]
+    },
+    "eqb": {
+      "nameEn": "EQB",
+      "nameTh": "อีคิวบี",
+      "slug": "eqb",
+      "brandEn": "Mercedes-Benz",
+      "brandTh": "เมอร์เซเดส-เบนซ์",
+      "brandSlug": "mercedes-benz",
+      "aliases": [
+        "EQB",
+        "eqb",
+        "อีคิวบี"
+      ],
+      "searchQueries": [
+        "Mercedes-Benz EQB",
+        "เมอร์เซเดส-เบนซ์ EQB",
+        "เมอร์เซเดส-เบนซ์ อีคิวบี",
+        "เมอร์เซเดส-เบนซ์ ราคา",
+        "อีคิวบี เปิดตัว",
+        "อีคิวบี สเปก",
+        "อีคิวบี รุ่นย่อย",
+        "อีคิวบี 2026"
+      ]
+    },
+    "gla": {
+      "nameEn": "GLA",
+      "nameTh": "จีแอลเอ",
+      "slug": "gla",
+      "brandEn": "Mercedes-Benz",
+      "brandTh": "เมอร์เซเดส-เบนซ์",
+      "brandSlug": "mercedes-benz",
+      "aliases": [
+        "GLA",
+        "gla",
+        "จีแอลเอ"
+      ],
+      "searchQueries": [
+        "Mercedes-Benz GLA",
+        "เมอร์เซเดส-เบนซ์ GLA",
+        "เมอร์เซเดส-เบนซ์ จีแอลเอ",
+        "เมอร์เซเดส-เบนซ์ ราคา",
+        "จีแอลเอ เปิดตัว",
+        "จีแอลเอ สเปก",
+        "จีแอลเอ รุ่นย่อย",
+        "จีแอลเอ 2026"
+      ]
+    },
+    "glc": {
+      "nameEn": "GLC",
+      "nameTh": "จีแอลซี",
+      "slug": "glc",
+      "brandEn": "Mercedes-Benz",
+      "brandTh": "เมอร์เซเดส-เบนซ์",
+      "brandSlug": "mercedes-benz",
+      "aliases": [
+        "GLC",
+        "glc",
+        "จีแอลซี"
+      ],
+      "searchQueries": [
+        "Mercedes-Benz GLC",
+        "เมอร์เซเดส-เบนซ์ GLC",
+        "เมอร์เซเดส-เบนซ์ จีแอลซี",
+        "เมอร์เซเดส-เบนซ์ ราคา",
+        "จีแอลซี เปิดตัว",
+        "จีแอลซี สเปก",
+        "จีแอลซี รุ่นย่อย",
+        "จีแอลซี 2026"
+      ]
+    },
+    "gle": {
+      "nameEn": "GLE",
+      "nameTh": "จีแอลอี",
+      "slug": "gle",
+      "brandEn": "Mercedes-Benz",
+      "brandTh": "เมอร์เซเดส-เบนซ์",
+      "brandSlug": "mercedes-benz",
+      "aliases": [
+        "GLE",
+        "gle",
+        "จีแอลอี"
+      ],
+      "searchQueries": [
+        "Mercedes-Benz GLE",
+        "เมอร์เซเดส-เบนซ์ GLE",
+        "เมอร์เซเดส-เบนซ์ จีแอลอี",
+        "เมอร์เซเดส-เบนซ์ ราคา",
+        "จีแอลอี เปิดตัว",
+        "จีแอลอี สเปก",
+        "จีแอลอี รุ่นย่อย",
+        "จีแอลอี 2026"
+      ]
+    },
+    "mg-cyberster": {
+      "nameEn": "CYBERSTER",
+      "nameTh": "ไซเบอร์สเตอร์",
+      "slug": "mg-cyberster",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "CYBERSTER",
+        "mg-cyberster",
+        "ไซเบอร์สเตอร์"
+      ],
+      "searchQueries": [
+        "MG CYBERSTER",
+        "เอ็มจี CYBERSTER",
+        "เอ็มจี ไซเบอร์สเตอร์",
+        "เอ็มจี ราคา",
+        "ไซเบอร์สเตอร์ เปิดตัว",
+        "ไซเบอร์สเตอร์ สเปก",
+        "ไซเบอร์สเตอร์ รุ่นย่อย",
+        "ไซเบอร์สเตอร์ 2026"
+      ]
+    },
+    "mg-ep": {
+      "nameEn": "EP Plus",
+      "nameTh": "อีพี พลัส",
+      "slug": "mg-ep",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "EP Plus",
+        "mg-ep",
+        "อีพี พลัส"
+      ],
+      "searchQueries": [
+        "MG EP Plus",
+        "เอ็มจี EP Plus",
+        "เอ็มจี อีพี พลัส",
+        "เอ็มจี ราคา",
+        "อีพี พลัส เปิดตัว",
+        "อีพี พลัส สเปก",
+        "อีพี พลัส รุ่นย่อย",
+        "อีพี พลัส 2026"
+      ]
+    },
+    "mg-es": {
+      "nameEn": "ES",
+      "nameTh": "อีเอส",
+      "slug": "mg-es",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "ES",
+        "mg-es",
+        "อีเอส"
+      ],
+      "searchQueries": [
+        "MG ES",
+        "เอ็มจี ES",
+        "เอ็มจี อีเอส",
+        "เอ็มจี ราคา",
+        "อีเอส เปิดตัว",
+        "อีเอส สเปก",
+        "อีเอส รุ่นย่อย",
+        "อีเอส 2026"
+      ]
+    },
+    "mg-extender": {
+      "nameEn": "EXTENDER",
+      "nameTh": "เอ็กซ์เตนเดอร์",
+      "slug": "mg-extender",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "EXTENDER",
+        "mg-extender",
+        "เอ็กซ์เตนเดอร์"
+      ],
+      "searchQueries": [
+        "MG EXTENDER",
+        "เอ็มจี EXTENDER",
+        "เอ็มจี เอ็กซ์เตนเดอร์",
+        "เอ็มจี ราคา",
+        "เอ็กซ์เตนเดอร์ เปิดตัว",
+        "เอ็กซ์เตนเดอร์ สเปก",
+        "เอ็กซ์เตนเดอร์ รุ่นย่อย",
+        "เอ็กซ์เตนเดอร์ 2026"
+      ]
+    },
+    "mg-hs-phev": {
+      "nameEn": "HS PHEV",
+      "nameTh": "เอชเอส",
+      "slug": "mg-hs-phev",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "HS PHEV",
+        "mg-hs-phev",
+        "เอชเอส"
+      ],
+      "searchQueries": [
+        "MG HS PHEV",
+        "เอ็มจี HS PHEV",
+        "เอ็มจี เอชเอส",
+        "เอ็มจี ราคา",
+        "เอชเอส เปิดตัว",
+        "เอชเอส สเปก",
+        "เอชเอส รุ่นย่อย",
+        "เอชเอส 2026"
+      ]
+    },
+    "mg-im5": {
+      "nameEn": "IM5",
+      "nameTh": "ไอเอ็ม 5",
+      "slug": "mg-im5",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "IM5",
+        "mg-im5",
+        "ไอเอ็ม 5"
+      ],
+      "searchQueries": [
+        "MG IM5",
+        "เอ็มจี IM5",
+        "เอ็มจี ไอเอ็ม 5",
+        "เอ็มจี ราคา",
+        "ไอเอ็ม 5 เปิดตัว",
+        "ไอเอ็ม 5 สเปก",
+        "ไอเอ็ม 5 รุ่นย่อย",
+        "ไอเอ็ม 5 2026"
+      ]
+    },
+    "mg-im6": {
+      "nameEn": "IM6",
+      "nameTh": "ไอเอ็ม 6",
+      "slug": "mg-im6",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "IM6",
+        "mg-im6",
+        "ไอเอ็ม 6"
+      ],
+      "searchQueries": [
+        "MG IM6",
+        "เอ็มจี IM6",
+        "เอ็มจี ไอเอ็ม 6",
+        "เอ็มจี ราคา",
+        "ไอเอ็ม 6 เปิดตัว",
+        "ไอเอ็ม 6 สเปก",
+        "ไอเอ็ม 6 รุ่นย่อย",
+        "ไอเอ็ม 6 2026"
+      ]
+    },
+    "mg-maxus7": {
+      "nameEn": "MAXUS 7",
+      "nameTh": "แม็กซัส 7",
+      "slug": "mg-maxus7",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "MAXUS 7",
+        "mg-maxus7",
+        "แม็กซัส 7"
+      ],
+      "searchQueries": [
+        "MG MAXUS 7",
+        "เอ็มจี MAXUS 7",
+        "เอ็มจี แม็กซัส 7",
+        "เอ็มจี ราคา",
+        "แม็กซัส 7 เปิดตัว",
+        "แม็กซัส 7 สเปก",
+        "แม็กซัส 7 รุ่นย่อย",
+        "แม็กซัส 7 2026"
+      ]
+    },
+    "mg-maxus9": {
+      "nameEn": "MAXUS 9",
+      "nameTh": "แม็กซัส 9",
+      "slug": "mg-maxus9",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "MAXUS 9",
+        "mg-maxus9",
+        "แม็กซัส 9"
+      ],
+      "searchQueries": [
+        "MG MAXUS 9",
+        "เอ็มจี MAXUS 9",
+        "เอ็มจี แม็กซัส 9",
+        "เอ็มจี ราคา",
+        "แม็กซัส 9 เปิดตัว",
+        "แม็กซัส 9 สเปก",
+        "แม็กซัส 9 รุ่นย่อย",
+        "แม็กซัส 9 2026"
+      ]
+    },
+    "mg3-hybrid": {
+      "nameEn": "MG3 HYBRID+",
+      "nameTh": "เอ็มจี 3",
+      "slug": "mg3-hybrid",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "MG3 HYBRID+",
+        "mg3-hybrid",
+        "เอ็มจี 3"
+      ],
+      "searchQueries": [
+        "MG MG3 HYBRID+",
+        "เอ็มจี MG3 HYBRID+",
+        "เอ็มจี เอ็มจี 3",
+        "เอ็มจี ราคา",
+        "เอ็มจี 3 เปิดตัว",
+        "เอ็มจี 3 สเปก",
+        "เอ็มจี 3 รุ่นย่อย",
+        "เอ็มจี 3 2026"
+      ]
+    },
+    "mg4": {
+      "nameEn": "MG4",
+      "nameTh": "เอ็มจี 4",
+      "slug": "mg4",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "MG4",
+        "mg4",
+        "เอ็มจี 4"
+      ],
+      "searchQueries": [
+        "MG MG4",
+        "เอ็มจี MG4",
+        "เอ็มจี เอ็มจี 4",
+        "เอ็มจี ราคา",
+        "เอ็มจี 4 เปิดตัว",
+        "เอ็มจี 4 สเปก",
+        "เอ็มจี 4 รุ่นย่อย",
+        "เอ็มจี 4 2026"
+      ]
+    },
+    "mg5": {
+      "nameEn": "MG5",
+      "nameTh": "เอ็มจี 5",
+      "slug": "mg5",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "MG5",
+        "mg5",
+        "เอ็มจี 5"
+      ],
+      "searchQueries": [
+        "MG MG5",
+        "เอ็มจี MG5",
+        "เอ็มจี เอ็มจี 5",
+        "เอ็มจี ราคา",
+        "เอ็มจี 5 เปิดตัว",
+        "เอ็มจี 5 สเปก",
+        "เอ็มจี 5 รุ่นย่อย",
+        "เอ็มจี 5 2026"
+      ]
+    },
+    "urban": {
+      "nameEn": "MG Urban",
+      "nameTh": "MG Urban",
+      "slug": "urban",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "MG Urban",
+        "urban"
+      ],
+      "searchQueries": [
+        "MG MG Urban",
+        "เอ็มจี MG Urban",
+        "เอ็มจี ราคา",
+        "MG Urban เปิดตัว",
+        "MG Urban สเปก",
+        "MG Urban รุ่นย่อย",
+        "MG Urban 2026"
+      ]
+    },
+    "mg-s5": {
+      "nameEn": "S5 EV PLUS",
+      "nameTh": "เอส 5",
+      "slug": "mg-s5",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "S5 EV PLUS",
+        "mg-s5",
+        "เอส 5"
+      ],
+      "searchQueries": [
+        "MG S5 EV PLUS",
+        "เอ็มจี S5 EV PLUS",
+        "เอ็มจี เอส 5",
+        "เอ็มจี ราคา",
+        "เอส 5 เปิดตัว",
+        "เอส 5 สเปก",
+        "เอส 5 รุ่นย่อย",
+        "เอส 5 2026"
+      ]
+    },
+    "mg-urban": {
+      "nameEn": "URBAN",
+      "nameTh": "เออร์บัน",
+      "slug": "mg-urban",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "URBAN",
+        "mg-urban",
+        "เออร์บัน"
+      ],
+      "searchQueries": [
+        "MG URBAN",
+        "เอ็มจี URBAN",
+        "เอ็มจี เออร์บัน",
+        "เอ็มจี ราคา",
+        "เออร์บัน เปิดตัว",
+        "เออร์บัน สเปก",
+        "เออร์บัน รุ่นย่อย",
+        "เออร์บัน 2026"
+      ]
+    },
+    "mg-vs-hev": {
+      "nameEn": "VS HEV",
+      "nameTh": "วีเอส",
+      "slug": "mg-vs-hev",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "VS HEV",
+        "mg-vs-hev",
+        "วีเอส"
+      ],
+      "searchQueries": [
+        "MG VS HEV",
+        "เอ็มจี VS HEV",
+        "เอ็มจี วีเอส",
+        "เอ็มจี ราคา",
+        "วีเอส เปิดตัว",
+        "วีเอส สเปก",
+        "วีเอส รุ่นย่อย",
+        "วีเอส 2026"
+      ]
+    },
+    "mg-zs": {
+      "nameEn": "ZS",
+      "nameTh": "เซดเอส",
+      "slug": "mg-zs",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "ZS",
+        "mg-zs",
+        "เซดเอส"
+      ],
+      "searchQueries": [
+        "MG ZS",
+        "เอ็มจี ZS",
+        "เอ็มจี เซดเอส",
+        "เอ็มจี ราคา",
+        "เซดเอส เปิดตัว",
+        "เซดเอส สเปก",
+        "เซดเอส รุ่นย่อย",
+        "เซดเอส 2026"
+      ]
+    },
+    "mg-zs-ev": {
+      "nameEn": "ZS EV",
+      "nameTh": "เซดเอส อีวี",
+      "slug": "mg-zs-ev",
+      "brandEn": "MG",
+      "brandTh": "เอ็มจี",
+      "brandSlug": "mg",
+      "aliases": [
+        "ZS EV",
+        "mg-zs-ev",
+        "เซดเอส อีวี"
+      ],
+      "searchQueries": [
+        "MG ZS EV",
+        "เอ็มจี ZS EV",
+        "เอ็มจี เซดเอส อีวี",
+        "เอ็มจี ราคา",
+        "เซดเอส อีวี เปิดตัว",
+        "เซดเอส อีวี สเปก",
+        "เซดเอส อีวี รุ่นย่อย",
+        "เซดเอส อีวี 2026"
+      ]
+    },
+    "cooper": {
+      "nameEn": "Cooper",
+      "nameTh": "คูเปอร์",
+      "slug": "cooper",
+      "brandEn": "MINI",
+      "brandTh": "มินิ",
+      "brandSlug": "mini",
+      "aliases": [
+        "Cooper",
+        "cooper",
+        "คูเปอร์"
+      ],
+      "searchQueries": [
+        "MINI Cooper",
+        "มินิ Cooper",
+        "มินิ คูเปอร์",
+        "มินิ ราคา",
+        "คูเปอร์ เปิดตัว",
+        "คูเปอร์ สเปก",
+        "คูเปอร์ รุ่นย่อย",
+        "คูเปอร์ 2026"
+      ]
+    },
+    "countryman": {
+      "nameEn": "Countryman",
+      "nameTh": "คันทรีแมน",
+      "slug": "countryman",
+      "brandEn": "MINI",
+      "brandTh": "มินิ",
+      "brandSlug": "mini",
+      "aliases": [
+        "Countryman",
+        "countryman",
+        "คันทรีแมน"
+      ],
+      "searchQueries": [
+        "MINI Countryman",
+        "มินิ Countryman",
+        "มินิ คันทรีแมน",
+        "มินิ ราคา",
+        "คันทรีแมน เปิดตัว",
+        "คันทรีแมน สเปก",
+        "คันทรีแมน รุ่นย่อย",
+        "คันทรีแมน 2026"
+      ]
+    },
+    "attrage": {
+      "nameEn": "Attrage",
+      "nameTh": "แอททราจ",
+      "slug": "attrage",
+      "brandEn": "Mitsubishi",
+      "brandTh": "มิตซูบิชิ",
+      "brandSlug": "mitsubishi",
+      "aliases": [
+        "Attrage",
+        "attrage",
+        "แอททราจ"
+      ],
+      "searchQueries": [
+        "Mitsubishi Attrage",
+        "มิตซูบิชิ Attrage",
+        "มิตซูบิชิ แอททราจ",
+        "มิตซูบิชิ ราคา",
+        "แอททราจ เปิดตัว",
+        "แอททราจ สเปก",
+        "แอททราจ รุ่นย่อย",
+        "แอททราจ 2026"
+      ]
+    },
+    "mirage": {
+      "nameEn": "Mirage",
+      "nameTh": "มิราจ",
+      "slug": "mirage",
+      "brandEn": "Mitsubishi",
+      "brandTh": "มิตซูบิชิ",
+      "brandSlug": "mitsubishi",
+      "aliases": [
+        "Mirage",
+        "mirage",
+        "มิราจ"
+      ],
+      "searchQueries": [
+        "Mitsubishi Mirage",
+        "มิตซูบิชิ Mirage",
+        "มิตซูบิชิ มิราจ",
+        "มิตซูบิชิ ราคา",
+        "มิราจ เปิดตัว",
+        "มิราจ สเปก",
+        "มิราจ รุ่นย่อย",
+        "มิราจ 2026"
+      ]
+    },
+    "pajero-sport": {
+      "nameEn": "Pajero Sport",
+      "nameTh": "ปาเจโร สปอร์ต",
+      "slug": "pajero-sport",
+      "brandEn": "Mitsubishi",
+      "brandTh": "มิตซูบิชิ",
+      "brandSlug": "mitsubishi",
+      "aliases": [
+        "Pajero Sport",
+        "pajero-sport",
+        "ปาเจโร สปอร์ต"
+      ],
+      "searchQueries": [
+        "Mitsubishi Pajero Sport",
+        "มิตซูบิชิ Pajero Sport",
+        "มิตซูบิชิ ปาเจโร สปอร์ต",
+        "มิตซูบิชิ ราคา",
+        "ปาเจโร สปอร์ต เปิดตัว",
+        "ปาเจโร สปอร์ต สเปก",
+        "ปาเจโร สปอร์ต รุ่นย่อย",
+        "ปาเจโร สปอร์ต 2026"
+      ]
+    },
+    "triton": {
+      "nameEn": "Triton",
+      "nameTh": "ไทรทัน",
+      "slug": "triton",
+      "brandEn": "Mitsubishi",
+      "brandTh": "มิตซูบิชิ",
+      "brandSlug": "mitsubishi",
+      "aliases": [
+        "Triton",
+        "triton",
+        "ไทรทัน"
+      ],
+      "searchQueries": [
+        "Mitsubishi Triton",
+        "มิตซูบิชิ Triton",
+        "มิตซูบิชิ ไทรทัน",
+        "มิตซูบิชิ ราคา",
+        "ไทรทัน เปิดตัว",
+        "ไทรทัน สเปก",
+        "ไทรทัน รุ่นย่อย",
+        "ไทรทัน 2026"
+      ]
+    },
+    "xpander": {
+      "nameEn": "Xpander",
+      "nameTh": "เอ็กซ์แพนเดอร์",
+      "slug": "xpander",
+      "brandEn": "Mitsubishi",
+      "brandTh": "มิตซูบิชิ",
+      "brandSlug": "mitsubishi",
+      "aliases": [
+        "Xpander",
+        "xpander",
+        "เอ็กซ์แพนเดอร์"
+      ],
+      "searchQueries": [
+        "Mitsubishi Xpander",
+        "มิตซูบิชิ Xpander",
+        "มิตซูบิชิ เอ็กซ์แพนเดอร์",
+        "มิตซูบิชิ ราคา",
+        "เอ็กซ์แพนเดอร์ เปิดตัว",
+        "เอ็กซ์แพนเดอร์ สเปก",
+        "เอ็กซ์แพนเดอร์ รุ่นย่อย",
+        "เอ็กซ์แพนเดอร์ 2026"
+      ]
+    },
+    "xpander-cross": {
+      "nameEn": "Xpander Cross",
+      "nameTh": "เอ็กซ์แพนเดอร์ ครอส",
+      "slug": "xpander-cross",
+      "brandEn": "Mitsubishi",
+      "brandTh": "มิตซูบิชิ",
+      "brandSlug": "mitsubishi",
+      "aliases": [
+        "Xpander Cross",
+        "xpander-cross",
+        "เอ็กซ์แพนเดอร์ ครอส"
+      ],
+      "searchQueries": [
+        "Mitsubishi Xpander Cross",
+        "มิตซูบิชิ Xpander Cross",
+        "มิตซูบิชิ เอ็กซ์แพนเดอร์ ครอส",
+        "มิตซูบิชิ ราคา",
+        "เอ็กซ์แพนเดอร์ ครอส เปิดตัว",
+        "เอ็กซ์แพนเดอร์ ครอส สเปก",
+        "เอ็กซ์แพนเดอร์ ครอส รุ่นย่อย",
+        "เอ็กซ์แพนเดอร์ ครอส 2026"
+      ]
+    },
+    "es6": {
+      "nameEn": "ES6",
+      "nameTh": "อีเอส6",
+      "slug": "es6",
+      "brandEn": "NIO",
+      "brandTh": "นิโอ",
+      "brandSlug": "nio",
+      "aliases": [
+        "ES6",
+        "es6",
+        "อีเอส6"
+      ],
+      "searchQueries": [
+        "NIO ES6",
+        "นิโอ ES6",
+        "นิโอ อีเอส6",
+        "นิโอ ราคา",
+        "อีเอส6 เปิดตัว",
+        "อีเอส6 สเปก",
+        "อีเอส6 รุ่นย่อย",
+        "อีเอส6 2026"
+      ]
+    },
+    "nio-firefly": {
+      "nameEn": "Firefly",
+      "nameTh": " файร์ฟลาย",
+      "slug": "nio-firefly",
+      "brandEn": "NIO",
+      "brandTh": "นิโอ",
+      "brandSlug": "nio",
+      "aliases": [
+        " файร์ฟลาย",
+        "Firefly",
+        "nio-firefly"
+      ],
+      "searchQueries": [
+        "NIO Firefly",
+        "นิโอ Firefly",
+        "นิโอ  файร์ฟลาย",
+        "นิโอ ราคา",
+        " файร์ฟลาย เปิดตัว",
+        " файร์ฟลาย สเปก",
+        " файร์ฟลาย รุ่นย่อย",
+        " файร์ฟลาย 2026"
+      ]
+    },
+    "almera": {
+      "nameEn": "Almera",
+      "nameTh": "อัลเมร่า",
+      "slug": "almera",
+      "brandEn": "Nissan",
+      "brandTh": "นิสสัน",
+      "brandSlug": "nissan",
+      "aliases": [
+        "Almera",
+        "almera",
+        "อัลเมร่า"
+      ],
+      "searchQueries": [
+        "Nissan Almera",
+        "นิสสัน Almera",
+        "นิสสัน อัลเมร่า",
+        "นิสสัน ราคา",
+        "อัลเมร่า เปิดตัว",
+        "อัลเมร่า สเปก",
+        "อัลเมร่า รุ่นย่อย",
+        "อัลเมร่า 2026"
+      ]
+    },
+    "nissan-kicks": {
+      "nameEn": "Kicks",
+      "nameTh": "คิกส์",
+      "slug": "nissan-kicks",
+      "brandEn": "Nissan",
+      "brandTh": "นิสสัน",
+      "brandSlug": "nissan",
+      "aliases": [
+        "Kicks",
+        "nissan-kicks",
+        "คิกส์"
+      ],
+      "searchQueries": [
+        "Nissan Kicks",
+        "นิสสัน Kicks",
+        "นิสสัน คิกส์",
+        "นิสสัน ราคา",
+        "คิกส์ เปิดตัว",
+        "คิกส์ สเปก",
+        "คิกส์ รุ่นย่อย",
+        "คิกส์ 2026"
+      ]
+    },
+    "navara": {
+      "nameEn": "Navara",
+      "nameTh": "นาวาร่า",
+      "slug": "navara",
+      "brandEn": "Nissan",
+      "brandTh": "นิสสัน",
+      "brandSlug": "nissan",
+      "aliases": [
+        "Navara",
+        "navara",
+        "นาวาร่า"
+      ],
+      "searchQueries": [
+        "Nissan Navara",
+        "นิสสัน Navara",
+        "นิสสัน นาวาร่า",
+        "นิสสัน ราคา",
+        "นาวาร่า เปิดตัว",
+        "นาวาร่า สเปก",
+        "นาวาร่า รุ่นย่อย",
+        "นาวาร่า 2026"
+      ]
+    },
+    "leaf": {
+      "nameEn": "Nissan Leaf",
+      "nameTh": "นิสสัน ลีฟ",
+      "slug": "leaf",
+      "brandEn": "Nissan",
+      "brandTh": "นิสสัน",
+      "brandSlug": "nissan",
+      "aliases": [
+        "Nissan Leaf",
+        "leaf",
+        "นิสสัน ลีฟ"
+      ],
+      "searchQueries": [
+        "Nissan Nissan Leaf",
+        "นิสสัน Nissan Leaf",
+        "นิสสัน นิสสัน ลีฟ",
+        "นิสสัน ราคา",
+        "นิสสัน ลีฟ เปิดตัว",
+        "นิสสัน ลีฟ สเปก",
+        "นิสสัน ลีฟ รุ่นย่อย",
+        "นิสสัน ลีฟ 2026"
+      ]
+    },
+    "livina": {
+      "nameEn": "Nissan Livina",
+      "nameTh": "นิสสัน ลิวิน่า",
+      "slug": "livina",
+      "brandEn": "Nissan",
+      "brandTh": "นิสสัน",
+      "brandSlug": "nissan",
+      "aliases": [
+        "Nissan Livina",
+        "livina",
+        "นิสสัน ลิวิน่า"
+      ],
+      "searchQueries": [
+        "Nissan Nissan Livina",
+        "นิสสัน Nissan Livina",
+        "นิสสัน นิสสัน ลิวิน่า",
+        "นิสสัน ราคา",
+        "นิสสัน ลิวิน่า เปิดตัว",
+        "นิสสัน ลิวิน่า สเปก",
+        "นิสสัน ลิวิน่า รุ่นย่อย",
+        "นิสสัน ลิวิน่า 2026"
+      ]
+    },
+    "march": {
+      "nameEn": "Nissan March",
+      "nameTh": "นิสสัน มาร์ช",
+      "slug": "march",
+      "brandEn": "Nissan",
+      "brandTh": "นิสสัน",
+      "brandSlug": "nissan",
+      "aliases": [
+        "Nissan March",
+        "march",
+        "นิสสัน มาร์ช"
+      ],
+      "searchQueries": [
+        "Nissan Nissan March",
+        "นิสสัน Nissan March",
+        "นิสสัน นิสสัน มาร์ช",
+        "นิสสัน ราคา",
+        "นิสสัน มาร์ช เปิดตัว",
+        "นิสสัน มาร์ช สเปก",
+        "นิสสัน มาร์ช รุ่นย่อย",
+        "นิสสัน มาร์ช 2026"
+      ]
+    },
+    "serena": {
+      "nameEn": "Nissan Serena",
+      "nameTh": "นิสสัน เซเรน่า",
+      "slug": "serena",
+      "brandEn": "Nissan",
+      "brandTh": "นิสสัน",
+      "brandSlug": "nissan",
+      "aliases": [
+        "Nissan Serena",
+        "serena",
+        "นิสสัน เซเรน่า"
+      ],
+      "searchQueries": [
+        "Nissan Nissan Serena",
+        "นิสสัน Nissan Serena",
+        "นิสสัน นิสสัน เซเรน่า",
+        "นิสสัน ราคา",
+        "นิสสัน เซเรน่า เปิดตัว",
+        "นิสสัน เซเรน่า สเปก",
+        "นิสสัน เซเรน่า รุ่นย่อย",
+        "นิสสัน เซเรน่า 2026"
+      ]
+    },
+    "terra": {
+      "nameEn": "Terra",
+      "nameTh": "เทอร์ร่า",
+      "slug": "terra",
+      "brandEn": "Nissan",
+      "brandTh": "นิสสัน",
+      "brandSlug": "nissan",
+      "aliases": [
+        "Terra",
+        "terra",
+        "เทอร์ร่า"
+      ],
+      "searchQueries": [
+        "Nissan Terra",
+        "นิสสัน Terra",
+        "นิสสัน เทอร์ร่า",
+        "นิสสัน ราคา",
+        "เทอร์ร่า เปิดตัว",
+        "เทอร์ร่า สเปก",
+        "เทอร์ร่า รุ่นย่อย",
+        "เทอร์ร่า 2026"
+      ]
+    },
+    "x-trail": {
+      "nameEn": "X-Trail",
+      "nameTh": "เอกซ์เทรล",
+      "slug": "x-trail",
+      "brandEn": "Nissan",
+      "brandTh": "นิสสัน",
+      "brandSlug": "nissan",
+      "aliases": [
+        "X-Trail",
+        "x-trail",
+        "เอกซ์เทรล"
+      ],
+      "searchQueries": [
+        "Nissan X-Trail",
+        "นิสสัน X-Trail",
+        "นิสสัน เอกซ์เทรล",
+        "นิสสัน ราคา",
+        "เอกซ์เทรล เปิดตัว",
+        "เอกซ์เทรล สเปก",
+        "เอกซ์เทรล รุ่นย่อย",
+        "เอกซ์เทรล 2026"
+      ]
+    },
+    "cayenne": {
+      "nameEn": "Cayenne",
+      "nameTh": "คาเยนน์",
+      "slug": "cayenne",
+      "brandEn": "Porsche",
+      "brandTh": "ปอร์เช่",
+      "brandSlug": "porsche",
+      "aliases": [
+        "Cayenne",
+        "cayenne",
+        "คาเยนน์"
+      ],
+      "searchQueries": [
+        "Porsche Cayenne",
+        "ปอร์เช่ Cayenne",
+        "ปอร์เช่ คาเยนน์",
+        "ปอร์เช่ ราคา",
+        "คาเยนน์ เปิดตัว",
+        "คาเยนน์ สเปก",
+        "คาเยนน์ รุ่นย่อย",
+        "คาเยนน์ 2026"
+      ]
+    },
+    "macan": {
+      "nameEn": "Macan",
+      "nameTh": "มาคัน",
+      "slug": "macan",
+      "brandEn": "Porsche",
+      "brandTh": "ปอร์เช่",
+      "brandSlug": "porsche",
+      "aliases": [
+        "Macan",
+        "macan",
+        "มาคัน"
+      ],
+      "searchQueries": [
+        "Porsche Macan",
+        "ปอร์เช่ Macan",
+        "ปอร์เช่ มาคัน",
+        "ปอร์เช่ ราคา",
+        "มาคัน เปิดตัว",
+        "มาคัน สเปก",
+        "มาคัน รุ่นย่อย",
+        "มาคัน 2026"
+      ]
+    },
+    "subaru-crosstrek": {
+      "nameEn": "Crosstrek",
+      "nameTh": "ครอสส์เทรค",
+      "slug": "subaru-crosstrek",
+      "brandEn": "Subaru",
+      "brandTh": "ซูบารุ",
+      "brandSlug": "subaru",
+      "aliases": [
+        "Crosstrek",
+        "subaru-crosstrek",
+        "ครอสส์เทรค"
+      ],
+      "searchQueries": [
+        "Subaru Crosstrek",
+        "ซูบารุ Crosstrek",
+        "ซูบารุ ครอสส์เทรค",
+        "ซูบารุ ราคา",
+        "ครอสส์เทรค เปิดตัว",
+        "ครอสส์เทรค สเปก",
+        "ครอสส์เทรค รุ่นย่อย",
+        "ครอสส์เทรค 2026"
+      ]
+    },
+    "outback": {
+      "nameEn": "Outback",
+      "nameTh": "เอาต์แบ็ค",
+      "slug": "outback",
+      "brandEn": "Subaru",
+      "brandTh": "ซูบารุ",
+      "brandSlug": "subaru",
+      "aliases": [
+        "Outback",
+        "outback",
+        "เอาต์แบ็ค"
+      ],
+      "searchQueries": [
+        "Subaru Outback",
+        "ซูบารุ Outback",
+        "ซูบารุ เอาต์แบ็ค",
+        "ซูบารุ ราคา",
+        "เอาต์แบ็ค เปิดตัว",
+        "เอาต์แบ็ค สเปก",
+        "เอาต์แบ็ค รุ่นย่อย",
+        "เอาต์แบ็ค 2026"
+      ]
+    },
+    "celerio": {
+      "nameEn": "Celerio",
+      "nameTh": "เซเลริโอ",
+      "slug": "celerio",
+      "brandEn": "Suzuki",
+      "brandTh": "ซูซูกิ",
+      "brandSlug": "suzuki",
+      "aliases": [
+        "Celerio",
+        "celerio",
+        "เซเลริโอ"
+      ],
+      "searchQueries": [
+        "Suzuki Celerio",
+        "ซูซูกิ Celerio",
+        "ซูซูกิ เซเลริโอ",
+        "ซูซูกิ ราคา",
+        "เซเลริโอ เปิดตัว",
+        "เซเลริโอ สเปก",
+        "เซเลริโอ รุ่นย่อย",
+        "เซเลริโอ 2026"
+      ]
+    },
+    "ertiga": {
+      "nameEn": "Ertiga",
+      "nameTh": "เออร์ทิกา",
+      "slug": "ertiga",
+      "brandEn": "Suzuki",
+      "brandTh": "ซูซูกิ",
+      "brandSlug": "suzuki",
+      "aliases": [
+        "Ertiga",
+        "ertiga",
+        "เออร์ทิกา"
+      ],
+      "searchQueries": [
+        "Suzuki Ertiga",
+        "ซูซูกิ Ertiga",
+        "ซูซูกิ เออร์ทิกา",
+        "ซูซูกิ ราคา",
+        "เออร์ทิกา เปิดตัว",
+        "เออร์ทิกา สเปก",
+        "เออร์ทิกา รุ่นย่อย",
+        "เออร์ทิกา 2026"
+      ]
+    },
+    "jimny": {
+      "nameEn": "Jimny",
+      "nameTh": "จิมนี่",
+      "slug": "jimny",
+      "brandEn": "Suzuki",
+      "brandTh": "ซูซูกิ",
+      "brandSlug": "suzuki",
+      "aliases": [
+        "Jimny",
+        "jimny",
+        "จิมนี่"
+      ],
+      "searchQueries": [
+        "Suzuki Jimny",
+        "ซูซูกิ Jimny",
+        "ซูซูกิ จิมนี่",
+        "ซูซูกิ ราคา",
+        "จิมนี่ เปิดตัว",
+        "จิมนี่ สเปก",
+        "จิมนี่ รุ่นย่อย",
+        "จิมนี่ 2026"
+      ]
+    },
+    "s-presso": {
+      "nameEn": "S-Presso",
+      "nameTh": "เอส-เพรสโซ่",
+      "slug": "s-presso",
+      "brandEn": "Suzuki",
+      "brandTh": "ซูซูกิ",
+      "brandSlug": "suzuki",
+      "aliases": [
+        "S-Presso",
+        "s-presso",
+        "เอส-เพรสโซ่"
+      ],
+      "searchQueries": [
+        "Suzuki S-Presso",
+        "ซูซูกิ S-Presso",
+        "ซูซูกิ เอส-เพรสโซ่",
+        "ซูซูกิ ราคา",
+        "เอส-เพรสโซ่ เปิดตัว",
+        "เอส-เพรสโซ่ สเปก",
+        "เอส-เพรสโซ่ รุ่นย่อย",
+        "เอส-เพรสโซ่ 2026"
+      ]
+    },
+    "fronx": {
+      "nameEn": "Suzuki Fronx",
+      "nameTh": "Suzuki Fronx",
+      "slug": "fronx",
+      "brandEn": "Suzuki",
+      "brandTh": "ซูซูกิ",
+      "brandSlug": "suzuki",
+      "aliases": [
+        "Suzuki Fronx",
+        "fronx"
+      ],
+      "searchQueries": [
+        "Suzuki Suzuki Fronx",
+        "ซูซูกิ Suzuki Fronx",
+        "ซูซูกิ ราคา",
+        "Suzuki Fronx เปิดตัว",
+        "Suzuki Fronx สเปก",
+        "Suzuki Fronx รุ่นย่อย",
+        "Suzuki Fronx 2026"
+      ]
+    },
+    "swift": {
+      "nameEn": "Swift",
+      "nameTh": "สวิฟท์",
+      "slug": "swift",
+      "brandEn": "Suzuki",
+      "brandTh": "ซูซูกิ",
+      "brandSlug": "suzuki",
+      "aliases": [
+        "Swift",
+        "swift",
+        "สวิฟท์"
+      ],
+      "searchQueries": [
+        "Suzuki Swift",
+        "ซูซูกิ Swift",
+        "ซูซูกิ สวิฟท์",
+        "ซูซูกิ ราคา",
+        "สวิฟท์ เปิดตัว",
+        "สวิฟท์ สเปก",
+        "สวิฟท์ รุ่นย่อย",
+        "สวิฟท์ 2026"
+      ]
+    },
+    "tesla-model-3": {
+      "nameEn": "Model 3",
+      "nameTh": "โมเดล 3",
+      "slug": "tesla-model-3",
+      "brandEn": "Tesla",
+      "brandTh": "เทสลา",
+      "brandSlug": "tesla",
+      "aliases": [
+        "Model 3",
+        "tesla-model-3",
+        "โมเดล 3"
+      ],
+      "searchQueries": [
+        "Tesla Model 3",
+        "เทสลา Model 3",
+        "เทสลา โมเดล 3",
+        "เทสลา ราคา",
+        "โมเดล 3 เปิดตัว",
+        "โมเดล 3 สเปก",
+        "โมเดล 3 รุ่นย่อย",
+        "โมเดล 3 2026"
+      ]
+    },
+    "tesla-model-y": {
+      "nameEn": "Model Y",
+      "nameTh": "โมเดล วาย",
+      "slug": "tesla-model-y",
+      "brandEn": "Tesla",
+      "brandTh": "เทสลา",
+      "brandSlug": "tesla",
+      "aliases": [
+        "Model Y",
+        "tesla-model-y",
+        "โมเดล วาย"
+      ],
+      "searchQueries": [
+        "Tesla Model Y",
+        "เทสลา Model Y",
+        "เทสลา โมเดล วาย",
+        "เทสลา ราคา",
+        "โมเดล วาย เปิดตัว",
+        "โมเดล วาย สเปก",
+        "โมเดล วาย รุ่นย่อย",
+        "โมเดล วาย 2026"
+      ]
+    },
+    "avanza": {
+      "nameEn": "Avanza",
+      "nameTh": "อวันซ่า",
+      "slug": "avanza",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Avanza",
+        "avanza",
+        "อวันซ่า"
+      ],
+      "searchQueries": [
+        "Toyota Avanza",
+        "โตโยต้า Avanza",
+        "โตโยต้า อวันซ่า",
+        "โตโยต้า ราคา",
+        "อวันซ่า เปิดตัว",
+        "อวันซ่า สเปก",
+        "อวันซ่า รุ่นย่อย",
+        "อวันซ่า 2026"
+      ]
+    },
+    "toyota-bz4x": {
+      "nameEn": "bZ4X",
+      "nameTh": "บีแซด4เอ็กซ์",
+      "slug": "toyota-bz4x",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "bZ4X",
+        "toyota-bz4x",
+        "บีแซด4เอ็กซ์"
+      ],
+      "searchQueries": [
+        "Toyota bZ4X",
+        "โตโยต้า bZ4X",
+        "โตโยต้า บีแซด4เอ็กซ์",
+        "โตโยต้า ราคา",
+        "บีแซด4เอ็กซ์ เปิดตัว",
+        "บีแซด4เอ็กซ์ สเปก",
+        "บีแซด4เอ็กซ์ รุ่นย่อย",
+        "บีแซด4เอ็กซ์ 2026"
+      ]
+    },
+    "toyota-camry": {
+      "nameEn": "Camry",
+      "nameTh": "แคมรี่",
+      "slug": "toyota-camry",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Camry",
+        "toyota-camry",
+        "แคมรี่"
+      ],
+      "searchQueries": [
+        "Toyota Camry",
+        "โตโยต้า Camry",
+        "โตโยต้า แคมรี่",
+        "โตโยต้า ราคา",
+        "แคมรี่ เปิดตัว",
+        "แคมรี่ สเปก",
+        "แคมรี่ รุ่นย่อย",
+        "แคมรี่ 2026"
+      ]
+    },
+    "toyota-corolla-altis": {
+      "nameEn": "Corolla Altis",
+      "nameTh": "โครอลลัอ อัลติส",
+      "slug": "toyota-corolla-altis",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Corolla Altis",
+        "toyota-corolla-altis",
+        "โครอลลัอ อัลติส"
+      ],
+      "searchQueries": [
+        "Toyota Corolla Altis",
+        "โตโยต้า Corolla Altis",
+        "โตโยต้า โครอลลัอ อัลติส",
+        "โตโยต้า ราคา",
+        "โครอลลัอ อัลติส เปิดตัว",
+        "โครอลลัอ อัลติส สเปก",
+        "โครอลลัอ อัลติส รุ่นย่อย",
+        "โครอลลัอ อัลติส 2026"
+      ]
+    },
+    "toyota-corolla-cross": {
+      "nameEn": "Corolla Cross",
+      "nameTh": "โครอลลัอ ครอส",
+      "slug": "toyota-corolla-cross",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Corolla Cross",
+        "toyota-corolla-cross",
+        "โครอลลัอ ครอส"
+      ],
+      "searchQueries": [
+        "Toyota Corolla Cross",
+        "โตโยต้า Corolla Cross",
+        "โตโยต้า โครอลลัอ ครอส",
+        "โตโยต้า ราคา",
+        "โครอลลัอ ครอส เปิดตัว",
+        "โครอลลัอ ครอส สเปก",
+        "โครอลลัอ ครอส รุ่นย่อย",
+        "โครอลลัอ ครอส 2026"
+      ]
+    },
+    "toyota-fortuner": {
+      "nameEn": "Fortuner",
+      "nameTh": "ฟอร์จูเนอร์",
+      "slug": "toyota-fortuner",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Fortuner",
+        "toyota-fortuner",
+        "ฟอร์จูเนอร์"
+      ],
+      "searchQueries": [
+        "Toyota Fortuner",
+        "โตโยต้า Fortuner",
+        "โตโยต้า ฟอร์จูเนอร์",
+        "โตโยต้า ราคา",
+        "ฟอร์จูเนอร์ เปิดตัว",
+        "ฟอร์จูเนอร์ สเปก",
+        "ฟอร์จูเนอร์ รุ่นย่อย",
+        "ฟอร์จูเนอร์ 2026"
+      ]
+    },
+    "toyota-hilux": {
+      "nameEn": "Hilux",
+      "nameTh": "ฮิลักซ์",
+      "slug": "toyota-hilux",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Hilux",
+        "toyota-hilux",
+        "ฮิลักซ์"
+      ],
+      "searchQueries": [
+        "Toyota Hilux",
+        "โตโยต้า Hilux",
+        "โตโยต้า ฮิลักซ์",
+        "โตโยต้า ราคา",
+        "ฮิลักซ์ เปิดตัว",
+        "ฮิลักซ์ สเปก",
+        "ฮิลักซ์ รุ่นย่อย",
+        "ฮิลักซ์ 2026"
+      ]
+    },
+    "toyota-innova": {
+      "nameEn": "Innova Zenix",
+      "nameTh": "อินโนวา เซนิกซ์",
+      "slug": "toyota-innova",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Innova Zenix",
+        "toyota-innova",
+        "อินโนวา เซนิกซ์"
+      ],
+      "searchQueries": [
+        "Toyota Innova Zenix",
+        "โตโยต้า Innova Zenix",
+        "โตโยต้า อินโนวา เซนิกซ์",
+        "โตโยต้า ราคา",
+        "อินโนวา เซนิกซ์ เปิดตัว",
+        "อินโนวา เซนิกซ์ สเปก",
+        "อินโนวา เซนิกซ์ รุ่นย่อย",
+        "อินโนวา เซนิกซ์ 2026"
+      ]
+    },
+    "veloz": {
+      "nameEn": "Veloz",
+      "nameTh": "เวลoster",
+      "slug": "veloz",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Veloz",
+        "veloz",
+        "เวลoster"
+      ],
+      "searchQueries": [
+        "Toyota Veloz",
+        "โตโยต้า Veloz",
+        "โตโยต้า เวลoster",
+        "โตโยต้า ราคา",
+        "เวลoster เปิดตัว",
+        "เวลoster สเปก",
+        "เวลoster รุ่นย่อย",
+        "เวลoster 2026"
+      ]
+    },
+    "yaris": {
+      "nameEn": "Yaris",
+      "nameTh": "ยาริส",
+      "slug": "yaris",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Yaris",
+        "yaris",
+        "ยาริส"
+      ],
+      "searchQueries": [
+        "Toyota Yaris",
+        "โตโยต้า Yaris",
+        "โตโยต้า ยาริส",
+        "โตโยต้า ราคา",
+        "ยาริส เปิดตัว",
+        "ยาริส สเปก",
+        "ยาริส รุ่นย่อย",
+        "ยาริส 2026"
+      ]
+    },
+    "yaris-ativ": {
+      "nameEn": "Yaris Ativ",
+      "nameTh": "ยาริส อativ",
+      "slug": "yaris-ativ",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Yaris Ativ",
+        "yaris-ativ",
+        "ยาริส อativ"
+      ],
+      "searchQueries": [
+        "Toyota Yaris Ativ",
+        "โตโยต้า Yaris Ativ",
+        "โตโยต้า ยาริส อativ",
+        "โตโยต้า ราคา",
+        "ยาริส อativ เปิดตัว",
+        "ยาริส อativ สเปก",
+        "ยาริส อativ รุ่นย่อย",
+        "ยาริส อativ 2026"
+      ]
+    },
+    "toyota-yaris-ativ": {
+      "nameEn": "Yaris ATIV",
+      "nameTh": "ยาริส อาทิฟ",
+      "slug": "toyota-yaris-ativ",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Yaris ATIV",
+        "toyota-yaris-ativ",
+        "ยาริส อาทิฟ"
+      ],
+      "searchQueries": [
+        "Toyota Yaris ATIV",
+        "โตโยต้า Yaris ATIV",
+        "โตโยต้า ยาริส อาทิฟ",
+        "โตโยต้า ราคา",
+        "ยาริส อาทิฟ เปิดตัว",
+        "ยาริส อาทิฟ สเปก",
+        "ยาริส อาทิฟ รุ่นย่อย",
+        "ยาริส อาทิฟ 2026"
+      ]
+    },
+    "toyota-yaris-cross": {
+      "nameEn": "Yaris Cross",
+      "nameTh": "ยาริส ครอส",
+      "slug": "toyota-yaris-cross",
+      "brandEn": "Toyota",
+      "brandTh": "โตโยต้า",
+      "brandSlug": "toyota",
+      "aliases": [
+        "Yaris Cross",
+        "toyota-yaris-cross",
+        "ยาริส ครอส"
+      ],
+      "searchQueries": [
+        "Toyota Yaris Cross",
+        "โตโยต้า Yaris Cross",
+        "โตโยต้า ยาริส ครอส",
+        "โตโยต้า ราคา",
+        "ยาริส ครอส เปิดตัว",
+        "ยาริส ครอส สเปก",
+        "ยาริส ครอส รุ่นย่อย",
+        "ยาริส ครอส 2026"
+      ]
+    },
+    "ex30": {
+      "nameEn": "EX30",
+      "nameTh": "อีเอ็กซ์30",
+      "slug": "ex30",
+      "brandEn": "Volvo",
+      "brandTh": "วอลโว่",
+      "brandSlug": "volvo",
+      "aliases": [
+        "EX30",
+        "ex30",
+        "อีเอ็กซ์30"
+      ],
+      "searchQueries": [
+        "Volvo EX30",
+        "วอลโว่ EX30",
+        "วอลโว่ อีเอ็กซ์30",
+        "วอลโว่ ราคา",
+        "อีเอ็กซ์30 เปิดตัว",
+        "อีเอ็กซ์30 สเปก",
+        "อีเอ็กซ์30 รุ่นย่อย",
+        "อีเอ็กซ์30 2026"
+      ]
+    },
+    "xc40": {
+      "nameEn": "XC40",
+      "nameTh": "เอกซ์ซี40",
+      "slug": "xc40",
+      "brandEn": "Volvo",
+      "brandTh": "วอลโว่",
+      "brandSlug": "volvo",
+      "aliases": [
+        "XC40",
+        "xc40",
+        "เอกซ์ซี40"
+      ],
+      "searchQueries": [
+        "Volvo XC40",
+        "วอลโว่ XC40",
+        "วอลโว่ เอกซ์ซี40",
+        "วอลโว่ ราคา",
+        "เอกซ์ซี40 เปิดตัว",
+        "เอกซ์ซี40 สเปก",
+        "เอกซ์ซี40 รุ่นย่อย",
+        "เอกซ์ซี40 2026"
+      ]
+    },
+    "xc60": {
+      "nameEn": "XC60",
+      "nameTh": "เอกซ์ซี60",
+      "slug": "xc60",
+      "brandEn": "Volvo",
+      "brandTh": "วอลโว่",
+      "brandSlug": "volvo",
+      "aliases": [
+        "XC60",
+        "xc60",
+        "เอกซ์ซี60"
+      ],
+      "searchQueries": [
+        "Volvo XC60",
+        "วอลโว่ XC60",
+        "วอลโว่ เอกซ์ซี60",
+        "วอลโว่ ราคา",
+        "เอกซ์ซี60 เปิดตัว",
+        "เอกซ์ซี60 สเปก",
+        "เอกซ์ซี60 รุ่นย่อย",
+        "เอกซ์ซี60 2026"
+      ]
+    },
+    "xc90": {
+      "nameEn": "XC90",
+      "nameTh": "เอกซ์ซี90",
+      "slug": "xc90",
+      "brandEn": "Volvo",
+      "brandTh": "วอลโว่",
+      "brandSlug": "volvo",
+      "aliases": [
+        "XC90",
+        "xc90",
+        "เอกซ์ซี90"
+      ],
+      "searchQueries": [
+        "Volvo XC90",
+        "วอลโว่ XC90",
+        "วอลโว่ เอกซ์ซี90",
+        "วอลโว่ ราคา",
+        "เอกซ์ซี90 เปิดตัว",
+        "เอกซ์ซี90 สเปก",
+        "เอกซ์ซี90 รุ่นย่อย",
+        "เอกซ์ซี90 2026"
+      ]
+    },
+    "l03": {
+      "nameEn": "L03",
+      "nameTh": "แอล03",
+      "slug": "l03",
+      "brandEn": "Xpeng",
+      "brandTh": "เอ็กซ์เพ่ง",
+      "brandSlug": "xpeng",
+      "aliases": [
+        "L03",
+        "l03",
+        "แอล03"
+      ],
+      "searchQueries": [
+        "Xpeng L03",
+        "เอ็กซ์เพ่ง L03",
+        "เอ็กซ์เพ่ง แอล03",
+        "เอ็กซ์เพ่ง ราคา",
+        "แอล03 เปิดตัว",
+        "แอล03 สเปก",
+        "แอล03 รุ่นย่อย",
+        "แอล03 2026"
+      ]
+    },
+    "009": {
+      "nameEn": "009",
+      "nameTh": "009",
+      "slug": "009",
+      "brandEn": "Zeekr",
+      "brandTh": "ซีเคอร์",
+      "brandSlug": "zeekr",
+      "aliases": [
+        "009"
+      ],
+      "searchQueries": [
+        "Zeekr 009",
+        "ซีเคอร์ 009",
+        "ซีเคอร์ ราคา",
+        "009 เปิดตัว",
+        "009 สเปก",
+        "009 รุ่นย่อย",
+        "009 2026"
+      ]
+    },
+    "x": {
+      "nameEn": "X",
+      "nameTh": "เอ็กซ์",
+      "slug": "x",
+      "brandEn": "Zeekr",
+      "brandTh": "ซีเคอร์",
+      "brandSlug": "zeekr",
+      "aliases": [
+        "X",
+        "x",
+        "เอ็กซ์"
+      ],
+      "searchQueries": [
+        "Zeekr X",
+        "ซีเคอร์ X",
+        "ซีเคอร์ เอ็กซ์",
+        "ซีเคอร์ ราคา",
+        "เอ็กซ์ เปิดตัว",
+        "เอ็กซ์ สเปก",
+        "เอ็กซ์ รุ่นย่อย",
+        "เอ็กซ์ 2026"
+      ]
+    }
+  }
+}

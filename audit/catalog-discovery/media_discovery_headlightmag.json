@@ -1,0 +1,1350 @@
+{
+  "source": {
+    "role": "MEDIA_DISCOVERY",
+    "origin": "headlightmag_wordpress_categories",
+    "url": "https://www.headlightmag.com/wp-json/wp/v2",
+    "observed_at": "2026-09-22T14:22:32.146164",
+    "acquisition_method": "wordpress_api",
+    "payload_hash": "d5587c641ca2a00c",
+    "provenance_note": "Each entry now includes article IDs/URLs where the model name appears in the post title"
+  },
+  "summary": {
+    "total_entries": 64,
+    "case_duplicates_removed": 10,
+    "by_classification": {
+      "model-mention": 49,
+      "non-vehicle": 11,
+      "unresolved": 2,
+      "variant-mention": 2
+    }
+  },
+  "entries": [
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "iX3",
+      "clean_model": "iX3",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "i Series",
+      "article_evidence": [
+        {
+          "post_id": 219196,
+          "post_title": "Headlightmag Clip Full Review ทดลองขับ BMW iX3 M Sport (G08) (LCI)",
+          "post_url": "https://www.headlightmag.com/2023-05-22-headlightmag-clip-bmw-ix3-m-sport-lci/",
+          "post_date": "2023-05-22T19:05:57"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "220i",
+      "clean_model": "220i",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "2 Series",
+      "article_evidence": [
+        {
+          "post_id": 180133,
+          "post_title": "ทดลองขับ BMW 220i Gran Coupe (F44) : Hamster นิสัยกระรอก ขับสนุกกว่าที่คิด",
+          "post_url": "https://www.headlightmag.com/full-review-2022-bmw-220i-gran-coupe/",
+          "post_date": "2022-06-06T03:00:13"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "M340i",
+      "clean_model": "M340i",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "M Series",
+      "article_evidence": [
+        {
+          "post_id": 161723,
+          "post_title": "THE CLIP รีวิว BMW M340i xDrive โหดเสงี่ยมเปี่ยมความสนุก ในราคาที่ฟังแล้วไม่จุก",
+          "post_url": "https://www.headlightmag.com/the-clip-review-bmw-m340i-xdrive-2021/",
+          "post_date": "2021-08-04T19:53:29"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "330i",
+      "clean_model": "330i",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "3 Series",
+      "article_evidence": [
+        {
+          "post_id": 119426,
+          "post_title": "The Clip: BMW 330i M Sport (G20) จิตวิญญาณ M2 ในคราบสปอร์ตซาลูนมาดเรียบ",
+          "post_url": "https://www.headlightmag.com/the-clip-bmw-330i-m-sport-2019/",
+          "post_date": "2019-10-08T17:46:35"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "320d",
+      "clean_model": "320d",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "3 Series",
+      "article_evidence": [
+        {
+          "post_id": 118222,
+          "post_title": "The Clip: BMW 320d Sport (G20) แรงขึ้น เกาะขึ้น ประหยัดขึ้น ขอเพิ่มกล้องหลังสักตัวพอ",
+          "post_url": "https://www.headlightmag.com/the-clip-bmw-320d-sport-g20/",
+          "post_date": "2019-09-19T19:48:02"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "ของวัยรุ่น",
+      "clean_model": "ของวัยรุ่น",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 10,
+      "article_evidence": [
+        {
+          "post_id": 54278,
+          "post_title": "ทดลองขับ BMW X1 sDrive18d 8AT FWD (F48) : MINI ของผู้ใหญ่..และ BMW ของวัยรุ่น",
+          "post_url": "https://www.headlightmag.com/full-review-2017-bmw-x1-sdrive18d-f48/",
+          "post_date": "2017-11-21T20:45:04"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "218i",
+      "clean_model": "218i",
+      "classification": "model-mention",
+      "total_posts_in_category": 10,
+      "series": "2 Series",
+      "article_evidence": [
+        {
+          "post_id": 30627,
+          "post_title": "ทดลองขับ BMW 218i Coupe M Sport (8AT FR) : รถขับดี ที่เกือบจะ &#8220;ฟิน&#8221;",
+          "post_url": "https://www.headlightmag.com/full-review-2016-bmw-218i-coupe-m-sport/",
+          "post_date": "2016-06-07T16:09:46"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "Brand - BMW",
+      "brand_category_id": 44,
+      "raw_model": "Driving",
+      "clean_model": "Driving",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 10,
+      "article_evidence": [
+        {
+          "post_id": 30912,
+          "post_title": "BMW Driving Experience 2016 &#8211; ควบ 4 รุ่นบนสนามปทุมธานีสปีดเวย์",
+          "post_url": "https://www.headlightmag.com/bmw-driving-experience-2016/",
+          "post_date": "2016-06-06T18:31:42"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "PERSONA",
+      "clean_model": "PERSONA",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 35,
+      "article_evidence": [
+        {
+          "post_id": 254218,
+          "post_title": "Mazda PERSONA / EUNOS 300 : The Complete History : Hardtop ทรงสวย แต่กลับไร้อนาคต",
+          "post_url": "https://www.headlightmag.com/history-1988-mazda-persona-eunos-300/",
+          "post_date": "2024-08-11T18:57:16"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-30",
+      "clean_model": "CX-30",
+      "classification": "model-mention",
+      "total_posts_in_category": 35,
+      "article_evidence": [
+        {
+          "post_id": 150581,
+          "post_title": "Full Review ทดลองขับ Mazda CX-30 (2.0 6AT FWD) : ไม่ใช่แค่ Mazda 3 Crossover แต่มันคือ CX-3 ที่เป็นผ",
+          "post_url": "https://www.headlightmag.com/full-review-2021-mazda-cx-30/",
+          "post_date": "2021-04-26T17:12:31"
+        },
+        {
+          "post_id": 132743,
+          "post_title": "The Clip รีวิว Mazda CX-30: จับ 3 มายกสูง กลายเป็นน่าใช้ขึ้นในภาพรวม",
+          "post_url": "https://www.headlightmag.com/the-clip-review-mazda-cx-30/",
+          "post_date": "2020-04-09T19:59:05"
+        },
+        {
+          "post_id": 130849,
+          "post_title": "First Impression รีวิว ทดลองขับ Mazda CX-30  เจ้า 3 ยกสูง สนุกน้อยลง แต่สบายน่าใช้ขึ้น",
+          "post_url": "https://www.headlightmag.com/first-impression-review-mazda-cx30-by-pan/",
+          "post_date": "2020-03-20T15:20:19"
+        }
+      ],
+      "article_evidence_count": 3,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "BT-50",
+      "clean_model": "BT-50",
+      "classification": "model-mention",
+      "total_posts_in_category": 35,
+      "article_evidence": [
+        {
+          "post_id": 156609,
+          "post_title": "Headlightmag Clip รีวิว ทดลองขับ Mazda BT-50 (Freestyle Cab 1.9 S 6MT, Double Cab 1.9 SP 6AT &#038; ",
+          "post_url": "https://www.headlightmag.com/headlightmag-clip-2020-mazda-bt-50-2/",
+          "post_date": "2021-04-19T14:22:41"
+        },
+        {
+          "post_id": 149496,
+          "post_title": "Headlightmag Clip ทดลองขับสั้นๆ All NEW Mazda BT-50 (Double Cab 3.0 6AT &#038; Freestyle Cab 1.9 6MT",
+          "post_url": "https://www.headlightmag.com/headlightmag-clip-2020-mazda-bt-50/",
+          "post_date": "2020-12-19T18:02:29"
+        }
+      ],
+      "article_evidence_count": 2,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-30:",
+      "clean_model": "CX-30",
+      "classification": "model-mention",
+      "total_posts_in_category": 35,
+      "article_evidence": [
+        {
+          "post_id": 150581,
+          "post_title": "Full Review ทดลองขับ Mazda CX-30 (2.0 6AT FWD) : ไม่ใช่แค่ Mazda 3 Crossover แต่มันคือ CX-3 ที่เป็นผ",
+          "post_url": "https://www.headlightmag.com/full-review-2021-mazda-cx-30/",
+          "post_date": "2021-04-26T17:12:31"
+        },
+        {
+          "post_id": 132743,
+          "post_title": "The Clip รีวิว Mazda CX-30: จับ 3 มายกสูง กลายเป็นน่าใช้ขึ้นในภาพรวม",
+          "post_url": "https://www.headlightmag.com/the-clip-review-mazda-cx-30/",
+          "post_date": "2020-04-09T19:59:05"
+        },
+        {
+          "post_id": 130849,
+          "post_title": "First Impression รีวิว ทดลองขับ Mazda CX-30  เจ้า 3 ยกสูง สนุกน้อยลง แต่สบายน่าใช้ขึ้น",
+          "post_url": "https://www.headlightmag.com/first-impression-review-mazda-cx30-by-pan/",
+          "post_date": "2020-03-20T15:20:19"
+        }
+      ],
+      "article_evidence_count": 3,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "3-รีรัน",
+      "clean_model": "3-รีรัน",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 35,
+      "article_evidence": [
+        {
+          "post_id": 118510,
+          "post_title": "First Impression รีวิว ทดลองขับ ALL NEW Mazda 3-รีรัน ไม่รีรอ ขอขับแบบจัดเต็ม",
+          "post_url": "https://www.headlightmag.com/first-impression-drive-all-new-mazda-3-2019/",
+          "post_date": "2019-10-01T20:48:14"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-8",
+      "clean_model": "CX-8",
+      "classification": "model-mention",
+      "total_posts_in_category": 35,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-5",
+      "clean_model": "CX-5",
+      "classification": "model-mention",
+      "total_posts_in_category": 35,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-3",
+      "clean_model": "CX-3",
+      "classification": "model-mention",
+      "total_posts_in_category": 35,
+      "article_evidence": [
+        {
+          "post_id": 150581,
+          "post_title": "Full Review ทดลองขับ Mazda CX-30 (2.0 6AT FWD) : ไม่ใช่แค่ Mazda 3 Crossover แต่มันคือ CX-3 ที่เป็นผ",
+          "post_url": "https://www.headlightmag.com/full-review-2021-mazda-cx-30/",
+          "post_date": "2021-04-26T17:12:31"
+        },
+        {
+          "post_id": 132743,
+          "post_title": "The Clip รีวิว Mazda CX-30: จับ 3 มายกสูง กลายเป็นน่าใช้ขึ้นในภาพรวม",
+          "post_url": "https://www.headlightmag.com/the-clip-review-mazda-cx-30/",
+          "post_date": "2020-04-09T19:59:05"
+        },
+        {
+          "post_id": 130849,
+          "post_title": "First Impression รีวิว ทดลองขับ Mazda CX-30  เจ้า 3 ยกสูง สนุกน้อยลง แต่สบายน่าใช้ขึ้น",
+          "post_url": "https://www.headlightmag.com/first-impression-review-mazda-cx30-by-pan/",
+          "post_date": "2020-03-20T15:20:19"
+        }
+      ],
+      "article_evidence_count": 3,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "ROADPACER",
+      "clean_model": "ROADPACER",
+      "classification": "unresolved",
+      "total_posts_in_category": 35,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "CX-9",
+      "clean_model": "CX-9",
+      "classification": "model-mention",
+      "total_posts_in_category": 35,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "MX-5",
+      "clean_model": "MX-5",
+      "classification": "model-mention",
+      "total_posts_in_category": 35,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MAZDA",
+      "brand_category_id": 116,
+      "raw_model": "New",
+      "clean_model": "New",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 35,
+      "article_evidence": [
+        {
+          "post_id": 149496,
+          "post_title": "Headlightmag Clip ทดลองขับสั้นๆ All NEW Mazda BT-50 (Double Cab 3.0 6AT &#038; Freestyle Cab 1.9 6MT",
+          "post_url": "https://www.headlightmag.com/headlightmag-clip-2020-mazda-bt-50/",
+          "post_date": "2020-12-19T18:02:29"
+        },
+        {
+          "post_id": 118510,
+          "post_title": "First Impression รีวิว ทดลองขับ ALL NEW Mazda 3-รีรัน ไม่รีรอ ขอขับแบบจัดเต็ม",
+          "post_url": "https://www.headlightmag.com/first-impression-drive-all-new-mazda-3-2019/",
+          "post_date": "2019-10-01T20:48:14"
+        },
+        {
+          "post_id": 115595,
+          "post_title": "First Impression รีวิว ทดลองขับ ALL NEW MAZDA 3 ชิมแบบเบาๆ ก่อนเปิดตัวอย่างเป็นทางการ",
+          "post_url": "https://www.headlightmag.com/first-impression-review-mazda-3-thaispec2019/",
+          "post_date": "2019-08-22T14:05:02"
+        }
+      ],
+      "article_evidence_count": 3,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "CIVIC",
+      "clean_model": "CIVIC",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 347437,
+          "post_title": "First Impression รีวิว ทดลองขับ Honda CIVIC e:HEV RS S+ Shift : ความสนุกที่ไปได้สุดมากกว่านี้",
+          "post_url": "https://www.headlightmag.com/first-impression-honda-civic-s-plus-shift/",
+          "post_date": "2026-07-24T10:47:04"
+        },
+        {
+          "post_id": 228965,
+          "post_title": "ผลทดสอบ อัตราเร่ง อัตราสิ้นเปลือง All NEW Honda Civic Type R (FL5) : 3,990,000 บาท (นำเข้า CBU)",
+          "post_url": "https://www.headlightmag.com/2023-08-03-acceleration-fuel-consumption-honda-civic-type-r/",
+          "post_date": "2023-08-03T19:42:28"
+        }
+      ],
+      "article_evidence_count": 2,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "Super-ONE",
+      "clean_model": "Super-ONE",
+      "classification": "variant-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 322312,
+          "post_title": "Exclusive First Impression : Honda Super-ONE Prototype : ต้นแบบ K-Car EV ที่อาจมาไทย!",
+          "post_url": "https://www.headlightmag.com/exclusive-first-impression-2025-honda-super-one-prototype/",
+          "post_date": "2025-11-05T22:00:57"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "WR-V",
+      "clean_model": "WR-V",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 213035,
+          "post_title": "Full Review ทดลองขับ Honda WR-V 1.5 CVT : มันคือ BR-V ช่วงสั้น ที่ขับดีเกินคาด แต่ราคาแพงเกินคุ้ม",
+          "post_url": "https://www.headlightmag.com/full-review-2023-honda-wr-v/",
+          "post_date": "2024-04-17T16:34:09"
+        },
+        {
+          "post_id": 213249,
+          "post_title": "ผลทดสอบ อัตราเร่ง อัตราสิ้นเปลือง Honda WR-V 1.5 RS CVT : 869,000 บาท",
+          "post_url": "https://www.headlightmag.com/2023-03-27-acceleration-fuel-consumption-honda-wrv-rs-cvt/",
+          "post_date": "2023-03-27T18:03:57"
+        }
+      ],
+      "article_evidence_count": 2,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "e:N1",
+      "clean_model": "e:N1",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 241108,
+          "post_title": "First Impression ทดลองขับ Honda e:N1 (HR-V EV) : ขุนศึกทัพหน้า ขับดีหนา ขอราคาแบบไม่ช็อค !",
+          "post_url": "https://www.headlightmag.com/2023-11-09-first-impression-test-drive-honda-en1-hrv-ev/",
+          "post_date": "2023-11-09T17:57:43"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "CR-V",
+      "clean_model": "CR-V",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 222462,
+          "post_title": "ผลทดสอบ อัตราเร่ง อัตราสิ้นเปลือง Honda CR-V 1.5 Turbo ES (5 ที่นั่ง) CVT AWD : 1,599,000 บาท",
+          "post_url": "https://www.headlightmag.com/2023-06-14-acceleration-fuel-consumption-honda-crv-turbo-es-cvt-awd/",
+          "post_date": "2023-06-23T19:43:08"
+        },
+        {
+          "post_id": 219987,
+          "post_title": "Headlightmag Clip Full Review ทดลองขับ Honda CR-V 1.5 Turbo EL 4WD / e:HEV RS 4WD",
+          "post_url": "https://www.headlightmag.com/2023-05-29-headlightmag-clip-full-review-honda-cr-v-gen-6/",
+          "post_date": "2023-05-29T14:18:45"
+        },
+        {
+          "post_id": 212755,
+          "post_title": "First Impression ทดลองขับ Honda CR-V (1.5 Turbo &#038; 2.0 Hybrid) : ภาคต่อของ Comfortable Runabout ",
+          "post_url": "https://www.headlightmag.com/2023-03-30-first-impression-honda-cr-v-g6-turbo-ehev-4wd/",
+          "post_date": "2023-04-01T19:15:01"
+        }
+      ],
+      "article_evidence_count": 3,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "BR-V",
+      "clean_model": "BR-V",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 213035,
+          "post_title": "Full Review ทดลองขับ Honda WR-V 1.5 CVT : มันคือ BR-V ช่วงสั้น ที่ขับดีเกินคาด แต่ราคาแพงเกินคุ้ม",
+          "post_url": "https://www.headlightmag.com/full-review-2023-honda-wr-v/",
+          "post_date": "2024-04-17T16:34:09"
+        },
+        {
+          "post_id": 191980,
+          "post_title": "Full Review ทดลองขับ Honda BR-V 2022 : อุตส่าห์ขับดี เปิดราคาแบบนี้ จบ (เห่) เลย",
+          "post_url": "https://www.headlightmag.com/full-review-2022-honda-br-v/",
+          "post_date": "2022-10-06T16:48:10"
+        }
+      ],
+      "article_evidence_count": 2,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "Accord",
+      "clean_model": "Accord",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "HR-V",
+      "clean_model": "HR-V",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 241108,
+          "post_title": "First Impression ทดลองขับ Honda e:N1 (HR-V EV) : ขุนศึกทัพหน้า ขับดีหนา ขอราคาแบบไม่ช็อค !",
+          "post_url": "https://www.headlightmag.com/2023-11-09-first-impression-test-drive-honda-en1-hrv-ev/",
+          "post_date": "2023-11-09T17:57:43"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "City",
+      "clean_model": "City",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "Clarity-เรือนร่างแห่งปัจจุบัน..บนเทคโนโลยีแห่งอนาคต",
+      "clean_model": "Clarity-เรือนร่างแห่งปัจจุบัน..บนเทคโนโลยีแห่งอนาคต",
+      "classification": "variant-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "HONDA",
+      "brand_category_id": 128,
+      "raw_model": "R&#038;D,",
+      "clean_model": "R&#038;D",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MERCEDES-BENZ",
+      "brand_category_id": 141,
+      "raw_model": "AMG",
+      "clean_model": "AMG",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 220944,
+          "post_title": "First Impression ทดลองขับ Mercedes-Benz A 200 AMG Dynamic (Facelift) : Your First Mercedes, Improved",
+          "post_url": "https://www.headlightmag.com/2023-06-07-first-impression-mercedes-benz-a200-amg-dynamic-facelift-by-borisjeam-02/",
+          "post_date": "2023-06-07T14:39:59"
+        },
+        {
+          "post_id": 182438,
+          "post_title": "Headlightmag Clip ทดลองขับ Mercedes-AMG C43 Coupé Special Edition &#8220;It&#8217;s Now or Never !&#",
+          "post_url": "https://www.headlightmag.com/2022-05-30-headlightmag-clip-mercedes-amg-c43-4matic-coupe-special-edition/",
+          "post_date": "2022-05-30T17:12:38"
+        },
+        {
+          "post_id": 162386,
+          "post_title": "Full Review ทดลองขับ Mercedes-Benz GLA 200 AMG Dynamic &#038; Mercedes-AMG GLA 35 4MATIC : ลบทุกข้อด",
+          "post_url": "https://www.headlightmag.com/full-review-2021-mercedes-benz-gla-200-mercedes-amg-gla-35/",
+          "post_date": "2022-03-09T16:18:46"
+        },
+        {
+          "post_id": 172604,
+          "post_title": "First Impression รีวิว ทดลองขับ Mercedes-AMG CLS 53 | หล่อ แรง ไม่เลือกวัย กับบทส่งท้ายแห่ง CLS",
+          "post_url": "https://www.headlightmag.com/first-impression-review-mercedes-amg-cls-53-by-pan/",
+          "post_date": "2022-02-18T12:57:35"
+        },
+        {
+          "post_id": 162597,
+          "post_title": "Headlightmag Clip รีวิว ทดลองขับ Mercedes-AMG GT C Roadster (Facelift)",
+          "post_url": "https://www.headlightmag.com/headlightmag-clip-mercedes-amg-gt-c-roadster/",
+          "post_date": "2021-08-20T17:05:47"
+        },
+        {
+          "post_id": 161494,
+          "post_title": "Headlightmag Clip รีวิว ทดลองขับ Mercedes-AMG GLA 35 MATIC",
+          "post_url": "https://www.headlightmag.com/headlightmag-clip-mercedes-amg-gla-35-matic/",
+          "post_date": "2021-07-22T17:07:33"
+        },
+        {
+          "post_id": 158317,
+          "post_title": "Headlightmag Clip รีวิว ทดลองขับ Mercedes-Benz GLA 200 AMG Dynamic",
+          "post_url": "https://www.headlightmag.com/headlightmag-clip-mercedes-benz-gla-200-amg-dynamic/",
+          "post_date": "2021-05-19T16:23:06"
+        },
+        {
+          "post_id": 157487,
+          "post_title": "THE CLIP รีวิว Mercedes-AMG GT 53 4 Matic+ Four-door Coupe 3.0L Turbo Mild-Hybrid",
+          "post_url": "https://www.headlightmag.com/the-clip-review-mercedes-amg-gt-53-4-matic-four-door-coupe/",
+          "post_date": "2021-05-06T18:57:54"
+        },
+        {
+          "post_id": 154091,
+          "post_title": "First Impression รีวิว ทดลองขับ Mercedes-Benz E 300 e AMG Dynamic Minorchange",
+          "post_url": "https://www.headlightmag.com/first-impression-review-mercedes-benz-e-300-e-amg-dynamic-minorchange-2021/",
+          "post_date": "2021-03-20T19:52:44"
+        }
+      ],
+      "article_evidence_count": 9,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MG",
+      "brand_category_id": 2599,
+      "raw_model": "URBAN",
+      "clean_model": "URBAN",
+      "classification": "model-mention",
+      "total_posts_in_category": 21,
+      "article_evidence": [
+        {
+          "post_id": 346229,
+          "post_title": "First Impression รีวิว ทดลองขับ MG URBAN : ทุกครั้งที่เราได้อะไรเพิ่ม เราก็มักเสียอะไรบางอย่าง",
+          "post_url": "https://www.headlightmag.com/first-impression-mg-urban/",
+          "post_date": "2026-07-01T15:18:46"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MG",
+      "brand_category_id": 2599,
+      "raw_model": "Maxus",
+      "clean_model": "Maxus",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 21,
+      "article_evidence": [
+        {
+          "post_id": 219758,
+          "post_title": "Headlightmag Clip First Impression พาชม และทดลองขับ MG Maxus 9",
+          "post_url": "https://www.headlightmag.com/2023-05-26-headlightmag-clip-first-impression-mg-maxus-9/",
+          "post_date": "2023-05-28T15:51:24"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MG",
+      "brand_category_id": 2599,
+      "raw_model": "Extender",
+      "clean_model": "Extender",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 21,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MG",
+      "brand_category_id": 2599,
+      "raw_model": "HS,",
+      "clean_model": "HS",
+      "classification": "model-mention",
+      "total_posts_in_category": 21,
+      "article_evidence": [
+        {
+          "post_id": 145847,
+          "post_title": "Kuruma Baka พาไปชมรอบคัน MG HS PHEV (Plug-in Hybrid) 284 แรงม้า 480 นิวตันเมตร",
+          "post_url": "https://www.headlightmag.com/kuruma-baka-2020-mg-hs-phev/",
+          "post_date": "2020-10-27T20:25:29"
+        },
+        {
+          "post_id": 133465,
+          "post_title": "ทดลองขับ MG HS 1.5 Turbo 7 DCT fWD : อย่าเพิ่งลุ่มหลง จนกว่าจะลองขับ",
+          "post_url": "https://www.headlightmag.com/full-review-2020-mg-hs/",
+          "post_date": "2020-05-08T14:19:24"
+        },
+        {
+          "post_id": 134085,
+          "post_title": "Headlightmag Clip รีวิว ทดลองขับ MG HS 1.5 Turbo X 2WD 7DCT",
+          "post_url": "https://www.headlightmag.com/headlightmag-clip-review-mg-hs-1-5-turbo-x-2wd-7dct/",
+          "post_date": "2020-05-07T15:12:36"
+        }
+      ],
+      "article_evidence_count": 3,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "MG",
+      "brand_category_id": 2599,
+      "raw_model": "RX8",
+      "clean_model": "RX8",
+      "classification": "model-mention",
+      "total_posts_in_category": 21,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "KICKS",
+      "clean_model": "KICKS",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 190924,
+          "post_title": "Full Review ทดลองขับ Nissan KICKS E-Power Model Year 2022 (AUTECH) : หรูขึ้น แรงขึ้น ประหยัดขึ้น และ",
+          "post_url": "https://www.headlightmag.com/full-review-2022-2023-nissan-kicks-e-power-autech/",
+          "post_date": "2026-06-02T14:53:36"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "QUEST",
+      "clean_model": "QUEST",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 312834,
+          "post_title": "Nissan QUEST / Mercury VILLAGER : The Completed History : Minivan 7 ที่นั่ง โดยญี่ปุ่น (และ FORD!?)",
+          "post_url": "https://www.headlightmag.com/nissan-quest-mercury-villager-the-complete-history-minivan/",
+          "post_date": "2025-12-25T18:07:23"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "X-TRAIL",
+      "clean_model": "X-TRAIL",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 326496,
+          "post_title": "First Impression ทดลองขับ Nissan X-TRAIL e-Power e-4ORCE (T33) : หลายอย่าง &#8220;ตามสั่ง&#8221; บาง",
+          "post_url": "https://www.headlightmag.com/first-impression-nissan-x-trail-e-power-e-4orce-t33/",
+          "post_date": "2025-12-22T14:21:47"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "SERENA",
+      "clean_model": "SERENA",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 310370,
+          "post_title": "ภาพคันจริง Nissan SERENA e-POWER Highway Star (C28) | มาช้าดีกว่าไม่มา",
+          "post_url": "https://www.headlightmag.com/2025-08-01-picture-specs-nissan-serena-e-power-c28/",
+          "post_date": "2025-08-01T19:30:29"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "SUNNY",
+      "clean_model": "SUNNY",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 300566,
+          "post_title": "NISSAN SUNNY TRUCK : The Completed History : ครั้งหนึ่ง ซันนี่ ก็เคยมีกระบะ!",
+          "post_url": "https://www.headlightmag.com/history-nissan-sunny-truck/",
+          "post_date": "2025-05-13T10:37:47"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "AD-1",
+      "clean_model": "AD-1",
+      "classification": "unresolved",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 292230,
+          "post_title": "1975 Nissan AD-1 Concept Car : (เกือบได้เป็น) รถสปอร์ต เครื่องวางกลางคันแรกของญี่ปุ่น",
+          "post_url": "https://www.headlightmag.com/%e0%b9%89history-1975-nissan-ad-1-concept-car/",
+          "post_date": "2025-02-23T20:22:57"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "Navara",
+      "clean_model": "Navara",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 187941,
+          "post_title": "Short Review ทดลองขับ Nissan Navara King Cab Black Edition : กระบะดีเซลเทอร์โบคู่สวมชุดแต่งที่ราคาถู",
+          "post_url": "https://www.headlightmag.com/short-review-2022-nissan-navara-black-edition/",
+          "post_date": "2022-08-01T19:36:52"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "LEAF",
+      "clean_model": "LEAF",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 162081,
+          "post_title": "Full Review ทดลองขับ Nissan LEAF EV : Why Thai customer Leave it on the showroom?",
+          "post_url": "https://www.headlightmag.com/full-review-2019-2022-nissan-leaf-ev/",
+          "post_date": "2022-07-29T15:39:54"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "TERRA",
+      "clean_model": "TERRA",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 162391,
+          "post_title": "ทดลองขับ Nissan TERRA Minorchange (2.3 TD 7AT 4&#215;4 VL) : SUV/PPV ที่ขับดีสุด และ คุ้มสุดในตลาด แ",
+          "post_url": "https://www.headlightmag.com/full-review-2021-2022-nissan-terra-minorchange/",
+          "post_date": "2022-01-05T15:46:18"
+        },
+        {
+          "post_id": 163612,
+          "post_title": "Headlightmag Clip ทดลองขับ Nissan Terra Minorchange 2.3 Twin-Turbo VL 7AT 4&#215;4",
+          "post_url": "https://www.headlightmag.com/headlightmag-clip-nissan-terra-minorchange-vl-4x4/",
+          "post_date": "2021-09-16T19:13:19"
+        }
+      ],
+      "article_evidence_count": 2,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "Almera",
+      "clean_model": "Almera",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "Note",
+      "clean_model": "Note",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "GT-R",
+      "clean_model": "GT-R",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "PRESEA",
+      "clean_model": "PRESEA",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "NISSAN",
+      "brand_category_id": 143,
+      "raw_model": "SYLPHY",
+      "clean_model": "SYLPHY",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "บ้านโพธิ์",
+      "clean_model": "บ้านโพธิ์",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 341215,
+          "post_title": "เยือนโรงงานสีเขียว TOYOTA บ้านโพธิ์ ฐานประกอบ Hilux Fortuner Land Cruiser FJ ส่งทั่วโลก",
+          "post_url": "https://www.headlightmag.com/2026-05-26-factory_tour-toyota-banpho/",
+          "post_date": "2026-05-29T16:54:49"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "WiLL",
+      "clean_model": "WiLL",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 186669,
+          "post_title": "TOYOTA WiLL Project (WiLL Vi / WiLL VS / WiLL CYPHA) : แผนการตลาด Multi-Industry เพื่อวัยรุ่นญี่ปุ่น",
+          "post_url": "https://www.headlightmag.com/history-toyota-will-vi-will-vs-will-cypha/",
+          "post_date": "2026-04-17T17:15:17"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Hilux",
+      "clean_model": "Hilux",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 341215,
+          "post_title": "เยือนโรงงานสีเขียว TOYOTA บ้านโพธิ์ ฐานประกอบ Hilux Fortuner Land Cruiser FJ ส่งทั่วโลก",
+          "post_url": "https://www.headlightmag.com/2026-05-26-factory_tour-toyota-banpho/",
+          "post_date": "2026-05-29T16:54:49"
+        },
+        {
+          "post_id": 323579,
+          "post_title": "First Impression ทดลองขับ Toyota Hilux TRAVO : ขับดีขึ้น เนียนขึ้น แต่ขออีกนิดน่า!",
+          "post_url": "https://www.headlightmag.com/first-impression-2026-toyota-hilux-travo/",
+          "post_date": "2025-11-20T11:02:47"
+        },
+        {
+          "post_id": 265617,
+          "post_title": "ทดลองขับ Toyota Hilux REVO GR SPORT Wide Tread : เวอร์ชั่นเข้ายิม ร่างบึก แรงเยอะ ทรงตัวดี แต่ยังไปต",
+          "post_url": "https://www.headlightmag.com/2024-06-21-full-review-toyota-hilux-revo-gr-sport-wide-tread/",
+          "post_date": "2024-09-02T13:27:16"
+        },
+        {
+          "post_id": 269456,
+          "post_title": "Full Review ทดลองขับ Toyota Hilux REVO SmartCab 4&#215;2 Z-Edition MY 2024 ปรับโฉมครั้งใหม่ เอาใจวัย",
+          "post_url": "https://www.headlightmag.com/full-review-2024-toyota-hilux-revo-smartcab-4x2-z-edition/",
+          "post_date": "2024-08-08T15:22:01"
+        },
+        {
+          "post_id": 246932,
+          "post_title": "First Impression ทดลองขับ Toyota Hilux Revo e BEV / FCEV &#038; Diesel HEV : ที่ Buriram",
+          "post_url": "https://www.headlightmag.com/first-impression-2024-toyota-hilux-revo-e-bev-fcev-diesel-hev/",
+          "post_date": "2023-12-27T12:25:43"
+        }
+      ],
+      "article_evidence_count": 5,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "YARIS",
+      "clean_model": "YARIS",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 312245,
+          "post_title": "Full Review ทดลองขับ Toyota YARIS ATIV HEV : ละเอียดกว่านี้ ก็ Service Manual แล้วละ!",
+          "post_url": "https://www.headlightmag.com/full-review-2025-toyota-yaris-ativ-hev-hybrid/",
+          "post_date": "2025-09-26T17:24:36"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "CYNOS",
+      "clean_model": "CYNOS",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 288856,
+          "post_title": "Toyota CYNOS / PASEO : The Completed History : Coupe น้องเล็ก พื้นฐาน Tercel Corsa Corolla II และ SO",
+          "post_url": "https://www.headlightmag.com/history-toyota-cynos-paseo/",
+          "post_date": "2025-04-15T19:22:42"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "CELICA",
+      "clean_model": "CELICA",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 281843,
+          "post_title": "1980 TOYOTA CELICA 4 Door CAMRY : ต้นกำเนิด Sedan รุ่นใหญ่ ขายดีทั่วโลก",
+          "post_url": "https://www.headlightmag.com/history-1980-toyota-celica-4-door-camry/",
+          "post_date": "2024-11-22T14:39:12"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Origin",
+      "clean_model": "Origin",
+      "classification": "non-vehicle",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 186966,
+          "post_title": "Toyota Origin : The Complete History : รถย้อนยุค 1955 งาน Hand Made!! แค่ 1,072 คัน เท่านั้น!",
+          "post_url": "https://www.headlightmag.com/2024-08-04-automobile-history-2000-toyota-origin/",
+          "post_date": "2024-08-04T19:20:09"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "VELOZ",
+      "clean_model": "VELOZ",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Corolla",
+      "clean_model": "Corolla",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 288856,
+          "post_title": "Toyota CYNOS / PASEO : The Completed History : Coupe น้องเล็ก พื้นฐาน Tercel Corsa Corolla II และ SO",
+          "post_url": "https://www.headlightmag.com/history-toyota-cynos-paseo/",
+          "post_date": "2025-04-15T19:22:42"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "C-HR",
+      "clean_model": "C-HR",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Camry",
+      "clean_model": "Camry",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 281843,
+          "post_title": "1980 TOYOTA CELICA 4 Door CAMRY : ต้นกำเนิด Sedan รุ่นใหญ่ ขายดีทั่วโลก",
+          "post_url": "https://www.headlightmag.com/history-1980-toyota-celica-4-door-camry/",
+          "post_date": "2024-11-22T14:39:12"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Fortuner",
+      "clean_model": "Fortuner",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [
+        {
+          "post_id": 341215,
+          "post_title": "เยือนโรงงานสีเขียว TOYOTA บ้านโพธิ์ ฐานประกอบ Hilux Fortuner Land Cruiser FJ ส่งทั่วโลก",
+          "post_url": "https://www.headlightmag.com/2026-05-26-factory_tour-toyota-banpho/",
+          "post_date": "2026-05-29T16:54:49"
+        }
+      ],
+      "article_evidence_count": 1,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    },
+    {
+      "source": "MEDIA_DISCOVERY",
+      "source_origin": "headlightmag_wordpress_categories",
+      "brand_category_name": "TOYOTA",
+      "brand_category_id": 153,
+      "raw_model": "Majesty",
+      "clean_model": "Majesty",
+      "classification": "model-mention",
+      "total_posts_in_category": 40,
+      "article_evidence": [],
+      "article_evidence_count": 0,
+      "evidence_note": "Category-level mention; articles traced where model name appears in title"
+    }
+  ]
+}

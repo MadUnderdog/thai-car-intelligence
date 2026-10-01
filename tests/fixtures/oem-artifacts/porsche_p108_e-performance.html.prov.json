@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/aboutporsche/e-performance/",
+  "captured_at": "2026-09-27T19:05:42.348934+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "ffe82949c8214dd3ff6e28a313252083331e1c2c65ce3ba9bf684e962b03d8df",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "porsche_p108_e-performance.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

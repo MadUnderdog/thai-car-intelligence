@@ -1,0 +1,1293 @@
+{
+  "artifact": "p104-catalog-reconciliation/1",
+  "generated_at": "2026-09-27T11:35:28.311758+00:00",
+  "before": {
+    "records": 1389,
+    "confirmed_models": 194,
+    "confirmed_variants": 401,
+    "oems_with_confirmation": 19
+  },
+  "after": {
+    "records": 1424,
+    "confirmed_models": 243,
+    "confirmed_variants": 404,
+    "oems_with_confirmation": 19
+  },
+  "deltas": {
+    "records": 35,
+    "confirmed_models": 49,
+    "confirmed_variants": 3,
+    "oems_with_confirmation": 0
+  },
+  "harvested": 234,
+  "outcomes": {
+    "existing": 231,
+    "new": 3
+  },
+  "by_method": {
+    "official_grade_table": 13,
+    "official_lineup_word_boundary": 218,
+    "official_sentence_grade": 3
+  },
+  "new_first_party_identities": [
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "Max",
+      "identity_level": "VARIANT",
+      "artifact": "changan_nevo_q05_page.html"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "variant": "Ultra",
+      "identity_level": "VARIANT",
+      "artifact": "changan_nevo_q05_page.html"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "Haval H6",
+      "variant": "ULTRA",
+      "identity_level": "VARIANT",
+      "artifact": "gwm_th_model_haval-h6.html"
+    }
+  ],
+  "ambiguous": [],
+  "skipped_artifacts_without_provenance": [
+    {
+      "artifact": "toyota_page.html",
+      "reason": "provenance not verified — Provenance sidecar not found: /home/ubuntu/Projects/thai-car-intelligence/tests/fixtures/oem-artifacts/toyota_page.html.prov.json"
+    },
+    {
+      "artifact": "bmw_models_page.html",
+      "reason": "provenance not verified — Provenance sidecar not found: /home/ubuntu/Projects/thai-car-intelligence/tests/fixtures/oem-artifacts/bmw_models_page.html.prov.json"
+    },
+    {
+      "artifact": "honda_page.html",
+      "reason": "provenance not verified — Provenance sidecar not found: /home/ubuntu/Projects/thai-car-intelligence/tests/fixtures/oem-artifacts/honda_page.html.prov.json"
+    },
+    {
+      "artifact": "honda_city_page.html",
+      "reason": "provenance not verified — Provenance sidecar not found: /home/ubuntu/Projects/thai-car-intelligence/tests/fixtures/oem-artifacts/honda_city_page.html.prov.json"
+    },
+    {
+      "artifact": "mazda_page.html",
+      "reason": "provenance not verified — Provenance sidecar not found: /home/ubuntu/Projects/thai-car-intelligence/tests/fixtures/oem-artifacts/mazda_page.html.prov.json"
+    },
+    {
+      "artifact": "isuzu_page.html",
+      "reason": "provenance not verified — Provenance sidecar not found: /home/ubuntu/Projects/thai-car-intelligence/tests/fixtures/oem-artifacts/isuzu_page.html.prov.json"
+    }
+  ],
+  "rejected_model_context_evidence": [
+    {
+      "manufacturer": "BMW",
+      "model": "SAV New iX",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAV New iX",
+      "snippet": "urther categories Concept Cars Reset all Full electric SAV New iX Models Electric From THB5,799,000 Illustrations show o",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "SAV New iX3",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAV New iX3",
+      "snippet": "cover now Available new vehicles Continue to \"Compare\" SAV New iX3 Models Electric From THB3,459,000 Build & Price Disco",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "SAC iX2",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAC iX2",
+      "snippet": "rice Discover now Request an offer Continue to \"Compare\" SAC iX2 Models Electric From THB3,259,000 Illustrations show op",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "SAV iX1 L",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAV iX1 L",
+      "snippet": "scover now Available new vehicles Continue to \"Compare\" SAV iX1 L Models Electric From THB2,359,000 Illustrations show o",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Sedan New i5",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Sedan New i5",
+      "snippet": "over now Available new vehicles Continue to \"Compare\" Sedan New i5 Models Electric From THB3,299,000 Illustrations show",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "SAV XM",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAV XM",
+      "snippet": "Sedan New i3 Model Electric Discover now Plug-in hybrid SAV XM Models Hybrid From THB6,499,000 Illustrations show optio",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "SAV X5",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAV X5",
+      "snippet": "\" SAV New X5 Models Hybrid Keep me informed Discover now SAV X5 Models Hybrid From THB5,269,000 Illustrations show optio",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Sedan 7 series",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Sedan 7 series",
+      "snippet": "ver now Available new vehicles Continue to \"Compare\" Sedan 7 series Models Hybrid From THB6,869,000 Illustrations show o",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Sedan 5 series",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Sedan 5 series",
+      "snippet": "ver now Available new vehicles Continue to \"Compare\" Sedan 5 series Models Hybrid From THB3,109,000 Illustrations show o",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Sedan M5",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Sedan M5",
+      "snippet": "scover now Available new vehicles Continue to \"Compare\" Sedan M5 Models Hybrid From THB12,679,000 Illustrations show opt",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Touring M5",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Touring M5",
+      "snippet": "cover now Available new vehicles Continue to \"Compare\" Touring M5 Models Hybrid From THB12,979,000 Illustrations show op",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Sedan 3 series",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Sedan 3 series",
+      "snippet": "ver now Available new vehicles Continue to \"Compare\" Sedan 3 series Models Hybrid From THB2,879,000 Illustrations show o",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "SAC X6",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAC X6",
+      "snippet": "now Available new vehicles Continue to \"Compare\" Petrol SAC X6 Models Petrol From THB5,769,000 Illustrations show optio",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "SAV X3",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAV X3",
+      "snippet": "iscover now Available new vehicles Continue to \"Compare\" SAV X3 M Models Petrol From THB4,379,000 Illustrations show opt",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "SAV X1",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAV X1",
+      "snippet": "iscover now Available new vehicles Continue to \"Compare\" SAV X1 Models Petrol From THB2,279,000 Illustrations show optio",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Coupé 4 series",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Coupé 4 series",
+      "snippet": "ver now Available new vehicles Continue to \"Compare\" Coupé 4 series Models Petrol From THB3,479,000 Illustrations show o",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Coupé M4",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Coupé M4",
+      "snippet": "scover now Available new vehicles Continue to \"Compare\" Coupé M4 Models Petrol From THB10,099,000 Illustrations show opt",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Convertible 4 series",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Convertible 4 series",
+      "snippet": "now Available new vehicles Continue to \"Compare\" Convertible 4 series Models Petrol From THB4,379,000 Illustrations sho",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Sedan M3",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Sedan M3",
+      "snippet": "scover now Available new vehicles Continue to \"Compare\" Sedan M3 Models Petrol From THB14,799,000 Illustrations show opt",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Touring M3",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Touring M3",
+      "snippet": "cover now Available new vehicles Continue to \"Compare\" Touring M3 Models Petrol From THB10,199,000 Illustrations show op",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Coupé M2",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Coupé M2",
+      "snippet": "scover now Available new vehicles Continue to \"Compare\" Coupé M2 Models Petrol From THB6,419,000 Illustrations show opti",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Coupé 2 series",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Coupé 2 series",
+      "snippet": "ver now Available new vehicles Continue to \"Compare\" Coupé 2 series Models Petrol From THB2,079,000 Illustrations show o",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "Roadster Z4",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "Roadster Z4",
+      "snippet": "cover now Available new vehicles Continue to \"Compare\" Roadster Z4 Models Petrol From THB4,129,000 Illustrations show op",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "SAV X7",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAV X7",
+      "snippet": "now Available new vehicles Continue to \"Compare\" Diesel SAV X7 Models Diesel From THB6,469,000 Illustrations show optio",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "SAC X4",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "SAC X4",
+      "snippet": "iscover now Available new vehicles Continue to \"Compare\" SAC X4 Models Diesel From THB4,069,000 Illustrations show optio",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 2 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 2 series",
+      "snippet": "s BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series BMW Concept Cars Copyright © BMW Thailan",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 3 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 3 series",
+      "snippet": "s BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series BMW Concept Cars Copyright",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 3 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 3 series",
+      "snippet": "s BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series BMW Concept Cars Copyright",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 3 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 3 series",
+      "snippet": "s BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series BMW Concept Cars Copyright",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 3 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 3 series",
+      "snippet": "s BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series BMW Concept Cars Copyright",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 4 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 4 series",
+      "snippet": "t Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series BMW Concept Ca",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 4 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 4 series",
+      "snippet": "t Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series BMW Concept Ca",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 4 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 4 series",
+      "snippet": "t Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series BMW Concept Ca",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 4 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 4 series",
+      "snippet": "t Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series BMW Concept Ca",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 5 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 5 series",
+      "snippet": "re Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 5 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 5 series",
+      "snippet": "re Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 5 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 5 series",
+      "snippet": "re Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 5 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 5 series",
+      "snippet": "re Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 5 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 5 series",
+      "snippet": "re Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series BMW M series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 7 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 7 series",
+      "snippet": "Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 7 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 7 series",
+      "snippet": "Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW 7 SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW 7 series",
+      "snippet": "Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series BMW 2 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW X series",
+      "snippet": "Services BMW Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW X series",
+      "snippet": "Services BMW Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW X series",
+      "snippet": "Services BMW Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW X series",
+      "snippet": "Services BMW Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW X series",
+      "snippet": "Services BMW Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW X series",
+      "snippet": "Services BMW Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW X series",
+      "snippet": "Services BMW Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "BMW",
+      "model": "BMW X SERIES",
+      "artifact": "bmw_all_models_verified.html",
+      "source_url": "https://www.bmw.co.th/en/all-models.html",
+      "matched_text": "BMW X series",
+      "snippet": "Services BMW Lifestyle Store Book a Test Drive Models BMW X series BMW 7 series BMW 5 series BMW 4 series BMW 3 series B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lbx",
+      "artifact": "lexus_models_page.html",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "matched_text": "Lexus LBX",
+      "snippet": "IS บ่งบอกความเป็นคุณ สัมผัสประสบการณ์ใหม่ในการปรับแต่ง Lexus LBX Bespoke ให้ทุกการเดินทางเป็นไปได้ตามนิยามของคุณ ค้นพบ",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lbx",
+      "artifact": "lexus_models_page.html",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "matched_text": "Lexus LBX",
+      "snippet": "IS บ่งบอกความเป็นคุณ สัมผัสประสบการณ์ใหม่ในการปรับแต่ง Lexus LBX Bespoke ให้ทุกการเดินทางเป็นไปได้ตามนิยามของคุณ ค้นพบ",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Lbx",
+      "artifact": "lexus_models_page.html",
+      "source_url": "https://www.lexus.co.th/th.html",
+      "matched_text": "Lexus LBX",
+      "snippet": "IS บ่งบอกความเป็นคุณ สัมผัสประสบการณ์ใหม่ในการปรับแต่ง Lexus LBX Bespoke ให้ทุกการเดินทางเป็นไปได้ตามนิยามของคุณ ค้นพบ",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "ORA 5 HEV",
+      "artifact": "gwm_data_models_page.html",
+      "source_url": "https://www.gwm.co.th/en",
+      "matched_text": "ORA 5 HEV",
+      "snippet": "rom 649,000.- MSRP : 669,000.- Order Now Test Drive NEW ORA 5 HEV REDEFINE YOUR NEW ERA From 709,000.- MSRP : 729,000.-",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 3.0T DIESEL",
+      "artifact": "gwm_data_models_page.html",
+      "source_url": "https://www.gwm.co.th/en",
+      "matched_text": "TANK 500 3.0T DIESEL",
+      "snippet": "E-OWNED FLEET SALES TEST DRIVE 02-668-8888 TH NEW TANK 500 3.0T DIESEL Power Beyond Limits Early bird offer for 4WD Only",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "ORA 5 HEV",
+      "artifact": "gwm_home_page.html",
+      "source_url": "https://www.gwm.co.th/en",
+      "matched_text": "ORA 5 HEV",
+      "snippet": "rom 649,000.- MSRP : 669,000.- Order Now Test Drive NEW ORA 5 HEV REDEFINE YOUR NEW ERA From 709,000.- MSRP : 729,000.-",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "GWM",
+      "model": "TANK 500 3.0T DIESEL",
+      "artifact": "gwm_home_page.html",
+      "source_url": "https://www.gwm.co.th/en",
+      "matched_text": "TANK 500 3.0T DIESEL",
+      "snippet": "E-OWNED FLEET SALES TEST DRIVE 02-668-8888 TH NEW TANK 500 3.0T DIESEL Power Beyond Limits Early bird offer for 4WD Only",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Taycan",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Taycan",
+      "snippet": "ailand | Official Website Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Po",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Cayenne",
+      "artifact": "porsche_home_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/",
+      "matched_text": "Cayenne",
+      "snippet": "Paint to Sample. Discover more Taycan. Now with E-Shift. Cayenne. The new 911 GT3 S/C. Your Porsche journey starts now.",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Porsche Macan",
+      "artifact": "porsche_macan_model_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/models/macan/#modelRangeId=macan",
+      "matched_text": "Porsche Macan",
+      "snippet": "Porsche Macan Models and Configurator | Porsche Thailand Model ove",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Porsche",
+      "model": "Porsche Macan",
+      "artifact": "porsche_macan_model_page.html",
+      "source_url": "https://www.porsche.com/pap/_thailand_/models/macan/#modelRangeId=macan",
+      "matched_text": "Porsche Macan",
+      "snippet": "Porsche Macan Models and Configurator | Porsche Thailand Model ove",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI CONVERTIBLE",
+      "artifact": "mini_home_page.html",
+      "source_url": "https://www.mini.co.th/en_TH/home.html",
+      "matched_text": "MINI CONVERTIBLE",
+      "snippet": "HATCH MINI 3-DOOR HATCH Menu Design and Highlights MINI CONVERTIBLE MINI CONVERTIBLE Menu The MINI Cooper Convertible T",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "Mini Clubman",
+      "artifact": "mini_home_page.html",
+      "source_url": "https://www.mini.co.th/en_TH/home.html",
+      "matched_text": "MINI CLUBMAN",
+      "snippet": "TIBLE Menu The MINI Cooper Convertible Technical Data MINI CLUBMAN MINI CLUBMAN Menu Design and Highlights MINI COUNTRYM",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "Mini 3 Door",
+      "artifact": "mini_home_page.html",
+      "source_url": "https://www.mini.co.th/en_TH/home.html",
+      "matched_text": "MINI 3-DOOR",
+      "snippet": "gle Play Store Install now Skip to main content MODELS MINI 3-DOOR COOPER SE MINI 3-DOOR COOPER SE Menu Design and Highl",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "MINI CONVERTIBLE",
+      "artifact": "mini_home_page.html",
+      "source_url": "https://www.mini.co.th/en_TH/home.html",
+      "matched_text": "MINI CONVERTIBLE",
+      "snippet": "HATCH MINI 3-DOOR HATCH Menu Design and Highlights MINI CONVERTIBLE MINI CONVERTIBLE Menu The MINI Cooper Convertible T",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Jaguar",
+      "model": "F-TYPE",
+      "artifact": "jaguar_range_page.html",
+      "source_url": "https://www.jaguar.co.th/jaguar-range/overview",
+      "matched_text": "F-TYPE",
+      "snippet": "EXPLORE ELECTRIC SPECIAL VEHICLES OPERATIONS SV VEHICLES F-TYPE ZP EDITION 24 MODEL YEAR OVERVIEW EXPLORE SVO FIND A RET",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Jaguar",
+      "model": "F-TYPE",
+      "artifact": "jaguar_home_page.html",
+      "source_url": "https://www.jaguar.co.th/",
+      "matched_text": "F-TYPE",
+      "snippet": "EXPLORE ELECTRIC SPECIAL VEHICLES OPERATIONS SV VEHICLES F-TYPE ZP EDITION 24 MODEL YEAR OVERVIEW EXPLORE SVO FIND A RET",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_home_page.html",
+      "source_url": "https://www.landrover.co.th/",
+      "matched_text": "DEFENDER",
+      "snippet": "and Rover Thailand สำรวจ สำรวจ สำรวจ รถยนต์ RANGE ROVER DEFENDER DISCOVERY BESPOKE ออกแบบรถในแบบของคุณเอง โปรแกรมจำหน่าย",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_home_page.html",
+      "source_url": "https://www.landrover.co.th/",
+      "matched_text": "DEFENDER",
+      "snippet": "and Rover Thailand สำรวจ สำรวจ สำรวจ รถยนต์ RANGE ROVER DEFENDER DISCOVERY BESPOKE ออกแบบรถในแบบของคุณเอง โปรแกรมจำหน่าย",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_home_page.html",
+      "source_url": "https://www.landrover.co.th/",
+      "matched_text": "DEFENDER",
+      "snippet": "and Rover Thailand สำรวจ สำรวจ สำรวจ รถยนต์ RANGE ROVER DEFENDER DISCOVERY BESPOKE ออกแบบรถในแบบของคุณเอง โปรแกรมจำหน่าย",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_home_page.html",
+      "source_url": "https://www.landrover.co.th/",
+      "matched_text": "DEFENDER",
+      "snippet": "and Rover Thailand สำรวจ สำรวจ สำรวจ รถยนต์ RANGE ROVER DEFENDER DISCOVERY BESPOKE ออกแบบรถในแบบของคุณเอง โปรแกรมจำหน่าย",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_home_page.html",
+      "source_url": "https://www.landrover.co.th/",
+      "matched_text": "DEFENDER",
+      "snippet": "and Rover Thailand สำรวจ สำรวจ สำรวจ รถยนต์ RANGE ROVER DEFENDER DISCOVERY BESPOKE ออกแบบรถในแบบของคุณเอง โปรแกรมจำหน่าย",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER",
+      "artifact": "landrover_home_page.html",
+      "source_url": "https://www.landrover.co.th/",
+      "matched_text": "RANGE ROVER",
+      "snippet": "สุดหรู | Land Rover Thailand สำรวจ สำรวจ สำรวจ รถยนต์ RANGE ROVER DEFENDER DISCOVERY BESPOKE ออกแบบรถในแบบของคุณเอง โปร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER",
+      "artifact": "landrover_home_page.html",
+      "source_url": "https://www.landrover.co.th/",
+      "matched_text": "RANGE ROVER",
+      "snippet": "สุดหรู | Land Rover Thailand สำรวจ สำรวจ สำรวจ รถยนต์ RANGE ROVER DEFENDER DISCOVERY BESPOKE ออกแบบรถในแบบของคุณเอง โปร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_range_rover_page.html",
+      "source_url": "https://www.landrover.co.th/range-rover/overview",
+      "matched_text": "DEFENDER",
+      "snippet": "ภาพรวม แจ้งข้อมูลให้ฉันทราบ BESPOKE รถยนต์ไฟฟ้า CLASSIC DEFENDER DEFENDER OCTA รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง ร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_range_rover_page.html",
+      "source_url": "https://www.landrover.co.th/range-rover/overview",
+      "matched_text": "DEFENDER",
+      "snippet": "ภาพรวม แจ้งข้อมูลให้ฉันทราบ BESPOKE รถยนต์ไฟฟ้า CLASSIC DEFENDER DEFENDER OCTA รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง ร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_range_rover_page.html",
+      "source_url": "https://www.landrover.co.th/range-rover/overview",
+      "matched_text": "DEFENDER",
+      "snippet": "ภาพรวม แจ้งข้อมูลให้ฉันทราบ BESPOKE รถยนต์ไฟฟ้า CLASSIC DEFENDER DEFENDER OCTA รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง ร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_range_rover_page.html",
+      "source_url": "https://www.landrover.co.th/range-rover/overview",
+      "matched_text": "DEFENDER",
+      "snippet": "ภาพรวม แจ้งข้อมูลให้ฉันทราบ BESPOKE รถยนต์ไฟฟ้า CLASSIC DEFENDER DEFENDER OCTA รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง ร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_range_rover_page.html",
+      "source_url": "https://www.landrover.co.th/range-rover/overview",
+      "matched_text": "DEFENDER",
+      "snippet": "ภาพรวม แจ้งข้อมูลให้ฉันทราบ BESPOKE รถยนต์ไฟฟ้า CLASSIC DEFENDER DEFENDER OCTA รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง ร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "DEFENDER",
+      "snippet": "ภาพรวม แจ้งข้อมูลให้ฉันทราบ BESPOKE รถยนต์ไฟฟ้า CLASSIC DEFENDER DEFENDER OCTA รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง ร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "DEFENDER",
+      "snippet": "ภาพรวม แจ้งข้อมูลให้ฉันทราบ BESPOKE รถยนต์ไฟฟ้า CLASSIC DEFENDER DEFENDER OCTA รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง ร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "DEFENDER",
+      "snippet": "ภาพรวม แจ้งข้อมูลให้ฉันทราบ BESPOKE รถยนต์ไฟฟ้า CLASSIC DEFENDER DEFENDER OCTA รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง ร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "DEFENDER",
+      "snippet": "ภาพรวม แจ้งข้อมูลให้ฉันทราบ BESPOKE รถยนต์ไฟฟ้า CLASSIC DEFENDER DEFENDER OCTA รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง ร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "DEFENDER",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "DEFENDER",
+      "snippet": "ภาพรวม แจ้งข้อมูลให้ฉันทราบ BESPOKE รถยนต์ไฟฟ้า CLASSIC DEFENDER DEFENDER OCTA รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง ร",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER VELAR",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "RANGE ROVER VELAR",
+      "snippet": "ออกแบบรถในแบบของคุณเอง BESPOKE รถยนต์ไฟฟ้า CLASSIC RANGE ROVER VELAR รุ่นปี 26 ภาพรวม ออกแบบรถในแบบของคุณเอง รุ่นปี 27",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER VELAR",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "RANGE ROVER VELAR",
+      "snippet": "ออกแบบรถในแบบของคุณเอง BESPOKE รถยนต์ไฟฟ้า CLASSIC RANGE ROVER VELAR รุ่นปี 26 ภาพรวม ออกแบบรถในแบบของคุณเอง รุ่นปี 27",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER SPORT",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "RANGE ROVER SPORT",
+      "snippet": "ออกแบบรถในแบบของคุณเอง BESPOKE รถยนต์ไฟฟ้า CLASSIC RANGE ROVER SPORT รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง BESPOKE รถ",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER SPORT",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "RANGE ROVER SPORT",
+      "snippet": "ออกแบบรถในแบบของคุณเอง BESPOKE รถยนต์ไฟฟ้า CLASSIC RANGE ROVER SPORT รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง BESPOKE รถ",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "RANGE ROVER",
+      "snippet": "ำรวจ สนใจสั่งซื้อ ดูราคา ศูนย์จำหน่าย สร้าง รุ่นรถยนต์ RANGE ROVER RANGE ROVER รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Land Rover",
+      "model": "RANGE ROVER",
+      "artifact": "landrover_discovery_page.html",
+      "source_url": "https://www.landrover.co.th/discovery/overview",
+      "matched_text": "RANGE ROVER",
+      "snippet": "ำรวจ สนใจสั่งซื้อ ดูราคา ศูนย์จำหน่าย สร้าง รุ่นรถยนต์ RANGE ROVER RANGE ROVER รุ่นปี 27 ภาพรวม ออกแบบรถในแบบของคุณเอง B",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal Hunter K50",
+      "artifact": "deepal_s07.html",
+      "source_url": "https://www.changan.co.th/th/deepal/s07-th/",
+      "matched_text": "DEEPAL HUNTER K50",
+      "snippet": "CHANGAN Thailand NEVO NEVO Q05 เกี่ยวกับ NEVO DEEPAL HUNTER K50 S05 REEV S05 E07 Performance AWD E07 Plus NEW S07",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal Hunter K50",
+      "artifact": "deepal_s05.html",
+      "source_url": "https://www.changan.co.th/th/deepal/s05-th/",
+      "matched_text": "DEEPAL HUNTER K50",
+      "snippet": "CHANGAN Thailand NEVO NEVO Q05 เกี่ยวกับ NEVO DEEPAL HUNTER K50 S05 REEV S05 E07 Performance AWD E07 Plus NEW S07",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Deepal",
+      "model": "Deepal Hunter K50",
+      "artifact": "deepal_e07_plus.html",
+      "source_url": "https://www.changan.co.th/th/deepal/e07-plus-th/",
+      "matched_text": "DEEPAL HUNTER K50",
+      "snippet": "CHANGAN Thailand NEVO NEVO Q05 เกี่ยวกับ NEVO DEEPAL HUNTER K50 S05 REEV S05 E07 Performance AWD E07 Plus NEW S07",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "artifact": "changan_home_page.html",
+      "source_url": "https://www.changan.co.th/th/",
+      "matched_text": "NEVO Q05",
+      "snippet": "CHANGAN Thailand NEVO NEVO Q05 เกี่ยวกับ NEVO DEEPAL HUNTER K50 S05 REEV S05 E07 Perfo",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "artifact": "changan_home_page.html",
+      "source_url": "https://www.changan.co.th/th/",
+      "matched_text": "NEVO Q05",
+      "snippet": "CHANGAN Thailand NEVO NEVO Q05 เกี่ยวกับ NEVO DEEPAL HUNTER K50 S05 REEV S05 E07 Perfo",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "artifact": "changan_home_page.html",
+      "source_url": "https://www.changan.co.th/th/",
+      "matched_text": "NEVO Q05",
+      "snippet": "CHANGAN Thailand NEVO NEVO Q05 เกี่ยวกับ NEVO DEEPAL HUNTER K50 S05 REEV S05 E07 Perfo",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "artifact": "changan_lumin_page.html",
+      "source_url": "https://www.changan.co.th/th/lumin/luminl-dc-th/",
+      "matched_text": "NEVO Q05",
+      "snippet": "CHANGAN Thailand NEVO NEVO Q05 เกี่ยวกับ NEVO DEEPAL HUNTER K50 S05 REEV S05 E07 Perfo",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "artifact": "changan_lumin_page.html",
+      "source_url": "https://www.changan.co.th/th/lumin/luminl-dc-th/",
+      "matched_text": "NEVO Q05",
+      "snippet": "CHANGAN Thailand NEVO NEVO Q05 เกี่ยวกับ NEVO DEEPAL HUNTER K50 S05 REEV S05 E07 Perfo",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "NEVO Q05",
+      "artifact": "changan_lumin_page.html",
+      "source_url": "https://www.changan.co.th/th/lumin/luminl-dc-th/",
+      "matched_text": "NEVO Q05",
+      "snippet": "CHANGAN Thailand NEVO NEVO Q05 เกี่ยวกับ NEVO DEEPAL HUNTER K50 S05 REEV S05 E07 Perfo",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "MG",
+      "model": "Mg4 Electric",
+      "artifact": "mg_home_page.html",
+      "source_url": "https://www.mgcars.com/th",
+      "matched_text": "MG4 ELECTRIC",
+      "snippet": "NEW MG CYBERSTER, NEW MG MAXUS 9, NEW MG MAXUS 7, NEW MG4 ELECTRIC, NEW MG ZS EV, NEW MG ES และ NEW MG EP Plus ที่มอบทาง",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "ALL NEW FORESTER",
+      "artifact": "subaru_brochure_page.html",
+      "source_url": "https://www.subaru.asia/th/th/contact-us/brochure.php",
+      "matched_text": "All New Forester",
+      "snippet": "ระเทศไทย เวียดนาม Tan Chong Intl Ltd รุ่นรถ SUV The All New Forester SUV Crosstrek Sports, Wagon WRX Wagon Sports, Sedan",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "CROSSTREK",
+      "artifact": "subaru_brochure_page.html",
+      "source_url": "https://www.subaru.asia/th/th/contact-us/brochure.php",
+      "matched_text": "Crosstrek",
+      "snippet": "Tan Chong Intl Ltd รุ่นรถ SUV The All New Forester SUV Crosstrek Sports, Wagon WRX Wagon Sports, Sedan WRX Sedan Sports",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "WRX WAGON",
+      "artifact": "subaru_brochure_page.html",
+      "source_url": "https://www.subaru.asia/th/th/contact-us/brochure.php",
+      "matched_text": "WRX Wagon",
+      "snippet": "รถ SUV The All New Forester SUV Crosstrek Sports, Wagon WRX Wagon Sports, Sedan WRX Sedan Sports BRZ Luxury, SUV Outback",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "CROSSTREK",
+      "artifact": "subaru_brochure_page.html",
+      "source_url": "https://www.subaru.asia/th/th/contact-us/brochure.php",
+      "matched_text": "Crosstrek",
+      "snippet": "Tan Chong Intl Ltd รุ่นรถ SUV The All New Forester SUV Crosstrek Sports, Wagon WRX Wagon Sports, Sedan WRX Sedan Sports",
+      "reason": "label occurs in the visible text but in no structural model context (heading / model card / lineup entry / official payload) — menu, footer, quotation and prose are not MODEL evidence"
+    }
+  ],
+  "rejected_model_context_evidence_count": 134,
+  "staging_written": false,
+  "price_pass": false
+}

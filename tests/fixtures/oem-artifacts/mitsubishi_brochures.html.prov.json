@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/th/download-a-brochure",
+  "captured_at": "2026-09-26T13:47:18.672783+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "fca08965d87e16b335bb4584cc95e795086b22a31caf11ac7cf696cbb3a69d39",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "mitsubishi_brochures.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

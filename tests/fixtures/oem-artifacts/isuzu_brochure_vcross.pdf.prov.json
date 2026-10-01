@@ -1,0 +1,9 @@
+{
+  "source_url": "https://assets.isuzu-tis.com/v_cross_brochure_2026_23a52b3f0d.pdf",
+  "captured_at": "2026-09-26T13:49:14.825291+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "84a1fa3940f71b601e99f60fe9bfd1c7253db0855923b6bd0e836ea41fb3e75f",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "isuzu_brochure_vcross.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

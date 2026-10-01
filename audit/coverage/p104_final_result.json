@@ -1,0 +1,1095 @@
+{
+  "schema": "p104-final-result/1",
+  "generated_at": "2026-09-27T11:35:28.311758+00:00",
+  "acceptance_boundary": "Phase-1 identity/catalog artifact only. It is NOT staging, NOT the accepted set and NOT the production DB: identity-only candidates have no price/locator and therefore cannot satisfy §95 mandatory fields, so they are never promoted.",
+  "before_after": {
+    "first_party_confirmed_models": [
+      194,
+      243
+    ],
+    "first_party_confirmed_variants": [
+      401,
+      404
+    ],
+    "oems_with_first_party_confirmation": [
+      19,
+      19
+    ]
+  },
+  "first_party_confirmed_models": 243,
+  "first_party_confirmed_variants": 404,
+  "oems_with_first_party_confirmation": 19,
+  "identity_only": {
+    "records": 773,
+    "models": 316,
+    "variants": 457
+  },
+  "conflicts": {
+    "records": 26
+  },
+  "rejected": {
+    "records": 1927
+  },
+  "harvested_identities": 234,
+  "outcomes": {
+    "existing": 231,
+    "new": 3
+  },
+  "per_oem_deltas": {
+    "BMW": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -3,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "bmw_all_models_verified.html",
+        "bmw_price_list.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Changan": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 2,
+      "identity_only_models": 0,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "changan_home_page.html",
+        "changan_lumin_page.html",
+        "changan_nevo_q05_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Deepal": {
+      "first_party_confirmed_models": 1,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -1,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "deepal_e07_plus.html",
+        "deepal_s05.html",
+        "deepal_s07.html"
+      ],
+      "p104_unresolved": []
+    },
+    "GWM": {
+      "first_party_confirmed_models": 2,
+      "first_party_confirmed_variants": 1,
+      "identity_only_models": -2,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "gwm_data_models_page.html",
+        "gwm_home_page.html",
+        "gwm_th_model_haval-h6.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Honda": {
+      "first_party_confirmed_models": 2,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -4,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "honda_models_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Kia": {
+      "first_party_confirmed_models": 6,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -6,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "kia_cars_page.html",
+        "kia_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Land Rover": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": 0,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "landrover_range_rover_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Lexus": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": 0,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "lexus_models_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "MG": {
+      "first_party_confirmed_models": 8,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -9,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "mg_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "MINI": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -1,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "mini_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Mazda": {
+      "first_party_confirmed_models": 8,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -8,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "mazda_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Mitsubishi": {
+      "first_party_confirmed_models": 9,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -9,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "mitsubishi_all_models_price.html",
+        "mitsubishi_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Nissan": {
+      "first_party_confirmed_models": 6,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -6,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "nissan_all_grade_price.html",
+        "nissan_all_models.html",
+        "nissan_new_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Porsche": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -1,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "porsche_macan_model_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Subaru": {
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": 0,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "subaru_th_home_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Suzuki": {
+      "first_party_confirmed_models": 2,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -2,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "suzuki_home_page.html",
+        "suzuki_models_page.html"
+      ],
+      "p104_unresolved": []
+    },
+    "Toyota": {
+      "first_party_confirmed_models": 5,
+      "first_party_confirmed_variants": 0,
+      "identity_only_models": -15,
+      "identity_only_variants": 0,
+      "p104_artifacts": [
+        "toyota_pricelist_page.html"
+      ],
+      "p104_unresolved": []
+    }
+  },
+  "artifacts_written": [
+    "p104_target_plan.json",
+    "p104_official_identities.json",
+    "catalog_reconciliation_p104.json",
+    "identity_universe_p104.json",
+    "identity_matrix_p104.json",
+    "identity_matrix_p104.md",
+    "p104_final_result.json"
+  ],
+  "gates": {
+    "staging_written": false,
+    "prisma_touched": false,
+    "price_pass": false,
+    "p102_p103_logic_changed": false
+  },
+  "hardening": {
+    "model_evidence_requires_structural_context": true,
+    "structural_context_types": [
+      "heading",
+      "card_title",
+      "lineup_entry",
+      "json_model_field",
+      "iframe_payload",
+      "island_payload"
+    ],
+    "visible_text_only_occurrences_rejected": 134,
+    "rejected_occurrences": [
+      {
+        "manufacturer": "BMW",
+        "model": "SAV New iX",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAV New iX"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "SAV New iX3",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAV New iX3"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "SAC iX2",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAC iX2"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "SAV iX1 L",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAV iX1 L"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Sedan New i5",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Sedan New i5"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "SAV XM",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAV XM"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "SAV X5",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAV X5"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Sedan 7 series",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Sedan 7 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Sedan 5 series",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Sedan 5 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Sedan M5",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Sedan M5"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Touring M5",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Touring M5"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Sedan 3 series",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Sedan 3 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "SAC X6",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAC X6"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "SAV X3",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAV X3"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "SAV X1",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAV X1"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Coupé 4 series",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Coupé 4 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Coupé M4",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Coupé M4"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Convertible 4 series",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Convertible 4 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Sedan M3",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Sedan M3"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Touring M3",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Touring M3"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Coupé M2",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Coupé M2"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Coupé 2 series",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Coupé 2 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "Roadster Z4",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "Roadster Z4"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "SAV X7",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAV X7"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "SAC X4",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "SAC X4"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 2 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 2 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 3 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 3 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 3 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 3 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 3 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 3 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 3 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 3 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 4 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 4 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 4 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 4 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 4 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 4 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 4 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 4 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 5 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 5 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 5 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 5 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 5 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 5 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 5 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 5 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 5 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 5 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 7 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 7 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 7 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 7 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW 7 SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW 7 series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW X SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW X series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW X SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW X series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW X SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW X series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW X SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW X series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW X SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW X series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW X SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW X series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW X SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW X series"
+      },
+      {
+        "manufacturer": "BMW",
+        "model": "BMW X SERIES",
+        "artifact": "bmw_all_models_verified.html",
+        "matched_text": "BMW X series"
+      },
+      {
+        "manufacturer": "Lexus",
+        "model": "Lexus Lbx",
+        "artifact": "lexus_models_page.html",
+        "matched_text": "Lexus LBX"
+      },
+      {
+        "manufacturer": "Lexus",
+        "model": "Lexus Lbx",
+        "artifact": "lexus_models_page.html",
+        "matched_text": "Lexus LBX"
+      },
+      {
+        "manufacturer": "Lexus",
+        "model": "Lexus Lbx",
+        "artifact": "lexus_models_page.html",
+        "matched_text": "Lexus LBX"
+      },
+      {
+        "manufacturer": "GWM",
+        "model": "ORA 5 HEV",
+        "artifact": "gwm_data_models_page.html",
+        "matched_text": "ORA 5 HEV"
+      },
+      {
+        "manufacturer": "GWM",
+        "model": "TANK 500 3.0T DIESEL",
+        "artifact": "gwm_data_models_page.html",
+        "matched_text": "TANK 500 3.0T DIESEL"
+      },
+      {
+        "manufacturer": "GWM",
+        "model": "ORA 5 HEV",
+        "artifact": "gwm_home_page.html",
+        "matched_text": "ORA 5 HEV"
+      },
+      {
+        "manufacturer": "GWM",
+        "model": "TANK 500 3.0T DIESEL",
+        "artifact": "gwm_home_page.html",
+        "matched_text": "TANK 500 3.0T DIESEL"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Taycan",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Taycan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Cayenne",
+        "artifact": "porsche_home_page.html",
+        "matched_text": "Cayenne"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Porsche Macan",
+        "artifact": "porsche_macan_model_page.html",
+        "matched_text": "Porsche Macan"
+      },
+      {
+        "manufacturer": "Porsche",
+        "model": "Porsche Macan",
+        "artifact": "porsche_macan_model_page.html",
+        "matched_text": "Porsche Macan"
+      },
+      {
+        "manufacturer": "MINI",
+        "model": "MINI CONVERTIBLE",
+        "artifact": "mini_home_page.html",
+        "matched_text": "MINI CONVERTIBLE"
+      },
+      {
+        "manufacturer": "MINI",
+        "model": "Mini Clubman",
+        "artifact": "mini_home_page.html",
+        "matched_text": "MINI CLUBMAN"
+      },
+      {
+        "manufacturer": "MINI",
+        "model": "Mini 3 Door",
+        "artifact": "mini_home_page.html",
+        "matched_text": "MINI 3-DOOR"
+      },
+      {
+        "manufacturer": "MINI",
+        "model": "MINI CONVERTIBLE",
+        "artifact": "mini_home_page.html",
+        "matched_text": "MINI CONVERTIBLE"
+      },
+      {
+        "manufacturer": "Jaguar",
+        "model": "F-TYPE",
+        "artifact": "jaguar_range_page.html",
+        "matched_text": "F-TYPE"
+      },
+      {
+        "manufacturer": "Jaguar",
+        "model": "F-TYPE",
+        "artifact": "jaguar_home_page.html",
+        "matched_text": "F-TYPE"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_home_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_home_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_home_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_home_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_home_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "RANGE ROVER",
+        "artifact": "landrover_home_page.html",
+        "matched_text": "RANGE ROVER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "RANGE ROVER",
+        "artifact": "landrover_home_page.html",
+        "matched_text": "RANGE ROVER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_range_rover_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_range_rover_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_range_rover_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_range_rover_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_range_rover_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "DEFENDER",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "DEFENDER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "RANGE ROVER VELAR",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "RANGE ROVER VELAR"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "RANGE ROVER VELAR",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "RANGE ROVER VELAR"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "RANGE ROVER SPORT",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "RANGE ROVER SPORT"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "RANGE ROVER SPORT",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "RANGE ROVER SPORT"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "RANGE ROVER",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "RANGE ROVER"
+      },
+      {
+        "manufacturer": "Land Rover",
+        "model": "RANGE ROVER",
+        "artifact": "landrover_discovery_page.html",
+        "matched_text": "RANGE ROVER"
+      },
+      {
+        "manufacturer": "Deepal",
+        "model": "Deepal Hunter K50",
+        "artifact": "deepal_s07.html",
+        "matched_text": "DEEPAL HUNTER K50"
+      },
+      {
+        "manufacturer": "Deepal",
+        "model": "Deepal Hunter K50",
+        "artifact": "deepal_s05.html",
+        "matched_text": "DEEPAL HUNTER K50"
+      },
+      {
+        "manufacturer": "Deepal",
+        "model": "Deepal Hunter K50",
+        "artifact": "deepal_e07_plus.html",
+        "matched_text": "DEEPAL HUNTER K50"
+      },
+      {
+        "manufacturer": "Changan",
+        "model": "NEVO Q05",
+        "artifact": "changan_home_page.html",
+        "matched_text": "NEVO Q05"
+      },
+      {
+        "manufacturer": "Changan",
+        "model": "NEVO Q05",
+        "artifact": "changan_home_page.html",
+        "matched_text": "NEVO Q05"
+      },
+      {
+        "manufacturer": "Changan",
+        "model": "NEVO Q05",
+        "artifact": "changan_home_page.html",
+        "matched_text": "NEVO Q05"
+      },
+      {
+        "manufacturer": "Changan",
+        "model": "NEVO Q05",
+        "artifact": "changan_lumin_page.html",
+        "matched_text": "NEVO Q05"
+      },
+      {
+        "manufacturer": "Changan",
+        "model": "NEVO Q05",
+        "artifact": "changan_lumin_page.html",
+        "matched_text": "NEVO Q05"
+      },
+      {
+        "manufacturer": "Changan",
+        "model": "NEVO Q05",
+        "artifact": "changan_lumin_page.html",
+        "matched_text": "NEVO Q05"
+      },
+      {
+        "manufacturer": "MG",
+        "model": "Mg4 Electric",
+        "artifact": "mg_home_page.html",
+        "matched_text": "MG4 ELECTRIC"
+      },
+      {
+        "manufacturer": "Subaru",
+        "model": "ALL NEW FORESTER",
+        "artifact": "subaru_brochure_page.html",
+        "matched_text": "All New Forester"
+      },
+      {
+        "manufacturer": "Subaru",
+        "model": "CROSSTREK",
+        "artifact": "subaru_brochure_page.html",
+        "matched_text": "Crosstrek"
+      },
+      {
+        "manufacturer": "Subaru",
+        "model": "WRX WAGON",
+        "artifact": "subaru_brochure_page.html",
+        "matched_text": "WRX Wagon"
+      },
+      {
+        "manufacturer": "Subaru",
+        "model": "CROSSTREK",
+        "artifact": "subaru_brochure_page.html",
+        "matched_text": "Crosstrek"
+      }
+    ],
+    "provenance_verification": {
+      "method": "AcquisitionReader.read — SHA-256 recomputed against the capture sidecar before any evidence is used",
+      "required_state": "ACQUISITION_VERIFIED",
+      "required_source_url_scheme": "https://",
+      "artifacts_rejected": 6
+    },
+    "generation_body_binding": {
+      "matcher": "BoundMatcher",
+      "context_carried_by_sources": false,
+      "policy": "candidate set spanning several generation/body records without source context resolves to AMBIGUOUS"
+    }
+  },
+  "blocker_changes": {
+    "new_blockers": [],
+    "cleared_blockers": [],
+    "retried_blocked_hosts": [
+      "Smart"
+    ],
+    "smart_retry_check": {
+      "artifact": "p104-smart-retry-check/1",
+      "checked_at": "2026-09-27T10:51:22.609123+00:00",
+      "url": "https://www.smart.co.th",
+      "method": "requests.get (default TLS verification, no header spoofing beyond UA)",
+      "status": "HTTP_OK",
+      "final_url": "https://www.smartsecurity.in.th/",
+      "final_host": "www.smartsecurity.in.th",
+      "redirect_chain": [
+        {
+          "url": "https://www.smart.co.th/",
+          "status": 301
+        },
+        {
+          "url": "https://www.smartsecurity.in.th/",
+          "status": 200
+        }
+      ],
+      "body_sha256": "5351874dcd9c05eb8e9bb05d737e92dacd096a3d256448aab4a6e599e56065df",
+      "unrelated_domain": true
+    },
+    "smart_status": "DEALER_REDIRECT"
+  }
+}

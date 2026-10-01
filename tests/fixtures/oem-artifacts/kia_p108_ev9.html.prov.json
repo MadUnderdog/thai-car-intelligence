@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.kia.com/th/en/shopping-tools/price-list/ev9.html",
+  "captured_at": "2026-09-27T19:06:24.100232+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "1f438fa868bdee48f3db2c1dfd948af9caea19715cffc40af6032b1808b4ebc2",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "kia_p108_ev9.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/%E2%80%A6",
+  "captured_at": "2026-09-27T19:03:35.680312+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "3209e600060447ba76d667dc3d8871061b7198d0bfa0aad9882f9bb36b515397",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "toyota_p108_.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

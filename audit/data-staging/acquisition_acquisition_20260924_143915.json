@@ -1,0 +1,117 @@
+{
+  "session_id": "acquisition_20260924_143915",
+  "captured": [
+    {
+      "success": true,
+      "filename": "gwm_models_page.html",
+      "provenance": {
+        "source_url": "https://www.gwm.co.th/en/models",
+        "captured_at": "2026-09-24T14:39:17.452420+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "e7a9070ab8c8d78cc09be23870fec1c6f27e7475eb03aae4d803f34d2e10e487",
+        "session_id": "acquisition_20260924_143915",
+        "artifact_filename": "gwm_models_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 144298,
+      "final_url": "https://www.gwm.co.th/en/models"
+    },
+    {
+      "success": true,
+      "filename": "jaguar_range_page.html",
+      "provenance": {
+        "source_url": "https://www.jaguar.co.th/jaguar-range/overview",
+        "captured_at": "2026-09-24T14:39:22.172451+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "12ad7deb8700dbc94a3f448a91d054ad9bfb571b18664aeaee7fe074fc894151",
+        "session_id": "acquisition_20260924_143915",
+        "artifact_filename": "jaguar_range_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED",
+        "sanitized": true,
+        "sanitizations": [
+          {
+            "pattern": "google_api_key",
+            "count": 1
+          }
+        ]
+      },
+      "size": 501438,
+      "final_url": "https://www.jaguar.co.th/jaguar-range/overview"
+    },
+    {
+      "success": true,
+      "filename": "landrover_discovery_page.html",
+      "provenance": {
+        "source_url": "https://www.landrover.co.th/discovery/overview",
+        "captured_at": "2026-09-24T14:39:23.877000+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "660b8fa629d46378a53922ecfad55b702ff923dee28654d7f86a9f09c3d51ce2",
+        "session_id": "acquisition_20260924_143915",
+        "artifact_filename": "landrover_discovery_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED",
+        "sanitized": true,
+        "sanitizations": [
+          {
+            "pattern": "google_api_key",
+            "count": 1
+          }
+        ]
+      },
+      "size": 555083,
+      "final_url": "https://www.landrover.co.th/discovery/overview"
+    },
+    {
+      "success": true,
+      "filename": "landrover_range_rover_page.html",
+      "provenance": {
+        "source_url": "https://www.landrover.co.th/range-rover/overview",
+        "captured_at": "2026-09-24T14:39:25.427969+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "aa02b1b04953577fa44ccd302b403f07fc266853c7f64e6c48393fcfdb6f9c29",
+        "session_id": "acquisition_20260924_143915",
+        "artifact_filename": "landrover_range_rover_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED",
+        "sanitized": true,
+        "sanitizations": [
+          {
+            "pattern": "google_api_key",
+            "count": 1
+          }
+        ]
+      },
+      "size": 611382,
+      "final_url": "https://www.landrover.co.th/range-rover/overview"
+    },
+    {
+      "success": true,
+      "filename": "isuzu_th_rendered_page.html",
+      "provenance": {
+        "source_url": "https://www.isuzu.co.th/",
+        "captured_at": "2026-09-24T14:39:42.731902+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "7f7956308b83ffc60da13e47efb95ad37839bc5de4141126c2916c50199e90f1",
+        "session_id": "acquisition_20260924_143915",
+        "artifact_filename": "isuzu_th_rendered_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 70672,
+      "final_url": "https://www.isuzu.co.th/"
+    },
+    {
+      "success": true,
+      "filename": "kia_cars_page.html",
+      "provenance": {
+        "source_url": "https://www.kia.com/th/th",
+        "captured_at": "2026-09-24T14:39:48.569427+00:00",
+        "acquisition_method": "playwright",
+        "sha256": "d068ec29fcbefa7b3f2b571845e25f847c17e71658540c6bf772326e4d5581b0",
+        "session_id": "acquisition_20260924_143915",
+        "artifact_filename": "kia_cars_page.html",
+        "provenance_state": "ACQUISITION_VERIFIED"
+      },
+      "size": 101427,
+      "final_url": "https://www.kia.com/th/th"
+    }
+  ],
+  "blocked": []
+}

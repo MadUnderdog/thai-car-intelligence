@@ -24,7 +24,7 @@ DB_PARAMS = {
 
 TIMEOUT = 12  # seconds per request
 USER_AGENT = "ThaiCarIntel/1.0 (dry-run source check)"
-RESULTS_DIR = "/home/ubuntu/thai-car-intelligence/storage"
+RESULTS_DIR = "/home/ubuntu/Projects/thai-car-intelligence/storage"
 
 def create_ssl_context():
     ctx = ssl.create_default_context()

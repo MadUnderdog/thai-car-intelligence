@@ -1,0 +1,70 @@
+{
+  "schema": "p117_target_plan/v1",
+  "created_at": "2026-09-29",
+  "base_commit": "2a30e39e31832b25782339380841045a83eb8570",
+  "pr": {"number": 3, "state": "OPEN", "merged": false},
+  "goal": "Community + moderation over promoted vehicle context: comments/replies/votes/reports/moderation queue/research-lead labeling — scope-safe, abuse-resistant, anecdotal, auditable. No catalog/provenance contamination.",
+  "blueprint_sections": ["22 User comments/community", "23 Community moderation", "24 AI classification (metadata only, no auto-ban, no spec facts)", "20 community discussion surface"],
+  "current_behavior": {
+    "tables_actual": ["CommunityComment (39 rows: 16 VISIBLE / 11 FLAGGED / 12 DELETED)", "CommentVote (12)", "CommentReport (16)", "ResearchCandidate (2 via COMMUNITY_LEAD run)"],
+    "identity": "lib/community/identity.ts — anonymous: ipHash (sha256 salted) + tci_token cookie; votes key on hashIp, reports key on cookie||hashIp",
+    "auth": "lib/community/admin-auth.ts requireAdmin Bearer ADMIN_API_TOKEN",
+    "rate_limit": "lib/security/rate-limit.ts in-memory sliding window + _resetRateLimitStore() for tests",
+    "routes": ["GET/POST /api/community/comments", "POST .../[id]/vote", "POST .../[id]/report", "GET/PATCH /api/admin/community/moderation", "POST /api/admin/community/research-lead"],
+    "ui": "CommunitySection (304 lines) on vehicle detail: label 'ความคิดเห็นจากชุมชน' + disclaimer 'ความคิดเห็นเป็นของผู้ใช้งาน ไม่ใช่ข้อมูลที่ได้รับการตรวจสอบจากแหล่งทางการ'; vote/reply/report controls; admin moderation page (181 lines) with token + HIDE/DELETE/RESTORE + research-lead form",
+    "schema_constraints": "CommunityComment.modelId/variantId are bare Uuid columns with NO relation/FK; CommentVote @@unique(commentId,voterToken); CommentReport @@unique(commentId,reporterToken); CommentStatus VISIBLE/HIDDEN/FLAGGED/DELETED; NO edit endpoint exists (edit-history N/A), NO community user table (anonymous by design)"
+  },
+  "reproduced_gaps": [
+    {"id": "D1", "boundary": "E/2", "gap": "POST /api/community/comments persists `isResearchLead: Boolean(isResearchLead)` from the CLIENT — any caller self-grants the research-lead badge; the trusted setter is only /api/admin/community/research-lead", "files": ["src/app/api/community/comments/route.ts:153"]},
+    {"id": "D2", "boundary": "C/1", "gap": "reply scope: `modelId: modelId ?? parent.modelId` — client payload OVERRIDES the parent scope; payload can also inject a mismatched modelId/variantId pair into a reply", "files": ["src/app/api/community/comments/route.ts:130-141"]},
+    {"id": "D3", "boundary": "D/1/6/8", "gap": "modelId/variantId never validated: malformed UUID → Prisma validation throw (no client-safe response); nonexistent/inactive entity → orphan row persisted with 201; modelId+variantId both supplied but belonging to different models → misattribution accepted; GET has the same format hole and page/limit parseInt can yield NaN", "files": ["src/app/api/community/comments/route.ts:35-48,108-155"]},
+    {"id": "D4", "boundary": "G/3", "gap": "report identity = `cookie || hashIp`: clearing the tci_token cookie mints a new reporterToken, so ONE actor can reach the 3-report auto-hide threshold on any comment (unique key is per-token, not per-IP)", "files": ["src/app/api/community/comments/[id]/report/route.ts:49-56"]},
+    {"id": "D5", "boundary": "J/10", "gap": "blocked-words check (Blueprint 23 minimum) does not exist anywhere in the community POST path", "files": ["src/app/api/community/comments/route.ts"]},
+    {"id": "D6", "boundary": "I/6", "gap": "GET/vote/report/admin routes have no try/catch: an internal DB error propagates as a thrown exception instead of a client-safe JSON error (and malformed ids surface through Prisma validation errors)", "files": ["comments/route.ts GET", "vote/route.ts", "report/route.ts", "admin moderation + research-lead routes"]},
+    {"id": "D7", "boundary": "M", "gap": "GET ordering is [upvotes desc, createdAt desc] with no final tiebreak — equal-score comments can order differently between identical runs", "files": ["src/app/api/community/comments/route.ts:53"]}
+  ],
+  "green_guards_regressions": [
+    "F: public GET where(status VISIBLE, deletedAt null) on parents AND replies — must keep excluding FLAGGED/HIDDEN/DELETED",
+    "H: vote contract commentId_voterToken + transaction idempotency/switch + counters == vote-row invariant",
+    "K: moderation queue lists unresolved reports; PATCH HIDE reflected on subsequent public GET; wrong bearer → 401",
+    "L: no catalog/provenance file references community tables; anecdotal label + disclaimer stay in CommunitySection; evidence flags come only from spec sourceTier",
+    "A/B: model-scope and variant-scope persistence with exact column attribution"
+  ],
+  "acceptance_tests": {
+    "A": "P117-A POST model comment → GET model scope returns it with correct modelId",
+    "B": "P117-B POST variant comment → GET variant scope returns it; model scope of another model does not",
+    "C": "P117-C malicious reply payload with foreign modelId/variantId still inherits parent scope exactly",
+    "D": "P117-D mismatch model+variant → 400; nonexistent → 404; inactive → 404; malformed UUID → 400 (POST and GET)",
+    "E": "P117-E isResearchLead:true in client POST → persisted false; only admin research-lead route sets true",
+    "F": "P117-F hidden/deleted/rejected parents+replies absent from GET list, replies and total",
+    "G": "P117-G report durable + idempotent per IP + 3 distinct reporters → FLAGGED with report rows preserved (evidence kept)",
+    "H": "P117-H duplicate/conflicting votes deterministic per identity; upvotes/downvotes == vote rows",
+    "I": "P117-I malformed UUID/enum/oversized body/page=abc → 400 safe JSON; forced DB error → 500 JSON with no stack/SQL/Prisma text",
+    "J": "P117-J blocked word → 400, NO row persisted (false positive cannot become an official fact); deterministic on fixture",
+    "K": "P117-K queue shows flagged fixture; PATCH HIDE → public GET excludes; RESTORE → returns",
+    "L": "P117-L catalog/evidence sources contain no CommunityComment/CommentVote/CommentReport reference; label+disclaimer text present",
+    "M": "P117-M repeated GET identical order/ids; orderBy captured with id tiebreak",
+    "N": "P117 smoke: vehicle detail community controls render (heading, disclaimer, form, vote/report), mobile 390px, console errors 0, touch targets"
+  },
+  "implementation_plan": {
+    "new_files": ["lib/community/blocked-words.ts (starter spam/abuse word list + normalized matcher)", "lib/community/scope.ts (UUID + entity existence/ACTIVE + model/variant consistency validation shared by routes)", "tests/p117-community.test.ts", "tests/p117-db-error-safety.test.ts", "scripts/p117_community_smoke.mjs"],
+    "modified_files": ["src/app/api/community/comments/route.ts", "src/app/api/community/comments/[id]/vote/route.ts", "src/app/api/community/comments/[id]/report/route.ts", "src/app/api/admin/community/moderation/route.ts", "src/app/api/admin/community/research-lead/route.ts"],
+    "fixes": [
+      "D1 strip isResearchLead from client payload (always false); admin research-lead route remains the sole setter",
+      "D2 replies inherit parent scope verbatim — client modelId/variantId ignored for replies",
+      "D3 shared scope validator: isValidUuid → 400; CarModel/Variant existence + ACTIVE → 404; both-ids consistency (variant.modelId === modelId) → 400; GET same format validation + finite page/limit; fail closed",
+      "D4 reporterToken = hashIp(ip) always (same identity family as votes; one report per comment per IP); NAT tradeoff disclosed",
+      "D5 blocked-words matcher (NFKC-safe lowercase, Thai+EN starter list) → 400 before persist",
+      "D6 try/catch on all community routes → generic JSON 400/500, message never includes SQL/stack/Prisma internals",
+      "D7 orderBy final tiebreak id asc"
+    ],
+    "no_changes": ["prisma schema", "provider/model/config", "P102-P116 identity/provenance/search/catalog semantics", "verifier", "catalog DB", "embeddings", "acquisition/refresh"]
+  },
+  "data_boundary": {
+    "community_writes": "tests may create fixtures ONLY in CommunityComment/CommentVote/CommentReport with a '[p117-fixture]' marker or unique ids, cleaned up in afterAll; no writes to catalog/price/spec tables",
+    "rate_limits": "tests use unique x-forwarded-for IPs per case and _resetRateLimitStore()",
+    "admin_auth": "tests set process.env.ADMIN_API_TOKEN before exercising admin routes"
+  },
+  "non_goals": ["no Prisma schema/migration (schema supports every mandatory boundary; edit history is N/A because no edit endpoint exists — disclosed)", "no new community architecture, no user accounts", "no AI auto-ban (Blueprint 24: classification stays additive metadata; no provider changes)", "no scheduled refresh/acquisition", "no redesign of CommunitySection beyond what boundaries require"],
+  "honest_limits_planned": ["in-memory rate limiter is single-process only (documented in helper)", "report/vote identity is per-IP (NAT users share one identity) — chosen over per-cookie because cookie rotation enabled auto-hide spam", "blocked-words list is a disclosed starter list, not an exhaustive profanity filter", "edit history not implemented: no edit endpoint exists in the repo"]
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/th.html",
+  "captured_at": "2026-09-24T11:08:47.206830+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "be1f5d866979029a4b04699ddc96f884267620ca8ed766eb7a30cc1741e660ff",
+  "session_id": "acquisition_20260924_110805",
+  "artifact_filename": "lexus_models_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

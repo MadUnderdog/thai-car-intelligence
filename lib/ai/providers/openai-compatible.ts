@@ -90,11 +90,19 @@ export class OpenAICompatibleProvider implements AIProvider {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), this.timeoutMs);
     try {
+      const headers: Record<string, string> = {
+        "content-type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      };
+      // OpenCode requires session ID header
+      if (this.config.baseUrl?.includes("opencode.ai")) {
+        headers["x-opencode-session"] = `session-${Date.now()}`;
+      }
       let response: Response;
       try {
         response = await fetch(url, {
           method: "POST",
-          headers: { "content-type": "application/json", Authorization: `Bearer ${apiKey}` },
+          headers,
           body: JSON.stringify(body),
           signal: controller.signal,
         });

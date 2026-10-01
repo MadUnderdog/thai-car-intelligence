@@ -1,0 +1,395 @@
+{
+  "artifact": "p106-catalog-reconciliation/1",
+  "generated_at": "2026-09-27T15:47:31.789733+00:00",
+  "before": {
+    "confirmed_variants": 462,
+    "confirmed_models": 255
+  },
+  "after": {
+    "confirmed_variants": 472,
+    "confirmed_models": 262
+  },
+  "harvested": 10,
+  "outcomes": {
+    "existing": 10
+  },
+  "by_method": {
+    "official_name_price_row": 7,
+    "official_page_bound_grade_list": 3
+  },
+  "per_oem_before_after": {
+    "Audi": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        21,
+        21
+      ]
+    },
+    "BMW": {
+      "confirmed_variants": [
+        66,
+        73
+      ],
+      "identity_only_variants": [
+        20,
+        13
+      ]
+    },
+    "BYD": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        24,
+        24
+      ]
+    },
+    "Changan": {
+      "confirmed_variants": [
+        4,
+        4
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Chery": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        6,
+        6
+      ]
+    },
+    "Chevrolet": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        16,
+        16
+      ]
+    },
+    "Deepal": {
+      "confirmed_variants": [
+        4,
+        4
+      ],
+      "identity_only_variants": [
+        7,
+        7
+      ]
+    },
+    "Ford": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        15,
+        15
+      ]
+    },
+    "GWM": {
+      "confirmed_variants": [
+        21,
+        21
+      ],
+      "identity_only_variants": [
+        9,
+        9
+      ]
+    },
+    "Haval": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        5,
+        5
+      ]
+    },
+    "Honda": {
+      "confirmed_variants": [
+        32,
+        32
+      ],
+      "identity_only_variants": [
+        18,
+        18
+      ]
+    },
+    "Isuzu": {
+      "confirmed_variants": [
+        7,
+        7
+      ],
+      "identity_only_variants": [
+        3,
+        3
+      ]
+    },
+    "Jaguar": {
+      "confirmed_variants": [
+        1,
+        1
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Kia": {
+      "confirmed_variants": [
+        3,
+        6
+      ],
+      "identity_only_variants": [
+        15,
+        12
+      ]
+    },
+    "Land Rover": {
+      "confirmed_variants": [
+        11,
+        11
+      ],
+      "identity_only_variants": [
+        0,
+        0
+      ]
+    },
+    "Lexus": {
+      "confirmed_variants": [
+        36,
+        36
+      ],
+      "identity_only_variants": [
+        9,
+        9
+      ]
+    },
+    "MG": {
+      "confirmed_variants": [
+        8,
+        8
+      ],
+      "identity_only_variants": [
+        29,
+        29
+      ]
+    },
+    "MINI": {
+      "confirmed_variants": [
+        13,
+        13
+      ],
+      "identity_only_variants": [
+        7,
+        7
+      ]
+    },
+    "Mazda": {
+      "confirmed_variants": [
+        22,
+        22
+      ],
+      "identity_only_variants": [
+        33,
+        33
+      ]
+    },
+    "Mitsubishi": {
+      "confirmed_variants": [
+        24,
+        24
+      ],
+      "identity_only_variants": [
+        17,
+        17
+      ]
+    },
+    "NETA": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Nissan": {
+      "confirmed_variants": [
+        23,
+        23
+      ],
+      "identity_only_variants": [
+        24,
+        24
+      ]
+    },
+    "Peugeot": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Porsche": {
+      "confirmed_variants": [
+        69,
+        69
+      ],
+      "identity_only_variants": [
+        21,
+        21
+      ]
+    },
+    "Subaru": {
+      "confirmed_variants": [
+        2,
+        2
+      ],
+      "identity_only_variants": [
+        9,
+        9
+      ]
+    },
+    "Suzuki": {
+      "confirmed_variants": [
+        11,
+        11
+      ],
+      "identity_only_variants": [
+        3,
+        3
+      ]
+    },
+    "Tesla": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        9,
+        9
+      ]
+    },
+    "Toyota": {
+      "confirmed_variants": [
+        105,
+        105
+      ],
+      "identity_only_variants": [
+        74,
+        74
+      ]
+    },
+    "Volvo": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        1,
+        1
+      ]
+    }
+  },
+  "new_identities": [],
+  "ambiguous": [],
+  "rejected_rows": [
+    {
+      "model": "Gwm Tank 300",
+      "variant": "HEV",
+      "artifact": "gwm_th_model_tank-300.html",
+      "line": 32,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Prime",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 375,
+      "text": "2.0 Prime",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Ultra",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 376,
+      "text": "2.0 Ultra",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Signature",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 377,
+      "text": "2.0 Signature",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "0",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 354,
+      "text": "0%",
+      "reason": "promotion / percent token in the published line ('%') — never a grade label"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Prime",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 291,
+      "text": "2.0 PRIME",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Ultra",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 292,
+      "text": "2.0 ULTRA",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Signature",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 293,
+      "text": "2.0 SIGNATURE",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Toyota Corolla",
+      "variant": "Cross",
+      "artifact": "toyota_press_news.html",
+      "line": 119,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Toyota Corolla",
+      "variant": "Cross",
+      "artifact": "toyota_pricelist_page.html",
+      "line": 120,
+      "reason": "generic label — never a variant"
+    }
+  ],
+  "staging_written": false,
+  "price_pass": false
+}

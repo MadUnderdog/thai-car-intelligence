@@ -1,0 +1,9 @@
+{
+  "source_url": "https://assets.isuzu-tis.com/4_door_brochure_2026_be4df560bb.pdf",
+  "captured_at": "2026-09-26T13:48:58.858059+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "bc56c415bc8da8d71745230da3a6d440c384360aa72e50483683ce38d63a9449",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "isuzu_brochure_4door.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

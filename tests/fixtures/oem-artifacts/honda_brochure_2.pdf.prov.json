@@ -1,0 +1,16 @@
+{
+  "source_url": "https://assets.honda.co.th/www-assets/model/2026/06/26/bc5ZpbNVUtvUdaYcQMT8N6WdinDUVwDx.pdf?response-content-disposition=attachment%3B%20filename%3DNew Honda City Hatchback - Catalog.pdf",
+  "captured_at": "2026-09-26T13:48:50.585638+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "8b026a671233995bd13f51d3b89a26f83c9387ef74c096577a3c2ba683d53028",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "honda_brochure_2.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "source_url": "https://www.smart.com/th/en",
+  "captured_at": "2026-09-25T09:53:06.779927+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "e9c40c01a39c9f68bb5dc084746295d9723ba8ce7490f07a63078b7e7d4e52ee",
+  "session_id": "p98_smart_url_decision",
+  "artifact_filename": "smart_com_th_en.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "capture_scope": "URL-target decision evidence only; NOT a brand acquisition endpoint and never a source of business rows",
+  "fetch": {
+    "http_status": 200,
+    "redirects": 1,
+    "final_url": "https://global.smart.com/",
+    "bytes": 4837,
+    "ssl_verify_result": 0,
+    "title": "Choose your country and language | smart"
+  }
+}

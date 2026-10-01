@@ -1,0 +1,16 @@
+{
+  "source_url": "https://en.nissan.co.th/vehicles/brochure-hub.html",
+  "captured_at": "2026-09-27T16:01:51.624402+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "70f7016975d5ca550e661c6bbded82e3fe470b841000c68fb70d8975a2748463",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "nissan_p107_brochure-hub.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

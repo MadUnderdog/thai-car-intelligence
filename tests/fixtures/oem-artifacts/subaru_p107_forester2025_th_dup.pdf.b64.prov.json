@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.subaru.asia/brochures/forester2025_th.pdf?v=d3p",
+  "captured_at": "2026-09-27T16:03:45.894726+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "12eb599c3d3983b93d5e8bbd06bfe2caa02cd2b3d3e99217b127ba78517ba477",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "subaru_p107_forester2025_th_dup.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

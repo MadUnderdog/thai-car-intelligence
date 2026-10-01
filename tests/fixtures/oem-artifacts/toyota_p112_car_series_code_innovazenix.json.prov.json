@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=innovazenix",
+  "captured_at": "2026-09-28T09:35:33.621205+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "1f5658dcea1b7c1b05a36a4eac22a7f79a39cd2abd05f2e87aef2d184a57a134",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_innovazenix.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,7 @@
+{
+  "schema": "p110_price_capture_log/1",
+  "generated_at": "2026-09-28T06:39:00.462716+00:00",
+  "new_captures": 0,
+  "method": "price pass ran entirely over already-captured first-party artifacts (rule 7: fetch only when a price source is genuinely missing)",
+  "results": []
+}

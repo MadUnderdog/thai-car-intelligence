@@ -1,0 +1,50 @@
+▲ Next.js 16.3.2 (Turbopack)
+- Environments: .env
+✓ Running next.config.ts took 25ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 492ms
+  Running TypeScript ...
+  Finished TypeScript in 3.3s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/10) ...
+  Generating static pages using 3 workers (2/10) 
+  Generating static pages using 3 workers (4/10) 
+  Generating static pages using 3 workers (7/10) 
+✓ Generating static pages using 3 workers (10/10) in 333ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /admin/moderation
+├ ○ /ai-ask
+├ ƒ /api/admin/candidates
+├ ƒ /api/admin/community/moderation
+├ ƒ /api/admin/community/research-lead
+├ ƒ /api/admin/coverage
+├ ƒ /api/admin/dashboard
+├ ƒ /api/admin/quality
+├ ƒ /api/admin/quality/variants
+├ ƒ /api/admin/research/queue
+├ ƒ /api/admin/universe
+├ ƒ /api/ai/ask
+├ ƒ /api/cars
+├ ƒ /api/community/comments
+├ ƒ /api/community/comments/[id]/report
+├ ƒ /api/community/comments/[id]/vote
+├ ƒ /api/compare
+├ ƒ /api/models
+├ ƒ /api/search
+├ ○ /cars
+├ ƒ /cars/[manufacturer]/[model]
+├ ○ /compare
+├ ○ /search
+└ ○ /showcase
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

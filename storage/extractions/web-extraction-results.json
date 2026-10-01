@@ -1,0 +1,410 @@
+{
+  "toyota": {
+    "brand": "Toyota",
+    "url": "https://www.toyota.co.th/en/model-list",
+    "models": [
+      {
+        "name": "Compare",
+        "href": "https://www.toyota.co.th/en/model/compare",
+        "img": ""
+      },
+      {
+        "name": "Model Compare",
+        "href": "https://www.toyota.co.th/en/model/compare",
+        "img": ""
+      },
+      {
+        "name": "Catalogue",
+        "href": "https://www.toyota.co.th/model/catalogue",
+        "img": ""
+      },
+      {
+        "name": "Compare",
+        "href": "https://www.toyota.co.th/model/compare",
+        "img": ""
+      }
+    ],
+    "error": null,
+    "price_mentions": []
+  },
+  "honda": {
+    "brand": "Honda",
+    "url": "https://www.honda.co.th/th",
+    "models": [],
+    "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honda.co.th/th\", waiting until \"networkidle\"\n"
+  },
+  "nissan": {
+    "brand": "Nissan",
+    "url": "https://www.nissan.co.th/en/vehicles",
+    "models": [
+      {
+        "name": "ตารางราคาทุกรุ่น",
+        "href": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+        "img": ""
+      },
+      {
+        "name": "ดาวน์โหลดโบรชัวร์",
+        "href": "https://www.nissan.co.th/vehicles/brochure-hub.html",
+        "img": ""
+      },
+      {
+        "name": "Discovery@Home",
+        "href": "https://www.nissan.co.th/vehicles/discovery-at-home.html",
+        "img": ""
+      },
+      {
+        "name": "ดาวน์โหลดโบรชัวร์",
+        "href": "https://www.nissan.co.th/vehicles/brochure-hub.html",
+        "img": ""
+      },
+      {
+        "name": "Discovery@Home",
+        "href": "https://www.nissan.co.th/vehicles/discovery-at-home.html",
+        "img": ""
+      },
+      {
+        "name": "ตารางราคาทุกรุ่น",
+        "href": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+        "img": ""
+      },
+      {
+        "name": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/VLP/new-kicks/2026/car/Thumbnail_car-admin-p02h.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/xtrail-epower.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_X-Trail.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/serena-epower.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_Serena_e-POWER.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน เซเรน่า ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/serena.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_Serena_S-Hybrid.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน อัลเมร่า",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/new-almera.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/VLP/new-almera/my26/car/Thumbnail.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/navara-pro-4x-and-pro-2x.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_Pro.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_Calibre.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน นาวารา คิงแค็บ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_KC.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/navara-single-cab.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_SC.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน เทอร์ร่า",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/new-terra.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_Terra.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "รุ่นรถทั้งหมด",
+        "href": "https://www.nissan.co.th/vehicles/all-models.html",
+        "img": ""
+      },
+      {
+        "name": "รุ่นรถทั้งหมด",
+        "href": "https://www.nissan.co.th/vehicles/all-models.html",
+        "img": ""
+      },
+      {
+        "name": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/VLP/new-kicks/2026/car/Thumbnail_car-admin-p02h.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/xtrail-epower.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_X-Trail.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/serena-epower.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_Serena_e-POWER.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "e-POWER",
+        "href": "https://www.nissan.co.th/vehicles/e-power.html",
+        "img": ""
+      },
+      {
+        "name": "e-POWER",
+        "href": "https://www.nissan.co.th/vehicles/e-power.html",
+        "img": ""
+      },
+      {
+        "name": "นิสสัน อัลเมร่า",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/new-almera.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/VLP/new-almera/my26/car/Thumbnail.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน อัลเมร่า",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/new-almera.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/VLP/new-almera/my26/car/Thumbnail.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "รถยนต์นั่งส่วนบุคคล",
+        "href": "https://www.nissan.co.th/vehicles/cars.html",
+        "img": ""
+      },
+      {
+        "name": "รถยนต์นั่งส่วนบุคคล",
+        "href": "https://www.nissan.co.th/vehicles/cars.html",
+        "img": ""
+      },
+      {
+        "name": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/VLP/new-kicks/2026/car/Thumbnail_car-admin-p02h.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/xtrail-epower.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_X-Trail.jpg.ximg.l_3_m.smart.jpg"
+      },
+      {
+        "name": "นิสสัน เทอร์ร่า",
+        "href": "https://www.nissan.co.th/vehicles/new-vehicles/new-terra.html",
+        "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/car/Thumbnail_All-model_Home-page_NAV-Menu_Periodic-maintenance_RAQ_BATD_Brochure-hub_Terra.jpg.ximg.l_3_m.smart.jpg"
+      }
+    ],
+    "error": null,
+    "price_mentions": []
+  },
+  "mg": {
+    "brand": "MG",
+    "url": "https://www.mgcars.com/th_th/cars",
+    "models": [],
+    "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.mgcars.com/th_th/cars\", waiting until \"networkidle\"\n"
+  },
+  "mitsubishi": {
+    "brand": "Mitsubishi",
+    "url": "https://www.mitsubishi-motors.co.th/en/model",
+    "models": [
+      {
+        "name": "XPANDER HEVFrom THB 939,000",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/xpanderhev",
+        "img": ""
+      },
+      {
+        "name": "XPANDER CROSS HEVFrom THB 969,000",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/xpandercrosshev",
+        "img": ""
+      },
+      {
+        "name": "XFORCE HEVFrom THB 899,000",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/xforce-hev",
+        "img": ""
+      },
+      {
+        "name": "TRITONFrom THB 614,000",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/all-newtriton",
+        "img": ""
+      },
+      {
+        "name": "PAJERO SPORTFrom THB 1,139,000",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/pajero-sport",
+        "img": ""
+      },
+      {
+        "name": "MIRAGEFrom THB 509,000",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/mirage",
+        "img": ""
+      },
+      {
+        "name": "XFORCE HEV",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/xforce-hev/emotion",
+        "img": ""
+      },
+      {
+        "name": "XPANDER HEV",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/xpanderhev/emotion",
+        "img": ""
+      },
+      {
+        "name": "XFORCE HEV",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/xforce-hev",
+        "img": ""
+      },
+      {
+        "name": "TRITON",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/all-newtriton",
+        "img": ""
+      },
+      {
+        "name": "Xpander HEV",
+        "href": "https://www.mitsubishi-motors.co.th/content/mitsubishi-motors/th/en/cars/xpander-hev/2024",
+        "img": ""
+      },
+      {
+        "name": "Xpander Cross HEV",
+        "href": "https://www.mitsubishi-motors.co.th/content/mitsubishi-motors/th/en/cars/xpander-cross-hev/2024",
+        "img": ""
+      },
+      {
+        "name": "Pajero Sport",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/pajero-sport",
+        "img": ""
+      },
+      {
+        "name": "Mirage",
+        "href": "https://www.mitsubishi-motors.co.th/en/cars/mirage",
+        "img": ""
+      }
+    ],
+    "error": null,
+    "price_mentions": []
+  },
+  "mazda": {
+    "brand": "Mazda",
+    "url": "https://www.mazda.co.th/en/models",
+    "models": [
+      {
+        "name": "NEW MAZDA2 ESSENTIAL​ Starting from 529,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda2-essential",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2025-03%2FIMG-Model-90_700x250_New-Mazda2-Sedan.webp%3FVersionId%3DW5q1YPEtr_g7ikBv0OxICmY.bPdvSyPJ&w=3840&q=75"
+      },
+      {
+        "name": "MAZDA3 FASTBACK Starting from 979,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda3-fastback",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_Mazda3_Fastback.webp%3FVersionId%3Dt5c5Nfij4juiC8PJP0X7o7OBVSydNJxr&w=3840&q=75"
+      },
+      {
+        "name": "MAZDA3 SEDAN Starting from 979,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda3-sedan",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_Mazda3_Sedan.webp%3FVersionId%3Du.ZIZ6CndnVAx7xIJhzneOoCA86Tacze&w=3840&q=75"
+      },
+      {
+        "name": "MAZDA6 20TH ANNIVERSARY EDITION Starting from 2,499,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda6",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_Mazda6.webp%3FVersionId%3DYCgOvltYhCGwWh5FmLW0187ew4_AdJrG&w=3840&q=75"
+      },
+      {
+        "name": "NEW MAZDA CX-3 ESSENTIAL Starting from 699,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda-cx3-essential",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2025-07%2FIMG-Model-90_700x250_New-MazdaCX3-Essential.png%3FVersionId%3Dl67vthVa2TWzL55y1_kgXWFJJTEHy6wW&w=3840&q=75"
+      },
+      {
+        "name": "NEW MAZDA CX-30 ESSENTIAL Starting from 899,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda-cx30-essential",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2025-07%2FIMG-Model-90_700x250_New%2520Mazda%2520CX-30%2520Essential.png%3FVersionId%3DdGnsavBMeJBEvt0WlxbofvGgc7.m1zRb&w=3840&q=75"
+      },
+      {
+        "name": "NEW MAZDA CX-5 Starting from 1,219,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda-cx5",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_CX-5.webp%3FVersionId%3DO8kvJ4ikixNB.RoSmTYRxR_0lpJjI.ev&w=3840&q=75"
+      },
+      {
+        "name": "MAZDA CX-8 Starting from 1,549,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda-cx8",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_CX-8.webp%3FVersionId%3D63Mw2K_6ZuutJ1RtIwdDkqr1jCLoQ77d&w=3840&q=75"
+      },
+      {
+        "name": "NEW MAZDA BT-50 Starting from 762,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/new-mazda-bt50",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_BT-50.webp%3FVersionId%3DZ7a5dtsMId07djtfohMbFaKLnIYjWdK1&w=3840&q=75"
+      },
+      {
+        "name": "NEW MAZDA2 ESSENTIAL​ Starting from 529,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda2-essential",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2025-03%2FIMG-Model-90_700x250_New-Mazda2-Sedan.webp%3FVersionId%3DW5q1YPEtr_g7ikBv0OxICmY.bPdvSyPJ&w=3840&q=75"
+      },
+      {
+        "name": "MAZDA3 FASTBACK Starting from 979,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda3-fastback",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_Mazda3_Fastback.webp%3FVersionId%3Dt5c5Nfij4juiC8PJP0X7o7OBVSydNJxr&w=3840&q=75"
+      },
+      {
+        "name": "MAZDA3 SEDAN Starting from 979,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda3-sedan",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_Mazda3_Sedan.webp%3FVersionId%3Du.ZIZ6CndnVAx7xIJhzneOoCA86Tacze&w=3840&q=75"
+      },
+      {
+        "name": "MAZDA6 20TH ANNIVERSARY EDITION Starting from 2,499,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda6",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_Mazda6.webp%3FVersionId%3DYCgOvltYhCGwWh5FmLW0187ew4_AdJrG&w=3840&q=75"
+      },
+      {
+        "name": "NEW MAZDA CX-3 ESSENTIAL Starting from 699,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda-cx3-essential",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2025-07%2FIMG-Model-90_700x250_New-MazdaCX3-Essential.png%3FVersionId%3Dl67vthVa2TWzL55y1_kgXWFJJTEHy6wW&w=3840&q=75"
+      },
+      {
+        "name": "NEW MAZDA CX-30 ESSENTIAL Starting from 899,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda-cx30-essential",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2025-07%2FIMG-Model-90_700x250_New%2520Mazda%2520CX-30%2520Essential.png%3FVersionId%3DdGnsavBMeJBEvt0WlxbofvGgc7.m1zRb&w=3840&q=75"
+      },
+      {
+        "name": "NEW MAZDA CX-5 Starting from 1,219,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda-cx5",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_CX-5.webp%3FVersionId%3DO8kvJ4ikixNB.RoSmTYRxR_0lpJjI.ev&w=3840&q=75"
+      },
+      {
+        "name": "MAZDA CX-8 Starting from 1,549,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/mazda-cx8",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_CX-8.webp%3FVersionId%3D63Mw2K_6ZuutJ1RtIwdDkqr1jCLoQ77d&w=3840&q=75"
+      },
+      {
+        "name": "NEW MAZDA BT-50 Starting from 762,000 THBView Detail",
+        "href": "https://www.mazda.co.th/en/cars/new-mazda-bt50",
+        "img": "https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fwww.mazda.co.th%2Fs3fs-public%2F2024-12%2F90_700x250_BT-50.webp%3FVersionId%3DZ7a5dtsMId07djtfohMbFaKLnIYjWdK1&w=3840&q=75"
+      }
+    ],
+    "error": null,
+    "price_mentions": [
+      "699,000 THB",
+      "762,000 THB",
+      "1,549,000 THB",
+      "1,219,000 THB",
+      "1,169,000 THB",
+      "529,000 THB",
+      "899,000 THB",
+      "2,499,000 THB",
+      "979,000 THB"
+    ]
+  },
+  "suzuki": {
+    "brand": "Suzuki",
+    "url": "https://www.suzukimotor.co.th/en/model",
+    "models": [],
+    "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.suzukimotor.co.th/en/model\nCall log:\n  - navigating to \"https://www.suzukimotor.co.th/en/model\", waiting until \"networkidle\"\n"
+  },
+  "ford": {
+    "brand": "Ford",
+    "url": "https://www.ford.co.th/vehicles",
+    "models": [],
+    "error": "Page.goto: Navigation to \"https://www.ford.co.th/vehicles\" is interrupted by another navigation to \"chrome-error://chromewebdata/\"\nCall log:\n  - navigating to \"https://www.ford.co.th/vehicles\", waitin"
+  },
+  "byd": {
+    "brand": "BYD",
+    "url": "https://www.reverautomotive.com/models",
+    "models": [],
+    "error": "Page.goto: Navigation to \"https://www.reverautomotive.com/models\" is interrupted by another navigation to \"https://www.ford.co.th/vehicles\"\nCall log:\n  - navigating to \"https://www.reverautomotive.com"
+  },
+  "hyundai": {
+    "brand": "Hyundai",
+    "url": "https://www.hyundai.com/th/en/models",
+    "models": [],
+    "error": "Page.goto: Navigation to \"https://www.hyundai.com/th/en/models\" is interrupted by another navigation to \"https://www.reverautomotive.com/models\"\nCall log:\n  - navigating to \"https://www.hyundai.com/th"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en",
+  "captured_at": "2026-09-27T19:06:04.700109+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "3eed01b57fef4eadb313de0908965f14c50c1d47cf3332c724db2d11ed1295f9",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mitsubishi_p108_en.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

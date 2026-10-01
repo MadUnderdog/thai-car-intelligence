@@ -1,0 +1,119 @@
+F.FF..FFFF..                                                             [100%]
+=================================== FAILURES ===================================
+_____ test_p119r1_T1_identity_enumerator_cannot_declare_official_verified ______
+
+    def test_p119r1_T1_identity_enumerator_cannot_declare_official_verified():
+        obs = {"source_role": "IDENTITY_ENUMERATOR", "trust_tier": "official_verified"}
+        tier = trust_for_obs(obs)
+>       assert tier != "official_verified", "an identity enumerator must never assemble above its role ceiling"
+E       AssertionError: an identity enumerator must never assemble above its role ceiling
+E       assert 'official_verified' != 'official_verified'
+
+tests/test_p119_r1_safety.py:58: AssertionError
+_____________ test_p119r1_T3_unknown_role_fails_closed_to_inferred _____________
+
+    def test_p119r1_T3_unknown_role_fails_closed_to_inferred():
+        obs = {"source_role": "TOTALLY_MADE_UP_ROLE", "trust_tier": "official_verified"}
+>       assert trust_for_obs(obs) == "inferred", "unknown role must fail closed, never inherit the declared tier"
+E       AssertionError: unknown role must fail closed, never inherit the declared tier
+E       assert 'official_verified' == 'inferred'
+E         
+E         - inferred
+E         + official_verified
+
+tests/test_p119_r1_safety.py:70: AssertionError
+_______ test_p119r1_T4_malformed_declared_tier_resolves_to_role_ceiling ________
+
+    def test_p119r1_T4_malformed_declared_tier_resolves_to_role_ceiling():
+        obs = {"source_role": "IDENTITY_ENUMERATOR", "trust_tier": "SUPER_TRUSTED"}
+>       assert trust_for_obs(obs) == "inferred"
+E       AssertionError: assert 'SUPER_TRUSTED' == 'inferred'
+E         
+E         - inferred
+E         + SUPER_TRUSTED
+
+tests/test_p119_r1_safety.py:75: AssertionError
+___________ test_p119r1_T7_packet_brand_a_never_resolves_to_brand_b ____________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-128/test_p119r1_T7_packet_brand_a_0')
+
+    def test_p119r1_T7_packet_brand_a_never_resolves_to_brand_b(tmp_path):
+        catalog = _synthetic_catalog()
+        packet = {"packet_id": "PX-1", "candidate_key": "branda|model x||mx"}
+        result = resolve_join_key(packet, catalog, universe_path=_empty_universe(tmp_path))
+        if result.get("ok"):
+>           assert result["join_key"]["manufacturer_slug"] == "branda", result
+E           AssertionError: {'ok': True, 'join_key': {'manufacturer_slug': 'brandb', 'model_slug': 'model-b', 'variant_slug': 'mx', 'model_year': None}, 'matched_via': 'alias_catalog+nameEn', 'alias_evidence': None, ...}
+E           assert 'brandb' == 'branda'
+E             
+E             - branda
+E             ?      ^
+E             + brandb
+E             ?      ^
+
+tests/test_p119_r1_safety.py:141: AssertionError
+___ test_p119r1_T8_cross_brand_catalog_hit_is_rejected_with_explicit_reason ____
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-128/test_p119r1_T8_cross_brand_cat0')
+
+    def test_p119r1_T8_cross_brand_catalog_hit_is_rejected_with_explicit_reason(tmp_path):
+        catalog = _synthetic_catalog()
+        # naive lookup returns brandb's entry (listed first) for packet branda
+        packet = {"packet_id": "PX-2", "candidate_key": "branda|model x||mx"}
+        result = resolve_join_key(packet, catalog, universe_path=_empty_universe(tmp_path))
+        # whichever way it goes, brandb must never be selected silently:
+        if result.get("ok"):
+>           assert result["join_key"]["manufacturer_slug"] == "branda"
+E           AssertionError: assert 'brandb' == 'branda'
+E             
+E             - branda
+E             ?      ^
+E             + brandb
+E             ?      ^
+
+tests/test_p119_r1_safety.py:154: AssertionError
+______________ test_p119r1_T9_same_model_name_different_oisolated ______________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-128/test_p119r1_T9_same_model_name0')
+
+    def test_p119r1_T9_same_model_name_different_oisolated(tmp_path):
+        catalog = _synthetic_catalog()
+        upath = _empty_universe(tmp_path)
+        ra = resolve_join_key({"packet_id": "A", "candidate_key": "branda|model x||mx"}, catalog, universe_path=upath)
+        rb = resolve_join_key({"packet_id": "B", "candidate_key": "brandb|model x||mx"}, catalog, universe_path=upath)
+        if ra.get("ok") and rb.get("ok"):
+>           assert ra["join_key"]["manufacturer_slug"] == "branda"
+E           AssertionError: assert 'brandb' == 'branda'
+E             
+E             - branda
+E             ?      ^
+E             + brandb
+E             ?      ^
+
+tests/test_p119_r1_safety.py:166: AssertionError
+_________ test_p119r1_T10_real_lexus_es_join_is_not_contaminated_by_mg _________
+
+    def test_p119r1_T10_real_lexus_es_join_is_not_contaminated_by_mg():
+        """Real defect on HEAD b3c9178: PKT-0250/0251 (lexus|es) assembled with
+        model_slug 'mg-es' via MG's catalog entry."""
+        packets = {p["packet_id"]: p for p in _packets()}
+        pkt = packets.get("PKT-0250")
+        assert pkt is not None
+        result = resolve_join_key(pkt, _catalog())
+        assert result.get("ok"), result
+        jk = result["join_key"]
+        assert jk["manufacturer_slug"] == "lexus"
+>       assert jk["model_slug"] != "mg-es", "cross-brand catalog slug leaked into the join key"
+E       AssertionError: cross-brand catalog slug leaked into the join key
+E       assert 'mg-es' != 'mg-es'
+
+tests/test_p119_r1_safety.py:181: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_p119_r1_safety.py::test_p119r1_T1_identity_enumerator_cannot_declare_official_verified
+FAILED tests/test_p119_r1_safety.py::test_p119r1_T3_unknown_role_fails_closed_to_inferred
+FAILED tests/test_p119_r1_safety.py::test_p119r1_T4_malformed_declared_tier_resolves_to_role_ceiling
+FAILED tests/test_p119_r1_safety.py::test_p119r1_T7_packet_brand_a_never_resolves_to_brand_b
+FAILED tests/test_p119_r1_safety.py::test_p119r1_T8_cross_brand_catalog_hit_is_rejected_with_explicit_reason
+FAILED tests/test_p119_r1_safety.py::test_p119r1_T9_same_model_name_different_oisolated
+FAILED tests/test_p119_r1_safety.py::test_p119r1_T10_real_lexus_es_join_is_not_contaminated_by_mg
+7 failed, 5 passed in 2.02s

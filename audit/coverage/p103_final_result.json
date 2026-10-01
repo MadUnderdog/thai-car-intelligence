@@ -1,0 +1,112 @@
+{
+  "schema": "p103-final-result/1",
+  "generated_at": "2026-09-27T08:46:38.249187+00:00",
+  "acceptance_boundary": "Phase-1 identity/catalog artifact only. It is NOT staging, NOT the accepted set and NOT the production DB: identity-only candidates have no price/locator and therefore cannot satisfy §95 mandatory fields, so they are never promoted.",
+  "baseline": {
+    "first_party_confirmed_models": 192,
+    "first_party_confirmed_variants": 370
+  },
+  "first_party_confirmed_models": 194,
+  "first_party_confirmed_variants": 401,
+  "oems_with_first_party_confirmation": 19,
+  "before_after": {
+    "first_party_confirmed_models": [
+      192,
+      194
+    ],
+    "first_party_confirmed_variants": [
+      370,
+      401
+    ],
+    "oems_with_first_party_confirmation": [
+      19,
+      19
+    ]
+  },
+  "identity_only": {
+    "records": 840,
+    "models": 383,
+    "variants": 457
+  },
+  "conflicts": {
+    "records": 27
+  },
+  "harvested_identities": 31,
+  "outcomes": {
+    "new": 29,
+    "existing": 2
+  },
+  "per_oem_deltas": {
+    "Isuzu": {
+      "model_candidates": 0,
+      "variant_candidates": 2,
+      "first_party_confirmed_models": 1,
+      "first_party_confirmed_variants": 2,
+      "p103_official_artifacts": [
+        "isuzu_page.html"
+      ],
+      "p103_unresolved": []
+    },
+    "MG": {
+      "model_candidates": 0,
+      "variant_candidates": 3,
+      "first_party_confirmed_models": 1,
+      "first_party_confirmed_variants": 5,
+      "p103_official_artifacts": [
+        "mg_home_page.html"
+      ],
+      "p103_unresolved": []
+    },
+    "Mazda": {
+      "model_candidates": 0,
+      "variant_candidates": 22,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 22,
+      "p103_official_artifacts": [
+        "mazda_car_mazda-cx30-essential.html",
+        "mazda_car_mazda-cx5.html",
+        "mazda_car_mazda2-essential.html",
+        "mazda_car_mazda3-sedan.html",
+        "mazda_car_new-mazda-bt50.html"
+      ],
+      "p103_unresolved": []
+    },
+    "Subaru": {
+      "model_candidates": 0,
+      "variant_candidates": 2,
+      "first_party_confirmed_models": 0,
+      "first_party_confirmed_variants": 2,
+      "p103_official_artifacts": [
+        "subaru_th_model_brz.html",
+        "subaru_th_model_crosstrek.html"
+      ],
+      "p103_unresolved": []
+    }
+  },
+  "per_oem_unresolved": {},
+  "blocker_changes": {
+    "new_blockers": [],
+    "cleared_blockers": [],
+    "retried_blocked_hosts": [],
+    "smart_status": "DEALER_REDIRECT",
+    "policy": "no blocked host is requested before its next_retry_at; blocker evidence preserved verbatim from the P102 matrix"
+  },
+  "artifacts_written": [
+    "catalog_reconciliation_p103.json",
+    "identity_matrix_p103.json",
+    "identity_matrix_p103.md",
+    "identity_universe_p103.json",
+    "p103_capture_log.json",
+    "p103_final_result.json",
+    "p103_official_identities.json",
+    "p103_target_plan.json"
+  ],
+  "gates": {
+    "staging_written": false,
+    "prisma_touched": false,
+    "price_pass": false,
+    "p102_logic_changed": false
+  },
+  "capture_log": "audit/coverage/p103_capture_log.json",
+  "target_plan": "p103_target_plan.json"
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-triton-l200",
+  "captured_at": "2026-09-28T07:14:03.694333+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "bcb81b01ee9f3c40dc20083287346f12d9fa68b8966ad44689bcc6787b249f0b",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mitsubishi_p111_explore-triton-l200.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

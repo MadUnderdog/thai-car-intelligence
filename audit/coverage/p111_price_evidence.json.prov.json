@@ -1,0 +1,15 @@
+{
+  "artifact_filename": "p111_price_evidence.json",
+  "sha256": "ffeef64a0c0d0f258e2e022b90525a787158647286c4601c69eabbdd3cfaae55",
+  "generated_at": "2026-09-28T08:24:21.672346+00:00",
+  "acquisition_method": "derived_from_accepted_ledger_and_captured_artifacts",
+  "session_id": "p111_price_pass_20260928",
+  "provenance_state": "DERIVED_PHASE1_AUDIT",
+  "inputs": [
+    "audit/coverage/p108_final_result.json",
+    "audit/coverage/identity_universe_p108.json",
+    "audit/coverage/p110_price_evidence.json",
+    "audit/coverage/p111_price_source_inventory.json",
+    "audit/coverage/p111_price_capture_log.json"
+  ]
+}

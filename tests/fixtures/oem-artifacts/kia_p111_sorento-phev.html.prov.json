@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.kia.com/th/th/shopping-tools/price-list/sorento-phev.html",
+  "captured_at": "2026-09-28T07:13:21.130592+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "08ab658e5627400c14e0ff10201f1a21066a99623dbf28af528173211f9261c6",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "kia_p111_sorento-phev.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

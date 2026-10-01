@@ -1,0 +1,19 @@
+{
+  "brand": "lexus",
+  "brand_display": "Lexus",
+  "status": "NO_PRICES",
+  "source_url": "https://www.9carthai.com/lexus-price/",
+  "article_title": "LEXUS 2025-2026 ราคารถ เลกซัส - 9CARTHAI : 9CARTHAI",
+  "prices": [],
+  "specs": [],
+  "sources": [
+    "https://www.9carthai.com/lexus-price/"
+  ],
+  "failures": [
+    {
+      "reason": "No model+price matches"
+    }
+  ],
+  "rejection_count": 0,
+  "extraction_ts": "2026-09-20T15:30:26.383519"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.bmw.co.th/en/topics/brochure.html",
+  "captured_at": "2026-09-26T13:44:53.701671+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "35b2d701233535f83776b0a2b26f2d75a8bfa5572136e9891d71d9cd0af8d8ce",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "bmw_brochure_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

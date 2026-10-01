@@ -1,0 +1,909 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /home/ubuntu/Projects/thai-car-intelligence
+
+ ❯ tests/p121_ui_contracts.test.ts (10 tests | 10 failed) 44ms
+     × F1a: Header desktop + mobile nav links carry a 32px minimum height 9ms
+     × F1b: Footer quick links carry a 32px minimum height 2ms
+     × F1c: Breadcrumb links carry a 32px minimum height 1ms
+     × F1d: Button base (all sizes incl. sm) carries a 32px minimum height 9ms
+     × F1e: search filter + clear buttons carry a 32px minimum height 4ms
+     × F1f: homepage ViewAll links carry a 32px minimum height (all three) 2ms
+     × F2: detail sidebar has no dead 'บันทึก' button 6ms
+     × F3: breadcrumb nav aria-label is Thai, not a copy-paste artifact 1ms
+     × F4: homepage verified-price section label + price-sorted fetch 4ms
+     × F5: footer no longer claims the verified-price listing is 'ทั้งหมด' 3ms
+ ❯ tests/p121_api_cars_stats.test.ts (4 tests | 3 failed) 293ms
+     × A1: response carries stats with all four integer fields 207ms
+     × B1: stats match an independent reference query over ACTIVE rows 25ms
+     × C1: values are non-zero and internally consistent 23ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 13 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/p121_api_cars_stats.test.ts > P121 /api/cars stats contract (live, read-only) > A1: response carries stats with all four integer fields
+AssertionError: expected undefined to be defined
+ ❯ tests/p121_api_cars_stats.test.ts:52:24
+     50|   it("A1: response carries stats with all four integer fields", async …
+     51|     const body = await fetchCars();
+     52|     expect(body.stats).toBeDefined();
+       |                        ^
+     53|     for (const key of ["totalActiveVariants", "evCount", "hevCount", "…
+     54|       expect(typeof body.stats?.[key], `stats.${key} must be a number`…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/13]⎯
+
+ FAIL  tests/p121_api_cars_stats.test.ts > P121 /api/cars stats contract (live, read-only) > B1: stats match an independent reference query over ACTIVE rows
+AssertionError: expected undefined to be 747 // Object.is equality
+
+- Expected:
+747
+
++ Received:
+undefined
+
+ ❯ tests/p121_api_cars_stats.test.ts:62:45
+     60|     const body = await fetchCars();
+     61|     const ref = (await client.query(REFERENCE_STATS)).rows[0];
+     62|     expect(body.stats?.totalActiveVariants).toBe(ref.total_active_vari…
+       |                                             ^
+     63|     expect(body.stats?.evCount).toBe(ref.ev_count);
+     64|     expect(body.stats?.hevCount).toBe(ref.hev_count);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/13]⎯
+
+ FAIL  tests/p121_api_cars_stats.test.ts > P121 /api/cars stats contract (live, read-only) > C1: values are non-zero and internally consistent
+TypeError: actual value must be number or bigint, received "undefined"
+ ❯ tests/p121_api_cars_stats.test.ts:70:45
+     68|   it("C1: values are non-zero and internally consistent", async () => {
+     69|     const body = await fetchCars();
+     70|     expect(body.stats?.totalActiveVariants).toBeGreaterThan(0);
+       |                                             ^
+     71|     expect(body.stats?.evCount).toBeGreaterThan(0);
+     72|     expect(body.stats?.hevCount).toBeGreaterThan(0);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/13]⎯
+
+ FAIL  tests/p121_ui_contracts.test.ts > P121 UI surface source contracts > F1a: Header desktop + mobile nav links carry a 32px minimum height
+AssertionError: expected 'className="px-4 py-2 text-sm font-med…' to contain 'min-h-[32px]'
+
+- Expected
++ Received
+
+- min-h-[32px]
++ className="px-4 py-2 text-sm font-medium text-[var(--color-gray-600)] hover:text-[var(--color-gray-900)] hover:bg-[var(--color-gray-100)] rounded-[var(--radius-lg)] transition-all duration-[var(--transition-normal)]"
++               >
++                 {link.label}
+
+ ❯ tests/p121_ui_contracts.test.ts:35:19
+     33|     expect(navLink.length).toBeGreaterThanOrEqual(1);
+     34|     for (const tag of navLink) {
+     35|       expect(tag).toContain("min-h-[32px]");
+       |                   ^
+     36|     }
+     37|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/13]⎯
+
+ FAIL  tests/p121_ui_contracts.test.ts > P121 UI surface source contracts > F1b: Footer quick links carry a 32px minimum height
+AssertionError: expected '<Link href="/cars" className="hover:t…' to contain 'min-h-[32px]'
+
+Expected: "min-h-[32px]"
+Received: "<Link href="/cars" className="hover:text-white transition-colors">"
+
+ ❯ tests/p121_ui_contracts.test.ts:44:19
+     42|     expect(quickLinks.length).toBeGreaterThanOrEqual(3);
+     43|     for (const tag of quickLinks) {
+     44|       expect(tag).toContain("min-h-[32px]");
+       |                   ^
+     45|     }
+     46|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/13]⎯
+
+ FAIL  tests/p121_ui_contracts.test.ts > P121 UI surface source contracts > F1c: Breadcrumb links carry a 32px minimum height
+AssertionError: expected '<a href="/" className="hover:text-blu…' to contain 'min-h-[32px]'
+
+Expected: "min-h-[32px]"
+Received: "<a href="/" className="hover:text-blue-600 transition">"
+
+ ❯ tests/p121_ui_contracts.test.ts:53:17
+     51|     expect(anchors.length).toBeGreaterThanOrEqual(1);
+     52|     for (const a of anchors) {
+     53|       expect(a).toContain("min-h-[32px]");
+       |                 ^
+     54|     }
+     55|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/13]⎯
+
+ FAIL  tests/p121_ui_contracts.test.ts > P121 UI surface source contracts > F1d: Button base (all sizes incl. sm) carries a 32px minimum height
+AssertionError: expected '"use client";\n\nimport { forwardRef,…' to contain 'min-h-[32px]'
+
+- Expected
++ Received
+
+- min-h-[32px]
++ "use client";
++
++ import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from "react";
++
++ type Variant = "primary" | "secondary" | "ghost" | "danger";
++ type Size = "sm" | "md" | "lg";
++
++ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
++   variant?: Variant;
++   size?: Size;
++   children: ReactNode;
++   isLoading?: boolean;
++   leftIcon?: ReactNode;
++   rightIcon?: ReactNode;
++ }
++
++ const variantStyles: Record<Variant, string> = {
++   primary: "bg-[var(--color-primary-600)] text-white hover:bg-[var(--color-primary-700)] active:bg-[var(--color-primary-800)] shadow-sm",
++   secondary: "bg-white text-[var(--color-gray-700)] border border-[var(--color-gray-300)] hover:bg-[var(--color-gray-50)] active:bg-[var(--color-gray-100)]",
++   ghost: "bg-transparent text-[var(--color-gray-600)] hover:bg-[var(--color-gray-100)] active:bg-[var(--color-gray-200)]",
++   danger: "bg-[var(--color-danger-500)] text-white hover:bg-[var(--color-danger-600)] active:bg-[var(--color-danger-600)] shadow-sm",
++ };
++
++ const sizeStyles: Record<Size, string> = {
++   sm: "px-3 py-1.5 text-xs gap-1.5",
++   md: "px-4 py-2 text-sm gap-2",
++   lg: "px-6 py-3 text-base gap-2.5",
++ };
++
++ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
++   ({ variant = "primary", size = "md", children, isLoading, leftIcon, rightIcon, className = "", disabled, ...props }, ref) => {
++     return (
++       <button
++         ref={ref}
++         className={`
++           inline-flex items-center justify-center font-medium rounded-[var(--radius-lg)]
++           transition-all duration-[var(--transition-normal)]
++           disabled:opacity-50 disabled:cursor-not-allowed
++           ${variantStyles[variant]}
++           ${sizeStyles[size]}
++           ${className}
++         `}
++         disabled={disabled || isLoading}
++         {...props}
++       >
++         {isLoading ? (
++           <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
++             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
++             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
++           </svg>
++         ) : leftIcon}
++         {children}
++         {!isLoading && rightIcon}
++       </button>
++     );
++   }
++ );
++
++ Button.displayName = "Button";
++
+
+ ❯ tests/p121_ui_contracts.test.ts:59:17
+     57|   it("F1d: Button base (all sizes incl. sm) carries a 32px minimum hei…
+     58|     const src = read("src/components/ui/Button.tsx");
+     59|     expect(src).toContain("min-h-[32px]");
+       |                 ^
+     60|   });
+     61|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/13]⎯
+
+ FAIL  tests/p121_ui_contracts.test.ts > P121 UI surface source contracts > F1e: search filter + clear buttons carry a 32px minimum height
+AssertionError: expected '<button onClick={() => setShowFilters…' to contain 'min-h-[32px]'
+
+Expected: "min-h-[32px]"
+Received: "<button onClick={() => setShowFilters(!showFilters)} className="flex items-center gap-1 text-sm font-medium text-slate-700">"
+
+ ❯ tests/p121_ui_contracts.test.ts:66:27
+     64|     const filterBtn = src.match(/<button onClick=\{\(\) => setShowFilt…
+     65|     expect(filterBtn, "filter toggle button present").toBeTruthy();
+     66|     expect(filterBtn![0]).toContain("min-h-[32px]");
+       |                           ^
+     67|     const clearBtn = src.match(/<button onClick=\{clearFilters\}[^>]*>…
+     68|     expect(clearBtn, "clear filters button present").toBeTruthy();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/13]⎯
+
+ FAIL  tests/p121_ui_contracts.test.ts > P121 UI surface source contracts > F1f: homepage ViewAll links carry a 32px minimum height (all three)
+AssertionError: expected '<Link href="/search?q=EV" className="…' to contain 'min-h-[32px]'
+
+- Expected
++ Received
+
+- min-h-[32px]
++ <Link href="/search?q=EV" className="text-sm text-[var(--color-primary-600)] hover:underline">
++               ดูทั้งหมด
+
+ ❯ tests/p121_ui_contracts.test.ts:77:19
+     75|     expect(viewAlls.length).toBeGreaterThanOrEqual(3);
+     76|     for (const tag of viewAlls) {
+     77|       expect(tag).toContain("min-h-[32px]");
+       |                   ^
+     78|     }
+     79|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/13]⎯
+
+ FAIL  tests/p121_ui_contracts.test.ts > P121 UI surface source contracts > F2: detail sidebar has no dead 'บันทึก' button
+AssertionError: expected '"use client";\n\nimport Link from "ne…' not to contain 'บันทึก'
+
+- Expected
++ Received
+
+- บันทึก
++ "use client";
++
++ import Link from "next/link";
++ import { Card, CardBody } from "@/components/ui/Card";
++ import { CommunitySection } from "@/components/community/CommunitySection";
++ import { Badge } from "@/components/ui/Badge";
++ import { Button } from "@/components/ui/Button";
++
++ type Variant = {
++   id: string;
++   name: string;
++   nameTh: string;
++   slug: string;
++   price: number | null;
++   priceSource: { url: string; sourceName: string | null; verifiedAt: string | null } | null;
++   fuelType: string | null;
++   powerKw: number | null;
++   torqueNm: number | null;
++   rangeKm: number | null;
++   batteryKwh: number | null;
++   batteryChemistry: string | null;
++   chargeDcKw: number | null;
++   chargeAcKw: number | null;
++   dimensionsMm: string | null;
++   wheelbaseMm: number | null;
++   groundClearanceMm: number | null;
++   warrantyYears: number | null;
++   warrantyKm: number | null;
++   // evidence provenance per section (from page.tsx joins)
++   evidence: {
++     priceVerified: boolean;
++     performance: boolean;
++     battery: boolean;
++     charging: boolean;
++     dimensions: boolean;
++     warranty: boolean;
++     lastVerifiedAt: string | null;
++   };
++   // research-only observations (NOT verified) — shown clearly distinct
++   researchSpecs: { label: string; value: string }[];
++ };
++
++ type ModelData = {
++   id: string;
++   name: string;
++   nameTh: string;
++   brand: string;
++   brandTh: string;
++   officialUrl: string | null;
++   brochure: { title: string; href: string | null; sourceName: string | null; verifiedAt: string | null; verified: boolean };
++   heroFallback: { kind: "image" | "fallback" | "placeholder"; href: string | null };
++   variants: Variant[];
++   images: { url: string; role: string; caption: string | null }[];
++ };
++
++ const NO_DATA = "ยังไม่มีข้อมูลยืนยัน";
++
++ function SpecRow({ label, value, unit }: { label: string; value: string | number | null; unit?: string }) {
++   return (
++     <div className="flex justify-between py-2 border-b border-[var(--color-gray-100)] last:border-0">
++       <span className="text-[var(--color-gray-500)]">{label}</span>
++       {value != null ? (
++         <span className="font-medium text-[var(--color-gray-900)]">
++           {typeof value === "number" ? value.toLocaleString() : value}
++           {unit ? ` ${unit}` : ""}
++         </span>
++       ) : (
++         <span className="text-[var(--color-gray-400)] text-sm italic">{NO_DATA}</span>
++       )}
++     </div>
++   );
++ }
++
++ function EvidenceDot({ ok }: { ok: boolean }) {
++   return ok
++     ? <span className="text-[var(--color-success-600)]" title="ตรวจสอบจากแหล่งทางการแล้ว">✔️ ยืนยันแล้ว</span>
++     : <span className="text-[var(--color-gray-400)]" title="ยังไม่มีการตรวจสอบจากแหล่งทางการ">⛔ ยังไม่ยืนยัน</span>;
++ }
++
++ function ResearchOnlyBlock({ researchSpecs, name }: { researchSpecs: { label: string; value: string }[]; name: string }) {
++   if (researchSpecs.length === 0) return null;
++   return (
++     <Card className="border-l-4 border-[var(--color-warning-400)]">
++       <CardBody>
++         <h3 className="font-medium text-[var(--color-gray-700)] mb-2">ข้อมูลจากงานวิจัย (ยังไม่ยืนยัน) — {name}</h3>
++         <p className="text-xs text-[var(--color-gray-500)] mb-2">
++           ⚠️ ข้อมูลจากการรวบรวมสื่อ/งานวิจัย ยังไม่ผ่านการตรวจสอบจากแหล่งทางการ โปรดใช้เพื่อการอ้างอิงเบื้องต้น
++         </p>
++         <ul className="text-sm space-y-1">
++           {researchSpecs.map((r) => (
++             <li key={r.label} className="flex justify-between">
++               <span className="text-[var(--color-gray-500)]">{r.label}</span>
++               <span className="italic text-[var(--color-gray-700)]">{r.value}</span>
++             </li>
++           ))}
++         </ul>
++       </CardBody>
++     </Card>
++   );
++ }
++
++ export default function VehicleDetailClient({ model }: { model: ModelData }) {
++   const heroImage = model.images.find((img) => img.role === "hero") || model.images[0];
++   const primary = model.variants[0];
++
++   return (
++     <div className="container-narrow py-8">
++       {/* Breadcrumb */}
++       <nav className="flex items-center gap-2 text-sm text-[var(--color-gray-500)] mb-6">
++         <Link href="/cars" className="hover:text-[var(--color-primary-600)]">รถยนต์</Link>
++         <span>/</span>
++         <span className="text-[var(--color-gray-900)]">{model.brand} {model.name}</span>
++       </nav>
++
++       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
++         {/* Main content */}
++         <div className="lg:col-span-2 space-y-6">
++           {/* Hero */}
++           <Card className="overflow-hidden">
++             <div className="relative h-64 md:h-96 bg-[var(--color-gray-100)]">
++               {heroImage ? (
++                 <img src={heroImage.url} alt={`${model.brand} ${model.name}`} className="w-full h-full object-cover" />
++               ) : (
++                 <div className="w-full h-full flex items-center justify-center text-6xl text-[var(--color-gray-300)]">🚗</div>
++               )}
++             </div>
++             <CardBody>
++               <div className="text-sm text-[var(--color-gray-500)] mb-1">{model.brandTh}</div>
++               <h1 className="text-2xl md:text-3xl font-bold text-[var(--color-gray-900)]">{model.name}</h1>
++               <div className="text-[var(--color-gray-600)]">{model.nameTh}</div>
++               {primary && (
++                 <div className="mt-3 flex flex-wrap items-baseline gap-3">
++                   <span className="text-2xl font-bold text-[var(--color-primary-600)]">
++                     {primary.price ? `฿${primary.price.toLocaleString()}` : NO_DATA}
++                   </span>
++                   <span className="text-xs">
++                     <EvidenceDot ok={primary.evidence.priceVerified} />
++                   </span>
++                   {primary.evidence.lastVerifiedAt && (
++                     <span className="text-xs text-[var(--color-gray-400)]">
++                       ตรวจสอบล่าสุด {new Date(primary.evidence.lastVerifiedAt).toLocaleDateString("th-TH")}
++                     </span>
++                   )}
++                 </div>
++               )}
++             </CardBody>
++           </Card>
++
++           {/* Variants table */}
++           <Card>
++             <CardBody>
++               <h2 className="text-lg font-semibold text-[var(--color-gray-900)] mb-4">รุ่นย่อย ({model.variants.length})</h2>
++               <div className="overflow-x-auto">
++                 <table className="w-full text-sm">
++                   <thead>
++                     <tr className="border-b border-[var(--color-gray-200)]">
++                       <th className="text-left py-3 px-2 text-[var(--color-gray-500)] font-medium">รุ่นย่อย</th>
++                       <th className="text-left py-3 px-2 text-[var(--color-gray-500)] font-medium">เชื้อเพลง</th>
++                       <th className="text-right py-3 px-2 text-[var(--color-gray-500)] font-medium">กำลัง</th>
++                       <th className="text-right py-3 px-2 text-[var(--color-gray-500)] font-medium">ระยะทาง</th>
++                       <th className="text-right py-3 px-2 text-[var(--color-gray-500)] font-medium">ราคา</th>
++                     </tr>
++                   </thead>
++                   <tbody>
++                     {model.variants.map((v) => (
++                       <tr key={v.id} className="border-b border-[var(--color-gray-100)] hover:bg-[var(--color-gray-50)]">
++                         <td className="py-3 px-2">
++                           <span className="font-medium text-[var(--color-gray-900)]">
++                             {v.name}
++                           </span>
++                         </td>
++                         <td className="py-3 px-2">
++                           <Badge variant={v.fuelType === "BEV" ? "success" : v.fuelType === "EV" ? "success" : v.fuelType === "HEV" ? "warning" : "default"}>
++                             {v.fuelType}
++                           </Badge>
++                         </td>
++                         <td className="py-3 px-2 text-right text-[var(--color-gray-700)]">
++                           {v.powerKw ? `${Math.round(v.powerKw * 1.341)} แรงม้า` : NO_DATA}
++                         </td>
++                         <td className="py-3 px-2 text-right text-[var(--color-gray-700)]">
++                           {v.rangeKm ? `${Math.round(v.rangeKm)} km` : NO_DATA}
++                         </td>
++                         <td className="py-3 px-2 text-right font-bold text-[var(--color-primary-600)]">
++                           {v.price ? `฿${v.price.toLocaleString()}` : NO_DATA}
++                         </td>
++                       </tr>
++                     ))}
++                   </tbody>
++                 </table>
++               </div>
++               <p className="text-xs text-[var(--color-gray-400)] mt-2">
++                 ℹ️ ราคาที่แสดงเป็นราคาที่ผ่านการตรวจสอบจากแหล่งข้อมูลทางการเท่านั้น
++               </p>
++             </CardBody>
++           </Card>
++
++           {/* Detailed verified specs for first variant with data */}
++           {model.variants.length > 0 && (
++             <Card>
++               <CardBody>
++                 <h2 className="text-lg font-semibold text-[var(--color-gray-900)] mb-4">
++                   สเปคหลัก — {model.variants[0].name}
++                 </h2>
++                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
++                   <div>
++                     <h3 className="font-medium text-[var(--color-gray-700)] mb-1 flex items-center justify-between gap-2">
++                       ประสิทธิภาพ
++                       <span className="text-[10px] font-normal"><EvidenceDot ok={model.variants[0].evidence.performance} /></span>
++                     </h3>
++                     <SpecRow label="กำลังสูงสุด" value={model.variants[0].powerKw} unit="kW" />
++                     <SpecRow label="แรงบิด" value={model.variants[0].torqueNm} unit="Nm" />
++                     <SpecRow label="ระยะทาง" value={model.variants[0].rangeKm} unit="km" />
++                   </div>
++                   <div>
++                     <h3 className="font-medium text-[var(--color-gray-700)] mb-3 flex items-center justify-between gap-2">
++                       แบตเตอรี่และการชาร์จ
++                       <span className="text-[10px] font-normal">
++                         <EvidenceDot ok={model.variants[0].evidence.battery || model.variants[0].evidence.charging} />
++                       </span>
++                     </h3>
++                     <SpecRow label="ความจุแบตเตอรี่" value={model.variants[0].batteryKwh} unit="kWh" />
++                     <SpecRow label="ประเภทแบตเตอรี่" value={model.variants[0].batteryChemistry} />
++                     <SpecRow label="ชาร์จ DC" value={model.variants[0].chargeDcKw} unit="kW" />
++                     <SpecRow label="ชาร์จ AC" value={model.variants[0].chargeAcKw} unit="kW" />
++                   </div>
++                   <div>
++                     <h3 className="font-medium text-[var(--color-gray-700)] mb-3 flex items-center justify-between gap-2">
++                       ขนาด
++                       <span className="text-[10px] font-normal"><EvidenceDot ok={model.variants[0].evidence.dimensions} /></span>
++                     </h3>
++                     <SpecRow label="ยาวxกว้างxสูง" value={model.variants[0].dimensionsMm} unit="mm" />
++                     <SpecRow label="ฐานล้อ" value={model.variants[0].wheelbaseMm} unit="mm" />
++                     <SpecRow label="ระยะต่ำสุด" value={model.variants[0].groundClearanceMm} unit="mm" />
++                   </div>
++                   <div>
++                     <h3 className="font-medium text-[var(--color-gray-700)] mb-3 flex items-center justify-between gap-2">
++                       การรับประกัน
++                       <span className="text-[10px] font-normal"><EvidenceDot ok={model.variants[0].evidence.warranty} /></span>
++                     </h3>
++                     <SpecRow label="ระยะเวลา" value={model.variants[0].warrantyYears} unit="ปี" />
++                     <SpecRow label="ระยะทาง" value={model.variants[0].warrantyKm} unit="km" />
++                   </div>
++                 </div>
++                 <p className="text-xs text-[var(--color-gray-400)] mt-3">
++                   ℹ️ แสดงเฉพาะข้อมูลที่ตรวจสอบแล้ว — ช่องที่ระบุ &quot;{NO_DATA}&quot; ยังไม่มีแหล่งข้อมูลที่ยืนยันได้
++                 </p>
++               </CardBody>
++             </Card>
++           )}
++
++           {/* Research-only observations (clearly NOT verified) */}
++           {model.variants.length > 0 && (
++             <ResearchOnlyBlock researchSpecs={model.variants[0].researchSpecs} name={model.variants[0].name} />
++           )}
++         </div>
++
++         {/* Sidebar */}
++         <div className="space-y-6">
++           <Card>
++             <CardBody className="space-y-3">
++               <Link href={`/compare?ids=${model.variants[0]?.id ?? ""}`}>
++                 <Button className="w-full" variant="primary">
++                   ⚖️ เปรียบเทียบรุ่นนี้
++                 </Button>
++               </Link>
++               <Button className="w-full" variant="secondary">
++                 🔖 บันทึก
++               </Button>
++               <Link href="/ai-ask">
++                 <Button className="w-full" variant="ghost">
++                   💬 ถาม AI เกี่ยวกับรุ่นนี้
++                 </Button>
++               </Link>
++             </CardBody>
++           </Card>
++         </div>
++       </div>
++
++       {/* Community comments (Part E) */}
++       <div className="mt-8">
++         <CommunitySection modelId={model.id} />
++       </div>
++     </div>
++   );
++ }
++
+
+ ❯ tests/p121_ui_contracts.test.ts:83:21
+     81|   it("F2: detail sidebar has no dead 'บันทึก' button", () => {
+     82|     const src = read("src/app/cars/[manufacturer]/[model]/VehicleDetai…
+     83|     expect(src).not.toContain("บันทึก");
+       |                     ^
+     84|     // the two remaining primary actions stay real links
+     85|     expect(src).toContain("เปรียบเทียบรุ่นนี้");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/13]⎯
+
+ FAIL  tests/p121_ui_contracts.test.ts > P121 UI surface source contracts > F3: breadcrumb nav aria-label is Thai, not a copy-paste artifact
+AssertionError: expected 'type Crumb = { label: string; href?: …' not to contain '面包屑'
+
+- Expected
++ Received
+
+- 面包屑
++ type Crumb = { label: string; href?: string };
++
++ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
++   return (
++     <nav className="text-sm text-gray-500 mb-4" aria-label="面包屑导航">
++       <ol className="flex flex-wrap items-center gap-1">
++         <li><a href="/" className="hover:text-blue-600 transition">หน้าแรก</a></li>
++         {items.map((item, i) => (
++           <li key={i} className="flex items-center gap-1">
++             <span className="text-gray-300">/</span>
++             {item.href ? (
++               <a href={item.href} className="hover:text-blue-600 transition">{item.label}</a>
++             ) : (
++               <span className="text-gray-700 font-medium">{item.label}</span>
++             )}
++           </li>
++         ))}
++       </ol>
++     </nav>
++   );
++ }
++
+
+ ❯ tests/p121_ui_contracts.test.ts:91:21
+     89|   it("F3: breadcrumb nav aria-label is Thai, not a copy-paste artifact…
+     90|     const src = read("src/components/Breadcrumbs.tsx");
+     91|     expect(src).not.toContain("面包屑");
+       |                     ^
+     92|     expect(src).toContain('aria-label="เส้นทางนำทาง"');
+     93|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/13]⎯
+
+ FAIL  tests/p121_ui_contracts.test.ts > P121 UI surface source contracts > F4: homepage verified-price section label + price-sorted fetch
+AssertionError: expected '"use client";\n\nimport { useEffect, …' to contain 'sortBy=price_asc'
+
+- Expected
++ Received
+
+- sortBy=price_asc
++ "use client";
++
++ import { useEffect, useState } from "react";
++ import Link from "next/link";
++ import { Card, CardBody } from "@/components/ui/Card";
++ import { Badge } from "@/components/ui/Badge";
++
++ type Model = {
++   id: string;
++   nameEn: string;
++   nameTh: string;
++   slug: string;
++   manufacturer: { nameEn: string; nameTh: string; slug: string };
++   minPrice: number | null;
++   maxPrice: number | null;
++   variantCount: number;
++   primaryFuelType: string;
++   heroImage: string | null;
++ };
++
++ type Stats = {
++   totalVariants: number;
++   totalManufacturers: number;
++   evCount: number;
++   hevCount: number;
++ };
++
++ function ModelCard({ model }: { model: Model }) {
++   return (
++     <Link href={`/cars/${model.manufacturer.slug}/${model.slug}`}>
++       <Card variant="elevated" className="h-full overflow-hidden group">
++         <div className="relative h-48 bg-[var(--color-gray-100)] overflow-hidden">
++           {model.heroImage ? (
++             <img
++               src={model.heroImage}
++               alt={`${model.manufacturer.nameEn} ${model.nameEn}`}
++               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
++               loading="lazy"
++             />
++           ) : (
++             <div className="w-full h-full flex items-center justify-center text-4xl text-[var(--color-gray-300)]">
++               🚗
++             </div>
++           )}
++           <div className="absolute top-3 left-3">
++             <Badge
++               variant={model.primaryFuelType === "EV" ? "success" : model.primaryFuelType === "HEV" ? "warning" : "default"}
++               size="md"
++             >
++               {model.primaryFuelType}
++             </Badge>
++           </div>
++         </div>
++         <CardBody>
++           <div className="text-xs text-[var(--color-gray-500)] mb-1">{model.manufacturer.nameEn}</div>
++           <h3 className="font-semibold text-[var(--color-gray-900)] mb-2 group-hover:text-[var(--color-primary-600)] transition-colors">
++             {model.nameEn}
++           </h3>
++           <div className="flex items-center justify-between">
++             <div>
++               {model.minPrice && model.maxPrice ? (
++                 <div className="text-lg font-bold text-[var(--color-primary-600)]">
++                   ฿{model.minPrice.toLocaleString()} - ฿{model.maxPrice.toLocaleString()}
++                 </div>
++               ) : (
++                 <div className="text-sm text-[var(--color-gray-400)]">ไม่มีข้อมูลราคา</div>
++               )}
++             </div>
++             <div className="text-xs text-[var(--color-gray-400)]">{model.variantCount} รุ่นย่อย</div>
++           </div>
++         </CardBody>
++       </Card>
++     </Link>
++   );
++ }
++
++ export default function HomePage() {
++   const [models, setModels] = useState<Model[]>([]);
++   const [stats, setStats] = useState<Stats | null>(null);
++   const [loading, setLoading] = useState(true);
++
++   useEffect(() => {
++     fetch("/api/models?limit=12")
++       .then((r) => r.json())
++       .then((data) => {
++         setModels(data.results || []);
++         setLoading(false);
++       })
++       .catch(() => setLoading(false));
++
++     fetch("/api/cars?limit=1")
++       .then((r) => r.json())
++       .then((data) => {
++         setStats({
++           totalVariants: data.total || 0,
++           totalManufacturers: data.totalManufacturers || 0,
++           evCount: data.evCount || 0,
++           hevCount: data.hevCount || 0,
++         });
++       })
++       .catch(() => {});
++   }, []);
++
++   const evModels = models.filter((m) => m.primaryFuelType === "EV").slice(0, 4);
++   const hevModels = models.filter((m) => m.primaryFuelType === "HEV").slice(0, 4);
++
++   return (
++     <div className="min-h-screen">
++       {/* Hero Section */}
++       <section className="bg-gradient-to-br from-[var(--color-primary-900)] via-[var(--color-primary-800)] to-[var(--color-primary-900)] text-white">
++         <div className="container-narrow py-20 text-center">
++           <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
++             Car Intelligence Thailand
++           </h1>
++           <p className="text-[var(--color-primary-200)] text-lg mb-8 max-w-2xl mx-auto">
++             ค้นคว้า เปรียบเทียบ และถาม AI เกี่ยวกับรถยนต์ตลาดไทย
++             จากแหล่งข้อมูลที่ตรวจสอบได้
++           </p>
++           <div className="flex flex-wrap justify-center gap-3">
++             <Link
++               href="/search"
++               className="px-6 py-3 bg-white text-[var(--color-primary-700)] font-semibold rounded-[var(--radius-xl)] hover:bg-[var(--color-primary-50)] transition-colors"
++             >
++               ค้นหารถ
++             </Link>
++             <Link
++               href="/compare"
++               className="px-6 py-3 bg-[var(--color-primary-700)] text-white font-semibold rounded-[var(--radius-xl)] hover:bg-[var(--color-primary-600)] transition-colors"
++             >
++               เปรียบเทียบ
++             </Link>
++           </div>
++         </div>
++       </section>
++
++       {/* Stats */}
++       {stats && (
++         <section className="container-narrow -mt-8">
++           <Card variant="elevated" className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[var(--color-gray-100)]">
++             <div className="p-6 text-center">
++               <div className="text-3xl font-bold text-[var(--color-primary-600)]">{stats.totalVariants}</div>
++               <div className="text-sm text-[var(--color-gray-500)] mt-1">รถยนต์</div>
++             </div>
++             <div className="p-6 text-center">
++               <div className="text-3xl font-bold text-[var(--color-success-600)]">{stats.evCount}</div>
++               <div className="text-sm text-[var(--color-gray-500)] mt-1">EV</div>
++             </div>
++             <div className="p-6 text-center">
++               <div className="text-3xl font-bold text-[var(--color-warning-600)]">{stats.hevCount}</div>
++               <div className="text-sm text-[var(--color-gray-500)] mt-1">HEV</div>
++             </div>
++             <div className="p-6 text-center">
++               <div className="text-3xl font-bold text-[var(--color-gray-700)]">{stats.totalManufacturers}</div>
++               <div className="text-sm text-[var(--color-gray-500)] mt-1">แบรนด์</div>
++             </div>
++           </Card>
++         </section>
++       )}
++
++       {/* EV Section */}
++       {evModels.length > 0 && (
++         <section className="container-narrow py-12">
++           <div className="flex items-center justify-between mb-6">
++             <h2 className="text-2xl font-bold text-[var(--color-gray-900)]">⚡ รถยนต์ไฟฟ้า EV</h2>
++             <Link href="/search?q=EV" className="text-sm text-[var(--color-primary-600)] hover:underline">
++               ดูทั้งหมด →
++             </Link>
++           </div>
++           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
++             {evModels.map((m) => (
++               <ModelCard key={m.id} model={m} />
++             ))}
++           </div>
++         </section>
++       )}
++
++       {/* HEV Section */}
++       {hevModels.length > 0 && (
++         <section className="container-narrow py-12">
++           <div className="flex items-center justify-between mb-6">
++             <h2 className="text-2xl font-bold text-[var(--color-gray-900)]">🔋 รถยนต์ไฮบริด HEV</h2>
++             <Link href="/search?q=HEV" className="text-sm text-[var(--color-primary-600)] hover:underline">
++               ดูทั้งหมด →
++             </Link>
++           </div>
++           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
++             {hevModels.map((m) => (
++               <ModelCard key={m.id} model={m} />
++             ))}
++           </div>
++         </section>
++       )}
++
++       {/* All Models */}
++       <section className="container-narrow py-12">
++         <div className="flex items-center justify-between mb-6">
++           <h2 className="text-2xl font-bold text-[var(--color-gray-900)]">รถยนต์ทั้งหมด</h2>
++           <Link href="/cars" className="text-sm text-[var(--color-primary-600)] hover:underline">
++             ดูทั้งหมด →
++           </Link>
++         </div>
++         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
++           {models.slice(0, 6).map((m) => (
++             <ModelCard key={m.id} model={m} />
++           ))}
++         </div>
++       </section>
++     </div>
++   );
++ }
++
+
+ ❯ tests/p121_ui_contracts.test.ts:97:17
+     95|   it("F4: homepage verified-price section label + price-sorted fetch",…
+     96|     const src = read("src/app/page.tsx");
+     97|     expect(src).toContain("sortBy=price_asc");
+       |                 ^
+     98|     expect(src).toContain("รถยนต์ที่มีราคาตรวจสอบแล้ว");
+     99|     // the old over-claiming heading must be gone
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/13]⎯
+
+ FAIL  tests/p121_ui_contracts.test.ts > P121 UI surface source contracts > F5: footer no longer claims the verified-price listing is 'ทั้งหมด'
+AssertionError: expected 'import Link from "next/link";\n\nexpo…' not to contain 'รถยนต์ทั้งหมด'
+
+- Expected
++ Received
+
+- รถยนต์ทั้งหมด
++ import Link from "next/link";
++
++ export default function Footer() {
++   return (
++     <footer className="bg-[var(--color-gray-900)] text-[var(--color-gray-400)] mt-auto">
++       <div className="container-wide py-12">
++         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
++           {/* Brand */}
++           <div className="md:col-span-2">
++             <div className="flex items-center gap-2.5 font-bold text-lg text-white mb-3">
++               <span className="w-8 h-8 bg-[var(--color-primary-600)] rounded-[var(--radius-lg)] flex items-center justify-center text-sm">
++                 🚗
++               </span>
++               Car Intelligence
++             </div>
++             <p className="text-sm leading-relaxed max-w-md">
++               แพลตฟอร์มข้อมูลรถยนต์ตลาดไทย ที่รวบรวมข้อมูลจากแหล่งทางการและแหล่งอ้างอิทธิพล
++               พร้อมระบบประเมินความน่าเชื่อถือของข้อมูล (Source-backed provenance)
++             </p>
++           </div>
++
++           {/* Quick links */}
++           <div>
++             <h3 className="text-sm font-semibold text-white mb-3">นำทาง</h3>
++             <div className="flex flex-col gap-2 text-sm">
++               <Link href="/cars" className="hover:text-white transition-colors">รถยนต์ทั้งหมด</Link>
++               <Link href="/search" className="hover:text-white transition-colors">ค้นหา</Link>
++               <Link href="/compare" className="hover:text-white transition-colors">เปรียบเทียบ</Link>
++               <Link href="/ai-ask" className="hover:text-white transition-colors">ถาม AI</Link>
++             </div>
++           </div>
++
++           {/* About */}
++           <div>
++             <h3 className="text-sm font-semibold text-white mb-3">เกี่ยวกับ</h3>
++             <p className="text-sm">
++               ข้อมูลเป็นข้อมูลอ้างอิง ไม่ใช่ข้อมูลทางการจากผู้ผลิต
++               กรุณาตรวจสอบแหล่งข้อมูลก่อนตัดสินใจ
++             </p>
++           </div>
++         </div>
++
++         <div className="mt-8 pt-8 border-t border-[var(--color-gray-800)] text-xs text-center">
++           © 2026 Car Intelligence Thailand
++         </div>
++       </div>
++     </footer>
++   );
++ }
++
+
+ ❯ tests/p121_ui_contracts.test.ts:109:21
+    107|   it("F5: footer no longer claims the verified-price listing is 'ทั้งห…
+    108|     const src = read("src/components/Footer.tsx");
+    109|     expect(src).not.toContain("รถยนต์ทั้งหมด");
+       |                     ^
+    110|   });
+    111| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/13]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  13 failed | 1 passed (14)
+   Start at  02:22:00
+   Duration  666ms (transform 149ms, setup 0ms, import 283ms, tests 337ms, environment 0ms)
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /home/ubuntu/Projects/thai-car-intelligence
+
+ ❯ tests/p121_detail_spec_pick.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/p121_detail_spec_pick.test.ts [ tests/p121_detail_spec_pick.test.ts ]
+Error: Cannot find module '../src/lib/catalog/spec-variant' imported from /home/ubuntu/Projects/thai-car-intelligence/tests/p121_detail_spec_pick.test.ts
+ ❯ tests/p121_detail_spec_pick.test.ts:20:1
+     18|  */
+     19| import { describe, it, expect } from "vitest";
+     20| import { pickSpecVariant } from "../src/lib/catalog/spec-variant";
+       | ^
+     21|
+     22| type V = {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  02:34:28
+   Duration  197ms (transform 25ms, setup 0ms, import 0ms, tests 0ms, environment 0ms)
+

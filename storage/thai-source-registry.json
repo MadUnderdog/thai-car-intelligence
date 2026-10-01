@@ -1,0 +1,99 @@
+{
+  "version": "1.0",
+  "source_class": "AUTOMOTIVE_MEDIA",
+  "trust_state": "RESEARCH_UNVERIFIED",
+  "language": "TH",
+  "content_hash_method": "sha256_evidence_excerpt_16",
+  "sources": [
+    {
+      "domain": "headlightmag.com",
+      "display_name": "HeadLight Magazine",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "language": "TH",
+      "search_method": "category_archive_crawl",
+      "content_hash_method": "sha256_evidence_excerpt_16",
+      "scope_requirements": [
+        "model_context_window_300",
+        "article_title_must_contain_model",
+        "model_context_validation_on_spec_extraction"
+      ],
+      "known_article_patterns": [
+        "Model Trim X,XXX,XXX",
+        "รุ่น Trim ราคา X,XXX,XXX",
+        "ราคาอย่างเป็นทางการ Model : X,XXX,XXX บาท",
+        "Trim | Price",
+        "\\d+ (?:แรงม้า|hp|PS) ... \\d+ (?:Nm|นิวตันเมตร)"
+      ],
+      "has_parser": true,
+      "notes": "WordPress site. Category archive crawl for article URLs. Extracts price+spec pairs with cross-model contamination guard."
+    },
+    {
+      "domain": "autospinn.com",
+      "display_name": "AutoSpinn",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "language": "TH",
+      "search_method": "brand_category_page_crawl",
+      "content_hash_method": "sha256_evidence_excerpt_16",
+      "scope_requirements": [
+        "model_context_from_heading",
+        "reject_prices_without_model_scope",
+        "price_range_as_model_scope_not_variant"
+      ],
+      "known_article_patterns": [
+        "Model Trim ราคา X,XXX,XXX",
+        "Model Trim : X,XXX,XXX",
+        "ราคาอย่างเป็นทางการ Model X,XXX,XXX บาท",
+        "รุ่น Trim ราคา X,XXX,XXX"
+      ],
+      "has_parser": false,
+      "notes": "Thai automotive news/review site. Similar content structure to headlightmag. Article pages with model-specific content."
+    },
+    {
+      "domain": "autolifethailand.tv",
+      "display_name": "AutoLife Thailand",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "language": "TH",
+      "search_method": "category_page_crawl",
+      "content_hash_method": "sha256_evidence_excerpt_16",
+      "scope_requirements": [
+        "model_context_from_heading",
+        "reject_prices_without_model_scope",
+        "price_range_as_model_scope_not_variant"
+      ],
+      "known_article_patterns": [
+        "Model Trim ราคา X,XXX,XXX",
+        "Model Trim : X,XXX,XXX บาท",
+        "รุ่น Trim ราคา X,XXX,XXX",
+        "ราคา Model X,XXX,XXX บาท"
+      ],
+      "has_parser": false,
+      "notes": "Thai automotive lifestyle/news site. Article-driven content with model+price extraction potential."
+    },
+    {
+      "domain": "9carthai.com",
+      "display_name": "9CARTHAI",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "language": "TH",
+      "search_method": "brand_price_page_crawl",
+      "content_hash_method": "sha256_evidence_excerpt_16",
+      "scope_requirements": [
+        "model_identity_from_h2_h3_heading",
+        "reject_prices_without_model_context",
+        "price_range_as_model_range",
+        "deduplicate_by_model_variant_price_source"
+      ],
+      "known_article_patterns": [
+        "รุ่น Trim ราคา X,XXX,XXX",
+        "Model Trim : X,XXX,XXX บาท",
+        "Model Trim ราคา X,XXX,XXX",
+        "ราคาอย่างเป็นทางการ Model X,XXX,XXX บาท"
+      ],
+      "has_parser": true,
+      "notes": "Brand price pages (/{brand}-price/). One page per brand, ALL models listed. Prices in Thai text, not tables."
+    }
+  ]
+}

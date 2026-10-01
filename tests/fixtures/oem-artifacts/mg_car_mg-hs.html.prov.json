@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mgcars.com/th/cars/mg-hs",
+  "captured_at": "2026-09-26T07:45:53.840799+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "85cb146b64179d3bacf3328f5284ba3839c29dae743d275dea1bdca26537deab",
+  "session_id": "catalog_layers_20260926_074454",
+  "artifact_filename": "mg_car_mg-hs.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

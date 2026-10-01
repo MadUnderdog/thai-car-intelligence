@@ -1,0 +1,19 @@
+{
+  "brand": "chevrolet",
+  "brand_display": "Chevrolet",
+  "status": "NO_PRICES",
+  "source_url": "https://www.9carthai.com/chevrolet-price/",
+  "article_title": "Chevrolet ราคารถ เชฟโรเลต 2020-2021 - 9CARTHAI : 9CARTHAI",
+  "prices": [],
+  "specs": [],
+  "sources": [
+    "https://www.9carthai.com/chevrolet-price/"
+  ],
+  "failures": [
+    {
+      "reason": "No model+price matches"
+    }
+  ],
+  "rejection_count": 42,
+  "extraction_ts": "2026-09-20T15:30:12.303483"
+}

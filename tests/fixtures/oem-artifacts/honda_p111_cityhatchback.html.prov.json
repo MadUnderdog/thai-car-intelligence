@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/cityhatchback",
+  "captured_at": "2026-09-28T07:13:05.187623+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "1a8d6a6a7fbeb9f289a4230a6c434fe8070a39a0843a55e5dfb01dcb3629f7df",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "honda_p111_cityhatchback.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

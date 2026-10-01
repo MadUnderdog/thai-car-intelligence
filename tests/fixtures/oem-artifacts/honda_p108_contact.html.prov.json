@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/contact",
+  "captured_at": "2026-09-27T19:05:58.354128+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "eade7dc12d9e8e8a118a41b3f400a600d827091287313f0bfee849db124979c0",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "honda_p108_contact.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

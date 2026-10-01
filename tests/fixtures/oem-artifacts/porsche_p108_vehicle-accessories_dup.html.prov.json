@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/accessoriesandservice/vehicle-accessories/",
+  "captured_at": "2026-09-27T19:05:52.951959+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "88538361c2b5699451790f635236ddc090de8f935aa89c9a6d2e63df8e353323",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "porsche_p108_vehicle-accessories_dup.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

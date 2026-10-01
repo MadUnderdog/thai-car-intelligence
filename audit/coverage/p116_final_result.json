@@ -1,0 +1,83 @@
+{
+  "schema": "p116_final_result/v1",
+  "created_at": "2026-09-29",
+  "base_commit": "3590131cc827118107a2b2009ec0fd32d4a73f13",
+  "pr": {"number": 3, "state_expected_at_report": "OPEN/UNMERGED"},
+  "status": "COMPLETE_PENDING_PUSH_VERIFICATION",
+  "red_before": {
+    "log": "audit/daily-runs/20260929-p116-redbefore.log",
+    "result": "23 failed | 1 passed (24) on untouched base + A3 separate red (1 failed)",
+    "build_red_log": "audit/daily-runs/20260929-p116-build-red.log",
+    "build_red": "tailwind auto-scan RC=124/60s (tests/ 831M) and exact-original '@import tailwindcss' RC=124/60s; base search/page.tsx next build rc=1 missing-suspense-with-csr-bailout",
+    "smoke_red_log": "audit/daily-runs/20260929-p116-smoke-red.log",
+    "smoke_red": "5 fails: compare contract crash (specs.power TypeError), legend, touch targets, console errors"
+  },
+  "green_after": {
+    "focused": "25 passed (2 files) rc=0",
+    "combined": "130 passed | 1 skipped (12 files) rc=0",
+    "full_vitest": "532 passed | 2 skipped (45 files) rc=0",
+    "deterministic_rerun": "25 passed rc=0",
+    "full_pytest": "964 passed, 1 error (1389.42s) rc=1 — ONLY error = known pre-existing tests/test_generation_config_boundary.py ImportError (_OPENROUTER_ALLOWED_MODEL, P49)",
+    "tsc": 0,
+    "prisma_validate": 0,
+    "credential_scan": 0,
+    "production_build": "rc=0 (.next/BUILD_ID — first working build in this repo)",
+    "ux_smoke": "RC=0, 19/19 checks (mobile 390x844, next start production)"
+  },
+  "defects_fixed": [
+    {"id": "G1/A", "before": "/api/models price eligibility = isCurrent + sd VERIFIED only → 351 current prices surfaced (incl. 40 AUTOMOTIVE_MEDIA, 293 official-without-bv) vs 18 true currentOfficialPrice", "after": "full chain via shared lib/catalog/price-sql (isCurrent + VERIFIED doc + ACTIVE official source + VERIFIED BrochureVerification) on main join + min/max filters", "proof": "A1 SQL-chain assertions + A2 live parity vs independently written reference query"},
+    {"id": "A3", "before": "/api/models?q=… bound $1,$2,$2 + LIMIT $3 with 2 params → 503 missing parameter (public /cars search box broken)", "after": "one value, three consistent placeholders, LIMIT next index", "proof": "A3 red on base swap + smoke 'q returns 200'"},
+    {"id": "G2/C1", "before": "/api/compare prices = sd+bv, missing source ACTIVE + official sourceType", "after": "full currentOfficialPriceWhere chain", "proof": "C1 chain tokens + fixture"},
+    {"id": "G3/B1", "before": "detail price join missing source ACTIVE + official sourceType", "after": "shared chain in lib/catalog/detail-queries.variantRowsSql", "proof": "B1 chain tokens"},
+    {"id": "G4", "before": "/api/compare had NO NextResponse import → ReferenceError → 500 on every request; response order = DB ANY order (selected order not preserved)", "after": "NextResponse imported; orderedRows maps DB rows back onto deduped idList; totalVariants kept; base client shape (name/model/specs) preserved exactly, additive: price.sourceUrl/sourceName, features.available", "proof": "C2 order test (DB order ≠ request order), C6 2–4 semantics, live D3+K2"},
+    {"id": "G5/D", "before": "/cars compare selection sent model UUIDs → /api/compare 404 variants_not_found", "after": "/api/models returns compareVariantId (representative ACTIVE variant: full-chain priced preferred, then cheapest, then nameEn/id — deterministic); CarsPage toggles that id; null → disabled — button", "proof": "D1 fake-pool + D2/D3 live (belongs to same model + ACTIVE, flows into /api/compare)"},
+    {"id": "G6/E", "before": "SearchClient read flat fields that never existed in the response (r.manufacturerSlug/modelName/…) → blank names + /cars/undefined/undefined links; ignored prices/searchMode/evidence; stats fields absent from API", "after": "lib/ux/search-view.mapSearchResponse consumes the real nested CatalogVariant + prices[] provenance + searchMode/evidence; SearchClient renders name/brand/price/source link, mode+evidence badges, truthful loading/error/empty states", "proof": "E1 documents flat fields absent, E2/E3 link+price+mode mapping, smoke: 0 undefined links, price/no-price note present"},
+    {"id": "F", "before": "search error (400/503) rendered as 'no results'; compare need_at_least_2 rendered as generic failure", "after": "resolveSearchUiState distinguishes loading/empty/error/ok (retry button on error); compareErrorMessage maps per-code truthful Thai messages", "proof": "F1/F2/F3/F4 unit tests"},
+    {"id": "G7", "before": "detail sidebar 'เปรียบเทียบรุ่นนี้' linked ONE variant id → API need_at_least_2 → misleading error", "after": "links first 2–4 variant ids of the model (both desktop + mobile sticky bar); single-variant models show honest disabled note", "proof": "smoke compare flow 2 columns renders"},
+    {"id": "G8", "before": "no official-site link under image placeholder; no brochure surface at all (Blueprint 86/87 missing)", "after": "detail lookup exposes officialUrl (ACTIVE official source baseUrl); verified brand PDF/price-list doc surfaced as 'เอกสารทางการ' card with title/source/verifiedAt; fallback = official-site link or plain text — never an invented file", "proof": "I1/I2/I3 unit tests (placeholder+link / plain fallback / doc keeps fields)"},
+    {"id": "G9/H", "before": "no price provenance URL anywhere in public UX (detail unused sd join, compare no url, search not rendered)", "after": "detail price block + compare price + search rows each render source link (url/name/verifiedAt)", "proof": "H2 live compare sourceUrl/sourceName, H3 view mapping, smoke no console errors"},
+    {"id": "G10/B", "before": "detail 'verified' evidence flags = value presence → secondary_automotive_media spec rows claimed official", "after": "specEvidenceFlags requires sourceTier='primary_official' (per-table tier columns), research block still strictly sd.status <> 'VERIFIED'", "proof": "B3 unit + B4 live (secondary tiers exist in ACTIVE variants; flagged false) + B2 research SQL"},
+    {"id": "G9/B", "before": "detail lookup queries copy-pasted", "after": "single detailModelLookupSql: BOTH slugs + ACTIVE on model AND manufacturer → 404, no cross-entity resolution", "proof": "G1 unit + smoke wrong-mfr/wrong-model → 404 ×2"},
+    {"id": "G4/K", "before": "compare features rows dropped available flag → absent row read as 'not installed'", "after": "features keep available; client three-state ✓/✗/ไม่มีข้อมูล with legend; label from any vehicle", "proof": "C5 fixture (true/false/missing rows + featureCellText)"},
+    {"id": "BUILD-1", "before": "next dev AND next build hung forever: Tailwind v4 auto-source scan walked tests/ (831M OEM PDF/b64 fixtures), postcss worker 390% CPU indefinitely", "after": "globals.css: '@import tailwindcss source(none); @source \"../../src\"' (no class strings exist outside src)", "proof": "build-red.log RC=124/60s → 95ms green; build rc=0"},
+    {"id": "BUILD-2", "before": "/search used useSearchParams() without Suspense → next build rc=1 prerender failure", "after": "search/page.tsx wraps SearchClient in <Suspense>", "proof": "base-file reproduce rc=1 → green build rc=0"}
+  ],
+  "gates": {
+    "focused": 25, "combined": "130 passed | 1 skipped", "full_vitest": "532 passed | 2 skipped",
+    "rerun": 25, "pytest": "964 passed, 1 error (known P49 only)", "tsc": 0, "prisma": 0, "credscan": 0,
+    "build": 0, "smoke": "19/19"
+  },
+  "mandatory_tests": {"A": "A1+A2+A3", "B": "B1+B2+B3+B4", "C": "C1+C2+C5+C6", "D": "D1+D-1+D2+D3", "E": "E1+E2+E3", "F": "F1-F4", "G": "G1+smoke×2 404", "H": "H2+H3", "I": "I1+I2+I3", "J": "smoke mobile/touch/console", "K": "K1+K2+deterministic rerun"},
+  "files_changed": {
+    "modified": [
+      "src/app/api/compare/route.ts", "src/app/api/models/route.ts",
+      "src/app/cars/page.tsx", "src/app/cars/[manufacturer]/[model]/page.tsx",
+      "src/app/cars/[manufacturer]/[model]/VehicleDetailClient.tsx",
+      "src/app/compare/CompareClient.tsx", "src/app/search/SearchClient.tsx",
+      "src/app/search/page.tsx", "src/app/globals.css"
+    ],
+    "new": [
+      "lib/catalog/price-sql.ts", "lib/catalog/detail-queries.ts",
+      "lib/ux/search-view.ts", "lib/ux/compare-view.ts", "lib/ux/detail-view.ts",
+      "tests/p116-public-ux.test.ts", "tests/p116-live-catalog.test.ts",
+      "scripts/p116_ux_smoke.mjs", "audit/coverage/p116_target_plan.json",
+      "audit/coverage/p116_final_result.json", "audit/coverage/p116_final_report.md",
+      "audit/daily-runs/20260929-p116-*.log"
+    ]
+  },
+  "boundaries_honored": {
+    "no_schema_change": true, "no_provider_model_config_change": true,
+    "no_db_writes": true, "no_acquisition_refresh": true, "no_embedding_changes": true,
+    "no_verifier_rewrite": true, "no_p102_p106_touch": true,
+    "api_shape": "backward-compatible: /api/compare keeps base name/model/specs + totalVariants (additive price provenance + features.available); /api/models additive compareVariantId"
+  },
+  "honest_limits": [
+    "currentOfficialPrice chain (incl. BrochureVerification VERIFIED) surfaces only 18 priced models; P114's 264 current official prices have no bv row → still not surfaced by the accepted predicate (data-coverage gap, out of P116 scope, unchanged since P115)",
+    "VariantFeature table = 0 rows in accepted set → features/three-state legend proven by unit fixtures only; smoke asserts the honest empty path (section hidden)",
+    "compare page source order == selected order proven in vitest (C2) + live (D3)",
+    "global nav links (358x20px) are pre-existing chrome outside touched components — excluded from touch-target assertion (main content: 0 violations)",
+    "CompareSelector/DifferenceFilter are dead code (no importers) — left untouched, disclosed",
+    "strays present in worktree, NOT part of P116, NOT committed: scripts/_probes/, scripts/dry-run-data-fingerprint.py, scripts/dry-run-refresh-source-check.py, storage/dry-run/",
+    "never declares catalog/price/spec-complete"
+  ]
+}

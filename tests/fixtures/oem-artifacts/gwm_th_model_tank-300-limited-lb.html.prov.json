@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/tank-300-limited-lb",
+  "captured_at": "2026-09-25T07:46:37.783589+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "3e458640a5c104ba8981c7fa721574f6bb36d26c422a2eab3d40ef6790a0b3c5",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_tank-300-limited-lb.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

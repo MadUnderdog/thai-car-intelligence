@@ -1,0 +1,9 @@
+{
+  "source_url": "https://cdn-jaguarlandrover.com/system/apio/th/TH_LandRover_PriceSheet.pdf",
+  "captured_at": "2026-09-24T17:47:28.318708+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "38497d2d73774ba9ea52b875d463c404317389abf23e95bb384af2900da0ab11",
+  "session_id": "acquisition_20260924_pdf_pricesheets",
+  "artifact_filename": "TH_LandRover_PriceSheet.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

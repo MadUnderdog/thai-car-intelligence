@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_RX.pdf",
+  "captured_at": "2026-09-27T16:15:40.066756+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "355e06613657b3bb33ce8a51e921d9e2c03d60a7d278ff08934b69fd97efe41a",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "lexus_p107_AW_catalog_nov2025_Lexus_RX.pdf.txt",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

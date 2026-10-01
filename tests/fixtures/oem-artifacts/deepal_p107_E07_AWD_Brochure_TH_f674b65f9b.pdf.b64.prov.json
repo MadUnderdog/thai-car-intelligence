@@ -1,0 +1,9 @@
+{
+  "source_url": "https://api.www.changan.co.th/uploads/E07_AWD_Brochure_TH_f674b65f9b.pdf",
+  "captured_at": "2026-09-27T16:06:03.774591+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "6e8ddbbe7e8bb84bb477802b69ec05daf44f1816780f62bef857d7dd084d3598",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "deepal_p107_E07_AWD_Brochure_TH_f674b65f9b.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

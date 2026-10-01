@@ -1,0 +1,510 @@
+{
+  "openev": {
+    "rows": [
+      {
+        "brand": "byd",
+        "model": "tang",
+        "year": 2024,
+        "trim_name": "Flagship",
+        "file_locator": "src/byd/tang/2024/tang.json",
+        "raw_content_hash": "82e3669a24059c25",
+        "source_native_id": null
+      },
+      {
+        "brand": "byd",
+        "model": "han",
+        "year": 2024,
+        "trim_name": "Flagship",
+        "file_locator": "src/byd/han/2024/han.json",
+        "raw_content_hash": "a274ca5f68443063",
+        "source_native_id": null
+      },
+      {
+        "brand": "byd",
+        "model": "seal",
+        "year": 2024,
+        "trim_name": "Standard",
+        "file_locator": "src/byd/seal/2024/seal.json",
+        "raw_content_hash": "e65fad275afceebe",
+        "source_native_id": null
+      },
+      {
+        "brand": "byd",
+        "model": "dolphin",
+        "year": 2024,
+        "trim_name": "Standard",
+        "file_locator": "src/byd/dolphin/2024/dolphin.json",
+        "raw_content_hash": "0ef6f3314dcf0912",
+        "source_native_id": null
+      },
+      {
+        "brand": "toyota",
+        "model": "bz4x",
+        "year": 2024,
+        "trim_name": "Front-Wheel Drive",
+        "file_locator": "src/toyota/bz4x/2024/bz4x.json",
+        "raw_content_hash": "7830a3e867144635",
+        "source_native_id": null
+      },
+      {
+        "brand": "toyota",
+        "model": "bz3",
+        "year": 2024,
+        "trim_name": "Base",
+        "file_locator": "src/toyota/bz3/2024/bz3.json",
+        "raw_content_hash": "d3f41607a36d1feb",
+        "source_native_id": null
+      },
+      {
+        "brand": "toyota",
+        "model": "bz3x",
+        "year": 2025,
+        "trim_name": "Base",
+        "file_locator": "src/toyota/bz3x/2025/bz3x.json",
+        "raw_content_hash": "2f10de866415e1c8",
+        "source_native_id": null
+      },
+      {
+        "brand": "mg",
+        "model": "mg4",
+        "year": 2024,
+        "trim_name": "Standard",
+        "file_locator": "src/mg/mg4/2024/mg4.json",
+        "raw_content_hash": "70f4893199184580",
+        "source_native_id": null
+      },
+      {
+        "brand": "nissan",
+        "model": "ariya",
+        "year": 2024,
+        "trim_name": "Engage",
+        "file_locator": "src/nissan/ariya/2024/ariya.json",
+        "raw_content_hash": "196089a644b06aef",
+        "source_native_id": null
+      },
+      {
+        "brand": "nissan",
+        "model": "leaf",
+        "year": 2023,
+        "trim_name": "Base",
+        "file_locator": "src/nissan/leaf/2023/leaf.json",
+        "raw_content_hash": "b45376e25da77c49",
+        "source_native_id": null
+      },
+      {
+        "brand": "bmw",
+        "model": "ix3",
+        "year": 2024,
+        "trim_name": "iX3",
+        "file_locator": "src/bmw/ix3/2024/ix3.json",
+        "raw_content_hash": "35146fe024c1cd61",
+        "source_native_id": null
+      },
+      {
+        "brand": "bmw",
+        "model": "ix",
+        "year": 2024,
+        "trim_name": "xDrive50",
+        "file_locator": "src/bmw/ix/2024/ix.json",
+        "raw_content_hash": "d9471b481bb455ba",
+        "source_native_id": null
+      },
+      {
+        "brand": "bmw",
+        "model": "i4",
+        "year": 2024,
+        "trim_name": "eDrive40",
+        "file_locator": "src/bmw/i4/2024/i4.json",
+        "raw_content_hash": "3937150600055444",
+        "source_native_id": null
+      },
+      {
+        "brand": "volvo",
+        "model": "ex30",
+        "year": 2024,
+        "trim_name": "Base",
+        "file_locator": "src/volvo/ex30/2024/ex30.json",
+        "raw_content_hash": "5bf495e19620825a",
+        "source_native_id": null
+      },
+      {
+        "brand": "volvo",
+        "model": "ex40",
+        "year": 2024,
+        "trim_name": "Base",
+        "file_locator": "src/volvo/ex40/2024/ex40.json",
+        "raw_content_hash": "d0199a26ffe420a1",
+        "source_native_id": null
+      },
+      {
+        "brand": "porsche",
+        "model": "taycan",
+        "year": 2024,
+        "trim_name": "Base",
+        "file_locator": "src/porsche/taycan/2024/taycan.json",
+        "raw_content_hash": "b13747ebe7af9e09",
+        "source_native_id": null
+      },
+      {
+        "brand": "mercedes_benz",
+        "model": "eqs",
+        "year": 2024,
+        "trim_name": "Base",
+        "file_locator": "src/mercedes_benz/eqs/2024/eqs.json",
+        "raw_content_hash": "19023c84a69f8267",
+        "source_native_id": null
+      },
+      {
+        "brand": "mercedes_benz",
+        "model": "eqe",
+        "year": 2024,
+        "trim_name": "Base",
+        "file_locator": "src/mercedes_benz/eqe/2024/eqe.json",
+        "raw_content_hash": "0b534e3471a050df",
+        "source_native_id": null
+      },
+      {
+        "brand": "mini",
+        "model": "cooper_se",
+        "year": 2023,
+        "trim_name": "SE",
+        "file_locator": "src/mini/cooper_se/2023/cooper_se.json",
+        "raw_content_hash": "c8a26603fc740f2d",
+        "source_native_id": null
+      },
+      {
+        "brand": "fiat",
+        "model": "500e",
+        "year": 2023,
+        "trim_name": "Base",
+        "file_locator": "src/fiat/500e/2023/500e.json",
+        "raw_content_hash": "f99fdc6540d09873",
+        "source_native_id": null
+      },
+      {
+        "brand": "honda",
+        "model": "prologue",
+        "year": 2025,
+        "trim_name": "EX",
+        "file_locator": "src/honda/prologue/2025/prologue.json",
+        "raw_content_hash": "ea3f4838afff47f5",
+        "source_native_id": null
+      },
+      {
+        "brand": "xpeng",
+        "model": "g6",
+        "year": 2023,
+        "trim_name": "Standard Range",
+        "file_locator": "src/xpeng/g6/2023/g6.json",
+        "raw_content_hash": "5dcbd4a637e5485c",
+        "source_native_id": null
+      },
+      {
+        "brand": "nio",
+        "model": "es6",
+        "year": 2024,
+        "trim_name": "Base",
+        "file_locator": "src/nio/es6/2024/es6.json",
+        "raw_content_hash": "1a7ba0f165131fb7",
+        "source_native_id": null
+      },
+      {
+        "brand": "nio",
+        "model": "et5",
+        "year": 2024,
+        "trim_name": "Base",
+        "file_locator": "src/nio/et5/2024/et5.json",
+        "raw_content_hash": "35369935fe49253e",
+        "source_native_id": null
+      },
+      {
+        "brand": "zeekr",
+        "model": "001",
+        "year": 2023,
+        "trim_name": "Base",
+        "file_locator": "src/zeekr/001/2023/001.json",
+        "raw_content_hash": "40814beecb58eecb",
+        "source_native_id": null
+      },
+      {
+        "brand": "zeekr",
+        "model": "007",
+        "year": 2025,
+        "trim_name": "Base",
+        "file_locator": "src/zeekr/007/2025/007.json",
+        "raw_content_hash": "027469b705761c13",
+        "source_native_id": null
+      }
+    ],
+    "commit_sha": "8edb266da3b2c4424dd031e248468ba5d445da5d",
+    "license": "CDLA-Permissive-2.0"
+  },
+  "headlightmag": {
+    "total_entries": 64,
+    "examples": [
+      {
+        "brand": null,
+        "raw_model": "iX3",
+        "classification": "model-mention",
+        "post_id": 219196,
+        "post_title": "Headlightmag Clip Full Review \u0e17\u0e14\u0e25\u0e2d\u0e07\u0e02\u0e31\u0e1a BMW iX3 M Sport (G08) (LCI)",
+        "post_url": "https://www.headlightmag.com/2023-05-22-headlightmag-clip-bmw-ix3-m-sport-lci/",
+        "post_date": "2023-05-22T19:05:57"
+      },
+      {
+        "brand": null,
+        "raw_model": "220i",
+        "classification": "model-mention",
+        "post_id": 180133,
+        "post_title": "\u0e17\u0e14\u0e25\u0e2d\u0e07\u0e02\u0e31\u0e1a BMW 220i Gran Coupe (F44) : Hamster \u0e19\u0e34\u0e2a\u0e31\u0e22\u0e01\u0e23\u0e30\u0e23\u0e2d\u0e01 \u0e02\u0e31\u0e1a\u0e2a\u0e19\u0e38\u0e01\u0e01\u0e27\u0e48\u0e32\u0e17\u0e35\u0e48\u0e04\u0e34\u0e14",
+        "post_url": "https://www.headlightmag.com/full-review-2022-bmw-220i-gran-coupe/",
+        "post_date": "2022-06-06T03:00:13"
+      },
+      {
+        "brand": null,
+        "raw_model": "M340i",
+        "classification": "model-mention",
+        "post_id": 161723,
+        "post_title": "THE CLIP \u0e23\u0e35\u0e27\u0e34\u0e27 BMW M340i xDrive \u0e42\u0e2b\u0e14\u0e40\u0e2a\u0e07\u0e35\u0e48\u0e22\u0e21\u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e04\u0e27\u0e32\u0e21\u0e2a\u0e19\u0e38\u0e01 \u0e43\u0e19\u0e23\u0e32\u0e04\u0e32\u0e17\u0e35\u0e48\u0e1f\u0e31\u0e07\u0e41\u0e25\u0e49\u0e27\u0e44\u0e21\u0e48\u0e08\u0e38\u0e01",
+        "post_url": "https://www.headlightmag.com/the-clip-review-bmw-m340i-xdrive-2021/",
+        "post_date": "2021-08-04T19:53:29"
+      },
+      {
+        "brand": null,
+        "raw_model": "330i",
+        "classification": "model-mention",
+        "post_id": 119426,
+        "post_title": "The Clip: BMW 330i M Sport (G20) \u0e08\u0e34\u0e15\u0e27\u0e34\u0e0d\u0e0d\u0e32\u0e13 M2 \u0e43\u0e19\u0e04\u0e23\u0e32\u0e1a\u0e2a\u0e1b\u0e2d\u0e23\u0e4c\u0e15\u0e0b\u0e32\u0e25\u0e39\u0e19\u0e21\u0e32\u0e14\u0e40\u0e23\u0e35\u0e22\u0e1a",
+        "post_url": "https://www.headlightmag.com/the-clip-bmw-330i-m-sport-2019/",
+        "post_date": "2019-10-08T17:46:35"
+      },
+      {
+        "brand": null,
+        "raw_model": "320d",
+        "classification": "model-mention",
+        "post_id": 118222,
+        "post_title": "The Clip: BMW 320d Sport (G20) \u0e41\u0e23\u0e07\u0e02\u0e36\u0e49\u0e19 \u0e40\u0e01\u0e32\u0e30\u0e02\u0e36\u0e49\u0e19 \u0e1b\u0e23\u0e30\u0e2b\u0e22\u0e31\u0e14\u0e02\u0e36\u0e49\u0e19 \u0e02\u0e2d\u0e40\u0e1e\u0e34\u0e48\u0e21\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e2b\u0e25\u0e31\u0e07\u0e2a\u0e31\u0e01\u0e15\u0e31\u0e27\u0e1e\u0e2d",
+        "post_url": "https://www.headlightmag.com/the-clip-bmw-320d-sport-g20/",
+        "post_date": "2019-09-19T19:48:02"
+      },
+      {
+        "brand": null,
+        "raw_model": "\u0e02\u0e2d\u0e07\u0e27\u0e31\u0e22\u0e23\u0e38\u0e48\u0e19",
+        "classification": "non-vehicle",
+        "post_id": 54278,
+        "post_title": "\u0e17\u0e14\u0e25\u0e2d\u0e07\u0e02\u0e31\u0e1a BMW X1 sDrive18d 8AT FWD (F48) : MINI \u0e02\u0e2d\u0e07\u0e1c\u0e39\u0e49\u0e43\u0e2b\u0e0d\u0e48..\u0e41\u0e25\u0e30 BMW \u0e02\u0e2d\u0e07\u0e27\u0e31\u0e22\u0e23\u0e38\u0e48\u0e19",
+        "post_url": "https://www.headlightmag.com/full-review-2017-bmw-x1-sdrive18d-f48/",
+        "post_date": "2017-11-21T20:45:04"
+      },
+      {
+        "brand": null,
+        "raw_model": "218i",
+        "classification": "model-mention",
+        "post_id": 30627,
+        "post_title": "\u0e17\u0e14\u0e25\u0e2d\u0e07\u0e02\u0e31\u0e1a BMW 218i Coupe M Sport (8AT FR) : \u0e23\u0e16\u0e02\u0e31\u0e1a\u0e14\u0e35 \u0e17\u0e35\u0e48\u0e40\u0e01\u0e37\u0e2d\u0e1a\u0e08\u0e30 &#8220;\u0e1f\u0e34\u0e19&#8221;",
+        "post_url": "https://www.headlightmag.com/full-review-2016-bmw-218i-coupe-m-sport/",
+        "post_date": "2016-06-07T16:09:46"
+      },
+      {
+        "brand": null,
+        "raw_model": "Driving",
+        "classification": "non-vehicle",
+        "post_id": 30912,
+        "post_title": "BMW Driving Experience 2016 &#8211; \u0e04\u0e27\u0e1a 4 \u0e23\u0e38\u0e48\u0e19\u0e1a\u0e19\u0e2a\u0e19\u0e32\u0e21\u0e1b\u0e17\u0e38\u0e21\u0e18\u0e32\u0e19\u0e35\u0e2a\u0e1b\u0e35\u0e14\u0e40\u0e27\u0e22\u0e4c",
+        "post_url": "https://www.headlightmag.com/bmw-driving-experience-2016/",
+        "post_date": "2016-06-06T18:31:42"
+      },
+      {
+        "brand": null,
+        "raw_model": "PERSONA",
+        "classification": "non-vehicle",
+        "post_id": 254218,
+        "post_title": "Mazda PERSONA / EUNOS 300 : The Complete History : Hardtop \u0e17\u0e23\u0e07\u0e2a\u0e27\u0e22 \u0e41\u0e15\u0e48\u0e01\u0e25\u0e31\u0e1a\u0e44\u0e23\u0e49\u0e2d\u0e19\u0e32\u0e04\u0e15",
+        "post_url": "https://www.headlightmag.com/history-1988-mazda-persona-eunos-300/",
+        "post_date": "2024-08-11T18:57:16"
+      },
+      {
+        "brand": null,
+        "raw_model": "CX-30",
+        "classification": "model-mention",
+        "post_id": 150581,
+        "post_title": "Full Review \u0e17\u0e14\u0e25\u0e2d\u0e07\u0e02\u0e31\u0e1a Mazda CX-30 (2.0 6AT FWD) : \u0e44\u0e21\u0e48\u0e43\u0e0a\u0e48\u0e41\u0e04\u0e48 Mazda 3 Crossover \u0e41\u0e15\u0e48\u0e21\u0e31\u0e19\u0e04\u0e37\u0e2d CX-3 \u0e17\u0e35\u0e48\u0e40\u0e1b\u0e47\u0e19\u0e1c",
+        "post_url": "https://www.headlightmag.com/full-review-2021-mazda-cx-30/",
+        "post_date": "2021-04-26T17:12:31"
+      },
+      {
+        "brand": null,
+        "raw_model": "CX-30",
+        "classification": "model-mention",
+        "post_id": 132743,
+        "post_title": "The Clip \u0e23\u0e35\u0e27\u0e34\u0e27 Mazda CX-30: \u0e08\u0e31\u0e1a 3 \u0e21\u0e32\u0e22\u0e01\u0e2a\u0e39\u0e07 \u0e01\u0e25\u0e32\u0e22\u0e40\u0e1b\u0e47\u0e19\u0e19\u0e48\u0e32\u0e43\u0e0a\u0e49\u0e02\u0e36\u0e49\u0e19\u0e43\u0e19\u0e20\u0e32\u0e1e\u0e23\u0e27\u0e21",
+        "post_url": "https://www.headlightmag.com/the-clip-review-mazda-cx-30/",
+        "post_date": "2020-04-09T19:59:05"
+      },
+      {
+        "brand": null,
+        "raw_model": "CX-30",
+        "classification": "model-mention",
+        "post_id": 130849,
+        "post_title": "First Impression \u0e23\u0e35\u0e27\u0e34\u0e27 \u0e17\u0e14\u0e25\u0e2d\u0e07\u0e02\u0e31\u0e1a Mazda CX-30  \u0e40\u0e08\u0e49\u0e32 3 \u0e22\u0e01\u0e2a\u0e39\u0e07 \u0e2a\u0e19\u0e38\u0e01\u0e19\u0e49\u0e2d\u0e22\u0e25\u0e07 \u0e41\u0e15\u0e48\u0e2a\u0e1a\u0e32\u0e22\u0e19\u0e48\u0e32\u0e43\u0e0a\u0e49\u0e02\u0e36\u0e49\u0e19",
+        "post_url": "https://www.headlightmag.com/first-impression-review-mazda-cx30-by-pan/",
+        "post_date": "2020-03-20T15:20:19"
+      },
+      {
+        "brand": null,
+        "raw_model": "BT-50",
+        "classification": "model-mention",
+        "post_id": 156609,
+        "post_title": "Headlightmag Clip \u0e23\u0e35\u0e27\u0e34\u0e27 \u0e17\u0e14\u0e25\u0e2d\u0e07\u0e02\u0e31\u0e1a Mazda BT-50 (Freestyle Cab 1.9 S 6MT, Double Cab 1.9 SP 6AT &#038; ",
+        "post_url": "https://www.headlightmag.com/headlightmag-clip-2020-mazda-bt-50-2/",
+        "post_date": "2021-04-19T14:22:41"
+      },
+      {
+        "brand": null,
+        "raw_model": "BT-50",
+        "classification": "model-mention",
+        "post_id": 149496,
+        "post_title": "Headlightmag Clip \u0e17\u0e14\u0e25\u0e2d\u0e07\u0e02\u0e31\u0e1a\u0e2a\u0e31\u0e49\u0e19\u0e46 All NEW Mazda BT-50 (Double Cab 3.0 6AT &#038; Freestyle Cab 1.9 6MT",
+        "post_url": "https://www.headlightmag.com/headlightmag-clip-2020-mazda-bt-50/",
+        "post_date": "2020-12-19T18:02:29"
+      },
+      {
+        "brand": null,
+        "raw_model": "CX-30:",
+        "classification": "model-mention",
+        "post_id": 150581,
+        "post_title": "Full Review \u0e17\u0e14\u0e25\u0e2d\u0e07\u0e02\u0e31\u0e1a Mazda CX-30 (2.0 6AT FWD) : \u0e44\u0e21\u0e48\u0e43\u0e0a\u0e48\u0e41\u0e04\u0e48 Mazda 3 Crossover \u0e41\u0e15\u0e48\u0e21\u0e31\u0e19\u0e04\u0e37\u0e2d CX-3 \u0e17\u0e35\u0e48\u0e40\u0e1b\u0e47\u0e19\u0e1c",
+        "post_url": "https://www.headlightmag.com/full-review-2021-mazda-cx-30/",
+        "post_date": "2021-04-26T17:12:31"
+      }
+    ],
+    "missing_evidence": [
+      {
+        "brand": null,
+        "raw_model": "CX-8",
+        "classification": "model-mention",
+        "category": "MAZDA"
+      },
+      {
+        "brand": null,
+        "raw_model": "CX-5",
+        "classification": "model-mention",
+        "category": "MAZDA"
+      },
+      {
+        "brand": null,
+        "raw_model": "ROADPACER",
+        "classification": "unresolved",
+        "category": "MAZDA"
+      },
+      {
+        "brand": null,
+        "raw_model": "CX-9",
+        "classification": "model-mention",
+        "category": "MAZDA"
+      },
+      {
+        "brand": null,
+        "raw_model": "MX-5",
+        "classification": "model-mention",
+        "category": "MAZDA"
+      },
+      {
+        "brand": null,
+        "raw_model": "Accord",
+        "classification": "model-mention",
+        "category": "HONDA"
+      },
+      {
+        "brand": null,
+        "raw_model": "City",
+        "classification": "model-mention",
+        "category": "HONDA"
+      },
+      {
+        "brand": null,
+        "raw_model": "Clarity-\u0e40\u0e23\u0e37\u0e2d\u0e19\u0e23\u0e48\u0e32\u0e07\u0e41\u0e2b\u0e48\u0e07\u0e1b\u0e31\u0e08\u0e08\u0e38\u0e1a\u0e31\u0e19..\u0e1a\u0e19\u0e40\u0e17\u0e04\u0e42\u0e19\u0e42\u0e25\u0e22\u0e35\u0e41\u0e2b\u0e48\u0e07\u0e2d\u0e19\u0e32\u0e04\u0e15",
+        "classification": "variant-mention",
+        "category": "HONDA"
+      },
+      {
+        "brand": null,
+        "raw_model": "R&#038;D,",
+        "classification": "non-vehicle",
+        "category": "HONDA"
+      },
+      {
+        "brand": null,
+        "raw_model": "Extender",
+        "classification": "non-vehicle",
+        "category": "MG"
+      },
+      {
+        "brand": null,
+        "raw_model": "RX8",
+        "classification": "model-mention",
+        "category": "MG"
+      },
+      {
+        "brand": null,
+        "raw_model": "Almera",
+        "classification": "model-mention",
+        "category": "NISSAN"
+      },
+      {
+        "brand": null,
+        "raw_model": "Note",
+        "classification": "model-mention",
+        "category": "NISSAN"
+      },
+      {
+        "brand": null,
+        "raw_model": "GT-R",
+        "classification": "model-mention",
+        "category": "NISSAN"
+      },
+      {
+        "brand": null,
+        "raw_model": "PRESEA",
+        "classification": "model-mention",
+        "category": "NISSAN"
+      },
+      {
+        "brand": null,
+        "raw_model": "SYLPHY",
+        "classification": "model-mention",
+        "category": "NISSAN"
+      },
+      {
+        "brand": null,
+        "raw_model": "VELOZ",
+        "classification": "model-mention",
+        "category": "TOYOTA"
+      },
+      {
+        "brand": null,
+        "raw_model": "C-HR",
+        "classification": "model-mention",
+        "category": "TOYOTA"
+      },
+      {
+        "brand": null,
+        "raw_model": "Majesty",
+        "classification": "model-mention",
+        "category": "TOYOTA"
+      }
+    ],
+    "duplicate_post_ids": {
+      "150581": 3,
+      "132743": 3,
+      "130849": 3,
+      "149496": 2,
+      "118510": 2,
+      "213035": 2,
+      "241108": 2,
+      "341215": 3,
+      "288856": 2,
+      "281843": 2
+    }
+  }
+}

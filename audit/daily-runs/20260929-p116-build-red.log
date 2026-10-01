@@ -1,0 +1,24 @@
+=== RED 1: tailwind v4 auto-source scan of tests/ (831M OEM fixtures) stalls ===
+before fix: @import tailwindcss source(none); @source ../../tests; only
+≈ tailwindcss v4.3.3
+
+/usr/bin/bash: line 14: /tmp/tw_red.out: No such file or directory
+RC=124 (124 = timed out after 60s) output_bytes=0
+
+after fix (globals.css): source(none) + @source ../../src only
+≈ tailwindcss v4.3.3
+
+Done in 95ms
+RC=0 in 1s output_bytes=56412
+
+=== RED 1b: EXACT original line '@import tailwindcss' (auto-detect) ===
+≈ tailwindcss v4.3.3
+
+/usr/bin/bash: line 11: /tmp/tw_orig.out: No such file or directory
+RC=124 after 60s output_bytes=0
+
+=== RED 2: BASE src/app/search/page.tsx (no Suspense around useSearchParams) ===
+next build rc=1
+⨯ useSearchParams() should be wrapped in a suspense boundary at page "/search". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+Export encountered an error on /search/page: /search, exiting the build.
+⨯ Next.js build worker exited with code: 1 and signal: null

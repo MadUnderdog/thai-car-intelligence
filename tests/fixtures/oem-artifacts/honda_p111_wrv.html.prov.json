@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/wrv",
+  "captured_at": "2026-09-28T07:13:07.652220+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "d089f2790d348540b4fd9a002f7644ea0bb446bd2843a30f51aec32194545333",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "honda_p111_wrv.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

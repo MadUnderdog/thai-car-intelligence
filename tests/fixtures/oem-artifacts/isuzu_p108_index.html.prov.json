@@ -1,0 +1,9 @@
+{
+  "source_url": "https://elearning.isuzu.co.th/",
+  "captured_at": "2026-09-27T19:07:10.679386+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "a889b5fad96ea34d9da9886c4ced17e37f613c588b22dd61ce01d5bfd964dfc0",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "isuzu_p108_index.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

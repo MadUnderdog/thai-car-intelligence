@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/sitemap.xml",
+  "captured_at": "2026-09-27T19:05:42.818656+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "20a7897edff3bdb04fd2aec11b3fc972fb4036265936f9df6030c0e4d34c6e39",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "porsche_p108_sitemap_dup.xml",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu-tis.com/specialoffer/ppv",
+  "captured_at": "2026-09-27T16:06:22.387534+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "de5786a2ece15d2e406300b781e40d9c8357c13284eb0f7337a02104a2796e81",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "isuzu_p107_ppv.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.landrover.co.th/discovery/overview",
+  "captured_at": "2026-09-24T14:39:23.877000+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "660b8fa629d46378a53922ecfad55b702ff923dee28654d7f86a9f09c3d51ce2",
+  "session_id": "acquisition_20260924_143915",
+  "artifact_filename": "landrover_discovery_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

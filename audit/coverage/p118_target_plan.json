@@ -1,0 +1,108 @@
+{
+  "schema": "p118_target_plan/v1",
+  "created_at": "2026-09-29",
+  "base_commit": "76a242a0b756c2e04c40769e0947779f6a85d755",
+  "pr": {"number": 3, "state": "OPEN", "merged": false},
+  "objective": "Phase 4 daily diff + scheduled updates + alerting (Blueprint §94/§99/§101): idempotent, provenance-safe, gate-safe, backoff-safe daily runner around the EXISTING primitives, with the 7-consecutive-green-run exit evidence.",
+  "current_refresh_architecture": {
+    "acquisition": "lib/thai_factory/acquisition/{provenance,contracts,adapters,ladder}.py — AcquisitionWriter/Reader (artifact+sidecar same event, ProvenanceError fail-closed), AcquisitionStatus OK/BLOCKED/INCOMPLETE/FAILED/CHALLENGE, adapter ladder Crawl4AI→Trafilatura→Newspaper4k (adapter fallback only, NOT HTTP backoff)",
+    "fetch": "lib/thai_factory/fetch/crawl4ai_fetch.py — per-domain _rate_limit (profiles 1000–2000ms), _is_challenge_page, FetchProfile timeout_s=30, cache",
+    "queue": "lib/thai_factory/queue/durable.py — durable job queue (PENDING→…→NEEDS_REVIEW, deterministic job_key, checkpoint/resume)",
+    "registry_single_source_of_truth": "audit/coverage/oem-registry.json — 33 brands; access_status REACHABLE 19 / BLOCKED_HTTP_403 6 / BLOCKED_DNS 4 / BLOCKED_HTTP_404 1 / BLOCKED_TLS 1 / DEALER_REDIRECT 1 / UNKNOWN 1; adapter_status PARSED_TESTED 19; blocker_evidence on 15; next_retry_at on 32; last_success_sha256 present; fallback_ladder per brand",
+    "digest": "scripts/generate_daily_report.py (482 lines) — cycle report MD+JSON → audit/daily-runs/YYYYMMDD{suffix}.{md,json}; counts from live state (registry axes, staging identity levels, locator integrity, tests, credential scan, commit/branch)",
+    "promotion_gates": "lib/thai_factory/acceptance/{evidence_packet,runner,ledger}.py — frozen v9 verifier path, append-only ledger (P113–P117, untouched)",
+    "digest_convention": "audit/daily-runs/20260924.{md,json} … 20260927b.{md,json} exist (suffix rule: none → b → c)",
+    "scheduler": "NONE — Blueprint §99 says 'scheduler/orchestrator: cron (Phase 4); manual runs before that'; no script runs the pipeline, no cron entry exists",
+    "change_queue": "NONE — audit/change-queue/ does not exist (ls: No such file or directory)",
+    "alerts": "NONE — no alert store/code in lib/ or scripts/",
+    "concurrency_lock": "NONE — grep flock/.lock over scripts+lib returns nothing",
+    "ts_refresh_stub": "lib/research/{refresh-pipeline,price-change-detection,verification,dry-run,rollback}.ts with tests/refresh-pipeline.test.ts (mocked db) — writes RefreshRun/ChangeCandidate/SourceHealth tables that DO NOT EXIST (psql information_schema empty; no Prisma models). Never migrated → dead stub; reviving it requires a schema change (forbidden default)"
+  },
+  "reproduced_gaps": [
+    {"id": "G-A", "boundary": "§94 pipeline/§101 Phase 4", "evidence": "no entrypoint runs DISCOVER→…→AUDIT: scripts/ has only generate_daily_report.py (report-only); no --once/--cron runner anywhere"},
+    {"id": "G-B", "boundary": "§94 retry/backoff", "evidence": "grep BLOCKED_TLS|BLOCKED_HTTP_403|backoff in lib/ → zero hits; ladder.py is adapter fallback only; registry stores blocker_evidence/next_retry_at but NOTHING computes them per the §94 table (403 +7d→monthly, 404 ≤2 alternates/cycle +14d, DNS weekly×4→monthly, TLS monthly + never disable verification, timeout 30s/120s→cycle-blocked, 5xx 30s/120s→RETRY_NEXT_RUN, politeness ≥5s)"},
+    {"id": "G-C", "boundary": "§94 idempotency/diff", "evidence": "no code classifies UNCHANGED / CONTENT_CHANGED_OUTPUT_UNCHANGED / CHANGED→ChangeCandidate; audit/change-queue/ absent (§99 specifies audit/change-queue/*.jsonl)"},
+    {"id": "G-D", "boundary": "§94 alerting", "evidence": "no alert store, no §94 allowlist implementation, no dedupe; grep alert in lib/thai_factory+scripts → only UI components"},
+    {"id": "G-E", "boundary": "architecture honesty", "evidence": "TS refresh-pipeline targets never-migrated tables (RefreshRun/ChangeCandidate/SourceHealth absent from DB and Prisma) → cannot be the Phase 4 foundation without a schema change; §99 names the jsonl change queue instead. P118 builds on §99 primitives; TS stub left untouched and disclosed as follow-up"},
+    {"id": "G-F", "boundary": "§94 digest per run", "evidence": "generate_daily_report is a cycle report (locator/staging/coverage axes) — no run state machine, no artifact count+bytes for the run, no change-candidate/alert/blocker summary, no run_id"},
+    {"id": "G-G", "boundary": "concurrency", "evidence": "no lock anywhere → a cron double-fire would duplicate queue entries and alerts"},
+    {"id": "G-H", "boundary": "§101 Phase 4 exit", "evidence": "no 7-consecutive-green-run replay evidence exists"}
+  ],
+  "files_to_touch": {
+    "new": [
+      "lib/thai_factory/acquisition/backoff.py — pure §94 policy: classify_outcome(), next_retry_at() (403 +7d→monthly; 404 ≤2 alternates/cycle +14d; DNS weekly×4→monthly; TLS monthly, action NEVER disables verification; timeout 30s/120s→cycle-blocked; 5xx 30s/120s→RETRY_NEXT_RUN), politeness_delay() ≥5s; explicit action flags {rotate_ua:false, bypass:false, disable_tls_verification:false} so G is assertable",
+      "lib/thai_factory/refresh/__init__.py",
+      "lib/thai_factory/refresh/classify.py — pure classify_capture(prev_sha, prev_output, new_sha, new_output) → UNCHANGED | CONTENT_CHANGED_OUTPUT_UNCHANGED | CHANGED + field-level diff (old_sha/new_sha/source/entity/field) + set-level model/variant add-remove diff",
+      "lib/thai_factory/refresh/alerts.py — §94 allowlist + deterministic event_id = sha256(type|entity|field|old|new|source|transition) + dedupe against run-state; never on unchanged/known-blocker/ladder-outcome",
+      "lib/thai_factory/refresh/runner.py — orchestration ONLY around existing primitives: due-source selection from registry (next_retry_at ≤ now, offline replay default), AcquisitionReader verification (ProvenanceError aborts that source, no queue/alert), classify → append change-candidates.jsonl (idempotent by candidate_id), alerts → alerts.jsonl, run state → audit/change-queue/run-state.json, digest sections; NEVER writes catalog/price/spec tables",
+      "scripts/daily_run.py — CLI: default/--once one-shot, --cron (SAME runner path), --replay7 (7-run scripted fixture scenario), --live (opt-in, registry URLs only, Writer-gated); fcntl.flock on audit/change-queue/.daily-run.lock; exit 0 green / 2 lock-busy / 1 failed",
+      "tests/test_p118_backoff_policy.py — boundary G (+ TLS/403 action flags)",
+      "tests/test_p118_daily_run.py — boundaries A–F, H–P (live sqlite-free; fixtures via AcquisitionWriter into tmp dirs + committed OEM artifacts)"
+    ],
+    "modified": [],
+    "runtime_artifacts": [
+      "audit/change-queue/change-candidates.jsonl (append-only ChangeCandidates, QUARANTINE status)",
+      "audit/change-queue/alerts.jsonl (append-only alert events)",
+      "audit/change-queue/run-state.json (per-source last_sha/last_output_hash/access_state + emitted event ids → idempotency + alert dedupe)",
+      "audit/daily-runs/YYYYMMDD{,b,c}.md/.json (per-run §94 digest; suffix rule identical to existing convention)",
+      "audit/coverage/p118_seven_green_runs.json (+ per-run digests) — the Phase 4 exit evidence"
+    ],
+    "explicitly_not_touched": [
+      "lib/research/*.ts (dead stub — disclosed follow-up, reviving needs schema change)",
+      "scripts/generate_daily_report.py (cycle report stays as-is; daily digest follows its file convention and reuses its load/jlines/duplicate_locators helpers by import)",
+      "lib/thai_factory/acceptance/* (verifier v9 frozen; P118 performs NO promotion at all)",
+      "lib/thai_factory/acquisition/{provenance,contracts,adapters,ladder}.py (existing 20 provenance tests green — no patch unless a boundary test proves a defect)",
+      "prisma/schema.prisma (default NO schema change — no blocking existing-schema defect demonstrated)",
+      "scripts/dry-run-*.py, storage/dry-run/ (untracked strays from another workflow — not part of P118, not committed)",
+      "P114–P117 surfaces, provider/model/config, embeddings, acquisition outside registry"
+    ]
+  },
+  "daily_run_state_machine": {
+    "RUN_QUEUED": "entry with run_id (deterministic: date + sequence)",
+    "LOCK_ACQUIRED": "fcntl.flock exclusive on audit/change-queue/.daily-run.lock; if held → RUN_SKIPPED_DOUBLE (exit 2, NO queue/alert/digest writes) — boundary K",
+    "SOURCES_SELECTED": "registry brands with next_retry_at ≤ now (offline replay: fixture source set); each source independent (§77 partial_success — one failure never fails the run)",
+    "ACQUIRE": "offline = committed artifact replay (tests/fixtures/oem-artifacts + tmp fixtures from AcquisitionWriter); live = Writer.write gated, registry URLs only",
+    "PROVENANCE_VERIFY": "AcquisitionReader.read — hash mismatch/missing sidecar → ProvenanceError → source RUN_FAILED_PROVENANCE (no classify, no candidate, no alert for that source) — boundary I; LEGACY_UNVERIFIED fixtures recorded, never semantically processed as verified — boundary contract 3",
+    "DIFF_CLASSIFY": "classify_capture → UNCHANGED | CONTENT_CHANGED_OUTPUT_UNCHANGED | CHANGED — boundaries A/B/C/J",
+    "QUARANTINE": "CHANGED → field-level candidate appended (status QUARANTINED, old_sha/new_sha/source/entity/field) — idempotent by candidate_id — boundary C; model/variant set diffs → candidates + alerts (E)",
+    "ALERT_EVAL": "§94 allowlist only (tracked price change, model/variant add/remove, new conflict, provenance/hash failure, reachable→blocked transition, promotion-gate failure) with dedupe by event_id — boundaries D/F/O",
+    "PRESERVE_ACCEPTED": "failed/blocked source → run-state keeps previous accepted values untouched; catalog tables never opened — boundary M (asserted by table-count invariance)",
+    "DIGEST": "MD+JSON with run_id, exact SHA, artifact count+bytes, per-OEM identity levels (registry axes + staging identity counters), hash coverage, locator coverage, tests/blockers, candidates, alerts, state transitions — boundary N",
+    "RUN_GREEN | RUN_PARTIAL | RUN_FAILED": "green = every selected source reached a terminal §94 state; partial = some failed but run completed (§77); failed = runner-level error; digest written in all three"
+  },
+  "acceptance_tests": {
+    "A": "P118-A same artifact/SHA twice → second run status UNCHANGED, zero new candidates/alerts, run-state and staging byte-stable",
+    "B": "P118-B new SHA + identical extracted output → CONTENT_CHANGED_OUTPUT_UNCHANGED (artifact retained in replay, zero candidates, zero alerts)",
+    "C": "P118-C new SHA + one field change → exactly one ChangeCandidate with old_sha/new_sha/source/entity/field, status QUARANTINED",
+    "D": "P118-D tracked price change fires exactly ONE price alert; unchanged rerun emits none",
+    "E": "P118-E model add and model remove → correct set-diff candidates + alerts, zero invented observation rows",
+    "F": "P118-F reachable→blocked transition → exactly one source-state alert; repeated known blocker → none",
+    "G": "P118-G backoff policy table exact; TLS action never disables verification; 403 action never rotates UA/bypasses; timeout 30/120 then cycle-blocked; politeness ≥5s",
+    "H": "P118-H ERROR_PAGE/DEALER_REDIRECT → blocker evidence recorded, observation count 0",
+    "I": "P118-I missing sidecar and SHA-mismatch → ProvenanceError, source aborted, no candidate/alert",
+    "J": "P118-J two identical runs → byte-identical observation sets, stable sorted ordering (JSON deep-equal)",
+    "K": "P118-K lock held → second invocation exits RUN_SKIPPED_DOUBLE with zero writes; sequential double run → idempotent (A)",
+    "L": "P118-L acceptance-gate failure keeps candidate QUARANTINED; catalog table counts unchanged (read-only counts before/after)",
+    "M": "P118-M fetch failure/blocked → last accepted state in run-state + staging + catalog untouched",
+    "N": "P118-N digest MD+JSON contain run_id/SHA/artifacts bytes/identity levels/hash coverage/tests/blockers/candidates/alerts",
+    "O": "P118-O alert dedupe: same event_id appended once across runs; new transition → new id",
+    "P": "P118-P --once and --cron hit the same runner function (spy/flag assert) and run manually with exit 0",
+    "Q": "gate chain: combined acquisition/provenance/diff/change/acceptance suites + full vitest + full pytest + tsc + prisma + credscan + git clean — no P114–P117 regression",
+    "EXIT_7": "P118-7RUN: --replay7 scripted scenario (baseline → unchanged → rehash-identical → price change → model add/remove → source blocked → unchanged) → 7 consecutive RUN_GREEN, alerts ONLY on runs 4,5,6, zero duplicate candidates, digest per run → audit/coverage/p118_seven_green_runs.json"
+  },
+  "data_boundary": {
+    "writes": "only audit/change-queue/*.jsonl + run-state.json + audit/daily-runs digest files + tmp fixtures; ZERO catalog/price/spec/community/DataChangeLog writes; catalog table counts asserted unchanged in L/M",
+    "db_reads": "read-only counts for L/M assertions and staging identity levels",
+    "network": "default offline replay (committed fixtures); --live restricted to registry source_urls with Writer gate; CI runs offline (Blueprint §98 category 10)",
+    "promotion": "P118 performs NO promotion; candidates stay QUARANTINED for the existing AcceptanceRunner (contract 10)",
+    "schema": "NO prisma change; TS dead-stub tables stay unmigrated (disclosed)"
+  },
+  "non_goals": ["no AI reconciliation (conflicts stay explicit/quarantined)", "no new source class, no expansion outside Thailand official market", "no managed cloud scheduler (cron line documented instead)", "no live-web requirement in CI", "no P114 rerun, no BrochureVerification backfill, no embedding pass", "no revival of lib/research TS stub", "no parallel data architecture — queue/digest/registry/gates all follow §99"],
+  "honest_limits_planned": [
+    "offline replay extraction uses deterministic fixture extractors (real committed artifacts + real sidecars); wiring every PARSED_TESTED adapter's live capture→extract path into the runner is follow-up work outside this wave",
+    "the TS refresh-pipeline (lib/research) writes to never-migrated tables — dead code kept untouched and disclosed (reviving = schema change = out of scope)",
+    "in-memory politeness/rate state is per-process (documented) — matches the existing fetch-layer approach",
+    "registry next_retry_at values were written by earlier probe cycles; backoff computation applies from P118 runs forward (no retroactive timestamp invention)",
+    "never declares refresh coverage complete; alerts fire only on the §94 allowlist"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/models/lm/lm-500h-6-seater.html",
+  "captured_at": "2026-09-28T07:13:27.000321+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "f405866c049d7793773229c33946792919c9e544ff41c7035aa39a11207506c5",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "lexus_p111_lm-500h-6-seater.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

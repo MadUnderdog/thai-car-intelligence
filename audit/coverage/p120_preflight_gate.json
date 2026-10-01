@@ -1,0 +1,7255 @@
+{
+  "db_counts_before": {
+    "datachangelog": 1917,
+    "price": 1061,
+    "price_current": 352,
+    "source": 32,
+    "sourcedocument": 2577,
+    "variant": 747,
+    "variantspec": 8036
+  },
+  "eligibility": [
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0001",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0002",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0003",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0004",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0005",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0006",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0007",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0008",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0009",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0010",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0011",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0012",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0013",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0014",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0015",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0016",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0017",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0018",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0019",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0020",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0021",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0022",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0023",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0024",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0025",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0026",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0027",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0028",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0029",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0030",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0031",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0032",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0033",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0034",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0035",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0036",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0037",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0038",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0039",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0040",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0041",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0042",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0043",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0044",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0045",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0046",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0047",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0048",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0049",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0050",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0051",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0052",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0053",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0054",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0055",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0056",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0057",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0058",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0059",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0060",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0061",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0062",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0063",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0064",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0065",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0066",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0067",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0068",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0069",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0070",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0071",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0072",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0073",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0074",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0075",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0076",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0077",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0078",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0079",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0080",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0081",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0082",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0083",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0084",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0085",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0086",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0087",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0088",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0089",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0090",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0091",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0092",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0093",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0094",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0095",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0096",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0097",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0098",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0099",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0100",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0101",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0102",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0103",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0104",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0105",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0106",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0107",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0108",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0109",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0110",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0111",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0112",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0113",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0114",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0115",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0116",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0117",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0118",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [
+        {
+          "fact": "price",
+          "obs": [
+            {
+              "artifact": "porsche_p111_718-cayman-gts-4.html",
+              "cited": true,
+              "counts_as_current_msrp": true,
+              "currentness": "CURRENT",
+              "field": "msrp_thb",
+              "locator": {
+                "mode": "value_digits",
+                "quote": "9790000",
+                "resolved": true
+              },
+              "msrp_status": "EXACT_CURRENT_MSRP_VERIFIED",
+              "obs_id": "PKT-0119.price.msrp_thb",
+              "price_type": "EXACT_VARIANT",
+              "provenance_state": "ACQUISITION_VERIFIED",
+              "runner_decision": "ACCEPTED",
+              "runner_reason": "All acceptance criteria met",
+              "sha256": "aa4e7255d9bcf6cf0f782bbfa59d4a0008f4c3a6ffa15183ad7001ac6bf80cad",
+              "source_class": "MARKET_TRUTH",
+              "source_name": null,
+              "source_url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-cayman-gts-4/",
+              "trust_tier": "official_verified",
+              "value": 9790000
+            }
+          ]
+        }
+      ],
+      "packet_id": "PKT-0119",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [
+        {
+          "fact": "price",
+          "obs": [
+            {
+              "artifact": "porsche_p111_718-boxster.html",
+              "cited": true,
+              "counts_as_current_msrp": true,
+              "currentness": "CURRENT",
+              "field": "msrp_thb",
+              "locator": {
+                "mode": "value_digits",
+                "quote": "6390000",
+                "resolved": true
+              },
+              "msrp_status": "EXACT_CURRENT_MSRP_VERIFIED",
+              "obs_id": "PKT-0120.price.msrp_thb",
+              "price_type": "EXACT_VARIANT",
+              "provenance_state": "ACQUISITION_VERIFIED",
+              "runner_decision": "ACCEPTED",
+              "runner_reason": "All acceptance criteria met",
+              "sha256": "66b11e0879b19a719d3615f3c45aab789da5a588b6139e019a3b2723c79728ce",
+              "source_class": "MARKET_TRUTH",
+              "source_name": null,
+              "source_url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster/",
+              "trust_tier": "official_verified",
+              "value": 6390000
+            }
+          ]
+        }
+      ],
+      "packet_id": "PKT-0120",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [
+        {
+          "fact": "price",
+          "obs": [
+            {
+              "artifact": "porsche_p111_718-boxster-style-edition.html",
+              "cited": true,
+              "counts_as_current_msrp": true,
+              "currentness": "CURRENT",
+              "field": "msrp_thb",
+              "locator": {
+                "mode": "value_digits",
+                "quote": "6990000",
+                "resolved": true
+              },
+              "msrp_status": "EXACT_CURRENT_MSRP_VERIFIED",
+              "obs_id": "PKT-0121.price.msrp_thb",
+              "price_type": "EXACT_VARIANT",
+              "provenance_state": "ACQUISITION_VERIFIED",
+              "runner_decision": "ACCEPTED",
+              "runner_reason": "All acceptance criteria met",
+              "sha256": "529b2fd897bdd62eee23189dc7b2beb9d6d94a314392c6fa6100bea91113592f",
+              "source_class": "MARKET_TRUTH",
+              "source_name": null,
+              "source_url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster-style-edition/",
+              "trust_tier": "official_verified",
+              "value": 6990000
+            }
+          ]
+        }
+      ],
+      "packet_id": "PKT-0121",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [
+        {
+          "fact": "price",
+          "obs": [
+            {
+              "artifact": "porsche_p111_718-boxster-gts-4.html",
+              "cited": true,
+              "counts_as_current_msrp": true,
+              "currentness": "CURRENT",
+              "field": "msrp_thb",
+              "locator": {
+                "mode": "value_digits",
+                "quote": "9990000",
+                "resolved": true
+              },
+              "msrp_status": "EXACT_CURRENT_MSRP_VERIFIED",
+              "obs_id": "PKT-0122.price.msrp_thb",
+              "price_type": "EXACT_VARIANT",
+              "provenance_state": "ACQUISITION_VERIFIED",
+              "runner_decision": "ACCEPTED",
+              "runner_reason": "All acceptance criteria met",
+              "sha256": "1022e2a707552d3b4803d2fff55704ef6eb6727f2558d744d507417b83d4a797",
+              "source_class": "MARKET_TRUTH",
+              "source_name": null,
+              "source_url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster-gts-4/",
+              "trust_tier": "official_verified",
+              "value": 9990000
+            }
+          ]
+        }
+      ],
+      "packet_id": "PKT-0122",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0123",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [
+        {
+          "fact": "price",
+          "obs": [
+            {
+              "artifact": "porsche_p111_718-cayman-gt4-rs.html",
+              "cited": true,
+              "counts_as_current_msrp": true,
+              "currentness": "CURRENT",
+              "field": "msrp_thb",
+              "locator": {
+                "mode": "value_digits",
+                "quote": "16990000",
+                "resolved": true
+              },
+              "msrp_status": "EXACT_CURRENT_MSRP_VERIFIED",
+              "obs_id": "PKT-0124.price.msrp_thb",
+              "price_type": "EXACT_VARIANT",
+              "provenance_state": "ACQUISITION_VERIFIED",
+              "runner_decision": "ACCEPTED",
+              "runner_reason": "All acceptance criteria met",
+              "sha256": "0018a55770562bd8478d8242be7b0255286722ff7a17e27c816182d2e49a1abf",
+              "source_class": "MARKET_TRUTH",
+              "source_name": null,
+              "source_url": "https://www.porsche.com/pap/_thailand_/models/718/718-cayman-gt4-rs/718-cayman-gt4-rs/",
+              "trust_tier": "official_verified",
+              "value": 16990000
+            }
+          ]
+        }
+      ],
+      "packet_id": "PKT-0124",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0125",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0126",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0127",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0128",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0129",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0130",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0131",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0132",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0133",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0134",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0135",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0136",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0137",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0138",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0139",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0140",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0141",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0142",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0143",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0144",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0145",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0146",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0147",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0148",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0149",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0150",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0151",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0152",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0153",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0154",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0155",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0156",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0157",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0158",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0159",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0160",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0161",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0162",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0163",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0164",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0165",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0166",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0167",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0168",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0169",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0170",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0171",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0172",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0173",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0174",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0175",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0176",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0177",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0178",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0179",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0180",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0181",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0182",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0183",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0184",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0185",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0186",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0187",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0188",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0189",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0190",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0191",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0192",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0193",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0194",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0195",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0196",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0197",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0198",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0199",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0200",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0201",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0202",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0203",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0204",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0205",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0206",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0207",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0208",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0209",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0210",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0211",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0212",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0213",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0214",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0215",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0216",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0217",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0218",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0219",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0220",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0221",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0222",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0223",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0224",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0225",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0226",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0227",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0228",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0229",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0230",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0231",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0232",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0233",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0234",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0235",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0236",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0237",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0238",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0239",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0240",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0241",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0242",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0243",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0244",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0245",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0246",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0247",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0248",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0249",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0250",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0251",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0252",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0253",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0254",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0255",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0256",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0257",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0258",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0259",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0260",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0261",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0262",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0263",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0264",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0265",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0266",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0267",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0268",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0269",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0270",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0271",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0272",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0273",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0274",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0275",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0276",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0277",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0278",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0279",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0280",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0281",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0282",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0283",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0284",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0285",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0286",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0287",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0288",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0289",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0290",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0291",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0292",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0293",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0294",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0295",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0296",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0297",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0298",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0299",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0300",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0301",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0302",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0303",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0304",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0305",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0306",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0307",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0308",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0309",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0310",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0311",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0312",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0313",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0314",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0315",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0316",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0317",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0318",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0319",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0320",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0321",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0322",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0323",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0324",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0325",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0326",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0327",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0328",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0329",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0330",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0331",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0332",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0333",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0334",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0335",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0336",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0337",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0338",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0339",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0340",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0341",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0342",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0343",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0344",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0345",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0346",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0347",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0348",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0349",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0350",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0351",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0352",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0353",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0354",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0355",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0356",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0357",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0358",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0359",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0360",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0361",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0362",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0363",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0364",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0365",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0366",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0367",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0368",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0369",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0370",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0371",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0372",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0373",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0374",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0375",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0376",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0377",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0378",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0379",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0380",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0381",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0382",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0383",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0384",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0385",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0386",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0387",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0388",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0389",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0390",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0391",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0392",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0393",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0394",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0395",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0396",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0397",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0398",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0399",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0400",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0401",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0402",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0403",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0404",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0405",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0406",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0407",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0408",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0409",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0410",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0411",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0412",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0413",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0414",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0415",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0416",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0417",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0418",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0419",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0420",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0421",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0422",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0423",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0424",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0425",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0426",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0427",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0428",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0429",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0430",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0431",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0432",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0433",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0434",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0435",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0436",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0437",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0438",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0439",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0440",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0441",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0442",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0443",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0444",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0445",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0446",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0447",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0448",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0449",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0450",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0451",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0452",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0453",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0454",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0455",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0456",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0457",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0458",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0459",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0460",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0461",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0462",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0463",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0464",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0465",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0466",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0467",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0468",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0469",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0470",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0471",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0472",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0473",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0474",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0475",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0476",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0477",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0478",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0479",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0480",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0481",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0482",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0483",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact price present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [
+        {
+          "fact": "spec",
+          "obs": [
+            {
+              "artifact": "isuzu_p107_mu-x-financial-normalmodel.html",
+              "binding": "grade_named_row",
+              "cited": true,
+              "currentness": "CURRENT",
+              "field_key": "warranty",
+              "grade_title": null,
+              "locator": {
+                "mode": "label_and_value",
+                "quote": "การรับประกัน = 7 ปี",
+                "resolved": true
+              },
+              "obs_id": "p112-e00022",
+              "provenance_state": "ACQUISITION_VERIFIED",
+              "runner_decision": "ACCEPTED",
+              "runner_reason": "All acceptance criteria met",
+              "sha256": "d79f3f89d1c9c942acbf87d0af4749eee7a76ea64870a4817dc63993e483e4f2",
+              "source_class": "MARKET_TRUTH",
+              "source_url": "https://www.isuzu-tis.com/specialoffer/ppv/mu-x-financial-normalmodel",
+              "trust_tier": "official_verified",
+              "unit": "years",
+              "value_numeric": 7.0,
+              "value_text": "7 ปี"
+            }
+          ]
+        }
+      ],
+      "packet_id": "PKT-0484",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0485",
+      "refusals": [
+        {
+          "detail": "status=QUARANTINED",
+          "reason": "STATUS_NOT_ACCEPTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0486",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0487",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    },
+    {
+      "eligible": false,
+      "facts": [],
+      "packet_id": "PKT-0488",
+      "refusals": [
+        {
+          "detail": "fact identity present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        },
+        {
+          "detail": "fact spec present in promotion ledgers",
+          "reason": "ALREADY_PROMOTED"
+        }
+      ]
+    }
+  ],
+  "eligible": 0,
+  "error": null,
+  "identity_resolution": {},
+  "input_shas": {
+    "catalog": "bad8e44d94622cd3154f69d8865212acb8b7085d7796d6e987754e5c351edb35",
+    "p114_ledger": "eec3cca409c811e59994876f2bc39c158baebe4a9a190e147d22d91ab726ca35",
+    "packets": "70afb6da79c10f11a5746f19a687bf5407f13ec19a68b092e0190600c2675517",
+    "production_ledger": null,
+    "universe": "bc9355e747a834d29e3f29ad7112852b7223ab11aa9e188aec8dcd7da10364fc"
+  },
+  "now": "2026-09-30T18:01:55.434617+00:00",
+  "promotable_packets": [],
+  "refusals": {
+    "ALREADY_PROMOTED": 836,
+    "STATUS_NOT_ACCEPTED": 71
+  },
+  "schema": "p120_preflight_gate/v1",
+  "status": "PASS"
+}

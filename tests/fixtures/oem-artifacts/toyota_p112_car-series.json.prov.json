@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car-series/",
+  "captured_at": "2026-09-28T09:32:34.204072+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "461e12dce0066c30ec2f8bf1719b62d416604e836578a14119760fc8c3103a20",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car-series.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

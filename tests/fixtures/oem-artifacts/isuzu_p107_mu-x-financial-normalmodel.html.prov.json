@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu-tis.com/specialoffer/ppv/mu-x-financial-normalmodel",
+  "captured_at": "2026-09-27T16:06:23.372745+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "d79f3f89d1c9c942acbf87d0af4749eee7a76ea64870a4817dc63993e483e4f2",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "isuzu_p107_mu-x-financial-normalmodel.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

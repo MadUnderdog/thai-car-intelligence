@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/models/macan/configure/",
+  "captured_at": "2026-09-28T07:14:50.738647+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "a95504782178f9e9b7cc8bb15fda3180c9ea06422f249c82ca79d53782b3ad8b",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "porsche_p111_configure_dup4.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

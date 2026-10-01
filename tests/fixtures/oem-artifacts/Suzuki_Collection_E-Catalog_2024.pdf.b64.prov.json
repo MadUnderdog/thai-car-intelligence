@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/upload/file/Catalog/Suzuki_Collection_E-Catalog_2024.pdf",
+  "captured_at": "2026-09-26T07:46:29.154684+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "cc7d52408d2aacdd3fe3cda079a01fa34df47e9e9920947c9d19a68f712ca26f",
+  "session_id": "catalog_layers_20260926_074454",
+  "artifact_filename": "Suzuki_Collection_E-Catalog_2024.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

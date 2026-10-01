@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.jaguar.co.th/jaguar-range/f-type/models",
+  "captured_at": "2026-09-27T15:07:20.237738+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "1df3d779424191de018ff18031093659ca4d339fd894bfeaaa4dbff460abf033",
+  "session_id": "p106_official_grade_pages",
+  "artifact_filename": "jaguar_f_type_models.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

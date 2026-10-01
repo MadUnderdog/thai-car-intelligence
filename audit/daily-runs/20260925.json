@@ -1,0 +1,449 @@
+{
+  "report_id": "p98-horizontal-continuation",
+  "generated_at": "2026-09-25T04:38:12.062937+00:00",
+  "baseline_commit": "91c8fe994d061363c445de6ec67668e199c6d6da",
+  "branch": "fix/p1-provenance-gate",
+  "coverage": {
+    "verified_parsed": 17,
+    "denominator": 32,
+    "percent": 53.1
+  },
+  "honda_city_recapture": {
+    "artifact": "tests/fixtures/oem-artifacts/honda_city_recapture.html",
+    "sidecar": "tests/fixtures/oem-artifacts/honda_city_recapture.html.prov.json",
+    "source_url": "https://www.honda.co.th/en/city",
+    "captured_at": "2026-09-25T04:07:07.005816+00:00",
+    "legacy_artifact": "honda_city_page.html",
+    "row_set_identical_legacy_vs_recapture": true,
+    "rows_proved": 4,
+    "rows": {
+      "S": 569000,
+      "e:HEV V": 619000,
+      "e:HEV SV": 689000,
+      "e:HEV RS": 739000
+    },
+    "currency_marker_diff": "legacy 'THB' vs recapture 'บาท' (th locale); extractor accepts both",
+    "provenance_before": "LEGACY_UNVERIFIED (4 rows)",
+    "provenance_after": "ACQUISITION_VERIFIED (4 rows)",
+    "retry_window_note": "Honda access_status=REACHABLE, blocker=null, next_retry_at=2026-09-25T13:41:49Z (9h37m after capture); recapture was explicitly ordered 'now' by this work unit and is not a blocked host"
+  },
+  "semantic_audit": {
+    "rows_audited": 295,
+    "zero_counts": {
+      "cross_model_evidence_contamination": 0,
+      "cross_variant_evidence_contamination": 0,
+      "duplicate_identity_price": 0,
+      "empty_or_nav_media_evidence": 0,
+      "rows_without_locator": 0,
+      "msrp_starting_without_starting_marker": 0
+    },
+    "fixed": [
+      {
+        "issue": "reduced schema on 12 rows",
+        "affected": 12,
+        "action": "additive normalization (nested evidence kept)"
+      },
+      {
+        "issue": "MODEL-level identity with EXACT_VARIANT price (Lexus RZ, LX)",
+        "affected": 2,
+        "action": "price type -> MSRP; evidence is bare 'ราคา', no starting marker",
+        "after": "MSRP 112 / MSRP_STARTING 103 / EXACT_VARIANT 80"
+      }
+    ],
+    "reported_not_changed": [
+      {
+        "issue": "MSRP_STARTING marker scan first read 44 rows unmarked",
+        "real_count": 0,
+        "detail": "false positive — marker set omitted 'From'/'฿'; BMW 'From THB5,799,000', MINI 'From 1,555,000 ฿', Honda 'starting' all present in artifacts"
+      },
+      {
+        "issue": "96 Toyota rows currentness=CURRENT",
+        "rows": 96,
+        "changed": false,
+        "detail": "from JSON-LD offers.availability='InStock'; artifact has no priceValidUntil/dateModified/validFrom",
+        "reason": "anchored to captured_at=2026-09-24T18:57:17Z + ACQUISITION_VERIFIED and an accepted test requires >=2 distinct values; flagged as owner policy question"
+      },
+      {
+        "issue": "20 rows share non-unique locators",
+        "rows": 20,
+        "detail": "Toyota 10 (json_path keyed only by variant name across JSON-LD blocks); Nissan 10 (generic selector)",
+        "impact": "row data correct (0 cross-contamination), re-resolution ambiguous"
+      },
+      {
+        "issue": "5 rows evidence 221-236 chars",
+        "rows": 5,
+        "detail": "Deepal/Changan; within 400-char bound"
+      }
+    ]
+  },
+  "multi_source_assembly": {
+    "join_file": "audit/data-staging/multi_source_joins.json",
+    "join_rule": "same (brand_normalized, model_normalized, price_thb) supported by >=2 DISTINCT captured artifacts, each ACQUISITION_VERIFIED; no inferred joins",
+    "join_count": 2,
+    "target": ">=10 only when evidence genuinely supports them",
+    "target_met": false,
+    "source_classes_present": [
+      "OEM_OFFICIAL"
+    ],
+    "caveat": "all staged rows are class OEM_OFFICIAL — there is currently NO second source class in staging, so >=2 independent source classes is not achievable yet; these joins are cross-ARTIFACT (independent official pages) rather than cross-class",
+    "join_keys": [
+      {
+        "brand": "changan",
+        "model": "nevo-q05",
+        "price_thb": 629900
+      },
+      {
+        "brand": "honda",
+        "model": "city",
+        "price_thb": 569000
+      }
+    ]
+  },
+  "spec_audit": {
+    "rows_with_specs": 72,
+    "total_rows": 295,
+    "percent": 24.4,
+    "sources": [
+      "Porsche Thailand Official"
+    ],
+    "placeholder_values": 0,
+    "keys": {
+      "fuel": 72,
+      "drive": 72,
+      "power_ps": 72
+    },
+    "distinct_power_ps": 32,
+    "fuel_distribution": {
+      "Gasoline": 38,
+      "Electro": 24,
+      "Hybrid": 10
+    },
+    "drive_distribution": {
+      "Rear-wheel-drive": 23,
+      "All-wheel-drive": 49
+    },
+    "concentration_finding": "100% of specs are Porsche — source-coverage gap, not contamination",
+    "promotions_made": 0
+  },
+  "headlightmag_9carthai": {
+    "action": "none",
+    "captured_artifacts_in_tree": 0,
+    "existing_evidence": "audit/catalog-discovery/media_discovery_headlightmag.json — MEDIA_DISCOVERY role, 6 title-only entries, no prices",
+    "ladder": "registry = 33 brands, all source_type=OFFICIAL_SITE; no media ladder entry",
+    "history": "scripts/quarantine-headlightmag-contamination.sql documents prior cross-model contamination from a generic price/spec regex",
+    "reason": "no captured price evidence to improve from; new fetches would be off-ladder speculative scraping"
+  },
+  "staging": {
+    "rows": 295,
+    "identity": {
+      "VARIANT": 186,
+      "MODEL": 109
+    },
+    "price_type": {
+      "MSRP": 112,
+      "MSRP_STARTING": 103,
+      "EXACT_VARIANT": 80
+    },
+    "provenance": {
+      "ACQUISITION_VERIFIED": 295
+    },
+    "legacy_unverified": 0
+  },
+  "fixtures": {
+    "html": 43,
+    "sidecars": 37,
+    "base64_pdf": 2
+  },
+  "tests": {
+    "pytest": "233/233",
+    "registry_invariants": "7/7",
+    "p98_semantic_audit": "15/15",
+    "prisma_validate": "rc=0",
+    "tsc_noemit": "rc=0",
+    "next_build": "rc=0",
+    "log": "/tmp/full_suite_p98.log"
+  },
+  "security": {
+    "changed_and_new_credential_scan": 0,
+    "github_secret_scanning_alerts": "UNVERIFIED (401 unauthenticated) — no closure claimed",
+    "owner_key_rotation": "EXTERNAL — not performed"
+  },
+  "retry_windows": {
+    "elapsed_now": [],
+    "not_yet_due": [
+      {
+        "brand": "Toyota",
+        "next_retry_at": "2026-09-25T13:41:49.738574+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Honda",
+        "next_retry_at": "2026-09-25T13:41:49.738574+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Nissan",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Mazda",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Mitsubishi",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Isuzu",
+        "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Suzuki",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "MG",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "BYD",
+        "next_retry_at": "2026-10-08T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_HTTP_404",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:31.848172+00:00",
+          "http_status_or_error": "HTTP_404",
+          "url": "https://www.byd.com/th/"
+        }
+      },
+      {
+        "brand": "Tesla",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_HTTP_403",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:32.086082+00:00",
+          "http_status_or_error": "HTTP_403",
+          "url": "https://www.tesla.com/th_th"
+        }
+      },
+      {
+        "brand": "Ford",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_HTTP_403",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:32.087860+00:00",
+          "http_status_or_error": "HTTP_403",
+          "url": "https://www.ford.co.th/"
+        }
+      },
+      {
+        "brand": "Chevrolet",
+        "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+        "access_status": "BLOCKED_HTTP_403",
+        "blocker": {
+          "checked_at": "2026-09-24T14:16:16.748942+00:00",
+          "http_status_or_error": "HTTP_403 via Playwright (requests GET earlier returned 200 — browser-level block)",
+          "url": "https://www.chevrolet.co.th/"
+        }
+      },
+      {
+        "brand": "Mercedes-Benz",
+        "next_retry_at": "2026-10-01T14:16:16.748942+00:00",
+        "access_status": "BLOCKED_HTTP_403",
+        "blocker": {
+          "checked_at": "2026-09-24T14:16:16.748942+00:00",
+          "http_status_or_error": "HTTP_403 via Playwright (probe was BLOCKED_TIMEOUT — browser-level block)",
+          "url": "https://www.mercedes-benz.co.th/"
+        }
+      },
+      {
+        "brand": "Audi",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_HTTP_403",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:32.369118+00:00",
+          "http_status_or_error": "HTTP_403",
+          "url": "https://www.audi.co.th/"
+        }
+      },
+      {
+        "brand": "BMW",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+        "access_status": "REACHABLE",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:32.390590+00:00",
+          "http_status_or_error": "Timeout after 15s",
+          "url": "https://www.bmw.co.th/en/all-models.html"
+        }
+      },
+      {
+        "brand": "Volvo",
+        "next_retry_at": "2026-10-24T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_TLS",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:32.815537+00:00",
+          "http_status_or_error": "SSLError: HTTPSConnectionPool(host='www.volvo.co.th', port=443): Max retries exceeded with url: /en/models.html (Caused by SSLErro",
+          "url": "https://www.volvo.co.th/en/models.html"
+        }
+      },
+      {
+        "brand": "Subaru",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_DNS",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:33.132436+00:00",
+          "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.subaru.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.subaru.co.th'",
+          "url": "https://www.subaru.co.th/"
+        }
+      },
+      {
+        "brand": "Porsche",
+        "next_retry_at": "2026-09-25T13:41:49.738574+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Lexus",
+        "next_retry_at": "2026-09-25T13:41:49.738574+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "NETA",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_DNS",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:33.300875+00:00",
+          "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.neta.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.neta.co.th', po",
+          "url": "https://www.neta.co.th/"
+        }
+      },
+      {
+        "brand": "Deepal",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Avance",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_DNS",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:33.586368+00:00",
+          "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.avancemotors.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.avancemot",
+          "url": "https://www.avancemotors.com/"
+        }
+      },
+      {
+        "brand": "Changan",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "GWM",
+        "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Haval",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_DNS",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:33.654558+00:00",
+          "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.haval.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.haval.co.th', ",
+          "url": "https://www.haval.co.th/"
+        }
+      },
+      {
+        "brand": "Chery",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_DNS",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:33.757563+00:00",
+          "http_status_or_error": "ConnectionError: HTTPSConnectionPool(host='www.chery.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.chery.co.th', ",
+          "url": "https://www.chery.co.th/"
+        }
+      },
+      {
+        "brand": "Jaguar",
+        "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Land Rover",
+        "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "MINI",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+        "access_status": "REACHABLE",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:34.397258+00:00",
+          "http_status_or_error": "Timeout after 15s",
+          "url": "https://www.mini.co.th/"
+        }
+      },
+      {
+        "brand": "Smart",
+        "next_retry_at": "2026-09-25T14:16:16.748942+00:00",
+        "access_status": "DEALER_REDIRECT",
+        "blocker": {
+          "checked_at": "2026-09-24T14:16:16.748942+00:00",
+          "http_status_or_error": "REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (security company, not smart cars) — fix URL target in registry",
+          "url": "https://www.smart.co.th/"
+        }
+      },
+      {
+        "brand": "Kia",
+        "next_retry_at": "2026-09-25T15:11:34.814997+00:00",
+        "access_status": "REACHABLE",
+        "blocker": null
+      },
+      {
+        "brand": "Peugeot",
+        "next_retry_at": "2026-10-01T13:41:49.738574+00:00",
+        "access_status": "BLOCKED_HTTP_403",
+        "blocker": {
+          "checked_at": "2026-09-24T13:41:35.062412+00:00",
+          "http_status_or_error": "HTTP_403",
+          "url": "https://www.peugeot.co.th/"
+        }
+      }
+    ],
+    "blocked_brand_count": 14
+  },
+  "blockers": [
+    "Headlightmag/9CARTHAI: no captured price evidence (see headlightmag_9carthai)",
+    "20 rows with non-unique locators (Toyota 10, Nissan 10)",
+    "96 Toyota CURRENT rows rest on availability=InStock, not a price validity date — unchanged, owner policy question",
+    "only 1 source class (OEM_OFFICIAL) so >=2-class joins impossible yet",
+    "spec coverage 24.4%, all Porsche",
+    "14 blocked OEMs on recorded retry windows (none elapsed at report time)",
+    "pre-existing test_generation_config_boundary.py import error (separated)",
+    "pre-existing prisma onDelete SetNull warning (separated)"
+  ],
+  "not_touched": [
+    "production DB",
+    "AI model/provider/config",
+    "verifier (FROZEN)",
+    "PR #3 (OPEN)"
+  ]
+}

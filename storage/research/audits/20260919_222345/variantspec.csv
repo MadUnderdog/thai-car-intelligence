@@ -1,0 +1,100 @@
+a55e5909-352a-4e8c-871a-ade1badde45c|BYD|ATTO 2|Dynamic|performance.rangeKm|250 km|250 km|250.000000|km|0.7000
+ea949d8c-4c4c-4bfb-862d-da4028176610|BYD|ATTO 2|Dynamic|battery.capacityKwh|38 kWh|38 kWh|38.000000|kWh|0.7000
+e0c3b418-a0e6-4272-ab73-37c31502d714|BYD|ATTO 2|Dynamic|capacityKwh|50|50|50.000000|kWh|0.7000
+71fe51c5-13e3-4734-866d-279ae9d86a87|BYD|ATTO 2|Premium|performance.rangeKm|340 km|340 km|340.000000|km|0.7000
+4cefb5b9-37f7-4d56-b9c1-45808ff162f9|BYD|ATTO 2|Premium|battery.capacityKwh|44.9 kWh|44.9 kWh|44.900000|kWh|0.7000
+44b32bf5-ceed-4942-ae49-73e16b27b84f|BYD|ATTO 3|Standard Range|warranty.batteryDistanceKm|150,000 km|150000 km|150000.000000|km|0.7000
+36d19bf3-7551-4475-91d8-03e12ab6af4e|BYD|ATTO 3|Standard Range|warranty.batteryYears|8 ปี|8 years|8.000000|years|0.7000
+1392f8b2-421d-43aa-a62d-3ab0b728a121|BYD|ATTO 3|Standard Range|warranty.vehicleDistanceKm|150,000 km|150000 km|150000.000000|km|0.7000
+08a4a082-e444-4262-8a48-5fb03e130dc4|BYD|ATTO 3|Standard Range|warranty.vehicleYears|8 ปี|8 years|8.000000|years|0.7000
+9d61e614-cbae-4133-8560-6a4dabf22368|BYD|ATTO 3|Standard Range|dimensions.groundClearanceMm|175 mm|175 mm|175.000000|mm|0.7000
+a23e7656-61b7-473f-b6d9-3a74446b8d95|BYD|ATTO 3|Standard Range|dimensions.heightMm|1,615 mm|1615 mm|1615.000000|mm|0.7000
+f57f69ac-18ab-49c7-ba08-2d912acc3f29|BYD|ATTO 3|Standard Range|dimensions.widthMm|1,875 mm|1875 mm|1875.000000|mm|0.7000
+67070c14-6e34-4fcf-9ec2-616a1d6f29d7|BYD|ATTO 3|Standard Range|dimensions.lengthMm|4,455 mm|4455 mm|4455.000000|mm|0.7000
+f9421f5c-0451-4608-8d07-742d7a4de306|BYD|ATTO 3|Standard Range|performance.torqueNm|310 Nm|310 Nm|310.000000|Nm|0.7000
+a6444006-74dd-4078-8031-eeb65f910607|BYD|ATTO 3|Standard Range|performance.powerKw|204 แรงม้า|204 hp|204.000000|hp|0.7000
+572c455e-cf84-4536-b39b-bea8aec7e2f4|BYD|ATTO 3|Standard Range|performance.rangeKm|310 km|310 km|310.000000|km|0.7000
+437aea3d-b4b6-4081-b7d5-120cda2d4607|BYD|ATTO 3|Standard Range|battery.capacityKwh|49.9 kWh|49.9 kWh|49.900000|kWh|0.7000
+c96675ac-8cb9-43c1-9518-6000aa0ba988|BYD|ATTO 3|Extended Range|performance.rangeKm|410 km|410 km|410.000000|km|0.7000
+c5229948-4c59-486c-848c-7689c24acecc|BYD|ATTO 3|Extended Range|battery.capacityKwh|60.5 kWh|60.5 kWh|60.500000|kWh|0.7000
+c7d2573d-0b7d-48c4-8f2d-45e6427dfe2d|BYD|Dolphin|Dynamic|performance.rangeKm|340 km|340 km|340.000000|km|0.7000
+d565c1a3-8cdb-4ddb-aee6-46751a337a6d|BYD|Dolphin|Dynamic|battery.capacityKwh|44.9 kWh|44.9 kWh|44.900000|kWh|0.7000
+35379c9c-464f-4ab3-bc49-a48fa8e0fc02|BYD|Dolphin|Premium|performance.rangeKm|420 km|420 km|420.000000|km|0.7000
+61af7808-3278-496f-a245-dcc702929b7e|BYD|Dolphin|Premium|battery.capacityKwh|60.4 kWh|60.4 kWh|60.400000|kWh|0.7000
+8e64505d-c0ba-4720-9196-ed57977c5d88|BYD|Seal|Dynamic RWD|warranty.vehicleYears|8 ปี|8 years|8.000000|years|0.7000
+1f051b09-2230-40ad-b572-03c50a81b4ed|BYD|Seal|Dynamic RWD|dimensions.groundClearanceMm|145 mm|145 mm|145.000000|mm|0.7000
+68bef40b-f900-4646-a497-042c300a0815|BYD|Seal|Dynamic RWD|dimensions.heightMm|1,460 mm|1460 mm|1460.000000|mm|0.7000
+a52b9b68-7e46-409d-8de6-8d9e5df1ff29|BYD|Seal|Dynamic RWD|dimensions.widthMm|1,875 mm|1875 mm|1875.000000|mm|0.7000
+aaa044c7-d31c-4804-9f03-0b44f4b6ce95|BYD|Seal|Dynamic RWD|dimensions.lengthMm|4,800 mm|4800 mm|4800.000000|mm|0.7000
+9bbda082-fec0-4bab-8f42-d47cfe57b8fc|BYD|Seal|Dynamic RWD|performance.powerKw|313 แรงม้า|313 hp|313.000000|hp|0.7000
+8aa4eacf-cb61-4212-bf1c-73db19e68fbb|BYD|Seal|Dynamic RWD|capacityKwh|69|69|69.000000|kWh|0.7000
+53d6d962-3feb-4467-8bb6-1908cad4501c|BYD|Seal|Dynamic RWD|performance.rangeKm|520 km|520 km|520.000000|km|0.7000
+8473e253-17e5-43c3-bb84-4306509dd5ea|BYD|Seal|Dynamic RWD|battery.capacityKwh|82.5 kWh|82.5 kWh|82.500000|kWh|0.7000
+e3ee3122-a9c7-4564-9067-55a73e89f60d|BYD|Seal|Performance AWD|performance.powerKw|530 แรงม้า|530 hp|530.000000|hp|0.7000
+a8772a95-3d67-4360-9bbf-6505c70e0ebc|BYD|Seal|Performance AWD|performance.rangeKm|520 km|520 km|520.000000|km|0.7000
+aca43c80-b26a-4486-b508-86491f156cb7|BYD|Seal|Performance AWD|battery.capacityKwh|82.5 kWh|82.5 kWh|82.500000|kWh|0.7000
+445fd108-9bb6-4a8a-a392-084a678e2111|BYD|Sealion 7|Advanced|warranty.vehicleYears|8 ปี|8 years|8.000000|years|0.7000
+1edd40e5-4a80-47d7-ab8b-bea78853aa00|BYD|Sealion 7|Advanced|dimensions.groundClearanceMm|195 mm|195 mm|195.000000|mm|0.7000
+2544f945-1f32-4939-a4f3-9d041f62a25d|BYD|Sealion 7|Advanced|dimensions.heightMm|1,620 mm|1620 mm|1620.000000|mm|0.7000
+a5ffb5cd-65bc-410c-9871-376baea29398|BYD|Sealion 7|Advanced|dimensions.widthMm|1,925 mm|1925 mm|1925.000000|mm|0.7000
+9a79b2d2-5d83-4888-8238-e4069dd73349|BYD|Sealion 7|Advanced|dimensions.lengthMm|4,830 mm|4830 mm|4830.000000|mm|0.7000
+35413694-3285-45b0-a774-ef7915bbe1f3|BYD|Sealion 7|Advanced|performance.powerKw|530 แรงม้า|530 hp|530.000000|hp|0.7000
+c87ae6d1-4410-44f4-a5ab-5f36ce7e2c28|BYD|Sealion 7|Advanced|performance.rangeKm|502 km|502 km|502.000000|km|0.7000
+353312d8-e9f6-4e69-982b-2ae1cc7951c0|BYD|Sealion 7|Advanced|battery.capacityKwh|91.3 kWh|91.3 kWh|91.300000|kWh|0.7000
+21dd4674-8db4-4787-8daa-d1b30f8ece73|BYD|M6|Electric|performance.rangeKm|420 km|420 km|420.000000|km|0.7000
+376d6114-551c-4245-b8d2-292541fe57d3|BYD|M6|Electric|battery.capacityKwh|55.4 kWh|55.4 kWh|55.400000|kWh|0.7000
+fad7256b-f8dd-4f30-ba18-38c0f6c49dc5|MG|URBAN|EV|dimensions.heightMm|1,545 mm|1545 mm|1545.000000|mm|0.7000
+2837450c-597a-4a2e-80e3-13f760bb8be8|MG|URBAN|EV|dimensions.widthMm|1,720 mm|1720 mm|1720.000000|mm|0.7000
+00963216-c927-4c38-ae10-f33d10ae2d07|MG|URBAN|EV|dimensions.lengthMm|3,890 mm|3890 mm|3890.000000|mm|0.7000
+e64250e6-7ca1-43ae-aaa3-92b91dd867a1|MG|URBAN|EV|performance.torqueNm|200 Nm|200 Nm|200.000000|Nm|0.7000
+342bb25c-13a2-4104-a777-c56ad9507de9|MG|URBAN|EV|performance.powerKw|136 แรงม้า|136 hp|136.000000|hp|0.7000
+9698ee4b-3c25-490a-bf84-d5aa877a46af|MG|URBAN|EV|performance.rangeKm|300 km|300 km|300.000000|km|0.7000
+4a0b3ed0-82c3-4a81-a8df-fa5ae8c523c0|MG|URBAN|EV|battery.capacityKwh|39.6 kWh|39.6 kWh|39.600000|kWh|0.7000
+a6a4910e-2df4-4a1a-8ce4-e9d01513d39e|MG|MG4|Standard|warranty.vehicleYears|8 ปี|8 years|8.000000|years|0.7000
+023b2043-e68f-4382-8c8f-e23d07e5a876|MG|MG4|Standard|dimensions.heightMm|1,516 mm|1516 mm|1516.000000|mm|0.7000
+c58c5e53-de1d-420d-b864-975aebcb486d|MG|MG4|Standard|dimensions.widthMm|1,836 mm|1836 mm|1836.000000|mm|0.7000
+c76553fd-674f-4bd3-8a43-b4cd2b914a03|MG|MG4|Standard|dimensions.lengthMm|4,287 mm|4287 mm|4287.000000|mm|0.7000
+c746a75c-dea0-4ac4-9b2a-a913fef8bf41|MG|MG4|Standard|performance.torqueNm|250 Nm|250 Nm|250.000000|Nm|0.7000
+aae2c59d-82e4-4e4c-9b84-cff4d697777e|MG|MG4|Standard|performance.powerKw|170 แรงม้า|170 hp|170.000000|hp|0.7000
+9c2503e8-ec18-49ac-893e-1065aec0aa93|MG|MG4|Standard|capacityKwh|50|50|50.000000|kWh|0.7000
+3858fed1-b556-4e64-ac07-15b65399b42e|MG|MG4|Standard|performance.rangeKm|350 km|350 km|350.000000|km|0.7000
+335fb873-71a7-453d-9362-7333746e8e13|MG|MG4|Standard|battery.capacityKwh|51 kWh|51 kWh|51.000000|kWh|0.7000
+95945021-9677-44aa-8aee-910febb8810b|MG|S5 EV PLUS|EV PLUS|dimensions.heightMm|1,530 mm|1530 mm|1530.000000|mm|0.7000
+a95bb26f-32bd-4985-8c00-637de86f3956|MG|S5 EV PLUS|EV PLUS|dimensions.widthMm|1,815 mm|1815 mm|1815.000000|mm|0.7000
+30069b72-8d98-4718-bfe9-0c017781a76e|MG|S5 EV PLUS|EV PLUS|dimensions.lengthMm|4,325 mm|4325 mm|4325.000000|mm|0.7000
+1d9520c1-2c93-46e5-8cb8-2689c648a7ea|MG|S5 EV PLUS|EV PLUS|performance.torqueNm|280 Nm|280 Nm|280.000000|Nm|0.7000
+e2e4a148-41f5-4dd4-8121-bdc032f533fa|MG|S5 EV PLUS|EV PLUS|performance.powerKw|177 แรงม้า|177 hp|177.000000|hp|0.7000
+7f6275b0-9aa1-4c5a-839d-2919555cce55|MG|S5 EV PLUS|EV PLUS|performance.rangeKm|420 km|420 km|420.000000|km|0.7000
+2e6dac5b-33ec-40dc-9c45-3f956192b03f|MG|S5 EV PLUS|EV PLUS|battery.capacityKwh|61.1 kWh|61.1 kWh|61.100000|kWh|0.7000
+ccb43093-2f1b-4439-ab92-e017a77c6871|MG|ZS EV|Premium|performance.rangeKm|320 km|320 km|320.000000|km|0.7000
+e50c1a31-7298-42b5-86c5-37cbadcf057d|MG|ZS EV|Premium|battery.capacityKwh|50.3 kWh|50.3 kWh|50.300000|kWh|0.7000
+9846c8b8-c3b3-42e6-8c42-ed887e39a7e8|MG|ES|EV|battery.capacityKwh|50.3 kWh|50.3 kWh|50.300000|kWh|0.7000
+0c6885d9-b488-41e1-94cb-192c8fb17fa7|MG|EP Plus|EV|performance.rangeKm|320 km|320 km|320.000000|km|0.7000
+cb60535c-4e4a-4e96-bb1f-586d7fff5d27|MG|EP Plus|EV|battery.capacityKwh|50.3 kWh|50.3 kWh|50.300000|kWh|0.7000
+256a5187-deaa-48dd-ad92-31cdd2809984|MG|IM5|EV|warranty.vehicleYears|8 ปี|8 years|8.000000|years|0.7000
+2b448b8f-9a93-4744-9618-92533eec4bc2|MG|IM5|EV|dimensions.heightMm|1,485 mm|1485 mm|1485.000000|mm|0.7000
+f625c470-1978-4c24-8522-2b37770b339e|MG|IM5|EV|dimensions.widthMm|1,905 mm|1905 mm|1905.000000|mm|0.7000
+ff40bd82-1560-4749-9344-621f60afeee3|MG|IM5|EV|dimensions.lengthMm|4,928 mm|4928 mm|4928.000000|mm|0.7000
+34d41e08-e581-40df-a8a2-14e61d77c0c6|MG|IM5|EV|performance.torqueNm|350 Nm|350 Nm|350.000000|Nm|0.7000
+70b54af9-2e84-4eca-bfa1-8ce81482a71d|MG|IM5|EV|capacityKwh|100|100|100.000000|kWh|0.7000
+e4051704-5042-4555-80bd-d7cd43b27ce0|MG|IM5|EV|charging.dcPowerKw|150 kW|150 kW|150.000000|kW|0.7000
+4ffd16b7-ec62-4aa0-bb64-1d8bd434d0d7|MG|IM5|EV|performance.rangeKm|410 km|410 km|410.000000|km|0.7000
+db8eaed0-44c3-43f3-ba66-0de07468bfe4|MG|IM5|EV|battery.capacityKwh|77 kWh|77 kWh|77.000000|kWh|0.7000
+a294c861-8fe6-4c03-a1d9-79f9ccbd93bb|MG|IM5|EV|performance.powerKw|231 แรงม้า|231 hp|231.000000|hp|0.7000
+12c41a7f-9ad3-4eca-9f60-2e3d2675d8e2|MG|IM6|EV|battery.capacityKwh|90 kWh|90 kWh|90.000000|kWh|0.7000
+6ea436ef-80fb-4064-8b06-edac95b69926|MG|MAXUS 7|EV|battery.capacityKwh|77 kWh|77 kWh|77.000000|kWh|0.7000
+722486a0-25a8-4fb0-88b4-817611095618|MG|MAXUS 9|EV|battery.capacityKwh|93 kWh|93 kWh|93.000000|kWh|0.7000
+0fc1bf54-823a-47ca-9bf4-97844522c442|MG|CYBERSTER|EV|performance.powerKw|544 แรงม้า|544 hp|544.000000|hp|0.7000
+144c8e36-65e4-4968-9ca1-286321944d5b|MG|CYBERSTER|EV|battery.capacityKwh|77 kWh|77 kWh|77.000000|kWh|0.7000
+ee4da867-574a-45c9-bbc6-8166113ae8e8|MG|MG3 HYBRID+|HYBRID+|performance.powerKw|136 แรงม้า|136 hp|136.000000|hp|0.7000
+2542d083-0b43-4df1-8f10-5bafef28bd13|MG|VS HEV|D|performance.powerKw|177 แรงม้า|177 hp|177.000000|hp|0.7000
+113f383f-bbba-4a57-b79b-6c0fb9bdce60|MG|HS PHEV|Premium|performance.rangeKm|65 km|65 km|65.000000|km|0.7000
+629aa308-0be0-439d-a9bb-38df96293ac5|MG|HS PHEV|Premium|battery.capacityKwh|16.6 kWh|16.6 kWh|16.600000|kWh|0.7000
+6d17ea44-9f3e-467d-ba41-76a25ecc4ee0|MG|MG5|Standard|performance.powerKw|120 แรงม้า|120 hp|120.000000|hp|0.7000
+6adea98e-75e2-42bb-9833-89dee086ddc6|MG|ZS|Standard|performance.powerKw|106 แรงม้า|106 hp|106.000000|hp|0.7000
+a9b08207-e167-41eb-aa11-57f44a402d98|MG|EXTENDER|DC|performance.powerKw|161 แรงม้า|161 hp|161.000000|hp|0.7000
+128c5139-f633-40af-8588-b854b33ce360|Honda|City|e:HEV|warranty.vehicleDistanceKm|150,000 km|150000 km|150000.000000|km|0.7000
+fbdb873f-ad9a-416a-ad7b-7a08ed89d420|Honda|City|e:HEV|warranty.vehicleYears|5 ปี|5 years|5.000000|years|0.7000
+6b906d28-6bc1-4b50-a268-80891bc20a31|Honda|City|e:HEV|dimensions.curbWeightKg|1,165 kg|1165 kg|1165.000000|kg|0.7000
+6749fe75-32a2-484e-9dac-e6dca45d0265|Honda|City|e:HEV|dimensions.groundClearanceMm|135 mm|135 mm|135.000000|mm|0.7000
+a0c46959-39b6-4cdd-b45c-89f35e205d0c|Honda|City|e:HEV|dimensions.wheelbaseMm|2,610 mm|2610 mm|2610.000000|mm|0.7000

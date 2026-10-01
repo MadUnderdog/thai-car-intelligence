@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/aftersales/collections.html",
+  "captured_at": "2026-09-27T19:05:30.717055+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "4ec8f32b0c7b536fb33203c2c4edc82d790d9ee9494c235c59ec4709b33aec50",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "nissan_p108_collections.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

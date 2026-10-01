@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.kia.com/th/en/shopping-tools/request-a-brochure.html",
+  "captured_at": "2026-09-28T07:13:15.806090+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "2bf61b64ba6332ab55b2674f14d3b14b54d8d3f46ebe7f1407e71d6b7e4ab715",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "kia_p111_request-a-brochure.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

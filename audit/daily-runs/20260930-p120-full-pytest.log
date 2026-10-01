@@ -1,0 +1,48 @@
+........................................................................ [  6%]
+.................................F...................................... [ 13%]
+........................................................................ [ 20%]
+........................................................................ [ 27%]
+........................................................................ [ 34%]
+........................................................................ [ 41%]
+........................................................................ [ 48%]
+........................................................................ [ 55%]
+........................................................................ [ 62%]
+........................................................................ [ 69%]
+........................................................................ [ 76%]
+........................................................................ [ 83%]
+........................................................................ [ 90%]
+........................................................................ [ 96%]
+................................                                         [100%]
+=================================== FAILURES ===================================
+___________________ test_suzuki_mutation_price_swap_detected ___________________
+
+    def test_suzuki_mutation_price_swap_detected():
+        import subprocess as _subprocess
+        import json as _json
+        from collect_multi_oem import SUZUKI_JS
+        artifact = _fx("suzuki_home_page.html")
+        data = open(artifact, encoding="utf-8").read()
+        assert "689,000" in data and "1,590,000" in data
+        mutated = data.replace("689,000", "__TMP__").replace("1,590,000", "689,000").replace("__TMP__", "1,590,000")
+        open("/tmp/mits_mutation.py", "w").write(MUTATION_RUNNER)
+        open("/tmp/suz_mutated.html", "w").write(mutated)
+        out = _subprocess.run(["python3", "/tmp/mits_mutation.py", SUZUKI_JS, "/tmp/suz_mutated.html"],
+                              capture_output=True, text=True, timeout=120)
+>       assert out.returncode == 0, out.stderr[-500:]
+E       AssertionError: right/_impl/_connection.py", line 76, in send
+E             return await self._connection.wrap_api_call(
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           File "/home/ubuntu/.hermes/hermes-agent/venv/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+E             raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+E         playwright._impl._errors.TimeoutError: Page.set_content: Timeout 30000ms exceeded.
+E         Call log:
+E           - setting frame content, waiting until "load"
+E         
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python3', '/tmp/mits_mutation.py', "\n(() => {\n    const items = [];\n    const seen = new Se...outError: Page.set_content: Timeout 30000ms exceeded.\nCall log:\n  - setting frame content, waiting until "load"\n\n').returncode
+
+tests/test_extraction_fixtures.py:1532: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_extraction_fixtures.py::test_suzuki_mutation_price_swap_detected
+1 failed, 1039 passed in 1467.71s (0:24:27)

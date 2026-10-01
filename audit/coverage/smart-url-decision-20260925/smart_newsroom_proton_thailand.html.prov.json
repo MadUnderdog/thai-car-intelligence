@@ -1,0 +1,18 @@
+{
+  "source_url": "https://media.smart.com/en-INT/260722-smart-and-proton-sign-general-distributer-agreement-for-malaysia-and-thailand/",
+  "captured_at": "2026-09-25T09:53:06.779927+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "f69470837143eb1e7a6941e070f69bb1f40ae3fc7ff9556c905f1c79a6a07a05",
+  "session_id": "p98_smart_url_decision",
+  "artifact_filename": "smart_newsroom_proton_thailand.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "capture_scope": "URL-target decision evidence only; NOT a brand acquisition endpoint and never a source of business rows",
+  "fetch": {
+    "http_status": 200,
+    "redirects": 0,
+    "final_url": "same",
+    "bytes": 170040,
+    "ssl_verify_result": 0,
+    "json_ld_datePublished": "2022-08-18T17:00:00.000000000+08:00"
+  }
+}

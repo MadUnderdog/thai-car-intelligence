@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/en/deal/tank-500-3t-diesel",
+  "captured_at": "2026-09-28T07:13:01.330344+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "353a0e8030abdda4de8ff49d1682b404bab0104dec65abd901488f69c07ca58c",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "gwm_p111_tank-500-3t-diesel.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

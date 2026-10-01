@@ -1,0 +1,16 @@
+{
+  "source_url": "https://assets.isuzu-tis.com/2_door_brochure_2026_4aed74da60.pdf",
+  "captured_at": "2026-09-26T13:48:53.768195+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "6f17343094265c3ebb8c74c440529a3d89583dbb88e25336ba1cb2b2be1b7ba1",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "isuzu_brochure_2door.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

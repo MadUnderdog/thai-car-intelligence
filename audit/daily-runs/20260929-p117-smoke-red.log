@@ -1,0 +1,15 @@
+PASS  smoke: vehicle detail target resolved — byd/atto-2
+INFO target has VISIBLE comments in DB
+PASS  smoke: production build exists
+PASS  smoke: next start up
+PASS  N/L: community section renders
+PASS  L: anecdotal heading present — ความคิดเห็นจากชุมชน (4)
+PASS  L: disclaimer present (user content, not official)
+PASS  N: comment form controls render
+PASS  N: vote controls render — 10 vote buttons
+PASS  N: reply + report controls render when comments exist — reply=4 report=5
+FAIL  N: community touch targets ≥32px — [{"tag":"BUTTON","label":"โพสต์ความคิดเห็น","w":109,"h":28},{"tag":"BUTTON","label":"สแปม","w":52,"h":28},{"tag":"BUTTON","label":"อื่น ๆ","w":52,"h":28},{"tag":"BUTTON","label":"สแปม","w":52,"h":28},{"tag":"BUTTON","label":"อื่น ๆ","w":52,"h":28},{"tag":"BUTTON","label":"สแปม","w":52,"h":28},{"tag":"BUTTON","label":"อื่น ๆ","w":52,"h":28},{"tag":"BUTTON","label":"สแปม","w":52,"h":28},{"tag":"BUTTON","label":"อื่น ๆ","w":52,"h":28},{"tag":"BUTTON","label":"สแปม","w":52,"h":28},{"tag":"BUTTON","label":"อื่น ๆ","w":52,"h":28}]
+PASS  N: no horizontal overflow (390px)
+PASS  L: disclaimer scoped to community section — spec rows outside: 5
+PASS  N: zero console/runtime errors on the community flow — console: none; http>=400: none
+SMOKE_JSON={"total":13,"passed":12,"failures":1,"results":[{"name":"smoke: vehicle detail target resolved","ok":true,"detail":"byd/atto-2"},{"name":"smoke: production build exists","ok":true,"detail":""},{"name":"smoke: next start up","ok":true,"detail":""},{"name":"N/L: community section renders","ok":true,"detail":""},{"name":"L: anecdotal heading present","ok":true,"detail":"ความคิดเห็นจากชุมชน (4)"},{"name":"L: disclaimer present (user content, not official)","ok":true,"detail":""},{"name":"N: comment form controls render","ok":true,"detail":""},{"name":"N: vote controls render","ok":true,"detail":"10 vote buttons"},{"name":"N: reply + report controls render when comments exist","ok":true,"detail":"reply=4 report=5"},{"name":"N: community touch targets ≥32px","ok":false,"detail":"[{\"tag\":\"BUTTON\",\"label\":\"โพสต์ความคิดเห็น\",\"w\":109,\"h\":28},{\"tag\":\"BUTTON\",\"label\":\"สแปม\",\"w\":52,\"h\":28},{\"tag\":\"BUTTON\",\"label\":\"อื่น ๆ\",\"w\":52,\"h\":28},{\"tag\":\"BUTTON\",\"label\":\"สแปม\",\"w\":52,\"h\":28},{\"tag\":\"BUTTON\",\"label\":\"อื่น ๆ\",\"w\":52,\"h\":28},{\"tag\":\"BUTTON\",\"label\":\"สแปม\",\"w\":52,\"h\":28},{\"tag\""},{"name":"N: no horizontal overflow (390px)","ok":true,"detail":""},{"name":"L: disclaimer scoped to community section","ok":true,"detail":"spec rows outside: 5"},{"name":"N: zero console/runtime errors on the community flow","ok":true,"detail":"console: none; http>=400: none"}]}

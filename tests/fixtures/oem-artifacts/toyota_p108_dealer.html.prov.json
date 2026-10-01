@@ -1,0 +1,16 @@
+{
+  "source_url": "https://aftersales.toyota.co.th/dealer",
+  "captured_at": "2026-09-27T19:03:32.147310+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "75bc6d509b563f7ff08535f27e44f3e4cec15277697906873c79b09ae758d104",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "toyota_p108_dealer.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

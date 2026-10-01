@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/altis",
+  "captured_at": "2026-09-27T16:00:53.418722+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "c4e2fd3e65ff84434c94d334a399a8bf1eb46e4344233ef100957a4b41278ed1",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "toyota_p107_altis.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

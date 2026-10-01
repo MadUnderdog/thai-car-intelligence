@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.jaguar.co.th/electric-cars/overview",
+  "captured_at": "2026-09-27T15:07:21.900857+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "304e8abb68b6f1ac6ae012747202915efbef63f3f50dfdf133a29c967285ae72",
+  "session_id": "p106_official_grade_pages",
+  "artifact_filename": "jaguar_electric_overview.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

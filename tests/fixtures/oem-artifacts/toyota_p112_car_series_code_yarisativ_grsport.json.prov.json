@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ_grsport",
+  "captured_at": "2026-09-28T09:35:36.701997+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "b1a0ea96e5bc5f42039d1265b2236cb139b6f287f64c03d3341f4467eca89ea6",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_yarisativ_grsport.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

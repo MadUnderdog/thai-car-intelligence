@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/nissan-intelligent-mobility.html",
+  "captured_at": "2026-09-28T07:14:31.612717+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "49124ed985e53a7aae81055a09d29aadcc803cac08c0e611f5c0e787934e2ae4",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "nissan_p111_nissan-intelligent-mobility_dup3.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

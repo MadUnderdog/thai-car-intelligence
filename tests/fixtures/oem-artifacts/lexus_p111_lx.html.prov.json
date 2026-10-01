@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/models/lx.html",
+  "captured_at": "2026-09-28T07:13:27.541580+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "e4e7161a790a75fc9f1aaf1a6de41abd794da89c9050233238c3d0900a04705d",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "lexus_p111_lx.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "p108-final-result/1",
+  "generated_at": "2026-09-27T19:10:37.613036+00:00",
+  "before_after": {
+    "first_party_confirmed_variants": [
+      482,
+      488
+    ],
+    "first_party_confirmed_models": [
+      264,
+      264
+    ],
+    "oems_with_variant_confirmation": [
+      19,
+      19
+    ],
+    "universe_records": [
+      1424,
+      1424
+    ]
+  },
+  "harvested_rows": 6,
+  "outcomes": {
+    "existing": 6
+  },
+  "by_method": {
+    "official_grade_list_row": 1,
+    "official_grade_list_bare_row": 3,
+    "official_grade_table_row": 2
+  },
+  "identity_only": {
+    "records": 690,
+    "models": 316,
+    "variants": 374
+  },
+  "conflicts": {
+    "records": 25
+  },
+  "rejected": {
+    "records": 1927
+  },
+  "per_oem_delta": {
+    "GWM": {
+      "confirmed_variants": 1,
+      "rows": 1
+    },
+    "Honda": {
+      "confirmed_variants": 3,
+      "rows": 3
+    },
+    "Nissan": {
+      "confirmed_variants": 2,
+      "rows": 2
+    }
+  },
+  "blocked_oems": [
+    "BYD",
+    "Audi",
+    "Chevrolet",
+    "Ford",
+    "Tesla",
+    "Chery",
+    "Haval",
+    "NETA",
+    "Peugeot",
+    "Volvo",
+    "Avance",
+    "Mercedes-Benz",
+    "Smart"
+  ],
+  "gates": {
+    "staging_written": false,
+    "price_pass": false,
+    "prisma_touched": false,
+    "p104_p103_p102_logic_changed": false,
+    "production_db_unchanged": true
+  },
+  "p108_baseline_result": {
+    "first_party_confirmed_variants": [
+      472,
+      482
+    ]
+  }
+}

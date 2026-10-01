@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/news-activity/news/unveil-spec-prices-of-athlete-and-dc-4wd-ultra",
+  "captured_at": "2026-09-27T19:06:08.391288+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "151558ffafb95cedcb50befe1f621936217d871f294a015a5ad622f9069b5563",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mitsubishi_p108_unveil-spec-prices-of-athlete-and-dc-4wd-ultra.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

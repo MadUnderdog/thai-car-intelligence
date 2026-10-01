@@ -1,0 +1,9 @@
+{
+ "models": [
+  "toyota-velo-cross",
+  "toyota-yaris-cross"
+ ],
+ "prices": {
+  "toyota-velo-cross-eco": 1019000
+ }
+}

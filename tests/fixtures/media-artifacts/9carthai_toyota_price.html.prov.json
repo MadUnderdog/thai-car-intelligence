@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.9carthai.com/toyota-price/",
+  "captured_at": "2026-09-25T06:34:55.695509+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "9d9971fefddb883dd73009e2490f3bb5e19087a98797f45014191995cb304366",
+  "session_id": "p100-media-batch",
+  "artifact_filename": "9carthai_toyota_price.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

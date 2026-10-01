@@ -12,8 +12,8 @@ interface CardProps {
 }
 
 const variantStyles: Record<CardVariant, string> = {
-  default: "bg-white shadow-sm",
-  elevated: "bg-white shadow-lg hover:shadow-xl transition-shadow duration-[var(--transition-normal)]",
+  default: "bg-white border border-[var(--color-gray-200)]",
+  elevated: "bg-white border border-[var(--color-gray-200)] hover:shadow-[var(--shadow-md)] transition-shadow duration-[var(--transition-normal)]",
   bordered: "bg-white border border-[var(--color-gray-200)]",
 };
 
@@ -21,7 +21,7 @@ export function Card({ children, variant = "default", className = "", onClick }:
   return (
     <div
       className={`
-        rounded-[var(--radius-xl)]
+        rounded-[var(--radius-lg)]
         ${variantStyles[variant]}
         ${onClick ? "cursor-pointer" : ""}
         ${className}

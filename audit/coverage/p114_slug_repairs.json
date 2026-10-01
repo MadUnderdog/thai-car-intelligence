@@ -1,0 +1,352 @@
+{
+  "schema": "p114_slug_repairs/v1",
+  "generated_at": "2026-09-28T18:32:12.445513+00:00",
+  "scope": "rows created by P114 promotion only (DataChangeLog CREATED reason 'P114%')",
+  "count": 38,
+  "models_updated": 17,
+  "variants_updated": 21,
+  "repairs": [
+    {
+      "entity_type": "CarModel",
+      "entity_id": "0c526f5c-abe0-446e-9852-2f2e9245af1e",
+      "packet_id": "PKT-0268",
+      "name": "ไทรทัน ขับเคลื่อน 2 ล้อ",
+      "before": "2",
+      "after": "ไทรทัน-ขับเคลื่อน-2-ล้อ",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "1861c8b5-1f7b-4579-a788-f61e13677d93",
+      "packet_id": "PKT-0283",
+      "name": "นิสสัน เซเรน่า ใหม่",
+      "before": "-2-2-2",
+      "after": "นิสสัน-เซเรน่า-ใหม่",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "1e081b70-8b22-4230-b59b-8905fb12e30f",
+      "packet_id": "PKT-0260",
+      "name": "ไทรทัน แอทลีท",
+      "before": "-2",
+      "after": "ไทรทัน-แอทลีท",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "23f5fbd3-1852-4360-94a4-a4d67f46a770",
+      "packet_id": "PKT-0272",
+      "name": "ปาเจโร สปอร์ต",
+      "before": "-2-2-2-2",
+      "after": "ปาเจโร-สปอร์ต",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "25d8a0ec-cd73-4dca-ba0c-b743b743239e",
+      "packet_id": "PKT-0276",
+      "name": "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+      "before": "",
+      "after": "นิสสัน-คิกส์-อี-พาวเวอร์-ใหม่",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "32548ecc-b2c6-4f0a-8763-c1aee1590a5b",
+      "packet_id": "PKT-0297",
+      "name": "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+      "before": "-2-2-2-2-2-2-2",
+      "after": "นิสสัน-นาวารา-ซิงเกิ้ลแค็บ-ใหม่",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "43db6b72-121b-4f3f-826c-6f8b443e1fc5",
+      "packet_id": "PKT-0257",
+      "name": "เอ็กซ์ฟอร์ส เอชอีวี",
+      "before": "",
+      "after": "เอ็กซ์ฟอร์ส-เอชอีวี",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "441d86d4-a57f-4bc0-86e0-ef2aeb54d7df",
+      "packet_id": "PKT-0264",
+      "name": "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+      "before": "-2-2",
+      "after": "ไทรทัน-ดับเบิ้ล-แค็บ-พลัส",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "53f5d631-4a09-434d-9969-3c0cdb10c8df",
+      "packet_id": "PKT-0261",
+      "name": "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ",
+      "before": "4",
+      "after": "ไทรทัน-ซิงเกิ้ล-แค็บ-ขับเคลื่อน-4-ล้อ",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "57a006b0-ff64-4ad4-8d57-f676ef775c5f",
+      "packet_id": "PKT-0274",
+      "name": "มิราจ",
+      "before": "-2-2-2-2-2",
+      "after": "มิราจ",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "7462e629-c738-4f48-b133-e85744ea92e9",
+      "packet_id": "PKT-0284",
+      "name": "นิสสัน อัลเมร่า",
+      "before": "-2-2-2-2",
+      "after": "นิสสัน-อัลเมร่า",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "77aec6f4-5f76-49d3-8153-503b60ab758c",
+      "packet_id": "PKT-0279",
+      "name": "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่",
+      "before": "-2",
+      "after": "นิสสัน-เอ็กซ์เทรล-อี-พาวเวอร์-ใหม่",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "87770eaa-4959-4b90-a348-969f598e716d",
+      "packet_id": "PKT-0270",
+      "name": "ปาเจโร สปอร์ต อีลีท เอดิชัน ใหม่",
+      "before": "-2-2-2",
+      "after": "ปาเจโร-สปอร์ต-อีลีท-เอดิชัน-ใหม่",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "9f10750b-8d3f-44d8-9864-f2cb9bd73ce0",
+      "packet_id": "PKT-0296",
+      "name": "นิสสัน นาวารา คิงแค็บ ใหม่",
+      "before": "-2-2-2-2-2-2",
+      "after": "นิสสัน-นาวารา-คิงแค็บ-ใหม่",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "a1b90e88-1a19-403f-995a-a71287237513",
+      "packet_id": "PKT-0280",
+      "name": "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+      "before": "-2-2",
+      "after": "นิสสัน-เซเรน่า-อี-พาวเวอร์-ใหม่",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "c6be4d59-4892-4f07-8954-bf50903a1c85",
+      "packet_id": "PKT-0288",
+      "name": "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+      "before": "pro-4x-pro-2x",
+      "after": "นิสสัน-นาวารา-pro-4x-pro-2x-ใหม่",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "CarModel",
+      "entity_id": "c72bfbaa-1deb-4561-b384-73a378bd410c",
+      "packet_id": "PKT-0290",
+      "name": "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+      "before": "-2-2-2-2-2",
+      "after": "นิสสัน-นาวารา-คาลิเบอร์-ใหม่",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "0a3dcd3d-810a-42b5-ae35-1c7144deb424",
+      "packet_id": "PKT-0266",
+      "name": "ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+      "before": "2-4-ultra-at",
+      "after": "ดับเบิ้ล-แค็บ-พลัส-2-4-ultra-at",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "1878a54a-61e4-423a-beb2-1a4a29d007b5",
+      "packet_id": "PKT-0435",
+      "name": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+      "before": "2-4-prime",
+      "after": "ดับเบิ้ล-แค็บ-พลัส-2-4-prime",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "18b0dc08-faf6-4269-a286-fa7433509d9b",
+      "packet_id": "PKT-0267",
+      "name": "ดับเบิ้ล แค็บ 2.4 PRIME 4WD",
+      "before": "2-4-prime-4wd",
+      "after": "ดับเบิ้ล-แค็บ-2-4-prime-4wd",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "29e27aa9-5dcc-4465-b8d3-731a142c56f0",
+      "packet_id": "PKT-0262",
+      "name": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD AT",
+      "before": "2-4-pro-4wd-at",
+      "after": "ซิงเกิ้ล-แค็บ-2-4-pro-4wd-at",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "3060805c-c5d9-4c54-a677-adf71950b1f8",
+      "packet_id": "PKT-0436",
+      "name": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+      "before": "2-4-prime-at",
+      "after": "ดับเบิ้ล-แค็บ-พลัส-2-4-prime-at",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "367da49f-3ea8-4a0d-8cb4-571207faa30c",
+      "packet_id": "PKT-0268",
+      "name": "ซิงเกิ้ล แค็บ 2.4 PRO",
+      "before": "2-4-pro",
+      "after": "ซิงเกิ้ล-แค็บ-2-4-pro",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "39e564e0-a24e-404b-9b55-bbf7d0885a56",
+      "packet_id": "PKT-0434",
+      "name": "ดับเบิ้ล แค็บ 2.4 PRO",
+      "before": "2-4-pro-2",
+      "after": "ดับเบิ้ล-แค็บ-2-4-pro",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "44624923-0c9c-478d-993e-fa23ee95e191",
+      "packet_id": "PKT-0265",
+      "name": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+      "before": "2-4-prime-at",
+      "after": "ดับเบิ้ล-แค็บ-พลัส-2-4-prime-at",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "61d7430c-aabd-4e92-9023-c401226c4232",
+      "packet_id": "PKT-0264",
+      "name": "ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+      "before": "2-4-prime",
+      "after": "ดับเบิ้ล-แค็บ-พลัส-2-4-prime",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "67af0a46-2db2-4f68-a3d0-a7ac57ec5378",
+      "packet_id": "PKT-0437",
+      "name": "ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+      "before": "2-4-ultra-at",
+      "after": "ดับเบิ้ล-แค็บ-พลัส-2-4-ultra-at",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "8904055e-8675-4186-8a32-eec5903b72de",
+      "packet_id": "PKT-0094",
+      "name": "ดีเซล 2.8 AT",
+      "before": "2-8-at",
+      "after": "ดีเซล-2-8-at",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "8a6d754d-5d37-4717-8ea4-8184714d9ea7",
+      "packet_id": "PKT-0261",
+      "name": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD",
+      "before": "2-4-pro-4wd",
+      "after": "ซิงเกิ้ล-แค็บ-2-4-pro-4wd",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "a148c6a3-f0ff-4d08-bc47-dc0c1062cc43",
+      "packet_id": "PKT-0282",
+      "name": "Highway Star สีฟ้า เทอร์ควอยซ์บลู หลังคาสีดำ และ สีขาว ปริซึมไวท์ หลังคาสีดำ *",
+      "before": "highway-star-2-2",
+      "after": "highway-star-สีฟ้า-เทอร์ควอยซ์บลู-หลังคาสีดำ-และ-สีขาว-ปริซึมไวท์-หลังคาสีดำ",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "b86e6bb4-af04-4049-aa29-1edc6fb35948",
+      "packet_id": "PKT-0062",
+      "name": "2.4 Entry (ไม่มีกระบะ)",
+      "before": "2-4-entry-2",
+      "after": "2-4-entry-ไม่มีกระบะ",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "ba24e8d1-e97b-4b9a-b1db-233a024e2198",
+      "packet_id": "PKT-0063",
+      "name": "2.4 Entry AT (ไม่มีกระบะ)",
+      "before": "2-4-entry-at-2",
+      "after": "2-4-entry-at-ไม่มีกระบะ",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "d1128813-c82e-4bb5-b009-94b2606eed3c",
+      "packet_id": "PKT-0095",
+      "name": "ดีเซล 2.8 MT",
+      "before": "2-8-mt",
+      "after": "ดีเซล-2-8-mt",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "d537d5a3-34ad-4948-9557-b257977ca2bf",
+      "packet_id": "PKT-0269",
+      "name": "ดับเบิ้ล แค็บ 2.4 PRO",
+      "before": "2-4-pro-2",
+      "after": "ดับเบิ้ล-แค็บ-2-4-pro",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "dc603c1c-92fe-4527-9e45-a18dd6478cb5",
+      "packet_id": "PKT-0263",
+      "name": "ซิงเกิ้ล แค็บ 2.4 PRO 4WD AT SWB",
+      "before": "2-4-pro-4wd-at-swb",
+      "after": "ซิงเกิ้ล-แค็บ-2-4-pro-4wd-at-swb",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "e0c12ba8-b11e-4534-9452-524db5308856",
+      "packet_id": "PKT-0281",
+      "name": "Highway Star สีขาว ปริซึม ไวท์ *",
+      "before": "highway-star-2",
+      "after": "highway-star-สีขาว-ปริซึม-ไวท์",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "eb469003-f150-4b9a-a052-f0eafa2ffb9c",
+      "packet_id": "PKT-0260",
+      "name": "ดับเบิ้ล แค็บ แอทลีท 4WD AT",
+      "before": "4wd-at",
+      "after": "ดับเบิ้ล-แค็บ-แอทลีท-4wd-at",
+      "action": "UPDATE"
+    },
+    {
+      "entity_type": "Variant",
+      "entity_id": "f6a79ac0-ddaf-4be3-b204-7bb7a78cdf21",
+      "packet_id": "PKT-0433",
+      "name": "ซิงเกิ้ล แค็บ 2.4 PRO",
+      "before": "2-4-pro",
+      "after": "ซิงเกิ้ล-แค็บ-2-4-pro",
+      "action": "UPDATE"
+    }
+  ]
+}

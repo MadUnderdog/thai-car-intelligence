@@ -1,0 +1,739 @@
+<!DOCTYPE html><html lang="en-TH" class="js flexbox canvas no-touch multiplebgs cssanimations cssgradients csstransforms3d csstransitions fontface svg cssfilters pointerevents csscalc md-inputdate js-focus-visible" data-js-focus-visible="" page="model-ranges" style="--js-footer-height: 449px;"><head><meta name="neo-shared-resources" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+  <meta name="description" content="Default title">
+
+  <title id="pageTitle">Model Ranges</title>
+
+  <!-- INTEGRATING TRON LIBRARY INTO CON -->
+      <link rel="preload" href="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/launch-5084d47f16b4.min.js" as="script"><script async="" src="https://www.bmw.com/p15r/c/WebVitals.min.js"></script><script id="AdobeLaunch" async="" src="https://assets.adobedtm.com/717b2dc27cb7/84654d53c441/launch-5084d47f16b4.min.js"></script><script type="module">
+        import(`https://tron.bmwgroup.com/generic-configurator/archive/v4/TRONgenericConfiguratorTracking.js`).then((tron) => {
+          const tronTracking = tron.default;
+          window.TRONgenericConfiguratorTracking = new tronTracking();
+        });
+      </script>
+
+
+  <script>
+    if (window.navigator && navigator.serviceWorker) {
+      navigator.serviceWorker.getRegistrations()
+        .then(function (registrations) {
+          for (let registration of registrations) {
+            registration.unregister();
+          }
+        });
+    }
+  </script>
+
+  <!-- See https://goo.gl/qRE0vM -->
+  <meta name="theme-color" content="#3f51b5">
+
+  <!-- No bots allowed in the configurator -->
+  <meta name="robots" content="noindex,nofollow">
+
+  <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Default title">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Default title">
+
+  <meta name="msapplication-TileColor" content="#3f51b5">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Start of the head-fragment to be included in other pages, e.g. via ESI -->
+  <meta name="con-meta" content="head-snippet-start">
+
+  <!-- EU AI Act Art. 50 — BMW default baseline transparency marking (CompositeSyntheticDigitalSource) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "digitalSourceType": "https://schema.org/CompositeSyntheticDigitalSource"
+  }
+  </script>
+
+  <script>
+    /**
+     * Create a tag in the dom via document.write - this guarantees correct order of execution for script tags.
+     * @param {string} tagName - The name of the tag to be created.
+     * @param {object} attributes - Key value pairs of html attributes to be set.
+     */
+    function loadTag(tagName, attributes) {
+      let tag = `<${tagName}`;
+      Object.keys(attributes).forEach(value => {
+        if (value === 'disabled' && (!attributes[value] || attributes[value] === 'false')) {
+          return;
+        }
+        tag += ` ${value}="${attributes[value]}" `;
+      });
+      tag += `></${tagName}>`;
+      document.write(tag);
+    }
+
+    /**
+     * Extracts a base path of a url path before the last occurrence of a locale pattern de_DE.
+     * @param urlString - Current url.
+     * @returns {string} - Extracted base path.
+     * @fixme: use endpoint instead of the pattern. You can do an exact string search here no need for a regex.
+     */
+    function extractConBasePath(urlString) {
+      const endpoint = '/en_TH';
+      const path = new URL(urlString).pathname;
+      return path.indexOf(endpoint) === -1 ? '' : path.split(endpoint)[0];
+    }
+
+    const basePath = extractConBasePath(window.location);
+    const base = document.createElement("base");
+    // this is required for the correct functionality of the router path
+    base.href = `${basePath}/`;
+    document.head.appendChild(base);
+
+    window.__conGlobal = {
+      basePath,
+    };
+  </script><script async="" data-requirecontext="_" data-requiremodule="core/utils/webp" src="https://www.mini.co.th/etc.clientlibs/settings/wcm/designs/minidigital-white/libs-js/core/utils.min.20260902091754.js"></script><script async="" data-requirecontext="_" data-requiremodule="conduitjs" src="https://www.mini.co.th/etc.clientlibs/settings/wcm/designs/minidigital-white/libs-js/vendor/conduitjs.min.js"></script><script async="" data-requirecontext="_" data-requiremodule="apps/minidigital/components/smart-banner/clientlib" src="https://www.mini.co.th/etc.clientlibs/minidigital/components/smart-banner/clientlib.min.20260902091754.js"></script><script async="" data-requirecontext="_" data-requiremodule="apps/minidigital/components/headertoolbar/clientlib" src="https://www.mini.co.th/etc.clientlibs/minidigital/components/header-toolbar/clientlib.min.20260902091754.js"></script><script async="" data-requirecontext="_" data-requiremodule="apps/minidigital/components/page/footer/clientlib" src="https://www.mini.co.th/etc.clientlibs/minidigital/components/page/footer/clientlib.min.20260902091754.js"></script><script async="" data-requirecontext="_" data-requiremodule="apps/minidigital/components/footerSitemap/clientlib" src="https://www.mini.co.th/etc.clientlibs/minidigital/components/footerSitemap/clientlib.min.20260902091754.js"></script><script async="" data-requirecontext="_" data-requiremodule="apps/minidigital/components/text/clientlib" src="https://www.mini.co.th/etc.clientlibs/minidigital/components/text/clientlib.min.20260902091754.js"></script><script async="" data-requirecontext="_" data-requiremodule="apps/minidigital/components/footerlinks/clientlib" src="https://www.mini.co.th/etc.clientlibs/minidigital/components/footerlinks/clientlib.min.20260902091754.js"></script><script async="" data-requirecontext="_" data-requiremodule="clientlib-activityMap" src="https://www.mini.co.th/etc.clientlibs/minidigital/components/tracking/clientlib.min.20260902091754.js"></script><script async="" data-requirecontext="_" data-requiremodule="apps/minidigital/components/page/header/new-header/clientlib" src="https://www.mini.co.th/etc.clientlibs/minidigital/components/page/header/new-header/clientlib.min.20260902091754.js"></script><script async="" data-requirecontext="_" data-requiremodule="apps/minidigital/components/ctas/clientlib" src="https://www.mini.co.th/etc.clientlibs/minidigital/components/ctas/clientlib.min.20260902091754.js"></script><script async="" data-requirecontext="_" data-requiremodule="core/SFWidgetUtil" src="https://www.mini.co.th/etc.clientlibs/settings/wcm/designs/minidigital-white/libs-js/core/finance.min.20260902091754.js"></script><base href="/">
+
+  <script>
+    loadTag('link', { rel: 'icon', href: `${window.__conGlobal.basePath}/assets/mini/images/favicon.ico` });
+  </script><link rel="icon" href="/assets/mini/images/favicon.ico">
+  <!-- See https://goo.gl/OOhYW5 -->
+  <script>
+    loadTag('link', { rel: 'manifest', crossorigin: 'use-credentials', href: `${window.__conGlobal.basePath}/en_TH/manifest.json` });
+  </script><link rel="manifest" crossorigin="use-credentials" href="/en_TH/manifest.json">
+
+  <!-- Homescreen icons -->
+  <script>
+    loadTag('link', {
+      rel: 'apple-touch-icon',
+      sizes: '48x48',
+      href: `${window.__conGlobal.basePath}/assets/mini/images/manifest/icon-48x48.png`,
+    });
+  </script><link rel="apple-touch-icon" sizes="48x48" href="/assets/mini/images/manifest/icon-48x48.png">
+  <script>
+    loadTag('link', {
+      rel: 'apple-touch-icon',
+      sizes: '72x72',
+      href: `${window.__conGlobal.basePath}/assets/mini/images/manifest/icon-72x72.png`,
+    });
+  </script><link rel="apple-touch-icon" sizes="72x72" href="/assets/mini/images/manifest/icon-72x72.png">
+  <script>
+    loadTag('link', {
+      rel: 'apple-touch-icon',
+      sizes: '96x96',
+      href: `${window.__conGlobal.basePath}/assets/mini/images/manifest/icon-96x96.png`,
+    });
+  </script><link rel="apple-touch-icon" sizes="96x96" href="/assets/mini/images/manifest/icon-96x96.png">
+  <script>
+    loadTag('link', {
+      rel: 'apple-touch-icon',
+      sizes: '144x144',
+      href: `${window.__conGlobal.basePath}/assets/mini/images/manifest/icon-144x144.png`,
+    });
+  </script><link rel="apple-touch-icon" sizes="144x144" href="/assets/mini/images/manifest/icon-144x144.png">
+  <script>
+    loadTag('link', {
+      rel: 'apple-touch-icon',
+      sizes: '192x192',
+      href: `${window.__conGlobal.basePath}/assets/mini/images/manifest/icon-192x192.png`,
+    });
+  </script><link rel="apple-touch-icon" sizes="192x192" href="/assets/mini/images/manifest/icon-192x192.png">
+  <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+  <script>
+    loadTag('link', {
+      name: 'msapplication-TileImage',
+      href: `${window.__conGlobal.basePath}/assets/mini/images/manifest/icon-144x144.png`,
+    });
+  </script><link name="msapplication-TileImage" href="/assets/mini/images/manifest/icon-144x144.png">
+
+  <!-- Theme overrides -->
+  <script>
+    loadTag('link', {
+      rel: 'stylesheet',
+      href: `${window.__conGlobal.basePath}/assets/mini/styles/theme.css`,
+    });
+  </script><link rel="stylesheet" href="/assets/mini/styles/theme.css">
+
+  <!-- Print variants -->
+  <script>
+    loadTag('link', {
+      rel: 'stylesheet',
+      media: 'print',
+      href: `${window.__conGlobal.basePath}/assets/mini/styles/print.css`,
+    });
+  </script><link rel="stylesheet" media="print" href="/assets/mini/styles/print.css">
+
+  <!-- Zoom overrides -->
+
+  <!-- End of the head-fragment to be included in other pages, e.g. via ESI -->
+  <meta name="con-meta" content="head-snippet-end">
+
+  <!-- Preloading scripts -->
+  <script>
+    loadTag('link', {
+      rel: 'preload',
+      href: `${window.__conGlobal.basePath}/en_TH/settings.f65bf2d0.json`,
+      as: 'fetch',
+      crossorigin: 'anonymous'
+    });
+    loadTag('link', {
+      rel: 'preload',
+      href: `${window.__conGlobal.basePath}/en_TH/locale.95fa665a.json`,
+      as: 'fetch',
+      crossorigin: 'anonymous'
+    });
+  </script><link rel="preload" href="/en_TH/settings.f65bf2d0.json" as="fetch" crossorigin="anonymous"><link rel="preload" href="/en_TH/locale.95fa665a.json" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="https://www.mini.co.th/de/shop/ls/wishlist/assets/proxy_api/v1/main.js" as="script">
+
+  <!-- FaaS - Forms as a Service -->
+
+  <!-- Preload & set up font families -->
+  <script>
+    document.write(`
+      <link rel="preload" href="${window.__conGlobal.basePath}/assets/mini/fonts/FontDefinitionSansSerifRegular.woff" as="font" type="font/woff" crossorigin="anonymous"><link rel="preload" href="${window.__conGlobal.basePath}/assets/mini/fonts/FontDefinitionSansSerifBold.woff" as="font" type="font/woff" crossorigin="anonymous"><link rel="preload" href="${window.__conGlobal.basePath}/assets/mini/fonts/FontDefinitionSerifBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    `);
+  </script>
+      <link rel="preload" href="/assets/mini/fonts/FontDefinitionSansSerifRegular.woff" as="font" type="font/woff" crossorigin="anonymous"><link rel="preload" href="/assets/mini/fonts/FontDefinitionSansSerifBold.woff" as="font" type="font/woff" crossorigin="anonymous"><link rel="preload" href="/assets/mini/fonts/FontDefinitionSerifBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    
+
+  <script>
+    document.write(`
+      <style>
+        :root {
+      --font-family-icons: FontDefinitionIcons;
+      --font-family-sans-serif-regular: FontDefinitionSansSerifRegular, sans-serif;
+      --font-family-sans-serif-bold: FontDefinitionSansSerifBold, sans-serif;
+      --font-family-serif-regular: FontDefinitionSerifRegular, serif;
+      --font-family-serif-italic: FontDefinitionSerifItalic, serif;
+      --font-family-serif-bold: FontDefinitionSerifBold, serif;
+      --font-family-normal: Arial, Verdana, Tahoma, 'Trebuchet MS', Roboto, Noto, -apple-system, sans-serif;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionIcons';
+      src: url('${window.__conGlobal.basePath}/assets/mini/fonts/FontDefinitionIcons.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifRegular';
+      src: url('${window.__conGlobal.basePath}/assets/mini/fonts/FontDefinitionSansSerifRegular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifBold';
+      src: url('${window.__conGlobal.basePath}/assets/mini/fonts/FontDefinitionSansSerifBold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSerifBold';
+      src: url('${window.__conGlobal.basePath}/assets/mini/fonts/FontDefinitionSerifBold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSerifRegular';
+      src: url('${window.__conGlobal.basePath}/assets/mini/fonts/FontDefinitionSerifRegular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSerifItalic';
+      src: url('${window.__conGlobal.basePath}/assets/mini/fonts/FontDefinitionSerifItalic.woff') format('woff');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+    }
+      </style>
+    `);
+  </script>
+      <style>
+        :root {
+      --font-family-icons: FontDefinitionIcons;
+      --font-family-sans-serif-regular: FontDefinitionSansSerifRegular, sans-serif;
+      --font-family-sans-serif-bold: FontDefinitionSansSerifBold, sans-serif;
+      --font-family-serif-regular: FontDefinitionSerifRegular, serif;
+      --font-family-serif-italic: FontDefinitionSerifItalic, serif;
+      --font-family-serif-bold: FontDefinitionSerifBold, serif;
+      --font-family-normal: Arial, Verdana, Tahoma, 'Trebuchet MS', Roboto, Noto, -apple-system, sans-serif;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionIcons';
+      src: url('/assets/mini/fonts/FontDefinitionIcons.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifRegular';
+      src: url('/assets/mini/fonts/FontDefinitionSansSerifRegular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSansSerifBold';
+      src: url('/assets/mini/fonts/FontDefinitionSansSerifBold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSerifBold';
+      src: url('/assets/mini/fonts/FontDefinitionSerifBold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSerifRegular';
+      src: url('/assets/mini/fonts/FontDefinitionSerifRegular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'FontDefinitionSerifItalic';
+      src: url('/assets/mini/fonts/FontDefinitionSerifItalic.woff') format('woff');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+    }
+      </style>
+    
+
+  <!-- Consent controller API - no dynamic base path needed consent url always absolute -->
+  <script src="https://www.bmw.com/etc/clientlibs/wcmp/consentcontroller.fallback/epaas.js" onload="consentcontroller.api.initialize({'tenant':'configurator_mini_co_th','locale':'en_TH','async':false,'devmode':false})"></script><script src="https://www.bmw.com/p15r.js?tenant=configurator_mini_co_th" async=""></script>
+
+  <!-- Activate preloading scripts -->
+  <script src="https://www.mini.co.th/de/shop/ls/wishlist/assets/proxy_api/v1/main.js" type="text/javascript"></script>
+
+
+
+  <!-- DNS-Prefetching is used to resolve the IP adresses of backends prior to their first -->
+  <!-- use. This allows for faster requests to those backends later, as the resolution of -->
+  <!-- the IP address already took place. Preconnect is used to perform the initial -->
+  <!-- SSL-negotiation with a backend prior to the first request to the backend. -->
+  <!-- https://www.w3.org/TR/resource-hints/ -->
+  <link rel="preconnect" href="" crossorigin="">
+  <link rel="preconnect" href="" crossorigin="">
+  <link rel="preconnect" href="" crossorigin="">
+
+  <!-- CSS global overwrites + spinner styling -->
+  <script>
+    loadTag('link', {
+      rel: 'stylesheet',
+      href: `${window.__conGlobal.basePath}/styles/global.css`,
+    });
+  </script><link rel="stylesheet" href="/styles/global.css">
+
+  <!-- ES6 support check -->
+  <script>
+    /**
+     * Checks if ES6 is supported.
+     * @return {boolean} Returns true if ES6 is supported.
+     */
+    function checkES6() {
+      if (typeof Symbol === 'undefined' || typeof fetch === 'undefined') {
+        return false;
+      }
+      try {
+        eval('class Foo{}');
+        eval('var bar = (x) => x+1');
+      } catch (e) {
+        return false;
+      }
+      return true;
+    }
+
+    function isBrowserUpdateRequired() {
+      const minBrowserVersionSetting = { Safari: 11, Edge: 81 };
+
+      const { userAgent } = navigator;
+      let browserName;
+      let fullVersion;
+      let verOffset;
+      if ((verOffset = userAgent.indexOf('Edge')) != -1) {
+        // Edge: the version is after "Edge"
+        browserName = 'Edge';
+        fullVersion = userAgent.substring(verOffset + 5);
+      } else if ((verOffset = userAgent.indexOf('Chrome')) != -1) {
+        // Chrome: the version is after "Chrome"
+        browserName = 'Chrome';
+        fullVersion = userAgent.substring(verOffset + 7);
+      } else if ((verOffset = userAgent.indexOf('Safari')) != -1) {
+        // Safari: the version is after "Safari" or after "Version"
+        browserName = 'Safari';
+        fullVersion = userAgent.substring(verOffset + 7);
+        if ((verOffset = userAgent.indexOf('Version')) != -1) fullVersion = userAgent.substring(verOffset + 8);
+      } else if ((verOffset = userAgent.indexOf('Firefox')) != -1) {
+        // Firefox: the version is after "Firefox"
+        browserName = 'Firefox';
+        fullVersion = userAgent.substring(verOffset + 8);
+      }
+
+      // For all other browsers only with checkES6 to check the compatibility
+
+      if (browserName && fullVersion && minBrowserVersionSetting[browserName] &&
+        fullVersion < (`${minBrowserVersionSetting[browserName]}`)) {
+        return true;
+      }
+      return false;
+    }
+
+    if (!checkES6() || isBrowserUpdateRequired()) {
+      window.location.href = 'error.html';
+    }
+  </script>
+
+  <base href="/">
+<link rel="stylesheet" href="https://mini-co-th-awsprod-b1.prod.bmwweb.eu-central-1.aws.bmw.cloud/etc.clientlibs/bmw-web/clientlibs/clientlib-site-fonts/css/mini.min.stoli.prod2.1790180504251.min.css" type="text/css"><script src="https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement.min.js" async=""></script><script src="https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement_Module_ActivityMap.min.js" async=""></script><script src="https://www.bmw.com/epaas/onlineaudit-1.0.0.js" async=""></script><script src="https://sf-mco.aws.bmw.cloud/frontend-components/general/vendor_neo.8595331b.js"></script><script src="https://sf-mco.aws.bmw.cloud/frontend-components/general/vendor_otel.504154df.js"></script></head>
+
+<body data-breakpoints="{}">
+  
+
+    <!-- #region ESI header -->
+    <div class="hide-on-print naas-header">
+      <esi:try>
+        <esi:attempt id="naas-header">
+          
+
+    
+    
+    
+        <link rel="stylesheet" href="https://www.mini.co.th/etc.clientlibs/settings/wcm/designs/minidigital-white/fonts/latin.min.20260902091754.min.css" type="text/css">
+
+    
+
+
+
+    <script>
+    window.mini = window.mini || {};
+    window.mini.external = {
+        host: 'https:\/\/www.mini.co.th'
+    };
+    </script>
+<style>
+    .md-fsm-no-scroll {
+        overflow: hidden !important
+    }
+</style>
+<script type="module">
+
+    class HeaderShell extends HTMLElement {
+        constructor() {
+            super();
+            this._activeElement = null;
+            this._handleFocusIn = this._handleFocusIn.bind(this);
+            this._handleFocusOut = this._handleFocusOut.bind(this);
+        }
+
+        connectedCallback() {
+            console.log('connectedCallback attach shadow header');
+            const child = this.firstElementChild;
+            child.remove();
+            this.style.visibility = 'visible';
+            const shadowRoot = this.attachShadow({mode: 'open'});
+            if (window.matchMedia("(pointer: fine) and (hover: hover)").matches) {
+                child.classList.add('no-touch');
+            }
+            shadowRoot.appendChild(child);
+            const $child = $(child);
+            const data = $child.data();
+            if(data && data.serverDomain){
+             if(!window.mini){
+                 window.mini = window.mini || {};
+                 window.mini.digital = window.mini.digital || {};
+             }
+                window.mini.digital.external = {
+                    serverDomain : data.serverDomain
+                };
+            }
+            setTimeout(function () {
+                if (_.isFunction(window.mini.digital.util.initialise)) {
+                    console.log("Init", $child);
+                    window.mini.digital.util.initialise($child);
+                }
+            }, 2000);
+            Object.defineProperty(this, 'activeElement', {
+                get: () => this._activeElement
+            });
+
+            this.focusElement = (element) => {
+                if (element) {
+                    setTimeout(() =>  requestAnimationFrame(() => element.focus?.({ preventScroll: true })), 0)
+                    return true;
+                }
+                return false;
+            };
+            this.closeElement = () => {
+                return shadowRoot.querySelector('.md-fsm-header__close-flyout');
+            };
+            this.getCustomOverlay = () => {
+                const enabledOverlay = shadowRoot.querySelector('.md-custom-overlay.md-enabled');
+                if (enabledOverlay) {
+                    return $(enabledOverlay);
+                }
+
+                const overlays = shadowRoot.querySelectorAll('.md-custom-overlay');
+                return $(overlays[overlays.length - 1]);
+            }
+            shadowRoot.addEventListener('focusin', this._handleFocusIn);
+            shadowRoot.addEventListener('focusout', this._handleFocusOut);
+            this.loadImages($child[0]);
+            const self =this;
+            if($.subscribe){
+                $.subscribe('md:content:updated', function(){
+                    const child = document.getElementsByTagName('header-shell')[0].shadowRoot.firstChild;
+                    self.loadImages(child);
+                });
+            }
+        }
+        loadImages(child){
+                require(['core/componentInitializer','core/utils/lazyImageSpy'], function(componentInitializer,lazyImageSpy) {
+                    if(window.mini.digital.util){
+                        child.addEventListener('lazybeforeunveil', window.mini.digital.util.onLazybeforeunveil);
+                    }
+
+                    componentInitializer.initAll($(child));
+                    lazySizes.loader._(child,true);
+                    lazySizes.loader.checkElems();
+                    lazyImageSpy.update({delay: 3000, timeoutId: "startup"});
+                    var el = child;
+                    var elements = el.getElementsByClassName('lazyload');
+                    for(var index=0; index<elements.length; index++) {
+                        if(elements[index].getAttribute("data-dam-filereference")){
+                            lazySizes.loader.unveil(elements[index]);
+                        }
+                    };
+                    lazySizes.autoSizer._(child);
+                    lazySizes.autoSizer.checkElems();
+                });
+        }
+        disconnectedCallback() {
+            const shadowRoot = this.shadowRoot;
+            if (shadowRoot) {
+                shadowRoot.removeEventListener('focusin', this._handleFocusIn);
+                shadowRoot.removeEventListener('focusout', this._handleFocusOut);
+            }
+        }
+
+        getFocusedElement() {
+            return this._activeElement;
+        }
+
+        _handleFocusIn(event) {
+            this._activeElement = event.target;
+        }
+
+        _handleFocusOut(event) {
+            if (!event.relatedTarget || !this.shadowRoot.contains(event.relatedTarget)) {
+                this._activeElement = null;
+            }
+        }
+    }
+    let headerShellComponent = customElements.get('header-shell');
+    if (headerShellComponent === undefined) {
+        customElements.define('header-shell', HeaderShell);
+    }
+</script>
+
+<header-shell style="visibility: visible;">
+    
+</header-shell>
+
+        </esi:attempt>
+      </esi:try>
+    </div>
+    <!-- #endregion ESI header -->
+
+
+  <con-app endpoint="en_TH" theme="mini" timestamp="1789569520468" release="release_4.14.2_0" disable-focus=""></con-app>
+
+    <!-- #region ESI footer -->
+    <div class="hide-on-print naas-footer">
+      <esi:try>
+        <esi:attempt id="naas-footer">
+          
+
+
+    
+    
+    
+        <link rel="stylesheet" href="https://www.mini.co.th/etc.clientlibs/settings/wcm/designs/minidigital-white/fonts/latin.min.20260902091754.min.css" type="text/css">
+
+    
+
+
+
+
+
+
+<script type="module">
+    /* web-component as top-level wrapper */
+    class FooterShell extends HTMLElement {
+        constructor() {
+            // Always call super first in constructor
+            super();
+        }
+
+        connectedCallback() {
+            console.log('connectedCallback attach shadow footer');
+            const child = this.firstElementChild;
+            child.remove();
+
+            this.style.visibility = 'visible';
+
+            // Create a shadow root
+            const shadowRoot = this.attachShadow({mode: 'open'});    // Create spans
+            shadowRoot.appendChild(child);
+            const $child = $(child);
+            window.mini.digital.util.initialise($child);
+            // init components in $child context
+            // component-initializer needs to be enhanced to work inside a context element
+            require(['core/componentInitializer','core/utils/lazyImageSpy'], function(componentInitializer) {
+                componentInitializer.initAll($child);
+            });
+        }
+    }
+
+    // register custom component
+    let footerShellComponent = customElements.get('footer-shell');
+    if (footerShellComponent === undefined) {
+        customElements.define('footer-shell', FooterShell);
+    }
+
+    //export default FooterShell;
+</script>
+
+
+<footer-shell style="visibility: visible;">
+    
+</footer-shell>
+
+
+        </esi:attempt>
+      </esi:try>
+    </div><script type="module">import EnhancedActivityMap from "https://tron.bmwgroup.com/enhanced-activity-map/archive/v3/TRONEnhancedActivityMapTracking.min.js"; window.enhancedActivityMapTracking = new EnhancedActivityMap();</script>
+    <!-- #endregion ESI footer -->
+
+  <!-- Load settings and locale from separate cacheable JSON files -->
+  <script>
+    window.__conDataReady = Promise.all([
+      fetch(`${window.__conGlobal.basePath}/en_TH/settings.f65bf2d0.json`, { credentials: 'same-origin' }).then(r => r.json()),
+      fetch(`${window.__conGlobal.basePath}/en_TH/locale.95fa665a.json`, { credentials: 'same-origin' }).then(r => r.json())
+    ]);
+  </script>
+
+  <!-- Suppress error caused by defining a custom element multiple times, to a mere warning -->
+  <script>
+    const _customElementsDefine = window.customElements.define;
+    window.customElements.define = (name, cl, conf) => {
+      if (!customElements.get(name)) {
+        _customElementsDefine.call(window.customElements, name, cl, conf);
+      }
+      else {
+        console.warn(`${name} has been defined twice`);
+      }
+    };
+  </script>
+
+  <!-- Register service worker -->
+  <!-- TODO get service worker working - will be done with separate US: check CONX-42719 -->
+  <!--<script>-->
+  <!--  if ('serviceWorker' in navigator) {-->
+  <!--    window.addEventListener('load', function() {-->
+  <!--      'use strict';-->
+  <!--      const originalLocation = window.location.href;-->
+  <!--      const startTime = new Date();-->
+  <!--      navigator.serviceWorker.register(window.__conGlobal.basePath + '/service-worker.js')-->
+  <!--      .then(function (registration) {-->
+  <!--        // Track updates to the Service Worker.-->
+  <!--        if (!navigator.serviceWorker.controller) {-->
+  <!--          // The window client isn't currently controlled so it's a new service-->
+  <!--          // worker that will activate immediately-->
+  <!--          return;-->
+  <!--        }-->
+
+  <!--        /*-->
+  <!--         * When the new version of the service worker skips waiting to take control, the page is refreshed so that the entire page is updated-->
+  <!--         * to the latest version (code inconsistencies due to mixed versions are fixed).-->
+  <!--         */-->
+  <!--        let preventDevToolsReloadLoop;-->
+  <!--        navigator.serviceWorker.addEventListener('controllerchange', function(event) {-->
+  <!--          // Ensure refresh is only called once.-->
+  <!--          // This works around a bug in "force update on reload".-->
+  <!--          const currentTime = new Date();-->
+  <!--          if (preventDevToolsReloadLoop) return;-->
+  <!--          preventDevToolsReloadLoop = true;-->
+  <!--          deleteObsoleteCache();-->
+  <!--          // redirect to original url if service worker update is within 5000ms-->
+  <!--          if(startTime/1000 + 5000 > currentTime/1000) {-->
+  <!--            window.location.replace(originalLocation);-->
+  <!--          } else {-->
+  <!--            window.location.reload();-->
+  <!--          }-->
+  <!--        });-->
+  <!--      });-->
+  <!--    });-->
+
+  <!--    function deleteObsoleteCache() {-->
+  <!--      try {-->
+  <!--        let precacheName = `sw-precache-v3&#45;&#45;${document.location.origin}/`;-->
+  <!--        caches.delete(precacheName);-->
+  <!--      } catch(err) {}-->
+  <!--      try {-->
+  <!--        let precacheName = `$$$toolbox-cache$$$${document.location.origin}/$$$`;-->
+  <!--        caches.delete(precacheName);-->
+  <!--      } catch(err) {}-->
+  <!--      try {-->
+  <!--        let precacheName = `workbox-precache-v2-${document.location.origin}/`;-->
+  <!--        caches.delete(precacheName);-->
+  <!--      } catch(err) {}-->
+  <!--    }-->
+  <!--  }-->
+  <!--</script>-->
+
+  <!-- Tracking related TODO: SEE if it is still required -->
+  <script>
+    if (window._satellite && typeof _satellite.pageBottom === 'function') {
+      _satellite.pageBottom();
+    }
+  </script>
+
+  <script type="module" crossorigin="use-credentials">
+    const [settings, locale] = await window.__conDataReady;
+    const conApp = document.getElementsByTagName('con-app')[0];
+    conApp.inputSettings = settings;
+    conApp.inputLocalization = locale;
+    import(`${/* @vite-ignore */window.__conGlobal.basePath}/js/index.1789569455.js`)
+      .catch(function () {
+        // Workaround for iOS
+        import(/* @vite-ignore */window.__conGlobal.basePath + '/' + '/js/index.1789569455.js');
+      });
+  </script>
+
+
+
+
+<epaas-consent-drawer-shell data-js-focus-visible="" class="focus-visible" data-focus-visible-added="" style="display: block; position: fixed; z-index: 2147483647;"></epaas-consent-drawer-shell><script type="module">import EnhancedActivityMap from "https://tron.bmwgroup.com/enhanced-activity-map/archive/v3/TRONEnhancedActivityMapTracking.min.js"; window.enhancedActivityMapTracking = new EnhancedActivityMap();</script></body></html>

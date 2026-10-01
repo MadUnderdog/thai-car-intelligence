@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/tank-300",
+  "captured_at": "2026-09-25T07:46:35.236012+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "c1d3072c46c5a62c1c4cda759747470b253076fecfbc5241dc6fd40770dd17d1",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_tank-300.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

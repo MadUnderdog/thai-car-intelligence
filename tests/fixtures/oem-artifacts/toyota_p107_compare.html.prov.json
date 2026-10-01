@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/compare",
+  "captured_at": "2026-09-27T16:00:50.752409+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "3220ab367360ad9b8429b124c441924d5046604882126605df43e9deeebac58e",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "toyota_p107_compare.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,19 @@
+{
+  "brand": "ldv",
+  "brand_display": "LDV",
+  "status": "NO_PRICES",
+  "source_url": "https://www.9carthai.com/ldv-price/",
+  "article_title": "Page Not Found - 9CARTHAI : 9CARTHAI",
+  "prices": [],
+  "specs": [],
+  "sources": [
+    "https://www.9carthai.com/ldv-price/"
+  ],
+  "failures": [
+    {
+      "reason": "No model+price matches"
+    }
+  ],
+  "rejection_count": 0,
+  "extraction_ts": "2026-09-20T15:30:51.436423"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.9carthai.com/peugeot-price/",
+  "captured_at": "2026-09-26T15:54:03.686938+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "1c412500d756f68700ebd49469b18d2dd66a557820b4f89c24e58adf4840fee2",
+  "session_id": "p102-identity-20260926",
+  "artifact_filename": "9carthai_peugeot-price.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

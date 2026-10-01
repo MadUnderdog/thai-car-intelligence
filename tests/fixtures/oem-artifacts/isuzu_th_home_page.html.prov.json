@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu.co.th/",
+  "captured_at": "2026-09-24T13:48:28.821578+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "5d27fa1ffd767a3eefe7b4d94f5ef29ae2e86cac94839a4c5e906265dbf29d39",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "isuzu_th_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,39 @@
+{
+  "policy_id": "toyota-currentness-v1",
+  "created": "2026-09-25",
+  "scope": "rows staged from tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+  "question": "May price.currentness=CURRENT rest on schema.org Offer availability=InStock when the artifact carries no source-dated price validity field?",
+  "terms": {
+    "availability_based_currentness": "Offer.availability = InStock. States stock availability observed at capture. It is NOT a statement about how long the price itself stays valid.",
+    "source_dated_price_validity": "A price-validity date published by the source (priceValidUntil / dateModified / datePublished / validFrom / validThrough). This is the only evidence that licenses CURRENT on price grounds.",
+    "capture_time": "captured_at — when this repo fetched the page. NEVER source effective-date evidence."
+  },
+  "observed_evidence": {
+    "artifact": "tests/fixtures/oem-artifacts/toyota_pricelist_page.html",
+    "priceValidUntil": 0,
+    "dateModified": 0,
+    "datePublished": 0,
+    "validFrom": 0,
+    "validThrough": 0,
+    "availability": 99,
+    "InStock": 96,
+    "OutOfStock": 3
+  },
+  "observed_evidence_note": "Recomputed from the artifact by tests/test_toyota_currentness_policy.py; if these counts drift the policy must be revisited rather than the test relaxed.",
+  "decision": "keep_current",
+  "decision_rationale": "The 96 rows are CURRENT on an availability basis, not on a price-validity basis. The distinction is recorded rather than smoothed over: availability is real, source-dated price validity does not exist on this page, and capture time is not substituted for it. Row values are therefore left unchanged in this cycle.",
+  "currentness_basis": "availability_instock",
+  "basis_not_claimed": ["source_dated_price_validity", "capture_time_as_effective_date"],
+  "row_change_required_now": false,
+  "demotion": {
+    "trigger": "owner sets decision to demote_without_source_date (e.g. when price validity must be source-dated)",
+    "target": "UNKNOWN",
+    "rows_affected": 96,
+    "reason": "no source-dated price validity exists on this artifact"
+  },
+  "invariants": [
+    "rows whose availability_raw is not InStock must not be CURRENT",
+    "no row may cite captured_at as its currentness evidence",
+    "CURRENT and price_validity_date cannot both be asserted while price_validity_date is null"
+  ]
+}

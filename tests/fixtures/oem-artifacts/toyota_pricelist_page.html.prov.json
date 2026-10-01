@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/pricelist",
+  "captured_at": "2026-09-24T18:57:17.345495+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "5d0ba584bcc369b7bc64047f4db193dbd1de9c26ef9cb55723360f8662f8f041",
+  "session_id": "acquisition_20260924_185700",
+  "artifact_filename": "toyota_pricelist_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

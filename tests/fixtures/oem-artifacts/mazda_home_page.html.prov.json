@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th",
+  "captured_at": "2026-09-24T13:48:24.077293+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "3e49287146ee978fbe8a1919a21df334ae7ce75414be7b161b53650a2f38ed49",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "mazda_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

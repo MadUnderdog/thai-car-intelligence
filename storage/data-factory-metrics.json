@@ -1,0 +1,111 @@
+{
+  "run_id": "factory-20260921-100953",
+  "timestamp": "2026-09-21T03:09:53.801135+00:00",
+  "total_observations": 127,
+  "price_observations": 124,
+  "spec_observations": 3,
+  "brands_found": {
+    "subaru": 1,
+    "byd": 29,
+    "mg": 53,
+    "volvo": 12,
+    "toyota": 9,
+    "honda": 13,
+    "nissan": 9,
+    "denza": 1
+  },
+  "scope_distribution": {
+    "MULTI_MODEL": 50,
+    "SINGLE_MODEL": 72,
+    "UNKNOWN": 5
+  },
+  "trust_distribution": {
+    "UNVERIFIED": 127
+  },
+  "persist_stats": {
+    "prices_inserted": 124,
+    "specs_inserted": 3,
+    "no_variant": 0,
+    "errors": 0
+  },
+  "per_source": {
+    "HeadLight Magazine": {
+      "source_name": "HeadLight Magazine",
+      "discovered": 13,
+      "fetched": 13,
+      "extracted": 196,
+      "resolved": 0,
+      "scope_valid": 0,
+      "accepted": 0,
+      "deduped": 0,
+      "persisted": 0,
+      "quarantined": 0,
+      "errors": 0
+    },
+    "9CARTHAI": {
+      "source_name": "9CARTHAI",
+      "discovered": 12,
+      "fetched": 12,
+      "extracted": 681,
+      "resolved": 0,
+      "scope_valid": 0,
+      "accepted": 0,
+      "deduped": 0,
+      "persisted": 0,
+      "quarantined": 0,
+      "errors": 0
+    },
+    "AutoSpinn": {
+      "source_name": "AutoSpinn",
+      "discovered": 15,
+      "fetched": 15,
+      "extracted": 114,
+      "resolved": 0,
+      "scope_valid": 0,
+      "accepted": 0,
+      "deduped": 0,
+      "persisted": 0,
+      "quarantined": 0,
+      "errors": 0
+    },
+    "AutoLife Thailand": {
+      "source_name": "AutoLife Thailand",
+      "discovered": 11,
+      "fetched": 11,
+      "extracted": 313,
+      "resolved": 0,
+      "scope_valid": 0,
+      "accepted": 0,
+      "deduped": 0,
+      "persisted": 0,
+      "quarantined": 0,
+      "errors": 0
+    },
+    "Car2Day": {
+      "source_name": "Car2Day",
+      "discovered": 10,
+      "fetched": 10,
+      "extracted": 187,
+      "resolved": 0,
+      "scope_valid": 0,
+      "accepted": 0,
+      "deduped": 0,
+      "persisted": 0,
+      "quarantined": 0,
+      "errors": 0
+    },
+    "CheckRaka": {
+      "source_name": "CheckRaka",
+      "discovered": 15,
+      "fetched": 15,
+      "extracted": 144,
+      "resolved": 0,
+      "scope_valid": 0,
+      "accepted": 0,
+      "deduped": 0,
+      "persisted": 0,
+      "quarantined": 0,
+      "errors": 0
+    }
+  }
+}

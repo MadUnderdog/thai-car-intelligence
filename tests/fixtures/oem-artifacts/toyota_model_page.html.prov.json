@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/model-list",
+  "captured_at": "2026-09-24T11:39:08.901604+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "258b3015796ffcd43208090bac768c3093171bdc0e501bbf96f6a484e4e9468c",
+  "session_id": "acquisition_20260924_113822",
+  "artifact_filename": "toyota_model_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

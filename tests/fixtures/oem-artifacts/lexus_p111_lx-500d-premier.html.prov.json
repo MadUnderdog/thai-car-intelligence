@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/models/lx/lx-500d-premier.html",
+  "captured_at": "2026-09-28T07:13:28.641785+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "6a682b901fb23d5bbd804d90c19a3358f9a4b6eeb0199e530b11e23dde362eee",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "lexus_p111_lx-500d-premier.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

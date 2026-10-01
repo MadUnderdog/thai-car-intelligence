@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab.html",
+  "captured_at": "2026-09-28T07:14:30.651696+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "0edd961add4fcb277d6d9ad32ecbdc7cc65e091d53347aad7ea069b90ec4ecdb",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "nissan_p111_navara-king-cab.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

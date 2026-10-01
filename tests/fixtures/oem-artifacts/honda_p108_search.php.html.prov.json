@@ -1,0 +1,9 @@
+{
+  "source_url": "https://usedcar.honda.co.th/search.php",
+  "captured_at": "2026-09-27T19:05:53.744484+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "736e98b649b38f8c7769c89b4abcb8f5413fd4f7e897d6b7c5a3f3734fd59c8c",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "honda_p108_search.php.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

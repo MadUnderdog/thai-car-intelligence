@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/models/panamera/configure/",
+  "captured_at": "2026-09-28T07:14:52.214016+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "12170cfa59e708c6447131b028fb668e5f1582089fbe0484577e8ce960384ef4",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "porsche_p111_configure_dup5.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

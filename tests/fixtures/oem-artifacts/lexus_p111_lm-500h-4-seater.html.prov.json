@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/models/lm/lm-500h-4-seater.html",
+  "captured_at": "2026-09-28T07:13:26.468062+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "f13b9904b12e75a02e161e0e3480dd800d9a5b59e316d89f21d3e261c4e4e0a9",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "lexus_p111_lm-500h-4-seater.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/models/718/718-models/718-boxster/",
+  "captured_at": "2026-09-28T07:14:43.540513+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "66b11e0879b19a719d3615f3c45aab789da5a588b6139e019a3b2723c79728ce",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "porsche_p111_718-boxster.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

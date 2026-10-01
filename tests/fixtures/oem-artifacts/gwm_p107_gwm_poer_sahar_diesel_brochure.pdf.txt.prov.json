@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/poer-sahar-diesel-new/gwm_poer_sahar_diesel_brochure.pdf",
+  "captured_at": "2026-09-27T16:16:28.105598+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "c738799c6c31a080f7fac752a171c6d60a878e0d1c9fbc3da984ea8b536adfb3",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "gwm_p107_gwm_poer_sahar_diesel_brochure.pdf.txt",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

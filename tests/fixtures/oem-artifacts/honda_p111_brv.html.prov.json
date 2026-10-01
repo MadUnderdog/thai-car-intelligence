@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/brv",
+  "captured_at": "2026-09-28T07:13:04.480846+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "5eeda3d584df95294be2068b15b964a37e6905854d2da3a1309a6e3f867e9e9d",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "honda_p111_brv.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

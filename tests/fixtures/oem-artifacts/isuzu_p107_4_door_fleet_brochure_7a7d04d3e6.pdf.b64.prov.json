@@ -1,0 +1,9 @@
+{
+  "source_url": "https://assets.isuzu-tis.com/4_door_fleet_brochure_7a7d04d3e6.pdf",
+  "captured_at": "2026-09-27T16:06:19.103093+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "4fb35a288e1a9e8566f9c3b493e334065991a022f9e1b8eb7bb97200aeba19fc",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "isuzu_p107_4_door_fleet_brochure_7a7d04d3e6.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

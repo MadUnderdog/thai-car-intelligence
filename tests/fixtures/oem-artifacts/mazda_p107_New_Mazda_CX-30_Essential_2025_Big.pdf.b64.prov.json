@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/s3fs-public/2026-04/New%20Mazda%20CX-30%20Essential_2025_Big.pdf?VersionId=C0PSWzUj5NTW.vWbsMFfJ2zsRHk_f3lu",
+  "captured_at": "2026-09-27T16:01:02.571182+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "f055d818e0878b39b8859df940f5d311960253b1ddc91e27452e0f7319c59961",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "mazda_p107_New_Mazda_CX-30_Essential_2025_Big.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

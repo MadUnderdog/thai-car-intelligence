@@ -128,6 +128,8 @@ model Manufacturer {
   aliases    Alias[]
   models     CarModel[]
   sources    Source[]
+  discoverySources DiscoverySource[]
+  universeEntries  VehicleUniverse[]
   createdAt  DateTime     @default(now())
   updatedAt  DateTime     @updatedAt
 
@@ -150,6 +152,7 @@ model CarModel {
   variants       Variant[]
   aliases        Alias[]
   media          Media[]
+  universeEntries VehicleUniverse[]
   createdAt      DateTime     @default(now())
   updatedAt      DateTime     @updatedAt
 
@@ -182,6 +185,7 @@ model Variant {
   aliases     Alias[]
   media       Media[]
   candidates  ResearchCandidate[]
+  universeEntries VehicleUniverse[]
   createdAt   DateTime            @default(now())
   updatedAt   DateTime            @updatedAt
 
@@ -243,6 +247,7 @@ model SourceDocument {
   events           CrawlEvent[]
   embeddings       Embedding[]
   variantFeatures  VariantFeature[]
+  freshness        SourceFreshness?
   createdAt        DateTime               @default(now())
   updatedAt        DateTime               @updatedAt
   medias           Media[]
@@ -255,7 +260,7 @@ model SourceDocument {
 model Price {
   id               String         @id @default(uuid()) @db.Uuid
   variantId        String         @db.Uuid
-  sourceDocumentId String?
+  sourceDocumentId String?        @db.Uuid
   priceType        PriceType
   amount           Decimal        @db.Decimal(15, 2)
   currency         String         @default("THB")
@@ -607,4 +612,245 @@ model Embedding {
 
   @@unique([sourceDocumentId, chunkIndex, model])
   @@index([sourceDocumentId])
+}
+
+// ============================================================
+// COMMUNITY FOUNDATION
+// Community content NEVER mutates canonical car facts.
+// Flow: Comment → optional research lead → ResearchCandidate
+//       → source verification → canonical fact
+// ============================================================
+
+enum CommentStatus {
+  VISIBLE
+  HIDDEN
+  FLAGGED
+  DELETED
+}
+
+model CommunityComment {
+  id          String    @id @default(uuid()) @db.Uuid
+  variantId   String?   @db.Uuid
+  modelId     String?   @db.Uuid
+  authorName  String
+  authorToken String // anonymous pseudonymous identity hash
+  body        String    @db.Text
+  parentId    String?   @db.Uuid // thread/reply
+  parent      CommunityComment?  @relation("CommentThread", fields: [parentId], references: [id], onDelete: Cascade)
+  replies     CommunityComment[] @relation("CommentThread")
+  
+  upvotes     Int       @default(0)
+  downvotes   Int       @default(0)
+  
+  status      CommentStatus @default(VISIBLE)
+  flaggedCount Int      @default(0)
+  
+  // research lead: community observation proposed for verification
+  isResearchLead Boolean @default(false)
+  researchCandidateId String? @db.Uuid
+  
+  // anti-spam / rate limiting
+  ipAddressHash String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime?
+  
+  votes          CommentVote[]
+  reports        CommentReport[]
+  
+  @@index([variantId])
+  @@index([modelId])
+  @@index([parentId])
+  @@index([status])
+}
+
+model CommentVote {
+  id        String   @id @default(uuid()) @db.Uuid
+  commentId String   @db.Uuid
+  voterToken String
+  value     Int      // +1 upvote, -1 downvote
+  comment   CommunityComment @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  
+  @@unique([commentId, voterToken])
+}
+
+model CommentReport {
+  id        String   @id @default(uuid()) @db.Uuid
+  commentId String   @db.Uuid
+  reporterToken String
+  reason    String
+  comment   CommunityComment @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  resolvedAt DateTime?
+  resolved  Boolean  @default(false)
+  
+  @@unique([commentId, reporterToken])
+}
+
+// ============================================================
+// DISCOVERY REGISTRY & EXTRACTION ENGINE
+// Master universe tracking, automated discovery, extraction jobs
+// ============================================================
+
+enum DiscoveryStatus {
+  DISCOVERED
+  EXTRACTING
+  EXTRACTED
+  VERIFIED
+  FAILED
+  STALE
+}
+
+enum ExtractionJobStatus {
+  QUEUED
+  RUNNING
+  SUCCEEDED
+  PARTIAL
+  FAILED
+  CANCELLED
+  RETRY_SCHEDULED
+}
+
+enum CoverageGapState {
+  NOT_DISCOVERED
+  FOUND_BUT_NO_PRICE
+  FOUND_BUT_NO_OFFICIAL_SOURCE
+  PRICE_ONLY
+  PARTIAL_SPECS
+  FULL_SPECS_UNVERIFIED
+  VERIFIED
+  STALE
+  CONFLICT
+  EXTRACTION_FAILED
+  NOT_APPLICABLE
+}
+
+enum DiscoveryJobStatus {
+  QUEUED
+  RUNNING
+  SUCCEEDED
+  PARTIAL
+  FAILED
+}
+
+model DiscoverySource {
+  id              String          @id @default(uuid()) @db.Uuid
+  manufacturerId  String?         @db.Uuid
+  nameTh          String
+  nameEn          String
+  baseUrl         String
+  catalogUrl      String?
+  priceListUrl    String?
+  brochureUrlPattern String?
+  domain          String
+  sourceType      SourceType
+  discoveryMethod String?         // "web_search", "official_site", "auto_show", etc.
+  priority        Int             @default(0)
+  enabled         Boolean         @default(true)
+  lastDiscoveredAt DateTime?
+  lastCheckedAt   DateTime?
+  contentHash     String?
+  status          DiscoveryStatus @default(DISCOVERED)
+  manufacturer    Manufacturer?   @relation(fields: [manufacturerId], references: [id], onDelete: SetNull)
+  universeEntries VehicleUniverse[]
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@unique([baseUrl])
+  @@index([manufacturerId, enabled])
+}
+
+model VehicleUniverse {
+  id              String          @id @default(uuid()) @db.Uuid
+  manufacturerId  String?         @db.Uuid
+  carModelId      String?         @db.Uuid
+  variantId       String?         @db.Uuid
+  nameTh          String
+  nameEn          String
+  slug            String
+  brandSlug       String
+  generation      String?
+  modelYear       Int?
+  status          RecordStatus    @default(ACTIVE)
+  coverageState   CoverageGapState @default(NOT_DISCOVERED)
+  discoverySourceId String?       @db.Uuid
+  officialUrl     String?
+  discoveryUrl    String?
+  aliases         Json?           // Thai/English aliases
+  identityConfidence Decimal?     @db.Decimal(5, 4)
+  discoveredAt    DateTime        @default(now())
+  lastCheckedAt   DateTime?
+  lastExtractedAt DateTime?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  manufacturer    Manufacturer?   @relation(fields: [manufacturerId], references: [id], onDelete: SetNull)
+  carModel        CarModel?       @relation(fields: [carModelId], references: [id], onDelete: SetNull)
+  variant         Variant?        @relation(fields: [variantId], references: [id], onDelete: SetNull)
+  discoverySource DiscoverySource? @relation(fields: [discoverySourceId], references: [id], onDelete: SetNull)
+  extractionJobs  ExtractionJob[]
+
+  @@unique([brandSlug, slug, modelYear])
+  @@index([coverageState])
+  @@index([brandSlug])
+  @@index([status])
+}
+
+model DiscoveryJob {
+  id              String            @id @default(uuid()) @db.Uuid
+  name            String
+  status          DiscoveryJobStatus @default(QUEUED)
+  brandSlug       String?
+  targetsFound    Int               @default(0)
+  modelsFound     Int               @default(0)
+  variantsFound   Int               @default(0)
+  newDiscoveries  Int               @default(0)
+  error           String?
+  startedAt       DateTime?
+  completedAt     DateTime?
+  createdAt       DateTime          @default(now())
+
+  @@index([status, createdAt])
+}
+
+model ExtractionJob {
+  id              String              @id @default(uuid()) @db.Uuid
+  name            String
+  status          ExtractionJobStatus @default(QUEUED)
+  priority        Int                 @default(0)
+  vehicleUniverseId String?           @db.Uuid
+  sourceUrl       String
+  extractionMethod String?            // "http", "json_ld", "browser", "pdf", "ocr"
+  attempts        Int                 @default(0)
+  maxAttempts     Int                 @default(3)
+  lastError       String?
+  nextRetryAt     DateTime?
+  pricesFound     Int                 @default(0)
+  specsFound      Int                 @default(0)
+  contentHash     String?
+  startedAt       DateTime?
+  completedAt     DateTime?
+  createdAt       DateTime            @default(now())
+
+  vehicleUniverse VehicleUniverse?    @relation(fields: [vehicleUniverseId], references: [id], onDelete: SetNull)
+
+  @@index([status, priority])
+  @@index([vehicleUniverseId])
+  @@index([nextRetryAt])
+}
+
+model SourceFreshness {
+  id              String    @id @default(uuid()) @db.Uuid
+  sourceDocumentId String   @db.Uuid @unique
+  lastSeenAt      DateTime
+  lastSuccessfulExtractionAt DateTime?
+  contentHash     String?
+  previousHash    String?
+  changed         Boolean   @default(false)
+  parserVersion   String?
+  extractorVersion String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  sourceDocument  SourceDocument @relation(fields: [sourceDocumentId], references: [id], onDelete: Cascade)
 }

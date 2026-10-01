@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/en/car-purchase-consultation",
+  "captured_at": "2026-09-27T19:06:54.265150+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "c56624f228e53156ac1d7146e9d92f38eaa97510737232e35643e3c3ff760304",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "gwm_p108_car-purchase-consultation.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

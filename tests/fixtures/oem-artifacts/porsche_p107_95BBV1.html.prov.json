@@ -1,0 +1,9 @@
+{
+  "source_url": "https://configurator.porsche.com/en-TH/mode/model/95BBV1",
+  "captured_at": "2026-09-27T16:01:59.763500+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "4c640e5a76dccad50fb90f34a8ab196a2e5c7458bcb02580d600a3f6dce7f8aa",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "porsche_p107_95BBV1.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/th?rd=true",
+  "captured_at": "2026-09-24T13:48:27.092513+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "eaa2b0f9e01fcbc45532782f931eeee7c00801cda5c480294c8c1a4f8ffee498",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "mitsubishi_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/price-and-model-tools/corporate-sales.html",
+  "captured_at": "2026-09-27T19:07:06.548203+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "397ca4cc8f1d549980f2b91a7a5de98df3fa23c8e7720c91b634018fc67d54d5",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "lexus_p108_corporate-sales.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,343 @@
+FFFFFFFFFFF.FFFFFF                                                       [100%]
+=================================== FAILURES ===================================
+_____________ test_p119_A_same_packet_set_rerun_is_byte_identical ______________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-114/test_p119_A_same_packet_set_re0')
+
+    def test_p119_A_same_packet_set_rerun_is_byte_identical(tmp_path):
+>       A = assemble_mod()
+            ^^^^^^^^^^^^^^
+
+tests/test_p119_assembly.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def assemble_mod():
+        m = load_mod("assemble")
+>       assert m is not None, "lib/thai_factory/assembly/assemble.py must exist"
+E       AssertionError: lib/thai_factory/assembly/assemble.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:41: AssertionError
+______ test_p119_B_field_provenance_points_to_exact_artifact_and_locator _______
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-114/test_p119_B_field_provenance_p0')
+
+    def test_p119_B_field_provenance_points_to_exact_artifact_and_locator(tmp_path):
+        packets = _accepted()
+        src = next(p for p in packets if p["observations"].get("price"))
+        obs = price_obs(src)
+>       result = run_assemble(packets)
+                 ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p119_assembly.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p119_assembly.py:64: in run_assemble
+    A = assemble_mod()
+        ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def assemble_mod():
+        m = load_mod("assemble")
+>       assert m is not None, "lib/thai_factory/assembly/assemble.py must exist"
+E       AssertionError: lib/thai_factory/assembly/assemble.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:41: AssertionError
+_________ test_p119_C_source_B_locator_on_source_A_value_fails_closed __________
+
+    def test_p119_C_source_B_locator_on_source_A_value_fails_closed():
+        # mutation 1: another packet's artifact sha attached to A's observation
+        packets = _accepted()
+        victim = next(p for p in packets if p["observations"].get("price"))
+        other = next(p for p in packets if p["observations"].get("price") and p["packet_id"] != victim["packet_id"])
+        mutated = copy.deepcopy(victim)
+        mutated["observations"]["price"][0]["sha256"] = price_obs(other)["sha256"]
+        mutated["observations"]["price"][0]["locator"] = copy.deepcopy(price_obs(other)["locator"])
+>       result = run_assemble([mutated, other])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p119_assembly.py:122: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p119_assembly.py:64: in run_assemble
+    A = assemble_mod()
+        ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def assemble_mod():
+        m = load_mod("assemble")
+>       assert m is not None, "lib/thai_factory/assembly/assemble.py must exist"
+E       AssertionError: lib/thai_factory/assembly/assemble.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:41: AssertionError
+________ test_p119_D_same_tier_conflict_newest_wins_both_sides_retained ________
+
+    def test_p119_D_same_tier_conflict_newest_wins_both_sides_retained():
+        older = base_packet()
+        newer = copy.deepcopy(older)
+        newer["packet_id"] = older["packet_id"] + "X"
+        newer["observed_at"] = "2026-09-29T12:00:00"
+        older["observed_at"] = "2026-01-01T00:00:00"
+        price_obs(newer)["value"] = price_obs(older)["value"] + 10000
+        # keep each packet's own artifact/sha coherent (real files, real sidecars)
+>       result = run_assemble([older, newer])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p119_assembly.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p119_assembly.py:64: in run_assemble
+    A = assemble_mod()
+        ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def assemble_mod():
+        m = load_mod("assemble")
+>       assert m is not None, "lib/thai_factory/assembly/assemble.py must exist"
+E       AssertionError: lib/thai_factory/assembly/assemble.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:41: AssertionError
+_____ test_p119_E_cross_tier_conflict_higher_tier_wins_lower_evidence_kept _____
+
+    def test_p119_E_cross_tier_conflict_higher_tier_wins_lower_evidence_kept():
+        official = base_packet()
+        reference = copy.deepcopy(official)
+        reference["packet_id"] = official["packet_id"] + "R"
+        reference["observed_at"] = "2020-01-01T00:00:00"  # older AND lower tier
+        price_obs(reference)["value"] = price_obs(official)["value"] - 50000
+        price_obs(reference)["trust_tier"] = "reference"
+>       result = run_assemble([official, reference])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p119_assembly.py:169: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p119_assembly.py:64: in run_assemble
+    A = assemble_mod()
+        ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def assemble_mod():
+        m = load_mod("assemble")
+>       assert m is not None, "lib/thai_factory/assembly/assemble.py must exist"
+E       AssertionError: lib/thai_factory/assembly/assemble.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:41: AssertionError
+______________ test_p119_F_unresolved_conflict_stays_quarantined _______________
+
+    def test_p119_F_unresolved_conflict_stays_quarantined():
+        a = base_packet()
+        b = copy.deepcopy(a)
+        b["packet_id"] = a["packet_id"] + "T"
+        a["observed_at"] = "2026-05-05T00:00:00"
+        b["observed_at"] = "2026-05-05T00:00:00"  # same tier, same date, different value
+        price_obs(b)["value"] = price_obs(a)["value"] + 7777
+>       result = run_assemble([a, b])
+                 ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p119_assembly.py:188: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p119_assembly.py:64: in run_assemble
+    A = assemble_mod()
+        ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def assemble_mod():
+        m = load_mod("assemble")
+>       assert m is not None, "lib/thai_factory/assembly/assemble.py must exist"
+E       AssertionError: lib/thai_factory/assembly/assemble.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:41: AssertionError
+_______ test_p119_G_join_uses_evidence_backed_key_display_only_rejected ________
+
+    def test_p119_G_join_uses_evidence_backed_key_display_only_rejected():
+>       J = join_mod()
+            ^^^^^^^^^^
+
+tests/test_p119_assembly.py:199: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def join_mod():
+        m = load_mod("join_keys")
+>       assert m is not None, "lib/thai_factory/assembly/join_keys.py must exist"
+E       AssertionError: lib/thai_factory/assembly/join_keys.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:47: AssertionError
+_____ test_p119_H_candidate_id_until_reconcile_canonical_is_deterministic ______
+
+    def test_p119_H_candidate_id_until_reconcile_canonical_is_deterministic():
+>       A = assemble_mod()
+            ^^^^^^^^^^^^^^
+
+tests/test_p119_assembly.py:224: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def assemble_mod():
+        m = load_mod("assemble")
+>       assert m is not None, "lib/thai_factory/assembly/assemble.py must exist"
+E       AssertionError: lib/thai_factory/assembly/assemble.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:41: AssertionError
+__________ test_p119_J_assembly_reads_only_packets_no_db_or_provider ___________
+
+    def test_p119_J_assembly_reads_only_packets_no_db_or_provider():
+        forbidden = ("psycopg", "prisma", "lib.db", "import db", "sqlite", "requests", "httpx", "urllib.request", "openai", "anthropic")
+        for name in ("assemble.py", "models.py", "join_keys.py", "ai_proposals.py", "report.py"):
+            path = REPO / "lib" / "thai_factory" / "assembly" / name
+            if not path.exists():
+>               raise AssertionError(f"lib/thai_factory/assembly/{name} must exist")
+E               AssertionError: lib/thai_factory/assembly/assemble.py must exist
+
+tests/test_p119_assembly.py:244: AssertionError
+________________ test_p119_K_repeat_run_produces_no_duplicates _________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-114/test_p119_K_repeat_run_produce0')
+
+    def test_p119_K_repeat_run_produces_no_duplicates(tmp_path):
+>       A = assemble_mod()
+            ^^^^^^^^^^^^^^
+
+tests/test_p119_assembly.py:266: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def assemble_mod():
+        m = load_mod("assemble")
+>       assert m is not None, "lib/thai_factory/assembly/assemble.py must exist"
+E       AssertionError: lib/thai_factory/assembly/assemble.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:41: AssertionError
+____________ test_p119_L_legacy_unverified_is_flagged_not_verified _____________
+
+    def test_p119_L_legacy_unverified_is_flagged_not_verified():
+        p = base_packet()
+        price_obs(p)["provenance_state"] = "LEGACY_UNVERIFIED"
+>       result = run_assemble([p])
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p119_assembly.py:284: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_p119_assembly.py:64: in run_assemble
+    A = assemble_mod()
+        ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def assemble_mod():
+        m = load_mod("assemble")
+>       assert m is not None, "lib/thai_factory/assembly/assemble.py must exist"
+E       AssertionError: lib/thai_factory/assembly/assemble.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:41: AssertionError
+____________________ test_p119_report_has_required_sections ____________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-114/test_p119_report_has_required_0')
+
+    def test_p119_report_has_required_sections(tmp_path):
+>       A = assemble_mod()
+            ^^^^^^^^^^^^^^
+
+tests/test_p119_assembly.py:311: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def assemble_mod():
+        m = load_mod("assemble")
+>       assert m is not None, "lib/thai_factory/assembly/assemble.py must exist"
+E       AssertionError: lib/thai_factory/assembly/assemble.py must exist
+E       assert None is not None
+
+tests/test_p119_assembly.py:41: AssertionError
+________ test_p119_I1_valid_proposal_citing_real_packet_ids_is_accepted ________
+
+    def test_p119_I1_valid_proposal_citing_real_packet_ids_is_accepted():
+>       V = validator()
+            ^^^^^^^^^^^
+
+tests/test_p119_proposals.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def validator():
+        m = load_mod()
+>       assert m is not None, "lib/thai_factory/assembly/ai_proposals.py must exist"
+E       AssertionError: lib/thai_factory/assembly/ai_proposals.py must exist
+E       assert None is not None
+
+tests/test_p119_proposals.py:30: AssertionError
+__________________ test_p119_I2_unknown_packet_id_is_rejected __________________
+
+    def test_p119_I2_unknown_packet_id_is_rejected():
+>       V = validator()
+            ^^^^^^^^^^^
+
+tests/test_p119_proposals.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def validator():
+        m = load_mod()
+>       assert m is not None, "lib/thai_factory/assembly/ai_proposals.py must exist"
+E       AssertionError: lib/thai_factory/assembly/ai_proposals.py must exist
+E       assert None is not None
+
+tests/test_p119_proposals.py:30: AssertionError
+___________ test_p119_I3_fact_absent_from_cited_packets_is_rejected ____________
+
+    def test_p119_I3_fact_absent_from_cited_packets_is_rejected():
+>       V = validator()
+            ^^^^^^^^^^^
+
+tests/test_p119_proposals.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def validator():
+        m = load_mod()
+>       assert m is not None, "lib/thai_factory/assembly/ai_proposals.py must exist"
+E       AssertionError: lib/thai_factory/assembly/ai_proposals.py must exist
+E       assert None is not None
+
+tests/test_p119_proposals.py:30: AssertionError
+________ test_p119_I4_proposal_module_imports_no_provider_or_model_code ________
+
+    def test_p119_I4_proposal_module_imports_no_provider_or_model_code():
+        m = load_mod()
+>       assert m is not None
+E       assert None is not None
+
+tests/test_p119_proposals.py:82: AssertionError
+_____ test_p119_I5_alias_merge_proposal_must_cite_existing_canonical_paths _____
+
+    def test_p119_I5_alias_merge_proposal_must_cite_existing_canonical_paths():
+>       V = validator()
+            ^^^^^^^^^^^
+
+tests/test_p119_proposals.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def validator():
+        m = load_mod()
+>       assert m is not None, "lib/thai_factory/assembly/ai_proposals.py must exist"
+E       AssertionError: lib/thai_factory/assembly/ai_proposals.py must exist
+E       assert None is not None
+
+tests/test_p119_proposals.py:30: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_p119_assembly.py::test_p119_A_same_packet_set_rerun_is_byte_identical
+FAILED tests/test_p119_assembly.py::test_p119_B_field_provenance_points_to_exact_artifact_and_locator
+FAILED tests/test_p119_assembly.py::test_p119_C_source_B_locator_on_source_A_value_fails_closed
+FAILED tests/test_p119_assembly.py::test_p119_D_same_tier_conflict_newest_wins_both_sides_retained
+FAILED tests/test_p119_assembly.py::test_p119_E_cross_tier_conflict_higher_tier_wins_lower_evidence_kept
+FAILED tests/test_p119_assembly.py::test_p119_F_unresolved_conflict_stays_quarantined
+FAILED tests/test_p119_assembly.py::test_p119_G_join_uses_evidence_backed_key_display_only_rejected
+FAILED tests/test_p119_assembly.py::test_p119_H_candidate_id_until_reconcile_canonical_is_deterministic
+FAILED tests/test_p119_assembly.py::test_p119_J_assembly_reads_only_packets_no_db_or_provider
+FAILED tests/test_p119_assembly.py::test_p119_K_repeat_run_produces_no_duplicates
+FAILED tests/test_p119_assembly.py::test_p119_L_legacy_unverified_is_flagged_not_verified
+FAILED tests/test_p119_assembly.py::test_p119_report_has_required_sections - ...
+FAILED tests/test_p119_proposals.py::test_p119_I1_valid_proposal_citing_real_packet_ids_is_accepted
+FAILED tests/test_p119_proposals.py::test_p119_I2_unknown_packet_id_is_rejected
+FAILED tests/test_p119_proposals.py::test_p119_I3_fact_absent_from_cited_packets_is_rejected
+FAILED tests/test_p119_proposals.py::test_p119_I4_proposal_module_imports_no_provider_or_model_code
+FAILED tests/test_p119_proposals.py::test_p119_I5_alias_merge_proposal_must_cite_existing_canonical_paths
+17 failed, 1 passed in 0.42s

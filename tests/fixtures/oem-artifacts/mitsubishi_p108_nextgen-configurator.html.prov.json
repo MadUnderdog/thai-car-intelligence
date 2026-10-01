@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/buy/configure/nextgen-configurator",
+  "captured_at": "2026-09-27T19:06:11.789048+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "bca6ae3ee5c0e6214a356933d868a3ef8e406df5f65c4b28a5ce35c31ff9f376",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mitsubishi_p108_nextgen-configurator.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

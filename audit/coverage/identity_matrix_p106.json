@@ -1,0 +1,1301 @@
+{
+  "schema": "p106-identity-matrix/1",
+  "generated_at": "2026-09-27T15:47:31.789733+00:00",
+  "baseline_artifact": "audit/coverage/identity_matrix_p105.json",
+  "oems": [
+    {
+      "brand": "Audi",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:32.369118+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.audi.co.th/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 31,
+        "variant_candidates_discovered": 21,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 31,
+        "identity_only_variants": 21,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index"
+        ],
+        "first_party_sources": [],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Avance",
+      "official_access_status": "BLOCKED_DNS",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:33.586368+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.avancemotors.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.avancemot\", \"url\": \"https://www.avancemotors.com/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "ENUMERATOR_PAGE_NOT_PUBLISHED",
+          "detail": "no published index page for this manufacturer on the enumerator"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 0,
+        "variant_candidates_discovered": 0,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 0,
+        "identity_only_variants": 0,
+        "first_party_confirmation": "NO_ENUMERATOR_AND_NO_FIRST_PARTY",
+        "candidate_sources": [],
+        "identity_levels_present": []
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "BMW",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 89,
+        "variant_candidates_discovered": 86,
+        "first_party_confirmed_models": 49,
+        "first_party_confirmed_variants": 73,
+        "identity_only_models": 35,
+        "identity_only_variants": 13,
+        "first_party_confirmed_records": 104,
+        "candidate_sources": [
+          "9carthai price index",
+          "BMW Thailand Official",
+          "BMW Thailand Price List",
+          "headlightmag",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "BMW Thailand Official",
+          "BMW Thailand Price List"
+        ],
+        "conflicts": 20
+      },
+      "p106_delta": {
+        "confirmed_variants": 7,
+        "rows": 7
+      }
+    },
+    {
+      "brand": "BYD",
+      "official_access_status": "BLOCKED_HTTP_404",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_404",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:31.848172+00:00\", \"http_status_or_error\": \"HTTP_404\", \"url\": \"https://www.byd.com/th/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-08T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 11,
+        "variant_candidates_discovered": 24,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 11,
+        "identity_only_variants": 24,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index",
+          "open_ev_data",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Changan",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 3,
+        "variant_candidates_discovered": 6,
+        "first_party_confirmed_models": 2,
+        "first_party_confirmed_variants": 4,
+        "identity_only_models": 1,
+        "identity_only_variants": 2,
+        "first_party_confirmed_records": 6,
+        "candidate_sources": [
+          "9carthai price index",
+          "Changan Thailand Official"
+        ],
+        "first_party_sources": [
+          "Changan Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Chery",
+      "official_access_status": "BLOCKED_DNS",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:33.757563+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.chery.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.chery.co.th', \", \"url\": \"https://www.chery.co.th/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 2,
+        "variant_candidates_discovered": 6,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 2,
+        "identity_only_variants": 6,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index"
+        ],
+        "first_party_sources": [],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Chevrolet",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T14:16:16.748942+00:00\", \"http_status_or_error\": \"HTTP_403 via Playwright (requests GET earlier returned 200 — browser-level block)\", \"url\": \"https://www.chevrolet.co.th/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-01T14:16:16.748942+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 8,
+        "variant_candidates_discovered": 16,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 8,
+        "identity_only_variants": 16,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Deepal",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 7,
+        "variant_candidates_discovered": 11,
+        "first_party_confirmed_models": 7,
+        "first_party_confirmed_variants": 4,
+        "identity_only_models": 0,
+        "identity_only_variants": 7,
+        "first_party_confirmed_records": 11,
+        "candidate_sources": [
+          "9carthai price index",
+          "Changan Thailand Campaign Pages",
+          "Changan Thailand Official",
+          "Deepal Thailand Official"
+        ],
+        "first_party_sources": [
+          "Changan Thailand Campaign Pages",
+          "Changan Thailand Official",
+          "Deepal Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Ford",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:32.087860+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.ford.co.th/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 10,
+        "variant_candidates_discovered": 15,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 9,
+        "identity_only_variants": 15,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [],
+        "conflicts": 2
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "GWM",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 19,
+        "variant_candidates_discovered": 30,
+        "first_party_confirmed_models": 15,
+        "first_party_confirmed_variants": 21,
+        "identity_only_models": 4,
+        "identity_only_variants": 9,
+        "first_party_confirmed_records": 35,
+        "candidate_sources": [
+          "9carthai price index",
+          "GWM Thailand Official",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "GWM Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Haval",
+      "official_access_status": "BLOCKED_DNS",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:33.654558+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.haval.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.haval.co.th', \", \"url\": \"https://www.haval.co.th/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 3,
+        "variant_candidates_discovered": 5,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 3,
+        "identity_only_variants": 5,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Honda",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 31,
+        "variant_candidates_discovered": 50,
+        "first_party_confirmed_models": 20,
+        "first_party_confirmed_variants": 32,
+        "identity_only_models": 14,
+        "identity_only_variants": 18,
+        "first_party_confirmed_records": 49,
+        "candidate_sources": [
+          "9carthai price index",
+          "Honda Models Page",
+          "Honda Thailand Grade List",
+          "Honda Thailand Official",
+          "headlightmag",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "Honda Models Page",
+          "Honda Thailand Grade List",
+          "Honda Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Isuzu",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 19,
+        "variant_candidates_discovered": 10,
+        "first_party_confirmed_models": 7,
+        "first_party_confirmed_variants": 7,
+        "identity_only_models": 13,
+        "identity_only_variants": 3,
+        "first_party_confirmed_records": 13,
+        "candidate_sources": [
+          "9carthai price index",
+          "Isuzu Thailand Official",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "Isuzu Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Jaguar",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 15,
+        "variant_candidates_discovered": 3,
+        "first_party_confirmed_models": 1,
+        "first_party_confirmed_variants": 1,
+        "identity_only_models": 14,
+        "identity_only_variants": 2,
+        "first_party_confirmed_records": 1,
+        "candidate_sources": [
+          "9carthai price index",
+          "Jaguar Thailand Official"
+        ],
+        "first_party_sources": [
+          "Jaguar Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Kia",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 14,
+        "variant_candidates_discovered": 18,
+        "first_party_confirmed_models": 9,
+        "first_party_confirmed_variants": 6,
+        "identity_only_models": 5,
+        "identity_only_variants": 12,
+        "first_party_confirmed_records": 15,
+        "candidate_sources": [
+          "9carthai price index",
+          "Kia Thailand Campaign Pages",
+          "Kia Thailand Official",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "Kia Thailand Campaign Pages",
+          "Kia Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 3,
+        "rows": 3
+      }
+    },
+    {
+      "brand": "Land Rover",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "ENUMERATOR_PAGE_NOT_PUBLISHED",
+          "detail": "no published index page for this manufacturer on the enumerator (only Jaguar is indexed)"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 4,
+        "variant_candidates_discovered": 11,
+        "first_party_confirmed_models": 4,
+        "first_party_confirmed_variants": 11,
+        "identity_only_models": 0,
+        "identity_only_variants": 0,
+        "first_party_confirmed_records": 14,
+        "candidate_sources": [
+          "Land Rover Thailand Official"
+        ],
+        "first_party_sources": [
+          "Land Rover Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Lexus",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 33,
+        "variant_candidates_discovered": 45,
+        "first_party_confirmed_models": 11,
+        "first_party_confirmed_variants": 36,
+        "identity_only_models": 26,
+        "identity_only_variants": 9,
+        "first_party_confirmed_records": 42,
+        "candidate_sources": [
+          "9carthai price index",
+          "Lexus Thailand Official",
+          "Lexus Thailand Price List",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "Lexus Thailand Official",
+          "Lexus Thailand Price List"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "MG",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 33,
+        "variant_candidates_discovered": 37,
+        "first_party_confirmed_models": 17,
+        "first_party_confirmed_variants": 8,
+        "identity_only_models": 17,
+        "identity_only_variants": 29,
+        "first_party_confirmed_records": 24,
+        "candidate_sources": [
+          "9carthai price index",
+          "MG Thailand Official",
+          "headlightmag",
+          "open_ev_data",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "MG Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "MINI",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 16,
+        "variant_candidates_discovered": 20,
+        "first_party_confirmed_models": 8,
+        "first_party_confirmed_variants": 13,
+        "identity_only_models": 8,
+        "identity_only_variants": 7,
+        "first_party_confirmed_records": 20,
+        "candidate_sources": [
+          "9carthai price index",
+          "MINI Thailand Official",
+          "MINI Thailand Price Sheet"
+        ],
+        "first_party_sources": [
+          "MINI Thailand Official",
+          "MINI Thailand Price Sheet"
+        ],
+        "conflicts": 1
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Mazda",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 25,
+        "variant_candidates_discovered": 55,
+        "first_party_confirmed_models": 18,
+        "first_party_confirmed_variants": 22,
+        "identity_only_models": 7,
+        "identity_only_variants": 33,
+        "first_party_confirmed_records": 40,
+        "candidate_sources": [
+          "9carthai price index",
+          "Mazda Thailand Official",
+          "headlightmag",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "Mazda Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T14:16:16.748942+00:00\", \"http_status_or_error\": \"HTTP_403 via Playwright (probe was BLOCKED_TIMEOUT — browser-level block)\", \"url\": \"https://www.mercedes-benz.co.th/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-01T14:16:16.748942+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 30,
+        "variant_candidates_discovered": 0,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 30,
+        "identity_only_variants": 0,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Mitsubishi",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 24,
+        "variant_candidates_discovered": 41,
+        "first_party_confirmed_models": 20,
+        "first_party_confirmed_variants": 24,
+        "identity_only_models": 4,
+        "identity_only_variants": 17,
+        "first_party_confirmed_records": 39,
+        "candidate_sources": [
+          "9carthai price index",
+          "Mitsubishi Thailand Official",
+          "Mitsubishi Thailand Price Tables",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "Mitsubishi Thailand Official",
+          "Mitsubishi Thailand Price Tables"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "NETA",
+      "official_access_status": "BLOCKED_DNS",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:33.300875+00:00\", \"http_status_or_error\": \"ConnectionError: HTTPSConnectionPool(host='www.neta.co.th', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\\\"HTTPSConnection(host='www.neta.co.th', po\", \"url\": \"https://www.neta.co.th/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 3,
+        "variant_candidates_discovered": 2,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 3,
+        "identity_only_variants": 2,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index"
+        ],
+        "first_party_sources": [],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Nissan",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 24,
+        "variant_candidates_discovered": 47,
+        "first_party_confirmed_models": 16,
+        "first_party_confirmed_variants": 23,
+        "identity_only_models": 8,
+        "identity_only_variants": 24,
+        "first_party_confirmed_records": 39,
+        "candidate_sources": [
+          "9carthai price index",
+          "Nissan Thailand Grade Price Table",
+          "Nissan Thailand Official",
+          "headlightmag",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "Nissan Thailand Grade Price Table",
+          "Nissan Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Peugeot",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:35.062412+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.peugeot.co.th/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 3,
+        "variant_candidates_discovered": 2,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 3,
+        "identity_only_variants": 2,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index"
+        ],
+        "first_party_sources": [],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Porsche",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 11,
+        "variant_candidates_discovered": 90,
+        "first_party_confirmed_models": 6,
+        "first_party_confirmed_variants": 69,
+        "identity_only_models": 7,
+        "identity_only_variants": 21,
+        "first_party_confirmed_records": 73,
+        "candidate_sources": [
+          "9carthai price index",
+          "Porsche Thailand Official"
+        ],
+        "first_party_sources": [
+          "Porsche Thailand Official"
+        ],
+        "conflicts": 2
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Smart",
+      "official_access_status": "DEALER_REDIRECT",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "DEALER_REDIRECT",
+          "detail": "{\"checked_at\": \"2026-09-25T14:16:39.761675+00:00\", \"http_status_or_error\": \"REDIRECT_TO_UNRELATED_DOMAIN: https://www.smartsecurity.in.th/ (HTTP 200) — unchanged since 2026-09-24; body sha256 e99e6e9a09a9f52c…; URL-decision evidence in audit/coverage/smart-url-decision-20260925/\", \"url\": \"https://www.smart.co.th/\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-09-26T14:16:39.761675+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "ENUMERATOR_PAGE_NOT_PUBLISHED",
+          "detail": "no published index page for this manufacturer on the enumerator"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 0,
+        "variant_candidates_discovered": 0,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 0,
+        "identity_only_variants": 0,
+        "first_party_confirmation": "NO_ENUMERATOR_AND_NO_FIRST_PARTY",
+        "candidate_sources": [],
+        "identity_levels_present": []
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Subaru",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 7,
+        "variant_candidates_discovered": 11,
+        "first_party_confirmed_models": 5,
+        "first_party_confirmed_variants": 2,
+        "identity_only_models": 2,
+        "identity_only_variants": 9,
+        "first_party_confirmed_records": 7,
+        "candidate_sources": [
+          "9carthai price index",
+          "Subaru Thailand Official",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "Subaru Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Suzuki",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 13,
+        "variant_candidates_discovered": 14,
+        "first_party_confirmed_models": 8,
+        "first_party_confirmed_variants": 11,
+        "identity_only_models": 6,
+        "identity_only_variants": 3,
+        "first_party_confirmed_records": 18,
+        "candidate_sources": [
+          "9carthai price index",
+          "Suzuki Thailand Official",
+          "Suzuki Thailand Spec & Price Tables",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "Suzuki Thailand Official",
+          "Suzuki Thailand Spec & Price Tables"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Tesla",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:32.086082+00:00\", \"http_status_or_error\": \"HTTP_403\", \"url\": \"https://www.tesla.com/th_th\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-01T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 4,
+        "variant_candidates_discovered": 9,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 4,
+        "identity_only_variants": 9,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Toyota",
+      "official_access_status": "REACHABLE",
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 66,
+        "variant_candidates_discovered": 179,
+        "first_party_confirmed_models": 39,
+        "first_party_confirmed_variants": 105,
+        "identity_only_models": 27,
+        "identity_only_variants": 74,
+        "first_party_confirmed_records": 143,
+        "candidate_sources": [
+          "9carthai price index",
+          "Toyota Thailand Official",
+          "headlightmag",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [
+          "Toyota Thailand Official"
+        ],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    },
+    {
+      "brand": "Volvo",
+      "official_access_status": "BLOCKED_TLS",
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_TLS",
+          "detail": "{\"checked_at\": \"2026-09-24T13:41:32.815537+00:00\", \"http_status_or_error\": \"SSLError: HTTPSConnectionPool(host='www.volvo.co.th', port=443): Max retries exceeded with url: /en/models.html (Caused by SSLErro\", \"url\": \"https://www.volvo.co.th/en/models.html\"}",
+          "consequence": "official alternate-route requests are deferred until next_retry_at; enumeration continues without ever marking this OEM official",
+          "next_retry_at": "2026-10-24T13:41:49.738574+00:00"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403",
+          "detail": "one2car: bot-challenge interstitial on every used-car taxonomy path"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS",
+          "detail": "chobrod: certificate subject mismatch; TLS verification is never bypassed"
+        }
+      ],
+      "identity": {
+        "model_candidates_discovered": 14,
+        "variant_candidates_discovered": 1,
+        "first_party_confirmed_models": 0,
+        "first_party_confirmed_variants": 0,
+        "identity_only_models": 14,
+        "identity_only_variants": 1,
+        "first_party_confirmed_records": 0,
+        "candidate_sources": [
+          "9carthai price index",
+          "thai_market_reference"
+        ],
+        "first_party_sources": [],
+        "conflicts": 0
+      },
+      "p106_delta": {
+        "confirmed_variants": 0,
+        "rows": 0
+      }
+    }
+  ]
+}

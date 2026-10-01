@@ -1,0 +1,141 @@
+{
+  "summary": {
+    "manufacturers_seeded": 27,
+    "manufacturers_discovered": 3,
+    "model_candidates": 81,
+    "canonical_models": 13,
+    "variant_candidates": 0,
+    "canonical_variants": 0,
+    "unresolved_variants": 0,
+    "conflicting_identities": 0,
+    "by_status": {
+      "UNKNOWN": 13
+    },
+    "with_price_evidence": 0,
+    "with_spec_evidence": 0
+  },
+  "by_manufacturer": [
+    {
+      "name": "Honda",
+      "thai_name": "",
+      "models": [
+        {
+          "name": "Civic",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "CR-V",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "Accord",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "City",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        }
+      ],
+      "model_count": 4
+    },
+    {
+      "name": "MG",
+      "thai_name": "",
+      "models": [
+        {
+          "name": "MG4",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "MG3",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        }
+      ],
+      "model_count": 2
+    },
+    {
+      "name": "BMW",
+      "thai_name": "",
+      "models": [
+        {
+          "name": "X1",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "5 Series",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "X5",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "3 Series",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "X3",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "7 Series",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        },
+        {
+          "name": "iX",
+          "status": "UNKNOWN",
+          "evidence_count": 1,
+          "has_price": false,
+          "has_specs": false
+        }
+      ],
+      "model_count": 7
+    }
+  ],
+  "fabrication_audit": {
+    "issues": [],
+    "passed": true,
+    "issue_count": 0
+  },
+  "coverage": {
+    "total": 13,
+    "with_price": 0,
+    "with_specs": 0
+  }
+}

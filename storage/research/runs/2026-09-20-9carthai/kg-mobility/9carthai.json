@@ -1,0 +1,19 @@
+{
+  "brand": "kg-mobility",
+  "brand_display": "KG Mobility",
+  "status": "NO_PRICES",
+  "source_url": "https://www.9carthai.com/kg-mobility-price/",
+  "article_title": "Page Not Found - 9CARTHAI : 9CARTHAI",
+  "prices": [],
+  "specs": [],
+  "sources": [
+    "https://www.9carthai.com/kg-mobility-price/"
+  ],
+  "failures": [
+    {
+      "reason": "No model+price matches"
+    }
+  ],
+  "rejection_count": 0,
+  "extraction_ts": "2026-09-20T15:31:05.896621"
+}

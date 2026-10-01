@@ -1,0 +1,21 @@
+{
+  "artifact": "p104-smart-retry-check/1",
+  "checked_at": "2026-09-27T10:51:22.609123+00:00",
+  "url": "https://www.smart.co.th",
+  "method": "requests.get (default TLS verification, no header spoofing beyond UA)",
+  "status": "HTTP_OK",
+  "final_url": "https://www.smartsecurity.in.th/",
+  "final_host": "www.smartsecurity.in.th",
+  "redirect_chain": [
+    {
+      "url": "https://www.smart.co.th/",
+      "status": 301
+    },
+    {
+      "url": "https://www.smartsecurity.in.th/",
+      "status": 200
+    }
+  ],
+  "body_sha256": "5351874dcd9c05eb8e9bb05d737e92dacd096a3d256448aab4a6e599e56065df",
+  "unrelated_domain": true
+}

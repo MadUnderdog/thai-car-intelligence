@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/s3fs-public/2026-02/Mazda3_2025_0.pdf?VersionId=B_yVtJ0n7L_lwESBGTpOXzWeazBdPehN",
+  "captured_at": "2026-09-27T16:01:00.481841+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "2b9ca43482d22c2f7d5722efb0578667a476ecd28c23a755123740296768a98f",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "mazda_p107_Mazda3_2025_0.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

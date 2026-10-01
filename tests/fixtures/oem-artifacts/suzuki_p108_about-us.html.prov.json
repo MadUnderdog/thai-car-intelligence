@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/about-us",
+  "captured_at": "2026-09-27T19:07:20.064637+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "3e35ee0063dd27c7724eb03ab54a8dc353f4acdd4378ef13fe84492c2358a3bb",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "suzuki_p108_about-us.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

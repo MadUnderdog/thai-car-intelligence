@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mini.co.th/en_TH/home.html",
+  "captured_at": "2026-09-24T13:49:07.774046+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "b662bd5b0cca816295643f72ac8b880a2ee82d017d25a40edd5ddca363783273",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "mini_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

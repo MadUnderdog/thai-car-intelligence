@@ -1,0 +1,51 @@
+{
+  "source": "mazda_official_lineup",
+  "url": "https://www.mazda.co.th/en/vehicles",
+  "observed_at": "2026-09-22T14:24:14.404465",
+  "acquisition_method": "playwright",
+  "payload_hash": "22be446f19b73d41",
+  "content_length": 177833,
+  "text_length": 2964,
+  "models": [
+    {
+      "name": "NEW MAZDA2 ESSENTIAL​",
+      "price": 529000
+    },
+    {
+      "name": "MAZDA3 FASTBACK",
+      "price": 979000
+    },
+    {
+      "name": "MAZDA3 SEDAN",
+      "price": 979000
+    },
+    {
+      "name": "MAZDA6 20TH ANNIVERSARY EDITION",
+      "price": 2499000
+    },
+    {
+      "name": "THE ALL-ELECTRIC MAZDA6e",
+      "price": 1169000
+    },
+    {
+      "name": "NEW MAZDA CX-3 ESSENTIAL",
+      "price": 699000
+    },
+    {
+      "name": "NEW MAZDA CX-30 ESSENTIAL",
+      "price": 899000
+    },
+    {
+      "name": "NEW MAZDA CX-5",
+      "price": 1219000
+    },
+    {
+      "name": "MAZDA CX-8",
+      "price": 1549000
+    },
+    {
+      "name": "NEW MAZDA BT-50",
+      "price": 762000
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "artifact": "p107-variant-evidence/1",
+  "generated_at": "2026-09-27T16:32:11.375302+00:00",
+  "plan": "p107_target_plan.json",
+  "rules": [
+    "model-bound composite label",
+    "name|price row or grade list",
+    "provenance verified before use"
+  ],
+  "evidence": [
+    {
+      "manufacturer": "Changan",
+      "model": "Changan Lumin",
+      "variant": "L DC",
+      "identity_level": "VARIANT",
+      "published_label": "Changan Lumin L DC",
+      "artifact": "changan_p107_compare-cars_dup.html",
+      "sha256": "7f5839ee28f59190a46d81bcca7ffbb52e0ab185f7f8f894e2e8d4d79b16e824",
+      "source_url": "https://www.changan.co.th/th/compare-cars/?compare1=17",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "Lumin L DC",
+        "line": 13,
+        "model_prefix": "Lumin",
+        "structure": "grade list of Changan Lumin (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Changan Lumin",
+          "variant": "L DC"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "Changan Lumin",
+      "variant": "L DC",
+      "identity_level": "VARIANT",
+      "published_label": "Changan Lumin L DC",
+      "artifact": "changan_p107_compare-cars_dup.html",
+      "sha256": "7f5839ee28f59190a46d81bcca7ffbb52e0ab185f7f8f894e2e8d4d79b16e824",
+      "source_url": "https://www.changan.co.th/th/compare-cars/?compare1=17",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "lumin l dc",
+        "line": 31,
+        "model_prefix": "Lumin",
+        "structure": "grade list of Changan Lumin (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Changan Lumin",
+          "variant": "L DC"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "Changan Lumin",
+      "variant": "L DC",
+      "identity_level": "VARIANT",
+      "published_label": "Changan Lumin L DC",
+      "artifact": "changan_p107_compare-cars_dup.html",
+      "sha256": "7f5839ee28f59190a46d81bcca7ffbb52e0ab185f7f8f894e2e8d4d79b16e824",
+      "source_url": "https://www.changan.co.th/th/compare-cars/?compare1=17",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "LUMIN L DC",
+        "line": 32,
+        "model_prefix": "Lumin",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Changan Lumin",
+          "variant": "L DC"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Changan",
+      "model": "Changan Lumin",
+      "variant": "L DC",
+      "identity_level": "VARIANT",
+      "published_label": "Changan Lumin L DC",
+      "artifact": "changan_p107_compare-cars_dup.html",
+      "sha256": "7f5839ee28f59190a46d81bcca7ffbb52e0ab185f7f8f894e2e8d4d79b16e824",
+      "source_url": "https://www.changan.co.th/th/compare-cars/?compare1=17",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "Lumin L DC",
+        "line": 80,
+        "model_prefix": "Lumin",
+        "structure": "grade list of Changan Lumin (2 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Changan Lumin",
+          "variant": "L DC"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "Mini John Cooper Works",
+      "variant": "ALL-ELECTRIC MINI JOHN COOPER WORKS",
+      "identity_level": "VARIANT",
+      "published_label": "Mini John Cooper Works ALL-ELECTRIC MINI JOHN COOPER WORKS",
+      "artifact": "mini_p107_brochure.html",
+      "sha256": "450c87d56336065519d778f49db1bee6e1a77d5b78ce04bdbddcc330595c9ab8",
+      "source_url": "https://www.mini.co.th/en_TH/home/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "All-Electric MINI John Cooper Works",
+        "line": 186,
+        "model_prefix": "Mini John Cooper Works",
+        "structure": "bare grade row of Mini John Cooper Works; the page lists 2 grades that only Mini John Cooper Works owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mini John Cooper Works",
+          "variant": "ALL-ELECTRIC MINI JOHN COOPER WORKS"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MINI",
+      "model": "Mini John Cooper Works",
+      "variant": "ALL-ELECTRIC MINI JOHN COOPER WORKS ACEMAN",
+      "identity_level": "VARIANT",
+      "published_label": "Mini John Cooper Works ALL-ELECTRIC MINI JOHN COOPER WORKS ACEMAN",
+      "artifact": "mini_p107_brochure.html",
+      "sha256": "450c87d56336065519d778f49db1bee6e1a77d5b78ce04bdbddcc330595c9ab8",
+      "source_url": "https://www.mini.co.th/en_TH/home/brochure.html",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_bare_row",
+      "evidence": {
+        "composite_line": "ALL-ELECTRIC MINI JOHN COOPER WORKS ACEMAN",
+        "line": 189,
+        "model_prefix": "Mini John Cooper Works",
+        "structure": "bare grade row of Mini John Cooper Works; the page lists 2 grades that only Mini John Cooper Works owns",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mini John Cooper Works",
+          "variant": "ALL-ELECTRIC MINI JOHN COOPER WORKS ACEMAN"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "450H",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 450H",
+      "artifact": "lexus_p107_AW_catalog_nov2025_Lexus_NX.pdf.b64",
+      "sha256": "4c204fa6f8d6eeb276d7ef0a9eb0c7be172d7e8a90545983fb68f6f7c9468218",
+      "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_NX.pdf",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "LEXUS NX 450h+",
+        "line": 172,
+        "model_prefix": "Lexus Nx",
+        "structure": "grade list of Lexus Nx (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "450H"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Lexus",
+      "model": "Lexus Nx",
+      "variant": "350H",
+      "identity_level": "VARIANT",
+      "published_label": "Lexus Nx 350H",
+      "artifact": "lexus_p107_AW_catalog_nov2025_Lexus_NX.pdf.b64",
+      "sha256": "4c204fa6f8d6eeb276d7ef0a9eb0c7be172d7e8a90545983fb68f6f7c9468218",
+      "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2025/AW_catalog_nov2025_Lexus_NX.pdf",
+      "source_generation_context": "",
+      "extraction_method": "official_grade_list_row",
+      "evidence": {
+        "composite_line": "LEXUS NX 350h",
+        "line": 198,
+        "model_prefix": "Lexus Nx",
+        "structure": "grade list of Lexus Nx (4 grades on this page)",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Lexus Nx",
+          "variant": "350H"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Alphard",
+      "variant": "HEV PREMIUM LUXURY",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Alphard HEV PREMIUM LUXURY",
+      "artifact": "toyota_p107_alphard.html",
+      "sha256": "9e5784401f294a96422067bae050d4289c0b1b968977875b79a61004f5cca952",
+      "source_url": "https://www.toyota.co.th/en/model/alphard",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Alphard HEV Premium Luxury",
+        "line": 20,
+        "model_prefix": "Alphard",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Alphard",
+          "variant": "HEV PREMIUM LUXURY"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Alphard",
+      "variant": "HEV PREMIUM",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Alphard HEV PREMIUM",
+      "artifact": "toyota_p107_alphard.html",
+      "sha256": "9e5784401f294a96422067bae050d4289c0b1b968977875b79a61004f5cca952",
+      "source_url": "https://www.toyota.co.th/en/model/alphard",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Alphard HEV Premium",
+        "line": 27,
+        "model_prefix": "Alphard",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Alphard",
+          "variant": "HEV PREMIUM"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Alphard",
+      "variant": "HEV SMART",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Alphard HEV SMART",
+      "artifact": "toyota_p107_alphard.html",
+      "sha256": "9e5784401f294a96422067bae050d4289c0b1b968977875b79a61004f5cca952",
+      "source_url": "https://www.toyota.co.th/en/model/alphard",
+      "source_generation_context": "",
+      "extraction_method": "official_name_price_row",
+      "evidence": {
+        "composite_line": "Alphard HEV Smart",
+        "line": 41,
+        "model_prefix": "Alphard",
+        "structure": "name row immediately followed by a published price line",
+        "selector": "official page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Alphard",
+          "variant": "HEV SMART"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Altis",
+      "variant": "HEV Smart",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Altis HEV Smart",
+      "artifact": "toyota_p107_altis.html",
+      "sha256": "c4e2fd3e65ff84434c94d334a399a8bf1eb46e4344233ef100957a4b41278ed1",
+      "source_url": "https://www.toyota.co.th/en/model/altis",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "HEV Smart",
+        "line": 33,
+        "model_prefix": "Toyota Altis",
+        "structure": "page URL names Toyota Altis and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Altis",
+          "variant": "HEV Smart"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "Toyota Altis",
+      "variant": "1.8G",
+      "identity_level": "VARIANT",
+      "published_label": "Toyota Altis 1.8G",
+      "artifact": "toyota_p107_altis.html",
+      "sha256": "c4e2fd3e65ff84434c94d334a399a8bf1eb46e4344233ef100957a4b41278ed1",
+      "source_url": "https://www.toyota.co.th/en/model/altis",
+      "source_generation_context": "",
+      "extraction_method": "official_page_bound_grade_list",
+      "evidence": {
+        "composite_line": "1.8G",
+        "line": 40,
+        "model_prefix": "Toyota Altis",
+        "structure": "page URL names Toyota Altis and lists 2 distinct grades of it",
+        "selector": "official model page body (navigation/footer/meta/style regions removed)"
+      },
+      "reconciliation_note": "",
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Toyota Altis",
+          "variant": "1.8G"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    }
+  ]
+}

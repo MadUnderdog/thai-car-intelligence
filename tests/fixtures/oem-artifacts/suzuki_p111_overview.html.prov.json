@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/en/model/xl7/overview",
+  "captured_at": "2026-09-28T07:14:58.926585+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "853113126723e9f3cc3d8ca58cac66a1600d62d4479183bff816f28f7ac16402",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "suzuki_p111_overview.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "p120_r1_repair_result/v1",
+  "created_at": "2026-09-30",
+  "repair": "P120-R1 targeted evidence-integrity repair (Phase-6 blocker in promotion eligibility)",
+  "base_commit": "6088d93ad2371cfbef7d11ea9323fa8cf65109f9",
+  "defect": {
+    "file": "lib/thai_factory/production/eligibility.py::check_observation()",
+    "before": "_sidecar_sha_ok() returned None when the artifact/sidecar could not be resolved and the caller did NOT refuse (None path); the actual artifact BYTES were never hashed against obs.sha256; price locator quotes were never re-resolved — a crafted/mutated ACCEPTED packet with missing artifact/sidecar, malformed sidecar, byte-substituted artifact, or bogus price quote could pass eligibility (violates contracts E/F).",
+    "after": "fail-closed evidence triple-check on every cited observation: (1) artifact must resolve AND sidecar must exist and parse — missing/unresolvable artifact, missing sidecar, malformed sidecar => EVIDENCE_TAMPERED; (2) actual artifact bytes SHA-256 == obs.sha256 AND sidecar sha256 == obs.sha256 (byte-hash cached per process); (3) locator required; price locator quote re-resolved against the observation value with the P119-R5 normalisation (comma/space strip, integral float) => mismatch EVIDENCE_TAMPERED. Runner/verifier untouched — this is a guard AROUND the frozen acceptance path.",
+    "real_set_impact": "all 128 distinct cited artifacts already satisfy file+sidecar+sidecar-sha+byte-sha (verified before implementation) => production dry-run under the stricter guard shows ZERO new refusals: refusals remain ALREADY_PROMOTED 836 / STATUS_NOT_ACCEPTED 71, writes 0"
+  },
+  "red_before": {
+    "log": "audit/daily-runs/20260930-p120r1-redbefore.log",
+    "failed": 6, "passed": 1,
+    "detail": "on HEAD 6088d93: N1 missing artifact, N2 missing sidecar, N4 byte-hash mismatch, N5 price quote mismatch produced NO refusal (set()); N3/N6 refused only with the generic detail string (pins for standardized details); P1 positive already passed"
+  },
+  "tests": {
+    "new": "tests/test_p120_r1_evidence_integrity.py (7 tests)",
+    "N1": "missing/unresolvable artifact => EVIDENCE_TAMPERED, zero DB writes",
+    "N2": "missing sidecar => EVIDENCE_TAMPERED, zero DB writes",
+    "N3": "sidecar sha != obs sha => EVIDENCE_TAMPERED, zero DB writes",
+    "N4": "actual artifact bytes sha != obs sha (sidecar matches) => EVIDENCE_TAMPERED, zero DB writes",
+    "N5": "price locator quote does not carry the value => EVIDENCE_TAMPERED, zero DB writes",
+    "N6": "malformed sidecar JSON => EVIDENCE_TAMPERED, zero DB writes",
+    "P1": "positive: REAL committed artifact + REAL sidecar + matching locator promotes on the ephemeral test DB (writes 1) and rerun is NO_ACTION (idempotent)"
+  },
+  "gates": {
+    "focused": "28 passed (7 new + 21 existing p120)",
+    "production_dry_run_read_only": "DRY_RUN, writes 0, refusals {ALREADY_PROMOTED: 836, STATUS_NOT_ACCEPTED: 71}, NO EVIDENCE_TAMPERED on the real set",
+    "combined": "154 passed (147 + 7, full-pytest order)",
+    "full_vitest": "563 passed | 2 skipped (47 files)",
+    "tsc": "0", "prisma": "validate OK", "credential_scan": "0",
+    "full_pytest": "1047 passed (no flake this run) — audit/daily-runs/20260930-p120r1-full-pytest.log",
+    "known_excluded": "tests/test_generation_config_boundary.py ImportError _OPENROUTER_ALLOWED_MODEL (P49, eef8c49) — reported separately",
+    "chain_log": "/home/ubuntu/.hermes/cache/scratch/p120r1_gate_chain.log",
+    "chain_overall": "ALL_GATES_PASS"
+  },
+  "production_separation": {
+    "p120_controlled_execute": "computed eligible delta 0 / NO_ACTION / 0 writes (before==after counts) — no production row was created during P120",
+    "worker_proof": "the promotion worker itself is proven by the ephemeral-DB positive promotion (P1) + idempotency + rollback tests (B/C/K/L/P), NOT by a production write",
+    "p120r1_production_access": "read-only dry-run only; production tables untouched in this repair (ephemeral schema-only test DB for all writes)",
+    "no_new_production_row_claim": "explicitly NOT claimed for P120 or P120-R1"
+  },
+  "disclosures": [
+    "The repair strengthens eligibility only; AcceptanceRunner/verifier v9, P114 mechanics, schemas and providers untouched (test Q in existing suite + git scope).",
+    "Byte-hash verification is cached per process (artifact files are immutable committed fixtures).",
+    "Red run N1 initially crashed in the TEST BUILDER (make_packet reading a sidecar for a nonexistent artifact) — fixed by passing an explicit sha so the red evidence shows the actual defect shape (no refusal), then the canonical red was re-captured: 6 failed | 1 passed.",
+    "The sidecar-mismatch (N3) and malformed-sidecar (N6) cases already refused on HEAD but with a generic detail; they are kept as pins for the standardized reason details."
+  ]
+}

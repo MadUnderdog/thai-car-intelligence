@@ -1,0 +1,854 @@
+{
+  "artifact": "p105-catalog-reconciliation/1",
+  "generated_at": "2026-09-27T14:29:29.195908+00:00",
+  "before": {
+    "confirmed_variants": 404,
+    "confirmed_models": 243
+  },
+  "after": {
+    "confirmed_variants": 462,
+    "confirmed_models": 255
+  },
+  "harvested": 143,
+  "outcomes": {
+    "existing": 143
+  },
+  "by_method": {
+    "official_page_bound_grade_list": 20,
+    "official_name_price_row": 33,
+    "official_grade_list_row": 80,
+    "official_grade_list_bare_row": 5,
+    "official_grade_table_row": 5
+  },
+  "per_oem_before_after": {
+    "Audi": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        21,
+        21
+      ]
+    },
+    "BMW": {
+      "confirmed_variants": [
+        49,
+        66
+      ],
+      "identity_only_variants": [
+        37,
+        20
+      ]
+    },
+    "BYD": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        24,
+        24
+      ]
+    },
+    "Changan": {
+      "confirmed_variants": [
+        4,
+        4
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Chery": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        6,
+        6
+      ]
+    },
+    "Chevrolet": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        16,
+        16
+      ]
+    },
+    "Deepal": {
+      "confirmed_variants": [
+        1,
+        4
+      ],
+      "identity_only_variants": [
+        10,
+        7
+      ]
+    },
+    "Ford": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        15,
+        15
+      ]
+    },
+    "GWM": {
+      "confirmed_variants": [
+        18,
+        21
+      ],
+      "identity_only_variants": [
+        12,
+        9
+      ]
+    },
+    "Haval": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        5,
+        5
+      ]
+    },
+    "Honda": {
+      "confirmed_variants": [
+        31,
+        32
+      ],
+      "identity_only_variants": [
+        19,
+        18
+      ]
+    },
+    "Isuzu": {
+      "confirmed_variants": [
+        2,
+        7
+      ],
+      "identity_only_variants": [
+        8,
+        3
+      ]
+    },
+    "Jaguar": {
+      "confirmed_variants": [
+        1,
+        1
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Kia": {
+      "confirmed_variants": [
+        3,
+        3
+      ],
+      "identity_only_variants": [
+        15,
+        15
+      ]
+    },
+    "Land Rover": {
+      "confirmed_variants": [
+        11,
+        11
+      ],
+      "identity_only_variants": [
+        0,
+        0
+      ]
+    },
+    "Lexus": {
+      "confirmed_variants": [
+        27,
+        36
+      ],
+      "identity_only_variants": [
+        18,
+        9
+      ]
+    },
+    "MG": {
+      "confirmed_variants": [
+        5,
+        8
+      ],
+      "identity_only_variants": [
+        32,
+        29
+      ]
+    },
+    "MINI": {
+      "confirmed_variants": [
+        13,
+        13
+      ],
+      "identity_only_variants": [
+        7,
+        7
+      ]
+    },
+    "Mazda": {
+      "confirmed_variants": [
+        22,
+        22
+      ],
+      "identity_only_variants": [
+        33,
+        33
+      ]
+    },
+    "Mitsubishi": {
+      "confirmed_variants": [
+        19,
+        24
+      ],
+      "identity_only_variants": [
+        22,
+        17
+      ]
+    },
+    "NETA": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Nissan": {
+      "confirmed_variants": [
+        23,
+        23
+      ],
+      "identity_only_variants": [
+        24,
+        24
+      ]
+    },
+    "Peugeot": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        2,
+        2
+      ]
+    },
+    "Porsche": {
+      "confirmed_variants": [
+        69,
+        69
+      ],
+      "identity_only_variants": [
+        21,
+        21
+      ]
+    },
+    "Subaru": {
+      "confirmed_variants": [
+        2,
+        2
+      ],
+      "identity_only_variants": [
+        9,
+        9
+      ]
+    },
+    "Suzuki": {
+      "confirmed_variants": [
+        6,
+        11
+      ],
+      "identity_only_variants": [
+        8,
+        3
+      ]
+    },
+    "Tesla": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        9,
+        9
+      ]
+    },
+    "Toyota": {
+      "confirmed_variants": [
+        98,
+        105
+      ],
+      "identity_only_variants": [
+        81,
+        74
+      ]
+    },
+    "Volvo": {
+      "confirmed_variants": [
+        0,
+        0
+      ],
+      "identity_only_variants": [
+        1,
+        1
+      ]
+    }
+  },
+  "new_identities": [],
+  "ambiguous": [],
+  "rejected_rows": [
+    {
+      "model": "Gwm Tank 300",
+      "variant": "HEV",
+      "artifact": "gwm_th_model_tank-300.html",
+      "line": 32,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Gwm Tank 300",
+      "variant": "ULTRA",
+      "artifact": "gwm_th_model_tank-300.html",
+      "line": 41,
+      "text": "ULTRA",
+      "reason": "occurs only in navigation / footer / meta / style regions"
+    },
+    {
+      "model": "Gwm Tank 500",
+      "variant": "ULTRA",
+      "artifact": "gwm_th_model_tank-500.html",
+      "line": 42,
+      "text": "ULTRA",
+      "reason": "occurs only in navigation / footer / meta / style regions"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 9,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 10,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 46,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 47,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 277,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_hunter_k50.html",
+      "line": 278,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/hunter-k50-th/ names Deepal Hunter K50, hunter-k50 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05.html",
+      "line": 9,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05.html",
+      "line": 10,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05.html",
+      "line": 46,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05.html",
+      "line": 47,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05.html",
+      "line": 273,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05.html",
+      "line": 274,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-th/ names Deepal S05, s05 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05_reev.html",
+      "line": 9,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05_reev.html",
+      "line": 10,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05_reev.html",
+      "line": 46,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05_reev.html",
+      "line": 47,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s05_reev.html",
+      "line": 268,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s05_reev.html",
+      "line": 269,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s05-reev-th/ names Deepal S05, s05, s05-reev but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s07.html",
+      "line": 9,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s07.html",
+      "line": 10,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s07.html",
+      "line": 46,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s07.html",
+      "line": 47,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Performance AWD",
+      "artifact": "deepal_s07.html",
+      "line": 288,
+      "text": "E07 Performance AWD",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Deepal E07",
+      "variant": "Plus",
+      "artifact": "deepal_s07.html",
+      "line": 289,
+      "text": "E07 Plus",
+      "reason": "cross-page binding: page URL https://www.changan.co.th/th/deepal/s07-th/ names S07, s07 but the row claims Deepal E07 — not model evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 54,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 55,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 58,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "Premium",
+      "artifact": "lexus_brochures.html",
+      "line": 74,
+      "text": "LX 500d Premium",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 75,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 86,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 89,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 130,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 138,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 142,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 278,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 281,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_brochures.html",
+      "line": 322,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 330,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_brochures.html",
+      "line": 334,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "Premium",
+      "artifact": "lexus_models_page.html",
+      "line": 74,
+      "text": "LX 500d Premium",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 54,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 55,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 58,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "Premium",
+      "artifact": "lexus_press_news.html",
+      "line": 74,
+      "text": "LX 500d Premium",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 75,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 86,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 89,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 130,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 138,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 142,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 278,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Lx 500D",
+      "variant": "F-Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 281,
+      "text": "LX 500d F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "450H F Sport",
+      "artifact": "lexus_press_news.html",
+      "line": 322,
+      "text": "NX 450h+ F SPORT",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 330,
+      "text": "NX 350h Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Lexus Nx",
+      "variant": "350h Grand Luxury",
+      "artifact": "lexus_press_news.html",
+      "line": 334,
+      "text": "NX 350h Grand Luxury",
+      "reason": "occurs only in navigation / footer / meta / style regions — not variant evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Prime",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 375,
+      "text": "2.0 Prime",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Ultra",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 376,
+      "text": "2.0 Ultra",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Signature",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 377,
+      "text": "2.0 Signature",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "0",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "line": 354,
+      "text": "0%",
+      "reason": "promotion / percent token in the published line ('%') — never a grade label"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Prime",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 291,
+      "text": "2.0 PRIME",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Ultra",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 292,
+      "text": "2.0 ULTRA",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Mazda Cx-3",
+      "variant": "2.0 Signature",
+      "artifact": "mazda_spec_mazda-cx30-essential.html",
+      "line": 293,
+      "text": "2.0 SIGNATURE",
+      "reason": "cross-page binding: page URL https://www.mazda.co.th/th/cars/mazda-cx30-essential/spec names CX-30 but the row claims Mazda Cx-3 — not model evidence"
+    },
+    {
+      "model": "Toyota Corolla",
+      "variant": "Cross",
+      "artifact": "toyota_press_news.html",
+      "line": 119,
+      "reason": "generic label — never a variant"
+    },
+    {
+      "model": "Toyota Corolla",
+      "variant": "Cross",
+      "artifact": "toyota_pricelist_page.html",
+      "line": 120,
+      "reason": "generic label — never a variant"
+    }
+  ],
+  "staging_written": false,
+  "price_pass": false
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "packet_target_plan_p113/v1",
+  "generated_at": "2026-09-28T12:04:15.563332+00:00",
+  "method": {
+    "sequence": [
+      "plan",
+      "build+accept (one run)",
+      "validate (one gate pass)"
+    ],
+    "written_before_build": true,
+    "repair_loop": false
+  },
+  "audit_snapshot": {
+    "head": "99c01d53103c3b06d515261dbce4e06515d961ab",
+    "existing_abstractions_found": [
+      "lib/thai_factory/acceptance/evidence_packet.py (EvidencePacket, EvidenceClass, AcceptanceDecision, EvidenceLocator, ArtifactHash)",
+      "lib/thai_factory/acceptance/runner.py (AcceptanceRunner)",
+      "lib/thai_factory/acceptance/ledger.py (AcceptanceLedger)",
+      "lib/thai_factory/quality/gates.py (G1-G8 gate helpers)",
+      "tests/test_gold_set.py (10 runner gold tests)",
+      "Blueprint.md #97/#98 (packet contents, gates G1-G8)"
+    ],
+    "reused_modules": [
+      "thai_factory.acceptance.EvidencePacket",
+      "thai_factory.acceptance.AcceptanceRunner"
+    ],
+    "verifier_touched": false,
+    "phase1_only": true
+  },
+  "inputs": {
+    "accepted_variants": 488,
+    "identity_ledger_artifact": "audit/coverage/identity_universe_p108.json",
+    "p111": {
+      "artifact": "audit/coverage/p111_price_evidence.json",
+      "price_rows": 299,
+      "exact_current_msrp_verified": 269,
+      "msrp_starting_not_exact": 29,
+      "exact_binding_not_verified_current": 1,
+      "unverified_price": 189
+    },
+    "p112": {
+      "artifact": "audit/coverage/p112_spec_evidence.json",
+      "spec_rows": 1389,
+      "variants_with_spec_evidence": 126,
+      "spec_gaps": 362
+    }
+  },
+  "policies": [
+    {
+      "id": "IDENTITY_ACCEPTABLE",
+      "rule": "identity tuple equals the frozen ledger row, scope TH, and at least one cited identity source passes sidecar+SHA+HTTPS+locator re-resolution"
+    },
+    {
+      "id": "PRICE_ACCEPTABLE",
+      "rule": "P111 semantics only: EXACT_CURRENT_MSRP_VERIFIED passes; MSRP_STARTING_NOT_EXACT kept as its own status; EXACT_BINDING_NOT_VERIFIED_CURRENT never counts as current MSRP"
+    },
+    {
+      "id": "SPEC_ACCEPTABLE",
+      "rule": "P112 field-level same-record evidence on a CURRENT official source with exact grade binding and unit-or-refuse"
+    },
+    {
+      "id": "PACKET_ACCEPTED",
+      "rule": "every CITED observation passes provenance integrity; missing evidence becomes an explicit field gap, never a packet failure and never a filled value"
+    },
+    {
+      "id": "PROMOTION_ELIGIBLE",
+      "rule": "always False in this pass — dry-run only"
+    },
+    {
+      "id": "QUARANTINE_REASONS",
+      "rule": "artifact_missing | sidecar_missing | non_https_source_url | sidecar_sha_mismatch | sidecar_url_mismatch | expected_sha_mismatch | provenance_state_* | locator_unresolvable | runner_not_accepted | ledger_tuple_mismatch"
+    }
+  ],
+  "boundaries": {
+    "promotion_eligible": false,
+    "staging_write": false,
+    "production_db": false,
+    "prisma_schema": false,
+    "verifier": false,
+    "api_config_model_provider": false,
+    "new_acquisition": false,
+    "ai_reconciliation": false,
+    "price_metrics_mutation": false,
+    "p112_evidence_mutation": false,
+    "identity_ledger_mutation": false
+  },
+  "targets": {
+    "packets": 488,
+    "per_oem_accepted_ledger": {
+      "BMW": 73,
+      "Changan": 5,
+      "Deepal": 4,
+      "GWM": 22,
+      "Honda": 35,
+      "Isuzu": 7,
+      "Jaguar": 1,
+      "Kia": 6,
+      "Land Rover": 11,
+      "Lexus": 38,
+      "MG": 8,
+      "MINI": 15,
+      "Mazda": 22,
+      "Mitsubishi": 24,
+      "Nissan": 25,
+      "Porsche": 69,
+      "Subaru": 2,
+      "Suzuki": 11,
+      "Toyota": 110
+    }
+  }
+}

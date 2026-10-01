@@ -23,10 +23,10 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white mb-3">นำทาง</h3>
             <div className="flex flex-col gap-2 text-sm">
-              <Link href="/cars" className="hover:text-white transition-colors">รถยนต์ทั้งหมด</Link>
-              <Link href="/search" className="hover:text-white transition-colors">ค้นหา</Link>
-              <Link href="/compare" className="hover:text-white transition-colors">เปรียบเทียบ</Link>
-              <Link href="/ai-ask" className="hover:text-white transition-colors">ถาม AI</Link>
+              <Link href="/cars" className="min-h-[32px] inline-flex items-center hover:text-white transition-colors">รถยนต์</Link>
+              <Link href="/search" className="min-h-[32px] inline-flex items-center hover:text-white transition-colors">ค้นหา</Link>
+              <Link href="/compare" className="min-h-[32px] inline-flex items-center hover:text-white transition-colors">เปรียบเทียบ</Link>
+              <Link href="/ai-ask" className="min-h-[32px] inline-flex items-center hover:text-white transition-colors">ถาม AI</Link>
             </div>
           </div>
 

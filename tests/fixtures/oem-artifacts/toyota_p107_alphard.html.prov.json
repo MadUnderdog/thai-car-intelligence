@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/alphard",
+  "captured_at": "2026-09-27T16:00:52.686298+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "9e5784401f294a96422067bae050d4289c0b1b968977875b79a61004f5cca952",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "toyota_p107_alphard.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

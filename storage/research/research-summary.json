@@ -1,0 +1,150 @@
+{
+  "Honda": {
+    "brand": "Honda",
+    "thai_name": "ฮอนด้า",
+    "official_url": "https://www.honda.co.th",
+    "timestamp": "2026-09-19T20:30:52.760540",
+    "discovery": {
+      "models_found": 0,
+      "models": [],
+      "prices_found": 0
+    },
+    "models": [],
+    "network_requests": [],
+    "api_endpoints": [],
+    "errors": []
+  },
+  "Toyota": {
+    "brand": "Toyota",
+    "thai_name": "โตโยต้า",
+    "official_url": "https://www.toyota.co.th",
+    "timestamp": "2026-09-19T20:31:09.981986",
+    "discovery": {
+      "models_found": 4,
+      "models": [
+        {
+          "name": "Compare",
+          "href": "https://www.toyota.co.th/en/model/compare"
+        },
+        {
+          "name": "Model Compare",
+          "href": "https://www.toyota.co.th/en/model/compare"
+        },
+        {
+          "name": "Catalogue",
+          "href": "https://www.toyota.co.th/model/catalogue"
+        },
+        {
+          "name": "Compare",
+          "href": "https://www.toyota.co.th/model/compare"
+        }
+      ],
+      "prices_found": 0
+    },
+    "models": [
+      {
+        "name": "Compare",
+        "url": "https://www.toyota.co.th/en/model/compare",
+        "specs": {
+          "range_km": 0
+        },
+        "prices": [],
+        "spec_count": 1
+      },
+      {
+        "name": "Model Compare",
+        "url": "https://www.toyota.co.th/en/model/compare",
+        "specs": {
+          "range_km": 0
+        },
+        "prices": [],
+        "spec_count": 1
+      },
+      {
+        "name": "Catalogue",
+        "url": "https://www.toyota.co.th/model/catalogue",
+        "specs": {},
+        "prices": [],
+        "spec_count": 0
+      },
+      {
+        "name": "Compare",
+        "url": "https://www.toyota.co.th/model/compare",
+        "specs": {},
+        "prices": [],
+        "spec_count": 0
+      }
+    ],
+    "network_requests": [],
+    "api_endpoints": [
+      {
+        "url": "https://www.toyota.co.th/component/api/tcoth/web-init",
+        "keys": [
+          "car_series"
+        ],
+        "content_type": "application/json"
+      }
+    ],
+    "errors": []
+  },
+  "Nissan": {
+    "brand": "Nissan",
+    "thai_name": "นิสสัน",
+    "official_url": "https://www.nissan.co.th",
+    "timestamp": "2026-09-19T20:31:56.583921",
+    "discovery": {
+      "models_found": 0,
+      "models": [],
+      "prices_found": 0
+    },
+    "models": [],
+    "network_requests": [],
+    "api_endpoints": [],
+    "errors": []
+  },
+  "Mazda": {
+    "brand": "Mazda",
+    "thai_name": "มาสด้า",
+    "official_url": "https://www.mazda.co.th",
+    "timestamp": "2026-09-19T20:32:12.619847",
+    "discovery": {
+      "models_found": 0,
+      "models": [],
+      "prices_found": 20
+    },
+    "models": [],
+    "network_requests": [],
+    "api_endpoints": [],
+    "errors": []
+  },
+  "Mitsubishi": {
+    "brand": "Mitsubishi",
+    "thai_name": "มิตซูบิชิ",
+    "official_url": "https://www.mitsubishi-motors.co.th",
+    "timestamp": "2026-09-19T20:32:31.266815",
+    "discovery": {
+      "models_found": 0,
+      "models": [],
+      "prices_found": 0
+    },
+    "models": [],
+    "network_requests": [],
+    "api_endpoints": [],
+    "errors": []
+  },
+  "MG": {
+    "brand": "MG",
+    "thai_name": "เอ็มจี",
+    "official_url": "https://www.mgcars.com",
+    "timestamp": "2026-09-19T20:32:47.444635",
+    "discovery": {
+      "models_found": 0,
+      "models": [],
+      "prices_found": 0
+    },
+    "models": [],
+    "network_requests": [],
+    "api_endpoints": [],
+    "errors": []
+  }
+}

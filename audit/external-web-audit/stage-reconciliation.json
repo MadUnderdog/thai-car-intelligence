@@ -1,0 +1,46 @@
+{
+  "dbSnapshot": "2026-09-21T04:50:48.007309+00:00",
+  "stages": {
+    "discovered": {
+      "total": 119,
+      "note": "RSS/category discovery from 6 sources"
+    },
+    "fetched": {
+      "total": 119,
+      "note": "All fetched successfully"
+    },
+    "parsed": {
+      "total": 2744,
+      "note": "Raw observations extracted"
+    },
+    "identity_resolved": {
+      "total": 119,
+      "note": "All have brand detected"
+    },
+    "scope_valid": {
+      "total": 49,
+      "note": "Single-model articles"
+    },
+    "quality_passed": {
+      "total": 17,
+      "note": "Passed quality gates"
+    },
+    "persisted_to_observation": {
+      "total": 0,
+      "note": "In Observation table"
+    },
+    "promoted_to_canonical": {
+      "prices": 767,
+      "specs": 6993
+    },
+    "quarantined": {
+      "prices": 79,
+      "specs": 410
+    },
+    "current_clean": {
+      "prices": 18,
+      "specs": 6583
+    }
+  },
+  "reconciliation_note": "Stages reflect accumulated DB state from prior factory runs. Pipeline (ResearchCandidate/ExtractionJob) is not currently processing."
+}

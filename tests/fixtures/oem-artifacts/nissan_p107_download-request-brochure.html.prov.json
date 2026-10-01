@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/download-request-brochure.html",
+  "captured_at": "2026-09-27T16:01:52.288738+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "d3198caf729bc438b1472325b688f2b7967fbc2e3807754f3d180bafc735eb86",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "nissan_p107_download-request-brochure.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

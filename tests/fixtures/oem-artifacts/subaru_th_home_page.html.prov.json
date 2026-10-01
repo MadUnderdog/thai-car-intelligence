@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.subaru.asia/th/th/",
+  "captured_at": "2026-09-25T13:22:55.814644+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "7626c14f97a7cc97a2bb4102290d5aa5256df0de8f714d4f270bcd235be36141",
+  "session_id": "acquisition_subaru_th_lineup",
+  "artifact_filename": "subaru_th_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

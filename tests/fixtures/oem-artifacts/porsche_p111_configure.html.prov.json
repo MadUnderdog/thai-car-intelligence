@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/models/718/configure/",
+  "captured_at": "2026-09-28T07:14:47.332927+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "cb9f5d6b7b93a29b9066b6e5a7d195f0ac631d44dfcba843cfc6713e128e92af",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "porsche_p111_configure.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

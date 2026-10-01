@@ -1,0 +1,452 @@
+{
+  "brand": "ford",
+  "brand_name": "Ford",
+  "started_at": "2026-09-20T02:09:21.190379",
+  "finished_at": "2026-09-20T02:15:00.000000",
+  "official_url": "https://www.ford.co.th",
+  "official_url_status": "blocked_akamai_cdn",
+  "data_sources": [
+    "https://www.headlightmag.com/official-price-ford-ranger-wildtrak-x-my2026/",
+    "https://www.headlightmag.com/official-price-ford-ranger-wildtrak-extra-pack/",
+    "https://www.headlightmag.com/official-price-ford-ranger-raptor-v6-extra-pack/",
+    "https://www.headlightmag.com/official-price-ford-ranger-wolftrak-2026/",
+    "https://www.headlightmag.com/official-price-ford-ranger-super-duty-2/",
+    "https://www.headlightmag.com/official-price-ford-ranger-double-cab-xls-extra-pack/",
+    "https://www.headlightmag.com/official-price-ford-ranger-minorchange-2-0-turbo-bi-turbo/",
+    "https://www.headlightmag.com/special-price-ford-ranger-raptor-diesel-2025/",
+    "https://www.headlightmag.com/official-price-ford-everest-platinum-my2026/",
+    "https://www.headlightmag.com/special-price-ford-everest-titanium-plus-2026/"
+  ],
+  "models_found": [
+    "Ford Ranger",
+    "Ford Ranger Raptor",
+    "Ford Ranger Wolftrak",
+    "Ford Ranger Super Duty",
+    "Ford Everest"
+  ],
+  "total_variants": 27,
+  "price_range_baht": {
+    "min": 559000,
+    "max": 1984000
+  },
+  "models": {
+    "Ford Ranger": {
+      "model_name_th": "ฟอร์ด เรนเจอร์",
+      "segments": ["pickup_truck"],
+      "variants": [
+        {
+          "variant": "Standard Cab 2.2 XL 6MT",
+          "body_type": "Standard Cab (ตอนเดียว)",
+          "engine": "2.2L Turbo Diesel",
+          "transmission": "6MT",
+          "drivetrain": "4x2",
+          "price_baht": 559000,
+          "generation": "Minorchange",
+          "notes": "Base single cab"
+        },
+        {
+          "variant": "Standard Cab SWB 2.0 Turbo SWB 4x2 6MT",
+          "body_type": "Standard Cab SWB (ตอนเดียวช่วงสั้น)",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "6MT",
+          "drivetrain": "4x2",
+          "price_baht": 589000,
+          "generation": "Minorchange",
+          "notes": "Short wheelbase"
+        },
+        {
+          "variant": "Standard Cab SWB 2.0 Bi-Turbo SWB 4x4 10AT",
+          "body_type": "Standard Cab SWB (ตอนเดียวช่วงสั้น)",
+          "engine": "2.0L Bi-Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 799000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Open Cab 2.2 XL 6MT",
+          "body_type": "Open Cab (แค็บเปิดได้)",
+          "engine": "2.2L Turbo Diesel",
+          "transmission": "6MT",
+          "drivetrain": "4x2",
+          "price_baht": 599000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Open Cab 2.2 XL+ Hi-Rider 6MT",
+          "body_type": "Open Cab (แค็บเปิดได้)",
+          "engine": "2.2L Turbo Diesel",
+          "transmission": "6MT",
+          "drivetrain": "4x2 Hi-Rider",
+          "price_baht": 649000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Open Cab 2.2 XLS 6MT",
+          "body_type": "Open Cab (แค็บเปิดได้)",
+          "engine": "2.2L Turbo Diesel",
+          "transmission": "6MT",
+          "drivetrain": "4x2",
+          "price_baht": 659000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Open Cab 2.2 XLS Hi-Rider 6MT",
+          "body_type": "Open Cab (แค็บเปิดได้)",
+          "engine": "2.2L Turbo Diesel",
+          "transmission": "6MT",
+          "drivetrain": "4x2 Hi-Rider",
+          "price_baht": 699000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Open Cab 2.2 XLS Hi-Rider 6AT",
+          "body_type": "Open Cab (แค็บเปิดได้)",
+          "engine": "2.2L Turbo Diesel",
+          "transmission": "6AT",
+          "drivetrain": "4x2 Hi-Rider",
+          "price_baht": 739000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Open Cab 2.2 XLT Hi-Rider 6MT",
+          "body_type": "Open Cab (แค็บเปิดได้)",
+          "engine": "2.2L Turbo Diesel",
+          "transmission": "6MT",
+          "drivetrain": "4x2 Hi-Rider",
+          "price_baht": 749000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Open Cab 2.2 XLT Hi-Rider 6AT",
+          "body_type": "Open Cab (แค็บเปิดได้)",
+          "engine": "2.2L Turbo Diesel",
+          "transmission": "6AT",
+          "drivetrain": "4x2 Hi-Rider",
+          "price_baht": 789000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Open Cab 2.0 Turbo Limited 4x4 6MT",
+          "body_type": "Open Cab (แค็บเปิดได้)",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "6MT",
+          "drivetrain": "4x4",
+          "price_baht": 889000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Double Cab 2.0 Limited Hi-Rider 6MT",
+          "body_type": "Double Cab",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "6MT",
+          "drivetrain": "4x2 Hi-Rider",
+          "price_baht": 899000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Double Cab 2.0 Limited Hi-Rider 10AT",
+          "body_type": "Double Cab",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x2 Hi-Rider",
+          "price_baht": 949000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Double Cab 2.0 Wildtrak Hi-Rider 10AT",
+          "body_type": "Double Cab",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x2 Hi-Rider",
+          "price_baht": 1029000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Double Cab 2.0 Limited 4x4 10AT",
+          "body_type": "Double Cab",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1029000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Double Cab 2.0 Bi-Turbo Wildtrak 4x4 10AT",
+          "body_type": "Double Cab",
+          "engine": "2.0L Bi-Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1265000,
+          "generation": "Minorchange"
+        },
+        {
+          "variant": "Double Cab XLS 2.0 Turbo 6AT Extra Pack",
+          "body_type": "Double Cab",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "6AT",
+          "drivetrain": "4x2",
+          "price_baht": 809000,
+          "price_regular_baht": 934000,
+          "generation": "MY2026 Special",
+          "notes": "Special price with Extra Pack accessories"
+        },
+        {
+          "variant": "Double Cab Wolftrak 2.0 Turbo 10AT 4x2",
+          "body_type": "Double Cab",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x2",
+          "price_baht": 949000,
+          "price_regular_baht": 999000,
+          "generation": "MY2026",
+          "notes": "Launch special price (Aug 3 - Sep 30, 2026)"
+        },
+        {
+          "variant": "Double Cab Wolftrak 2.0 Turbo 10AT 4x4",
+          "body_type": "Double Cab",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1089000,
+          "generation": "MY2026"
+        },
+        {
+          "variant": "Double Cab Wildtrak Extra Pack 2.0 Turbo 6AT 2WD",
+          "body_type": "Double Cab",
+          "engine": "2.0L Turbo Diesel (170 PS / 405 Nm)",
+          "transmission": "6AT",
+          "drivetrain": "4x2",
+          "price_baht": 1104000,
+          "generation": "MY2026 Special",
+          "notes": "Special edition with sportbar, new alloy wheels, stickers"
+        },
+        {
+          "variant": "Double Cab Wildtrak 2.0 Turbo 10AT 4x2",
+          "body_type": "Double Cab",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x2",
+          "price_baht": 1159000,
+          "generation": "MY2026"
+        },
+        {
+          "variant": "Double Cab Wildtrak 2.0 Turbo 10AT 4x4",
+          "body_type": "Double Cab",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1249000,
+          "generation": "MY2026"
+        },
+        {
+          "variant": "Double Cab Wildtrak X V6 3.0 Turbo 10AT 4x4",
+          "body_type": "Double Cab",
+          "engine": "V6 3.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1469000,
+          "generation": "MY2026",
+          "notes": "Top Wildtrak variant with V6, e-Shifter, B&O 12-speaker, off-road features"
+        },
+        {
+          "variant": "Double Cab Super Duty V6 3.0 Diesel",
+          "body_type": "Double Cab",
+          "engine": "V6 3.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1599000,
+          "generation": "MY2026",
+          "notes": "Heavy-duty variant"
+        }
+      ]
+    },
+    "Ford Ranger Raptor": {
+      "model_name_th": "ฟอร์ด เรนเจอร์ แรพเตอร์",
+      "segments": ["performance_pickup"],
+      "variants": [
+        {
+          "variant": "Raptor 2.0 Bi-Turbo 10AT 4x4",
+          "engine": "2.0L Bi-Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1804000,
+          "price_special_baht": 1699000,
+          "generation": "MY2026",
+          "notes": "Special price ฿1,699,000 (discount ฿105,000)"
+        },
+        {
+          "variant": "Raptor V6 3.0 Twin-Turbo 10AT 4WD Extra Pack",
+          "engine": "V6 3.0L Twin-Turbo Gasoline",
+          "transmission": "10AT",
+          "drivetrain": "4WD",
+          "price_baht": 1984000,
+          "generation": "MY2026 Special",
+          "notes": "Top performance variant, Extra Pack with sportbar, B&O 10-speaker, 7 airbags"
+        }
+      ]
+    },
+    "Ford Everest": {
+      "model_name_th": "ฟอร์ด เอเวอเรสต์",
+      "segments": ["suv"],
+      "variants": [
+        {
+          "variant": "Active 2.0 Turbo 10AT 4x4",
+          "engine": "2.0L Turbo Diesel (250 PS / 600 Nm)",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1379000,
+          "price_special_baht": 1299000,
+          "generation": "MY2026",
+          "notes": "Base Everest, special price via Ford Leasing"
+        },
+        {
+          "variant": "Sport 2.0 Turbo 10AT 4x2",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x2",
+          "price_baht": 1599000,
+          "generation": "MY2026"
+        },
+        {
+          "variant": "Sport 2.0 Turbo 10AT 4x4",
+          "engine": "2.0L Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1669000,
+          "generation": "MY2026"
+        },
+        {
+          "variant": "Titanium+ 2.0 Bi-Turbo 10AT 4x2",
+          "engine": "2.0L Bi-Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x2",
+          "price_baht": 1767000,
+          "price_special_baht": 1599000,
+          "generation": "MY2026",
+          "notes": "Special price ฿1,599,000 (discount ฿168,000, limited 30 units)"
+        },
+        {
+          "variant": "Platinum 2.0 Turbo 10AT 4x4",
+          "engine": "2.0L Turbo Diesel (250 PS / 600 Nm)",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1779000,
+          "generation": "MY2026"
+        },
+        {
+          "variant": "Titanium+ 2.0 Bi-Turbo 10AT 4x4",
+          "engine": "2.0L Bi-Turbo Diesel",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 1917000,
+          "price_special_baht": 1717000,
+          "generation": "MY2026",
+          "notes": "Special price ฿1,717,000 (discount ฿200,000, limited 70 units)"
+        },
+        {
+          "variant": "Platinum V6 3.0 Turbo 10AT 4x4",
+          "engine": "V6 3.0L Turbo Diesel (250 PS / 600 Nm)",
+          "transmission": "10AT",
+          "drivetrain": "4x4",
+          "price_baht": 2284000,
+          "generation": "MY2026",
+          "notes": "Top Everest variant, Active Centre Differential, 21-inch wheels, Black Roof, leather seats"
+        }
+      ]
+    }
+  },
+  "all_prices_baht": [
+    559000, 589000, 599000, 649000, 659000, 699000, 739000, 749000,
+    789000, 799000, 809000, 889000, 899000, 934000, 949000, 999000,
+    1029000, 1089000, 1104000, 1159000, 1249000, 1265000, 1299000,
+    1379000, 1469000, 1599000, 1669000, 1699000, 1767000, 1779000,
+    1804000, 1917000, 1984000, 2284000
+  ],
+  "unique_regular_prices_baht": [
+    559000, 589000, 599000, 649000, 659000, 699000, 739000, 749000,
+    789000, 799000, 809000, 889000, 899000, 949000, 1029000, 1089000,
+    1104000, 1159000, 1249000, 1265000, 1379000, 1469000, 1599000,
+    1669000, 1767000, 1779000, 1804000, 1917000, 1984000, 2284000
+  ],
+  "promotional_prices": [
+    {
+      "variant": "Ranger XLS Extra Pack",
+      "regular": 934000,
+      "special": 809000,
+      "discount": 125000
+    },
+    {
+      "variant": "Ranger Wolftrak 4x2",
+      "regular": 999000,
+      "special": 949000,
+      "discount": 50000,
+      "valid_until": "2026-09-30"
+    },
+    {
+      "variant": "Ranger Raptor 2.0 Bi-Turbo",
+      "regular": 1804000,
+      "special": 1699000,
+      "discount": 105000
+    },
+    {
+      "variant": "Everest Active",
+      "regular": 1379000,
+      "special": 1299000,
+      "discount": 80000,
+      "condition": "Ford Leasing finance"
+    },
+    {
+      "variant": "Everest Titanium+ 4x2",
+      "regular": 1767000,
+      "special": 1599000,
+      "discount": 168000,
+      "limited_units": 30
+    },
+    {
+      "variant": "Everest Titanium+ 4x4",
+      "regular": 1917000,
+      "special": 1717000,
+      "discount": 200000,
+      "limited_units": 70
+    }
+  ],
+  "specs_highlights": {
+    "ranger_wildtrak_x_v6": {
+      "engine": "V6 3.0L Turbo Diesel",
+      "transmission": "10AT with e-Shifter",
+      "audio": "Bang & Olufsen 12 speakers",
+      "features": ["Off-road Upfitter Switches", "Trail Control", "Trail Turn Assist"]
+    },
+    "raptor_v6_extra_pack": {
+      "engine": "V6 3.0L Twin-Turbo Gasoline",
+      "transmission": "10AT",
+      "audio": "Bang & Olufsen 10 speakers",
+      "safety": "7 airbags",
+      "warranty": "5 years / 150,000 km"
+    },
+    "everest_platinum_v6": {
+      "engine": "V6 3.0L Turbo Diesel (250 PS / 600 Nm)",
+      "transmission": "10AT e-Shifter",
+      "drivetrain": "Full-time 4A with Active Centre Differential",
+      "wheels": "21-inch alloy, 275/45 R21",
+      "features": ["Black Roof", "Leather seats", "PLATINUM badge"],
+      "warranty": "5 years / 150,000 km"
+    },
+    "everest_active": {
+      "engine": "2.0L Turbo Diesel (250 PS / 600 Nm)",
+      "transmission": "10AT",
+      "drivetrain": "4x4",
+      "warranty": "5 years / 150,000 km"
+    }
+  },
+  "notes": [
+    "Ford.co.th blocked by Akamai CDN - prices sourced from headlightmag.com official price articles",
+    "Minorchange generation Ranger (2.2L engine) still available alongside MY2026 (2.0L/3.0L)",
+    "MY2026 Ranger uses 2.0L Turbo/Bi-Turbo and V6 3.0L engines (no more 2.2L)",
+    "Some variants have promotional/launch prices - regular prices noted where available",
+    "Everest Titanium+ is a special edition with limited units",
+    "Ford Territory not currently listed on Ford Thailand website (discontinued in Thai market)",
+    "Ford Transit/Tourneo commercial vehicles not priced on headlightmag (commercial channel)"
+  ]
+}

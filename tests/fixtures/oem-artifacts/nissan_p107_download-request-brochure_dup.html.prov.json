@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/new-almera/download-request-brochure.html",
+  "captured_at": "2026-09-27T16:01:54.601839+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "035de909bec078b21565a2eabaeeabe186454639dc5004a80f72c53576393e32",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "nissan_p107_download-request-brochure_dup.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/en/deal/tank-300",
+  "captured_at": "2026-09-27T19:07:02.746446+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "c608dd91289cd07bfa94ea66c1233cfe1570a6be54550e4896496658d901041f",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "gwm_p108_tank-300.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.subaru.asia/brochures/forester_th.pdf",
+  "captured_at": "2026-09-27T16:03:47.902822+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "52f1a59010db0e0530ce2127b9c98f39b73182870c9bad007d088a030759d4c3",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "subaru_p107_forester_th.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

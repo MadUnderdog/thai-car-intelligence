@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.subaru.asia/brochures/forestergtwild_th.pdf?v=4vc4y",
+  "captured_at": "2026-09-27T19:06:36.381080+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "7363a52f4dd5eda2c19aed952ed41606498938e7a96841566ef385cbba8180e7",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "subaru_p108_forestergtwild_th.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

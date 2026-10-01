@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/about-us/heritage/explore-model-a",
+  "captured_at": "2026-09-27T19:06:04.227575+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "a418f95e235ad258a6d108a57547822ade6e78e3d2d830d4ac8d65158e2ef899",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mitsubishi_p108_explore-model-a.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

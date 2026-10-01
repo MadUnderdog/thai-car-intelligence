@@ -1,0 +1,396 @@
+{
+  "brand": "chevrolet",
+  "brand_name": "Chevrolet",
+  "brand_name_th": "เชฟโรเลต",
+  "research_date": "2026-09-20",
+  "market_status": "Chevrolet exited new vehicle sales in Thailand (stopped ~2020). Official site (chevrolet.co.th) now only provides after-sales service and spare parts. Vehicle prices below are historical MSRP from when vehicles were still sold.",
+  "official_url": "https://www.chevrolet.co.th",
+  "official_url_note": "Website no longer lists vehicle models/prices. Only after-sales service, spare parts, and warranty info.",
+  "models": [
+    {
+      "model": "Captiva",
+      "model_th": "แคปติวา",
+      "generation": "C140 (All-New)",
+      "model_year": "2019-2020",
+      "body_type": "SUV",
+      "engine": "1.5L Turbo",
+      "variants": [
+        {
+          "variant": "LS (5 seats)",
+          "variant_th": "รุ่น LS 5 ที่นั่ง",
+          "price_thb": 999000,
+          "price_thb_formatted": "999,000 บาท",
+          "drivetrain": "FWD",
+          "transmission": "CVT",
+          "note": "Discontinued (sold out at clearance)"
+        },
+        {
+          "variant": "LS (7 seats)",
+          "variant_th": "รุ่น LS 7 ที่นั่ง",
+          "price_thb": 1029000,
+          "price_thb_formatted": "1,029,000 บาท",
+          "drivetrain": "FWD",
+          "transmission": "CVT",
+          "note": "MSRP = 999,000 + 30,000 for 7-seat option"
+        },
+        {
+          "variant": "LT",
+          "variant_th": "รุ่น LT",
+          "price_thb": 1099000,
+          "price_thb_formatted": "1,099,000 บาท",
+          "drivetrain": "FWD",
+          "transmission": "CVT"
+        },
+        {
+          "variant": "Premier",
+          "variant_th": "รุ่น Premier",
+          "price_thb": 1199000,
+          "price_thb_formatted": "1,199,000 บาท",
+          "drivetrain": "FWD",
+          "transmission": "CVT"
+        }
+      ]
+    },
+    {
+      "model": "Colorado",
+      "model_th": "โคโลราโด",
+      "generation": "2nd Gen (Thai-assembled)",
+      "model_year": "2020-2021",
+      "body_type": "Pickup Truck",
+      "engine": "2.5L Duramax Diesel Turbo",
+      "price_range_thb": {
+        "min": 548000,
+        "max": 1098000,
+        "min_formatted": "548,000 บาท",
+        "max_formatted": "1,098,000 บาท"
+      },
+      "variants": [
+        {
+          "variant": "2.5L 2WD S-Cab LS",
+          "variant_th": "2.5L 2WD แค็บเดี่ยว LS",
+          "body_style": "Single Cab",
+          "price_thb": 548000,
+          "price_thb_formatted": "548,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "MT"
+        },
+        {
+          "variant": "2.5L 2WD X-Cab LS",
+          "variant_th": "2.5L 2WD เอ็กซ์-แคป LS",
+          "body_style": "Extended Cab",
+          "price_thb": 599000,
+          "price_thb_formatted": "599,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "MT"
+        },
+        {
+          "variant": "2.5L 2WD X-Cab LT",
+          "variant_th": "2.5L 2WD เอ็กซ์-แคป LT",
+          "body_style": "Extended Cab",
+          "price_thb": 655000,
+          "price_thb_formatted": "655,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "MT"
+        },
+        {
+          "variant": "2.5L 2WD X-Cab LT (AT)",
+          "variant_th": "2.5L 2WD เอ็กซ์-แคป LT อัตโนมัติ",
+          "body_style": "Extended Cab",
+          "price_thb": 708000,
+          "price_thb_formatted": "708,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT"
+        },
+        {
+          "variant": "2.5L 2WD X-Cab LTZ",
+          "variant_th": "2.5L 2WD เอ็กซ์-แคป LTZ",
+          "body_style": "Extended Cab",
+          "price_thb": 799000,
+          "price_thb_formatted": "799,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT"
+        },
+        {
+          "variant": "2.5L 2WD X-Cab LT Z71",
+          "variant_th": "2.5L 2WD เอ็กซ์-แคป LT Z71",
+          "body_style": "Extended Cab",
+          "price_thb": 839000,
+          "price_thb_formatted": "839,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT"
+        },
+        {
+          "variant": "2.5L 2WD C-Cab LS",
+          "variant_th": "2.5L 2WD แค็บไฟฟ้า LS",
+          "body_style": "Crew Cab",
+          "price_thb": 699000,
+          "price_thb_formatted": "699,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT"
+        },
+        {
+          "variant": "2.5L 2WD C-Cab LT",
+          "variant_th": "2.5L 2WD แค็บไฟฟ้า LT",
+          "body_style": "Crew Cab",
+          "price_thb": 779000,
+          "price_thb_formatted": "779,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT"
+        },
+        {
+          "variant": "2.5L 2WD C-Cab LT Z71 MT",
+          "variant_th": "2.5L 2WD แค็บไฟฟ้า LT Z71 เกียร์ธรรมดา",
+          "body_style": "Crew Cab",
+          "price_thb": 822000,
+          "price_thb_formatted": "822,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "MT"
+        },
+        {
+          "variant": "2.5L 2WD C-Cab LT Z71 AT",
+          "variant_th": "2.5L 2WD แค็บไฟฟ้า LT Z71 อัตโนมัติ",
+          "body_style": "Crew Cab",
+          "price_thb": 868000,
+          "price_thb_formatted": "868,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT"
+        },
+        {
+          "variant": "2.5L 2WD C-Cab LTZ Z71 MT",
+          "variant_th": "2.5L 2WD แค็บไฟฟ้า LTZ Z71 เกียร์ธรรมดา",
+          "body_style": "Crew Cab",
+          "price_thb": 928000,
+          "price_thb_formatted": "928,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "MT"
+        },
+        {
+          "variant": "2.5L 2WD C-Cab LTZ Z71 AT",
+          "variant_th": "2.5L 2WD แค็บไฟฟ้า LTZ Z71 อัตโนมัติ",
+          "body_style": "Crew Cab",
+          "price_thb": 968000,
+          "price_thb_formatted": "968,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT"
+        },
+        {
+          "variant": "2.5L 2WD C-Cab High Country Z71 AT",
+          "variant_th": "2.5L 2WD แค็บไฟฟ้า High Country Z71 อัตโนมัติ",
+          "body_style": "Crew Cab",
+          "price_thb": 998000,
+          "price_thb_formatted": "998,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT",
+          "trim": "High Country"
+        },
+        {
+          "variant": "2.5L 4WD C-Cab High Country Z71 AT",
+          "variant_th": "2.5L 4WD แค็บไฟฟ้า High Country Z71 อัตโนมัติ",
+          "body_style": "Crew Cab",
+          "price_thb": 1068000,
+          "price_thb_formatted": "1,068,000 บาท",
+          "drivetrain": "4WD",
+          "transmission": "AT",
+          "trim": "High Country"
+        },
+        {
+          "variant": "2.5L VGT 2WD Storm Z71 AT",
+          "variant_th": "2.5L VGT 2WD Storm Z71 อัตโนมัติ",
+          "body_style": "Crew Cab",
+          "price_thb": 1028000,
+          "price_thb_formatted": "1,028,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT",
+          "trim": "Storm"
+        },
+        {
+          "variant": "2.5L VGT 4WD Storm Z71 AT",
+          "variant_th": "2.5L VGT 4WD Storm Z71 อัตโนมัติ",
+          "body_style": "Crew Cab",
+          "price_thb": 1098000,
+          "price_thb_formatted": "1,098,000 บาท",
+          "drivetrain": "4WD",
+          "transmission": "AT",
+          "trim": "Storm"
+        }
+      ]
+    },
+    {
+      "model": "Trailblazer",
+      "model_th": "เทรลเบลเซอร์",
+      "generation": "2nd Gen (Thai-assembled)",
+      "model_year": "2020-2021",
+      "body_type": "SUV (7-seat)",
+      "engine": "2.5L Duramax Diesel Turbo VGT",
+      "engine_power": "180 hp (132 kW) @ 3,600 rpm",
+      "engine_torque": "440 Nm @ 2,000 rpm",
+      "dimensions_mm": "1902x4887x1852",
+      "price_range_thb": {
+        "min": 1129000,
+        "max": 1499000,
+        "min_formatted": "1,129,000 บาท",
+        "max_formatted": "1,499,000 บาท"
+      },
+      "variants": [
+        {
+          "variant": "2.8L 2WD LT AT",
+          "variant_th": "2.8 2WD LT อัตโนมัติ 6 สปีด",
+          "price_thb": 1129000,
+          "price_thb_formatted": "1,129,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT 6-speed"
+        },
+        {
+          "variant": "2.5L VGT 2WD LT AT",
+          "variant_th": "2.5L VGT (4x2) AT LT",
+          "price_thb": 1244000,
+          "price_thb_formatted": "1,244,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT",
+          "note": "Clearance price: 895,000 THB"
+        },
+        {
+          "variant": "2.8L 4WD LTZ AT",
+          "variant_th": "2.8 4WD LTZ อัตโนมัติ 6 สปีด",
+          "price_thb": 1289000,
+          "price_thb_formatted": "1,289,000 บาท",
+          "drivetrain": "4WD",
+          "transmission": "AT 6-speed"
+        },
+        {
+          "variant": "2.5L VGT 2WD LTZ AT",
+          "variant_th": "2.5L VGT (4x2) AT LTZ",
+          "price_thb": 1379000,
+          "price_thb_formatted": "1,379,000 บาท",
+          "drivetrain": "2WD",
+          "transmission": "AT",
+          "note": "Clearance price: 1,175,000 THB"
+        },
+        {
+          "variant": "2.5L VGT 4WD LTZ AT",
+          "variant_th": "2.5L VGT (4x4) AT LTZ",
+          "price_thb": 1479000,
+          "price_thb_formatted": "1,479,000 บาท",
+          "drivetrain": "4WD",
+          "transmission": "AT",
+          "note": "Clearance price: 1,275,000 THB"
+        },
+        {
+          "variant": "2.8L 4WD LTZ1 AT",
+          "variant_th": "2.8 4WD LTZ1 อัตโนมัติ 6 สปีด",
+          "price_thb": 1465000,
+          "price_thb_formatted": "1,465,000 บาท",
+          "drivetrain": "4WD",
+          "transmission": "AT 6-speed"
+        },
+        {
+          "variant": "2.5L VGT 4WD LTZ Z71 AT",
+          "variant_th": "2.5L VGT (4x4) AT LTZ Z71",
+          "price_thb": 1499000,
+          "price_thb_formatted": "1,499,000 บาท",
+          "drivetrain": "4WD",
+          "transmission": "AT",
+          "trim": "Z71",
+          "note": "Clearance price: 1,295,000 THB"
+        }
+      ]
+    },
+    {
+      "model": "Cruze",
+      "model_th": "ครูซ",
+      "model_year": "Pre-2020",
+      "body_type": "Sedan",
+      "note": "No detailed pricing found on sources scraped. Listed as supported model on official site."
+    },
+    {
+      "model": "Sonic",
+      "model_th": "โซนิค",
+      "model_year": "Pre-2020",
+      "body_type": "Sedan/Hatchback",
+      "note": "No detailed pricing found on sources scraped. Listed as supported model on official site."
+    },
+    {
+      "model": "Spin",
+      "model_th": "สปิน",
+      "model_year": "Pre-2020",
+      "body_type": "MPV",
+      "note": "No detailed pricing found on sources scraped. Listed as supported model on official site."
+    }
+  ],
+  "clearance_discounts": {
+    "note": "Chevrolet offered heavy clearance discounts (Feb 2020 onwards) as part of market exit. Some models discounted by up to 500,000 THB.",
+    "captiva_discounts": {
+      "LS_5seat": {"original": 999000, "discounted": 499000, "status": "sold_out"},
+      "LS_7seat": {"original": 999000, "discounted": 529000},
+      "LT": {"original": 1099000, "discounted": 599000},
+      "Premier": {"original": 1199000, "discounted": 699000}
+    },
+    "colorado_discounts": {
+      "X-Cab Z71 MT": {"original": 699000, "discounted": 555000},
+      "Trail Boss MT": {"original": 859000, "discounted": 655000},
+      "Trail Boss AT": {"original": 899000, "discounted": 695000},
+      "High Country 2WD AT": {"original": 998000, "discounted": 775000},
+      "High Country 4WD AT": {"original": 1068000, "discounted": 845000}
+    },
+    "trailblazer_discounts": {
+      "VGT 2WD LT AT": {"original": 1244000, "discounted": 895000},
+      "VGT 2WD LTZ AT": {"original": 1379000, "discounted": 1175000},
+      "VGT 4WD LTZ AT": {"original": 1479000, "discounted": 1275000},
+      "VGT 4WD LTZ Z71 AT": {"original": 1499000, "discounted": 1295000}
+    }
+  },
+  "spare_parts_pricing": {
+    "note": "The official site's '2025 New Price' page (updated 1 July 2568 BE / 2025 CE) lists revised spare parts prices for over 1,500 items, with discounts up to 94%.",
+    "models_with_revised_parts_prices": ["Colorado", "Cruze", "Captiva C100", "Captiva C140", "Sonic", "Trailblazer", "Spin"],
+    "url": "https://www.chevrolet.co.th/promotion/2025-new-price"
+  },
+  "sources": [
+    {
+      "url": "https://www.chevrolet.co.th",
+      "type": "official",
+      "status": "no_vehicle_prices",
+      "note": "Official site no longer lists vehicle models or prices. Only after-sales service."
+    },
+    {
+      "url": "https://www.chevrolet.co.th/promotion/2025-new-price",
+      "type": "official",
+      "status": "spare_parts_only",
+      "note": "Spare parts pricing page, not vehicle prices."
+    },
+    {
+      "url": "https://www.9carthai.com/chevrolet-price/",
+      "type": "third_party_media",
+      "status": "ok",
+      "note": "Main Chevrolet price listing page with all models."
+    },
+    {
+      "url": "https://www.9carthai.com/all-new-chevrolet-colorado-price/",
+      "type": "third_party_media",
+      "status": "ok",
+      "note": "Detailed Colorado pricing with clearance discounts."
+    },
+    {
+      "url": "https://www.9carthai.com/all-new-chevrolet-trailblazer-price/",
+      "type": "third_party_media",
+      "status": "ok",
+      "note": "Detailed Trailblazer pricing with clearance discounts."
+    },
+    {
+      "url": "https://www.9carthai.com/all-new-chevrolet-captiva-price/",
+      "type": "third_party_media",
+      "status": "ok",
+      "note": "Detailed Captiva pricing with clearance discounts."
+    }
+  ],
+  "total_variants_with_prices": 28,
+  "price_summary": {
+    "lowest_price_thb": 548000,
+    "lowest_price_formatted": "548,000 บาท (Colorado S-Cab LS)",
+    "highest_price_thb": 1499000,
+    "highest_price_formatted": "1,499,000 บาท (Trailblazer LTZ Z71 4WD)",
+    "total_models_with_pricing": 3,
+    "total_variants": 28,
+    "models_listed": ["Captiva", "Colorado", "Trailblazer"],
+    "models_without_pricing": ["Cruze", "Sonic", "Spin"]
+  }
+}

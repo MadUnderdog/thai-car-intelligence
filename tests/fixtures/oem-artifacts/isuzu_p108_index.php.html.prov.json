@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu.co.th/index.php",
+  "captured_at": "2026-09-27T19:07:15.570594+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "33e667231f3341ba4437862c8e317fe0b28e9877e8d1bb7d4e6b6e3979a5819f",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "isuzu_p108_index.php.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/camry",
+  "captured_at": "2026-09-27T19:03:29.895038+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "98a75b32e098ecba6fd33da5f7db8b1b48d74853b96006007d7c3e5c817ce04b",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "toyota_p108_camry.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

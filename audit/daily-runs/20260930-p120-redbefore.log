@@ -1,0 +1,425 @@
+.FFFFFFFFFFFFF..FFFFFFF                                                  [100%]
+=================================== FAILURES ===================================
+_________________ test_p120_A_unaccepted_packet_cannot_promote _________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_A_unaccepted_packet_0')
+
+    def test_p120_A_unaccepted_packet_cannot_promote(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:228: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+_____________ test_p120_B_accepted_promotes_once_rerun_idempotent ______________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_B_accepted_promotes_0')
+
+    def test_p120_B_accepted_promotes_once_rerun_idempotent(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:248: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+____________ test_p120_C_replay_creates_no_duplicate_business_rows _____________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_C_replay_creates_no_0')
+
+    def test_p120_C_replay_creates_no_duplicate_business_rows(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+_________________ test_p120_D_legacy_unverified_packet_refused _________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_D_legacy_unverified_0')
+
+    def test_p120_D_legacy_unverified_packet_refused(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:297: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+____________________ test_p120_E_tampered_evidence_refused _____________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_E_tampered_evidence_0')
+
+    def test_p120_E_tampered_evidence_refused(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:316: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+______________ test_p120_F_promoted_rows_carry_packet_sha_locator ______________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_F_promoted_rows_carr0')
+
+    def test_p120_F_promoted_rows_carry_packet_sha_locator(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:337: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+____________________ test_p120_G_cross_brand_packet_refused ____________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_G_cross_brand_packet0')
+
+    def test_p120_G_cross_brand_packet_refused(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:366: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+_______________ test_p120_H_conflict_quarantined_packet_refused ________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_H_conflict_quarantin0')
+
+    def test_p120_H_conflict_quarantined_packet_refused(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:398: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+________________ test_p120_I_price_semantics_survive_promotion _________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_I_price_semantics_su0')
+
+    def test_p120_I_price_semantics_survive_promotion(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:417: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+__________________ test_p120_J_failure_preserves_prior_state ___________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_J_failure_preserves_0')
+
+    def test_p120_J_failure_preserves_prior_state(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:469: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+__________________ test_p120_K_transaction_failure_rolls_back __________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_K_transaction_failur0')
+
+    def test_p120_K_transaction_failure_rolls_back(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:493: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+________________ test_p120_L_rollback_is_bounded_and_auditable _________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_L_rollback_is_bounde0')
+
+    def test_p120_L_rollback_is_bounded_and_auditable(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:517: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+_________________ test_p120_P_concurrent_invocation_serialized _________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_P_concurrent_invocat0')
+
+    def test_p120_P_concurrent_invocation_serialized(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_promotion.py:551: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+_______________ test_p120_M1_audit_module_contains_no_write_sql ________________
+
+    def test_p120_M1_audit_module_contains_no_write_sql():
+>       mod = require("audit")
+              ^^^^^^^^^^^^^^^^
+
+tests/test_p120_observability.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'audit'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/audit.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+__________________ test_p120_M2_audit_report_is_deterministic __________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_M2_audit_report_is_d0')
+
+    def test_p120_M2_audit_report_is_deterministic(tmp_path):
+>       audit = require("audit")
+                ^^^^^^^^^^^^^^^^
+
+tests/test_p120_observability.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'audit'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/audit.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+_____________ test_p120_N1_freshness_uses_only_real_dated_evidence _____________
+
+    def test_p120_N1_freshness_uses_only_real_dated_evidence():
+>       freshness = require("freshness")
+                    ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_p120_observability.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'freshness'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/freshness.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+_______________ test_p120_O1_preflight_written_before_any_write ________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_O1_preflight_written0')
+
+    def test_p120_O1_preflight_written_before_any_write(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_observability.py:116: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+_______________ test_p120_O2_execute_refuses_on_failed_preflight _______________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_O2_execute_refuses_o0')
+
+    def test_p120_O2_execute_refuses_on_failed_preflight(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_observability.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+_____________ test_p120_O3_postflight_proves_counts_and_provenance _____________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-138/test_p120_O3_postflight_proves0')
+
+    def test_p120_O3_postflight_proves_counts_and_provenance(tmp_path):
+>       worker = require("worker")
+                 ^^^^^^^^^^^^^^^^^
+
+tests/test_p120_observability.py:164: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'worker'
+
+    def require(name: str):
+        m = load_mod(name)
+>       assert m is not None, f"lib/thai_factory/production/{name}.py must exist"
+E       AssertionError: lib/thai_factory/production/worker.py must exist
+E       assert None is not None
+
+tests/test_p120_promotion.py:46: AssertionError
+___________ test_p120_O4_incident_runbook_covers_required_scenarios ____________
+
+    def test_p120_O4_incident_runbook_covers_required_scenarios():
+        path = REPO / "audit" / "coverage" / "p120_incident_runbook.md"
+>       assert path.exists(), "p120_incident_runbook.md must exist"
+E       AssertionError: p120_incident_runbook.md must exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/home/ubuntu/Projects/thai-car-intelligence/audit/coverage/p120_incident_runbook.md').exists
+
+tests/test_p120_observability.py:187: AssertionError
+=============================== warnings summary ===============================
+tests/test_p120_promotion.py::test_db_url
+  /home/ubuntu/.hermes/hermes-agent/venv/lib/python3.11/site-packages/_pytest/python.py:171: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_p120_promotion.py::test_db_url returned <class 'str'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_p120_observability.py::test_db_url
+  /home/ubuntu/.hermes/hermes-agent/venv/lib/python3.11/site-packages/_pytest/python.py:171: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_p120_observability.py::test_db_url returned <class 'str'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_p120_promotion.py::test_p120_A_unaccepted_packet_cannot_promote
+FAILED tests/test_p120_promotion.py::test_p120_B_accepted_promotes_once_rerun_idempotent
+FAILED tests/test_p120_promotion.py::test_p120_C_replay_creates_no_duplicate_business_rows
+FAILED tests/test_p120_promotion.py::test_p120_D_legacy_unverified_packet_refused
+FAILED tests/test_p120_promotion.py::test_p120_E_tampered_evidence_refused - ...
+FAILED tests/test_p120_promotion.py::test_p120_F_promoted_rows_carry_packet_sha_locator
+FAILED tests/test_p120_promotion.py::test_p120_G_cross_brand_packet_refused
+FAILED tests/test_p120_promotion.py::test_p120_H_conflict_quarantined_packet_refused
+FAILED tests/test_p120_promotion.py::test_p120_I_price_semantics_survive_promotion
+FAILED tests/test_p120_promotion.py::test_p120_J_failure_preserves_prior_state
+FAILED tests/test_p120_promotion.py::test_p120_K_transaction_failure_rolls_back
+FAILED tests/test_p120_promotion.py::test_p120_L_rollback_is_bounded_and_auditable
+FAILED tests/test_p120_promotion.py::test_p120_P_concurrent_invocation_serialized
+FAILED tests/test_p120_observability.py::test_p120_M1_audit_module_contains_no_write_sql
+FAILED tests/test_p120_observability.py::test_p120_M2_audit_report_is_deterministic
+FAILED tests/test_p120_observability.py::test_p120_N1_freshness_uses_only_real_dated_evidence
+FAILED tests/test_p120_observability.py::test_p120_O1_preflight_written_before_any_write
+FAILED tests/test_p120_observability.py::test_p120_O2_execute_refuses_on_failed_preflight
+FAILED tests/test_p120_observability.py::test_p120_O3_postflight_proves_counts_and_provenance
+FAILED tests/test_p120_observability.py::test_p120_O4_incident_runbook_covers_required_scenarios
+20 failed, 3 passed, 2 warnings in 0.42s

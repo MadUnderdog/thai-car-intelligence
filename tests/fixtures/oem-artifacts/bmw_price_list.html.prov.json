@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.bmw.co.th/en/topics/price-list.html",
+  "captured_at": "2026-09-26T07:44:28.929592+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "5cbf4b00ebbc75f6b4a4d1daa0b754139f3ac79a0c2a71c3992fba69dad21e6e",
+  "session_id": "catalog_layers_20260926_074356",
+  "artifact_filename": "bmw_price_list.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

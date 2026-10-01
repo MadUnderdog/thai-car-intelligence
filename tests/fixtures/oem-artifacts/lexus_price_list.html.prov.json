@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/th/price-and-model-tools/price-list.html",
+  "captured_at": "2026-09-26T07:44:21.388806+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "c621cb377e17c332bf6b4fba27d6432d8c91aabfab1a0db0df69f999f5637ce6",
+  "session_id": "catalog_layers_20260926_074356",
+  "artifact_filename": "lexus_price_list.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

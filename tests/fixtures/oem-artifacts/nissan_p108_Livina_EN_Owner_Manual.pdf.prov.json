@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.nissan.co.th/content/dam/Nissan/th/owners/Livina_EN_Owner_Manual.pdf",
+  "captured_at": "2026-09-27T19:05:35.012823+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "974d1549409203ec4dbe13a073b6d18bc5a8ea86d52331c98cbfdb5b700fab2a",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "nissan_p108_Livina_EN_Owner_Manual.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

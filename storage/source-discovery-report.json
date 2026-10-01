@@ -1,0 +1,423 @@
+{
+  "title": "Thai Automotive Source Discovery Report",
+  "run_id": "discovery-20260920-214313",
+  "generated_at": "2026-09-20T14:45:01.065588+00:00",
+  "overview": {
+    "articles_discovered": 120,
+    "articles_processed": 119,
+    "articles_failed": 1,
+    "prices_extracted": 1717,
+    "specs_extracted": 1027,
+    "sources_active": 6,
+    "brands_covered": 25,
+    "models_found": 32
+  },
+  "targets_met": {
+    "100_plus_articles": true,
+    "50_plus_prices": true,
+    "100_plus_specs": true
+  },
+  "per_source": {
+    "headlightmag.com": {
+      "display_name": "HeadLight Magazine",
+      "discovered": 25,
+      "processed": 25,
+      "failed": 0,
+      "prices": 38,
+      "specs": 339,
+      "brands": {
+        "nissan": 1,
+        "nio": 1,
+        "toyota": 6,
+        "lexus": 4,
+        "mazda": 2,
+        "gwm": 2,
+        "byd": 2,
+        "denza": 1,
+        "hyundai": 2,
+        "geely": 1,
+        "mitsubishi": 1,
+        "suzuki": 1,
+        "mini": 1
+      },
+      "models": {
+        "nissan/Kicks": 1,
+        "nio/Firefly": 1,
+        "lexus/Es": 4,
+        "gwm/Tank ": 2,
+        "byd/Atto": 1,
+        "denza/Denza": 1,
+        "hyundai/Staria": 1,
+        "geely/Starray": 1,
+        "toyota/Land Cruiser": 2,
+        "hyundai/Ioniq": 1,
+        "mitsubishi/Pajero": 1,
+        "suzuki/Fronx": 1,
+        "mazda/6E": 1,
+        "mini/Aceman": 1,
+        "byd/Sealion": 1
+      },
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878150+00:00"
+    },
+    "9carthai.com": {
+      "display_name": "9CARTHAI",
+      "discovered": 25,
+      "processed": 25,
+      "failed": 0,
+      "prices": 1392,
+      "specs": 276,
+      "brands": {
+        "xpeng": 2,
+        "toyota": 18,
+        "changan": 1,
+        "lexus": 1,
+        "zeekr": 1,
+        "honda": 1
+      },
+      "models": {
+        "xpeng/G6": 1,
+        "xpeng/Xpeng": 1,
+        "changan/Deepal": 1,
+        "lexus/Es": 1,
+        "zeekr/Zeekr": 1,
+        "honda/City": 1
+      },
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878157+00:00"
+    },
+    "autodeft.com": {
+      "display_name": "AutoDeft",
+      "discovered": 0,
+      "processed": 0,
+      "failed": 0,
+      "prices": 0,
+      "specs": 0,
+      "brands": {},
+      "models": {},
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878161+00:00"
+    },
+    "autolifethailand.tv": {
+      "display_name": "AutoLife Thailand",
+      "discovered": 10,
+      "processed": 10,
+      "failed": 0,
+      "prices": 31,
+      "specs": 138,
+      "brands": {
+        "volvo": 2,
+        "lexus": 1,
+        "geely": 1,
+        "zeekr": 1,
+        "byd": 3,
+        "toyota": 2
+      },
+      "models": {
+        "volvo/Xc60": 1,
+        "lexus/Es": 1,
+        "geely/Geely": 1,
+        "zeekr/Zeekr": 1,
+        "volvo/Xc90": 1,
+        "byd/Seal": 1,
+        "byd/Sealion": 1
+      },
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878165+00:00"
+    },
+    "car2day.com": {
+      "display_name": "Car2Day",
+      "discovered": 10,
+      "processed": 10,
+      "failed": 0,
+      "prices": 36,
+      "specs": 71,
+      "brands": {
+        "honda": 1,
+        "gwm": 1,
+        "subaru": 1,
+        "toyota": 3,
+        "denza": 1,
+        "lexus": 2,
+        "bmw": 1
+      },
+      "models": {
+        "honda/Haval": 1,
+        "gwm/Haval": 1,
+        "subaru/Crosstrek": 1,
+        "toyota/Haval": 2,
+        "denza/Denza": 1,
+        "lexus/Es": 2,
+        "toyota/Land Cruiser": 1,
+        "bmw/X5": 1
+      },
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878169+00:00"
+    },
+    "sanook.com": {
+      "display_name": "Sanook Auto",
+      "discovered": 0,
+      "processed": 0,
+      "failed": 0,
+      "prices": 0,
+      "specs": 0,
+      "brands": {},
+      "models": {},
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878172+00:00"
+    },
+    "bangkokbiznews.com": {
+      "display_name": "Bangkok Biz News Auto",
+      "discovered": 0,
+      "processed": 0,
+      "failed": 0,
+      "prices": 0,
+      "specs": 0,
+      "brands": {},
+      "models": {},
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878176+00:00"
+    },
+    "autospinn.com": {
+      "display_name": "AutoSpinn",
+      "discovered": 25,
+      "processed": 24,
+      "failed": 1,
+      "prices": 18,
+      "specs": 137,
+      "brands": {
+        "porsche": 2,
+        "ford": 1,
+        "nissan": 1,
+        "denza": 1,
+        "mercedes-benz": 1,
+        "lexus": 2,
+        "mazda": 1,
+        "geely": 1,
+        "volvo": 1,
+        "changan": 1,
+        "mg": 1
+      },
+      "models": {
+        "nissan/Kicks": 1,
+        "denza/Denza": 1,
+        "mercedes-benz/Glc": 1,
+        "lexus/Es": 2,
+        "porsche/Cayenne": 1,
+        "mazda/6E": 1,
+        "geely/Geely": 1,
+        "mg/Im5": 1
+      },
+      "errors": [
+        "https://www.autospinn.com/2026/09/dlt-กรมการขนส-งทางบก-152370: fetch_failed"
+      ],
+      "duration": "2026-09-20T14:45:00.878186+00:00"
+    },
+    "dailynews.co.th": {
+      "display_name": "Daily News Auto",
+      "discovered": 0,
+      "processed": 0,
+      "failed": 0,
+      "prices": 0,
+      "specs": 0,
+      "brands": {},
+      "models": {},
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878190+00:00"
+    },
+    "checkraka.com": {
+      "display_name": "CheckRaka",
+      "discovered": 25,
+      "processed": 25,
+      "failed": 0,
+      "prices": 202,
+      "specs": 66,
+      "brands": {
+        "kia": 1
+      },
+      "models": {},
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878194+00:00"
+    },
+    "thairath.co.th": {
+      "display_name": "Thairath Auto",
+      "discovered": 0,
+      "processed": 0,
+      "failed": 0,
+      "prices": 0,
+      "specs": 0,
+      "brands": {},
+      "models": {},
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878197+00:00"
+    },
+    "kapook.com": {
+      "display_name": "Kapook Auto",
+      "discovered": 0,
+      "processed": 0,
+      "failed": 0,
+      "prices": 0,
+      "specs": 0,
+      "brands": {},
+      "models": {},
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878200+00:00"
+    },
+    "mgronline.com": {
+      "display_name": "Manager Auto",
+      "discovered": 0,
+      "processed": 0,
+      "failed": 0,
+      "prices": 0,
+      "specs": 0,
+      "brands": {},
+      "models": {},
+      "errors": [],
+      "duration": "2026-09-20T14:45:00.878203+00:00"
+    }
+  },
+  "top_brands_by_articles": [
+    {
+      "brand": "toyota",
+      "count": 29
+    },
+    {
+      "brand": "lexus",
+      "count": 10
+    },
+    {
+      "brand": "byd",
+      "count": 5
+    },
+    {
+      "brand": "mazda",
+      "count": 3
+    },
+    {
+      "brand": "gwm",
+      "count": 3
+    },
+    {
+      "brand": "denza",
+      "count": 3
+    },
+    {
+      "brand": "geely",
+      "count": 3
+    },
+    {
+      "brand": "volvo",
+      "count": 3
+    },
+    {
+      "brand": "nissan",
+      "count": 2
+    },
+    {
+      "brand": "hyundai",
+      "count": 2
+    },
+    {
+      "brand": "xpeng",
+      "count": 2
+    },
+    {
+      "brand": "changan",
+      "count": 2
+    },
+    {
+      "brand": "zeekr",
+      "count": 2
+    },
+    {
+      "brand": "honda",
+      "count": 2
+    },
+    {
+      "brand": "porsche",
+      "count": 2
+    }
+  ],
+  "top_models_by_data": [
+    {
+      "model": "lexus/Es",
+      "count": 10
+    },
+    {
+      "model": "denza/Denza",
+      "count": 3
+    },
+    {
+      "model": "toyota/Land Cruiser",
+      "count": 3
+    },
+    {
+      "model": "nissan/Kicks",
+      "count": 2
+    },
+    {
+      "model": "gwm/Tank ",
+      "count": 2
+    },
+    {
+      "model": "mazda/6E",
+      "count": 2
+    },
+    {
+      "model": "byd/Sealion",
+      "count": 2
+    },
+    {
+      "model": "zeekr/Zeekr",
+      "count": 2
+    },
+    {
+      "model": "geely/Geely",
+      "count": 2
+    },
+    {
+      "model": "toyota/Haval",
+      "count": 2
+    },
+    {
+      "model": "nio/Firefly",
+      "count": 1
+    },
+    {
+      "model": "byd/Atto",
+      "count": 1
+    },
+    {
+      "model": "hyundai/Staria",
+      "count": 1
+    },
+    {
+      "model": "geely/Starray",
+      "count": 1
+    },
+    {
+      "model": "hyundai/Ioniq",
+      "count": 1
+    },
+    {
+      "model": "mitsubishi/Pajero",
+      "count": 1
+    },
+    {
+      "model": "suzuki/Fronx",
+      "count": 1
+    },
+    {
+      "model": "mini/Aceman",
+      "count": 1
+    },
+    {
+      "model": "xpeng/G6",
+      "count": 1
+    },
+    {
+      "model": "xpeng/Xpeng",
+      "count": 1
+    }
+  ]
+}

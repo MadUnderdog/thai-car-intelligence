@@ -1,0 +1,86 @@
+{
+  "schema": "promotion_verification_p114/v1",
+  "status": "PASS",
+  "checks": {
+    "delta_Manufacturer": {
+      "ok": true,
+      "detail": "baseline=34 after=37 claimed=3 live=37"
+    },
+    "delta_CarModel": {
+      "ok": true,
+      "detail": "baseline=157 after=284 claimed=127 live=284"
+    },
+    "delta_Variant": {
+      "ok": true,
+      "detail": "baseline=343 after=747 claimed=404 live=747"
+    },
+    "delta_Price": {
+      "ok": true,
+      "detail": "baseline=767 after=1061 claimed=294 live=1061"
+    },
+    "delta_VariantSpec": {
+      "ok": true,
+      "detail": "baseline=6993 after=8036 claimed=1043 live=8036"
+    },
+    "delta_DataChangeLog": {
+      "ok": true,
+      "detail": "promotion=1879 claimed=1879 slug_repairs=38 artifact=38 unjustified=0 live_delta=1917"
+    },
+    "slug_repairs_justified": {
+      "ok": true,
+      "detail": "repairs_without_before_after_packet=0"
+    },
+    "source_documents_registered": {
+      "ok": true,
+      "detail": "registered=122 cited=122"
+    },
+    "no_uncited_documents": {
+      "ok": true,
+      "detail": "extra=0"
+    },
+    "values_verbatim_from_p111_p112": {
+      "ok": true,
+      "detail": "spec_rows=1043 price_rows=294 invented=0"
+    },
+    "quarantined_rows_promoted": {
+      "ok": true,
+      "detail": "packet_ids_in_changelog=414"
+    },
+    "price_semantics_db": {
+      "ok": true,
+      "detail": "got={('LIST_PRICE', 'f'): 29, ('MSRP', 'f'): 1, ('MSRP', 't'): 264}"
+    },
+    "mg_not_current_in_db": {
+      "ok": true,
+      "detail": "rows=1"
+    },
+    "single_current_price_per_touched_variant": {
+      "ok": true,
+      "detail": "dup_variants=0"
+    },
+    "upstream_artifacts_byte_identical": {
+      "ok": true,
+      "detail": ""
+    },
+    "identity_ledger_488": {
+      "ok": true,
+      "detail": "count=488"
+    },
+    "ledger_only_accepted_packets": {
+      "ok": true,
+      "detail": ""
+    },
+    "ledger_identity_one_per_accepted": {
+      "ok": true,
+      "detail": ""
+    },
+    "inserts_have_row_ids": {
+      "ok": true,
+      "detail": ""
+    }
+  },
+  "failures": [],
+  "quarantined_rows_promoted": 0,
+  "invented_values": 0,
+  "verified_at": "2026-09-28T19:08:50.554900+00:00"
+}

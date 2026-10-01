@@ -1,0 +1,662 @@
+{
+  "artifact": "p103-official-identities/1",
+  "generated_at": "2026-09-27T08:46:38.249187+00:00",
+  "plan": "p103_target_plan.json",
+  "rules": [
+    "identity_level declared at extraction",
+    "published label must exist in the cited artifact bytes",
+    "no price rows, no staging writes"
+  ],
+  "identities": [
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-5",
+      "variant": "2.0 S",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA CX-5 2.0 S",
+      "artifact": "mazda_car_mazda-cx5.html",
+      "sha256": "ca9e7c60533c34b8d04dbeab2d1925a22190e56c17416dbc51752c6d3db65e02",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx5",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "1,219,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA CX-5"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-5",
+      "variant": "2.0 SP",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA CX-5 2.0 SP",
+      "artifact": "mazda_car_mazda-cx5.html",
+      "sha256": "ca9e7c60533c34b8d04dbeab2d1925a22190e56c17416dbc51752c6d3db65e02",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx5",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "1,299,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA CX-5"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-5",
+      "variant": "XDL",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA CX-5 XDL",
+      "artifact": "mazda_car_mazda-cx5.html",
+      "sha256": "ca9e7c60533c34b8d04dbeab2d1925a22190e56c17416dbc51752c6d3db65e02",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx5",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "1,669,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA CX-5"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 PRIME",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA2 ESSENTIAL 1.3 PRIME",
+      "artifact": "mazda_car_mazda2-essential.html",
+      "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "529,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA2 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 ULTRA",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA2 ESSENTIAL 1.3 ULTRA",
+      "artifact": "mazda_car_mazda2-essential.html",
+      "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "589,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA2 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 SIGNATURE",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA2 ESSENTIAL 1.3 SIGNATURE",
+      "artifact": "mazda_car_mazda2-essential.html",
+      "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "659,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA2 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "XDL SIGNATURE",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA2 ESSENTIAL XDL SIGNATURE",
+      "artifact": "mazda_car_mazda2-essential.html",
+      "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "749,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA2 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 PRIME SPORTS",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA2 ESSENTIAL 1.3 PRIME SPORTS",
+      "artifact": "mazda_car_mazda2-essential.html",
+      "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "529,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA2 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 ULTRA SPORTS",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA2 ESSENTIAL 1.3 ULTRA SPORTS",
+      "artifact": "mazda_car_mazda2-essential.html",
+      "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "589,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA2 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "1.3 SIGNATURE SPORTS",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA2 ESSENTIAL 1.3 SIGNATURE SPORTS",
+      "artifact": "mazda_car_mazda2-essential.html",
+      "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "659,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA2 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA2 ESSENTIAL",
+      "variant": "XDL SIGNATURE SPORTS",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA2 ESSENTIAL XDL SIGNATURE SPORTS",
+      "artifact": "mazda_car_mazda2-essential.html",
+      "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "749,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA2 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 C",
+      "identity_level": "VARIANT",
+      "published_label": "MAZDA3 SEDAN 2.0 C",
+      "artifact": "mazda_car_mazda3-sedan.html",
+      "sha256": "1df796474960d5b42246781aca8e969b0ca56b3d8cdfb027bcbf5b973d228c04",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda3-sedan",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "979,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "MAZDA3 SEDAN"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 S",
+      "identity_level": "VARIANT",
+      "published_label": "MAZDA3 SEDAN 2.0 S",
+      "artifact": "mazda_car_mazda3-sedan.html",
+      "sha256": "1df796474960d5b42246781aca8e969b0ca56b3d8cdfb027bcbf5b973d228c04",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda3-sedan",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "1,069,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "MAZDA3 SEDAN"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "2.0 SP",
+      "identity_level": "VARIANT",
+      "published_label": "MAZDA3 SEDAN 2.0 SP",
+      "artifact": "mazda_car_mazda3-sedan.html",
+      "sha256": "1df796474960d5b42246781aca8e969b0ca56b3d8cdfb027bcbf5b973d228c04",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda3-sedan",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "1,198,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "MAZDA3 SEDAN"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "MAZDA3 SEDAN",
+      "variant": "CARBON EDITION",
+      "identity_level": "VARIANT",
+      "published_label": "MAZDA3 SEDAN CARBON EDITION",
+      "artifact": "mazda_car_mazda3-sedan.html",
+      "sha256": "1df796474960d5b42246781aca8e969b0ca56b3d8cdfb027bcbf5b973d228c04",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda3-sedan",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "1,210,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "MAZDA3 SEDAN"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "variant": "2.0 PRIME",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA CX-30 ESSENTIAL 2.0 PRIME",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "899,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA CX-30 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "variant": "2.0 ULTRA",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA CX-30 ESSENTIAL 2.0 ULTRA",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "999,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA CX-30 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA CX-30 ESSENTIAL",
+      "variant": "2.0 SIGNATURE",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA CX-30 ESSENTIAL 2.0 SIGNATURE",
+      "artifact": "mazda_car_mazda-cx30-essential.html",
+      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
+      "source_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "1,099,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA CX-30 ESSENTIAL"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "FSC 2.2 XS HI-RACER 6MT",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA BT-50 FSC 2.2 XS HI-RACER 6MT",
+      "artifact": "mazda_car_new-mazda-bt50.html",
+      "sha256": "01df606fe74c1ce1702dc7907be3f0719b8a223d7a14c21c0586dde2376a4876",
+      "source_url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "762,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA BT-50"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 2.2 XT HI-RACER 8AT",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA BT-50 DBL 2.2 XT HI-RACER 8AT",
+      "artifact": "mazda_car_new-mazda-bt50.html",
+      "sha256": "01df606fe74c1ce1702dc7907be3f0719b8a223d7a14c21c0586dde2376a4876",
+      "source_url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "992,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA BT-50"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 3.0 XTR HI-RACER 6AT",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA BT-50 DBL 3.0 XTR HI-RACER 6AT",
+      "artifact": "mazda_car_new-mazda-bt50.html",
+      "sha256": "01df606fe74c1ce1702dc7907be3f0719b8a223d7a14c21c0586dde2376a4876",
+      "source_url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "1,242,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA BT-50"
+      }
+    },
+    {
+      "manufacturer": "Mazda",
+      "model": "NEW MAZDA BT-50",
+      "variant": "DBL 3.0 XTR 4x4 6AT",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MAZDA BT-50 DBL 3.0 XTR 4x4 6AT",
+      "artifact": "mazda_car_new-mazda-bt50.html",
+      "sha256": "01df606fe74c1ce1702dc7907be3f0719b8a223d7a14c21c0586dde2376a4876",
+      "source_url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+      "extraction_method": "embedded_json_grade_array",
+      "evidence": {
+        "selector": "embedded grade objects ID/ModelID/Title/Price",
+        "price_thb": "1,352,000"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MAZDA BT-50"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "MG3 HYBRID+",
+      "variant": "X",
+      "identity_level": "VARIANT",
+      "published_label": "MG3 HYBRID+ รุ่น X",
+      "artifact": "mg_home_page.html",
+      "sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff",
+      "source_url": "https://www.mgcars.com/th",
+      "extraction_method": "published_title_model_prefixed",
+      "evidence": {
+        "selector": "published title containing model + รุ่น + grade"
+      },
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mg3 Hybrid",
+          "variant": "+ X"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "MG3 HYBRID+",
+      "variant": "D",
+      "identity_level": "VARIANT",
+      "published_label": "MG3 HYBRID+ รุ่น D",
+      "artifact": "mg_home_page.html",
+      "sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff",
+      "source_url": "https://www.mgcars.com/th",
+      "extraction_method": "published_title_model_prefixed",
+      "evidence": {
+        "selector": "published title containing model + รุ่น + grade"
+      },
+      "reconciliation": {
+        "outcome": "existing",
+        "match_method": "exact_match_key",
+        "reason": "",
+        "matched_record": {
+          "model": "Mg3 Hybrid",
+          "variant": "+ D"
+        },
+        "prior_status": "IDENTITY_ONLY"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "D+",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MGS5 EV PLUS รุ่น D+",
+      "artifact": "mg_home_page.html",
+      "sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff",
+      "source_url": "https://www.mgcars.com/th",
+      "extraction_method": "published_title_model_prefixed",
+      "evidence": {
+        "selector": "published title containing model + รุ่น + grade"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MGS5 EV PLUS"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "X+",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MGS5 EV PLUS รุ่น X+",
+      "artifact": "mg_home_page.html",
+      "sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff",
+      "source_url": "https://www.mgcars.com/th",
+      "extraction_method": "published_title_model_prefixed",
+      "evidence": {
+        "selector": "published title containing model + รุ่น + grade"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MGS5 EV PLUS"
+      }
+    },
+    {
+      "manufacturer": "MG",
+      "model": "NEW MGS5 EV PLUS",
+      "variant": "V+",
+      "identity_level": "VARIANT",
+      "published_label": "NEW MGS5 EV PLUS รุ่น V+",
+      "artifact": "mg_home_page.html",
+      "sha256": "ee75dda64330dad215ae6c427d7932ed7b2252026c64ec0ebc2db0040a6809ff",
+      "source_url": "https://www.mgcars.com/th",
+      "extraction_method": "published_title_model_prefixed",
+      "evidence": {
+        "selector": "published title containing model + รุ่น + grade"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "NEW MGS5 EV PLUS"
+      }
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "BRZ",
+      "variant": "BRZ AT",
+      "identity_level": "VARIANT",
+      "published_label": "BRZ BRZ AT",
+      "artifact": "subaru_th_model_brz.html",
+      "sha256": "9c286cf22708117a2b523d94071fbc094b46f3d910e83bb2b4c55fa311e26347",
+      "source_url": "https://www.subaru.asia/th/th/brz/",
+      "extraction_method": "official_model_page_grade_marker",
+      "evidence": {
+        "selector": "รุ่น\\s+(BRZ\\s+AT)"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "BRZ"
+      }
+    },
+    {
+      "manufacturer": "Subaru",
+      "model": "CROSSTREK",
+      "variant": "2.0i-S EyeSight",
+      "identity_level": "VARIANT",
+      "published_label": "CROSSTREK 2.0i-S EyeSight",
+      "artifact": "subaru_th_model_crosstrek.html",
+      "sha256": "1ee82168642271c3604248d7b922b485f753ec96e709accc99fb1693eec20c64",
+      "source_url": "https://www.subaru.asia/th/th/crosstrek/",
+      "extraction_method": "official_model_page_grade_marker",
+      "evidence": {
+        "selector": "(2\\.0i-S\\s+EyeSight)"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "CROSSTREK"
+      }
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "MU-X",
+      "variant": "Active",
+      "identity_level": "VARIANT",
+      "published_label": "มิว-เอ็กซ์ เกรด Active",
+      "artifact": "isuzu_page.html",
+      "sha256": "e9d00350296d15205cbb1558b94a9d6a219161c81130c9e83afbcc3aa49703f6",
+      "source_url": "https://www.isuzu.co.th/",
+      "extraction_method": "official_prose_model_grade_sentence",
+      "evidence": {
+        "selector": "published sentence naming model and เกรด"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "MU-X"
+      }
+    },
+    {
+      "manufacturer": "Isuzu",
+      "model": "Isuzu D Max",
+      "variant": "L",
+      "identity_level": "VARIANT",
+      "published_label": "ดีแมคซ์ 4 ประตู เกรด L",
+      "artifact": "isuzu_page.html",
+      "sha256": "e9d00350296d15205cbb1558b94a9d6a219161c81130c9e83afbcc3aa49703f6",
+      "source_url": "https://www.isuzu.co.th/",
+      "extraction_method": "official_prose_model_grade_sentence",
+      "evidence": {
+        "selector": "published sentence naming model and เกรด"
+      },
+      "reconciliation": {
+        "outcome": "new",
+        "match_method": "model_matched_variant_absent",
+        "reason": "official grade is published for a model already in P102 but that grade label is not in the P102 variant universe",
+        "new_model": "Isuzu D Max"
+      }
+    }
+  ]
+}

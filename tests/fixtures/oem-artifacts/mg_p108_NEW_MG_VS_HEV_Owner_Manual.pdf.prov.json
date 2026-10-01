@@ -1,0 +1,9 @@
+{
+  "source_url": "https://ex-prod.mgcars.com/en/pdf/AfterSalesService/37/NEW%20MG%20VS%20HEV%20Owner%20Manual.pdf",
+  "captured_at": "2026-09-27T19:04:37.270374+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "807223b765d91080462e654f0e8d8a9c5cf6e6686390636647be37bafd1cebcb",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mg_p108_NEW_MG_VS_HEV_Owner_Manual.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

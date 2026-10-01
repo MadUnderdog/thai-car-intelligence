@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=gryaris",
+  "captured_at": "2026-09-28T09:35:29.578066+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "a18aba791ee3a2fc44e966454e1c6b39e722b4b23b39bda05fe9a896717d98a7",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_gryaris.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

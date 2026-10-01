@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/all-grade-price.html",
+  "captured_at": "2026-09-26T07:44:05.915769+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "4bb44caa18c9ceb51e04770c8b0a6285474575f000f659ef202d5d3fd0390bda",
+  "session_id": "catalog_layers_20260926_074356",
+  "artifact_filename": "nissan_all_grade_price.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

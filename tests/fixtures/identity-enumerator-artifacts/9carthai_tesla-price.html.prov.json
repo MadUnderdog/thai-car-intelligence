@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.9carthai.com/tesla-price/",
+  "captured_at": "2026-09-26T15:54:27.076209+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "d19457ae24bb207b57041c301489678c8d307b8fd26df12f37fd8ea4e0a52879",
+  "session_id": "p102-identity-20260926",
+  "artifact_filename": "9carthai_tesla-price.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

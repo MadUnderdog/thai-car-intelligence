@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/models/taycan/configure/",
+  "captured_at": "2026-09-28T07:14:54.093665+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "9113e82193550461d1493dcab81d8cfcc9265f4a49b2428f3fb07ab36602895f",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "porsche_p111_configure_dup6.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://assets.honda.co.th/www-assets/model/2026/06/26/6CdfhVQHROmk0raXdaXA8qd8lJiRGKi7.pdf?response-content-disposition=attachment%3B%20filename%3DNew%20Honda%20City%20-%20Catalog.pdf",
+  "captured_at": "2026-09-27T16:02:46.791771+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "c2aca38d49ca1716db6680b620e32a32563845ab14346588d6fc1bf05890b344",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "honda_p107_6CdfhVQHROmk0raXdaXA8qd8lJiRGKi7.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

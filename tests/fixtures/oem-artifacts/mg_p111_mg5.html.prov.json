@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mgcars.com/th/cars/mg5",
+  "captured_at": "2026-09-28T07:13:32.051285+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "aa937a1b4052be254011d97b232add4beb4c0fde7f097bbac74136628849249b",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mg_p111_mg5.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

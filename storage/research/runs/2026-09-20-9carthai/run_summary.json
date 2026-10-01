@@ -1,0 +1,293 @@
+{
+  "started": "2026-09-20T15:29:44.409641",
+  "brands": {
+    "toyota": {
+      "status": "OK",
+      "prices": 35,
+      "rejections": 19,
+      "models": [
+        "Corolla Cross",
+        "Yaris",
+        "Alphard",
+        "Yaris Cross",
+        "Veloz",
+        "Innova Crysta",
+        "Camry",
+        "Land Cruiser",
+        "Yaris ATIV"
+      ]
+    },
+    "honda": {
+      "status": "OK",
+      "prices": 26,
+      "rejections": 25,
+      "models": [
+        "City",
+        "WR-V",
+        "EP",
+        "Civic",
+        "HR-V",
+        "CR-V",
+        "Accord"
+      ]
+    },
+    "nissan": {
+      "status": "OK",
+      "prices": 26,
+      "rejections": 15,
+      "models": [
+        "X-Trail",
+        "Navara",
+        "Kicks e-POWER",
+        "Terra"
+      ]
+    },
+    "mazda": {
+      "status": "OK",
+      "prices": 10,
+      "rejections": 6,
+      "models": [
+        "CX-3",
+        "Mazda 6e",
+        "CX-5"
+      ]
+    },
+    "mg": {
+      "status": "OK",
+      "prices": 27,
+      "rejections": 0,
+      "models": [
+        "MG5",
+        "S5 EV PLUS",
+        "URBAN",
+        "EP",
+        "ZS",
+        "MG3",
+        "MG4",
+        "HS"
+      ]
+    },
+    "byd": {
+      "status": "OK",
+      "prices": 27,
+      "rejections": 0,
+      "models": [
+        "Atto 3",
+        "Seal",
+        "Atto 2",
+        "Dolphin",
+        "M6"
+      ]
+    },
+    "gwm": {
+      "status": "OK",
+      "prices": 10,
+      "rejections": 0,
+      "models": [
+        "Tank"
+      ]
+    },
+    "ford": {
+      "status": "OK",
+      "prices": 1,
+      "rejections": 13,
+      "models": [
+        "Ranger"
+      ]
+    },
+    "isuzu": {
+      "status": "OK",
+      "prices": 11,
+      "rejections": 5,
+      "models": [
+        "MU-X"
+      ]
+    },
+    "bmw": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "mercedes-benz": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "volvo": {
+      "status": "OK",
+      "prices": 4,
+      "rejections": 0,
+      "models": [
+        "Volvo"
+      ]
+    },
+    "chevrolet": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 42,
+      "models": []
+    },
+    "chery": {
+      "status": "OK",
+      "prices": 8,
+      "rejections": 0,
+      "models": [
+        "Chery"
+      ]
+    },
+    "hyundai": {
+      "status": "OK",
+      "prices": 10,
+      "rejections": 1,
+      "models": [
+        "Santa Fe",
+        "Ioniq",
+        "Stargazer"
+      ]
+    },
+    "kia": {
+      "status": "OK",
+      "prices": 7,
+      "rejections": 0,
+      "models": [
+        "EV9",
+        "Carnival"
+      ]
+    },
+    "subaru": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "mitsubishi": {
+      "status": "OK",
+      "prices": 10,
+      "rejections": 3,
+      "models": [
+        "Mirage",
+        "Xpander",
+        "Triton",
+        "Attrage"
+      ]
+    },
+    "suzuki": {
+      "status": "OK",
+      "prices": 6,
+      "rejections": 1,
+      "models": [
+        "XL7",
+        "Carry"
+      ]
+    },
+    "lexus": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "porsche": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "mini": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "tesla": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "zeekr": {
+      "status": "OK",
+      "prices": 7,
+      "rejections": 0,
+      "models": [
+        "Zeekr"
+      ]
+    },
+    "changan": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "geely": {
+      "status": "OK",
+      "prices": 5,
+      "rejections": 1,
+      "models": [
+        "X5"
+      ]
+    },
+    "dongfeng": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "ldv": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "jetour": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "baic": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "kg-mobility": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    },
+    "denza": {
+      "status": "NO_PRICES",
+      "prices": 0,
+      "rejections": 0,
+      "models": []
+    }
+  },
+  "total_prices": 230,
+  "total_rejections": 131,
+  "brands_extracted": [
+    "toyota",
+    "honda",
+    "nissan",
+    "mazda",
+    "mg",
+    "byd",
+    "gwm",
+    "ford",
+    "isuzu",
+    "volvo",
+    "chery",
+    "hyundai",
+    "kia",
+    "mitsubishi",
+    "suzuki",
+    "zeekr",
+    "geely"
+  ],
+  "finished": "2026-09-20T15:31:07.965618",
+  "brands_ok_count": 17,
+  "met_target_brands": true,
+  "met_target_prices": true
+}

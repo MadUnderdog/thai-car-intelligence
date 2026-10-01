@@ -1,0 +1,141 @@
+FFFFFF.                                                                  [100%]
+=================================== FAILURES ===================================
+_____________ test_p120r1_N1_missing_artifact_refused_zero_writes ______________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-159/test_p120r1_N1_missing_artifac0')
+
+    def test_p120r1_N1_missing_artifact_refused_zero_writes(tmp_path):
+        conn = db_conn()
+        vid, marker = seed_identity(conn)
+        try:
+            pkt = make_packet(marker, artifact="definitely_absent.html",
+                              sha=hashlib.sha256(b"ghost").hexdigest())
+            before = q1(conn, 'select count(*) from "Price" where "variantId"=%s', (vid,))
+            res = _execute_with(tmp_path, [pkt], _tmp_fixtures(tmp_path))
+            reasons = _refusal_reasons(res, pkt["packet_id"])
+>           assert any(r.startswith("EVIDENCE_TAMPERED") for r in reasons), reasons
+E           AssertionError: set()
+E           assert False
+E            +  where False = any(<generator object test_p120r1_N1_missing_artifact_refused_zero_writes.<locals>.<genexpr> at 0x7f67c521e7a0>)
+
+tests/test_p120_r1_evidence_integrity.py:68: AssertionError
+______________ test_p120r1_N2_missing_sidecar_refused_zero_writes ______________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-159/test_p120r1_N2_missing_sidecar0')
+
+    def test_p120r1_N2_missing_sidecar_refused_zero_writes(tmp_path):
+        conn = db_conn()
+        vid, marker = seed_identity(conn)
+        try:
+            fx = _tmp_fixtures(tmp_path, write_sidecar=False)
+            sha = hashlib.sha256(b"X").hexdigest()
+            pkt = make_packet(marker, artifact="r1_artifact.html", sha=sha)
+            before = q1(conn, 'select count(*) from "Price" where "variantId"=%s', (vid,))
+            res = _execute_with(tmp_path, [pkt], fx)
+            reasons = _refusal_reasons(res, pkt["packet_id"])
+>           assert any("EVIDENCE_TAMPERED" in r and "missing_sidecar" in r
+                       for r in reasons), reasons
+E                      AssertionError: set()
+E                      assert False
+E                       +  where False = any(<generator object test_p120r1_N2_missing_sidecar_refused_zero_writes.<locals>.<genexpr> at 0x7f67c520f100>)
+
+tests/test_p120_r1_evidence_integrity.py:87: AssertionError
+_____________ test_p120r1_N3_sidecar_mismatch_refused_zero_writes ______________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-159/test_p120r1_N3_sidecar_mismatc0')
+
+    def test_p120r1_N3_sidecar_mismatch_refused_zero_writes(tmp_path):
+        conn = db_conn()
+        vid, marker = seed_identity(conn)
+        try:
+            # bytes match obs sha; sidecar declares a DIFFERENT sha
+            bytes_sha = hashlib.sha256(b"X").hexdigest()
+            fx = _tmp_fixtures(tmp_path, artifact_bytes=b"X",
+                               sidecar_sha=hashlib.sha256(b"Y").hexdigest())
+            pkt = make_packet(marker, artifact="r1_artifact.html", sha=bytes_sha)
+            before = q1(conn, 'select count(*) from "Price" where "variantId"=%s', (vid,))
+            res = _execute_with(tmp_path, [pkt], fx)
+            reasons = _refusal_reasons(res, pkt["packet_id"])
+>           assert any("EVIDENCE_TAMPERED" in r and "sidecar_sha_mismatch" in r
+                       for r in reasons), reasons
+E                      AssertionError: {'EVIDENCE_TAMPERED:sidecar sha mismatch for r1_artifact.html'}
+E                      assert False
+E                       +  where False = any(<generator object test_p120r1_N3_sidecar_mismatch_refused_zero_writes.<locals>.<genexpr> at 0x7f67c5040ba0>)
+
+tests/test_p120_r1_evidence_integrity.py:109: AssertionError
+________ test_p120r1_N4_artifact_byte_hash_mismatch_refused_zero_writes ________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-159/test_p120r1_N4_artifact_byte_h0')
+
+    def test_p120r1_N4_artifact_byte_hash_mismatch_refused_zero_writes(tmp_path):
+        conn = db_conn()
+        vid, marker = seed_identity(conn)
+        try:
+            # sidecar matches obs sha, but the actual bytes differ from it
+            claimed_sha = hashlib.sha256(b"Y").hexdigest()
+            fx = _tmp_fixtures(tmp_path, artifact_bytes=b"X",
+                               sidecar_sha=claimed_sha)
+            pkt = make_packet(marker, artifact="r1_artifact.html", sha=claimed_sha)
+            before = q1(conn, 'select count(*) from "Price" where "variantId"=%s', (vid,))
+            res = _execute_with(tmp_path, [pkt], fx)
+            reasons = _refusal_reasons(res, pkt["packet_id"])
+>           assert any("EVIDENCE_TAMPERED" in r and "artifact_byte_hash_mismatch" in r
+                       for r in reasons), reasons
+E                      AssertionError: set()
+E                      assert False
+E                       +  where False = any(<generator object test_p120r1_N4_artifact_byte_hash_mismatch_refused_zero_writes.<locals>.<genexpr> at 0x7f67c3fa6dc0>)
+
+tests/test_p120_r1_evidence_integrity.py:131: AssertionError
+_______ test_p120r1_N5_price_locator_quote_mismatch_refused_zero_writes ________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-159/test_p120r1_N5_price_locator_q0')
+
+    def test_p120r1_N5_price_locator_quote_mismatch_refused_zero_writes(tmp_path):
+        conn = db_conn()
+        vid, marker = seed_identity(conn)
+        try:
+            # real committed artifact + real sidecar (coherent) but a locator
+            # quote that does not carry the observation's value
+            pkt = make_packet(marker)   # default: real toyota artifact + sidecar
+            pkt["observations"]["price"][0]["locator"] = {
+                "mode": "value_digits", "quote": "000000", "resolved": True}
+            before = q1(conn, 'select count(*) from "Price" where "variantId"=%s', (vid,))
+            res = _execute_with(tmp_path, [pkt], str(REPO / "tests" / "fixtures"))
+            reasons = _refusal_reasons(res, pkt["packet_id"])
+>           assert any("EVIDENCE_TAMPERED" in r and "price_locator_quote_mismatch" in r
+                       for r in reasons), reasons
+E                      AssertionError: set()
+E                      assert False
+E                       +  where False = any(<generator object test_p120r1_N5_price_locator_quote_mismatch_refused_zero_writes.<locals>.<genexpr> at 0x7f67c375fe00>)
+
+tests/test_p120_r1_evidence_integrity.py:153: AssertionError
+___________________ test_p120r1_N6_malformed_sidecar_refused ___________________
+
+tmp_path = PosixPath('/home/ubuntu/.hermes/cache/scratch/pytest-of-ubuntu/pytest-159/test_p120r1_N6_malformed_sidec0')
+
+    def test_p120r1_N6_malformed_sidecar_refused(tmp_path):
+        conn = db_conn()
+        vid, marker = seed_identity(conn)
+        try:
+            fx = _tmp_fixtures(tmp_path, write_sidecar=False)
+            Path(fx, "oem-artifacts", "r1_artifact.html.prov.json").write_text(
+                "{not json", encoding="utf-8")
+            pkt = make_packet(marker, artifact="r1_artifact.html",
+                              sha=hashlib.sha256(b"X").hexdigest())
+            res = _execute_with(tmp_path, [pkt], fx)
+            reasons = _refusal_reasons(res, pkt["packet_id"])
+>           assert any("EVIDENCE_TAMPERED" in r and "malformed_sidecar" in r
+                       for r in reasons), reasons
+E                      AssertionError: {'EVIDENCE_TAMPERED:sidecar sha mismatch for r1_artifact.html'}
+E                      assert False
+E                       +  where False = any(<generator object test_p120r1_N6_malformed_sidecar_refused.<locals>.<genexpr> at 0x7f67c3fa7b90>)
+
+tests/test_p120_r1_evidence_integrity.py:174: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_p120_r1_evidence_integrity.py::test_p120r1_N1_missing_artifact_refused_zero_writes
+FAILED tests/test_p120_r1_evidence_integrity.py::test_p120r1_N2_missing_sidecar_refused_zero_writes
+FAILED tests/test_p120_r1_evidence_integrity.py::test_p120r1_N3_sidecar_mismatch_refused_zero_writes
+FAILED tests/test_p120_r1_evidence_integrity.py::test_p120r1_N4_artifact_byte_hash_mismatch_refused_zero_writes
+FAILED tests/test_p120_r1_evidence_integrity.py::test_p120r1_N5_price_locator_quote_mismatch_refused_zero_writes
+FAILED tests/test_p120_r1_evidence_integrity.py::test_p120r1_N6_malformed_sidecar_refused
+6 failed, 1 passed in 1.01s

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/th/models/tank-500-diesel",
+  "captured_at": "2026-09-25T07:46:41.562168+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "434bb47d85368cba8c1700a67fb4df3de95002d0d5db64be885dfdfd9da32a48",
+  "session_id": "acquisition_gwm_model_pages",
+  "artifact_filename": "gwm_th_model_tank-500-diesel.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

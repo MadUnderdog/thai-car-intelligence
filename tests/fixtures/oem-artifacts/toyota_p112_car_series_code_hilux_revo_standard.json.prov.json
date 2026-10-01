@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=hilux_revo_standard",
+  "captured_at": "2026-09-28T09:35:31.071156+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "d8b5611a1a17a536f9bbbb18caf72c7d12ccba6112d7a57a707e9135d9791d6c",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_hilux_revo_standard.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

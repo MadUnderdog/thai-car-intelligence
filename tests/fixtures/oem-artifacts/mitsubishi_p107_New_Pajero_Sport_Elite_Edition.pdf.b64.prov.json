@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors-th/images/documents/brochure/all-brochure/mar2025/New%20Pajero%20Sport%20Elite%20Edition.pdf",
+  "captured_at": "2026-09-27T16:03:16.693537+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "a1dc83b83c6512ffb81cade69146f780abd5b1987a6fd48dbd47543e566120a0",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "mitsubishi_p107_New_Pajero_Sport_Elite_Edition.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th/used-car/cpo/grade",
+  "captured_at": "2026-09-27T19:03:48.880686+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "1ac6b90369792333cad371fe19f05a24522edb38e3626bd312c778f7b7619e7f",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mazda_p108_grade.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

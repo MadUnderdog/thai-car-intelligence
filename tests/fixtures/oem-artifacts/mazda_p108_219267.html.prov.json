@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th/news-update/detail/219267",
+  "captured_at": "2026-09-27T19:04:03.699976+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "560a89dcfc2e5c903081c64a3578d679b30a297553f32be42f4e0d6ce5485505",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mazda_p108_219267.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

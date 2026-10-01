@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.gwm.co.th/en/deal",
+  "captured_at": "2026-09-27T19:06:56.626729+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "e7175516bfaa22f4134d3cfe6e7c0c7a1f3fafae7499e1d216a29e3d1a6dfc33",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "gwm_p108_deal.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

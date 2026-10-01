@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/en/model/xl7/safety",
+  "captured_at": "2026-09-28T07:15:00.456101+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "800ef5343bd833372355407c227751c501173236484b5dcf11cf4d3f90f87a26",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "suzuki_p111_safety.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

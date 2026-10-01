@@ -1,0 +1,9 @@
+{
+  "source_url": "https://vinsearch.honda.co.th/",
+  "captured_at": "2026-09-27T19:05:54.668733+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "b72995f30c3627a3b20bb8517b3e90b5b848ab69849999d77d1e52feaf39e9e3",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "honda_p108_index.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

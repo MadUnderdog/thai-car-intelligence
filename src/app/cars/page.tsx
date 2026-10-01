@@ -16,6 +16,9 @@ type Model = {
   variantCount: number;
   primaryFuelType: string;
   heroImage: string | null;
+  // P116: representative ACTIVE variant UUID — the SAME id kind /api/compare
+  // accepts (model UUIDs are NOT valid there).
+  compareVariantId: string | null;
 };
 
 export default function CarsPage() {
@@ -24,6 +27,7 @@ export default function CarsPage() {
   const [search, setSearch] = useState("");
   const [brand, setBrand] = useState("");
   const [fuelType, setFuelType] = useState("");
+  const [bodyType, setBodyType] = useState("");
   const [sortBy, setSortBy] = useState("price_asc");
   const [compareList, setCompareList] = useState<string[]>([]);
 
@@ -32,21 +36,21 @@ export default function CarsPage() {
     if (search) params.set("q", search);
     if (brand) params.set("manufacturer", brand);
     if (fuelType) params.set("fuelType", fuelType);
+    if (bodyType) params.set("bodyType", bodyType);
+    if (sortBy) params.set("sortBy", sortBy);
     params.set("limit", "50");
     fetch(`/api/models?${params}`).then(r => r.json()).then(d => {
-      let results = d.results || [];
-      if (sortBy === "price_asc") results.sort((a: any, b: any) => (a.minPrice || 999999999) - (b.minPrice || 999999999));
-      if (sortBy === "price_desc") results.sort((a: any, b: any) => (b.minPrice || 0) - (a.minPrice || 0));
-      setModels(results);
+      setModels(d.results || []);
       setLoading(false);
     }).catch(() => setLoading(false));
-  }, [search, brand, fuelType, sortBy]);
+  }, [search, brand, fuelType, bodyType, sortBy]);
 
   const toggleCompare = (id: string) => {
     setCompareList(prev => prev.includes(id) ? prev.filter(x => x !== id) : prev.length < 4 ? [...prev, id] : prev);
   };
 
   const brands = ["Toyota", "Honda", "BYD", "MG", "Mazda", "Nissan", "Ford", "Hyundai", "Kia", "Tesla", "Isuzu", "Mitsubishi", "Suzuki"];
+
 
   return (
     <div className="container-narrow py-8">
@@ -72,6 +76,15 @@ export default function CarsPage() {
           <option value="Petrol">เบนซิน</option>
           <option value="Diesel">ดีเซล</option>
         </select>
+        <select value={bodyType} onChange={e => setBodyType(e.target.value)} className="px-4 py-2 bg-white border border-[var(--color-gray-300)] rounded-[var(--radius-lg)]">
+          <option value="">ทุกประเภท</option>
+          <option value="SUV">SUV / ครอสโอเวอร์</option>
+          <option value="sedan">ซีดาน</option>
+          <option value="hatchback">แฮทช์แบ็ก</option>
+          <option value="pickup">กระบะ</option>
+          <option value="MPV">MPV / มินิแวน</option>
+          <option value="coupe">คูเป้</option>
+        </select>
         <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="px-4 py-2 bg-white border border-[var(--color-gray-300)] rounded-[var(--radius-lg)]">
           <option value="price_asc">ราคาต่ำ → สูง</option>
           <option value="price_desc">ราคาสูง → ต่ำ</option>
@@ -92,7 +105,7 @@ export default function CarsPage() {
       )}
 
       {/* Results */}
-      <div className="text-sm text-[var(--color-gray-500)] mb-4">{models.length} รุ่น</div>
+      <div className="text-sm text-[var(--color-gray-500)] mb-4">{models.length} รุ่น{bodyType ? ` (${bodyType})` : ""}</div>
 
       {loading ? (
         <div className="text-center py-12 text-[var(--color-gray-500)]">กำลังโหลด...</div>
@@ -150,17 +163,29 @@ export default function CarsPage() {
                 </Card>
               </Link>
 
-              {/* Compare button */}
-              <button
-                onClick={(e) => { e.preventDefault(); toggleCompare(model.id); }}
-                className={`absolute top-3 right-3 w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm transition ${
-                  compareList.includes(model.id)
-                    ? "bg-[var(--color-primary-600)] border-[var(--color-primary-600)] text-white"
-                    : "bg-white border-[var(--color-gray-300)] text-[var(--color-gray-400)] hover:border-[var(--color-primary-400)]"
-                }`}
-              >
-                {compareList.includes(model.id) ? "✓" : "+"}
-              </button>
+              {/* Compare button — selects the model's compareVariantId
+                  (variant UUID for /api/compare, never the model UUID) */}
+              {model.compareVariantId ? (
+                <button
+                  onClick={(e) => { e.preventDefault(); toggleCompare(model.compareVariantId!); }}
+                  aria-pressed={compareList.includes(model.compareVariantId)}
+                  title="เพิ่มเข้าสู่การเปรียบเทียบ"
+                  className={`absolute top-3 right-3 w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm transition ${
+                    compareList.includes(model.compareVariantId)
+                      ? "bg-[var(--color-primary-600)] border-[var(--color-primary-600)] text-white"
+                      : "bg-white border-[var(--color-gray-300)] text-[var(--color-gray-400)] hover:border-[var(--color-primary-400)]"
+                  }`}
+                >
+                  {compareList.includes(model.compareVariantId) ? "✓" : "+"}
+                </button>
+              ) : (
+                <span
+                  title="ยังไม่มีข้อมูลรุ่นย่อยสำหรับเปรียบเทียบ"
+                  className="absolute top-3 right-3 w-8 h-8 rounded-full border-2 border-dashed border-[var(--color-gray-200)] flex items-center justify-center text-sm text-[var(--color-gray-300)]"
+                >
+                  —
+                </span>
+              )}
             </div>
           ))}
         </div>

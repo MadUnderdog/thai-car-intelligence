@@ -1,0 +1,286 @@
+{
+  "run_id": "run-20260920-mega-parallel",
+  "timestamp": "2026-09-20T02:35:46.084983",
+  "total_brands": 34,
+  "brands_with_prices": 23,
+  "brands_blocked": 6,
+  "brands_failed": 0,
+  "total_prices": 1085,
+  "total_specs": 8221,
+  "total_sources": 39,
+  "total_models_found": 0,
+  "per_brand": {
+    "isuzu": {
+      "status": "DATA_EXTRACTED",
+      "prices": 97,
+      "specs": 0,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "nissan": {
+      "status": "PARTIAL",
+      "prices": 0,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "suzuki": {
+      "status": "DATA_EXTRACTED",
+      "prices": 47,
+      "specs": 0,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "mazda": {
+      "status": "DATA_EXTRACTED",
+      "prices": 63,
+      "specs": 0,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "chery": {
+      "status": "DATA_EXTRACTED",
+      "prices": 43,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "gwm": {
+      "status": "DATA_EXTRACTED",
+      "prices": 46,
+      "specs": 0,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "zeekr": {
+      "status": "DATA_EXTRACTED",
+      "prices": 45,
+      "specs": 0,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "byd": {
+      "status": "BLOCKED",
+      "prices": 0,
+      "specs": 0,
+      "sources": 0,
+      "models": 0,
+      "variants": 0
+    },
+    "hyundai": {
+      "status": "DATA_EXTRACTED",
+      "prices": 46,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "kia": {
+      "status": "DATA_EXTRACTED",
+      "prices": 49,
+      "specs": 0,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "ford": {
+      "status": "DATA_EXTRACTED",
+      "prices": 63,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "mg": {
+      "status": "DATA_EXTRACTED",
+      "prices": 26,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "chevrolet": {
+      "status": "DATA_EXTRACTED",
+      "prices": 73,
+      "specs": 0,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "changan": {
+      "status": "DATA_EXTRACTED",
+      "prices": 20,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "honda": {
+      "status": "DATA_EXTRACTED",
+      "prices": 11,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "volvo": {
+      "status": "DATA_EXTRACTED",
+      "prices": 41,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "lexus": {
+      "status": "DATA_EXTRACTED",
+      "prices": 69,
+      "specs": 0,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "tesla": {
+      "status": "DATA_EXTRACTED",
+      "prices": 45,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "toyota": {
+      "status": "PARTIAL",
+      "prices": 0,
+      "specs": 8221,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "subaru": {
+      "status": "DATA_EXTRACTED",
+      "prices": 51,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "mitsubishi": {
+      "status": "BLOCKED",
+      "prices": 0,
+      "specs": 0,
+      "sources": 0,
+      "models": 0,
+      "variants": 0
+    },
+    "porsche": {
+      "status": "DATA_EXTRACTED",
+      "prices": 40,
+      "specs": 0,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "geely": {
+      "status": "DATA_EXTRACTED",
+      "prices": 43,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "kg-mobility": {
+      "status": "BLOCKED",
+      "prices": 0,
+      "specs": 0,
+      "sources": 0,
+      "models": 0,
+      "variants": 0
+    },
+    "ldv": {
+      "status": "BLOCKED",
+      "prices": 0,
+      "specs": 0,
+      "sources": 0,
+      "models": 0,
+      "variants": 0
+    },
+    "jetour": {
+      "status": "BLOCKED",
+      "prices": 0,
+      "specs": 0,
+      "sources": 0,
+      "models": 0,
+      "variants": 0
+    },
+    "denza": {
+      "status": "DATA_EXTRACTED",
+      "prices": 42,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "xpeng": {
+      "status": "DATA_EXTRACTED",
+      "prices": 44,
+      "specs": 0,
+      "sources": 2,
+      "models": 0,
+      "variants": 0
+    },
+    "baic": {
+      "status": "PARTIAL",
+      "prices": 0,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "nio": {
+      "status": "PARTIAL",
+      "prices": 0,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "avora": {
+      "status": "PARTIAL",
+      "prices": 0,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "bmw": {
+      "status": "DATA_EXTRACTED",
+      "prices": 41,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "mini": {
+      "status": "DATA_EXTRACTED",
+      "prices": 40,
+      "specs": 0,
+      "sources": 1,
+      "models": 0,
+      "variants": 0
+    },
+    "mercedes-benz": {
+      "status": "BLOCKED",
+      "prices": 0,
+      "specs": 0,
+      "sources": 0,
+      "models": 0,
+      "variants": 0
+    }
+  }
+}

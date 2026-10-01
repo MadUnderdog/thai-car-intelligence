@@ -1,0 +1,9 @@
+{
+  "source_url": "https://assets.isuzu-tis.com/v_cross_fleet_brochure_5ae2ce4d38.pdf",
+  "captured_at": "2026-09-27T16:06:21.062715+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "cdccaa95e4865b5d1cddf45b3455090cf4999483a992518e5c7c786895adedec",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "isuzu_p107_v_cross_fleet_brochure_5ae2ce4d38.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

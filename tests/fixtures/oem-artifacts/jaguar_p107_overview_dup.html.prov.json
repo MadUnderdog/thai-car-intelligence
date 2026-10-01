@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.jaguar.co.th/about-jaguar/special-vehicle-operations/overview",
+  "captured_at": "2026-09-27T16:07:32.751648+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "31b0c1206326b439a40e163d165762c62799b48f665412384744be9f21faf83d",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "jaguar_p107_overview_dup.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

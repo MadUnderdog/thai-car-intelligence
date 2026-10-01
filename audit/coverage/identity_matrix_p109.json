@@ -1,0 +1,1823 @@
+{
+  "schema": "identity_matrix_p109/1",
+  "generated_at": "2026-09-27T20:23:03.575826+00:00",
+  "baseline_artifact": "audit/coverage/identity_matrix_p108.json",
+  "accepted_ledger_frozen": 488,
+  "totals": {
+    "oems": 32,
+    "oems_closed": 32,
+    "current_models_published": 267,
+    "current_grades_published": 475,
+    "first_party_confirmed_current_rows": 671,
+    "stale_historical_candidates": 0,
+    "unresolved_candidates": 664,
+    "conflicts": 25,
+    "blocked_oems": 13
+  },
+  "oems": [
+    {
+      "brand": "Audi",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 52,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "Avance",
+      "official_access_status": "BLOCKED_DNS",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 0,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "ENUMERATOR_PAGE_NOT_PUBLISHED"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "BMW",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 4,
+      "current_models_published_first_party": 52,
+      "current_grades_published_first_party": 73,
+      "first_party_confirmed_current_rows": 104,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 104,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 48,
+      "conflicts": 20,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "3 Series",
+        "5 Series",
+        "7 Series",
+        "BMW 2 SERIES",
+        "BMW 3 SERIES",
+        "BMW 4 SERIES",
+        "BMW 5 SERIES",
+        "BMW 7 SERIES",
+        "BMW M",
+        "BMW M3",
+        "BMW M4",
+        "BMW X SERIES",
+        "BMW Z",
+        "BMW i",
+        "Bmw I5",
+        "Bmw Ix",
+        "Bmw Ix1",
+        "Bmw Ix2",
+        "Bmw M2",
+        "Bmw M340I",
+        "Bmw M5",
+        "Bmw X3",
+        "Bmw X4",
+        "Bmw X5",
+        "Bmw X7",
+        "Bmw Xm",
+        "Bmw Z4",
+        "Convertible 4 series",
+        "Coupé 2 series",
+        "Coupé 4 series",
+        "Coupé M2",
+        "Coupé M4",
+        "Roadster Z4",
+        "SAC X4",
+        "SAC X6",
+        "SAC iX2",
+        "SAV New iX",
+        "SAV New iX3",
+        "SAV X1",
+        "SAV X3",
+        "SAV X5",
+        "SAV X7",
+        "SAV XM",
+        "SAV iX1 L",
+        "Sedan 3 series",
+        "Sedan 5 series",
+        "Sedan 7 series",
+        "Sedan M3",
+        "Sedan M5",
+        "Sedan New i5",
+        "Touring M3",
+        "Touring M5"
+      ],
+      "current_grades": [
+        "BMW 2 SERIES | 220 Gran Coupe M Sport Pro",
+        "BMW 3 SERIES | 320Li M Sport",
+        "BMW 3 SERIES | 320d M Sport",
+        "BMW 3 SERIES | 330e M Sport",
+        "BMW 3 SERIES | M340i xDrive",
+        "BMW 4 SERIES | 420i Coupé M Sport",
+        "BMW 4 SERIES | 430i Convertible M Sport",
+        "BMW 4 SERIES | 430i Coupé M Sport",
+        "BMW 4 SERIES | M440i xDrive",
+        "BMW 5 SERIES | 520d M Sport",
+        "BMW 5 SERIES | 520d M Sport Pro",
+        "BMW 5 SERIES | 530e Inspiring",
+        "BMW 5 SERIES | 530e M Sport",
+        "BMW 5 SERIES | 530e M Sport Pro",
+        "BMW 7 SERIES | 740d M Sport",
+        "BMW 7 SERIES | 750e xDrive M Sport",
+        "BMW 7 SERIES | M760e xDrive",
+        "BMW M | M2",
+        "BMW M | M2 (M Racetrack Package)",
+        "BMW M | M2 (Manual Transmission)",
+        "BMW M | M2 CS",
+        "BMW M | M2 CS (Ceramic Brake)",
+        "BMW M | M2 CS (Velvet Blue with Ceramic Brake)",
+        "BMW M | M3 CS",
+        "BMW M | M3 Competition M xDrive Touring",
+        "BMW M | M4 CS",
+        "BMW M | M4 Competition M xDrive Coupé",
+        "BMW M | M5",
+        "BMW M | M5 (Ceramic Break)",
+        "BMW M | M5 Touring",
+        "BMW M | M5 Touring (Ceramic Break)",
+        "BMW M | XM",
+        "BMW M | XM 50e (Shadow Line)",
+        "BMW M | XM Label Red",
+        "BMW M3 | CS",
+        "BMW M3 | CS Touring",
+        "BMW M3 | Competition M xDrive Touring",
+        "BMW M4 | CS",
+        "BMW X SERIES | X1 sDrive20i M Sport",
+        "BMW X SERIES | X3 20d xDrive M Sport Pro",
+        "BMW X SERIES | X3 M50 xDrive",
+        "BMW X SERIES | X4 xDrive20d M Sport",
+        "BMW X SERIES | X5 xDrive30d M Sport",
+        "BMW X SERIES | X5 xDrive50e M Sport",
+        "BMW X SERIES | X6 xDrive40i M Sport",
+        "BMW X SERIES | X7 xDrive40d M Sport",
+        "BMW Z | Z4 M40i",
+        "BMW Z | Z4 sDrive30i M Sport",
+        "BMW i | i5 eDrive40 M Sport",
+        "BMW i | iX xDrive45 M Sport",
+        "BMW i | iX1 eDrive20L M Sport",
+        "BMW i | iX2 xDrive30 M Sport",
+        "BMW i | iX3 50 xDrive M Sport",
+        "Bmw I5 | Edrive40 M Sport",
+        "Bmw Ix | Xdrive45 M Sport",
+        "Bmw Ix1 | eDrive20L M Sport",
+        "Bmw Ix2 | xDrive30 M Sport",
+        "Bmw M2 | CS",
+        "Bmw M2 | CS (Ceramic Brake",
+        "Bmw M2 | M Race Track Package",
+        "Bmw M340I | xDrive",
+        "Bmw M5 | Ceramic Break",
+        "Bmw M5 | Touring",
+        "Bmw M5 | Touring (Ceramic Break",
+        "Bmw X3 | M50 Xdrive",
+        "Bmw X4 | xDrive20d M Sport",
+        "Bmw X5 | xDrive30d M Sport",
+        "Bmw X5 | xDrive50e M Sport",
+        "Bmw X7 | xDrive40d M Sport",
+        "Bmw Xm | 50e Shadow Line",
+        "Bmw Xm | Label Red",
+        "Bmw Z4 | M40i",
+        "Bmw Z4 | sDrive30i M Sport"
+      ]
+    },
+    {
+      "brand": "BYD",
+      "official_access_status": "BLOCKED_HTTP_404",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 35,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_404"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "Changan",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 8,
+      "current_models_published_first_party": 3,
+      "current_grades_published_first_party": 3,
+      "first_party_confirmed_current_rows": 5,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 5,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 2,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "Changan Lumin",
+        "Lumin L DC",
+        "NEVO Q05"
+      ],
+      "current_grades": [
+        "Changan Lumin | L DC",
+        "NEVO Q05 | Max",
+        "NEVO Q05 | Ultra"
+      ]
+    },
+    {
+      "brand": "Chery",
+      "official_access_status": "BLOCKED_DNS",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 8,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "Chevrolet",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 24,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "Deepal",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 11,
+      "current_models_published_first_party": 7,
+      "current_grades_published_first_party": 4,
+      "first_party_confirmed_current_rows": 9,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 9,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 7,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "Deepal E07",
+        "Deepal S05",
+        "L07",
+        "S07",
+        "e07-plus",
+        "hunter-k50",
+        "s05-reev"
+      ],
+      "current_grades": [
+        "Deepal E07 | Performance AWD",
+        "Deepal E07 | Plus",
+        "Deepal S05 | Reev",
+        "S07 | S07 L"
+      ]
+    },
+    {
+      "brand": "Ford",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 23,
+      "conflicts": 2,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "GWM",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 27,
+      "current_models_published_first_party": 18,
+      "current_grades_published_first_party": 22,
+      "first_party_confirmed_current_rows": 38,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 36,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 2
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 10,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "GWM HAVAL H6",
+        "GWM POER SAHAR DIESEL",
+        "GWM POER SAHAR HEV",
+        "Gwm Tank 300",
+        "Gwm Tank 500",
+        "Haval H6",
+        "ORA 5 EV",
+        "ORA 5 HEV",
+        "Ora 5",
+        "POER 2.4T PRO",
+        "Poer",
+        "TANK 300 DIESEL",
+        "TANK 300 HEV",
+        "TANK 300 LIMITED",
+        "TANK 500 3.0T DIESEL",
+        "TANK 500 DIESEL",
+        "TANK 500 HEV",
+        "WEY G9"
+      ],
+      "current_grades": [
+        "GWM HAVAL H6 | hev-pro",
+        "GWM HAVAL H6 | phev-pro",
+        "GWM HAVAL H6 | phev-ultra",
+        "GWM POER SAHAR HEV | pro",
+        "GWM POER SAHAR HEV | ultra-4wd",
+        "Gwm Tank 300 | Diesel",
+        "Gwm Tank 300 | PRO",
+        "Gwm Tank 500 | Diesel",
+        "Gwm Tank 500 | PRO",
+        "Haval H6 | ULTRA",
+        "TANK 300 DIESEL | 2-4t-pro",
+        "TANK 300 DIESEL | 2-4t-ultra",
+        "TANK 300 DIESEL | 2-4t-ultra-4wd",
+        "TANK 300 HEV | pro",
+        "TANK 300 HEV | ultra",
+        "TANK 500 DIESEL | 2wd-high",
+        "TANK 500 DIESEL | 2wd-medium",
+        "TANK 500 DIESEL | 4wd-high",
+        "TANK 500 DIESEL | black-warrior-2wd",
+        "TANK 500 DIESEL | black-warrior-4wd",
+        "TANK 500 HEV | pro",
+        "TANK 500 HEV | ultra"
+      ]
+    },
+    {
+      "brand": "Haval",
+      "official_access_status": "BLOCKED_DNS",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 8,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "Honda",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 16,
+      "current_models_published_first_party": 23,
+      "current_grades_published_first_party": 35,
+      "first_party_confirmed_current_rows": 53,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 52,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 1
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 28,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "Accord e:HEV",
+        "BR-V",
+        "CR-V e:HEV",
+        "City",
+        "City Hatchback",
+        "Civic",
+        "Civic Type R",
+        "Civic e:HEV",
+        "HEV",
+        "HR-V",
+        "HR-V e:HEV",
+        "Honda Accord",
+        "Honda Civic e:HEV",
+        "Honda HR-V e:HEV",
+        "N1",
+        "N2",
+        "NEW HONDA CITY",
+        "ONE",
+        "STEP WGN e:HEV",
+        "Super-ONE",
+        "WR-V",
+        "e:N1",
+        "e:N2"
+      ],
+      "current_grades": [
+        "Accord e:HEV | e:HEV E",
+        "Accord e:HEV | e:HEV EL",
+        "Accord e:HEV | e:HEV RS",
+        "BR-V | E - Taffeta White",
+        "BR-V | E – Crystal Black",
+        "BR-V | EL - Crystal Black",
+        "BR-V | EL – Premium Sunlight",
+        "CR-V e:HEV | e:HEV E",
+        "CR-V e:HEV | e:HEV ES",
+        "CR-V e:HEV | e:HEV HuNT - Crystal Black Pearl",
+        "CR-V e:HEV | e:HEV HuNT - Meteoroid Gray Metallic",
+        "CR-V e:HEV | e:HEV RS",
+        "CR-V e:HEV | e:HEV RS 4WD",
+        "City | S",
+        "City | e:HEV RS",
+        "City | e:HEV SV",
+        "City | e:HEV V",
+        "City Hatchback | S",
+        "City Hatchback | e:HEV RS",
+        "City Hatchback | e:HEV SV",
+        "City Hatchback | e:HEV V",
+        "Civic e:HEV | e:HEV EL",
+        "Civic e:HEV | e:HEV RS",
+        "HR-V e:HEV | e:HEV E",
+        "HR-V e:HEV | e:HEV EL",
+        "HR-V e:HEV | e:HEV HuNT-Black",
+        "HR-V e:HEV | e:HEV HuNT-White",
+        "HR-V e:HEV | e:HEV RS",
+        "Honda Accord | e:HEV",
+        "Honda Accord | e:HEV E",
+        "Honda Accord | e:HEV EL",
+        "Honda Accord | e:HEV RS",
+        "STEP WGN e:HEV | e:HEV SPADA",
+        "WR-V | RS",
+        "WR-V | SV"
+      ]
+    },
+    {
+      "brand": "Isuzu",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 18,
+      "current_models_published_first_party": 7,
+      "current_grades_published_first_party": 7,
+      "first_party_confirmed_current_rows": 13,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 13,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 16,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "Isuzu D Max",
+        "MU-X",
+        "NEW ISUZU D-MAX HI-LANDER",
+        "NEW ISUZU D-MAX SPACECAB",
+        "NEW ISUZU D-MAX SPARK",
+        "NEW ISUZU V-CROSS 4x4",
+        "X-SERIES"
+      ],
+      "current_grades": [
+        "Isuzu D Max | 2 Doors",
+        "Isuzu D Max | 4 Doors",
+        "Isuzu D Max | L",
+        "Isuzu D Max | Spark",
+        "Isuzu D Max | V Cross",
+        "Isuzu D Max | X Series",
+        "MU-X | Active"
+      ]
+    },
+    {
+      "brand": "Jaguar",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 8,
+      "current_models_published_first_party": 1,
+      "current_grades_published_first_party": 1,
+      "first_party_confirmed_current_rows": 1,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 1,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 16,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "F-TYPE"
+      ],
+      "current_grades": [
+        "F-TYPE | 2.0 RWD Coupe R-Dynamic Plus"
+      ]
+    },
+    {
+      "brand": "Kia",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 16,
+      "current_models_published_first_party": 1,
+      "current_grades_published_first_party": 3,
+      "first_party_confirmed_current_rows": 3,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 3,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 17,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "Kia Ev5"
+      ],
+      "current_grades": [
+        "Kia Ev5 | AIR",
+        "Kia Ev5 | EARTH Exclusive AWD",
+        "Kia Ev5 | EARTH Long Range"
+      ]
+    },
+    {
+      "brand": "Land Rover",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 5,
+      "current_models_published_first_party": 4,
+      "current_grades_published_first_party": 11,
+      "first_party_confirmed_current_rows": 14,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 14,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 0,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "ENUMERATOR_PAGE_NOT_PUBLISHED"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "DEFENDER",
+        "RANGE ROVER",
+        "RANGE ROVER SPORT",
+        "RANGE ROVER VELAR"
+      ],
+      "current_grades": [
+        "DEFENDER | 110 2.0 AWD Trophy Plus (5 Door)",
+        "DEFENDER | 110 2.0 AWD X-Dynamic SE Plus (5 Door)",
+        "DEFENDER | 110 3.0 AWD X-Dynamic SE Plus (5 Door)",
+        "DEFENDER | 130 3.0 X-Dynamic SE Plus (5 Door LWB)",
+        "DEFENDER | 90 3.0 AWD X-Dynamic SE Plus (3 Door)",
+        "RANGE ROVER | 3.0 AWD Autobiography LWB Plus",
+        "RANGE ROVER | 3.0 AWD SV LWB Plus",
+        "RANGE ROVER SPORT | 3.0 AWD Battersea Plus",
+        "RANGE ROVER SPORT | 3.0 AWD SE Plus",
+        "RANGE ROVER VELAR | 2.0 AWD Belgravia Plus",
+        "RANGE ROVER VELAR | 2.0 AWD Dynamic SE Plus"
+      ]
+    },
+    {
+      "brand": "Lexus",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 19,
+      "current_models_published_first_party": 14,
+      "current_grades_published_first_party": 38,
+      "first_party_confirmed_current_rows": 48,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 44,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 4
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 29,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "ES",
+        "IS",
+        "LBX",
+        "LM",
+        "LS",
+        "LX",
+        "Lexus Lbx",
+        "Lexus Lx 500D",
+        "Lexus Nx",
+        "NX",
+        "RX",
+        "RZ",
+        "SEDAN",
+        "UX"
+      ],
+      "current_grades": [
+        "ES | ES 350e Premium",
+        "ES | ES 350h Grand Luxury",
+        "IS | IS 300h F SPORT",
+        "IS | IS 300h Luxury",
+        "LBX | LBX Bespoke",
+        "LBX | LBX Luxury",
+        "LBX | LBX Premium",
+        "LM | LM 350h 4-Seater",
+        "LM | LM 350h 7-Seater",
+        "LM | LM 500h 4-Seater",
+        "LM | LM 500h 6-Seater",
+        "LS | LS 500h",
+        "LX | LX 500d F SPORT",
+        "LX | LX 500d Premium",
+        "Lexus Lbx | Bespoke",
+        "Lexus Lbx | Luxury",
+        "Lexus Lbx | Premium",
+        "Lexus Lx 500D | F-Sport",
+        "Lexus Lx 500D | Premium",
+        "Lexus Nx | 350H",
+        "Lexus Nx | 350h Grand Luxury",
+        "Lexus Nx | 350h Luxury",
+        "Lexus Nx | 450H",
+        "Lexus Nx | 450H F Sport",
+        "Lexus Nx | 450h+ F Sport AWD",
+        "NX | NX 350h Grand Luxury",
+        "NX | NX 350h Luxury",
+        "NX | NX 350h Premium",
+        "NX | NX 450h+ F SPORT",
+        "NX | NX 450h+ Grand Luxury Plus",
+        "RX | RX 350h Luxury",
+        "RX | RX 350h Premium",
+        "RX | RX 450h+",
+        "RX | RX 500h F SPORT Performance",
+        "RZ | RZ 350e Grand Luxury",
+        "RZ | RZ 500e Premium AWD",
+        "RZ | RZ 500e Premium AWD Steer-by-wire",
+        "UX | UX 300h Grand Luxury"
+      ]
+    },
+    {
+      "brand": "MG",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 17,
+      "current_models_published_first_party": 5,
+      "current_grades_published_first_party": 2,
+      "first_party_confirmed_current_rows": 6,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 2,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 4
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 42,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "HS",
+        "MG3",
+        "Mg Ep",
+        "Mg Es",
+        "Mg Urban"
+      ],
+      "current_grades": [
+        "Mg Urban | MAX",
+        "Mg Urban | ULTRA"
+      ]
+    },
+    {
+      "brand": "MINI",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 10,
+      "current_models_published_first_party": 13,
+      "current_grades_published_first_party": 15,
+      "first_party_confirmed_current_rows": 26,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 22,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 4
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 9,
+      "conflicts": 1,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "ALL-ELECTRIC MINI ACEMAN",
+        "ALL-ELECTRIC MINI COOPER",
+        "JOHN COOPER WORKS",
+        "MINI ACEMAN",
+        "MINI CONVERTIBLE",
+        "MINI COOPER",
+        "MINI COUNTRYMAN",
+        "MINI Cooper Convertible",
+        "MINI JOHN COOPER WORKS",
+        "Mini Clubman",
+        "Mini Cooper S",
+        "Mini Cooper Se",
+        "Mini John Cooper Works"
+      ],
+      "current_grades": [
+        "MINI ACEMAN | ALL-ELECTRIC MINI ACEMAN SE",
+        "MINI ACEMAN | ALL-ELECTRIC MINI ACEMAN SE - CLASSIC",
+        "MINI ACEMAN | ALL-ELECTRIC MINI ACEMAN SE - HIGHTRIM",
+        "MINI CONVERTIBLE | MINI COOPER CONVERTIBLE S",
+        "MINI COOPER | ALL-ELECTRIC MINI COOPER PAUL SMITH EDITION",
+        "MINI COOPER | ALL-ELECTRIC MINI COOPER SE - CLASSIC",
+        "MINI COOPER | ALL-ELECTRIC MINI COOPER SE - HIGHTRIM",
+        "MINI COUNTRYMAN | MINI COUNTRYMAN S ALL4 - HIGHTRIM",
+        "MINI JOHN COOPER WORKS | ALL-ELECTRIC MINI JCW",
+        "MINI JOHN COOPER WORKS | ALL-ELECTRIC MINI JCW - 1965 VICTORY EDITION",
+        "MINI JOHN COOPER WORKS | ALL-ELECTRIC MINI JCW ACEMAN",
+        "MINI JOHN COOPER WORKS | MINI JCW",
+        "MINI JOHN COOPER WORKS | MINI JCW CONVERTIBLE",
+        "Mini John Cooper Works | ALL-ELECTRIC MINI JOHN COOPER WORKS",
+        "Mini John Cooper Works | ALL-ELECTRIC MINI JOHN COOPER WORKS ACEMAN"
+      ]
+    },
+    {
+      "brand": "Mazda",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 30,
+      "current_models_published_first_party": 7,
+      "current_grades_published_first_party": 22,
+      "first_party_confirmed_current_rows": 24,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 22,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 2
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 38,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "CX-30",
+        "MAZDA3 SEDAN",
+        "Mazda 3",
+        "NEW MAZDA BT-50",
+        "NEW MAZDA CX-30 ESSENTIAL",
+        "NEW MAZDA CX-5",
+        "NEW MAZDA2 ESSENTIAL"
+      ],
+      "current_grades": [
+        "MAZDA3 SEDAN | 2.0 C",
+        "MAZDA3 SEDAN | 2.0 S",
+        "MAZDA3 SEDAN | 2.0 SP",
+        "MAZDA3 SEDAN | CARBON EDITION",
+        "NEW MAZDA BT-50 | DBL 2.2 XT HI-RACER 8AT",
+        "NEW MAZDA BT-50 | DBL 3.0 XTR 4x4 6AT",
+        "NEW MAZDA BT-50 | DBL 3.0 XTR HI-RACER 6AT",
+        "NEW MAZDA BT-50 | FSC 2.2 XS HI-RACER 6MT",
+        "NEW MAZDA CX-30 ESSENTIAL | 2.0 PRIME",
+        "NEW MAZDA CX-30 ESSENTIAL | 2.0 SIGNATURE",
+        "NEW MAZDA CX-30 ESSENTIAL | 2.0 ULTRA",
+        "NEW MAZDA CX-5 | 2.0 S",
+        "NEW MAZDA CX-5 | 2.0 SP",
+        "NEW MAZDA CX-5 | XDL",
+        "NEW MAZDA2 ESSENTIAL | 1.3 PRIME",
+        "NEW MAZDA2 ESSENTIAL | 1.3 PRIME SPORTS",
+        "NEW MAZDA2 ESSENTIAL | 1.3 SIGNATURE",
+        "NEW MAZDA2 ESSENTIAL | 1.3 SIGNATURE SPORTS",
+        "NEW MAZDA2 ESSENTIAL | 1.3 ULTRA",
+        "NEW MAZDA2 ESSENTIAL | 1.3 ULTRA SPORTS",
+        "NEW MAZDA2 ESSENTIAL | XDL SIGNATURE",
+        "NEW MAZDA2 ESSENTIAL | XDL SIGNATURE SPORTS"
+      ]
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 30,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "Mitsubishi",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 14,
+      "current_models_published_first_party": 17,
+      "current_grades_published_first_party": 24,
+      "first_party_confirmed_current_rows": 33,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 33,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 21,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "ALL NEW MITSUBISHI TRITON",
+        "Mitsubishi Mirage",
+        "Mitsubishi Outlander Phev",
+        "Mitsubishi Pajero",
+        "Mitsubishi Triton",
+        "Mitsubishi Xforce HEV",
+        "Outlander",
+        "Pajero Sport",
+        "Xpander",
+        "ปาเจโร สปอร์ต",
+        "ปาเจโร สปอร์ต อีลีท เอดิชัน ใหม่",
+        "มิราจ",
+        "เอ็กซ์ฟอร์ส เอชอีวี",
+        "ไทรทัน ขับเคลื่อน 2 ล้อ",
+        "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ",
+        "ไทรทัน ดับเบิ้ล แค็บ พลัส",
+        "ไทรทัน แอทลีท"
+      ],
+      "current_grades": [
+        "ALL NEW MITSUBISHI TRITON | ซิงเกิ้ล แค็บ 2.4 PRO",
+        "ALL NEW MITSUBISHI TRITON | ดับเบิ้ล แค็บ 2.4 PRO",
+        "ALL NEW MITSUBISHI TRITON | ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+        "ALL NEW MITSUBISHI TRITON | ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+        "ALL NEW MITSUBISHI TRITON | ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+        "ปาเจโร สปอร์ต | 2.4 GT",
+        "ปาเจโร สปอร์ต | 2.4 PRIME",
+        "ปาเจโร สปอร์ต อีลีท เอดิชัน ใหม่ | 2.4 ELITE EDITION 2WD",
+        "ปาเจโร สปอร์ต อีลีท เอดิชัน ใหม่ | 2.4 ELITE EDITION 4WD",
+        "มิราจ | ACTIVE",
+        "มิราจ | SMART",
+        "เอ็กซ์ฟอร์ส เอชอีวี | IGNITE",
+        "เอ็กซ์ฟอร์ส เอชอีวี | ULTIMATE",
+        "เอ็กซ์ฟอร์ส เอชอีวี | ULTIMATE X",
+        "ไทรทัน ขับเคลื่อน 2 ล้อ | ซิงเกิ้ล แค็บ 2.4 PRO",
+        "ไทรทัน ขับเคลื่อน 2 ล้อ | ดับเบิ้ล แค็บ 2.4 PRO",
+        "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ | ซิงเกิ้ล แค็บ 2.4 PRO 4WD",
+        "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ | ซิงเกิ้ล แค็บ 2.4 PRO 4WD AT",
+        "ไทรทัน ซิงเกิ้ล แค็บ ขับเคลื่อน 4 ล้อ | ซิงเกิ้ล แค็บ 2.4 PRO 4WD AT SWB",
+        "ไทรทัน ดับเบิ้ล แค็บ พลัส | ดับเบิ้ล แค็บ 2.4 PRIME 4WD",
+        "ไทรทัน ดับเบิ้ล แค็บ พลัส | ดับเบิ้ล แค็บ พลัส 2.4 PRIME",
+        "ไทรทัน ดับเบิ้ล แค็บ พลัส | ดับเบิ้ล แค็บ พลัส 2.4 PRIME AT",
+        "ไทรทัน ดับเบิ้ล แค็บ พลัส | ดับเบิ้ล แค็บ พลัส 2.4 ULTRA AT",
+        "ไทรทัน แอทลีท | ดับเบิ้ล แค็บ แอทลีท 4WD AT"
+      ]
+    },
+    {
+      "brand": "NETA",
+      "official_access_status": "BLOCKED_DNS",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 5,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_DNS"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "Nissan",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 17,
+      "current_models_published_first_party": 20,
+      "current_grades_published_first_party": 23,
+      "first_party_confirmed_current_rows": 43,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 39,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 4
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 26,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "Nissan Almera",
+        "Nissan Kicks",
+        "Nissan Navara",
+        "Nissan Serena",
+        "Nissan Terra",
+        "Nissan X Trail",
+        "Nissan X-Trail e-Power",
+        "Note",
+        "QUEST",
+        "Sylphy",
+        "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่",
+        "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่",
+        "นิสสัน นาวารา คาลิเบอร์ ใหม่",
+        "นิสสัน นาวารา คิงแค็บ ใหม่",
+        "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่",
+        "นิสสัน อัลเมร่า",
+        "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่",
+        "นิสสัน เซเรน่า ใหม่",
+        "นิสสัน เทอร์ร่า",
+        "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่"
+      ],
+      "current_grades": [
+        "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่ | e-POWER SV *** / ****",
+        "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่ | e-POWER V *",
+        "นิสสัน คิกส์ อี-พาวเวอร์ ใหม่ | e-POWER VL **",
+        "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่ | DC PRO-2X 7AT",
+        "นิสสัน นาวารา PRO-4X / PRO-2X ใหม่ | DC PRO-4X 7AT",
+        "นิสสัน นาวารา คาลิเบอร์ ใหม่ | DC Calibre E 7AT Black Edition",
+        "นิสสัน นาวารา คาลิเบอร์ ใหม่ | DC Calibre SL 6MT",
+        "นิสสัน นาวารา คาลิเบอร์ ใหม่ | DC Calibre SL 7AT",
+        "นิสสัน นาวารา คาลิเบอร์ ใหม่ | KC Calibre E 6MT",
+        "นิสสัน นาวารา คาลิเบอร์ ใหม่ | KC Calibre E 7AT Black Edition",
+        "นิสสัน นาวารา คาลิเบอร์ ใหม่ | KC Calibre SL 7AT",
+        "นิสสัน นาวารา คิงแค็บ ใหม่ | KC SL 6MT",
+        "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่ | SC SL 6MT",
+        "นิสสัน นาวารา ซิงเกิ้ลแค็บ ใหม่ | SC SL 6MT 4WD",
+        "นิสสัน อัลเมร่า | 1.0L TURBO E CVT",
+        "นิสสัน อัลเมร่า | 1.0L TURBO EL CVT",
+        "นิสสัน อัลเมร่า | 1.0L TURBO V CVT",
+        "นิสสัน อัลเมร่า | 1.0L TURBO VL CVT * / **",
+        "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่ | Highway Star",
+        "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่ | Highway Star สีขาว ปริซึม ไวท์ *",
+        "นิสสัน เซเรน่า อี-พาวเวอร์ ใหม่ | Highway Star สีฟ้า เทอร์ควอยซ์บลู หลังคาสีดำ และ สีขาว ปริซึมไวท์ หลังคาสีดำ *",
+        "นิสสัน เซเรน่า ใหม่ | Highway Star",
+        "นิสสัน เอ็กซ์เทรล อี-พาวเวอร์ ใหม่ | e-POWER *"
+      ]
+    },
+    {
+      "brand": "Peugeot",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 5,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "Porsche",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 13,
+      "current_models_published_first_party": 8,
+      "current_grades_published_first_party": 69,
+      "first_party_confirmed_current_rows": 74,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 73,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 1
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 25,
+      "conflicts": 2,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "718",
+        "911",
+        "Cayenne",
+        "Macan",
+        "Panamera",
+        "Porsche 911",
+        "Porsche Panamera",
+        "Taycan"
+      ],
+      "current_grades": [
+        "718 | 718 Boxster",
+        "718 | 718 Boxster GTS 4.0",
+        "718 | 718 Boxster Style Edition",
+        "718 | 718 Cayman",
+        "718 | 718 Cayman GT4 RS",
+        "718 | 718 Cayman GTS 4.0",
+        "718 | 718 Cayman Style Edition",
+        "718 | 718 Spyder RS",
+        "911 | 911 Carrera",
+        "911 | 911 Carrera 4 GTS",
+        "911 | 911 Carrera 4 GTS Cabriolet",
+        "911 | 911 Carrera 4S",
+        "911 | 911 Carrera 4S Cabriolet",
+        "911 | 911 Carrera Cabriolet",
+        "911 | 911 Carrera GTS",
+        "911 | 911 Carrera GTS Cabriolet",
+        "911 | 911 Carrera S",
+        "911 | 911 Carrera S Cabriolet",
+        "911 | 911 Carrera T",
+        "911 | 911 Carrera T Cabriolet",
+        "911 | 911 GT3",
+        "911 | 911 GT3 S/C",
+        "911 | 911 GT3 with Touring Package",
+        "911 | 911 Spirit 70",
+        "911 | 911 Targa 4 GTS",
+        "911 | 911 Targa 4S",
+        "911 | 911 Turbo S",
+        "911 | 911 Turbo S Cabriolet",
+        "Cayenne | Cayenne Coupé",
+        "Cayenne | Cayenne Coupé Electric",
+        "Cayenne | Cayenne E-Hybrid",
+        "Cayenne | Cayenne E-Hybrid Coupé",
+        "Cayenne | Cayenne Electric",
+        "Cayenne | Cayenne GTS",
+        "Cayenne | Cayenne GTS Coupé",
+        "Cayenne | Cayenne S",
+        "Cayenne | Cayenne S Coupé",
+        "Cayenne | Cayenne S Coupé Electric",
+        "Cayenne | Cayenne S E-Hybrid Coupé",
+        "Cayenne | Cayenne S Electric",
+        "Cayenne | Cayenne Turbo Coupé Electric",
+        "Cayenne | Cayenne Turbo E-Hybrid",
+        "Cayenne | Cayenne Turbo E-Hybrid Coupé",
+        "Cayenne | Cayenne Turbo Electric",
+        "Cayenne | Cayenne Turbo GT",
+        "Macan | Macan 4 Electric",
+        "Macan | Macan 4S Electric",
+        "Macan | Macan Electric",
+        "Macan | Macan S",
+        "Macan | Macan Turbo Electric",
+        "Panamera | Panamera 4 E-Hybrid",
+        "Panamera | Panamera 4 E-Hybrid Executive",
+        "Panamera | Panamera 4S E-Hybrid",
+        "Panamera | Panamera GTS",
+        "Panamera | Panamera Turbo E-Hybrid",
+        "Panamera | Panamera Turbo S E-Hybrid",
+        "Taycan | Taycan 4",
+        "Taycan | Taycan 4 Black Edition",
+        "Taycan | Taycan 4 Cross Turismo",
+        "Taycan | Taycan 4S",
+        "Taycan | Taycan 4S Black Edition",
+        "Taycan | Taycan 4S Cross Turismo",
+        "Taycan | Taycan Black Edition",
+        "Taycan | Taycan GTS",
+        "Taycan | Taycan Turbo",
+        "Taycan | Taycan Turbo Cross Turismo",
+        "Taycan | Taycan Turbo GT",
+        "Taycan | Taycan Turbo GT with Weissach Package",
+        "Taycan | Taycan Turbo S"
+      ]
+    },
+    {
+      "brand": "Smart",
+      "official_access_status": "DEALER_REDIRECT",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 0,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "DEALER_REDIRECT"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "ENUMERATOR_PAGE_NOT_PUBLISHED"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "Subaru",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 15,
+      "current_models_published_first_party": 6,
+      "current_grades_published_first_party": 2,
+      "first_party_confirmed_current_rows": 8,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 7,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 1
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 10,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "ALL NEW FORESTER",
+        "BRZ",
+        "CROSSTREK",
+        "Subaru Xv",
+        "WRX",
+        "WRX WAGON"
+      ],
+      "current_grades": [
+        "BRZ | BRZ AT",
+        "CROSSTREK | 2.0i-S EyeSight"
+      ]
+    },
+    {
+      "brand": "Suzuki",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 20,
+      "current_models_published_first_party": 9,
+      "current_grades_published_first_party": 11,
+      "first_party_confirmed_current_rows": 20,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 18,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 2
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 7,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "ALL NEW SUZUKI FRONX",
+        "ALL NEW SUZUKI e VITARA",
+        "CARRY",
+        "JIMNY",
+        "Suzuki E Vitara",
+        "Suzuki Fronx",
+        "Suzuki Xl7",
+        "XL-7",
+        "XL7 HYBRID"
+      ],
+      "current_grades": [
+        "ALL NEW SUZUKI FRONX | GL",
+        "ALL NEW SUZUKI FRONX | GLX",
+        "ALL NEW SUZUKI FRONX | GLX PLUS",
+        "JIMNY | AT (SINGLE-TONE)",
+        "JIMNY | AT (TWO-TONE)",
+        "Suzuki Fronx | GL",
+        "Suzuki Fronx | GLX",
+        "Suzuki Fronx | GLX PLUS",
+        "Suzuki Xl7 | BLACK EDITION",
+        "Suzuki Xl7 | HYBRID",
+        "XL7 HYBRID | GLX"
+      ]
+    },
+    {
+      "brand": "Tesla",
+      "official_access_status": "BLOCKED_HTTP_403",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 13,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    },
+    {
+      "brand": "Toyota",
+      "official_access_status": "REACHABLE",
+      "closure_status": "CLOSED_CURRENT_FIRST_PARTY_AS_PUBLISHED",
+      "source_gap": "classification complete for what current first-party sources publish",
+      "current_sources": 16,
+      "current_models_published_first_party": 52,
+      "current_grades_published_first_party": 110,
+      "first_party_confirmed_current_rows": 149,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 148,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 1
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 95,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [
+        "Alphard",
+        "CAMRY",
+        "Camry",
+        "Coaster",
+        "Commuter",
+        "Corolla Altis",
+        "Corolla Altis GR Sport",
+        "Corolla Cross",
+        "Corolla Cross GR Sport",
+        "Fortuner GR Sport",
+        "Fortuner Leader",
+        "Fortuner Legender",
+        "GR 86",
+        "GR Corolla",
+        "GR Supra",
+        "GR Yaris",
+        "Hiace",
+        "Hilux Champ",
+        "Hilux Revo Standard Cab",
+        "Hilux Revo Z Edition",
+        "Hilux Travo Overland",
+        "Hilux Travo Prerunner & 4TREX",
+        "Hilux Travo Standard Cab 4TREX",
+        "Hilux Travo-e",
+        "Innova Zenix",
+        "Land Cruiser",
+        "Land Cruiser FJ",
+        "Majesty",
+        "Toyota Alphard",
+        "Toyota Altis",
+        "Toyota Bz4X",
+        "Toyota Commuter",
+        "Toyota Corolla",
+        "Toyota Fortuner",
+        "Toyota Gr Supra",
+        "Toyota Hiace",
+        "Toyota Hilux",
+        "Toyota Hilux Champ",
+        "Toyota Innova",
+        "Toyota Land Cruiser Fj",
+        "Toyota Majesty",
+        "Toyota Veloz",
+        "Toyota Yaris",
+        "Veloz",
+        "WiLL",
+        "Yaris",
+        "Yaris ATIV",
+        "Yaris ATIV GR Sport",
+        "Yaris ATIV Nightshade",
+        "Yaris Cross",
+        "Yaris Cross Nightshade",
+        "bZ4X"
+      ],
+      "current_grades": [
+        "Alphard | Alphard HEV Premium",
+        "Alphard | Alphard HEV Premium Luxury",
+        "Alphard | Alphard HEV Smart",
+        "Alphard | Vellfire HEV Premium",
+        "CAMRY | HEV Premium",
+        "CAMRY | HEV Premium Luxury",
+        "CAMRY | HEV Smart",
+        "Coaster | Coaster",
+        "Commuter | ดีเซล 2.8 AT",
+        "Commuter | ดีเซล 2.8 MT",
+        "Corolla Altis | 1.8G",
+        "Corolla Altis | HEV Premium",
+        "Corolla Altis | HEV Smart",
+        "Corolla Altis GR Sport | HEV GR Sport",
+        "Corolla Cross | HEV Premium",
+        "Corolla Cross | HEV Premium Luxury",
+        "Corolla Cross | HEV Smart",
+        "Corolla Cross GR Sport | HEV GR Sport",
+        "Fortuner GR Sport | 2.8 GR Sport 4WD",
+        "Fortuner Leader | 2.4 Leader G+",
+        "Fortuner Leader | 2.4 Leader S",
+        "Fortuner Leader | 2.4 Leader V",
+        "Fortuner Leader | 2.4 Leader V 4WD",
+        "Fortuner Legender | 2.4 Legender",
+        "Fortuner Legender | 2.4 Legender 4WD",
+        "Fortuner Legender | 2.8 Legender",
+        "Fortuner Legender | 2.8 Legender 4WD",
+        "GR 86 | GR86",
+        "GR Corolla | GR Corolla",
+        "GR Supra | GR Supra",
+        "GR Supra | GR Supra Track Edition",
+        "GR Yaris | GR Yaris",
+        "Hiace | Hiace Eco MT",
+        "Hiace | Hiace GL AT",
+        "Hiace | Hiace GL MT",
+        "Hilux Champ | 2.4 AT C&C SWB",
+        "Hilux Champ | 2.4 AT LWB",
+        "Hilux Champ | 2.4 AT SWB Attractive Package",
+        "Hilux Champ | 2.4 AT Super SWB Attractive Package",
+        "Hilux Champ | 2.4 MT C&C LWB",
+        "Hilux Champ | 2.4 MT LWB",
+        "Hilux Revo Standard Cab | 2.4 Entry",
+        "Hilux Revo Standard Cab | 2.4 Entry (ไม่มีกระบะ)",
+        "Hilux Revo Standard Cab | 2.4 Entry AT",
+        "Hilux Revo Standard Cab | 2.4 Entry AT (ไม่มีกระบะ)",
+        "Hilux Revo Standard Cab | 2.8 Entry",
+        "Hilux Revo Z Edition | Double Cab 4x2 2.8 GR Sport AT",
+        "Hilux Revo Z Edition | Double Cab Z Edition 4x2 2.4 Entry",
+        "Hilux Revo Z Edition | Double Cab Z Edition 4x2 2.4 Entry AT",
+        "Hilux Revo Z Edition | Double Cab Z Edition 4x2 2.4 Mid",
+        "Hilux Revo Z Edition | Double Cab Z Edition 4x2 2.4 Mid AT",
+        "Hilux Revo Z Edition | Smart Cab Z Edition 4x2 2.4 Entry",
+        "Hilux Revo Z Edition | Smart Cab Z Edition 4x2 2.4 Entry AT",
+        "Hilux Revo Z Edition | Smart Cab Z Edition 4x2 2.4 Mid",
+        "Hilux Revo Z Edition | Smart Cab Z Edition 4x2 2.4 Mid AT",
+        "Hilux Travo Overland | Hilux Travo Double Cab 4TREX 2.8 Overland AT",
+        "Hilux Travo Overland | Hilux Travo Double Cab 4TREX 2.8 Overland Plus AT",
+        "Hilux Travo Overland | Hilux Travo Double Cab Prerunner 2.8 Overland AT",
+        "Hilux Travo Overland | Hilux Travo Double Cab Prerunner 2.8 Overland Plus AT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Double Cab 4TREX 2.8 Premium MT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Double Cab Prerunner 2.8 Premium AT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Double Cab Prerunner 2.8 Premium MT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Double Cab Prerunner 2.8 Smart AT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Double Cab Prerunner 2.8 Smart MT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Smart Cab 4TREX 2.8 Premium AT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Smart Cab 4TREX 2.8 Premium MT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Smart Cab Prerunner 2.8 Premium AT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Smart Cab Prerunner 2.8 Premium MT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Smart Cab Prerunner 2.8 Smart AT",
+        "Hilux Travo Prerunner & 4TREX | Hilux Travo Smart Cab Prerunner 2.8 Smart MT",
+        "Hilux Travo Standard Cab 4TREX | Hilux Travo Standard Cab 4TREX 2.8  AT",
+        "Hilux Travo Standard Cab 4TREX | Hilux Travo Standard Cab 4TREX 2.8  MT",
+        "Hilux Travo-e | Hilux Travo-e Double Cab 4TREX",
+        "Innova Zenix | HEV Premium",
+        "Innova Zenix | HEV Smart",
+        "Land Cruiser FJ | Land Cruiser FJ 4WD 2.7",
+        "Majesty | Grande",
+        "Majesty | Premium",
+        "Toyota Alphard | HEV PREMIUM",
+        "Toyota Alphard | HEV PREMIUM LUXURY",
+        "Toyota Alphard | HEV SMART",
+        "Toyota Altis | 1.8G",
+        "Toyota Altis | HEV Smart",
+        "Toyota Corolla | Altis Gr Sport",
+        "Toyota Fortuner | Gr Sport",
+        "Toyota Fortuner | Leader",
+        "Toyota Fortuner | Legender",
+        "Toyota Innova | ZENIX",
+        "Toyota Yaris | Ativ",
+        "Toyota Yaris | Cross Nightshade",
+        "Veloz | Premium",
+        "Veloz | Smart",
+        "Yaris | Premium",
+        "Yaris | Smart",
+        "Yaris | Sport",
+        "Yaris ATIV | HEV Premium",
+        "Yaris ATIV | NIGHTSHADE",
+        "Yaris ATIV | Premium",
+        "Yaris ATIV | Premium Luxury",
+        "Yaris ATIV | Smart",
+        "Yaris ATIV | Sport",
+        "Yaris ATIV GR Sport | HEV GR Sport",
+        "Yaris ATIV Nightshade | NIGHTSHADE",
+        "Yaris Cross | HEV Premium",
+        "Yaris Cross | HEV Premium Luxury",
+        "Yaris Cross | HEV Smart",
+        "Yaris Cross | NIGHTSHADE",
+        "Yaris Cross Nightshade | NIGHTSHADE",
+        "bZ4X | AWD",
+        "bZ4X | FWD"
+      ]
+    },
+    {
+      "brand": "Volvo",
+      "official_access_status": "BLOCKED_TLS",
+      "closure_status": "CLOSED_BLOCKED_NO_BYPASS",
+      "source_gap": "official Thai site unreachable by policy (no bypass); current-market classification cannot be produced beyond enumerator/media candidates",
+      "current_sources": 0,
+      "current_models_published_first_party": 0,
+      "current_grades_published_first_party": 0,
+      "first_party_confirmed_current_rows": 0,
+      "confirmed_current_by_tier": {
+        "MARKET_TRUTH_ROW": 0,
+        "CURRENT_SEMANTIC_GRADE": 0,
+        "CURRENT_SEMANTIC_MODEL": 0
+      },
+      "stale_historical_candidates": 0,
+      "unresolved_candidates": 15,
+      "conflicts": 0,
+      "blockers": [
+        {
+          "layer": "official_first_party",
+          "blocker": "BLOCKED_TLS"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_HTTP_403"
+        },
+        {
+          "layer": "identity_enumerator",
+          "blocker": "BLOCKED_TLS"
+        }
+      ],
+      "current_models": [],
+      "current_grades": []
+    }
+  ]
+}

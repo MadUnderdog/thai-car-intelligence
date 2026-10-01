@@ -1,0 +1,9 @@
+{
+  "source_url": "https://ex-prod.mgcars.com/th/pdf/AfterSalesService/62/mg-im6-owner-manual-20250318.pdf",
+  "captured_at": "2026-09-27T19:04:42.038524+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "60047cdcaa09b1473b68a406cfc44ee01817e9229e1fdffbcf0c6b9038945cf6",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mg_p108_mg-im6-owner-manual-20250318.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

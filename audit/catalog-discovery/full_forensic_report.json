@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-09-22T17:35:45.710715+00:00",
+  "project": "thai-car-intelligence",
+  "commit_sha_verified": "b0aed37993c42b148bc16769a1543973d4175230",
+  "remote_sha": "b0aed37993c42b148bc16769a1543973d4175230",
+  "local_equals_remote": true,
+  "architecture_pivot": "Two-lane pipeline (Discovery/Quarantine + Acceptance/Promotion)",
+  "new_components": [
+    "lib/thai_factory/acceptance/evidence_packet.py",
+    "lib/thai_factory/acceptance/runner.py",
+    "lib/thai_factory/acceptance/ledger.py",
+    "tests/test_gold_set.py"
+  ],
+  "gold_set_tests": 10,
+  "gold_set_passed": 10,
+  "total_tests_passed": 54,
+  "blockers": [
+    "pre-existing import error in test_generation_config_boundary.py",
+    "Fipe API rate limited (429, ~22h retry)",
+    "Thai DLT not accessible (timeout)",
+    "Third-party taxonomy sites blocked (WAF/JS/SSL)"
+  ],
+  "next_steps": [
+    "Database forensic audit: inspect 174 price rows + 6,985 VariantSpec rows",
+    "HLM semantic contract: independently fetch/verify WordPress posts",
+    "OpenEV contract: GitHub API object metadata / Git tree verification",
+    "Build acceptance runner integration with live DB",
+    "Reconciliation ledger with row-level provenance"
+  ]
+}

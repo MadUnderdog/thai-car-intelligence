@@ -1,0 +1,208 @@
+{
+  "session_id": "catalog_layers_20260926_074454",
+  "batch": "B",
+  "generated_at": "2026-09-26T07:46:41.164127+00:00",
+  "politeness_s": 5.5,
+  "targets": 18,
+  "captured": [
+    {
+      "success": true,
+      "filename": "kia_brochure_hub.html",
+      "url": "https://www.kia.com/th/th/shopping-tools/download-a-brochure.html",
+      "final_url": "https://www.kia.com/th/th/shopping-tools/download-a-brochure.html",
+      "size": 93638,
+      "sha256": "9fac60a97de9550ce94a015c0700c68249645e103fd869d3edf094e08fc65f43",
+      "captured_at": "2026-09-26T07:45:00.416875+00:00",
+      "note": "official Kia brochure hub (link from kia.com/th/th)",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "isuzu_brochure_page.html",
+      "url": "https://www.isuzu-tis.com/download-brochure",
+      "final_url": "https://www.isuzu-tis.com/download-brochure",
+      "size": 211202,
+      "sha256": "64cf78e986eef66d854116a95e135481dd1bc862216713647fc8974b682c2eeb",
+      "captured_at": "2026-09-26T07:45:04.831341+00:00",
+      "note": "official Isuzu brochure download page (link from isuzu-tis.com)",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "mazda_car_mazda-cx5.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda-cx5",
+      "final_url": "https://www.mazda.co.th/th/cars/mazda-cx5",
+      "size": 410730,
+      "sha256": "ca9e7c60533c34b8d04dbeab2d1925a22190e56c17416dbc51752c6d3db65e02",
+      "captured_at": "2026-09-26T07:45:10.210062+00:00",
+      "note": "official Mazda model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "mazda_car_mazda2-essential.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "final_url": "https://www.mazda.co.th/th/cars/mazda2-essential",
+      "size": 567119,
+      "sha256": "2edf155ae81f331b828ae000c3798c10011b89e1c5f0ef168ea3f06c5c691eeb",
+      "captured_at": "2026-09-26T07:45:16.473642+00:00",
+      "note": "official Mazda model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "mazda_car_mazda3-sedan.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda3-sedan",
+      "final_url": "https://www.mazda.co.th/th/cars/mazda3-sedan",
+      "size": 416955,
+      "sha256": "1df796474960d5b42246781aca8e969b0ca56b3d8cdfb027bcbf5b973d228c04",
+      "captured_at": "2026-09-26T07:45:23.858324+00:00",
+      "note": "official Mazda model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "mazda_car_new-mazda-bt50.html",
+      "url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+      "final_url": "https://www.mazda.co.th/th/cars/new-mazda-bt50",
+      "size": 384871,
+      "sha256": "01df606fe74c1ce1702dc7907be3f0719b8a223d7a14c21c0586dde2376a4876",
+      "captured_at": "2026-09-26T07:45:29.682112+00:00",
+      "note": "official Mazda model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "mazda_car_mazda-cx30-essential.html",
+      "url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+      "final_url": "https://www.mazda.co.th/th/cars/mazda-cx30-essential",
+      "size": 422635,
+      "sha256": "b30fac265426a7de3804f9ce594a8ed4df6b1b90291c24f8565ee4277c48725c",
+      "captured_at": "2026-09-26T07:45:37.829614+00:00",
+      "note": "official Mazda model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "mg_car_mg-zs.html",
+      "url": "https://www.mgcars.com/th/cars/mg-zs",
+      "final_url": "https://www.mgcars.com/th/cars/mg-zs",
+      "size": 1907217,
+      "sha256": "01f41293474e78e363c30b6ea59e34bf6a94eaab4f1d6506ae1af64cdda111ab",
+      "captured_at": "2026-09-26T07:45:46.653057+00:00",
+      "note": "official MG model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "mg_car_mg-hs.html",
+      "url": "https://www.mgcars.com/th/cars/mg-hs",
+      "final_url": "https://www.mgcars.com/th/cars/mg-hs",
+      "size": 2157072,
+      "sha256": "85cb146b64179d3bacf3328f5284ba3839c29dae743d275dea1bdca26537deab",
+      "captured_at": "2026-09-26T07:45:53.840799+00:00",
+      "note": "official MG model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "mg_car_mg-im6.html",
+      "url": "https://www.mgcars.com/th/cars/mg-im6",
+      "final_url": "https://www.mgcars.com/th/cars/mg-im6",
+      "size": 1622624,
+      "sha256": "92731131cc6ec4229899f209da231379260793628775a806d8e09733037eb8e6",
+      "captured_at": "2026-09-26T07:46:00.113895+00:00",
+      "note": "official MG model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "mg_car_mg-urban.html",
+      "url": "https://www.mgcars.com/th/cars/mg-urban",
+      "final_url": "https://www.mgcars.com/th/cars/mg-urban",
+      "size": 1406999,
+      "sha256": "712fc2a6b0319fcfb7316d2100f21b85fd1b665a978867ab9760a5269be39f27",
+      "captured_at": "2026-09-26T07:46:06.134064+00:00",
+      "note": "official MG model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "suzuki_model_fronx.html",
+      "url": "https://www.suzuki.co.th/model/fronx/",
+      "final_url": "https://www.suzuki.co.th/model/fronx",
+      "size": 204407,
+      "sha256": "f0b458cf3ea951f6e6cccbf1b18c3cd3f46f637cad78f781cc5c1ae2c93e62de",
+      "captured_at": "2026-09-26T07:46:13.295317+00:00",
+      "note": "official Suzuki model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "suzuki_model_xl7.html",
+      "url": "https://www.suzuki.co.th/model/xl7/",
+      "final_url": "https://www.suzuki.co.th/model/xl7",
+      "size": 213277,
+      "sha256": "29c2c89334c904b7c2b71ee1f3cd8d8c463323486f07f04d6ad5dfd13a9c95ae",
+      "captured_at": "2026-09-26T07:46:20.417065+00:00",
+      "note": "official Suzuki model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "suzuki_model_jimny.html",
+      "url": "https://www.suzuki.co.th/model/jimny",
+      "final_url": "https://www.suzuki.co.th/model/jimny",
+      "size": 204310,
+      "sha256": "09f1319028977a1c13b4f3b8795d76a36ba81b70f8e90435d56c36fba16a00f9",
+      "captured_at": "2026-09-26T07:46:26.002155+00:00",
+      "note": "official Suzuki model page",
+      "layer": "model_page_or_price_index"
+    },
+    {
+      "success": true,
+      "filename": "Suzuki_Collection_E-Catalog_2024.pdf.b64",
+      "url": "https://www.suzuki.co.th/upload/file/Catalog/Suzuki_Collection_E-Catalog_2024.pdf",
+      "size": 6715249,
+      "sha256": "cc7d52408d2aacdd3fe3cda079a01fa34df47e9e9920947c9d19a68f712ca26f",
+      "captured_at": "2026-09-26T07:46:29.154684+00:00",
+      "host": "www.suzuki.co.th",
+      "note": "official Suzuki e-catalog PDF (link from suzuki.co.th)",
+      "layer": "brochure_or_price_sheet_pdf"
+    },
+    {
+      "success": true,
+      "filename": "Changan_NEVOQ05_SpecSheet_th.pdf.b64",
+      "url": "https://www.changan.co.th/images/nevo/q05/pdf/Q05-Specs-sheet-th.pdf",
+      "size": 3242924,
+      "sha256": "44e2bebaeed9b269fa9e22d39488228c74ddec4d30fc91c85ec751d3391d02c4",
+      "captured_at": "2026-09-26T07:46:30.468767+00:00",
+      "host": "www.changan.co.th",
+      "note": "official Changan NEVO Q05 spec sheet PDF (link from changan.co.th)",
+      "layer": "brochure_or_price_sheet_pdf"
+    },
+    {
+      "success": true,
+      "filename": "GWM_HavalH6_Brochure.pdf.b64",
+      "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/en/model/haval-h6-hev/0901_th_h6.pdf",
+      "size": 192594,
+      "sha256": "1357854fcb52dd6b8a4277832cab71734f76a21a447f60d02289627648e15443",
+      "captured_at": "2026-09-26T07:46:31.779872+00:00",
+      "host": "www.gwm.co.th",
+      "note": "official GWM Haval H6 brochure PDF",
+      "layer": "brochure_or_price_sheet_pdf"
+    },
+    {
+      "success": true,
+      "filename": "GWM_ORA5BEV_Catalog.pdf.b64",
+      "url": "https://www.gwm.co.th/content/dam/gwm/pages/th/th/model/ora-5/tc_ora5_bev_catalog_th_220326.pdf",
+      "size": 15488217,
+      "sha256": "7a6356d20d7ccd6a2f1a78011cf0615f901e16efea9f6a7de827ff0f6f01067f",
+      "captured_at": "2026-09-26T07:46:41.086847+00:00",
+      "host": "www.gwm.co.th",
+      "note": "official GWM ORA 5 BEV catalog PDF",
+      "layer": "brochure_or_price_sheet_pdf"
+    }
+  ],
+  "blocked": []
+}

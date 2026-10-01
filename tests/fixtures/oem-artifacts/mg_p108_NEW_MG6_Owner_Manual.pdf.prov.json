@@ -1,0 +1,9 @@
+{
+  "source_url": "https://ex-prod.mgcars.com/en/pdf/AfterSalesService/36/NEW%20MG6%20Owner%20Manual.pdf",
+  "captured_at": "2026-09-27T19:04:23.319643+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "71b1773c13d297bc6fb6955764e24bb7ccc974c7c91f44ec6363ca00fd6576af",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "mg_p108_NEW_MG6_Owner_Manual.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

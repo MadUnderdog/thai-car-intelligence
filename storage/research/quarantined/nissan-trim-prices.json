@@ -1,0 +1,2722 @@
+[
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1216500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 530000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1299000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 559500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Terra",
+    "grade_code": "29838-2_3_E_2WD_7AT",
+    "price": 1199000,
+    "version_key": "JTSARS",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "VEC005",
+    "grade_code": "LVL005",
+    "price": 765000,
+    "version_key": "VEC005",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Kicks e-POWER",
+    "grade_code": "70053-L1_V",
+    "price": 789900,
+    "version_key": "26KEV",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "X-Trail e-POWER",
+    "grade_code": "70006-E-POWER",
+    "price": 1699000,
+    "version_key": "26XTE4",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Almera",
+    "grade_code": "29637-SC_SL_6MT",
+    "price": 595000,
+    "version_key": "105S",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Navara",
+    "grade_code": "70005-DC_PRO-2X_7AT",
+    "price": 1045000,
+    "version_key": "25DCP2A",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 13500000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 637000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Navara Pro",
+    "grade_code": "29643-DC_PRO-2X_7AT",
+    "price": 1030000,
+    "version_key": "144P",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1339000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Serena",
+    "grade_code": "70002-SC_SL_6MT",
+    "price": 606000,
+    "version_key": "25SCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 837000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 693000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Serena Highway Star",
+    "grade_code": "30176-HIGHWAY_STAR",
+    "price": 1690000,
+    "version_key": "SEC28",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 445000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Navara Calibre",
+    "grade_code": "29621-KC_CALIBRE_E_6MT",
+    "price": 765000,
+    "version_key": "120C",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Almera",
+    "grade_code": "29545-1_0L_TURBO_E_CVT",
+    "price": 515000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Kicks e-POWER",
+    "grade_code": "29843-E-POWER_E",
+    "price": 779900,
+    "version_key": "E0951",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Almera",
+    "grade_code": "29851-1_0L_TURBO_E_CVT",
+    "price": 573000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 833000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 672000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1990000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 420000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Kicks",
+    "grade_code": "70003-KC_SL_6MT",
+    "price": 667000,
+    "version_key": "25KCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Livina",
+    "grade_code": "29624-KC_SL_6MT",
+    "price": 649000,
+    "version_key": "114K",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Serena Highway Star",
+    "grade_code": "30177-HIGHWAY_STAR",
+    "price": 1469000,
+    "version_key": "HWS01",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1350000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Kicks Calibre",
+    "grade_code": "70004-KC_CALIBRE_SL_7AT",
+    "price": 758000,
+    "version_key": "25KCCSLA",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "Leaf",
+    "grade_code": "29785-EV",
+    "price": 1590000,
+    "version_key": "LEV1",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan March",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 781000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/march.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1216500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 530000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1299000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 559500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Terra",
+    "grade_code": "29838-2_3_E_2WD_7AT",
+    "price": 1199000,
+    "version_key": "JTSARS",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "VEC005",
+    "grade_code": "LVL005",
+    "price": 765000,
+    "version_key": "VEC005",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Kicks e-POWER",
+    "grade_code": "70053-L1_V",
+    "price": 789900,
+    "version_key": "26KEV",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "X-Trail e-POWER",
+    "grade_code": "70006-E-POWER",
+    "price": 1699000,
+    "version_key": "26XTE4",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Almera",
+    "grade_code": "29637-SC_SL_6MT",
+    "price": 595000,
+    "version_key": "105S",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Navara",
+    "grade_code": "70005-DC_PRO-2X_7AT",
+    "price": 1045000,
+    "version_key": "25DCP2A",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 13500000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 637000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Navara Pro",
+    "grade_code": "29643-DC_PRO-2X_7AT",
+    "price": 1030000,
+    "version_key": "144P",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1339000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Serena",
+    "grade_code": "70002-SC_SL_6MT",
+    "price": 606000,
+    "version_key": "25SCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 837000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 693000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Serena Highway Star",
+    "grade_code": "30176-HIGHWAY_STAR",
+    "price": 1690000,
+    "version_key": "SEC28",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 445000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Navara Calibre",
+    "grade_code": "29621-KC_CALIBRE_E_6MT",
+    "price": 765000,
+    "version_key": "120C",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Almera",
+    "grade_code": "29545-1_0L_TURBO_E_CVT",
+    "price": 515000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Kicks e-POWER",
+    "grade_code": "29843-E-POWER_E",
+    "price": 779900,
+    "version_key": "E0951",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Almera",
+    "grade_code": "29851-1_0L_TURBO_E_CVT",
+    "price": 573000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 833000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 672000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1990000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 420000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Kicks",
+    "grade_code": "70003-KC_SL_6MT",
+    "price": 667000,
+    "version_key": "25KCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Livina",
+    "grade_code": "29624-KC_SL_6MT",
+    "price": 649000,
+    "version_key": "114K",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Serena Highway Star",
+    "grade_code": "30177-HIGHWAY_STAR",
+    "price": 1469000,
+    "version_key": "HWS01",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1350000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Kicks Calibre",
+    "grade_code": "70004-KC_CALIBRE_SL_7AT",
+    "price": 758000,
+    "version_key": "25KCCSLA",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "Leaf",
+    "grade_code": "29785-EV",
+    "price": 1590000,
+    "version_key": "LEV1",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Kicks e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 781000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/kicks-epower.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1216500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 530000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1299000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 559500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Terra",
+    "grade_code": "29838-2_3_E_2WD_7AT",
+    "price": 1199000,
+    "version_key": "JTSARS",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "VEC005",
+    "grade_code": "LVL005",
+    "price": 765000,
+    "version_key": "VEC005",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Kicks e-POWER",
+    "grade_code": "70053-L1_V",
+    "price": 789900,
+    "version_key": "26KEV",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "X-Trail e-POWER",
+    "grade_code": "70006-E-POWER",
+    "price": 1699000,
+    "version_key": "26XTE4",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Almera",
+    "grade_code": "29637-SC_SL_6MT",
+    "price": 595000,
+    "version_key": "105S",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Navara",
+    "grade_code": "70005-DC_PRO-2X_7AT",
+    "price": 1045000,
+    "version_key": "25DCP2A",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 13500000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 637000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Navara Pro",
+    "grade_code": "29643-DC_PRO-2X_7AT",
+    "price": 1030000,
+    "version_key": "144P",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1339000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Serena",
+    "grade_code": "70002-SC_SL_6MT",
+    "price": 606000,
+    "version_key": "25SCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 837000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 693000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Serena Highway Star",
+    "grade_code": "30176-HIGHWAY_STAR",
+    "price": 1690000,
+    "version_key": "SEC28",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 445000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Navara Calibre",
+    "grade_code": "29621-KC_CALIBRE_E_6MT",
+    "price": 765000,
+    "version_key": "120C",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Almera",
+    "grade_code": "29545-1_0L_TURBO_E_CVT",
+    "price": 515000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Kicks e-POWER",
+    "grade_code": "29843-E-POWER_E",
+    "price": 779900,
+    "version_key": "E0951",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Almera",
+    "grade_code": "29851-1_0L_TURBO_E_CVT",
+    "price": 573000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 833000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 672000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1990000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 420000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Kicks",
+    "grade_code": "70003-KC_SL_6MT",
+    "price": 667000,
+    "version_key": "25KCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Livina",
+    "grade_code": "29624-KC_SL_6MT",
+    "price": 649000,
+    "version_key": "114K",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Serena Highway Star",
+    "grade_code": "30177-HIGHWAY_STAR",
+    "price": 1469000,
+    "version_key": "HWS01",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1350000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Kicks Calibre",
+    "grade_code": "70004-KC_CALIBRE_SL_7AT",
+    "price": 758000,
+    "version_key": "25KCCSLA",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "Leaf",
+    "grade_code": "29785-EV",
+    "price": 1590000,
+    "version_key": "LEV1",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Almera",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 781000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-almera.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1216500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 530000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1299000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 559500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Terra",
+    "grade_code": "29838-2_3_E_2WD_7AT",
+    "price": 1199000,
+    "version_key": "JTSARS",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "VEC005",
+    "grade_code": "LVL005",
+    "price": 765000,
+    "version_key": "VEC005",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Kicks e-POWER",
+    "grade_code": "70053-L1_V",
+    "price": 789900,
+    "version_key": "26KEV",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "X-Trail e-POWER",
+    "grade_code": "70006-E-POWER",
+    "price": 1699000,
+    "version_key": "26XTE4",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Almera",
+    "grade_code": "29637-SC_SL_6MT",
+    "price": 595000,
+    "version_key": "105S",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Navara",
+    "grade_code": "70005-DC_PRO-2X_7AT",
+    "price": 1045000,
+    "version_key": "25DCP2A",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 13500000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 637000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Navara Pro",
+    "grade_code": "29643-DC_PRO-2X_7AT",
+    "price": 1030000,
+    "version_key": "144P",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1339000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Serena",
+    "grade_code": "70002-SC_SL_6MT",
+    "price": 606000,
+    "version_key": "25SCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 837000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 693000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Serena Highway Star",
+    "grade_code": "30176-HIGHWAY_STAR",
+    "price": 1690000,
+    "version_key": "SEC28",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 445000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Navara Calibre",
+    "grade_code": "29621-KC_CALIBRE_E_6MT",
+    "price": 765000,
+    "version_key": "120C",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Almera",
+    "grade_code": "29545-1_0L_TURBO_E_CVT",
+    "price": 515000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Kicks e-POWER",
+    "grade_code": "29843-E-POWER_E",
+    "price": 779900,
+    "version_key": "E0951",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Almera",
+    "grade_code": "29851-1_0L_TURBO_E_CVT",
+    "price": 573000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 833000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 672000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1990000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 420000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Kicks",
+    "grade_code": "70003-KC_SL_6MT",
+    "price": 667000,
+    "version_key": "25KCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Livina",
+    "grade_code": "29624-KC_SL_6MT",
+    "price": 649000,
+    "version_key": "114K",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Serena Highway Star",
+    "grade_code": "30177-HIGHWAY_STAR",
+    "price": 1469000,
+    "version_key": "HWS01",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1350000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Kicks Calibre",
+    "grade_code": "70004-KC_CALIBRE_SL_7AT",
+    "price": 758000,
+    "version_key": "25KCCSLA",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "Leaf",
+    "grade_code": "29785-EV",
+    "price": 1590000,
+    "version_key": "LEV1",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Navara",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 781000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/navara.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1216500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 530000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1299000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 559500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Terra",
+    "grade_code": "29838-2_3_E_2WD_7AT",
+    "price": 1199000,
+    "version_key": "JTSARS",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "VEC005",
+    "grade_code": "LVL005",
+    "price": 765000,
+    "version_key": "VEC005",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Kicks e-POWER",
+    "grade_code": "70053-L1_V",
+    "price": 789900,
+    "version_key": "26KEV",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "X-Trail e-POWER",
+    "grade_code": "70006-E-POWER",
+    "price": 1699000,
+    "version_key": "26XTE4",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Almera",
+    "grade_code": "29637-SC_SL_6MT",
+    "price": 595000,
+    "version_key": "105S",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Navara",
+    "grade_code": "70005-DC_PRO-2X_7AT",
+    "price": 1045000,
+    "version_key": "25DCP2A",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 13500000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 637000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Navara Pro",
+    "grade_code": "29643-DC_PRO-2X_7AT",
+    "price": 1030000,
+    "version_key": "144P",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1339000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Serena",
+    "grade_code": "70002-SC_SL_6MT",
+    "price": 606000,
+    "version_key": "25SCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 837000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 693000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Serena Highway Star",
+    "grade_code": "30176-HIGHWAY_STAR",
+    "price": 1690000,
+    "version_key": "SEC28",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 445000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Navara Calibre",
+    "grade_code": "29621-KC_CALIBRE_E_6MT",
+    "price": 765000,
+    "version_key": "120C",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Almera",
+    "grade_code": "29545-1_0L_TURBO_E_CVT",
+    "price": 515000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Kicks e-POWER",
+    "grade_code": "29843-E-POWER_E",
+    "price": 779900,
+    "version_key": "E0951",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Almera",
+    "grade_code": "29851-1_0L_TURBO_E_CVT",
+    "price": 573000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 833000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 672000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1990000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 420000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Kicks",
+    "grade_code": "70003-KC_SL_6MT",
+    "price": 667000,
+    "version_key": "25KCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Livina",
+    "grade_code": "29624-KC_SL_6MT",
+    "price": 649000,
+    "version_key": "114K",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Serena Highway Star",
+    "grade_code": "30177-HIGHWAY_STAR",
+    "price": 1469000,
+    "version_key": "HWS01",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1350000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Kicks Calibre",
+    "grade_code": "70004-KC_CALIBRE_SL_7AT",
+    "price": 758000,
+    "version_key": "25KCCSLA",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "Leaf",
+    "grade_code": "29785-EV",
+    "price": 1590000,
+    "version_key": "LEV1",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Terra",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 781000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/new-terra.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1216500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 530000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1299000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 559500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Terra",
+    "grade_code": "29838-2_3_E_2WD_7AT",
+    "price": 1199000,
+    "version_key": "JTSARS",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "VEC005",
+    "grade_code": "LVL005",
+    "price": 765000,
+    "version_key": "VEC005",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Kicks e-POWER",
+    "grade_code": "70053-L1_V",
+    "price": 789900,
+    "version_key": "26KEV",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "X-Trail e-POWER",
+    "grade_code": "70006-E-POWER",
+    "price": 1699000,
+    "version_key": "26XTE4",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Almera",
+    "grade_code": "29637-SC_SL_6MT",
+    "price": 595000,
+    "version_key": "105S",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Navara",
+    "grade_code": "70005-DC_PRO-2X_7AT",
+    "price": 1045000,
+    "version_key": "25DCP2A",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 13500000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 637000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Navara Pro",
+    "grade_code": "29643-DC_PRO-2X_7AT",
+    "price": 1030000,
+    "version_key": "144P",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1339000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Serena",
+    "grade_code": "70002-SC_SL_6MT",
+    "price": 606000,
+    "version_key": "25SCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 837000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 693000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Serena Highway Star",
+    "grade_code": "30176-HIGHWAY_STAR",
+    "price": 1690000,
+    "version_key": "SEC28",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 445000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Navara Calibre",
+    "grade_code": "29621-KC_CALIBRE_E_6MT",
+    "price": 765000,
+    "version_key": "120C",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Almera",
+    "grade_code": "29545-1_0L_TURBO_E_CVT",
+    "price": 515000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Kicks e-POWER",
+    "grade_code": "29843-E-POWER_E",
+    "price": 779900,
+    "version_key": "E0951",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Almera",
+    "grade_code": "29851-1_0L_TURBO_E_CVT",
+    "price": 573000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 833000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 672000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1990000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 420000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Kicks",
+    "grade_code": "70003-KC_SL_6MT",
+    "price": 667000,
+    "version_key": "25KCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Livina",
+    "grade_code": "29624-KC_SL_6MT",
+    "price": 649000,
+    "version_key": "114K",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Serena Highway Star",
+    "grade_code": "30177-HIGHWAY_STAR",
+    "price": 1469000,
+    "version_key": "HWS01",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1350000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Kicks Calibre",
+    "grade_code": "70004-KC_CALIBRE_SL_7AT",
+    "price": 758000,
+    "version_key": "25KCCSLA",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "Leaf",
+    "grade_code": "29785-EV",
+    "price": 1590000,
+    "version_key": "LEV1",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 781000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1216500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 530000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1299000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 559500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Terra",
+    "grade_code": "29838-2_3_E_2WD_7AT",
+    "price": 1199000,
+    "version_key": "JTSARS",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "VEC005",
+    "grade_code": "LVL005",
+    "price": 765000,
+    "version_key": "VEC005",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Kicks e-POWER",
+    "grade_code": "70053-L1_V",
+    "price": 789900,
+    "version_key": "26KEV",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "X-Trail e-POWER",
+    "grade_code": "70006-E-POWER",
+    "price": 1699000,
+    "version_key": "26XTE4",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Almera",
+    "grade_code": "29637-SC_SL_6MT",
+    "price": 595000,
+    "version_key": "105S",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Navara",
+    "grade_code": "70005-DC_PRO-2X_7AT",
+    "price": 1045000,
+    "version_key": "25DCP2A",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 13500000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 637000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Navara Pro",
+    "grade_code": "29643-DC_PRO-2X_7AT",
+    "price": 1030000,
+    "version_key": "144P",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1339000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Serena",
+    "grade_code": "70002-SC_SL_6MT",
+    "price": 606000,
+    "version_key": "25SCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 837000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 693000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Serena Highway Star",
+    "grade_code": "30176-HIGHWAY_STAR",
+    "price": 1690000,
+    "version_key": "SEC28",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 445000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Navara Calibre",
+    "grade_code": "29621-KC_CALIBRE_E_6MT",
+    "price": 765000,
+    "version_key": "120C",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Almera",
+    "grade_code": "29545-1_0L_TURBO_E_CVT",
+    "price": 515000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Kicks e-POWER",
+    "grade_code": "29843-E-POWER_E",
+    "price": 779900,
+    "version_key": "E0951",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Almera",
+    "grade_code": "29851-1_0L_TURBO_E_CVT",
+    "price": 573000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 833000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 672000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1990000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 420000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Kicks",
+    "grade_code": "70003-KC_SL_6MT",
+    "price": 667000,
+    "version_key": "25KCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Livina",
+    "grade_code": "29624-KC_SL_6MT",
+    "price": 649000,
+    "version_key": "114K",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Serena Highway Star",
+    "grade_code": "30177-HIGHWAY_STAR",
+    "price": 1469000,
+    "version_key": "HWS01",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1350000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Kicks Calibre",
+    "grade_code": "70004-KC_CALIBRE_SL_7AT",
+    "price": 758000,
+    "version_key": "25KCCSLA",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "Leaf",
+    "grade_code": "29785-EV",
+    "price": 1590000,
+    "version_key": "LEV1",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Serena e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 781000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/serena-epower.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1216500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 530000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1299000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 559500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Terra",
+    "grade_code": "29838-2_3_E_2WD_7AT",
+    "price": 1199000,
+    "version_key": "JTSARS",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "VEC005",
+    "grade_code": "LVL005",
+    "price": 765000,
+    "version_key": "VEC005",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Kicks e-POWER",
+    "grade_code": "70053-L1_V",
+    "price": 789900,
+    "version_key": "26KEV",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "X-Trail e-POWER",
+    "grade_code": "70006-E-POWER",
+    "price": 1699000,
+    "version_key": "26XTE4",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Almera",
+    "grade_code": "29637-SC_SL_6MT",
+    "price": 595000,
+    "version_key": "105S",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Navara",
+    "grade_code": "70005-DC_PRO-2X_7AT",
+    "price": 1045000,
+    "version_key": "25DCP2A",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 13500000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 637000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Navara Pro",
+    "grade_code": "29643-DC_PRO-2X_7AT",
+    "price": 1030000,
+    "version_key": "144P",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1339000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Serena",
+    "grade_code": "70002-SC_SL_6MT",
+    "price": 606000,
+    "version_key": "25SCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 837000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 693000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Serena Highway Star",
+    "grade_code": "30176-HIGHWAY_STAR",
+    "price": 1690000,
+    "version_key": "SEC28",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 445000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Navara Calibre",
+    "grade_code": "29621-KC_CALIBRE_E_6MT",
+    "price": 765000,
+    "version_key": "120C",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Almera",
+    "grade_code": "29545-1_0L_TURBO_E_CVT",
+    "price": 515000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Kicks e-POWER",
+    "grade_code": "29843-E-POWER_E",
+    "price": 779900,
+    "version_key": "E0951",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Almera",
+    "grade_code": "29851-1_0L_TURBO_E_CVT",
+    "price": 573000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 833000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 672000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1990000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 420000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Kicks",
+    "grade_code": "70003-KC_SL_6MT",
+    "price": 667000,
+    "version_key": "25KCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Livina",
+    "grade_code": "29624-KC_SL_6MT",
+    "price": 649000,
+    "version_key": "114K",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Serena Highway Star",
+    "grade_code": "30177-HIGHWAY_STAR",
+    "price": 1469000,
+    "version_key": "HWS01",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1350000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Kicks Calibre",
+    "grade_code": "70004-KC_CALIBRE_SL_7AT",
+    "price": 758000,
+    "version_key": "25KCCSLA",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "Leaf",
+    "grade_code": "29785-EV",
+    "price": 1590000,
+    "version_key": "LEV1",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan Livina",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 781000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/livina.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1216500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 530000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1299000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 559500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Terra",
+    "grade_code": "29838-2_3_E_2WD_7AT",
+    "price": 1199000,
+    "version_key": "JTSARS",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "VEC005",
+    "grade_code": "LVL005",
+    "price": 765000,
+    "version_key": "VEC005",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Kicks e-POWER",
+    "grade_code": "70053-L1_V",
+    "price": 789900,
+    "version_key": "26KEV",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "X-Trail e-POWER",
+    "grade_code": "70006-E-POWER",
+    "price": 1699000,
+    "version_key": "26XTE4",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Almera",
+    "grade_code": "29637-SC_SL_6MT",
+    "price": 595000,
+    "version_key": "105S",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Navara",
+    "grade_code": "70005-DC_PRO-2X_7AT",
+    "price": 1045000,
+    "version_key": "25DCP2A",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 13500000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 637000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Navara Pro",
+    "grade_code": "29643-DC_PRO-2X_7AT",
+    "price": 1030000,
+    "version_key": "144P",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1339000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Serena",
+    "grade_code": "70002-SC_SL_6MT",
+    "price": 606000,
+    "version_key": "25SCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 837000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 693000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Serena Highway Star",
+    "grade_code": "30176-HIGHWAY_STAR",
+    "price": 1690000,
+    "version_key": "SEC28",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 445000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Navara Calibre",
+    "grade_code": "29621-KC_CALIBRE_E_6MT",
+    "price": 765000,
+    "version_key": "120C",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Almera",
+    "grade_code": "29545-1_0L_TURBO_E_CVT",
+    "price": 515000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Kicks e-POWER",
+    "grade_code": "29843-E-POWER_E",
+    "price": 779900,
+    "version_key": "E0951",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Almera",
+    "grade_code": "29851-1_0L_TURBO_E_CVT",
+    "price": 573000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 833000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 672000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1990000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 420000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Kicks",
+    "grade_code": "70003-KC_SL_6MT",
+    "price": 667000,
+    "version_key": "25KCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Livina",
+    "grade_code": "29624-KC_SL_6MT",
+    "price": 649000,
+    "version_key": "114K",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Serena Highway Star",
+    "grade_code": "30177-HIGHWAY_STAR",
+    "price": 1469000,
+    "version_key": "HWS01",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1350000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Kicks Calibre",
+    "grade_code": "70004-KC_CALIBRE_SL_7AT",
+    "price": 758000,
+    "version_key": "25KCCSLA",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "Leaf",
+    "grade_code": "29785-EV",
+    "price": 1590000,
+    "version_key": "LEV1",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan X-Trail e-POWER",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 781000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/xtrail-epower.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1216500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 530000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1299000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 559500,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Terra",
+    "grade_code": "29838-2_3_E_2WD_7AT",
+    "price": 1199000,
+    "version_key": "JTSARS",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "VEC005",
+    "grade_code": "LVL005",
+    "price": 765000,
+    "version_key": "VEC005",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Kicks e-POWER",
+    "grade_code": "70053-L1_V",
+    "price": 789900,
+    "version_key": "26KEV",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "X-Trail e-POWER",
+    "grade_code": "70006-E-POWER",
+    "price": 1699000,
+    "version_key": "26XTE4",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Almera",
+    "grade_code": "29637-SC_SL_6MT",
+    "price": 595000,
+    "version_key": "105S",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Navara",
+    "grade_code": "70005-DC_PRO-2X_7AT",
+    "price": 1045000,
+    "version_key": "25DCP2A",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 13500000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 637000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Navara Pro",
+    "grade_code": "29643-DC_PRO-2X_7AT",
+    "price": 1030000,
+    "version_key": "144P",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1339000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Serena",
+    "grade_code": "70002-SC_SL_6MT",
+    "price": 606000,
+    "version_key": "25SCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 837000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 693000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Serena Highway Star",
+    "grade_code": "30176-HIGHWAY_STAR",
+    "price": 1690000,
+    "version_key": "SEC28",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 445000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Navara Calibre",
+    "grade_code": "29621-KC_CALIBRE_E_6MT",
+    "price": 765000,
+    "version_key": "120C",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Almera",
+    "grade_code": "29545-1_0L_TURBO_E_CVT",
+    "price": 515000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Kicks e-POWER",
+    "grade_code": "29843-E-POWER_E",
+    "price": 779900,
+    "version_key": "E0951",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Almera",
+    "grade_code": "29851-1_0L_TURBO_E_CVT",
+    "price": 573000,
+    "version_key": "BDYARBZ",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 833000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 672000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1990000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 420000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Kicks",
+    "grade_code": "70003-KC_SL_6MT",
+    "price": 667000,
+    "version_key": "25KCSLM",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Livina",
+    "grade_code": "29624-KC_SL_6MT",
+    "price": 649000,
+    "version_key": "114K",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Serena Highway Star",
+    "grade_code": "30177-HIGHWAY_STAR",
+    "price": 1469000,
+    "version_key": "HWS01",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 1350000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Kicks Calibre",
+    "grade_code": "70004-KC_CALIBRE_SL_7AT",
+    "price": 758000,
+    "version_key": "25KCCSLA",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "Leaf",
+    "grade_code": "29785-EV",
+    "price": 1590000,
+    "version_key": "LEV1",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  },
+  {
+    "model": "Nissan Leaf",
+    "trim": "March",
+    "grade_code": "LVL001",
+    "price": 781000,
+    "version_key": "VEC001",
+    "source_url": "https://www.nissan.co.th/en/vehicles/new-vehicles/leaf.html"
+  }
+]

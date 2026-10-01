@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.suzuki.co.th/en/model/fronx/equipment",
+  "captured_at": "2026-09-27T16:06:54.683161+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "26078dde6f5df2211ee114518beb558e70d15b283d6714ef6bb7c75bd70c880f",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "suzuki_p107_equipment.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.jaguar.co.th/jaguar-range/overview",
+  "captured_at": "2026-09-24T14:39:22.172451+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "12ad7deb8700dbc94a3f448a91d054ad9bfb571b18664aeaee7fe074fc894151",
+  "session_id": "acquisition_20260924_143915",
+  "artifact_filename": "jaguar_range_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

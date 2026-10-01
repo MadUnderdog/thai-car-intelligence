@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu.co.th/default/assets/pdf/data_subject_request_form_en.pdf",
+  "captured_at": "2026-09-27T19:07:12.107165+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "0ab350ede388c8470604e9930799323f32d4cc929bb8e1bacec4bb183a027437",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "isuzu_p108_data_subject_request_form_en.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

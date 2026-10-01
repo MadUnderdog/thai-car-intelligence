@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.mitsubishi-motors.co.th/en/cars/mirage",
+  "captured_at": "2026-09-28T07:14:06.016297+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "ed50de9288fe9ed52ab1dbadfc7a6fbe91ade618f176daa51bc05f4dfee93a49",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mitsubishi_p111_mirage.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "commit": "dc0357b8a77aa1a748ff55589396668df09765ea",
+  "outputs": {
+    "assembled_records.jsonl": "/home/ubuntu/Projects/thai-car-intelligence/audit/assembly/assembled_records.jsonl",
+    "conflicts.jsonl": "/home/ubuntu/Projects/thai-car-intelligence/audit/assembly/conflicts.jsonl",
+    "join_errors.jsonl": "/home/ubuntu/Projects/thai-car-intelligence/audit/assembly/join_errors.jsonl",
+    "validation_failures.jsonl": "/home/ubuntu/Projects/thai-car-intelligence/audit/assembly/validation_failures.jsonl"
+  },
+  "report": {
+    "json": "/home/ubuntu/Projects/thai-car-intelligence/audit/coverage/p119_assembly_report.json",
+    "md": "/home/ubuntu/Projects/thai-car-intelligence/audit/coverage/p119_assembly_report.md"
+  },
+  "stats": {
+    "conflicts": 261,
+    "fields_assembled": 1323,
+    "join_errors": 0,
+    "packets_accepted": 417,
+    "packets_in": 488,
+    "packets_quarantined_input": 71,
+    "quarantines": 261,
+    "records": 417,
+    "validation_failures": 0
+  }
+}

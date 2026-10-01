@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=altis_grsport",
+  "captured_at": "2026-09-28T09:35:23.980578+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "5f718695097d78a54657038ff7ab4b84a20a51a22f9a9cdefbde93c5b60cad26",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_altis_grsport.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

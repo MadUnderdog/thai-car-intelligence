@@ -1,0 +1,12 @@
+{
+  "source": "open_ev_data",
+  "url": "https://github.com/open-ev-data/open-ev-data-dataset",
+  "observed_at": "2026-09-22T15:20:43.233246",
+  "acquisition_method": "github_raw",
+  "payload_hash": "c9a918dd5ea45914",
+  "total_rows": 0,
+  "brands": {
+    "toyota": {},
+    "byd": {}
+  }
+}

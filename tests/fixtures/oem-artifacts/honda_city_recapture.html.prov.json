@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.honda.co.th/en/city",
+  "captured_at": "2026-09-25T04:07:07.005816+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "1953984e5b3b48e0a7bfc374fd67b5bf0dd8f9ab2305fec014f2cf51a03990df",
+  "session_id": "acquisition_20260925_honda_city_recapture",
+  "artifact_filename": "honda_city_recapture.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=grsupra",
+  "captured_at": "2026-09-28T09:35:29.076823+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "f41f99457e440a8808348b525f372e0469349e0d5b6c4f88647734784ab2f56d",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_grsupra.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

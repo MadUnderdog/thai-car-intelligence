@@ -1,0 +1,533 @@
+{
+  "articles": [
+    {
+      "source": "autolifethailand",
+      "url": "https://autolifethailand.tv/",
+      "title": "Autolifethailand รีวิวรถยนต์",
+      "prices": [
+        3690000,
+        800000,
+        499900,
+        659900,
+        744900
+      ],
+      "hp": [],
+      "nm": [],
+      "kwh": [
+        "13.08",
+        "13.08",
+        "13.08"
+      ],
+      "range_km": [
+        "690",
+        "690",
+        "000"
+      ]
+    },
+    {
+      "source": "autolifethailand",
+      "url": "https://autolifethailand.tv/news-volvo-xc60-and-xc90-my-2027-launched/",
+      "title": "Volvo XC60 และ XC90 รุ่นปี 2027 ปรับรุ่น Long Range ให้ขับขี่ใน EV Mode ได้ไกลมา",
+      "prices": [
+        3690000
+      ],
+      "hp": [
+        "250",
+        "180",
+        "177"
+      ],
+      "nm": [
+        "360",
+        "280",
+        "309"
+      ],
+      "kwh": [
+        "2",
+        "2"
+      ],
+      "range_km": [
+        "690",
+        "690"
+      ]
+    },
+    {
+      "source": "autolifethailand",
+      "url": "https://autolifethailand.tv/news-mercedes-benz-c-300-4matic-electric-launched/",
+      "title": "Mercedes-Benz C 300 4MATIC Electric มอเตอร์คู่ ขับสี่ ขับได้ไกลสุด 690 km (WLTP)",
+      "prices": [
+        2404000,
+        3690000
+      ],
+      "hp": [
+        "408"
+      ],
+      "nm": [
+        "800"
+      ],
+      "kwh": [
+        "85"
+      ],
+      "range_km": [
+        "690",
+        "690",
+        "690"
+      ]
+    },
+    {
+      "source": "autolifethailand",
+      "url": "https://autolifethailand.tv/smart-geely-thonburi-group-distributor-thailand-motor-expo-2026/",
+      "title": "กลุ่มธนบุรี คว้าสิทธิ์ขายแบรนด์ Smart # รถไฟฟ้า100% เครือ GEELY เปิดตัว Motor Ex",
+      "prices": [
+        2025000,
+        2075000,
+        2035000,
+        3690000
+      ],
+      "hp": [
+        "272",
+        "272",
+        "428"
+      ],
+      "nm": [
+        "343",
+        "343",
+        "543"
+      ],
+      "kwh": [
+        "49",
+        "66.0",
+        "66.0"
+      ],
+      "range_km": [
+        "100",
+        "180",
+        "315"
+      ]
+    },
+    {
+      "source": "autolifethailand",
+      "url": "https://autolifethailand.tv/zeekr-design-lab-2026/",
+      "title": "ZEEKR DESIGN LAB เปิดรับสมัครนักศึกษาร่วมออกแบบผลิตภัณฑ์ - Autolifethailand.tv",
+      "prices": [
+        500000,
+        3690000
+      ],
+      "hp": [],
+      "nm": [],
+      "kwh": [],
+      "range_km": [
+        "690",
+        "690",
+        "690"
+      ]
+    },
+    {
+      "source": "autolifethailand",
+      "url": "https://autolifethailand.tv/byd-gac-aion-comment-tax-structure/",
+      "title": "BYD - GAC Aion หนุนปรับโครงสร้างภาษีรถยนต์ช่วยนักลงทุนตัวจริง - Autolifethailand",
+      "prices": [
+        3690000,
+        3690000,
+        649900,
+        3690000
+      ],
+      "hp": [],
+      "nm": [],
+      "kwh": [],
+      "range_km": [
+        "690",
+        "690"
+      ]
+    },
+    {
+      "source": "autolifethailand",
+      "url": "https://autolifethailand.tv/official-price-discount-volvo-xc90-ultra-t8-phev-awd-sep-2026-warehouse-mega-deal/",
+      "title": "ส่วนลด 800,000 ! Volvo XC90 Ultra T8 PHEV AWD (MY2026) ราคาพิเศษ : 3,690,000 บาท",
+      "prices": [
+        3690000,
+        3690000,
+        3690000,
+        3690000,
+        3690000
+      ],
+      "hp": [
+        "317",
+        "145",
+        "462"
+      ],
+      "nm": [
+        "400",
+        "309",
+        "709"
+      ],
+      "kwh": [
+        "18.8"
+      ],
+      "range_km": [
+        "000",
+        "000",
+        "100"
+      ]
+    },
+    {
+      "source": "autolifethailand",
+      "url": "https://autolifethailand.tv/official-special-price-byd-seal-5-dm-i-phev-plug-in-hybrid-sep-2026/",
+      "title": "ส่วนลด 100,000 ! BYD Seal 5 DM-i PHEV ราคาพิเศษ : 499,900 - 649,900 บาท (ประกอบไ",
+      "prices": [
+        649900,
+        649900,
+        649900,
+        649900,
+        649900
+      ],
+      "hp": [
+        "98",
+        "197",
+        "218"
+      ],
+      "nm": [
+        "122",
+        "300",
+        "122"
+      ],
+      "kwh": [
+        "13.08",
+        "13.08",
+        "18.3"
+      ],
+      "range_km": [
+        "000",
+        "000",
+        "100"
+      ]
+    },
+    {
+      "source": "autolifethailand",
+      "url": "https://autolifethailand.tv/official-price-discount-byd-sealion-5-dm-i-phev-sep-2026/",
+      "title": "ส่วนลด 100,000 ! BYD Sealion 5 DM-i PHEV ราคาอย่างเป็นทางการ : 659,900 - 744,900",
+      "prices": [
+        744900,
+        744900,
+        744900,
+        744900,
+        744900
+      ],
+      "hp": [
+        "95",
+        "163",
+        "210"
+      ],
+      "nm": [
+        "125",
+        "210",
+        "210"
+      ],
+      "kwh": [
+        "18.3",
+        "18.3"
+      ],
+      "range_km": [
+        "000",
+        "100",
+        "185"
+      ]
+    },
+    {
+      "source": "autolifethailand",
+      "url": "https://autolifethailand.tv/leapmotor-stellantis-thailand-ev-bev-pna-group-2026/",
+      "title": "บริษัทแม่มาเอง ! จดทะเบียน บริษัท ลีปมอเตอร์ (ประเทศไทย) จำกัด LEAPMOTOR ทุนจดทะ",
+      "prices": [
+        898000,
+        898000,
+        798000,
+        798000,
+        3690000
+      ],
+      "hp": [],
+      "nm": [],
+      "kwh": [],
+      "range_km": [
+        "690",
+        "690"
+      ]
+    },
+    {
+      "source": "autospinn",
+      "url": "https://www.autospinn.com/",
+      "title": "ข่าวรถยนต์ จักรยานยนต์ ข่าวรถ รีวิวรถ ราคารถใหม่ | Autospinn",
+      "prices": [
+        649000,
+        928000
+      ],
+      "hp": [],
+      "nm": [],
+      "kwh": [
+        "37.9"
+      ],
+      "range_km": [
+        "200",
+        "645"
+      ]
+    },
+    {
+      "source": "autospinn",
+      "url": "https://www.autospinn.com/2026/09/launch-new-audi-a2-152153",
+      "title": "Audi A2 e-tron ครอสโอเวอร์ไฟฟ้าไซส์กะทัดรัด วิ่งไกลสุด 645 กม. - รถเปิดตัวใหม่ |",
+      "prices": [],
+      "hp": [
+        "170",
+        "190",
+        "231"
+      ],
+      "nm": [],
+      "kwh": [
+        "52",
+        "61",
+        "84"
+      ],
+      "range_km": [
+        "645",
+        "645",
+        "645"
+      ]
+    },
+    {
+      "source": "autospinn",
+      "url": "https://www.autospinn.com/2026/09/smart-152142",
+      "title": "Smart #2 รถไฟฟ้า 2 ที่นั่ง โผล่วิ่งทดสอบในจีน - ข่าวในวงการรถยนต์ |",
+      "prices": [],
+      "hp": [
+        "80"
+      ],
+      "nm": [],
+      "kwh": [
+        "35.7"
+      ],
+      "range_km": [
+        "140",
+        "300"
+      ]
+    },
+    {
+      "source": "autospinn",
+      "url": "https://www.autospinn.com/2026/09/launch-geely-xingyue-l-plus-152140",
+      "title": "Geely Xingyue L PLUS ไฮบริดสายซิ่ง ขุมพลัง 3DHT 3 สปีด - รถเปิดตัวใหม่ |",
+      "prices": [],
+      "hp": [
+        "286",
+        "215",
+        "308"
+      ],
+      "nm": [],
+      "kwh": [],
+      "range_km": []
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/official-price-gwm-tank-500-diesel-2026/",
+      "title": "ราคาอย่างเป็นทางการ GWM TANK 500 3.0T : 1,669,000 - 1,749,000* บาท | ดีเซล 3.0L ",
+      "prices": [
+        1669000,
+        1699000,
+        1719000,
+        1749000,
+        1799000
+      ],
+      "hp": [
+        "231",
+        "231"
+      ],
+      "kwh": []
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/official-price-byd-sealion-7-2026-awd-ultimate/",
+      "title": "ราคาอย่างเป็นทางการ + เทียบสเป็ค BYD Sealion 7 MY2026 : 1,199,900 - 1,349,900 บา",
+      "prices": [
+        1349900,
+        1349900,
+        1199900,
+        1299900,
+        1349000
+      ],
+      "hp": [
+        "313",
+        "530",
+        "530"
+      ],
+      "kwh": [
+        "91.3",
+        "82.5",
+        "82.5"
+      ]
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/official-price-hyundai-staria-hybrid-minorchange-2026/",
+      "title": "ราคาอย่างเป็นทางการ + เทียบสเป็ค Hyundai STARIA Hybrid (Minorchange) : 2,099,000",
+      "prices": [
+        2399000,
+        2399000,
+        2099000,
+        2399000
+      ],
+      "hp": [
+        "178",
+        "72",
+        "242"
+      ],
+      "kwh": [
+        "1.49"
+      ]
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/special-price-suzuki-fronx-september-2026/",
+      "title": "ราคาพิเศษ Suzuki Fronx : 599,000 - 699,000 บาท | ลดเพิ่ม 1 แสนบาท ! สำหรับรุ่น G",
+      "prices": [
+        699000,
+        699000,
+        689000,
+        599000,
+        749000
+      ],
+      "hp": [
+        "105",
+        "101",
+        "3.1"
+      ],
+      "kwh": []
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/official-price-toyota-land-cruiser-fj-2/",
+      "title": "ราคาอย่างเป็นทางการ Toyota Land Cruiser FJ : 1,289,000 บาท - HeadLight Magazine",
+      "prices": [
+        1289000,
+        1289000,
+        1289000
+      ],
+      "hp": [
+        "166"
+      ],
+      "kwh": []
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/official-price-denza-z9gt/",
+      "title": "ราคาอย่างเป็นทางการ DENZA Z9GT Performance AWD : 2,899,900 บาท - HeadLight Magaz",
+      "prices": [
+        2899900,
+        2899900,
+        2899000,
+        2899900,
+        3999900
+      ],
+      "hp": [
+        "156",
+        "313",
+        "421"
+      ],
+      "kwh": [
+        "122.5"
+      ]
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/official-price-mini-aceman-collections-mini-aceman-collections-multitone-shadow-jcw/",
+      "title": "ราคาอย่างเป็นทางการ MINI ACEMAN Collections | Multitone | Shadow | JCW : 1,799,0",
+      "prices": [
+        2099000,
+        2099000,
+        1799000,
+        1999000,
+        2099000
+      ],
+      "hp": [
+        "218"
+      ],
+      "kwh": [
+        "54.2"
+      ]
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/2026-mitsubishi-pajero-world-premiere-launch/",
+      "title": "ข้อมูลทั้งหมดของ All NEW Mitsubishi PAJERO สานต่อตำนาน Flagship SUV สาย Off-road",
+      "prices": [],
+      "hp": [
+        "204"
+      ],
+      "kwh": []
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/2026-09-26-picture-specs-toyota-land-cruiser-fj-edit/",
+      "title": "ภาพคันจริง Toyota Land Cruiser FJ | Boxy SUV ของคนมีสไตล์ และ สตางค์ (เติมน้ำมัน",
+      "prices": [
+        1269000,
+        1289000,
+        1269000,
+        1269000
+      ],
+      "hp": [
+        "166",
+        "166"
+      ],
+      "kwh": []
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/official-price-hyundai-ioniq-5-n-line-ckd-thailand-2nd-lot/",
+      "title": "ราคาอย่างเป็นทางการ Hyundai IONIQ 5 N Line (ประกอบไทย / MY2026) : 1,449,000 บาท ",
+      "prices": [
+        1449000,
+        1449000,
+        1449000,
+        1449000,
+        1699000
+      ],
+      "hp": [
+        "228"
+      ],
+      "kwh": [
+        "84.0"
+      ]
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/2026-09-28-picture-specs-mazda-6e-exclusive/",
+      "title": "ภาพคันจริง Mazda 6e Exclusive | สีน้ำตาล / ทองแดง - Melting Copper นี้ ไม่มีขายแ",
+      "prices": [
+        1199000,
+        1199000,
+        1199000
+      ],
+      "hp": [
+        "258",
+        "258"
+      ],
+      "kwh": [
+        "77.9",
+        "77.9"
+      ]
+    },
+    {
+      "source": "headlightmag",
+      "url": "https://www.headlightmag.com/2026-09-08-picture-specs-geely-starray-em-r-max/",
+      "title": "ภาพคันจริง Geely Starray EM-R Max | ชาร์จได้ เติมน้ำมันได้ หมดห่วง ช่วงเทศกาล - ",
+      "prices": [
+        799900,
+        799900,
+        799900
+      ],
+      "hp": [
+        "218"
+      ],
+      "kwh": [
+        "18.4"
+      ]
+    }
+  ],
+  "total": 26
+}

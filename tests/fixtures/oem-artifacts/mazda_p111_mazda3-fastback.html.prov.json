@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th/cars/mazda3-fastback",
+  "captured_at": "2026-09-28T07:13:58.016466+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "7a6cced4afac410cf0707e9bcfda29863f08df0c14b4e792b4a553a154549714",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "mazda_p111_mazda3-fastback.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

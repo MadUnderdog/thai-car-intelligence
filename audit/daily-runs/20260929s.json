@@ -1,0 +1,123 @@
+{
+  "alerts": {
+    "count": 1,
+    "entries": [
+      {
+        "created_at": "2026-09-29T10:00:00+00:00",
+        "detail": {
+          "added": [
+            "toyota-corolla-cross"
+          ],
+          "removed": [
+            "toyota-yaris-cross"
+          ]
+        },
+        "entity": "models",
+        "event_id": "335369d1a624b7deed63fb149016b11ed7b721a0ab46021aafd4ece04f9ffaae",
+        "run_id": "DR-20260929-005",
+        "source": "www.toyota.co.th",
+        "type": "MODEL_VARIANT_ADDED_REMOVED"
+      }
+    ]
+  },
+  "artifacts": {
+    "bytes": 119,
+    "count": 1
+  },
+  "blockers": {
+    "registry": {
+      "BLOCKED_DNS": 4,
+      "BLOCKED_HTTP_403": 6,
+      "BLOCKED_HTTP_404": 1,
+      "BLOCKED_TLS": 1,
+      "DEALER_REDIRECT": 1,
+      "REACHABLE": 19,
+      "UNKNOWN": 1
+    },
+    "run": []
+  },
+  "candidates": {
+    "count": 2,
+    "entries": [
+      {
+        "candidate_id": "eae7931d8665ff204a610a4d9cc08e228733bce65ed228a4f1674702d70b23b5",
+        "detected_at": "2026-09-29T10:00:00+00:00",
+        "entity": "models",
+        "field": "membership:toyota-corolla-cross",
+        "new_sha": "8231f7087dfb58d182fe5f4b92e1653a1231ecbdc52aa6b1d0ae0afb1f2e452f",
+        "new_value": "present",
+        "old_sha": "acc6af7e5ed2b2ee8f95299bac6d09cfa2d812ab77d2dac401daec3a574a3bb2",
+        "old_value": "absent",
+        "run_id": "DR-20260929-005",
+        "source": "www.toyota.co.th",
+        "status": "QUARANTINED"
+      },
+      {
+        "candidate_id": "cb98731578ca0bf290dcec7ae07a1a8eeaad628cc0d7f5ca8a8614bef864ff05",
+        "detected_at": "2026-09-29T10:00:00+00:00",
+        "entity": "models",
+        "field": "membership:toyota-yaris-cross",
+        "new_sha": "8231f7087dfb58d182fe5f4b92e1653a1231ecbdc52aa6b1d0ae0afb1f2e452f",
+        "new_value": "absent",
+        "old_sha": "acc6af7e5ed2b2ee8f95299bac6d09cfa2d812ab77d2dac401daec3a574a3bb2",
+        "old_value": "present",
+        "run_id": "DR-20260929-005",
+        "source": "www.toyota.co.th",
+        "status": "QUARANTINED"
+      }
+    ]
+  },
+  "commit": "a5849d00ce1b866c5e0cb6e19566a94b772c3523",
+  "entrypoint": "replay7",
+  "generated_at": "2026-09-29T10:00:00+00:00",
+  "hash_coverage": {
+    "in_scope": 32,
+    "with_last_success_sha256": 19
+  },
+  "identity_levels": {
+    "MODEL": 131,
+    "VARIANT": 372
+  },
+  "locator_coverage": {
+    "duplicate_dom_path": 0,
+    "duplicate_json_path": 0,
+    "rows": 503
+  },
+  "mode": "offline-replay7",
+  "observations": [
+    {
+      "observations": [
+        {
+          "key": "models",
+          "value": [
+            "toyota-velo-cross",
+            "toyota-corolla-cross"
+          ]
+        },
+        {
+          "key": "prices",
+          "value": {
+            "toyota-velo-cross-eco": 1019000
+          }
+        }
+      ],
+      "source": "www.toyota.co.th"
+    }
+  ],
+  "run_id": "DR-20260929-005",
+  "runner": "daily_run.run_daily",
+  "sources": [
+    {
+      "classification": "CHANGED",
+      "kind": "capture",
+      "observations": 2,
+      "provenance": "VERIFIED",
+      "source": "www.toyota.co.th"
+    }
+  ],
+  "state_transitions": [],
+  "status": "RUN_GREEN",
+  "tests": {
+    "status": "not_run_in_this_invocation"
+  }
+}

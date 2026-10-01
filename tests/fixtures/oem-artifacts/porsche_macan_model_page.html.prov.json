@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/models/macan/#modelRangeId=macan",
+  "captured_at": "2026-09-24T18:55:11.625114+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "7e0630709119b244bb69f100d3e591afd410158bf7be0f9560598793db1fd727",
+  "session_id": "acquisition_20260924_185458",
+  "artifact_filename": "porsche_macan_model_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

@@ -1,0 +1,6 @@
+revert plan: {"demote_restores": 8, "changelog": null, "spec_rows": 1043, "price_rows": 294, "source_documents": 122, "sources": 12, "variants": 405, "models": 127, "manufacturers": 3}
+MISMATCH Source: got 20 expected 21
+REVERT_FAILED
+recreate changan source: INSERT 0 1
+isCurrent 96
+BASELINE_RESTORED_EXACT

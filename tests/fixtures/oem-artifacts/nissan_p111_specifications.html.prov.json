@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/kicks-epower/specifications.html",
+  "captured_at": "2026-09-28T07:14:27.697974+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "9831aa167f282ab48cb00cc170703030864a525a66d907176962fe951778f5be",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "nissan_p111_specifications.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

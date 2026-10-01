@@ -1,0 +1,9 @@
+{
+  "source_url": "https://en.nissan.co.th/content/dam/Nissan/th/owners/OwnerManual-170612/Note%20Owner%20Manual%20EN.pdf",
+  "captured_at": "2026-09-27T19:05:28.319248+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "4221c9e7457e690488b699b86ea5f2d34ac746c196c57f9205e3454520d3ade5",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "nissan_p108_Note_Owner_Manual_EN.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

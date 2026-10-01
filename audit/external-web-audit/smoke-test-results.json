@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.headlightmag.com/news-subaru-crosstrek-jdm-updated/",
+    "profile": "headlightmag",
+    "c4a_html": 46041,
+    "c4a_time": 2.5587158203125,
+    "urllib_html": 46041,
+    "urllib_time": 0.5388610363006592,
+    "tables": 0,
+    "headings": 6,
+    "prices": 0,
+    "specs": 1
+  },
+  {
+    "url": "https://www.headlightmag.com/all-new-honda-cr-v-g7-production-2027-debut-late-2026/",
+    "profile": "headlightmag",
+    "c4a_html": 45987,
+    "c4a_time": 1.8093571662902832,
+    "urllib_html": 45987,
+    "urllib_time": 0.2996642589569092,
+    "tables": 0,
+    "headings": 6,
+    "prices": 0,
+    "specs": 0
+  },
+  {
+    "url": "https://www.headlightmag.com/2026-09-20-world-news-nissan-uk-factory-in-sunderland-will-produce-nissan-kicks-e-power-for-europe/",
+    "profile": "headlightmag",
+    "c4a_html": 55292,
+    "c4a_time": 3.8912880420684814,
+    "urllib_html": 55292,
+    "urllib_time": 0.4565095901489258,
+    "tables": 0,
+    "headings": 6,
+    "prices": 0,
+    "specs": 0
+  },
+  {
+    "url": "https://www.9carthai.com/new-byd-dolphin-price/",
+    "profile": "9carthai",
+    "c4a_html": 194536,
+    "c4a_time": 3.550924062728882,
+    "urllib_html": 194536,
+    "urllib_time": 1.1595804691314697,
+    "tables": 0,
+    "headings": 22,
+    "prices": 64,
+    "specs": 4
+  },
+  {
+    "url": "https://www.9carthai.com/all-new-honda-accord-price/",
+    "profile": "9carthai",
+    "c4a_html": 710774,
+    "c4a_time": 5.719823837280273,
+    "urllib_html": 710774,
+    "urllib_time": 9.333731889724731,
+    "tables": 0,
+    "headings": 26,
+    "prices": 140,
+    "specs": 7
+  },
+  {
+    "url": "https://www.9carthai.com/new-toyota-yaris-cross-price/",
+    "profile": "9carthai",
+    "c4a_html": 188731,
+    "c4a_time": 2.9580955505371094,
+    "urllib_html": 188731,
+    "urllib_time": 0.8840041160583496,
+    "tables": 0,
+    "headings": 12,
+    "prices": 48,
+    "specs": 5
+  }
+]

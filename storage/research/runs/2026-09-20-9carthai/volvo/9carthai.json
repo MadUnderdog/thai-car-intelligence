@@ -1,0 +1,76 @@
+{
+  "brand": "volvo",
+  "brand_display": "Volvo",
+  "status": "OK",
+  "source_url": "https://www.9carthai.com/volvo-price/",
+  "article_title": "VOLVO 2026-2027 ราคารถ วอลโว่ - 9CARTHAI : 9CARTHAI",
+  "prices": [
+    {
+      "brand": "volvo",
+      "model": "Volvo",
+      "variant": "EX30",
+      "amount": 1590000,
+      "unit": "THB",
+      "price_type": "MSRP",
+      "source_url": "https://www.9carthai.com/volvo-price/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "9carthai_model_trim_price",
+      "content_hash": "371cb754acd21e88",
+      "article_title": "VOLVO 2026-2027 ราคารถ วอลโว่ - 9CARTHAI : 9CARTHAI",
+      "observed_date": "2026-09-20T15:30:10.001467"
+    },
+    {
+      "brand": "volvo",
+      "model": "Volvo",
+      "variant": "EX40",
+      "amount": 1990000,
+      "unit": "THB",
+      "price_type": "MSRP",
+      "source_url": "https://www.9carthai.com/volvo-price/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "9carthai_model_trim_price",
+      "content_hash": "30295c0ad1884427",
+      "article_title": "VOLVO 2026-2027 ราคารถ วอลโว่ - 9CARTHAI : 9CARTHAI",
+      "observed_date": "2026-09-20T15:30:10.001489"
+    },
+    {
+      "brand": "volvo",
+      "model": "Volvo",
+      "variant": "EC40",
+      "amount": 2090000,
+      "unit": "THB",
+      "price_type": "MSRP",
+      "source_url": "https://www.9carthai.com/volvo-price/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "9carthai_model_trim_price",
+      "content_hash": "e44d1f2123b6e422",
+      "article_title": "VOLVO 2026-2027 ราคารถ วอลโว่ - 9CARTHAI : 9CARTHAI",
+      "observed_date": "2026-09-20T15:30:10.001498"
+    },
+    {
+      "brand": "volvo",
+      "model": "Volvo",
+      "variant": "__MODEL_RANGE__",
+      "amount": 500000,
+      "unit": "THB",
+      "price_type": "LIST_PRICE",
+      "source_url": "https://www.9carthai.com/volvo-price/",
+      "source_class": "AUTOMOTIVE_MEDIA",
+      "trust_state": "RESEARCH_UNVERIFIED",
+      "extraction_method": "9carthai_brand_page_range",
+      "content_hash": "5db0dd9a514f9177",
+      "article_title": "VOLVO 2026-2027 ราคารถ วอลโว่ - 9CARTHAI : 9CARTHAI",
+      "observed_date": "2026-09-20T15:30:10.001594"
+    }
+  ],
+  "specs": [],
+  "sources": [
+    "https://www.9carthai.com/volvo-price/"
+  ],
+  "failures": [],
+  "rejection_count": 0,
+  "extraction_ts": "2026-09-20T15:30:10.008670"
+}

@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-calibre/performance.html",
+  "captured_at": "2026-09-28T07:14:29.540785+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "bfc9ae91d6a9be3f4e6e1dca78c13cb0290193f98ec551b4f5989ad759c635f8",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "nissan_p111_performance_dup2.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://assets.honda.co.th/www-assets/model/2025/06/10/3r9nlBpVjXbHrlGvCChH0scFGfewYQGM.pdf?response-content-disposition=attachment%3B%20filename%3DHonda%20e:N1%20Catalogue.pdf",
+  "captured_at": "2026-09-27T16:27:05.842751+00:00",
+  "acquisition_method": "http_get_pdf_pdftotext",
+  "sha256": "d6c3b4b2331e993193da1810bf30b183946909465c101f08ca355ed87825bafc",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "honda_p107_3r9nlBpVjXbHrlGvCChH0scFGfewYQGM.pdf.txt",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

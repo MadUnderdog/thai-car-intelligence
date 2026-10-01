@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.subaru.asia/brochures/crosstrek_th.pdf?v=ei4xb",
+  "captured_at": "2026-09-27T16:03:40.516433+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "6c8ce42c1263695477b5cc4e794b92e834c917c79cb9e664d621a818f89d01d7",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "subaru_p107_crosstrek_th_dup.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

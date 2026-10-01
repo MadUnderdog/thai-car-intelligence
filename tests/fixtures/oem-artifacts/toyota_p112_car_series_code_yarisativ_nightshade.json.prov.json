@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/model/api/car/?series_code=yarisativ_nightshade",
+  "captured_at": "2026-09-28T09:35:37.201082+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "139c1f0bd2be43e334db1e1f49d5e4beacecfae7adb1430264109298bc15c942",
+  "session_id": "p112_spec_sources_20260928",
+  "artifact_filename": "toyota_p112_car_series_code_yarisativ_nightshade.json",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

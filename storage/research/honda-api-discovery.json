@@ -1,0 +1,348 @@
+{
+  "research_date": "2026-09-19",
+  "method": "Playwright network interception with th-TH locale, Asia/Bangkok timezone",
+  "brands_discovered": {
+    "honda_thailand": {
+      "website": "https://www.honda.co.th/th",
+      "framework": "Next.js App Router with React Server Components (RSC)",
+      "waf": "Incapsula (Imperva) - may block after multiple requests",
+      "endpoints": {
+        "model_list_page": {
+          "url": "https://www.honda.co.th/th/car",
+          "method": "GET",
+          "content_type": "text/x-component (RSC flight format)",
+          "description": "Returns all car models with grades and prices in React Server Component format",
+          "notes": "RSC format: lines like '1:{json}' where line 1 contains the main data payload. Must be called from within the site context (not direct curl).",
+          "data_structure": {
+            "response_format": "RSC flight data (text/x-component)",
+            "main_data_line": "Line prefixed with '1:' contains JSON with {status, statusText, data: [...models]}",
+            "model_schema": {
+              "key": "UUID identifier",
+              "title": "Model name (e.g., 'City', 'Civic e:HEV')",
+              "slug": "URL slug (e.g., 'city', 'civic-ehev')",
+              "image": "CDN image URL (assets.honda.co.th)",
+              "grades": "Array of grade objects with uuid, title, grade_price"
+            }
+          },
+          "example_models_captured": [
+            {
+              "title": "City",
+              "slug": "city",
+              "key": "94542905-10cd-429b-b65a-b7c2c74db1d5"
+            },
+            {
+              "title": "City Hatchback",
+              "slug": "city-hatchback"
+            },
+            {
+              "title": "Civic e:HEV",
+              "slug": "civic-ehev"
+            },
+            {
+              "title": "HR-V e:HEV",
+              "slug": "hr-v-ehev"
+            },
+            {
+              "title": "CR-V e:HEV",
+              "slug": "cr-v-ehev"
+            },
+            {
+              "title": "WR-V",
+              "slug": "wr-v"
+            },
+            {
+              "title": "BR-V",
+              "slug": "br-v"
+            },
+            {
+              "title": "Accord e:HEV",
+              "slug": "accord-ehev"
+            },
+            {
+              "title": "Civic Type R",
+              "slug": "civic-type-r"
+            },
+            {
+              "title": "e:N1",
+              "slug": "e-n1"
+            },
+            {
+              "title": "e:N2",
+              "slug": "e-n2"
+            },
+            {
+              "title": "Super-ONE",
+              "slug": "super-one"
+            },
+            {
+              "title": "STEP WGN e:HEV",
+              "slug": "step-wgn-ehev"
+            }
+          ],
+          "cdn_base": "https://assets.honda.co.th/www-assets/"
+        },
+        "server_action_getModelList": {
+          "action_id": "60d19550e903ff7238e65cf5851dfd2bce2380ab6c",
+          "method": "POST",
+          "url": "https://www.honda.co.th/th/car",
+          "headers": {
+            "Next-Action": "60d19550e903ff7238e65cf5851dfd2bce2380ab6c",
+            "Accept": "text/x-component",
+            "Content-Type": "multipart/form-data"
+          },
+          "description": "Next.js Server Action that fetches model list. Takes locale parameter (e.g., 'th'). Returns RSC format.",
+          "note": "Direct calls return 500 error without proper session context. Best to intercept from page navigation."
+        },
+        "homepage_promotions": {
+          "url": "https://www.honda.co.th/th",
+          "method": "GET",
+          "content_type": "text/x-component (RSC)",
+          "description": "Returns promotion data with title, slug for current campaigns"
+        }
+      },
+      "assets_domain": "https://assets.honda.co.th/www-assets/",
+      "js_chunks_pattern": "/_next/static/chunks/{hash}.js (Turbopack)",
+      "key_js_files": [
+        "0f~gysb2afck5.js - Contains getModelList server action reference",
+        "0wsa2stpu74_n.js - Contains getModelList hook implementation"
+      ]
+    },
+    "toyota_thailand": {
+      "website": "https://www.toyota.co.th/th",
+      "framework": "Custom (not Next.js)",
+      "api_endpoint": {
+        "url": "https://www.toyota.co.th/component/api/tcoth/web-init",
+        "method": "POST",
+        "content_type": "application/json",
+        "body": "{}",
+        "authentication": "None required (public API)",
+        "cors": "Works from browser context (needs page cookies)",
+        "description": "Main initialization API returning all car data, navigation, and settings",
+        "full_data_size": "~60KB JSON",
+        "data_structure": {
+          "top_level_keys": [
+            "nav_main",
+            "nav_top",
+            "nav_footer",
+            "search_keyword_highlights",
+            "car_series"
+          ],
+          "car_series_schema": {
+            "fields": [
+              "id",
+              "code",
+              "type_code",
+              "type_name",
+              "type_name_en",
+              "model_code",
+              "model_year",
+              "title",
+              "title_en",
+              "slogan",
+              "slogan_en",
+              "picture",
+              "logo",
+              "start_price",
+              "max_price",
+              "fuel_types",
+              "seats",
+              "can_conversion",
+              "can_testdrive",
+              "can_quotation",
+              "menu_bg_color",
+              "version",
+              "out_of_stock",
+              "is_4x4"
+            ],
+            "fuel_types": "Array of {code, title, title_en} objects (hybrid, gasoline, diesel, ev)",
+            "seats": "Array of {code, title, title_en} objects (2s, 4s, 5s, 7s, 11s, 12s, >13s)"
+          },
+          "nav_main_car_highlights": "Array of featured models with code, title, picture, start_price"
+        }
+      },
+      "models_found": 34,
+      "model_summary": [
+        {
+          "code": "yarisativ",
+          "title": "Yaris ATIV",
+          "price_range": "569,000 - 729,000 THB",
+          "type": "Personal Cars",
+          "fuel": "Hybrid, Gasoline"
+        },
+        {
+          "code": "yariscross",
+          "title": "Yaris Cross",
+          "price_range": "809,000 - 929,000 THB",
+          "type": "SUV & PPV",
+          "fuel": "Hybrid, Gasoline"
+        },
+        {
+          "code": "altis",
+          "title": "Corolla Altis",
+          "price_range": "909,000 - 1,009,000 THB",
+          "type": "Personal Cars",
+          "fuel": "Hybrid, Gasoline"
+        },
+        {
+          "code": "camry",
+          "title": "CAMRY",
+          "price_range": "1,475,000 - 1,809,000 THB",
+          "type": "Personal Cars",
+          "fuel": "Hybrid, Gasoline"
+        },
+        {
+          "code": "corollacross",
+          "title": "Corolla Cross",
+          "price_range": "989,000 - 1,204,000 THB",
+          "type": "SUV & PPV",
+          "fuel": "Hybrid, Gasoline"
+        },
+        {
+          "code": "fortuner_leader",
+          "title": "Fortuner Leader",
+          "price_range": "1,239,000 - 1,600,000 THB",
+          "type": "SUV & PPV",
+          "fuel": "Diesel"
+        },
+        {
+          "code": "fortuner_legender",
+          "title": "Fortuner Legender",
+          "price_range": "1,643,000 - 1,904,000 THB",
+          "type": "SUV & PPV",
+          "fuel": "Diesel"
+        },
+        {
+          "code": "hilux_champ",
+          "title": "Hilux Champ",
+          "price_range": "519,000 - 615,000 THB",
+          "type": "Commercial",
+          "fuel": "Diesel"
+        },
+        {
+          "code": "hilux_revo_zedition",
+          "title": "Hilux Revo Z Edition",
+          "price_range": "669,000 - 934,000 THB",
+          "type": "Commercial",
+          "fuel": "Diesel"
+        },
+        {
+          "code": "hilux_travo_overland",
+          "title": "Hilux Travo Overland",
+          "price_range": "1,102,000 - 1,366,000 THB",
+          "type": "Commercial",
+          "fuel": "Diesel"
+        },
+        {
+          "code": "veloz",
+          "title": "Veloz",
+          "price_range": "795,000 - 875,000 THB",
+          "type": "MPV",
+          "fuel": "Gasoline"
+        },
+        {
+          "code": "innovazenix",
+          "title": "Innova Zenix",
+          "price_range": "1,379,000 - 1,489,000 THB",
+          "type": "MPV",
+          "fuel": "Hybrid"
+        },
+        {
+          "code": "alphard",
+          "title": "Alphard",
+          "price_range": "3,590,000 - 4,590,000 THB",
+          "type": "MPV",
+          "fuel": "Hybrid, Gasoline"
+        },
+        {
+          "code": "bz4x",
+          "title": "bZ4X",
+          "price_range": "1,529,000 - 1,649,000 THB",
+          "type": "SUV & PPV",
+          "fuel": "EV"
+        },
+        {
+          "code": "grsupra",
+          "title": "GR Supra",
+          "price_range": "5,349,000 - 5,749,000 THB",
+          "type": "GR",
+          "fuel": "Gasoline"
+        },
+        {
+          "code": "hilux_travo_e",
+          "title": "Hilux Travo-e",
+          "price_range": "1,491,000 THB",
+          "type": "Commercial",
+          "fuel": "EV"
+        },
+        {
+          "code": "landcruiser_fj",
+          "title": "Land Cruiser FJ",
+          "price_range": "1,289,000 THB",
+          "type": "SUV & PPV",
+          "fuel": "Gasoline"
+        }
+      ],
+      "additional_endpoints": {
+        "search_highlights": {
+          "url": "https://www.toyota.co.th/api-service/setting/search_highlights",
+          "method": "POST",
+          "description": "Search keyword highlights for the site"
+        }
+      }
+    },
+    "nissan_thailand": {
+      "website": "https://www.nissan.co.th/th",
+      "framework": "Adobe Experience Manager (AEM) / Java-based",
+      "api_discovery": {
+        "access_token_endpoint": {
+          "url": "https://ap.nissan-api.net/v2/publicAccessToken",
+          "method": "GET",
+          "params": {
+            "locale": "th_TH",
+            "scope": "READ",
+            "proxy": "*",
+            "brand": "nissan",
+            "environment": "prod"
+          },
+          "response": {
+            "access_token": "...",
+            "valid_until": "timestamp_ms"
+          },
+          "note": "Token is short-lived, generated per session"
+        },
+        "base_urls": [
+          "https://ap.nissan-api.net/",
+          "https://ap.api-nissanpace.net/"
+        ],
+        "note": "Nissan API requires proper proxy routing via their gateway. Direct calls to vehicle endpoints fail with 'Unable to identify proxy' error. Need to discover the correct proxy path from the page's JavaScript."
+      },
+      "status": "PARTIALLY_DISCOVERED - Token endpoint found, but vehicle data API routes unknown"
+    }
+  },
+  "other_brands_tested": {
+    "mg_thailand": {
+      "website": "https://www.mgcars.com/th",
+      "status": "No API endpoints found - likely SSR with no separate data API"
+    },
+    "mitsubishi_thailand": {
+      "website": "https://www.mitsubishi-motors.co.th/th",
+      "status": "No API endpoints found - uses AEM CMS with server-side rendering"
+    },
+    "mazda_thailand": {
+      "website": "https://www.mazda.co.th/th",
+      "status": "No API endpoints found"
+    }
+  },
+  "implementation_notes": {
+    "honda": {
+      "how_to_use": "Navigate to https://www.honda.co.th/th/car with Playwright (th-TH locale). Capture text/x-component responses. Parse RSC flight data format where line '1:' contains the main JSON payload.",
+      "data_freshness": "Data appears to be server-side rendered on each request",
+      "waf_protection": "Incapsula/Imperva WAF may block after multiple rapid requests. Add delays between requests."
+    },
+    "toyota": {
+      "how_to_use": "First visit https://www.toyota.co.th/th to establish session. Then POST to https://www.toyota.co.th/component/api/tcoth/web-init with empty JSON body. Response contains all 34 models with prices, fuel types, seats, etc.",
+      "data_freshness": "API returns current production data with model_year codes",
+      "advantage": "Clean JSON API, no auth required, comprehensive data including prices, fuel types, seat counts, body types"
+    }
+  }
+}

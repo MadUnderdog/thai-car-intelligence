@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.landrover.co.th/",
+  "captured_at": "2026-09-24T13:48:50.679730+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "e82a21773190cb8bfe6cd0d0cfabc4361aedc6cc8375629eef9918555de35abe",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "landrover_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

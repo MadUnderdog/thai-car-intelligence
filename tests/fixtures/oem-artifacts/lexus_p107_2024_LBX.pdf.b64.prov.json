@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/content/dam/thailand/website-v3/borchures/catalog/2024/2024_LBX.pdf",
+  "captured_at": "2026-09-27T16:03:51.034109+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "3b6b60c2f923f17cb99ecbd614c64a9243e14c4adac184819918f0ce2d8d362d",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "lexus_p107_2024_LBX.pdf.b64",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

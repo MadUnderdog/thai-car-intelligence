@@ -1,0 +1,15 @@
+{
+  "brand": "Nissan",
+  "thai_name": "นิสสัน",
+  "official_url": "https://www.nissan.co.th",
+  "timestamp": "2026-09-19T20:31:56.583921",
+  "discovery": {
+    "models_found": 0,
+    "models": [],
+    "prices_found": 0
+  },
+  "models": [],
+  "network_requests": [],
+  "api_endpoints": [],
+  "errors": []
+}

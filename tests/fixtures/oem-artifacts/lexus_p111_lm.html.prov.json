@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.lexus.co.th/en/models/lm.html",
+  "captured_at": "2026-09-28T07:13:24.806329+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "1b50b2857e5bfe9f15697995989d9e94109c96e5dc4b5b32f2ee0e095e9d0ac2",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "lexus_p111_lm.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

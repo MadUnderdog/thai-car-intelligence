@@ -1,0 +1,9 @@
+{
+  "source_url": "https://assets.isuzu-tis.com/mu_x_brochure_2026_5d17d1513d.pdf",
+  "captured_at": "2026-09-26T13:49:02.748539+00:00",
+  "acquisition_method": "http_get_pdf_base64",
+  "sha256": "918be06f322878515a374377b03e8e29f6f80c5a19cda0607faeb2b30e6c2561",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "isuzu_brochure_mux.pdf",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

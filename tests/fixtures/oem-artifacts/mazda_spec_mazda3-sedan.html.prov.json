@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.mazda.co.th/th/cars/mazda3-sedan/spec",
+  "captured_at": "2026-09-26T13:47:00.051491+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "11d0e43e5400fe8e8a74638c212984106a56a1520614a036c0e68599c2bb76df",
+  "session_id": "catalog_layers_20260926_134441",
+  "artifact_filename": "mazda_spec_mazda3-sedan.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

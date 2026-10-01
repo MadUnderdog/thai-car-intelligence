@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.jaguar.co.th/",
+  "captured_at": "2026-09-24T13:48:48.917711+00:00",
+  "acquisition_method": "playwright",
+  "sha256": "05d97f701cf4222bfd14729dfbc911a52d517143bad66231506330bdfa5fd02a",
+  "session_id": "acquisition_20260924_134815",
+  "artifact_filename": "jaguar_home_page.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

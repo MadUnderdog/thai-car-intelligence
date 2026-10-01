@@ -1,0 +1,20 @@
+
+ RUN  v4.1.11 /home/ubuntu/Projects/thai-car-intelligence
+
+ ❯ tests/p115-retrieval-boundaries.test.ts (19 tests | 10 failed) 528ms
+     × 1: 'Honda City' resolves to city scope + honda brand (never brand-wide) 13ms
+     × 2b: substring-colliding Thai aliases keep the most specific entity ('ยาริส ครอส' → yaris cross, not 'yaris yaris cross') 2ms
+     × 1b: live catalog — city scope returns real rows and never CR-V/Civic/Accord 269ms
+     × 3a: structured query 'MG EP' is model-scoped (q='ep'), never brand-wide 4ms
+     × 3b: exact retrieval must not resolve slug 'mg-ep' (EP Plus) for query 'MG EP' — and still resolves Honda City 2ms
+     × 3c: hybrid never returns EP Plus vector evidence for an 'MG EP' query 2ms
+     × 4a: hybrid keeps the structured result set byte-identical while attaching gated evidence 2ms
+     × 4b: /api/search response reports hybrid mode from searchHybrid and preserves structured fields 157ms
+     × 10b: explicit-model query never falls back to brand-wide search terms 2ms
+     × 12: exact-branch prices failing the official chain are dropped, not claimed 57ms
+
+ Test Files  1 failed (1)
+      Tests  10 failed | 9 passed (19)
+   Start at  12:40:46
+   Duration  1.25s (transform 276ms, setup 0ms, import 554ms, tests 528ms, environment 0ms)
+

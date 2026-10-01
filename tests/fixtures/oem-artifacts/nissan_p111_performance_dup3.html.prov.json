@@ -1,0 +1,16 @@
+{
+  "source_url": "https://www.nissan.co.th/vehicles/new-vehicles/navara-king-cab/performance.html",
+  "captured_at": "2026-09-28T07:14:32.087249+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "978cc36dbdbbd3e961cc5cf5e64ff3f992eb0a6a26f1bdf40190f9385dadb750",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "nissan_p111_performance_dup3.html",
+  "provenance_state": "ACQUISITION_VERIFIED",
+  "sanitized": true,
+  "sanitizations": [
+    {
+      "pattern": "google_api_key",
+      "count": 1
+    }
+  ]
+}

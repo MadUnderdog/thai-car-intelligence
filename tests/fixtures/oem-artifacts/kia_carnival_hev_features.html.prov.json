@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.kia.com/th/th/cars/carnival-hev/features.html",
+  "captured_at": "2026-09-27T15:07:15.283078+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "f5be08a9f2de45cea1a2656ab02813e6f93f7c8b63264585edaba6a1fff41e4e",
+  "session_id": "p106_official_grade_pages",
+  "artifact_filename": "kia_carnival_hev_features.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

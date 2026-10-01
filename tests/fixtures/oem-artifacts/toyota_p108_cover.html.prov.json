@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.toyota.co.th/en/cover",
+  "captured_at": "2026-09-27T19:03:36.136141+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "02e82ca88ae8fb303f5aa48db9f9df9ae5d55c968adc27f8a3fe64ff7ff34560",
+  "session_id": "p108_external_discovery_20260928",
+  "artifact_filename": "toyota_p108_cover.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

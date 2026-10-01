@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.changan.co.th/th/compare-cars/",
+  "captured_at": "2026-09-27T16:07:00.013712+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "263e90d018075c611471944b63ce8587da20da8ee0288c779031b7cba6b9cb5a",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "changan_p107_compare-cars.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

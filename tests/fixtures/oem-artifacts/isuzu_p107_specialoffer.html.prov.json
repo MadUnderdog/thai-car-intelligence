@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.isuzu-tis.com/specialoffer",
+  "captured_at": "2026-09-27T16:06:21.815859+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "cdb3f648c7c23bc3dea0f13c4c23b3aa98e98c256e72077dd98d31775b94b196",
+  "session_id": "p107_batch_sources_20260927",
+  "artifact_filename": "isuzu_p107_specialoffer.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}

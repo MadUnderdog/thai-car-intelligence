@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www.porsche.com/pap/_thailand_/models/cayenne/configure/",
+  "captured_at": "2026-09-28T07:14:49.648796+00:00",
+  "acquisition_method": "http_get",
+  "sha256": "c621daa88ac090bacca555640a97ea70e33a0fbb5e02a98a40f78136522e5258",
+  "session_id": "p111_price_sources_20260928",
+  "artifact_filename": "porsche_p111_configure_dup3.html",
+  "provenance_state": "ACQUISITION_VERIFIED"
+}
